@@ -1,0 +1,280 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Set-AzEventHubNetworkRuleSet
+name: Set-AzEventHubNetworkRuleSet
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Update the NetworkruleSet of the given Namespace in the current Azure subscription.
+description: |-
+  Update the NetworkruleSet of the given Namespace in the current Azure subscription.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default Action for NetworkRuleSet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkRuleSetPropertiesSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNetworkRuleSetAttributes" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkruleSet Configuration Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetwrokruleSetInputObjectSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPRule
+    type: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetIpRulesAttributes" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of IPRuleSet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkRuleSetPropertiesSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub Namespace Name.
+    aliases:
+    - NamespaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of Namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkRuleSetResourceIdParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkRule
+    type: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetVirtualNetworkRulesAttributes" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of VirtualNetworkRules
+    aliases:
+    - VirtualNteworkRule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NetworkRuleSetPropertiesSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzEventHubNetworkRuleSet
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-IPRule] <PSNWRuleSetIpRulesAttributes[]>
+        [-VirtualNetworkRule] <PSNWRuleSetVirtualNetworkRulesAttributes[]>
+        [-DefaultAction <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetworkRuleSetPropertiesSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzEventHubNetworkRuleSet
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-InputObject] <PSNetworkRuleSetAttributes>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetwrokruleSetInputObjectSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzEventHubNetworkRuleSet
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NetworkRuleSetResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNetworkRuleSetAttributes" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNetworkRuleSetAttributes" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> $IpRules = @([Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetIpRulesAttributes] @{IpMask = "4.4.4.4";Action = "Allow"},[Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetIpRulesAttributes] @{IpMask = "3.3.3.3";Action = "Allow"})
+    PS C:\> $VirtualNetworkRules = @([Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetVirtualNetworkRulesAttributes]@{Subnet=@{Id="/subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default"};IgnoreMissingVnetServiceEndpoint=$True})
+    PS C:\> Set-AzEventHubNetworkRuleSet -ResourceGroupName v-ajnavtest -Namespace EventHub-Namespace1-1375 -IPRule $IpRules -VirtualNetworkRule $VirtualNetworkRules -DefaultAction "Allow" -Debug
+
+    ```
+
+    Name                : default
+    DefaultAction       : Allow
+    Id                  : /subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1122/networkRuleSets/default
+    Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
+    IpRules             : {4.4.4.4, Allow, 3.3.3.3, Allow}
+    VirtualNetworkRules : {/subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, True}
+
+    Update the NetworkRuleSet using -IPRule and -VirtualNetworkRule parameters
+- title: Example 2
+  description: |-
+    ```powershell
+    PS C:\> $getresult = Get-AzEventHubNetworkRuleSet -ResourceGroupName v-ajnavtest -Namespace Eventhub-Namespace1-1375
+    PS C:\> Set-AzEventHubNetworkRuleSet -ResourceGroupName v-ajnavtest -Namespace Eventhub-Namespace1-1375 -InputObject $getresult
+    ```
+
+    Name                : default
+    DefaultAction       : Allow
+    Id                  : /subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1122/networkRuleSets/default
+    Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
+    IpRules             : {4.4.4.4, Allow, 3.3.3.3, Allow}
+    VirtualNetworkRules : {/subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, True}
+
+    Update the NetworkRuleSet using -InputObject
+- title: Example 3
+  description: |-
+    ```powershell
+    PS C:\> Set-AzEventHubNetworkRuleSet -ResourceGroupName v-ajnavtest -Namespace Eventhub-Namespace1-1375 -ResourceId /subscriptions/SubscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/Eventhub-Namespace1-1375
+    ```
+    Name                : default
+    DefaultAction       : Allow
+    Id                  : /subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.EventHub/namespaces/EventHub-Namespace-1122/networkRuleSets/default
+    Type                : Microsoft.EventHub/Namespaces/NetworkRuleSet
+    IpRules             : {4.4.4.4, Allow, 3.3.3.3, Allow}
+    VirtualNetworkRules : {/subscriptions/subscriptionId/resourcegroups/ResourceGroup/providers/Microsoft.Network/virtualNetworks/sbehvnettest1/subnets/default, True}
+
+    Update the NetworkRuleSet using -ResourceId of the other namespace.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Set-AzEventHubNetworkRuleSet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/set-azeventhubnetworkruleset
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Set-AzEventHubNetworkRuleSet.md
+  PlatyPS schema version: 2024-05-01

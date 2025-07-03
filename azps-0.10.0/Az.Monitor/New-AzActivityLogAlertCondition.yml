@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActivityLogAlertCondition
+name: New-AzActivityLogAlertCondition
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an new activity log alert condition object in memory.
+description: |-
+  The **New-AzActivityLogAlertCondition** cmdlet creates new activity log alert condition object in memory.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Equal
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the equals property for the leaf condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Field
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the field for the condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActivityLogAlertCondition
+        -Field <String>
+        -Equal <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertLeafCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new activity log alert condition object in memory.'
+  description: |-
+    ```
+    PS C:\>$Condition = New-AzActivityLogAlertCondition -Field "Requests" -Equal "OtherField"
+    PS C:\>Write-Host "Field property value: $($Condition.Field)"
+    PS C:\>Write-Host "Equals property value: $($Condition.Equals)"
+
+    Field property value: Requests
+    Equals property value: OtherField
+    ```
+
+    This command creates a new activity log alert condition object in memory.
+    **NOTE**: when this cmdlet is used with Set-AzActivityLogAlert at least one of these objects, passed as parameters, must have its Field equal to "Category". Otherwise, the backend responds with a 400 (BadRequest.)
+links:
+- text: Set-AzActivityLogAlert
+  href: ./Set-AzActivityLogAlert.yml
+- text: Enable-AzActivityLogAlert
+  href: ./Enable-AzActivityLogAlert.yml
+- text: Disable-AzActivityLogAlert
+  href: ./Disable-AzActivityLogAlert.yml
+- text: Get-AzActivityLogAlert
+  href: ./Get-AzActivityLogAlert.yml
+- text: Remove-AzActivityLogAlert
+  href: ./Remove-AzActivityLogAlert.yml
+- text: New-AzActionGroup
+  href: ./Get-AzActionGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActivityLogAlertCondition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azactivitylogalertcondition
+  Module Name: Az.Monitor
+  ms.assetid: 5E854358-CA9D-4336-BA6A-BF7B1FADAB50
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActivityLogAlertCondition.md
+  PlatyPS schema version: 2024-05-01

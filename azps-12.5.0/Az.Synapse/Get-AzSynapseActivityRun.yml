@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Get-AzSynapseActivityRun
+name: Get-AzSynapseActivityRun
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Gets information about activity runs for a pipeline run.
+description: |-
+  The **Get-AzSynapseActivityRun** cmdlet gets information about runs in workspace for the specified pipeline run that happened in the given timeframe. Additionally, you can specify filters for activity name and the status of the run.
+parameters:
+  cmdletParameters:
+  - name: ActivityName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the activity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pipeline name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineRunId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pipeline run identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunStartedAfter
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or after which the run event was updated in 'ISO 8601' format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunStartedBefore
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or before which the run event was updated in 'ISO 8601' format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The status of the pipeline run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseActivityRun
+        -WorkspaceName <String>
+        -PipelineName <String>
+        -PipelineRunId <String>
+        -RunStartedAfter <DateTimeOffset>
+        -RunStartedBefore <DateTimeOffset>
+        [-ActivityName <String>]
+        [-Status <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseActivityRun
+        -WorkspaceObject <PSSynapseWorkspace>
+        -PipelineName <String>
+        -PipelineRunId <String>
+        -RunStartedAfter <DateTimeOffset>
+        -RunStartedBefore <DateTimeOffset>
+        [-ActivityName <String>]
+        [-Status <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSActivityRunsQueryResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSynapseActivityRun -WorkspaceName ContosoWorkspace -PipelineName ContosoPipeline -PipelineRunId "f288712d-fb08-4cb8-96ef-82d3b9b30621" -RunStartedAfter [DateTimeOffset]"2018-09-01T21:00" -RunStartedBefore [DateTimeOffset]"2018-09-30T21:00"
+    ```
+
+    This command gets details about all activity runs in the pipeline called ContosoPipeline run with ID "f288712d-fb08-4cb8-96ef-82d3b9b30621" that happened between "2018-09-01T21:00" and "2018-09-30T21:00".
+- title: Example 2
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Get-AzSynapseActivityRun -PipelineName ContosoPipeline -PipelineRunId "f288712d-fb08-4cb8-96ef-82d3b9b30621" -RunStartedAfter [DateTimeOffset]"2018-09-01T21:00" -RunStartedBefore [DateTimeOffset]"2018-09-30T21:00"
+    ```
+
+    This command gets details about all activity runs in the pipeline called ContosoPipeline run with ID "f288712d-fb08-4cb8-96ef-82d3b9b30621" that happened between "2018-09-01T21:00" and "2018-09-30T21:00" through pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseActivityRun.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapseactivityrun
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseActivityRun.md
+  PlatyPS schema version: 2024-05-01

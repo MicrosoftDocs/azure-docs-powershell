@@ -1,0 +1,241 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Remove-AzDataFactoryV2Pipeline
+name: Remove-AzDataFactoryV2Pipeline
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Removes a pipeline from Data Factory.
+description: |-
+  The Remove-AzDataFactoryV2Pipeline cmdlet removes a pipeline from Azure Data Factory.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a data factory.
+      This cmdlet removes a pipeline from the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet without prompting for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Pipeline object.
+      This cmdlet removes the pipeline that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the pipeline to remove.
+    aliases:
+    - PipelineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure resource group.
+      This cmdlet removes a pipeline from the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID of the pipeline to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2Pipeline
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2Pipeline
+        [-InputObject] <PSPipeline>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2Pipeline
+        [-ResourceId] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipeline" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a pipeline'
+  description: |-
+    ```powershell
+    Remove-AzDataFactoryV2Pipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF"
+    ```
+
+    ```output
+    Confirm
+              Are you sure you want to remove pipeline 'DPWikisample' in data factory 'WikiADF'?
+              [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+              True
+    ```
+
+    This cmdlet removes the pipeline named DPWikisample from the data factory named WikiADF.
+    The command returns a value of $True.
+links:
+- text: Get-AzDataFactoryV2Pipeline
+  href: Get-AzDataFactoryV2Pipeline.yml
+- text: Set-AzDataFactoryV2Pipeline
+  href: Set-AzDataFactoryV2Pipeline.yml
+- text: Invoke-AzDataFactoryV2Pipeline
+  href: Invoke-AzDataFactoryV2Pipeline.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Remove-AzDataFactoryV2Pipeline.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryv2pipeline
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Remove-AzDataFactoryV2Pipeline.md
+  PlatyPS schema version: 2024-05-01

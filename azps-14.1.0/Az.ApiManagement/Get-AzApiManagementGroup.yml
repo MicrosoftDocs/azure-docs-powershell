@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementGroup
+name: Get-AzApiManagementGroup
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets all or specific API management groups.
+description: |-
+  The **Get-AzApiManagementGroup** cmdlet gets all or specific API management groups.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an instance of PsApiManagementContext.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the group ID.
+      If specified, the cmdlet attempts to find the group by the identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByGroupId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the management group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of existing product.
+      If specified will return all groups the product assigned to.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByProductId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of existing product.
+      If specified the cmdlet will return all groups the product assigned to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByUserId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementGroup
+        -Context <PsApiManagementContext>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllGroups
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementGroup
+        -Context <PsApiManagementContext>
+        [-GroupId <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByGroupId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementGroup
+        -Context <PsApiManagementContext>
+        [-Name <String>]
+        [-UserId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByUserId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementGroup
+        -Context <PsApiManagementContext>
+        [-Name <String>]
+        [-ProductId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByProductId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all groups'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementGroup -Context $apimContext
+    ```
+
+    This command gets all groups.
+- title: 'Example 2: Get a group by ID'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementGroup -Context $apimContext -GroupId "0123456789"
+    ```
+
+    This command gets  the group ID named 0123456789.
+- title: 'Example 3: Get a group by name'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementGroup -Context $apimContext -Name "Group0002"
+    ```
+
+    This command gets the group named Group0002.
+- title: 'Example 4: Get all user groups'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementGroup -Context $apimContext -UserId "0123456789"
+    ```
+
+    This command gets all user groups with the user ID named 0123456789.
+links:
+- text: New-AzApiManagementGroup
+  href: ./New-AzApiManagementGroup.yml
+- text: Remove-AzApiManagementGroup
+  href: ./Remove-AzApiManagementGroup.yml
+- text: Set-AzApiManagementGroup
+  href: ./Set-AzApiManagementGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementgroup
+  Module Name: Az.ApiManagement
+  ms.assetid: EEB52CCA-F5D6-4ACB-A6C9-D07C510A5878
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementGroup.md
+  PlatyPS schema version: 2024-05-01

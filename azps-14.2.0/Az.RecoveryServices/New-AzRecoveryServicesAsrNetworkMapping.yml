@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.New-AzRecoveryServicesAsrNetworkMapping
+name: New-AzRecoveryServicesAsrNetworkMapping
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Creates an ASR network mapping between two networks.
+description: |-
+  The **New-AzRecoveryServicesAsrNetworkMapping** cmdlet starts the operation of creating an ASR network mapping between two networks and returns the ASR job object for the ASR job used to track the operation.
+parameters:
+  cmdletParameters:
+  - name: AzureToAzure
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to create AzureToAzure scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the ASR network mapping to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryAzureNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure virtual network ID of the primary network for the mapping.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryFabric
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ASR fabric where mapping should be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryNetwork
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary network object for the ASR network mapping.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: EnterpriseToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryAzureNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery azure network ID for the network mapping.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: EnterpriseToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryFabric
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Site Recovery fabric object corresponding to the recovery Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryNetwork
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery network object for the ASR network mapping.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRecoveryServicesAsrNetworkMapping
+        -Name <String>
+        -PrimaryNetwork <ASRNetwork>
+        -RecoveryNetwork <ASRNetwork>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToEnterprise
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzRecoveryServicesAsrNetworkMapping
+        -Name <String>
+        -PrimaryFabric <ASRFabric>
+        -PrimaryAzureNetworkId <String>
+        -RecoveryFabric <ASRFabric>
+        -RecoveryAzureNetworkId <String>
+        [-AzureToAzure]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureToAzure
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRecoveryServicesAsrNetworkMapping
+        -Name <String>
+        -PrimaryNetwork <ASRNetwork>
+        -RecoveryAzureNetworkId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToAzure
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRNetwork" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $currentJob = New-AzRecoveryServicesAsrNetworkMapping -Name $NetworkMapName -PrimaryNetwork $PrimaryNetwork -RecoveryNetwork $RecoveryNetwork
+    ```
+
+    Starts the network mapping creation operation using the specified name, primary and recovery networks, and returns an ASR job to track the operation.
+- title: Example 2
+  description: |-
+    ```powershell
+    $currentJob = New-AzRecoveryServicesAsrNetworkMapping -AzureToAzure -Name "mappingName" -PrimaryFabric $AzureFabric `
+     -PrimaryAzureNetworkId $AzureNetworkId -RecoveryFabric $RecoveryAzureFabric -RecoveryAzureNetworkId $RecoveryNetworkId
+    ```
+
+    Starts the network mapping for creation operation using the specified name, primary and recovery networks, and returns an ASR job to track the operation(Azure to Azure scenario).
+links:
+- text: Get-AzRecoveryServicesAsrNetworkMapping
+  href: ./Get-AzRecoveryServicesAsrNetworkMapping.yml
+- text: Remove-AzRecoveryServicesAsrNetworkMapping
+  href: ./Remove-AzRecoveryServicesAsrNetworkMapping.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrNetworkMapping.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/new-azrecoveryservicesasrnetworkmapping
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrNetworkMapping.md
+  PlatyPS schema version: 2024-05-01

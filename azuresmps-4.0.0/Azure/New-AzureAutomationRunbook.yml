@@ -1,0 +1,175 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureAutomationRunbook
+name: New-AzureAutomationRunbook
+module: Azure
+isPreview: false
+summary: |-
+  Creates a runbook.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **New-AzureAutomationRunbook** cmdlet creates a new, empty Microsoft Azure Automation runbook.
+  Specify a name to create a new runbook.
+
+  You can also specify the path to a Windows PowerShell script (.ps1 ) file to import a runbook.
+  The script to import must contain a single Windows PowerShell Workflow definition.
+  The name of this Windows PowerShell Workflow becomes the name of the runbook.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the runbook.
+    aliases:
+    - RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path.
+    aliases:
+    - RunbookPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies tags for the runbook.
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationRunbook
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Description <String>]
+        [-Tags <String[]>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationRunbook
+        -Path <String>
+        -AutomationAccountName <String>
+        [-Description <String>]
+        [-Tags <String[]>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPath
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Runbook" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a runbook'
+  description: |-
+    ```
+    PS C:\> New-AzureAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook02"
+    ```
+
+    This command creates a new runbook named Runbook02 in the Automation account named Contoso17.
+links:
+- text: Get-AzureAutomationRunbook
+  href: ./Get-AzureAutomationRunbook.yml
+- text: Publish-AzureAutomationRunbook
+  href: ./Publish-AzureAutomationRunbook.yml
+- text: Remove-AzureAutomationRunbook
+  href: ./Remove-AzureAutomationRunbook.yml
+- text: Set-AzureAutomationRunbook
+  href: ./Set-AzureAutomationRunbook.yml
+- text: Start-AzureAutomationRunbook
+  href: ./Start-AzureAutomationRunbook.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0B496085-670D-45F7-B989-D4541A3811FF
+  PlatyPS schema version: 2024-05-01

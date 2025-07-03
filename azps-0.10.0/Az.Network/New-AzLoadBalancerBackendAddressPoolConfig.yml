@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzLoadBalancerBackendAddressPoolConfig
+name: New-AzLoadBalancerBackendAddressPoolConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a backend address pool configuration for a load balancer.
+description: |-
+  The **New-AzLoadBalancerBackendAddressPoolConfig** cmdlet creates a backend address pool configuration for an Azure load balancer.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the address pool configuration to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzLoadBalancerBackendAddressPoolConfig
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBackendAddressPool" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a backend address pool configuration for a load balancer'
+  description: |-
+    ```
+    PS C:\>New-AzLoadBalancerBackendAddressPoolConfig -Name "BackendAddressPool02"
+    ```
+
+    This command creates a backend address pool configuration named BackendAddressPool02 for a load balancer.
+links:
+- text: Add-AzLoadBalancerBackendAddressPoolConfig
+  href: ./Add-AzLoadBalancerBackendAddressPoolConfig.yml
+- text: Get-AzLoadBalancerBackendAddressPoolConfig
+  href: ./Get-AzLoadBalancerBackendAddressPoolConfig.yml
+- text: Remove-AzLoadBalancerBackendAddressPoolConfig
+  href: ./Remove-AzLoadBalancerBackendAddressPoolConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerBackendAddressPoolConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancerbackendaddresspoolconfig
+  Module Name: Az.Network
+  ms.assetid: 67AD15B0-94EB-486F-8C17-606EA5F702D3
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerBackendAddressPoolConfig.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,447 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADServicePrincipal
+name: Get-AzADServicePrincipal
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists entities from service principals or get entity from service principals by key
+description: |-
+  Lists entities from service principals or get entity from service principals by key
+parameters:
+  cmdletParameters:
+  - name: AppendSelected
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Append properties selected with default properties when this switch is on, only works with parameter '-Select'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      application id of serviceprincipal
+    aliases:
+    - AppId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      The service principal object, could be used as pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsistencyLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the requested consistency level.
+      Documentation URL: https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include count of items
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CountVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a count of the total number of items in a collection.
+      By default, this variable will be set in the global scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      serviceprincipal display name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayNameBeginsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      serviceprincipal display name starts with
+    aliases:
+    - DisplayNameStartsWith
+    - SearchString
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter items by property values, for more detail about filter query please see: https://learn.microsoft.com/en-us/graph/filter-query-parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the first 'n' objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      key: id of servicePrincipal
+    aliases:
+    - ServicePrincipalId
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Orderby
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Order items by property values
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Search
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search items by search phrases
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Select properties to be returned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      serviceprincipal name
+    aliases:
+    - SPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first 'n' objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        [-Select <String[]>]
+        [-Count]
+        [-Filter <String>]
+        [-Orderby <String[]>]
+        [-Search <String>]
+        [-ConsistencyLevel <String>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [-CountVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -ObjectId <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -DisplayNameBeginsWith <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SearchStringParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -DisplayName <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -ApplicationId <Guid>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -ApplicationObject <IMicrosoftGraphApplication>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADServicePrincipal
+        -ServicePrincipalName <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SPNParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphServicePrincipal" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get service principal by display name'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -DisplayName $name
+    ```
+
+    Get service principal by display name
+- title: 'Example 2: Search for service principal display name starts with'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -DisplayNameStartsWith $prefix
+    ```
+
+    Search for service principal display name starts with
+- title: 'Example 3: List service principals'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -First 10 -Select Tags -AppendSelected
+    ```
+
+    List first 10 service principals and append property 'Tags' after default properties: 'DisplayName', 'Id', 'DeletedDateTime', 'ServicePrincipalNames', 'AppId'
+- title: 'Example 4: Get service principal by application Id'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -ApplicationId $appId
+    ```
+
+    Get service principal by application Id
+- title: 'Example 5: Get service principal by pipeline input'
+  description: |-
+    ```powershell
+    Get-AzADApplication -DisplayName $name | Get-AzADServicePrincipal
+    ```
+
+    Get service principal by pipeline input
+- title: 'Example 6: Get service principal with filter'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -Filter "startsWith(DisplayName,'some-name')"
+    ```
+
+    Get service principal with filter
+- title: 'Example 7: Assign OdataCount to a variable'
+  description: |-
+    ```powershell
+    Get-AzADServicePrincipal -First 10 -ConsistencyLevel eventual -Count -CountVariable 'result'
+    $result
+    ```
+
+    Assign OdataCount to a variable
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADServicePrincipal.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azadserviceprincipal
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADServicePrincipal.md
+  PlatyPS schema version: 2024-05-01

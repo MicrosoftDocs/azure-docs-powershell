@@ -1,0 +1,102 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureVMImageDiskConfigSet
+name: New-AzureVMImageDiskConfigSet
+module: Azure
+isPreview: false
+summary: |-
+  Creates a disk configuration set object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureVMImageDiskConfigSet** cmdlet creates a disk configuration set object that is passed to the image update cmdlet.
+  It encapsulates the OSDiskConfig and the DataDiskConfig object.
+  Use the **Set-AzureVMImageOSDiskConfig** and **Set-AzureVMImageDataDiskConfig** cmdlets to set the OS Disk and Data Disk properties for the virtual machine image.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureVMImageDiskConfigSet
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.ServiceManagement.Model.VirtualMachineImageDiskConfigSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a disk configuration set object'
+  description: |-
+    ```
+    PS C:\> $Disk = New-AzureDiskConfigSet
+    PS C:\> $Disk = Set-AzureOSDiskConfig -DiskConfig $Disk -HostCaching ReadWrite
+    PS C:\> $Disk = Set-AzureDataDiskConfig -DiskConfig $Disk -Name "Test" -HostCaching "ReadWrite" -LUN 0
+    PS C:\> Update-AzureVMImage -ImageName "Image2" -Label "Test1" -Description "Test1" -DiskConfigSet $Disk;
+    ```
+
+    This command creates a disk configuration set object and stores the results in the variable named $Disk.
+    After the disk configuration is created, it is used to set the OSDiskConfig and DataDiskConfig.
+    Then the virtual machine is updated with the configuration.
+links:
+- text: Get-AzureVMImageDiskConfigSet
+  href: ./Get-AzureVMImageDiskConfigSet.yml
+- text: Set-AzureVMImageOSDiskConfig
+  href: ./Set-AzureVMImageOSDiskConfig.yml
+- text: Set-AzureVMImageDataDiskConfig
+  href: ./Set-AzureVMImageDataDiskConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F420A47F-D036-4B31-AA59-97CFC9C79E75
+  PlatyPS schema version: 2024-05-01

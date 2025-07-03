@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.Get-AzStackHCIVMAttestation
+name: Get-AzStackHCIVMAttestation
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Get-AzStackHCIVMAttestation shows a list of guests added to IMDS Attestation on a node.
+description: |-
+  Get-AzStackHCIVMAttestation shows a list of guests added to IMDS Attestation on a node.
+parameters:
+  cmdletParameters:
+  - name: Local
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Only retrieve guests with Attestation from the node executing the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIVMAttestation
+        [-Local]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    Get-AzStackHCIVMAttestation
+    ```
+
+    ```output
+    Name        AttestationHost    Status
+    ----        ---------------    ------
+    183hcinode1 HCINODE2        Connected
+    bhat2       HCINODE2        Connected
+    ppnt3n1     HCINODE2        Connected
+    ppt3n0      HCINODE2        Connected
+    ppt5pn0     HCINODE2        Connected
+    ppt6pn0     HCINODE2        Connected
+    ppt7pn0     HCINODE2        Connected
+    ```
+
+    Get all guests with IMDS Attestation on cluster.
+- title: 'Example 2:'
+  description: |-
+    ```powershell
+    Get-AzStackHCIVMAttestation -Local
+    ```
+
+    ```output
+    Name        AttestationHost    Status
+    ----        ---------------    ------
+    183hcinode1 HCINODE2        Connected
+    bhat2       HCINODE2        Connected
+    ppnt3n1     HCINODE2        Connected
+    ppt3n0      HCINODE2        Connected
+    ppt5pn0     HCINODE2        Connected
+    ppt6pn0     HCINODE2        Connected
+    ppt7pn0     HCINODE2        Connected
+    ```
+
+    Gets guests with Attestation from the node executing the cmdlet.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIVMAttestation.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhcivmattestation
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIVMAttestation.md
+  PlatyPS schema version: 2024-05-01

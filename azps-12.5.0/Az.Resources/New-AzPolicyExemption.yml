@@ -1,0 +1,348 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzPolicyExemption
+name: New-AzPolicyExemption
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates or updates a policy exemption.
+description: |-
+  The **New-AzPolicyExemption** cmdlet creates a policy exemption with the given scope and name.
+parameters:
+  cmdletParameters:
+  - name: AssignmentScopeValidation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to validate the exemption is at or under the assignment scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackwardCompatible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return artifacts using legacy format placing policy-specific properties in a property bag object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This message will be part of response in case of policy violation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the policy assignment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExemptionCategory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy exemption category
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiresOn
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The expiration date and time (in UTC ISO 8601 format yyyy-MM-ddTHH:mm:ssZ) of the policy exemption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy assignment metadata.
+      Metadata is an open ended object and is typically a collection of key value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy exemption.
+    aliases:
+    - PolicyExemptionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyAssignment
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy assignment id filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinitionReferenceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The policy definition reference ID list when the associated policy assignment is for a policy set (initiative).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceSelector
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IResourceSelector" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The resource selector list to filter policies by resource properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the policy exemption.
+      Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPolicyExemption
+        -Name <String>
+        -ExemptionCategory <String>
+        -PolicyAssignment <PSObject>
+        [-Scope <String>]
+        [-PolicyDefinitionReferenceId <String[]>]
+        [-AssignmentScopeValidation <String>]
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-ExpiresOn <DateTime>]
+        [-Metadata <String>]
+        [-ResourceSelector <IResourceSelector[]>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyExemption" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Policy exemption at subscription level'
+  description: |-
+    ```powershell
+    $Subscription = Get-AzSubscription -SubscriptionName 'Subscription01'
+    $Assignment = Get-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment'
+    New-AzPolicyExemption -Name 'VirtualMachinePolicyExemption' -PolicyAssignment $Assignment -Scope "/subscriptions/$($Subscription.Id)" -ExemptionCategory Waiver
+    ```
+
+    The first command gets a subscription named Subscription01 by using the Get-AzSubscription cmdlet and stores it in the $Subscription variable.
+    The second command gets the policy assignment named VirtualMachinePolicyAssignment by using the Get-AzPolicyAssignment cmdlet and stores it in the $Assignment variable.
+    The final command exempts the policy assignment in $Assignment at the level of the subscription identified by the subscription scope string.
+- title: 'Example 2: Policy exemption at resource group level'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Assignment = Get-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment'
+    New-AzPolicyExemption -Name 'VirtualMachinePolicyAssignment' -PolicyAssignment $Assignment -Scope $ResourceGroup.ResourceId -ExemptionCategory Mitigated
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The second command gets the policy assignment named VirtualMachinePolicyAssignment by using the Get-AzPolicyAssignment cmdlet and stores it in the $Assignment variable.
+    The final command exempts the policy assignment in $Assignment at the level of the resource group identified by the **ResourceId** property of $ResourceGroup.
+- title: 'Example 3: Policy exemption at management group level'
+  description: |-
+    ```powershell
+    $ManagementGroup = Get-AzManagementGroup -GroupName 'AManagementGroup'
+    $Assignment = Get-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment'
+    New-AzPolicyExemption -Name 'VirtualMachinePolicyAssignment' -PolicyAssignment $Assignment -Scope $ManagementGroup.Id -ExemptionCategory Mitigated
+    ```
+
+    The first command gets a management group named AManagementGroup by using the Get-AzManagementGroup cmdlet and stores it in the $ManagementGroup variable.
+    The second command gets the policy assignment named VirtualMachinePolicyAssignment by using the Get-AzPolicyAssignment cmdlet and stores it in the $Assignment variable.
+    The final command exempts the policy assignment in $Assignment at the level of the management group identified by the **Id** property of $ManagementGroup.
+- title: 'Example 4: Policy exemption at resource level'
+  description: |-
+    ```powershell
+    $VM = Get-AzVM -Name 'SpecialVM'
+    $Assignment = Get-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment'
+    New-AzPolicyExemption -Name 'VirtualMachinePolicyAssignment' -PolicyAssignment $Assignment -Scope $SpecialVM.Id -ExemptionCategory Waiver
+    ```
+
+    The first command gets a VM named SpecialVM by using the Get-AzVM cmdlet and stores it in the $VM variable.
+    The second command gets the policy assignment named VirtualMachinePolicyAssignment by using the Get-AzPolicyAssignment cmdlet and stores it in the $Assignment variable.
+    The final command exempts the resource identified by the **Id** property of $VM from the policy assignment in $Assignment.
+- title: 'Example 5: Policy exemption with resource selector'
+  description: |-
+    ```powershell
+    $Assignment = Get-AzPolicyAssignment -Name 'VirtualMachineAssignment'
+    $ResourceSelector = @{Name = "MyLocationSelector"; Selector = @(@{Kind = "resourceLocation"; In = @("eastus", "eastus2")})}
+    New-AzPolicyExemption -Name 'VirtualMachinePolicyExemption' -PolicyAssignment $Assignment -ResourceSelector $ResourceSelector
+    ```
+
+    The first command gets the policy assignment named VirtualMachineAssignment by using the Get-AzPolicyAssignment cmdlet and stores it in the $Assignment variable.
+    The second command creates a resource selector object that will be used to specify the exemption should only apply to resources located in East US or East US 2 and stores it in the $ResourceSelector variable.
+    The final command creates a policy exemption for the assignment $Assignment with the resource selector specified by $ResourceSelector.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyExemption.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/new-azpolicyexemption
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyExemption.md
+  PlatyPS schema version: 2024-05-01

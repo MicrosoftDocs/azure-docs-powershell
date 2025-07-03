@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.Get-AzDataBoxJob
+name: Get-AzDataBoxJob
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Gets information about the specified job.
+description: |-
+  Gets information about the specified job.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      $expand is supported on details parameter for job, which provides details on the job stages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the job Resource within the specified resource group.
+      job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+    aliases:
+    - JobName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      $skipToken is supported on Get list of jobs, which provides the next page in the list of jobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Subscription Id
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataBoxJob
+        [-SubscriptionId <String[]>]
+        [-SkipToken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataBoxJob
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataBoxJob
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-SkipToken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IJobResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets a particular job'
+  description: |-
+    ```powershell
+    Get-AzDataBoxJob -Name "Powershell10" -ResourceGroupName "resourceGroupName"  -SubscriptionId "SubscriptionId"
+    ```
+
+    ```output
+    Name         Location Status        TransferType  SkuName IdentityType DeliveryType Detail
+    ----         -------- ------        ------------  ------- ------------ ------------ ------
+    Powershell10 WestUS   DeviceOrdered ImportToAzure DataBox None         NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails
+    ```
+
+    Gets a particular job
+- title: 'Example 2: List all job under a subscription'
+  description: |-
+    ```powershell
+    Get-AzDataBoxJob -SubscriptionId "SubscriptionId"
+    ```
+
+    ```output
+    Name        Location      Status        TransferType    SkuName    IdentityType  DeliveryType Detail
+    ----        --------      ------        ------------    -------    ------------  ------------ ------
+    brtestdbd  brazilsouth   DeviceOrdered ImportToAzure   DataBoxDisk None          NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxDiskJobDetails
+    testorder  uksouth       Cancelled     ImportToAzure   DataBoxDisk None          NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxDiskJobDetails
+    ```
+
+    List all job under a subscription
+- title: 'Example 3: List all job under a resourcegroup'
+  description: |-
+    ```powershell
+    Get-AzDataBoxJob -ResourceGroupName "resourceGroupName"
+    ```
+
+    ```output
+    Name                   Location Status        TransferType    SkuName IdentityType   DeliveryType Detail
+    ----                   -------- ------        ------------    ------- ------------   ------------ ------
+    abcbnkndnkndn          westus   DeviceOrdered ImportToAzure   DataBox None           NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails
+    abcbnkndnkndn-Clone    westus   DeviceOrdered ImportToAzure   DataBox None           NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails
+    abcOrder               westus   Cancelled     ImportToAzure   DataBox None           NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails
+    ```
+
+    List all job under a resource group
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Get-AzDataBoxJob.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.databox/get-azdataboxjob
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Get-AzDataBoxJob.md
+  PlatyPS schema version: 2024-05-01

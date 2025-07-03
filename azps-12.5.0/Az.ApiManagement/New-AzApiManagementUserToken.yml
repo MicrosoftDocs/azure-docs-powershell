@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagementUserToken
+name: New-AzApiManagementUserToken
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Generates a Shared Access Token for the User.
+description: |-
+  The cmdlet **New-AzApiManagementUserToken** generates a Shared Access Token for a specified User
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expiry
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Expiry of the Token.
+      If not specified, the token is created to expire after 8 hours.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyType
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserKeyType" data-throw-if-not-resolved="False" />
+    description: |-
+      User Key to use when generating the Token.
+      This parameter is optional.
+    acceptedValues:
+    - Primary
+    - Secondary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of existing user.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementUserToken
+        -Context <PsApiManagementContext>
+        -UserId <String>
+        [-KeyType <PsApiManagementUserKeyType>]
+        [-Expiry <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserKeyType" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementUserToken" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Generate a Shared Access Token for Git User'
+  description: |-
+    ```powershell
+    $context = New-AzApiManagementContext -ResourceGroupName powershelltest -ServiceName powershellsdkservice
+    $gitAccess=Get-AzApiManagementTenantAccess -Context $context
+    New-AzApiManagementUserToken -Context $context -UserId $gitAccess.Id
+    ```
+
+    ```output
+    UserId      TokenExpiry         KeyType UserToken
+    ------      -----------         ------- ---------
+    integration 5/3/2019 2:02:34 PM Primary integration&201905031402&zOwopJChWAA6oaqGHMyf7Ol9wUCPcrtdmBmff8c2lcmZk9Y...
+    ```
+
+    This script get the Git user configured in ApiManagement service and generates a Shared Access Token using the Primary Key valid for 8 hours.
+- title: Example 2
+  description: |-
+    Generates a Shared Access Token for the User. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    New-AzApiManagementUserToken -Context <PsApiManagementContext> -Expiry <DateTime> -UserId <String>
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementUserToken.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementusertoken
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementUserToken.md
+  PlatyPS schema version: 2024-05-01

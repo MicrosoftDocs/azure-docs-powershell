@@ -1,0 +1,270 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Disconnect-AzP2SVpnGatewayVpnConnection
+name: Disconnect-AzP2SVpnGatewayVpnConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Disconnect given connected vpn client connections with a given p2s vpn gateway
+description: |-
+  The **Disconnect-AzP2sVpnGatewayVpnConnection** cmdlet enables you to disconnect given current point to site connection from P2SVpnGateway.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The p2s vpn gateway object to be modified
+    aliases:
+    - P2SVpnGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - P2SVpnGatewayName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item on which this operation is being performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      P2s Virtual network gateway resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnConnectionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Vpn Connection Ida
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disconnect-AzP2SVpnGatewayVpnConnection
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnConnectionId <String[]>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Disconnect-AzP2SVpnGatewayVpnConnection
+        -ResourceId <String>
+        -VpnConnectionId <String[]>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disconnect-AzP2SVpnGatewayVpnConnection
+        -InputObject <PSP2SVpnGateway>
+        -VpnConnectionId <String[]>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Disconnect-AzP2SVpnGatewayVpnConnection -ResourceName 683482ade8564515aed4b8448c9757ea-westus-gw -ResourceGroupName P2SCortexGATesting -VpnConnectionId @("IKEv2_7e1cfe59-5c7c-4315-a876-b11fbfdfeed4")
+    ```
+
+    ```output
+    ResourceGroupName              : P2SCortexGATesting
+    Name                           : 683482ade8564515aed4b8448c9757ea-westus-gw
+    Id                             : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482ade8564515a
+                                     ed4b8448c9757ea-westus-gw
+    Location                       : westus
+    VpnGatewayScaleUnit            : 1
+    VirtualHub                     : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub
+    VpnServerConfiguration         : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/WestUsConfig
+    VpnServerConfigurationLocation :
+    VpnClientConnectionHealth      : null
+    Type                           : Microsoft.Network/p2sVpnGateways
+    ProvisioningState              : Succeeded
+    P2SConnectionConfigurations    : [
+                                       {
+                                         "ProvisioningState": "Succeeded",
+                                         "VpnClientAddressPool": {
+                                           "AddressPrefixes": [
+                                             "192.168.2.0/24"
+                                           ]
+                                         },
+                                         "Name": "P2SConnectionConfigDefault",
+                                         "Etag": "W/\"4b96e6a2-b4d8-46b3-9210-76d40f359bef\"",
+                                         "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482
+                                     ade8564515aed4b8448c9757ea-westus-gw/p2sConnectionConfigurations/P2SConnectionConfigDefault"
+                                       }
+                                     ]
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Disconnect-AzP2SVpnGatewayVpnConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/disconnect-azp2svpngatewayvpnconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Disconnect-AzP2SVpnGatewayVpnConnection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageCache.New-AzStorageCachePrimingJobObject
+name: New-AzStorageCachePrimingJobObject
+module: Az.StorageCache
+isPreview: false
+summary: |-
+  Create an in-memory object for PrimingJob.
+description: |-
+  Create an in-memory object for PrimingJob.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The priming job name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimingManifestUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL for the priming manifest file to download.
+      This file must be readable from the HPC Cache.
+      When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageCachePrimingJobObject
+        -Name <String>
+        -PrimingManifestUrl <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.Api20230501.PrimingJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for PrimingJob.'
+  description: |-
+    ```powershell
+    New-AzStorageCachePrimingJobObject -Name azps-primingjob -PrimingManifestUrl "https://contosostorage.blob.core.windows.net/contosoblob/00000000_00000000000000000000000000000000.00000000000.FFFFFFFF.00000000?sp=r&st=2021-08-11T19:33:35Z&se=2021-08-12T03:33:35Z&spr=https&sv=2020-08-04&sr=b&sig=<secret-value-from-key>"
+    ```
+
+    ```output
+    Detail Name            PercentComplete PrimingManifestUrl
+    ------ ----            --------------- ------------------
+           azps-primingjob                 https://contosostorage.blo...
+    ```
+
+    Create an in-memory object for PrimingJob.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCachePrimingJobObject.md
+  document type: cmdlet
+  external help file: Az.StorageCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageCache/new-AzStorageCachePrimingJobObject
+  Module Name: Az.StorageCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCachePrimingJobObject.md
+  PlatyPS schema version: 2024-05-01

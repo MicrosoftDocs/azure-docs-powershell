@@ -1,0 +1,193 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.New-AzRecoveryServicesAsrvCenter
+name: New-AzRecoveryServicesAsrvCenter
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Adds a vCenter server to discover protectable items from.
+description: |-
+  The **New-AzRecoveryServicesAsrvCenter** cmdlet adds a vCenter server to discover protectable items from. This cmdlet registers the vCenter server for discovery with the Configuration server.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRunAsAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      User login credential Account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Fabric
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric" data-throw-if-not-resolved="False" />
+    description: |-
+      ASR fabric corresponding to the Configuration server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpOrHostName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IPv4 address or FQDN of the vCenter server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the vCenter server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The TCP port on the vCenter server to use for discovery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRecoveryServicesAsrvCenter
+        -Fabric <ASRFabric>
+        -Name <String>
+        -Account <ASRRunAsAccount>
+        -Port <Int32>
+        -IpOrHostName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRFabric" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzRecoveryServicesAsrvCenter -Account $ConfigServer.FabricSpecificDetails.RunAsAccounts[1] -Fabric $ConfigServer -Name InmTest59 -Port 443 -IpOrHostName 10.150.209.6
+    ```
+
+    ```output
+    Asr Job for vCenter creation.
+    ```
+
+    Adds a vCenter server to discover protectable items from.
+- title: Example 2
+  description: |-
+    Adds a vCenter server to discover protectable items from. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    New-AzRecoveryServicesAsrvCenter -Account $fabric.FabricSpecificDetails.RunAsAccounts[0] -Fabric $Fabric -IpOrHostName <String> -Name 'V2VM' -Port <Int32>
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrvCenter.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/new-azrecoveryservicesasrvcenter
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/New-AzRecoveryServicesAsrvCenter.md
+  PlatyPS schema version: 2024-05-01

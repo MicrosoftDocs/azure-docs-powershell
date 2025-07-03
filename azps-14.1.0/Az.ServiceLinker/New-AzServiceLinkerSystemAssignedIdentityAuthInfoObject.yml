@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceLinker.New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
+name: New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
+module: Az.ServiceLinker
+isPreview: false
+summary: |-
+  Create an in-memory object for SystemAssignedIdentityAuthInfo.
+description: |-
+  Create an in-memory object for SystemAssignedIdentityAuthInfo.
+parameters:
+  cmdletParameters:
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Optional, this value specifies the Azure role to be assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username created in the database which is mapped to a user in AAD.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
+        [-Role <String[]>]
+        [-UserName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.SystemAssignedIdentityAuthInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: Create linker's auth info with system assigned identity"
+  description: |-
+    ```powershell
+    New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
+    ```
+
+    ```output
+    AuthType
+    --------
+    systemAssignedIdentity
+    ```
+
+    Create linker's auth info with system assigned identity
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject.md
+  document type: cmdlet
+  external help file: Az.ServiceLinker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkersystemassignedidentityauthinfoobject
+  Module Name: Az.ServiceLinker
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject.md
+  PlatyPS schema version: 2024-05-01

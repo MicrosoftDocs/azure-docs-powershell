@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecurityPricing
+name: Get-AzSecurityPricing
+module: Az.Security
+isPreview: false
+summary: |-
+  Gets the Azure Defender plans for a subscription in Azure Security Center.
+description: |-
+  You can view each Azure Defender plan, per subscription, using this cmdlet.
+
+  For details about Azure Defender and the available plans, see [Introduction to Azure Defender](https://learn.microsoft.com/azure/security-center/azure-defender).
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityPricing
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityPricing
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionLevelResource
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityPricing
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.Pricings.PSSecurityPricing" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSecurityPricing
+    ```
+
+    ```output
+    Id                                                                                                                      Name                          PricingTier   SubPlan             FreeTrialRemainingTime    Deprecated  ReplacedBy
+    --                                                                                                                      ----                          -----------   -------             ----------------------    ----------  ----------
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/VirtualMachines               VirtualMachines               Standard      P2                  00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/SqlServers                    SqlServers                    Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/AppServices                   AppServices                   Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/StorageAccounts               StorageAccounts               Standard      PerStorageAccount   00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/SqlServerVirtualMachines      SqlServerVirtualMachines      Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/KubernetesService             KubernetesService             Free                              00:00:00                  True        [Containers]
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/ContainerRegistry             ContainerRegistry             Free                              00:00:00                  True        [Containers]
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/KeyVaults                     KeyVaults                     Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/Dns                           Dns                           Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/Arm                           Arm                           Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/OpenSourceRelationalDatabases OpenSourceRelationalDatabases Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/CosmosDbs                     CosmosDbs                     Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/Containers                    Containers                    Standard                          00:00:00
+    /subscriptions/c32e05d9-7207-4e22-bdf4-4f7d9c72e5fd/providers/Microsoft.Security/pricings/CloudPosture                  CloudPosture                  Free                              00:00:00
+    ```
+
+    Gets the status of each Azure Defender plan for the subscription.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzSecurityPricing -ResourceId '/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/pricings/VirtualMachines'
+    ```
+
+    Gets pricing details of the specific resource ID. Where ResourceId is one of the IDs returned by `Get-AzSecurityPricing`.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzSecurityPricing -Name 'VirtualMachines'
+    ```
+
+    ```output
+    Id                     : /subscriptions/10329fc1-5a3b-443c-9054-83d13abd64db/providers/Microsoft.Security/pricings/VirtualMachines
+    Name                   : VirtualMachines
+    PricingTier            : Standard
+    FreeTrialRemainingTime : 00:00:00
+    SubPlan                : P2
+    Extensions             : [{"name":"MdeDesignatedSubscription","isEnabled":"False","additionalExtensionProperties":null,"operationStatus":null},{"name":"AgentlessVmScanning","isEnabled":"True","additionalExtensionProperties":{"ExclusionTags":"[{\"key\":\"Microsoft\",\"value\":\"Defender\"},{\"key\":\"For\",\"value\":\"Cloud\"}]"},"operationStatus":null}]
+    ```
+
+    Gets pricing details of the named Azure Defender plan. Where `name` is one of the names returned by `Get-AzSecurityPricing`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityPricing.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecurityPricing
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityPricing.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,252 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TrafficManager.Disable-AzTrafficManagerEndpoint
+name: Disable-AzTrafficManagerEndpoint
+module: Az.TrafficManager
+isPreview: false
+summary: |-
+  Disables an endpoint in a Traffic Manager profile.
+description: |-
+  The **Disable-AzTrafficManagerEndpoint** cmdlet disables an endpoint in an Azure Traffic Manager profile.
+
+  You can use the pipeline operator to pass a **TrafficManagerEndpoint** object to this cmdlet, or you can pass a **TrafficManagerEndpoint** object using the *TrafficManagerEndpoint* parameter.
+
+  Alternatively, you can specify the endpoint name and type by using the *Name* and *Type* parameters, together with the *ProfileName* and *ResourceGroupName* parameters.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Traffic Manager endpoint that this cmdlet disables.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a Traffic Manager profile in which this cmdlet disables an endpoint.
+      To obtain a profile, use the Get-AzTrafficManagerProfile cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+      This cmdlet disables a Traffic Manager endpoint in the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerEndpoint
+    type: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Traffic Manager endpoint that this cmdlet disables.
+      To obtain a **TrafficManagerEndpoint** object, use the Get-AzTrafficManagerEndpoint cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of endpoint that this cmdlet adds to the Traffic Manager profile.
+      Valid values are:
+
+      - AzureEndpoints
+      - ExternalEndpoints
+      - NestedEndpoints
+    acceptedValues:
+    - AzureEndpoints
+    - ExternalEndpoints
+    - NestedEndpoints
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzTrafficManagerEndpoint
+        -Name <String>
+        -Type <String>
+        -ProfileName <String>
+        -ResourceGroupName <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fields
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-AzTrafficManagerEndpoint
+        -TrafficManagerEndpoint <TrafficManagerEndpoint>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerEndpoint" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable an endpoint by name'
+  description: |-
+    ```powershell
+    Disable-AzTrafficManagerEndpoint -Name "contoso" -ProfileName "ContosoProfile" -ResourceGroupName ResourceGroup11 -Type ExternalEndpoints
+    ```
+
+    This command disables the external endpoint named contoso in the profile named ContosoProfile in resource group ResourceGroup11.
+    The command prompts you for confirmation.
+- title: 'Example 2: Disable an endpoint by using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzTrafficManagerEndpoint -Name "contoso" -Type ExternalEndpoints -ProfileName "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzTrafficManagerEndpoint -Force
+    ```
+
+    This command gets the external endpoint named Contoso from the profile named ContosoProfile in ResourceGroup11.
+    The command then passes that endpoint to the **Disable-AzTrafficManagerEndpoint** cmdlet by using the pipeline operator.
+    That cmdlet disables that endpoint.
+    The command specifies the *Force* parameter.
+    Therefore, it does not prompt you for confirmation.
+links:
+- text: Enable-AzTrafficManagerEndpoint
+  href: ./Enable-AzTrafficManagerEndpoint.yml
+- text: Get-AzTrafficManagerEndpoint
+  href: ./Get-AzTrafficManagerEndpoint.yml
+- text: Get-AzTrafficManagerProfile
+  href: ./Get-AzTrafficManagerProfile.yml
+- text: New-AzTrafficManagerEndpoint
+  href: ./New-AzTrafficManagerEndpoint.yml
+- text: New-AzTrafficManagerProfile
+  href: ./New-AzTrafficManagerProfile.yml
+- text: Remove-AzTrafficManagerEndpoint
+  href: ./Remove-AzTrafficManagerEndpoint.yml
+- text: Set-AzTrafficManagerProfile
+  href: ./Set-AzTrafficManagerProfile.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Disable-AzTrafficManagerEndpoint.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.trafficmanager/disable-aztrafficmanagerendpoint
+  Module Name: Az.TrafficManager
+  ms.assetid: 8CC749F1-B961-4F8F-BAD4-2C0F4385D1C2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Disable-AzTrafficManagerEndpoint.md
+  PlatyPS schema version: 2024-05-01

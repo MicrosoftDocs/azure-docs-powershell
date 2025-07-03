@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.StandbyPool
+name: Az.StandbyPool Module
+isPreview: false
+cmdletGroups:
+- title: StandbyPool
+  cmdlets:
+  - Az.StandbyPool.Get-AzStandbyContainerGroupPool
+  - Az.StandbyPool.Get-AzStandbyContainerGroupPoolStatus
+  - Az.StandbyPool.Get-AzStandbyVMPool
+  - Az.StandbyPool.Get-AzStandbyVMPoolStatus
+  - Az.StandbyPool.New-AzStandbyContainerGroupPool
+  - Az.StandbyPool.New-AzStandbyVMPool
+  - Az.StandbyPool.Remove-AzStandbyContainerGroupPool
+  - Az.StandbyPool.Remove-AzStandbyVMPool
+  - Az.StandbyPool.Update-AzStandbyContainerGroupPool
+  - Az.StandbyPool.Update-AzStandbyVMPool
+description: |-
+  Microsoft Azure PowerShell: StandbyPool cmdlets
+metadata:
+  Module Name: Az.StandbyPool
+  Module Guid: bb1182ed-2a39-47be-8b39-46b13e973cea
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.standbypool
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Az.StandbyPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Az.StandbyPool.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

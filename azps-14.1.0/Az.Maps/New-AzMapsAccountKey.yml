@@ -1,0 +1,316 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Maps.New-AzMapsAccountKey
+name: New-AzMapsAccountKey
+module: Az.Maps
+isPreview: false
+summary: |-
+  Regenerate either the primary or secondary key for use with the Maps APIs.
+  The old key will stop working immediately.
+description: |-
+  Regenerate either the primary or secondary key for use with the Maps APIs.
+  The old key will stop working immediately.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Regenerate operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Regenerate operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether the operation refers to the primary or secondary key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Maps Account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RegenerateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RegenerateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMapsAccountKey
+        -Name <String>
+        -ResourceGroupName <String>
+        -KeyType <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RegenerateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzMapsAccountKey
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RegenerateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMapsAccountKey
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RegenerateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMapsAccountKey
+        -InputObject <IMapsIdentity>
+        -KeyType <String>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RegenerateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsAccountKeys" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Regenerate either the primary or secondary key for use with the Maps APIs'
+  description: |-
+    ```powershell
+    New-AzMapsAccountKey -ResourceGroupName azure-rg-test -Name pwsh-mapsAccount01 -KeyType primary
+    ```
+
+    ```output
+    PrimaryKey                                  PrimaryKeyLastUpdated        SecondaryKey                                SecondaryKeyLastUpdated
+    ----------                                  ---------------------        ------------                                -----------------------
+    W5VYcbrpyt4urV2-4C-lXepnHoy6EIOHnoLL_wjEtaw 2021-05-20T05:50:27.1509422Z zi6W1bw4zIYLjDj_DRRrC3jBkX-APgBebwx4cZBKJOU 2021-05-20T05:41:03.452571Z
+    ```
+
+    This command regenerate either the primary or secondary key for use with the Maps APIs.
+    The old key will stop working immediately.
+- title: 'Example 2: Regenerate either the primary or secondary key for use with the Maps APIs by pipeline'
+  description: |-
+    ```powershell
+    Get-AzMapsAccount -ResourceGroupName azure-rg-test -Name pwsh-mapsAccount01 | New-AzMapsAccountKey -KeyType primary
+    ```
+
+    ```output
+    PrimaryKey                                  PrimaryKeyLastUpdated        SecondaryKey                                SecondaryKeyLastUpdated
+    ----------                                  ---------------------        ------------                                -----------------------
+    xoGsuTFWuG6xq0re7EdA7nCbDhvRoisZfLHvKfdzIhQ 2021-05-20T05:55:21.7797268Z zi6W1bw4zIYLjDj_DRRrC3jBkX-APgBebwx4cZBKJOU 2021-05-20T05:41:03.452571Z
+    ```
+
+    This command regenerate either the primary or secondary key for use with the Maps APIs by pipeline.
+    The old key will stop working immediately.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/New-AzMapsAccountKey.md
+  document type: cmdlet
+  external help file: Az.Maps-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.maps/new-azmapsaccountkey
+  Module Name: Az.Maps
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/New-AzMapsAccountKey.md
+  PlatyPS schema version: 2024-05-01

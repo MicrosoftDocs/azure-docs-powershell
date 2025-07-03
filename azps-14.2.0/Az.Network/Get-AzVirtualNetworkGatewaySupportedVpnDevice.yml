@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualNetworkGatewaySupportedVpnDevice
+name: Get-AzVirtualNetworkGatewaySupportedVpnDevice
+module: Az.Network
+isPreview: false
+summary: |-
+  This cmdlet returns a list of supported VPN device brands, models, and firmware versions.
+description: |-
+  This cmdlet returns a list of supported VPN device brands, models, and firmware versions.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network gateway name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualNetworkGatewaySupportedVpnDevice
+        -Name <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    The following example returns a list of supported VPN device brands, models and firmware versions.
+
+    ```powershell
+    Get-AzVirtualNetworkGatewaySupportedVpnDevice -ResourceGroupName TestRG -Name TestGateway
+    ```
+
+    ```output
+    <?xml version="1.0" encoding="utf-8"?>
+    <RpVpnDeviceList version="1.0">
+      <Vendor name="Cisco-Test">
+        <DeviceFamily name="IOS-Test">
+           <FirmwareVersion name="20" />
+        </DeviceFamily>
+      </Vendor>
+    </RpVpnDeviceList>
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewaySupportedVpnDevice.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewaysupportedvpndevice
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewaySupportedVpnDevice.md
+  PlatyPS schema version: 2024-05-01

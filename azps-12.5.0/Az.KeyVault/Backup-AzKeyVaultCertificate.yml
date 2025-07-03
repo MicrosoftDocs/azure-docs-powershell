@@ -1,0 +1,237 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Backup-AzKeyVaultCertificate
+name: Backup-AzKeyVaultCertificate
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Backs up a certificate in a key vault.
+description: |-
+  The **Backup-AzKeyVaultCertificate** cmdlet backs up a specified certificate in a key vault by downloading it and storing it in a file.
+  If the certificate has multiple versions, all its versions will be included in the backup.
+  Because the downloaded content is encrypted, it cannot be used outside of Azure Key Vault.
+  You can restore a backed-up certificate to any key vault in the subscription that it was backed up from, as long as the vault is in the same Azure geography.
+  Typical reasons to use this cmdlet are:
+  - You want to retain an offline copy of the certificate in case you accidentally delete the original from the vault.
+
+  - You created a certificate using Key Vault and now want to clone the object into a different Azure region, so that you can use it from all instances of your distributed application.
+  Use the **Backup-AzKeyVaultCertificate** cmdlet to retrieve the certificate in encrypted format and then use the **Restore-AzKeyVaultCertificate** cmdlet
+  and specify a key vault in the second region.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overwrite the given file if it exists
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Secret to be backed up, pipelined in from the output of a retrieval call.
+    aliases:
+    - Certificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificate
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secret name.
+      Cmdlet constructs the FQDN of a secret from vault name, currently selected environment and secret name.
+    aliases:
+    - SecretName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificateName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Output file.
+      The output file to store the backup of the certificate.
+      If not specified, a default filename will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+      Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificateName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Backup-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        [[-OutputFile] <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Backup-AzKeyVaultCertificate
+        [-InputObject] <PSKeyVaultCertificateIdentityItem>
+        [[-OutputFile] <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificate
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Back up a certificate with an automatically generated file name'
+  description: |-
+    ```powershell
+    Backup-AzKeyVaultCertificate -VaultName 'mykeyvault' -Name 'mycert'
+    ```
+
+    ```output
+    C:\Users\username\mykeyvault-mycert-1527029447.01191
+    ```
+
+    This command retrieves the certificate named MyCert from the key vault named MyKeyVault and saves a backup of that certificate to a file that is automatically named for you, and displays the file name.
+- title: 'Example 2: Back up a certificate to a specified file name'
+  description: |-
+    ```powershell
+    Backup-AzKeyVaultCertificate -VaultName 'MyKeyVault' -Name 'MyCert' -OutputFile 'C:\Backup.blob'
+    ```
+
+    ```output
+    C:\Backup.blob
+    ```
+
+    This command retrieves the certificate named MyCert from the key vault named MyKeyVault and saves a backup of that certificate to a file named Backup.blob.
+- title: 'Example 3: Back up a previously retrieved certificate to a specified file name, overwriting the destination file without prompting.'
+  description: |-
+    ```powershell
+    $cert = Get-AzKeyVaultCertificate -VaultName 'MyKeyVault' -Name 'MyCert'
+    Backup-AzKeyVaultCertificate -Certificate $cert -OutputFile 'C:\Backup.blob' -Force
+    ```
+
+    ```output
+    C:\Backup.blob
+    ```
+
+    This command creates a backup of the certificate named $cert.Name in the vault named $cert.VaultName to a file named Backup.blob, silently overwriting the file if it exists already.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/backup-azkeyvaultcertificate
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Backup-AzKeyVaultCertificate.md
+  PlatyPS schema version: 2024-05-01

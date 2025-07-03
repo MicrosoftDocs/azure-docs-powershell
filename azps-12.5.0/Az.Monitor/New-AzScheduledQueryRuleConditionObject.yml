@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzScheduledQueryRuleConditionObject
+name: New-AzScheduledQueryRuleConditionObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for Condition.
+description: |-
+  Create an in-memory object for Condition.
+parameters:
+  cmdletParameters:
+  - name: Dimension
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.Api20210801.IDimension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Dimensions conditions.
+      To construct, see NOTES section for DIMENSION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailingPeriodMinFailingPeriodsToAlert
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of violations to trigger an alert.
+      Should be smaller or equal to numberOfEvaluationPeriods.
+      Default value is 1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailingPeriodNumberOfEvaluationPeriod
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of aggregated lookback points.
+      The lookback time window is calculated based on the aggregation granularity (windowSize) and the selected number of aggregated points.
+      Default value is 1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricMeasureColumn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The column containing the metric measure number.
+      Relevant only for rules of the kind LogAlert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the metric to be sent.
+      Relevant and required only for rules of the kind LogToMetric.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Support.ConditionOperator" data-throw-if-not-resolved="False" />
+    description: |-
+      The criteria operator.
+      Relevant and required only for rules of the kind LogAlert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Query
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Log query alert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceIdColumn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The column containing the resource id.
+      The content of the column must be a uri formatted as resource id.
+      Relevant only for rules of the kind LogAlert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Threshold
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      the criteria threshold value that activates the alert.
+      Relevant and required only for rules of the kind LogAlert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeAggregation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Support.TimeAggregation" data-throw-if-not-resolved="False" />
+    description: |-
+      Aggregation type.
+      Relevant and required only for rules of the kind LogAlert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzScheduledQueryRuleConditionObject
+        [-Dimension <IDimension[]>]
+        [-FailingPeriodMinFailingPeriodsToAlert <Int64>]
+        [-FailingPeriodNumberOfEvaluationPeriod <Int64>]
+        [-MetricMeasureColumn <String>]
+        [-MetricName <String>]
+        [-Operator <ConditionOperator>]
+        [-Query <String>]
+        [-ResourceIdColumn <String>]
+        [-Threshold <Double>]
+        [-TimeAggregation <TimeAggregation>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ScheduledQueryRule.Models.Api20210801.Condition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create condition object'
+  description: |-
+    ```powershell
+    $dimension = New-AzScheduledQueryRuleDimensionObject -Name Computer -Operator Include -Value *
+    New-AzScheduledQueryRuleConditionObject -Dimension $dimension -Query "Perf | where ObjectName == `"Processor`" and CounterName == `"% Processor Time`" | summarize AggregatedValue = avg(CounterValue) by bin(TimeGenerated, 5m), Computer" -TimeAggregation "Average" -MetricMeasureColumn "AggregatedValue" -Operator "GreaterThan" -Threshold "70" -FailingPeriodNumberOfEvaluationPeriod 1 -FailingPeriodMinFailingPeriodsToAlert 1
+    ```
+
+    Create condition object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzScheduledQueryRuleConditionObject.md
+  document type: cmdlet
+  external help file: Az.ScheduledQueryRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzScheduledQueryRuleConditionObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzScheduledQueryRuleConditionObject.md
+  PlatyPS schema version: 2024-05-01

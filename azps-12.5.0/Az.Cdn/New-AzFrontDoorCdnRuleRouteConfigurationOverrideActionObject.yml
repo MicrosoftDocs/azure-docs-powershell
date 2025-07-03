@@ -1,0 +1,181 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject
+name: New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction.
+description: |-
+  Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction.
+parameters:
+  cmdletParameters:
+  - name: CacheConfigurationCacheBehavior
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleCacheBehavior" data-throw-if-not-resolved="False" />
+    description: |-
+      Caching behavior for the requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheConfigurationCacheDuration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The duration for which the content needs to be cached.
+      Allowed format is [d.]hh:mm:ss.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheConfigurationIsCompressionEnabled
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleIsCompressionEnabled" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether content compression is enabled.
+      If compression is enabled, content will be served as compressed if user requests for a compressed version.
+      Content won't be compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheConfigurationQueryParameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      query parameters to include or exclude (comma separated).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CacheConfigurationQueryStringCachingBehavior
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.RuleQueryStringCachingBehavior" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines how Frontdoor caches requests that include query strings.
+      You can ignore any query strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query strings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the action for the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OriginGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OriginGroupOverrideForwardingProtocol
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.ForwardingProtocol" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol this rule will use when forwarding traffic to backends.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject
+        -Name <DeliveryRuleAction>
+        [-CacheConfigurationCacheBehavior <RuleCacheBehavior>]
+        [-CacheConfigurationCacheDuration <String>]
+        [-CacheConfigurationIsCompressionEnabled <RuleIsCompressionEnabled>]
+        [-CacheConfigurationQueryParameter <String>]
+        [-CacheConfigurationQueryStringCachingBehavior <RuleQueryStringCachingBehavior>]
+        [-OriginGroupId <String>]
+        [-OriginGroupOverrideForwardingProtocol <ForwardingProtocol>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.DeliveryRuleRouteConfigurationOverrideAction" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction'
+  description: |-
+    ```powershell
+    $originGroupId = "xxxx"
+    New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject -Name RouteConfigurationOverride -OriginGroupOverrideForwardingProtocol HttpOnly -OriginGroupId $originGroupId
+    ```
+
+    ```output
+    Name
+    ----
+    RouteConfigurationOverride
+    ```
+
+    Create an in-memory object for DeliveryRuleRouteConfigurationOverrideAction
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRouteConfigurationOverrideActionObject.md
+  PlatyPS schema version: 2024-05-01

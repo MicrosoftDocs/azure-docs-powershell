@@ -1,0 +1,183 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.New-AzAutomationVariable
+name: New-AzAutomationVariable
+module: Az.Automation
+isPreview: false
+summary: |-
+  Creates an Automation variable.
+description: |-
+  The **New-AzAutomationVariable** cmdlet creates a variable in Azure Automation.
+  To encrypt the variable, specify the *Encrypted* parameter.
+  You cannot modify the encrypted state of a variable after creation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account in which to store the variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encrypted
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet encrypts the value of the variable for storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group for which this cmdlet creates a variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a value for the variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutomationVariable
+        [-Name] <String>
+        -Encrypted <Boolean>
+        [-Description <String>]
+        [-Value <Object>]
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Variable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a variable with a simple value'
+  description: |-
+    ```powershell
+    New-AzAutomationVariable -AutomationAccountName "Contoso17" -Name "StringVariable22" -Encrypted $False -Value "My String" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    This command creates a variable named StringVariable22 with a string value in the Automation account named Contoso17.
+- title: 'Example 2: Create a variable with a complex value'
+  description: |-
+    ```powershell
+    $VirtualMachine = Get-AzVM -Name "VirtualMachine03"
+    New-AzAutomationVariable -AutomationAccountName "Contoso17" -Name "ComplexVariable01" -Encrypted $False -Value $VirtualMachine -ResourceGroupName "ResourceGroup01"
+    ```
+
+    The first command gets a virtual machine by using the Get-AzVM cmdlet.
+    The command stores it in the $VirtualMachine variable.
+    The second command creates a variable named ComplexVariable01 in the Automation account named Contoso17.
+    This command uses a complex object for its value, in this case, the virtual machine in $VirtualMachine.
+links:
+- text: Get-AzAutomationVariable
+  href: ./Get-AzAutomationVariable.yml
+- text: Remove-AzAutomationVariable
+  href: ./Remove-AzAutomationVariable.yml
+- text: Set-AzAutomationVariable
+  href: ./Set-AzAutomationVariable.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationVariable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationvariable
+  Module Name: Az.Automation
+  ms.assetid: 5AF6F70F-7137-48E2-96ED-2C509042F127
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationVariable.md
+  PlatyPS schema version: 2024-05-01

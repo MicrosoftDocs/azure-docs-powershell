@@ -1,0 +1,614 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkWatcherPacketCaptureV2
+name: New-AzNetworkWatcherPacketCaptureV2
+module: Az.Network
+isPreview: false
+summary: |-
+  V2 Version of Packet Capture Cmdlet which creates a new packet capture resource and starts a packet capture session on a VM, VMSS or few instances of VMSS.
+description: |-
+  The New-AzNetworkWatcherPacketCaptureV2 cmdlet creates a new packet capture resource and starts a packet capture session on a VM, VMSS or few instances of VMSS.
+  The length of the Packet Capture sessions can be configured via a time constraint or a size constraint. The amount of data captured for each packet can also be configured.
+  Filters can be applied to a given packet capture session, allowing you to customize the type of packets captured. Filters can restrict packets on local and remote IP addresses & address ranges, local and remote ports & port ranges, and the session level protocol to be captured. Filters are composable, and multiple filters can be applied to provide you with granularity of capture.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BytesToCapturePerPacket
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Bytes to capture per packet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPacketCaptureFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Filters for packet capture session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Local file path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the network watcher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The packet capture name.
+    aliases:
+    - PacketCaptureName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcher
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+    description: |-
+      The network watcher resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcherName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of network watcher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network watcher resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPacketCaptureMachineScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope of VMSS Instances to be Included or Excluded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target virtual machine ID or virtual machine scale set ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Type of the Resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeLimitInSecond
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Time limit in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TotalBytesPerSession
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Total bytes per session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkWatcherPacketCaptureV2
+        -NetworkWatcher <PSNetworkWatcher>
+        -Name <String>
+        -TargetId <String>
+        [-StorageAccountId <String>]
+        [-StoragePath <String>]
+        [-LocalFilePath <String>]
+        [-BytesToCapturePerPacket <Int32>]
+        [-TotalBytesPerSession <UInt32>]
+        [-TimeLimitInSecond <Int32>]
+        [-Scope <PSPacketCaptureMachineScope>]
+        [-TargetType <String>]
+        [-Filter <PSPacketCaptureFilter[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzNetworkWatcherPacketCaptureV2
+        -NetworkWatcherName <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        -TargetId <String>
+        [-StorageAccountId <String>]
+        [-StoragePath <String>]
+        [-LocalFilePath <String>]
+        [-BytesToCapturePerPacket <Int32>]
+        [-TotalBytesPerSession <UInt32>]
+        [-TimeLimitInSecond <Int32>]
+        [-Scope <PSPacketCaptureMachineScope>]
+        [-TargetType <String>]
+        [-Filter <PSPacketCaptureFilter[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNetworkWatcherPacketCaptureV2
+        -Location <String>
+        -Name <String>
+        -TargetId <String>
+        [-StorageAccountId <String>]
+        [-StoragePath <String>]
+        [-LocalFilePath <String>]
+        [-BytesToCapturePerPacket <Int32>]
+        [-TotalBytesPerSession <UInt32>]
+        [-TimeLimitInSecond <Int32>]
+        [-Scope <PSPacketCaptureMachineScope>]
+        [-TargetType <String>]
+        [-Filter <PSPacketCaptureFilter[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByLocation
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPacketCaptureResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Packet Capture on a VM'
+  description: |-
+    ```powershell
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+    $filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+    $filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP
+    New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vm.Id -TargetType "azurevm" -Name "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSecond 60 -Filter $filter1, $filter2
+    ```
+
+    ```output
+    Name                    : PacketCaptureTest
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/packetCaptures/PacketCaptureTest
+    Etag                    : W/"0b3c52cb-aa63-4647-93d3-3221c13ccdd2"
+    ProvisioningState       : Succeeded
+    Target                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Compute/virtualMachines/SampleVM
+    TargetType              : AzureVM
+    BytesToCapturePerPacket : 0
+    TotalBytesPerSession    : 1073741824
+    TimeLimitInSeconds      : 18000
+    StorageLocation         : {
+                                "StorageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Storage/storageAccounts/contosostorage123",
+                                "StoragePath": "https://contosostorage123.blob.core.windows.net/network-watcher-logs/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/contosoResourceGroup/providers/microsoft.compute/virtualmachines/SampleVM/2022/07/21/packetcapture_09_20_07_166.cap"
+                              }
+    Filters                 : [
+                                {
+                                  "Protocol": "TCP",
+                                  "RemoteIPAddress": "1.1.1.1-255.255.255",
+                                  "LocalIPAddress": "10.0.0.3",
+                                  "LocalPort": "1-65535",
+                                  "RemotePort": "20;80;443"
+                                },
+                                {
+                                  "Protocol": "UDP",
+                                  "RemoteIPAddress": "",
+                                  "LocalIPAddress": "",
+                                  "LocalPort": "",
+                                  "RemotePort": ""
+                                }
+                              ]
+    Scope                   : {
+                                "Include": [],
+                                "Exclude": []
+                              }
+    ```
+
+    In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit. Once the session is complete, it will be saved to the specified storage account.
+    Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.
+- title: 'Example 2: Create a Packet Capture on a VMSS'
+  description: |-
+    ```powershell
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+    $filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+    $filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP
+    New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Name "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSecond 60 -Filter $filter1, $filter2
+    ```
+
+    ```output
+    Name                    : PacketCaptureTest
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/packetCaptures/PacketCaptureTest
+    Etag                    : W/"0b3c52cb-aa63-4647-93d3-3221c13ccdd2"
+    ProvisioningState       : Succeeded
+    Target                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/SampleVMSS
+    TargetType              : AzureVMSS
+    BytesToCapturePerPacket : 0
+    TotalBytesPerSession    : 1073741824
+    TimeLimitInSeconds      : 60
+    StorageLocation         : {
+                                "StorageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Storage/storageAccounts/contosostorage123",
+                                "StoragePath": "https://contosostorage123.blob.core.windows.net/network-watcher-logs/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/contosoResourceGroup/providers/microsoft.compute/virtualmachinescalesets/SampleVMSS/2022/07/21/packetcapture_09_20_07_166.cap"
+                              }
+    Filters                 : [
+                                {
+                                  "Protocol": "TCP",
+                                  "RemoteIPAddress": "1.1.1.1-255.255.255",
+                                  "LocalIPAddress": "10.0.0.3",
+                                  "LocalPort": "1-65535",
+                                  "RemotePort": "20;80;443"
+                                },
+                                {
+                                  "Protocol": "UDP",
+                                  "RemoteIPAddress": "",
+                                  "LocalIPAddress": "",
+                                  "LocalPort": "",
+                                  "RemotePort": ""
+                                }
+                              ]
+    Scope                   : {
+                                "Include": [],
+                                "Exclude": []
+                              }
+    ```
+
+    In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit. Once the session is complete, it will be saved to the specified storage account.
+    Note: The Azure Network Watcher extension must be installed on the target virtual machine scale set and all the respective instances adhering to the latest vmss model, to create packet captures.
+- title: 'Example 3: Create a Packet Capture on few Instances of VMSS'
+  description: |-
+    ```powershell
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+    $filter1 = New-AzPacketCaptureFilterConfig -Protocol TCP -RemoteIPAddress "1.1.1.1-255.255.255" -LocalIPAddress "10.0.0.3" -LocalPort "1-65535" -RemotePort "20;80;443"
+    $filter2 = New-AzPacketCaptureFilterConfig -Protocol UDP
+
+    $instance1 = $vmssInstance1.Name
+    $instance2 = $vmssInstance2.Name
+    $scope = New-AzPacketCaptureScopeConfig -Include $instance1, $instance2
+
+    New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Scope $scope -Name "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSecond 60 -Filter $filter1, $filter2
+    ```
+
+    ```output
+    Name                    : PacketCaptureTest
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/NetworkWatcherRG/providers/Microsoft.Network/networkWatchers/NetworkWatcher_eastus/packetCaptures/PacketCaptureTest
+    Etag                    : W/"0b3c52cb-aa63-4647-93d3-3221c13ccdd2"
+    ProvisioningState       : Succeeded
+    Target                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/SampleVMSS
+    TargetType              : AzureVMSS
+    BytesToCapturePerPacket : 0
+    TotalBytesPerSession    : 1073741824
+    TimeLimitInSeconds      : 18000
+    StorageLocation         : {
+                                "StorageId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Storage/storageAccounts/contosostorage123",
+                                "StoragePath": "https://contosostorage123.blob.core.windows.net/network-watcher-logs/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/contosoResourceGroup/providers/microsoft.compute/virtualmachinescalesets/SampleVMSS/2022/07/21/packetcapture_09_20_07_166.cap"
+                              }
+    Filters                 : [
+                                {
+                                  "Protocol": "TCP",
+                                  "RemoteIPAddress": "1.1.1.1-255.255.255",
+                                  "LocalIPAddress": "10.0.0.3",
+                                  "LocalPort": "1-65535",
+                                  "RemotePort": "20;80;443"
+                                },
+                                {
+                                  "Protocol": "UDP",
+                                  "RemoteIPAddress": "",
+                                  "LocalIPAddress": "",
+                                  "LocalPort": "",
+                                  "RemotePort": ""
+                                }
+                              ]
+    Scope                   : {
+                                "Include": [
+                                  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/SampleVMSS/virtualMachines/0",
+                                  "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/contosoResourceGroup/providers/Microsoft.Compute/virtualMachineScaleSets/SampleVMSS/virtualMachines/1"
+                                ],
+                                "Exclude": []
+                              }
+    ```
+
+    In this example we create a packet capture named "PacketCaptureTest" with multiple filters and a time limit. Once the session is complete, it will be saved to the specified storage account.
+    Note: The Azure Network Watcher extension must be installed on the target virtual machine scale set and on the respective instances in include scope adhering to the latest vmss model, to create packet captures.
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcherNextHop
+  href: ./Get-AzNetworkWatcherNextHop.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Start-AzNetworkWatcherResourceTroubleshooting
+  href: ./Start-AzNetworkWatcherResourceTroubleshooting.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+- text: New-AzNetworkWatcherProtocolConfiguration
+  href: ./New-AzNetworkWatcherProtocolConfiguration.yml
+- text: Test-AzNetworkWatcherIPFlow
+  href: ./Test-AzNetworkWatcherIPFlow.yml
+- text: Test-AzNetworkWatcherConnectivity
+  href: ./Test-AzNetworkWatcherConnectivity.yml
+- text: Stop-AzNetworkWatcherConnectionMonitor
+  href: ./Stop-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConnectionMonitor
+  href: ./Set-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConfigFlowLog
+  href: ./Set-AzNetworkWatcherConfigFlowLog.yml
+- text: Remove-AzNetworkWatcherConnectionMonitor
+  href: ./Remove-AzNetworkWatcherConnectionMonitor.yml
+- text: New-AzNetworkWatcherConnectionMonitor
+  href: ./New-AzNetworkWatcherConnectionMonitor.yml
+- text: Get-AzNetworkWatcherTroubleshootingResult
+  href: ./Get-AzNetworkWatcherTroubleshootingResult.yml
+- text: Get-AzNetworkWatcherReachabilityReport
+  href: ./Get-AzNetworkWatcherReachabilityReport.yml
+- text: Get-AzNetworkWatcherReachabilityProvidersList
+  href: ./Get-AzNetworkWatcherReachabilityProvidersList.yml
+- text: Get-AzNetworkWatcherFlowLogStatus
+  href: ./Get-AzNetworkWatcherFlowLogStatus.yml
+- text: Get-AzNetworkWatcherConnectionMonitor
+  href: ./Get-AzNetworkWatcherConnectionMonitor.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherPacketCaptureV2.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkwatcherpacketcapturev2
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkWatcherPacketCaptureV2.md
+  PlatyPS schema version: 2024-05-01

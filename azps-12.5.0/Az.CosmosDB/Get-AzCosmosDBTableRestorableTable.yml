@@ -1,0 +1,178 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.Get-AzCosmosDBTableRestorableTable
+name: Get-AzCosmosDBTableRestorableTable
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Lists all the restorable Azure Cosmos DB Tables available for a specific database.
+description: |-
+  Lists all the restorable Azure Cosmos DB Tables available for a specific database account.
+  The list would have entries corresponding to create, replace and delete events of all live and deleted tables under a specific database account.
+  This list is useful to identify the restore timestamp based on the changes in the collection.
+  For example, if user wants to restore the database account to a timestamp when a specific table is deleted, the user can find corresponding table delete event from this list, and choose a timestamp before the delete event for restore.
+parameters:
+  cmdletParameters:
+  - name: DatabaseAccountInstanceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance Id of the CosmosDB database account.
+      (This is returned as a part of database account properties).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Restorable Tables event feed end time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Management.CosmosDB.Models.PSRestorableTableGetResult" data-throw-if-not-resolved="False" />
+    description: |-
+      CosmosDB Restorable Table object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Location in string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Restorable Tables event feed start time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCosmosDBTableRestorableTable
+        -Location <String>
+        -DatabaseAccountInstanceId <String>
+        [-StartTime <String>]
+        [-EndTime <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCosmosDBTableRestorableTable
+        -InputObject <PSRestorableTableGetResult>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Management.CosmosDB.Models.PSRestorableTableGetResult" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.CosmosDB.Models.PSRestorableTableGetResult" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzCosmosDBTableRestorableTable -Location "location" -DatabaseAccountInstanceId "DatabaseAccountInstanceId" -StartTime "StartTime" -EndTime "EndTime"
+    ```
+
+    ```output
+    Id              : /subscriptions/23587e98-b6ac-4328-a753-03bcd3c8e744/providers/Microsoft.DocumentDB/locations/East%20US2%20EUAP/restorableDatabaseAccounts/45221949-3b3b-457a-b23c-2562858de5a8/restorab
+                      leTables/768c880d-082a-4414-9095-33eb612de58e
+    Name            : 768c880d-082a-4414-9095-33eb612de58e
+    Type            : Microsoft.DocumentDB/locations/restorableDatabaseAccounts/restorableTables
+    _rid            : QEE+IAAAAA==
+    OperationType   : Create
+    EventTimestamp  : 01/27/2022 02:08:02
+    OwnerId         : table1
+    OwnerResourceId : F45qAKUxkWc=
+
+    Id              : /subscriptions/23587e98-b6ac-4328-a753-03bcd3c8e744/providers/Microsoft.DocumentDB/locations/East%20US2%20EUAP/restorableDatabaseAccounts/45221949-3b3b-457a-b23c-2562858de5a8/restorab
+                      leTables/6af230dc-dd95-4a36-97b9-5c7071d40fef
+    Name            : 6af230dc-dd95-4a36-97b9-5c7071d40fef
+    Type            : Microsoft.DocumentDB/locations/restorableDatabaseAccounts/restorableTables
+    _rid            : s74kawAAAA==
+    OperationType   : Create
+    EventTimestamp  : 01/27/2022 02:08:34
+    OwnerId         : table2
+    OwnerResourceId : F45qAJxEhOM=
+    ```
+
+    The resource object contains the properties of the table resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBTableRestorableTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbtablerestorabletable
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBTableRestorableTable.md
+  PlatyPS schema version: 2024-05-01

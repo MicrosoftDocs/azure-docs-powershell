@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Remove-AzADGroup
+name: Remove-AzADGroup
+module: Az.Resources
+isPreview: false
+summary: |-
+  Deletes an active directory group.
+description: |-
+  Deletes an active directory group.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the group to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, doesn't ask for confirmation for deleting the group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      The object representation of the group to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The object id of the group to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifying this will return true if the command was successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzADGroup
+        -ObjectId <Guid>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzADGroup
+        -DisplayName <String>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzADGroup
+        -InputObject <PSADGroup>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameters: InputObject (ByValue)
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Remove a group by object id
+  description: |-
+    ```
+    PS C:\> Remove-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ```
+
+    Removes the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' from the tenant.
+- title: Example 2 - Remove a group by piping
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Remove-AzADGroup
+    ```
+
+    Gets the group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to Remove-AzADGroup to remove the group from the tenant.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/remove-Azadgroup
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Remove-AzADGroup.md
+  PlatyPS schema version: 2024-05-01

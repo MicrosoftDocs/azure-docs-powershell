@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureWebsite
+name: New-AzureWebsite
+module: Azure
+isPreview: false
+summary: |-
+  Create a new website to run in Azure.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The cmdlet creates a new website to run in Azure and prepares for deployment through GitHub.
+parameters:
+  cmdletParameters:
+  - name: Git
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets up a local Git repository and links it to the website.
+      If specified, this parameter sets up a Git repository in the local directory and add a remote repository named 'azure' that links to the website in Azure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHub
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet links the new website to an existing GitHub repository.
+      Commits to the GitHub repository are pushed to the website in Azure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubCredentials
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name and password credentials to connect to GitHub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubRepository
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full name of the GitHub repository to link to this website.
+      For example, `myaccount/myrepo`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hostname
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an alternative host name for the new website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the data center where you want to deploy the website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishingUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name you have specified in the Azure Portal for Git deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a slot name for the website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureWebsite
+        [-Location <String>]
+        [-Hostname <String>]
+        [-PublishingUsername <String>]
+        [-Git]
+        [-GitHub]
+        [-GitHubCredentials <PSCredential>]
+        [-GitHubRepository <String>]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a new website with Git'
+  description: |-
+    ```
+    PS C:\> New-AzureWebsite mySite -Git
+    ```
+
+    This example creates a new website in Azure and a local Git repository to use for deploying files to the new website.
+- title: 'Example 2: Create website integrated with GitHub'
+  description: |-
+    ```
+    PS C:\> New-AzureWebsite mysite -GitHub -GitHubRepository myaccount/myrepo
+    ```
+
+    This example creates a new website linked to a GitHub repository named myaccount/myrepo.
+    Commits to the GitHub repository are pushed to the website in Azure.
+links:
+- text: Set-AzureWebsite
+  href: ./Set-AzureWebsite.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: FBB55071-454D-4473-93BA-D97F33067785
+  PlatyPS schema version: 2024-05-01

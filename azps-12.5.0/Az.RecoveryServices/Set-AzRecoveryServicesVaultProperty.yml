@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Set-AzRecoveryServicesVaultProperty
+name: Set-AzRecoveryServicesVaultProperty
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Updates properties of a Vault.
+description: |-
+  The **Set-AzRecoveryServicesVaultProperty** cmdlet updates properties of a Recovery services vault. This cmdlet can be used to Enable/Disable/AlwaysON soft delete or set CMK encryption for a vault with two different parameter sets.
+  **SoftDeleteFeatureState** property of a vault can be disabled only if there are no registered containers in the vault. InfrastructureEncryption can only be set the first time a user updates the CMK vault.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableHybridBackupSecurityFeature
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optional flag ($true/$false) to disable/enable security setting for hybrid backups against accidental deletes and add additional layer of authentication for critical operations. Provide $false to enable the security.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultSoftDeleteParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyId of the encryption key to be used for CMK.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultCMKParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InfrastructureEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables infrastructure encryption on this vault. Infrastructure encryption must be enabled when configuring encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultCMKParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id of the Key Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultCMKParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SoftDeleteFeatureState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SoftDeleteFeatureState of the Recovery Services Vault. Allowed values are Disable, Enable, AlwaysON.
+    acceptedValues:
+    - Enable
+    - Disable
+    - AlwaysON
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultSoftDeleteParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Token
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Auxiliary access token for authenticating critical operation to resource guard subscription
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Id of UserAssigned Identity to be used for CMK encryption. Provide this parameter if UseSystemAssignedIdentity is $false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultCMKParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSystemAssignedIdentity
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Boolean flag to indicate if SystemAssigned Identity will be used for CMK encryption. Accepted Values: $true, $false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRSVaultCMKParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of the Recovery Services Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzRecoveryServicesVaultProperty
+        [-SoftDeleteFeatureState <String>]
+        [-DisableHybridBackupSecurityFeature <Boolean>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Token <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureRSVaultSoftDeleteParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzRecoveryServicesVaultProperty
+        -EncryptionKeyId <String>
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Token <String>]
+        [-KeyVaultSubscriptionId <String>]
+        [-InfrastructureEncryption]
+        [-UseSystemAssignedIdentity <Boolean>]
+        [-UserAssignedIdentity <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureRSVaultCMKParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.VaultSoftDeleteFeatureState" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.RecoveryServices.Backup.Models.BackupResourceVaultConfigResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update SoftDeleteFeatureState of a vault'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
+    $props = Set-AzRecoveryServicesVaultProperty -VaultId $vault.Id -SoftDeleteFeatureState Enable
+    ```
+
+    The first command gets a Vault object and then stores it in the $vault variable.
+    The second command Updates the SoftDeleteFeatureState property of the vault to "Enabled" state. Allowed values for SoftDeleteFeatureState are Disable, Enable, AlwaysON.
+- title: 'Example 2: Update CMK encryption of a vault to use SystemAssigned MSIdentity'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
+    $keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName"
+    $key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName"
+    Set-AzRecoveryServicesVaultProperty -EncryptionKeyId $key.ID -InfrastructureEncryption -VaultId $vault.ID -UseSystemAssignedIdentity $true
+    ```
+
+    First cmdlet gets the RSVault to update encryption properties. Second cmdlet gets the azure key vault. Third cmdlet gets the key from the key vault.
+    Fourth cmdlet updates the customer managed encryption key within the RSVault to be accessed via SystemAssigned identity. Use -InfrastructureEncryption param to enable infrastructure encryption for the first time update.
+- title: 'Example 3: Update CMK encryption of a vault to use userAssigned MSIdentity'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
+    $keyVault = Get-AzKeyVault -VaultName "keyVaultName" -ResourceGroupName "RGName"
+    $key = Get-AzKeyVaultKey -VaultName "keyVaultName" -Name "keyName"
+    Set-AzRecoveryServicesVaultProperty -EncryptionKeyId $key.ID -VaultId $vault.ID -UseSystemAssignedIdentity $false -UserAssignedIdentity $vault.Identity.UserAssignedIdentities.Keys[0]
+    ```
+
+    First cmdlet gets the RSVault to update encryption properties. Second cmdlet gets the azure key vault. Third cmdlet gets the key from the key vault.
+    Fourth cmdlet updates the customer managed encryption key within the RSVault to be accessed via UserAssigned identity.
+- title: 'Example 4: Update HybridBackupSecurityFeature of a vault'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "rgName" -Name "vaultName"
+    $prop = Set-AzRecoveryServicesVaultProperty -VaultId $vault.Id -DisableHybridBackupSecurityFeature $false
+    ```
+
+    The first command gets a Vault object and then stores it in the $vault variable.
+    The second command disables the HybridBackupSecurityFeature of the vault, set $true to enable it again.
+links:
+- text: Get-AzRecoveryServicesVault
+  href: ./Get-AzRecoveryServicesVault.yml
+- text: Get-AzRecoveryServicesVaultProperty
+  href: ./Get-AzRecoveryServicesVaultProperty.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesvaultproperty
+  Module Name: Az.RecoveryServices
+  ms.assetid: C2A7F37B-5713-4430-B83F-C6745692396D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesVaultProperty.md
+  PlatyPS schema version: 2024-05-01

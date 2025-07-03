@@ -1,0 +1,940 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.Update-AzEventGridPartnerTopicEventSubscription
+name: Update-AzEventGridPartnerTopicEventSubscription
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  update an existing event subscription of a partner topic.
+description: |-
+  update an existing event subscription of a partner topic.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeadLetterWithResourceIdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of managed identity used.
+      The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities.
+      The type 'None' will remove any identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeadLetterWithResourceIdentityUserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user identity associated with the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryWithResourceIdentityDestination
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventSubscriptionDestination" data-throw-if-not-resolved="False" />
+    description: |-
+      Information about the destination where events have to be delivered for the event subscription.Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryWithResourceIdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of managed identity used.
+      The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities.
+      The type 'None' will remove any identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryWithResourceIdentityUserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user identity associated with the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventSubscriptionDestination" data-throw-if-not-resolved="False" />
+    description: |-
+      Information about the destination where events have to be delivered for the event subscription.Uses Azure Event Grid's identity to acquire the authentication tokens being used during delivery / dead-lettering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventDeliverySchema
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The event delivery schema for the event subscription.
+    aliases:
+    - DeliverySchema
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventSubscriptionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the event subscription to be created.
+      Event subscription names must be between 3 and 100 characters in length and use alphanumeric letters only.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpirationTimeUtc
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Information about the expiration time for the event subscription.
+    aliases:
+    - ExpirationDate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterAdvancedFilter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IAdvancedFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of advanced filters that are used for filtering event subscriptions.
+    aliases:
+    - AdvancedFilter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterEnableAdvancedFilteringOnArray
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+    aliases:
+    - AdvancedFilteringOnArray
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterIncludedEventType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of applicable event types that need to be part of the event subscription.
+      If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+    aliases:
+    - IncludedEventType
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterIsSubjectCaseSensitive
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filtershould be compared in a case sensitive manner.
+    aliases:
+    - SubjectCaseSensitive
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterSubjectBeginsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional string to filter events for an event subscription based on a resource path prefix.The format of this depends on the publisher of the events.Wildcard characters are not supported in this path.
+    aliases:
+    - SubjectBeginsWith
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterSubjectEndsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional string to filter events for an event subscription based on a resource path suffix.Wildcard characters are not supported in this path.
+    aliases:
+    - SubjectEndsWith
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventGridIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of user defined labels.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerTopicInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventGridIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerTopicName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the partner topic.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group within the user's subscription.
+    aliases:
+    - ResourceGroup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryPolicyEventTimeToLiveInMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Time To Live (in minutes) for events.
+    aliases:
+    - EventTtl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryPolicyMaxDeliveryAttempt
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of delivery retry attempts for events.
+    aliases:
+    - MaxDeliveryAttempt
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityPartnerTopicExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription credentials that uniquely identify a Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzEventGridPartnerTopicEventSubscription
+        -EventSubscriptionName <String>
+        -PartnerTopicName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DeadLetterWithResourceIdentityType <String>]
+        [-DeadLetterWithResourceIdentityUserAssignedIdentity <String>]
+        [-DeliveryWithResourceIdentityDestination <IEventSubscriptionDestination>]
+        [-DeliveryWithResourceIdentityType <String>]
+        [-DeliveryWithResourceIdentityUserAssignedIdentity <String>]
+        [-Destination <IEventSubscriptionDestination>]
+        [-EventDeliverySchema <String>]
+        [-ExpirationTimeUtc <DateTime>]
+        [-FilterAdvancedFilter <IAdvancedFilter[]>]
+        [-FilterEnableAdvancedFilteringOnArray]
+        [-FilterIncludedEventType <String[]>]
+        [-FilterIsSubjectCaseSensitive]
+        [-FilterSubjectBeginsWith <String>]
+        [-FilterSubjectEndsWith <String>]
+        [-Label <String[]>]
+        [-RetryPolicyEventTimeToLiveInMinute <Int32>]
+        [-RetryPolicyMaxDeliveryAttempt <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzEventGridPartnerTopicEventSubscription
+        -EventSubscriptionName <String>
+        -PartnerTopicName <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzEventGridPartnerTopicEventSubscription
+        -EventSubscriptionName <String>
+        -PartnerTopicName <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzEventGridPartnerTopicEventSubscription
+        -EventSubscriptionName <String>
+        -PartnerTopicInputObject <IEventGridIdentity>
+        [-DeadLetterWithResourceIdentityType <String>]
+        [-DeadLetterWithResourceIdentityUserAssignedIdentity <String>]
+        [-DeliveryWithResourceIdentityDestination <IEventSubscriptionDestination>]
+        [-DeliveryWithResourceIdentityType <String>]
+        [-DeliveryWithResourceIdentityUserAssignedIdentity <String>]
+        [-Destination <IEventSubscriptionDestination>]
+        [-EventDeliverySchema <String>]
+        [-ExpirationTimeUtc <DateTime>]
+        [-FilterAdvancedFilter <IAdvancedFilter[]>]
+        [-FilterEnableAdvancedFilteringOnArray]
+        [-FilterIncludedEventType <String[]>]
+        [-FilterIsSubjectCaseSensitive]
+        [-FilterSubjectBeginsWith <String>]
+        [-FilterSubjectEndsWith <String>]
+        [-Label <String[]>]
+        [-RetryPolicyEventTimeToLiveInMinute <Int32>]
+        [-RetryPolicyMaxDeliveryAttempt <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityPartnerTopicExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzEventGridPartnerTopicEventSubscription
+        -InputObject <IEventGridIdentity>
+        [-DeadLetterWithResourceIdentityType <String>]
+        [-DeadLetterWithResourceIdentityUserAssignedIdentity <String>]
+        [-DeliveryWithResourceIdentityDestination <IEventSubscriptionDestination>]
+        [-DeliveryWithResourceIdentityType <String>]
+        [-DeliveryWithResourceIdentityUserAssignedIdentity <String>]
+        [-Destination <IEventSubscriptionDestination>]
+        [-EventDeliverySchema <String>]
+        [-ExpirationTimeUtc <DateTime>]
+        [-FilterAdvancedFilter <IAdvancedFilter[]>]
+        [-FilterEnableAdvancedFilteringOnArray]
+        [-FilterIncludedEventType <String[]>]
+        [-FilterIsSubjectCaseSensitive]
+        [-FilterSubjectBeginsWith <String>]
+        [-FilterSubjectEndsWith <String>]
+        [-Label <String[]>]
+        [-RetryPolicyEventTimeToLiveInMinute <Int32>]
+        [-RetryPolicyMaxDeliveryAttempt <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventGridIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IEventSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an existing event subscription of a partner topic.'
+  description: |-
+    ```powershell
+    $obj = New-AzEventGridWebHookEventSubscriptionDestinationObject -EndpointUrl "https://azpsweb.azurewebsites.net/api/updates"
+    Update-AzEventGridPartnerTopicEventSubscription -EventSubscriptionName azps-eventsubname -ResourceGroupName azps_test_group_eventgrid -PartnerTopicName default -FilterIsSubjectCaseSensitive:$false -FilterSubjectBeginsWith "ExamplePrefix" -FilterSubjectEndsWith "ExampleSuffix" -EventDeliverySchema CloudEventSchemaV1_0 -Destination $obj
+    ```
+
+    ```output
+    Name              ResourceGroupName
+    ----              -----------------
+    azps-eventsubname azps_test_group_eventgrid
+    ```
+
+    Update an existing event subscription of a partner topic.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/Update-AzEventGridPartnerTopicEventSubscription.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventgrid/update-azeventgridpartnertopiceventsubscription
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/Update-AzEventGridPartnerTopicEventSubscription.md
+  PlatyPS schema version: 2024-05-01

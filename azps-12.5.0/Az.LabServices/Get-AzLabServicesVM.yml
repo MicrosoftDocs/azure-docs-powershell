@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LabServices.Get-AzLabServicesVM
+name: Get-AzLabServicesVM
+module: Az.LabServices
+isPreview: false
+summary: |-
+  Returns the properties for a lab virtual machine.
+description: |-
+  Returns the properties for a lab virtual machine.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter to apply to the operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Lab
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Lab" data-throw-if-not-resolved="False" />
+    description: |-
+      To construct, see NOTES section for LAB properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Lab
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the lab that uniquely identifies it within containing lab account.
+      Used in resource URIs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the virtual machine that uniquely identifies it within the containing lab.
+      Used in resource URIs.
+    aliases:
+    - VirtualMachineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesVM
+        -LabName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesVM
+        -LabName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesVM
+        -Lab <Lab>
+        [-Name <String>]
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Lab
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.Lab" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.IVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets all the Virtual machines in the lab.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesVM -LabName "Lab Name" -ResourceGroupName "Group Name"
+    ```
+
+    ```output
+    Name
+    ----
+    0
+    1
+    2
+    ```
+
+    Returns all the VMs.
+- title: 'Example 2: Gets the specific VM in the lab.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesVM -LabName "Lab Name" -ResourceGroupName "Group Name" -Name 2
+    ```
+
+    ```output
+    Name
+    ----
+    2
+    ```
+
+    Returns the specific VM.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesVM.md
+  document type: cmdlet
+  external help file: Az.LabServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.labservices/get-azlabservicesvm
+  Module Name: Az.LabServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesVM.md
+  PlatyPS schema version: 2024-05-01

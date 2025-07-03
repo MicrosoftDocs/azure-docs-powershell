@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzNetworkManagerIpamPool
+name: Set-AzNetworkManagerIpamPool
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates an IPAM pool.
+description: |-
+  The **Set-AzNetworkManagerIpamPool** cmdlet updates an IPAM pool.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSIpamPool" data-throw-if-not-resolved="False" />
+    description: |-
+      The Ipam Pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkManagerIpamPool
+        -InputObject <PSIpamPool>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSIpamPool" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSIpamPool" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $ResourceGroupName = "testRG"
+    $NetworkManagerName = "testNM"
+    $IpamPoolName = "testPool"
+    $NewAddressPrefixes = @("10.0.0.0/15", "10.0.0.0/16")
+
+    $ipamPool = Get-AzNetworkManagerIpamPool -ResourceGroupName $ResourceGroupName -NetworkManagerName $NetworkManagerName -Name $IpamPoolName
+
+    $ipamPool.Properties.AddressPrefixes = [System.Collections.Generic.List[string]]$NewAddressPrefixes
+
+    Set-AzNetworkManagerIpamPool -InputObject $ipamPool
+    ```
+
+    ```output
+    Location           : eastus
+    Tags               : {}
+    Properties         : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSIpamPoolProperties
+    TagsTable          :
+    PropertiesText     : {
+                           "ProvisioningState": "Succeeded",
+                           "Description": "Test description.",
+                           "DisplayName": "allocationView test",
+                           "ParentPoolName": "",
+                           "IPAddressType": [
+                             "IPv4"
+                           ],
+                           "AddressPrefixes": [
+                             "10.0.0.0/15",
+                             "10.0.0.0/16"
+                           ]
+                         }
+    Name               : testPool
+    ResourceGroupName  : testRG
+    NetworkManagerName : testNM
+    Etag               : "00000000-0000-0000-0000-000000000000"
+    Type               : Microsoft.Network/networkManagers/ipamPools
+    SystemData         : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText     : {
+                           "CreatedBy": "test@email.com",
+                           "CreatedByType": "User",
+                           "CreatedAt": "2024-10-01T15:22:51.5180609Z",
+                           "LastModifiedBy": "test@email.com",
+                           "LastModifiedByType": "User",
+                           "LastModifiedAt": "2024-10-03T14:22:22.7534287Z"
+                         }
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Network/networkManagers/testNM/ipamPools/testPool
+    ```
+
+    Update the IPAM pool's addressPrefixes.
+- title: Example 2
+  description: |-
+    ```powershell
+    $ResourceGroupName = "testRG"
+    $NetworkManagerName = "testNM"
+    $IpamPoolName = "testPool"
+    $NewDisplayName = "My Test Pool"
+
+    $ipamPool = Get-AzNetworkManagerIpamPool -ResourceGroupName $ResourceGroupName -NetworkManagerName $NetworkManagerName -Name $IpamPoolName
+
+    $ipamPool.Properties.DisplayName = $NewDisplayName
+
+    Set-AzNetworkManagerIpamPool -InputObject $ipamPool
+    ```
+
+    ```output
+    Location           : eastus
+    Tags               : {}
+    Properties         : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSIpamPoolProperties
+    TagsTable          :
+    PropertiesText     : {
+                           "ProvisioningState": "Succeeded",
+                           "Description": "Test description.",
+                           "DisplayName": "My Test Pool",
+                           "ParentPoolName": "",
+                           "IPAddressType": [
+                             "IPv4"
+                           ],
+                           "AddressPrefixes": [
+                             "10.0.0.0/15",
+                             "10.0.0.0/16"
+                           ]
+                         }
+    Name               : testPool
+    ResourceGroupName  : testRG
+    NetworkManagerName : testNM
+    Etag               : "00000000-0000-0000-0000-000000000000"
+    Type               : Microsoft.Network/networkManagers/ipamPools
+    SystemData         : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText     : {
+                           "CreatedBy": "test@email.com",
+                           "CreatedByType": "User",
+                           "CreatedAt": "2024-10-01T15:22:51.5180609Z",
+                           "LastModifiedBy": "test@email.com",
+                           "LastModifiedByType": "User",
+                           "LastModifiedAt": "2024-10-03T14:48:24.9403689Z"
+                         }
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Microsoft.Network/networkManagers/testNM/ipamPools/testPool
+    ```
+
+    Gives the IPAM pool 'testPool' Display Name of 'My Test Pool'
+links:
+- text: New-AzNetworkManagerIpamPool
+  href: ./New-AzNetworkManagerIpamPool.yml
+- text: Get-AzNetworkManagerIpamPool
+  href: ./Get-AzNetworkManagerIpamPool.yml
+- text: Remove-AzNetworkManagerIpamPool
+  href: ./Remove-AzNetworkManagerIpamPool.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerIpamPool.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-aznetworkmanageripampool
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzNetworkManagerIpamPool.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,196 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceDatastoreBlobObject
+name: New-AzMLWorkspaceDatastoreBlobObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for AzureBlobDatastore.
+description: |-
+  Create an in-memory object for AzureBlobDatastore.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account container name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credentials
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IDatastoreCredentials" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Account credentials.
+      To construct, see NOTES section for CREDENTIALS properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The asset description text.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure cloud endpoint for the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The asset property dictionary.
+      To construct, see NOTES section for PROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol used to communicate with the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceDataAccessAuthIdentity
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ServiceDataAccessAuthIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates which identity to use to authenticate service data access to customer's storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseTags" data-throw-if-not-resolved="False" />
+    description: |-
+      Tag dictionary.
+      Tags can be added, removed, and updated.
+      To construct, see NOTES section for TAG properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceDatastoreBlobObject
+        -Credentials <IDatastoreCredentials>
+        [-AccountName <String>]
+        [-ContainerName <String>]
+        [-Endpoint <String>]
+        [-Protocol <String>]
+        [-ServiceDataAccessAuthIdentity <ServiceDataAccessAuthIdentity>]
+        [-Description <String>]
+        [-Property <IResourceBaseProperties>]
+        [-Tag <IResourceBaseTags>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.AzureBlobDatastore" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureBlobDatastore'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceDatastoreBlobObject -AccountName mlworkspace1 -ContainerName "dataset001" -Endpoint "core.windows.net" -Protocol "https" -ServiceDataAccessAuthIdentity 'None'
+    ```
+
+    ```output
+    DatastoreType Description IsDefault ResourceGroup SubscriptionId AccountName  ContainerName    Endpoint         Protocol ServiceDataAccessAuthIdentity
+    ------------- ----------- --------- ------------- -------------- -----------  -------------    --------         -------- -----------------------------
+    AzureBlob                                                        mlworkspace1 dataset001-work2 core.windows.net https    None
+    ```
+
+    This command creates an in-memory object for AzureBlobDatastore.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDatastoreBlobObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceDatastoreBlobObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDatastoreBlobObject.md
+  PlatyPS schema version: 2024-05-01

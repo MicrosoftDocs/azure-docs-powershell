@@ -1,0 +1,601 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzPipelineGroup
+name: New-AzPipelineGroup
+module: Az.Monitor
+isPreview: false
+summary: |-
+  create a pipeline group instance.
+description: |-
+  create a pipeline group instance.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Exporter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.IExporter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The exporters specified for a pipeline group instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the extended location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the extended location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of pipeline group.
+      The name is case insensitive.
+    aliases:
+    - PipelineGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkingConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.INetworkingConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Networking configurations for the pipeline group instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PersistencePersistentVolumeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the mounted persistent volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Processor
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.IProcessor" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The processors specified for a pipeline group instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Receiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.IReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The receivers specified for a pipeline group instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Replica
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the amount of replicas of the pipeline group instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePipeline
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.IPipeline" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Pipelines belonging to a given pipeline group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPipelineGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-Exporter <IExporter[]>]
+        [-ExtendedLocationName <String>]
+        [-ExtendedLocationType <String>]
+        [-NetworkingConfiguration <INetworkingConfiguration[]>]
+        [-PersistencePersistentVolumeName <String>]
+        [-Processor <IProcessor[]>]
+        [-Receiver <IReceiver[]>]
+        [-Replica <Int32>]
+        [-ServicePipeline <IPipeline[]>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzPipelineGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzPipelineGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.PipelineGroup.Models.IPipelineGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Pipeline Group with JSON file'
+  description: |-
+    ```powershell
+    New-AzPipelineGroup -JsonFilePath CreatePipelineGroupBody.json -Name testgroup -ResourceGroupName kubetest -SubscriptionId 00000000-0000-0000-0000-000000000000
+    ```
+
+    ```output
+    Exporter                        : {{
+                                        "azureMonitorWorkspaceLogs": {
+                                          "api": {
+                                            "schema": {
+                                              "recordMap": [
+                                                {
+                                                  "from": "body",
+                                                  "to": "Body"
+                                                },
+                                                {
+                                                  "from": "severity_text",
+                                                  "to": "SeverityText"
+                                                },
+                                                {
+                                                  "from": "time_unix_nano",
+                                                  "to": "TimeGenerated"
+                                                }
+                                              ]
+                                            },
+                                            "dataCollectionEndpointUrl":
+                                      "https://myexporter.eastus-1.ingest.monitor.azure.com",
+                                            "stream": "Custom-MyTableRawData",
+                                            "dataCollectionRule": "dcr-00000000000000000000000000000000"
+                                          }
+                                        },
+                                        "type": "AzureMonitorWorkspaceLogs",
+                                        "name": "gigla1"
+                                      }}
+    ExtendedLocationName            : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/kubetest/prov
+                                      iders/Microsoft.ExtendedLocation/customLocations/myloc
+    ExtendedLocationType            : CustomLocation
+    Id                              : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/kubetest/prov
+                                      iders/Microsoft.Monitor/pipelineGroups/testgroup
+    Location                        : centraluseuap
+    Name                            : testgroup
+    NetworkingConfiguration         :
+    PersistencePersistentVolumeName :
+    Processor                       : {{
+                                        "batch": {
+                                          "batchSize": 10
+                                        },
+                                        "type": "Batch",
+                                        "name": "batchproc1"
+                                      }}
+    ProvisioningState               : Succeeded
+    Receiver                        : {{
+                                        "otlp": {
+                                          "endpoint": "0.0.0.0:7778"
+                                        },
+                                        "type": "OTLP",
+                                        "name": "otlp1"
+                                      }, {
+                                        "udp": {
+                                          "endpoint": "0.0.0.0:5556"
+                                        },
+                                        "type": "UDP",
+                                        "name": "myudpreceiveralittlelong26283032"
+                                      }, {
+                                        "syslog": {
+                                          "endpoint": "0.0.0.0:4445"
+                                        },
+                                        "type": "Syslog",
+                                        "name": "mysyslog1"
+                                      }}
+    Replica                         :
+    ResourceGroupName               : kubetest
+    RetryAfter                      :
+    ServicePipeline                 : {{
+                                        "name": "MyPipeline1",
+                                        "type": "logs",
+                                        "receivers": [ "otlp1", "myudpreceiveralittlelong26283032", "mysyslog1" ],
+                                        "processors": [ "batchproc1" ],
+                                        "exporters": [ "gigla1" ]
+                                      }}
+    SystemDataCreatedAt             : 9/26/2024 6:50:55 AM
+    SystemDataCreatedBy             : xxxxxxxx@microsoft.com
+    SystemDataCreatedByType         : User
+    SystemDataLastModifiedAt        : 9/26/2024 6:51:30 AM
+    SystemDataLastModifiedBy        : 319f651f-7ddb-4fc6-9857-7aef9250bd05
+    SystemDataLastModifiedByType    : Application
+    Tag                             : {
+                                      }
+    Type                            : microsoft.monitor/pipelinegroups
+    ```
+
+    Create Pipeline Group with JSON file
+- title: 'Example 2: Create Pipeline Group with expanded parameters'
+  description: |-
+    ```powershell
+    New-AzPipelineGroup -Name testgroup -ResourceGroupName kubetest -SubscriptionId 00000000-0000-0000-0000-000000000000 -Location centraluseuap -ExtendedLocationName "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/kubetest/providers/Microsoft.ExtendedLocation/customLocations/myloc" -ExtendedLocationType CustomLocation -NetworkingConfiguration @() -Replica 1 -Exporter @{name="gigla1"; type="AzureMonitorWorkspaceLogs"; azureMonitorWorkspaceLog=@{api=@{dataCollectionEndpointUrl="https://myexporter.eastus-1.ingest.monitor.azure.com"; dataCollectionRule="dcr-00000000000000000000000000000000"; stream="Custom-MyTableRawData"; schema=@{recordMap=@(@{from="body"; to="Body"},@{from="severity_text"; to="SeverityText"},@{from="time_unix_nano"; to="TimeGenerated"})}}}} -Processor @{name="batchproc1"; type="Batch"; batch=@{batchSize=10}} -Receiver @(@{name="otlp1"; type="OTLP"; otlp=@{endpoint="0.0.0.0:7777"}}, @{name="myudpreceiveralittlelong26283032"; type="UDP"; udp=@{endpoint="0.0.0.0:5555"}}, @{name="mysyslog1"; type="Syslog"; syslog=@{endpoint="0.0.0.0:4444"}}) -ServicePipeline @{name="MyPipeline1"; type="logs"; receiver=@("otlp1", "myudpreceiveralittlelong26283032", "mysyslog1"); processor=@("batchproc1"); exporter=@("gigla1")}
+    ```
+
+    ```output
+    Exporter                        : {{
+                                        "azureMonitorWorkspaceLogs": {
+                                          "api": {
+                                            "schema": {
+                                              "recordMap": [
+                                                {
+                                                  "from": "body",
+                                                  "to": "Body"
+                                                },
+                                                {
+                                                  "from": "severity_text",
+                                                  "to": "SeverityText"
+                                                },
+                                                {
+                                                  "from": "time_unix_nano",
+                                                  "to": "TimeGenerated"
+                                                }
+                                              ]
+                                            },
+                                            "dataCollectionEndpointUrl":
+                                      "https://myexporter.eastus-1.ingest.monitor.azure.com",
+                                            "stream": "Custom-MyTableRawData",
+                                            "dataCollectionRule": "dcr-00000000000000000000000000000000"
+                                          }
+                                        },
+                                        "type": "AzureMonitorWorkspaceLogs",
+                                        "name": "gigla1"
+                                      }}
+    ExtendedLocationName            : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/kubetest/prov
+                                      iders/Microsoft.ExtendedLocation/customLocations/myloc
+    ExtendedLocationType            : CustomLocation
+    Id                              : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/kubetest/prov
+                                      iders/Microsoft.Monitor/pipelineGroups/testgroup
+    Location                        : centraluseuap
+    Name                            : testgroup
+    NetworkingConfiguration         : {}
+    PersistencePersistentVolumeName :
+    Processor                       : {{
+                                        "batch": {
+                                          "batchSize": 10
+                                        },
+                                        "type": "Batch",
+                                        "name": "batchproc1"
+                                      }}
+    ProvisioningState               : Succeeded
+    Receiver                        : {{
+                                        "otlp": {
+                                          "endpoint": "0.0.0.0:7777"
+                                        },
+                                        "type": "OTLP",
+                                        "name": "otlp1"
+                                      }, {
+                                        "udp": {
+                                          "endpoint": "0.0.0.0:5555"
+                                        },
+                                        "type": "UDP",
+                                        "name": "myudpreceiveralittlelong26283032"
+                                      }, {
+                                        "syslog": {
+                                          "endpoint": "0.0.0.0:4444"
+                                        },
+                                        "type": "Syslog",
+                                        "name": "mysyslog1"
+                                      }}
+    Replica                         : 1
+    ResourceGroupName               : kubetest
+    RetryAfter                      :
+    ServicePipeline                 : {{
+                                        "name": "MyPipeline1",
+                                        "type": "logs",
+                                        "receivers": [ "otlp1", "myudpreceiveralittlelong26283032", "mysyslog1" ],
+                                        "processors": [ "batchproc1" ],
+                                        "exporters": [ "gigla1" ]
+                                      }}
+    SystemDataCreatedAt             : 9/26/2024 8:18:42 AM
+    SystemDataCreatedBy             : xxxxxxxx@microsoft.com
+    SystemDataCreatedByType         : User
+    SystemDataLastModifiedAt        : 9/26/2024 8:19:11 AM
+    SystemDataLastModifiedBy        : 319f651f-7ddb-4fc6-9857-7aef9250bd05
+    SystemDataLastModifiedByType    : Application
+    Tag                             : {
+                                      }
+    Type                            : microsoft.monitor/pipelinegroups
+    ```
+
+    Create Pipeline Group with expanded parameters
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzPipelineGroup.md
+  document type: cmdlet
+  external help file: Az.PipelineGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/new-azpipelinegroup
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzPipelineGroup.md
+  PlatyPS schema version: 2024-05-01

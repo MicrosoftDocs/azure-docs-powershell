@@ -1,0 +1,487 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.New-AzCosmosDBSqlContainer
+name: New-AzCosmosDBSqlContainer
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Creates a new CosmosDB Sql Container.
+description: |-
+  Creates a new CosmosDB Sql Container.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Cosmos DB database account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AnalyticalStorageTtl
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      TTL for Analytical Storage (in Seconds).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoscaleMaxThroughput
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Maximum Throughput value if autoscale is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientEncryptionPolicy
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      ClientEncryptionPolicy Object of type PSSqlClientEncryptionPolicy, when provided this is set as the ClientEncryptionPolicy of the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConflictResolutionPolicy
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlConflictResolutionPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      ConflictResolutionPolicy Object of type PSSqlConflictResolutionPolicy, when provided this is set as the ConflictResolutionPolicy of the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConflictResolutionPolicyMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Can have the values: LastWriterWins, Custom, Manual.
+      If provided along with ConflictResolutionPolicy parameter, it is ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConflictResolutionPolicyPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      To be provided when the type is LastWriterWins.
+      If provided along with ConflictResolutionPolicy parameter, it is ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConflictResolutionPolicyProcedure
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      To be provided when the type is custom.
+      If provided along with ConflictResolutionPolicy parameter, it is ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IndexingPolicy
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlIndexingPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Indexing Policy Object of type Microsoft.Azure.Commands.CosmosDB.PSSqlIndexingPolicy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentObject
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlDatabaseGetResults" data-throw-if-not-resolved="False" />
+    description: |-
+      Sql Database object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionKeyKind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The kind of algorithm used for partitioning.
+      Possible values include: 'Hash', 'Range'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionKeyPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Partition Key Path, e.g., '/address/zipcode'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionKeyVersion
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The version of the partition key definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Throughput
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The throughput of SQL container (RU/s).
+      Default value is 400.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TtlInSeconds
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default Ttl in seconds.
+      If the value is missing or set to  - 1, items don't expire.
+      If the value is set to n, items will expire n seconds after last modified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UniqueKeyPolicy
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlUniqueKeyPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      UniqueKeyPolicy Object of type Microsoft.Azure.Commands.CosmosDB.PSSqlUniqueKeyPolicy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: vectorEmbeddingPolicy
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlVectorEmbeddingPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      VectorEmbeddingPolicy Object of type PSSqlVectorEmbeddingPolicy, when provided this is set as the VectorEmbeddingPolicy of the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCosmosDBSqlContainer
+        -ResourceGroupName <String>
+        -AccountName <String>
+        -DatabaseName <String>
+        -Name <String>
+        -PartitionKeyKind <String>
+        -PartitionKeyPath <String[]>
+        [-IndexingPolicy <PSSqlIndexingPolicy>]
+        [-PartitionKeyVersion <Int32>]
+        [-Throughput <Int32>]
+        [-AutoscaleMaxThroughput <Int32>]
+        [-TtlInSeconds <Int32>]
+        [-UniqueKeyPolicy <PSSqlUniqueKeyPolicy>]
+        [-ConflictResolutionPolicyMode <String>]
+        [-ConflictResolutionPolicyPath <String>]
+        [-ConflictResolutionPolicyProcedure <String>]
+        [-ConflictResolutionPolicy <PSSqlConflictResolutionPolicy>]
+        [-ClientEncryptionPolicy <PSSqlClientEncryptionPolicy>]
+        [-vectorEmbeddingPolicy <PSSqlVectorEmbeddingPolicy>]
+        [-AnalyticalStorageTtl <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzCosmosDBSqlContainer
+        -Name <String>
+        -PartitionKeyKind <String>
+        -PartitionKeyPath <String[]>
+        -ParentObject <PSSqlDatabaseGetResults>
+        [-IndexingPolicy <PSSqlIndexingPolicy>]
+        [-PartitionKeyVersion <Int32>]
+        [-Throughput <Int32>]
+        [-AutoscaleMaxThroughput <Int32>]
+        [-TtlInSeconds <Int32>]
+        [-UniqueKeyPolicy <PSSqlUniqueKeyPolicy>]
+        [-ConflictResolutionPolicyMode <String>]
+        [-ConflictResolutionPolicyPath <String>]
+        [-ConflictResolutionPolicyProcedure <String>]
+        [-ConflictResolutionPolicy <PSSqlConflictResolutionPolicy>]
+        [-ClientEncryptionPolicy <PSSqlClientEncryptionPolicy>]
+        [-vectorEmbeddingPolicy <PSSqlVectorEmbeddingPolicy>]
+        [-AnalyticalStorageTtl <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlIndexingPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlUniqueKeyPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlConflictResolutionPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlDatabaseGetResults" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlVectorEmbeddingPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlDatabaseGetResults" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Exceptions.ConflictingResourceException" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzCosmosDBSqlContainer -AccountName myAccountName -DatabaseName myDatabaseName -ResourceGroupName myRgName -Name myContainerName -PartitionKeyPath /a/b/c -PartitionKeyKind Hash
+    ```
+
+    ```output
+    Name     : myContainerName
+    Id       : /subscriptions/mySubscriptionId/resourceGroups/myRgName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlDatabases/myDatabaseName/contain
+               ers/myContainerName
+    Location :
+    Tags     :
+    Resource : Microsoft.Azure.Commands.CosmosDB.Models.PSSqlContainerGetPropertiesResource
+    ```
+- title: 'Example 2: Create a new CosmosDB Sql Container with Client Encryption Policy'
+  description: |-
+    ```powershell
+    $includedPath1 = [Microsoft.Azure.Management.CosmosDB.Models.ClientEncryptionIncludedPath]::new("/path1","key1","Deterministic","AEAD_AES_256_CBC_HMAC_SHA256");
+    $includedPath2 = [Microsoft.Azure.Management.CosmosDB.Models.ClientEncryptionIncludedPath]::new("/path2","key2","Randomized","AEAD_AES_256_CBC_HMAC_SHA256");
+    $listofIncludedPaths = New-Object Collections.Generic.List[Microsoft.Azure.Management.CosmosDB.Models.ClientEncryptionIncludedPath]
+    $listofIncludedPaths.Add($includedPath1)
+    $listofIncludedPaths.Add($includedPath2)
+    $newClientEncryptionPolicy =  [Microsoft.Azure.Management.CosmosDB.Models.ClientEncryptionPolicy]::new($listofIncludedPaths, 2)
+    $newPSSqlClientEncryptionPolicy = [Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionPolicy]::new($newClientEncryptionPolicy)
+    New-AzCosmosDBSqlContainer -AccountName myAccountName -DatabaseName myDatabaseName -ResourceGroupName myRgName -Name myContainerName -PartitionKeyPath /a/b/c -PartitionKeyKind Hash -ClientEncryptionPolicy $newPSSqlClientEncryptionPolicy
+    ```
+
+    ```output
+    Name     : myContainerName
+    Id       : /subscriptions/mySubscriptionId/resourceGroups/myRgName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlDatabases/myDatabaseName/contain
+               ers/myContainerName
+    Location :
+    Tags     :
+    Resource : Microsoft.Azure.Commands.CosmosDB.Models.PSSqlContainerGetPropertiesResource
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBSqlContainer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/new-azcosmosdbsqlcontainer
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBSqlContainer.md
+  PlatyPS schema version: 2024-05-01

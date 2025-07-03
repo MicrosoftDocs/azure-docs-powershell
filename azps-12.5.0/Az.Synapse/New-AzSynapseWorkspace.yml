@@ -1,0 +1,449 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.New-AzSynapseWorkspace
+name: New-AzSynapseWorkspace
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Creates a Synapse Analytics workspace.
+description: |-
+  The **New-AzSynapseWorkspace** cmdlet creates an Azure Synapse Analytics workspace.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultDataLakeStorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default ADLS Gen2 storage account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultDataLakeStorageFilesystem
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default ADLS Gen2 file system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnablePublicNetworkAccess
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or Disable public network access to workspace. Possible values include: 'Enabled', 'Disabled'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyIdentifier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key identifier should be in the format of: https://{keyvaultname}.vault.azure.net/keys/{keyname}.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace encryption key name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepository
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSWorkspaceRepositoryConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Git Repository Settings. Connect workspace to the repository for source control and collaboration for work on your workspace pipelines
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure region where the resource should be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A container that holds ancillary resources. Created by default while the name can be specified. Note that this field must not be the same with ResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedVirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSManagedVirtualNetworkSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a Synapse-managed virtual network dedicated for the Azure Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    aliases:
+    - WorkspaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlAdministratorLoginCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL administrator credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A string,string dictionary of tags associated with the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      User assigned managed identity Id for workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityInEncryption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User assigned identity resource Id used in Workspace Encryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSystemAssignedIdentityInEncryption
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      specifying whether to use system assigned identity in Workspace Encryption or not
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSynapseWorkspace
+        -ResourceGroupName <String>
+        -Name <String>
+        -Location <String>
+        [-Tag <Hashtable>]
+        -DefaultDataLakeStorageAccountName <String>
+        -DefaultDataLakeStorageFilesystem <String>
+        -SqlAdministratorLoginCredential <PSCredential>
+        [-ManagedVirtualNetwork <PSManagedVirtualNetworkSettings>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyIdentifier <String>]
+        [-UserAssignedIdentityInEncryption <String>]
+        [-UseSystemAssignedIdentityInEncryption <Object>]
+        [-AsJob]
+        [-ManagedResourceGroupName <String>]
+        [-GitRepository <PSWorkspaceRepositoryConfiguration>]
+        [-EnablePublicNetworkAccess <Boolean>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $creds = New-Object System.Management.Automation.PSCredential ("ContosoUser", $password)
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds
+    ```
+
+    This command creates a Synapse Analytics workspace named ContosoWorkspace that uses the ContosoAdlGenStorage Data Store, in the resource group named ContosoResourceGroup.
+- title: Example 2
+  description: |-
+    ```powershell
+    $config = New-AzSynapseManagedVirtualNetworkConfig -PreventDataExfiltration -AllowedAadTenantIdsForLinking ContosoTenantId
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $creds = New-Object System.Management.Automation.PSCredential ("ContosoUser", $password)
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds -ManagedVirtualNetwork $config
+    ```
+
+    The first command creates a managed virtual network configuration. Then the rest methods uses the configuration to creates a new Synapse workspace.
+- title: Example 3
+  description: |-
+    ```powershell
+    $config = New-AzSynapseManagedVirtualNetworkConfig -PreventDataExfiltration -AllowedAadTenantIdsForLinking ContosoTenantId
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $creds = New-Object System.Management.Automation.PSCredential ("ContosoUser", $password)
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds -ManagedVirtualNetwork $config -EnablePublicNetworkAccess $True
+    ```
+
+    The first command creates a managed virtual network configuration. Then the rest methods uses the configuration to creates a new Synapse workspace with enabled managed virtual network and enabled public network access.
+- title: Example 4
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $creds = New-Object System.Management.Automation.PSCredential ("ContosoUser", $password)
+    $config = New-AzSynapseGitRepositoryConfig -RepositoryType GitHub -AccountName ContosoAccount -RepositoryName ContosoRepo -CollaborationBranch main
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds -GitRepository $config
+    ```
+
+    This command creates a Synapse Analytics workspace named ContosoWorkspace that uses the ContosoAdlGenStorage Data Store, in the resource group named ContosoResourceGroup. And the workspace is connected to a Git Repository called ContosoRepo.
+- title: Example 5
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $creds = New-Object System.Management.Automation.PSCredential ("ContosoUser", $password)
+    $uamis = Get-AzUserAssignedIdentity -ResourceGroupName ContosoResourceGroup
+    $uamilist = New-Object System.Collections.Generic.List[string]
+    foreach($uami in $uamis){
+    	$uamilist.Add($uami.Id)
+    }
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds -UserAssignedIdentityId $uamilist
+    ```
+
+    This command creates a Synapse Analytics workspace named ContosoWorkspace that uses the ContosoAdlGenStorage Data Store, in the resource group named ContosoResourceGroup, and add user assigned managed identities that get from ResourceGroup ContosoResourceGroup to workspace.
+- title: Example 6
+  description: |-
+    ```powershell
+    New-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup -Name ContosoWorkspace -Location northeurope -DefaultDataLakeStorageAccountName ContosoAdlGen2Storage -DefaultDataLakeStorageFilesystem ContosoFileSystem -SqlAdministratorLoginCredential $creds -EncryptionKeyIdentifier $identifier -UseSystemAssignedIdentityInEncryption $true
+    $ws = Get-AzSynapseWorkspace -name ContosoWorkspace
+    $ws.Encryption.CustomerManagedKeyDetails.Key
+    ```
+
+    ```output
+    Name    KeyVaultUrl
+    ----    -----------
+    default https://contosoKeyValut.vault.azure.net/keys/testkey
+    ```
+
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -name ContosoWorkspace
+    $ws.Encryption.CustomerManagedKeyDetails.KekIdentity
+    ```
+
+    ```output
+    UserAssignedIdentity UseSystemAssignedIdentity
+    -------------------- -------------------------
+                                              True
+    ```
+
+    This command creates a Synapse Analytics workspace named ContosoWorkspace that uses the ContosoAdlGenStorage Data Store, in the resource group named ContosoResourceGroup, and enable double encryption with customer-managed key with specified key identifier and set Managed Identity as System Assigned. After creation, we can call `Get-AzSynapseWorkspace` to get Encryption properties of workspace.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseWorkspace.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/new-azsynapseworkspace
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseWorkspace.md
+  PlatyPS schema version: 2024-05-01

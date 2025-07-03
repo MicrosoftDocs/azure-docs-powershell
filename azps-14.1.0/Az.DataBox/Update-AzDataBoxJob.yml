@@ -1,0 +1,595 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.Update-AzDataBoxJob
+name: Update-AzDataBoxJob
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Updates the properties of an existing job.
+description: |-
+  Updates the properties of an existing job.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IContactDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Contact details for notification and shipping.
+      To construct, see NOTES section for CONTACTDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailContactName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Contact name of the person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailMobile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mobile number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPhone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPhoneExtension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone extension number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPreferenceDoubleEncryption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.DoubleEncryption" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines secondary layer of software-based encryption enablement.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPreferenceHardwareEncryption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.HardwareEncryption" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines Hardware level encryption (Only for disk)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the If-Match condition.
+      The patch will be performed only if the ETag of the job on the server matches this value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKey
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IKeyEncryptionKey" data-throw-if-not-resolved="False" />
+    description: |-
+      Key encryption key for the job.
+      To construct, see NOTES section for KEYENCRYPTIONKEY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the job Resource within the specified resource group.
+      job names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+    aliases:
+    - JobName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferencePreferredDataCenterRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Preferred data center region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnToCustomerPackageDetailCarrierAccountNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Carrier Account Number of customer for customer disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnToCustomerPackageDetailCarrierName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the carrier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnToCustomerPackageDetailTrackingId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tracking Id of shipment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReverseShippingDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IShippingAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Shipping address where customer wishes to receive the device.
+      To construct, see NOTES section for REVERSESHIPPINGDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReverseTransportPreferredShipmentType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.TransportShipmentTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates Shipment Logistics type that the customer preferred.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShippingAddress
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IShippingAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Shipping address of the customer.
+      To construct, see NOTES section for SHIPPINGADDRESS properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountAccessTierPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.StorageAccountAccessTier" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Preferences related to the Access Tier of storage accounts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Subscription Id
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The list of key value pairs that describe the resource.
+      These tags can be used in viewing and grouping this resource (across resource groups).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransportPreferredShipmentType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.TransportShipmentTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates Shipment Logistics type that the customer preferred.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      User Assigned Identities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzDataBoxJob
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-IfMatch <String>]
+        [-ContactDetail <IContactDetails>]
+        [-ContactDetailContactName <String>]
+        [-ContactDetailMobile <String>]
+        [-ContactDetailPhone <String>]
+        [-ContactDetailPhoneExtension <String>]
+        [-EncryptionPreferenceDoubleEncryption <DoubleEncryption>]
+        [-EncryptionPreferenceHardwareEncryption <HardwareEncryption>]
+        [-IdentityType <String>]
+        [-KeyEncryptionKey <IKeyEncryptionKey>]
+        [-PreferencePreferredDataCenterRegion <String[]>]
+        [-ReturnToCustomerPackageDetailCarrierAccountNumber <String>]
+        [-ReturnToCustomerPackageDetailCarrierName <String>]
+        [-ReturnToCustomerPackageDetailTrackingId <String>]
+        [-ReverseShippingDetail <IShippingAddress>]
+        [-ReverseTransportPreferredShipmentType <TransportShipmentTypes>]
+        [-ShippingAddress <IShippingAddress>]
+        [-StorageAccountAccessTierPreference <StorageAccountAccessTier[]>]
+        [-Tag <Hashtable>]
+        [-TransportPreferredShipmentType <TransportShipmentTypes>]
+        [-UserAssignedIdentity <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IJobResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update databox job encryption from microsoft managed to customer managed with user assigned identities'
+  description: |-
+    ```powershell
+    $keyEncryptionDetails = New-AzDataBoxKeyEncryptionKeyObject -KekType "CustomerManaged" -IdentityProperty @{Type = "UserAssigned"; UserAssignedResourceId = "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName"} -KekUrl "keyIdentifier" -KekVaultResourceId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.KeyVault/vaults/keyVaultName"
+
+    $DebugPreference = "Continue"
+
+    # You can use `$DebugPreference = "Continue"`, with any example/usecase to get exact details of error in below format when update command fails.
+    # {
+    #   "Error": {
+    #     "Code": "StaticValidationGenericCountryCodeHasInvalidLength",
+    #     "Message": "The attribute country code does not meet length constraints.\r\nEnter a value with 2 characters for country code.",
+    #     "Details": [
+    #       null
+    #     ],
+    #     "Target": null
+    #   }
+    # }
+
+    Update-AzDataBoxJob -Name "powershell10" -ResourceGroupName "resourceGroupName" -KeyEncryptionKey $keyEncryptionDetails -ContactDetail $contactDetail -ShippingAddress $ShippingDetails  -IdentityType "UserAssigned" -UserAssignedIdentity @{"/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName" = @{}}
+
+    $keyEncryptionDetails
+    ```
+
+    ```output
+    KekType         KekUrl                                           KekVaultResourceId
+    -------         ------                                           ------------------
+    CustomerManaged keyIdentifier /subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.KeyVault/vaults/keyVaultName
+
+    Name         Location Status        TransferType  SkuName IdentityType DeliveryType Detail
+    ----         -------- ------        ------------  ------- ------------ ------------ ------
+    Powershell10 WestUS   DeviceOrdered ImportToAzure DataBox UserAssigned NonScheduled Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails
+    ```
+
+    Update databox job encryption from microsoft managed to customer managed with user assigned identities.
+- title: 'Example 2: Update databox job encryption from microsoft managed to customer managed with system identities in 2 updates'
+  description: |-
+    ```powershell
+    $databoxUpdate = Update-AzDataBoxJob -Name "pwshTestSAssigned" -ResourceGroupName "resourceGroupName" -ContactDetail $contactDetail -ShippingAddress $ShippingDetails  -IdentityType "SystemAssigned"
+
+    $databoxUpdate.Identity
+
+    $keyEncryptionDetails = New-AzDataBoxKeyEncryptionKeyObject -KekType "CustomerManaged" -IdentityProperty @{Type = "SystemAssigned"} -KekUrl "keyIdentifier" -KekVaultResourceId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.KeyVault/vaults/keyVaultName"
+
+    $databoxUpdateWithCMK = Update-AzDataBoxJob -Name "pwshTestSAssigned" -ResourceGroupName "resourceGroupName" -ContactDetail $contactDetail -ShippingAddress $ShippingDetails  -KeyEncryptionKey $keyEncryptionDetails
+
+    $databoxUpdateWithCMK.Identity
+
+    $databoxUpdateWithCMK.Detail.KeyEncryptionKey
+    ```
+
+    ```output
+    PrincipalId                          TenantId                             Type
+    -----------                          --------                             ----
+    920850f5-9b6b-4017-a81a-3dcafe348be7 72f988bf-86f1-41af-91ab-2d7cd011db47 SystemAssigned
+
+    PrincipalId                          TenantId                             Type
+    -----------                          --------                             ----
+    920850f5-9b6b-4017-a81a-3dcafe348be7 72f988bf-86f1-41af-91ab-2d7cd011db47 SystemAssigned
+
+    KekType         KekUrl                                           KekVaultResourceId
+    -------         ------                                           ------------------
+    CustomerManaged keyIdentifier /subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.KeyVault/vaults/keyVaultName
+    ```
+
+    Update databox job encryption from microsoft managed to customer managed to customer managed with sytem assigned identity.
+    For any failure re-run with $DebugPreference = "Continue" as mentioned in example 1
+- title: 'Example 3: Update databox job from system assigned to user assigned with customer managed key encryption'
+  description: |-
+    ```powershell
+    $contactDetail = New-AzDataBoxContactDetailsObject -ContactName "random" -EmailList @("emailId") -Phone "1234567891"
+    $ShippingDetails = New-AzDataBoxShippingAddressObject -StreetAddress1 "101 TOWNSEND ST" -StateOrProvince "CA" -Country "US" -City "San Francisco" -PostalCode "94107" -AddressType "Commercial"
+
+    Update-AzDataBoxJob -Name "pwshTestSAssigned" -ResourceGroupName "resourceGroupName" -KeyEncryptionKey $keyEncryptionDetails -ContactDetail $contactDetail -ShippingAddress $ShippingDetails  -IdentityType "SystemAssigned,UserAssigned" -UserAssignedIdentity @{"/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identityName" = @{}}
+    ```
+
+    Update databox job from system assigned to user assigned with customer managed key encryption.
+    For any failure re-run with $DebugPreference = "Continue" as mentioned in example 1
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Update-AzDataBoxJob.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.databox/update-azdataboxjob
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Update-AzDataBoxJob.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,423 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Add-AzVirtualNetworkSubnetConfig
+name: Add-AzVirtualNetworkSubnetConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Adds a subnet configuration to a virtual network.
+description: |-
+  The **Add-AzVirtualNetworkSubnetConfig** cmdlet adds a subnet configuration to an existing Azure virtual network.
+parameters:
+  cmdletParameters:
+  - name: AddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a range of IP addresses for a subnet configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultOutboundAccess
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default outbound connectivity for all VMs in the subnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Delegation
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of services that have permission to perform operations on this subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNatGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the nat gateway associated with the subnet configuration.
+    aliases:
+    - NatGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpAllocation
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpAllocation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies IpAllocations for a subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpamPoolPrefixAllocation
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpamPoolPrefixAllocation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      IpamPool to auto allocate from for subnet address prefixes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the subnet configuration to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkIdentifier
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSResourceId" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkIdentifier Value for ServiceEndpoint
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroup
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **NetworkSecurityGroup** object.
+      This cmdlet adds a virtual network subnet configuration to the object that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateEndpointNetworkPoliciesFlag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Configure to enable or disable applying network policies on private endpoint in the subnet. Default value is Disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkServiceNetworkPoliciesFlag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Configure to enable or disable applying network policies on private link service in the subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Id of NAT Gateway resource associated with the subnet configuration.
+    aliases:
+    - NatGatewayId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteTable
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteTableId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Service Endpoint Value
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpointConfig
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSServiceEndpoint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Service Endpoint with NetworkIdentifier Value
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpointPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSServiceEndpointPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Service Endpoint Policies
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **VirtualNetwork** object in which to add a subnet configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzVirtualNetworkSubnetConfig
+        -Name <String>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-AddressPrefix <String[]>]
+        [-IpamPoolPrefixAllocation <PSIpamPoolPrefixAllocation[]>]
+        [-NetworkSecurityGroup <PSNetworkSecurityGroup>]
+        [-RouteTable <PSRouteTable>]
+        [-InputObject <PSNatGateway>]
+        [-ServiceEndpoint <String[]>]
+        [-NetworkIdentifier <PSResourceId>]
+        [-ServiceEndpointConfig <PSServiceEndpoint[]>]
+        [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
+        [-Delegation <PSDelegation[]>]
+        [-PrivateEndpointNetworkPoliciesFlag <String>]
+        [-PrivateLinkServiceNetworkPoliciesFlag <String>]
+        [-IpAllocation <PSIpAllocation[]>]
+        [-DefaultOutboundAccess <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzVirtualNetworkSubnetConfig
+        -Name <String>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-AddressPrefix <String[]>]
+        [-IpamPoolPrefixAllocation <PSIpamPoolPrefixAllocation[]>]
+        [-NetworkSecurityGroupId <String>]
+        [-RouteTableId <String>]
+        [-ResourceId <String>]
+        [-ServiceEndpoint <String[]>]
+        [-NetworkIdentifier <PSResourceId>]
+        [-ServiceEndpointConfig <PSServiceEndpoint[]>]
+        [-ServiceEndpointPolicy <PSServiceEndpointPolicy[]>]
+        [-Delegation <PSDelegation[]>]
+        [-PrivateEndpointNetworkPoliciesFlag <String>]
+        [-PrivateLinkServiceNetworkPoliciesFlag <String>]
+        [-IpAllocation <PSIpAllocation[]>]
+        [-DefaultOutboundAccess <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteTable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSServiceEndpointPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a subnet to an existing virtual network'
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Name TestResourceGroup -Location centralus
+        $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "10.0.1.0/24"
+        $virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet $frontendSubnet
+        Add-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork $virtualNetwork -AddressPrefix "10.0.2.0/24"
+        $virtualNetwork | Set-AzVirtualNetwork
+    ```
+
+      This example first creates a resource group as a container of the resources to be created. It then creates a subnet configuration and uses it to create a virtual network. The
+        Add-AzVirtualNetworkSubnetConfig is then used to add a subnet to the in-memory representation of the virtual network. The Set-AzVirtualNetwork command updates the existing virtual
+        network with the new subnet.
+- title: 'Example 2: Add a delegation to a subnet being added to an existing virtual network'
+  description: |-
+    ```powershell
+    $vnet = Get-AzVirtualNetwork -Name "myVNet" -ResourceGroupName "myResourceGroup"
+    $delegation = New-AzDelegation -Name "myDelegation" -ServiceName "Microsoft.Sql/servers"
+    Add-AzVirtualNetworkSubnetConfig -Name "mySubnet" -VirtualNetwork $vnet -AddressPrefix "10.0.2.0/24" -Delegation $delegation | Set-AzVirtualNetwork
+    ```
+
+    This example first gets an existing vnet.
+    Then, it creates a delegation object in memory.
+    Finally, it creates a new subnet with that delegation that is added to the vnet. The modified configuration is then sent to the server.
+links:
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+- text: New-AzVirtualNetworkSubnetConfig
+  href: ./New-AzVirtualNetworkSubnetConfig.yml
+- text: Remove-AzVirtualNetworkSubnetConfig
+  href: ./Remove-AzVirtualNetworkSubnetConfig.yml
+- text: Set-AzVirtualNetworkSubnetConfig
+  href: ./Set-AzVirtualNetworkSubnetConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualNetworkSubnetConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/add-azvirtualnetworksubnetconfig
+  Module Name: Az.Network
+  ms.assetid: B8B632B5-9D3B-4352-B4C8-49C00472B3A7
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzVirtualNetworkSubnetConfig.md
+  PlatyPS schema version: 2024-05-01

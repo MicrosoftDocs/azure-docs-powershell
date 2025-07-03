@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Chaos.New-AzChaosStepObject
+name: New-AzChaosStepObject
+module: Az.Chaos
+isPreview: false
+summary: |-
+  Create an in-memory object for Step.
+description: |-
+  Create an in-memory object for Step.
+parameters:
+  cmdletParameters:
+  - name: Branch
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IBranch" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of branches.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String of the step name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzChaosStepObject
+        -Branch <IBranch[]>
+        -Name <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.Step" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Step.'
+  description: |-
+    ```powershell
+    $actionObj = New-AzChaosActionObject -Name "urn:csci:microsoft:virtualMachine:shutdown/1.0" -Type "continuous"
+    $branchObj = New-AzChaosBranchObject -Action $actionObj -Name "branch1"
+    New-AzChaosStepObject -Branch $branchObj -Name "step1"
+    ```
+
+    ```output
+    Branch Name
+    ------ ----
+    {{…    step1
+    ```
+
+    Create an in-memory object for Step.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosStepObject.md
+  document type: cmdlet
+  external help file: Az.Chaos-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Chaos/new-azchaosstepobject
+  Module Name: Az.Chaos
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosStepObject.md
+  PlatyPS schema version: 2024-05-01

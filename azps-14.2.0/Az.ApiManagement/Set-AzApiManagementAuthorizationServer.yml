@@ -1,0 +1,424 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Set-AzApiManagementAuthorizationServer
+name: Set-AzApiManagementAuthorizationServer
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Modifies an authorization server.
+description: |-
+  The **Set-AzApiManagementAuthorizationServer** cmdlet modifies Azure API Management authorization server details.
+parameters:
+  cmdletParameters:
+  - name: AccessTokenSendingMethods
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of methods to send an access token.
+      psdx_paramvalues AuthorizationHeader and Query.
+    acceptedValues:
+    - AuthorizationHeader
+    - Query
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationEndpointUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the authorization endpoint to authenticate resource owners and obtain authorization grants.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationRequestMethods
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of authorization request methods.
+      psdx_paramvalues GET and POST.
+      The default value is GET.
+    acceptedValues:
+    - Get
+    - Post
+    - Head
+    - Options
+    - Trace
+    - Put
+    - Patch
+    - Delete
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientAuthenticationMethods
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of client authentication methods.
+      psdx_paramvalues Basic and Body.
+    acceptedValues:
+    - Basic
+    - Body
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client ID of the developer console that is the client application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientRegistrationPageUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client registration endpoint to register clients with the authorization server and obtain client credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientSecret
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client secret of the developer console that is the client application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PsApiManagementContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default scope for the authorization server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for an authorization server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GrantTypes
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of grant types.
+      psdx_paramvalues
+      - AuthorizationCode
+      - ClientCredentials
+      - Implicit
+      - ResourceOwnerPassword
+    acceptedValues:
+    - AuthorizationCode
+    - Implicit
+    - ResourceOwnerPassword
+    - ClientCredentials
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the authorization server to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      passthru
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceOwnerPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource owner password.
+      You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceOwnerUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource owner user name.
+      You must specify this parameter if ResourceOwnerPassword is specified by the *GrantTypes* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the authorization server to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates whether to support the *State* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenBodyParameters
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies additional body parameters using application/x-www-form-urlencoded format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenEndpointUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the token endpoint for clients to obtain access tokens in exchange for presenting authorization grants or refresh tokens.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApiManagementAuthorizationServer
+        -Context <PsApiManagementContext>
+        -ServerId <String>
+        -Name <String>
+        [-Description <String>]
+        -ClientRegistrationPageUrl <String>
+        -AuthorizationEndpointUrl <String>
+        -TokenEndpointUrl <String>
+        -ClientId <String>
+        [-ClientSecret <String>]
+        [-AuthorizationRequestMethods <PsApiManagementAuthorizationRequestMethod[]>]
+        -GrantTypes <PsApiManagementGrantType[]>
+        -ClientAuthenticationMethods <PsApiManagementClientAuthenticationMethod[]>
+        [-TokenBodyParameters <Hashtable>]
+        [-SupportState <Boolean>]
+        [-DefaultScope <String>]
+        -AccessTokenSendingMethods <PsApiManagementAccessTokenSendingMethod[]>
+        [-ResourceOwnerUsername <String>]
+        [-ResourceOwnerPassword <String>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAuthorizationRequestMethod" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGrantType" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementClientAuthenticationMethod" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementAccessTokenSendingMethod" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementOAuth2AuthorizationServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify an authorization server'
+  description: |-
+    ```powershell
+    $ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Set-AzApiManagementAuthorizationServer -Context $ApiMgmtContext -ServerId 0123456789 -Name "Contoso OAuth2 server" -ClientRegistrationPageUrl "https://contoso/signupv2" -AuthorizationEndpointUrl "https://contoso/authv2" -TokenEndpointUrl "https://contoso/tokenv2" -ClientId "clientid" -ClientSecret "e041ed1b660b4eadbad5a29d066e6e88" -AuthorizationRequestMethods @('Get') -GrantTypes @( 'AuthorizationCode', 'Implicit', 'ClientCredentials') -ClientAuthenticationMethods @('Basic') -TokenBodyParameters @{'par1'='val1'} -AccessTokenSendingMethods @('AuthorizationHeader')
+    ```
+
+    This command modifies the specified API Management authorization server.
+- title: Example 2
+  description: |-
+    Modifies an authorization server. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    Set-AzApiManagementAuthorizationServer -AccessTokenSendingMethods AuthorizationHeader -AuthorizationEndpointUrl 'https://contoso/authv2' -AuthorizationRequestMethods Get -ClientAuthenticationMethods Basic -ClientId 'clientid' -ClientRegistrationPageUrl 'https://contoso/signupv2' -ClientSecret '0000000000000000000000000000000000000' -Context <PsApiManagementContext> -DefaultScope <String> -GrantTypes AuthorizationCode -Name 'Contoso OAuth2 server' -ServerId 0123456789 -TokenEndpointUrl 'https://contoso/tokenv2'
+    ```
+links:
+- text: Get-AzApiManagementAuthorizationServer
+  href: ./Get-AzApiManagementAuthorizationServer.yml
+- text: New-AzApiManagementAuthorizationServer
+  href: ./New-AzApiManagementAuthorizationServer.yml
+- text: Remove-AzApiManagementAuthorizationServer
+  href: ./Remove-AzApiManagementAuthorizationServer.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementauthorizationserver
+  Module Name: Az.ApiManagement
+  ms.assetid: 93005775-3AB9-43C5-B353-45B82124ADB7
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementAuthorizationServer.md
+  PlatyPS schema version: 2024-05-01

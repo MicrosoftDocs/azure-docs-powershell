@@ -1,0 +1,197 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppTemplateObject
+name: New-AzContainerAppTemplateObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for Container.
+description: |-
+  Create an in-memory object for Container.
+parameters:
+  cmdletParameters:
+  - name: Arg
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container start command arguments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Command
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container start command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Env
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IEnvironmentVar" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container environment variables.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container image tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom container name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Probe
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IContainerAppProbe" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of probes for the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceCpu
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      Required CPU in cores, e.g.
+      0.5.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMemory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Required memory, e.g.
+      "250Mb".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeMount
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IVolumeMount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container volume mounts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppTemplateObject
+        [-Probe <IContainerAppProbe[]>]
+        [-Arg <String[]>]
+        [-Command <String[]>]
+        [-Env <IEnvironmentVar[]>]
+        [-Image <String>]
+        [-Name <String>]
+        [-ResourceCpu <Double>]
+        [-ResourceMemory <String>]
+        [-VolumeMount <IVolumeMount[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.Container" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Container.'
+  description: |-
+    ```powershell
+    $probeHttpGetHttpHeader = New-AzContainerAppProbeHeaderObject -Name "Custom-Header" -Value "Awesome"
+    $probe = New-AzContainerAppProbeObject -Type "Liveness" -HttpGetPath "/health" -HttpGetPort 8080 -InitialDelaySecond 3 -PeriodSecond 3 -HttpGetHttpHeader $probeHttpGetHttpHeader
+
+    New-AzContainerAppTemplateObject -Image "repo/testcontainerApp0:v1" -Name "testcontainerApp0" -Probe $probe
+    ```
+
+    ```output
+    Image                     Name              ResourceCpu ResourceEphemeralStorage ResourceMemory
+    -----                     ----              ----------- ------------------------ --------------
+    repo/testcontainerApp0:v1 testcontainerApp0
+    ```
+
+    Create an in-memory object for Container.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppTemplateObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerapptemplateobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppTemplateObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,175 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Tools.Migration.Find-AzUpgradeCommandReference
+name: Find-AzUpgradeCommandReference
+module: Az.Tools.Migration
+isPreview: false
+summary: |-
+  Searches for **AzureRM** PowerShell command references in the specified file or folder.
+description: |-
+  Searches for **AzureRM** PowerShell command references in the specified file or folder. When
+  reviewing the specified file or folder, all of the cmdlets used in the files will be analyzed and
+  compared against known **AzureRM** PowerShell commands. If commands match a known **AzureRM**
+  cmdlet, then output will be returned that shows the position/offset for each usage.
+parameters:
+  cmdletParameters:
+  - name: AzureRmModuleSpec
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,CommandDefinition" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a dictionary containing cmdlet specification objects, returned from
+      `Get-AzUpgradeCmdletSpec`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFileAndModuleSpec
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDirectoryAndModuleSpec
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureRmVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **AzureRM** module version used in your existing PowerShell file(s) or modules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFileAndModuleVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDirectoryAndModuleVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectoryPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the folder where PowerShell scripts or modules reside.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDirectoryAndModuleSpec
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDirectoryAndModuleVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a single PowerShell file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFileAndModuleSpec
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFileAndModuleVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Find-AzUpgradeCommandReference
+        -FilePath <String>
+        -AzureRmModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFileAndModuleSpec
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Find-AzUpgradeCommandReference
+        -FilePath <String>
+        -AzureRmVersion <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFileAndModuleVersion
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Find-AzUpgradeCommandReference
+        -DirectoryPath <String>
+        -AzureRmModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDirectoryAndModuleSpec
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Find-AzUpgradeCommandReference
+        -DirectoryPath <String>
+        -AzureRmVersion <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDirectoryAndModuleVersion
+  isDefault: false
+examples:
+- title: EXAMPLE 1
+  description: |-
+    The following example finds **AzureRM** PowerShell command references in the specified file.
+
+    ```powershell
+    Find-AzUpgradeCommandReference -FilePath 'C:\Scripts\test.ps1' -AzureRmVersion '6.13.1'
+    ```
+- title: EXAMPLE 2
+  description: |-
+    Find-AzUpgradeCommandReference -DirectoryPath 'C:\Scripts' -AzureRmVersion '6.13.1'
+
+    ```
+    The following example finds AzureRM PowerShell command references in the specified directory and subfolders.
+    ```
+- title: EXAMPLE 3
+  description: |-
+    The following example finds **AzureRM** PowerShell command references in the specified directory and
+    subfolders but with a pre-loaded module specification. This is helpful to avoid reloading the module
+    specification if the `Find-AzUpgradeCommandReference` command needs to be executed several times.
+
+    ```powershell
+    $moduleSpec = Get-AzUpgradeCmdletSpec -AzureRM
+    Find-AzUpgradeCommandReference -DirectoryPath 'C:\Scripts1' -AzureRmModuleSpec $moduleSpec
+    Find-AzUpgradeCommandReference -DirectoryPath 'C:\Scripts2' -AzureRmModuleSpec $moduleSpec
+    Find-AzUpgradeCommandReference -DirectoryPath 'C:\Scripts3' -AzureRmModuleSpec $moduleSpec
+    ```
+metadata:
+  document type: cmdlet
+  external help file: Az.Tools.Migration-help.xml
+  HelpUri: 
+  Module Name: az.tools.migration
+  original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/Find-AzUpgradeCommandReference.md
+  PlatyPS schema version: 2024-05-01

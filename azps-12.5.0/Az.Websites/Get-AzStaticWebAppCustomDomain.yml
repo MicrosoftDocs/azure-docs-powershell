@@ -1,0 +1,216 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.Get-AzStaticWebAppCustomDomain
+name: Get-AzStaticWebAppCustomDomain
+module: Az.Websites
+isPreview: false
+summary: |-
+  Description for Gets an existing custom domain for a particular static site.
+description: |-
+  Description for Gets an existing custom domain for a particular static site.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The custom domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the static site resource to search in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group to which the resource belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Your Azure subscription ID.
+      This is a GUID-formatted string (e.g.
+      00000000-0000-0000-0000-000000000000).
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStaticWebAppCustomDomain
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStaticWebAppCustomDomain
+        -DomainName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStaticWebAppCustomDomain
+        -InputObject <IWebsitesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.Api20201201.IStaticSiteCustomDomainOverviewArmResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all existing custom domains for a particular static site'
+  description: |-
+    ```powershell
+    Get-AzStaticWebAppCustomDomain -ResourceGroupName azure-rg-test -Name staticweb00
+    ```
+
+    ```output
+    Kind Name               Type
+    ---- ----               ----
+         www01.azpstest.net Microsoft.Web/staticSites/customDomains
+    ```
+
+    This command lists all existing custom domains for a particular static site.
+- title: 'Example 2: Get an existing custom domain for a particular static site'
+  description: |-
+    ```powershell
+    Get-AzStaticWebAppCustomDomain -ResourceGroupName azure-rg-test -Name staticweb00 -DomainName 'www02.azpstest.net'
+    ```
+
+    ```output
+    Kind Name               Type
+    ---- ----               ----
+         www02.azpstest.net Microsoft.Web/staticSites/customDomains
+    ```
+
+    This command gets an existing custom domain for a particular static site.
+- title: 'Example 3: Get an existing custom domain for a particular static site by pipeline'
+  description: |-
+    ```powershell
+    New-AzStaticWebAppCustomDomain -ResourceGroupName azure-rg-test -Name staticweb00 -DomainName 'www02.azpstest.net' | Get-AzStaticWebAppCustomDomain
+    ```
+
+    ```output
+    Kind Name               Type
+    ---- ----               ----
+         www02.azpstest.net Microsoft.Web/staticSites/customDomains
+    ```
+
+    This command gets an existing custom domain for a particular static site by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzStaticWebAppCustomDomain.md
+  document type: cmdlet
+  external help file: Az.Websites-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.websites/get-azstaticwebappcustomdomain
+  Module Name: Az.Websites
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzStaticWebAppCustomDomain.md
+  PlatyPS schema version: 2024-05-01

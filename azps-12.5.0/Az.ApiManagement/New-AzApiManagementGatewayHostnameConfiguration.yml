@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagementGatewayHostnameConfiguration
+name: New-AzApiManagementGatewayHostnameConfiguration
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Creates a hostname configuration for the existing Gateway.
+description: |-
+  The **New-AzApiManagementGatewayHostnameConfiguration** cmdlet creates a hostname configuration for the existing Gateway.
+parameters:
+  cmdletParameters:
+  - name: CertificateResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A resource identifier for the existing certificate id.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayHostnameConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of new gateway hostname configuration.
+      This parameter is optional.
+      If not specified will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of existing gateway.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hostname.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NegotiateClientCertificate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to enforce NegotiateClientCertificate.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementGatewayHostnameConfiguration
+        -Context <PsApiManagementContext>
+        -GatewayId <String>
+        [-GatewayHostnameConfigurationId <String>]
+        -Hostname <String>
+        -CertificateResourceId <String>
+        [-NegotiateClientCertificate]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementGatewayHostnameConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a hostname configuration for the existing gateway'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    $cert = Get-AzApiManagementCertificate -Context $apimContext -CertificateId "333"
+    New-AzApiManagementGatewayHostnameConfiguration -Context $apimContext -GatewayId "g01" -GatewayHostnameConfigurationId "h01" -Hostname "www.contoso.com" -CertificateResourceId $cert.Id
+    ```
+
+    This command creates a "h01" hostname configuration for a "g01" gateway.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementGatewayHostnameConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementgatewayhostnameconfiguration
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementGatewayHostnameConfiguration.md
+  PlatyPS schema version: 2024-05-01

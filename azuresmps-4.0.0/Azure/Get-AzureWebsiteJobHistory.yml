@@ -1,0 +1,185 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureWebsiteJobHistory
+name: Get-AzureWebsiteJobHistory
+module: Azure
+isPreview: false
+summary: |-
+  Gets a web job history.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  Gets a web job history.
+parameters:
+  cmdletParameters:
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web job name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Latest
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, return the latest run history.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LatestParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the run history you want to see.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RunIdParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteJobHistory
+        -JobName <String>
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: HistoryParameterSetName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteJobHistory
+        -JobName <String>
+        -RunId <String>
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RunIdParameterSetName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteJobHistory
+        -JobName <String>
+        [-Latest]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LatestParameterSetName
+  isDefault: false
+examples:
+- title: 'Example 1: Get complete history for a web job'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob
+    ```
+
+    Gets complete history for MyWebJob.
+- title: 'Example 2: Get latest run for a web job'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -Latest
+    ```
+
+    Gets latest run info for MyWebJob.
+- title: 'Example 3: Get specific run for a web job'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJobHistory -Name MyWebsite -JobName MyWebJob -RunId 10
+    ```
+
+    Gets all info about run with id 10 for MyWebJob.
+links:
+- text: Get-AzureWebsite
+  href: ./Get-AzureWebsite.yml
+- text: New-AzureWebsite
+  href: ./New-AzureWebsite.yml
+- text: Get-AzureWebsiteJob
+  href: ./Get-AzureWebsiteJob.yml
+- text: New-AzureWebsiteJob
+  href: ./New-AzureWebsiteJob.yml
+- text: Remove-AzureWebsiteJob
+  href: ./Remove-AzureWebsiteJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A2CBF963-1FAE-41B0-964E-EFF52076AB32
+  PlatyPS schema version: 2024-05-01

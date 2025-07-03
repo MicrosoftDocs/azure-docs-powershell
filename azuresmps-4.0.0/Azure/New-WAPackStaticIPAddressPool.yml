@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackStaticIPAddressPool
+name: New-WAPackStaticIPAddressPool
+module: Azure
+isPreview: false
+summary: |-
+  Creates a static IP address pool.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-WAPackStaticIPAddressPool** cmdlet creates a static IP address pool.
+parameters:
+  cmdletParameters:
+  - name: IPAddressRangeEnd
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an IP address range end for the static IP address pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressRangeStart
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an IP address range start for the static IP address pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the static IP address pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSubnet
+    type: <xref href="VMSubnet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a VMSubnet associated with the static IP address pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackStaticIPAddressPool
+        -VMSubnet <VMSubnet>
+        -Name <String>
+        -IPAddressRangeStart <String>
+        -IPAddressRangeEnd <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a static IP address pool'
+  description: |-
+    ```
+    PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+    PS C:\> $VMSubnet = Get-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01"
+    PS C:\> New-WAPackStaticIpAddressPool ?VMSubnet $VMSubnet -Name "ContosoStaticIpAddressPool01" -IPAddressRangeStart "192.168.1.0" -IPAddressRangeEnd "192.168.1.10"
+    ```
+
+    The first command first retrieves the virtual machine network to which we want to add the static IP address pool.
+    This virtual machine network is named ContosoVNet01.
+
+    The second command uses the previously retrieved virtual machine network to get the virtual machine subnet named ContosoVMSubnet01 to which we want to add the static IP address pool.
+
+    The last command creates a new static IP address pool with a name ContosoStaticIpAddressPool01 and a range start 192.168.1.0 and a range end 192.168.1.10.
+links:
+- text: Get-WAPackStaticIPAddressPool
+  href: ./Get-WAPackStaticIPAddressPool.yml
+- text: Remove-WAPackStaticIPAddressPool
+  href: ./Remove-WAPackStaticIPAddressPool.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 22A9B83D-789D-4722-BDD1-D8C448CFB88A
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Restart-AzureSiteRecoveryJob
+name: Restart-AzureSiteRecoveryJob
+module: Azure
+isPreview: false
+summary: |-
+  Restarts a Site Recovery job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Restart-AzureSiteRecoveryJob** cmdlet restarts an Azure Site Recovery job.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job to restart.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Job
+    type: <xref href="ASRJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job to restart.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restart-AzureSiteRecoveryJob
+        -Job <ASRJob>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Restart-AzureSiteRecoveryJob
+        -Id <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+examples:
+- title: 'Example 1: Restart a job'
+  description: |-
+    ```
+    PS C:\> Restart-AzureSiteRecoveryJob -Id "bbf0b839-9aaa-49e1-8354-601c9145966d"
+    ID               : bbf0b839-9aaa-49e1-8354-601c9145966d
+    ClientRequestId  : ef42c8b0-640c-4442-960b-349f83d161a5-2014-24-06 14:24:04Z-P
+    State            : Failed
+    StateDescription : Failed
+    StartTime        : 10/6/2014 9:41:08 AM
+    EndTime          : 10/6/2014 9:41:21 AM
+    AllowedActions   : {Cancel, Restart}
+    Name             : Enable protection
+    Tasks            : {Prerequisites check for enabling protection , Identifying replication target, Enable replication,
+                       Starting initial replication...}
+    Errors           : {CreateProtectionTargetTask}
+    ```
+
+    This command restarts the job that has the specified ID.
+links:
+- text: Get-AzureSiteRecoveryJob
+  href: ./Get-AzureSiteRecoveryJob.yml
+- text: Resume-AzureSiteRecoveryJob
+  href: ./Resume-AzureSiteRecoveryJob.yml
+- text: Stop-AzureSiteRecoveryJob
+  href: ./Stop-AzureSiteRecoveryJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: AE26EA0F-9D92-4FDF-92EF-CA33BF06C0DB
+  PlatyPS schema version: 2024-05-01

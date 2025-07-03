@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Resume-AzureAutomationJob
+name: Resume-AzureAutomationJob
+module: Azure
+isPreview: false
+summary: |-
+  Resumes a suspended Automation job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Resume-AzureAutomationJob** cmdlet resumes a suspended Microsoft Azure Automation job.
+  Use the *Id* parameter to specify the suspended job.
+
+  To suspend a job, use the Suspend-AzureAutomationJob cmdlet.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a job.
+    aliases:
+    - JobId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-AzureAutomationJob
+        -Id <Guid>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Resume a suspended job'
+  description: |-
+    ```
+    PS C:\> Resume-AzureAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64
+    ```
+
+    This command resumes the job that has the specified ID.
+links:
+- text: Get-AzureAutomationJob
+  href: ./Get-AzureAutomationJob.yml
+- text: Stop-AzureAutomationJob
+  href: ./Stop-AzureAutomationJob.yml
+- text: Suspend-AzureAutomationJob
+  href: ./Suspend-AzureAutomationJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5E5B8102-9E7E-4128-8160-3AA3803B118F
+  PlatyPS schema version: 2024-05-01

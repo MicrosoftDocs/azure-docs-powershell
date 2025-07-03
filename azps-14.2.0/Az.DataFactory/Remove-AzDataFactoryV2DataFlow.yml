@@ -1,0 +1,254 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Remove-AzDataFactoryV2DataFlow
+name: Remove-AzDataFactoryV2DataFlow
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Removes a data flow from Data Factory.
+description: |-
+  The Remove-AzDataFactoryV2DataFlow cmdlet removes a data flow from Azure Data Factory.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Don't ask for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFlow" data-throw-if-not-resolved="False" />
+    description: |-
+      The data flow object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data flow name.
+    aliases:
+    - DataFlowName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified will write true in case operation succeeds. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2DataFlow
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2DataFlow
+        [-InputObject] <PSDataFlow>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzDataFactoryV2DataFlow
+        [-ResourceId] <String>
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataset" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AzDataFactoryV2DataFlow -ResourceGroupName adf -DataFactoryName WikiADF -DataFlowName "dataflow5"
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to remove data flow 'dataflow5' in data factory 'WikiADF'?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+    ```
+
+    This command removes the data flow named dataflow5 from the data factory named WikiADF.
+links:
+- text: Get-AzDataFactoryV2DataFlow
+  href: ./get-azdatafactoryv2dataflow.yml
+- text: Set-AzDataFactoryV2DataFlow
+  href: ./set-azdatafactoryv2dataflow.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Remove-AzDataFactoryV2DataFlow.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/remove-azdatafactoryv2dataflow
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Remove-AzDataFactoryV2DataFlow.md
+  PlatyPS schema version: 2024-05-01

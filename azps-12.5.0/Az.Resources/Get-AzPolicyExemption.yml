@@ -1,0 +1,218 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzPolicyExemption
+name: Get-AzPolicyExemption
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets policy exemptions.
+description: |-
+  The **Get-AzPolicyExemption** cmdlet gets a collection of policy exemptions or a specific policy exemption identified by name or ID.
+parameters:
+  cmdletParameters:
+  - name: BackwardCompatible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return artifacts using legacy format placing policy-specific properties in a property bag object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified resource Id of the exemption.
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeDescendent
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes the list of returned policy exemptions to include all exemptions related to the given scope, including those from ancestor scopes and those from descendent scopes.
+      If not provided, only exemptions at and above the given scope are included.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IncludeDescendent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy exemption.
+    aliases:
+    - PolicyExemptionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyAssignmentIdFilter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy assignment id filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Id
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the policy exemption.
+      Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: IncludeDescendent
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyExemption
+        [-Name <String>]
+        [-Scope <String>]
+        [-PolicyAssignmentIdFilter <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyExemption
+        [-Scope <String>]
+        [-IncludeDescendent]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IncludeDescendent
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyExemption
+        -Id <String>
+        [-PolicyAssignmentIdFilter <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyExemption" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get all policy exemptions
+  description: |-
+    ```powershell
+    Get-AzPolicyExemption
+    ```
+
+    This command gets all the policy exemptions in the current subscription.
+    If you need to list all the exemptions related to the given scope, including those from ancestor scopes and those from descendent scopes you need to pass the `-IncludeDescendent` parameter.
+- title: 'Example 2: Get a specific policy exemption'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    Get-AzPolicyExemption -Name 'PolicyExemption07' -Scope $ResourceGroup.ResourceId
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The second command gets the policy exemption named PolicyExemption07 for the scope that the **ResourceId** property of $ResourceGroup identifies.
+- title: 'Example 3: Get all policy exemptions associated with a policy assignment'
+  description: |-
+    ```powershell
+    $Assignment = Get-AzPolicyAssignment -Name 'PolicyAssignment07'
+    Get-AzPolicyExemption -PolicyAssignmentIdFilter $Assignment.ResourceId
+    ```
+
+    The first command gets a policy assignment named PolicyAssignment07.
+    The second command gets all of the policy exemptions that are assigned with the policy assignment.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyExemption.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azpolicyexemption
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyExemption.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,216 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Update-AzMonitorWorkspace
+name: Update-AzMonitorWorkspace
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Updates part of a workspace
+description: |-
+  Updates part of a workspace
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IMonitorWorkspaceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure Monitor workspace.
+      The name is case insensitive
+    aliases:
+    - AzureMonitorWorkspaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzMonitorWorkspace
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzMonitorWorkspace
+        -InputObject <IMonitorWorkspaceIdentity>
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.IMonitorWorkspaceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.MonitorWorkspace.Models.Api20230403.IAzureMonitorWorkspaceResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Updates part of a workspace.'
+  description: |-
+    ```powershell
+    Update-AzMonitorWorkspace -Name azps-monitor-workspace -ResourceGroupName azps_test_group -Tag @{"123"="abc"}
+    ```
+
+    ```output
+    Name                   Location ProvisioningState PublicNetworkAccess ResourceGroupName
+    ----                   -------- ----------------- ------------------- -----------------
+    azps-monitor-workspace eastus   Succeeded         Enabled             azps_test_group
+    ```
+
+    Updates part of a workspace.
+- title: 'Example 2: Updates part of a workspace.'
+  description: |-
+    ```powershell
+    Get-AzMonitorWorkspace -Name azps-monitor-workspace -ResourceGroupName azps_test_group | Update-AzMonitorWorkspace -Tag @{"aaa"="bbb"}
+    ```
+
+    ```output
+    Name                   Location ProvisioningState PublicNetworkAccess ResourceGroupName
+    ----                   -------- ----------------- ------------------- -----------------
+    azps-monitor-workspace eastus   Succeeded         Enabled             azps_test_group
+    ```
+
+    Updates part of a workspace.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzMonitorWorkspace.md
+  document type: cmdlet
+  external help file: Az.MonitorWorkspace.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/update-azmonitorworkspace
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Update-AzMonitorWorkspace.md
+  PlatyPS schema version: 2024-05-01

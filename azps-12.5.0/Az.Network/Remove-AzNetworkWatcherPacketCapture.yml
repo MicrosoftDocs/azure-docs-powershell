@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzNetworkWatcherPacketCapture
+name: Remove-AzNetworkWatcherPacketCapture
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes a packet capture resource.
+description: |-
+  The Remove-AzNetworkWatcherPacketCapture removes a packet capture resource.
+  It is recommended to call Stop-AzNetworkWatcherPacketCapture before calling Remove-AzNetworkWatcherPacketCapture.
+  If the packet capture session is running when Remove-AzNetworkWatcherPacketCapture is called the packet capture may not be saved. If the session is stopped prior to removal the .cap file containing capture data is not removed.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, packet, capture, traffic, remove
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the network watcher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcher
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+    description: |-
+      The network watcher resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcherName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of network watcher.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PacketCaptureName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The packet capture name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network watcher resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzNetworkWatcherPacketCapture
+        -NetworkWatcher <PSNetworkWatcher>
+        -PacketCaptureName <String>
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzNetworkWatcherPacketCapture
+        -NetworkWatcherName <String>
+        -ResourceGroupName <String>
+        -PacketCaptureName <String>
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzNetworkWatcherPacketCapture
+        -Location <String>
+        -PacketCaptureName <String>
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByLocation
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a packet capture session'
+  description: |-
+    ```powershell
+    Remove-AzNetworkWatcherPacketCapture -NetworkWatcher $networkWatcher -PacketCaptureName "PacketCaptureTest"
+    ```
+
+    In this example we remove an existing packet capture session named "PacketCaptureTest".
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcherNextHop
+  href: ./Get-AzNetworkWatcherNextHop.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Start-AzNetworkWatcherResourceTroubleshooting
+  href: ./Start-AzNetworkWatcherResourceTroubleshooting.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+- text: New-AzNetworkWatcherProtocolConfiguration
+  href: ./New-AzNetworkWatcherProtocolConfiguration.yml
+- text: Test-AzNetworkWatcherIPFlow
+  href: ./Test-AzNetworkWatcherIPFlow.yml
+- text: Test-AzNetworkWatcherConnectivity
+  href: ./Test-AzNetworkWatcherConnectivity.yml
+- text: Stop-AzNetworkWatcherConnectionMonitor
+  href: ./Stop-AzNetworkWatcherConnectionMonitor.yml
+- text: Start-AzNetworkWatcherConnectionMonitor
+  href: ./Start-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConnectionMonitor
+  href: ./Set-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConfigFlowLog
+  href: ./Set-AzNetworkWatcherConfigFlowLog.yml
+- text: Remove-AzNetworkWatcherConnectionMonitor
+  href: ./Remove-AzNetworkWatcherConnectionMonitor.yml
+- text: New-AzNetworkWatcherConnectionMonitor
+  href: ./New-AzNetworkWatcherConnectionMonitor.yml
+- text: Get-AzNetworkWatcherTroubleshootingResult
+  href: ./Get-AzNetworkWatcherTroubleshootingResult.yml
+- text: Get-AzNetworkWatcherReachabilityReport
+  href: ./Get-AzNetworkWatcherReachabilityReport.yml
+- text: Get-AzNetworkWatcherReachabilityProvidersList
+  href: ./Get-AzNetworkWatcherReachabilityProvidersList.yml
+- text: Get-AzNetworkWatcherFlowLogStatus
+  href: ./Get-AzNetworkWatcherFlowLogStatus.yml
+- text: Get-AzNetworkWatcherConnectionMonitorReport
+  href: ./Get-AzNetworkWatcherConnectionMonitorReport.yml
+- text: Get-AzNetworkWatcherConnectionMonitor
+  href: ./Get-AzNetworkWatcherConnectionMonitor.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-aznetworkwatcherpacketcapture
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzNetworkWatcherPacketCapture.md
+  PlatyPS schema version: 2024-05-01

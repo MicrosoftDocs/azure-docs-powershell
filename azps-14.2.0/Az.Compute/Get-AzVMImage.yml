@@ -1,0 +1,314 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzVMImage
+name: Get-AzVMImage
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets all the versions of a VMImage.
+description: |-
+  The **Get-AzVMImage** cmdlet gets all the versions of a VMImage.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EdgeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Set the extended location name for EdgeZone. If not set, VM Image will be queried from Azure main region. Otherwise it will be queried from the specified extended location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The expand expression to apply on the operation. Possible values are: 'properties', and 'properties/imageDeprecationStatus'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListVMImage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of a VMImage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of VMImage offer.
+      To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderBy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the order of the results returned. Formatted as an OData query.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListVMImage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublisherName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the publisher of a VMImage.
+      To obtain an image publisher, use the Get-AzVMImagePublisher cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a VMImage SKU.
+      To obtain an SKU, use the Get-AzVMImageSku cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum number of virtual machine images returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListVMImage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the VMImage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetVMImageDetail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVMImage
+        -Location <String>
+        -PublisherName <String>
+        -Offer <String>
+        -Skus <String>
+        [-EdgeZone <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListVMImage
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVMImage
+        -Location <String>
+        -PublisherName <String>
+        -Offer <String>
+        -Skus <String>
+        -Version <String>
+        [-EdgeZone <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetVMImageDetail
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineImage" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineImageDetail" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List VM Image objects'
+  description: |-
+    ```powershell
+    Get-AzVMImage -Location "Central US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2025-datacenter"
+    ```
+
+    ```output
+    Version           Location  PublisherName          HyperVGeneration Architecture ImageDeprecationStatus
+    -------           --------  -------------          ---------------- ------------ ----------------------
+    26100.2033.241004 centralus MicrosoftWindowsServer
+    26100.2314.241107 centralus MicrosoftWindowsServer
+    26100.2605.241207 centralus MicrosoftWindowsServer
+    26100.2894.250113 centralus MicrosoftWindowsServer
+    26100.3194.250210 centralus MicrosoftWindowsServer
+    26100.3476.250306 centralus MicrosoftWindowsServer
+    26100.3775.250406 centralus MicrosoftWindowsServer
+
+    ```
+
+    This command gets all the versions of VMImage that match the specified values.
+- title: 'Example 2: List VM Image objects with Image Deprecation Status'
+  description: |-
+    ```powershell
+    Get-AzVMImage -Location "Central US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2025-datacenter" -Expand properties/imageDeprecationStatus
+    ```
+
+    ```output
+    Version           Location  PublisherName          HyperVGeneration Architecture ImageDeprecationStatus
+    -------           --------  -------------          ---------------- ------------ ----------------------
+    26100.2033.241004 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.2314.241107 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.2605.241207 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.2894.250113 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.3194.250210 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.3476.250306 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    26100.3775.250406 centralus MicrosoftWindowsServer V1               x64          Microsoft.Azure.Management.Compute.Mo…
+    ```
+
+    This command gets all the versions of VMImage that match the specified values with image deprecation statuses.
+- title: 'Example 3: Get VMImage object'
+  description: |-
+    ```powershell
+    Get-AzVMImage -Location "Central US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2025-datacenter" -Version 26100.2033.241004
+    ```
+
+    ```output
+    Id                     : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/cent
+                             ralus/Publishers/MicrosoftWindowsServer/ArtifactTypes/VMImage/Offers/windowsserver/Skus/2025-d
+                             atacenter/Versions/26100.2033.241004
+    Location               : centralus
+    PublisherName          : MicrosoftWindowsServer
+    Offer                  : windowsserver
+    Skus                   : 2025-datacenter
+    Version                : 26100.2033.241004
+    FilterExpression       :
+    Name                   : 26100.2033.241004
+    HyperVGeneration       : V1
+    OSDiskImage            : {
+                               "operatingSystem": "Windows"
+                             }
+    PurchasePlan           : null
+    DataDiskImages         : []
+    ImageDeprecationStatus : {
+                               "imageState": "Active",
+                               "scheduledDeprecationTime": null,
+                               "alternativeOption": null
+                             }
+    ```
+
+    This command gets a specific version of VMImage that matches the specified values.
+- title: 'Example 4: Get VMImage objects'
+  description: |-
+    ```powershell
+    Get-AzVMImage -Location "Central US" -PublisherName "MicrosoftWindowsServer" -Offer "windowsserver" -Skus "2025-datacenter" -Version 26100.2* -Expand properties
+    ```
+
+    ```output
+    Version           Location  PublisherName          HyperVGeneration Architecture ImageDeprecationStatus
+    -------           --------  -------------          ---------------- ------------ ----------------------
+    26100.2033.241004 centralus MicrosoftWindowsServer V1               x64
+    26100.2314.241107 centralus MicrosoftWindowsServer V1               x64
+    26100.2605.241207 centralus MicrosoftWindowsServer V1               x64
+    26100.2894.250113 centralus MicrosoftWindowsServer V1               x64
+    ```
+
+    This command gets all the versions of VMImage that match the specified values with filtering over version.
+links:
+- text: Get-AzVMImageOffer
+  href: ./Get-AzVMImageOffer.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMImageSku
+  href: ./Get-AzVMImageSku.yml
+- text: Save-AzVMImage
+  href: ./Save-AzVMImage.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMImage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azvmimage
+  Module Name: Az.Compute
+  ms.assetid: D5254218-8B3B-4DE2-9480-D65EE5483018
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMImage.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureWebsiteJob
+name: Get-AzureWebsiteJob
+module: Azure
+isPreview: false
+summary: |-
+  Gets the web jobs associated with a website.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  Gets the web jobs associated with a website.
+parameters:
+  cmdletParameters:
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web job name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web job type.
+      The acceptable values for this parameter are:
+
+      - Triggered
+      - Continuous
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteJob
+        [-JobName <String>]
+        [-JobType <String>]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get specific web job info'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob
+    ```
+
+    Gets a web job called MyWebJob from MyWebsite production slot.
+- title: 'Example 2: Get all web jobs for a website'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJob -Name MyWebsite
+    ```
+
+    Gets all web jobs associated with MyWebsite production slot.
+- title: 'Example 3: Get all triggered web jobs'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteJob -Name MyWebsite -Slot staging -Type Triggered
+    ```
+
+    Gets all triggered web jobs from staging slot of MyWebsite.
+links:
+- text: Get-AzureWebsite
+  href: ./Get-AzureWebsite.yml
+- text: New-AzureWebsiteJob
+  href: ./New-AzureWebsiteJob.yml
+- text: Remove-AzureWebsiteJob
+  href: ./Remove-AzureWebsiteJob.yml
+- text: Start-AzureWebsiteJob
+  href: ./Start-AzureWebsiteJob.yml
+- text: Stop-AzureWebsiteJob
+  href: ./Stop-AzureWebsiteJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6B406310-287F-4BD3-BA38-A9C97E8EDC45
+  PlatyPS schema version: 2024-05-01

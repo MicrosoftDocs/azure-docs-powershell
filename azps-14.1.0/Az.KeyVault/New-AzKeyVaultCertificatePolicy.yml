@@ -1,0 +1,567 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.New-AzKeyVaultCertificatePolicy
+name: New-AzKeyVaultCertificatePolicy
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Creates an in-memory certificate policy object.
+description: |-
+  The **New-AzKeyVaultCertificatePolicy** cmdlet creates an in-memory certificate policy object for Azure Key Vault.
+parameters:
+  cmdletParameters:
+  - name: CertificateTransparency
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates whether certificate transparency is enabled for this certificate/issuer; if not specified, the default is 'true'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of certificate to the issuer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Curve
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the elliptic curve name of the key of the certificate.
+      The acceptable values for this parameter are:
+      - P-256
+      - P-384
+      - P-521
+      - P-256K
+      - SECP256K1
+    acceptedValues:
+    - P-256
+    - P-384
+    - P-521
+    - P-256K
+    - SECP256K1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the certificate policy is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsName
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the DNS names in the certificate. Subject Alternative Names (SANs) can be specified as DNS names.
+    aliases:
+    - DnsNames
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DNSNames
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ekus
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the enhanced key usages (EKUs) in the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAtNumberOfDaysBeforeExpiry
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies how many days before expiry the automatic notification process begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAtPercentageLifetime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the percentage of the lifetime after which the automatic process for the notification begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IssuerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the issuer for the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyNotExportable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the key is not exportable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeySize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key size of the certificate.
+      The acceptable values for this parameter are:
+      - 2048
+      - 3072
+      - 4096
+      - 256
+      - 384
+      - 521
+    acceptedValues:
+    - "2048"
+    - "3072"
+    - "4096"
+    - "256"
+    - "384"
+    - "521"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key type of the key that backs the certificate.
+      The acceptable values for this parameter are:
+      - RSA
+      - RSA-HSM
+      - EC
+      - EC-HSM
+    acceptedValues:
+    - RSA
+    - RSA-HSM
+    - EC
+    - EC-HSM
+    defaultValue: RSA
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyUsage
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Security.Cryptography.X509Certificates.X509KeyUsageFlags" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the key usages in the certificate.
+    acceptedValues:
+    - None
+    - EncipherOnly
+    - CrlSign
+    - KeyCertSign
+    - KeyAgreement
+    - DataEncipherment
+    - KeyEncipherment
+    - NonRepudiation
+    - DigitalSignature
+    - DecipherOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewAtNumberOfDaysBeforeExpiry
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of days before expiry after which the automatic process for certificate renewal begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewAtPercentageLifetime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReuseKeyOnRenewal
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the certificate reuse the key during renewal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecretContentType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the content type of the new key vault secret.
+      The acceptable values for this parameter are:
+      - application/x-pkcs12
+      - application/x-pem-file
+    acceptedValues:
+    - application/x-pkcs12
+    - application/x-pem-file
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subject name of the certificate.
+
+      > [!NOTE]
+      > If you must use a comma (,) or a period (.) within a property in the `SubjectName` parameter,
+      > you must enclose the property field in quotation marks. For example, you may use O="Contoso, Ltd." in the Organization Name field.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubjectName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidityInMonths
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of months the certificate is valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzKeyVaultCertificatePolicy
+        [-IssuerName] <String>
+        [-SubjectName] <String>
+        [-RenewAtNumberOfDaysBeforeExpiry <Int32>]
+        [-RenewAtPercentageLifetime <Int32>]
+        [-SecretContentType <String>]
+        [-ReuseKeyOnRenewal]
+        [-Disabled]
+        [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+        [-Ekus <System.Collections.Generic.List`1[System.String]>]
+        [-ValidityInMonths <Int32>]
+        [-CertificateType <String>]
+        [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+        [-EmailAtPercentageLifetime <Int32>]
+        [-KeyType <String>]
+        [-KeySize <Int32>]
+        [-KeyNotExportable]
+        [-CertificateTransparency <Boolean>]
+        [-Curve <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubjectName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzKeyVaultCertificatePolicy
+        [-IssuerName] <String>
+        [[-SubjectName] <String>]
+        [-DnsName] <System.Collections.Generic.List`1[System.String]>
+        [-RenewAtNumberOfDaysBeforeExpiry <Int32>]
+        [-RenewAtPercentageLifetime <Int32>]
+        [-SecretContentType <String>]
+        [-ReuseKeyOnRenewal]
+        [-Disabled]
+        [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+        [-Ekus <System.Collections.Generic.List`1[System.String]>]
+        [-ValidityInMonths <Int32>]
+        [-CertificateType <String>]
+        [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+        [-EmailAtPercentageLifetime <Int32>]
+        [-KeyType <String>]
+        [-KeySize <Int32>]
+        [-KeyNotExportable]
+        [-CertificateTransparency <Boolean>]
+        [-Curve <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DNSNames
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a certificate policy'
+  description: |-
+    ```powershell
+    New-AzKeyVaultCertificatePolicy -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -IssuerName "Self" -ValidityInMonths 6 -ReuseKeyOnRenewal
+    ```
+
+    ```output
+    SecretContentType               : application/x-pkcs12
+    Kty                             :
+    KeySize                         : 2048
+    Curve                           :
+    Exportable                      :
+    ReuseKeyOnRenewal               : True
+    SubjectName                     : CN=contoso.com
+    DnsNames                        :
+    KeyUsage                        :
+    Ekus                            :
+    ValidityInMonths                : 6
+    IssuerName                      : Self
+    CertificateType                 :
+    RenewAtNumberOfDaysBeforeExpiry :
+    RenewAtPercentageLifetime       :
+    EmailAtNumberOfDaysBeforeExpiry :
+    EmailAtPercentageLifetime       :
+    CertificateTransparency         :
+    Enabled                         : True
+    Created                         :
+    Updated                         :
+    ```
+
+    This command creates a certificate policy that is valid for six months and reuses the key to renew the certificate.
+- title: Example 2
+  description: |-
+    Creates an in-memory certificate policy object. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    New-AzKeyVaultCertificatePolicy -IssuerName 'Self' -KeyType RSA -RenewAtNumberOfDaysBeforeExpiry <Int32> -SecretContentType application/x-pkcs12 -SubjectName 'CN=contoso.com' -ValidityInMonths 6
+    ```
+- title: 'Example 3: Create a Subject Alternate Name (or SAN) certificate'
+  description: |-
+    ```powershell
+    New-AzKeyVaultCertificatePolicy -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -DnsName "contoso.com","support.contoso.com","docs.contoso.com" -IssuerName "Self"
+    ```
+
+    ```output
+    SecretContentType               : application/x-pkcs12
+    Kty                             : RSA
+    KeySize                         : 2048
+    Curve                           :
+    Exportable                      :
+    ReuseKeyOnRenewal               : False
+    SubjectName                     : CN=contoso.com
+    DnsNames                        : {contoso.com, support.contoso.com, docs.contoso.com}
+    KeyUsage                        :
+    Ekus                            :
+    ValidityInMonths                :
+    IssuerName                      : Self
+    CertificateType                 :
+    RenewAtNumberOfDaysBeforeExpiry :
+    RenewAtPercentageLifetime       :
+    EmailAtNumberOfDaysBeforeExpiry :
+    EmailAtPercentageLifetime       :
+    CertificateTransparency         :
+    Enabled                         : True
+    Created                         :
+    Updated                         :
+    ```
+
+    This example creates a SAN certificate with 3 DNS names.
+links:
+- text: Get-AzKeyVaultCertificatePolicy
+  href: ./Get-AzKeyVaultCertificatePolicy.yml
+- text: Set-AzKeyVaultCertificatePolicy
+  href: ./Set-AzKeyVaultCertificatePolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVaultCertificatePolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/new-azkeyvaultcertificatepolicy
+  Module Name: Az.KeyVault
+  ms.assetid: 25E0F0E9-BF8C-49DF-87BA-31E2103A29A9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/New-AzKeyVaultCertificatePolicy.md
+  PlatyPS schema version: 2024-05-01

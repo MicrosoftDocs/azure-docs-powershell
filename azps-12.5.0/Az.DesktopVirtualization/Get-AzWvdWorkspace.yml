@@ -1,0 +1,245 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.Get-AzWvdWorkspace
+name: Get-AzWvdWorkspace
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  Get a workspace.
+description: |-
+  Get a workspace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitialSkip
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Initial number of items to skip.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsDescending
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the collection is descending.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the workspace
+    aliases:
+    - WorkspaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PageSize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of items per page.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWvdWorkspace
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWvdWorkspace
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWvdWorkspace
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-InitialSkip <Int32>]
+        [-IsDescending]
+        [-PageSize <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWvdWorkspace
+        -InputObject <IDesktopVirtualizationIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IWorkspace" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Windows Virtual Desktop Workspace by name'
+  description: |-
+    ```powershell
+    Get-AzWvdWorkspace -ResourceGroupName ResourceGroupName -Name WorkspaceName
+    ```
+
+    ```output
+    Location   Name                 Type
+    --------   ----                 ----
+    eastus     WorkspaceName Microsoft.DesktopVirtualization/workspaces
+    ```
+
+    This command gets a Windows Virtual Desktop Workspace in a Resource Group.
+- title: 'Example 2: List Windows Virtual Desktop Workspaces'
+  description: |-
+    ```powershell
+    Get-AzWvdWorkspace -ResourceGroupName ResourceGroupName
+    ```
+
+    ```output
+    Location   Name           Type
+    --------   ----           ----
+    eastus     WorkspaceName1 Microsoft.DesktopVirtualization/workspaces
+    eastus     WorkspaceName2 Microsoft.DesktopVirtualization/workspaces
+    ```
+
+    This command lists a Windows Virtual Desktop Workspaces in a Resource Group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Get-AzWvdWorkspace.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdworkspace
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Get-AzWvdWorkspace.md
+  PlatyPS schema version: 2024-05-01

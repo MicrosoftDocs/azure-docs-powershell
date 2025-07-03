@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Communication.Get-AzEmailServiceSenderUsername
+name: Get-AzEmailServiceSenderUsername
+module: Az.Communication
+isPreview: false
+summary: |-
+  Get a valid sender username for a domains resource.
+description: |-
+  Get a valid sender username for a domains resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailService.Models.IEmailServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Domains resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityEmailService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailServiceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailService.Models.IEmailServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityEmailService
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the EmailService resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailService.Models.IEmailServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SenderUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The valid sender Username.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityEmailService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServiceSenderUsername
+        -DomainName <String>
+        -EmailServiceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServiceSenderUsername
+        -DomainName <String>
+        -SenderUsername <String>
+        -EmailServiceInputObject <IEmailServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityEmailService
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServiceSenderUsername
+        -DomainName <String>
+        -EmailServiceName <String>
+        -ResourceGroupName <String>
+        -SenderUsername <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServiceSenderUsername
+        -SenderUsername <String>
+        -DomainInputObject <IEmailServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityDomain
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServiceSenderUsername
+        -InputObject <IEmailServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailService.Models.IEmailServiceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailService.Models.ISenderUsernameResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get infomation on specified Azure Email services senderusername resource.'
+  description: |-
+    ```powershell
+    Get-AzEmailServiceSenderUsername -SenderUsername donotreply -DomainName AzureManagedDomain -EmailServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1
+    ```
+
+    ```output
+    DataLocation                 :
+    DisplayName                  : DoNotReply
+    Id                           : /subscriptions/653983b8-683a-427c-8c27-9e9624ce9176/resourcegroups/ContosoResourceProvider1/providers/microsoft.communication/emailservices/
+                                   ContosoAcsResource1/domains/azuremanageddomain/senderusernames/donotreply
+    Name                         : donotreply
+    ProvisioningState            :
+    ResourceGroupName            : ContosoResourceProvider1
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : emailservices/domains/senderusernames
+    Username                     : donotreply
+    ```
+
+    Returns the information on senderusername resource.
+- title: 'Example 2: List existing Email Service sender usernames.'
+  description: |-
+    ```powershell
+    Get-AzEmailServiceSenderUsername -DomainName AzureManagedDomain -EmailServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1
+    ```
+
+    ```output
+    Name       SystemData SystemData SystemData    SystemData     SystemData     SystemData         ResourceGroup
+               CreatedAt  CreatedBy  CreatedByType LastModifiedAt LastModifiedBy LastModifiedByType                                                                                                                                        Name
+    ----       ---------- ---------- ------------- -------------- -------------- ------------------ -------------
+    donotreply                                                                                      ContosoResourceProvider1
+    test                                                                                            ContosoResourceProvider1
+    ```
+
+    Returns the information on existing Email Service sender usernames.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzEmailServiceSenderUsername.md
+  document type: cmdlet
+  external help file: Az.Communication-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.communication/get-azemailservicesenderusername
+  Module Name: Az.Communication
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzEmailServiceSenderUsername.md
+  PlatyPS schema version: 2024-05-01

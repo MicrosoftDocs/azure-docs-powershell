@@ -1,0 +1,38 @@
+### YamlMime:PowerShellModule1
+uid: Az.ImageBuilder
+name: Az.ImageBuilder Module
+isPreview: false
+cmdletGroups:
+- title: Image Builder
+  cmdlets:
+  - Az.ImageBuilder.Get-AzImageBuilderTemplate
+  - Az.ImageBuilder.Get-AzImageBuilderTemplateRunOutput
+  - Az.ImageBuilder.Get-AzImageBuilderTrigger
+  - Az.ImageBuilder.New-AzImageBuilderTemplate
+  - Az.ImageBuilder.New-AzImageBuilderTemplateCustomizerObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplateDistributeVersionerLatestObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplateDistributeVersionerSourceObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplateDistributorObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplateSourceObject
+  - Az.ImageBuilder.New-AzImageBuilderTemplateValidatorObject
+  - Az.ImageBuilder.New-AzImageBuilderTrigger
+  - Az.ImageBuilder.Remove-AzImageBuilderTemplate
+  - Az.ImageBuilder.Remove-AzImageBuilderTrigger
+  - Az.ImageBuilder.Start-AzImageBuilderTemplate
+  - Az.ImageBuilder.Stop-AzImageBuilderTemplate
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  Module Name: Az.ImageBuilder
+  Module Guid: bdedc683-d9b6-41ea-b310-d068b8c72305
+  HelpInfoUri:
+    ? Update Download Link: 
+    : 
+  Help Version:
+    ? Please enter version of help manually (X.X.X.X) format: 
+    : 
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/Az.ImageBuilder.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/Az.ImageBuilder.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

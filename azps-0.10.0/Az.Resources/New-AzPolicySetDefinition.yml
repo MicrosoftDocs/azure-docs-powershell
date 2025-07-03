@@ -1,0 +1,343 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzPolicySetDefinition
+name: New-AzPolicySetDefinition
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates a policy set definition.
+description: |-
+  The **New-AzPolicySetDefinition** cmdlet creates a policy set definition.
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, indicates the version of the resource provider API to use.
+      If not specified, the API version is automatically determined as the latest available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description for policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name for policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the management group of the new policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The metadata for policy set definition. This can either be a path to a file name containing the metadata, or the metadata as string
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy set definition name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parameters declaration for policy set definition.
+      This can either be a path to a file name containing the parameters declaration, or the parameters declaration as string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy set definition. This can either be a path to a file name containing the policy definitions, or the policy set definition as string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The subscription ID of the new policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPolicySetDefinition
+        -Name <String>
+        -PolicyDefinition <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzPolicySetDefinition
+        -Name <String>
+        -PolicyDefinition <String>
+        -ManagementGroupName <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzPolicySetDefinition
+        -Name <String>
+        -PolicyDefinition <String>
+        -SubscriptionId <Guid>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a policy set definition by using a policy set file'
+  description: |-
+    ```
+    [
+       {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a0e14a6-b0a6-4fab-991a-187a4f81c498",
+          "parameters": {
+             "tagName": {
+                "value": "Business Unit"
+             },
+             "tagValue": {
+                "value": "Finance"
+             }
+          }
+       },
+       {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/464dbb85-3d5f-4a1d-bb09-95a9b5dd19cf"
+       }
+    ]
+    ```
+
+    ```
+    PS C:\> New-AzPolicySetDefinition -Name 'VMPolicyDefinition' -PolicyDefinition C:\VMPolicySet.json
+    ```
+
+    This command creates a policy set definition named VMPolicyDefinition that contains the policy definitions specified in C:\VMPolicy.json. Example content of the VMPolicy.json is provided above.
+- title: 'Example 2: Create a parameterized policy set definition'
+  description: |-
+    ```
+    [
+       {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2a0e14a6-b0a6-4fab-991a-187a4f81c498",
+          "parameters": {
+             "tagName": {
+                "value": "Business Unit"
+             },
+             "tagValue": {
+                "value": "[parameters('buTagValue')]"
+             }
+          }
+       },
+       {
+          "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/464dbb85-3d5f-4a1d-bb09-95a9b5dd19cf"
+       }
+    ]
+    ```
+
+    ```
+    PS C:\> New-AzPolicySetDefinition -Name 'VMPolicyDefinition' -PolicyDefinition C:\VMPolicySet.json -Parameter '{ "buTagValue": { "type": "string" } }'
+    ```
+
+    This command creates a parameterized policy set definition named VMPolicyDefinition that contains the policy definitions specified in C:\VMPolicy.json. Example content of the VMPolicy.json is provided above.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzPolicySetDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azpolicysetdefinition
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzPolicySetDefinition.md
+  PlatyPS schema version: 2024-05-01

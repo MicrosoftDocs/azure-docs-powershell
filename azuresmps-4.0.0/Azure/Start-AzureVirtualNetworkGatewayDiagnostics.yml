@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureVirtualNetworkGatewayDiagnostics
+name: Start-AzureVirtualNetworkGatewayDiagnostics
+module: Azure
+isPreview: false
+summary: |-
+  Starts diagnostics for a virtual network gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureVirtualNetworkGatewayDiagnostics** cmdlet starts a new gateway diagnostics session for a virtual network gateway.
+  Only one gateway diagnostics session can run at a time.
+  If you run this cmdlet while a gateway diagnostics session is running, this cmdlet returns an error.
+parameters:
+  cmdletParameters:
+  - name: CaptureDurationInSeconds
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the capture duration in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure container.
+      This cmdlet stores results in the container that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContext
+    type: <xref href="AzureStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      This cmdlet stores results by using the storage context that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureVirtualNetworkGatewayDiagnostics
+        -GatewayId <String>
+        [-CaptureDurationInSeconds <Int32>]
+        [-ContainerName <String>]
+        [-StorageContext <AzureStorageContext>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Get-AzureVirtualNetworkGatewayDiagnostics
+  href: ./Get-AzureVirtualNetworkGatewayDiagnostics.yml
+- text: Stop-AzureVirtualNetworkGatewayDiagnostics
+  href: ./Stop-AzureVirtualNetworkGatewayDiagnostics.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DA5689DF-AA4A-4161-89B0-8055BF384274
+  PlatyPS schema version: 2024-05-01

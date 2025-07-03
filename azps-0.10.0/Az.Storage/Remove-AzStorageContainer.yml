@@ -1,0 +1,231 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Remove-AzStorageContainer
+name: Remove-AzStorageContainer
+module: Az.Storage
+isPreview: false
+summary: |-
+  Removes the specified storage container.
+description: |-
+  The **Remove-AzStorageContainer** cmdlet removes the specified storage container in Azure.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a context for the container you want to remove.
+      You can use the New-AzStorageContext cmdlet to create it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the container to remove.
+    aliases:
+    - N
+    - Container
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+      By default, this cmdlet does not return a value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the service side time-out interval, in seconds, for a request.
+      If the specified interval elapses before the service processes the request, the storage service returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzStorageContainer
+        [-Name] <String>
+        [-Force]
+        [-PassThru]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a container'
+  description: |-
+    ```
+    PS C:\>Remove-AzStorageContainer -Name "MyTestContainer"
+    ```
+
+    This example removes a container named MyTestContainer.
+links:
+- text: Get-AzStorageContainer
+  href: ./Get-AzStorageContainer.yml
+- text: New-AzStorageContainer
+  href: ./New-AzStorageContainer.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Remove-AzStorageContainer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.storage/remove-azstoragecontainer
+  Module Name: Az.Storage
+  ms.assetid: 6A46DA60-2ACF-4842-B5B3-58944264854A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Remove-AzStorageContainer.md
+  PlatyPS schema version: 2024-05-01

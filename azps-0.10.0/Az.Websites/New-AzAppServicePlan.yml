@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.New-AzAppServicePlan
+name: New-AzAppServicePlan
+module: Az.Websites
+isPreview: false
+summary: |-
+  Creates an Azure App Service plan in a given Geo location.
+description: |-
+  The **New-AzAppServicePlan** cmdlet creates an Azure App Service plan in a given Geo location with the specified Tier, worker size, and number of workers.
+parameters:
+  cmdletParameters:
+  - name: AppServicePlan
+    type: <xref href="ServerFarmWithRichSku" data-throw-if-not-resolved="False" />
+    description: |-
+      App Service Plan Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S2
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      App Service Environment Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AseResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      App Service Environment Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      App Service Plan Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S1
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NumberofWorkers
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number Of Workers
+    defaultValue: "1"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PerSiteScaling
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not to enable Per Site Scaling
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S1
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tier
+    acceptedValues:
+    - Free
+    - Shared
+    - Basic
+    - Standard
+    - Premium
+    - PremiumV2
+    defaultValue: Free
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkerSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Size of web worker
+    acceptedValues:
+    - Small
+    - Medium
+    - Large
+    - ExtraLarge
+    defaultValue: Small
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAppServicePlan
+        [-Location] <String>
+        [[-Tier] <String>]
+        [[-NumberofWorkers] <Int32>]
+        [[-WorkerSize] <String>]
+        [[-AseName] <String>]
+        [[-AseResourceGroupName] <String>]
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-PerSiteScaling <Boolean>]
+        [-AsJob][-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: S1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzAppServicePlan
+        [-Location] <String>
+        [[-Tier] <String>]
+        [[-NumberofWorkers] <Int32>]
+        [[-WorkerSize] <String>]
+        [[-AseName] <String>]
+        [[-AseResourceGroupName] <String>]
+        [-AppServicePlan] <ServerFarmWithRichSku>
+        [-PerSiteScaling <Boolean>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: S2
+  isDefault: false
+inputs:
+- name: <xref href="ServerFarmWithRichSku" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'AppServicePlan' accepts value of type 'ServerFarmWithRichSku' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Management.WebSites.Models.ServerFarmWithRichSku" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an App Service plan'
+  description: |-
+    ```
+    PS C:\>New-AzAppServicePlan -ResourceGroupName "Default-Web-WestUS" -Name "ContosoASP" -Location "West US" -Tier "Basic" -NumberofWorkers 2 -WorkerSize "Small"
+    ```
+
+    This command creates an App Service plan named ContosoASP in the resource group named Default-Web-WestUS in Geo location West US.
+    The command specifies a Basic Tier and allocates two small workers.
+links:
+- text: Get-AzAppServicePlan
+  href: ./Get-AzAppServicePlan.yml
+- text: Remove-AzAppServicePlan
+  href: ./Remove-AzAppServicePlan.yml
+- text: Set-AzAppServicePlan
+  href: ./Set-AzAppServicePlan.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzAppServicePlan.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.websites/new-azappserviceplan
+  Module Name: Az.WebSites
+  ms.assetid: 8F36244D-A4D7-40BB-AC4C-E9AD445549F8
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzAppServicePlan.md
+  PlatyPS schema version: 2024-05-01

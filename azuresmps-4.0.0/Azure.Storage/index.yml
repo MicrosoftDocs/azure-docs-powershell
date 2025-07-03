@@ -1,0 +1,81 @@
+### YamlMime:PowerShellModule1
+uid: Azure.Storage
+name: Azure.Storage Module
+isPreview: false
+cmdletGroups:
+- title: Policies
+  cmdlets:
+  - Azure.Storage.Get-AzureStorageContainerStoredAccessPolicy
+  - Azure.Storage.Get-AzureStorageQueueStoredAccessPolicy
+  - Azure.Storage.Get-AzureStorageShareStoredAccessPolicy
+  - Azure.Storage.Get-AzureStorageTableStoredAccessPolicy
+  - Azure.Storage.New-AzureStorageContainerStoredAccessPolicy
+  - Azure.Storage.New-AzureStorageQueueStoredAccessPolicy
+  - Azure.Storage.New-AzureStorageShareStoredAccessPolicy
+  - Azure.Storage.New-AzureStorageTableStoredAccessPolicy
+  - Azure.Storage.Remove-AzureStorageContainerStoredAccessPolicy
+  - Azure.Storage.Remove-AzureStorageQueueStoredAccessPolicy
+  - Azure.Storage.Remove-AzureStorageShareStoredAccessPolicy
+  - Azure.Storage.Remove-AzureStorageTableStoredAccessPolicy
+  - Azure.Storage.Set-AzureStorageContainerStoredAccessPolicy
+  - Azure.Storage.Set-AzureStorageQueueStoredAccessPolicy
+  - Azure.Storage.Set-AzureStorageShareStoredAccessPolicy
+  - Azure.Storage.Set-AzureStorageTableStoredAccessPolicy
+- title: Storage
+  cmdlets:
+  - Azure.Storage.Get-AzureStorageBlob
+  - Azure.Storage.Get-AzureStorageBlobContent
+  - Azure.Storage.Get-AzureStorageBlobCopyState
+  - Azure.Storage.Get-AzureStorageContainer
+  - Azure.Storage.Get-AzureStorageCORSRule
+  - Azure.Storage.Get-AzureStorageFile
+  - Azure.Storage.Get-AzureStorageFileContent
+  - Azure.Storage.Get-AzureStorageFileCopyState
+  - Azure.Storage.Get-AzureStorageQueue
+  - Azure.Storage.Get-AzureStorageServiceLoggingProperty
+  - Azure.Storage.Get-AzureStorageServiceMetricsProperty
+  - Azure.Storage.Get-AzureStorageShare
+  - Azure.Storage.Get-AzureStorageTable
+  - Azure.Storage.New-AzureStorageAccountSASToken
+  - Azure.Storage.New-AzureStorageBlobSASToken
+  - Azure.Storage.New-AzureStorageContainer
+  - Azure.Storage.New-AzureStorageContainerSASToken
+  - Azure.Storage.New-AzureStorageContext
+  - Azure.Storage.New-AzureStorageDirectory
+  - Azure.Storage.New-AzureStorageFileSASToken
+  - Azure.Storage.New-AzureStorageQueue
+  - Azure.Storage.New-AzureStorageQueueSASToken
+  - Azure.Storage.New-AzureStorageShare
+  - Azure.Storage.New-AzureStorageShareSASToken
+  - Azure.Storage.New-AzureStorageTable
+  - Azure.Storage.New-AzureStorageTableSASToken
+  - Azure.Storage.Remove-AzureStorageBlob
+  - Azure.Storage.Remove-AzureStorageContainer
+  - Azure.Storage.Remove-AzureStorageCORSRule
+  - Azure.Storage.Remove-AzureStorageDirectory
+  - Azure.Storage.Remove-AzureStorageFile
+  - Azure.Storage.Remove-AzureStorageQueue
+  - Azure.Storage.Remove-AzureStorageShare
+  - Azure.Storage.Remove-AzureStorageTable
+  - Azure.Storage.Set-AzureStorageBlobContent
+  - Azure.Storage.Set-AzureStorageContainerAcl
+  - Azure.Storage.Set-AzureStorageCORSRule
+  - Azure.Storage.Set-AzureStorageFileContent
+  - Azure.Storage.Set-AzureStorageServiceLoggingProperty
+  - Azure.Storage.Set-AzureStorageServiceMetricsProperty
+  - Azure.Storage.Set-AzureStorageShareQuota
+  - Azure.Storage.Start-AzureStorageBlobCopy
+  - Azure.Storage.Start-AzureStorageBlobIncrementalCopy
+  - Azure.Storage.Start-AzureStorageFileCopy
+  - Azure.Storage.Stop-AzureStorageBlobCopy
+  - Azure.Storage.Stop-AzureStorageFileCopy
+description: |-
+  This topic displays help topics for the Azure Storage Cmdlets.
+metadata:
+  Module Name: Azure.Storage
+  Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+  HelpInfoUri: ./Azure.Storage.md
+  Help Version: ""
+  Locale: en-US
+  PlatyPS schema version: 2024-05-01
+  document type: module

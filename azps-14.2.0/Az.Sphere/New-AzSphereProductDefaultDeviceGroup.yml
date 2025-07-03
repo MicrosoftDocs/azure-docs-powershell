@@ -1,0 +1,237 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sphere.New-AzSphereProductDefaultDeviceGroup
+name: New-AzSphereProductDefaultDeviceGroup
+module: Az.Sphere
+isPreview: false
+summary: |-
+  Generates default device groups for the product.
+  '.default' and '.unassigned' are system defined values and cannot be used for product name.
+description: |-
+  Generates default device groups for the product.
+  '.default' and '.unassigned' are system defined values and cannot be used for product name.
+parameters:
+  cmdletParameters:
+  - name: CatalogInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenerateViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CatalogName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of catalog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Generate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenerateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Generate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GenerateViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Generate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Generate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSphereProductDefaultDeviceGroup
+        -CatalogName <String>
+        -ProductName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Generate
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSphereProductDefaultDeviceGroup
+        -ProductName <String>
+        -CatalogInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GenerateViaIdentityCatalog
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSphereProductDefaultDeviceGroup
+        -InputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GenerateViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.IDeviceGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Generate default device groups for the product'
+  description: |-
+    ```powershell
+    New-AzSphereProductDefaultDeviceGroup -CatalogName test2024 -ProductName product0207 -ResourceGroupName group-test
+    ```
+
+    ```output
+    Name                     SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----                     ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    Development                                                                                                                                                             group-test
+    Field Test                                                                                                                                                              group-test
+    Production                                                                                                                                                              group-test
+    Production OS Evaluation                                                                                                                                                group-test
+    Field Test OS Evaluation                                                                                                                                                group-test
+    ```
+
+    This command generates default device groups for the product.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/New-AzSphereProductDefaultDeviceGroup.md
+  document type: cmdlet
+  external help file: Az.Sphere-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sphere/new-azsphereproductdefaultdevicegroup
+  Module Name: Az.Sphere
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/New-AzSphereProductDefaultDeviceGroup.md
+  PlatyPS schema version: 2024-05-01

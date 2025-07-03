@@ -1,0 +1,497 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.Update-AzWvdSessionHost
+name: Update-AzWvdSessionHost
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  update a session host.
+description: |-
+  update a session host.
+parameters:
+  cmdletParameters:
+  - name: AllowNewSession
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allow a new session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedUser
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User assigned to SessionHost.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Force flag to update assign, unassign or reassign personal desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Friendly name of SessionHost
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostPoolInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityHostPoolExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the host pool within the specified resource group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the session host within the specified host pool
+    aliases:
+    - SessionHostName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPoolExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityHostPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionHost
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.ISessionHostPatch" data-throw-if-not-resolved="False" />
+    description: |-
+      SessionHost properties that can be patched.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityHostPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -HostPoolName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Force]
+        [-AllowNewSession]
+        [-AssignedUser <String>]
+        [-FriendlyName <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -HostPoolName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-Force]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -HostPoolName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-Force]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -Name <String>
+        -HostPoolInputObject <IDesktopVirtualizationIdentity>
+        [-Force]
+        [-AllowNewSession]
+        [-AssignedUser <String>]
+        [-FriendlyName <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityHostPoolExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -Name <String>
+        -HostPoolInputObject <IDesktopVirtualizationIdentity>
+        -SessionHost <ISessionHostPatch>
+        [-Force]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityHostPool
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzWvdSessionHost
+        -InputObject <IDesktopVirtualizationIdentity>
+        [-Force]
+        [-AllowNewSession]
+        [-AssignedUser <String>]
+        [-FriendlyName <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.ISessionHostPatch" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.ISessionHost" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a Windows Virtual Desktop SessionHost by name'
+  description: |-
+    ```powershell
+    Update-AzWvdSessionHost -ResourceGroupName ResourceGroupName `
+                                -HostPoolName HostPoolName `
+                                -Name SessionHostName `
+                                -AllowNewSession:$false
+    ```
+
+    ```output
+    Name                                               Type
+    ----                                               ----
+    HostPoolName/SessionHostName Microsoft.DesktopVirtualization/hostpools/sessionhosts
+    ```
+
+    This command updates a Windows Virtual Desktop SessionHost in a Host Pool.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Update-AzWvdSessionHost.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/update-azwvdsessionhost
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Update-AzWvdSessionHost.md
+  PlatyPS schema version: 2024-05-01

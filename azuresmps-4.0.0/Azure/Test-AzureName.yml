@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Test-AzureName
+name: Test-AzureName
+module: Azure
+isPreview: false
+summary: |-
+  Tests whether a Microsoft Azure cloud service name, storage service name or service bus namespace name exists or not.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  If the name exists, the cmdlet returns $True.
+  If the name does not exist, it returns $False.
+notes: |-
+  * node-dev, php-dev, python-dev
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service or storage account to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to test for an existing service account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Service
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceBusNamespace
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to test for an existing service bus namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceBusNamespace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Storage
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to test for an existing storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Storage
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Website
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to test for an existing website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Website
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzureName
+        -Name <String>
+        [-Service]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Service
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzureName
+        -Name <String>
+        [-Storage]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Storage
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzureName
+        -Name <String>
+        [-ServiceBusNamespace]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServiceBusNamespace
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzureName
+        -Name <String>
+        [-Website]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Website
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Test-AzureName -Service "MyNameService1"
+    ```
+
+    This command tests to see if the "MyNameService1" is an existing Microsoft Azure cloud service name.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Test-AzureName -Storage "mystorename1"
+    ```
+
+    This command tests to see if the "mystorename1" is an existing Microsoft Azure storage service name.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Test-AzureName -ServiceBusNamespace "mynamespace"
+    ```
+
+    This command tests to see if the "mynamespace" is an existing Microsoft Azure service bus namespace name.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0DF54C9D-7A19-4591-A1FC-33C6A4C9BF33
+  PlatyPS schema version: 2024-05-01

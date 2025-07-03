@@ -1,0 +1,65 @@
+### YamlMime:PowerShellModule1
+uid: Az.CognitiveServices
+name: Az.CognitiveServices Module
+isPreview: false
+cmdletGroups:
+- title: Cognitive Services
+  cmdlets:
+  - Az.CognitiveServices.Add-AzCognitiveServicesAccountNetworkRule
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccount
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountCommitmentPlan
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountDefenderForAISetting
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountDeployment
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountDeploymentSku
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountKey
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountModel
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountNetworkRuleSet
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountRaiBlocklist
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountRaiBlocklistItem
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountRaiPolicy
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountSku
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountType
+  - Az.CognitiveServices.Get-AzCognitiveServicesAccountUsage
+  - Az.CognitiveServices.Get-AzCognitiveServicesCommitmentPlan
+  - Az.CognitiveServices.Get-AzCognitiveServicesCommitmentPlanAssociation
+  - Az.CognitiveServices.Get-AzCognitiveServicesCommitmentTier
+  - Az.CognitiveServices.Get-AzCognitiveServicesModel
+  - Az.CognitiveServices.Get-AzCognitiveServicesModelCapacity
+  - Az.CognitiveServices.Get-AzCognitiveServicesRaiContentFilter
+  - Az.CognitiveServices.Get-AzCognitiveServicesUsage
+  - Az.CognitiveServices.New-AzCognitiveServicesAccount
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountApiProperty
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountCommitmentPlan
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountDefenderForAISetting
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountDeployment
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountKey
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountRaiBlocklist
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountRaiBlocklistItem
+  - Az.CognitiveServices.New-AzCognitiveServicesAccountRaiPolicy
+  - Az.CognitiveServices.New-AzCognitiveServicesCommitmentPlan
+  - Az.CognitiveServices.New-AzCognitiveServicesCommitmentPlanAssociation
+  - Az.CognitiveServices.New-AzCognitiveServicesObject
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccount
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountCommitmentPlan
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountDeployment
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountNetworkRule
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountRaiBlocklist
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountRaiBlocklistItem
+  - Az.CognitiveServices.Remove-AzCognitiveServicesAccountRaiPolicy
+  - Az.CognitiveServices.Remove-AzCognitiveServicesCommitmentPlan
+  - Az.CognitiveServices.Remove-AzCognitiveServicesCommitmentPlanAssociation
+  - Az.CognitiveServices.Set-AzCognitiveServicesAccount
+  - Az.CognitiveServices.Undo-AzCognitiveServicesAccountRemoval
+  - Az.CognitiveServices.Update-AzCognitiveServicesAccountNetworkRuleSet
+description: |-
+  This topic displays help topics for the Azure Cognitive Services cmdlets.
+metadata:
+  Module Name: Az.CognitiveServices
+  Module Guid: 66c566b4-950c-4a2b-9f3b-199d92f0df1a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.cognitiveservices
+  Help Version: 0.9.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Az.CognitiveServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Az.CognitiveServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

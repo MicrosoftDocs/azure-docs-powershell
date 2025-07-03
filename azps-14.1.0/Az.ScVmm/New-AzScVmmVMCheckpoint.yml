@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ScVmm.New-AzScVmmVMCheckpoint
+name: New-AzScVmmVMCheckpoint
+module: Az.ScVmm
+isPreview: false
+summary: |-
+  create a checkpoint in virtual machine.
+description: |-
+  create a checkpoint in virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CheckpointDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the checkpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CheckpointName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the checkpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the virtual machine.
+    aliases:
+    - VMName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzScVmmVMCheckpoint
+        -Name <String>
+        -ResourceGroupName <String>
+        -CheckpointDescription <String>
+        -CheckpointName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzScVmmVMCheckpoint
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzScVmmVMCheckpoint
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create VM checkpoint'
+  description: |-
+    ```powershell
+    New-AzScVmmVMCheckpoint -Name "test-vm" -ResourceGroupName "test-rg-01" -CheckpointName "Test-01" -CheckpointDescription "Test-Desc-01"
+    ```
+
+    Creates a VM checkpoint with given Name and Description values for Checkpoint.
+    To get details of the created checkpoint perform a Get VM operation using `Get-AzScVmmVM`.
+- title: 'Example 2: Create VM checkpoint'
+  description: |-
+    ```powershell
+    $CheckpointProperties = '{
+        "name": "Test-02",
+        "description": "Test-Desc-02"
+    }'
+    New-AzScVmmVMCheckpoint -Name "test-vm" -ResourceGroupName "test-rg-01" -JsonString $CheckpointProperties
+    ```
+
+    Creates a VM checkpoint with Checkpoint name and description in JsonString.
+    To get details of the created checkpoint perform a Get VM operation using `Get-AzScVmmVM`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmVMCheckpoint.md
+  document type: cmdlet
+  external help file: Az.ScVmm-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.scvmm/new-azscvmmvmcheckpoint
+  Module Name: Az.ScVmm
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmVMCheckpoint.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementSubscriptionKey
+name: Get-AzApiManagementSubscriptionKey
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets subscription keys.
+description: |-
+  The **Get-AzApiManagementSubscriptionKey** cmdlet gets a keys of a specified subscription.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PsApiManagementContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a subscription identifier.
+      If specified, this cmdlet finds subscription by the identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementSubscriptionKey
+        -Context <PsApiManagementContext>
+        -SubscriptionId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSubscriptionKey" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a subscription keys with a specified ID'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-East-US" -ServiceName "contoso"
+    Get-AzApiManagementSubscriptionKey -Context $apimContext -SubscriptionId "0123456789"
+    ```
+
+    ```output
+    PrimaryKey        : 5e48532634114fe999a6979ce0d63a64
+    SecondaryKey      : 0a8efaf85a664aa0a412241015c7c8f6
+    ```
+
+    This command gets a subscription by ID.
+links:
+- text: New-AzApiManagementSubscription
+  href: ./Get-AzApiManagementSubscription.yml
+- text: New-AzApiManagementSubscription
+  href: ./New-AzApiManagementSubscription.yml
+- text: Remove-AzApiManagementSubscription
+  href: ./Remove-AzApiManagementSubscription.yml
+- text: Set-AzApiManagementSubscription
+  href: ./Set-AzApiManagementSubscription.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSubscriptionKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementsubscriptionkey
+  Module Name: Az.ApiManagement
+  ms.assetid: 227EF8A2-E04A-4F6B-B66E-E77F1276A7E4
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementSubscriptionKey.md
+  PlatyPS schema version: 2024-05-01

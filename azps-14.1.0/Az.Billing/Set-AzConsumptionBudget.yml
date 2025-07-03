@@ -1,0 +1,561 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Billing.Set-AzConsumptionBudget
+name: Set-AzConsumptionBudget
+module: Az.Billing
+isPreview: false
+summary: |-
+  Update a budget in either a subscription or a resource group.
+description: |-
+  The Set-AzConsumptionBudget cmdlet updates a budget in either a subscription or a resource group.
+notes: |-
+  - Currently, PowerShell SDK for Consumption is only available to Enterprise Agreement customers.
+  - PowerShell SDK for Consumption is using an older version of Budgets API and few backwards non-compatible items like listing Budgets with filters will not work as expected.
+parameters:
+  cmdletParameters:
+  - name: Amount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Decimal" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Amount of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Category
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Category of the budget can be cost or usage.
+    acceptedValues:
+    - Cost
+    - Usage
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email addresses to send the budget notification to when the threshold is exceeded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Action groups to send the budget notification to when the threshold is exceeded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactRole
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Contact roles to send the budget notification to when the threshold is exceeded.
+    acceptedValues:
+    - Owner
+    - Reader
+    - Contributor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDate
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      End date (YYYY-MM-DD in UTC) of time period of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Consumption.Models.PSBudget" data-throw-if-not-resolved="False" />
+    description: |-
+      Budget object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Piping
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MeterFilter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma-separated list of meters to filter on.
+      Required if category is usage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Subscription
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Notification
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The notification is enabled.
+      If not specified, the notification is disabled by default.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key of a notification associated with a budget, required to create a notification with notification enabled switch, notification threshold, contact emails, contact groups, or contact roles.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationThreshold
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Decimal" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Threshold value associated with a notification.
+      Notification is sent when the cost or usage exceeded the threshold.
+      It is always percent and has to be between 0 and 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Piping and Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceFilter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma-separated list of resource instances to filter on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupFilter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma-separated list of resource groups to filter on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Subscription
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Notification
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDate
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Start date (YYYY-MM-DD in UTC) of time period of a budget.
+      Not prior to current month for monthly time grain.
+      Not prior to three months for quarterly time grain.
+      Not prior to twelve months for yearly time grain.
+      Future start date not more than three months.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeGrain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Time grain of the budget can be monthly, quarterly, or annually.
+    acceptedValues:
+    - Monthly
+    - Quarterly
+    - Annually
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzConsumptionBudget
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Amount <Decimal>]
+        [-Category <String>]
+        [-TimeGrain <String>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-ResourceGroupName <String>]
+        [-MeterFilter <String[]>]
+        [-ResourceFilter <String[]>]
+        [-ResourceGroupFilter <String[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Subscription
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzConsumptionBudget
+        -Name <String>
+        -NotificationKey <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Amount <Decimal>]
+        [-Category <String>]
+        [-TimeGrain <String>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-ResourceGroupName <String>]
+        [-MeterFilter <String[]>]
+        [-ResourceFilter <String[]>]
+        [-ResourceGroupFilter <String[]>]
+        [-NotificationEnabled]
+        [-NotificationThreshold <Decimal>]
+        [-ContactEmail <String[]>]
+        [-ContactGroup <String[]>]
+        [-ContactRole <String[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Notification
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzConsumptionBudget
+        -InputObject <PSBudget>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Amount <Decimal>]
+        [-Category <String>]
+        [-TimeGrain <String>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-MeterFilter <String[]>]
+        [-ResourceFilter <String[]>]
+        [-ResourceGroupFilter <String[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Piping
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzConsumptionBudget
+        -InputObject <PSBudget>
+        -NotificationKey <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Amount <Decimal>]
+        [-Category <String>]
+        [-TimeGrain <String>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-MeterFilter <String[]>]
+        [-ResourceFilter <String[]>]
+        [-ResourceGroupFilter <String[]>]
+        [-NotificationEnabled]
+        [-NotificationThreshold <Decimal>]
+        [-ContactEmail <String[]>]
+        [-ContactGroup <String[]>]
+        [-ContactRole <String[]>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Piping and Notification
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Consumption.Models.PSBudget" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Consumption.Models.PSBudget" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a budget by a new amount with a budget name at subscription level'
+  description: |-
+    ```powershell
+    Set-AzConsumptionBudget -Name PSBudget -Amount 75
+    ```
+
+    ```output
+    Amount:  75
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
+    Name:  PSBudget
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+- title: 'Example 2: Update a budget with a notification when cost or usage reaches a threshold of 90 percent of amount at subscription level'
+  description: |-
+    ```powershell
+    Set-AzConsumptionBudget -Name PSBudget -NotificationKey notificationKey-ps1234 -NotificationEnabled -NotificationThreshold 90 -ContactEmail @('johndoe@contoso.com','janesmith@contoso.com') -ContactRole Owner,Reader,Contributor
+    ```
+
+    ```output
+    Amount:  75
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
+    Name:  PSBudget
+    Notification:  NotificationKey:  notificationKey-ps1234
+                   Threshold:  90
+                   Enabled:  true
+                   ContactEmail:  johndoe@contoso.com,janesmith@contoso.com
+                   ContactRole:  Owner,Reader,Contributor
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+- title: 'Example 3: Update a budget by a new amount with a budget name at resource group level'
+  description: |-
+    ```powershell
+    Set-AzConsumptionBudget -ResourceGroupName RGBudgets -Name PSBudgetRG -Amount 75
+    ```
+
+    ```output
+    Amount:  75
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG
+    Name:  PSBudgetRG
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Set-AzConsumptionBudget.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billing/set-azconsumptionbudget
+  Module Name: Az.Billing
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Set-AzConsumptionBudget.md
+  PlatyPS schema version: 2024-05-01

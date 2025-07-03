@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.New-AzureStorageTableStoredAccessPolicy
+name: New-AzureStorageTableStoredAccessPolicy
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Creates a stored access policy for an Azure storage table.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorageTableStoredAccessPolicy** cmdlet creates a stored access policy for an Azure storage table.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time at which the stored access policy becomes invalid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the level of public access to this storage table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a stored access policy, which includes the permissions for this Shared Access Signature (SAS) token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time at which the stored access policy becomes valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Table
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage table name.
+    aliases:
+    - N
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorageTableStoredAccessPolicy
+        [-Table] <String>
+        [-Policy] <String>
+        [-Permission <String>]
+        [-StartTime <DateTime>]
+        [-ExpiryTime <DateTime>]
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a stored access policy in a table'
+  description: |-
+    ```
+    PS C:\>New-AzureStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy02"
+    ```
+
+    This command creates an access policy named Policy02 in the storage table named MyTable.
+links:
+- text: Get-AzureStorageTableStoredAccessPolicy
+  href: ./Get-AzureStorageTableStoredAccessPolicy.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+- text: Remove-AzureStorageTableStoredAccessPolicy
+  href: ./Remove-AzureStorageTableStoredAccessPolicy.yml
+- text: Set-AzureStorageTableStoredAccessPolicy
+  href: ./Set-AzureStorageTableStoredAccessPolicy.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: CF3B6E3B-3FC1-4871-AFE0-366B17A9E4F8
+  PlatyPS schema version: 2024-05-01

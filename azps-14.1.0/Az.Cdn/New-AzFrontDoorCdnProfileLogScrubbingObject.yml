@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnProfileLogScrubbingObject
+name: New-AzFrontDoorCdnProfileLogScrubbingObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for ProfileLogScrubbing.
+description: |-
+  Create an in-memory object for ProfileLogScrubbing.
+parameters:
+  cmdletParameters:
+  - name: ScrubbingRule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.IProfileScrubbingRules" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of log scrubbing rules applied to the Azure Front Door profile logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the log scrubbing config.
+      Default value is Enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnProfileLogScrubbingObject
+        [-ScrubbingRule <IProfileScrubbingRules[]>]
+        [-State <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.ProfileLogScrubbing" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ProfileUpgradeParameters, for two LogScrubbingRules'
+  description: |-
+    ```powershell
+    $scrubbingRule1 = New-AzFrontDoorCdnProfileScrubbingRulesObject -MatchVariable RequestIPAddress -State Enabled
+    $scrubbingRule2 = New-AzFrontDoorCdnProfileScrubbingRulesObject -MatchVariable RequestUri -State Enabled
+    New-AzFrontDoorCdnProfileLogScrubbingObject -ScrubbingRule @($scrubbingRule1, $scrubbingRule2) -State Enabled
+    ```
+
+    ```output
+    State
+    -----
+    Enabled
+    ```
+
+    Create an in-memory object for ProfileUpgradeParameters, for two LogScrubbingRules
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileLogScrubbingObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnprofilelogscrubbingobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileLogScrubbingObject.md
+  PlatyPS schema version: 2024-05-01

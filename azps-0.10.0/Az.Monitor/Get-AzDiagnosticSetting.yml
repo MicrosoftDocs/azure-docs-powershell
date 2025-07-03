@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzDiagnosticSetting
+name: Get-AzDiagnosticSetting
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets the logged categories and time grains.
+description: |-
+  The **Get-AzDiagnosticSetting** cmdlet gets the categories and time grains that are logged for a resource.
+  A time grain is the aggregation interval of a metric.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the diagnostic setting. If not given the call default to "service" as it was in the previous API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDiagnosticSetting
+        [-ResourceId] <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSServiceDiagnosticSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the status of the logging categories and time grains'
+  description: |-
+    ```
+    PS C:\>Get-AzDiagnosticSetting -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault"
+    StorageAccountId   : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.storage/accounts/ContosoStorageAccount
+    StorageAccountName : ContosoStorageAccount001
+    Metrics
+
+    Logs
+    Enabled  : True
+    Category : AuditEvent
+    ```
+
+    This command gets the categories and time grains that are logged for an Azure Key Vault with a *ResourceId* of /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/ResourceGroups/ContosoRG/providers/microsoft.keyvault/KeyVaults/ContosoKeyVault.
+links:
+- text: Set-AzDiagnosticSetting
+  href: ./Set-AzDiagnosticSetting.yml
+- text: Remove-AzDiagnosticSetting
+  href: ./Remove-AzDiagnosticSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzDiagnosticSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/get-azdiagnosticsetting
+  Module Name: Az.Monitor
+  ms.assetid: 60B497F6-98A2-4C60-B142-FF5CD123362D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzDiagnosticSetting.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,221 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorWafCustomRuleObject
+name: New-AzFrontDoorWafCustomRuleObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create CustomRule Object for WAF policy creation
+description: |-
+  Create CustomRule Object for WAF policy creation
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of Actions.
+      Possible values include: 'Allow', 'Block', 'Log'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomRule
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontDoorWafCustomRuleGroupByVariable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets describes the list of variables to group the rate limit
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enabled State. Possible values include: 'Enabled', 'Disabled'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchCondition
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSMatchCondition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of match conditions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes priority of the rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RateLimitDurationInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Rate limit duration. Default - 1 minute
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RateLimitThreshold
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Rate limit threshold
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of the rule.
+      Possible values include: 'MatchRule', 'RateLimitRule'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorWafCustomRuleObject
+        -Name <String>
+        -RuleType <String>
+        -MatchCondition <PSMatchCondition[]>
+        -Action <String>
+        -Priority <Int32>
+        [-RateLimitDurationInMinutes <Int32>]
+        [-RateLimitThreshold <Int32>]
+        [-EnabledState <String>]
+        [-CustomRule <PSFrontDoorWafCustomRuleGroupByVariable[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzFrontDoorWafCustomRuleObject -Name "Rule1" -RuleType MatchRule -MatchCondition $matchCondition1 -Action Block -Priority 2
+    ```
+
+    ```output
+    Name   RuleType Action Priority RateLimitDurationInMinutes
+    ----   -------- ------ -------- --------------------------
+    Rule1 MatchRule  Block        2                          1
+    ```
+
+    Create a CustomRule Object
+links:
+- text: New-AzFrontDoorWafPolicy
+  href: ./New-AzFrontDoorWafPolicy.yml
+- text: Update-AzFrontDoorWafPolicy
+  href: ./Update-AzFrontDoorWafPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorwafcustomruleobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafCustomRuleObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.Dashboard
+name: Az.Dashboard Module
+isPreview: false
+cmdletGroups:
+- title: Dashboard
+  cmdlets:
+  - Az.Dashboard.Get-AzGrafana
+  - Az.Dashboard.New-AzGrafana
+  - Az.Dashboard.New-AzGrafanaMonitorWorkspaceIntegrationObject
+  - Az.Dashboard.Remove-AzGrafana
+  - Az.Dashboard.Update-AzGrafana
+description: |-
+  Microsoft Azure PowerShell: Dashboard cmdlets
+metadata:
+  Module Name: Az.Dashboard
+  Module Guid: 8475f339-2250-485a-a9cc-aba350de72d2
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dashboard
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dashboard/Dashboard/help/Az.Dashboard.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,183 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSSHKey
+name: New-AzureSSHKey
+module: Azure
+isPreview: false
+summary: |-
+  Creates a SSH Key object to insert an existing certificate into a new Linux-based Azure virtual machines.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureSSHKey** cmdlet creates an SSH Key object for a certificate that has already been added to Azure.
+  This SSH Key object can then be used by **New-AzureProvisioningConfig** when creating the configuration object for a new virtual machine using **New-AzureVM**, or when creating a new virtual machine with **New-AzureQuickVM**.
+  When included as part of a virtual machine creation script, this adds the specified SSH Public Key or Key Pair to the new virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Fingerprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fingerprint of the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyPair
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet creates an object for inserting an SSH Key Pair into the new virtual machine configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: keypair
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to store the SSH Public Key or Key Pair.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicKey
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet creates an object for inserting an SSH Public Key into the new virtual machine configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: publickey
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSSHKey
+        [-Fingerprint] <String>
+        [-Path] <String>
+        [-KeyPair]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: keypair
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSSHKey
+        [-Fingerprint] <String>
+        [-Path] <String>
+        [-PublicKey]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: publickey
+  isDefault: false
+examples:
+- title: 'Example 1: Create a certificate setting object'
+  description: |-
+    ```
+    PS C:\> $myLxCert = New-AzureSSHKey -Fingerprint "D7BECD4D63EBAF86023BB4F1A5FBF5C2C924902A" -Path "/home/username/.ssh/authorized_keys"
+    ```
+
+    This command creates a certificate setting object for an existing certificate and then stores the object in a variable for later use.
+- title: 'Example 2: Add a certificate to a service'
+  description: |-
+    ```
+    PS C:\> Add-AzureCertificate -ServiceName "MySvc" -CertToDeploy "C:\temp\MyLxCert.cer"
+    $myLxCert = New-AzureSSHKey ?Fingerprint "D7BECD4D63EBAF86023BB4F1A5FBF5C2C924902A" -Path "/home/username/.ssh/authorized_keys"
+    New-AzureVMConfig -Name "MyVM2" -InstanceSize Small -ImageName $LxImage `
+              | Add-AzureProvisioningConfig -Linux -LinuxUser $lxUser -SSHPublicKeys $myLxCert -Password 'pass@word1' `
+              | New-AzureVM -ServiceName "MySvc"
+    ```
+
+    This command adds a certificate to an Azure service, and then creates a new Linux virtual machine that uses the certificate.
+links:
+- text: Add-AzureProvisioningConfig
+  href: ./Add-AzureProvisioningConfig.yml
+- text: New-AzureVMConfig
+  href: ./New-AzureVMConfig.yml
+- text: New-AzureVM
+  href: ./New-AzureVM.yml
+- text: New-AzureQuickVM
+  href: ./New-AzureQuickVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: AA58B897-EFA0-4321-9246-ED8E11AB3538
+  PlatyPS schema version: 2024-05-01

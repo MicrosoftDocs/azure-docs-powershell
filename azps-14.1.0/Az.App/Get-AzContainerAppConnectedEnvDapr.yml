@@ -1,0 +1,248 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.Get-AzContainerAppConnectedEnvDapr
+name: Get-AzContainerAppConnectedEnvDapr
+module: Az.App
+isPreview: false
+summary: |-
+  Get a dapr component.
+description: |-
+  Get a dapr component.
+parameters:
+  cmdletParameters:
+  - name: ConnectedEnvironmentInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityConnectedEnvironment
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectedEnvironmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the connected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Dapr Component.
+    aliases:
+    - DaprName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityConnectedEnvironment
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzContainerAppConnectedEnvDapr
+        -ConnectedEnvironmentName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzContainerAppConnectedEnvDapr
+        -ConnectedEnvironmentName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzContainerAppConnectedEnvDapr
+        -Name <String>
+        -ConnectedEnvironmentInputObject <IAppIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityConnectedEnvironment
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzContainerAppConnectedEnvDapr
+        -InputObject <IAppIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IDaprComponent" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List dapr component by connected env name.'
+  description: |-
+    ```powershell
+    Get-AzContainerAppConnectedEnvDapr -ConnectedEnvironmentName azps-connectedenv -ResourceGroupName azps_test_group_app
+    ```
+
+    ```output
+    Name                  ComponentType        IgnoreError InitTimeout ResourceGroupName   Version
+    ----                  -------------        ----------- ----------- -----------------   -------
+    azps-connectedenvdapr state.azure.cosmosdb False       50s         azps_test_group_app v1
+    ```
+
+    List dapr component by connected env name.
+- title: 'Example 2: Get a dapr component by name.'
+  description: |-
+    ```powershell
+    Get-AzContainerAppConnectedEnvDapr -ConnectedEnvironmentName azps-connectedenv -ResourceGroupName azps_test_group_app -Name azps-connectedenvdapr
+    ```
+
+    ```output
+    Name                  ComponentType        IgnoreError InitTimeout ResourceGroupName   Version
+    ----                  -------------        ----------- ----------- -----------------   -------
+    azps-connectedenvdapr state.azure.cosmosdb False       50s         azps_test_group_app v1
+    ```
+
+    Get a dapr component by name.
+- title: 'Example 3: Get a dapr component.'
+  description: |-
+    ```powershell
+    $connectedenv = Get-AzContainerAppConnectedEnv -ResourceGroupName azps_test_group_app -Name azps-connectedenv
+    Get-AzContainerAppConnectedEnvDapr -ConnectedEnvironmentInputObject $connectedenv -Name azps-connectedenvdapr
+    ```
+
+    ```output
+    Name                  ComponentType        IgnoreError InitTimeout ResourceGroupName   Version
+    ----                  -------------        ----------- ----------- -----------------   -------
+    azps-connectedenvdapr state.azure.cosmosdb False       50s         azps_test_group_app v1
+    ```
+
+    Get a dapr component.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Get-AzContainerAppConnectedEnvDapr.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.app/get-azcontainerappconnectedenvdapr
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Get-AzContainerAppConnectedEnvDapr.md
+  PlatyPS schema version: 2024-05-01

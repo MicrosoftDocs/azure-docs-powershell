@@ -1,0 +1,157 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.Get-AzSpringCloudBuildServiceAgentPool
+name: Get-AzSpringCloudBuildServiceAgentPool
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Get build service agent pool.
+description: |-
+  Get build service agent pool.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ISpringCloudIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Service resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets subscription ID which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSpringCloudBuildServiceAgentPool
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSpringCloudBuildServiceAgentPool
+        -InputObject <ISpringCloudIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ISpringCloudIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.IBuildServiceAgentPoolResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a build service agent pool'
+  description: |-
+    ```powershell
+    Get-AzSpringCloudBuildServiceAgentPool -ResourceGroupName springcloudrg -ServiceName sspring-portal01
+    ```
+
+    ```output
+    Name    ResourceGroupName ProvisioningState PoolSizeCpu PoolSizeMemory PoolSizeName
+    ----    ----------------- ----------------- ----------- -------------- ------------
+    default springcloudrg     Succeeded         2           4Gi            S1
+    ```
+
+    Get a build service agent pool.
+- title: 'Example 2: Get a build service agent pool by pipeline'
+  description: |-
+    ```powershell
+    New-AzSpringCloudBuildServiceAgentPool -ResourceGroupName springcloudrg -ServiceName espring-pwsh01 -PoolSizeName "S1" | Get-AzSpringCloudBuildServiceAgentPool
+    ```
+
+    ```output
+    Name    ResourceGroupName ProvisioningState PoolSizeCpu PoolSizeMemory PoolSizeName
+    ----    ----------------- ----------------- ----------- -------------- ------------
+    default springcloudrg     Succeeded         2           4Gi            S1
+    ```
+
+    Get a build service agent pool by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Get-AzSpringCloudBuildServiceAgentPool.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.springcloud/get-azspringcloudbuildserviceagentpool
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Get-AzSpringCloudBuildServiceAgentPool.md
+  PlatyPS schema version: 2024-05-01

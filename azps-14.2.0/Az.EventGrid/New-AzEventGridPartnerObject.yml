@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridPartnerObject
+name: New-AzEventGridPartnerObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for Partner.
+description: |-
+  Create an in-memory object for Partner.
+parameters:
+  cmdletParameters:
+  - name: AuthorizationExpirationTimeInUtc
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Expiration time of the partner authorization.
+      If this timer expires, any request from this partner to create, update or delete resources in subscriber's
+              context will fail.
+      If specified, the allowed values are between 1 to the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration.
+              If not specified, the default value will be the value of defaultMaximumExpirationTimeInDays specified in PartnerConfiguration or 7 if this value is not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The partner name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationImmutableId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The immutableId of the corresponding partner registration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridPartnerObject
+        [-AuthorizationExpirationTimeInUtc <DateTime>]
+        [-Name <String>]
+        [-RegistrationImmutableId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.Partner" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Partner.'
+  description: |-
+    ```powershell
+    New-AzEventGridPartnerObject -AuthorizationExpirationTimeInUtc "2023-11-19T09:31:42.521Z" -Name "Auth0" -RegistrationImmutableId "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX"
+    ```
+
+    ```output
+    AuthorizationExpirationTimeInUtc Name  RegistrationImmutableId
+    -------------------------------- ----  -----------------------
+    2023-11-19 下午 05:31:42         Auth0 804a11ca-ce9b-4158-8e94-3c8dc7a072ec
+    ```
+
+    Create an in-memory object for Partner.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridPartnerObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridpartnerobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridPartnerObject.md
+  PlatyPS schema version: 2024-05-01

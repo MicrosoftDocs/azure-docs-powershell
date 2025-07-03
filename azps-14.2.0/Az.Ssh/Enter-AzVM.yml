@@ -1,0 +1,405 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Ssh.Enter-AzVM
+name: Enter-AzVM
+module: Az.Ssh
+isPreview: false
+summary: |-
+  Starts an interactive SSH session to an Azure Resource (such as Azure VMs or Arc Servers).
+  Users can login using Microsoft Entra accounts, or local user accounts via standard SSH authentication. Use Microsoft Entra account login for the best security and convenience.
+description: |-
+  Start interactive SSH session to an Azure Resource (currently supports Azure VMs and Arc Servers).
+  Users can login using Microsoft Entra issued certificates or using local user credentials. We recommend login using Microsoft Entra issued certificates when possible.
+  Important note: When connecting to Azure Arc resources, this cmdlet requires the Az.Ssh.ArcProxy module to also be installed in the client machine. The cmdlet will attempt to install the module from the PowerShell Gallery, but the user also has the option to install it themselves. It is important that the user also has permission to execute the Proxy files in the Az.Ssh.ArcProxy module, or the connection will fail. You can find the Az.Ssh.ArcServer module in the PowerShell Gallery: https://aka.ms/PowerShellGallery-Az.Ssh.ArcProxy.
+parameters:
+  cmdletParameters:
+  - name: CertificateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SSH Certificate to be used to authenticate to local user account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When connecting to Arc resources, do not prompt for confirmation before updating the allowed port for SSH connection in the Connection Endpoint to match the target port or to install Az.Ssh.ArcProxy module from the PowerShell Gallery, if needed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ip
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP Address of target Azure VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IpAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalUser
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username for a local user in the target resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the target Azure Resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Interactive
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true if connection is successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Port to connect to on the remote host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateKeyFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to private key file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicKeyFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to public key file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Rdp
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Start a RDP connection over SSH connection. Only supported on Windows OS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Interactive
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the target resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource type of the target resource.
+    acceptedValues:
+    - Microsoft.HybridCompute/machines
+    - Microsoft.Compute/virtualMachines
+    - Microsoft.ConnectedVMwarevSphere/virtualMachines
+    - Microsoft.ScVmm/virtualMachines
+    - Microsoft.AzureStackHCI/virtualMachines
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Interactive
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshArgument
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Additional SSH arguments passed to OpenSSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsePrivateIp
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When connecting to an Azure VM, this flag specifies that it should connect to one of the private IPs of the VM. It requires connectivity to the private IP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Interactive
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enter-AzVM
+        -ResourceGroupName <String>
+        -Name <String>
+        [-PublicKeyFile <String>]
+        [-PrivateKeyFile <String>]
+        [-UsePrivateIp]
+        [-LocalUser <String>]
+        [-Port <String>]
+        [-ResourceType <String>]
+        [-CertificateFile <String>]
+        [-SshArgument <String[]>]
+        [-Rdp]
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Interactive
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Enter-AzVM
+        -Ip <String>
+        [-PublicKeyFile <String>]
+        [-PrivateKeyFile <String>]
+        [-LocalUser <String>]
+        [-Port <String>]
+        [-CertificateFile <String>]
+        [-SshArgument <String[]>]
+        [-Rdp]
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IpAddress
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Enter-AzVM
+        -ResourceId <String>
+        [-PublicKeyFile <String>]
+        [-PrivateKeyFile <String>]
+        [-UsePrivateIp]
+        [-LocalUser <String>]
+        [-Port <String>]
+        [-CertificateFile <String>]
+        [-SshArgument <String[]>]
+        [-Rdp]
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Connect to Azure Resource using Microsoft Entra issued certificates'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine
+    ```
+
+    When a -LocalUser is not supplied, the cmdlet will attempt to login using Microsoft Entra ID. This is currently only supported for resources running Linux OS.
+- title: 'Example 2: Connect to Local User on Azure Resource using SSH certificates for authentication'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser azureuser -PrivateKeyFile ./id_rsa -CertificateFile ./cert
+    ```
+- title: 'Example 3: Connect to Local User on Azure Resource using SSH private key for authentication'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser azureuser -PrivateKeyFile ./id_rsa
+    ```
+- title: 'Example 4: Connect to Local User on Azure Resource using interactive username and password authentication'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser azureuser
+    ```
+- title: 'Example 5: Connect to the Public Ip of an Azure Virtual Machine using Microsoft Entra issued certificates'
+  description: |-
+    ```powershell
+    Enter-AzVM -Ip 1.2.3.4
+    ```
+- title: 'Example 6: Provide the Resource Type of the target.'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -ResourceType Microsoft.HybridCompute/machines
+    ```
+
+    This parameter is useful when there is more than one supported resource with the same name in the Resource Group.
+- title: 'Example 7: Connect to Azure Resource using Microsoft Entra certificate issued certificates and custom key files'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -PrivateKeyFile ./id_rsa -PublicKeyFile ./id_rsa.pub
+    ```
+
+    If custom key files are not provided, the cmdlet will generate the key pair.
+- title: 'Example 8: Start RDP connection over SSH connection.'
+  description: |-
+    ```powershell
+    Enter-AzVM -ResourceGroupName myRg -Name myMachine -LocalUser username -Rdp
+    ```
+
+    This parameter is useful for creating RDP session to an Arc resource via Arc Connectivity Platform.
+links:
+- text: SSH Access to Azure Arc-enabled servers
+  href: https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli
+- text: Troubleshoot SSH access to Azure Arc Enabled Servers
+  href: https://learn.microsoft.com/en-us/azure/azure-arc/servers/ssh-arc-troubleshoot
+- text: Login to a Linux VM by using Microsoft Entra ID
+  href: https://learn.microsoft.com/en-us/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux
+- text: Install OpenSSH for Windows
+  href: https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Enter-AzVM.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Ssh.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ssh/enter-azvm
+  Module Name: Az.Ssh
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Enter-AzVM.md
+  PlatyPS schema version: 2024-05-01

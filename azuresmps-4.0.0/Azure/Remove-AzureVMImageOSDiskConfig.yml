@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureVMImageOSDiskConfig
+name: Remove-AzureVMImageOSDiskConfig
+module: Azure
+isPreview: false
+summary: |-
+  Removes the operating system disk configuration from the DiskConfigSet object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureVMImageOSDiskConfig** cmdlet removes the operating system disk configuration from the DiskConfigSet object.
+parameters:
+  cmdletParameters:
+  - name: DiskConfig
+    type: <xref href="VirtualMachineImageDiskConfigSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk configuration object that encapsulates the operating system disk and Data Disk objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureVMImageOSDiskConfig
+        [-DiskConfig] <VirtualMachineImageDiskConfigSet>
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.ServiceManagement.Model.VirtualMachineImageDiskConfigSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove the operating system disk configuration from a DiskConfigSet'
+  description: |-
+    ```
+    PS C:\> $Disk = New-AzureDiskConfigSet
+    PS C:\> $Disk = Set-AzureOSDiskConfig -DiskConfig $Disk -HostCaching ReadWrite
+    PS C:\> Remove-AzureVMImageOSDiskConfig -DiskConfig $Disk
+    ```
+
+    This command removes the operating system disk configuration from the DiskConfigSet object
+links:
+- text: Set-AzureVMImageOSDiskConfig
+  href: ./Set-AzureVMImageOSDiskConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 1E1F98E9-FC45-4BEF-90F6-A21D7DB7C82F
+  PlatyPS schema version: 2024-05-01

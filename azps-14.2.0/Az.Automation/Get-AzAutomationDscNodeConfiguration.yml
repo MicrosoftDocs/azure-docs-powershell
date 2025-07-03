@@ -1,0 +1,202 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationDscNodeConfiguration
+name: Get-AzAutomationDscNodeConfiguration
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets metadata for DSC node configurations in Automation.
+description: |-
+  The **Get-AzAutomationDscNodeConfiguration** cmdlet gets metadata for APS Desired State Configuration (DSC) node configurations in Azure Automation.
+  Automation stores DSC node configuration as a Managed Object Format (MOF) configuration document.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account that contains the DSC node configurations for which this cmdlet gets metadata.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of DSC configuration for which this cmdlet gets node configuration metadata.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the DSC node configuration for which this cmdlet gets metadata.
+    aliases:
+    - NodeConfigurationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNodeConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+      This cmdlet gets metadata for DSC node configurations in the resource group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollupStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the rollup status of DSC node configurations that this cmdlet gets.
+      Valid values are:
+      - Bad
+      - Good
+      *Bad: Non-Compliant* *Good: Compliant*
+      >[!NOTE]
+      > Even if one node is non-compliant, the overall state of the node configuration shows as bad.
+    acceptedValues:
+    - Good
+    - Bad
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByConfigurationName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationDscNodeConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-RollupStatus <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationDscNodeConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNodeConfigurationName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationDscNodeConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -ConfigurationName <String>
+        [-RollupStatus <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConfigurationName
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.CompilationJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all DSC node configurations'
+  description: |-
+    ```powershell
+    Get-AzAutomationDscNodeConfiguration -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17"
+    ```
+
+    This command gets metadata for all DSC node configurations in the Automation account named Contoso17.
+- title: 'Example 2: Get all DSC node configurations for a DSC configuration'
+  description: |-
+    ```powershell
+    Get-AzAutomationDscNodeConfiguration -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -ConfigurationName "ContosoConfiguration"
+    ```
+
+    This command gets metadata for all DSC node configurations in the Automation account named Contoso17 that the DSC configuration named ContosoConfiguration generated.
+- title: 'Example 3: Get a DSC node configuration by name'
+  description: |-
+    ```powershell
+    Get-AzAutomationDscNodeConfiguration -ResourceGroupName "ResourceGroup03" -AutomationAccountName "Contoso17" -Name "ContosoConfiguration.webserver"
+    ```
+
+    This command gets metadata for a DSC node configuration with the name ContosoConfiguration.webserver in the Automation account named Contoso17.
+links:
+- text: Import-AzAutomationDscNodeConfiguration
+  href: ./Import-AzAutomationDscNodeConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNodeConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationdscnodeconfiguration
+  Module Name: Az.Automation
+  ms.assetid: 89C931AE-DA81-47A7-80E4-159C36497DA0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationDscNodeConfiguration.md
+  PlatyPS schema version: 2024-05-01

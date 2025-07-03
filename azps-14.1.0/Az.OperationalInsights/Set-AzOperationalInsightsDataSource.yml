@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.OperationalInsights.Set-AzOperationalInsightsDataSource
+name: Set-AzOperationalInsightsDataSource
+module: Az.OperationalInsights
+isPreview: false
+summary: |-
+  Updates a data source.
+description: |-
+  The **Set-AzOperationalInsightsDataSource** cmdlet updates a data source.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, operational, insights
+parameters:
+  cmdletParameters:
+  - name: DataSource
+    type: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the data source that this cmdlet updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzOperationalInsightsDataSource
+        [-DataSource] <PSDataSource>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $datasource = Get-AzOperationalInsightsDataSource -Kind CustomLog -ResourceGroupName testrg -WorkspaceName LogAnalyticsWorkspace
+    Set-AzOperationalInsightsDataSource -DataSource $datasource
+    ```
+
+    ```output
+    Name              : DataSource_CustomLog_Customlog_CL
+    ResourceGroupName : testrg
+    WorkspaceName     : LogAnalyticsWorkspace
+    ResourceId        : /subscriptions/xxxx-xxxx-xxxx-xxxx-xxxx/resourceGroups/testrg/providers/Microsoft.Ope
+                        rationalInsights/workspaces/LogAnalyticsWorkspace/datasources/DataSource_CustomLog_Customlog_
+                        CL
+    Kind              : CustomLog
+    Properties        : {"customLogName":"Customlog_CL","description":"","extractions":[{"extractionName":"TimeGenerated","
+                        extractionProperties":{"dateTimeExtraction":{"joinStringRegex":null,"regex":null,"formatString":nul
+                        l}},"extractionType":"DateTime"}],"inputs":[{"location":{"fileSystemLocations":{"linuxFileTypeLogPa
+                        ths":null,"windowsFileTypeLogPaths":["D:\\logs.txt"]}},"recordDelimiter":{"regexDelimiter":{"matchI
+                        ndex":0,"numberdGroup":null,"pattern":"\\n"}}}]}
+    ```
+
+    Update a data source.
+links:
+- text: Get-AzOperationalInsightsDataSource
+  href: ./Get-AzOperationalInsightsDataSource.yml
+- text: Remove-AzOperationalInsightsDataSource
+  href: ./Remove-AzOperationalInsightsDataSource.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Set-AzOperationalInsightsDataSource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.operationalinsights/set-azoperationalinsightsdatasource
+  Module Name: Az.OperationalInsights
+  ms.assetid: 3992E6B5-F794-4C7A-BB59-C8D60E2CD7BC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Set-AzOperationalInsightsDataSource.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,560 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.Set-AzStackHciUpdate
+name: Set-AzStackHciUpdate
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Put specified Update
+description: |-
+  Put specified Update
+parameters:
+  cmdletParameters:
+  - name: AdditionalProperty
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Extensible KV pairs serialized as a string.
+      This is currently used to report the stamp OEM family and hardware model information when an update is flagged as Invalid for the stamp based on OEM type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilityType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.AvailabilityType" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the way the update content can be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComponentVersion
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IPackageVersionInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of component versions for a Solution Bundle update, and an empty array otherwise.
+
+      To construct, see NOTES section for COMPONENTVERSION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Display name of the Update
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthCheckDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Last time the package-specific checks were run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthCheckResult
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IPrecheckResult" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of PrecheckResult objects.
+      To construct, see NOTES section for HEALTHCHECKRESULT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthState
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.HealthState" data-throw-if-not-resolved="False" />
+    description: |-
+      Overall health state for update-specific health checks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstalledDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Date that the update was installed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinSbeVersionRequired
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum Sbe Version of the update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Update
+    aliases:
+    - UpdateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackagePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path where the update package is available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageSizeInMb
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Size of the package.
+      This value is a combination of the size from update metadata and size of the payload that results from the live scan operation for OS update content.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Customer-visible type of the update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prerequisite
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdatePrerequisite" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      If update State is HasPrerequisite, this property contains an array of objects describing prerequisite updates before installing this update.
+      Otherwise, it is empty.
+      To construct, see NOTES section for PREREQUISITE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher of the update package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RebootRequired
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.RebootRequirement" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReleaseLink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Link to release notes for the update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.State" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the update as it relates to this stamp.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdate" data-throw-if-not-resolved="False" />
+    description: |-
+      Update details
+      To construct, see NOTES section for UPDATEPROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Put
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateStatePropertyNotifyMessage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Brief message with instructions for updates of AvailabilityType Notify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateStatePropertyProgressPercentage
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Progress percentage of ongoing operation.
+      Currently this property is only valid when the update is in the Downloading state, where it maps to how much of the update content has been downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version of the update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PutExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzStackHciUpdate
+        -ClusterName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AdditionalProperty <String>]
+        [-AvailabilityType <AvailabilityType>]
+        [-ComponentVersion <IPackageVersionInfo[]>]
+        [-Description <String>]
+        [-DisplayName <String>]
+        [-HealthCheckDate <DateTime>]
+        [-HealthCheckResult <IPrecheckResult[]>]
+        [-HealthState <HealthState>]
+        [-InstalledDate <DateTime>]
+        [-Location <String>]
+        [-MinSbeVersionRequired <String>]
+        [-PackagePath <String>]
+        [-PackageSizeInMb <Single>]
+        [-PackageType <String>]
+        [-Prerequisite <IUpdatePrerequisite[]>]
+        [-Publisher <String>]
+        [-RebootRequired <RebootRequirement>]
+        [-ReleaseLink <String>]
+        [-State <State>]
+        [-UpdateStatePropertyNotifyMessage <String>]
+        [-UpdateStatePropertyProgressPercentage <Single>]
+        [-Version <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PutExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzStackHciUpdate
+        -ClusterName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -UpdateProperty <IUpdate>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Put
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdate" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.IUpdate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    Set-AzStackHciUpdate -ClusterName 'test-cluster' -ResourceGroupName 'test-rg' -Name 'test-update'
+    ```
+
+    Sets the update
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Set-AzStackHciUpdate.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/set-azstackhciupdate
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Set-AzStackHciUpdate.md
+  PlatyPS schema version: 2024-05-01

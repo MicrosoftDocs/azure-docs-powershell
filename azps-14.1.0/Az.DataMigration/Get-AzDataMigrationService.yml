@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.Get-AzDataMigrationService
+name: Get-AzDataMigrationService
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Retrieves the properties associated with an instance of the Azure Database Migration Service (classic).
+description: |-
+  The Get-AzDataMigrationService cmdlet retrieves the properties associated with an instance of the Azure Database Migration Service (classic) based on Service name and Azure Resource Group name as input parameters.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure Database Migration Service (classic).
+    aliases:
+    - ServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServiceNameGroupSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      DataMigrationService Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationService
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationService
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationService
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServiceNameGroupSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.PSDataMigrationService" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDataMigrationService -ResourceGroupName testResourceGroup -Name testService
+    ```
+
+    The above example retrieves the properties of the Azure Database Migration Service (classic) instance called testService.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzDataMigrationService -ResourceGroupName testResourceGroup
+    ```
+
+    The above example retrieves Azure Database Migration Services (classic) in the resource group called testResourceGroup.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/Get-AzDataMigrationService
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationService.md
+  PlatyPS schema version: 2024-05-01

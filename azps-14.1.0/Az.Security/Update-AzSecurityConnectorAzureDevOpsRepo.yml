@@ -1,0 +1,345 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Update-AzSecurityConnectorAzureDevOpsRepo
+name: Update-AzSecurityConnectorAzureDevOpsRepo
+module: Az.Security
+isPreview: false
+summary: |-
+  Update a monitored Azure DevOps repository resource.
+description: |-
+  Update a monitored Azure DevOps repository resource.
+parameters:
+  cmdletParameters:
+  - name: ActionableRemediation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IActionableRemediation" data-throw-if-not-resolved="False" />
+    description: |-
+      Configuration payload for PR Annotations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrgName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure DevOps organization name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentOrgName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets parent Azure DevOps Organization name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets parent Azure DevOps Project name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The project name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepoName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The repository name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityConnectorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The security connector name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure subscription ID
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSecurityConnectorAzureDevOpsRepo
+        -OrgName <String>
+        -ProjectName <String>
+        -RepoName <String>
+        -ResourceGroupName <String>
+        -SecurityConnectorName <String>
+        [-SubscriptionId <String>]
+        [-ActionableRemediation <IActionableRemediation>]
+        [-ParentOrgName <String>]
+        [-ParentProjectName <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzSecurityConnectorAzureDevOpsRepo
+        -InputObject <ISecurityIdentity>
+        [-ActionableRemediation <IActionableRemediation>]
+        [-ParentOrgName <String>]
+        [-ParentProjectName <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IAzureDevOpsRepository" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update discovered AzureDevOps repository configuration'
+  description: |-
+    ```powershell
+    $config = New-AzSecurityConnectorActionableRemediationObject -State Enabled -InheritFromParentState Disabled -CategoryConfiguration @( @{category="IaC"; minimumSeverityLevel="Low"} )
+    Update-AzSecurityConnectorAzureDevOpsRepo -ResourceGroupName "securityConnectors-pwsh-tmp" -SecurityConnectorName "ado-sdk-pwsh-test03" -OrgName "org1" -ProjectName "Build" -RepoName "Build" -ActionableRemediation $config
+    ```
+
+    ```output
+    ActionableRemediation           : {
+                                        "state": "Enabled",
+                                        "categoryConfigurations": [
+                                          {
+                                            "minimumSeverityLevel": "Low",
+                                            "category": "IaC"
+                                          }
+                                        ],
+                                        "branchConfiguration": {
+                                          "branchNames": [ ],
+                                          "annotateDefaultBranch": "Enabled"
+                                        },
+                                        "inheritFromParentState": "Disabled"
+                                      }
+    Id                              : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/securityConnectors-pwsh-tmp/providers/Microsoft.Security/securityConnectors/ado-sdk-pwsh-test03/devops/default/azureDevOpsOrgs/org1/p
+                                      rojects/Build/repos/Build
+    Name                            : Build
+    OnboardingState                 : Onboarded
+    ParentOrgName                   : org1
+    ParentProjectName               : Build
+    ProvisioningState               : Succeeded
+    ProvisioningStatusMessage       : OK
+    ProvisioningStatusUpdateTimeUtc : 2/24/2024 12:31:19 AM
+    RepoId                          : 64d6ea8c-6030-44db-86a4-044f13a7f43e
+    RepoUrl                         : https://dev.azure.com/org1/Build/_git/Build
+    ResourceGroupName               : securityConnectors-pwsh-tmp
+    SystemDataCreatedAt             :
+    SystemDataCreatedBy             :
+    SystemDataCreatedByType         :
+    SystemDataLastModifiedAt        :
+    SystemDataLastModifiedBy        :
+    SystemDataLastModifiedByType    :
+    Type                            : Microsoft.Security/securityConnectors/devops/azureDevOpsOrgs/projects/repos
+    Visibility                      :
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Update-AzSecurityConnectorAzureDevOpsRepo.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/update-azsecurityconnectorazuredevopsrepo
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Update-AzSecurityConnectorAzureDevOpsRepo.md
+  PlatyPS schema version: 2024-05-01

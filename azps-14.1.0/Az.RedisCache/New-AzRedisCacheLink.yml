@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RedisCache.New-AzRedisCacheLink
+name: New-AzRedisCacheLink
+module: Az.RedisCache
+isPreview: false
+summary: |-
+  Create a geo replication link between two Redis Caches.
+description: |-
+  Create a geo replication link between two Redis Caches.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of primary redis cache in link.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of secondary redis cache in link.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRedisCacheLink
+        -PrimaryServerName <String>
+        -SecondaryServerName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSRedisLinkedServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a link between two caches'
+  description: |-
+    ```powershell
+    New-AzRedisCacheLink -PrimaryServerName "mycache1" -SecondaryServerName "mycache2"
+    ```
+
+    ```output
+    PrimaryServerName            : mycache1
+            SecondaryServerName          : mycache2
+            ProvisioningState            : Creating
+            LinkedRedisCacheLocation     : East US
+            ServerRole                   : Secondary
+            PrimaryHostName              : mycache1.redis.cache.windows.net
+            GeoReplicatedPrimaryHostName : mycache2.geo.redis.cache.windows.net
+    ```
+
+    This command creates geo-replication link between Redis Cache mycache1 and mycache2.
+links:
+- text: Get-AzRedisCacheLink
+  href: ./Get-AzRedisCacheLink.yml
+- text: Remove-AzRedisCacheLink
+  href: ./Remove-AzRedisCacheLink.yml
+- text: Get-AzRedisCache
+  href: ./Get-AzRedisCache.yml
+- text: New-AzRedisCache
+  href: ./New-AzRedisCache.yml
+- text: Remove-AzRedisCache
+  href: ./Remove-AzRedisCache.yml
+- text: Set-AzRedisCache
+  href: ./Set-AzRedisCache.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheLink.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.rediscache/new-azrediscachelink
+  Module Name: Az.RedisCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheLink.md
+  PlatyPS schema version: 2024-05-01

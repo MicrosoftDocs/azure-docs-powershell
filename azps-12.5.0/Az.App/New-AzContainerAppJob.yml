@@ -1,0 +1,899 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppJob
+name: New-AzContainerAppJob
+module: Az.App
+isPreview: false
+summary: |-
+  Create a Container Apps Job.
+description: |-
+  Create a Container Apps Job.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationRegistry
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IRegistryCredentials" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Collection of private container registry credentials used by a Container apps job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationReplicaRetryLimit
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of retries before failing the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationReplicaTimeout
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of seconds a replica is allowed to run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationSecret
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISecret" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Collection of secrets used by a Container Apps Job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationTriggerType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Trigger type of the job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnvironmentId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventTriggerConfigParallelism
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of parallel replicas of a job that can run at a given time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventTriggerConfigReplicaCompletionCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum number of successful replica completions before overall job completion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityUserAssignedIdentity
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of user assigned identities associated with the resource.
+      The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
+      The dictionary values can be empty objects ({}) in requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManualTriggerConfigParallelism
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of parallel replicas of a job that can run at a given time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManualTriggerConfigReplicaCompletionCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum number of successful replica completions before overall job completion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Job Name
+    aliases:
+    - JobName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleMaxExecution
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of job executions that are created for a trigger, default 100.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleMinExecution
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum number of job executions that are created for a trigger, default 0
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalePollingInterval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Interval to check each event source in seconds.
+      Defaults to 30s
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleRule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IJobScaleRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Scaling rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTriggerConfigCronExpression
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cron formatted repeating schedule ("* * * * *") of a Cron Job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTriggerConfigParallelism
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of parallel replicas of a job that can run at a given time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTriggerConfigReplicaCompletionCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum number of successful replica completions before overall job completion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateContainer
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IContainer" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of container definitions for the Container App.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateInitContainer
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IInitContainer" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of specialized containers that run before app containers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateVolume
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of volume definitions for the Container App.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkloadProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Workload profile name to pin for container apps job execution.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppJob
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-ConfigurationRegistry <IRegistryCredentials[]>]
+        [-ConfigurationReplicaRetryLimit <Int32>]
+        [-ConfigurationReplicaTimeout <Int32>]
+        [-ConfigurationSecret <ISecret[]>]
+        [-ConfigurationTriggerType <String>]
+        [-EnvironmentId <String>]
+        [-EventTriggerConfigParallelism <Int32>]
+        [-EventTriggerConfigReplicaCompletionCount <Int32>]
+        [-IdentityType <String>]
+        [-IdentityUserAssignedIdentity <Hashtable>]
+        [-ManualTriggerConfigParallelism <Int32>]
+        [-ManualTriggerConfigReplicaCompletionCount <Int32>]
+        [-ScaleMaxExecution <Int32>]
+        [-ScaleMinExecution <Int32>]
+        [-ScalePollingInterval <Int32>]
+        [-ScaleRule <IJobScaleRule[]>]
+        [-ScheduleTriggerConfigCronExpression <String>]
+        [-ScheduleTriggerConfigParallelism <Int32>]
+        [-ScheduleTriggerConfigReplicaCompletionCount <Int32>]
+        [-Tag <Hashtable>]
+        [-TemplateContainer <IContainer[]>]
+        [-TemplateInitContainer <IInitContainer[]>]
+        [-TemplateVolume <IVolume[]>]
+        [-WorkloadProfileName <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppJob
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppJob
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppJob
+        -InputObject <IAppIdentity>
+        -Location <String>
+        [-ConfigurationRegistry <IRegistryCredentials[]>]
+        [-ConfigurationReplicaRetryLimit <Int32>]
+        [-ConfigurationReplicaTimeout <Int32>]
+        [-ConfigurationSecret <ISecret[]>]
+        [-ConfigurationTriggerType <String>]
+        [-EnvironmentId <String>]
+        [-EventTriggerConfigParallelism <Int32>]
+        [-EventTriggerConfigReplicaCompletionCount <Int32>]
+        [-IdentityType <String>]
+        [-IdentityUserAssignedIdentity <Hashtable>]
+        [-ManualTriggerConfigParallelism <Int32>]
+        [-ManualTriggerConfigReplicaCompletionCount <Int32>]
+        [-ScaleMaxExecution <Int32>]
+        [-ScaleMinExecution <Int32>]
+        [-ScalePollingInterval <Int32>]
+        [-ScaleRule <IJobScaleRule[]>]
+        [-ScheduleTriggerConfigCronExpression <String>]
+        [-ScheduleTriggerConfigParallelism <Int32>]
+        [-ScheduleTriggerConfigReplicaCompletionCount <Int32>]
+        [-Tag <Hashtable>]
+        [-TemplateContainer <IContainer[]>]
+        [-TemplateInitContainer <IInitContainer[]>]
+        [-TemplateVolume <IVolume[]>]
+        [-WorkloadProfileName <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Container Apps Job.'
+  description: |-
+    ```powershell
+    $EnvId = (Get-AzContainerAppManagedEnv -ResourceGroupName azps_test_group_app -Name azps-env).Id
+    $probeHttpGetHttpHeader = New-AzContainerAppProbeHeaderObject -Name "Custom-Header" -Value "Awesome"
+    $probe = New-AzContainerAppProbeObject -Type "Liveness" -HttpGetPath "/health" -HttpGetPort 8080 -InitialDelaySecond 3 -PeriodSecond 3 -HttpGetHttpHeader $probeHttpGetHttpHeader
+    $temp = New-AzContainerAppTemplateObject -Image "mcr.microsoft.com/k8se/quickstart-jobs:latest" -Name "simple-hello-world-container" -Probe $probe -ResourceCpu 0.25 -ResourceMemory "0.5Gi"
+
+    New-AzContainerAppJob -Name azps-app-job -ResourceGroupName azps_test_group_app -Location eastus -ConfigurationReplicaRetryLimit 10 -ConfigurationReplicaTimeout 10 -ConfigurationTriggerType Manual -EnvironmentId $EnvId -ManualTriggerConfigParallelism 4 -ManualTriggerConfigReplicaCompletionCount 1 -TemplateContainer $temp
+    ```
+
+    ```output
+    Location Name         ProvisioningState ResourceGroupName
+    -------- ----         ----------------- -----------------
+    East US  azps-app-job Succeeded         azps_test_group_app
+    ```
+
+    Create a Container Apps Job.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppJob.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.app/new-azcontainerappjob
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppJob.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,290 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MySql.Test-AzMySqlFlexibleServerConnect
+name: Test-AzMySqlFlexibleServerConnect
+module: Az.MySql
+isPreview: false
+summary: |-
+  Test out the connection to the database server
+description: |-
+  Test out the connection to the database server
+parameters:
+  cmdletParameters:
+  - name: AdministratorLoginPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password of the administrator.
+      Minimum 8 characters and maximum 128 characters.
+      Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Administrator username for the server.
+      Once set, it cannot be changed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database name to connect.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      The server to connect.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TestViaIdentityAndQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server to connect.
+    aliases:
+    - ServerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Test
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestAndQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryText
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The query for the database to test
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TestAndQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestViaIdentityAndQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource, You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Test
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestAndQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzMySqlFlexibleServerConnect
+        -Name <String>
+        -ResourceGroupName <String>
+        -AdministratorLoginPassword <SecureString>
+        [-DatabaseName <String>]
+        [-AdministratorUserName <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Test
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzMySqlFlexibleServerConnect
+        -Name <String>
+        -ResourceGroupName <String>
+        -QueryText <String>
+        -AdministratorLoginPassword <SecureString>
+        [-DatabaseName <String>]
+        [-AdministratorUserName <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TestAndQuery
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzMySqlFlexibleServerConnect
+        -QueryText <String>
+        -AdministratorLoginPassword <SecureString>
+        -InputObject <IMySqlIdentity>
+        [-DatabaseName <String>]
+        [-AdministratorUserName <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TestViaIdentityAndQuery
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzMySqlFlexibleServerConnect
+        -AdministratorLoginPassword <SecureString>
+        -InputObject <IMySqlIdentity>
+        [-DatabaseName <String>]
+        [-AdministratorUserName <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TestViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test connection by name'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Test-AzMySqlFlexibleServerConnect -ResourceGroupName PowershellMySqlTest -Name mysql-test -AdministratorLoginPassword $password
+    ```
+
+    ```output
+    The connection testing to mysql-test.database.azure.com was successful!
+    ```
+
+    Test connection by the resource group and the server name
+- title: 'Example 2: Test connection by identity'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Get-AzMySqlFlexibleServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Test-AzMySqlFlexibleServerConnect -AdministratorLoginPassword $password
+    ```
+
+    ```output
+    The connection testing to mysql-test.database.azure.com was successful!
+    ```
+
+    Test connection by the identity
+- title: 'Example 3: Test query by name'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Test-AzMySqlFlexibleServerConnect -ResourceGroupName PowershellMySqlTest -Name mysql-test -AdministratorLoginPassword $password -QueryText "SELECT * FROM test"
+    ```
+
+    ```output
+    col
+    -----
+    1
+    2
+    3
+    ```
+
+    Test a query by the resource group and the server name
+- title: 'Example 4: Test connection by identity'
+  description: |-
+    ```powershell
+    Get-AzMySqlFlexibleServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Test-AzMySqlFlexibleServerConnect -QueryText "SELECT * FROM test" -AdministratorLoginPassword $password
+    ```
+
+    ```output
+    col
+    -----
+    1
+    2
+    3
+    ```
+
+    Test a query by the identity
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Test-AzMySqlFlexibleServerConnect.md
+  document type: cmdlet
+  external help file: Az.MySql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.mysql/test-azmysqlflexibleserverconnect
+  Module Name: Az.MySql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Test-AzMySqlFlexibleServerConnect.md
+  PlatyPS schema version: 2024-05-01

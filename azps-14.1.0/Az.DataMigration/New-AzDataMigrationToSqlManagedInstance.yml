@@ -1,0 +1,653 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.New-AzDataMigrationToSqlManagedInstance
+name: New-AzDataMigrationToSqlManagedInstance
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Create a new database migration to a given SQL Managed Instance.
+description: |-
+  Create a new database migration to a given SQL Managed Instance.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobAuthType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Authentication type used for accessing Azure Blob Storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob container name where backups are stored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobIdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobStorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the storage account where backups are stored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobUserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The set of user assigned identities associated with the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSharePassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Password for username to access file share location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSharePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location as SMB share or local drive where backups are placed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileShareUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username to access the file share location for backups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataMigration.Support.ResourceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedInstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the target SQL Managed Instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigrationService
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the Migration Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offline
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Offline migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfflineConfigurationLastBackupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Last backup name for offline migration.
+      This is optional for migrations from file share.
+      If it is not provided, then the service will determine the last backup file name based on latest backup files present in file share.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the target resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the source database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionAuthentication
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Authentication type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionDataSource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Data source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionEncryptConnection
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to encrypt connection or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Password to connect to source SQL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionTrustServerCertificate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to trust server certificate or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User name to connect to source SQL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the storage account copying backups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription ID that identifies an Azure subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseCollation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database collation to be used for the target database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDbName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataMigrationToSqlManagedInstance
+        -ManagedInstanceName <String>
+        -ResourceGroupName <String>
+        -TargetDbName <String>
+        [-SubscriptionId <String>]
+        [-AzureBlobAccountKey <String>]
+        [-AzureBlobAuthType <String>]
+        [-AzureBlobContainerName <String>]
+        [-AzureBlobIdentityType <String>]
+        [-AzureBlobStorageAccountResourceId <String>]
+        [-FileSharePassword <SecureString>]
+        [-FileSharePath <String>]
+        [-FileShareUsername <String>]
+        [-AzureBlobUserAssignedIdentity <String[]>]
+        [-Kind <ResourceType>]
+        [-MigrationService <String>]
+        [-Offline]
+        [-OfflineConfigurationLastBackupName <String>]
+        [-Scope <String>]
+        [-SourceDatabaseName <String>]
+        [-SourceSqlConnectionAuthentication <String>]
+        [-SourceSqlConnectionDataSource <String>]
+        [-SourceSqlConnectionEncryptConnection]
+        [-SourceSqlConnectionPassword <SecureString>]
+        [-SourceSqlConnectionTrustServerCertificate]
+        [-SourceSqlConnectionUserName <String>]
+        [-StorageAccountKey <String>]
+        [-StorageAccountResourceId <String>]
+        [-TargetDatabaseCollation <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataMigration.Models.Api20250315Preview.IDatabaseMigrationSqlMi" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start a Database Migration from the on-premise Source Sql Server to target Managed Instance'
+  description: |-
+    ```powershell
+    $sourcePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
+    $filesharePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
+    New-AzDataMigrationToSqlManagedInstance -ResourceGroupName "MyResourceGroup" -ManagedInstanceName "MyManagedInstance" -TargetDbName "MyDb" -Kind "SqlMI" -Scope "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/managedInstances/MyManagedInstance" -MigrationService "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyRG/providers/Microsoft.DataMigration/SqlMigrationServices/MySqlMigrationService" -StorageAccountResourceId "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/MyStorageAccount" -StorageAccountKey "aaaaacccccoouunntkkkkeeeyyy" -FileSharePath "\\filesharepath.com\SharedBackup\MyBackUps" -FileShareUsername "filesharepath\User" -FileSharePassword $filesharePassword -SourceSqlConnectionAuthentication "SqlAuthentication" -SourceSqlConnectionDataSource "LabServer.database.net" -SourceSqlConnectionUserName "User" -SourceSqlConnectionPassword $sourcePassword -SourceDatabaseName "AdventureWorks"
+    ```
+
+    ```output
+    Name               Type                                       Kind  ProvisioningState MigrationStatus
+    ----               ----                                       ----  ----------------- ---------------
+    MyDb               Microsoft.DataMigration/databaseMigrations SqlMi Succeeded         InProgress
+    ```
+
+    This command starts a Database Migration from the Source Sql Server to target Managed Instance.
+    This example is for online migration.
+    To make it offline add -Offline to the parameters.
+- title: 'Example 2: Start DB Migration from Azure Blob to Managed Instance via System-Assigned Identity'
+  description: |-
+    ```powershell
+    New-AzDataMigrationToSqlManagedInstance -ResourceGroupName "MyResourceGroup" -ManagedInstanceName "MyManagedInstance" -TargetDbName "MyDb" -Kind "SqlMI" -Scope "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/managedInstances/MyManagedInstance" -MigrationService "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyRG/providers/Microsoft.DataMigration/SqlMigrationServices/MySqlMigrationService" -AzureBlobAuthType "ManagedIdentity" -AzureBlobIdentityType "SystemAssigned" -AzureBlobStorageAccountResourceId "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/MyStorageAccount" -AzureBlobContainerName "container"
+    ```
+
+    ```output
+    Name               Type                                       Kind  ProvisioningState MigrationStatus
+    ----               ----                                       ----  ----------------- ---------------
+    MyDb               Microsoft.DataMigration/databaseMigrations SqlMi Succeeded         InProgress
+    ```
+
+    This command starts a Database Migration from the Azure Blob to target Managed Instance.
+    This example is for online migration.
+    To make it offline add -Offline to the parameters.
+- title: 'Example 3: Start DB Migration from Azure Blob to Managed Instance via User-Assigned Identity'
+  description: |-
+    ```powershell
+    New-AzDataMigrationToSqlManagedInstance -ResourceGroupName "MyResourceGroup" -ManagedInstanceName "MyManagedInstance" -TargetDbName "MyDb" -Kind "SqlMI" -Scope "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/managedInstances/MyManagedInstance" -MigrationService "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyRG/providers/Microsoft.DataMigration/SqlMigrationServices/MySqlMigrationService" -AzureBlobAuthType "ManagedIdentity" -AzureBlobIdentityType "UserAssigned" -AzureBlobUserAssignedIdentity "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/MyUserAssignedIdentity" -AzureBlobStorageAccountResourceId "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/MyStorageAccount" -AzureBlobContainerName "container"
+    ```
+
+    ```output
+    Name               Type                                       Kind  ProvisioningState MigrationStatus
+    ----               ----                                       ----  ----------------- ---------------
+    MyDb               Microsoft.DataMigration/databaseMigrations SqlMi Succeeded         InProgress
+    ```
+
+    This command starts a Database Migration from the Azure Blob to target Managed Instance.
+    This example is for online migration.
+    To make it offline add -Offline to the parameters.
+- title: 'Example 4: Start DB Migration from Azure Blob to Managed Instance via Storage Account Key'
+  description: |-
+    ```powershell
+    New-AzDataMigrationToSqlManagedInstance -ResourceGroupName "MyResourceGroup" -ManagedInstanceName "MyManagedInstance" -TargetDbName "MyDb" -Kind "SqlMI" -Scope "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Sql/managedInstances/MyManagedInstance" -MigrationService "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyRG/providers/Microsoft.DataMigration/SqlMigrationServices/MySqlMigrationService" -AzureBlobStorageAccountResourceId "/subscriptions/0000-1111-2222-3333-4444/resourceGroups/MyResourceGroup/providers/Microsoft.Storage/storageAccounts/MyStorageAccount" -AzureBlobContainerName "container" -AzureBlobAccountKey "accountKey"
+    ```
+
+    ```output
+    Name               Type                                       Kind  ProvisioningState MigrationStatus
+    ----               ----                                       ----  ----------------- ---------------
+    MyDb               Microsoft.DataMigration/databaseMigrations SqlMi Succeeded         InProgress
+    ```
+
+    This command starts a Database Migration from the Azure Blob to target Managed Instance.
+    This example is for online migration.
+    To make it offline add -Offline to the parameters.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationToSqlManagedInstance.md
+  document type: cmdlet
+  external help file: Az.DataMigration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationtosqlmanagedinstance
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationToSqlManagedInstance.md
+  PlatyPS schema version: 2024-05-01

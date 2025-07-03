@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppVmStaleAdObject
+name: Get-AzureRemoteAppVmStaleAdObject
+module: Azure
+isPreview: false
+summary: |-
+  Gets objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppVmStaleAdObject** cmdlet gets objects in Microsoft Entra ID that are associated with Azure RemoteApp virtual machines that no longer exist.
+  This cmdlet displays the name of each object that it gets.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a credential that has rights to perform this action.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      If you do not specify this parameter, this cmdlet uses the current user credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppVmStaleAdObject
+        -CollectionName <String>
+        [-Credential <PSCredential>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get stale objects for a collection'
+  description: |-
+    ```
+    PS C:\> Clear-AzureRemoteAppVmStaleAdObject -CollectionName "Contoso"
+    ```
+
+    This second command gets the stale objects for the collection named Contoso.
+links:
+- text: Clear-AzureRemoteAppVmStaleAdObject
+  href: ./Clear-AzureRemoteAppVmStaleAdObject.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: EC6AB7E9-BC9F-4FA2-8172-144C9842D74C
+  PlatyPS schema version: 2024-05-01

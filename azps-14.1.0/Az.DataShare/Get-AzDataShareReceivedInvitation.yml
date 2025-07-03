@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataShare.Get-AzDataShareReceivedInvitation
+name: Get-AzDataShareReceivedInvitation
+module: Az.DataShare
+isPreview: false
+summary: |-
+  Gets information about consumer invitations.
+description: |-
+  The **Get-AzDataShareReceivedInvitation** cmdlet provides information about all the invitations that the consumer has receieved. If you provide location or invitation id, this cmdlet provides information about invitation in particular location or having invitation id. Otherwise, it provides a list of invitations sent to the consumer.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InvitationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure dataShare invitation id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure data share invitation location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataShareReceivedInvitation
+        [-Location <String>]
+        [-InvitationId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataShare.Models.PSDataShare" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDataShareReceivedInvitation -location "westus"
+    ```
+
+    ```output
+    DataSetCount      : 3
+    InvitationId      : 167e06ff-567f-4bc7-be0c-645a6de710f3
+    InvitationStatus  : Pending
+    Location          : westus
+    RespondedAt       :
+    Sender            : adsprovider@microsoft.com
+    SenderCompanyName : ADS Test
+    SentAt            : 7/8/2019 10:47:10 PM
+    ShareName         : AdsShare
+    Description       : Some description
+    Terms             : Some terms of use
+    Id                : /providers/Microsoft.DataShare/consumerInvitations/167e06ff-567f-4bc7-be0c-645a6de710f3
+    Name              : AdsInvitation
+    Type              : Microsoft.DataShare/consumerInvitations
+    ```
+
+    This commant provides information about consumer invitations.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareReceivedInvitation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datashare/get-azdatasharereceivedinvitation
+  Module Name: Az.DataShare
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareReceivedInvitation.md
+  PlatyPS schema version: 2024-05-01

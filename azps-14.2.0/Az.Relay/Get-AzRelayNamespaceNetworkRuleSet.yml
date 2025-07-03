@@ -1,0 +1,201 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Relay.Get-AzRelayNamespaceNetworkRuleSet
+name: Get-AzRelayNamespaceNetworkRuleSet
+module: Az.Relay
+isPreview: false
+summary: |-
+  Gets NetworkRuleSet for a Namespace.
+description: |-
+  Gets NetworkRuleSet for a Namespace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespaceNetworkRuleSet
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespaceNetworkRuleSet
+        -InputObject <IRelayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.INetworkRuleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets NetworkRuleSet for a Relay Namespace'
+  description: |-
+    ```powershell
+    Get-AzRelayNamespaceNetworkRuleSet -ResourceGroupName lucas-relay-rg -NamespaceName namespace-pwsh01 | Format-List
+    ```
+
+    ```output
+    DefaultAction                : Deny
+    IPRule                       : {{
+                                     "ipMask": "1.1.1.1",
+                                     "action": "Allow"
+                                   }, {
+                                     "ipMask": "1.1.1.2",
+                                     "action": "Allow"
+                                   }, {
+                                     "ipMask": "1.1.1.3",
+                                     "action": "Allow"
+                                   }}
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lucas-relay-rg/providers/Microsoft.Relay/namespaces/namespa
+                                   ce-pwsh01/networkRuleSets/default
+    Name                         : default
+    PublicNetworkAccess          : Enabled
+    ResourceGroupName            : lucas-relay-rg
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Relay/Namespaces/NetworkRuleSets
+    ```
+
+    This cmdlet gets NetworkRuleSet for a Relay Namespace.
+- title: 'Example 2: Gets NetworkRuleSet for a Relay Namespace by pipeline'
+  description: |-
+    ```powershell
+    $rules = @()
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.1"
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.2"
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.3"
+    Set-AzRelayNamespaceNetworkRuleSet -ResourceGroupName lucas-relay-rg -NamespaceName namespace-pwsh01 -DefaultAction 'Deny' -IPRule $rules | Get-AzRelayNamespaceNetworkRuleSet | Format-List
+    ```
+
+    ```output
+    DefaultAction                : Deny
+    IPRule                       : {{
+                                     "ipMask": "1.1.1.1",
+                                     "action": "Allow"
+                                   }, {
+                                     "ipMask": "1.1.1.2",
+                                     "action": "Allow"
+                                   }, {
+                                     "ipMask": "1.1.1.3",
+                                     "action": "Allow"
+                                   }}
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lucas-relay-rg/providers/Microsoft.Relay/namespaces/namespa
+                                   ce-pwsh01/networkRuleSets/default
+    Name                         : default
+    PublicNetworkAccess          : Enabled
+    ResourceGroupName            : lucas-relay-rg
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Relay/Namespaces/NetworkRuleSets
+    ```
+
+    This cmdlet gets NetworkRuleSet for a Relay Namespace by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayNamespaceNetworkRuleSet.md
+  document type: cmdlet
+  external help file: Az.Relay-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.relay/get-azrelaynamespacenetworkruleset
+  Module Name: Az.Relay
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayNamespaceNetworkRuleSet.md
+  PlatyPS schema version: 2024-05-01

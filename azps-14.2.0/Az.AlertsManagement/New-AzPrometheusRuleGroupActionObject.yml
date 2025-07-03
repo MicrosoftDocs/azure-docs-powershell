@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AlertsManagement.New-AzPrometheusRuleGroupActionObject
+name: New-AzPrometheusRuleGroupActionObject
+module: Az.AlertsManagement
+isPreview: false
+summary: |-
+  Create an in-memory object for PrometheusRuleGroupAction.
+description: |-
+  Create an in-memory object for PrometheusRuleGroupAction.
+parameters:
+  cmdletParameters:
+  - name: ActionGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the action group to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActionProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.IPrometheusRuleGroupActionProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The properties of an action group object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPrometheusRuleGroupActionObject
+        [-ActionGroupId <String>]
+        [-ActionProperty <IPrometheusRuleGroupActionProperties>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.PrometheusRuleGroupAction" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for PrometheusRuleGroupAction.'
+  description: |-
+    ```powershell
+    New-AzPrometheusRuleGroupActionObject -ActionGroupId /subscriptions/fffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MyresourceGroup/providers/microsoft.insights/actiongroups/MyActionGroup -ActionProperty @{"key1" = "value1"}
+    ```
+
+    ```output
+    ActionGroupId
+    -------------
+    /subscriptions/fffffffff-ffff-ffff-ffff-ffffffffffff/resourceGroups/MyresourceGroup/providers/microsoft.insights/acti…
+    ```
+
+    Create an in-memory object for PrometheusRuleGroupAction.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleGroupActionObject.md
+  document type: cmdlet
+  external help file: Az.PrometheusRuleGroups.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.AlertsManagement/new-azprometheusrulegroupactionobject
+  Module Name: Az.AlertsManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleGroupActionObject.md
+  PlatyPS schema version: 2024-05-01

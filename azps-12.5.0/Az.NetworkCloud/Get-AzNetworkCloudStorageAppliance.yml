@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.Get-AzNetworkCloudStorageAppliance
+name: Get-AzNetworkCloudStorageAppliance
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Get properties of the provided storage appliance.
+description: |-
+  Get properties of the provided storage appliance.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.INetworkCloudIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the storage appliance.
+    aliases:
+    - StorageApplianceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkCloudStorageAppliance
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkCloudStorageAppliance
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkCloudStorageAppliance
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkCloudStorageAppliance
+        -InputObject <INetworkCloudIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.INetworkCloudIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.IStorageAppliance" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List storage appliances by subscription'
+  description: |-
+    ```powershell
+    Get-AzNetworkCloudStorageAppliance -SubscriptionId subscriptionId
+    ```
+
+    ```output
+    Location Name                SystemDataCreatedAt SystemDataCreatedBy  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy  SystemDataLastModifiedByType ResourceGroupName
+    -------- ----                ------------------- -------------------  ----------------------- ------------------------ ------------------------  ---------------------------- -----------------
+    westus3  storage-appliance     07/12/2023 10:42:00 user1                   Application            07/12/2023 12:58:10      user2                      Application                resourceGroup
+    eastus   storage-appliance     11/03/2022 16:59:20 user1                   Application            12/09/2022 19:46:26      user2                      Application                resourceGroup
+    ```
+
+    This command lists all storage appliances in the subscription.
+- title: 'Example 2: List storage appliances by resource group'
+  description: |-
+    ```powershell
+    Get-AzNetworkCloudStorageAppliance -ResourceGroupName resourceGroup -SubscriptionId subscriptionId
+    ```
+
+    ```output
+    Location Name                SystemDataCreatedAt SystemDataCreatedBy  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy  SystemDataLastModifiedByType ResourceGroupName
+    -------- ----                ------------------- -------------------  ----------------------- ------------------------ ------------------------  ---------------------------- -----------------
+    westus3  storage-appliance     07/12/2023 10:42:00 user1                   Application            07/12/2023 12:58:10      user2                      Application                resourceGroup
+    eastus   storage-appliance     11/03/2022 16:59:20 user1                   Application            12/09/2022 19:46:26      user2                      Application                resourceGroup
+    ```
+
+    This command lists all storage appliances in the ResourceGroup.
+- title: 'Example 3: Get storage appliance'
+  description: |-
+    ```powershell
+    Get-AzNetworkCloudStorageAppliance -Name storageApplianceName -SubscriptionId subscriptionId -ResourceGroupName resourceGroup
+    ```
+
+    ```output
+    Location Name                SystemDataCreatedAt SystemDataCreatedBy  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy  SystemDataLastModifiedByType ResourceGroupName
+    -------- ----                ------------------- -------------------  ----------------------- ------------------------ ------------------------  ---------------------------- -----------------
+    westus3  storage-appliance     07/12/2023 10:42:00 user1                   Application            07/12/2023 12:58:10      user2                      Application                resourceGroup
+    ```
+
+    This command gets a storage appliance by its name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/Get-AzNetworkCloudStorageAppliance.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.networkcloud/get-aznetworkcloudstorageappliance
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/Get-AzNetworkCloudStorageAppliance.md
+  PlatyPS schema version: 2024-05-01

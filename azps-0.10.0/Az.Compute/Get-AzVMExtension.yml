@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzVMExtension
+name: Get-AzVMExtension
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets properties of Virtual Machine Extensions installed on a virtual machine.
+description: |-
+  The **Get-AzVMExtension** cmdlet gets properties of Virtual Machine Extensions installed on a virtual machine.
+  Specify the name of an extension for which to get properties.
+  To get only the instance view of an extension, specify the Status parameter.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an extension.
+      This cmdlet gets properties for the extension that this parameter specifies.
+    aliases:
+    - ExtensionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets only the instance view of an extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual machine.
+      This cmdlet gets properties of an extension from the virtual machine that this parameter specifies.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVMExtension
+        [-ResourceGroupName] <String>
+        [-VMName] <String>
+        [-Name] <String>
+        [-Status]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineExtension" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get properties of an extension'
+  description: |-
+    ```
+    PS C:\> Get-AzVMExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine22" -Name "CustomScriptExtension"
+    ```
+
+    This command gets properties for the extension named CustomScriptExtension on the virtual machine named VirtualMachine22 in the resource group ResourceGroup11.
+- title: 'Example 2: Get instance view of an extension'
+  description: |-
+    ```
+    PS C:\> Get-AzVMExtension -ResourceGroupName "ResourceGroup11" -VMName "VirtualMachine22" -Name "CustomScriptExtension" -Status
+    ```
+
+    This command gets the instance view for the extension named CustomScriptExtension on the virtual machine named VirtualMachine22 in the resource group ResourceGroup11.
+links:
+- text: Remove-AzVMExtension
+  href: ./Remove-AzVMExtension.yml
+- text: Set-AzVMExtension
+  href: ./Set-AzVMExtension.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMExtension.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvmextension
+  Module Name: Az.Compute
+  ms.assetid: 842652D4-0F1C-4D0D-AB55-0D43D3C5D82A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVMExtension.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudEgressEndpointObject
+name: New-AzNetworkCloudEgressEndpointObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for EgressEndpoint.
+description: |-
+  Create an in-memory object for EgressEndpoint.
+parameters:
+  cmdletParameters:
+  - name: Category
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The descriptive category name of endpoints accessible by the AKS agent node.
+      For example, azure-resource-management, API server, etc.
+      The platform egress endpoints provided by default will use the category 'default'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.IEndpointDependency" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of endpoint dependencies.
+      To construct, see NOTES section for ENDPOINT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudEgressEndpointObject
+        -Category <String>
+        -Endpoint <IEndpointDependency[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.EgressEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for EgressEndpointObject.'
+  description: |-
+    ```powershell
+    $endpointDependency=New-AzNetworkCloudEndpointDependencyObject -DomainName domainName -Port 1234
+
+    New-AzNetworkCloudEgressEndpointObject -Category "azure-resource-management" -Endpoint ($endpointDependency)
+    ```
+
+    ```output
+    Category
+    --------
+    azure-resource-management
+    ```
+
+    Create an in-memory object for EgressEndpoint.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEgressEndpointObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudEgressEndpointObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEgressEndpointObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,408 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedVMware.New-AzConnectedVMwareVNet
+name: New-AzConnectedVMwareVNet
+module: Az.ConnectedVMware
+isPreview: false
+summary: |-
+  Create virtual network.
+description: |-
+  Create virtual network.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extended location name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extended location type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InventoryItemId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the inventory Item ID for the virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g.
+      ApiApps are a kind of Microsoft.Web/sites type.
+      If supported, the resource provider must validate and persist this value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MoRefId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the virtual network resource.
+    aliases:
+    - VirtualNetworkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCenterId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the ARM Id of the vCenter resource in which this template resides.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzConnectedVMwareVNet
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-ExtendedLocationName <String>]
+        [-ExtendedLocationType <String>]
+        [-InventoryItemId <String>]
+        [-Kind <String>]
+        [-Location <String>]
+        [-MoRefId <String>]
+        [-Tag <Hashtable>]
+        [-VCenterId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzConnectedVMwareVNet
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzConnectedVMwareVNet
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedVMware.Models.IVirtualNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Virtual Network'
+  description: |-
+    ```powershell
+    New-AzConnectedVMwareVNet -Name "test-vnet" -ResourceGroupName "test-rg" -Location "eastus" -ExtendedLocationName "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl" -ExtendedLocationType "CustomLocation" -InventoryItemId "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/network-563661" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    CustomResourceName           : 1c967ed8-79f5-4737-aae9-0978e1128da6
+    ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+    ExtendedLocationType         : CustomLocation
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/virtualNetworks/test-vnet
+    InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/network-563661
+    Kind                         :
+    Location                     : eastus
+    MoName                       : VM Network
+    MoRefId                      : network-563661
+    Name                         : test-vnet
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : test-rg
+    Statuses                     : {{
+                                     "type": "Ready",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2023-10-06T11:07:38.9615735Z"
+                                   }, {
+                                     "type": "Idle",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2023-10-06T11:07:38.9615735Z"
+                                   }}
+    SystemDataCreatedAt          : 10/6/2023 11:07:19 AM
+    SystemDataCreatedBy          : xyz
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 10/6/2023 11:07:19 AM
+    SystemDataLastModifiedBy     : xyz
+    SystemDataLastModifiedByType : User
+    Tag                          : {
+                                   }
+    Type                         : microsoft.connectedvmwarevsphere/virtualnetworks
+    Uuid                         : 1c967ed8-79f5-4737-aae9-0978e1128da6
+    VCenterId                    : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
+    ```
+
+    This command create a Virtual Network named `test-vnet` in a resource group named `test-rg`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/New-AzConnectedVMwareVNet.md
+  document type: cmdlet
+  external help file: Az.ConnectedVMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedvmware/new-azconnectedvmwarevnet
+  Module Name: Az.ConnectedVMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/New-AzConnectedVMwareVNet.md
+  PlatyPS schema version: 2024-05-01

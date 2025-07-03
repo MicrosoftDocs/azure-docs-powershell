@@ -1,0 +1,318 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureEndpoint
+name: Set-AzureEndpoint
+module: Azure
+isPreview: false
+summary: |-
+  Modifies an endpoint assigned to a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureEndpoint** cmdlet modifies an endpoint assigned to an Azure virtual machine.
+  You can specify changes to an endpoint that is not load balanced.
+parameters:
+  cmdletParameters:
+  - name: ACL
+    type: <xref href="NetworkAclObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an access control list (ACL) configuration object that this cmdlet applies to the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectServerReturn
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet enables direct server return.
+      Specify $True to enable, or $False to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleTimeoutInMinutes
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the TCP idle time-out period, in minutes, for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalLoadBalancerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the internal load balancer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancerDistribution
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the load balancer distribution algorithm.
+      Valid values are:
+
+      - sourceIP.
+      A two tuple affinity: Source IP, Destination IP
+      - sourceIPProtocol.
+      A three tuple affinity: Source IP, Destination IP, Protocol
+      - none.
+      A five tuple affinity: Source IP, Source Port, Destination IP, Destination Port, Protocol
+
+      The default value is none.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the local, private, port that this endpoint uses.
+      Applications within the virtual machine listen on this port for service input requests for this endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol of the endpoint.
+      Valid values are:
+
+      - tcp
+      - udp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the public port that the endpoint uses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualIPName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual IP address that Azure associates to the endpoint.
+      Your service can have multiple virtual IPs.
+      To create virtual IPs, use the **Add-AzureVirtualIP** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine to which the endpoint belongs.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureEndpoint
+        [-Name] <String>
+        [[-Protocol] <String>]
+        [[-LocalPort] <Int32>]
+        [-PublicPort <Int32>]
+        [-DirectServerReturn <Boolean>]
+        [-ACL <NetworkAclObject>]
+        [-InternalLoadBalancerName <String>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadBalancerDistribution <String>]
+        [-VirtualIPName <String>]
+        -VM <IPersistentVM>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify an endpoint to listen on a port'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine01" | Set-AzureEndpoint -Name "Web" -PublicPort 443 -LocalPort 443 -Protocol tcp | Update-AzureVM
+    ```
+
+    This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.
+    The command passes it to the current cmdlet by using the pipeline operator.
+    This cmdlet modifies the endpoint named Web to listen on port 443.
+    The command passes the virtual machine object to the **Update-AzureVM** cmdlet, which implements your changes.
+links:
+- text: Add-AzureEndpoint
+  href: ./Add-AzureEndpoint.yml
+- text: Add-AzureVirtualIP
+  href: ./Add-AzureVirtualIP.yml
+- text: Get-AzureEndpoint
+  href: ./Get-AzureEndpoint.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: Remove-AzureEndpoint
+  href: ./Remove-AzureEndpoint.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 1BA472FB-E684-486C-8066-42C9215DBDEF
+  PlatyPS schema version: 2024-05-01

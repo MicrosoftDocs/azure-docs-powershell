@@ -1,0 +1,284 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Move-AzureVirtualNetwork
+name: Move-AzureVirtualNetwork
+module: Azure
+isPreview: false
+summary: |-
+  Migrates a virtual network to the Azure Resource Manager stack.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Move-AzureVirtualNetwork** cmdlet migrates a virtual network to a resource group in the Azure Resource Manager stack.
+parameters:
+  cmdletParameters:
+  - name: Abort
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet cancels the virtual network migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AbortMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Commit
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet starts the virtual network migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommitMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prepare
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet prepares the virtual network for migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Validate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet validates the virtual network for migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Virtual Network to migrate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Move-AzureVirtualNetwork
+        [-VirtualNetworkName] <String>
+        [-Validate]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureVirtualNetwork
+        [-VirtualNetworkName] <String>
+        [-Abort]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AbortMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureVirtualNetwork
+        [-VirtualNetworkName] <String>
+        [-Commit]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommitMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureVirtualNetwork
+        [-VirtualNetworkName] <String>
+        [-Prepare]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PrepareMigrationParameterSet
+  isDefault: false
+examples:
+- title: 'Example 1: Prepare virtual network migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureVirtualNetwork -Prepare -VirtualNetworkName "ContosoVNET"
+    ```
+
+    This command prepares the virtual network named ContosoVNET for migration to the Azure Resource Manager stack.
+- title: 'Example 2: Start virtual network migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureVirtualNetwork -Commit -VirtualNetworkName "ContosoVNET"
+    ```
+
+    This command starts migration of the virtual network named ContosoVNET to the Azure Resource Manager stack.
+- title: 'Example 3: Validate virtual network migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureVirtualNetwork -Validate -VirtualNetworkName "ContosoVNET"
+    ```
+
+    This command validates migration for the virtual network named ContosoVNET to the Azure Resource Manager stack.
+links:
+- text: Move-AzureNetworkSecurityGroup
+  href: ./Move-AzureNetworkSecurityGroup.yml
+- text: Move-AzureReservedIP
+  href: ./Move-AzureReservedIP.yml
+- text: Move-AzureRouteTable
+  href: ./Move-AzureRouteTable.yml
+- text: Move-AzureService
+  href: ./Move-AzureService.yml
+- text: Move-AzureStorageAccount
+  href: ./Move-AzureStorageAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 2B0CC65A-0A73-4FFE-BF7C-B148871909D9
+  PlatyPS schema version: 2024-05-01

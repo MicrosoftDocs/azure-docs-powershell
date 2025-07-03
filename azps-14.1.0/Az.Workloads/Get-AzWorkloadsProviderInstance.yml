@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.Get-AzWorkloadsProviderInstance
+name: Get-AzWorkloadsProviderInstance
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Gets properties of a provider instance for the specified subscription, resource group, SAP monitor name, and resource name.
+description: |-
+  Gets properties of a provider instance for the specified subscription, resource group, SAP monitor name, and resource name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the SAP monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the provider instance.
+    aliases:
+    - ProviderInstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWorkloadsProviderInstance
+        -MonitorName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWorkloadsProviderInstance
+        -MonitorName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWorkloadsProviderInstance
+        -InputObject <IMonitorsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.IProviderInstance" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all providers in an AMS Instance'
+  description: |-
+    ```powershell
+    Get-AzWorkloadsProviderInstance -ResourceGroupName ad-ams-rg -MonitorName ad-ams
+    ```
+
+    ```output
+    Name              ResourceGroupName ProvisioningState IdentityType
+    ----              ----------------- ----------------- ------------
+    Hana-1-test       ad-ams-rg         Failed
+    hana-test-2       ad-ams-rg         Succeeded
+    prov-1            ad-ams-rg         Failed
+    hana-test         ad-ams-rg         Failed
+    SAP-NETWEAVER     ad-ams-rg         Failed
+    HA3-HANA-HighAvl  ad-ams-rg         Succeeded
+    lh-28022023-host  ad-ams-rg         Failed
+    as1-sysdb         ad-ams-rg         Succeeded
+    h2-test           ad-ams-rg         Failed
+    ```
+
+    List all the providers created for an AMS Instance
+- title: 'Example 2: Get information about an AMS Provider'
+  description: |-
+    ```powershell
+    Get-AzWorkloadsProviderInstance -ResourceGroupName ad-ams-rg -MonitorName ad-ams -Name hana-test-2
+    ```
+
+    ```output
+    Name        ResourceGroupName ProvisioningState IdentityType
+    ----        ----------------- -----------------  ------------
+    hana-test-2 ad-ams-rg         Succeeded
+    ```
+
+    Gets information about a specific AMS Provider
+- title: 'Example 3: Get information about an AMS Provider by Id'
+  description: |-
+    ```powershell
+    Get-AzWorkloadsProviderInstance -InputObject "/subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.Workloads/monitors/ams_mon/providerInstances/suha-db2-1"
+    ```
+
+    ```output
+    Name       ResourceGroupName ProvisioningState IdentityType
+    ----       ----------------- ----------------- ------------
+    suha-db2-1 suha-0802-rg1     Succeeded
+    ```
+
+    Get information about an AMS Provider by ArmId
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Get-AzWorkloadsProviderInstance.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/get-azworkloadsproviderinstance
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Get-AzWorkloadsProviderInstance.md
+  PlatyPS schema version: 2024-05-01

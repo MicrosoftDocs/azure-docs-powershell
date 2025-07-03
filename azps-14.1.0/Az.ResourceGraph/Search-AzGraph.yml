@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ResourceGraph.Search-AzGraph
+name: Search-AzGraph
+module: Az.ResourceGraph
+isPreview: false
+summary: |-
+  Queries the resources managed by Azure Resource Manager.
+description: |-
+  Learn more about the query syntax here: https://aka.ms/resource-graph/learntoquery
+parameters:
+  cmdletParameters:
+  - name: AllowPartialScope
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates if query should succeed when only partial number of subscriptions underneath can be processed by server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupScopedQuery
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TenantScopedQuery
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of objects to return. Allowed values: 1-1000.
+      Default value is 100.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Management group(s) to run query against.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupScopedQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Query
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Graph query.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first N objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The skip token to use for getting the next page of results if applicable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription(s) to run query against.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionScopedQuery
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseTenantScope
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run query across all available subscriptions in the current tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TenantScopedQuery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Search-AzGraph
+        [-Query] <String>
+        [-Subscription <String[]>]
+        [-First <Int32>]
+        [-Skip <Int32>]
+        [-SkipToken <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScopedQuery
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Search-AzGraph
+        [-Query] <String>
+        -ManagementGroup <String[]>
+        [-AllowPartialScope]
+        [-First <Int32>]
+        [-Skip <Int32>]
+        [-SkipToken <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupScopedQuery
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Search-AzGraph
+        [-Query] <String>
+        [-UseTenantScope]
+        [-AllowPartialScope]
+        [-First <Int32>]
+        [-Skip <Int32>]
+        [-SkipToken <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TenantScopedQuery
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceGraph.Models.PSResourceGraphResponse`1" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Search-AzGraph "project id, name, type, location, tags" -First 3
+    ```
+
+    ```output
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.Compute/virtualMachineScaleSets/nt
+    name       : nt
+    type       : microsoft.compute/virtualmachinescalesets
+    location   : eastus
+    tags       : @{resourceType=Service Fabric; clusterName=gov-art-int-nt-a}
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.Compute/virtualMachineScaleSets/nt
+
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.EventGrid/topics/egtopic-1
+    name       : egtopic-1
+    type       : microsoft.eventgrid/topics
+    location   : westus2
+    tags       :
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.EventGrid/topics/egtopic-1
+    ```
+
+    Simple resources query requesting a subset of resource fields.
+- title: Example 2
+  description: |-
+    ```powershell
+    Search-AzGraph "project id, name, type, location | where type =~ 'Microsoft.Compute/virtualMachines' | summarize count() by location | top 3 by count_"
+    ```
+
+    ```output
+    location      count_
+    --------      ------
+    eastus            66
+    westcentralus     32
+    westus            26
+    ```
+
+    A complex query on resources featuring field selection, filtering and summarizing.
+- title: Example 3
+  description: |-
+    ```powershell
+    $response = Search-AzGraph -Query "project id, name, type, location" -First 2
+    Search-AzGraph -Query "project id, name, type, location" -SkipToken $response.SkipToken
+    ```
+
+    ```output
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/test/providers/Microsoft.Network/networkInterfaces/17ni
+    name       : 17ni
+    type       : microsoft.network/networkinterfaces
+    location   : westeurope
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/test/providers/Microsoft.Network/networkInterfaces/17ni
+
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/17nsg
+    name       : 17nsg
+    type       : microsoft.network/networksecuritygroups
+    location   : westeurope
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/test/providers/Microsoft.Network/networkSecurityGroups/17nsg
+    ```
+
+    A query with the skip token passed from the previous query results. Please note that keeping id in the results is mandatory to get back a skip token.
+- title: Example 4
+  description: |-
+    ```powershell
+    Search-AzGraph -Query "project id, name, type, location, tags" -First 2 -ManagementGroup MyManagementGroupId -AllowPartialScope
+    ```
+
+    ```output
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.Compute/virtualMachineScaleSets/nt
+    name       : nt
+    type       : microsoft.compute/virtualmachinescalesets
+    location   : eastus
+    tags       : @{resourceType=Service Fabric; clusterName=gov-art-int-nt-a}
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.Compute/virtualMachineScaleSets/nt
+
+    id         : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.EventGrid/topics/egtopic-1
+    name       : egtopic-1
+    type       : microsoft.eventgrid/topics
+    location   : westus2
+    tags       :
+    ResourceId : /subscriptions/1ef51df4-f8a9-4b69-9919-1ef51df4eff6/resourceGroups/Service-INT-a/providers/Microsoft.EventGrid/topics/egtopic-1
+    ```
+
+    A query scoped to the management group that allows the query to succeed with partial scope result if MyManagementGroupId has more than N subscriptions underneath.
+    N is max number of subscriptions that can be processed by server.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceGraph.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resourcegraph/search-azgraph
+  Module Name: Az.ResourceGraph
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Search-AzGraph.md
+  PlatyPS schema version: 2024-05-01

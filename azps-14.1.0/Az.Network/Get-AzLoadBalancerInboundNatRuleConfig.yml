@@ -1,0 +1,108 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzLoadBalancerInboundNatRuleConfig
+name: Get-AzLoadBalancerInboundNatRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an inbound NAT rule configuration for a load balancer.
+description: |-
+  The **Get-AzLoadBalancerInboundNatRuleConfig** cmdlet gets one or more inbound network address translation (NAT) rules in an Azure load balancer.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancer
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the load balancer that is associated with the inbound NAT rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the inbound NAT rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLoadBalancerInboundNatRuleConfig
+        -LoadBalancer <PSLoadBalancer>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSInboundNatRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an inbound NAT rule configuration'
+  description: |-
+    ```powershell
+    $slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+    Get-AzLoadBalancerInboundNatRuleConfig -Name "MyInboundNatRule1" -LoadBalancer $slb
+    ```
+
+    The first command gets the load balancer named MyLoadBalancer, and stores it in the variable $slb.
+    The second command gets the associated NAT rule named MyInboundNatRule1 from the load balancer in $slb.
+links:
+- text: Get-AzLoadBalancer
+  href: ./Get-AzLoadBalancer.yml
+- text: New-AzLoadBalancerInboundNatRuleConfig
+  href: ./New-AzLoadBalancerInboundNatRuleConfig.yml
+- text: Remove-AzLoadBalancerInboundNatRuleConfig
+  href: ./Remove-AzLoadBalancerInboundNatRuleConfig.yml
+- text: Set-AzLoadBalancerInboundNatRuleConfig
+  href: ./Set-AzLoadBalancerInboundNatRuleConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLoadBalancerInboundNatRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azloadbalancerinboundnatruleconfig
+  Module Name: Az.Network
+  ms.assetid: 1FDA90C0-D01F-45E1-9149-16AD04046271
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLoadBalancerInboundNatRuleConfig.md
+  PlatyPS schema version: 2024-05-01

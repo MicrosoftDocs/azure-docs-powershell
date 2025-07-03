@@ -1,0 +1,513 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzNetworkWatcherConnectionMonitor
+name: Set-AzNetworkWatcherConnectionMonitor
+module: Az.Network
+isPreview: false
+summary: |-
+  Update a connection monitor.
+description: |-
+  The Set-AzNetworkWatcherConnectionMonitor cmdlet updates the specified connection monitor.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, connectivity, management, manager, network, networking, network watcher, connection monitor
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoStart
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Auto start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Ip address of the connection monitor destination.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Destination port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the connection monitor destination.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="PSConnectionMonitorResult" data-throw-if-not-resolved="False" />
+    description: |-
+      Connection monitor object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the network watcher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitoringIntervalInSeconds
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Monitoring interval in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The connection monitor name.
+    aliases:
+    - ConnectionMonitorName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcher
+    type: <xref href="PSNetworkWatcher" data-throw-if-not-resolved="False" />
+    description: |-
+      The network watcher resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcherName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of network watcher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network watcher resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Source port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the connection monitor source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkWatcherConnectionMonitor
+        -NetworkWatcher <PSNetworkWatcher>
+        -SourceResourceId <String>
+        [-Name <String>]
+        [-MonitoringIntervalInSeconds <Int32>]
+        [-SourcePort <Int32>]
+        [-DestinationResourceId <String>]
+        [-DestinationAddress <String>]
+        [-DestinationPort <Int32>]
+        [-AutoStart <Boolean>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkWatcherConnectionMonitor
+        -NetworkWatcherName <String>
+        -ResourceGroupName <String>
+        -SourceResourceId <String>
+        [-Name <String>]
+        [-MonitoringIntervalInSeconds <Int32>]
+        [-SourcePort <Int32>]
+        [-DestinationResourceId <String>]
+        [-DestinationAddress <String>]
+        [-DestinationPort <Int32>]
+        [-AutoStart <Boolean>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: SetByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkWatcherConnectionMonitor
+        -Location <String>
+        -SourceResourceId <String>
+        [-Name <String>]
+        [-MonitoringIntervalInSeconds <Int32>]
+        [-SourcePort <Int32>]
+        [-DestinationResourceId <String>]
+        [-DestinationAddress <String>]
+        [-DestinationPort <Int32>]
+        [-AutoStart <Boolean>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: SetByLocation
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkWatcherConnectionMonitor
+        -ResourceId <String>
+        -SourceResourceId <String>
+        [-Name <String>]
+        [-MonitoringIntervalInSeconds <Int32>]
+        [-SourcePort <Int32>]
+        [-DestinationResourceId <String>]
+        [-DestinationAddress <String>]
+        [-DestinationPort <Int32>]
+        [-AutoStart <Boolean>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkWatcherConnectionMonitor
+        -InputObject <PSConnectionMonitorResult>
+        -SourceResourceId <String>
+        [-Name <String>]
+        [-MonitoringIntervalInSeconds <Int32>]
+        [-SourcePort <Int32>]
+        [-DestinationResourceId <String>]
+        [-DestinationAddress <String>]
+        [-DestinationPort <Int32>]
+        [-AutoStart <Boolean>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: SetByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+    Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorResult
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSConnectionMonitorResult" data-throw-if-not-resolved="False" />
+examples:
+- title: '---------------  Example 1: Update a connection monitor ---------------'
+  description: |-
+    ```
+    PS C:\> Set-AzNetworkWatcherConnectionMonitor -Location centraluseuap -Name cm -SourceResourceId /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RgCentralUSEUAP/providers/Microsoft.Compute/virtualMachines/vm
+    -DestinationAddress google.com -DestinationPort 80 -Tag @{"key1" = "value1"}
+
+    Name                        : cm
+    Id                          : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGro
+                                  ups/NetworkWatcherRG/providers/Microsoft.Network/networkWatcher
+                                  s/NetworkWatcher_centraluseuap/connectionMonitors/cm
+    Etag                        : W/"5b2b20e8-0ce0-417e-9607-76208149bb67"
+    ProvisioningState           : Succeeded
+    Source                      : {
+                                    "ResourceId": "/subscriptions/00000000-0000-0000-0000-0000000
+                                    00000/RgCentralUSEUAP/providers/Microsoft.Compute/virtualMach
+                                    ines/vm",
+                                    "Port": 0
+                                  }
+    Destination                 : {
+                                    "Address": "google.com",
+                                    "Port": 80
+                                  }
+    MonitoringIntervalInSeconds : 60
+    AutoStart                   : True
+    StartTime                   : 1/12/2018 7:19:28 PM
+    MonitoringStatus            : Running
+    Location                    : centraluseuap
+    Type                        : Microsoft.Network/networkWatchers/connectionMonitors
+    Tags                        : {
+                                    "key1": "value1"
+                                  }
+    ```
+
+    In this example we update existing connection monitor by changing destinationAddress and adding tags.
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcherNextHop
+  href: ./Get-AzNetworkWatcherNextHop.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Get-AzNetworkWatcherTroubleshootingResult
+  href: ./Get-AzNetworkWatcherTroubleshootingResult.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+- text: Get-AzNetworkWatcherConnectionMonitor
+  href: ./Get-AzNetworkWatcherConnectionMonitor.yml
+- text: Get-AzNetworkWatcherConnectionMonitorReport
+  href: ./Get-AzNetworkWatcherConnectionMonitorReport.yml
+- text: Remove-AzNetworkWatcherConnectionMonitor
+  href: ./Remove-AzNetworkWatcherConnectionMonitor.yml
+- text: Start-AzNetworkWatcherConnectionMonitor
+  href: ./Start-AzNetworkWatcherConnectionMonitor.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkWatcherConnectionMonitor.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-aznetworkwatcherconnectionmonitor
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkWatcherConnectionMonitor.md
+  PlatyPS schema version: 2024-05-01

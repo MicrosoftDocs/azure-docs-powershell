@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzExtensionDataSourceObject
+name: New-AzExtensionDataSourceObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for ExtensionDataSource.
+description: |-
+  Create an in-memory object for ExtensionDataSource.
+parameters:
+  cmdletParameters:
+  - name: ExtensionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VM extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionSetting
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension settings.
+      The format is specific for particular extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputDataSource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of data sources this extension needs data from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the data source.
+              This name should be unique across all data sources (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stream
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of streams that this data source will be sent to.
+              A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzExtensionDataSourceObject
+        -ExtensionName <String>
+        [-ExtensionSetting <Hashtable>]
+        [-InputDataSource <String[]>]
+        [-Name <String>]
+        [-Stream <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.ExtensionDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create extension data source object'
+  description: |-
+    ```powershell
+    New-AzExtensionDataSourceObject -ExtensionName AzureSecurityLinuxAgent -ExtensionSetting @{auditLevel='4'; maxQueueSize='1234'} -Name "myExtensionDataSource1" -Stream "Microsoft-OperationLog"
+    ```
+
+    ```output
+    ExtensionName    : AzureSecurityLinuxAgent
+    ExtensionSetting : {
+                         "maxQueueSize": "1234",
+                         "auditLevel": "4"
+                       }
+    InputDataSource  :
+    Name             : myExtensionDataSource1
+    Stream           : {Microsoft-OperationLog}
+    ```
+
+    This command creates a extension data source object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzExtensionDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azextensiondatasourceobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzExtensionDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

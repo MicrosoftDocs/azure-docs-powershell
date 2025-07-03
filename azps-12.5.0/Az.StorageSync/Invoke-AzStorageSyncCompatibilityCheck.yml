@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageSync.Invoke-AzStorageSyncCompatibilityCheck
+name: Invoke-AzStorageSyncCompatibilityCheck
+module: Az.StorageSync
+isPreview: false
+summary: |-
+  Checks for potential compatibility issues between your system and Azure File Sync.
+description: |-
+  The **Invoke-AzStorageSyncCompatibilityCheck** cmdlet checks for potential compatibility issues between your system and Azure File Sync. Given a local or remote path, it performs a set of validations on the system and file namespace, and then returns any compatibility issues it finds.
+  System checks:
+  - OS compatibility
+  File namespace checks:
+  - Unsupported characters
+  - Maximum file size
+  - Maximum path length
+  - Maximum file length
+  - Maximum dataset size
+  - Maximum directory depth
+notes: |-
+  * Keywords: azure, Az, arm, resource, management, storagesync, filesync
+parameters:
+  cmdletParameters:
+  - name: ComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The computer you are performing this check on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputerNameBased
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Your credentials for the share you are validating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The UNC path of the share you are validating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PathBased
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipNamespaceChecks
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set this flag to skip file namespace validations and only perform system validations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PathBased
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipSystemChecks
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set this flag to skip system validations and only perform file namespace validations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzStorageSyncCompatibilityCheck
+        [-Path] <String>
+        [-Credential <PSCredential>]
+        [-SkipSystemChecks]
+        [-SkipNamespaceChecks]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PathBased
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzStorageSyncCompatibilityCheck
+        [-ComputerName] <String>
+        [-Credential <PSCredential>]
+        [-SkipSystemChecks]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputerNameBased
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.StorageSync.Evaluation.Models.PSValidationResult" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Invoke-AzStorageSyncCompatibilityCheck C:\DATA
+    ```
+
+    This command checks the compatibility of the system and also of files and folders in C:\DATA.
+- title: Example 2
+  description: |-
+    ```powershell
+    Invoke-AzStorageSyncCompatibilityCheck C:\DATA -SkipSystemChecks
+    ```
+
+    This command checks the compatibility of files and folders in C:\DATA, but does not perform a system compatibility check.
+- title: Example 3
+  description: |-
+    ```powershell
+    $validation = Invoke-AzStorageSyncCompatibilityCheck C:\DATA
+    $validation.Results | Select-Object -Property Type, Path, Level, Description, Result | Export-Csv -Path C:\results.csv -Encoding utf8
+    ```
+
+    This command checks the compatibility of the system and also of files and folders in C:\DATA, and then exports the results as a CSV file to C:\results.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Invoke-AzStorageSyncCompatibilityCheck.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.StorageSync.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagesync/invoke-azstoragesynccompatibilitycheck
+  Module Name: Az.StorageSync
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageSync/StorageSync/help/Invoke-AzStorageSyncCompatibilityCheck.md
+  PlatyPS schema version: 2024-05-01

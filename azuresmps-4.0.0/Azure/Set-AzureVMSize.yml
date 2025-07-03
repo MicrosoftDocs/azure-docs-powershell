@@ -1,0 +1,158 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureVMSize
+name: Set-AzureVMSize
+module: Azure
+isPreview: false
+summary: |-
+  Sets the size of an Azure virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureVMSize** cmdlet updates the size of a virtual machine.
+  It has two parameters: *InstanceSize*, which is the new size of the virtual machine, and *VM*, which is a virtual machine object retrieved by using the **Get-AzureVM** cmdlet.
+  The result of **Set-AzureVMSize** can be piped to the **Update-AzureVM** cmdlet or stored in a variable for later use.
+  No actual change is made until **Update-AzureVM** is executed.
+
+  Note: This cmdlet will require the virtual machine to be re-provisioned and it might get a new IP address.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the virtual machine.
+
+      The acceptable values for this parameter are:
+
+      --ExtraSmall
+      --Small
+      --Medium
+      --Large
+      --ExtraLarge
+      --A5
+      --A6
+      --A7
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the persistent virtual machine object that this cmdlet sets the size of.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureVMSize
+        [-InstanceSize] <String>
+        -VM <IPersistentVM>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set the size of a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "MySvc1" -Name "MyVM3" | Set-AzureVMSize "Small" | Update-AzureVM
+    ```
+
+    This command updates a virtual machine to size "Small".
+links:
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 437889D1-F24F-4BBE-8C56-7C3E48CEA517
+  PlatyPS schema version: 2024-05-01

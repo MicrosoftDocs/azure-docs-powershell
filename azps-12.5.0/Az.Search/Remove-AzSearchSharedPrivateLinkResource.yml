@@ -1,0 +1,305 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Search.Remove-AzSearchSharedPrivateLinkResource
+name: Remove-AzSearchSharedPrivateLinkResource
+module: Az.Search
+isPreview: false
+summary: |-
+  Remove the shared private link resource from the Azure Cognitive Search service.
+description: |-
+  The **Remove-AzSearchSharedPrivateLinkResource** cmdlet removes the shared private link resource from the Azure Cognitive Search service.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSSharedPrivateLinkResource" data-throw-if-not-resolved="False" />
+    description: |-
+      Shared private link resource input object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Cognitive Search Shared private link resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParentObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentObject
+    type: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSSearchService" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Cognitive Search Service Input Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This Cmdlet does not return an object by default.
+      If this switch is specified, it returns true if successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Shared private link resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Cognitive Search Service name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzSearchSharedPrivateLinkResource
+        [-ResourceGroupName] <String>
+        [-ServiceName] <String>
+        [-Name] <String>
+        [-Force]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzSearchSharedPrivateLinkResource
+        [-ParentObject] <PSSearchService>
+        [-Name] <String>
+        [-Force]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSearchSharedPrivateLinkResource
+        [-ResourceId] <String>
+        [-Force]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSearchSharedPrivateLinkResource
+        [-InputObject] <PSSharedPrivateLinkResource>
+        [-Force]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AzSearchSharedPrivateLinkResource -ResourceGroupName arjagann -ServiceName arjagann-test-cuseuap -Name blob-pe
+    ```
+
+    ```output
+    Confirm
+    Remove Shared Private Link Resource 'blob-pe'.
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    ```
+
+    This example deletes a shared private link resource by name of the Azure Cognitive Search service.
+links:
+- text: New-AzSearchSharedPrivateLinkResource.md
+  href: ./New-AzSearchSharedPrivateLinkResource.yml
+- text: Get-AzSearchSharedPrivateLinkResource.md
+  href: ./Get-AzSearchSharedPrivateLinkResource.yml
+- text: Set-AzSearchSharedPrivateLinkResource.md
+  href: ./Set-AzSearchSharedPrivateLinkResource.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchSharedPrivateLinkResource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.search/remove-azsearchsharedprivatelinkresource
+  Module Name: Az.Search
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Remove-AzSearchSharedPrivateLinkResource.md
+  PlatyPS schema version: 2024-05-01

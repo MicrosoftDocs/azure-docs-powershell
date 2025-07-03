@@ -1,0 +1,476 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Relay.Get-AzRelayAuthorizationRule
+name: Get-AzRelayAuthorizationRule
+module: Az.Relay
+isPreview: false
+summary: |-
+  Authorization rule for a namespace by name.
+description: |-
+  Authorization rule for a namespace by name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HybridConnection
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The hybrid connection name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The authorization rule name.
+    aliases:
+    - AuthorizationRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get2
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WcfRelay
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The relay name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        -HybridConnection <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        -WcfRelay <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List2
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        -HybridConnection <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -Namespace <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        -WcfRelay <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get2
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayAuthorizationRule
+        -InputObject <IRelayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IAuthorizationRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Authorization Rules of the Relay namespace'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01
+    ```
+
+    ```output
+    Location Name                      ResourceGroupName
+    -------- ----                      -----------------
+    eastus   RootManageSharedAccessKey lucas-relay-rg
+    eastus   authRule-03               lucas-relay-rg
+    ```
+
+    This cmdlet lists all Authorization Rules of the Relay namespace.
+- title: 'Example 2: Get the specified authorization rule description for a given Relay namespace'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -Name authRule-03 | Format-List
+    ```
+
+    ```output
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/lucas-relay-rg/providers/Microsoft.Relay/namespaces/namespa
+                                   ce-pwsh01/authorizationrules/authRule-03
+    Location                     : eastus
+    Name                         : authRule-03
+    ResourceGroupName            : lucas-relay-rg
+    Rights                       : {Listen, Send}
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Relay/Namespaces/AuthorizationRules
+    ```
+
+    This cmdlet gets the specified authorization rule description for a given Relay namespace.
+- title: 'Example 3: List all Authorization Rules of the Hybrid Connection'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -HybridConnection connection-01
+    ```
+
+    ```output
+    Location Name        ResourceGroupName
+    -------- ----        -----------------
+    eastus   authRule-01 lucas-relay-rg
+    ```
+
+    This cmdlet lists all Authorization Rules of the Hybrid Connection.
+- title: 'Example 4: Get the specified authorization rule description for a given Hybrid Connection'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -HybridConnection connection-01 -Name authRule-01 | Format-List
+    ```
+
+    ```output
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/lucas-relay-rg/providers/Microsoft.Relay/namespaces/namespa
+                                   ce-pwsh01/hybridconnections/connection-01/authorizationrules/authRule-01
+    Location                     : eastus
+    Name                         : authRule-01
+    ResourceGroupName            : lucas-relay-rg
+    Rights                       : {Listen, Send}
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Relay/namespaces/hybridconnections/authorizationrules
+    ```
+
+    This cmdlet gets the specified authorization rule description for a given Hybrid Connection.
+- title: 'Example 5: List all Authorization Rules of the Wcf Relay'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -WcfRelay wcf-01
+    ```
+
+    ```output
+    Location Name        ResourceGroupName
+    -------- ----        -----------------
+    eastus   authRule-01 lucas-relay-rg
+    ```
+
+    This cmdlet lists all Authorization Rules of the Wcf Relay.
+- title: 'Example 6: Get the specified authorization rule description for a given Wcf Relay'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 -WcfRelay connection-01 -Name authRule-01 | Format-List
+    ```
+
+    ```output
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/lucas-relay-rg/providers/Microsoft.Relay/namespaces/namespa
+                                   ce-pwsh01/wcfrelays/connection-01/authorizationrules/authRule-01
+    Location                     : eastus
+    Name                         : authRule-01
+    ResourceGroupName            : lucas-relay-rg
+    Rights                       : {Listen, Send}
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Relay/namespaces/wcfrelays/authorizationrules
+    ```
+
+    This cmdlet gets the specified authorization rule description for a given Wcf Relay.
+- title: 'Example 7: Get the specified authorization rule description by pipeline'
+  description: |-
+    ```powershell
+    Get-AzRelayAuthorizationRule -ResourceGroupName lucas-relay-rg -Namespace namespace-pwsh01 | Get-AzRelayAuthorizationRule
+    ```
+
+    ```output
+    Location Name                      ResourceGroupName
+    -------- ----                      -----------------
+    eastus   RootManageSharedAccessKey lucas-relay-rg
+    eastus   authRule-03               lucas-relay-rg
+    ```
+
+    This cmdlet gets the specified authorization rule description by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayAuthorizationRule.md
+  document type: cmdlet
+  external help file: Az.Relay-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.relay/get-azrelayauthorizationrule
+  Module Name: Az.Relay
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayAuthorizationRule.md
+  PlatyPS schema version: 2024-05-01

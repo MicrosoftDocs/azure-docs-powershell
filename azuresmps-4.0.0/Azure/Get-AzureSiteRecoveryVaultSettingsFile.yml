@@ -1,0 +1,196 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryVaultSettingsFile
+name: Get-AzureSiteRecoveryVaultSettingsFile
+module: Azure
+isPreview: false
+summary: |-
+  Gets the Site Recovery vault settings file.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryVaultSettingsFile** cmdlet gets the settings file for an Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the geographical location to which the vault belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the Site Recovery vault settings file.
+      To store this file locally, download it from the Site Recovery vault portal after the command has finished running.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Site
+    type: <xref href="ASRSite" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a site for which to get a settings file.
+      To obtain a **Site** object, use the **Get-AzureSiteRecoverySite** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="ASRVault" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the vault for the site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryVaultSettingsFile
+        -Name <String>
+        -Location <String>
+        [-SiteName <String>]
+        [-SiteId <String>]
+        [-Path <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParam
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryVaultSettingsFile
+        -Vault <ASRVault>
+        [-Site <ASRSite>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: false
+examples:
+- title: 'Example 1: Get the settings file for a vault'
+  description: |-
+    ```
+    PS C:\> $Vault = Get-AzureSiteRecoveryVault -Name "ContosoVault"
+    PS C:\> Get-AzureSiteRecoveryVaultSettingsFile -Vault $Vault
+    FilePath
+    --------
+    C:\Users\ContosoAdmin\ContosoVault_2015-02-02T05-39-23.VaultCredentials
+    ```
+
+    The first command gets the active Azure Site Recovery vault named ContosoVault by using the **Get-AzureSiteRecoveryVault** cmdlet.
+    The command stores that vault in the $Vault variable.
+
+    The second command gets the settings file for the vault stored in $Vault.
+links:
+- text: Get-AzureSiteRecoverySite
+  href: ./Get-AzureSiteRecoverySite.yml
+- text: Get-AzureSiteRecoveryVault
+  href: ./Get-AzureSiteRecoveryVault.yml
+- text: Get-AzureSiteRecoveryVaultSettings
+  href: ./Get-AzureSiteRecoveryVaultSettings.yml
+- text: Import-AzureSiteRecoveryVaultSettingsFile
+  href: ./Import-AzureSiteRecoveryVaultSettingsFile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: AFAA1BDF-3F6A-437A-ADC2-C5EBD970F57D
+  PlatyPS schema version: 2024-05-01

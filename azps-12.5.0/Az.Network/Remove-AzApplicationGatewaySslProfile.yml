@@ -1,0 +1,108 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzApplicationGatewaySslProfile
+name: Remove-AzApplicationGatewaySslProfile
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes the ssl profile from an application gateway.
+description: |-
+  The **Remove-AzApplicationGatewaySslProfile** cmdlet removes the ssl profile from an application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The applicationGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ssl profile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzApplicationGatewaySslProfile
+        -Name <String>
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    Remove-AzApplicationGatewaySslProfile -ApplicationGateway $AppGw -Name "SslProfile01"
+    Set-AzApplicationGateway -ApplicationGateway $AppGw
+    ```
+
+    The first command gets an application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable. The second command removes the ssl profile named SslProfile01 from the application gateway stored in $AppGw.
+    The last command updates the application gateway.
+links:
+- text: New-AzApplicationGatewaySslProfile
+  href: ./New-AzApplicationGatewaySslProfile.yml
+- text: Add-AzApplicationGatewaySslProfile
+  href: ./Add-AzApplicationGatewaySslProfile.yml
+- text: Get-AzApplicationGatewaySslProfile
+  href: ./Get-AzApplicationGatewaySslProfile.yml
+- text: Set-AzApplicationGatewaySslProfile
+  href: ./Set-AzApplicationGatewaySslProfile.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewaySslProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-azapplicationgatewaysslprofile
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewaySslProfile.md
+  PlatyPS schema version: 2024-05-01

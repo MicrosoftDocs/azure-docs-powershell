@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.New-AzCosmosDBMongoDBRole
+name: New-AzCosmosDBMongoDBRole
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Creates a new CosmosDB MongoDB Role object to be used to create or update  a CosmosDB MongoDB Role Definition and User Definition.
+description: |-
+  Creates a new CosmosDB MongoDB Role object to be used to create or update a CosmosDB MongoDB Role Definition and User Definition.
+parameters:
+  cmdletParameters:
+  - name: Database
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Role Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCosmosDBMongoDBRole
+        -Database <String>
+        -Role <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSMongoRole" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $db = 'test'
+    $role = 'testRoleName'
+
+    New-AzCosmosDBMongoDBRole -Database $db -Role $role
+    ```
+
+    ```output
+    Object
+    Microsoft.Azure.Commands.CosmosDB.Models.PSMongoRole
+    ```
+links:
+- text: New-AzCosmosDBMongoDBRoleDefinition
+  href: ./New-AzCosmosDBMongoDBRoleDefinition.yml
+- text: Update-AzCosmosDBMongoDBRoleDefinition
+  href: ./Update-AzCosmosDBMongoDBRoleDefinition.yml
+- text: New-AzCosmosDBMongoDBUserDefinition
+  href: ./New-AzCosmosDBMongoDBUserDefinition.yml
+- text: Update-AzCosmosDBMongoDBUserDefinition
+  href: ./Update-AzCosmosDBMongoDBUserDefinition.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBMongoDBRole.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/new-azcosmosdbmongodbrole
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBMongoDBRole.md
+  PlatyPS schema version: 2024-05-01

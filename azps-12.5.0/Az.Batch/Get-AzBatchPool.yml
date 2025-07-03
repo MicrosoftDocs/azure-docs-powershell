@@ -1,0 +1,259 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchPool
+name: Get-AzBatchPool
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch pools under the specified Batch account.
+description: |-
+  The **Get-AzBatchPool** cmdlet gets the Azure Batch pools under the Batch account specified with the *BatchContext* parameter.
+  You can use the *Id* parameter to get a single pool, or you can use the *Filter* parameter to get the pools that match an Open Data Protocol (OData) filter.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Open Data Protocol (OData) expand clause.
+      Specify a value for this parameter to get associated entities of the main entity that you get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the OData filter clause to use when querying for pools.
+      If you do not specify a filter, all pools under the Batch account specified with the *BatchContext* parameter are returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the pool to get.
+      You cannot specify wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of pools to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPool
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPool
+        [[-Id] <String>]
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a pool by ID'
+  description: |-
+    ```powershell
+    Get-AzBatchPool -Id "MyPool" -BatchContext $Context
+    ```
+
+    ```output
+    AllocationState                      : Resizing
+    AllocationStateTransitionTime        : 7/25/2015 9:30:28 PM
+    AutoScaleEnabled                     : False
+    AutoScaleFormula                     :
+    AutoScaleRun                         :
+    CertificateReferences                :
+    CreationTime                         : 7/25/2015 9:30:28 PM
+    CurrentDedicated                     : 0
+    CurrentOSVersion                     : *
+    DisplayName                          :
+    ETag                                 : 0x8D29538429CF04C
+    Id                                   : MyPool
+    InterComputeNodeCommunicationEnabled : False
+    LastModified                         : 7/25/2015 9:30:28 PM
+    MaxTasksPerComputeNode               : 1
+    Metadata                             :
+    OSFamily                             : 4
+    ResizeError                          :
+    ResizeTimeout                        : 00:05:00
+    TaskSchedulingPolicy                 : Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
+    StartTask                            :
+    State                                : Active
+    StateTransitionTime                  : 7/25/2015 9:30:28 PM
+    Statistics                           :
+    TargetDedicated                      : 1
+    TargetOSVersion                      : *
+    Url                                  : https://cmdletexample.westus.batch.azure.com/pools/MyPool
+    VirtualMachineSize                   : standard_d1_v2
+    ```
+
+    This command gets the pool with ID MyPool.
+- title: 'Example 2: Get all pools using an OData filter'
+  description: |-
+    ```powershell
+    Get-AzBatchPool -Filter "startswith(id,'My')" -BatchContext $Context
+    ```
+
+    ```output
+    AllocationState                      : Resizing
+    AllocationStateTransitionTime        : 7/25/2015 9:30:28 PM
+    AutoScaleEnabled                     : False
+    AutoScaleFormula                     :
+    AutoScaleRun                         :
+    CertificateReferences                :
+    CreationTime                         : 7/25/2015 9:30:28 PM
+    CurrentDedicated                     : 0
+    CurrentOSVersion                     : *
+    DisplayName                          :
+    ETag                                 : 0x8D29538429CF04C
+    Id                                   : MyPool
+    InterComputeNodeCommunicationEnabled : False
+    LastModified                         : 7/25/2015 9:30:28 PM
+    MaxTasksPerComputeNode               : 1
+    Metadata                             :
+    OSFamily                             : 4
+    ResizeError                          :
+    ResizeTimeout                        : 00:05:00
+    TaskSchedulingPolicy                 : Microsoft.Azure.Commands.Batch.Models.PSTaskSchedulingPolicy
+    StartTask                            :
+    State                                : Active
+    StateTransitionTime                  : 7/25/2015 9:30:28 PM
+    Statistics                           :
+    TargetDedicated                      : 1
+    TargetOSVersion                      : *
+    Url                                  : https://cmdletexample.westus.batch.azure.com/pools/MyPool
+    VirtualMachineSize                   : standard_d1_v2
+    ```
+
+    This command gets the pools whose IDs start with My by using the *Filter* parameter.
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: New-AzBatchPool
+  href: ./New-AzBatchPool.yml
+- text: Remove-AzBatchPool
+  href: ./Remove-AzBatchPool.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPool.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchpool
+  Module Name: Az.Batch
+  ms.assetid: 44D877F1-D066-4C9C-A797-05EF03785B54
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPool.md
+  PlatyPS schema version: 2024-05-01

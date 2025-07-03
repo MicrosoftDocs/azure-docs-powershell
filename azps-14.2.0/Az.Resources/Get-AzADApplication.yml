@@ -1,0 +1,448 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADApplication
+name: Get-AzADApplication
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists entities from applications or get entity from applications by key
+description: |-
+  Lists entities from applications or get entity from applications by key
+parameters:
+  cmdletParameters:
+  - name: AppendSelected
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Append properties selected with default properties when this switch is on, only works with parameter '-Select'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      application id
+    aliases:
+    - AppId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsistencyLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the requested consistency level.
+      Documentation URL: https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include count of items
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CountVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a count of the total number of items in a collection.
+      By default, this variable will be set in the global scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      application display name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayNameStartWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      application display name starts with
+    aliases:
+    - DisplayNameStartsWith
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter items by property values, for more detail about filter query please see: https://learn.microsoft.com/en-us/graph/filter-query-parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the first 'n' objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentifierUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      application identifier uri
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationIdentifierUriParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      key: id of application
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Orderby
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Order items by property values
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: OwnedApplicationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OwnedApplication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      get owned application
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OwnedApplicationParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Search
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search items by search phrases
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Select properties to be returned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first 'n' objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        [-Select <String[]>]
+        [-Count]
+        [-Filter <String>]
+        [-Orderby <String[]>]
+        [-Search <String>]
+        [-ConsistencyLevel <String>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [-CountVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        -ObjectId <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        [-OwnedApplication]
+        [-Select <String[]>]
+        [-Orderby <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OwnedApplicationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        -DisplayNameStartWith <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SearchStringParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        -DisplayName <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        -ApplicationId <Guid>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADApplication
+        -IdentifierUri <String>
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationIdentifierUriParameterSet
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get application by display name'
+  description: |-
+    ```powershell
+    Get-AzADApplication -DisplayName $appname
+    ```
+
+    Get application by display name
+- title: 'Example 2: List applications'
+  description: |-
+    ```powershell
+    Get-AzADApplication -First 10
+    ```
+
+    List first 10 applications
+- title: 'Example 3: Search for application display name starts with'
+  description: |-
+    ```powershell
+    Get-AzADApplication -DisplayNameStartsWith $prefix
+    ```
+
+    Search for application display name starts with
+- title: 'Example 4: Get application by object Id'
+  description: |-
+    ```powershell
+    Get-AzADApplication -ObjectId $id -Select Tags -AppendSelected
+    ```
+
+    Get application by object Id and append property 'Tags' after default properties: 'DisplayName', 'Id', 'DeletedDateTime', 'IdentifierUris', 'Web', 'AppId', 'SignInAudience'
+- title: 'Example 5: Get applications owned by current user'
+  description: |-
+    ```powershell
+    Get-AzADApplication -OwnedApplication
+    ```
+
+    Get applications owned by current user
+- title: 'Example 6: Get applications with filter'
+  description: |-
+    ```powershell
+    Get-AzADApplication -Filter "startsWith(DisplayName,'some-name')"
+    ```
+
+    Get applications with filter
+- title: 'Example 7: Assign OdataCount to a variable'
+  description: |-
+    ```powershell
+    Get-AzADApplication -First 10 -ConsistencyLevel eventual -Count -CountVariable 'result'
+    $result
+    ```
+
+    Assign OdataCount to a variable
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADApplication.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azadapplication
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADApplication.md
+  PlatyPS schema version: 2024-05-01

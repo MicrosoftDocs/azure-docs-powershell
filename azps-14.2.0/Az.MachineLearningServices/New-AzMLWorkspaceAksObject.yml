@@ -1,0 +1,349 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceAksObject
+name: New-AzMLWorkspaceAksObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for Aks.
+description: |-
+  Create an in-memory object for Aks.
+parameters:
+  cmdletParameters:
+  - name: AgentCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of agents.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgentVMSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Agent virtual machine size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AkNetworkingDnsServiceIP
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An IP address assigned to the Kubernetes DNS service.
+      It must be within the Kubernetes service address range specified in serviceCidr.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AkNetworkingDockerBridgeCidr
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A CIDR notation IP range assigned to the Docker bridge network.
+      It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AkNetworkingServiceCidr
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A CIDR notation IP range from which to assign service cluster IPs.
+      It must not overlap with any Subnet IP ranges.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AkNetworkingSubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual network subnet resource ID the compute nodes belong to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterFqdn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster full qualified domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterPurpose
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ClusterPurpose" data-throw-if-not-resolved="False" />
+    description: |-
+      Intended usage of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the Machine Learning compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancerSubnet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Load Balancer Subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancerType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.LoadBalancerType" data-throw-if-not-resolved="False" />
+    description: |-
+      Load Balancer Type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the underlying compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCert
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cert data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CNAME of the cert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslLeafDomainLabel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Leaf domain label of public endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslOverwriteExistingDomain
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to overwrite existing domain label.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslStatus
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.SslConfigStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable ssl for scoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceAksObject
+        [-Description <String>]
+        [-DisableLocalAuth <Boolean>]
+        [-ResourceId <String>]
+        [-AgentCount <Int32>]
+        [-AgentVMSize <String>]
+        [-AkNetworkingDnsServiceIP <String>]
+        [-AkNetworkingDockerBridgeCidr <String>]
+        [-AkNetworkingServiceCidr <String>]
+        [-AkNetworkingSubnetId <String>]
+        [-ClusterFqdn <String>]
+        [-ClusterPurpose <ClusterPurpose>]
+        [-LoadBalancerSubnet <String>]
+        [-LoadBalancerType <LoadBalancerType>]
+        [-SslCert <String>]
+        [-SslCname <String>]
+        [-SslKey <String>]
+        [-SslLeafDomainLabel <String>]
+        [-SslOverwriteExistingDomain <Boolean>]
+        [-SslStatus <SslConfigStatus>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.Aks" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Aks'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceAksObject -Description "aks compute"
+    ```
+
+    Create an in-memory object for Aks
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceAksObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceAksObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceAksObject.md
+  PlatyPS schema version: 2024-05-01

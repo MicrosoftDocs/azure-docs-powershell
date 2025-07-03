@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppJobExecutionContainerObject
+name: New-AzContainerAppJobExecutionContainerObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for JobExecutionContainer.
+description: |-
+  Create an in-memory object for JobExecutionContainer.
+parameters:
+  cmdletParameters:
+  - name: Arg
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container start command arguments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Command
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container start command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Env
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IEnvironmentVar" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Container environment variables.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container image tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom container name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceCpu
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      Required CPU in cores, e.g.
+      0.5.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMemory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Required memory, e.g.
+      "250Mb".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppJobExecutionContainerObject
+        [-Arg <String[]>]
+        [-Command <String[]>]
+        [-Env <IEnvironmentVar[]>]
+        [-Image <String>]
+        [-Name <String>]
+        [-ResourceCpu <Double>]
+        [-ResourceMemory <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.JobExecutionContainer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for JobExecutionContainer.'
+  description: |-
+    ```powershell
+    New-AzContainerAppJobExecutionContainerObject -Image "mcr.microsoft.com/k8se/quickstart-jobs:latest" -Name "simple-hello-world-container2" -ResourceCpu 0.25 -ResourceMemory "0.5Gi" -Command "/bin/sh" -Arg "-c","echo hello; sleep 10;"
+    ```
+
+    ```output
+    Image                                    Name
+    -----                                    ----
+    mcr.microsoft.com/k8se/quickstart:latest simple-hello-world-container2
+    ```
+
+    Create an in-memory object for JobExecutionContainer.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppJobExecutionContainerObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappjobexecutioncontainerobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppJobExecutionContainerObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Remove-AzVMNetworkInterface
+name: Remove-AzVMNetworkInterface
+module: Az.Compute
+isPreview: false
+summary: |-
+  Removes a network interface from a virtual machine.
+description: |-
+  The **Remove-AzVMNetworkInterface** cmdlet removes a network interface from a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkInterfaceIDs
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of network interface IDs that this cmdlet removes.
+    aliases:
+    - Id
+    - NicIds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine from which this cmdlet removes a network interface.
+      To obtain a virtual machine object, use the Get-AzVM cmdlet.
+    aliases:
+    - VMProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzVMNetworkInterface
+        [-VM] <PSVirtualMachine>
+        [[-NetworkInterfaceIDs] <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: '1:'
+  description: |-
+    ```
+
+    ```
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMNetworkInterface.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/remove-azvmnetworkinterface
+  Module Name: Az.Compute
+  ms.assetid: 6B26DADE-BF71-48D2-98C9-87B2F6182AC2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Remove-AzVMNetworkInterface.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,267 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewTriggerObject
+name: New-AzPurviewTriggerObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for Trigger.
+description: |-
+  Create an in-memory object for Trigger.
+parameters:
+  cmdletParameters:
+  - name: IncrementalScanStartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Interval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceEndTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceFrequency
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.TriggerFrequency" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceInterval
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceStartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanLevel
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.ScanLevelType" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleAdditionalProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IRecurrenceScheduleAdditionalProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Dictionary of \<any\>.
+      To construct, see NOTES section for SCHEDULEADDITIONALPROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMonthDay
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMonthlyOccurrence
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IRecurrenceScheduleOccurrence" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      To construct, see NOTES section for SCHEDULEMONTHLYOCCURRENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleWeekDay
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DaysOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewTriggerObject
+        [-IncrementalScanStartTime <DateTime>]
+        [-Interval <Int32>]
+        [-RecurrenceEndTime <DateTime>]
+        [-RecurrenceFrequency <TriggerFrequency>]
+        [-RecurrenceInterval <String>]
+        [-RecurrenceStartTime <DateTime>]
+        [-RecurrenceTimeZone <String>]
+        [-ScanLevel <ScanLevelType>]
+        [-ScheduleAdditionalProperty <IRecurrenceScheduleAdditionalProperties>]
+        [-ScheduleHour <Int32[]>]
+        [-ScheduleMinute <Int32[]>]
+        [-ScheduleMonthDay <Int32[]>]
+        [-ScheduleMonthlyOccurrence <IRecurrenceScheduleOccurrence[]>]
+        [-ScheduleWeekDay <DaysOfWeek[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.Trigger" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create trigger object'
+  description: |-
+    ```powershell
+    New-AzPurviewTriggerObject -RecurrenceEndTime '7/20/2022 12:00:00 AM' -RecurrenceStartTime '2/17/2022 1:32:00 PM' -Interval 1 -RecurrenceFrequency 'Month' -ScanLevel 'Full' -ScheduleHour $(9) -ScheduleMinute $(0) -ScheduleMonthDay $(10)
+    ```
+
+    ```output
+    CreatedAt                  :
+    Id                         :
+    IncrementalScanStartTime   :
+    Interval                   : 1
+    LastModifiedAt             :
+    LastScheduled              :
+    Name                       :
+    RecurrenceEndTime          : 7/20/2022 12:00:00 AM
+    RecurrenceFrequency        : Month
+    RecurrenceInterval         :
+    RecurrenceStartTime        : 2/17/2022 1:32:00 PM
+    RecurrenceTimeZone         :
+    ResourceGroupName          :
+    ScanLevel                  : Full
+    ScheduleAdditionalProperty : {
+                                 }
+    ScheduleHour               : {9}
+    ScheduleMinute             : {0}
+    ScheduleMonthDay           : {10}
+    ScheduleMonthlyOccurrence  :
+    ScheduleWeekDay            :
+    ```
+
+    Create trigger object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewTriggerObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Purview/new-AzPurviewTriggerObject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewTriggerObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,448 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IoTOperationsService.Update-AzIoTOperationsServiceDataflow
+name: Update-AzIoTOperationsServiceDataflow
+module: Az.IoTOperationsService
+isPreview: false
+summary: |-
+  update a DataflowResource
+description: |-
+  update a DataflowResource
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataflowProfileInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityDataflowProfileExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityInstanceExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mode for Dataflow.
+      Optional; defaults to Enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Instance dataflowProfile dataflow resource
+    aliases:
+    - DataflowName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityInstanceExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityDataflowProfileExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowOperation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of operations including source and destination references as well as transformation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Instance dataflowProfile resource
+    aliases:
+    - DataflowProfileName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityInstanceExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzIoTOperationsServiceDataflow
+        -InstanceName <String>
+        -Name <String>
+        -ProfileName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Mode <String>]
+        [-Operation <IDataflowOperation[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzIoTOperationsServiceDataflow
+        -Name <String>
+        -ProfileName <String>
+        -InstanceInputObject <IIoTOperationsServiceIdentity>
+        [-Mode <String>]
+        [-Operation <IDataflowOperation[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityInstanceExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTOperationsServiceDataflow
+        -Name <String>
+        -DataflowProfileInputObject <IIoTOperationsServiceIdentity>
+        [-Mode <String>]
+        [-Operation <IDataflowOperation[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityDataflowProfileExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTOperationsServiceDataflow
+        -InputObject <IIoTOperationsServiceIdentity>
+        [-Mode <String>]
+        [-Operation <IDataflowOperation[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a dataflow'
+  description: |-
+    ```powershell
+    Update-AzIoTOperationsServiceDataflow -InstanceName "aio-117832708" `
+      -Name "dataflow-name" `
+      -ProfileName "dataflowprofile-name" `
+      -ResourceGroupName "aio-validation-117832708" `
+      -Mode "Enabled" `
+      -Operation @(
+        @{
+          operationType = "Source"
+          sourceSettings = @{
+            endpointRef         = "default"
+            assetRef            = "do-not-delete"
+            serializationFormat = "Json"
+            dataSources         = @("azure-iot-operations/data/do-not-delete")
+          }
+        },
+        @{
+          operationType = "BuiltInTransformation"
+          builtInTransformationSettings = @{
+            serializationFormat = "Json"
+            datasets            = @()
+            filter              = @()
+            map                 = @(
+              @{
+                type    = "PassThrough"
+                inputs  = @("*")
+                output  = "*"
+              }
+            )
+          }
+        },
+        @{
+          operationType = "Destination"
+          destinationSettings = @{
+            endpointRef     = "default"
+            dataDestination = "fgn"
+          }
+        }
+      )
+    ```
+
+    ```output
+    ExtendedLocationName         : /subscriptions/d4ccd08b-0809-446d-a8b7-7af8a90109cd/resourceGroups/aio-validation-117832708/providers/Microsoft.ExtendedLocation/customLocations/location-11783270
+                                   8
+    ExtendedLocationType         : CustomLocation
+    Id                           : /subscriptions/d4ccd08b-0809-446d-a8b7-7af8a90109cd/resourceGroups/aio-validation-117832708/providers/Microsoft.IoTOperations/instances/aio-117832708/dataflowProf
+                                   iles/dataflowprofile-name/dataflows/mydataflow
+    Mode                         : Enabled
+    Name                         : mydataflow
+    Operation                    : {{
+                                     "sourceSettings": {
+                                       "endpointRef": "default",
+                                       "assetRef": "do-not-delete",
+                                       "serializationFormat": "Json",
+                                       "dataSources": [ "azure-iot-operations/data/do-not-delete" ]
+                                     },
+                                     "operationType": "Source"
+                                   }, {
+                                     "builtInTransformationSettings": {
+                                       "serializationFormat": "Json",
+                                       "datasets": [ ],
+                                       "filter": [ ],
+                                       "map": [
+                                         {
+                                           "type": "PassThrough",
+                                           "inputs": [ "*" ],
+                                           "output": "*"
+                                         }
+                                       ]
+                                     },
+                                     "operationType": "BuiltInTransformation"
+                                   }, {
+                                     "destinationSettings": {
+                                       "endpointRef": "default",
+                                       "dataDestination": "fgn"
+                                     },
+                                     "operationType": "Destination"
+                                   }}
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : aio-validation-117832708
+    SystemDataCreatedAt          : 3/13/2025 6:49:12 PM
+    SystemDataCreatedBy          : henrymorales@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 3/13/2025 6:49:19 PM
+    SystemDataLastModifiedBy     : 319f651f-7ddb-4fc6-9857-7aef9250bd05
+    SystemDataLastModifiedByType : Application
+    Type                         : microsoft.iotoperations/instances/dataflowprofiles/dataflows
+    ```
+
+    Updates a dataflow
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Update-AzIoTOperationsServiceDataflow.md
+  document type: cmdlet
+  external help file: Az.IoTOperationsService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iotoperationsservice/update-aziotoperationsservicedataflow
+  Module Name: Az.IoTOperationsService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Update-AzIoTOperationsServiceDataflow.md
+  PlatyPS schema version: 2024-05-01

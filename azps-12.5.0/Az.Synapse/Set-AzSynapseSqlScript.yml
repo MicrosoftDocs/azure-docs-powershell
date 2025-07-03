@@ -1,0 +1,367 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Set-AzSynapseSqlScript
+name: Set-AzSynapseSqlScript
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Creates or updates a SQL script in a workspace.
+description: |-
+  The **Set-AzSynapseSqlScript** cmdlet creates or updates a SQL script in a workspace.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefinitionFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SQL file path.
+    aliases:
+    - File
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the SQL script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FolderPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The folder that this SQL script is in.
+      If specify a multi-level path such as \[rootFolder/subFolder\], the SqlScript will appear at the bottom level.
+      If not specified, this SQL script will appear at the root level.
+    aliases:
+    - FolderName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sql script name.
+    aliases:
+    - SqlScriptName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultLimit
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Limit of results, '-1' for no limit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Which database the sql script is going to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByObjectAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Which sql pool the sql script is going to connect to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByObjectAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByNameAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByObjectAndSqlPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlScript
+        -WorkspaceName <String>
+        -DefinitionFile <String>
+        [-Name <String>]
+        [-ResultLimit <Int32>]
+        [-FolderPath <String>]
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlScript
+        -WorkspaceName <String>
+        -SqlPoolName <String>
+        -SqlDatabaseName <String>
+        -DefinitionFile <String>
+        [-Name <String>]
+        [-ResultLimit <Int32>]
+        [-FolderPath <String>]
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByNameAndSqlPool
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlScript
+        -WorkspaceObject <PSSynapseWorkspace>
+        -DefinitionFile <String>
+        [-Name <String>]
+        [-ResultLimit <Int32>]
+        [-FolderPath <String>]
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlScript
+        -WorkspaceObject <PSSynapseWorkspace>
+        -SqlPoolName <String>
+        -SqlDatabaseName <String>
+        -DefinitionFile <String>
+        [-Name <String>]
+        [-ResultLimit <Int32>]
+        [-FolderPath <String>]
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByObjectAndSqlPool
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSqlScriptResource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlScript -WorkspaceName ContosoWorkspace -DefinitionFile "C:\\samples\\sqlscript.sql"
+    ```
+
+    This command creates or updates a SQL script from SQL script file sqlscript.sql in the workspace named ContosoWorkspace.
+- title: Example 2
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Set-AzSynapseSqlScript -DefinitionFile "C:\\samples\\sqlscript.sql"
+    ```
+
+    This command creates or updates a SQL script from SQL script file sqlscript.sql in the workspace named ContosoWorkspace.
+- title: Example 3
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlScript -WorkspaceName ContosoWorkspace -DefinitionFile "C:\\samples\\sqlscript.sql"  -SqlPoolName Contososqlpool -SqlDatabaseName Contosodatabase
+    ```
+
+    This command creates or updates a SQL script from SQL script file sqlscript.sql which connects to ContosoSqlPool and uses the database named Contosodatabase in the workspace named ContosoWorkspace.
+links:
+- text: Export-AzSynapseSqlScript
+  href: ./Export-AzSynapseSqlScript.yml
+- text: Get-AzSynapseSqlScript
+  href: ./Get-AzSynapseSqlScript.yml
+- text: Remove-AzSynapseSqlScript
+  href: ./Remove-AzSynapseSqlScript.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlScript.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/set-azsynapsesqlscript
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlScript.md
+  PlatyPS schema version: 2024-05-01

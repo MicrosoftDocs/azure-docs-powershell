@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppCustomDomainObject
+name: New-AzContainerAppCustomDomainObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for CustomDomain.
+description: |-
+  Create an in-memory object for CustomDomain.
+parameters:
+  cmdletParameters:
+  - name: BindingType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom Domain binding type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the Certificate to be bound to this hostname.
+      Must exist in the Managed Environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hostname.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppCustomDomainObject
+        -Name <String>
+        [-BindingType <String>]
+        [-CertificateId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.CustomDomain" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for CustomDomain.'
+  description: |-
+    ```powershell
+    $certificateId = (Get-AzContainerAppManagedEnvCert -EnvName azps-env -ResourceGroupName azps_test_group_app -Name azps-env-cert).Id
+
+    New-AzContainerAppCustomDomainObject -Name "www.my-name.com" -BindingType "SniEnabled" -CertificateId $certificateId
+    ```
+
+    ```output
+    BindingType CertificateId                                                                                                                                 Name
+    ----------- -------------                                                                                                                                 ----
+    SniEnabled  /subscriptions/{subId}/resourceGroups/azps_test_group_app/providers/Microsoft.App/managedEnvironments/{manageEnvName}/certificates/{testcert} www.my-name.com
+    ```
+
+    Create an in-memory object for CustomDomain.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppCustomDomainObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappcustomdomainobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppCustomDomainObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,54 @@
+### YamlMime:PowerShellModule1
+uid: Az.ConnectedNetwork
+name: Az.ConnectedNetwork Module
+isPreview: false
+cmdletGroups:
+- title: ConnectedNetwork
+  cmdlets:
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkDevice
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkDeviceRegistrationKey
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkFunction
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkFunctionVendor
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkVendor
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkVendorFunction
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkVendorFunctionRoleInstance
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkVendorSku
+  - Az.ConnectedNetwork.Get-AzConnectedNetworkVendorSkuPreview
+  - Az.ConnectedNetwork.New-AzConnectedNetworkAzureStackEdgeObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkDevice
+  - Az.ConnectedNetwork.New-AzConnectedNetworkFunction
+  - Az.ConnectedNetwork.New-AzConnectedNetworkFunctionRoleConfigurationObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkFunctionUserConfigurationObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkFunctionVendorConfigurationObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkInterfaceIPConfigurationObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkInterfaceObject
+  - Az.ConnectedNetwork.New-AzConnectedNetworkVendor
+  - Az.ConnectedNetwork.New-AzConnectedNetworkVendorFunction
+  - Az.ConnectedNetwork.New-AzConnectedNetworkVendorSku
+  - Az.ConnectedNetwork.New-AzConnectedNetworkVendorSkuPreview
+  - Az.ConnectedNetwork.Remove-AzConnectedNetworkDevice
+  - Az.ConnectedNetwork.Remove-AzConnectedNetworkFunction
+  - Az.ConnectedNetwork.Remove-AzConnectedNetworkVendor
+  - Az.ConnectedNetwork.Remove-AzConnectedNetworkVendorSku
+  - Az.ConnectedNetwork.Remove-AzConnectedNetworkVendorSkuPreview
+  - Az.ConnectedNetwork.Restart-AzConnectedNetworkVendorFunctionRoleInstance
+  - Az.ConnectedNetwork.Start-AzConnectedNetworkVendorFunctionRoleInstance
+  - Az.ConnectedNetwork.Stop-AzConnectedNetworkVendorFunctionRoleInstance
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkDeviceTag
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkFunctionTag
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkVendor
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkVendorFunction
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkVendorSku
+  - Az.ConnectedNetwork.Update-AzConnectedNetworkVendorSkuPreview
+description: |-
+  Microsoft Azure PowerShell: ConnectedNetwork cmdlets
+metadata:
+  Module Name: Az.ConnectedNetwork
+  Module Guid: 86910398-1fa6-447a-8b10-54e0ac5a2a6a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.connectednetwork
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Az.ConnectedNetwork.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Az.ConnectedNetwork.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

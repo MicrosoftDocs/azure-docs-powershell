@@ -1,0 +1,524 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.Update-AzStaticWebApp
+name: Update-AzStaticWebApp
+module: Az.Websites
+isPreview: false
+summary: |-
+  Description for Creates a new static site in an existing resource group, or updates an existing static site.
+description: |-
+  Description for Creates a new static site in an existing resource group, or updates an existing static site.
+parameters:
+  cmdletParameters:
+  - name: AllowConfigFileUpdate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if config file is locked for this static web app; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiBuildCommand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A custom command to run during deployment of the Azure Functions API application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to the api code within the repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppArtifactLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Deprecated: The path of the app artifacts after building (deprecated in favor of OutputLocation)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppBuildCommand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A custom command to run during deployment of the static content application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to the app code within the repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Branch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target branch in the repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForkRepositoryDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the newly generated repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForkRepositoryIsPrivate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not the newly generated repository is a private repository.
+      Defaults to false (i.e.
+      public).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForkRepositoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the newly generated repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForkRepositoryOwner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Owner of the newly generated repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubActionSecretNameOverride
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Github Action secret name override.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Kind of resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the static site to create or update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The output path of the app after building.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A user's github repository token.
+      This is used to setup the Github Actions workflow file and API secrets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URL for the repository of the static site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group to which the resource belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipGithubActionWorkflowGeneration
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip Github Action workflow generation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StagingEnvironmentPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Support.StagingEnvironmentPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      State indicating whether staging environments are allowed or not allowed for a static web app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Your Azure subscription ID.
+      This is a GUID-formatted string (e.g.
+      00000000-0000-0000-0000-000000000000).
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateRepositoryUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URL of the template repository.
+      The newly generated repository will be based on this one.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzStaticWebApp
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AllowConfigFileUpdate]
+        [-ApiBuildCommand <String>]
+        [-ApiLocation <String>]
+        [-AppArtifactLocation <String>]
+        [-AppBuildCommand <String>]
+        [-AppLocation <String>]
+        [-Branch <String>]
+        [-ForkRepositoryDescription <String>]
+        [-ForkRepositoryIsPrivate]
+        [-ForkRepositoryName <String>]
+        [-ForkRepositoryOwner <String>]
+        [-GithubActionSecretNameOverride <String>]
+        [-Kind <String>]
+        [-OutputLocation <String>]
+        [-RepositoryToken <String>]
+        [-RepositoryUrl <String>]
+        [-SkipGithubActionWorkflowGeneration]
+        [-StagingEnvironmentPolicy <StagingEnvironmentPolicy>]
+        [-TemplateRepositoryUrl <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzStaticWebApp
+        -InputObject <IWebsitesIdentity>
+        [-AllowConfigFileUpdate]
+        [-ApiBuildCommand <String>]
+        [-ApiLocation <String>]
+        [-AppArtifactLocation <String>]
+        [-AppBuildCommand <String>]
+        [-AppLocation <String>]
+        [-Branch <String>]
+        [-ForkRepositoryDescription <String>]
+        [-ForkRepositoryIsPrivate]
+        [-ForkRepositoryName <String>]
+        [-ForkRepositoryOwner <String>]
+        [-GithubActionSecretNameOverride <String>]
+        [-Kind <String>]
+        [-OutputLocation <String>]
+        [-RepositoryToken <String>]
+        [-RepositoryUrl <String>]
+        [-SkipGithubActionWorkflowGeneration]
+        [-StagingEnvironmentPolicy <StagingEnvironmentPolicy>]
+        [-TemplateRepositoryUrl <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.IWebsitesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.Api20201201.IStaticSiteArmResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a static site'
+  description: |-
+    ```powershell
+    Update-AzStaticWebApp -ResourceGroupName 'resourceGroup' -Name 'staticweb00'
+    ```
+
+    ```output
+    Kind Location   Name             Type
+    ---- --------   ----             ----
+         Central US staticweb00 Microsoft.Web/staticSites
+    ```
+
+    This command updates a static site.
+- title: 'Example 2: Update a static site by pipeline'
+  description: |-
+    ```powershell
+    Get-AzStaticWebApp -ResourceGroupName 'resourceGroup' -Name 'staticweb00' | Update-AzStaticWebApp
+    ```
+
+    ```output
+    Kind Location   Name             Type
+    ---- --------   ----             ----
+         Central US staticweb00 Microsoft.Web/staticSites
+    ```
+
+    This command updates a static site by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Update-AzStaticWebApp.md
+  document type: cmdlet
+  external help file: Az.Websites-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.websites/update-azstaticwebapp
+  Module Name: Az.Websites
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Update-AzStaticWebApp.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageFileServiceProperty
+name: Get-AzStorageFileServiceProperty
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets service properties for Azure Storage File services.
+description: |-
+  The **Get-AzStorageFileServiceProperty** cmdlet gets the service properties for Azure Storage File services.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Input a Storage account Resource Id, or a File service properties Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FileServicePropertiesResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceProperty
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceProperty
+        -StorageAccount <PSStorageAccount>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceProperty
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FileServicePropertiesResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSFileServiceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get  Azure Storage File services property of a specified Storage Account'
+  description: |-
+    ```powershell
+    Get-AzStorageFileServiceProperty -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount"
+    ```
+
+    ```output
+    StorageAccountName                            : mystorageaccount
+    ResourceGroupName                             : myresourcegroup
+    ShareDeleteRetentionPolicy.Enabled            : True
+    ShareDeleteRetentionPolicy.Days               : 3
+    ProtocolSettings.Smb.Multichannel.Enabled     : False
+    ProtocolSettings.Smb.Versions                 : {SMB2.1, SMB3.0, SMB3.1.1}
+    ProtocolSettings.Smb.AuthenticationMethods    : {Kerberos, NTLMv2}
+    ProtocolSettings.Smb.KerberosTicketEncryption : {RC4-HMAC, AES-256}
+    ProtocolSettings.Smb.ChannelEncryption        : {AES-128-CCM, AES-128-GCM, AES-256-GCM}
+    ```
+
+    This command gets the File services property of a specified Storage Account.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileServiceProperty.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragefileserviceproperty
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileServiceProperty.md
+  PlatyPS schema version: 2024-05-01

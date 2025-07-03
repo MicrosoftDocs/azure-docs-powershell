@@ -1,0 +1,349 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.OperationalInsights.New-AzOperationalInsightsApplicationInsightsDataSource
+name: New-AzOperationalInsightsApplicationInsightsDataSource
+module: Az.OperationalInsights
+isPreview: false
+summary: |-
+  Collect logs from given Application-Insights application.
+description: |-
+  The **New-AzOperationalInsightsApplicationInsightsDataSource** cmdlet enables the collection of logs from a given Application-Insights application.
+parameters:
+  cmdletParameters:
+  - name: ApplicationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the linked application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObjectByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name of the linked application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObjectByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The linked application resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObjectByApplicationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription id of the linked application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObjectByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Don't ask for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceNameByApplicationParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationResourceId
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Workspace
+    type: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace that will contain the data source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObjectByApplicationParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceObjectByApplicationResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the workspace that will contain the data source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceNameByApplicationParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByWorkspaceNameByApplicationResourceId
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsApplicationInsightsDataSource
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsApplicationInsightsDataSource
+        [-Workspace] <PSWorkspace>
+        -ApplicationSubscriptionId <String>
+        -ApplicationResourceGroupName <String>
+        -ApplicationName <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceObjectByApplicationParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsApplicationInsightsDataSource
+        [-Workspace] <PSWorkspace>
+        -ApplicationResourceId <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceObjectByApplicationResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsApplicationInsightsDataSource
+        [-ResourceGroupName] <String>
+        [-WorkspaceName] <String>
+        -ApplicationSubscriptionId <String>
+        -ApplicationResourceGroupName <String>
+        -ApplicationName <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceNameByApplicationParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsApplicationInsightsDataSource
+        [-ResourceGroupName] <String>
+        [-WorkspaceName] <String>
+        -ApplicationResourceId <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceNameByApplicationResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create application-insights data source in workspace'
+  description: |-
+    ```powershell
+    New-AzOperationalInsightsApplicationInsightsDataSource -ResourceGroupName "ContosoResourceGroup" -WorkspaceName "MyWorkspace" -ApplicationSubscriptionId "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -ApplicationResourceGroupName "ContosoResourceGroup" -ApplicationName "MyAIApplication"
+    ```
+
+    ```output
+    Name              : subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication
+    ResourceGroupName : ContosoResourceGroup
+    WorkspaceName     : MyWorkspace
+    ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace/datasources/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication
+    Kind              : ApplicationInsights
+    Properties        : {"linkedResourceId":"subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication","status":"Succeeded"}
+    ```
+
+    This command creates an application-insights data source of a given application in a given log analytics workspace. This enables the collection of logs from given application to the log analytics workspace.
+- title: 'Example 2: Get workspace object and create application-insights data source by the application resource id'
+  description: |-
+    ```powershell
+    Get-AzOperationalInsightsWorkspace -Name "MyWorkspace" -ResourceGroupName "ContosoResourceGroup" | New-AzOperationalInsightsApplicationInsightsDataSource -ApplicationResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication"
+    ```
+
+    ```output
+    Name              : subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication
+    ResourceGroupName : ContosoResourceGroup
+    WorkspaceName     : MyWorkspace
+    ResourceId        : /subscriptions/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2/resourceGroups/ContosoResourceGroup/providers/Microsoft.OperationalInsights/workspaces/MyWorkspace/datasources/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication
+    Kind              : ApplicationInsights
+    Properties        : {"linkedResourceId":"subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/microsoft.insights/components/MyAIApplication","status":"Succeeded"}
+    ```
+
+    This command demonstrates getting a log analytics workspace object and then passing the output to create an associated application-insights data source by the application resource id.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsApplicationInsightsDataSource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.operationalinsights/new-azoperationalinsightsapplicationinsightsdatasource
+  Module Name: Az.OperationalInsights
+  ms.assetid: E3D7A3FE-40D4-4495-BA39-493F85F304AD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsApplicationInsightsDataSource.md
+  PlatyPS schema version: 2024-05-01

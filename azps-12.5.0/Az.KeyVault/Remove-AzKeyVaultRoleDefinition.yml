@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Remove-AzKeyVaultRoleDefinition
+name: Remove-AzKeyVaultRoleDefinition
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Removes a custom role definition from an HSM.
+description: |-
+  The `Remove-AzKeyVaultRoleDefinition` cmdlet deletes a custom role in Azure Role-Based Access Control of Azure KeyVault managed HSM.
+  Provide the `-RoleName` parameter of an existing custom role or a role object to delete that custom role.
+  By default, `Remove-AzKeyVaultRoleDefinition` prompts you for confirmation.
+  To suppress the prompt, use the `-Force` parameter.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirm.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultRoleDefinition" data-throw-if-not-resolved="False" />
+    description: |-
+      The object representing the role definition to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This cmdlet does not return an object by default.
+      If this switch is specified, it returns true if successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the role definition to get.
+    aliases:
+    - RoleDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope at which the role assignment or definition applies to, e.g., '/' or '/keys' or '/keys/{keyName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzKeyVaultRoleDefinition
+        [-HsmName] <String>
+        -RoleName <String>
+        [-Scope <String>]
+        [-Force]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzKeyVaultRoleDefinition
+        [-HsmName] <String>
+        -InputObject <PSKeyVaultRoleDefinition>
+        [-Scope <String>]
+        [-Force]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultRoleDefinition" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AzKeyVaultRoleDefinition -HsmName myHsm -RoleName "my role"
+    ```
+
+    This example removes a custom role named "my role".
+- title: Example 2
+  description: |-
+    ```powershell
+    $role = Get-AzKeyVaultRoleDefinition -HsmName myHsm -RoleName "my role"
+    $role | Remove-AzKeyVaultRoleDefinition -HsmName myHsm -Force
+    ```
+
+    This example removes a custom role named "my role" by piping the role object. It also suppress the prompt by `-Force`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Remove-AzKeyVaultRoleDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/remove-azkeyvaultroledefinition
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Remove-AzKeyVaultRoleDefinition.md
+  PlatyPS schema version: 2024-05-01

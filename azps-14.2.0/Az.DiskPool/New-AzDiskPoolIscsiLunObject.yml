@@ -1,0 +1,74 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DiskPool.New-AzDiskPoolIscsiLunObject
+name: New-AzDiskPoolIscsiLunObject
+module: Az.DiskPool
+isPreview: false
+summary: |-
+  Create an in-memory object for IscsiLun.
+description: |-
+  Create an in-memory object for IscsiLun.
+parameters:
+  cmdletParameters:
+  - name: ManagedDiskAzureResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Resource ID of the Managed Disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User defined name for iSCSI LUN; example: "lun0".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDiskPoolIscsiLunObject
+        -ManagedDiskAzureResourceId <String>
+        -Name <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IscsiLun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an iSCSI lun object'
+  description: |-
+    ```powershell
+    New-AzDiskPoolIscsiLunObject -ManagedDiskAzureResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/storagepool-rg-test/providers/Microsoft.Compute/disks/disk-pool-disk-1" -Name 'lun0'
+    ```
+
+    This command creates an iSCSI lun object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/New-AzDiskPoolIscsiLunObject.md
+  document type: cmdlet
+  external help file: Az.DiskPool-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DiskPool/new-azdiskpooliscsilunobject
+  Module Name: Az.DiskPool
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/New-AzDiskPoolIscsiLunObject.md
+  PlatyPS schema version: 2024-05-01

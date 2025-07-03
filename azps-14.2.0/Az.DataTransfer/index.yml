@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.DataTransfer
+name: Az.DataTransfer Module
+isPreview: false
+cmdletGroups:
+- title: DataTransfer
+  cmdlets:
+  - Az.DataTransfer.Approve-AzDataTransferConnection
+  - Az.DataTransfer.Deny-AzDataTransferConnection
+  - Az.DataTransfer.Disable-AzDataTransferFlow
+  - Az.DataTransfer.Enable-AzDataTransferFlow
+  - Az.DataTransfer.Get-AzDataTransferConnection
+  - Az.DataTransfer.Get-AzDataTransferFlow
+  - Az.DataTransfer.Get-AzDataTransferPendingConnection
+  - Az.DataTransfer.Get-AzDataTransferPendingFlow
+  - Az.DataTransfer.Get-AzDataTransferPipeline
+  - Az.DataTransfer.Invoke-AzDataTransferLinkPendingConnection
+  - Az.DataTransfer.Invoke-AzDataTransferLinkPendingFlow
+  - Az.DataTransfer.New-AzDataTransferConnection
+  - Az.DataTransfer.New-AzDataTransferFlow
+  - Az.DataTransfer.Remove-AzDataTransferConnection
+  - Az.DataTransfer.Remove-AzDataTransferFlow
+  - Az.DataTransfer.Update-AzDataTransferConnection
+  - Az.DataTransfer.Update-AzDataTransferFlow
+description: |-
+  Microsoft Azure PowerShell: DataTransfer cmdlets
+metadata:
+  Module Name: Az.DataTransfer
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.datatransfer
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataTransfer/DataTransfer/help/Az.DataTransfer.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataTransfer/DataTransfer/help/Az.DataTransfer.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

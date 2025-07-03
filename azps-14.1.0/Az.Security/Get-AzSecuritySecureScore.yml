@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecuritySecureScore
+name: Get-AzSecuritySecureScore
+module: Az.Security
+isPreview: false
+summary: |-
+  Gets security secure scores and their results on a subscription
+description: |-
+  The Get-AzSecuritySecureScore comlet gets security secure scores and their results on a subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecuritySecureScore
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSecuritySecureScore
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionLevelResource
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.Assessments.PSSecuritySecureScore" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSecuritySecureScore
+    ```
+
+    ```output
+    Id : /subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/Microsoft.Security/secureScores/ascScore
+    Name : ascScore
+    Type : Microsoft.Security/secureScores
+    DisplayName : ASC score
+    CurrentScore : 18.38
+    MaxScore : 56
+    Percentage : 0.3282
+    Weight : 1161
+    ```
+
+    Gets all the security secure scores in a subscription
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecuritySecureScore.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecuritySecureScore
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecuritySecureScore.md
+  PlatyPS schema version: 2024-05-01

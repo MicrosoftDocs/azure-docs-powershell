@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Get-AzureStorageQueueStoredAccessPolicy
+name: Get-AzureStorageQueueStoredAccessPolicy
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Gets the stored access policy or policies for an Azure storage queue.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorageQueueStoredAccessPolicy** cmdlet lists the stored access policy or policies for an Azure storage queue.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context.
+      To obtain a storage context, use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a stored access policy, which includes the permissions for this Shared Access Signature (SAS) token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Queue
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage queue name.
+    aliases:
+    - N
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageQueueStoredAccessPolicy
+        [-Queue] <String>
+        [[-Policy] <String>]
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a stored access policy in the queue'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue" -Policy "Policy12"
+    ```
+
+    This command gets the access policy named Policy12 in the storage queue named MyQueue.
+- title: 'Example 2: Get all stored access policies in the queue'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageQueueStoredAccessPolicy -Queue "MyQueue"
+    ```
+
+    This command gets all stored access policies in the queue named MyQueue.
+links:
+- text: New-AzureStorageQueueStoredAccessPolicy
+  href: ./New-AzureStorageQueueStoredAccessPolicy.yml
+- text: Remove-AzureStorageQueueStoredAccessPolicy
+  href: ./Remove-AzureStorageQueueStoredAccessPolicy.yml
+- text: Set-AzureStorageQueueStoredAccessPolicy
+  href: ./Set-AzureStorageQueueStoredAccessPolicy.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: F1EC601C-3ADD-402A-A5F7-84A95D312187
+  PlatyPS schema version: 2024-05-01

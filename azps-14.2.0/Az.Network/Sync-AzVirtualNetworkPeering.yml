@@ -1,0 +1,192 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Sync-AzVirtualNetworkPeering
+name: Sync-AzVirtualNetworkPeering
+module: Az.Network
+isPreview: false
+summary: |-
+  Command to sync the address space on the peering link if the remote virtual network has a new address space.
+description: |-
+  Updating the address space on peered virtual networks is now supported. However, to sync the latest address space on the peering link, this cmdlet needs to be called on the (peered) remote virtual network. When invoked, it would sync the address space on the peering link with the latest address space of the (peered) remote virtual network.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network peering name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkPeering
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network peering
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Sync-AzVirtualNetworkPeering
+        -VirtualNetworkName <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fields
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Sync-AzVirtualNetworkPeering
+        -VirtualNetworkPeering <PSVirtualNetworkPeering>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Sync-AzVirtualNetworkPeering -Name 'peering2' -VirtualNetworkName 'vnet1' -ResourceGroupName 'rg1'
+    ```
+
+    Syncs the address space on the peering, peering2 in the virtual network, vnet1 within the resource group, rg1.
+- title: Example 2
+  description: |-
+    ```powershell
+    $s1h1 = Get-AzVirtualNetworkPeering -Name 'spoke1-hub1' -VirtualNetworkName 'spoke1' -ResourceGroupName 'HUB1-RG'
+    $s1h1 | Sync-AzVirtualNetworkPeering
+    ```
+
+    The first cmdlet gets the virtual network peering. The second piped cmdlet applies the sync operation on the peering.
+links:
+- text: Add-AzVirtualNetworkPeering
+  href: ./Add-AzVirtualNetworkPeering.yml
+- text: Get-AzVirtualNetworkPeering
+  href: ./Get-AzVirtualNetworkPeering.yml
+- text: Remove-AzVirtualNetworkPeering
+  href: ./Remove-AzVirtualNetworkPeering.yml
+- text: Set-AzVirtualNetworkPeering
+  href: ./Set-AzVirtualNetworkPeering.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Sync-AzVirtualNetworkPeering.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/sync-azvirtualnetworkpeering
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Sync-AzVirtualNetworkPeering.md
+  PlatyPS schema version: 2024-05-01

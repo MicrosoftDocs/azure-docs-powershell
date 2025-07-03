@@ -1,0 +1,285 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureVMSqlServerExtension
+name: Set-AzureVMSqlServerExtension
+module: Azure
+isPreview: false
+summary: |-
+  Sets the Azure SQL Server extension on a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureVMSqlServerExtension** cmdlet sets the Azure SQL Server extension on a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AutoBackupSettings
+    type: <xref href="AutoBackupSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the automatic SQL Server backup settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnableSqlServerExtension
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPatchingSettings
+    type: <xref href="AutoPatchingSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the automatic SQL Server patching settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnableSqlServerExtension
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables the extension state.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableSqlServerExtension
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultCredentialSettings
+    type: <xref href="KeyVaultCredentialSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies key vault credential settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnableSqlServerExtension
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReferenceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the reference name of the SQL Server extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uninstall
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet uninstalls the SQL Server extension from the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UninstallSqlServerExtension
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the SQL Server extension that Get-AzureVMSqlServerExtension retrieves settings from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the persistent virtual machine object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureVMSqlServerExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        [[-AutoPatchingSettings] <AutoPatchingSettings>]
+        [[-AutoBackupSettings] <AutoBackupSettings>]
+        [[-KeyVaultCredentialSettings] <KeyVaultCredentialSettings>]
+        -VM <IPersistentVM>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnableSqlServerExtension
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureVMSqlServerExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        -VM <IPersistentVM>
+        [-Disable]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableSqlServerExtension
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureVMSqlServerExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        -VM <IPersistentVM>
+        [-Uninstall]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UninstallSqlServerExtension
+  isDefault: false
+examples:
+- title: 'Example 1: Set auto-patching settings on a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoPatchingSettings $APS | Update-AzureVM
+    ```
+
+    This command sets auto-patching settings on an Azure virtual machine.
+- title: 'Example 2: Set auto-backup settings on a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ServiceName" -Name "VMName" | Set-AzureVMSqlServerExtension -AutoBackupSettings $ABS | Update-AzureVM
+    ```
+
+    This command sets auto-backup settings on Azure virtual machine.
+- title: 'Example 3: Disable an SQL Server extension on a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Disable
+    ```
+
+    This command disables SQL Server virtual machine extension on a given virtual machine.
+- title: 'Example 4: Uninstall an SQL Server extension on a specific virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "Service" -Name "VMName" | Set-AzureVMSqlServerExtension -Uninstall
+    ```
+
+    This command uninstalls a SQL Server virtual machine extension on the virtual machine named VMName.
+links:
+- text: Get-AzureVMSqlServerExtension
+  href: ./Get-AzureVMSqlServerExtension.yml
+- text: Remove-AzureVMSqlServerExtension
+  href: ./Remove-AzureVMSqlServerExtension.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 56C7B6F5-C2AC-4C5A-8930-645374694CC3
+  PlatyPS schema version: 2024-05-01

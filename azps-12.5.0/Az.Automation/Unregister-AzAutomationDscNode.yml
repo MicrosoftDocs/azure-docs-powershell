@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Unregister-AzAutomationDscNode
+name: Unregister-AzAutomationDscNode
+module: Az.Automation
+isPreview: false
+summary: |-
+  Removes a DSC node from management by an Automation account.
+description: |-
+  The **Unregister-AzAutomationDscNode** cmdlet removes an APS Desired State Configuration (DSC) node from management by an Azure Automation account.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account from which this cmdlet removes a DSC node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      ps_force
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of the DSC node that this cmdlet removes.
+    aliases:
+    - NodeId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group in which this cmdlet unregisters a DSC node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unregister-AzAutomationDscNode
+        -Id <Guid>
+        [-Force]
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.DscNode" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an Azure DSC node from management by an Automation account'
+  description: |-
+    ```powershell
+    Unregister-AzAutomationDscNode -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Id 064a8929-c98b-25e4-80hh-111ca86067j8
+    ```
+
+    This command removes the DSC node that has the specified GUID from management by the Automation account named Contoso17.
+- title: 'Example 2: Remove an Azure DSC node from management by an Automation account by specifying the DSC node name'
+  description: |-
+    ```powershell
+    $dscNodeNameToRemove = "MyMachine1"
+    $automationAccountName = "Contoso17"
+    $resourceGroupName = "ResourceGroup01"
+    $nodeToRemove = Get-AzAutomationDscNode -Name $dscNodeNameToRemove -AutomationAccountName $automationAccountName -ResourceGroupName $resourceGroupName
+    $nodeToRemove | Unregister-AzAutomationDscNode -AutomationAccountName $automationAccountName -ResourceGroupName $resourceGroupName
+    ```
+
+    This command removes the DSC node that has the name "MyMachine1" from management by the Automation account named Contoso17.
+links:
+- text: Get-AzAutomationDscNode
+  href: ./Get-AzAutomationDscNode.yml
+- text: Register-AzAutomationDscNode
+  href: ./Register-AzAutomationDscNode.yml
+- text: Set-AzAutomationDscNode
+  href: ./Set-AzAutomationDscNode.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Unregister-AzAutomationDscNode.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/unregister-azautomationdscnode
+  Module Name: Az.Automation
+  ms.assetid: E4FC60AE-16B4-4E62-874F-49B9285CFF7A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Unregister-AzAutomationDscNode.md
+  PlatyPS schema version: 2024-05-01

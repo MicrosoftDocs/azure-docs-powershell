@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Unregister-AzureAutomationScheduledRunbook
+name: Unregister-AzureAutomationScheduledRunbook
+module: Azure
+isPreview: false
+summary: |-
+  Removes an association between a runbook and a schedule.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Unregister-AzureAutomationScheduledRunbook** cmdlet removes the association between a Microsoft Azure Automation runbook and a schedule, which stops the runbook from starting when the schedule fires.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobScheduleId
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a scheduled runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByJobScheduleId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookNameAndScheduleName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookNameAndScheduleName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unregister-AzureAutomationScheduledRunbook
+        -JobScheduleId <Guid>
+        -AutomationAccountName <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByJobScheduleId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Unregister-AzureAutomationScheduledRunbook
+        -RunbookName <String>
+        -ScheduleName <String>
+        -AutomationAccountName <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookNameAndScheduleName
+  isDefault: false
+examples:
+- title: 'Example 1: Remove the association between a runbook and a schedule'
+  description: |-
+    ```
+    PS C:\> Unregister-AzureAutomationScheduledRunbook -AutomationAccountName "Contoso17" -Name "Runbk01" -ScheduleName "Runbk01Sched"
+    ```
+
+    This command removes the association between the runbook named Runbk01 and the schedule named Runbk01Sched.
+links:
+- text: Register-AzureAutomationScheduledRunbook
+  href: ./Register-AzureAutomationScheduledRunbook.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: EA7C1449-E11F-4AE8-A513-59BDCA38875D
+  PlatyPS schema version: 2024-05-01

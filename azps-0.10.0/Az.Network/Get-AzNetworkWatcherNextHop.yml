@@ -1,0 +1,245 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkWatcherNextHop
+name: Get-AzNetworkWatcherNextHop
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the next hop from a VM.
+description: |-
+  The Get-AzNetworkWatcherNextHop cmdlet gets the next hop from a VM.
+  Next hop allows you to view the type of Azure resource, the associated IP address of that resource, and the routing table rule that is responsible for the route.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, network, networking, network watcher, next, hop
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Destination IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcher
+    type: <xref href="PSNetworkWatcher" data-throw-if-not-resolved="False" />
+    description: |-
+      The network watcher resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkWatcherName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of network watcher.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network watcher resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceIPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Source IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNetworkInterfaceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target network interface Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVirtualMachineId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target virtual machine ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkWatcherNextHop
+        -NetworkWatcher <PSNetworkWatcher>
+        -TargetVirtualMachineId <String>
+        -DestinationIPAddress <String>
+        -SourceIPAddress <String>
+        [-TargetNetworkInterfaceId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkWatcherNextHop
+        -NetworkWatcherName <String>
+        -ResourceGroupName <String>
+        -TargetVirtualMachineId <String>
+        -DestinationIPAddress <String>
+        -SourceIPAddress <String>
+        [-TargetNetworkInterfaceId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkWatcher" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNextHopResult" data-throw-if-not-resolved="False" />
+examples:
+- title: '-- Example 1: Get the Next Hop when communicating with an Internet IP --'
+  description: |-
+    ```
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+    $VM = Get-AzVM -ResourceGroupName ContosoResourceGroup -Name VM0
+    $Nics = Get-AzNetworkInterface | Where {$_.Id -eq $vm.NetworkInterfaceIDs.ForEach({$_})}
+    Get-AzNetworkWatcherNextHop -NetworkWatcher $networkWatcher -TargetVirtualMachineId $VM.Id -SourceIPAddress $nics[0].IpConfigurations[0].PrivateIpAddress  -DestinationIPAddress 204.79.197.200
+
+
+    NextHopIpAddress NextHopType RouteTableId
+    ---------------- ----------- ------------
+                     Internet    System Route
+    ```
+
+    Get's the Next Hop for outbound communication from the primary Network Interface on the specified Virtual Vachine to 204.79.197.200 (www.bing.com)
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Test-AzNetworkWatcherIPFlow
+  href: ./Test-AzNetworkWatcherIPFlow.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Start-AzNetworkWatcherResourceTroubleshooting
+  href: ./Start-AzNetworkWatcherResourceTroubleshooting.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherNextHop.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkwatchernexthop
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkWatcherNextHop.md
+  PlatyPS schema version: 2024-05-01

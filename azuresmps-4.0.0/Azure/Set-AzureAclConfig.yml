@@ -1,0 +1,325 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureAclConfig
+name: Set-AzureAclConfig
+module: Azure
+isPreview: false
+summary: |-
+  Modifies an ACL configuration object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureAclConfig** cmdlet modifies an access control list (ACL) configuration object from an existing Azure virtual machine configuration.
+parameters:
+  cmdletParameters:
+  - name: ACL
+    type: <xref href="NetworkAclObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ACL configuration object that this cmdlet modifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Action
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action for the rule that this cmdlet adds or modifies.
+      Valid values are: Permit and Deny.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddRule
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet adds a rule to the ACL configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the rule that this cmdlet adds or modifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRule
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetRule
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Order
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the processing order for the rule that this cmdlet adds or modifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRule
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetRule
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoteSubnet
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the remote subnet for the rule that this cmdlet adds or modifies.
+      Specifies an address in Classless Interdomain Routing (CIDR) format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRule
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveRule
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet removes a rule from the ACL configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleId
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the rule that this cmdlet removes or modifies for the ACL configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SetRule
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet modifies a rule in the ACL configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureAclConfig
+        [-Action] <String>
+        [-RemoteSubnet] <String>
+        [[-Order] <Int32>]
+        [[-Description] <String>]
+        -ACL <NetworkAclObject>
+        [-AddRule]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AddRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureAclConfig
+        [-RuleId] <Int32>
+        -ACL <NetworkAclObject>
+        [-RemoveRule]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureAclConfig
+        [-RuleId] <Int32>
+        [[-Action] <String>]
+        [[-RemoteSubnet] <String>]
+        [[-Order] <Int32>]
+        [[-Description] <String>]
+        -ACL <NetworkAclObject>
+        [-SetRule]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetRule
+  isDefault: false
+examples:
+- title: 'Example 1: Add a rule to a new ACL configuration'
+  description: |-
+    ```
+    PS C:\> $Acl = New-AzureAclConfig
+    PS C:\> Set-AzureAclConfig -AddRule -ACL $Acl -Action Permit -RemoteSubnet "172.0.0.0/8" -Order 100 -Description "Permit ACL rule"
+    ```
+
+    The first command creates an ACL configuration, and then stores it in the $Acl variable.
+
+    The second command adds a new rule to the configuration stored in $Acl.
+    The command specifies an action, subnet, order, and description for the rule.
+- title: 'Example 2: Modify a rule in an ACL configuration'
+  description: |-
+    ```
+    PS C:\> $Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
+    PS C:\> Set-AzureAclConfig -SetRule -RuleId 0 -ACL $Acl -Order 102 -Description "Web endpoint rule"
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Set-AzureEndpoint -ACL $Acl -Name "Web" | Update-AzureVM
+    ```
+
+    The first command gets the virtual machine named VirtualMachine07 in the service named ContosoService by using the **Get-AzureVM** cmdlet.
+    The command passes that object to the **Get-AzureAclConfig** cmdlet by using the pipeline operator.
+    That cmdlet gets the ACL configuration for the endpoint named Web.
+    The command stores that ACL configuration object in the $Acl variable.
+
+    The second command modifies the rule that has the ID of 0.
+    The command changes the order and the description of the rule.
+
+    The final command sets the ACL configuration object for that virtual machine by using the **Set-AzureEndpoint** cmdlet.
+    The command also updates that virtual machine.
+- title: 'Example 3: Remove a rule from an ACL configuration'
+  description: |-
+    ```
+    PS C:\> $Acl = Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Get-AzureAclConfig -EndpointName "Web"
+    PS C:\> Set-AzureAclConfig -RemoveRule -ID 0 -ACL $Acl
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine07" | Set-AzureEndpoint -ACL $Acl -Name "Web" | Update-AzureVM
+    ```
+
+    The first command stores an ACL configuration object in the $Acl variable.
+    This is the same as the previous example.
+
+    The second command removes the rule that has the ID 0 from the ACL configuration in $Acl.
+
+    The final command sets the ACL configuration object for the virtual machine and updates that virtual machine.
+    This is the same as the previous example.
+links:
+- text: Get-AzureAclConfig
+  href: ./Get-AzureAclConfig.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: New-AzureAclConfig
+  href: ./New-AzureAclConfig.yml
+- text: Remove-AzureAclConfig
+  href: ./Remove-AzureAclConfig.yml
+- text: Set-AzureEndpoint
+  href: ./Set-AzureEndpoint.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A9E43722-DEE2-4A5C-A3F6-8DA6612735AC
+  PlatyPS schema version: 2024-05-01

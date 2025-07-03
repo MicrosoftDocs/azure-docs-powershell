@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EdgeOrder.New-AzEdgeOrderHierarchyInformationObject
+name: New-AzEdgeOrderHierarchyInformationObject
+module: Az.EdgeOrder
+isPreview: false
+summary: |-
+  Create an in-memory object for HierarchyInformation.
+description: |-
+  Create an in-memory object for HierarchyInformation.
+parameters:
+  cmdletParameters:
+  - name: ConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents configuration name that uniquely identifies configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductFamilyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents product family name that uniquely identifies product family.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductLineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents product line name that uniquely identifies product line.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents product name that uniquely identifies product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEdgeOrderHierarchyInformationObject
+        [-ConfigurationName <String>]
+        [-ProductFamilyName <String>]
+        [-ProductLineName <String>]
+        [-ProductName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Models.Api20211201.HierarchyInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates hierarchy information object'
+  description: |-
+    ```powershell
+    $HierarchyInformation=New-AzEdgeOrderHierarchyInformationObject -ProductFamilyName "azurestackedge" -ProductLineName "azurestackedge" -ProductName "azurestackedgegpu" -ConfigurationName "EdgeP_High"
+    $HierarchyInformation | Format-List
+    ```
+
+    ```output
+    ConfigurationName : EdgeP_High
+    ProductFamilyName : azurestackedge
+    ProductLineName   : azurestackedge
+    ProductName       : azurestackedgegpu
+    ```
+
+    Creates a in-memory hierarchy information object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderHierarchyInformationObject.md
+  document type: cmdlet
+  external help file: Az.EdgeOrder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EdgeOrder/new-AzEdgeOrderHierarchyInformationObject
+  Module Name: Az.EdgeOrder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderHierarchyInformationObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,175 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureAccount
+name: Remove-AzureAccount
+module: Azure
+isPreview: false
+summary: |-
+  Deletes an Azure account from Windows PowerShell.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureAccount** cmdlet deletes an Azure account and its subscriptions from the subscription data file in your roaming user profile.
+  It does not delete the account from Microsoft Azure, or change the actual account in any way.
+
+  Using this cmdlet is a lot like logging out of your Azure account.
+  And, if you want to log into the account again, use the **Add-AzureAccount** or **Import-AzurePublishSettingsFile** to add the account to Windows PowerShell again.
+
+  You can also use **Remove-AzureAccount** cmdlet to change the way the Azure PowerShell cmdlets sign into your Azure account.
+  If your account has both a management certificate from **Import-AzurePublishSettingsFile** and an access token from **Add-AzureAccount**, the Azure PowerShell cmdlets use only the access token; they ignore the management certificate.
+  To use the management certificate, run **Remove-AzureAccount**.
+  When **Remove-AzureAccount** finds both a management certificate and an access token, it deletes only the access token, instead of deleting the account.
+  The management certificate is still there, so account is still available to Windows PowerShell.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Suppresses the confirmation prompt.
+      By default, **Remove-AzureAccount** prompts you before removing the account from Windows PowerShell.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the account to remove.
+      The parameter value is case-sensitive.
+      Wildcard characters are not supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns $True if the command succeeds and $False if it fails.
+      By default, this cmdlet does not return any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureAccount
+        -Name <String>
+        [-Force]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="None or System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
+    Otherwise, it does not return any output.
+examples:
+- title: 'Example 1: Remove an account'
+  description: |-
+    ```
+    PS C:\> Remove-AzureAccount -Name admin@contoso.com
+    ```
+
+    This command removes the admin@contoso.com from your subscription data file.
+    When the command completes, the account is no longer available to Windows PowerShell.
+links:
+- text: Add-AzureAccount
+  href: ./Add-AzureAccount.yml
+- text: Get-AzureAccount
+  href: ./Get-AzureAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 3CD1A989-902C-48B3-81E9-7B78EDA5F880
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlInstanceStartStopSchedule
+name: New-AzSqlInstanceStartStopSchedule
+module: Az.Sql
+isPreview: false
+summary: |-
+  Creates start/stop schedule for Azure SQL Managed Instance
+description: |-
+  Creates start/stop schedule for Azure SQL Managed Instance
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceModel
+    type: <xref href="AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance model input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewInstanceScheduleByInstanceModelInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Managed Instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewInstanceScheduleInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleList
+    type: <xref href="ScheduleItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Array of valid SheduleItem objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the timezone for the schedule.
+      Please refer to https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-timezone?view=powershell-7.3#examples for valid values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceStartStopSchedule
+        [-ResourceGroupName] <String>
+        -InstanceName <String>
+        -TimeZone <String>
+        -ScheduleList <ScheduleItem[]>
+        [-Description <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewInstanceScheduleInputParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceStartStopSchedule
+        [-ResourceGroupName] <String>
+        -TimeZone <String>
+        -ScheduleList <ScheduleItem[]>
+        -InstanceModel <AzureSqlManagedInstanceModel>
+        [-Description <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewInstanceScheduleByInstanceModelInputParameters
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceSchedule.Model.AzureSqlManagedInstanceScheduleModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $newSchedule = New-AzSqlInstanceScheduleItem -StartDay Monday -StopDay Friday -StartTime "09:00" -StopTime "17:00"
+    New-AzSqlInstanceStartStopSchedule -InstanceName managed-instance-v2 -ResourceGroupName CustomerExperienceTeam_RG -ScheduleList $newSchedule -TimeZone "Central Europe Standard Time"
+    ```
+
+    Creates new start/stop schedule that starts at Monday 9 AM and stops at Friday 5 PM.
+- title: Example 2
+  description: |-
+    ```powershell
+    $mi = Get-AzSqlInstanceStartStopSchedule -InstanceName instance-name -ResourceGroupName rg-name
+
+    $existingSchedule = $mi.ScheduleList
+
+    $newSchedule = New-AzSqlInstanceScheduleItem -StartDay Monday -StopDay Friday -StartTime "09:00" -StopTime "17:00" -ScheduleList $existingSchedule
+
+    New-AzSqlInstanceStartStopSchedule -InstanceName managed-instance-v2 -ResourceGroupName CustomerExperienceTeam_RG -ScheduleList $newSchedule -TimeZone "Central Europe Standard Time"
+    ```
+
+    Updates existing start/stop schedule with new schedule item starts at Monday 9 AM and stops at Friday 5 PM.
+links:
+- text: Get-AzSqlInstanceStartStopSchedule
+  href: ./Get-AzSqlInstanceStartStopSchedule.yml
+- text: New-AzSqlInstanceScheduleItem
+  href: ./New-AzSqlInstanceScheduleItem.yml
+- text: Remove-AzSqlInstanceStartStopSchedule
+  href: ./Remove-AzSqlInstanceStartStopSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceStartStopSchedule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstancestartstopschedule
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceStartStopSchedule.md
+  PlatyPS schema version: 2024-05-01

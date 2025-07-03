@@ -1,0 +1,86 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageAccountNameAvailability
+name: Get-AzStorageAccountNameAvailability
+module: Az.Storage
+isPreview: false
+summary: |-
+  Checks the availability of a Storage account name.
+description: |-
+  The **Get-AzStorageAccountNameAvailability** cmdlet checks whether the name of an Azure Storage account is valid and available to use.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage account that this cmdlet checks.
+    aliases:
+    - StorageAccountName
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageAccountNameAvailability
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Storage.Models.CheckNameAvailabilityResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Check availability of a Storage account name'
+  description: |-
+    ```
+    PS C:\>Get-AzStorageAccountNameAvailability -Name 'contosostorage03'
+    ```
+
+    This command checks the availability of the name ContosoStorage03.
+links:
+- text: Azure Storage Manager Cmdlets
+  href: index.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.storage/get-azstorageaccountnameavailability
+  Module Name: Az.Storage
+  ms.assetid: F6EA099A-D588-49AE-9D2C-865BC32685BA
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageAccountNameAvailability.md
+  PlatyPS schema version: 2024-05-01

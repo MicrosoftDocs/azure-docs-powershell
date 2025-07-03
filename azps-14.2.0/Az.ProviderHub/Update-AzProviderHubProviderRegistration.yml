@@ -1,0 +1,658 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ProviderHub.Update-AzProviderHubProviderRegistration
+name: Update-AzProviderHubProviderRegistration
+module: Az.ProviderHub
+isPreview: false
+summary: |-
+  Update the provider registration.
+description: |-
+  Update the provider registration.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Capability
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IResourceProviderCapabilities" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FeatureRuleRequiredFeaturesPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementIncidentContactEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementIncidentRoutingService
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementIncidentRoutingTeam
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementManifestOwner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementResourceAccessPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementResourceAccessRole
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IAny" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementSchemaOwner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementServiceTreeInfo
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IServiceTreeInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IAny" data-throw-if-not-resolved="False" />
+    description: |-
+      Anything
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderAuthenticationAllowedAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderAuthorization
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IResourceProviderAuthorization" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderHubMetadataProviderAuthenticationAllowedAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderHubMetadataProviderAuthorization
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IResourceProviderAuthorization" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderHubMetadataThirdPartyProviderAuthorization
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.ILightHouseAuthorization" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderHubMetadataThirdPartyProviderAuthorizationManagedByTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource provider hosted within ProviderHub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisioningState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestHeaderOptionOptInHeader
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequiredFeature
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionLifecycleNotificationSpecificationSoftDeleteTtl
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionLifecycleNotificationSpecificationSubscriptionStateOverrideAction
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.ISubscriptionStateOverrideAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateDeploymentOptionPreflightOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateDeploymentOptionPreflightSupported
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzProviderHubProviderRegistration
+        -ProviderNamespace <String>
+        [-SubscriptionId <String>]
+        [-Capability <IResourceProviderCapabilities[]>]
+        [-FeatureRuleRequiredFeaturesPolicy <String>]
+        [-ManagementIncidentContactEmail <String>]
+        [-ManagementIncidentRoutingService <String>]
+        [-ManagementIncidentRoutingTeam <String>]
+        [-ManagementManifestOwner <String[]>]
+        [-ManagementResourceAccessPolicy <String>]
+        [-ManagementResourceAccessRole <IAny[]>]
+        [-ManagementSchemaOwner <String[]>]
+        [-ManagementServiceTreeInfo <IServiceTreeInfo[]>]
+        [-Metadata <IAny>]
+        [-Namespace <String>]
+        [-ProviderAuthenticationAllowedAudience <String[]>]
+        [-ProviderAuthorization <IResourceProviderAuthorization[]>]
+        [-ProviderHubMetadataProviderAuthenticationAllowedAudience <String[]>]
+        [-ProviderHubMetadataProviderAuthorization <IResourceProviderAuthorization[]>]
+        [-ProviderHubMetadataThirdPartyProviderAuthorization <ILightHouseAuthorization[]>]
+        [-ProviderHubMetadataThirdPartyProviderAuthorizationManagedByTenantId <String>]
+        [-ProviderType <String>]
+        [-ProviderVersion <String>]
+        [-ProvisioningState <String>]
+        [-RequestHeaderOptionOptInHeader <String>]
+        [-RequiredFeature <String[]>]
+        [-SubscriptionLifecycleNotificationSpecificationSoftDeleteTtl <TimeSpan>]
+        [-SubscriptionLifecycleNotificationSpecificationSubscriptionStateOverrideAction <ISubscriptionStateOverrideAction[]>]
+        [-TemplateDeploymentOptionPreflightOption <String[]>]
+        [-TemplateDeploymentOptionPreflightSupported]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzProviderHubProviderRegistration
+        -InputObject <IProviderHubIdentity>
+        [-Capability <IResourceProviderCapabilities[]>]
+        [-FeatureRuleRequiredFeaturesPolicy <String>]
+        [-ManagementIncidentContactEmail <String>]
+        [-ManagementIncidentRoutingService <String>]
+        [-ManagementIncidentRoutingTeam <String>]
+        [-ManagementManifestOwner <String[]>]
+        [-ManagementResourceAccessPolicy <String>]
+        [-ManagementResourceAccessRole <IAny[]>]
+        [-ManagementSchemaOwner <String[]>]
+        [-ManagementServiceTreeInfo <IServiceTreeInfo[]>]
+        [-Metadata <IAny>]
+        [-Namespace <String>]
+        [-ProviderAuthenticationAllowedAudience <String[]>]
+        [-ProviderAuthorization <IResourceProviderAuthorization[]>]
+        [-ProviderHubMetadataProviderAuthenticationAllowedAudience <String[]>]
+        [-ProviderHubMetadataProviderAuthorization <IResourceProviderAuthorization[]>]
+        [-ProviderHubMetadataThirdPartyProviderAuthorization <ILightHouseAuthorization[]>]
+        [-ProviderHubMetadataThirdPartyProviderAuthorizationManagedByTenantId <String>]
+        [-ProviderType <String>]
+        [-ProviderVersion <String>]
+        [-ProvisioningState <String>]
+        [-RequestHeaderOptionOptInHeader <String>]
+        [-RequiredFeature <String[]>]
+        [-SubscriptionLifecycleNotificationSpecificationSoftDeleteTtl <TimeSpan>]
+        [-SubscriptionLifecycleNotificationSpecificationSubscriptionStateOverrideAction <ISubscriptionStateOverrideAction[]>]
+        [-TemplateDeploymentOptionPreflightOption <String[]>]
+        [-TemplateDeploymentOptionPreflightSupported]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderHubIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ProviderHub.Models.IProviderRegistration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a provider registration.'
+  description: |-
+    ```powershell
+    Update-AzProviderHubProviderRegistration -ProviderNamespace "Microsoft.Contoso" -ProviderHubMetadataProviderAuthenticationAllowedAudience "https://management.core.windows.net/" -ProviderHubMetadataProviderAuthorization @{ApplicationId = "00000000-0000-0000-0000-000000000000"; RoleDefinitionId = "00000000-0000-0000-0000-000000000000"} -Namespace "Microsoft.Contoso" -ProviderVersion "2.0" -ProviderType "Internal" -ManagementManifestOwner "SPARTA-PlatformServiceAdministrator" -ManagementIncidentContactEmail "help@microsoft.com" -ManagementIncidentRoutingService "Contoso Service" -ManagementIncidentRoutingTeam "Contoso Team" -ManagementServiceTreeInfo @{ComponentId = "00000000-0000-0000-0000-000000000000"; ServiceId = "00000000-0000-0000-0000-000000000000"} -Capability @{QuotaId = "CSP_2015-05-01"; Effect = "Allow"}, @{QuotaId = "CSP_MG_2017-12-01"; Effect = "Allow"}
+    ```
+
+    ```output
+    Name                Type
+    ----                ----
+    Microsoft.Contoso   Microsoft.ProviderHub/providerRegistrations
+    ```
+
+    Update a provider registration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/ProviderHub/help/Update-AzProviderHubProviderRegistration.md
+  document type: cmdlet
+  external help file: Az.ProviderHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.providerhub/update-azproviderhubproviderregistration
+  Module Name: Az.ProviderHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/ProviderHub/help/Update-AzProviderHubProviderRegistration.md
+  PlatyPS schema version: 2024-05-01

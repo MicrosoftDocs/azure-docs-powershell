@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudStorageApplianceConfigurationDataObject
+name: New-AzNetworkCloudStorageApplianceConfigurationDataObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for StorageApplianceConfigurationData.
+description: |-
+  Create an in-memory object for StorageApplianceConfigurationData.
+parameters:
+  cmdletParameters:
+  - name: AdminCredentialsPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password of the administrator of the device used during initialization.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminCredentialsUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The username of the administrator of the device used during initialization.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RackSlot
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot that storage appliance is in the rack based on the BOM configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SerialNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The serial number of the appliance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageApplianceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user-provided name for the storage appliance that will be created from this specification.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudStorageApplianceConfigurationDataObject
+        -AdminCredentialsPassword <SecureString>
+        -AdminCredentialsUsername <String>
+        -RackSlot <Int64>
+        -SerialNumber <String>
+        [-StorageApplianceName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.StorageApplianceConfigurationData" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for StorageApplianceConfigurationData.'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString "********" -AsPlainText -Force
+
+    New-AzNetworkCloudStorageApplianceConfigurationDataObject -AdminCredentialsPassword $password -AdminCredentialsUsername username -RackSlot 1 -SerialNumber serialNumber -StorageApplianceName storageApplianceName
+    ```
+
+    ```output
+    RackSlot SerialNumber StorageApplianceName
+    -------- ------------ --------------------
+    1        serialNumber storageApplianceName
+    ```
+
+    Create an in-memory object for StorageApplianceConfigurationData.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudStorageApplianceConfigurationDataObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudStorageApplianceConfigurationDataObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudStorageApplianceConfigurationDataObject.md
+  PlatyPS schema version: 2024-05-01

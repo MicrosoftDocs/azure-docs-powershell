@@ -1,0 +1,266 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzAvailabilitySet
+name: Get-AzAvailabilitySet
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets Azure availability sets in a resource group.
+description: |-
+  The **Get-AzAvailabilitySet** cmdlet gets Azure availability sets in a resource group.
+  You can specify the name of a specific availability set to get.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an availability set that this cmdlet gets.
+    aliases:
+    - ResourceName
+    - AvailabilitySetName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAvailabilitySet
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSAvailabilitySet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific availability set'
+  description: |-
+    ```powershell
+    Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
+    ```
+
+    ```output
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet03
+    Name                      : AvailabilitySet03
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+    ```
+
+    This command gets the availability set named AvailabilitySet03 in the resource group named ResourceGroup11.
+- title: 'Example 2: Get all availability sets'
+  description: |-
+    ```powershell
+    Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11"
+    ```
+
+    ```output
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet02
+    Name                      : AvailabilitySet02
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+
+
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet03
+    Name                      : AvailabilitySet03
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet10
+    Name                      : AvailabilitySet10
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+    ```
+
+    This command gets all the availability sets in the resource group named ResourceGroup11.
+- title: 'Example 3: Get all availability sets with filtering'
+  description: |-
+    ```powershell
+    Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup1*" -Name "AvailabilitySet0*"
+    ```
+
+    ```output
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet02
+    Name                      : AvailabilitySet02
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+
+
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet03
+    Name                      : AvailabilitySet03
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+    ```
+
+    This command gets all the availability sets in the resource group named ResourceGroup11 that start with "AvailabilitySet0".
+- title: 'Example 4: Get all availability sets with name starting with AvailabilitySet0'
+  description: |-
+    ```powershell
+    Get-AzAvailabilitySet -Name AvailabilitySet0*
+    ```
+
+    ```output
+    ResourceGroupName         : ResourceGroup11
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup11/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet02
+    Name                      : AvailabilitySet02
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+
+
+    ResourceGroupName         : ResourceGroup12
+    Id                        : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup12/providers/
+                                Microsoft.Compute/availabilitySets/AvailabilitySet03
+    Name                      : AvailabilitySet03
+    Type                      : Microsoft.Compute/availabilitySets
+    Location                  : eastus
+    Managed                   : False
+    Sku                       : Classic
+    Tags                      : {
+                                  "a": "b"
+                                }
+    PlatformFaultDomainCount  : 3
+    PlatformUpdateDomainCount : 2
+    Statuses                  : []
+    VirtualMachinesReferences : []
+    ```
+
+    This command gets all the availability sets that start with "AvailabilitySet0".
+links:
+- text: New-AzAvailabilitySet
+  href: ./New-AzAvailabilitySet.yml
+- text: Remove-AzAvailabilitySet
+  href: ./Remove-AzAvailabilitySet.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzAvailabilitySet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azavailabilityset
+  Module Name: Az.Compute
+  ms.assetid: 45D55DC9-0027-4EB9-B2F7-9ABF6685E6B5
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzAvailabilitySet.md
+  PlatyPS schema version: 2024-05-01

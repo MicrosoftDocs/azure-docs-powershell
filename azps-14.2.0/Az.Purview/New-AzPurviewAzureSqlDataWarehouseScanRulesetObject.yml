@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewAzureSqlDataWarehouseScanRulesetObject
+name: New-AzPurviewAzureSqlDataWarehouseScanRulesetObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for AzureSqlDataWarehouseScanRuleset.
+description: |-
+  Create an in-memory object for AzureSqlDataWarehouseScanRuleset.
+parameters:
+  cmdletParameters:
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedSystemClassification
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedCustomClassificationRuleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewAzureSqlDataWarehouseScanRulesetObject
+        [-Description <String>]
+        [-ExcludedSystemClassification <String[]>]
+        [-IncludedCustomClassificationRuleName <String[]>]
+        [-Type <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AzureSqlDataWarehouseScanRuleset" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Azure SQL Data Warehouse custom scanruleset object'
+  description: |-
+    ```powershell
+    New-AzPurviewAzureSqlDataWarehouseScanRulesetObject -Description 'desc' -ExcludedSystemClassification @('MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER','MICROSOFT.SECURITY.COMMON_PASSWORDS') -IncludedCustomClassificationRuleName @('ClassificationRule2') -Type 'Custom'
+    ```
+
+    ```output
+    CreatedAt                            :
+    Description                          : desc
+    ExcludedSystemClassification         : {MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER, MICROSOFT.SECURITY.COMMON_PASSWORDS}
+    Id                                   :
+    IncludedCustomClassificationRuleName : {ClassificationRule2}
+    Kind                                 : AzureSqlDataWarehouse
+    LastModifiedAt                       :
+    Name                                 :
+    Status                               :
+    Type                                 : Custom
+    Version                              :
+    ```
+
+    Create Azure SQL Data Warehouse custom scanruleset object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureSqlDataWarehouseScanRulesetObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewazuresqldatawarehousescanrulesetobject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAzureSqlDataWarehouseScanRulesetObject.md
+  PlatyPS schema version: 2024-05-01

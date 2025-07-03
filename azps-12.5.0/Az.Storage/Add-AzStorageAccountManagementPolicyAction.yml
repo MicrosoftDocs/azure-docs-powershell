@@ -1,0 +1,398 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Add-AzStorageAccountManagementPolicyAction
+name: Add-AzStorageAccountManagementPolicyAction
+module: Az.Storage
+isPreview: false
+summary: |-
+  Adds an action to the input ManagementPolicy Action Group object, or creates a ManagementPolicy Action Group object with the action. The object can be used in New-AzStorageAccountManagementPolicyRule.
+description: |-
+  The **Add-AzStorageAccountManagementPolicyAction** cmdlet adds an action to the input ManagementPolicy Action Group object, or creates a ManagementPolicy Action Group object with the action.
+parameters:
+  cmdletParameters:
+  - name: BaseBlobAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The management policy action for baseblob.
+    acceptedValues:
+    - Delete
+    - TierToArchive
+    - TierToCool
+    - TierToCold
+    - TierToHot
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlob
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BaseBlobLastAccessTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BaseBlobCreationTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BlobVersionAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The management policy action for blob version.
+    acceptedValues:
+    - Delete
+    - TierToArchive
+    - TierToCool
+    - TierToCold
+    - TierToHot
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BlobVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysAfterCreationGreaterThan
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Integer value indicating the age in days after creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlobCreationTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Snapshot
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BlobVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysAfterLastAccessTimeGreaterThan
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Integer value indicating the age in days after last blob access. This property can only be used in conjunction with last access time tracking policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlobLastAccessTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysAfterLastTierChangeGreaterThan
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Integer value indicating the age in days after last blob tier change time. This property is only applicable for tierToArchive actions. It requires daysAfterModificationGreaterThan to be set for baseBlobs based actions, or daysAfterModificationGreaterThan to be set for snapshots and blob version based actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlob
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Snapshot
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BlobVersion
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysAfterModificationGreaterThan
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Integer value indicating the age in days after last modification.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlob
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutoTierToHotFromCool
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables auto tiering of a blob from cool to hot on a blob access. It only works with TierToCool action and DaysAfterLastAccessTimeGreaterThan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BaseBlobLastAccessTime
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyActionGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      If input the ManagementPolicy Action object, will set the action to the input action object.
+      If not input, will create a new action object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The management policy action for snapshot.
+    acceptedValues:
+    - Delete
+    - TierToArchive
+    - TierToCool
+    - TierToCold
+    - TierToHot
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Snapshot
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzStorageAccountManagementPolicyAction
+        -BaseBlobAction <String>
+        -DaysAfterModificationGreaterThan <Int32>
+        [-DaysAfterLastTierChangeGreaterThan <Int32>]
+        [-InputObject <PSManagementPolicyActionGroup>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BaseBlob
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzStorageAccountManagementPolicyAction
+        -BaseBlobAction <String>
+        -DaysAfterLastAccessTimeGreaterThan <Int32>
+        [-EnableAutoTierToHotFromCool]
+        [-InputObject <PSManagementPolicyActionGroup>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BaseBlobLastAccessTime
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzStorageAccountManagementPolicyAction
+        -BaseBlobAction <String>
+        -DaysAfterCreationGreaterThan <Int32>
+        [-InputObject <PSManagementPolicyActionGroup>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BaseBlobCreationTime
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzStorageAccountManagementPolicyAction
+        -SnapshotAction <String>
+        -DaysAfterCreationGreaterThan <Int32>
+        [-DaysAfterLastTierChangeGreaterThan <Int32>]
+        [-InputObject <PSManagementPolicyActionGroup>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Snapshot
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzStorageAccountManagementPolicyAction
+        -BlobVersionAction <String>
+        -DaysAfterCreationGreaterThan <Int32>
+        [-DaysAfterLastTierChangeGreaterThan <Int32>]
+        [-InputObject <PSManagementPolicyActionGroup>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BlobVersion
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyActionGroup" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyActionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates a ManagementPolicy Action Group object with 4 actions, then add it to a management policy rule and set to a Storage account'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -DaysAfterCreationGreaterThan 100
+    $action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToArchive -daysAfterModificationGreaterThan 50  -DaysAfterLastTierChangeGreaterThan 40 -InputObject $action
+    $action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToCool -DaysAfterLastAccessTimeGreaterThan 30  -EnableAutoTierToHotFromCool -InputObject $action
+    $action = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction TierToHot -DaysAfterCreationGreaterThan 100 -InputObject $action
+    $action = Add-AzStorageAccountManagementPolicyAction -SnapshotAction Delete -daysAfterCreationGreaterThan 100 -InputObject $action
+    $action
+
+    BaseBlob.TierToCool.DaysAfterModificationGreaterThan      :
+    BaseBlob.TierToCool.DaysAfterLastAccessTimeGreaterThan    : 30
+    BaseBlob.TierToCool.DaysAfterCreationGreaterThan          :
+    BaseBlob.EnableAutoTierToHotFromCool                      : True
+    BaseBlob.TierToArchive.DaysAfterModificationGreaterThan   : 50
+    BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan :
+    BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       :
+    BaseBlob.TierToArchive.DaysAfterLastTierChangeGreaterThan : 40
+    BaseBlob.Delete.DaysAfterModificationGreaterThan          :
+    BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        :
+    BaseBlob.Delete.DaysAfterCreationGreaterThan              : 100
+    BaseBlob.TierToCold.DaysAfterModificationGreaterThan      :
+    BaseBlob.TierToCold.DaysAfterLastAccessTimeGreaterThan    :
+    BaseBlob.TierToCold.DaysAfterCreationGreaterThan          :
+    BaseBlob.TierToHot.DaysAfterModificationGreaterThan       :
+    BaseBlob.TierToHot.DaysAfterLastAccessTimeGreaterThan     :
+    BaseBlob.TierToHot.DaysAfterCreationGreaterThan           : 100
+    Snapshot.TierToCool.DaysAfterCreationGreaterThan          :
+    Snapshot.TierToArchive.DaysAfterCreationGreaterThan       :
+    Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan :
+    Snapshot.Delete.DaysAfterCreationGreaterThan              : 100
+    Snapshot.TierToCold.DaysAfterCreationGreaterThan          :
+    Snapshot.TierToHot.DaysAfterCreationGreaterThan           :
+    Version.TierToCool.DaysAfterCreationGreaterThan           :
+    Version.TierToArchive.DaysAfterCreationGreaterThan        :
+    Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  :
+    Version.Delete.DaysAfterCreationGreaterThan               :
+    Version.TierToCold.DaysAfterCreationGreaterThan           :
+    Version.TierToHot.DaysAfterCreationGreaterThan            :
+
+    $filter = New-AzStorageAccountManagementPolicyFilter
+    $rule = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action -Filter $filter
+    $policy = Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule
+    ```
+
+    The first command create a ManagementPolicy Action Group object, the following 3 commands add 3 actions to the object. Then add it to a management policy rule and set to a Storage account.
+- title: 'Example 2: Creates a ManagementPolicy Action Group object with 7 actions on snapshot and blob version, then add it to a management policy rule and set to a Storage account'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $action = Add-AzStorageAccountManagementPolicyAction  -SnapshotAction Delete -daysAfterCreationGreaterThan 40
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -SnapshotAction TierToArchive -daysAfterCreationGreaterThan 50
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -SnapshotAction TierToCool -daysAfterCreationGreaterThan 60
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -BlobVersionAction Delete -daysAfterCreationGreaterThan 70
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -BlobVersionAction TierToArchive -daysAfterCreationGreaterThan 80
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -BlobVersionAction TierToCool -daysAfterCreationGreaterThan 90
+    $action = Add-AzStorageAccountManagementPolicyAction -InputObject $action -BlobVersionAction TierToCold -daysAfterCreationGreaterThan 100
+    $action
+
+    BaseBlob.TierToCool.DaysAfterModificationGreaterThan      :
+    BaseBlob.TierToCool.DaysAfterLastAccessTimeGreaterThan    :
+    BaseBlob.TierToCool.DaysAfterCreationGreaterThan          :
+    BaseBlob.EnableAutoTierToHotFromCool                      :
+    BaseBlob.TierToArchive.DaysAfterModificationGreaterThan   :
+    BaseBlob.TierToArchive.DaysAfterLastAccessTimeGreaterThan :
+    BaseBlob.TierToArchive.DaysAfterCreationGreaterThan       :
+    BaseBlob.TierToArchive.DaysAfterLastTierChangeGreaterThan :
+    BaseBlob.Delete.DaysAfterModificationGreaterThan          :
+    BaseBlob.Delete.DaysAfterLastAccessTimeGreaterThan        :
+    BaseBlob.Delete.DaysAfterCreationGreaterThan              :
+    BaseBlob.TierToCold.DaysAfterModificationGreaterThan      :
+    BaseBlob.TierToCold.DaysAfterLastAccessTimeGreaterThan    :
+    BaseBlob.TierToCold.DaysAfterCreationGreaterThan          :
+    BaseBlob.TierToHot.DaysAfterModificationGreaterThan       :
+    BaseBlob.TierToHot.DaysAfterLastAccessTimeGreaterThan     :
+    BaseBlob.TierToHot.DaysAfterCreationGreaterThan           :
+    Snapshot.TierToCool.DaysAfterCreationGreaterThan          : 60
+    Snapshot.TierToArchive.DaysAfterCreationGreaterThan       : 50
+    Snapshot.TierToArchive.DaysAfterLastTierChangeGreaterThan :
+    Snapshot.Delete.DaysAfterCreationGreaterThan              : 40
+    Snapshot.TierToCold.DaysAfterCreationGreaterThan          :
+    Snapshot.TierToHot.DaysAfterCreationGreaterThan           :
+    Version.TierToCool.DaysAfterCreationGreaterThan           : 90
+    Version.TierToArchive.DaysAfterCreationGreaterThan        : 80
+    Version.TierToArchive.DaysAfterLastTierChangeGreaterThan  :
+    Version.Delete.DaysAfterCreationGreaterThan               : 70
+    Version.TierToCold.DaysAfterCreationGreaterThan           : 100
+    Version.TierToHot.DaysAfterCreationGreaterThan            :
+
+    $filter = New-AzStorageAccountManagementPolicyFilter
+    $rule = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action -Filter $filter
+    $policy = Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule
+    ```
+
+    The first command create a ManagementPolicy Action Group object, the following 5 commands add 5 actions on snapshot and blob version to the object. Then add it to a management policy rule and set to a Storage account.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Add-AzStorageAccountManagementPolicyAction.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.storage/add-Azstorageaccountmanagementpolicyaction
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Add-AzStorageAccountManagementPolicyAction.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.WindowsIotServices
+name: Az.WindowsIotServices Module
+isPreview: false
+cmdletGroups:
+- title: WindowsIotServices
+  cmdlets:
+  - Az.WindowsIotServices.Get-AzWindowsIotServicesDevice
+  - Az.WindowsIotServices.New-AzWindowsIotServicesDevice
+  - Az.WindowsIotServices.Remove-AzWindowsIotServicesDevice
+  - Az.WindowsIotServices.Update-AzWindowsIotServicesDevice
+description: |-
+  Microsoft Azure PowerShell: WindowsIotServices cmdlets
+metadata:
+  Module Name: Az.WindowsIotServices
+  Module Guid: d5c7f2ce-fe23-49d5-a869-fb780e78a663
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.windowsiotservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/WindowsIotServices/help/Az.WindowsIotServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/WindowsIotServices/help/Az.WindowsIotServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

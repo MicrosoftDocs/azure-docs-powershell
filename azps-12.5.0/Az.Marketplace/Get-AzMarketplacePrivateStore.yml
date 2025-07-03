@@ -1,0 +1,73 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Marketplace.Get-AzMarketplacePrivateStore
+name: Get-AzMarketplacePrivateStore
+module: Az.Marketplace
+isPreview: false
+summary: |-
+  Get private store list
+description: |-
+  Get private store list that were created under tenant scope
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMarketplacePrivateStore
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Marketplace.Models.PrivateStore.PSPrivateStore" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzMarketplacePrivateStore
+    ```
+
+    ```output
+    Availability   : enabled
+    PrivateStoreId : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    ETag           : "47006253-0000-0100-0000-5ecb6df90000"
+    Id             : /providers/Microsoft.Marketplace/privateStores/7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    Name           : 7gh67884-1r56-44fb-a93d-030d4ae08b2d
+    Type           : Microsoft.Marketplace/privateStores
+    ```
+
+    private store list that were created under tenant scope
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Get-AzMarketplacePrivateStore.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Marketplace.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.marketplace/get-azmarketplaceprivatestore
+  Module Name: Az.Marketplace
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Get-AzMarketplacePrivateStore.md
+  PlatyPS schema version: 2024-05-01

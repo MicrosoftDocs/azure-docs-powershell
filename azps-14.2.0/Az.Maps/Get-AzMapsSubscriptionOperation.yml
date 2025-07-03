@@ -1,0 +1,121 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Maps.Get-AzMapsSubscriptionOperation
+name: Get-AzMapsSubscriptionOperation
+module: Az.Maps
+isPreview: false
+summary: |-
+  List operations available for the Maps Resource Provider
+description: |-
+  List operations available for the Maps Resource Provider
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMapsSubscriptionOperation
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IOperationDetail" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List operations available for the Maps Resource Provider'
+  description: |-
+    ```powershell
+    Get-AzMapsSubscriptionOperation
+    ```
+
+    ```output
+    IsDataAction Name                                                                          Origin
+    ------------ ----                                                                          ------
+                 Microsoft.Maps/resourceTypes/read
+                 Microsoft.Maps/unregister/action
+                 Microsoft.Maps/operations/read
+                 Microsoft.Maps/register/action
+                 Microsoft.Maps/accounts/write
+                 Microsoft.Maps/accounts/read
+                 Microsoft.Maps/accounts/delete
+                 Microsoft.Maps/accounts/listKeys/action
+                 Microsoft.Maps/accounts/regenerateKey/action
+                 Microsoft.Maps/accounts/eventGridFilters/delete
+                 Microsoft.Maps/accounts/eventGridFilters/read
+                 Microsoft.Maps/accounts/eventGridFilters/write
+                 Microsoft.Maps/accounts/providers/Microsoft.Insights/metricDefinitions/read   system
+                 Microsoft.Maps/accounts/providers/Microsoft.Insights/diagnosticSettings/read  system
+                 Microsoft.Maps/accounts/providers/Microsoft.Insights/diagnosticSettings/write system
+    True         Microsoft.Maps/accounts/services/render/read
+    True         Microsoft.Maps/accounts/services/geolocation/read
+    True         Microsoft.Maps/accounts/services/mobility/read
+    True         Microsoft.Maps/accounts/services/route/read
+    True         Microsoft.Maps/accounts/services/search/read
+    True         Microsoft.Maps/accounts/services/timezone/read
+    True         Microsoft.Maps/accounts/services/traffic/read
+    True         Microsoft.Maps/accounts/services/weather/read
+    True         Microsoft.Maps/accounts/services/data/read
+    True         Microsoft.Maps/accounts/services/data/delete
+    True         Microsoft.Maps/accounts/services/data/write
+    True         Microsoft.Maps/accounts/services/spatial/read
+    True         Microsoft.Maps/accounts/services/spatial/write
+    True         Microsoft.Maps/accounts/services/turnbyturn/read
+    True         Microsoft.Maps/accounts/services/elevation/read
+    True         Microsoft.Maps/accounts/services/dataordering/read
+    True         Microsoft.Maps/accounts/services/dataordering/write
+    True         Microsoft.Maps/accounts/services/analytics/read
+    True         Microsoft.Maps/accounts/services/analytics/delete
+    True         Microsoft.Maps/accounts/services/analytics/write
+                 Microsoft.Maps/accounts/creators/write
+                 Microsoft.Maps/accounts/creators/read
+                 Microsoft.Maps/accounts/creators/delete
+    ```
+
+    This command lists operations available for the Maps Resource Provider.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Get-AzMapsSubscriptionOperation.md
+  document type: cmdlet
+  external help file: Az.Maps-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.maps/get-azmapssubscriptionoperation
+  Module Name: Az.Maps
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Get-AzMapsSubscriptionOperation.md
+  PlatyPS schema version: 2024-05-01

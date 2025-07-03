@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.New-AzCosmosDBDatabaseToRestore
+name: New-AzCosmosDBDatabaseToRestore
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Creates a new CosmosDB Database to Restore object(PSDatabaseToRestore)
+description: |-
+  Creates a new CosmosDB DatabaseToRestore object(PSDatabaseToRestore). This returned object can be used to specify the subset of databases and collections to restore.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The names of the collections to be restored.
+      (If not provided, all the collections will be restored)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the database to restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCosmosDBDatabaseToRestore
+        -DatabaseName <String>
+        [-CollectionName <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSDatabaseToRestore" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzCosmosDBDatabaseToRestore -DatabaseName database1 -CollectionName collection1,collection2,collection3
+    ```
+
+    ```output
+    DatabaseName CollectionNames
+    ------------ ---------------
+    database1    {collection1, collection2, collection3}
+    ```
+
+    Creates a new DatabaseToRestore object with the name database1 and collections with names collection1, collection2 and collection3.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBDatabaseToRestore.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/new-azcosmosdbdatabasetorestore
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBDatabaseToRestore.md
+  PlatyPS schema version: 2024-05-01

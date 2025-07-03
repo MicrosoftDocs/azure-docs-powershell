@@ -1,0 +1,98 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Aks.Stop-AzAksDashboard
+name: Stop-AzAksDashboard
+module: Az.Aks
+isPreview: false
+summary: |-
+  Stop the Kubectl SSH tunnel created in Start-AzKubernetesDashboard.
+description: |-
+  Stop the Kubectl SSH tunnel created in Start-AzKubernetesDashboard.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true if SSH tunnel is closed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the subscription.
+      By default, cmdlets are executed in the subscription that is set in the current context. If the user specifies another subscription, the current cmdlet is executed in the subscription specified by the user.
+      Overriding subscriptions only take effect during the lifecycle of the current cmdlet. It does not change the subscription in the context, and does not affect subsequent cmdlets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzAksDashboard
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Stop-AzAksDashboard
+    ```
+
+    Stops the existing SSH tunnel setup by executing Start-AzKubernetesDashboard.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Stop-AzAksDashboard.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Aks.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.aks/stop-azaksdashboard
+  Module Name: Az.Aks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Stop-AzAksDashboard.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecurityCompliance
+name: Get-AzSecurityCompliance
+module: Az.Security
+isPreview: false
+summary: |-
+  Get the security compliance of a subscription over time
+description: |-
+  Gets the security compliance of a subscription based on the current healthy and non secured resources ratio on this subscription.
+  The security compliance is calculated every day and the history is saved.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityCompliance
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityCompliance
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionLevelResource
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityCompliance
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityCompliance" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSecurityCompliance
+    ```
+
+    ```output
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-20Z
+    Name                       : 2018-08-20Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 20/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-19Z
+    Name                       : 2018-08-19Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 19/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-18Z
+    Name                       : 2018-08-18Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 18/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-17Z
+    Name                       : 2018-08-17Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 17/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-16Z
+    Name                       : 2018-08-16Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 16/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-15Z
+    Name                       : 2018-08-15Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 15/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-14Z
+    Name                       : 2018-08-14Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 14/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-13Z
+    Name                       : 2018-08-13Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 13/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-12Z
+    Name                       : 2018-08-12Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 12/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-11Z
+    Name                       : 2018-08-11Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 11/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-10Z
+    Name                       : 2018-08-10Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 10/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-09Z
+    Name                       : 2018-08-09Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 09/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-08Z
+    Name                       : 2018-08-08Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 08/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-07Z
+    Name                       : 2018-08-07Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 07/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+    ```
+
+    Gets the security compliance of a subscription for the last 14 days
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzSecurityCompliance -Name "2018-08-20Z"
+    ```
+
+    ```output
+    Id                         : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/providers/Microsoft.Security/compliances/2018-08-20Z
+    Name                       : 2018-08-20Z
+    ResourceCount              : 18
+    AssessmentTimestampUtcDate : 20/08/2018 00:00:00
+    AssessmentResult           : {Microsoft.Azure.Commands.Security.Models.Compliances.PSSecurityComplianceSegment}
+    ```
+
+    Gets the security compliance of a subscription on a specific date
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityCompliance.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzSecurityCompliance
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityCompliance.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,671 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApplicationInsights.New-AzApplicationInsightsWebTest
+name: New-AzApplicationInsightsWebTest
+module: Az.ApplicationInsights
+isPreview: false
+summary: |-
+  Creates or updates an Application Insights web test definition.
+description: |-
+  Creates or updates an Application Insights web test definition.
+parameters:
+  cmdletParameters:
+  - name: Configuration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The XML specification of a WebTest to run against an application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateClassic
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentIgnoreCase
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, this value makes the ContentMatch validation case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Content to look for in the return of the WebTest.
+      Must not be null or empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentPassIfTextFound
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When true, validation will pass if there is a match for the ContentMatch string.
+      If false, validation will fail if there is a match
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User defined description for this WebTest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Is the test actively being monitored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Frequency
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Interval in seconds between test runs for this WebTest.
+      Default value is 300.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GeoLocation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.IWebTestGeolocation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of where to physically run the tests from to give global coverage for accessibility of your application.
+      To construct, see NOTES section for GEOLOCATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Support.WebTestKindEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      The kind of web test this is, valid choices are ping, multistep, and standard.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Application Insights WebTest resource.
+    aliases:
+    - WebTestName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestBody
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Base64 encoded string body to send with this web test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestFollowRedirect
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Follow redirects for this web test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestHeader
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.IHeaderField" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of headers and their values to add to the WebTest call.
+      To construct, see NOTES section for REQUESTHEADER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestHttpVerb
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Http verb to use for this web test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestParseDependent
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Parse Dependent request for this WebTest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Url location to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allow for retries should this WebTest fail.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleExpectedHttpStatusCode
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Validate that the WebTest returns the http status code provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleIgnoreHttpsStatusCode
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, validation will ignore the status code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleSslCertRemainingLifetimeCheck
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      A number of days to check still remain before the the existing SSL cert expires.
+      Value must be positive and the SSLCheck must be set to true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleSslCheck
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Checks to see if the SSL cert is still valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateStandard
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User defined name if this WebTest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Timeout
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Seconds until this WebTest will timeout and fail.
+      Default value is 30.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationInsightsWebTest
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-ContentIgnoreCase]
+        [-ContentMatch <String>]
+        [-ContentPassIfTextFound]
+        [-Description <String>]
+        [-Enabled]
+        [-Frequency <Int32>]
+        [-GeoLocation <IWebTestGeolocation[]>]
+        [-Kind <WebTestKindEnum>]
+        [-RequestBody <String>]
+        [-RequestFollowRedirect]
+        [-RequestHeader <IHeaderField[]>]
+        [-RequestHttpVerb <String>]
+        [-RequestParseDependent]
+        [-RequestUrl <String>]
+        [-RetryEnabled]
+        [-RuleExpectedHttpStatusCode <Int32>]
+        [-RuleIgnoreHttpsStatusCode]
+        [-RuleSslCertRemainingLifetimeCheck <Int32>]
+        [-RuleSslCheck]
+        [-Tag <Hashtable>]
+        [-TestName <String>]
+        [-Timeout <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateStandard
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzApplicationInsightsWebTest
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-ContentMatch <String>]
+        [-Description <String>]
+        [-Enabled]
+        [-Frequency <Int32>]
+        [-GeoLocation <IWebTestGeolocation[]>]
+        [-Kind <WebTestKindEnum>]
+        [-RequestParseDependent]
+        [-RequestUrl <String>]
+        [-RetryEnabled]
+        [-RuleExpectedHttpStatusCode <Int32>]
+        [-Tag <Hashtable>]
+        [-TestName <String>]
+        [-Timeout <Int32>]
+        [-Configuration <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateClassic
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.IWebTest" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates or updates a standard kind of the Application Insights web test'
+  description: |-
+    ```powershell
+    $geoLocation = @()
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "emea-nl-ams-azr"
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "us-ca-sjc-azr"
+    New-AzApplicationInsightsWebTest -ResourceGroupName azpwsh-rg-test -Name standard-pwsh01 -Location 'westus2' `
+    -Tag @{"hidden-link:/subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/azpwsh-rg-test/providers/microsoft.insights/components/appinsights-portal01" = "Resource"} `
+    -RequestUrl "https://www.bing.com" -RequestHttpVerb "GET" -TestName 'standard-pwsh01' `
+    -RuleExpectedHttpStatusCode 200 -Frequency 300 -Enabled -Timeout 120 -Kind 'standard' -RetryEnabled -GeoLocation $geoLocation
+    ```
+
+    ```output
+    Name            Location WebTestKind ResourceGroupName  Enabled
+    ----            -------- ----------- -----------------  -------
+    standard-pwsh01 westus2  standard    azpwsh-rg-test     True
+    ```
+
+    This command creates or updates an standard kind of the Application Insights web test.
+
+    We enter hidden-link in the `Tag` parameter to associate WebTest and Application Insights.
+- title: 'Example 2: Creates or updates a standard kind of the Application Insights web test in disabled state'
+  description: |-
+    ```powershell
+    $geoLocation = @()
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "emea-nl-ams-azr"
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "us-ca-sjc-azr"
+    New-AzApplicationInsightsWebTest -ResourceGroupName azpwsh-rg-test -Name standard-pwsh01 -Location 'westus2' `
+    -Tag @{"hidden-link:/subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/azpwsh-rg-test/providers/microsoft.insights/components/appinsights-portal01" = "Resource"} `
+    -RequestUrl "https://www.bing.com" -RequestHttpVerb "GET" -TestName 'standard-pwsh01' `
+    -RuleExpectedHttpStatusCode 200 -Frequency 300 -Enabled:$false -Timeout 120 -Kind 'standard' -RetryEnabled -GeoLocation $geoLocation
+    ```
+
+    ```output
+    Name            Location WebTestKind ResourceGroupName  Enabled
+    ----            -------- ----------- -----------------  -------
+    standard-pwsh01 westus2  standard    azpwsh-rg-test     False
+    ```
+
+    This command creates or updates a standard kind of the Application Insights web test in disabled state.
+
+    The switch parameter "-Enabled" must be set explicitly to $false to disable the test.
+- title: 'Example 3: Creates a standard kind of the Application Insights web test with a custom header'
+  description: |-
+    ```powershell
+    $headerField = New-AzApplicationInsightsWebTestHeaderFieldObject -Name "HeaderName1" -Value "HeaderValue1"
+    New-AzApplicationInsightsWebTest -ResourceGroupName exampleRG -Name expwshelltestheader2 -Location 'westus2' -Tag @{"hidden-link:<RESOURCE URL>" = "Resource"} -RequestUrl "https://www.bing.com" -RequestHttpVerb "GET" -TestName 'expwshelltestheader2' -RuleExpectedHttpStatusCode 200 -Frequency 300 -Enabled -Timeout 120 -Kind 'standard' -RetryEnabled -GeoLocation $geoLocation -RequestHeader $headerField
+    ```
+
+
+    ```output
+    Name            	Location 	WebTestKind 	ResourceGroupName  	Enabled
+    ----            	-------- 	----------- 	-----------------  	-------
+    expwshellheader2 	westus2  	standard    	exampleRG		    True
+    ```
+
+    This command creates a standard kind of the Application Insights web test with a custom header
+- title: 'Example 4: Creates or updates a ping kind of the Application Insights web test'
+  description: |-
+    ```powershell
+    $geoLocation = @()
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "emea-nl-ams-azr"
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "us-ca-sjc-azr"
+    New-AzApplicationInsightsWebTest -ResourceGroupName azpwsh-rg-test -Name 'pingwebtest-pwsh01' -TestName 'pingwentest-pwsh01testname' -Location 'westus2' `
+    -Tag @{"hidden-link:/subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/azpwsh-rg-test/providers/microsoft.insights/components/appinsights-portal01" = "Resource"} `
+    -GeoLocation $geoLocation -RetryEnabled -Enabled -Frequency 300 -Timeout 90 `
+    -Kind 'ping' -RequestUrl 'https://cn.bing.com' -RequestParseDependent -RuleExpectedHttpStatusCode 200 `
+    -ContentMatch "status"
+    ```
+
+    ```output
+    Name               Location WebTestKind ResourceGroupName   Enabled
+    ----               -------- ----------- -----------------   -------
+    pingwebtest-pwsh01 westus2  ping        azpwsh-rg-test      True
+    ```
+
+    This command creates or updates an ping kind of the Application Insights web test.
+- title: 'Example 5: Creates or updates a ping kind of the Application Insights web test with custom configuration'
+  description: |-
+    ```powershell
+    $geoLocation = @()
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "emea-nl-ams-azr"
+    $geoLocation += New-AzApplicationInsightsWebTestGeolocationObject -Location "us-ca-sjc-azr"
+    New-AzApplicationInsightsWebTest -ResourceGroupName azpwsh-rg-test -Name 'pingwebtest-pwsh01' -TestName 'pingwentest-pwsh01testname' -Location 'westus2' `
+    -Tag @{"hidden-link:/subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/azpwsh-rg-test/providers/microsoft.insights/components/appinsights-portal01" = "Resource"} `
+    -GeoLocation $geoLocation -RetryEnabled -Enabled -Frequency 300 -Timeout 90 `
+    -Kind 'ping' `
+    -Configuration "<WebTest  Name=`"basic-portal03`"  Id=`"9407db10-5d84-487f-98a3-a1ee67bb98f0`"  Enabled=`"True`"  CssProjectStructure=`"`"  CssIteration=`"`"  Timeout=`"90`"  WorkItemIds=`"`"  xmlns=`"http://microsoft.com/schemas/VisualStudio/TeamTest/2010`"  Description=`"`"  CredentialUserName=`"`"  CredentialPassword=`"`"  PreAuthenticate=`"True`"  Proxy=`"default`"  StopOnError=`"False`"  RecordedResultFile=`"`"  ResultsLocale=`"`">
+        <Items>
+            <Request Method=`"GET`"  Guid=`"a2025e53-0702-d03e-f311-5774ec16893d`"  Version=`"1.1`"  Url=`"https://www.bing.com`"  ThinkTime=`"0`"  Timeout=`"90`"  ParseDependentRequests=`"True`"  FollowRedirects=`"True`"  RecordResult=`"True`"  Cache=`"False`"  ResponseTimeGoal=`"0`"  Encoding=`"utf-8`"  ExpectedHttpStatusCode=`"200`"  ExpectedResponseUrl=`"`"  ReportingName=`"`"  IgnoreHttpStatusCode=`"False`" />
+        </Items>
+        <ValidationRules>
+            <ValidationRule  Classname=`"Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleFindText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`"  DisplayName=`"Find Text`"  Description=`"Verifies the existence of the specified text in the response.`"  Level=`"High`"  ExecutionOrder=`"BeforeDependents`">
+                <RuleParameters>
+                <RuleParameter Name=`"FindText`" Value=`"test&#x20;content&#x20;match`" />
+                <RuleParameter Name=`"IgnoreCase`" Value=`"False`" />
+                <RuleParameter Name=`"UseRegularExpression`" Value=`"False`" />
+                <RuleParameter Name=`"PassIfTextFound`" Value=`"True`" />
+                </RuleParameters>
+            </ValidationRule>
+        </ValidationRules>
+    </WebTest>"
+    ```
+
+    ```output
+    Name               Location WebTestKind ResourceGroupName   Enabled
+    ----               -------- ----------- -----------------   -------
+    pingwebtest-pwsh01 westus2  ping        azpwsh-rg-test      True
+    ```
+
+    This command creates or updates an ping kind of the Application Insights web test with custom configuration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTest.md
+  document type: cmdlet
+  external help file: Az.ApplicationInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.applicationinsights/new-azapplicationinsightswebtest
+  Module Name: Az.ApplicationInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTest.md
+  PlatyPS schema version: 2024-05-01

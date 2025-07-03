@@ -1,0 +1,157 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Add-AzHDInsightStorage
+name: Add-AzHDInsightStorage
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Adds an Azure Storage key to a cluster configuration object.
+description: |-
+  The **Add-AzHDInsightStorage** cmdlet adds an Azure Storage account entry to the Azure HDInsight configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Config
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+      This object is created by the **New-AzHDInsightClusterConfig** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account key for the storage account to be added to the new cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account name for the storage account to be added to the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzHDInsightStorage
+        [-Config] <AzureHDInsightConfig>
+        [-StorageAccountName] <String>
+        [-StorageAccountKey] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an Azure storage key to the cluster configuration object'
+  description: |-
+    ```powershell
+    # Primary storage account info
+    $storageAccountResourceGroupName = "Group"
+    $storageAccountResourceId = "yourstorageaccountresourceid"
+    $storageAccountName = "yourstorageacct001"
+    $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+
+    $storageContainer = "container001"
+
+    # Cluster configuration info
+    $location = "East US 2"
+    $clusterResourceGroupName = "Group"
+    $clusterName = "your-hadoop-001"
+    $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Second storage account info
+    $secondStorageAccountResourceGroupName = "Group"
+    $secondStorageAccountName = "yourstorageacct002"
+    $secondStorageAccountKey = Get-AzStorageAccountKey `
+    -ResourceGroupName $secondStorageAccountResourceGroupName `
+                -Name $secondStorageAccountName | ForEach-Object{ $_.Key1 }
+
+    # Create the cluster
+    New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightStorage `
+                    -StorageAccountName "$secondStorageAccountName.blob.core.contoso.net" `
+                    -StorageAccountKey $key2 `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -StorageAccountResourceId $storageAccountResourceId `
+                    -StorageAccountKey $storageAccountKey `
+                    -StorageContainer $storageContainer
+    ```
+
+    This command adds an blob storage account entry to the HDInsight configuration named your-hadoop-001.
+links:
+- text: New-AzHDInsightClusterConfig
+  href: ./New-AzHDInsightClusterConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightStorage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightstorage
+  Module Name: Az.HDInsight
+  ms.assetid: 2C2AF43D-18BF-4036-A355-FC27E406B18A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightStorage.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject
+name: New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for ServiceBusTopicEventSubscriptionDestination.
+description: |-
+  Create an in-memory object for ServiceBusTopicEventSubscriptionDestination.
+parameters:
+  cmdletParameters:
+  - name: DeliveryAttributeMapping
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IDeliveryAttributeMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Delivery attribute details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Resource Id that represents the endpoint of the Service Bus Topic destination of an event subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject
+
+        [-DeliveryAttributeMapping <IDeliveryAttributeMapping[]>]
+        [-ResourceId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.ServiceBusTopicEventSubscriptionDestination" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ServiceBusTopicEventSubscriptionDestination.'
+  description: |-
+    ```powershell
+    $damObj = New-AzEventGridDeliveryAttributeMappingObject -Type "TestType" -Name "TestName"
+    $eventSubObj = Get-AzEventGridSubscription -ResourceGroupName azps_test_group_eventgrid -DomainName azps-domain -TopicName azps-topic
+    New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject -DeliveryAttributeMapping $damObj -ResourceId $eventSubObj.Id
+    ```
+
+    ```output
+    EndpointType
+    ------------
+    ServiceBusTopic
+    ```
+
+    Create an in-memory object for ServiceBusTopicEventSubscriptionDestination.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridservicebustopiceventsubscriptiondestinationobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridServiceBusTopicEventSubscriptionDestinationObject.md
+  PlatyPS schema version: 2024-05-01

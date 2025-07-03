@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.Confluent
+name: Az.Confluent Module
+isPreview: false
+cmdletGroups:
+- title: Confluent
+  cmdlets:
+  - Az.Confluent.Get-AzConfluentMarketplaceAgreement
+  - Az.Confluent.Get-AzConfluentOrganization
+  - Az.Confluent.New-AzConfluentOrganization
+  - Az.Confluent.Remove-AzConfluentOrganization
+  - Az.Confluent.Update-AzConfluentOrganization
+description: |-
+  Microsoft Azure PowerShell: Confluent cmdlets
+metadata:
+  Module Name: Az.Confluent
+  Module Guid: 957f617c-6cbe-4ea3-b46c-ab3ae8eddb3c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.confluent
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/Confluent/help/Az.Confluent.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/Confluent/help/Az.Confluent.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridDynamicRoutingEnrichmentObject
+name: New-AzEventGridDynamicRoutingEnrichmentObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for DynamicRoutingEnrichment.
+description: |-
+  Create an in-memory object for DynamicRoutingEnrichment.
+parameters:
+  cmdletParameters:
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dynamic routing enrichment key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dynamic routing enrichment value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridDynamicRoutingEnrichmentObject
+        [-Key <String>]
+        [-Value <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.DynamicRoutingEnrichment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DynamicRoutingEnrichment.'
+  description: |-
+    ```powershell
+    New-AzEventGridDynamicRoutingEnrichmentObject -Key key1 -Value value1
+    ```
+
+    ```output
+    Key  Value
+    ---  -----
+    key1 value1
+    ```
+
+    Create an in-memory object for DynamicRoutingEnrichment.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridDynamicRoutingEnrichmentObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgriddynamicroutingenrichmentobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridDynamicRoutingEnrichmentObject.md
+  PlatyPS schema version: 2024-05-01

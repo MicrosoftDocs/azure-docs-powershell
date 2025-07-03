@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementNamedValue
+name: Get-AzApiManagementNamedValue
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets a list or a particular Named Value.
+description: |-
+  The **Get-AzApiManagementNamedValue** cmdlet gets a list or a particular named value.
+  Value will not be included into result details if the named value marked as a secret. To get secret value, use **Get-AzApiManagementNamedValueSecretValue**.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Finds named values with names containing the string Name.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamedValueId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of the named value.
+      If specified will try to find named value by the identifier.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNamedValueId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Finds named values associated with a Tag.
+      If specified will return all properties associated with a tag.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByTag
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNamedValue
+        -Context <PsApiManagementContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllNamedValues
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNamedValue
+        -Context <PsApiManagementContext>
+        [-NamedValueId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByNamedValueId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNamedValue
+        -Context <PsApiManagementContext>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNamedValue
+        -Context <PsApiManagementContext>
+        [-Tag <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByTag
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementNamedValue" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Named Value by name'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementNamedValue -Context $apimContext -Name "sql-connectionstring"
+    ```
+
+    This command gets the named value details given the named value name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNamedValue.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementnamedvalue
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNamedValue.md
+  PlatyPS schema version: 2024-05-01

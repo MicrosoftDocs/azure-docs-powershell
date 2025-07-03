@@ -1,0 +1,120 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotHub.Get-AzIotHubConnectionString
+name: Get-AzIotHubConnectionString
+module: Az.IotHub
+isPreview: false
+summary: |-
+  Gets the IotHub connectionstrings.
+description: |-
+  Gets the IotHub connectionstrings.
+  You can either get connectionstrings for all the keys or filter them by a specific key name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the IotHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIotHubConnectionString
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [[-KeyName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSSharedAccessSignatureAuthorizationRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get All IotHub connectionstrings
+  description: |-
+    ```powershell
+    Get-AzIotHubConnectionString -ResourceGroupName "myresourcegroup" -Name "myiothub"
+    ```
+
+    Gets the connectionstrings for all keys for the iothub named "myiothub"
+- title: Example 2 Get the IotHub connectionstrings for a specific key
+  description: |-
+    ```powershell
+    Get-AzIotHubConnectionString -ResourceGroupName "myresourcegroup" -Name "myiothub" -KeyName "mykey"
+    ```
+
+    Gets the connectionstrings for the key named "mykey" for the iothub named "myiothub"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubConnectionString.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubconnectionstring
+  Module Name: Az.IotHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubConnectionString.md
+  PlatyPS schema version: 2024-05-01

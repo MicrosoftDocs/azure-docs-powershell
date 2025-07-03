@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridWebHookEventSubscriptionDestinationObject
+name: New-AzEventGridWebHookEventSubscriptionDestinationObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for WebHookEventSubscriptionDestination.
+description: |-
+  Create an in-memory object for WebHookEventSubscriptionDestination.
+parameters:
+  cmdletParameters:
+  - name: AzureActiveDirectoryApplicationIdOrUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Active Directory Tenant ID to get the access token that will be included as the bearer token in delivery requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryAttributeMapping
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IDeliveryAttributeMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Delivery attribute details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndpointUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL that represents the endpoint of the destination of an event subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxEventsPerBatch
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of events per batch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumTlsVersionAllowed
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum TLS version that should be supported by webhook endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredBatchSizeInKilobyte
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred batch size in Kilobytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridWebHookEventSubscriptionDestinationObject
+        [-AzureActiveDirectoryApplicationIdOrUri <String>]
+        [-AzureActiveDirectoryTenantId <String>]
+        [-DeliveryAttributeMapping <IDeliveryAttributeMapping[]>]
+        [-EndpointUrl <String>]
+        [-MaxEventsPerBatch <Int32>]
+        [-MinimumTlsVersionAllowed <String>]
+        [-PreferredBatchSizeInKilobyte <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.WebHookEventSubscriptionDestination" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for WebHookEventSubscriptionDestination.'
+  description: |-
+    ```powershell
+    New-AzEventGridWebHookEventSubscriptionDestinationObject -EndpointUrl "https://azpsweb.azurewebsites.net/api/updates"
+    ```
+
+    ```output
+    EndpointType
+    ------------
+    WebHook
+    ```
+
+    Create an in-memory object for WebHookEventSubscriptionDestination.
+    A usable EndpointUrl can be created from this link: https://learn.microsoft.com/en-us/azure/event-grid/custom-event-quickstart-powershell
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridWebHookEventSubscriptionDestinationObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridwebhookeventsubscriptiondestinationobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridWebHookEventSubscriptionDestinationObject.md
+  PlatyPS schema version: 2024-05-01

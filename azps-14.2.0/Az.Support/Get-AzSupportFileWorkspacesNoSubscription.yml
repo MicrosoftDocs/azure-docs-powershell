@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.Get-AzSupportFileWorkspacesNoSubscription
+name: Get-AzSupportFileWorkspacesNoSubscription
+module: Az.Support
+isPreview: false
+summary: |-
+  Gets details for a specific file workspace.
+description: |-
+  Gets details for a specific file workspace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileWorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      File Workspace Name
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSupportFileWorkspacesNoSubscription
+        -FileWorkspaceName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSupportFileWorkspacesNoSubscription
+        -InputObject <ISupportIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.IFileWorkspaceDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a file workspace'
+  description: |-
+    ```powershell
+    Get-AzSupportFileWorkspacesNoSubscription -Name "testworkspace"
+    ```
+
+    ```output
+    CreatedOn                    : 2/8/2024 4:25:38 PM
+    ExpirationTime               : 2/9/2024 4:25:38 PM
+    Id                           : /providers/Microsoft.Support/fileWorkspaces/testworkspace
+    Name                         : testworkspace
+    ResourceGroupName            :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Support/fileWorkspaces
+    ```
+
+    Gets details for a specific file workspace.
+- title: 'Example 1: Get information about a file workspace for a support ticket'
+  description: |-
+    ```powershell
+    Get-AzSupportFileWorkspace -Name "2402084010005835"
+    ```
+
+    ```output
+    CreatedOn                    : 2/8/2024 3:51:36 PM
+    ExpirationTime               : 8/9/2024 3:51:36 PM
+    Id                           : /providers/Microsoft.Support/fileWorkspaces/2402084010005835
+    Name                         : 2402084010005835
+    ResourceGroupName            :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Support/fileWorkspaces
+    ```
+
+    Gets details for a specific file workspace under a support ticket.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportFileWorkspacesNoSubscription.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/get-azsupportfileworkspacesnosubscription
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportFileWorkspacesNoSubscription.md
+  PlatyPS schema version: 2024-05-01

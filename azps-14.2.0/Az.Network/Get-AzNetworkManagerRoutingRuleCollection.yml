@@ -1,0 +1,267 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerRoutingRuleCollection
+name: Get-AzNetworkManagerRoutingRuleCollection
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a routing rule collection in a network manager.
+description: |-
+  The **Get-AzNetworkManagerRoutingRuleCollection** cmdlet gets a routing rule collection in a network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkManager RoutingCollection Id
+    aliases:
+    - RoutingCollectionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager routing configuration name.
+    aliases:
+    - ConfigName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerRoutingRuleCollection
+        -RoutingConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByList
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerRoutingRuleCollection
+        -Name <String>
+        -RoutingConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerRoutingRuleCollection
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerRoutingRuleCollection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerRoutingRuleCollection  -Name "TestRC" -RoutingConfigurationName "TestRoutingConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name              : TestRC
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/routingConfigurations/TestRoutingConfig/ruleCollections/TestRC
+    Type              : Microsoft.Network/networkManagers/routingConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesTo         : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    DisableBgpRoutePropagation : "False"
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+    ```
+
+    Gets a rule collection within a routing configuration.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerRoutingRuleCollection  -RoutingConfigurationName "TestRoutingConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name              : TestRC
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/routingConfigurations/TestRoutingConfig/ruleCollections/TestRC
+    Type              : Microsoft.Network/networkManagers/routingConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesTo         : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    DisableBgpRoutePropagation : "False"
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+
+    Name              : TestRC2
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/routingConfigurations/TestRoutingConfig/ruleCollections/TestRC2
+    Type              : Microsoft.Network/networkManagers/routingConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesTo         : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+    ```
+
+    Gets all rule collections within a routing configuration.
+links:
+- text: New-AzNetworkManagerRoutingRuleCollection
+  href: ./New-AzNetworkManagerRoutingRuleCollection.yml
+- text: Remove-AzNetworkManagerRoutingRuleCollection
+  href: ./Remove-AzNetworkManagerRoutingRuleCollection.yml
+- text: Set-AzNetworkManagerRoutingRuleCollection
+  href: ./Set-AzNetworkManagerRoutingRuleCollection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerRoutingRuleCollection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagerroutingrulecollection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerRoutingRuleCollection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,337 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlInstanceTransparentDataEncryptionProtector
+name: Set-AzSqlInstanceTransparentDataEncryptionProtector
+module: Az.Sql
+isPreview: false
+summary: |-
+  Sets the Transparent Data Encryption (TDE) protector for a SQL managed instance.
+description: |-
+  The Set-AzSqlInstanceTransparentDataEncryptionProtector cmdlet sets the TDE protector for a SQL managed instance. Changing the TDE protector type will rotate the protector.
+parameters:
+  cmdletParameters:
+  - name: AutoRotationEnabled
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The key auto rotation opt-in status.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Instance
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance input object
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorInputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorDefaultParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance resource id
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Key Vault KeyId.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorDefaultParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.Commands.Sql.TransparentDataEncryption.Model.EncryptionProtectorType" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Sql Database Transparent Data Encryption Protector type.
+    acceptedValues:
+    - AzureKeyVault
+    - ServiceManaged
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceTransparentDataEncryptionProtector
+        [-Type] <EncryptionProtectorType>
+        [[-KeyId] <String>]
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-AutoRotationEnabled <Boolean>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorDefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceTransparentDataEncryptionProtector
+        [-Type] <EncryptionProtectorType>
+        [[-KeyId] <String>]
+        [-Instance] <AzureSqlManagedInstanceModel>
+        [-AutoRotationEnabled <Boolean>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceTransparentDataEncryptionProtector
+        [-Type] <EncryptionProtectorType>
+        [[-KeyId] <String>]
+        [-InstanceResourceId] <String>
+        [-AutoRotationEnabled <Boolean>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureSqlRmManagedInstanceTransparentDataEncryptionProtectorResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.TransparentDataEncryption.Model.AzureRmSqlManagedInstanceTransparentDataEncryptionProtectorModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the Transparent Data Encryption (TDE) protector type to ServiceManaged'
+  description: |-
+    ```powershell
+    Set-AzSqlInstanceTransparentDataEncryptionProtector -ResourceGroupName 'ContosoResourceGroup' -InstanceName 'ContosoManagedInstanceName' -Type ServiceManaged
+    ```
+
+    ```output
+    ResourceGroupName              : ContosoResourceGroup
+    ManagedInstanceName            : ContosoManagedInstanceName
+    Type                           : ServiceManaged
+    ManagedInstanceKeyVaultKeyName : ServiceManaged
+    KeyId                          :
+    ```
+
+    This command updates a managed instance's TDE protector type to Service Managed.
+- title: 'Example 2: Set the Transparent Data Encryption protector type to Azure Key Vault'
+  description: |-
+    ```powershell
+    Set-AzSqlInstanceTransparentDataEncryptionProtector -ResourceGroupName 'ContosoResourceGroup' -InstanceName 'ContosoManagedInstanceName' -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+    ```
+
+    ```output
+    ResourceGroupName              : ContosoResourceGroup
+    ManagedInstanceName            : ContosoManagedInstanceName
+    Type                           : AzureKeyVault
+    ManagedInstanceKeyVaultKeyName : contoso_contosokey_01234567890123456789012345678901
+    KeyId                          : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ```
+
+    This command updates the specified managed instance to use the Managed instance Key Vault Key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' as the TDE protector.
+- title: 'Example 3: Set the Transparent Data Encryption protector type to Azure Key Vault using managed instance object'
+  description: |-
+    ```powershell
+    $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    Set-AzSqlInstanceTransparentDataEncryptionProtector -Instance $managedInstance -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+    ```
+
+    ```output
+    ResourceGroupName              : ContosoResourceGroup
+    ManagedInstanceName            : ContosoManagedInstanceName
+    Type                           : AzureKeyVault
+    ManagedInstanceKeyVaultKeyName : contoso_contosokey_01234567890123456789012345678901
+    KeyId                          : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ```
+
+    This command updates the specified managed instance to use the Managed instance Key Vault Key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' as the TDE protector.
+- title: 'Example 4: Set the Transparent Data Encryption protector type to Azure Key Vault using resource id'
+  description: |-
+    ```powershell
+    $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    Set-AzSqlInstanceTransparentDataEncryptionProtector -InstanceResourceId $managedInstance.ResourceId -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+    ```
+
+    ```output
+    ResourceGroupName              : ContosoResourceGroup
+    ManagedInstanceName            : ContosoManagedInstanceName
+    Type                           : AzureKeyVault
+    ManagedInstanceKeyVaultKeyName : contoso_contosokey_01234567890123456789012345678901
+    KeyId                          : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ```
+
+    This command updates the specified managed instance to use the Managed instance Key Vault Key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' as the TDE protector.
+- title: 'Example 5: Set the Transparent Data Encryption protector type to Azure Key Vault using piping'
+  description: |-
+    ```powershell
+    $managedInstance = Get-AzSqlInstance -Name 'ContosoManagedInstanceName' -ResourceGroupName 'ContosoResourceGroup'
+    $managedInstance | Set-AzSqlInstanceTransparentDataEncryptionProtector -Type AzureKeyVault -KeyId 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901'
+    ```
+
+    ```output
+    ResourceGroupName              : ContosoResourceGroup
+    ManagedInstanceName            : ContosoManagedInstanceName
+    Type                           : AzureKeyVault
+    ManagedInstanceKeyVaultKeyName : contoso_contosokey_01234567890123456789012345678901
+    KeyId                          : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    ```
+
+    This command updates the specified managed instance to use the Managed instance Key Vault Key with Id 'https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901' as the TDE protector.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceTransparentDataEncryptionProtector.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.sql/Set-AzSqlInstanceTransparentDataEncryptionProtector
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceTransparentDataEncryptionProtector.md
+  PlatyPS schema version: 2024-05-01

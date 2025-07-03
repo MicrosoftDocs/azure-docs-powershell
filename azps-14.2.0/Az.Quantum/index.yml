@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.Quantum
+name: Az.Quantum Module
+isPreview: false
+cmdletGroups:
+- title: Quantum
+  cmdlets:
+  - Az.Quantum.Get-AzQuantumOffering
+  - Az.Quantum.Get-AzQuantumWorkspace
+  - Az.Quantum.New-AzQuantumProviderObject
+  - Az.Quantum.New-AzQuantumWorkspace
+  - Az.Quantum.Remove-AzQuantumWorkspace
+  - Az.Quantum.Test-AzQuantumWorkspaceNameAvailability
+  - Az.Quantum.Update-AzQuantumWorkspace
+description: |-
+  Microsoft Azure PowerShell: Quantum cmdlets
+metadata:
+  Module Name: Az.Quantum
+  Module Guid: c33ffd08-641a-46a2-8984-f16074447b27
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.quantum
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Az.Quantum.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Az.Quantum.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

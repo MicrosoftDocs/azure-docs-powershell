@@ -1,0 +1,166 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroupAutomationRunbookReceiverObject
+name: New-AzActionGroupAutomationRunbookReceiverObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for AutomationRunbookReceiver.
+description: |-
+  Create an in-memory object for AutomationRunbookReceiver.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure automation account Id which holds this runbook and authenticate to Azure resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsGlobalRunbook
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this instance is global runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates name of the webhook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name for this runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI where webhooks should be sent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseCommonAlertSchema
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to use common alert schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id for webhook linked to this runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupAutomationRunbookReceiverObject
+        -AutomationAccountId <String>
+        -IsGlobalRunbook <Boolean>
+        -RunbookName <String>
+        -WebhookResourceId <String>
+        [-Name <String>]
+        [-ServiceUri <String>]
+        [-UseCommonAlertSchema <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.AutomationRunbookReceiver" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: create action group automation runbook receiver'
+  description: |-
+    ```powershell
+    New-AzActionGroupAutomationRunbookReceiverObject -AutomationAccountId "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest" -RunbookName "sample runbook" -WebhookResourceId "/subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/automationAccounts/runbooktest/webhooks/Alert1510184037084" -Name "testRunbook" -UseCommonAlertSchema $true -IsGlobalRunbook $false
+    ```
+
+    ```output
+    AutomationAccountId  : /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/a
+                           utomationAccounts/runbooktest
+    IsGlobalRunbook      : False
+    Name                 : testRunbook
+    RunbookName          : sample runbook
+    ServiceUri           :
+    UseCommonAlertSchema : True
+    WebhookResourceId    : /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/runbookTest/providers/Microsoft.Automation/a
+                           utomationAccounts/runbooktest/webhooks/Alert1510184037084
+    ```
+
+    This command creates action group automation runbook receiver object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupAutomationRunbookReceiverObject.md
+  document type: cmdlet
+  external help file: Az.ActionGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azactiongroupautomationrunbookreceiverobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupAutomationRunbookReceiverObject.md
+  PlatyPS schema version: 2024-05-01

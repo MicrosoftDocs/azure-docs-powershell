@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Stop-AzureHDInsightJob
+name: Stop-AzureHDInsightJob
+module: Azure
+isPreview: false
+summary: |-
+  Stops an HDInsight job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This version of Azure PowerShell HDInsight is deprecated.
+  These cmdlets will be removed by January 1, 2017.
+  Please use the newer version of Azure PowerShell HDInsight.
+
+  For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell) (/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell).
+  For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically) (/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically).
+  For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
+
+  The **Stop-AzureHDInsightJob** cmdlet stops an Azure HDInsight job on the specified cluster.
+parameters:
+  cmdletParameters:
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the management certificate for an Azure subscription.
+    aliases:
+    - Cert
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cluster
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a cluster.
+      This cmdlet stops a job that runs on the cluster that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use for direct HTTP access to a cluster.
+      You can specify this parameter instead of the *Subscription* parameter to authenticate access to a cluster.
+    aliases:
+    - Cred
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint to use to connect to Azure.
+      If you do not specify this parameter, this cmdlet uses the default endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostedService
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the namespace of an HDInsight service if you do not want to use the default namespace.
+    aliases:
+    - CloudServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreSslErrors
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Secure Sockets Layer (SSL) errors are ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the HDInsight job to stop.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a subscription.
+      This cmdlet stops a job for the subscription that this parameter specifies.
+    aliases:
+    - Sub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzureHDInsightJob
+        -Cluster <String>
+        -JobId <String>
+        [-Credential <PSCredential>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Start jobDetails on an HDInsight Cluster
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzureHDInsightJob
+        -Cluster <String>
+        -JobId <String>
+        [-Certificate <X509Certificate2>]
+        [-HostedService <String>]
+        [-Endpoint <Uri>]
+        [-IgnoreSslErrors <Boolean>]
+        [-Subscription <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Start jobDetails on an HDInsight Cluster (with Specific Subscription Credential)
+  isDefault: false
+links:
+- text: Get-AzureHDInsightJob
+  href: ./Get-AzureHDInsightJob.yml
+- text: Start-AzureHDInsightJob
+  href: ./Start-AzureHDInsightJob.yml
+- text: Wait-AzureHDInsightJob
+  href: ./Wait-AzureHDInsightJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: EE2ADA86-B2A3-4F6F-96EF-BB61D6DC550F
+  PlatyPS schema version: 2024-05-01

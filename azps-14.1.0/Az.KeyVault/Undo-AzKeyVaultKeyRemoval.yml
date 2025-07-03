@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Undo-AzKeyVaultKeyRemoval
+name: Undo-AzKeyVaultKeyRemoval
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Recovers a deleted key in a key vault into an active state.
+description: |-
+  The **Undo-AzKeyVaultKeyRemoval** cmdlet will recover a previously deleted key.
+  The recovered key will be active and can be used for all normal key operations.
+  Caller needs to have 'recover' permission in order to perform this operation.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM name. Cmdlet constructs the FQDN of a managed HSM based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: HsmInteractive
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Deleted key object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key name.
+      Cmdlet constructs the FQDN of a key from vault name, currently selected environment and key name.
+    aliases:
+    - KeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: HsmInteractive
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+      Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultKeyRemoval
+        [-VaultName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultKeyRemoval
+        [-Name] <String>
+        -HsmName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: HsmInteractive
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultKeyRemoval
+        [-InputObject] <PSDeletedKeyVaultKeyIdentityItem>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKey" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Undo-AzKeyVaultKeyRemoval -VaultName 'MyKeyVault' -Name 'MyKey'
+    ```
+
+    ```output
+    Vault Name     : MyKeyVault
+    Name           : MyKey
+    Version        : 1af807cc331a49d0b52b7c75e1b2366e
+    Id             : https://mykeybault.vault.azure.net:443/keys/mykey/1af807cc331a49d0b52b7c75e1b2366e
+    Enabled        : True
+    Expires        :
+    Not Before     :
+    Created        : 5/24/2018 8:32:27 PM
+    Updated        : 5/24/2018 8:32:27 PM
+    Purge Disabled : False
+    Tags           :
+    ```
+
+    This command will recover the key 'MyKey' that was previously deleted, into an active and usable state.
+links:
+- text: Remove-AzKeyVaultKey
+  href: ./Remove-AzKeyVaultKey.yml
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Get-AzKeyVaultKey
+  href: ./Get-AzKeyVaultKey.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultKeyRemoval.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/undo-azkeyvaultkeyremoval
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultKeyRemoval.md
+  PlatyPS schema version: 2024-05-01

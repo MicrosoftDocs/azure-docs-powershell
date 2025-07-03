@@ -1,0 +1,210 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Get-AzEventHubAuthorizationRule
+name: Get-AzEventHubAuthorizationRule
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Gets the details of an authorization rule, or gets a list of authorization rules.
+description: |-
+  The Get-AzEventHubAuthorizationRule cmdlet gets either the details of an authorization rule, or a list of all authorization rules for a specified Event Hub.
+  If the name of an authorization rule is provided, the details of that single authorization rule are returned.
+  If the name of an authorization rule is not provided, a list of all authorization rules for the specified Event Hub is returned.
+  If (Disaster Recovery) Alias name provided, the details of authorization rule of the Namespace for Alias configured is returned.
+parameters:
+  cmdletParameters:
+  - name: AliasName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alias Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AliasAuthoRuleSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Eventhub
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Eventhub Name
+    aliases:
+    - EventHubName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EventhubAuthorizationRuleSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AuthorizationRule Name
+    aliases:
+    - AuthorizationRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Namespace Name
+    aliases:
+    - NamespaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEventHubAuthorizationRule
+        [-ResourceGroupName] <String>
+        [-Namespace] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NamespaceAuthorizationRuleSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzEventHubAuthorizationRule
+        [-ResourceGroupName] <String>
+        [-Namespace] <String>
+        [-Eventhub] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EventhubAuthorizationRuleSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzEventHubAuthorizationRule
+        [-ResourceGroupName] <String>
+        [-Namespace] <String>
+        [-AliasName] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AliasAuthoRuleSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSSharedAccessAuthorizationRuleAttributes" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1.0 - AuthorizationRule for namespace
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -Name MyAuthRuleName
+    ```
+
+    Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+- title: Example 1.1 - AuthorizationRules for namespace
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+    ```
+
+    Gets a list of all authorization rules in the namespace \`MyNamespaceName\`.
+- title: Example 2.0 - AuthorizationRule for EventHub
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName -Name MyAuthRuleName
+    ```
+
+    Gets the authorization rule \`MyAuthRuleName\` in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+- title: Example 2.1 - AuthorizationRules for EventHub
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -EventHubName MyEventHubName
+    ```
+
+    Gets list authorization rules in the Event Hub \`MyEventHubName\`, which is scoped by the namespace \`MyNamespaceName\`.
+- title: Example 3.0 - AuthorizationRule for Alias (GeoRecovery Configuration)
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName -Name MyAuthRuleName
+    ```
+
+    Gets the authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+- title: Example 3.1 -AuthorizationRules for Alias (GeoRecovery Configuration)
+  description: |-
+    ```
+    PS C:\> Get-AzEventHubAuthorizationRule -ResourceGroupName MyResourceGroupName -NamespaceName MyNamespaceName -AliasName MyAliasNameName
+    ```
+
+    Gets a list of all authorization rule \`MyAuthRuleName\` in the namespace \`MyNamespaceName\`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Get-AzEventHubAuthorizationRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/get-azeventhubauthorizationrule
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Get-AzEventHubAuthorizationRule.md
+  PlatyPS schema version: 2024-05-01

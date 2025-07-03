@@ -1,0 +1,148 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageTable
+name: Get-AzStorageTable
+module: Az.Storage
+isPreview: false
+summary: |-
+  Lists the storage tables.
+description: |-
+  The **Get-AzStorageTable** cmdlet lists the storage tables associated with the storage account in Azure.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage context.
+      To create it, you can use the New-AzStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the table name.
+      If the table name is empty, the cmdlet lists all the tables.
+      Otherwise, it lists all tables that match the specified name or the regular name pattern.
+    aliases:
+    - N
+    - Table
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TableName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a prefix used in the name of the table or tables you want to get.
+      You can use this to find all tables that start with the same string, such as table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TablePrefix
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageTable
+        [[-Name] <String>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TableName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageTable
+        -Prefix <String>
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TablePrefix
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageTable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Azure Storage tables'
+  description: |-
+    ```powershell
+    Get-AzStorageTable
+    ```
+
+    This command gets all storage tables for a Storage account.
+- title: 'Example 2: List Azure Storage tables using a wildcard character'
+  description: |-
+    ```powershell
+    Get-AzStorageTable -Name table*
+    ```
+
+    This command uses a wildcard character to get storage tables whose name starts with table.
+- title: 'Example 3: List Azure Storage tables using table name prefix'
+  description: |-
+    ```powershell
+    Get-AzStorageTable -Prefix "table"
+    ```
+
+    This command uses the *Prefix* parameter to get storage tables whose name starts with table.
+links:
+- text: New-AzStorageTable
+  href: ./New-AzStorageTable.yml
+- text: Remove-AzStorageTable
+  href: ./Remove-AzStorageTable.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragetable
+  Module Name: Az.Storage
+  ms.assetid: 4631D36F-926A-4279-AA4D-5F694C18081E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageTable.md
+  PlatyPS schema version: 2024-05-01

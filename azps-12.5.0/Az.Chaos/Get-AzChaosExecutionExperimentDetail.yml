@@ -1,0 +1,267 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Chaos.Get-AzChaosExecutionExperimentDetail
+name: Get-AzChaosExecutionExperimentDetail
+module: Az.Chaos
+isPreview: false
+summary: |-
+  Execution details of an experiment resource.
+description: |-
+  Execution details of an experiment resource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExecutionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      GUID that represents a Experiment execution detail.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Execution
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExecutionViaIdentityExperiment
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExperimentInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IChaosIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExecutionViaIdentityExperiment
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExperimentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String that represents a Experiment resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Execution
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IChaosIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExecutionViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String that represents an Azure resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Execution
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      GUID that represents an Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Execution
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExecutionExperimentDetail
+        -ExecutionId <String>
+        -ExperimentName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Execution
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExecutionExperimentDetail
+        -ExecutionId <String>
+        -ExperimentInputObject <IChaosIdentity>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExecutionViaIdentityExperiment
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExecutionExperimentDetail
+        -InputObject <IChaosIdentity>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExecutionViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IChaosIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IExperimentExecutionDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Execution details of an experiment resource.'
+  description: |-
+    ```powershell
+    Get-AzChaosExecutionExperimentDetail -ExperimentName experiment-test -ResourceGroupName azps_test_group_chaos -ExecutionId 13E31E28-45F4-402E-99B4-DF19A78E457E
+    ```
+
+    ```output
+    FailureReason      :
+    Id                 : /subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/Microsoft.Chaos/experiments/experiment-test/executions/13E31E28-45F4-402E-99B4-DF19A
+                         78E457E
+    LastActionAt       : 2024-05-06 09:54:20 AM
+    Name               : 13E31E28-45F4-402E-99B4-DF19A78E457E
+    ResourceGroupName  : azps_test_group_chaos
+    RunInformationStep : {{
+                           "stepName": "step1",
+                           "stepId": "step1",
+                           "status": "completed",
+                           "branches": [
+                             {
+                               "branchName": "branch1",
+                               "branchId": "branch1",
+                               "status": "completed",
+                               "actions": [
+                                 {
+                                   "actionName": "urn:csci:microsoft:virtualMachine:shutdown/1.0",
+                                   "actionId": "c5e62ae5-60c2-4cb4-b620-890bbf671c7b",
+                                   "status": "completed",
+                                   "startTime": "2024-05-06T09:43:15.6470366Z",
+                                   "endTime": "2024-05-06T09:54:16.1794070Z",
+                                   "targets": [
+                                     {
+                                       "status": "completed",
+                                       "target": "urn:x-chaos-targets:Azure-virtualMachine:/subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/Microsoft.Compute/virt
+                         ualMachines/exampleVM/providers/Microsoft.Chaos/targets/microsoft-virtualMachine",
+                                       "targetFailedTime": "0001-01-01T00:00:00.0000000Z",
+                                       "targetCompletedTime": "2024-05-06T09:54:16.1708885Z"
+                                     }
+                                   ]
+                                 }
+                               ]
+                             }
+                           ]
+                         }}
+    StartedAt          : 2024-05-06 09:42:44 AM
+    Status             : Success
+    StoppedAt          : 2024-05-06 09:54:20 AM
+    Type               : Microsoft.Chaos/experiments/executions
+    ```
+
+    Execution details of an experiment resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Get-AzChaosExecutionExperimentDetail.md
+  document type: cmdlet
+  external help file: Az.Chaos-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.chaos/get-azchaosexecutionexperimentdetail
+  Module Name: Az.Chaos
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Get-AzChaosExecutionExperimentDetail.md
+  PlatyPS schema version: 2024-05-01

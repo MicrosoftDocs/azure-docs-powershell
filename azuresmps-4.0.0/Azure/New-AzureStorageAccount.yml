@@ -1,0 +1,245 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureStorageAccount
+name: New-AzureStorageAccount
+module: Azure
+isPreview: false
+summary: |-
+  Creates a new storage account in an Azure subscription.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorageAccount** cmdlet creates an account that provides access to Azure storage services.
+  A storage account is a globally unique resource within the storage system.
+  The account is the parent namespace for the Blob, Queue, and Table services.
+parameters:
+  cmdletParameters:
+  - name: AffinityGroup
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an existing affinity group in the current subscription.
+      You can specify either the *Location* or *AffinityGroup* parameter, but not both.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetAffinityGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the storage account.
+      The description may be up to 1024 characters in length.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a label for the storage account.
+      The label may be up to 100 characters in length.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure data center location where the storage account is created.
+      You can include either the *Location* or *AffinityGroup* parameter, but not both.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterSetLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the storage account.
+      The storage account name must be unique to Azure and must be between 3 and 24 characters in length and use lowercase letters and numbers only.
+    aliases:
+    - ServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the storage account.
+      Valid values are:
+
+      - Standard_LRS
+      - Standard_ZRS
+      - Standard_GRS
+      - Standard_RAGRS
+      - Premium_LRS
+
+      If this parameter is not specified, the default value is Standard_GRS.
+
+      Standard_ZRS or Premium_LRS accounts cannot be changed to other account types, and vice versa.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorageAccount
+        [-StorageAccountName] <String>
+        -AffinityGroup <String>
+        [-Label <String>]
+        [-Description <String>]
+        [-Type <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetAffinityGroup
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureStorageAccount
+        [-StorageAccountName] <String>
+        -Location <String>
+        [-Label <String>]
+        [-Description <String>]
+        [-Type <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterSetLocation
+  isDefault: false
+examples:
+- title: 'Example 1: Create a storage account for a specified affinity group'
+  description: |-
+    ```
+    PS C:\> New-AzureStorageAccount -StorageAccountName "azure01" -Label "AzureOne" -AffinityGroup "prodapps"
+    ```
+
+    This command creates a storage account for a specified affinity group.
+- title: 'Example 2: Create a storage account in a specified location'
+  description: |-
+    ```
+    PS C:\> New-AzureStorageAccount -StorageAccountName "azure02" -Label "AzureTwo" -Location "North Central US"
+    ```
+
+    This command creates a storage account in a specified location.
+links:
+- text: Get-AzureStorageAccount
+  href: ./Get-AzureStorageAccount.yml
+- text: Set-AzureStorageAccount
+  href: ./Set-AzureStorageAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 931BC75D-B8EF-463D-8FCE-A822093CB05A
+  PlatyPS schema version: 2024-05-01

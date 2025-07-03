@@ -1,0 +1,320 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sphere.Get-AzSphereImage
+name: Get-AzSphereImage
+module: Az.Sphere
+isPreview: false
+summary: |-
+  Get a Image
+description: |-
+  Get a Image
+parameters:
+  cmdletParameters:
+  - name: CatalogInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CatalogName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of catalog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter the result list using the given expression
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Maxpagesize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of result items per page.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image name.
+      Use an image GUID for GA versions of the API.
+    aliases:
+    - ImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of result items to skip.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of result items to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSphereImage
+        -CatalogName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-Maxpagesize <Int32>]
+        [-Skip <Int32>]
+        [-Top <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSphereImage
+        -CatalogName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereImage
+        -Name <String>
+        -CatalogInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCatalog
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereImage
+        -InputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.IImage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List images for specific catalog with specified resource group'
+  description: |-
+    ```powershell
+    Get-AzSphereImage -CatalogName MyCatalog1 -ResourceGroupName ResourceGroup1
+    ```
+
+    ```output
+    Name                                 SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDa
+                                                                                                                                                           taLastMo
+                                                                                                                                                           difiedBy
+                                                                                                                                                           Type
+    ----                                 ------------------- ------------------- ----------------------- ------------------------ ------------------------ --------
+    11111111-2222-3333-4444-123456789104
+    11111111-2222-3333-4444-123456789105
+    ```
+
+    This command lists images.
+- title: 'Example 2: Get specific image with specified catalog and resource group'
+  description: |-
+    ```powershell
+    Get-AzSphereImage -CatalogName anotherCatalog -Name 11111111-2222-3333-4444-123456789104 -ResourceGroupName Sphere-test
+    ```
+
+    ```output
+    ComponentId                  : 42257ad6-382d-405f-b7cc-e110fbda2d0b
+    Description                  :
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789103/resourceGroups/Sphere-test/providers/Microsoft.AzureSphere/catalogs/anotherCatalog/images/11111111-2222-3333-4444-123456789104
+    ImageId                      : 11111111-2222-3333-4444-123456789104
+    ImageName                    :
+    ImageType                    : Applications
+    Name                         : 11111111-2222-3333-4444-123456789104
+    PropertiesImage              : AzureSphereBlink1
+    ProvisioningState            : Succeeded
+    RegionalDataBoundary         : None
+    ResourceGroupName            : Sphere-test
+    RetryAfter                   :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.AzureSphere/catalogs/images
+    Uri                          : ****************
+    ```
+
+    This command get specific image.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereImage.md
+  document type: cmdlet
+  external help file: Az.Sphere-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sphere/get-azsphereimage
+  Module Name: Az.Sphere
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereImage.md
+  PlatyPS schema version: 2024-05-01

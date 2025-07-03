@@ -1,0 +1,305 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzMetricAlertRuleV2Criteria
+name: New-AzMetricAlertRuleV2Criteria
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates a local criteria object that can be used to create a new metric alert
+description: |-
+  The **New-AzMetricAlertRuleV2Criteria** cmdlet creates a local metric criteria object to be used as an input Add-AzMetricAlertRuleV2 cmdlet which creates a new metric alert rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DimensionSelection
+    type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricDimension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of dimension conditions
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicThreshold
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch parameter for using Dynamic Threshold Type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DynamicThresholdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExaminedAggregatedPointCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The Total number of examined points
+    aliases:
+    - TotalPeriod
+    - NumberOfExaminedAggregatedPoints
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DynamicThresholdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreDataBefore
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The IgnoreDataBefore parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DynamicThresholdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The metric name for rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Namespace of the metric
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The rule condition operator
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Threshold
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The threshold for rule condition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StaticThresholdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThresholdSensitivity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sensitivity for rule condition
+    aliases:
+    - Sensitivity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DynamicThresholdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeAggregation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The aggregation operation used to roll up multiple metric values across the window interval
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ViolationCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of violations required within the selected lookback time window required to raise an alert
+    aliases:
+    - FailingPeriod
+    - NumberOfViolations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DynamicThresholdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMetricAlertRuleV2Criteria
+        -MetricName <String>
+        -TimeAggregation <String>
+        -Operator <String>
+        -Threshold <Double>
+        [-MetricNamespace <String>]
+        [-DimensionSelection <PSMetricDimension[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StaticThresholdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzMetricAlertRuleV2Criteria
+        -MetricName <String>
+        -TimeAggregation <String>
+        -Operator <String>
+        [-DynamicThreshold]
+        [-MetricNamespace <String>]
+        [-DimensionSelection <PSMetricDimension[]>]
+        [-ThresholdSensitivity <String>]
+        [-ViolationCount <Int32>]
+        [-ExaminedAggregatedPointCount <Int32>]
+        [-IgnoreDataBefore <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DynamicThresholdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricDimension" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.IPSMultiMetricCriteria" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a simple metric alert criteria'
+  description: |-
+    ```powershell
+    PS C:\> New-AzMetricAlertRuleV2Criteria -MetricName "Percentage CPU" -MetricNameSpace "Microsoft.Compute/virtualMachines" -TimeAggregation Average -Operator GreaterThan -Threshold 5
+
+    CriterionType        : StaticThresholdCriterion
+    OperatorProperty     : GreaterThan
+    Threshold            : 5
+    AdditionalProperties :
+    Name                 : metric1
+    MetricName           : Percentage CPU
+    MetricNamespace      : Microsoft.Compute/virtualMachines
+    TimeAggregation      : Average
+    Dimensions           :
+    ```
+
+    This command creates a simple metric alert criteria that can be used in a metric alert rule
+- title: 'Example 2: Create a dynamic metric alert criteria'
+  description: |-
+    ```powershell
+    PS C:\>New-AzMetricAlertRuleV2Criteria -Dynamic -MetricName "Percentage CPU" -MetricNameSpace "Microsoft.Compute/virtualMachines" -TimeAggregation Average -Operator GreaterThan -ThresholdSensitivity Medium -ViolationCount 2 -ExaminedAggregatedPointCount 4
+    CriterionType        : DynamicThresholdCriterion
+    OperatorProperty     : GreaterThan
+    AlertSensitivity     : Medium
+    FailingPeriods       : Microsoft.Azure.Management.Monitor.Models.DynamicThresholdFailingPeriods
+    IgnoreDataBefore     :
+    AdditionalProperties :
+    Name                 : metric1
+    MetricName           : Percentage CPU
+    MetricNamespace      : Microsoft.Compute/virtualMachines
+    TimeAggregation      : Average
+    Dimensions           :
+    ```
+
+    This command creates a Dynamic metric alert criteria that can be used in a metric alert rule
+- title: 'Example 3: Create a more complex metric alert criteria'
+  description: |-
+    ```powershell
+    PS C:\>New-AzMetricAlertRuleV2DimensionSelection -DimensionName "availabilityResult/name" -ValuesToInclude "gdtest" | New-AzMetricAlertRuleV2Criteria -MetricName "availabilityResults/availabilityPercentage" -TimeAggregation Average -Operator GreaterThan -Threshold 2
+    CriterionType        : StaticThresholdCriterion
+    OperatorProperty     : GreaterThan
+    Threshold            : 2
+    AdditionalProperties :
+    Name                 : metric1
+    MetricName           : availabilityResults/availabilityPercentage
+    MetricNamespace      :
+    TimeAggregation      : Average
+    Dimensions           : {availabilityResult/name}
+    ```
+
+    This set of commands creates a more complex metric alert criteria which includes dimension selection
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzMetricAlertRuleV2Criteria.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azmetricalertrulev2criteria
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzMetricAlertRuleV2Criteria.md
+  PlatyPS schema version: 2024-05-01

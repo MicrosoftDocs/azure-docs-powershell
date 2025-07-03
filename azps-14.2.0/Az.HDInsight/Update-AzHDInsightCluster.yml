@@ -1,0 +1,223 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Update-AzHDInsightCluster
+name: Update-AzHDInsightCluster
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Update tags or managed identities for a HDInsight cluster.
+description: |-
+  This **Update-AzHDInsightCluster** cmdlet update  the tags or managed identity of HDInsight cluster.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of user identities associated with the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the type of identity used for the cluster.
+      Possible values include: SystemAssigned, UserAssigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzHDInsightCluster
+        [-ClusterName] <String>
+        [-IdentityType <String>]
+        [-IdentityId <String[]>]
+        [-Tag <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update tags for the cluster.'
+  description: |-
+    ```powershell
+    $clusterName = "your-hadoop-001"
+    $tags = New-Object 'System.Collections.Generic.Dictionary[System.String,System.String]'
+    $tags.Add('Tag1', 'Value1')
+    $tags.Add('Tag2', 'Value2')
+
+    Update-AzHDInsightCluster -ClusterName $clusterName -Tag $tags
+    ```
+- title: 'Example 2: Update manage identity with single UserAssigned msi.'
+  description: |-
+    ```powershell
+    $clusterName = "your-hadoop-001"
+    $identityType = "UserAssigned"
+    $identityId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft ManagedIdentity/userAssignedIdentities/hdi-msi"
+
+    Update-AzHDInsightCluster -ClusterName $clusterName -IdentityType $identityType -IdentityId $identityId
+    ```
+- title: 'Example 3: Update manage identity with multiple UserAssigned msi.'
+  description: |-
+    ```powershell
+    $clusterName = "your-hadoop-001"
+    $identityType = "UserAssigned"
+    $identityIds = @(
+     "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/hdi-msi",
+     "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/hdi-msi1"
+    )
+
+    Update-AzHDInsightCluster -ClusterName $clusterName -IdentityType $identityType -IdentityId $identityIds
+    ```
+- title: 'Example 4: Update SystemAssigned manage identity.'
+  description: |-
+    ```powershell
+    $clusterName = "your-hadoop-001"
+    $identityType = "SystemAssigned"
+    $identityId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/hdi-msi"
+
+    Update-AzHDInsightCluster -ClusterName $clusterName -IdentityType $identityType
+    ```
+- title: 'Example 5: Update manage identity with SystemAssigned,UserAssigned msi.'
+  description: |-
+    ```powershell
+    $clusterName = "your-hadoop-001"
+    $identityId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/hdi-msi"
+    $identityType = "SystemAssigned,UserAssigned"
+
+    Update-AzHDInsightCluster -ClusterName $clusterName -IdentityType $identityType -IdentityId $identityId
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Update-AzHDInsightCluster.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/update-azhdinsightcluster
+  Module Name: Az.HDInsight
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Update-AzHDInsightCluster.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzCustomIpPrefix
+name: Get-AzCustomIpPrefix
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a CustomIpPrefix resource
+description: |-
+  The **Get-AzCustomIpPrefix** cmdlet gets one or more CustomIpPrefixes given the set of input parameters
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCustomIpPrefix
+        [-Name <String>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCustomIpPrefix
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSCustomIpPrefix" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzCustomIpPrefix -ResourceGroupName myRg -Name myCustomIpPrefix
+    ```
+
+    ```output
+    Name                 : myCustomIpPrefix
+    ResourceGroupName    : myRg
+    Location             : westus
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/byoip-test-rg/providers/Micro
+                           soft.Network/customIPPrefixes/testCustomIpPrefix
+    Etag                 : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid         : 00000000-0000-0000-0000-000000000000
+    ProvisioningState    : Succeeded
+    Tags                 :
+    Cidr                 : 111.111.111.111/24
+    CommissionedState    : Provisioning
+    PublicIpPrefixes     : []
+    Zones                : {}
+    SignedMessage        : SignedMessage
+    AuthorizationMessage : AuthorizationMessage
+    CustomIpPrefixParent :
+    ChildCustomIpPrefixes: []
+    ```
+
+    This command gets a CustomIpPrefix resource named myCustomIpPrefix in resource group myRg
+links:
+- text: New-AzCustomIpPrefix
+  href: ./New-AzCustomIpPrefix.yml
+- text: Remove-AzCustomIpPrefix
+  href: ./Remove-AzCustomIpPrefix.yml
+- text: Update-AzCustomIpPrefix
+  href: ./Update-AzCustomIpPrefix.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzCustomIpPrefix.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azcustomipprefix
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzCustomIpPrefix.md
+  PlatyPS schema version: 2024-05-01

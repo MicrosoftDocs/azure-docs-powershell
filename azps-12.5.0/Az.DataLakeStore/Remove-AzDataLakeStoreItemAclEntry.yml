@@ -1,0 +1,313 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Remove-AzDataLakeStoreItemAclEntry
+name: Remove-AzDataLakeStoreItemAclEntry
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Removes an entry from the ACL of a file or folder in Data Lake Store.
+description: |-
+  The **Remove-AzDataLakeStoreItemAclEntry** cmdlet removes an entry (ACE) from the access control list (ACL) of a file or folder in Data Lake Store.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AceType
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of ACE to remove.
+      The acceptable values for this parameter are:
+      - User
+      - Group
+      - Mask
+      - Other
+    acceptedValues:
+    - User
+    - Group
+    - Mask
+    - Other
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveSpecificACE
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Acl
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the ACL object that contains the entries to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByACLObject
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Concurrency
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of files/directories processed in parallel. Optional: a reasonable default will be selected
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Default
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation removes the default ACE from the specified ACL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveSpecificACE
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the AzureActive Directory user, group, or service principal for which to remove an ACE.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveSpecificACE
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates a boolean response should be returned indicating the result of the delete operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store path of the item from which to remove an ACE, starting with the root directory (/).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Recurse
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the ACL to be removed recursively to the child subdirectories and files
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShowProgress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If passed then progress status is showed. Only applicable when recursive Acl remove is done.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzDataLakeStoreItemAclEntry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-Acl] <DataLakeStoreItemAce[]>
+        [-PassThru]
+        [-Recurse]
+        [-Concurrency <Int32>]
+        [-ShowProgress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByACLObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzDataLakeStoreItemAclEntry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-AceType] <AceType>
+        [[-Id] <Guid>]
+        [-Default]
+        [-PassThru]
+        [-Recurse]
+        [-Concurrency <Int32>]
+        [-ShowProgress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveSpecificACE
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a user entry'
+  description: |-
+    ```powershell
+    Remove-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzADUser -Mail "PattiFuller@contoso.com").ObjectId
+    ```
+
+    This command removes the user ACE for Patti Fuller from the ContosoADL account.
+- title: 'Example 2: Remove a user entry recursively'
+  description: |-
+    ```powershell
+    Remove-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzADUser -Mail "PattiFuller@contoso.com").ObjectId -Recurse -Concurrency 128
+    ```
+- title: 'Example 3: Remove permissions for an ACE recursively using Acl object'
+  description: |-
+    ```powershell
+    $fullAcl="user:enterpriseObjectID:rwx,default:user:enterpriseObjectID:rwx"
+    $newFullAcl = $fullAcl.Split(",")
+    Remove-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -Acl $newFullAcl -Recurse -Concurrency 128 -ShowProgress -Verbose
+    ```
+
+    This command removes the user ACE for Patti Fuller from the root and recursively from all it's subdirectories and files for account ContosoADL.
+links:
+- text: Set-AzDataLakeStoreItemAclEntry
+  href: ./Set-AzDataLakeStoreItemAclEntry.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreItemAclEntry.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/remove-azdatalakestoreitemaclentry
+  Module Name: Az.DataLakeStore
+  ms.assetid: 33E7607E-C2BC-4F46-9038-91AC92041F00
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Remove-AzDataLakeStoreItemAclEntry.md
+  PlatyPS schema version: 2024-05-01

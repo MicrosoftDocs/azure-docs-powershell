@@ -1,0 +1,526 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LabServices.New-AzLabServicesLabPlan
+name: New-AzLabServicesLabPlan
+module: Az.LabServices
+isPreview: false
+summary: |-
+  Operation to create or update a Lab Plan resource.
+description: |-
+  Operation to create or update a Lab Plan resource.
+parameters:
+  cmdletParameters:
+  - name: AllowedRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The allowed regions for the lab creator to use when creating labs using this lab plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileDisconnectDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileIdleDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileNoConnectDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileShutdownOnDisconnect
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether shutdown on disconnect is enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileShutdownOnIdle
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ShutdownOnIdleMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether a VM will get shutdown when it has idled for a period of time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAutoShutdownProfileShutdownWhenNotConnected
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultConnectionProfileClientRdpAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Client Access over RDP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultConnectionProfileClientSshAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Client Access over SSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultConnectionProfileWebRdpAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Web Access over RDP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultConnectionProfileWebSshAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Web Access over SSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultNetworkProfileSubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The external subnet resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinkedLmsInstance
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Base Url of the lms instance this lab plan can link lab rosters against.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the lab plan that uniquely identifies it within containing resource group.
+      Used in resource URIs and in UI.
+    aliases:
+    - LabPlanName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedGalleryId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the Shared Image Gallery attached to this lab plan.
+      When saving a lab template virtual machine image it will be persisted in this gallery.
+      Shared images from the gallery can be made available to use when creating new labs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportInfoEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support contact email address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportInfoInstruction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support instructions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportInfoPhone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support contact phone number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportInfoUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support web address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzLabServicesLabPlan
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -Location <String>
+        [-AllowedRegion <String[]>]
+        [-DefaultAutoShutdownProfileDisconnectDelay <TimeSpan>]
+        [-DefaultAutoShutdownProfileIdleDelay <TimeSpan>]
+        [-DefaultAutoShutdownProfileNoConnectDelay <TimeSpan>]
+        [-DefaultAutoShutdownProfileShutdownOnDisconnect <EnableState>]
+        [-DefaultAutoShutdownProfileShutdownOnIdle <ShutdownOnIdleMode>]
+        [-DefaultAutoShutdownProfileShutdownWhenNotConnected <EnableState>]
+        [-DefaultConnectionProfileClientRdpAccess <ConnectionType>]
+        [-DefaultConnectionProfileClientSshAccess <ConnectionType>]
+        [-DefaultConnectionProfileWebRdpAccess <ConnectionType>]
+        [-DefaultConnectionProfileWebSshAccess <ConnectionType>]
+        [-DefaultNetworkProfileSubnetId <String>]
+        [-LinkedLmsInstance <String>]
+        [-SharedGalleryId <String>]
+        [-SupportInfoEmail <String>]
+        [-SupportInfoInstruction <String>]
+        [-SupportInfoPhone <String>]
+        [-SupportInfoUrl <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.ILabPlan" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new Lab plan.'
+  description: |-
+    ```powershell
+    New-AzLabServicesLabPlan `
+    	-LabPlanName "testplan" `
+    	-ResourceGroupName "Group Name" `
+    	-Location "westus2" `
+    	-AllowedRegion @('westus2', 'eastus2') `
+    	-DefaultAutoShutdownProfileShutdownOnDisconnect Disabled `
+    	-DefaultAutoShutdownProfileShutdownOnIdle None `
+    	-DefaultAutoShutdownProfileShutdownWhenNotConnected Disabled `
+    	-DefaultConnectionProfileClientRdpAccess Public `
+    	-DefaultConnectionProfileClientSshAccess None `
+    	-SupportInfoEmail 'test@contoso.com' `
+    	-SupportInfoInstruction 'test information' `
+    	-SupportInfoPhone '123-456-7890' `
+    	-SupportInfoUrl 'https:\\test.com' `
+    	-DefaultConnectionProfileWebRdpAccess None `
+    	-DefaultConnectionProfileWebSshAccess None
+    ```
+
+    ```output
+    Location Name
+    -------- ----
+    westus2  testplan
+    ```
+
+    Create a lab plan.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/New-AzLabServicesLabPlan.md
+  document type: cmdlet
+  external help file: Az.LabServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.labservices/new-azlabserviceslabplan
+  Module Name: Az.LabServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/New-AzLabServicesLabPlan.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,294 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualWanVpnServerConfigurationVpnProfile
+name: Get-AzVirtualWanVpnServerConfigurationVpnProfile
+module: Az.Network
+isPreview: false
+summary: |-
+  Generates and downloads Vpn profile at VirtualWan-VpnServerConfiguration level for Point to site client setup.
+description: |-
+  The **Get-AzVirtualWanVpnServerConfigurationVpnProfile** cmdlet enables you to generate and download the Vpn profile at VirtualWan-VpnServerConfiguration level for Point to site client setup. This is required for Point to site connectivity from Point to site client to Azure P2SVpnGateway.
+parameters:
+  cmdletParameters:
+  - name: AuthenticationMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Authentication Method
+    acceptedValues:
+    - EAPTLS
+    - EAPMSCHAPv2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanNameByVpnServerConfigurationObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanNameByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanNameByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanNameByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID for the virtual wan.
+    aliases:
+    - VirtualWanId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanResourceIdByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanResourceIdByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualWanObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualWan" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual wan object.
+    aliases:
+    - VirtualWan
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanObjectByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanObjectByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnServerConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The VpnServerConfiguration with which this VirtualWan is associated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanNameByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanObjectByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanResourceIdByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnServerConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of Vpn server configuration object this Virtual wan will be associated with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualWanNameByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanObjectByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualWanResourceIdByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -ResourceGroupName <String>
+        -VpnServerConfiguration <PSVpnServerConfiguration>
+        [-Name <String>]
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanNameByVpnServerConfigurationObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -ResourceGroupName <String>
+        -VpnServerConfigurationId <String>
+        [-Name <String>]
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanNameByVpnServerConfigurationResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -VirtualWanObject <PSVirtualWan>
+        -VpnServerConfiguration <PSVpnServerConfiguration>
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanObjectByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -VirtualWanObject <PSVirtualWan>
+        -VpnServerConfigurationId <String>
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanObjectByVpnServerConfigurationResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -ResourceId <String>
+        -VpnServerConfiguration <PSVpnServerConfiguration>
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanResourceIdByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile
+        -ResourceId <String>
+        -VpnServerConfigurationId <String>
+        [-AuthenticationMethod <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualWanResourceIdByVpnServerConfigurationResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Azure.Commands.Network.Models.PSVirtualWan
+    Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnProfileResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzVirtualWanVpnServerConfigurationVpnProfile -Name WestUsVirtualWan -ResourceGroupName P2SCortexGATesting -VpnServerConfiguration $vpnServerConfig -AuthenticationMethod EAPTLS
+    ```
+
+    ```output
+    ProfileUrl : https://nfvprodsuppby.blob.core.windows.net/vpnprofileimmutable/aa316f33-d0f6-4e61-994a-9aa24c0e5f70/vpnprofile/eb99aa3d-1106-49eb-9644-791c045c5cca/vpnclientconfiguration.zip?sv=2017-04-17&sr=b&sig=kZinevNqW
+                 qsEAbWAcYiKfUHFxZzh2hwvtb49dfVtUDA%3D&st=2019-10-25T19%3A52%3A36Z&se=2019-10-25T20%3A52%3A36Z&sp=r&fileExtension=.zip
+    ```
+
+    The above command will generate and returns SAS Url for customer to download the Vpn profile at VirtualWan-VpnServerConfiguration level for Point to site client setup.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWanVpnServerConfigurationVpnProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualwanvpnserverconfigurationvpnprofile
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWanVpnServerConfigurationVpnProfile.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzVpnClientRevokedCertificate
+name: Remove-AzVpnClientRevokedCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes a VPN client-revocation certificate.
+description: |-
+  The **Remove-AzVpnClientRevokedCertificate** cmdlet removes a client-revocation certificate from a virtual network gateway.
+  Client-revocation certificates prevent client computers from using the specified certificate for authentication.
+  If you remove a client-revocation certificate client computers can then use the previously-banned certificate to make a virtual private network (VPN) connection.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that the virtual network gateway is assigned to.
+
+      Resource groups categorize items to help simplify inventory management and general Azure administration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique identifier of the certificate being removed.
+
+      You can return thumbprint information for your certificates by using a Windows PowerShell command similar to this:
+
+      `Get-ChildItem -Path "Cert:\LocalMachine\Root"`
+
+      The preceding command returns information for all the Local Computer certificates found in the Root certificate store.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGatewayName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual network gateway that the certificate is assigned to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientRevokedCertificateName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the VPN client certificate being removed.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzVpnClientRevokedCertificate
+        -VpnClientRevokedCertificateName <String>
+        -VirtualNetworkGatewayName <String>
+        -ResourceGroupName <String>
+        -Thumbprint <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a client-revocation certificate from a virtual network gateway'
+  description: |-
+    ```
+    PS C:\>Remove-AzVpnClientRevokedCertificate -VirtualNetworkGatewayName "ContosoVirtualNetwork" -ResourceGroupName"ContosoResourceGroup" -VpnClientRevokedCertificateName "ContosoRevokedClientCertificate"-Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
+    ```
+
+    This command removes a client-revocation certificate from a virtual network gateway named ContosoVirtualNetwork.
+    In order to remove a client-revocation certificate, you must specify both the certificate name and the certificate thumbprint.
+links:
+- text: Add-AzVpnClientRevokedCertificate
+  href: ./Add-AzVpnClientRevokedCertificate.yml
+- text: Get-AzVpnClientRevokedCertificate
+  href: ./Get-AzVpnClientRevokedCertificate.yml
+- text: New-AzVpnClientRevokedCertificate
+  href: ./New-AzVpnClientRevokedCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVpnClientRevokedCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azvpnclientrevokedcertificate
+  Module Name: Az.Network
+  ms.assetid: 818C2250-DE43-409E-AC68-B4A7E945401E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVpnClientRevokedCertificate.md
+  PlatyPS schema version: 2024-05-01

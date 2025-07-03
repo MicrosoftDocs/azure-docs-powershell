@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.Get-AzPeeringReceivedRoute
+name: Get-AzPeeringReceivedRoute
+module: Az.Peering
+isPreview: false
+summary: |-
+  Lists the prefixes received over the specified peering under the given subscription and resource group.
+description: |-
+  Lists the prefixes received over the specified peering under the given subscription and resource group.
+parameters:
+  cmdletParameters:
+  - name: AsPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The optional AS path that can be used to filter the routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OriginAsValidationState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The optional origin AS validation state that can be used to filter the routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The optional prefix that can be used to filter the routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RpkiValidationState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The optional RPKI validation state that can be used to filter the routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The optional page continuation token that is used in the event of paginated result.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringReceivedRoute
+        -PeeringName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-AsPath <String>]
+        [-OriginAsValidationState <String>]
+        [-Prefix <String>]
+        [-RpkiValidationState <String>]
+        [-SkipToken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeeringReceivedRoute" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all received routes for a specific peering'
+  description: |-
+    ```powershell
+    Get-AzPeeringReceivedRoute -PeeringName DemoPeering -ResourceGroupName DemoRG
+    ```
+
+    ```output
+    AsPath               NextHop       OriginAsValidationState Prefix         ReceivedTimestamp            RpkiValidationState TrustAnchor
+    ------               -------       ----------------------- ------         -----------------            ------------------- -----------
+    7018 13335           12.90.152.69  Valid                   1.0.0.0/24     2022-12-05T11:51:51.2062620Z Valid               None
+    7018 13335           12.90.152.69  Valid                   1.1.1.0/24     2022-12-05T11:51:51.2062620Z Valid               None
+    7018 4837 4808       12.90.152.69  Valid                   1.119.192.0/21 2021-12-07T05:21:11.7043790Z Unknown             None
+    7018 4837 4808       12.90.152.69  Valid                   1.119.200.0/22 2021-12-07T05:21:11.7043790Z Unknown             None
+    7018 4837 4808 59034 12.90.152.69  Valid                   1.119.204.0/24 2021-12-07T05:21:13.7045170Z Unknown             None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.160.0.0/12   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.160.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.161.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.162.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.163.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 15169 396982    12.90.152.69  Unknown                 1.179.112.0/20 2021-12-07T05:21:16.7056160Z Unknown             None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.164.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.165.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.166.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462  12.90.152.69  Valid                   1.167.0.0/16   2022-11-29T07:46:45.2062680Z Valid               None
+    ...
+    ```
+
+    Gets all the received routes for a specific peering
+- title: 'Example 2: Filter received routes based on optional parameters'
+  description: |-
+    ```powershell
+    Get-AzPeeringReceivedRoute -PeeringName DemoPeering -ResourceGroupName DemoRG -AsPath "7018 9680 9680 3462"
+    ```
+
+    ```output
+    AsPath                          NextHop       OriginAsValidationState Prefix           ReceivedTimestamp            RpkiValidationState TrustAnchor
+    ------                          -------       ----------------------- ------           -----------------            ------------------- -----------
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.160.0.0/12     2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.160.0.0/16     2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.161.0.0/16     2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.162.0.0/16     2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.163.0.0/16     2022-11-29T07:46:45.2062680Z Valid               None
+    7018 9680 9680 3462             12.90.152.69  Valid                   1.164.0.0/16     2022-11-29T07:46:45.2062680Z Valid               None
+    ...
+    ```
+
+    Gets all received routes of a peering with a specific AsPath
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringReceivedRoute.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringreceivedroute
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringReceivedRoute.md
+  PlatyPS schema version: 2024-05-01

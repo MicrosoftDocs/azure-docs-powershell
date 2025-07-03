@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PolicyInsights.Get-AzPolicyMetadata
+name: Get-AzPolicyMetadata
+module: Az.PolicyInsights
+isPreview: false
+summary: |-
+  Gets Policy Metadata resources
+description: |-
+  The **Get-AzPolicyRemediation** cmdlet gets all policy metadata resources or a particular policy metadata resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of policy metadata resources to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyMetadata
+        [-Name <String>]
+        [-Top <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.PSPolicyMetadata" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all policy metadata resources'
+  description: |-
+    ```powershell
+    Get-AzPolicyMetadata
+    ```
+
+    This command gets all policy metadata resources
+- title: 'Example 2: Get a collection of 10 policy metadata resources'
+  description: |-
+    ```powershell
+    Get-AzPolicyMetadata -Top 10
+    ```
+
+    This command gets a collection of 10 policy metadata resources
+- title: "Example 3: Get a single policy metadata resource with the name 'ACF1348'"
+  description: |-
+    ```powershell
+    Get-AzPolicyMetadata -Name ACF1348
+    ```
+
+    This command gets a single policy metadata resource with the name 'ACF1348'
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyMetadata.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.policyinsights/get-azpolicymetadata
+  Module Name: Az.PolicyInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyMetadata.md
+  PlatyPS schema version: 2024-05-01

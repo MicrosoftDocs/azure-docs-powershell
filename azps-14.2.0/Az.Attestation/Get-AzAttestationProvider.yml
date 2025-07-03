@@ -1,0 +1,309 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Attestation.Get-AzAttestationProvider
+name: Get-AzAttestationProvider
+module: Az.Attestation
+isPreview: false
+summary: |-
+  Get the status of Attestation Provider.
+description: |-
+  Get the status of Attestation Provider.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Attestation.Models.IAttestationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the attestation provider.
+    aliases:
+    - ProviderName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAttestationProvider
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAttestationProvider
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAttestationProvider
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAttestationProvider
+        -InputObject <IAttestationIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Attestation.Models.IAttestationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Attestation.Models.Api20201001.IAttestationProvider" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Attestation.Models.Api20201001.IAttestationProviderListResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the status of a specific Attestation Provider'
+  description: |-
+    ```powershell
+    Get-AzAttestationProvider -Name testprovider1 -ResourceGroupName test-rg | fl
+    ```
+
+    ```output
+    AttestUri                    : https://testprovider1.eus.attest.azure.net
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/testprovider1
+    Location                     : eastus
+    Name                         : testprovider1
+    PrivateEndpointConnection    :
+    ResourceGroupName            : test-rg
+    Status                       : Ready
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    TrustModel                   : AAD
+    Type                         : Microsoft.Attestation/attestationProviders
+    ```
+
+    This command gets the status of a specific Attestation Provider named `testprovider1`.
+- title: 'Example 2: List statuses of all Attestation Providers in current subscription'
+  description: |-
+    ```powershell
+    Get-AzAttestationProvider
+    ```
+
+    ```output
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Value                        : {{
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/test",
+                                     "name": "test",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "tags": {
+                                       "Test": "true",
+                                       "CreationYear": "2020"
+                                     },
+                                     "location": "East US",
+                                     "properties": {
+                                       "trustModel": "Isolated",
+                                       "status": "Ready",
+                                       "attestUri": "https://test.eus.attest.azure.net"
+                                     }
+                                   }, {
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/testprovider1",
+                                     "name": "testprovider1",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "tags": {
+                                       "Test": "true",
+                                       "CreationYear": "2020"
+                                     },
+                                     "location": "East US",
+                                     "properties": {
+                                       "trustModel": "Isolated",
+                                       "status": "Ready",
+                                       "attestUri": "https://testprovider1.eus.attest.azure.net"
+                                     }
+                                   },{
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Att
+                                   estation/attestationProviders/testprovider2",
+                                     "name": "testprovider2",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "location": "eastus",
+                                     "properties": {
+                                       "trustModel": "AAD",
+                                       "status": "Ready",
+                                       "attestUri": "https://testprovider2.eus.attest.azure.net"
+                                     }
+                                   }}
+    ```
+
+    This command lists statuses of all Attestation Providers in current subscription.
+- title: 'Example 2: List statuses of all Attestation Providers in a resource group'
+  description: |-
+    ```powershell
+    Get-AzAttestationProvider -ResourceGroupName test-rg
+    ```
+
+    ```output
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Value                        : {{
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/test",
+                                     "name": "test",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "tags": {
+                                       "Test": "true",
+                                       "CreationYear": "2020"
+                                     },
+                                     "location": "East US",
+                                     "properties": {
+                                       "trustModel": "Isolated",
+                                       "status": "Ready",
+                                       "attestUri": "https://test.eus.attest.azure.net"
+                                     }
+                                   }, {
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/testprovider1",
+                                     "name": "testprovider1",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "tags": {
+                                       "Test": "true",
+                                       "CreationYear": "2020"
+                                     },
+                                     "location": "East US",
+                                     "properties": {
+                                       "trustModel": "Isolated",
+                                       "status": "Ready",
+                                       "attestUri": "https://testprovider1.eus.attest.azure.net"
+                                     }
+                                   },{
+                                     "id": "/subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Attestation/attestationProviders/testprovider2",
+                                     "name": "testprovider2",
+                                     "type": "Microsoft.Attestation/attestationProviders",
+                                     "location": "eastus",
+                                     "properties": {
+                                       "trustModel": "AAD",
+                                       "status": "Ready",
+                                       "attestUri": "https://testprovider2.eus.attest.azure.net"
+                                     }
+                                   }}
+    ```
+
+    This command lists statuses of all Attestation Providers in a resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationProvider.md
+  document type: cmdlet
+  external help file: Az.Attestation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.attestation/get-azattestationprovider
+  Module Name: Az.Attestation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Attestation/Attestation/help/Get-AzAttestationProvider.md
+  PlatyPS schema version: 2024-05-01

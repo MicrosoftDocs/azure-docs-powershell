@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.ArcGateway
+name: Az.ArcGateway Module
+isPreview: false
+cmdletGroups:
+- title: ArcGateway
+  cmdlets:
+  - Az.ArcGateway.Get-AzArcGateway
+  - Az.ArcGateway.New-AzArcGateway
+  - Az.ArcGateway.Remove-AzArcGateway
+  - Az.ArcGateway.Update-AzArcSetting
+description: |-
+  Microsoft Azure PowerShell: ArcGateway cmdlets
+metadata:
+  Module Name: Az.ArcGateway
+  Module Guid: 54ca52d1-cd78-409d-b88d-fc5ef844abf6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.arcgateway
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcGateway/ArcGateway/help/Az.ArcGateway.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcGateway/ArcGateway/help/Az.ArcGateway.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

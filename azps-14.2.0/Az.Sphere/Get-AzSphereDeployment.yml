@@ -1,0 +1,456 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sphere.Get-AzSphereDeployment
+name: Get-AzSphereDeployment
+module: Az.Sphere
+isPreview: false
+summary: |-
+  Get a Deployment.
+  '.default' and '.unassigned' are system defined values and cannot be used for product or device group name.
+description: |-
+  Get a Deployment.
+  '.default' and '.unassigned' are system defined values and cannot be used for product or device group name.
+parameters:
+  cmdletParameters:
+  - name: CatalogInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CatalogName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of catalog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceGroupInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityDeviceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of device group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityProduct
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter the result list using the given expression
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Maxpagesize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of result items per page.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Deployment name.
+      Use .default for deployment creation and to get the current deployment for the associated device group.
+    aliases:
+    - DeploymentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityProduct
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityDeviceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityProduct
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of result items to skip.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of result items to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -CatalogName <String>
+        -DeviceGroupName <String>
+        -ProductName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-Maxpagesize <Int32>]
+        [-Skip <Int32>]
+        [-Top <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -CatalogName <String>
+        -DeviceGroupName <String>
+        -Name <String>
+        -ProductName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -DeviceGroupName <String>
+        -Name <String>
+        -ProductInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityProduct
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -DeviceGroupName <String>
+        -Name <String>
+        -ProductName <String>
+        -CatalogInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCatalog
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -Name <String>
+        -DeviceGroupInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityDeviceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereDeployment
+        -InputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.IDeployment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List by resource group'
+  description: |-
+    ```powershell
+    Get-AzSphereDeployment -ResourceGroupName group-test -DeviceGroupName testdevicegroup -ProductName product2024 -CatalogName test2024
+    ```
+
+    ```output
+    Name                                 SystemDataCreatedAt  SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----                                 -------------------  ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    11111111-2222-3333-4444-123456789101 2/28/2024 2:36:04 AM                                             2/28/2024 2:36:04 AM                                                           group-test
+    11111111-2222-3333-4444-123456789102 2/28/2024 2:57:56 AM                                             2/28/2024 2:57:56 AM                                                           group-test
+    ```
+
+    This command lists all deployments for specified device group.
+- title: 'Example 2: Get specific deployment for device group'
+  description: |-
+    ```powershell
+    Get-AzSphereDeployment -ResourceGroupName group-test -DeviceGroupName testdevicegroup -ProductName product2024 -CatalogName test2024 -Name 11111111-2222-3333-4444-123456789102
+    ```
+
+    ```output
+    DateUtc                      : 2/28/2024 2:57:56 AM
+    DeployedImage                : {{
+                                     "id": "/subscriptions/11111111-2222-3333-4444-123456789103/resourceGroups/group-test/providers/Microsoft.AzureSphere/catalogs/test2024/images/a04f0a91-b369-4249-a47d-28c118e2cb3b",
+                                     "name": "a04f0a91-b369-4249-a47d-28c118e2cb3b",
+                                     "type": "Microsoft.AzureSphere/catalogs/images",
+                                     "properties": {
+                                       "image": "GPIO_HighLevelApp",
+                                       "imageId": "a04f0a91-b369-4249-a47d-28c118e2cb3b",
+                                       "regionalDataBoundary": "None",
+                                       "uri": "****************",
+                                       "componentId": "dc7f135c-6074-4d49-aa3a-160e4eed884f",
+                                       "imageType": "Applications",
+                                       "provisioningState": "Succeeded"
+                                     }
+                                   }}
+    DeploymentId                 : 11111111-2222-3333-4444-123456789102
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789103/resourceGroups/group-test/providers/Microsoft.AzureSphere/catalogs/test2024/products/product2024/de
+                                   viceGroups/testdevicegroup/deployments/11111111-2222-3333-4444-123456789102
+    Name                         : 11111111-2222-3333-4444-123456789102
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : group-test
+    SystemDataCreatedAt          : 2/28/2024 2:57:56 AM
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     : 2/28/2024 2:57:56 AM
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.AzureSphere/catalogs/products/deviceGroups/deployments
+    ```
+
+    This command gets specific deployment in specified device group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereDeployment.md
+  document type: cmdlet
+  external help file: Az.Sphere-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sphere/get-azspheredeployment
+  Module Name: Az.Sphere
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereDeployment.md
+  PlatyPS schema version: 2024-05-01

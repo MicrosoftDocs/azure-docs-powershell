@@ -1,0 +1,347 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Add-AzLoadBalancerRuleConfig
+name: Add-AzLoadBalancerRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Adds a rule configuration to a load balancer.
+description: |-
+  The **Add-AzLoadBalancerRuleConfig** cmdlet adds a rule configuration to an Azure load balancer.
+parameters:
+  cmdletParameters:
+  - name: BackendAddressPool
+    type: <xref href="PSBackendAddressPool" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backend address pool to associate with a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendAddressPoolId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a **BackendAddressPool** object to associate with a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backend port for traffic that is matched by a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableOutboundSNAT
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableFloatingIP
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet enables a floating IP address for a rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendIpConfiguration
+    type: <xref href="PSFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a list of front-end IP addresses to associate with a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendIpConfigurationId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID for a front-end IP address configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the front-end port that is matched by a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleTimeoutInMinutes
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the length of time, in minutes, that the state of conversations is maintained in the load balancer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancer
+    type: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **LoadBalancer** object.
+      This cmdlet adds a rule configuration to the load balancer that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadDistribution
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a load distribution.
+    acceptedValues:
+    - Default
+    - SourceIP
+    - SourceIPProtocol
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Probe
+    type: <xref href="PSProbe" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a probe to associate with a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbeId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the probe to associate with a load balancer rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specfies the protocol that is matched by a load balancer rule.
+      The acceptable values for this parameter are: Tcp or Udp.
+    acceptedValues:
+    - Tcp
+    - Udp
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzLoadBalancerRuleConfig
+        -Name <String>
+        -LoadBalancer <PSLoadBalancer>
+        [-FrontendIpConfigurationId <String>]
+        [-BackendAddressPoolId <String>]
+        [-ProbeId <String>]
+        [-Protocol <String>]
+        [-FrontendPort <Int32>]
+        [-BackendPort <Int32>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadDistribution <String>]
+        [-EnableFloatingIP]
+        [-DisableOutboundSNAT]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzLoadBalancerRuleConfig
+        -Name <String>
+        -LoadBalancer <PSLoadBalancer>
+        [-FrontendIpConfiguration <PSFrontendIPConfiguration>]
+        [-BackendAddressPool <PSBackendAddressPool>]
+        [-Probe <PSProbe>]
+        [-Protocol <String>]
+        [-FrontendPort <Int32>]
+        [-BackendPort <Int32>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadDistribution <String>]
+        [-EnableFloatingIP]
+        [-DisableOutboundSNAT]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: false
+inputs:
+- name: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'LoadBalancer' accepts value of type 'PSLoadBalancer' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a rule configuration to a load balancer'
+  description: |-
+    ```
+    PS C:\>$slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+    PS C:\> $slb | Add-AzLoadBalancerRuleConfig -Name "NewRule" -FrontendIPConfiguration $slb.FrontendIpConfigurations[0] -Protocol "Tcp" -FrontendPort 3350 -BackendPort 3350 -EnableFloatingIP
+    ```
+
+    The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $slb.
+
+    The second command uses the pipeline operator to pass the load balancer in $slb to **Add-AzLoadBalancerRuleConfig**, which adds the rule configuration named NewRule.
+links:
+- text: Get-AzLoadBalancer
+  href: ./Get-AzLoadBalancer.yml
+- text: Get-AzLoadBalancerRuleConfig
+  href: ./Get-AzLoadBalancerRuleConfig.yml
+- text: New-AzLoadBalancerRuleConfig
+  href: ./New-AzLoadBalancerRuleConfig.yml
+- text: Remove-AzLoadBalancerRuleConfig
+  href: ./Remove-AzLoadBalancerRuleConfig.yml
+- text: Set-AzLoadBalancerRuleConfig
+  href: ./Set-AzLoadBalancerRuleConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azloadbalancerruleconfig
+  Module Name: Az.Network
+  ms.assetid: 2AE5E9B8-7344-407B-9317-47709F10FCD8
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzLoadBalancerRuleConfig.md
+  PlatyPS schema version: 2024-05-01

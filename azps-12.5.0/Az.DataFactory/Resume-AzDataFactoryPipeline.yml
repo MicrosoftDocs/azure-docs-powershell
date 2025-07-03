@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Resume-AzDataFactoryPipeline
+name: Resume-AzDataFactoryPipeline
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Resumes a suspended pipeline in Data Factory.
+description: |-
+  The **Resume-AzDataFactoryPipeline** cmdlet resumes a suspended pipeline in Azure Data Factory.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactory
+    type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSDataFactory** object.
+      This cmdlet resumes a pipeline that belongs to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a data factory.
+      This cmdlet resumes a pipeline that belongs to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the pipeline to resume.
+    aliases:
+    - PipelineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure resource group.
+      This cmdlet resumes a pipeline that belongs to the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-AzDataFactoryPipeline
+        [-Name] <String>
+        [-DataFactoryName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Resume-AzDataFactoryPipeline
+        [-Name] <String>
+        [-DataFactory] <PSDataFactory>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Resume a pipeline'
+  description: |-
+    ```powershell
+    Resume-AzDataFactoryPipeline -ResourceGroupName "ADF" -Name "DPWikisample" -DataFactoryName "WikiADF"
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to resume pipeline 'DPWikisample' in data factory 'WikiADF'?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    True
+    ```
+
+    This command resumes the pipeline named DPWikisample in the data factory named WikiADF.
+    Use the **Suspend-AzDataFactoryPipeline** cmdlet to suspend a pipeline.
+    The command returns a value of $True.
+- title: Example 2
+  description: |-
+    Resumes a suspended pipeline in Data Factory. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Resume-AzDataFactoryPipeline -DataFactory $DataFactory -Name 'DPWikisample'
+    ```
+links:
+- text: Get-AzDataFactoryPipeline
+  href: ./Get-AzDataFactoryPipeline.yml
+- text: New-AzDataFactoryPipeline
+  href: ./New-AzDataFactoryPipeline.yml
+- text: Remove-AzDataFactoryPipeline
+  href: ./Remove-AzDataFactoryPipeline.yml
+- text: Set-AzDataFactoryPipelineActivePeriod
+  href: ./Set-AzDataFactoryPipelineActivePeriod.yml
+- text: Suspend-AzDataFactoryPipeline
+  href: ./Suspend-AzDataFactoryPipeline.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Resume-AzDataFactoryPipeline.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV1.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/resume-azdatafactorypipeline
+  Module Name: Az.DataFactory
+  ms.assetid: F522841A-4246-4028-A754-393D8DADD924
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Resume-AzDataFactoryPipeline.md
+  PlatyPS schema version: 2024-05-01

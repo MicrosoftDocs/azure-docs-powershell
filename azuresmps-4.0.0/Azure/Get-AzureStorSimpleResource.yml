@@ -1,0 +1,125 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleResource
+name: Get-AzureStorSimpleResource
+module: Azure
+isPreview: false
+summary: |-
+  Gets all resources that you created.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleResource** cmdlet gets all resources that you created by using Azure Portal.
+  The cmdlet gets details you can use to connect to the resources.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource that this cmdlet gets.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleResource
+        [-ResourceName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns **ResourceCredentials** objects that contain the following properties:
+
+    - **ResourceName**
+    - **ResourceId**
+    - **ResourceState**
+examples:
+- title: 'Example 1: Get all resources'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleResource
+    VERBOSE: ClientRequestId: 5cd61b91-ef40-43b4-986d-156e06d2ed65_PS
+
+    ResourceName                                      ResourceId           ResourceState
+    ------------                                      ----------           -------------
+    Contoso63-Tsqa                                    8838459798595306468  Started
+    Contoso68-Tsqa                                    2859070203638134681  Started
+    Contoso73-Tsqa                                    7871392677286863733  Started
+    Contoso87-Tsqa                                    1909806764156522689  Started
+    VERBOSE: Found 4 StorSimple resources.
+    ```
+
+    This command gets all the resources you created.
+    In this example, there are three resources.
+- title: 'Example 2: Get a resource by using its name'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa"
+    VERBOSE: ClientRequestId: efc3c85c-12aa-4345-b6eb-ccc532de4825_PS
+
+    ResourceName                                      ResourceId           ResourceState
+    ------------                                      ----------           -------------
+    Contoso63-Tsqa                                    1909806764156522689  Started
+    VERBOSE: Found 1 StorSimple resource.
+    ```
+
+    This command gets the resource named Contoso63-Tsqa.
+- title: 'Example 3: Attempt to get a nonexistent resource'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleResource -ResourceName "Contoso64-Tsqa"
+    VERBOSE: ClientRequestId: 5d08d40b-f9d7-4d43-956f-13f01e89625b_PS
+    VERBOSE: Invalid input : Could not find a resource named Contoso64-Tsqa in your subscription.
+    ```
+
+    This command attempts to get the resource named Contoso64-Tsqa.
+    There is no resource that has this name.
+    This example does not return any resource.
+links:
+- text: Get-AzureStorSimpleResourceContext
+  href: ./Get-AzureStorSimpleResourceContext.yml
+- text: Select-AzureStorSimpleResource
+  href: ./Select-AzureStorSimpleResource.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 482E8CD6-C38F-4BD5-8214-016D0D8C7FD0
+  PlatyPS schema version: 2024-05-01

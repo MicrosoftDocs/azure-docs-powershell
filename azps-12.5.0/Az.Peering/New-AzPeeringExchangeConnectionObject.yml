@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.New-AzPeeringExchangeConnectionObject
+name: New-AzPeeringExchangeConnectionObject
+module: Az.Peering
+isPreview: false
+summary: |-
+  Create an in-memory object for ExchangeConnection.
+description: |-
+  Create an in-memory object for ExchangeConnection.
+parameters:
+  cmdletParameters:
+  - name: BgpSessionMaxPrefixesAdvertisedV4
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of prefixes advertised over the IPv4 session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionMaxPrefixesAdvertisedV6
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of prefixes advertised over the IPv6 session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionMd5AuthenticationKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The MD5 authentication key of the session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionMicrosoftSessionIPv4Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv4 session address on Microsoft's end.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionMicrosoftSessionIPv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv6 session address on Microsoft's end.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionPeerSessionIPv4Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv4 session address on peer's end.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionPeerSessionIPv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv6 session address on peer's end.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionPrefixV4
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv4 prefix that contains both ends' IPv4 addresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpSessionPrefixV6
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv6 prefix that contains both ends' IPv6 addresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionIdentifier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier (GUID) for the connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringDbFacilityId
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The PeeringDB.com ID of the facility at which the connection has to be set up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPeeringExchangeConnectionObject
+        [-BgpSessionMaxPrefixesAdvertisedV4 <Int32>]
+        [-BgpSessionMaxPrefixesAdvertisedV6 <Int32>]
+        [-BgpSessionMd5AuthenticationKey <String>]
+        [-BgpSessionMicrosoftSessionIPv4Address <String>]
+        [-BgpSessionMicrosoftSessionIPv6Address <String>]
+        [-BgpSessionPeerSessionIPv4Address <String>]
+        [-BgpSessionPeerSessionIPv6Address <String>]
+        [-BgpSessionPrefixV4 <String>]
+        [-BgpSessionPrefixV6 <String>]
+        [-ConnectionIdentifier <String>]
+        [-PeeringDbFacilityId <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.ExchangeConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an exchange connection object'
+  description: |-
+    ```powershell
+    $md5Key = "******"
+
+    New-AzPeeringExchangeConnectionObject -BgpSessionMaxPrefixesAdvertisedV4 20000 -BgpSessionMaxPrefixesAdvertisedV6 0 -BgpSessionMd5AuthenticationKey $md5Key -BgpSessionMicrosoftSessionIPv4Address 1.1.1.1 -BgpSessionPeerSessionIPv4Address 1.1.1.0 -BgpSessionPrefixV4 1.1.1.1/31 -PeeringDbFacilityId 82 -ConnectionIdentifier c111111111111
+    ```
+
+    ```output
+    ConnectionIdentifier ConnectionState ErrorMessage PeeringDbFacilityId
+    -------------------- --------------- ------------ -------------------
+    c111111111111                                     82
+    ```
+
+    Create a exchange connection object in memory
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringExchangeConnectionObject.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Peering/new-AzPeeringExchangeConnectionObject
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringExchangeConnectionObject.md
+  PlatyPS schema version: 2024-05-01

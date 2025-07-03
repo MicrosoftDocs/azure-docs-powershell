@@ -1,0 +1,574 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceBus.New-AzServiceBusNamespace
+name: New-AzServiceBusNamespace
+module: Az.ServiceBus
+isPreview: false
+summary: |-
+  Creates a new ServiceBus namespace.
+description: |-
+  Creates a new ServiceBus namespace.
+notes: |-
+  ALIASES
+
+  New-AzServiceBusNamespaceV2
+parameters:
+  cmdletParameters:
+  - name: AlternateName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alternate name for namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This property disables SAS authentication for the Service Bus namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IKeyVaultProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Properties of KeyVault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumTlsVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum TLS version for the cluster to support, e.g.
+      '1.2'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of ServiceBusNamespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PremiumMessagingPartition
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of partitions of a Service Bus namespace.
+      This property is only applicable to Premium SKU namespaces.
+      The default value is 1 and possible values are 1, 2 and 4
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This determines if traffic is allowed over public network.
+      By default it is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequireInfrastructureEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Infrastructure Encryption (Double Encryption)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ResourceGroupName.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The specified messaging units for the tier.
+      For Premium tier, capacity are 1,2 and 4.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of this SKU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Properties for User Assigned Identities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enabling this property creates a Premium Service Bus Namespace in regions supported availability zones.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceBusNamespace
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -Location <String>
+        [-AlternateName <String>]
+        [-DisableLocalAuth]
+        [-KeyVaultProperty <IKeyVaultProperties[]>]
+        [-PremiumMessagingPartition <Int32>]
+        [-RequireInfrastructureEncryption]
+        [-IdentityType <String>]
+        [-ZoneRedundant]
+        [-UserAssignedIdentityId <String[]>]
+        [-MinimumTlsVersion <String>]
+        [-PublicNetworkAccess <String>]
+        [-SkuName <String>]
+        [-SkuCapacity <Int32>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.ISbNamespace" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new ServiceBus namespace with UserAssignedIdentity Encryption'
+  description: |-
+    ```powershell
+    $id1 = "/subscriptions/000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity"
+    $id2 = "/subscriptions/000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/mySecondIdentity"
+    $keyVaultProperty1 = New-AzServiceBusKeyVaultPropertiesObject -KeyName key4 -KeyVaultUri https://testkeyvault.vault.azure.net/ -UserAssignedIdentity "/subscriptions/000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity"
+    $keyVaultProperty2 = New-AzServiceBusKeyVaultPropertiesObject -KeyName key5 -KeyVaultUri https://testkeyvault.vault.azure.net/ -UserAssignedIdentity "/subscriptions/000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity"
+    New-AzServiceBusNamespace -ResourceGroupName myResourceGroup -Name myNamespace -SkuName Premium -Location northeurope -IdentityType UserAssigned -UserAssignedIdentityID $id1,$id2 -KeyVaultProperty $keyVaultProperty1,$keyVaultProperty2
+    ```
+
+    ```output
+    AlternateName                   :
+    CreatedAt                       : 11/21/2022 5:15:41 AM
+    DisableLocalAuth                : False
+    Id                              : /subscriptions/000000000000000/resourceGroups/myResourceGroup/provide
+                                      rs/Microsoft.ServiceBus/namespaces/myNamespace
+    IdentityType                    : UserAssigned
+    KeySource                       : Microsoft.KeyVault
+    KeyVaultProperty                : {{
+                                        "identity": {
+                                          "userAssignedIdentity": "/subscriptions/000000000000000/reso
+                                      urceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity
+                                         "
+                                        },
+                                        "keyName": "key4",
+                                        "keyVaultUri": "https://testkeyvault.vault.azure.net",
+                                        "keyVersion": ""
+                                      }, {
+                                        "identity": {
+                                          "userAssignedIdentity": "/subscriptions/000000000000000/reso
+                                      urceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity
+                                         "
+                                        },
+                                        "keyName": "key5",
+                                        "keyVaultUri": "https://testkeyvault.vault.azure.net",
+                                        "keyVersion": ""
+                                      }}
+    Location                        : North Europe
+    MetricId                        : 000000000000000:myNamespace
+    MinimumTlsVersion               : 1.2
+    Name                            : myNamespace
+    PrincipalId                     :
+    PrivateEndpointConnection       :
+    ProvisioningState               : Succeeded
+    PublicNetworkAccess             : Enabled
+    RequireInfrastructureEncryption : False
+    ResourceGroupName               : myResourceGroup
+    ServiceBusEndpoint              : https://myNamespace.servicebus.windows.net:443/
+    SkuCapacity                     : 1
+    SkuName                         : Premium
+    SkuTier                         : Premium
+    Status                          : Active
+    SystemDataCreatedAt             :
+    SystemDataCreatedBy             :
+    SystemDataCreatedByType         :
+    SystemDataLastModifiedAt        :
+    SystemDataLastModifiedBy        :
+    SystemDataLastModifiedByType    :
+    Tag                             : {
+                                      }
+    TenantId                        :
+    Type                            : Microsoft.ServiceBus/Namespaces
+    UpdatedAt                       : 11/21/2022 5:23:01 AM
+    UserAssignedIdentity            : {
+                                        "/subscriptions/000000000000000/resourceGroups/myResourceGroup/prov
+                                      iders/Microsoft.ManagedIdentity/userAssignedIdentities/myFirstIdentity": {
+                                        },
+                                        "/subscriptions/000000000000000/resourceGroups/myResourceGroup/prov
+                                      iders/Microsoft.ManagedIdentity/userAssignedIdentities/mySecondIdentity": {
+                                        }
+                                      }
+    ZoneRedundant                   : False
+    ```
+
+    Creates a new Premium ServiceBus namespace with UserAssignedIdentity encryption.
+- title: 'Example 2: Create a new ServiceBus namespace with System Assigned Identity enabled.'
+  description: |-
+    ```powershell
+    New-AzServiceBusNamespace -ResourceGroupName myResourceGroup -Name myNamespace -SkuName Premium -Location northeurope -IdentityType SystemAssigned
+    ```
+
+    ```output
+    AlternateName                   :
+    CreatedAt                       : 11/21/2022 5:33:10 AM
+    DisableLocalAuth                : False
+    Id                              : /subscriptions/000000000000000/resourceGroups/myResourceGroup/provide
+                                      rs/Microsoft.ServiceBus/namespaces/myNamespace
+    IdentityType                    : SystemAssigned
+    KeySource                       :
+    KeyVaultProperty                :
+    Location                        : North Europe
+    MetricId                        : 000000000000000:myNamespace
+    MinimumTlsVersion               : 1.2
+    Name                            : myNamespace
+    PrincipalId                     : 000000000000
+    PrivateEndpointConnection       :
+    ProvisioningState               : Succeeded
+    PublicNetworkAccess             : Enabled
+    RequireInfrastructureEncryption :
+    ResourceGroupName               : myResourceGroup
+    ServiceBusEndpoint              : https://myNamespace.servicebus.windows.net:443/
+    SkuCapacity                     : 1
+    SkuName                         : Premium
+    SkuTier                         : Premium
+    Status                          : Active
+    SystemDataCreatedAt             :
+    SystemDataCreatedBy             :
+    SystemDataCreatedByType         :
+    SystemDataLastModifiedAt        :
+    SystemDataLastModifiedBy        :
+    SystemDataLastModifiedByType    :
+    Tag                             : {
+                                      }
+    TenantId                        : 000000000000000
+    Type                            : Microsoft.ServiceBus/Namespaces
+    UpdatedAt                       : 11/21/2022 5:40:18 AM
+    UserAssignedIdentity            : {
+                                      }
+    ZoneRedundant                   : False
+    ```
+
+    Create an ServiceBus namespace with SystemAssigned identity.
+- title: 'Example 3: Create a new Standard ServiceBus namespace with DisableLocalAuth enabled'
+  description: |-
+    ```powershell
+    New-AzServiceBusNamespace -ResourceGroupName myResourceGroup -Name myNamespace -SkuName Standard -Location southcentralus -Tag @{k1='v1'; k2='v2'} -DisableLocalAuth
+    ```
+
+    ```output
+    AlternateName                   :
+    CreatedAt                       : 11/18/2022 6:06:22 AM
+    DisableLocalAuth                : True
+    Id                              : /subscriptions/000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ServiceBus/namespaces/myNamespace
+    IdentityType                    :
+    KeySource                       :
+    KeyVaultProperty                :
+    Location                        : South Central US
+    MetricId                        : 000000000000000:myNamespace
+    MinimumTlsVersion               : 1.1
+    Name                            : myNamespace
+    PrincipalId                     :
+    PrivateEndpointConnection       :
+    ProvisioningState               : Succeeded
+    PublicNetworkAccess             : Enabled
+    RequireInfrastructureEncryption :
+    ResourceGroupName               : myResourceGroup
+    ServiceBusEndpoint              : https://myNamespace.servicebus.windows.net:443/
+    SkuCapacity                     :
+    SkuName                         : Standard
+    SkuTier                         : Standard
+    Status                          : Active
+    SystemDataCreatedAt             :
+    SystemDataCreatedBy             :
+    SystemDataCreatedByType         :
+    SystemDataLastModifiedAt        :
+    SystemDataLastModifiedBy        :
+    SystemDataLastModifiedByType    :
+    Tag                             : {
+                                        "k1": "v1",
+                                        "k2": "v2"
+                                      }
+    TenantId                        :
+    Type                            : Microsoft.ServiceBus/Namespaces
+    UpdatedAt                       : 11/18/2022 6:07:06 AM
+    UserAssignedIdentity            : {
+                                      }
+    ZoneRedundant                   : False
+    ```
+
+    Create a standard ServiceBus namespace `myNamespace` with DisableLocalAuth enabled.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusNamespace.md
+  document type: cmdlet
+  external help file: Az.ServiceBus-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicebus/new-azservicebusnamespace
+  Module Name: Az.ServiceBus
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusNamespace.md
+  PlatyPS schema version: 2024-05-01

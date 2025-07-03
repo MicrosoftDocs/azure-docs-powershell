@@ -1,0 +1,185 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabaseOperation
+name: Get-AzureSqlDatabaseOperation
+module: Azure
+isPreview: false
+summary: |-
+  Gets the status of database operations on an Azure server.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabaseOperation** cmdlet gets the status of database operations on the specified Azure server.
+  If you specify only the *ServerName* or *ConnectionContext* parameter, the cmdlet gets all the database operations for the server.
+  If you also specify a database by using the *Database* or *DatabaseName* parameter, this cmdlet gets all the operations for the specified database.
+  If you specify an operation GUID, and *ServerName* or *ConnectionContext*, the cmdlet gets a single database operation.
+parameters:
+  cmdletParameters:
+  - name: ConnectionContext
+    type: <xref href="IServerDataServiceContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server.
+    aliases:
+    - Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Database
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents an Azure SQL Database.
+      If you specify this parameter, you must specify the *ServerName* parameter or *ConnectionContext* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a database.
+      If you specify this parameter, you must specify the *ServerName* parameter or the *ConnectionContext* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationGuid
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operation ID that represents a specific database operation for which this cmdlet gets status.
+      You can obtain operation IDs by requesting all the database operations for a Azure SQL Database or server.
+      If you specify this parameter, you must specify the *ServerName* parameter or the *ConnectionContext* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseOperation
+        -ConnectionContext <IServerDataServiceContext>
+        [-Database <Database>]
+        [-DatabaseName <String>]
+        [-OperationGuid <Guid>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionContext
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseOperation
+        -ServerName <String>
+        [-Database <Database>]
+        [-DatabaseName <String>]
+        [-OperationGuid <Guid>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.SqlDatabaseServerContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database.DatabaseOperationResponseList" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an array of **DatabaseOperationResponseList** objects if you get multiple operations.
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database.DatabaseOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the status of all database operations for a database'
+  description: |-
+    ```
+    PS C:\> $Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context -DatabaseName "Database17"
+    ```
+
+    This command gets the status of all database operations on the database named Database17 on the server that the connection context $Context specifies.
+- title: 'Example 2: Get the status of all database operations for a server'
+  description: |-
+    ```
+    PS C:\> $Operations = Get-AzureSqlDatabaseOperation -ConnectionContext $Context
+    ```
+
+    This command gets the status of all database operations on the server that the connection context $Context specifies.
+links:
+- text: Azure SQL Database
+  href: https://msdn.microsoft.com/library/ee336279.aspx
+- text: Database Operation Status
+  href: https://msdn.microsoft.com/en-us/library/azure/dn720371.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlDatabase
+  href: ./Get-AzureSqlDatabase.yml
+- text: New-AzureSqlDatabaseServerContext
+  href: ./New-AzureSqlDatabaseServerContext.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 56026A74-A6DC-47A5-9643-5828C3D0E83B
+  PlatyPS schema version: 2024-05-01

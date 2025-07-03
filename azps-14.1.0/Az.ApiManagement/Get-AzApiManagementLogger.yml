@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementLogger
+name: Get-AzApiManagementLogger
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets API Management Logger objects.
+description: |-
+  The **Get-AzApiManagementLogger** cmdlet gets an Azure API Management **Logger** or all the loggers.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PsApiManagementContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoggerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the specific logger to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByLoggerId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementLogger
+        -Context <PsApiManagementContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllLoggers
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementLogger
+        -Context <PsApiManagementContext>
+        -LoggerId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByLoggerId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementLogger" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all loggers'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementLogger -Context $apimContext
+    ```
+
+    This command gets all the loggers for the specified context.
+- title: 'Example 2: Get a specific logger'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementLogger -Context $apimContext -LoggerId "Logger123"
+    ```
+
+    This command removes a logger that has the ID Logger123.
+links:
+- text: New-AzApiManagementLogger
+  href: ./New-AzApiManagementLogger.yml
+- text: Remove-AzApiManagementLogger
+  href: ./Remove-AzApiManagementLogger.yml
+- text: Set-AzApiManagementLogger
+  href: ./Set-AzApiManagementLogger.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementLogger.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementlogger
+  Module Name: Az.ApiManagement
+  ms.assetid: A935ABAC-6C60-4AE3-9434-B9BCC1182A34
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementLogger.md
+  PlatyPS schema version: 2024-05-01

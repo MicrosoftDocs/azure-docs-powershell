@@ -1,0 +1,22 @@
+### YamlMime:PowerShellModule1
+uid: Az.Tools.Predictor
+name: Az.Tools.Predictor Module
+isPreview: false
+cmdletGroups:
+- title: Az.Tools.Predictor Cmdlets
+  cmdlets:
+  - Az.Tools.Predictor.Disable-AzPredictor
+  - Az.Tools.Predictor.Enable-AzPredictor
+  - Az.Tools.Predictor.Open-AzPredictorSurvey
+  - Az.Tools.Predictor.Send-AzPredictorRating
+description: |-
+  Commands to enable and disable Az Predictor, and send feedback about the suggestions provided by the
+  module.
+metadata:
+  Module Name: Az.Tools.Predictor
+  Module Guid: 599d1760-4ee1-4ed2-806e-f2a1b1a0ba4d
+  Help Version: 1.0.0.0
+  Locale: en-US
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Predictor/help/Az.Tools.Predictor.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BotService.Get-AzBotService
+name: Get-AzBotService
+module: Az.BotService
+isPreview: false
+summary: |-
+  Returns a BotService specified by the parameters.
+description: |-
+  Returns a BotService specified by the parameters.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BotService.Models.IBotServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Bot resource.
+    aliases:
+    - BotName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Bot resource group in the user subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBotService
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBotService
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBotService
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBotService
+        -InputObject <IBotServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BotService.Models.IBotServiceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BotService.Models.Api20220615Preview.IBot" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List by subscription'
+  description: |-
+    ```powershell
+    Get-AzBotService
+    ```
+
+    ```output
+    Etag                                   Kind Location Name      SkuName SkuTier Zone
+    ----                                   ---- -------- ----      ------- ------- ----
+    "4f003041-0000-1800-0000-6281fec80000" bot  global   botTest1  F0              {}
+    "0d0018e1-0000-1800-0000-6371e9540000" bot  global   botTest2  F0              {}
+    "05000ef7-0000-0200-0000-5fd7065a0000" sdk  global   botTest3  S1              {}
+    "0600ef2b-0000-0200-0000-5fd727a70000" sdk  global   botTest4  S1              {}
+    ```
+
+    Returns BotService resources belonging to current subscription.
+- title: 'Example 2: Get by Name and ResourceGroupName'
+  description: |-
+    ```powershell
+    Get-AzBotService -Name botTest1 -ResourceGroupName botTest-rg
+    ```
+
+    ```output
+    Etag                                   Kind Location Name      SkuName SkuTier Zone
+    ----                                   ---- -------- ----      ------- ------- ----
+    "4f003041-0000-1800-0000-6281fec80000" bot  global   botTest1  F0              {}
+    ```
+
+    Returns a BotService specified by Name and ResourceGroupName.
+- title: 'Example 3: GetViaIdentity'
+  description: |-
+    ```powershell
+    Get-AzBotService -InputObject $botTest1
+    ```
+
+    ```output
+    Etag                                   Kind Location Name      SkuName SkuTier Zone
+    ----                                   ---- -------- ----      ------- ------- ----
+    "4f003041-0000-1800-0000-6281fec80000" bot  global   botTest1  F0              {}
+    ```
+
+    Returns a BotService specified by the input IBotServiceIdentity.
+- title: 'Example 4: List by resource group'
+  description: |-
+    ```powershell
+    Get-AzBotService -ResourceGroupName botTest-rg
+    ```
+
+    ```output
+    Etag                                   Kind Location Name      SkuName SkuTier Zone
+    ----                                   ---- -------- ----      ------- ------- ----
+    "4f003041-0000-1800-0000-6281fec80000" bot  global   botTest1  F0              {}
+    "05000ef7-0000-0200-0000-5fd7065a0000" sdk  global   botTest3  S1              {}
+    ```
+
+    Returns all the resources of a particular type belonging to a resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Get-AzBotService.md
+  document type: cmdlet
+  external help file: Az.BotService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.botservice/get-azbotservice
+  Module Name: Az.BotService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Get-AzBotService.md
+  PlatyPS schema version: 2024-05-01

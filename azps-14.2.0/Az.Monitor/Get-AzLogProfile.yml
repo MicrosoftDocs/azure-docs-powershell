@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzLogProfile
+name: Get-AzLogProfile
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets a log profile.
+description: |-
+  The **Get-AzLogProfile** cmdlet gets a log profile.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the log profile to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLogProfile
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSLogProfileCollection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets a log profile'
+  description: |-
+    ```powershell
+    Get-AzLogProfile
+    ```
+
+    ```output
+    StorageAccountId : /subscriptions/xxxx-xxxx-xxxx-xxxx-xxxx/resourceGroups/testrg/providers/Microsoft.Stor
+    age/storageAccounts/storageaccount
+    ServiceBusRuleId :
+    Locations
+         : eastus
+    Categories
+         : Delete
+         : Write
+         : Action
+    RetentionPolicy
+    Enabled : False
+    Days    : 0
+
+    Id               :
+    /subscriptions/xxxx-xxxx-xxxx-xxxx-xxxx/providers/microsoft.insights/logprofiles/exportlogprofile
+    Name             : exportlogprofile
+    Type             :
+    Location         :
+    Tags             :
+    Kind             :
+    Etag             :
+    ```
+
+    This command gets a log profile.
+links:
+- text: Add-AzLogProfile
+  href: ./Add-AzLogProfile.yml
+- text: Remove-AzLogProfile
+  href: ./Remove-AzLogProfile.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzLogProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azlogprofile
+  Module Name: Az.Monitor
+  ms.assetid: 019EFD94-4087-45F6-812D-FBDFE1B2E48A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzLogProfile.md
+  PlatyPS schema version: 2024-05-01

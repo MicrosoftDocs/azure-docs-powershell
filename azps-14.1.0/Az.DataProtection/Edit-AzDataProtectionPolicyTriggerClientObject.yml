@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Edit-AzDataProtectionPolicyTriggerClientObject
+name: Edit-AzDataProtectionPolicyTriggerClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Updates Backup schedule of an existing backup policy.
+description: |-
+  Updates Backup schedule of an existing backup policy.
+parameters:
+  cmdletParameters:
+  - name: Policy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.IBackupPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup Policy object.
+      To construct, see NOTES section for POLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveSchedule
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to remove the backup Schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveBackupSchedule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Schedule
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Schedule to be associated to backup policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyBackupSchedule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Edit-AzDataProtectionPolicyTriggerClientObject
+        -Policy <IBackupPolicy>
+        [-RemoveSchedule]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveBackupSchedule
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Edit-AzDataProtectionPolicyTriggerClientObject
+        -Policy <IBackupPolicy>
+        -Schedule <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ModifyBackupSchedule
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.IBackupPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add Daily schedule to Azure Backup rule.'
+  description: |-
+    ```powershell
+    $schedule = New-AzDataProtectionPolicyTriggerScheduleClientObject -ScheduleDays (Get-Date) -IntervalType Daily -IntervalCount 1
+    Edit-AzDataProtectionPolicyTriggerClientObject -Policy $pol -Schedule $schedule
+    ```
+
+    ```output
+    DatasourceType            ObjectType
+    --------------            ----------
+    {Microsoft.Compute/disks} BackupPolicy
+    ```
+
+    This command updates backup schedule of given policy to daily backup.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Edit-AzDataProtectionPolicyTriggerClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/edit-azdataprotectionpolicytriggerclientobject
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Edit-AzDataProtectionPolicyTriggerClientObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzNetworkSecurityGroup
+name: Set-AzNetworkSecurityGroup
+module: Az.Network
+isPreview: false
+summary: |-
+  Sets the goal state for a network security group.
+description: |-
+  The **Set-AzNetworkSecurityGroup** cmdlet sets the goal state for an Azure network security group.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroup
+    type: <xref href="PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      A network security group object representing the goal state to which the cmdlet sets the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkSecurityGroup
+        -NetworkSecurityGroup <PSNetworkSecurityGroup>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'NetworkSecurityGroup' accepts value of type 'PSNetworkSecurityGroup' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the goal state for a network security group'
+  description: |-
+    ```
+    PS C:\>Get-AzNetworkSecurityGroup -Name "Nsg1" -ResourceGroupName "Rg1" | Add-AzNetworkSecurityRuleConfig -Name "Rdp-Rule" -Description "Allow RDP" -Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority 100 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "*" -DestinationPortRange "3389" | Set-AzNetworkSecurityGroup
+    ```
+
+    This command gets the Azure network security group named Nsg1, and adds a network security rule named Rdp-Rule to allow Internet traffic on port 3389 to the retrieved network security group object using Add-AzNetworkSecurityRuleConfig.
+    The command persists the modified Azure network security group using **Set-AzNetworkSecurityGroup**.
+links:
+- text: Get-AzNetworkSecurityGroup
+  href: ./Get-AzNetworkSecurityGroup.yml
+- text: New-AzNetworkSecurityGroup
+  href: ./New-AzNetworkSecurityGroup.yml
+- text: Remove-AzNetworkSecurityGroup
+  href: ./Remove-AzNetworkSecurityGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-aznetworksecuritygroup
+  Module Name: Az.Network
+  ms.assetid: 9F69DAEF-F2ED-449B-B75F-FCA7ED73D98F
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityGroup.md
+  PlatyPS schema version: 2024-05-01

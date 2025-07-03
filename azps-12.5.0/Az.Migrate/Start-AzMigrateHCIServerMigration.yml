@@ -1,0 +1,266 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Start-AzMigrateHCIServerMigration
+name: Start-AzMigrateHCIServerMigration
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Starts the migration for the replicating server.
+description: |-
+  Starts the migration for the replicating server.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.IMigrateIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which migration needs to be initiated.
+      The server object can be retrieved using the Get-AzMigrateHCIServerReplication cmdlet.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetObjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which migration needs to be initiated.
+      The ID should be retrieved using the Get-AzMigrateHCIServerReplication cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TurnOffSourceServer
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the source server should be turned off post migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzMigrateHCIServerMigration
+        -TargetObjectID <String>
+        [-TurnOffSourceServer]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByID
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzMigrateHCIServerMigration
+        -InputObject <IMigrateIdentity>
+        [-TurnOffSourceServer]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.IMigrateIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.IWorkflowModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start migration by Id'
+  description: |-
+    ```powershell
+    Start-AzMigrateHCIServerMigration -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851"
+    ```
+
+    ```output
+    ActivityId                         :  ActivityId: 00000000-0000-0000-0000-000000000000
+    AllowedAction                      : {Cancel}
+    CustomPropertyAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api2021
+                                         0216Preview.WorkflowModelCustomPropertiesAffectedObjectDe
+                                         tails
+    CustomPropertyInstanceType         : FailoverWorkflowDetails
+    DisplayName                        : Planned failover
+    EndTime                            :
+    Error                              : {}
+    Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication
+                                         /replicationVaults/testproj1234replicationvault/jobs/af0e1bf6-e3e6-482c-8345-b1a06d87af96
+    Name                               : af0e1bf6-e3e6-482c-8345-b1a06d87af96
+    ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication
+                                         /replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851/plannedFai
+                                         lover
+    ObjectInternalId                   : a8b5ee68-102c-5aae-9499-c57a475a8fc4
+    ObjectInternalName                 : testmachine
+    ObjectName                         : 0ec082d5-6827-457a-bae2-f986e1b94851
+    ObjectType                         : ProtectedItem
+    ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
+    SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
+    StartTime                          : 8/1/2023 12:42:19 AM
+    State                              : Started
+    SystemDataCreatedAt                :
+    SystemDataCreatedBy                :
+    SystemDataCreatedByType            :
+    SystemDataLastModifiedAt           :
+    SystemDataLastModifiedBy           :
+    SystemDataLastModifiedByType       :
+    Tag                                : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api2021
+                                         0216Preview.WorkflowModelTags
+    TargetFabricProviderId             : 22f00372-a1b7-467f-87ce-d95e17a6e7c7
+    Task                               : {Prerequisite check, Turning off resource on primary,
+                                         Starting failover, Preparing protected entities...}
+    Type                               : Microsoft.DataReplication/replicationVaults/jobs
+    ```
+
+    Start AzStackHCI server migration by Id.
+- title: 'Example 2: Start migration by input object'
+  description: |-
+    ```powershell
+    $InputObject = Get-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851"
+
+    Start-AzMigrateHCIServerMigration -InputObject $InputObject
+
+    $InputObject | Start-AzMigrateHCIServerMigration
+    ```
+
+    ```output
+    ActivityId                         :  ActivityId: 00000000-0000-0000-0000-000000000000
+    AllowedAction                      : {Cancel}
+    CustomPropertyAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api2021
+                                         0216Preview.WorkflowModelCustomPropertiesAffectedObjectDe
+                                         tails
+    CustomPropertyInstanceType         : FailoverWorkflowDetails
+    DisplayName                        : Planned failover
+    EndTime                            :
+    Error                              : {}
+    Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication
+                                         /replicationVaults/testproj1234replicationvault/jobs/af0e1bf6-e3e6-482c-8345-b1a06d87af96
+    Name                               : af0e1bf6-e3e6-482c-8345-b1a06d87af96
+    ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication
+                                         /replicationVaults/testproj1234replicationvault/protectedItems/0ec082d5-6827-457a-bae2-f986e1b94851/plannedFai
+                                         lover
+    ObjectInternalId                   : a8b5ee68-102c-5aae-9499-c57a475a8fc4
+    ObjectInternalName                 : testmachine
+    ObjectName                         : 0ec082d5-6827-457a-bae2-f986e1b94851
+    ObjectType                         : ProtectedItem
+    ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
+    SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
+    StartTime                          : 8/1/2023 12:42:19 AM
+    State                              : Started
+    SystemDataCreatedAt                :
+    SystemDataCreatedBy                :
+    SystemDataCreatedByType            :
+    SystemDataLastModifiedAt           :
+    SystemDataLastModifiedBy           :
+    SystemDataLastModifiedByType       :
+    Tag                                : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api2021
+                                         0216Preview.WorkflowModelTags
+    TargetFabricProviderId             : 22f00372-a1b7-467f-87ce-d95e17a6e7c7
+    Task                               : {Prerequisite check, Turning off resource on primary,
+                                         Starting failover, Preparing protected entities...}
+    Type                               : Microsoft.DataReplication/replicationVaults/jobs
+    ```
+
+    Start AzStackHCI server migration by replication input object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Start-AzMigrateHCIServerMigration.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/start-azmigratehciservermigration
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Start-AzMigrateHCIServerMigration.md
+  PlatyPS schema version: 2024-05-01

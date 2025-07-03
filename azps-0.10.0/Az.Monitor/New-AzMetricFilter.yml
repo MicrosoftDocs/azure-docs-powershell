@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzMetricFilter
+name: New-AzMetricFilter
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates a metric dimension filter that can be used to query metrics.
+description: |-
+  The **New-AzMetricFilter** cmdlet creates a metric dimension filter that can be used to query metrics.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dimension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the metric dimension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operator used to select the metric dimension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the array of metric dimension values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMetricFilter
+        [-Dimension] <String>
+        [-Operator] <String>
+        [-Value] <String[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a metric dimension filter'
+  description: |-
+    ```
+    PS C:\>New-AzMetricFilter -Dimension City -Operator eq -Value "Seattle","New York"
+    ```
+
+    This command creates metric dimension filter of the format "City eq 'Seattle' or City eq 'New York'".
+links:
+- text: Get-AzMetric
+  href: ./Get-AzMetric.yml
+- text: Get-AzMetricDefinition
+  href: ./Get-AzMetricDefinition.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzMetricFilter.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azmetricfilter
+  Module Name: Az.Monitor
+  ms.assetid: B5F2388E-0136-4F8A-8577-67CE2A45671E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzMetricFilter.md
+  PlatyPS schema version: 2024-05-01

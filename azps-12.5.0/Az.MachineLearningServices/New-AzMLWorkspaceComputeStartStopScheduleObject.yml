@@ -1,0 +1,319 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceComputeStartStopScheduleObject
+name: New-AzMLWorkspaceComputeStartStopScheduleObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for ComputeStartStopSchedule.
+description: |-
+  Create an in-memory object for ComputeStartStopSchedule.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ComputePowerAction" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The compute power action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CronExpression
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies cron expression of schedule.
+              The expression should follow NCronTab format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CronStartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The start time in yyyy-MM-ddTHH:mm:ss format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CronTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies time zone in which the schedule runs.
+              TimeZone should follow Windows time zone format.
+      Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceFrequency
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ComputeRecurrenceFrequency" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The frequency to trigger schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceInterval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies schedule interval in conjunction with frequency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceStartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The start time in yyyy-MM-ddTHH:mm:ss format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies time zone in which the schedule runs.
+              TimeZone should follow Windows time zone format.
+      Refer: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-time-zones?view=windows-11.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Required] List of hours for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A system assigned id for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Required] List of minutes for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMonthDay
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of month days for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleProvisioningStatus
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ScheduleProvisioningState" data-throw-if-not-resolved="False" />
+    description: |-
+      The current deployment state of schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleStatus
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ScheduleStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Is the schedule enabled or disabled?.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleWeekDay
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ComputeWeekDay" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of days for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ScheduleStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Is the schedule enabled or disabled?.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TriggerType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ComputeTriggerType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The schedule trigger type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceComputeStartStopScheduleObject
+        [-Action <ComputePowerAction>]
+        [-CronExpression <String>]
+        [-CronStartTime <String>]
+        [-CronTimeZone <String>]
+        [-RecurrenceFrequency <ComputeRecurrenceFrequency>]
+        [-RecurrenceInterval <Int32>]
+        [-RecurrenceStartTime <String>]
+        [-RecurrenceTimeZone <String>]
+        [-ScheduleHour <Int32[]>]
+        [-ScheduleId <String>]
+        [-ScheduleMinute <Int32[]>]
+        [-ScheduleMonthDay <Int32[]>]
+        [-ScheduleProvisioningStatus <ScheduleProvisioningState>]
+        [-ScheduleStatus <ScheduleStatus>]
+        [-ScheduleWeekDay <ComputeWeekDay[]>]
+        [-Status <ScheduleStatus>]
+        [-TriggerType <ComputeTriggerType>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ComputeStartStopSchedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ComputeStartStopSchedule'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceComputeStartStopScheduleObject
+    ```
+
+    Create an in-memory object for ComputeStartStopSchedule
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeStartStopScheduleObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceComputeStartStopScheduleObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeStartStopScheduleObject.md
+  PlatyPS schema version: 2024-05-01

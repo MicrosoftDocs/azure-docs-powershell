@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Add-AzApplicationGatewayRedirectConfiguration
+name: Add-AzApplicationGatewayRedirectConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Adds a redirect configuration to an Application Gateway.
+description: |-
+  The **Add-AzApplicationGatewayRedirectConfiguration** cmdlet adds a redirect configuration to an Application Gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The applicationGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludePath
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Include path in the redirected url.
+      Default is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeQueryString
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Include query string in the redirected url.
+      Default is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Redirect Configuration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of redirect
+    acceptedValues:
+    - Permanent
+    - Found
+    - SeeOther
+    - Temporary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetListener
+    type: <xref href="PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+    description: |-
+      HTTPListener to redirect the request to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetListenerID
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of  listener to redirect the request to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target URL fo redirection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByURL
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayRedirectConfiguration
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -RedirectType <String>
+        [-TargetListenerID <String>]
+        [-IncludePath <Boolean>]
+        [-IncludeQueryString <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayRedirectConfiguration
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -RedirectType <String>
+        [-TargetListener <PSApplicationGatewayHttpListener>]
+        [-IncludePath <Boolean>]
+        [-IncludeQueryString <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayRedirectConfiguration
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -RedirectType <String>
+        [-TargetUrl <String>]
+        [-IncludePath <Boolean>]
+        [-IncludeQueryString <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByURL
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\>$Appgw = Add-AzApplicationGatewayRedirectConfiguration -ApplicationGateway $AppGw -Name "Redirect01" -RedirectType Permanent -TargetListener $listener01
+    ```
+
+    The first command gets the application gateway and stores it in the $AppGw variable.
+    The second command adds the redirect configuration to the application gateway.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayRedirectConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/add-azapplicationgatewayredirectconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Add-AzApplicationGatewayRedirectConfiguration.md
+  PlatyPS schema version: 2024-05-01

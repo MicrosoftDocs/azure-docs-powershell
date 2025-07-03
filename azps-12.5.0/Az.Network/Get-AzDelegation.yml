@@ -1,0 +1,126 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzDelegation
+name: Get-AzDelegation
+module: Az.Network
+isPreview: false
+summary: |-
+  Get a delegation (or all of the delegations) on a given subnet.
+description: |-
+  The **Get-AzDelegation** cmdlet gets the named delegation from a subnet. If no delegation is named, it returns all of the delegations on the provided subnet.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the delegation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subnet
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+    description: |-
+      The subnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDelegation
+        [-Name <String>]
+        -Subnet <PSSubnet>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSSubnet" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Retrieving a specific delegation'
+  description: |-
+    ```powershell
+    $subnet = Get-AzVirtualNetwork -Name "myVNet" -ResourceGroupName "myResourceGroup" | Get-AzVirtualNetworkSubnetConfig -Name "mySubnet"
+    Get-AzDelegation -Name "myDelegation" -Subnet $subnet
+    ```
+
+    ```output
+    ProvisioningState : Succeeded
+    ServiceName       : Microsoft.Sql/servers
+    Actions           : {}
+    Name              : myDelegation
+    Etag              : "thisisaguid"
+    Id                : /subscriptions/subId/resourceGroups/rg/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/mySubnet/delegations/myDelegation
+    ```
+
+    The first line retrieves the subnet of interest. The second line shows the delegation information for the delegation called "myDelegation."
+- title: 'Example 2: Retrieving all subnet delegations'
+  description: |-
+    ```powershell
+    $subnet = Get-AzVirtualNetwork -Name "myVNet" -ResourceGroupName "myResourceGroup" | Get-AzVirtualNetworkSubnetConfig -Name "mySubnet"
+    $delegations = Get-AzDelegation -Subnet $subnet
+    ```
+
+    The first line retrieves the subnet of interest. The second line stores a list of all of the delegations on _mySubnet_ in the $delegations variable.
+links:
+- text: Add-AzDelegation
+  href: ./Add-AzDelegation.yml
+- text: New-AzDelegation
+  href: ./New-AzDelegation.yml
+- text: Remove-AzDelegation
+  href: ./Remove-AzDelegation.yml
+- text: Get-AzVirtualNetwork
+  href: ./Get-AzVirtualNetwork.yml
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzDelegation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azdelegation
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzDelegation.md
+  PlatyPS schema version: 2024-05-01

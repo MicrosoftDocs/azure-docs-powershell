@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DevCenter.Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint
+name: Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint
+module: Az.DevCenter
+isPreview: false
+summary: |-
+  Lists the endpoints that agents may call as part of Dev Box service administration.
+  These FQDNs should be allowed for outbound access in order for the Dev Box service to function.
+description: |-
+  Lists the endpoints that agents may call as part of Dev Box service administration.
+  These FQDNs should be allowed for outbound access in order for the Dev Box service to function.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkConnectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Network Connection that can be applied to a Pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint
+        -NetworkConnectionName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenter.Models.Api20240501Preview.IOutboundEnvironmentEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List the outbound network dependency endpoints of a network connection'
+  description: |-
+    ```powershell
+    Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint -ResourceGroupName testRg -NetworkConnectionName eastusNetwork
+    ```
+
+    This command lists the outbound network dependency endpoints of the network connection "eastusNetwork" under the resource group "testRg".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint.md
+  document type: cmdlet
+  external help file: Az.DevCenter-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.devcenter/get-azdevcenteradminnetworkconnectionoutboundnetworkdependencyendpoint
+  Module Name: Az.DevCenter
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,166 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataShare.Get-AzDataShareProviderShareSubscription
+name: Get-AzDataShareProviderShareSubscription
+module: Az.DataShare
+isPreview: false
+summary: |-
+  Gets information about consumer share subscriptions on provider side.
+description: |-
+  The **Get-AzDataShareProviderSubscription** cmdlet gets information about consumer share subscriptions on provider side. If you specify the share subscription id, this cmdlet gets information about the share subscription. If you do not specify the share subscription id, this cmdlet gets information about all the consumer share subscriptions in associated with the share.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure DataShare Account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the Azure DataShare Account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the share
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByProviderShareSubscriptionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure DataShare name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of consumer share subscription
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataShareProviderShareSubscription
+        -ResourceGroupName <String>
+        -AccountName <String>
+        -ShareName <String>
+        [-ShareSubscriptionId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataShareProviderShareSubscription
+        -ResourceId <String>
+        [-ShareSubscriptionId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByProviderShareSubscriptionIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataShare.Models.PSDataShareProviderShareSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDataShareProviderShareSubscription -ResourceGroupName "ADS" -AccountName "WikiAds" -ShareName "AdsShare" -ShareSubscriptionId "/subscriptions/1834da9b-787a-44f6-ae81-60707ab8c957/resourceGroups/ADS/providers/Microsoft.DataShare/accounts/WikiAds/shares/AdsShare/shareSubscriptions/00001111-aaaa-2222-bbbb-3333cccc4444"
+    ```
+
+    ```output
+    Company                   : ADS Test
+    CreatedAt                 : 6/30/2019 12:42:12 AM
+    CreatedBy                 : adstest@microsoft.com
+    SharedAt                  : 6/30/2019 12:41:37 AM
+    SharedBy                  : adsprovider@microsoft.com
+    ShareSubscriptionObjectId : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ShareSubscriptionStatus   : Active
+    Id                        : /subscriptions/1834da9b-787a-44f6-ae81-60707ab8c957/resourceGroups/ADS/providers/Microsoft.DataShare/accounts/WikiAds/shares/AdsShare/shareSubscriptions/00001111-aaaa-2222-bbbb-3333cccc4444
+    Name                      : AdsShareSubscription
+    Type                      : Microsoft.DataShare/ShareSubscriptions
+    ```
+
+    This commands provides information about consumer share subscription associated with share AdsShare in data share account WikiAds.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareProviderShareSubscription.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataShare.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datashare/get-azdatashareprovidersharesubscription
+  Module Name: Az.DataShare
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataShare/DataShare/help/Get-AzDataShareProviderShareSubscription.md
+  PlatyPS schema version: 2024-05-01

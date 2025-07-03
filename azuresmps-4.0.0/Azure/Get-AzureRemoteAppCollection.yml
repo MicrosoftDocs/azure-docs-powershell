@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppCollection
+name: Get-AzureRemoteAppCollection
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves information about an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppCollection** cmdlet retrieves information about Azure RemoteApp collections in Microsoft Azure.
+  It returns an object with information on a specific collection, or if no collection is specified, for all the collections in the current subscription.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppCollection
+        [[-CollectionName] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a list of all collections'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppCollection
+    ```
+
+    This command returns a list of all Azure RemoteApp collections in the subscription.
+- title: 'Example 2: Get information about a specified collection'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppCollection ContosoApps
+    ```
+
+    This command returns information about the Azure RemoteApp collection named ContosoApps.
+- title: 'Example 3: Get a list of collections by using a wildcard'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppCollection Finance*
+    ```
+
+    This command returns a list of all Azure RemoteApp collections matching Finance*.
+links:
+- text: New-AzureRemoteAppCollection
+  href: ./New-AzureRemoteAppCollection.yml
+- text: Remove-AzureRemoteAppCollection
+  href: ./Remove-AzureRemoteAppCollection.yml
+- text: Set-AzureRemoteAppCollection
+  href: ./Set-AzureRemoteAppCollection.yml
+- text: Update-AzureRemoteAppCollection
+  href: ./Update-AzureRemoteAppCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8F00099A-042A-4450-B6CF-9EDA2350CBFC
+  PlatyPS schema version: 2024-05-01

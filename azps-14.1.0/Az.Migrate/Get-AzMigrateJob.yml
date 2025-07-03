@@ -1,0 +1,346 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Get-AzMigrateJob
+name: Get-AzMigrateJob
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Retrieves the status of an Azure Migrate job.
+description: |-
+  The Get-AzMigrateJob cmdlet retrives the status of an Azure Migrate job.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OData filter options.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListById
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job object of the replicating server.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job id for which the details needs to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Job identifier
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Migrate Project in which servers are replicating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the migrate project.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Resource Group of the Azure Migrate Project in the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group where the recovery services vault is present.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateJob
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        [-SubscriptionId <String>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateJob
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        -JobName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateJob
+        -JobID <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateJob
+        -InputObject <IJob>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateJob
+        -ResourceGroupID <String>
+        -ProjectID <String>
+        [-SubscriptionId <String>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListById
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get By Job Id'
+  description: |-
+    ```powershell
+    Get-AzMigrateJob -JobID "/Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b"
+    ```
+
+    ```output
+    ActivityId                       : 68af14b4-46ae-48d1-b3e9-cdcffb9e8a93 ActivityId: 74d1a396-1d37-4264-8a5b-b727aaef0171
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          : 9/16/20 11:57:33 AM
+    Error                            : {}
+    FriendlyName                     : Associate replication policy
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b
+    Location                         :
+    Name                             : 997e2a92-5afe-49c7-a81a-89660aec9b7b
+    ScenarioName                     : AssociateProtectionProfile
+    StartTime                        : 9/16/20 11:57:32 AM
+    State                            : Succeeded
+    StateDescription                 : Completed
+    TargetInstanceType               : ProtectionProfile
+    TargetObjectId                   : 42752b89-5fad-52fd-bf93-679fbdb6fed9
+    TargetObjectName                 : migrateAzMigratePWSHTc8d1sitepolicy
+    Task                             : {CloudPairingPrerequisitesCheck, CloudPairingPrepareSite}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    This retrieves a job by it's Id.
+- title: 'Example 2: List by resource group and project'
+  description: |-
+    ```powershell
+    Get-AzMigrateJob -ResourceGroupName 'azmigratepwshtestasr13072020' -ProjectName 'AzMigrateTestProjectPWSH'
+    ```
+
+    ```output
+    ActivityId                       :
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         :
+    EndTime                          : 9/21/20 4:13:40 PM
+    Error                            : {}
+    FriendlyName                     : Update the virtual machine
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/1c89e38e-34ec-4903-aa7c-115201bf2de1
+    Location                         :
+    Name                             : 1c89e38e-34ec-4903-aa7c-115201bf2de1
+    ScenarioName                     : UpdateVmProperties
+    StartTime                        : 9/21/20 4:13:34 PM
+    State                            : Succeeded
+    StateDescription                 : Completed
+    TargetInstanceType               : ProtectionEntity
+    TargetObjectId                   : 593b735d-2a34-53b2-b8ed-e33da5650703
+    TargetObjectName                 : rb-w2k12r2-1
+    Task                             : {}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    This gets all jobs in a project.
+- title: 'Example 3: Get by resource group, project and job name'
+  description: |-
+    ```powershell
+    Get-AzMigrateJob -ResourceGroupName 'azmigratepwshtestasr13072020' -ProjectName 'AzMigrateTestProjectPWSH' -JobName 7ae1ee7c-442c-499d-8b0e-81d52a42b71e
+    ```
+
+    ```output
+    ActivityId                       : 6986b7e5-0f1f-49d8-8b4b-77e6f66bcb92 ActivityId: eb73c6a1-7c66-469f-a853-d896aa38cc0f
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          : 8/21/20 6:41:48 AM
+    Error                            : {}
+    FriendlyName                     : Create replication policy
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/7ae1ee7c-442c-499d-8b0e-81d52a42b71e
+    Location                         :
+    Name                             : 7ae1ee7c-442c-499d-8b0e-81d52a42b71e
+    ScenarioName                     : AddProtectionProfile
+    StartTime                        : 8/21/20 6:41:48 AM
+    State                            : Succeeded
+    StateDescription                 : Completed
+    TargetInstanceType               : ProtectionProfile
+    TargetObjectId                   : 18b2ccec-e39a-517b-ae5d-dd395e9f4f96
+    TargetObjectName                 : samplePolicy3
+    Task                             : {AddProtectionProfilePreflightsCheckTask, AddProtectionProfileTask}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    This gets a specific job.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateJob.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigratejob
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateJob.md
+  PlatyPS schema version: 2024-05-01

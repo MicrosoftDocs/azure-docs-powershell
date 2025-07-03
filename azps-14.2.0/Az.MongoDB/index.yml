@@ -1,0 +1,22 @@
+### YamlMime:PowerShellModule1
+uid: Az.MongoDB
+name: Az.MongoDB Module
+isPreview: false
+cmdletGroups:
+- title: MongoDB
+  cmdlets:
+  - Az.MongoDB.Get-AzMongoDBOrganization
+  - Az.MongoDB.New-AzMongoDBOrganization
+  - Az.MongoDB.Remove-AzMongoDBOrganization
+description: |-
+  Microsoft Azure PowerShell: MongoDB cmdlets
+metadata:
+  Module Name: Az.MongoDB
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.mongodb
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MongoDB/MongoDB/help/Az.MongoDB.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MongoDB/MongoDB/help/Az.MongoDB.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

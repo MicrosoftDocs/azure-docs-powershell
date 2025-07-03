@@ -1,0 +1,885 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KubernetesConfiguration.Update-AzKubernetesConfigurationFlux
+name: Update-AzKubernetesConfigurationFlux
+module: Az.KubernetesConfiguration
+isPreview: false
+summary: |-
+  Update an existing Kubernetes Flux Configuration.
+description: |-
+  Update an existing Kubernetes Flux Configuration.
+notes: |-
+  ALIASES
+
+  Update-AzK8sConfigurationFlux
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The account key (shared key) to access the storage account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Blob container name to sync from the url endpoint for the flux configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobLocalAuthRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobSasToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Shared Access token to access the storage container
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobSyncIntervalInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The interval at which to re-reconcile the cluster Azure Blob source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobTimeoutInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum time to attempt to reconcile the cluster Azure Blob source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureBlobUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL to sync for the flux configuration Azure Blob storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketAccessKey
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Plaintext access key used to securely access the S3 bucket
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketInsecure
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify whether to use insecure communication when puling data from the S3 bucket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketLocalAuthRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The bucket name to sync from the url endpoint for the flux configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketSyncIntervalInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The interval at which to re-reconcile the cluster bucket source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketTimeoutInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum time to attempt to reconcile the cluster bucket source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BucketUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL to sync for the flux configuration S3 bucket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the kubernetes cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Kubernetes cluster resource name - i.e.
+      managedClusters, connectedClusters, provisionedClusters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationProtectedSetting
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs of protected configuration settings for the configuration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositoryHttpsCaCert
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Base64-encoded HTTPS certificate authority contents used to access git private git repositories over HTTPS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositoryHttpsUser
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plaintext HTTPS username used to access private git repositories over HTTPS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositoryLocalAuthRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the managed or user-provided configuration secrets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositorySshKnownHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Base64-encoded known_hosts value containing public SSH keys required to access private git repositories over SSH
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositorySyncIntervalInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The interval at which to re-reconcile the cluster git repository source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositoryTimeoutInSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum time to attempt to reconcile the cluster git repository source with the remote.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitRepositoryUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL to sync for the flux configuration git repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.IKubernetesConfigurationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kustomization
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedIdentityClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The client Id for authenticating a Managed Identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Flux Configuration.
+    aliases:
+    - FluxConfigurationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryRefBranch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The git repository branch name to checkout.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryRefCommit
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The commit SHA to checkout.
+      This value must be combined with the branch name to be valid.
+      This takes precedence over semver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryRefSemver
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The semver range used to match against git repository tags.
+      This takes precedence over tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryRefTag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The git repository tag name to checkout.
+      This takes precedence over branch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalClientCertificate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Base64-encoded certificate used to authenticate a Service Principal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalClientCertificatePassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The password for the certificate used to authenticate a Service Principal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalClientCertificateSendChain
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to include x5c header in client claims when acquiring a token to enable subject name / issuer based authentication for the Client Certificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The client Id for authenticating a Service Principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalClientSecret
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The client secret for authenticating a Service Principal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The tenant Id for authenticating a Service Principal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceKind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Source Kind to pull the configuration data from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Suspend
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether this configuration should suspend its reconciliation of its kustomizations and sources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzKubernetesConfigurationFlux
+        -ClusterName <String>
+        -ClusterType <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AzureBlobAccountKey <String>]
+        [-AzureBlobContainerName <String>]
+        [-AzureBlobLocalAuthRef <String>]
+        [-AzureBlobSasToken <String>]
+        [-AzureBlobSyncIntervalInSecond <Int64>]
+        [-AzureBlobTimeoutInSecond <Int64>]
+        [-AzureBlobUrl <String>]
+        [-BucketAccessKey <SecureString>]
+        [-BucketInsecure]
+        [-BucketLocalAuthRef <String>]
+        [-BucketName <String>]
+        [-BucketSyncIntervalInSecond <Int64>]
+        [-BucketTimeoutInSecond <Int64>]
+        [-BucketUrl <String>]
+        [-ConfigurationProtectedSetting <Hashtable>]
+        [-GitRepositoryHttpsCaCert <String>]
+        [-GitRepositoryHttpsUser <String>]
+        [-GitRepositoryLocalAuthRef <String>]
+        [-GitRepositorySshKnownHost <String>]
+        [-GitRepositorySyncIntervalInSecond <Int64>]
+        [-GitRepositoryTimeoutInSecond <Int64>]
+        [-GitRepositoryUrl <String>]
+        [-Kustomization <Hashtable>]
+        [-ManagedIdentityClientId <String>]
+        [-RepositoryRefBranch <String>]
+        [-RepositoryRefCommit <String>]
+        [-RepositoryRefSemver <String>]
+        [-RepositoryRefTag <String>]
+        [-ServicePrincipalClientCertificate <String>]
+        [-ServicePrincipalClientCertificatePassword <String>]
+        [-ServicePrincipalClientCertificateSendChain]
+        [-ServicePrincipalClientId <String>]
+        [-ServicePrincipalClientSecret <String>]
+        [-ServicePrincipalTenantId <String>]
+        [-SourceKind <String>]
+        [-Suspend]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzKubernetesConfigurationFlux
+        -InputObject <IKubernetesConfigurationIdentity>
+        [-AzureBlobAccountKey <String>]
+        [-AzureBlobContainerName <String>]
+        [-AzureBlobLocalAuthRef <String>]
+        [-AzureBlobSasToken <String>]
+        [-AzureBlobSyncIntervalInSecond <Int64>]
+        [-AzureBlobTimeoutInSecond <Int64>]
+        [-AzureBlobUrl <String>]
+        [-BucketAccessKey <SecureString>]
+        [-BucketInsecure]
+        [-BucketLocalAuthRef <String>]
+        [-BucketName <String>]
+        [-BucketSyncIntervalInSecond <Int64>]
+        [-BucketTimeoutInSecond <Int64>]
+        [-BucketUrl <String>]
+        [-ConfigurationProtectedSetting <Hashtable>]
+        [-GitRepositoryHttpsCaCert <String>]
+        [-GitRepositoryHttpsUser <String>]
+        [-GitRepositoryLocalAuthRef <String>]
+        [-GitRepositorySshKnownHost <String>]
+        [-GitRepositorySyncIntervalInSecond <Int64>]
+        [-GitRepositoryTimeoutInSecond <Int64>]
+        [-GitRepositoryUrl <String>]
+        [-Kustomization <Hashtable>]
+        [-ManagedIdentityClientId <String>]
+        [-RepositoryRefBranch <String>]
+        [-RepositoryRefCommit <String>]
+        [-RepositoryRefSemver <String>]
+        [-RepositoryRefTag <String>]
+        [-ServicePrincipalClientCertificate <String>]
+        [-ServicePrincipalClientCertificatePassword <String>]
+        [-ServicePrincipalClientCertificateSendChain]
+        [-ServicePrincipalClientId <String>]
+        [-ServicePrincipalClientSecret <String>]
+        [-ServicePrincipalTenantId <String>]
+        [-SourceKind <String>]
+        [-Suspend]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.IKubernetesConfigurationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesConfiguration.Models.IFluxConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an existing Kubernetes Flux Configuration.'
+  description: |-
+    ```powershell
+    Update-AzKubernetesConfigurationFlux -ClusterName azpstest_cluster_arc -ClusterType ConnectedClusters -Name azpstestflux-k8s -ResourceGroupName azps_test_group -GitRepositoryUrl https://github.com/fluxcd/flux2-kustomize-helm-example -RepositoryRefBranch main -SourceKind 'GitRepository' -GitRepositorySyncIntervalInSecond 600 -GitRepositoryTimeoutInSecond 600 -Suspend:$false
+    ```
+
+    ```output
+    Name             ResourceGroupName
+    ----             -----------------
+    azpstestflux-k8s azps_test_group
+    ```
+
+    Update an existing Kubernetes Flux Configuration.
+- title: 'Example 2: Update an existing Kubernetes Flux Configuration.'
+  description: |-
+    ```powershell
+    Get-AzKubernetesConfigurationFlux -ClusterName azpstest_cluster_arc -ClusterType ConnectedClusters -Name azpstestflux-k8s -ResourceGroupName azps_test_group | Update-AzKubernetesConfigurationFlux -GitRepositoryUrl https://github.com/fluxcd/flux2-kustomize-helm-example -RepositoryRefBranch main -SourceKind 'GitRepository' -GitRepositorySyncIntervalInSecond 600 -GitRepositoryTimeoutInSecond 600 -Suspend:$false
+    ```
+
+    ```output
+    Name             ResourceGroupName
+    ----             -----------------
+    azpstestflux-k8s azps_test_group
+    ```
+
+    Update an existing Kubernetes Flux Configuration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/KubernetesConfiguration/help/Update-AzKubernetesConfigurationFlux.md
+  document type: cmdlet
+  external help file: Az.KubernetesConfiguration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration/update-azkubernetesconfigurationflux
+  Module Name: Az.KubernetesConfiguration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/KubernetesConfiguration/help/Update-AzKubernetesConfigurationFlux.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,202 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Get-AzMigrateReplicationFabric
+name: Get-AzMigrateReplicationFabric
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Gets the details of an Azure Site Recovery fabric.
+description: |-
+  Gets the details of an Azure Site Recovery fabric.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Fabric name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OData filter options.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group where the recovery services vault is present.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the recovery services vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription Id in which migrate project was created.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateReplicationFabric
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateReplicationFabric
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -FabricName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IFabric" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all fabrics by resource group and vault name'
+  description: |-
+    ```powershell
+    Get-AzMigrateReplicationFabric -ResourceGroupName azmigratepwshtestasr13072020 -ResourceName AzMigrateTestProjectPWSH02aarsvault -FabricName AzMigratePWSHTc8d1replicationfabric
+    ```
+
+    ```output
+    BcdrState                                 : Valid
+    CustomDetailInstanceType                  : VMwareV2
+    EncryptionDetailKekCertExpiryDate         :
+    EncryptionDetailKekCertThumbprint         :
+    EncryptionDetailKekState                  : None
+    FriendlyName                              : AzMigratePWSHTc8d1replicationfabric
+    Health                                    : Normal
+    HealthErrorDetail                         : {}
+    Id                                        : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsof
+                                                t.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationFabrics/AzMigratePWSHTc8d1replicationfabr
+                                                ic
+    InternalIdentifier                        : 501ff8f2-c9d7-5bf4-87ff-d0b3fc98aeb5
+    Location                                  :
+    Name                                      : AzMigratePWSHTc8d1replicationfabric
+    RolloverEncryptionDetailKekCertExpiryDate :
+    RolloverEncryptionDetailKekCertThumbprint :
+    RolloverEncryptionDetailKekState          : None
+    Type                                      : Microsoft.RecoveryServices/vaults/replicationFabrics
+    ```
+
+    Get all fabrics in resource group and vault
+- title: 'Example 2: Get fabric by resource group, vault name and fabric name'
+  description: |-
+    ```powershell
+    Get-AzMigrateReplicationFabric -ResourceGroupName azmigratepwshtestasr13072020 -ResourceName AzMigrateTestProjectPWSH02aarsvault
+    ```
+
+    ```output
+    BcdrState                                 : Valid
+    CustomDetailInstanceType                  : VMwareV2
+    EncryptionDetailKekCertExpiryDate         :
+    EncryptionDetailKekCertThumbprint         :
+    EncryptionDetailKekState                  : None
+    FriendlyName                              : AzMigratePWSHTc8d1replicationfabric
+    Health                                    : Normal
+    HealthErrorDetail                         : {}
+    Id                                        : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsof
+                                                t.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationFabrics/AzMigratePWSHTc8d1replicationfabr
+                                                ic
+    InternalIdentifier                        : 501ff8f2-c9d7-5bf4-87ff-d0b3fc98aeb5
+    Location                                  :
+    Name                                      : AzMigratePWSHTc8d1replicationfabric
+    RolloverEncryptionDetailKekCertExpiryDate :
+    RolloverEncryptionDetailKekCertThumbprint :
+    RolloverEncryptionDetailKekState          : None
+    Type                                      : Microsoft.RecoveryServices/vaults/replicationFabrics
+    ```
+
+    Get a specific fabric
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateReplicationFabric.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigratereplicationfabric
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateReplicationFabric.md
+  PlatyPS schema version: 2024-05-01

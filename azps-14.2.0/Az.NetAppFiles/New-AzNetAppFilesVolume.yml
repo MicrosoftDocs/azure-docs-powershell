@@ -1,0 +1,1008 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetAppFiles.New-AzNetAppFilesVolume
+name: New-AzNetAppFilesVolume
+module: Az.NetAppFiles
+isPreview: false
+summary: |-
+  Creates a new Azure NetApp Files (ANF) volume.
+description: |-
+  The **New-AzNetAppFilesVolume** cmdlet creates an ANF volume.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvsDataStore
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the volume is enabled for Azure VMware Solution (AVS) datastore purpose (Enabled, Disabled)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Backup
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeBackupProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the backup object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup ID. UUID v4 or resource identifier used to identify the Backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CapacityPoolResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Pool Resource Id used in case of creating a volume through volume group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolAccess
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Cool Access(tiering) is enabled for the volume (default false).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolAccessRetrievalPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CoolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are:
+       Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
+       OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
+       Never - No client-driven data is pulled from cool tier to standard storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolAccessTieringPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CoolAccessTieringPolicy determines which cold data blocks are moved to cool tier. The possible values for this field are:
+       Auto - Moves cold user data blocks in both the Snapshot copies and the active file system to the cool tier tier. This policy is the default.
+       SnapshotOnly - Moves user data blocks of the Volume Snapshot copies that are not associated with the active file system to the cool tier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolnessPeriod
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of days after which data that is not accessed by clients will be tiered (minimum 7, maximum 63).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreationToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A unique file path for the volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultGroupQuotaInKiB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default group quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultUserQuotaInKiB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default user quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteBaseSnapshot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled (true) the snapshot the volume was created from will be automatically deleted after the volume create operation has finished.  Defaults to false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSubvolume
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag indicating whether subvolume operations are enabled on the volume (Enabled, Disabled)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeySource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Source of key used to encrypt data in volume. Applicable if NetApp account has encryption.keySource = 'Microsoft.KeyVault'. Possible values are: 'Microsoft.NetApp, Microsoft.KeyVault'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExportPolicy
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeExportPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the export policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsDefaultQuotaEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if default quota is enabled for the volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsLargeVolume
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether volume is a Large Volume or Regular Volume. Defaults to false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KerberosEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Describe if a volume is Kerberos Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultPrivateEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of private endpoint for KeyVault. It must reside in the same VNET as the volume. Only applicable if encryptionKeySource = 'Microsoft.KeyVault'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether LDAP is enabled or not for a given NFS volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF volume
+    aliases:
+    - VolumeName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkFeature
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Basic network, or Standard features available to the volume (Basic, Standard).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlacementRule
+    type: <xref href="System.Collections.Generic.IList`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSKeyValuePairs" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Application specific placement rules for the particular volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesPool" data-throw-if-not-resolved="False" />
+    description: |-
+      The pool for the new volume object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtocolType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A hashtable array which represents the export policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProximityPlacementGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Proximity placement group associated with the volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesReplicationObject" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the replication object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityStyle
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The security style of volume. Possible values include: 'ntfs', 'unix'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service level of the ANF volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbAccessBasedEnumeration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables access based enumeration share property for SMB Shares. Only applicable for SMB/DualProtocol volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbContinuouslyAvailable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables continuously available share property for SMB volume. Only applicable for SMB volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables encryption for in-flight smb3 data. Only applicable for SMB/DualProtocol volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbNonBrowsable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables non browsable property for SMB Shares. Only applicable for SMB/DualProtocol volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Snapshot
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeSnapshot" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the snapshot object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotDirectoryVisible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Create volume from a snapshot. UUID v4 or resource identifier used to identify the Snapshot
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotPolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Snapshot Policy ResourceId used to apply a snapshot policy to the volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Resource URI for a delegated subnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThroughputMibps
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Double" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Maximum throughput in Mibps that can be achieved by this volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UnixPermission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
+    aliases:
+    - UnixPermissions
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsageThreshold
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum storage quota allowed for a file system in bytes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeSpecName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Volume spec name is the application specific designation or identifier for the particular volume in a volume group for e.g. data, log.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the ANF volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of Availability Zones
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetAppFilesVolume
+        -ResourceGroupName <String>
+        -Location <String>
+        -AccountName <String>
+        -PoolName <String>
+        -Name <String>
+        -UsageThreshold <Int64>
+        -SubnetId <String>
+        -CreationToken <String>
+        -ServiceLevel <String>
+        [-VolumeType <String>]
+        [-SnapshotId <String>]
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-ReplicationObject <PSNetAppFilesReplicationObject>]
+        [-Snapshot <PSNetAppFilesVolumeSnapshot>]
+        [-SnapshotPolicyId <String>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ProtocolType <String[]>]
+        [-SnapshotDirectoryVisible]
+        [-BackupId <String>]
+        [-SecurityStyle <String>]
+        [-ThroughputMibps <Double>]
+        [-KerberosEnabled]
+        [-SmbEncryption]
+        [-SmbContinuouslyAvailable]
+        [-LdapEnabled]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-CoolAccessTieringPolicy <String>]
+        [-UnixPermission <String>]
+        [-AvsDataStore <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-NetworkFeature <String>]
+        [-CapacityPoolResourceId <String>]
+        [-ProximityPlacementGroup <String>]
+        [-VolumeSpecName <String>]
+        [-PlacementRule <System.Collections.Generic.IList`1[Microsoft.Azure.Commands.NetAppFiles.Models.PSKeyValuePairs]>]
+        [-EnableSubvolume]
+        [-Zone <String[]>]
+        [-EncryptionKeySource <String>]
+        [-KeyVaultPrivateEndpointResourceId <String>]
+        [-DeleteBaseSnapshot]
+        [-SmbAccessBasedEnumeration <String>]
+        [-SmbNonBrowsable <String>]
+        [-IsLargeVolume]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzNetAppFilesVolume
+        -Name <String>
+        -UsageThreshold <Int64>
+        -SubnetId <String>
+        -CreationToken <String>
+        -ServiceLevel <String>
+        -PoolObject <PSNetAppFilesPool>
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-ReplicationObject <PSNetAppFilesReplicationObject>]
+        [-Snapshot <PSNetAppFilesVolumeSnapshot>]
+        [-SnapshotPolicyId <String>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ProtocolType <String[]>]
+        [-SnapshotDirectoryVisible]
+        [-SecurityStyle <String>]
+        [-ThroughputMibps <Double>]
+        [-KerberosEnabled]
+        [-SmbEncryption]
+        [-SmbContinuouslyAvailable]
+        [-LdapEnabled]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-CoolAccessTieringPolicy <String>]
+        [-UnixPermission <String>]
+        [-AvsDataStore <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-NetworkFeature <String>]
+        [-CapacityPoolResourceId <String>]
+        [-ProximityPlacementGroup <String>]
+        [-VolumeSpecName <String>]
+        [-PlacementRule <System.Collections.Generic.IList`1[Microsoft.Azure.Commands.NetAppFiles.Models.PSKeyValuePairs]>]
+        [-EnableSubvolume]
+        [-Zone <String[]>]
+        [-EncryptionKeySource <String>]
+        [-KeyVaultPrivateEndpointResourceId <String>]
+        [-DeleteBaseSnapshot]
+        [-SmbAccessBasedEnumeration <String>]
+        [-SmbNonBrowsable <String>]
+        [-IsLargeVolume]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesPool" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an ANF volume'
+  description: |-
+    ```powershell
+    New-AzNetAppFilesVolume -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -Name "MyAnfVolume" -Location "westus2" -CreationToken "MyAnfVolume" -UsageThreshold 1099511627776 -ServiceLevel "Premium" -SubnetId "/subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/MySubNetName"
+    ```
+
+    ```output
+    Location          : westus2
+    Id                : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.NetApp/netAppAccounts/MyAnfAccount/capacityPools/MyAnfPool/volumes/MyAnfVolume
+    Name              : MyAnfAccount/MyAnfPool/MyAnfVolume
+    Type              : Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+    Tags              :
+    FileSystemId      : 3e2773a7-2a72-d003-0637-1a8b1fa3eaaf
+    CreationToken     : MyAnfVolume
+    ServiceLevel      : Premium
+    UsageThreshold    : 1099511627776
+    ProvisioningState : Succeeded
+    SubnetId          : /subscriptions/f557b96d-2308-4a18-aae1-b8f7e7e70cc7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/default
+    ```
+
+    This command creates the new ANF volume "MyAnfVolume" within the pool "MyAnfPool".
+- title: 'Example 2: Create an ANF volume using NFSv4.1 Protocol Type. Note do not use the IP adddress block shown for -AllowedClient. This is an example IPv4 address blocks for use in documentation.'
+  description: |-
+    ```powershell
+    $exportPolicyRule = New-AzNetAppFilesExportPolicyRuleObject -RuleIndex 1 -AllowedClient "192.0.2.0/24" -UnixReadWrite -Nfsv41
+    New-AzNetAppFilesVolume -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -Name "MyAnfVolume" -Location "westus2" -CreationToken "MyAnfVolume" -ProtocolType NFSv4.1 -ExportPolicy $exportPolicyRule -UsageThreshold 1099511627776 -ServiceLevel "Premium" -SubnetId "/subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/MySubNetName"
+    ```
+
+    ```output
+    Location          : westus2
+    Id                : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.NetApp/netAppAccounts/MyAnfAccount/capacityPools/MyAnfPool/volumes/MyAnfVolume
+    Name              : MyAnfAccount/MyAnfPool/MyAnfVolume
+    Type              : Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+    Tags              :
+    FileSystemId      : 3e2773a7-2a72-d003-0637-1a8b1fa3eaaf
+    CreationToken     : MyAnfVolume
+    ServiceLevel      : Premium
+    UsageThreshold    : 1099511627776
+    ProvisioningState : Succeeded
+    SubnetId          : /subscriptions/f557b96d-2308-4a18-aae1-b8f7e7e70cc7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyVnetName/subnets/default
+    ```
+
+    This command creates the new ANF volume "MyAnfVolume" within the pool "MyAnfPool" using NFSv4.1 protocol including the required ExportPolicy.
+links:
+- text: Get-AzNetAppFilesVolume
+  href: ./Get-AzNetAppFilesVolume.yml
+- text: Update-AzNetAppFilesVolume
+  href: ./Update-AzNetAppFilesVolume.yml
+- text: Remove-AzNetAppFilesVolume
+  href: ./Update-AzNetAppFilesVolume.yml
+- text: Restore-AzNetAppFilesVolume
+  href: ./Restore-AzNetAppFilesVolume.yml
+- text: Set-AzNetAppFilesVolumePool
+  href: ./Set-AzNetAppFilesVolumePool.yml
+- text: Get-AzNetAppFilesVolumeBackupStatus
+  href: ./Get-AzNetAppFilesVolumeBackupStatus.yml
+- text: Get-AzNetAppFilesVolumeRestoreStatus
+  href: ./Get-AzNetAppFilesVolumeRestoreStatus.yml
+- text: New-AzNetAppFilesVolumeRestoreStatus
+  href: ./Get-AzNetAppFilesVolumeRestoreStatus.yml
+- text: Approve-AzNetAppFilesReplication
+  href: ./Approve-AzNetAppFilesReplication.yml
+- text: Initialize-AzNetAppFilesReplication
+  href: ./Approve-AzNetAppFilesReplication.yml
+- text: Resume-AzNetAppFilesReplication
+  href: ./Resume-AzNetAppFilesReplication.yml
+- text: Remove-AzNetAppFilesReplication
+  href: ./Remove-AzNetAppFilesReplication.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesVolume.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.netappfiles/new-aznetappfilesvolume
+  Module Name: Az.NetAppFiles
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/New-AzNetAppFilesVolume.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppVolumeObject
+name: New-AzContainerAppVolumeObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for Volume.
+description: |-
+  Create an in-memory object for Volume.
+parameters:
+  cmdletParameters:
+  - name: MountOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mount options used while mounting the AzureFile.
+      Must be a comma-separated string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Volume name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISecretVolumeItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of secrets to be added in volume.
+      If no secrets are provided, all secrets in collection will be added to volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of storage resource.
+      No need to provide for EmptyDir and Secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage type for the volume.
+      If not provided, use EmptyDir.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppVolumeObject
+        [-MountOption <String>]
+        [-Name <String>]
+        [-Secret <ISecretVolumeItem[]>]
+        [-StorageName <String>]
+        [-StorageType <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.Volume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Volume object for ContainerApp.'
+  description: |-
+    ```powershell
+    New-AzContainerAppVolumeObject -Name "volumeName" -StorageName "azpssa"
+    ```
+
+    ```output
+    MountOption Name       StorageName StorageType
+    ----------- ----       ----------- -----------
+                volumeName azpssa
+    ```
+
+    Create a Volume object for ContainerApp.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppVolumeObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappvolumeobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppVolumeObject.md
+  PlatyPS schema version: 2024-05-01

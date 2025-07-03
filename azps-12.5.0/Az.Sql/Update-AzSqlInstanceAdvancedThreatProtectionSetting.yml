@@ -1,0 +1,168 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Update-AzSqlInstanceAdvancedThreatProtectionSetting
+name: Update-AzSqlInstanceAdvancedThreatProtectionSetting
+module: Az.Sql
+isPreview: false
+summary: |-
+  Sets the Advanced Threat Protection settings on a managed instance.
+description: |-
+  The **Update-AzSqlInstanceAdvancedThreatProtectionSetting** cmdlet sets the Advanced Threat Protection settings on an Azure SQL managed instance.
+  To use this cmdlet, specify the *ResourceGroupName* and *InstanceName* parameters to identify the managed instance.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enable
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines whether to enable or disable Advanced Threat Protection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL Managed Instance name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSqlInstanceAdvancedThreatProtectionSetting
+        -Enable <Boolean>
+        [-PassThru]
+        -InstanceName <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.AdvancedThreatProtection.Model.ManagedInstanceAdvancedThreatProtectionSettingsModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the Advanced Threat Protection settings for a managed instance'
+  description: |-
+    ```powershell
+    Update-AzSqlInstanceAdvancedThreatProtectionSetting -ResourceGroupName "ResourceGroup11" -InstanceName "Instance01"
+    ```
+
+    This command sets the Advanced Threat Protection settings for a managed instance named Instance01.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceAdvancedThreatProtectionSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/Update-AzSqlInstanceAdvancedThreatProtectionSetting
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceAdvancedThreatProtectionSetting.md
+  PlatyPS schema version: 2024-05-01

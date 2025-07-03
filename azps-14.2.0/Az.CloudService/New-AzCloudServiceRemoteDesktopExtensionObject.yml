@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CloudService.New-AzCloudServiceRemoteDesktopExtensionObject
+name: New-AzCloudServiceRemoteDesktopExtensionObject
+module: Az.CloudService
+isPreview: false
+summary: |-
+  Create a in-memory object for Remote Desktop Extension
+description: |-
+  Create a in-memory object for Remote Desktop Extension
+parameters:
+  cmdletParameters:
+  - name: AutoUpgradeMinorVersion
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Auto upgrade minor version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Credential for Remote Desktop Extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expiration
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Expiration for Remote Desktop Extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Remote Desktop Extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RolesAppliedTo
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Roles applied to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeHandlerVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Remote Desktop Extension version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCloudServiceRemoteDesktopExtensionObject
+        [-Name] <String>
+        [-Credential] <PSCredential>
+        [[-Expiration] <DateTime>]
+        [[-TypeHandlerVersion] <String>]
+        [[-RolesAppliedTo] <String[]>]
+        [[-AutoUpgradeMinorVersion] <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.Extension" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create remote desktop extension object'
+  description: |-
+    ```powershell
+    $credential = Get-Credential
+    $expiration = (Get-Date).AddYears(1)
+    $extension = New-AzCloudServiceRemoteDesktopExtensionObject -Name 'RDPExtension' -Credential $credential -Expiration $expiration -TypeHandlerVersion '1.2.1'
+    ```
+
+    This command creates remote desktop extension object which is used for creating or updating a cloud service.
+    For more details see New-AzCloudService.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceRemoteDesktopExtensionObject.md
+  document type: cmdlet
+  external help file: Az.CloudService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudserviceremotedesktopextensionobject
+  Module Name: Az.CloudService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceRemoteDesktopExtensionObject.md
+  PlatyPS schema version: 2024-05-01

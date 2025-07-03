@@ -1,0 +1,327 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSqlDatabase
+name: New-AzureSqlDatabase
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Azure SQL Database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureSqlDatabase** cmdlet creates an Azure SQL Database.
+  You can specify the server by using an Azure SQL Database server connection context that you create using the **New-AzureSqlDatabaseServerContext** cmdlet.
+  Or, if you specify the server name, the cmdlet uses the current Azure subscription information to authenticate the request to access the server.
+
+  When you create a new database by specifying an Azure SQL Database server, the **New-AzureSqlDatabase** cmdlet creates a temporary connection context using the specified server name and the current Azure subscription information to perform the operation.
+notes: |-
+  * To delete a database that was created by **New-AzureSqlDatabase**, use the Remove-AzureSqlDatabase cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Collation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a collation for the new database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionContext
+    type: <xref href="IServerDataServiceContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server where this cmdlet creates a database.
+    aliases:
+    - Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the new database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="DatabaseEdition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition for the new Azure SQL Database.
+      Valid values are:
+
+      - None
+      - Web
+      - Business
+      - Basic
+      - Standard
+      -  Premium
+
+      The default value is Web.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows the action to complete without prompting the user for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxSizeBytes
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size of the database in bytes.
+      You can specify either this parameter or the *MaxSizeGB* parameter.
+      See the *MaxSizeGB* parameter description for acceptable values based on edition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxSizeGB
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size of the database in gigabytes.
+      You can specify either this parameter or the *MaxSizeBytes* parameter.
+      The acceptable values differ based on edition.
+
+      Basic Edition values: 1 or 2
+
+      Standard Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, or 250
+
+      Premium Edition values: 1, 2, 5, 10, 20, 30, 40, 50, 100, 150, 200, 250, 300, 400, or 500
+
+      Web Edition values: 1 or 5
+
+      Business Edition values: 10, 20, 30, 40, 50, 100, or 150
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure SQL Database server to contain the new database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceObjective
+    type: <xref href="ServiceObjective" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represent the new service objective (performance level) for this database.
+      This value represents the level of resources assigned to this database.
+      Valid values are:
+
+      Basic: dd6d99bb-f193-4ec1-86f2-43d3bccbc49c
+      Standard (S0): f1173c43-91bd-4aaa-973c-54e79e15235b
+      Standard (S1): 1b1ebd4d-d903-4baa-97f9-4ea675f5e928
+      Standard (S2): 455330e1-00cd-488b-b5fa-177c226f28b7
+      *Standard (S3): 789681b8-ca10-4eb0-bdf2-e0b050601b40
+      Premium (P1): 7203483a-c4fb-4304-9e9f-17c71c904f5d
+      Premium (P1): 7203483a-c4fb-4304-9e9f-17c71c904f5d
+      Premium (P2): a7d1b92d-c987-4375-b54d-2b1d0e0f5bb0
+      Premium (P3): a7c4c615-cfb1-464b-b252-925be0a19446
+
+      *Standard (S3) is part of the Latest SQL Database Update V12 (preview).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSqlDatabase
+        -ConnectionContext <IServerDataServiceContext>
+        -DatabaseName <String>
+        [-Collation <String>]
+        [-Edition <DatabaseEdition>]
+        [-ServiceObjective <ServiceObjective>]
+        [-MaxSizeGB <Int32>]
+        [-MaxSizeBytes <Int64>]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionContext
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSqlDatabase
+        -ServerName <String>
+        -DatabaseName <String>
+        [-Collation <String>]
+        [-Edition <DatabaseEdition>]
+        [-ServiceObjective <ServiceObjective>]
+        [-MaxSizeGB <Int32>]
+        [-MaxSizeBytes <Int64>]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a database'
+  description: |-
+    ```
+    PS C:\> $Database01 = New-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
+    ```
+
+    This command creates an Azure SQL Database named Database1, for the Azure SQL Database server connection context $Context.
+- title: 'Example 2: Create a database in the current subscription'
+  description: |-
+    ```
+    PS C:\> $Database01 = New-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -Edition "Business" -MaxSizeGB 50 -Collation "SQL_Latin1_General_CP1_CI_AS"
+    ```
+
+    This example creates a database named Database1, in the specified Azure SQL Database server named lpqd0zbr8y.
+    The cmdlet uses the current Azure subscription information to authenticate the request to access the server.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Create Database
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505701.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlDatabase
+  href: ./Get-AzureSqlDatabase.yml
+- text: New-AzureSqlDatabaseServerContext
+  href: ./New-AzureSqlDatabaseServerContext.yml
+- text: Remove-AzureSqlDatabase
+  href: ./Remove-AzureSqlDatabase.yml
+- text: Set-AzureSqlDatabase
+  href: ./Set-AzureSqlDatabase.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F4FE79DB-B481-49BD-A33B-7C642A136890
+  PlatyPS schema version: 2024-05-01

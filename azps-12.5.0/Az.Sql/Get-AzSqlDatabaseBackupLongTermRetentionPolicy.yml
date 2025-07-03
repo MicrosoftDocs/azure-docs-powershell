@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+name: Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+module: Az.Sql
+isPreview: false
+summary: |-
+  Gets a database long term retention policy.
+description: |-
+  The **Get-AzSqlDatabaseBackupLongTermRetentionPolicy** cmdlet gets the long term retention policy registered to this database.
+  The policy is an Azure Backup resource used to define backup storage policy.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Server the database is in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseBackupLongTermRetentionPolicyModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the current version of the long term retention policy'
+  description: |-
+    ```powershell
+    Get-AzSqlDatabaseBackupLongTermRetentionPolicy -ResourceGroupName resourcegroup01 -ServerName server01 -DatabaseName database01
+    ```
+
+    ```output
+    ResourceGroupName                      : resourcegroup01
+    ServerName                             : server01
+    DatabaseName                           : database01
+    WeeklyRetention                        : P2W
+    MonthlyRetention                       : PT0S
+    YearlyRetention                        : PT0S
+    WeekOfYear                             : 0
+    State                                  :
+    RecoveryServicesBackupPolicyResourceId :
+    Location                               :
+    ```
+
+    This command gets the current version of the long term retention policy for database01
+links:
+- text: Get-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Get-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Update-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Update-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Copy-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Copy-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Remove-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Remove-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Set-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseBackupLongTermRetentionPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabasebackuplongtermretentionpolicy
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseBackupLongTermRetentionPolicy.md
+  PlatyPS schema version: 2024-05-01

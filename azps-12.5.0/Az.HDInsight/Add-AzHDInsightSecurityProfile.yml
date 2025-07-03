@@ -1,0 +1,242 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Add-AzHDInsightSecurityProfile
+name: Add-AzHDInsightSecurityProfile
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Adds a security profile to a cluster configuration object.
+description: |-
+  Security profile is used to create a secure cluster by kerberizing it.
+  Security profile contains configuration related joining the cluster to Active Directory Domain.
+parameters:
+  cmdletParameters:
+  - name: ClusterUsersGroupDNs
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Distinguished names of the Active Directory groups that will be available in Ambari and Ranger
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Config
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+      This object is created by the New-AzHDInsightClusterConfig cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Active Directory domain resource id for the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainUserCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      A domain user account credential with sufficient permissions for creating the cluster.
+      Username should be in user@domain format
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LdapsUrls
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Urls of one or multiple LDAPS servers for the Active Directory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrganizationalUnitDN
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Distinguished name of the organizational unit in the Active directory where user and computer accounts will be created
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzHDInsightSecurityProfile
+        [-Config] <AzureHDInsightConfig>
+        -DomainResourceId <String>
+        -DomainUserCredential <PSCredential>
+        [-OrganizationalUnitDN <String>]
+        -LdapsUrls <String[]>
+        [-ClusterUsersGroupDNs <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightSecurityProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add security profile to the cluster configuration object'
+  description: |-
+    ```powershell
+    #Primary storage account info
+    $storageAccountResourceGroupName = "Group"
+    $storageAccountResourceId = "yourstorageaccountresourceid"
+    $storageAccountName = "yourstorageacct001"
+    $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+    $storageContainer = "container001"
+
+    # Cluster configuration info
+    $location = "East US 2"
+    $clusterResourceGroupName = "Group"
+    $clusterName = "your-hadoop-001"
+    $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    #Security profile info
+    $domain="sampledomain.onmicrosoft.com"
+    $domainUser="sample.user@sampledomain.onmicrosoft.com"
+    $domainPassword=ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $domainUserCredential=New-Object System.Management.Automation.PSCredential($domainUser, $domainPassword)
+    $organizationalUnitDN="ou=testunitdn"
+    $ldapsUrls=("ldaps://sampledomain.onmicrosoft.com:636","ldaps://sampledomain.onmicrosoft.com:389")
+    $clusterUsersGroupDNs=("groupdn1","groupdn2")
+
+    # Create the cluster
+    New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightSecurityProfile `
+                    -DomainResourceId $domain `
+                    -DomainUserCredential $domainUserCredential `
+                    -OrganizationalUnitDN $organizationalUnitDN `
+                    -LdapsUrls $ldapsUrls `
+                    -ClusterUsersGroupDNs $clusterUsersGroupDNs `
+                | New-AzHDInsightCluster `
+                    -ClusterType Spark `
+                    -OSType Linux `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -StorageAccountResourceId $storageAccountResourceId `
+                    -StorageAccountKey $storageAccountKey `
+                    -StorageContainer $storageContainer
+    ```
+
+    This command adds a security profile value to the cluster named your-hadoop-001.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightSecurityProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightsecurityprofile
+  Module Name: Az.HDInsight
+  ms.assetid: FB37494B-4035-45B7-88AB-DF33CEEF0D0A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightSecurityProfile.md
+  PlatyPS schema version: 2024-05-01

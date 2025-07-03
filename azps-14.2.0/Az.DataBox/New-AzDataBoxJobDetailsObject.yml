@@ -1,0 +1,239 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.New-AzDataBoxJobDetailsObject
+name: New-AzDataBoxJobDetailsObject
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Create an in-memory object for DataBoxJobDetails.
+description: |-
+  Create an in-memory object for DataBoxJobDetails.
+parameters:
+  cmdletParameters:
+  - name: ContactDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IContactDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Contact details for notification and shipping.
+      To construct, see NOTES section for CONTACTDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExportDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IDataExportDetails" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Details of the data to be exported from azure.
+      To construct, see NOTES section for DATAEXPORTDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataImportDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IDataImportDetails" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Details of the data to be imported into azure.
+      To construct, see NOTES section for DATAIMPORTDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevicePassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Set Device password for unlocking Databox.
+      Should not be passed for TransferType:ExportFromAzure jobs.
+      If this is not passed, the service will generate password itself.
+      This will not be returned in Get Call.
+      Password Requirements :  Password must be minimum of 12 and maximum of 64 characters.
+      Password must have at least one uppercase alphabet, one number and one special character.
+      Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpectedDataSizeInTeraByte
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The expected size of the data, which needs to be transferred in this job, in terabytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKey
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IKeyEncryptionKey" data-throw-if-not-resolved="False" />
+    description: |-
+      Details about which key encryption type is being used.
+      To construct, see NOTES section for KEYENCRYPTIONKEY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Preference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IPreferences" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferences for the order.
+      To construct, see NOTES section for PREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReverseShippingDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IReverseShippingDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Reverse Shipping details for order.
+      To construct, see NOTES section for REVERSESHIPPINGDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShippingAddress
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.IShippingAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Shipping address of the customer.
+      To construct, see NOTES section for SHIPPINGADDRESS properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.ClassDiscriminator" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the type of job details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataBoxJobDetailsObject
+        -ContactDetail <IContactDetails>
+        -Type <ClassDiscriminator>
+        [-DevicePassword <String>]
+        [-DataExportDetail <IDataExportDetails[]>]
+        [-DataImportDetail <IDataImportDetails[]>]
+        [-ExpectedDataSizeInTeraByte <Int32>]
+        [-KeyEncryptionKey <IKeyEncryptionKey>]
+        [-Preference <IPreferences>]
+        [-ReverseShippingDetail <IReverseShippingDetails>]
+        [-ShippingAddress <IShippingAddress>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataBoxJobDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates a databox job detail in memory object'
+  description: |-
+    ```powershell
+    $contactDetail = New-AzDataBoxContactDetailsObject -ContactName "random" -EmailList @("emailId") -Phone "1234567891"
+    $ShippingDetails = New-AzDataBoxShippingAddressObject -StreetAddress1 "101 TOWNSEND ST" -StateOrProvince "CA" -Country "US" -City "San Francisco" -PostalCode "94107" -AddressType "Commercial"
+
+    New-AzDataBoxJobDetailsObject -Type "DataBox"  -DataImportDetail  @(@{AccountDetail=$dataAccount; AccountDetailDataAccountType = "StorageAccount"} ) -ContactDetail $contactDetail -ShippingAddress $ShippingDetails
+    ```
+
+    ```output
+    Action                     :
+    ChainOfCustodySasKey       :
+    ContactDetail              : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.ContactDetails
+    CopyLogDetail              :
+    CopyProgress               :
+    DataExportDetail           :
+    DataImportDetail           : {Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.DataImportDetails}
+    DeliveryPackage            : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.PackageShippingDetails
+    DevicePassword             :
+    ExpectedDataSizeInTeraByte : 0
+    JobStage                   :
+    KeyEncryptionKey           : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.KeyEncryptionKey
+    LastMitigationActionOnJob  : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.LastMitigationActionOnJob
+    Preference                 : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.Preferences
+    ReturnPackage              : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.PackageShippingDetails
+    ReverseShipmentLabelSasKey :
+    ShippingAddress            : Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.ShippingAddress
+    Type                       : DataBox
+    ```
+
+    Create a in-memory object for DataBoxJobDetails
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxJobDetailsObject.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DataBox/new-AzDataBoxJobDetailsObject
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxJobDetailsObject.md
+  PlatyPS schema version: 2024-05-01

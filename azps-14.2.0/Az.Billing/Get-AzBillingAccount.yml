@@ -1,0 +1,190 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Billing.Get-AzBillingAccount
+name: Get-AzBillingAccount
+module: Az.Billing
+isPreview: false
+summary: |-
+  Get billing accounts.
+description: |-
+  The **Get-AzBillingAccount** cmdlet gets billing accounts, user has access to.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandBillingProfile
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include the billing profiles under the billing account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandInvoiceSection
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include the billing profiles under billing account and invoices sections under them.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeAddress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include the address of the billing account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ListEntitiesToCreateSubscription
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      List the billing entities under billing account which can be used as input to create subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Single
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Name of a specific billing account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Single
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBillingAccount
+        [-IncludeAddress]
+        [-ExpandBillingProfile]
+        [-ExpandInvoiceSection]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBillingAccount
+        -Name <System.Collections.Generic.List`1[System.String]>
+        [-IncludeAddress]
+        [-ExpandBillingProfile]
+        [-ExpandInvoiceSection]
+        [-ListEntitiesToCreateSubscription]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Single
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Billing.Models.PSBillingAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzBillingAccount
+    ```
+
+    Get all billing accounts user has access to.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzBillingAccount -Name 00000000-0000-0000-0000-000000000000
+    ```
+
+    Get the billing account with the specified name.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzBillingAccount -IncludeAddress
+    ```
+
+    Get all billing accounts user has access to, and include the address in the result.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzBillingAccount -ExpandBillingProfile
+    ```
+
+    Get all billing accounts user has access to, and include the billing profiles in the result.
+- title: Example 5
+  description: |-
+    ```powershell
+    Get-AzBillingAccount -ExpandInvoiceSection
+    ```
+
+    Get all billing accounts user has access to, and include the billing profiles and invoice sections under them in the result.
+- title: Example 6
+  description: |-
+    ```powershell
+    Get-AzBillingAccount -ExpandInvoiceSection -IncludeAddress -ExpandBillingProfile -Name 00000000-0000-0000-0000-000000000000
+    ```
+
+    Get the billing account with the specified name, and include the address, billing profiles and invoice sections under them in the result.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billing/get-azbillingaccount
+  Module Name: Az.Billing
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzBillingAccount.md
+  PlatyPS schema version: 2024-05-01

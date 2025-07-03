@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.DedicatedHsm
+name: Az.DedicatedHsm Module
+isPreview: false
+cmdletGroups:
+- title: Dedicated HSM
+  cmdlets:
+  - Az.DedicatedHsm.Get-AzDedicatedHsm
+  - Az.DedicatedHsm.Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint
+  - Az.DedicatedHsm.New-AzDedicatedHsm
+  - Az.DedicatedHsm.Remove-AzDedicatedHsm
+  - Az.DedicatedHsm.Update-AzDedicatedHsm
+description: |-
+  Microsoft Azure PowerShell: DedicatedHsm cmdlets
+metadata:
+  Module Name: Az.DedicatedHsm
+  Module Guid: 841c2fad-e8c0-4924-b9b9-9d27d0f40b48
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dedicatedhsm
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Az.DedicatedHsm.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Az.DedicatedHsm.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

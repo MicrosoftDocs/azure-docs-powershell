@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Get-AzSynapseWorkspace
+name: Get-AzSynapseWorkspace
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Gets a Synapse Analytics workspace.
+description: |-
+  The **Get-AzSynapseWorkspace** cmdlet gets information about an Azure Synapse Analytics workspace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    aliases:
+    - WorkspaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseWorkspace
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseWorkspace
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSynapseWorkspace
+    ```
+
+    This command gets all the Azure Synapse Analytics workspaces under the current subscription.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzSynapseWorkspace -ResourceGroupName ContosoResourceGroup
+    ```
+
+    This command gets all the Azure Synapse Analytics workspaces under the current subscription within the Resource Group ContosoResourceGroup.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzSynapseWorkspace -Name ContosoWorkspace
+    ```
+
+    This command gets the Azure Synapse Analytics workspace with the specified name.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzSynapseWorkspace -ResourceId /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/ContosoResourceGroup/providers/Microsoft.Synapse/workspaces/ContosoWorkspace
+    ```
+
+    This command gets the Azure Synapse Analytics workspace with the specified resource ID.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseWorkspace.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapseworkspace
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseWorkspace.md
+  PlatyPS schema version: 2024-05-01

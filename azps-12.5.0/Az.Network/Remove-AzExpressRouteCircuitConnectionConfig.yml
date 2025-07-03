@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzExpressRouteCircuitConnectionConfig
+name: Remove-AzExpressRouteCircuitConnectionConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes an ExpressRoute circuit connection configuration.
+description: |-
+  The **Remove-AzExpressRouteCircuitConnectionConfig** cmdlet removes an ExpressRoute circuit
+  connection configuration associated with a given Express Route Circuit.
+parameters:
+  cmdletParameters:
+  - name: AddressPrefixType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the address family that needs to be removed from the config
+    acceptedValues:
+    - IPv4
+    - IPv6
+    - All
+    defaultValue: IPv4
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuit
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRoute circuit containing the peering configuration to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the circuit connection configuration to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzExpressRouteCircuitConnectionConfig
+        [-Name] <String>
+        [-ExpressRouteCircuit] <PSExpressRouteCircuit>
+        [-AddressPrefixType <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a circuit connection configuration from an ExpressRoute circuit'
+  description: |-
+    ```powershell
+    $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
+    Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
+    ```
+- title: 'Example 2: Remove a circuit connection configuration using Piping from an ExpressRoute Circuit'
+  description: |-
+    ```powershell
+    Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName|Set-AzExpressRouteCircuit
+    ```
+- title: 'Example 3: Remove a circuit connection configuration from an ExpressRoute circuit for a specific address family'
+  description: |-
+    ```powershell
+    $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
+    Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init -AddressPrefixType IPv4
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit_init
+    ```
+- title: 'Example 4: Remove a circuit connection configuration using Piping from an ExpressRoute Circuit for a specific address family'
+  description: |-
+    ```powershell
+    Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Remove-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -AddressPrefixType IPv6|Set-AzExpressRouteCircuit
+    ```
+links:
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+- text: Get-AzExpressRouteCircuitConnectionConfig
+  href: Get-AzExpressRouteCircuitConnectionConfig.yml
+- text: Add-AzExpressRouteCircuitConnectionConfig
+  href: Add-AzExpressRouteCircuitConnectionConfig.yml
+- text: Set-AzExpressRouteCircuitConnectionConfig
+  href: Set-AzExpressRouteCircuitConnectionConfig.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-azexpressroutecircuitconnectionconfig
+  Module Name: Az.Network
+  ms.assetid: cc944e06-4fa0-4ce5-88e9-ea6454b41d55
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteCircuitConnectionConfig.md
+  PlatyPS schema version: 2024-05-01

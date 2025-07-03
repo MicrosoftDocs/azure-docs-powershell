@@ -1,0 +1,422 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Stop-AzSqlInstanceDatabaseCopy
+name: Stop-AzSqlInstanceDatabaseCopy
+module: Az.Sql
+isPreview: false
+summary: |-
+  Stop copy operation of a managed database.
+description: |-
+  The **Stop-AzSqlInstanceDatabaseCopy** cmdlet stops copy operation of a database between two Azure SQL Managed Instances.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CopyModelObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.MoveCopyManagedDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Object that is returned from start copy operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CancelManagedDatabaseCopyByCopyModelObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the instance database.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed database object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the source instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MoveCopyOperationObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.ManagedDatabaseMoveCopyOperation" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed database move or copy operation object.
+    aliases:
+    - Operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByOperationObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Signal to receive output from a cmdlet which does not return anything
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the source resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource id of managed database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetInstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the target Azure SQL Managed Instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the target resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByInputObjectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the target subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MoveCopyManagedDatabaseByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByInputObjectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MoveCopyManagedDatabaseByResourceIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceDatabaseCopy
+        -DatabaseName <String>
+        -InstanceName <String>
+        -ResourceGroupName <String>
+        -TargetInstanceName <String>
+        [-TargetSubscriptionId <String>]
+        [-TargetResourceGroupName <String>]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MoveCopyManagedDatabaseByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceDatabaseCopy
+        -CopyModelObject <MoveCopyManagedDatabaseModel>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CancelManagedDatabaseCopyByCopyModelObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceDatabaseCopy
+        -MoveCopyOperationObject <ManagedDatabaseMoveCopyOperation>
+        [-DatabaseName <String>]
+        [-InstanceName <String>]
+        [-ResourceGroupName <String>]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MoveCopyManagedDatabaseByOperationObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceDatabaseCopy
+        -InstanceName <String>
+        -ResourceGroupName <String>
+        -TargetInstanceName <String>
+        -DatabaseObject <AzureSqlManagedDatabaseModel>
+        [-TargetSubscriptionId <String>]
+        [-TargetResourceGroupName <String>]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MoveCopyManagedDatabaseByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceDatabaseCopy
+        -InstanceName <String>
+        -ResourceGroupName <String>
+        -TargetInstanceName <String>
+        -ResourceId <String>
+        [-TargetSubscriptionId <String>]
+        [-TargetResourceGroupName <String>]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MoveCopyManagedDatabaseByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.MoveCopyManagedDatabaseModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.ManagedDatabaseMoveCopyOperation" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Complete copy database to another Managed Instance in the same resource group'
+  description: |-
+    ```powershell
+    Stop-AzSqlInstanceDatabaseCopy -ResourceGroupName RG1 -InstanceName MI1 -Name database1 -TargetInstanceName MI2
+    ```
+
+    This command stops copy operation of database1 on instance MI1 to instance MI2
+- title: 'Example 2: Complete copy database to another Managed Instance in the different resource group'
+  description: |-
+    ```powershell
+    Stop-AzSqlInstanceDatabaseCopy -ResourceGroupName RG1 -InstanceName MI1 -Name database1 -TargetResourceGroupName RG2 -TargetInstanceName MI2
+    ```
+
+    This command stops copy operation of database1 on instance MI1 in resource group RG1 to instance MI2 in resource group RG2
+links:
+- text: Complete-AzSqlInstanceDatabaseCopy
+  href: ./Complete-AzSqlInstanceDatabaseCopy.yml
+- text: Get-AzSqlInstanceDatabaseCopyOperation
+  href: ./Get-AzSqlInstanceDatabaseCopyOperation.yml
+- text: Copy-AzSqlInstanceDatabase
+  href: ./Copy-AzSqlInstanceDatabase.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlInstanceDatabaseCopy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/stop-azsqlinstancedatabasecopy
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlInstanceDatabaseCopy.md
+  PlatyPS schema version: 2024-05-01

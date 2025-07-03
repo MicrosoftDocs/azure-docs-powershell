@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Resume-AzAutomationJob
+name: Resume-AzAutomationJob
+module: Az.Automation
+isPreview: false
+summary: |-
+  Resumes a suspended Automation job.
+description: |-
+  The **Resume-AzAutomationJob** cmdlet resumes a suspended Azure Automation job.
+  Specify the suspended job.
+  To suspend a job, use the Suspend-AzAutomationJob cmdlet.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account in which this cmdlet resume a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a job that this cmdlet resumes.
+    aliases:
+    - JobId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group for which this cmdlet resumes a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-AzAutomationJob
+        [-Id] <Guid>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Resume a suspended job'
+  description: |-
+    ```powershell
+    Resume-AzAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b64 -ResourceGroupName "ResourceGroup01"
+    ```
+
+    This command resumes the job that has the specified ID.
+links:
+- text: Get-AzAutomationJob
+  href: ./Get-AzAutomationJob.yml
+- text: Get-AzAutomationJobOutput
+  href: ./Get-AzAutomationJobOutput.yml
+- text: Stop-AzAutomationJob
+  href: ./Stop-AzAutomationJob.yml
+- text: Suspend-AzAutomationJob
+  href: ./Suspend-AzAutomationJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Resume-AzAutomationJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/resume-azautomationjob
+  Module Name: Az.Automation
+  ms.assetid: 9400E9EB-E927-44D5-8722-9706BDD92FD5
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Resume-AzAutomationJob.md
+  PlatyPS schema version: 2024-05-01

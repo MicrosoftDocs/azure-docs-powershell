@@ -1,0 +1,43 @@
+### YamlMime:PowerShellModule1
+uid: Az.ContainerInstance
+name: Az.ContainerInstance Module
+isPreview: false
+cmdletGroups:
+- title: Container Instances
+  cmdlets:
+  - Az.ContainerInstance.Add-AzContainerInstanceOutput
+  - Az.ContainerInstance.Get-AzContainerGroup
+  - Az.ContainerInstance.Get-AzContainerInstanceCachedImage
+  - Az.ContainerInstance.Get-AzContainerInstanceCapability
+  - Az.ContainerInstance.Get-AzContainerInstanceContainerGroupOutboundNetworkDependencyEndpoint
+  - Az.ContainerInstance.Get-AzContainerInstanceLog
+  - Az.ContainerInstance.Get-AzContainerInstanceUsage
+  - Az.ContainerInstance.Invoke-AzContainerInstanceCommand
+  - Az.ContainerInstance.New-AzContainerGroup
+  - Az.ContainerInstance.New-AzContainerGroupImageRegistryCredentialObject
+  - Az.ContainerInstance.New-AzContainerGroupPortObject
+  - Az.ContainerInstance.New-AzContainerGroupVolumeObject
+  - Az.ContainerInstance.New-AzContainerInstanceEnvironmentVariableObject
+  - Az.ContainerInstance.New-AzContainerInstanceHttpHeaderObject
+  - Az.ContainerInstance.New-AzContainerInstanceInitDefinitionObject
+  - Az.ContainerInstance.New-AzContainerInstanceObject
+  - Az.ContainerInstance.New-AzContainerInstancePortObject
+  - Az.ContainerInstance.New-AzContainerInstanceVolumeMountObject
+  - Az.ContainerInstance.Remove-AzContainerGroup
+  - Az.ContainerInstance.Remove-AzContainerInstanceSubnetServiceAssociationLink
+  - Az.ContainerInstance.Restart-AzContainerGroup
+  - Az.ContainerInstance.Start-AzContainerGroup
+  - Az.ContainerInstance.Stop-AzContainerGroup
+  - Az.ContainerInstance.Update-AzContainerGroup
+description: |-
+  Microsoft Azure PowerShell: ContainerInstance cmdlets
+metadata:
+  Module Name: Az.ContainerInstance
+  Module Guid: ddf74844-4a25-4263-8a5c-f27979292e4e
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.containerinstance
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/Az.ContainerInstance.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/Az.ContainerInstance.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,485 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LogicApp.New-AzIntegrationAccountAssembly
+name: New-AzIntegrationAccountAssembly
+module: Az.LogicApp
+isPreview: false
+summary: |-
+  Creates an integration account assembly.
+description: |-
+  The **Get-AzIntegrationAccountAssembly** cmdlet creates a new assembly in an integration account.
+parameters:
+  cmdletParameters:
+  - name: AssemblyData
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The integration account assembly byte data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationAccountAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssemblyFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration account assembly file path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationAccountAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentLink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A publicly accessible link to the integration account assembly data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationAccountAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration account assembly metadata.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration account assembly name.
+    aliases:
+    - AssemblyName
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration account name.
+    aliases:
+    - IntegrationAccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationAccountAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIntegrationAccountAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIntegrationAccountAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentObject
+    type: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      An integration account object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration account resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationAccountAndFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIntegrationAccountAndContentLink
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIntegrationAccountAndFileBytes
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ResourceGroupName <String>
+        -ParentName <String>
+        -Name <String>
+        -AssemblyFilePath <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationAccountAndFilePath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ResourceGroupName <String>
+        -ParentName <String>
+        -Name <String>
+        -ContentLink <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationAccountAndContentLink
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ResourceGroupName <String>
+        -ParentName <String>
+        -Name <String>
+        -AssemblyData <Byte[]>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationAccountAndFileBytes
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentObject <IntegrationAccount>
+        -Name <String>
+        -ContentLink <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectAndContentLink
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentObject <IntegrationAccount>
+        -Name <String>
+        -AssemblyData <Byte[]>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectAndFileBytes
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentObject <IntegrationAccount>
+        -Name <String>
+        -AssemblyFilePath <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectAndFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentResourceId <String>
+        -Name <String>
+        -ContentLink <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdAndContentLink
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentResourceId <String>
+        -Name <String>
+        -AssemblyData <Byte[]>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdAndFileBytes
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIntegrationAccountAssembly
+        -ParentResourceId <String>
+        -Name <String>
+        -AssemblyFilePath <String>
+        [-Metadata <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdAndFilePath
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.LogicApp.Models.PSIntegrationAccountAssembly" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new assembly using local file'
+  description: |-
+    ```powershell
+    New-AzIntegrationAccountAssembly -ResourceGroupName "sampleResourceGroup" -IntegrationAccountName "sampleIntegrationAccount" -AssemblyName "sampleAssembly" -AssemblyFilePath $localAssemblyFilePath
+    ```
+
+    ```output
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly
+    Name       : sampleAssembly
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+    ```
+
+    Creates a new assembly using the local file located at the file path contained in "$localAssemblyFilePath".
+- title: 'Example 2: Create new assembly using byte data'
+  description: |-
+    ```powershell
+    New-AzIntegrationAccountAssembly -ResourceGroupName "sampleResourceGroup" -IntegrationAccountName "sampleIntegrationAccount" -AssemblyName "sampleAssembly" -AssemblyData $assemblyContent
+    ```
+
+    ```output
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly
+    Name       : sampleAssembly
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+    ```
+
+    Creates a new assembly using the a byte array contained in "$assemblyContent".
+- title: 'Example 3: Create new assembly using a content link'
+  description: |-
+    ```powershell
+    New-AzIntegrationAccountAssembly -ResourceGroupName "sampleResourceGroup" -IntegrationAccountName "sampleIntegrationAccount" -AssemblyName "sampleAssembly" -ContentLink $assemblyUrl
+    ```
+
+    ```output
+    Properties : Microsoft.Azure.Management.Logic.Models.AssemblyProperties
+    Id         : /subscriptions/{SubscriptionId}/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/integrationAccounts/sampleIntegrationAccount/assemblies/sampleAssembly
+    Name       : sampleAssembly
+    Type       : Microsoft.Logic/integrationAccounts/assemblies
+    Location   :
+    Tags       :
+    ```
+
+    Creates a new assembly using the a byte data located at the URL "$assemblyUrl". This is the suggested method for creating large sized assemblies.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccountAssembly.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.logicapp/new-azintegrationaccountassembly
+  Module Name: Az.LogicApp
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/New-AzIntegrationAccountAssembly.md
+  PlatyPS schema version: 2024-05-01

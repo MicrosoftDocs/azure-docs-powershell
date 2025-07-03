@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ResourceMover.Get-AzResourceMoverRequiredForResources
+name: Get-AzResourceMoverRequiredForResources
+module: Az.ResourceMover
+isPreview: false
+summary: |-
+  List of the move resources for which an arm resource is required for.
+
+  **The 'Get-AzResourceMoverRequiredForResources' command is applicable for 'RegionToRegion' type move collections.
+
+  However, for move collections with moveType 'RegionToZone' dependencies are automatically added to the move collection once 'Resolve-AzResourceMoverMoveCollectionDependency' is executed.
+  Please refer to 'Resolve-AzResourceMoverMoveCollectionDependency' command documentation for additional details.**
+description: |-
+  List of the move resources for which an arm resource is required for.
+
+  **The 'Get-AzResourceMoverRequiredForResources' command is applicable for 'RegionToRegion' type move collections.
+
+  However, for move collections with moveType 'RegionToZone' dependencies are automatically added to the move collection once 'Resolve-AzResourceMoverMoveCollectionDependency' is executed.
+  Please refer to 'Resolve-AzResourceMoverMoveCollectionDependency' command documentation for additional details.**
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MoveCollectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Move Collection Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sourceId for which the api is invoked.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzResourceMoverRequiredForResources
+        -MoveCollectionName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        -SourceId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of required resource ARMIDs that are required to be added, to add the specified resource.'
+  description: |-
+    ```powershell
+    Get-AzResourceMoverRequiredForResources -MoveCollectionName "PS-centralus-westcentralus-demoRMS" -ResourceGroupName "RG-MoveCollection-demoRMS" -SourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups"
+    ```
+
+    ```output
+    /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/PSDemoRM/providers/Microsoft.Compute/virtualMachines/PSDemoVM
+    /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networkinterfaces/psdemovm111
+    /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/psdemorm/providers/Microsoft.Network/virtualNetworks/psdemorm-vnet
+    /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/psdemorm/providers/microsoft.network/networksecuritygroups/psdemovm-nsg
+    ```
+
+    Get a list of required resource ARMIDs that are required to be added, to add the specified resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/ResourceMover/help/Get-AzResourceMoverRequiredForResources.md
+  document type: cmdlet
+  external help file: Az.ResourceMover-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resourcemover/get-azresourcemoverrequiredforresources
+  Module Name: Az.ResourceMover
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/ResourceMover/help/Get-AzResourceMoverRequiredForResources.md
+  PlatyPS schema version: 2024-05-01

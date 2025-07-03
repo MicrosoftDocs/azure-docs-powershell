@@ -1,0 +1,675 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Set-AzKeyVaultCertificatePolicy
+name: Set-AzKeyVaultCertificatePolicy
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Creates or updates the policy for a certificate in a key vault.
+description: |-
+  The **Set-AzKeyVaultCertificatePolicy** cmdlet creates or updates the policy for a certificate in a key vault.
+parameters:
+  cmdletParameters:
+  - name: CertificateTransparency
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates whether certificate transparency is enabled for this certificate/issuer; if not specified, the default is 'true'.
+      `-IssuerName` needs to be specified when setting this property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of certificate to the issuer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Curve
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the elliptic curve name of the key of the certificate.
+      The acceptable values for this parameter are:
+      - P-256
+      - P-384
+      - P-521
+      - P-256K
+      - SECP256K1
+    acceptedValues:
+    - P-256
+    - P-384
+    - P-521
+    - P-256K
+    - SECP256K1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the certificate policy is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsName
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the subject name of the certificate.
+    aliases:
+    - DnsNames
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ekus
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the enhanced key usages (EKUs) in the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAtNumberOfDaysBeforeExpiry
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of days before expiration when automatic renewal should start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAtPercentageLifetime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the percentage of the lifetime after which the automatic process for the notification begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate policy.
+    aliases:
+    - CertificatePolicy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByValue
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IssuerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the issuer for this certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyNotExportable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the key is not exportable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeySize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key size of the certificate.
+      The acceptable values for this parameter are:
+      - 2048
+      - 3072
+      - 4096
+      - 256
+      - 384
+      - 521
+    acceptedValues:
+    - "2048"
+    - "3072"
+    - "4096"
+    - "256"
+    - "384"
+    - "521"
+    defaultValue: "2048"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key type of the key that backs the certificate.
+      The acceptable values for this parameter are:
+      - RSA
+      - RSA-HSM
+      - EC
+      - EC-HSM
+    acceptedValues:
+    - RSA
+    - RSA-HSM
+    - EC
+    - EC-HSM
+    defaultValue: RSA
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyUsage
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Security.Cryptography.X509Certificates.X509KeyUsageFlags" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the key usages in the certificate.
+    acceptedValues:
+    - None
+    - EncipherOnly
+    - CrlSign
+    - KeyCertSign
+    - KeyAgreement
+    - DataEncipherment
+    - KeyEncipherment
+    - NonRepudiation
+    - DigitalSignature
+    - DecipherOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the certificate.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewAtNumberOfDaysBeforeExpiry
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of days before expiry after which the automatic process for certificate renewal begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RenewAtPercentageLifetime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the percentage of the lifetime after which the automatic process for certificate renewal begins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReuseKeyOnRenewal
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates that the certificate reuse the key during renewal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecretContentType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the content type of the new key vault secret.
+      The acceptable values for this parameter are:
+      - application/x-pkcs12
+      - application/x-pem-file
+    acceptedValues:
+    - application/x-pkcs12
+    - application/x-pem-file
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subject name of the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidityInMonths
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of months the certificate is valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedRenewPercentage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExpandedRenewNumber
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultCertificatePolicy
+        [-VaultName] <String>
+        [-Name] <String>
+        [-RenewAtPercentageLifetime <Int32>]
+        [-SecretContentType <String>]
+        [-ReuseKeyOnRenewal <Boolean>]
+        [-Disabled]
+        [-SubjectName <String>]
+        [-DnsName <System.Collections.Generic.List`1[System.String]>]
+        [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+        [-Ekus <System.Collections.Generic.List`1[System.String]>]
+        [-ValidityInMonths <Int32>]
+        [-IssuerName <String>]
+        [-CertificateType <String>]
+        [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+        [-EmailAtPercentageLifetime <Int32>]
+        [-KeyType <String>]
+        [-KeySize <Int32>]
+        [-KeyNotExportable]
+        [-CertificateTransparency <Boolean>]
+        [-PassThru]
+        [-Curve <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExpandedRenewPercentage
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultCertificatePolicy
+        [-VaultName] <String>
+        [-Name] <String>
+        [-InputObject] <PSKeyVaultCertificatePolicy>
+        [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+        [-EmailAtPercentageLifetime <Int32>]
+        [-KeyType <String>]
+        [-KeySize <Int32>]
+        [-CertificateTransparency <Boolean>]
+        [-PassThru]
+        [-Curve <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByValue
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultCertificatePolicy
+        [-VaultName] <String>
+        [-Name] <String>
+        -RenewAtNumberOfDaysBeforeExpiry <Int32>
+        [-SecretContentType <String>]
+        [-ReuseKeyOnRenewal <Boolean>]
+        [-Disabled]
+        [-SubjectName <String>]
+        [-DnsName <System.Collections.Generic.List`1[System.String]>]
+        [-KeyUsage <System.Collections.Generic.List`1[System.Security.Cryptography.X509Certificates.X509KeyUsageFlags]>]
+        [-Ekus <System.Collections.Generic.List`1[System.String]>]
+        [-ValidityInMonths <Int32>]
+        [-IssuerName <String>]
+        [-CertificateType <String>]
+        [-EmailAtNumberOfDaysBeforeExpiry <Int32>]
+        [-EmailAtPercentageLifetime <Int32>]
+        [-KeyType <String>]
+        [-KeySize <Int32>]
+        [-KeyNotExportable]
+        [-CertificateTransparency <Boolean>]
+        [-PassThru]
+        [-Curve <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExpandedRenewNumber
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificatePolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set a certificate policy'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultCertificatePolicy -VaultName "ContosoKV01" -Name "TestCert01" -SecretContentType "application/x-pkcs12" -SubjectName "CN=contoso.com" -IssuerName "Self" -ValidityInMonths 6 -ReuseKeyOnRenewal $True -PassThru
+    ```
+
+    ```output
+    SecretContentType               : application/x-pkcs12
+    Kty                             :
+    KeySize                         : 2048
+    Curve                           :
+    Exportable                      :
+    ReuseKeyOnRenewal               : True
+    SubjectName                     : CN=contoso.com
+    DnsNames                        :
+    KeyUsage                        :
+    Ekus                            :
+    ValidityInMonths                : 6
+    IssuerName                      : Self
+    CertificateType                 :
+    RenewAtNumberOfDaysBeforeExpiry :
+    RenewAtPercentageLifetime       :
+    EmailAtNumberOfDaysBeforeExpiry :
+    EmailAtPercentageLifetime       :
+    CertificateTransparency         :
+    Enabled                         : True
+    Created                         :
+    Updated                         :
+    ```
+
+    This command sets the policy for the TestCert01 certificate in the ContosoKV01 key vault.
+links:
+- text: Get-AzKeyVaultCertificatePolicy
+  href: ./Get-AzKeyVaultCertificatePolicy.yml
+- text: New-AzKeyVaultCertificatePolicy
+  href: ./New-AzKeyVaultCertificatePolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificatePolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultcertificatepolicy
+  Module Name: Az.KeyVault
+  ms.assetid: 28BC1B99-946C-4A8D-9581-4D5CC0BCEF8B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificatePolicy.md
+  PlatyPS schema version: 2024-05-01

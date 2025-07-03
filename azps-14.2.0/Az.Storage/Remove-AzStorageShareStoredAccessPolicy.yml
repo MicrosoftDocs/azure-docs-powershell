@@ -1,0 +1,238 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Remove-AzStorageShareStoredAccessPolicy
+name: Remove-AzStorageShareStoredAccessPolicy
+module: Az.Storage
+isPreview: false
+summary: |-
+  Removes a stored access policy from a Storage share.
+description: |-
+  The **Remove-AzStorageShareStoredAccessPolicy** cmdlet removes a stored access policy from an Azure Storage share.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    aliases:
+    - ClientTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the [New-AzStorageContext](./New-AzStorageContext.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+      By default, this cmdlet does not return a value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the stored access policy that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    aliases:
+    - ServerTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Storage share name for which this cmdlet removes a policy.
+    aliases:
+    - N
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzStorageShareStoredAccessPolicy
+        [-ShareName] <String>
+        [-Policy] <String>
+        [-PassThru]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a stored access policy from an Azure Storage share'
+  description: |-
+    ```powershell
+    Remove-AzStorageShareStoredAccessPolicy -ShareName "ContosoShare" -Policy "GeneralPolicy"
+    ```
+
+    This command removes a stored access policy named GeneralPolicy from ContosoShare.
+links:
+- text: Get-AzStorageShareStoredAccessPolicy
+  href: ./Get-AzStorageShareStoredAccessPolicy.yml
+- text: New-AzStorageShareStoredAccessPolicy
+  href: ./New-AzStorageShareStoredAccessPolicy.yml
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+- text: Set-AzStorageShareStoredAccessPolicy
+  href: ./Set-AzStorageShareStoredAccessPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageShareStoredAccessPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/remove-azstoragesharestoredaccesspolicy
+  Module Name: Az.Storage
+  ms.assetid: E2CCDA8F-2D45-4F25-B297-337B7AB021E0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Remove-AzStorageShareStoredAccessPolicy.md
+  PlatyPS schema version: 2024-05-01

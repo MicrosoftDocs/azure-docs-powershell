@@ -1,0 +1,39 @@
+### YamlMime:PowerShellModule1
+uid: Az.EdgeOrder
+name: Az.EdgeOrder Module
+isPreview: false
+cmdletGroups:
+- title: EdgeOrder
+  cmdlets:
+  - Az.EdgeOrder.Get-AzEdgeOrder
+  - Az.EdgeOrder.Get-AzEdgeOrderAddress
+  - Az.EdgeOrder.Get-AzEdgeOrderConfiguration
+  - Az.EdgeOrder.Get-AzEdgeOrderItem
+  - Az.EdgeOrder.Get-AzEdgeOrderProductFamily
+  - Az.EdgeOrder.Get-AzEdgeOrderProductFamilyMetadata
+  - Az.EdgeOrder.Invoke-AzEdgeOrderItemCancellation
+  - Az.EdgeOrder.Invoke-AzEdgeOrderReturnOrderItem
+  - Az.EdgeOrder.New-AzEdgeOrderAddress
+  - Az.EdgeOrder.New-AzEdgeOrderContactDetailsObject
+  - Az.EdgeOrder.New-AzEdgeOrderFilterablePropertyObject
+  - Az.EdgeOrder.New-AzEdgeOrderHierarchyInformationObject
+  - Az.EdgeOrder.New-AzEdgeOrderItem
+  - Az.EdgeOrder.New-AzEdgeOrderOrderItemDetailsObject
+  - Az.EdgeOrder.New-AzEdgeOrderPreferencesObject
+  - Az.EdgeOrder.New-AzEdgeOrderShippingAddressObject
+  - Az.EdgeOrder.Remove-AzEdgeOrderAddress
+  - Az.EdgeOrder.Remove-AzEdgeOrderItem
+  - Az.EdgeOrder.Update-AzEdgeOrderAddress
+  - Az.EdgeOrder.Update-AzEdgeOrderItem
+description: |-
+  Microsoft Azure PowerShell: EdgeOrder cmdlets
+metadata:
+  Module Name: Az.EdgeOrder
+  Module Guid: ffbed74a-2473-42d2-95fc-73adffd13d49
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.edgeorder
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/Az.EdgeOrder.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/Az.EdgeOrder.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

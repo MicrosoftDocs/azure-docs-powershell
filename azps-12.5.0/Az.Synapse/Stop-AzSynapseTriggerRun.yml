@@ -1,0 +1,252 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Stop-AzSynapseTriggerRun
+name: Stop-AzSynapseTriggerRun
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Stops a trigger run in a synapse workspace.
+description: |-
+  The Stop-AzSynapseTriggerRun cmdlet stops a trigger run in a synapse workspace specified with the trigger name and trigger run ID. Currently only supported for TumblingWindowTriggers in WaitingOnDependency State.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSTriggerRun" data-throw-if-not-resolved="False" />
+    description: |-
+      The information about the trigger run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The trigger name.
+    aliases:
+    - TriggerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StopByWorkspaceObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This Cmdlet does not return an object by default. If this switch is specified, it returns true if successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TriggerRunId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Run ID of the trigger.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StopByWorkspaceObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByWorkspaceObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzSynapseTriggerRun
+        -WorkspaceName <String>
+        -Name <String>
+        -TriggerRunId <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzSynapseTriggerRun
+        -InputObject <PSTriggerRun>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-AzSynapseTriggerRun
+        -WorkspaceObject <PSSynapseWorkspace>
+        -Name <String>
+        -TriggerRunId <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByWorkspaceObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSTriggerRun" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Stop-AzSynapseTriggerRun -WorkspaceName ContosoWorkspace -Name ContosoTrigger -TriggerRunId 000111222333abc
+    ```
+
+    This command stops the trigger run with id '000111222333abc' in the Synapse workspace ContosoWorkspace.
+- title: Example 2
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Stop-AzSynapseTriggerRun -Name ContosoTrigger -TriggerRunId 000111222333abc
+    ```
+
+    Stops the trigger run with id '000111222333abc' in the Synapse workspace ContosoWorkspace through pipeline.
+- title: Example 3
+  description: |-
+    ```powershell
+    $triggerun = Get-AzSynapseTriggerRun -WorkspaceName ContosoWorkspace -Name ContosoTrigger -RunStartedAfter "2018-09-01T21:00" -RunStartedBefore "2019-09-01T21:00"
+    $triggerun | Stop-AzSynapseTriggerRun
+    ```
+
+    Stops the trigger run in the Synapse workspace ContosoWorkspace through pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Stop-AzSynapseTriggerRun.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/stop-azsynapsetriggerrun
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Stop-AzSynapseTriggerRun.md
+  PlatyPS schema version: 2024-05-01

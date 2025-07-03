@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.DynatraceObservability
+name: Az.DynatraceObservability Module
+isPreview: false
+cmdletGroups:
+- title: DynatraceObservability
+  cmdlets:
+  - Az.DynatraceObservability.Get-AzDynatraceMonitor
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorAppService
+  - Az.DynatraceObservability.Get-AzDynatraceMonitoredResource
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorHost
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorLinkableEnv
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorSSOConfig
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorSSODetail
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorTagRule
+  - Az.DynatraceObservability.Get-AzDynatraceMonitorVMHostPayload
+  - Az.DynatraceObservability.New-AzDynatraceMonitor
+  - Az.DynatraceObservability.New-AzDynatraceMonitorFilteringTagObject
+  - Az.DynatraceObservability.New-AzDynatraceMonitorSSOConfig
+  - Az.DynatraceObservability.New-AzDynatraceMonitorTagRule
+  - Az.DynatraceObservability.Remove-AzDynatraceMonitor
+  - Az.DynatraceObservability.Remove-AzDynatraceMonitorTagRule
+  - Az.DynatraceObservability.Update-AzDynatraceMonitor
+  - Az.DynatraceObservability.Update-AzDynatraceMonitorTagRule
+description: |-
+  Microsoft Azure PowerShell: DynatraceObservability cmdlets
+metadata:
+  Module Name: Az.DynatraceObservability
+  Module Guid: f889aadf-56ba-485c-8077-283219e39439
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dynatraceobservability
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/DynatraceObservability/help/Az.DynatraceObservability.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DynatraceObservability/DynatraceObservability/help/Az.DynatraceObservability.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

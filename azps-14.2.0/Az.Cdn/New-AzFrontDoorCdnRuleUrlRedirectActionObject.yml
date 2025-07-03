@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnRuleUrlRedirectActionObject
+name: New-AzFrontDoorCdnRuleUrlRedirectActionObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for UrlRedirectAction.
+description: |-
+  Create an in-memory object for UrlRedirectAction.
+parameters:
+  cmdletParameters:
+  - name: ParameterCustomFragment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Fragment to add to the redirect URL.
+      Fragment is the part of the URL that comes after #.
+      Do not include the #.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterCustomHostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host to redirect.
+      Leave empty to use the incoming host as the destination host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterCustomPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The full path to redirect.
+      Path cannot be empty and must start with /.
+      Leave empty to use the incoming path as destination path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterCustomQueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of query strings to be placed in the redirect URL.
+      Setting this value would replace any existing query string; leave empty to preserve the incoming query string.
+      Query string must be in \<key\>=\<value\> format.
+      ? and & will be added automatically so do not include them.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterDestinationProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol to use for the redirect.
+      The default value is MatchRequest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterRedirectType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The redirect type the rule will use when redirecting traffic.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterTypeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnRuleUrlRedirectActionObject
+        -ParameterRedirectType <String>
+        -ParameterTypeName <String>
+        [-ParameterCustomFragment <String>]
+        [-ParameterCustomHostname <String>]
+        [-ParameterCustomPath <String>]
+        [-ParameterCustomQueryString <String>]
+        [-ParameterDestinationProtocol <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.UrlRedirectAction" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for UrlRedirectAction'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnRuleUrlRedirectActionObject -Name UrlRedirect -ParameterRedirectType Moved -ParameterDestinationProtocol MatchRequest
+    ```
+
+    ```output
+    Name
+    ----
+    UrlRedirect
+    ```
+
+    Create an in-memory object for UrlRedirectAction
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleUrlRedirectActionObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnruleurlredirectactionobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleUrlRedirectActionObject.md
+  PlatyPS schema version: 2024-05-01

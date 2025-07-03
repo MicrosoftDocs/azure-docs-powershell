@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceFabric.Update-AzServiceFabricVmImage
+name: Update-AzServiceFabricVmImage
+module: Az.ServiceFabric
+isPreview: false
+summary: |-
+  Update the cluster resource vmImage setting which maps the appropriate runtime package to be delivered based on the target operating system.
+description: |-
+  Use **Update-AzServiceFabricVmImage** to update the vmImage setting of the cluster, responsible for runtime package delivery.
+
+  Important Note: VmImage 'Linux' as well as 'Ubuntu' map to the delivery of the Ubuntu 16.04 package,
+  so if the intent is to run Ubuntu18+, use Ubuntu18_04.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the cluster, if not given it will be same as resource group name
+    aliases:
+    - ClusterName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmImage
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.VmImageKind" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify common target vmImage to be used for the cluster.
+    acceptedValues:
+    - Windows
+    - Linux
+    - Ubuntu
+    - Ubuntu18_04
+    - Ubuntu20_04
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzServiceFabricVmImage
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        -VmImage <VmImageKind>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.VmImageKind" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSDeploymentResult" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Update-AzServiceFabricVmImage -ResourceGroupName 'Group1' -ClusterName 'Contoso01SFCluster' -VmImage Ubuntu18_04
+    ```
+
+    This command changes vmImage of the of the cluster 'Contoso01SFCluster' to 'Ubuntu18_04',
+    for the purpose of migrating future upgrades to use the Ubuntu 18 SF runtime deb package.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricVmImage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicefabric/update-azservicefabricvmimage
+  Module Name: Az.ServiceFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Update-AzServiceFabricVmImage.md
+  PlatyPS schema version: 2024-05-01

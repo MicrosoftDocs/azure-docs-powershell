@@ -1,0 +1,38 @@
+### YamlMime:PowerShellModule1
+uid: Az.MixedReality
+name: Az.MixedReality Module
+isPreview: false
+cmdletGroups:
+- title: Mixed Reality
+  cmdlets:
+  - Az.MixedReality.Get-AzMixedRealityObjectAnchorsAccount
+  - Az.MixedReality.Get-AzMixedRealityObjectAnchorsAccountKey
+  - Az.MixedReality.Get-AzMixedRealityRemoteRenderingAccount
+  - Az.MixedReality.Get-AzMixedRealityRemoteRenderingAccountKey
+  - Az.MixedReality.Get-AzMixedRealitySpatialAnchorsAccount
+  - Az.MixedReality.Get-AzMixedRealitySpatialAnchorsAccountKey
+  - Az.MixedReality.New-AzMixedRealityObjectAnchorsAccount
+  - Az.MixedReality.New-AzMixedRealityObjectAnchorsAccountKey
+  - Az.MixedReality.New-AzMixedRealityRemoteRenderingAccount
+  - Az.MixedReality.New-AzMixedRealityRemoteRenderingAccountKey
+  - Az.MixedReality.New-AzMixedRealitySpatialAnchorsAccount
+  - Az.MixedReality.New-AzMixedRealitySpatialAnchorsAccountKey
+  - Az.MixedReality.Remove-AzMixedRealityObjectAnchorsAccount
+  - Az.MixedReality.Remove-AzMixedRealityRemoteRenderingAccount
+  - Az.MixedReality.Remove-AzMixedRealitySpatialAnchorsAccount
+  - Az.MixedReality.Test-AzMixedRealityNameAvailability
+  - Az.MixedReality.Update-AzMixedRealityObjectAnchorsAccount
+  - Az.MixedReality.Update-AzMixedRealityRemoteRenderingAccount
+  - Az.MixedReality.Update-AzMixedRealitySpatialAnchorsAccount
+description: |-
+  Microsoft Azure PowerShell: MixedReality cmdlets
+metadata:
+  Module Name: Az.MixedReality
+  Module Guid: 4bdb5e8a-54be-4080-8f73-9c4e31acf7c7
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.mixedreality
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Az.MixedReality.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MixedReality/MixedReality/help/Az.MixedReality.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

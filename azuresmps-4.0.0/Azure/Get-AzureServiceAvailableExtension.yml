@@ -1,0 +1,264 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureServiceAvailableExtension
+name: Get-AzureServiceAvailableExtension
+module: Azure
+isPreview: false
+summary: |-
+  Gets information about the available extensions for hosted services.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  The **Get-AzureServiceAvailableExtension** cmdlet gets information for the latest available extensions for hosted services.
+parameters:
+  cmdletParameters:
+  - name: AllVersions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets all versions of an extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListAllVersions
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListLatestExtensions
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderNamespace
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension provider namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListLatestExtensions
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListSingleVersion
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureServiceAvailableExtension
+        [[-ExtensionName] <String>]
+        [[-ProviderNamespace] <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListLatestExtensions
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureServiceAvailableExtension
+        [-ExtensionName] <String>
+        [-ProviderNamespace] <String>
+        [-AllVersions]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListAllVersions
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureServiceAvailableExtension
+        [-ExtensionName] <String>
+        [-ProviderNamespace] <String>
+        [-Version] <String>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListSingleVersion
+  isDefault: false
+examples:
+- title: 'Example 1: Get available extensions'
+  description: |-
+    ```
+    PS C:\> Get-AzureServiceAvailableExtension
+
+              ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
+              ExtensionName              : RDP
+              Version                    : 1.0
+              Label                      : Microsoft Azure Remote Desktop Extension
+              Description                : Microsoft Azure Remote Desktop Extension
+              HostingResources           : WebOrWorkerRole
+              ThumbprintAlgorithm        : sha1
+              PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PublicConfig"><xs:complexType><xs:sequence><xs:element
+              name="UserName" type="xs:string" minOccurs="1" /><xs:element name="Expiration" type="xs:string" minOccurs="1"
+              /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              PrivateConfigurationSchema : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PrivateConfig"><xs:complexType><xs:sequence><xs:element
+              name="Password" type="xs:string" /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              OperationDescription       : Get-AzureServiceAvailableExtension
+              OperationId                : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+              OperationStatus            : Succeeded
+    ```
+
+    This command gets all available extensions.
+- title: 'Example 2: Get extensions in a specified namespace'
+  description: |-
+    ```
+    PS C:\> Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -AllVersions
+
+              ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
+              ExtensionName              : RDP
+              Version                    : 1.0.0.1
+              Label                      : Microsoft Azure Remote Desktop Extension
+              Description                : Microsoft Azure Remote Desktop Extension
+              HostingResources           : WebOrWorkerRole
+              ThumbprintAlgorithm        : sha1
+              PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PublicConfig"><xs:complexType><xs:sequence><xs:element
+              name="UserName" type="xs:string" minOccurs="1" /><xs:element name="Expiration" type="xs:string" minOccurs="1"
+              /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              PrivateConfigurationSchema : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PrivateConfig"><xs:complexType><xs:sequence><xs:element
+              name="Password" type="xs:string" /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              OperationDescription       : Get-AzureServiceAvailableExtension
+              OperationId                : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+              OperationStatus            : Succeeded
+    ```
+
+    This command gets the extensions with a specified name in a specified namespace.
+- title: 'Example 3: Get a specific version of an extension'
+  description: |-
+    ```
+    PS C:\> Get-AzureServiceAvailableExtension -ProviderNamespace Microsoft.Windows.Azure.Extensions -ExtensionName "RDP" -Version 1.0.0.1
+
+              ProviderNameSpace          : Microsoft.Windows.Azure.Extensions
+              ExtensionName              : RDP
+              Version                    : 1.0.0.1
+              Label                      : Microsoft Azure Remote Desktop Extension
+              Description                : Microsoft Azure Remote Desktop Extension
+              HostingResources           : WebOrWorkerRole
+              ThumbprintAlgorithm        : sha1
+              PublicConfigurationSchema  : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PublicConfig"><xs:complexType><xs:sequence><xs:element
+              name="UserName" type="xs:string" minOccurs="1" /><xs:element name="Expiration" type="xs:string" minOccurs="1"
+              /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              PrivateConfigurationSchema : <?xml version="1.0" encoding="utf-8"?><xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"><xs:element name="PrivateConfig"><xs:complexType><xs:sequence><xs:element
+              name="Password" type="xs:string" /></xs:sequence></xs:complexType></xs:element></xs:schema>
+              OperationDescription       : Get-AzureServiceAvailableExtension
+              OperationId                : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+              OperationStatus            : Succeeded
+    ```
+
+    This command gets information about a specific version of an extension.
+links:
+- text: Get-AzureServiceExtension
+  href: ./Get-AzureServiceExtension.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BFB0000C-2EFF-4216-923B-55B0B07BFE60
+  PlatyPS schema version: 2024-05-01

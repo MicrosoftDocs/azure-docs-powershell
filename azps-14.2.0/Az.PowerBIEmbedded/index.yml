@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.PowerBIEmbedded
+name: Az.PowerBIEmbedded Module
+isPreview: false
+cmdletGroups:
+- title: Power BI Embedded Capacity
+  cmdlets:
+  - Az.PowerBIEmbedded.Get-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.New-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.Remove-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.Resume-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.Suspend-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.Test-AzPowerBIEmbeddedCapacity
+  - Az.PowerBIEmbedded.Update-AzPowerBIEmbeddedCapacity
+description: |-
+  This topic displays help topics for the Azure Power BI Embedded Cmdlets.
+metadata:
+  Module Name: Az.PowerBIEmbedded
+  Module Guid: 868389ce-dd36-4f57-a674-0970db085d9a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.powerbiembedded
+  Help Version: 4.1.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PowerBIEmbedded/PowerBIEmbedded/help/Az.PowerBIEmbedded.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PowerBIEmbedded/PowerBIEmbedded/help/Az.PowerBIEmbedded.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

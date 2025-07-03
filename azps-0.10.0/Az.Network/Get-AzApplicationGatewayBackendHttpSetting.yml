@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGatewayBackendHttpSetting
+name: Get-AzApplicationGatewayBackendHttpSetting
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the back-end HTTP settings of an application gateway.
+description: |-
+  The Get-AzApplicationGatewayBackendHttpSetting cmdlet gets the back-end HTTP settings of an application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an application gateway object that contains back-end HTTP settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the backend HTTP settings that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGatewayBackendHttpSetting
+        [-Name <String>]
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.AzureApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get back-end HTTP settings by name'
+  description: |-
+    ```
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $Settings  = Get-AzApplicationGatewayBackendHttpSetting -Name "Settings01" -ApplicationGateway $AppGw
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.The second command gets the HTTP settings named Settings01 for $AppGw and stores the settings in the $Settings variable.
+- title: 'Example 2: Get a collection of back-end HTTP settings'
+  description: |-
+    ```
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $SettingsList  = Get-AzApplicationGatewayBackendHttpSetting -ApplicationGateway $AppGw
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 in the resource group named ResourceGroup01, and stores it in the $AppGw variable.The second command gets the collection of HTTP settings for $AppGw and stores the settings in the $SettingsList variable.
+links:
+- text: Add-AzApplicationGatewayBackendHttpSetting
+  href: Add-AzApplicationGatewayBackendHttpSetting.yml
+- text: New-AzApplicationGatewayBackendHttpSetting
+  href: New-AzApplicationGatewayBackendHttpSetting.yml
+- text: Remove-AzApplicationGatewayBackendHttpSetting
+  href: Remove-AzApplicationGatewayBackendHttpSetting.yml
+- text: Set-AzApplicationGatewayBackendHttpSetting
+  href: Set-AzApplicationGatewayBackendHttpSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzApplicationGatewayBackendHttpSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-AzApplicationGatewayBackendHttpSetting
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzApplicationGatewayBackendHttpSetting.md
+  PlatyPS schema version: 2024-05-01

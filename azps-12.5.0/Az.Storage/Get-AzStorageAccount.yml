@@ -1,0 +1,211 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageAccount
+name: Get-AzStorageAccount
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets a Storage account.
+description: |-
+  The **Get-AzStorageAccount** cmdlet gets a specified Storage account or all of the Storage accounts in a resource group or the subscription.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeBlobRestoreStatus
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Get the BlobRestoreStatus of the Storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BlobRestoreStatusParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeGeoReplicationStats
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Get the GeoReplicationStats of the Storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage account to get.
+    aliases:
+    - StorageAccountName
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BlobRestoreStatusParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the Storage account to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageAccount
+        [[-ResourceGroupName] <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageAccount
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-IncludeGeoReplicationStats]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageAccount
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-IncludeBlobRestoreStatus]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BlobRestoreStatusParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified Storage account'
+  description: |-
+    ```powershell
+    Get-AzStorageAccount -ResourceGroupName "RG01" -Name "mystorageaccount"
+    ```
+
+    This command gets the specified Storage account.
+- title: 'Example 2: Get all Storage accounts in a resource group'
+  description: |-
+    ```powershell
+    Get-AzStorageAccount -ResourceGroupName "RG01"
+    ```
+
+    This command gets all of the Storage accounts in a resource group.
+- title: 'Example 3:  Get all Storage accounts in the subscription'
+  description: |-
+    ```powershell
+    Get-AzStorageAccount
+    ```
+
+    This command gets all of the Storage accounts in the subscription.
+- title: 'Example 4:  Get a Storage accounts with its blob restore status'
+  description: |-
+    ```powershell
+    $account = Get-AzStorageAccount -ResourceGroupName "myresourcegroup" -Name "mystorageaccount" -IncludeBlobRestoreStatus
+
+    $account.BlobRestoreStatus
+    ```
+
+    ```output
+    Status     RestoreId                            FailureReason Parameters.TimeToRestore     Parameters.BlobRanges
+    ------     ---------                            ------------- ------------------------     ---------------------
+    InProgress a70cd4a1-f223-4c86-959f-cc13eb4795a8               2020-02-10T13:45:04.7155962Z [container1/blob1 -> container2/blob2]
+    ```
+
+    This command gets a Storage accounts with its blob restore status, and show the blob restore status.
+links:
+- text: New-AzStorageAccount
+  href: ./New-AzStorageAccount.yml
+- text: Remove-AzStorageAccount
+  href: ./Remove-AzStorageAccount.yml
+- text: Set-AzStorageAccount
+  href: ./Set-AzStorageAccount.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageaccount
+  Module Name: Az.Storage
+  ms.assetid: E53D5040-C1E8-4DC1-8371-F41C00B666E3
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccount.md
+  PlatyPS schema version: 2024-05-01

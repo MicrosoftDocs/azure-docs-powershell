@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.New-AzWebAppBackup
+name: New-AzWebAppBackup
+module: Az.Websites
+isPreview: false
+description: |-
+  The **New-AzWebAppBackup** cmdlet creates an Azure Web App Backup.
+parameters:
+  cmdletParameters:
+  - name: BackupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Databases
+    type: <xref href="DatabaseBackupSetting" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Databases of type DatabaseBackupSetting[]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromResourceName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromResourceName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Slot Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromResourceName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Url
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebApp
+    type: <xref href="Site" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromWebApp
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+inputs:
+- name: <xref href="Site" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'WebApp' accepts value of type 'Site' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.WebApps.Cmdlets.WebApps.AzureWebAppBackup" data-throw-if-not-resolved="False" />
+examples:
+- title: '1:'
+  description: |-
+    ```
+    PS C:\> New-AzWebAppBackup -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -StorageAccountUrl "https://storageaccount.file.core.windows.net"
+    ```
+
+    Creates a backup of the specified app ContosoWebApp that is within resource group Default-Web-WestUS in `https://storageaccount.file.core.windows.net`
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebAppBackup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.websites/new-Azwebappbackup
+  Module Name: Az.WebSites
+  ms.assetid: D3FE0440-C663-4379-8F5F-2E66EF024E5D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/New-AzWebAppBackup.md
+  PlatyPS schema version: 2024-05-01

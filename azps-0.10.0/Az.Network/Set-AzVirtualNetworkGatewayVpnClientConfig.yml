@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzVirtualNetworkGatewayVpnClientConfig
+name: Set-AzVirtualNetworkGatewayVpnClientConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Sets the VPN client address pool for a virtual network gateway.
+description: |-
+  The **Set-AzVirtualNetworkVpnClientConfig** cmdlet configures the client address pool for a virtual network gateway.
+  Virtual private network (VPN) clients that connect to this gateway will be assigned an IP address from this address pool.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RadiusServerAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      P2S External Radius server address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RadiusServerConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RadiusServerSecret
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      P2S External Radius server secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RadiusServerConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGateway
+    type: <xref href="PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object reference to the virtual network gateway that contains the VPN client configuration settings that this cmdlet modifies.
+      You can create an object reference to a virtual network gateway by using the Get-AzVirtualNetworkGateway and specifying the name of the gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientAddressPool
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the IP addresses to be assigned to clients connecting to this gateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGatewayVpnClientConfig
+        -VirtualNetworkGateway <PSVirtualNetworkGateway>
+        -VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGatewayVpnClientConfig
+        -VirtualNetworkGateway <PSVirtualNetworkGateway>
+        -VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>
+        -RadiusServerAddress <String>
+        -RadiusServerSecret <SecureString>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RadiusServerConfiguration
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts pipelined instances of the **Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway** object.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet modifies existing instances of the **Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway** object.
+examples:
+- title: 'Example 1: Assign a VPN client address pool to a virtual network gateway'
+  description: |-
+    ```
+    PS C:\>$Gateway = Get-AzVirtualNetworkGateway -Name "ContosoVirtualGateway"
+    PS C:\> Set-AzVirtualNetworkGatewayVpnClientConfig -VirtualNetworkGateway $Gateway -VpnClientAddressPool "10.0.0.0/16"
+    ```
+
+    This example assigns a VPN client address pool to a virtual network gateway named ContosoVirtualGateway.
+
+    The first command creates an object reference to the gateway and the object is stored in a variable named $Gateway.
+
+    The second command in the example then uses the **Set-AzVirtualNetworkGatewayVpnClientConfig** cmdlet to assign the address pool 10.0.0.0/16 to ContosoVirtualGateway.
+- title: 'Example 2: Configure external radius based authentication on existing gateway'
+  description: |-
+    ```
+    PS C:\>$Gateway = Get-AzVirtualNetworkGateway -Name "ContosoVirtualGateway"
+    PS C:\> $Secure_String_Pwd = ConvertTo-SecureString "TestRadiusServerPassword" -AsPlainText -Force
+    PS C:\> Set-AzVirtualNetworkGatewayVpnClientConfig -VirtualNetworkGateway $Gateway -VpnClientAddressPool "10.0.0.0/16" -RadiusServerAddress "TestRadiusServer" -RadiusServerSecret $Secure_String_Pwd
+    ```
+
+    This example assigns a VPN client address pool to a virtual network gateway named ContosoVirtualGateway.
+
+    The first command creates an object reference to the gateway and the object is stored in a variable named $Gateway.
+
+    The second command in the example then uses the **Set-AzVirtualNetworkGatewayVpnClientConfig** cmdlet to assign the address pool 10.0.0.0/16 to ContosoVirtualGateway. It also configures the external radius server "TestRadiusServer" to be used for authentication for vpn clients.
+links:
+- text: Get-AzVpnClientPackage
+  href: ./Get-AzVpnClientPackage.yml
+- text: Get-AzVirtualNetworkGateway
+  href: ./Get-AzVirtualNetworkGateway.yml
+- text: Resize-AzVirtualNetworkGateway
+  href: ./Resize-AzVirtualNetworkGateway.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGatewayVpnClientConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgatewayvpnclientconfig
+  Module Name: Az.Network
+  ms.assetid: EFB0D7A6-0C8A-4514-873D-672641CCCAF3
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGatewayVpnClientConfig.md
+  PlatyPS schema version: 2024-05-01

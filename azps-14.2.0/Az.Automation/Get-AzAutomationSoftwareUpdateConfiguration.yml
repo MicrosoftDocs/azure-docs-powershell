@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationSoftwareUpdateConfiguration
+name: Get-AzAutomationSoftwareUpdateConfiguration
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets a list of azure automation software update configurations.
+description: |-
+  The Get-AzAutomationSoftwareUpdateConfiguration returns a list of software update configurations. To get a specific software update configuration, specify the name parameter. You can also list software update configurations targeting specific azure virtual machine by specifying the azure resource Id for this virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The automation account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureVMResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure resource Id of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVMId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the software update configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateConfiguration
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -AzureVMResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVMId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    Get an azure automation software update configuration by name.
+
+    ```powershell
+    Get-AzAutomationSoftwareUpdateConfiguration -ResourceGroupName "mygroup" -AutomationAccountName "myaccount" -Name "MyWeeklySchedule"
+    ```
+
+    ```output
+    UpdateConfiguration   : Microsoft.Azure.Commands.Automation.Model.UpdateManagement.UpdateConfiguration
+    ScheduleConfiguration : Microsoft.Azure.Commands.Automation.Model.Schedule
+    ProvisioningState     : Succeeded
+    ErrorInfo             :
+    ResourceGroupName     : mygroup
+    AutomationAccountName : myaccount
+    Name                  : MyWeeklySchedule
+    CreationTime          : 9/14/2018 3:53:27 AM +00:00
+    LastModifiedTime      : 9/14/2018 3:53:37 AM +00:00
+    Description           :
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSoftwareUpdateConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationsoftwareupdateconfiguration
+  Module Name: Az.Automation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSoftwareUpdateConfiguration.md
+  PlatyPS schema version: 2024-05-01

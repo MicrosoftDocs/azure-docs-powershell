@@ -1,0 +1,168 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quota.Get-AzQuota
+name: Get-AzQuota
+module: Az.Quota
+isPreview: false
+summary: |-
+  Get the quota limit of a resource.
+  The response can be used to determine the remaining quota to calculate a new quota limit that can be submitted with a PUT request.
+description: |-
+  Get the quota limit of a resource.
+  The response can be used to determine the remaining quota to calculate a new quota limit that can be submitted with a PUT request.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.IQuotaIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name for a given resource provider.
+      For example:
+      - SKU name for Microsoft.Compute
+      - SKU or TotalLowPriorityCores for Microsoft.MachineLearningServices
+       For Microsoft.Network PublicIPAddresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Azure resource URI.
+      For example, `/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/qms-test/providers/Microsoft.Batch/batchAccounts/testAccount/`.
+      This is the target Azure resource URI for the List GET operation.
+      If a `{resourceName}` is added after `/quotas`, then it's the target Azure resource URI in the GET operation for the specific resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzQuota
+        -Scope <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzQuota
+        -ResourceName <String>
+        -Scope <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzQuota
+        -InputObject <IQuotaIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.IQuotaIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.ICurrentQuotaLimitBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List the quota limits of a scope'
+  description: |-
+    ```powershell
+    Get-AzQuota -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus"
+    ```
+
+    ```output
+    Name              NameLocalizedValue  Unit  ETag
+    ----              ------------------  ----  ----
+    VirtualNetworks   Virtual Networks    Count
+    CustomIpPrefixes  Custom Ip Prefixes  Count
+    PublicIpPrefixes  Public Ip Prefixes  Count
+    PublicIPAddresses Public IP Addresses Count
+    ......
+    ```
+
+    This command lists the quota limits of a scope.
+- title: 'Example 2: Get the quota limit of a resource'
+  description: |-
+    ```powershell
+    Get-AzQuota -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus" -ResourceName VirtualNetworks
+    ```
+
+    ```output
+    Name            NameLocalizedValue Unit  ETag
+    ----            ------------------ ----  ----
+    VirtualNetworks Virtual Networks   Count
+    ```
+
+    This command gets the quota limit of a resource.
+    The response can be used to determine the remaining quota to calculate a new quota limit that can be submitted with a PUT request.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuota.md
+  document type: cmdlet
+  external help file: Az.Quota-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.quota/get-azquota
+  Module Name: Az.Quota
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuota.md
+  PlatyPS schema version: 2024-05-01

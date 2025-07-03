@@ -1,0 +1,312 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSqlDatabaseRestore
+name: Start-AzureSqlDatabaseRestore
+module: Azure
+isPreview: false
+summary: |-
+  Performs a point in time restore of a database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSqlDatabaseRestore** cmdlet performs a point in time restore of a Basic, Standard or Premium database.
+  Azure SQL Database retains Basic database backups 7 days, Standard for 14 days, and Premium for 35 days.
+  The restore operation creates a new database.
+  If the source database is not deleted, the *SourceDatabaseName* and *TargetDatabaseName* parameter must have different values.
+
+  Azure SQL Database does not currently support cross server restore.
+  The source and target server names must be the same.
+notes: |-
+  * You must use certificate based authentication to run this cmdlet. Run the following commands on the computer where run this cmdlet:
+
+  `PS C:\\\> $subId = \<Subscription ID\>`
+  `PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
+  `PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
+  `PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
+  `PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+parameters:
+  cmdletParameters:
+  - name: PointInTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the restore point to which to restore the database.
+      When the restore operation finishes, the database is restored to the state it was at the date and time that this parameter specifies.
+      By default, for a live database this set to the current time, and for a dropped database, this cmdlet uses the time when the database was dropped.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestorableDropped
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores a restorable dropped database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceRestorableDroppedDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabase
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database that this cmdlet restores.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabaseDeletionDate
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the date and time when the database was deleted.
+      You must include milliseconds when you specify the time to match the actual database deletion time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceRestorableDroppedDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the live database that this cmdlet restores.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySourceRestorableDroppedDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceRestorableDroppedDatabase
+    type: <xref href="RestorableDroppedDatabase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the restorable dropped database that this cmdlet restores.
+      To obtain a **RestorableDroppedDatabase** object, use the Get-AzureSqlDatabase cmdlet, and specify the *RestorableDropped* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceRestorableDroppedDatabaseObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server on which the source database is live and running, or on which the source database ran before it was deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySourceRestorableDroppedDatabaseObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the new database that the restore operation creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server to which this cmdlet restores the database.
+
+      Azure SQL Database does not currently support cross server restore.
+      The source and target server names must be the same.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRestore
+        -SourceDatabase <Database>
+        -TargetDatabaseName <String>
+        [-SourceServerName <String>]
+        [-TargetServerName <String>]
+        [-PointInTime <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceDatabaseObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRestore
+        -SourceRestorableDroppedDatabase <RestorableDroppedDatabase>
+        -TargetDatabaseName <String>
+        [-SourceServerName <String>]
+        [-TargetServerName <String>]
+        [-PointInTime <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceRestorableDroppedDatabaseObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRestore
+        -SourceServerName <String>
+        -SourceDatabaseName <String>
+        -TargetDatabaseName <String>
+        [-TargetServerName <String>]
+        [-PointInTime <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceDatabaseName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRestore
+        -SourceServerName <String>
+        -SourceDatabaseName <String>
+        -SourceDatabaseDeletionDate <DateTime>
+        -TargetDatabaseName <String>
+        [-TargetServerName <String>]
+        [-RestorableDropped]
+        [-PointInTime <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceRestorableDroppedDatabaseName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.RestorableDroppedDatabase" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.RestoreDatabaseOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Restore a database specified as an object to a point in time'
+  description: |-
+    ```
+    PS C:\> $Database = Get-AzureSqlDatabase -ServerName "Server01" -DatabaseName "Database17"
+    PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
+    ```
+
+    The first command gets a database object for the database named Database17 on the server named Server01, and then stores it in the $Database variable.
+
+    The second command restores the database to a specific point in time.
+    The command specifies at name for the new database.
+- title: 'Example 2: Restore a database specified by name to a point in time'
+  description: |-
+    ```
+    PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored" -PointInTime "2013-01-01 06:00:00"
+    ```
+
+    This command restores the database named Database17 to a specific point in time.
+    The command specifies at name for the new database.
+- title: 'Example 3: Restore a dropped database specified as an object to a point in time'
+  description: |-
+    ```
+    PS C:\> $Database = Get-AzureSqlDatabase -RestorableDropped -ServerName "Server01" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z"
+    PS C:\> $Operation = Start-AzureSqlDatabaseRestore -SourceRestorableDroppedDatabase $Database -TargetDatabaseName "DroppedDatabaseRestored"
+    ```
+
+    The first command gets a database object for the database named Database01 on the server named Server01.
+    The command specifies the *RestorableDropped* parameter.
+    Therefore, the cmdlet gets restorable dropped database the specified restore point.
+    The command stores that database object in the $Database variable.
+
+    The second command restores the dropped database specified by $Database.
+    The command specifies at name for the new database.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Create Database Restore Request
+  href: https://msdn.microsoft.com/en-us/library/dn509571.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlDatabase
+  href: ./Get-AzureSqlDatabase.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 383F36F3-3F52-4FC3-99F7-831096E6037D
+  PlatyPS schema version: 2024-05-01

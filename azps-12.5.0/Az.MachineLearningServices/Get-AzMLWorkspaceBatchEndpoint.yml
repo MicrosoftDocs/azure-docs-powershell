@@ -1,0 +1,236 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.Get-AzMLWorkspaceBatchEndpoint
+name: Get-AzMLWorkspaceBatchEndpoint
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Gets a batch inference endpoint by name.
+description: |-
+  Gets a batch inference endpoint by name.
+parameters:
+  cmdletParameters:
+  - name: Count
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of endpoints to be retrieved in a page of results.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name for the Batch Endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Continuation token for pagination.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure Machine Learning workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMLWorkspaceBatchEndpoint
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        [-SubscriptionId <String[]>]
+        [-Count <Int32>]
+        [-Skip <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMLWorkspaceBatchEndpoint
+        -Name <String>
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMLWorkspaceBatchEndpoint
+        -InputObject <IMachineLearningServicesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IMachineLearningServicesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IBatchEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Lists all batch inference endpoint under workspace'
+  description: |-
+    ```powershell
+    Get-AzMLWorkspaceBatchEndpoint -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-cli01
+    ```
+
+    ```output
+    Location Name         SystemDataCreatedAt  SystemDataCreatedBy                 SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType Kind ResourceGroupName
+    -------- ----         -------------------  -------------------                 ----------------------- ------------------------ ------------------------ ---------------------------- ---- -----------------
+    eastus   batch-pwsh03 5/20/2022 7:21:12 AM UserName (Example)                  5/20/2022 7:31:17 AM                                                                                        ml-rg-test
+    eastus   batch-pwsh02 5/20/2022 7:17:33 AM UserName (Example)                  5/20/2022 7:20:02 AM                                                                                        ml-rg-test
+    eastus   batch-cli01  5/20/2022 7:11:11 AM UserName (Example)                  5/20/2022 7:11:32 AM                                                                                        ml-rg-test
+    ```
+
+    Lists all batch inference endpoint under workspace
+- title: 'Example 2: Gets a batch inference endpoint by name'
+  description: |-
+    ```powershell
+    Get-AzMLWorkspaceBatchEndpoint -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-cli01 -Name batch-pwsh03
+    ```
+
+    ```output
+    Location Name         SystemDataCreatedAt  SystemDataCreatedBy                 SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType Kind ResourceGroupName
+    -------- ----         -------------------  -------------------                 ----------------------- ------------------------ ------------------------ ---------------------------- ---- -----------------
+    eastus   batch-pwsh03 5/20/2022 7:21:12 AM UserName (Example)                  5/20/2022 7:31:17 AM                                                                                        ml-rg-test
+    ```
+
+    Gets a batch inference endpoint by name
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Get-AzMLWorkspaceBatchEndpoint.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearningservices/get-azmlworkspacebatchendpoint
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Get-AzMLWorkspaceBatchEndpoint.md
+  PlatyPS schema version: 2024-05-01

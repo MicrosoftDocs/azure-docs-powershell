@@ -1,0 +1,350 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.Start-AzFrontDoorCdnProfilePrepareMigration
+name: Start-AzFrontDoorCdnProfilePrepareMigration
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Migrate the classic AFD instance to Azure Front Door(Standard/Premium) profile.
+  MigrationWebApplicationFirewallMapping should be associated if the front door has WAF policy.
+  Managed Identity should be associated if the frontdoor has Customer Certificates.
+  The change need to be committed after this.
+description: |-
+  Migrate the classic AFD instance to Azure Front Door(Standard/Premium) profile.
+  The change need to be committed after this.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClassicResourceReferenceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the classic front door instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.ManagedServiceIdentityType" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityUserAssignedIdentity
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of user assigned identities associated with the resource.
+      The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
+      The dictionary values can be empty objects ({}) in requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigrationWebApplicationFirewallMapping
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.IMigrationWebApplicationFirewallMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Waf mapping for the migrated profile
+      To construct, see NOTES section for MIGRATIONWEBAPPLICATIONFIREWALLMAPPING properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the new AFD Standard/Premium profile that need to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.SkuName" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the pricing tier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzFrontDoorCdnProfilePrepareMigration
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -ClassicResourceReferenceId <String>
+        -ProfileName <String>
+        -SkuName <SkuName>
+        [-MigrationWebApplicationFirewallMapping <IMigrationWebApplicationFirewallMapping[]>]
+        [-IdentityType <ManagedServiceIdentityType>]
+        [-IdentityUserAssignedIdentity <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.IMigrateResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: When a classic AFD instance associated without WAF policy and has no customer certificates.'
+  description: |-
+    ```powershell
+    Start-AzFrontDoorCdnProfilePrepareMigration -ResourceGroupName rgName -ClassicResourceReferenceId /subscriptions/testSubId/resourcegroups/rgName/providers/Microsoft.Network/Frontdoors/name -ProfileName name-migrated -SkuName Standard_AzureFrontDoor
+    ```
+
+    ```output
+    MigratedProfileResourceId
+    -------------------------
+    /subscriptions/testSubId/resourceGroups/rgName/providers/Microsoft.Cdn/profiles/name-migrated
+    ```
+
+    When a classic AFD instance associated without WAF policy and has no customer certificates.
+    Migrate the classic AFD to Azure Front Door(Standard/Premium) profile..
+    The change need to be committed after this.
+- title: 'Example 2: When a classic AFD instance associated with WAF and copy to a new WAF policy.'
+  description: |-
+    ```powershell
+    $wafMapping = New-AzFrontDoorCdnMigrationWebApplicationFirewallMappingObject -MigratedFromId /subscriptions/testSubId/resourcegroups/rgName01/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf01 -MigratedToId /subscriptions/testSubId/resourcegroups/rgName/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/newWAFName
+    Start-AzFrontDoorCdnProfilePrepareMigration -ResourceGroupName rgName -ClassicResourceReferenceId /subscriptions/testSubId/resourcegroups/rgName/providers/Microsoft.Network/Frontdoors/name -ProfileName name-migrated -SkuName Standard_AzureFrontDoor -MigrationWebApplicationFirewallMapping $wafMapping
+    ```
+
+    ```output
+    MigratedProfileResourceId
+    -------------------------
+    /subscriptions/testSubId/resourceGroups/rgName/providers/Microsoft.Cdn/profiles/name-migrated
+    ```
+
+    When a classic AFD instance associated with WAF and copy to a new WAF policy.
+    The new WAF policy should be created in the same subscription and resource group with the classic AFD instance's.
+    Migrate classic AFD to Azure Front Door(Standard/Premium) profile..
+    The change need to be committed after this.
+- title: 'Example 3: When a classic AFD instance associated with WAF and select an existing WAF policy.'
+  description: |-
+    ```powershell
+    $wafMapping = New-AzFrontDoorCdnMigrationWebApplicationFirewallMappingObject -MigratedFromId /subscriptions/testSubId/resourcegroups/rgName01/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf01 -MigratedToId /subscriptions/testSubId/resourcegroups/rgName02/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/existingWAFName
+    Start-AzFrontDoorCdnProfilePrepareMigration -ResourceGroupName rgName -ClassicResourceReferenceId /subscriptions/testSubId/resourcegroups/rgName/providers/Microsoft.Network/Frontdoors/name -ProfileName name-migrated -SkuName Standard_AzureFrontDoor -MigrationWebApplicationFirewallMapping $wafMapping
+    ```
+
+    ```output
+    MigratedProfileResourceId
+    -------------------------
+    /subscriptions/testSubId/resourceGroups/rgName/providers/Microsoft.Cdn/profiles/name-migrated
+    ```
+
+    When a classic AFD instance associated with WAF and select an existing WAF policy.
+    You could only select the WAF policy located in the same subscription with the classic AFD instance's.
+    Migrate the classic AFD to Azure Front Door(Standard/Premium) profile..
+    The change need to be committed after this.
+- title: 'Example 4: When a classic AFD instance associated with more than one WAF policy and has no customer certificates.'
+  description: |-
+    ```powershell
+    $wafMapping1 = New-AzFrontDoorCdnMigrationWebApplicationFirewallMappingObject -MigratedFromId /subscriptions/testSubId/resourcegroups/rgName01/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf01 -MigratedToId /subscriptions/testSubId/resourcegroups/rgName01/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf01test
+
+    $wafMapping2 = New-AzFrontDoorCdnMigrationWebApplicationFirewallMappingObject -MigratedFromId /subscriptions/testSubId/resourcegroups/rgName02/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf02 -MigratedToId  /subscriptions/testSubId/resourcegroups/rgName02/providers/Microsoft.Network/frontdoorwebapplicationfirewallpolicies/waf02test
+
+    # enable Managed Identity via SystemAssigned and UserAssigned
+    $identityType = "SystemAssigned, UserAssigned"
+
+    # UserIdentity information
+    $userInfo = @{
+    	"/subscriptions/testSubId/resourceGroups/rgName01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01" = @{}
+    	"/subscriptions/testSubId/resourceGroups/rgName02/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity02" = @{}
+    }
+
+    Start-AzFrontDoorCdnProfilePrepareMigration -ResourceGroupName rgName -ClassicResourceReferenceId /subscriptions/testSubId/resourcegroups/rgName/providers/Microsoft.Network/Frontdoors/name -ProfileName name-migrated -SkuName Premium_AzureFrontDoor -MigrationWebApplicationFirewallMapping @($wafMapping1, $wafMapping2) -IdentityType $identityType -IdentityUserAssignedIdentity $userInfo
+    ```
+
+    ```output
+    MigratedProfileResourceId
+    -------------------------
+    /subscriptions/testSubId/resourceGroups/rgName/providers/Microsoft.Cdn/profiles/name-migrated
+    ```
+
+    When a classic AFD instance associated with more than one WAF policy and has no customer certificates.
+    Migrate the classic AFD to Azure Front Door(Standard/Premium) profile..
+    The change need to be committed after this.
+- title: 'Example 5: When a classic AFD instance not associated with WAF and has no customer certificate, and the subscription of the classic AFD instance is different from the local subscription.'
+  description: |-
+    ```powershell
+    Start-AzFrontDoorCdnProfilePrepareMigration -ResourceGroupName rgName -ClassicResourceReferenceId /subscriptions/testSubId01/resourcegroups/rgName/providers/Microsoft.Network/Frontdoors/name -ProfileName name-migrated -SkuName Standard_AzureFrontDoor -SubscriptionId testSubId01
+    ```
+
+    ```output
+    MigratedProfileResourceId
+    -------------------------
+    /subscriptions/testSubId/resourceGroups/rgName/providers/Microsoft.Cdn/profiles/name-migrated
+    ```
+
+    When a classic AFD instance not associated with WAF and has no customer certificate, and the subscription of the classic AFD instance is different from the local subscription.
+    Migrate the classic AFD to Azure Front Door(Standard/Premium) profile..
+    The change need to be committed after this.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/Start-AzFrontDoorCdnProfilePrepareMigration.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cdn/start-azfrontdoorcdnprofilepreparemigration
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/Start-AzFrontDoorCdnProfilePrepareMigration.md
+  PlatyPS schema version: 2024-05-01

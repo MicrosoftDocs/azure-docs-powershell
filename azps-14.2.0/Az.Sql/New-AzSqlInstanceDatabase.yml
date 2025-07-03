@@ -1,0 +1,306 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlInstanceDatabase
+name: New-AzSqlInstanceDatabase
+module: Az.Sql
+isPreview: false
+summary: |-
+  Creates an Azure SQL Managed Instance database.
+description: |-
+  The **New-AzSqlInstanceDatabase** cmdlet creates an Azure SQL Managed instance database.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Collation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The collation of the Azure SQL Instance Database collation to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableLedger
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Creates a ledger database, in which the integrity of all data is protected by the ledger feature. All tables in the ledger database must be ledger tables. Note: the value of this property cannot be changed after the database has been created.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNewInstanceDatabaseFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance object
+    aliases:
+    - ParentObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNewInstanceDatabaseFromAzureSqlManagedInstanceModelInstanceDefinition
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance resource id
+    aliases:
+    - ParentResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNewInstanceDatabaseFromAzureSqlInstanceResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Instance Database to create.
+    aliases:
+    - InstanceDatabaseName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNewInstanceDatabaseFromInputParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags to associate with the Azure Sql Instance Database
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceDatabase
+        [-Name] <String>
+        [-InstanceName] <String>
+        [-ResourceGroupName] <String>
+        [-Collation <String>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-EnableLedger]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateNewInstanceDatabaseFromInputParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceDatabase
+        [-Name] <String>
+        [-InstanceObject] <AzureSqlManagedInstanceModel>
+        [-Collation <String>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateNewInstanceDatabaseFromAzureSqlManagedInstanceModelInstanceDefinition
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceDatabase
+        [-Name] <String>
+        [-InstanceResourceId] <String>
+        [-Collation <String>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateNewInstanceDatabaseFromAzureSqlInstanceResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a database on a specified instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstanceDatabase -Name "Database01" -InstanceName "managedInstance1" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    ```output
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1/databases/Database01
+    Name                     : Database01
+    Tags                     :
+    Collation                : SQL_Latin1_General_CP1_CI_AS
+    Status                   : Online
+    CreationDate             : 4/27/2018 2:30:07 PM
+    EarliestRestorePoint     : 4/27/2018 2:40:47 PM
+    RestorePointInTime       :
+    DefaultSecondaryLocation : West US 2
+    CatalogCollation         :
+    CreateMode               :
+    EnableLedger             : False
+    StorageContainerUri      :
+    StorageContainerSasToken :
+    SourceDatabaseId         :
+    FailoverGroupId          :
+    ```
+
+    This command creates a instance database named Database01 on instance managedInstance1.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceDatabase.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstancedatabase
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceDatabase.md
+  PlatyPS schema version: 2024-05-01

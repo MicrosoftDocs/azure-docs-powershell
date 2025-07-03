@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewAdlsGen1ScanRulesetObject
+name: New-AzPurviewAdlsGen1ScanRulesetObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for AdlsGen1ScanRuleset.
+description: |-
+  Create an in-memory object for AdlsGen1ScanRuleset.
+parameters:
+  cmdletParameters:
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedSystemClassification
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedCustomClassificationRuleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanningRuleCustomFileExtension
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.ICustomFileExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanningRuleFileExtension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewAdlsGen1ScanRulesetObject
+        [-Description <String>]
+        [-ExcludedSystemClassification <String[]>]
+        [-IncludedCustomClassificationRuleName <String[]>]
+        [-ScanningRuleCustomFileExtension <ICustomFileExtension[]>]
+        [-ScanningRuleFileExtension <String[]>]
+        [-Type <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.AdlsGen1ScanRuleset" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create AdlsGen1 custom scanruleset object'
+  description: |-
+    ```powershell
+    New-AzPurviewAdlsGen1ScanRulesetObject -Description 'desc' -ExcludedSystemClassification @('MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER','MICROSOFT.SECURITY.COMMON_PASSWORDS') -IncludedCustomClassificationRuleName @('ClassificationRule2') -ScanningRuleFileExtension @("CSV","JSON","PSV","SSV","TSV","TXT","XML","PARQUET","AVRO","ORC","Documents","GZ","DOC","DOCM","DOCX","DOT","ODP","ODS","ODT","PDF","POT","PPS","PPSX","PPT","PPTM","PPTX","XLC","XLS","XLSB","XLSM","XLSX","XLT") -Type 'Custom'
+    ```
+
+    ```output
+    CreatedAt                            :
+    Description                          : desc
+    ExcludedSystemClassification         : {MICROSOFT.FINANCIAL.CREDIT_CARD_NUMBER, MICROSOFT.SECURITY.COMMON_PASSWORDS}
+    Id                                   :
+    IncludedCustomClassificationRuleName : {ClassificationRule2}
+    Kind                                 : AdlsGen1
+    LastModifiedAt                       :
+    Name                                 :
+    ScanningRuleCustomFileExtension      :
+    ScanningRuleFileExtension            : {CSV, JSON, PSV, SSV…}
+    Status                               :
+    Type                                 : Custom
+    Version                              :
+    ```
+
+    Create AdlsGen1 custom scanruleset object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen1ScanRulesetObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewadlsgen1scanrulesetobject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewAdlsGen1ScanRulesetObject.md
+  PlatyPS schema version: 2024-05-01

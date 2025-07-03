@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityCspmMonitorGcpOfferingObject
+name: New-AzSecurityCspmMonitorGcpOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for CspmMonitorGcpOffering.
+description: |-
+  Create an in-memory object for CspmMonitorGcpOffering.
+parameters:
+  cmdletParameters:
+  - name: NativeCloudConnectionServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NativeCloudConnectionWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GCP workload identity provider id for the offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityCspmMonitorGcpOfferingObject
+        [-NativeCloudConnectionServiceAccountEmailAddress <String>]
+        [-NativeCloudConnectionWorkloadIdentityProviderId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.CspmMonitorGcpOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new CspmMonitorGcpOffering object'
+  description: |-
+    ```powershell
+    New-AzSecurityCspmMonitorGcpOfferingObject -NativeCloudConnectionServiceAccountEmailAddress "microsoft-defender-cspm@asc-sdk-samples.iam.gserviceaccount.com" -NativeCloudConnectionWorkloadIdentityProviderId "cspm"
+    ```
+
+    ```output
+    Description NativeCloudConnectionServiceAccountEmailAddress                 NativeCloudConnectionWorkloadIdentityProviderId OfferingType
+    ----------- -----------------------------------------------                 ----------------------------------------------- ------------
+                microsoft-defender-cspm@asc-sdk-samples.iam.gserviceaccount.com cspm                                            CspmMonitorGcp
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorGcpOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritycspmmonitorgcpofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorGcpOfferingObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSqlDatabaseRecovery
+name: Start-AzureSqlDatabaseRecovery
+module: Azure
+isPreview: false
+summary: |-
+  Initiates a restore request for a database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSqlDatabaseRecovery** cmdlet initiates a restore request for a live or dropped database.
+  This cmdlet supports basic recovery that uses the last known available backup for the database.
+  The recovery operation creates a new database.
+  If you recover a live database on the same server, you must specify a different name for the new database.
+
+  To do a point in time restore for a database, use the **Start-AzureSqlDatabaseRestore** cmdlet instead.
+notes: |-
+  * You must use certificate-based authentication to run this cmdlet. Run the following commands on the computer where you run this cmdlet:
+
+  `PS C:\\\> $subId = \<Subscription ID\>`
+  `PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
+  `PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
+  `PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
+  `PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabase
+    type: <xref href="RecoverableDatabase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the database object that represents the database that this cmdlet recovers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database that this cmdlet recovers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server on which the source database is live and running, or on which the source database ran before it was deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySourceDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the recovered database.
+      If the source database is still live, in order to recover it to the same server, you must specify a name that differs from the source database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server to which to restore a database.
+      You can restore a database to the same server or to a different server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRecovery
+        -SourceServerName <String>
+        -SourceDatabaseName <String>
+        [-TargetServerName <String>]
+        [-TargetDatabaseName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceDatabaseName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseRecovery
+        -SourceDatabase <RecoverableDatabase>
+        [-TargetServerName <String>]
+        [-TargetDatabaseName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySourceDatabaseObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Management.Sql.Models.RecoverableDatabase" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Management.Sql.Models.RecoverDatabaseOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Recover a database specified as an object'
+  description: |-
+    ```
+    PS C:\> $Database = Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
+    PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceDatabase $Database -TargetDatabaseName "DatabaseRestored"
+    ```
+
+    The first command gets a database object by using the **Get-AzureSqlRecoverableDatabase** cmdlet.
+    The command stores that object in the $Database variable.
+
+    The second command recovers the database stored in $Database.
+- title: 'Example 2: Recover a database specified by name'
+  description: |-
+    ```
+    PS C:\> $Operation = Start-AzureSqlDatabaseRecovery -SourceServerName "Server01" -SourceDatabaseName "Database17" -TargetDatabaseName "DatabaseRestored"
+    ```
+
+    This command recovers a database using the database name.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Create Database Recovery Request
+  href: https://msdn.microsoft.com/en-us/library/dn800986.aspx
+- text: Geo-Replication in Azure SQL Database
+  href: /azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlRecoverableDatabase
+  href: ./Get-AzureSqlRecoverableDatabase.yml
+- text: Start-AzureSqlDatabaseRestore
+  href: ./Start-AzureSqlDatabaseRestore.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F63769D6-9A31-4A67-972A-1E0428853C86
+  PlatyPS schema version: 2024-05-01

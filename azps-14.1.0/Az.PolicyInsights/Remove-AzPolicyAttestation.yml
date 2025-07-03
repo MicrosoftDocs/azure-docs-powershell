@@ -1,0 +1,250 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PolicyInsights.Remove-AzPolicyAttestation
+name: Remove-AzPolicyAttestation
+module: Az.PolicyInsights
+isPreview: false
+summary: |-
+  Deletes a policy attestation.
+description: |-
+  The **Remove-AzPolicyAttestation** cmdlet deletes a policy attestation.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation" data-throw-if-not-resolved="False" />
+    description: |-
+      The Attestation object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Return True if the command completes successfully.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope of the resource.
+      E.g.
+      '/subscriptions/{subscriptionId}/resourceGroups/{rgName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzPolicyAttestation
+        -Name <String>
+        [-Scope <String>]
+        [-ResourceGroupName <String>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzPolicyAttestation
+        -ResourceId <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzPolicyAttestation
+        -InputObject <PSAttestation>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Delete a policy remediation by name at subscription scope.'
+  description: |-
+    ```powershell
+    Set-AzContext -Subscription "d1acb22b-c876-44f7-b08e-3fcf9f6767f4"
+    Remove-AzPolicyAttestation -Name "attestation-subscription" -PassThru
+    ```
+
+    ```output
+    True
+    ```
+
+    This command deletes the attestation named 'attestation-subscription' in subscription "d1acb22b-c876-44f7-b08e-3fcf9f6767f4". The `-PassThru` switch forces the cmdlet to return the status of the operation.
+- title: 'Example 2: Delete a policy remediation via piping at resource group.'
+  description: |-
+    ```powershell
+    $rgName = "ps-attestation-test-rg"
+    Get-AzPolicyAttestation -Name "attestation-RG" -ResourceGroupName $rgName | Remove-AzPolicyAttestation
+    ```
+
+    This command deletes the attestation named 'attestation-RG' at resource group 'ps-attestation-test-rg' using input object given by the **Get-AzPolicyAttestation** cmdlet.
+- title: 'Example 3: Delete a policy remediation using ResourceId.'
+  description: |-
+    ```powershell
+    $scope = "/subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/resourceGroups/ps-attestation-test-rg/providers/Microsoft.Network/networkSecurityGroups/pstests0"
+    $attestationToDelete = Get-AzPolicyAttestation -Name "attestation-resource" -Scope $scope
+    Remove-AzPolicyAttestation -Id $attestationToDelete.Id
+    ```
+
+    The first command gets an attestation named 'attestation-resource' with a resource id supplied as scope.
+    The second command then deletes the attestation using the resource id of the stored attestation.
+links:
+- text: Get-AzPolicyAttestation
+  href: ./Get-AzPolicyAttestation.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Remove-AzPolicyAttestation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.policyinsights/remove-azpolicyattestation
+  Module Name: Az.PolicyInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Remove-AzPolicyAttestation.md
+  PlatyPS schema version: 2024-05-01

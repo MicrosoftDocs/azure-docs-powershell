@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureStorageAccount
+name: Set-AzureStorageAccount
+module: Azure
+isPreview: false
+summary: |-
+  Updates the properties of a storage account in an Azure subscription.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureStorageAccount** cmdlet updates the properties of an Azure storage account in the current subscription.
+  Properties that can be set are: **Label**, **Description**, **Type** and **GeoReplicationEnabled**.
+parameters:
+  cmdletParameters:
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the storage account.
+      The description may be up to 1024 characters long.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GeoReplicationEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the storage account is created with the geo-replication enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GeoReplicationEnabled
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a label for the storage account.
+      The label may be up to 100 characters long.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the storage account that this cmdlet modifies.
+    aliases:
+    - ServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the storage account.
+      Valid values are:
+
+      - Standard_LRS
+      - Standard_ZRS
+      - Standard_GRS
+      - Standard_RAGRS
+      - Premium_LRS
+
+      If this parameter is not specified, the default value is Standard_GRS.
+
+      The effect of specifying the *GeoReplicationEnabled* parameter is the same as specifying Standard_GRS in the *Type* parameter.
+
+      Standard_ZRS or Premium_LRS accounts cannot be changed to other account types, and vice versa.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountType
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureStorageAccount
+        [-StorageAccountName] <String>
+        [-Label <String>]
+        [-Description <String>]
+        [-Type <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountType
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureStorageAccount
+        [-StorageAccountName] <String>
+        [-Label <String>]
+        [-Description <String>]
+        [-GeoReplicationEnabled <Boolean>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GeoReplicationEnabled
+  isDefault: false
+examples:
+- title: 'Example 1: Update the label for a storage account'
+  description: |-
+    ```
+    PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -Label "ContosoAccnt" -Description "Contoso storage account"
+    ```
+
+    This command updates the **Label** and **Description** properties for the storage account named ContosoStorage01.
+- title: 'Example 2: Enable geo-replication for a storage account'
+  description: |-
+    ```
+    PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $False
+    ```
+
+    This command sets the **GeoReplicationEnabled** property to $False for the storage account named ContosoStorage01.
+- title: 'Example 3: Disable geo-replication for a storage account'
+  description: |-
+    ```
+    PS C:\> Set-AzureStorageAccount -StorageAccountName "ContosoStorage01" -GeoReplicationEnabled $True
+    ```
+
+    This command sets the **GeoReplicationEnabled** property to $True for the storage account named ContosoStorage01.
+links:
+- text: Get-AzureStorageAccount
+  href: ./Get-AzureStorageAccount.yml
+- text: New-AzureStorageAccount
+  href: ./New-AzureStorageAccount.yml
+- text: Remove-AzureStorageAccount
+  href: ./Remove-AzureStorageAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: EB4A7F84-99E4-49B1-856D-EC0736058D23
+  PlatyPS schema version: 2024-05-01

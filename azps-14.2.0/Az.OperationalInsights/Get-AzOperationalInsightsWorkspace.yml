@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.OperationalInsights.Get-AzOperationalInsightsWorkspace
+name: Get-AzOperationalInsightsWorkspace
+module: Az.OperationalInsights
+isPreview: false
+summary: |-
+  Gets information about a workspace.
+description: |-
+  The **Get-AzOperationalInsightsWorkspace** cmdlet gets information about an existing workspace.
+  If you specify a workspace name, this cmdlet gets information about that workspace.
+  If you do not specify a name, this cmdlet gets information about all workspaces in a resource group.
+  If you do not specify a name and resource group, this cmdlet gets information about all workspaces in a subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the workspace name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzOperationalInsightsWorkspace
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a workspace by name'
+  description: |-
+    ```powershell
+    Get-AzOperationalInsightsWorkspace -Name "MyWorkspace" -ResourceGroupName "ContosoResourceGroup"
+    ```
+
+    This command gets a workspace named MyWorkspace in the resource group named ContosoResourceGroup.
+links:
+- text: Azure Operational Insights Cmdlets
+  href: index.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsWorkspace.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.operationalinsights/get-azoperationalinsightsworkspace
+  Module Name: Az.OperationalInsights
+  ms.assetid: F94415DA-1A4A-4D37-A626-1EDF5D1EFE74
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/Get-AzOperationalInsightsWorkspace.md
+  PlatyPS schema version: 2024-05-01

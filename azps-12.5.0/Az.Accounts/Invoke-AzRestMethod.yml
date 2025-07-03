@@ -1,0 +1,438 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Invoke-AzRestMethod
+name: Invoke-AzRestMethod
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Construct and perform HTTP request to Azure resource management endpoint only
+description: |-
+  Construct and perform HTTP request to Azure resource management endpoint only
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Api Version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Method
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Http Method
+    acceptedValues:
+    - GET
+    - POST
+    - PUT
+    - PATCH
+    - DELETE
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      list of Target Resource Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of target resource URL. Hostname of Resource Manager should not be added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Payload
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      JSON format payload
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier URI specified by the REST API you are calling. It shouldn't be the resource id of Azure Resource Manager.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByURI
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceProviderName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Resource Provider Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Target Resource Type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Uniform Resource Identifier of the Azure resources. The target resource needs to support Azure AD authentication and the access token is derived according to resource id. If resource id is not set, its value is derived according to built-in service suffixes in current Azure Environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByURI
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzRestMethod
+        -Path <String>
+        [-Method <String>]
+        [-Payload <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPath
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzRestMethod
+        -ApiVersion <String>
+        [-SubscriptionId <String>]
+        [-ResourceGroupName <String>]
+        [-ResourceProviderName <String>]
+        [-ResourceType <String[]>]
+        [-Name <String[]>]
+        [-Method <String>]
+        [-Payload <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzRestMethod
+        [-Uri] <Uri>
+        [-ResourceId <Uri>]
+        [-Method <String>]
+        [-Payload <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByURI
+  isDefault: false
+inputs:
+- name: <xref href="System.string" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSHttpResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Invoke-AzRestMethod -Path "/subscriptions/{subscription}/resourcegroups/{resourcegroup}/providers/microsoft.operationalinsights/workspaces/{workspace}?api-version={API}" -Method GET
+    ```
+
+    ```Output
+    Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [x-ms-request-id, System.String[]], [Strict-Transport-Security, System.String[]]…}
+    Version    : 1.1
+    StatusCode : 200
+    Method     : GET
+    Content    : {
+                   "properties": {
+                     "source": "Azure",
+                     "customerId": "{customerId}",
+                     "provisioningState": "Succeeded",
+                     "sku": {
+                       "name": "pergb2018",
+                       "maxCapacityReservationLevel": 3000,
+                       "lastSkuUpdate": "Mon, 25 May 2020 11:10:01 GMT"
+                     },
+                     "retentionInDays": 30,
+                     "features": {
+                       "legacy": 0,
+                       "searchVersion": 1,
+                       "enableLogAccessUsingOnlyResourcePermissions": true
+                     },
+                     "workspaceCapping": {
+                       "dailyQuotaGb": -1.0,
+                       "quotaNextResetTime": "Thu, 18 Jun 2020 05:00:00 GMT",
+                       "dataIngestionStatus": "RespectQuota"
+                     },
+                     "enableFailover": false,
+                     "publicNetworkAccessForIngestion": "Enabled",
+                     "publicNetworkAccessForQuery": "Enabled",
+                     "createdDate": "Mon, 25 May 2020 11:10:01 GMT",
+                     "modifiedDate": "Mon, 25 May 2020 11:10:02 GMT"
+                   },
+                   "id": "/subscriptions/{subscription}/resourcegroups/{resourcegroup}/providers/microsoft.operationalinsights/workspaces/{workspace}",
+                   "name": "{workspace}",
+                   "type": "Microsoft.OperationalInsights/workspaces",
+                   "location": "eastasia",
+                   "tags": {}
+                 }
+    ```
+
+    Get log analytics workspace by path. It only supports management plane API and Hostname of Azure Resource Manager is added according to Azure environment setting.
+- title: Example 2
+  description: |-
+    ```powershell
+    Invoke-AzRestMethod https://graph.microsoft.com/v1.0/me
+    ```
+
+    ```output
+    Headers    : {[Date, System.String[]], [Cache-Control, System.String[]], [Transfer-Encoding, System.String[]], [Strict-Transport-Security, System.String[]]…}
+    Version    : 1.1
+    StatusCode : 200
+    Method     : GET
+    Content    : {"@odata.context":"https://graph.microsoft.com/v1.0/$metadata#users/$entity","businessPhones":["......}
+    ```
+
+    Get current signed in user via MicrosoftGraph API. This example is equivalent to `Get-AzADUser -SignedIn`.
+- title: Example 3
+  description: |-
+    ```powershell
+    $subscriptionId = (Get-AzContext).Subscription.ID
+    Invoke-AzRestMethod -SubscriptionId $subscriptionId -ResourceGroupName "test-group" -ResourceProviderName Microsoft.AppPlatform -ResourceType Spring,apps -Name "test-spring-service" -ApiVersion 2020-07-01 -Method GET
+    ```
+
+    ```output
+    Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [Vary, System.String[]], [x-ms-request-id,
+                 System.String[]]…}
+    Version    : 1.1
+    StatusCode : 200
+    Method     : GET
+    Content    : {"value":[{"properties":{"public":true,"url":"https://test-spring-service-demo.azuremicroservices.io","provisioni
+                 ngState":"Succeeded","activeDeploymentName":"default","fqdn":"test-spring-service.azuremicroservices.io","httpsOn
+                 ly":false,"createdTime":"2022-06-22T02:57:13.272Z","temporaryDisk":{"sizeInGB":5,"mountPath":"/tmp"},"pers
+                 istentDisk":{"sizeInGB":0,"mountPath":"/persistent"}},"type":"Microsoft.AppPlatform/Spring/apps","identity
+                 ":null,"location":"eastus","id":"/subscriptions/$subscriptionId/resourceGroups/test-group/providers/Microsoft.AppPlatform/Spring/test-spring-service/apps/demo","name":"demo"},{"properties":{"publ
+                 ic":false,"provisioningState":"Succeeded","activeDeploymentName":"deploy01","fqdn":"test-spring-service.azuremicr
+                 oservices.io","httpsOnly":false,"createdTime":"2022-06-22T07:46:54.9Z","temporaryDisk":{"sizeInGB":5,"moun
+                 tPath":"/tmp"},"persistentDisk":{"sizeInGB":0,"mountPath":"/persistent"}},"type":"Microsoft.AppPlatform/Sp
+                 ring/apps","identity":null,"location":"eastus","id":"/subscriptions/$subscriptionId/r
+                 esourceGroups/test-group/providers/Microsoft.AppPlatform/Spring/test-spring-service/apps/pwsh01","name":"pwsh0
+                 1"}]}
+    ```
+
+    List apps under spring service "test-spring-service"
+- title: Example 4
+  description: |-
+    ```powershell
+    $subscriptionId = (Get-AzContext).Subscription.ID
+    Invoke-AzRestMethod -SubscriptionId $subscriptionId -ResourceGroupName "test-group" -ResourceProviderName Microsoft.AppPlatform -ResourceType Spring -Name "test-spring-service","demo" -ApiVersion 2020-07-01 -Method GET
+    ```
+
+    ```output
+    Headers    : {[Cache-Control, System.String[]], [Pragma, System.String[]], [Vary, System.String[]], [x-ms-request-id,
+                 System.String[]]…}
+    Version    : 1.1
+    StatusCode : 200
+    Method     : GET
+    Content    : {"properties":{"public":true,"url":"https://test-spring-service-demo.azuremicroservices.io","provisioningState":"
+                 Succeeded","activeDeploymentName":"default","fqdn":"test-spring-service.azuremicroservices.io","httpsOnly":false,
+                 "createdTime":"2022-06-22T02:57:13.272Z","temporaryDisk":{"sizeInGB":5,"mountPath":"/tmp"},"persistentDisk
+                 ":{"sizeInGB":0,"mountPath":"/persistent"}},"type":"Microsoft.AppPlatform/Spring/apps","identity":null,"lo
+                 cation":"eastus","id":"/subscriptions/$subscriptionId/resourceGroups/test-group/pr
+                 oviders/Microsoft.AppPlatform/Spring/test-spring-service/apps/demo","name":"demo"}
+    ```
+
+    Get app "demo" under Spring cloud service "test-spring-service"
+- title: Example 5
+  description: |-
+    ```powershell
+    # Replace *** with real values
+    $payload = @{principalId="***"; resourceId="***"; appRoleId="***"} | ConvertTo-Json -Depth 3
+    Invoke-AzRestMethod -Method POST -Uri https://graph.microsoft.com/v1.0/servicePrincipals/***/appRoleAssignedTo -Payload $payload
+    ```
+
+    Call Microsoft Graph API to assign App Role by constructing a hashtable, converting to a JSON string, and passing the payload to `Invoke-AzRestMethod`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Invoke-AzRestMethod.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/invoke-azrestmethod
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Invoke-AzRestMethod.md
+  PlatyPS schema version: 2024-05-01

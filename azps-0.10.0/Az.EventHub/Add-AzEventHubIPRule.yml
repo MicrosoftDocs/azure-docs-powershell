@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Add-AzEventHubIPRule
+name: Add-AzEventHubIPRule
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Add a single IP rule to the NetworkRuleSet of the given Namespace
+description: |-
+  Add a single IP rule to the NetworkRuleSet of the given Namespace
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP Filter Action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IPRulePropertiesParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpMask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subnet Resource ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IPRulePropertiesParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpRuleObject
+    type: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetIpRulesAttributes" data-throw-if-not-resolved="False" />
+    description: |-
+      IPRule Configuration Object to be added
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IPRuleInputObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Namespace Name
+    aliases:
+    - NamespaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzEventHubIPRule
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-IpMask] <String>
+        [-Action <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IPRulePropertiesParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzEventHubIPRule
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-IpRuleObject] <PSNWRuleSetIpRulesAttributes>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IPRuleInputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNWRuleSetIpRulesAttributes" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.EventHub.Models.PSNetworkRuleSetAttributes" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> Add-AzEventHubIPRule -ResourceGroupName v-ajnavtest -Namespace Eventhub-Namespace1-2389 -IpMask "11.22.33.44" -Action Allow
+    ```
+    Name                : default
+    DefaultAction       : Allow
+    Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-2389/networkRuleSets/default
+    Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
+    IpRules             : {11.22.33.44, Allow}
+    VirtualNetworkRules :
+
+    add the IPRule with IpMask "11.22.33.44" and Action Allow for the given namespace.
+- title: Example 2
+  description: |-
+    ```powershell
+    PS C:\> Add-AzEventHubIPRule -ResourceGroupName v-ajnavtest -Namespace Eventhub-Namespace1-2389 -IpRuleObject $ipruleobject
+    ```
+    Name                : default
+    DefaultAction       : Allow
+    Id                  : /subscriptions/SubscriptionId/resourceGroups/RSG-TestAzEventhub/providers/Microsoft.Eventhub/namespaces/Eventhub-Namespace-2389/networkRuleSets/default
+    Type                : Microsoft.Eventhub/Namespaces/NetworkRuleSet
+    IpRules             : {11.22.33.44, Allow}
+    VirtualNetworkRules :
+
+    add the IPRule with IpMask "11.22.33.44" and Action Allow for the given namespace.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Add-AzEventHubIPRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.EventHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.eventhub/add-azeventhubiprule
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/EventHub/EventHub/help/Add-AzEventHubIPRule.md
+  PlatyPS schema version: 2024-05-01

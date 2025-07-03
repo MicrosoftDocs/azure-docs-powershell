@@ -1,0 +1,666 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSiteRecoveryTestFailoverJob
+name: Start-AzureSiteRecoveryTestFailoverJob
+module: Azure
+isPreview: false
+summary: |-
+  Starts a test failover for a Site Recovery protection entity.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSiteRecoveryTestFailoverJob** cmdlet starts test failover of an Azure Site Recovery protection entity or recovery plan.
+  You can check whether the job succeeded by using the **Get-AzureRMSiteRecoveryJob** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Direction
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the failover direction.
+      The acceptable values for this parameter are:
+
+      - PrimaryToRecovery
+      - RecoveryToPrimary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicalNetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the logical network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPIdWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Network
+    type: <xref href="ASRNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network object to use for test failover.
+      To obtain a network, use the **Get-AzureSiteRecoveryNetwork** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIdWithLogicalNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIdWithVMNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithLogicalNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithVMNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithLogicalNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithLogicalNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithVMNetworkID
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network type to use for test failover.
+      The acceptable values for this parameter are:
+
+      - None
+      - New
+      - Existing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainerId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected container.
+      This cmdlet starts the job for a protected virtual machine that belongs to the container that this cmdlet specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntity
+    type: <xref href="ASRProtectionEntity" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Site Recovery protection entity object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEObjectWithVMNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntityId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected virtual machine for which to start the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryPlan
+    type: <xref href="ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a recovery plan for which to start the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPObjectWithVMNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RpId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a recovery plan for which to start the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIdWithLogicalNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIdWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIdWithVMNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmNetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the virtual machine network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPIdWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObjectWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEIdWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObjectWithVMNetworkID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForCompletion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RpId <String>
+        -Direction <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RpId <String>
+        -Direction <String>
+        -LogicalNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPIdWithLogicalNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RpId <String>
+        -Direction <String>
+        -VmNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPIdWithVMNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RpId <String>
+        -Network <ASRNetwork>
+        -Direction <String>
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPIdWithVMNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Network <ASRNetwork>
+        -Direction <String>
+        -ProtectionEntity <ASRProtectionEntity>
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObjectWithVMNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Network <ASRNetwork>
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObjectWithVMNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Network <ASRNetwork>
+        -Direction <String>
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEIdWithVMNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        -LogicalNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObjectWithLogicalNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        -VmNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObjectWithVMNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        -LogicalNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEIdWithLogicalNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        -VmNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEIdWithVMNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntity <ASRProtectionEntity>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntity <ASRProtectionEntity>
+        -LogicalNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObjectWithLogicalNetworkID
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryTestFailoverJob
+        -Direction <String>
+        -ProtectionEntity <ASRProtectionEntity>
+        -VmNetworkId <String>
+        [-Network <ASRNetwork>]
+        [-NetworkType <String>]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObjectWithVMNetworkID
+  isDefault: false
+examples:
+- title: 'Example 1: Start a test failover'
+  description: |-
+    ```
+    PS C:\> $ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
+    PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $ProtectionContainer
+    PS C:\> Start-AzureSiteRecoveryTestFailoverJob -ProtectionEntity $ProtectionEntity -Direction "PrimaryToRecovery"
+    ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
+    ClientRequestId  : 32ace403-0916-4967-83a1-529176bd6e88-2014-49-06 15:49:24Z-P
+    State            : NotStarted
+    StateDescription : NotStarted
+    StartTime        :
+    EndTime          :
+    AllowedActions   : {}
+    Name             :
+    Tasks            : {}
+    Errors           : {}
+    ```
+
+    The first command uses the **Get-AzureSiteRecoveryProtectionContainer** cmdlet to get a protected container, and then stores it in the $ProtectionContainer variable.
+
+    The second command gets the protected entities that belong to the protected container stored in $ProtectionContainer by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
+    The command stores the results in the $ProtectionEntity variable.
+
+    The final command starts the test failover operation for the protected entities stored in $ProtectionEntity and specifies the direction of the failover.
+- title: 'Example 2: Start a test failover using a recovery plan'
+  description: |-
+    ```
+    PS C:\> $RecoveryPlan = Get-AzureSiteRecoveryRecoveryPlan -Name "RecoveryPlan01"
+    Start-AzureSiteRecoveryTestFailoverJob -Direction PrimaryToRecovery -RecoveryPlan $RecoveryPlan
+    ```
+
+    This command gets the recovery plan named RecoveryPlan01 for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryRecoveryPlan** cmdlet.
+    The command stores the plan in the $RecoveryPlan variable.
+
+    The second command starts the test failover operation for the recovery plan stored in $RecoveryPlan and specifies the direction of the failover.
+links:
+- text: Get-AzureSiteRecoveryProtectionContainer
+  href: ./Get-AzureSiteRecoveryProtectionContainer.yml
+- text: Get-AzureSiteRecoveryNetwork
+  href: ./Get-AzureSiteRecoveryNetwork.yml
+- text: Get-AzureSiteRecoveryProtectionEntity
+  href: ./Get-AzureSiteRecoveryProtectionEntity.yml
+- text: Get-AzureSiteRecoveryRecoveryPlan
+  href: ./Get-AzureSiteRecoveryRecoveryPlan.yml
+- text: Start-AzureSiteRecoveryUnplannedFailoverJob
+  href: ./Start-AzureSiteRecoveryUnplannedFailoverJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 9AE41884-C39F-4AEB-8030-96167F98C8DD
+  PlatyPS schema version: 2024-05-01

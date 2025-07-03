@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzResourceLock
+name: Get-AzResourceLock
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets a resource lock.
+description: |-
+  The **Get-AzResourceLock** cmdlet gets Azure resource locks.
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the resource provider API to use.
+      If you do not specify a version, this cmdlet uses the latest available version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AtScope
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns all locks at or above the specified scope.
+      If you do not specify this parameter, the cmdlet returns all locks at, above, or below the scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LockId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the lock that this cmdlet gets.
+    aliases:
+    - Id
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByLockId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LockName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the lock that this cmdlet gets.
+    aliases:
+    - ExtensionResourceName
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceGroupLevel
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySpecifiedScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySubscription
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySubscriptionLevel
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group for which the lock applies.
+      This cmdlet gets locks for this resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceGroupLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource for which this lock applies.
+      This cmdlet gets locks for this resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroupLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySubscriptionLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource type of the resource for which this lock applies.
+      This cmdlet gets locks for this resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroupLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySubscriptionLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scope to which the lock applies.
+      The cmdlet gets locks for this scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySpecifiedScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        -ResourceGroupName <String>
+        [-LockName <String>]
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        -ResourceName <String>
+        -ResourceType <String>
+        -ResourceGroupName <String>
+        [-LockName <String>]
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceGroupLevel
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        -Scope <String>
+        [-LockName <String>]
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySpecifiedScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        [-LockName <String>]
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySubscription
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        -ResourceName <String>
+        -ResourceType <String>
+        [-LockName <String>]
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySubscriptionLevel
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzResourceLock
+        -LockId <String>
+        [-AtScope]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByLockId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a lock'
+  description: |-
+    ```powershell
+    Get-AzResourceLock -LockName "ContosoSiteLock" -ResourceName "ContosoSite" -ResourceType "microsoft.web/sites" -ResourceGroupName "ResourceGroup11"
+    ```
+
+    This command gets the resource lock named ContosoSiteLock.
+- title: 'Example 2: Get locks at resource group level or higher'
+  description: |-
+    ```powershell
+    Get-AzResourceLock -ResourceGroupName "ResourceGroup11" -AtScope
+    ```
+
+    This command gets the resource locks on the resource group or the subscription.
+links:
+- text: New-AzResourceLock
+  href: ./New-AzResourceLock.yml
+- text: Remove-AzResourceLock
+  href: ./Remove-AzResourceLock.yml
+- text: Set-AzResourceLock
+  href: ./Set-AzResourceLock.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzResourceLock.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azresourcelock
+  Module Name: Az.Resources
+  ms.assetid: 3FBF91B8-8EF9-4E05-AD7E-AEFC6EBBFB8E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzResourceLock.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,70 @@
+### YamlMime:PowerShellModule1
+uid: Az.EventHub
+name: Az.EventHub Module
+isPreview: false
+cmdletGroups:
+- title: Event Hub
+  cmdlets:
+  - Az.EventHub.Approve-AzEventHubPrivateEndpointConnection
+  - Az.EventHub.Deny-AzEventHubPrivateEndpointConnection
+  - Az.EventHub.Get-AzEventHub
+  - Az.EventHub.Get-AzEventHubApplicationGroup
+  - Az.EventHub.Get-AzEventHubAuthorizationRule
+  - Az.EventHub.Get-AzEventHubCluster
+  - Az.EventHub.Get-AzEventHubClusterNamespace
+  - Az.EventHub.Get-AzEventHubClustersAvailableRegion
+  - Az.EventHub.Get-AzEventHubConsumerGroup
+  - Az.EventHub.Get-AzEventHubGeoDRConfiguration
+  - Az.EventHub.Get-AzEventHubKey
+  - Az.EventHub.Get-AzEventHubNamespace
+  - Az.EventHub.Get-AzEventHubNetworkRuleSet
+  - Az.EventHub.Get-AzEventHubPrivateEndpointConnection
+  - Az.EventHub.Get-AzEventHubPrivateLink
+  - Az.EventHub.Get-AzEventHubSchemaGroup
+  - Az.EventHub.New-AzEventHub
+  - Az.EventHub.New-AzEventHubApplicationGroup
+  - Az.EventHub.New-AzEventHubAuthorizationRule
+  - Az.EventHub.New-AzEventHubAuthorizationRuleSASToken
+  - Az.EventHub.New-AzEventHubCluster
+  - Az.EventHub.New-AzEventHubConsumerGroup
+  - Az.EventHub.New-AzEventHubGeoDRConfiguration
+  - Az.EventHub.New-AzEventHubIPRuleConfig
+  - Az.EventHub.New-AzEventHubKey
+  - Az.EventHub.New-AzEventHubKeyVaultPropertiesObject
+  - Az.EventHub.New-AzEventHubLocationsNameObject
+  - Az.EventHub.New-AzEventHubNamespace
+  - Az.EventHub.New-AzEventHubSchemaGroup
+  - Az.EventHub.New-AzEventHubThrottlingPolicyConfig
+  - Az.EventHub.New-AzEventHubVirtualNetworkRuleConfig
+  - Az.EventHub.Remove-AzEventHub
+  - Az.EventHub.Remove-AzEventHubApplicationGroup
+  - Az.EventHub.Remove-AzEventHubAuthorizationRule
+  - Az.EventHub.Remove-AzEventHubCluster
+  - Az.EventHub.Remove-AzEventHubConsumerGroup
+  - Az.EventHub.Remove-AzEventHubGeoDRConfiguration
+  - Az.EventHub.Remove-AzEventHubNamespace
+  - Az.EventHub.Remove-AzEventHubPrivateEndpointConnection
+  - Az.EventHub.Remove-AzEventHubSchemaGroup
+  - Az.EventHub.Set-AzEventHub
+  - Az.EventHub.Set-AzEventHubApplicationGroup
+  - Az.EventHub.Set-AzEventHubAuthorizationRule
+  - Az.EventHub.Set-AzEventHubCluster
+  - Az.EventHub.Set-AzEventHubConsumerGroup
+  - Az.EventHub.Set-AzEventHubGeoDRConfigurationBreakPair
+  - Az.EventHub.Set-AzEventHubGeoDRConfigurationFailOver
+  - Az.EventHub.Set-AzEventHubNamespace
+  - Az.EventHub.Set-AzEventHubNetworkRuleSet
+  - Az.EventHub.Start-AzEventHubNamespaceFailOver
+  - Az.EventHub.Test-AzEventHubName
+description: |-
+  This topic displays help for the Azure Event Hub PowerShell resource manager cmdlets.
+metadata:
+  Module Name: Az.EventHub
+  Module Guid: 5728d353-7ad5-42d8-b00a-46aaecf07b91
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.eventhub
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Az.EventHub.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Az.EventHub.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

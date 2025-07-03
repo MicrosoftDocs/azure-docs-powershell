@@ -1,0 +1,271 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LogicApp.Get-AzLogicAppUpgradedDefinition
+name: Get-AzLogicAppUpgradedDefinition
+module: Az.LogicApp
+isPreview: false
+summary: |-
+  Gets the upgraded definition for a logic app.
+description: |-
+  The **Get-AzLogicAppUpgradedDefinition** cmdlet gets the upgraded definition for the schema version and logic app from a resource group.
+  This cmdlet returns an object that represents the definition of the upgraded logic app.
+  Specify the resource group name, logic app name, and target schema version.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a logic app.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSchemaVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target schema version of the definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLogicAppUpgradedDefinition
+        -ResourceGroupName <String>
+        -Name <String>
+        -TargetSchemaVersion <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a logic app upgraded definition'
+  description: |-
+    ```powershell
+    $UpgradedDefinition = Get-AzLogicAppUpgradedDefinition -ResourceGroupName "ResourceGroup11" -Name "LogicApp01" -TargetSchemaVersion "2016-06-01"
+    $UpgradedDefinition.ToString()
+    ```
+
+    ```output
+    {
+
+      "$schema": "http://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+
+      "contentVersion": "1.0.0.0",
+
+      "parameters": {},
+
+      "triggers": {
+
+        "httpTrigger": {
+
+          "recurrence": {
+
+            "frequency": "Hour",
+
+            "interval": 1
+
+          },
+
+          "type": "Http",
+
+          "inputs": {
+
+            "method": "GET",
+
+            "uri": "http://www.bing.com"
+
+          },
+
+          "conditions": [
+
+            {
+
+              "expression": "@bool('true')"
+
+            }
+
+          ]
+
+        },
+
+        "manualTrigger": {
+
+          "type": "Request",
+
+          "kind": "Http"
+
+        }
+
+      },
+
+      "actions": {
+
+        "httpScope": {
+
+          "actions": {
+
+            "http": {
+
+              "runAfter": {},
+
+              "type": "Http",
+
+              "inputs": {
+
+                "method": "GET",
+
+                "uri": "http://www.bing.com"
+
+              }
+
+            }
+
+          },
+
+          "runAfter": {},
+
+          "else": {
+
+            "actions": {}
+
+          },
+
+          "expression": "@bool('true')",
+
+          "type": "If"
+
+        },
+
+        "http1Scope": {
+
+          "actions": {
+
+            "http1": {
+
+              "runAfter": {},
+
+              "type": "Http",
+
+              "inputs": {
+
+                "method": "GET",
+
+                "uri": "http://www.bing.com"
+
+              }
+
+            }
+
+          },
+
+          "runAfter": {},
+
+          "else": {
+
+            "actions": {}
+
+          },
+
+          "expression": "@bool('true')",
+
+          "type": "If"
+
+        }
+
+      },
+
+      "outputs": {
+
+        "output1": {
+
+          "type": "String",
+
+          "value": "true"
+
+        }
+
+      }
+
+    }
+    ```
+
+    The first command gets the definition for the logic app upgraded to the specified target schema version.
+    The command stores the definition in the $UpgradedDefinition variable.
+    The second command displays the contents of $UpgradedDefinition as a string.
+links:
+- text: Get-AzLogicApp
+  href: ./Get-AzLogicApp.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppUpgradedDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicappupgradeddefinition
+  Module Name: Az.LogicApp
+  ms.assetid: B7FED447-C398-47D7-AF1B-A3E4FDAD0B41
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppUpgradedDefinition.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetAppFiles.Get-AzNetAppFilesVolumeGroup
+name: Get-AzNetAppFilesVolumeGroup
+module: Az.NetAppFiles
+isPreview: false
+summary: |-
+  Gets details of an Azure NetApp Files (ANF) VolumeGroup.
+description: |-
+  The **Get-AzNetAppFilesVolumeGroup** cmdlet gets details of an ANF VolumeGroup.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      The Account object containing the VolumeGroup to return
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF VolumeGroup
+    aliases:
+    - VolumeGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the ANF VolumeGroup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the ANF VolumeGroup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetAppFilesVolumeGroup
+        -ResourceGroupName <String>
+        -AccountName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetAppFilesVolumeGroup
+        -AccountObject <PSNetAppFilesAccount>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetAppFilesVolumeGroup
+        -ResourceId <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeGroupDetail" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetAppFilesVolumeGroup -ResourceGroupName "MyRG" -AccountName "MyAnfAccount" -Name "MyAnfVolumeGroup"
+    ```
+
+    This command gets the volume named MyAnfVolumeGroup from the Account "MyAnfAccount".
+links:
+- text: New-AzNetAppFilesVolumeGroup
+  href: ./New-AzNetAppFilesVolumeGroup.yml
+- text: Remove-AzNetAppFilesVolumeGroup
+  href: ./Remove-AzNetAppFilesVolumeGroup.yml
+- text: New-AzNetAppFilesVolume
+  href: ./New-AzNetAppFilesVolume.yml
+- text: Update-AzNetAppFilesVolume
+  href: ./Update-AzNetAppFilesVolume.yml
+- text: Remove-AzNetAppFilesVolume
+  href: ./Remove-AzNetAppFilesVolume.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolumeGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.netappfiles/get-aznetappfilesvolumegroup
+  Module Name: Az.NetAppFiles
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Get-AzNetAppFilesVolumeGroup.md
+  PlatyPS schema version: 2024-05-01

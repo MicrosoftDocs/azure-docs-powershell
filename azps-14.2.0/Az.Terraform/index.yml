@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.Terraform
+name: Az.Terraform Module
+isPreview: false
+cmdletGroups:
+- title: Terraform
+  cmdlets:
+  - Az.Terraform.Export-AzTerraform
+  - Az.Terraform.New-AzTerraformExportQueryObject
+  - Az.Terraform.New-AzTerraformExportResourceGroupObject
+  - Az.Terraform.New-AzTerraformExportResourceObject
+description: |-
+  Microsoft Azure PowerShell: Terraform cmdlets
+metadata:
+  Module Name: Az.Terraform
+  Module Guid: 782d68d2-849f-4832-bc7a-dd95d1f28f93
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.terraform
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Terraform/Terraform/help/Az.Terraform.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Terraform/Terraform/help/Az.Terraform.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

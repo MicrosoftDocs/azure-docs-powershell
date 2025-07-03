@@ -1,0 +1,39 @@
+### YamlMime:PowerShellModule1
+uid: Az.RedisEnterpriseCache
+name: Az.RedisEnterpriseCache Module
+isPreview: false
+cmdletGroups:
+- title: Redis Enterprise
+  cmdlets:
+  - Az.RedisEnterpriseCache.Export-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheAccessPolicyAssignment
+  - Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheDatabase
+  - Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheKey
+  - Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheOperationStatus
+  - Az.RedisEnterpriseCache.Import-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.Invoke-AzRedisEnterpriseCacheDatabaseFlush
+  - Az.RedisEnterpriseCache.Invoke-AzRedisEnterpriseCacheForceDatabaseLinkToReplicationGroup
+  - Az.RedisEnterpriseCache.Invoke-AzRedisEnterpriseCacheForceDatabaseUnlink
+  - Az.RedisEnterpriseCache.New-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.New-AzRedisEnterpriseCacheAccessPolicyAssignment
+  - Az.RedisEnterpriseCache.New-AzRedisEnterpriseCacheDatabase
+  - Az.RedisEnterpriseCache.New-AzRedisEnterpriseCacheKey
+  - Az.RedisEnterpriseCache.Remove-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.Remove-AzRedisEnterpriseCacheAccessPolicyAssignment
+  - Az.RedisEnterpriseCache.Remove-AzRedisEnterpriseCacheDatabase
+  - Az.RedisEnterpriseCache.Update-AzRedisEnterpriseCache
+  - Az.RedisEnterpriseCache.Update-AzRedisEnterpriseCacheDatabase
+  - Az.RedisEnterpriseCache.Update-AzRedisEnterpriseCacheDatabaseDbRedisVersion
+description: |-
+  Microsoft Azure PowerShell: RedisEnterpriseCache cmdlets
+metadata:
+  Module Name: Az.RedisEnterpriseCache
+  Module Guid: 0b3b43eb-9078-4d06-8c79-d156a1410906
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.redisenterprisecache
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Az.RedisEnterpriseCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Az.RedisEnterpriseCache.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

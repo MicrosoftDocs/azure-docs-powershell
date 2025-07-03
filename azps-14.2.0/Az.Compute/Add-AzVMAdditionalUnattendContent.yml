@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Add-AzVMAdditionalUnattendContent
+name: Add-AzVMAdditionalUnattendContent
+module: Az.Compute
+isPreview: false
+summary: |-
+  Adds information to the unattended Windows Setup answer file.
+description: |-
+  The **Add-AzVMAdditionalUnattendContent** cmdlet adds information to the unattended Windows Setup answer file.
+  Specify additional base 64 encoded .xml formatted information that this cmdlet adds to the unattend.xml file.
+parameters:
+  cmdletParameters:
+  - name: Content
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies base 64 encoded XML formatted content.
+      This cmdlet adds the content to the unattend.xml file.
+      The XML content must be less than 4 KB and must include the root element for the setting or feature that this cmdlet inserts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingName
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Compute.Models.SettingNames" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the name of the setting to which the content applies.
+      The acceptable values for this parameter are:
+      - FirstLogonCommands
+      - AutoLogon
+    acceptedValues:
+    - AutoLogon
+    - FirstLogonCommands
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine object that this cmdlet modifies.
+      To obtain a virtual machine object, use the [Get-AzVM](./Get-AzVM.yml) cmdlet.
+      Create a virtual machine object by using the [New-AzVMConfig](./New-AzVMConfig.yml) cmdlet.
+    aliases:
+    - VMProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzVMAdditionalUnattendContent
+        [-VM] <PSVirtualMachine>
+        [[-Content] <String>]
+        [[-SettingName] <SettingNames>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add content to unattend.xml'
+  description: |-
+    ```powershell
+    $AvailabilitySet = Get-AzAvailabilitySet -ResourceGroupName "ResourceGroup11" -Name "AvailabilitySet03"
+    $VirtualMachine = New-AzVMConfig -VMName "VirtualMachine07" -VMSize "Standard_A1" -AvailabilitySetID $AvailabilitySet.Id
+    $Credential = Get-Credential
+    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine  -Windows -ComputerName "Contoso26" -Credential $Credential
+    $AucContent = "<UserAccounts><AdministratorPassword><Value>" + "Password" + "</Value><PlainText>true</PlainText></AdministratorPassword></UserAccounts>";
+    $VirtualMachine = Add-AzVMAdditionalUnattendContent -VM $VirtualMachine -Content $AucContent -SettingName "AutoLogon"
+    ```
+
+    The first command gets the availability set named AvailabilitySet03 in the resource group named ResourceGroup11, and then stores that object in the $AvailabilitySet variable.
+    The second command creates a virtual machine object, and then stores it in the $VirtualMachine variable.
+    The command assigns a name and size to the virtual machine.
+    The virtual machine belongs to the availability set stored in $AvailabilitySet.
+    The third command creates a credential object by using the Get-Credential cmdlet, and then stores the result in the $Credential variable.
+    The command prompts you for a user name and password.
+    For more information, type `Get-Help Get-Credential`.
+    The fourth command uses the **Set-AzVMOperatingSystem** cmdlet to configure the virtual machine stored in $VirtualMachine.
+    The fifth command assigns content to the $AucContent variable.
+    The content includes a password.
+    The final command adds the content stored in $AucContent to the unattend.xml file.
+links:
+- text: Get-AzAvailabilitySet
+  href: ./Get-AzAvailabilitySet.yml
+- text: Set-AzVMOperatingSystem
+  href: ./Set-AzVMOperatingSystem.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVMAdditionalUnattendContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/add-azvmadditionalunattendcontent
+  Module Name: Az.Compute
+  ms.assetid: 50B64FFE-8277-4DAA-805A-271123B35355
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVMAdditionalUnattendContent.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnPurgeParametersObject
+name: New-AzCdnPurgeParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for PurgeParameters.
+description: |-
+  Create an in-memory object for PurgeParameters.
+parameters:
+  cmdletParameters:
+  - name: ContentPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The path to the content to be purged.
+      Can describe a file path or a wild card directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnPurgeParametersObject
+        -ContentPath <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.PurgeParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for PurgeParameters'
+  description: |-
+    ```powershell
+    $contentPath = @("/movies/amazing.mp4","/pictures/pic1.jpg")
+    New-AzCdnPurgeParametersObject -ContentPath $contentPath
+    ```
+
+    ```output
+    ContentPath
+    -----------
+    {/movies/amazing.mp4, /pictures/pic1.jpg}
+    ```
+
+    Create an in-memory object for PurgeParameters
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnPurgeParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azcdnpurgeparametersobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnPurgeParametersObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,436 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Set-AzApiManagementApiRevision
+name: Set-AzApiManagementApiRevision
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Modifies an API Revision
+description: |-
+  The **Set-AzApiManagementApiRevision** cmdlet modifies an Azure API Management API Revision.
+parameters:
+  cmdletParameters:
+  - name: ApiId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of existing API.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiRevision
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of existing API Revision. This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OAuth operations scope.
+      This parameter is optional.
+      Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationServerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OAuth authorization server identifier.
+      This parameter is optional.
+      Default value is $null.
+      Must be specified if AuthorizationScope specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BearerTokenSendingMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      OpenId authorization server mechanism by which access token is passed to the API. Refer to https://datatracker.ietf.org/doc/html/rfc6749#section-4. This parameter is optional. Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Web API description.
+      This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementApi. This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Web API name.
+      Public name of the API as it would appear on the developer and admin portals.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OpenIdProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OpenId authorization server identifier. This parameter is optional. Default value is $null. Must be specified if BearerTokenSendingMethods is specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified then instance of Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi type representing the set API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Web API Path.
+      Last part of the API's public URL.
+      This URL will be used by API consumers for sending requests to the web service.
+      Must be 1 to 400 characters long.
+      This parameter is optional.
+      Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocols
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Web API protocols (http, https).
+      Protocols over which API is made available.
+      This parameter is required.
+      Default value is $null.
+    acceptedValues:
+    - Http
+    - Https
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A URL of the web service exposing the API.
+      This URL will be used by Azure API Management only, and will not be made public.
+      Must be 1 to 2000 characters long.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionKeyHeaderName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription key header name.
+      This parameter is optional.
+      Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionKeyQueryParamName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription key query string parameter name.
+      This parameter is optional.
+      Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionRequired
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to enforce SubscriptionRequired for requests to the Api. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApiManagementApiRevision
+        -ApiRevision <String>
+        -Context <PsApiManagementContext>
+        -ApiId <String>
+        [-Name <String>]
+        [-Description <String>]
+        [-ServiceUrl <String>]
+        [-Path <String>]
+        [-Protocols <PsApiManagementSchema[]>]
+        [-AuthorizationServerId <String>]
+        [-AuthorizationScope <String>]
+        [-OpenIdProviderId <String>]
+        [-BearerTokenSendingMethod <String[]>]
+        [-SubscriptionKeyHeaderName <String>]
+        [-SubscriptionKeyQueryParamName <String>]
+        [-SubscriptionRequired]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExpandedParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzApiManagementApiRevision
+        -InputObject <PsApiManagementApi>
+        [-Name <String>]
+        [-Description <String>]
+        [-ServiceUrl <String>]
+        [-Path <String>]
+        [-Protocols <PsApiManagementSchema[]>]
+        [-AuthorizationServerId <String>]
+        [-AuthorizationScope <String>]
+        [-OpenIdProviderId <String>]
+        [-BearerTokenSendingMethod <String[]>]
+        [-SubscriptionKeyHeaderName <String>]
+        [-SubscriptionKeyQueryParamName <String>]
+        [-SubscriptionRequired]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify an API Revision'
+  description: |-
+    ```powershell
+    $ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Set-AzApiManagementApiRevision -Context $ApiMgmtContext -ApiId "echo-api" -ApiRevision "2" -Name "EchoApi" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @('https') -Description "Responds with what was sent" -Path "echo"
+    ```
+
+    The cmdlet updates the `2` revision of the API `echo-api` with a new description, protocol and path.
+links:
+- text: Get-AzApiManagementApiRevision
+  href: ./Get-AzApiManagementApiRevision.yml
+- text: New-AzApiManagementApiRevision
+  href: ./New-AzApiManagementApiRevision.yml
+- text: Remove-AzApiManagementApiRevision
+  href: ./Remove-AzApiManagementApiRevision.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementApiRevision.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/set-azapimanagementapirevision
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Set-AzApiManagementApiRevision.md
+  PlatyPS schema version: 2024-05-01

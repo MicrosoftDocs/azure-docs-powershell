@@ -1,0 +1,338 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Import-AzAutomationRunbook
+name: Import-AzAutomationRunbook
+module: Az.Automation
+isPreview: false
+summary: |-
+  Imports an Automation runbook.
+description: |-
+  The **Import-AzAutomationRunbook** cmdlet imports an Azure Automation runbook. Specify the
+  path to a wps_2 script (.ps1) file to import for wps_2 and wps_2 Workflow runbooks,
+  (.graphrunbook) file for graphical runbooks, or (.py) file for python 2 runbooks.
+  For wps_2 Workflow runbooks, the script must contain a single wps_2 Workflow definition that matches the name of the file.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account into which this cmdlet imports a runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the imported runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      ps_force
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogProgress
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether the runbook logs progress information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogVerbose
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether the runbook logs detailed information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the runbook that this cmdlet imports.
+    aliases:
+    - RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a .ps1 or .graphrunbook file that this cmdlet imports.
+    aliases:
+    - SourcePath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Published
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet publishes the runbook that it imports.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group for which this cmdlet imports a runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of runbook that this cmdlet creates.
+      Valid values are:
+      - PowerShell
+      - PowerShell72
+      - GraphicalPowerShell
+      - PowerShellWorkflow
+      - GraphicalPowerShellWorkflow
+      - Graph
+      - Python2
+      - Python3
+      The value Graph is obsolete.
+      It is equivalent to GraphicalPowerShellWorkflow.
+    acceptedValues:
+    - PowerShell
+    - GraphicalPowerShell
+    - PowerShellWorkflow
+    - GraphicalPowerShellWorkflow
+    - Graph
+    - Python2
+    - Python3
+    - Powershell72
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-AzAutomationRunbook
+        [-Path] <String>
+        [-Description <String>]
+        [-Name <String>]
+        [-Tags <IDictionary>]
+        -Type <String>
+        [-LogProgress <Boolean>]
+        [-LogVerbose <Boolean>]
+        [-Published]
+        [-Force]
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Runbook" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import a runbook from a file'
+  description: |-
+    ```powershell
+    $Tags = @{"tag01"="value01"; "tag02"="value02"}
+    Import-AzAutomationRunbook -Path .\GraphicalRunbook06.graphrunbook -Tags $Tags -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01" -Type GraphicalPowershell
+    ```
+
+    The first command assigns two key/value pairs to the $Tags variable.
+    The second command imports a graphical runbook called GraphicalRunbook06 into the Automation account named AutomationAccount01.
+    The command also assigns the tags stored in $Tags.
+- title: Example 2
+  description: |-
+    Imports an Automation runbook. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Import-AzAutomationRunbook -AutomationAccountName 'AutomationAccount01' -Name 'Configuration01' -Path .\GraphicalRunbook06.graphrunbook -Published -ResourceGroupName 'ResourceGroup01' -Type PowerShell
+    ```
+links:
+- text: Export-AzAutomationRunbook
+  href: ./Export-AzAutomationRunbook.yml
+- text: Get-AzAutomationRunbook
+  href: ./Get-AzAutomationRunbook.yml
+- text: New-AzAutomationRunbook
+  href: ./New-AzAutomationRunbook.yml
+- text: Publish-AzAutomationRunbook
+  href: ./Publish-AzAutomationRunbook.yml
+- text: Remove-AzAutomationRunbook
+  href: ./Remove-AzAutomationRunbook.yml
+- text: Set-AzAutomationRunbook
+  href: ./Set-AzAutomationRunbook.yml
+- text: Start-AzAutomationRunbook
+  href: ./Start-AzAutomationRunbook.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Import-AzAutomationRunbook.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/import-azautomationrunbook
+  Module Name: Az.Automation
+  ms.assetid: B6487D26-2B6A-4938-B1CD-48EADD8D0C3C
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Import-AzAutomationRunbook.md
+  PlatyPS schema version: 2024-05-01

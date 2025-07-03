@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationRunbook
+name: Get-AzureAutomationRunbook
+module: Azure
+isPreview: false
+summary: |-
+  Gets a runbook.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationRunbook** cmdlet gets one or more Microsoft Azure Automation runbooks.
+  By default, all runbooks are returned.
+  To get a specific runbook, specify its name or ID.
+  To get all runbooks linked to a specific schedule, specify the schedule name.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook.
+    aliases:
+    - RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationRunbook
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationRunbook
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Runbook" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all runbooks'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationRunbook -AutomationAccountName "Contoso17"
+    ```
+
+    This command gets all runbooks in the Azure Automation account named Contoso17.
+links:
+- text: New-AzureAutomationRunbook
+  href: ./New-AzureAutomationRunbook.yml
+- text: Publish-AzureAutomationRunbook
+  href: ./Publish-AzureAutomationRunbook.yml
+- text: Remove-AzureAutomationRunbook
+  href: ./Remove-AzureAutomationRunbook.yml
+- text: Set-AzureAutomationRunbook
+  href: ./Set-AzureAutomationRunbook.yml
+- text: Start-AzureAutomationRunbook
+  href: ./Start-AzureAutomationRunbook.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 304F71E0-9E89-46E6-BD25-7584601CC845
+  PlatyPS schema version: 2024-05-01

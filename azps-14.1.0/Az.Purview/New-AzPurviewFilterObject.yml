@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewFilterObject
+name: New-AzPurviewFilterObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for Filter.
+description: |-
+  Create an in-memory object for Filter.
+parameters:
+  cmdletParameters:
+  - name: ExcludeUriPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeUriPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewFilterObject
+        [-ExcludeUriPrefix <String[]>]
+        [-IncludeUriPrefix <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.Filter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create filter object'
+  description: |-
+    ```powershell
+    New-AzPurviewFilterObject -ExcludeUriPrefix @('https://foo.file.core.windows.net/share1/user/temp') -IncludeUriPrefix @('https://foo.file.core.windows.net/share1/user','https://foo.file.core.windows.net/share1/aggregated')
+    ```
+
+    ```output
+    ExcludeUriPrefix  : {https://foo.file.core.windows.net/share1/user/temp}
+    Id                :
+    IncludeUriPrefix  : {https://foo.file.core.windows.net/share1/user,
+                        https://foo.file.core.windows.net/share1/aggregated}
+    Name              :
+    ```
+
+    Create filter object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewFilterObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-AzPurviewFilterObject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewFilterObject.md
+  PlatyPS schema version: 2024-05-01

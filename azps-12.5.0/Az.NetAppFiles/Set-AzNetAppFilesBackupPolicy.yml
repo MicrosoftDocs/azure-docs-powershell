@@ -1,0 +1,337 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetAppFiles.Set-AzNetAppFilesBackupPolicy
+name: Set-AzNetAppFilesBackupPolicy
+module: Az.NetAppFiles
+isPreview: false
+summary: |-
+  Updates an Azure NetApp Files (ANF) Backup Policy with the new data set.
+description: |-
+  The **Set-AzNetAppFilesBackupPolicy** cmdlet modifies an ANF BackupPolicy.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      The Account object for the new Backup Policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DailyBackupsToKeep
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Daily backups count to keep
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The property to decide policy is enabled or not
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonthlyBackupsToKeep
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Monthly backups count to keep
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF backup policy
+    aliases:
+    - BackupPolicyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents resource tags
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WeeklyBackupsToKeep
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Weekly backups count to keep
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzNetAppFilesBackupPolicy
+        -ResourceGroupName <String>
+        -Location <String>
+        -AccountName <String>
+        -Name <String>
+        [-Enabled]
+        [-DailyBackupsToKeep <Int32>]
+        [-WeeklyBackupsToKeep <Int32>]
+        [-MonthlyBackupsToKeep <Int32>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzNetAppFilesBackupPolicy
+        -Name <String>
+        -AccountObject <PSNetAppFilesAccount>
+        [-Enabled]
+        [-DailyBackupsToKeep <Int32>]
+        [-WeeklyBackupsToKeep <Int32>]
+        [-MonthlyBackupsToKeep <Int32>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzNetAppFilesBackupPolicy
+        -Name <String>
+        -ResourceId <String>
+        [-Enabled]
+        [-DailyBackupsToKeep <Int32>]
+        [-WeeklyBackupsToKeep <Int32>]
+        [-MonthlyBackupsToKeep <Int32>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesBackupPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzNetAppFilesBackupPolicy -ResourceGroupName "MyRG" -Location "westus2" -AccountName "MyAccount" -Name "MyBackupPolicy" -Tag @{"tag1" = "tagValue"} -Enabled -DailyBackupsToKeep 1 -WeeklyBackupsToKeep 2 -MonthlyBackupsToKeep 2
+    ```
+
+    This command performs an update on the given backup policy.
+links:
+- text: Get-AzNetAppFilesSnapshotPolicy
+  href: ./Get-AzNetAppFilesSnapshotPolicy.yml
+- text: New-AzNetAppFilesSnapshotPolicy
+  href: ./New-AzNetAppFilesSnapshotPolicy.yml
+- text: Update-AzNetAppFilesSnapshotPolicy
+  href: ./Update-AzNetAppFilesSnapshotPolicy.yml
+- text: Remove-AzNetAppFilesSnapshotPolicy
+  href: ./Remove-AzNetAppFilesSnapshotPolicy.yml
+- text: Get-AzNetAppFilesSnapshot
+  href: ./Get-AzNetAppFilesSnapshot.yml
+- text: New-AzNetAppFilesSnapshot
+  href: ./New-AzNetAppFilesSnapshot.yml
+- text: Remove-AzNetAppFilesSnapshot
+  href: ./Remove-AzNetAppFilesSnapshot.yml
+- text: Get-AzNetAppFilesVolume
+  href: ./Get-AzNetAppFilesVolume.yml
+- text: New-AzNetAppFilesVolume
+  href: ./New-AzNetAppFilesVolume.yml
+- text: Update-AzNetAppFilesVolume
+  href: ./Update-AzNetAppFilesVolume.yml
+- text: Remove-AzNetAppFilesVolume
+  href: ./Remove-AzNetAppFilesVolume.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Set-AzNetAppFilesBackupPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.netappfiles/set-aznetappfilesbackuppolicy
+  Module Name: Az.NetAppFiles
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Set-AzNetAppFilesBackupPolicy.md
+  PlatyPS schema version: 2024-05-01

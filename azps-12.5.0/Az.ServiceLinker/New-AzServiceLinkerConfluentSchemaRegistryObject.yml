@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceLinker.New-AzServiceLinkerConfluentSchemaRegistryObject
+name: New-AzServiceLinkerConfluentSchemaRegistryObject
+module: Az.ServiceLinker
+isPreview: false
+summary: |-
+  Create an in-memory object for ConfluentSchemaRegistry.
+description: |-
+  Create an in-memory object for ConfluentSchemaRegistry.
+parameters:
+  cmdletParameters:
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The endpoint of service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceLinkerConfluentSchemaRegistryObject
+        -Endpoint <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.Api20221101Preview.ConfluentSchemaRegistry" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an target resource object for schema registry on confluent cloud'
+  description: |-
+    ```powershell
+    New-AzServiceLinkerConfluentSchemaRegistryObject -Endpoint "https://psrc-xxxx.westus2.azure.confluent.cloud"
+    ```
+
+    ```output
+    Endpoint
+    --------
+    https://psrc-xxxx.westus2.azure.confluent.cloud
+    ```
+
+    Create an target resource object for schema registry on confluent cloud
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerConfluentSchemaRegistryObject.md
+  document type: cmdlet
+  external help file: Az.ServiceLinker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkerconfluentschemaregistryobject
+  Module Name: Az.ServiceLinker
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerConfluentSchemaRegistryObject.md
+  PlatyPS schema version: 2024-05-01

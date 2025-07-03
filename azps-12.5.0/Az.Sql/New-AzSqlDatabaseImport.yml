@@ -1,0 +1,416 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlDatabaseImport
+name: New-AzSqlDatabaseImport
+module: Az.Sql
+isPreview: false
+summary: |-
+  Imports a .bacpac file and create a new database on the server.
+description: |-
+  The **New-AzSqlDatabaseImport** cmdlet imports a bacpac file from an Azure storage account to a new Azure SQL Database.
+  The get import database status request may be sent to retrieve status information for this request.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, sql, database, mssql
+parameters:
+  cmdletParameters:
+  - name: AdministratorLogin
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorLoginPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the SQL administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationType
+    type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AuthenticationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of authentication used to access the server.
+      This parameter defaults to SQL if no authentication type is set.
+      The acceptable values for this parameter are:
+      - SQL.
+      SQL authentication.
+      Set the *AdministratorLogin* and *AdministratorLoginPassword* parameters to the SQL administrator username and password.
+      - ADPassword.
+      Microsoft Entra authentication.
+      Set *AdministratorLogin* and *AdministratorLoginPassword* to the Microsoft Entra administrator username and password.
+      This parameter is only available on SQL Database V12 servers.
+    acceptedValues:
+    - None
+    - Sql
+    - AdPassword
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseMaxSizeBytes
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size for the newly imported database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.DatabaseEdition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition of the new database to import to.
+      The acceptable values for this parameter are:
+      - Premium
+      - Basic
+      - Standard
+      - DataWarehouse
+      - Free
+    acceptedValues:
+    - None
+    - Premium
+    - Basic
+    - Standard
+    - DataWarehouse
+    - Stretch
+    - Free
+    - PremiumRS
+    - GeneralPurpose
+    - BusinessCritical
+    - Hyperscale
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group for the SQL Database server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL Database server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceObjectiveName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service objective to assign to the Azure SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlServerResourceIdForPrivateLink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sql server resource id to create private link
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceIdForPrivateLink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage account resource id to create private link
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the access key for the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageKeyType
+    type: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.StorageKeyType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of access key for the storage account.
+      The acceptable values for this parameter are:
+      - StorageAccessKey.
+      Uses the storage account key.
+      - SharedAccessKey.
+      Uses the Shared Access Signature (SAS) key.
+    acceptedValues:
+    - StorageAccessKey
+    - SharedAccessKey
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageUri
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the blob URI of the .bacpac file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseNetworkIsolation
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      If set, will create private link for storage account and/or SQL server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlDatabaseImport
+        -DatabaseName <String>
+        -Edition <DatabaseEdition>
+        -ServiceObjectiveName <String>
+        -DatabaseMaxSizeBytes <Int64>
+        [-ServerName] <String>
+        -StorageKeyType <StorageKeyType>
+        -StorageKey <String>
+        -StorageUri <Uri>
+        -AdministratorLogin <String>
+        -AdministratorLoginPassword <SecureString>
+        [-AuthenticationType <AuthenticationType>]
+        [-UseNetworkIsolation <Boolean>]
+        [-StorageAccountResourceIdForPrivateLink <String>]
+        [-SqlServerResourceIdForPrivateLink <String>]
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ImportExport.Model.AzureSqlDatabaseImportExportBaseModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an import request for a bacpac file'
+  description: |-
+    ```powershell
+    New-AzSqlDatabaseImport -ResourceGroupName "RG01" -ServerName "Server01" -DatabaseName "Database01" -StorageKeyType "StorageAccessKey" -StorageKey "StorageKey01" -StorageUri "http://account01.blob.core.contoso.net/bacpacs/database01.bacpac" -AdministratorLogin "User" -AdministratorLoginPassword $SecureString -Edition Standard -ServiceObjectiveName S0 -DatabaseMaxSizeBytes 5000000
+    ```
+
+    ```output
+    ResourceGroupName          : RG01
+    ServerName                 : Server01
+    DatabaseName               : Database01
+    StorageKeyType             : StorageAccessKey
+    StorageKey                 :
+    StorageUri                 : http://account01.blob.core.contoso.net/bacpacs/database01.bacpac
+    AdministratorLogin         : User
+    AdministratorLoginPassword :
+    AuthenticationType         : None
+    OperationStatusLink        : https://management.contoso.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource01/providers/Microsoft.Sql/servers/server01/databases/database01/importExportOperationResults/00000000-00
+                                 0-0000-0000-000000000000?api-version=2014-04-01
+    Status                     : InProgress
+    ErrorMessage               :
+    ```
+
+    This command creates an import request to import a .bacpac to a new database.
+- title: Example 2
+  description: |-
+    Imports a .bacpac file and create a new database on the server. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+    ```powershell
+    New-AzSqlDatabaseImport -AdministratorLogin 'User' -AdministratorLoginPassword <SecureString> -AuthenticationType None -DatabaseMaxSizeBytes 5000000 -DatabaseName 'Database01' -Edition None -ResourceGroupName 'RG01' -ServerName 'Server01' -ServiceObjectiveName S0 -StorageKey 'StorageKey01' -StorageKeyType StorageAccessKey -StorageUri 'https://account01.blob.core.contoso.net/bacpacs/database01.bacpac'
+    ```
+links:
+- text: Get-AzSqlDatabaseImportExportStatus
+  href: ./Get-AzSqlDatabaseImportExportStatus.yml
+- text: New-AzSqlDatabaseExport
+  href: ./New-AzSqlDatabaseExport.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseImport.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqldatabaseimport
+  Module Name: Az.Sql
+  ms.assetid: A1327BC6-F090-490E-8DC2-2CC48A21C2C0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabaseImport.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Start-AzApplicationGateway
+name: Start-AzApplicationGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Starts an application gateway.
+description: |-
+  The **Start-AzApplicationGateway** cmdlet starts an Azure application gateway
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway that this cmdlet starts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzApplicationGateway
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example1: Start an application gateway'
+  description: |-
+    ```
+    PS C:\>$AppGw = Start-AzApplicationGateway -ApplicationGateway $AppGw
+    ```
+
+    This command starts the application gateway stored in the $AppGw variable.
+links:
+- text: Stop-AzApplicationGateway
+  href: ./Stop-AzApplicationGateway.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Start-AzApplicationGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/start-azapplicationgateway
+  Module Name: Az.Network
+  ms.assetid: 95731734-EDCA-432A-A7BF-94D1E3725FB2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Start-AzApplicationGateway.md
+  PlatyPS schema version: 2024-05-01

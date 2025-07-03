@@ -1,0 +1,38 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityGitHubScopeEnvironmentObject
+name: New-AzSecurityGitHubScopeEnvironmentObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for GitHubScopeEnvironment.
+description: |-
+  Create an in-memory object for GitHubScopeEnvironment.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityGitHubScopeEnvironmentObject
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.GitHubScopeEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new GitHubScopeEnvironment object'
+  description: |-
+    ```powershell
+    New-AzSecurityGitHubScopeEnvironmentObject
+    ```
+
+    ```output
+    EnvironmentType
+    ---------------
+    GithubScope
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGitHubScopeEnvironmentObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritygithubscopeenvironmentobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGitHubScopeEnvironmentObject.md
+  PlatyPS schema version: 2024-05-01

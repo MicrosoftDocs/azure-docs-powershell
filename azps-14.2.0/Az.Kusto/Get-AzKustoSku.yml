@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Kusto.Get-AzKustoSku
+name: Get-AzKustoSku
+module: Az.Kusto
+isPreview: false
+summary: |-
+  Lists eligible region SKUs for Kusto resource provider by Azure region.
+description: |-
+  Lists eligible region SKUs for Kusto resource provider by Azure region.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKustoSku
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20240413.ISkuDescription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Lists eligible SKUs for Kusto resource provider by Azure region'
+  description: |-
+    ```powershell
+    Get-AzKustoSku -SubscriptionId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -Location "East US"
+    ```
+
+    ```output
+    Location Name                        ResourceType Tier
+    -------- ----                        ------------ ----
+             Dev(No SLA)_Standard_D11_v2 clusters     Basic
+             Dev(No SLA)_Standard_E2a_v4 clusters     Basic
+             Standard_D11_v2             clusters     Standard
+             Standard_D12_v2             clusters     Standard
+             Standard_D13_v2             clusters     Standard
+             Standard_D14_v2             clusters     Standard
+             Standard_D32d_v4            clusters     Standard
+             Standard_DS13_v2+1TB_PS     clusters     Standard
+             Standard_DS13_v2+2TB_PS     clusters     Standard
+             Standard_DS14_v2+3TB_PS     clusters     Standard
+             Standard_DS14_v2+4TB_PS     clusters     Standard
+             Standard_L8s_v2             clusters     Standard
+             Standard_L16s_v2            clusters     Standard
+             Standard_E64i_v3            clusters     Standard
+             Standard_E80ids_v4          clusters     Standard
+             Standard_E2a_v4             clusters     Standard
+             Standard_E4a_v4             clusters     Standard
+             Standard_E8a_v4             clusters     Standard
+             Standard_E16a_v4            clusters     Standard
+             Standard_E8as_v4+1TB_PS     clusters     Standard
+             Standard_E8as_v4+2TB_PS     clusters     Standard
+             Standard_E16as_v4+3TB_PS    clusters     Standard
+             Standard_E16as_v4+4TB_PS    clusters     Standard
+             Standard_E8as_v5+1TB_PS     clusters     Standard
+             Standard_E8as_v5+2TB_PS     clusters     Standard
+             Standard_E16as_v5+3TB_PS    clusters     Standard
+             Standard_E16as_v5+4TB_PS    clusters     Standard
+             Standard_E2ads_v5           clusters     Standard
+             Standard_E4ads_v5           clusters     Standard
+             Standard_E8ads_v5           clusters     Standard
+             Standard_E16ads_v5          clusters     Standard
+             Standard_E8s_v4+1TB_PS      clusters     Standard
+             Standard_E8s_v4+2TB_PS      clusters     Standard
+             Standard_E16s_v4+3TB_PS     clusters     Standard
+             Standard_E16s_v4+4TB_PS     clusters     Standard
+             Standard_E2d_v4             clusters     Standard
+             Standard_E4d_v4             clusters     Standard
+             Standard_E8d_v4             clusters     Standard
+             Standard_E16d_v4            clusters     Standard
+             Standard_E2d_v5             clusters     Standard
+             Standard_E4d_v5             clusters     Standard
+             Standard_E8d_v5             clusters     Standard
+             Standard_E16d_v5            clusters     Standard
+    ```
+
+    Lists eligible SKUs for Kusto resource provider by Azure region
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/Kusto/help/Get-AzKustoSku.md
+  document type: cmdlet
+  external help file: Az.Kusto-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.kusto/get-azkustosku
+  Module Name: Az.Kusto
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/Kusto/help/Get-AzKustoSku.md
+  PlatyPS schema version: 2024-05-01

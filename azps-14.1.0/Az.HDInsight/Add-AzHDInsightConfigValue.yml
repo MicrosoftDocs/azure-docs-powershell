@@ -1,0 +1,409 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Add-AzHDInsightConfigValue
+name: Add-AzHDInsightConfigValue
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Adds a Hadoop configuration value customization and/or a Hive shared library customization to a cluster configuration object.
+description: |-
+  The **Add-AzHDInsightConfigValue** cmdlet adds a Hadoop configuration value customization, such as core-site.xml or hive-site.xml, and/or a Hive shared library customization to the HDInsight configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Config
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+      This object is created by the New-AzHDInsightClusterConfig cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Core
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Core Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HBaseEnv
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HBase Env configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HBaseSite
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HBase Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hdfs
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDFS configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HiveEnv
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Hive Env configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HiveSite
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Hive Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MapRed
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the MapRed Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OozieEnv
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Oozie Env configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OozieSite
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Oozie Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RServer
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the RServer configurations. Valid only for RServer clusters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Spark2Defaults
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Spark2 Defaults configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Spark2ThriftConf
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Spark2 Thrift SparkConf configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkDefaults
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Spark Defaults configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkThriftConf
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Spark Thrift SparkConf configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Storm
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Storm Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tez
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Tez Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebHCat
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the WebHCat Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Yarn
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the YARN Site configurations of this HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzHDInsightConfigValue
+        [-Config] <AzureHDInsightConfig>
+        [-Core <Hashtable>]
+        [-HiveSite <Hashtable>]
+        [-HiveEnv <Hashtable>]
+        [-OozieSite <Hashtable>]
+        [-OozieEnv <Hashtable>]
+        [-WebHCat <Hashtable>]
+        [-HBaseSite <Hashtable>]
+        [-HBaseEnv <Hashtable>]
+        [-Storm <Hashtable>]
+        [-Yarn <Hashtable>]
+        [-MapRed <Hashtable>]
+        [-Tez <Hashtable>]
+        [-Hdfs <Hashtable>]
+        [-RServer <Hashtable>]
+        [-SparkDefaults <Hashtable>]
+        [-SparkThriftConf <Hashtable>]
+        [-Spark2Defaults <Hashtable>]
+        [-Spark2ThriftConf <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a custom configuration value to the cluster configuration object'
+  description: |-
+    ```powershell
+    # Primary storage account info
+    $storageAccountResourceGroupName = "Group"
+    $storageAccountResourceId = "yourstorageaccountresourceid"
+    $storageAccountName = "yourstorageacct001"
+    $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+    $storageContainer = "container001"
+
+    # Cluster configuration info
+    $location = "East US 2"
+    $clusterResourceGroupName = "Group"
+    $clusterName = "your-hadoop-001"
+    $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Config values
+    $coreConfigs = @{"io.file.buffer.size"="300000"}
+    $mapRedConfigs = @{"mapred.map.max.attempts"="2"}
+
+    # Create the cluster
+    New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightConfigValue `
+                    -Core $coreConfigs `
+                    -MapRed $mapRedConfigs `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -StorageAccountResourceId $storageAccountResourceId `
+                    -StorageAccountKey $storageAccountKey `
+                    -StorageContainer $storageAccountContainer
+    ```
+
+    This command adds a Hadoop configuration value to the cluster named your-hadoop-001.
+links:
+- text: New-AzHDInsightClusterConfig
+  href: ./New-AzHDInsightClusterConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightConfigValue.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightconfigvalue
+  Module Name: Az.HDInsight
+  ms.assetid: 4C3CF283-DD4F-4D2A-ABEC-84AC7B005D6A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightConfigValue.md
+  PlatyPS schema version: 2024-05-01

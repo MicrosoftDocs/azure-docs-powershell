@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudBgpAdvertisementObject
+name: New-AzNetworkCloudBgpAdvertisementObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for BgpAdvertisement.
+description: |-
+  Create an in-memory object for BgpAdvertisement.
+parameters:
+  cmdletParameters:
+  - name: AdvertiseToFabric
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.AdvertiseToFabric" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator of if this advertisement is also made to the network fabric associated with the Network Cloud Cluster.
+      This field is ignored if fabricPeeringEnabled is set to False.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Community
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The names of the BGP communities to be associated with the announcement, utilizing a BGP community string in 1234:1234 format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressPool
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The names of the IP address pools associated with this announcement.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Peer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The names of the BGP peers to limit this advertisement to.
+      If no values are specified, all BGP peers will receive this advertisement.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudBgpAdvertisementObject
+        -IPAddressPool <String[]>
+        [-AdvertiseToFabric <AdvertiseToFabric>]
+        [-Community <String[]>]
+        [-Peer <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.BgpAdvertisement" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for BgpAdvertisement.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudBgpAdvertisementObject -IPAddressPool  @("pool1","pool2") -AdvertiseToFabric "True" -Community  @("communityString") -Peer @("peer1")
+    ```
+
+    ```output
+    AdvertiseToFabric Community         IPAddressPool  Peer
+    ----------------- ---------         -------------  ----
+    True              {communityString} {pool1, pool2} {peer1}
+    ```
+
+    Create an in-memory object for BgpAdvertisement.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudBgpAdvertisementObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudBgpAdvertisementObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudBgpAdvertisementObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,643 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVMCustomScriptExtension
+name: Set-AzVMCustomScriptExtension
+module: Az.Compute
+isPreview: false
+summary: |-
+  Adds a custom script extension to a virtual machine.
+description: |-
+  The **Set-AzVMCustomScriptExtension** cmdlet adds a custom script Virtual Machine Extension to a virtual machine.
+  This extension lets you run your own scripts on the virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Argument
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies arguments that the script extension passes to the script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure storage container where this cmdlet stores the script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutoUpgradeMinorVersion
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the name of the script file. If the file is stored in Azure Blob storage, the file name
+      value is case-sensitive. File names of files stored in Azure File storage are not case-sensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the URI of the script file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithFileUriParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceRerun
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet forces a rerun of the same extension configuration on the virtual machine without uninstalling and reinstalling the extension.
+      The value can be any string different from the current value.
+      If forceUpdateTag is not changed, updates to public or protected settings are still applied by the handler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Compute.Models.VirtualMachineCustomScriptExtensionContext" data-throw-if-not-resolved="False" />
+    description: |-
+      VM extension object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectWithFileUriParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the custom script extension.
+    aliases:
+    - ExtensionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByNameWithFileUriParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Starts the operation and returns immediately, before the operation is completed. In order to determine if the operation has successfully been completed, use some other mechanism.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByNameWithFileUriParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      VM extension ResourceID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdWithFileUriParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Run
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the command to use that runs your script.
+    aliases:
+    - RunFile
+    - Command
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureExecution
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet makes sure that the value of the *Run* parameter is not logged on the server or returned to the user by using the GET extension API.
+      The value of *Run* might contain secrets or passwords to be passed to the script file securely.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key for the Azure storage container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure storage account where this cmdlet stores the script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage endpoint suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeHandlerVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the extension to use for this virtual machine.
+      To obtain the version, run the Get-AzVMExtensionImage cmdlet with a value of Microsoft.Compute for the *PublisherName* parameter and CustomScriptExtension for the *Type* parameter.
+    aliases:
+    - HandlerVersion
+    - Version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual machine.
+      This cmdlet adds the custom script extension for the virtual machine that this parameter specifies.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithContainerAndFileNamesParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByNameWithFileUriParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMObject
+    type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      VM object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectWithContainerAndFileNamesParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByParentObjectWithFileUriParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        [-ResourceGroupName] <String>
+        [-VMName] <String>
+        -ContainerName <String>
+        -FileName <String[]>
+        [-Name <String>]
+        [-StorageAccountName <String>]
+        [-StorageEndpointSuffix <String>]
+        [-StorageAccountKey <String>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameWithContainerAndFileNamesParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        [-ResourceGroupName] <String>
+        [-VMName] <String>
+        [-Name <String>]
+        [-FileUri <String[]>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameWithFileUriParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -Name <String>
+        -VMObject <PSVirtualMachine>
+        -ContainerName <String>
+        -FileName <String[]>
+        [-StorageAccountName <String>]
+        [-StorageEndpointSuffix <String>]
+        [-StorageAccountKey <String>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectWithContainerAndFileNamesParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -Name <String>
+        -VMObject <PSVirtualMachine>
+        [-FileUri <String[]>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectWithFileUriParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -ResourceId <String>
+        -ContainerName <String>
+        -FileName <String[]>
+        [-StorageAccountName <String>]
+        [-StorageEndpointSuffix <String>]
+        [-StorageAccountKey <String>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdWithContainerAndFileNamesParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -ResourceId <String>
+        [-FileUri <String[]>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdWithFileUriParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -InputObject <VirtualMachineCustomScriptExtensionContext>
+        -ContainerName <String>
+        -FileName <String[]>
+        [-StorageAccountName <String>]
+        [-StorageEndpointSuffix <String>]
+        [-StorageAccountKey <String>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectWithContainerAndFileNamesParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzVMCustomScriptExtension
+        -InputObject <VirtualMachineCustomScriptExtensionContext>
+        [-FileUri <String[]>]
+        [-Run <String>]
+        [-Argument <String>]
+        [-SecureExecution]
+        [-TypeHandlerVersion <String>]
+        [-Location <String>]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ForceRerun <String>]
+        [-NoWait]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectWithFileUriParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a custom script'
+  description: |-
+    ```powershell
+    Set-AzVMCustomScriptExtension -ResourceGroupName "ResourceGroup11" -Location "Central US" -VMName "VirtualMachine07" -Name "ContosoTest" -TypeHandlerVersion "1.1" -StorageAccountName "Contoso" -StorageAccountKey <StorageKey> -FileName "ContosoScript.exe" -ContainerName "Scripts"
+    ```
+
+    This command adds a custom script to the virtual machine named VirtualMachine07.
+    The script file is contososcript.exe.
+- title: Example 2
+  description: |-
+    Adds a custom script extension to a virtual machine. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Set-AzVMCustomScriptExtension -Argument <String> -ContainerName 'Scripts' -DefaultProfile <IAzureContextContainer> -FileName 'ContosoScript.exe' -Location 'Central US' -Name 'ContosoTest' -ResourceGroupName 'ResourceGroup11' -Run 'myScript.ps1' -SecureExecution -StorageAccountKey <String> -StorageAccountName 'Contoso' -TypeHandlerVersion '1.1' -VMName 'VirtualMachine07'
+    ```
+links:
+- text: Get-AzVMCustomScriptExtension
+  href: ./Get-AzVMCustomScriptExtension.yml
+- text: Remove-AzVMCustomScriptExtension
+  href: ./Remove-AzVMCustomScriptExtension.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMCustomScriptExtension.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/set-azvmcustomscriptextension
+  Module Name: Az.Compute
+  ms.assetid: 64AB1BAE-A756-43A8-A40F-10B746EA0946
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMCustomScriptExtension.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.HealthBot
+name: Az.HealthBot Module
+isPreview: false
+cmdletGroups:
+- title: Health Bot
+  cmdlets:
+  - Az.HealthBot.Get-AzHealthBot
+  - Az.HealthBot.New-AzHealthBot
+  - Az.HealthBot.Remove-AzHealthBot
+  - Az.HealthBot.Update-AzHealthBot
+description: |-
+  Microsoft Azure PowerShell: HealthBot cmdlets
+metadata:
+  Module Name: Az.HealthBot
+  Module Guid: 8a970870-ddd1-49d0-9886-3a92149e1078
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.healthbot
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/HealthBot/help/Az.HealthBot.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthBot/HealthBot/help/Az.HealthBot.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

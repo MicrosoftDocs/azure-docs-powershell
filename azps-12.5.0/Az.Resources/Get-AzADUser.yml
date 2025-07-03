@@ -1,0 +1,477 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADUser
+name: Get-AzADUser
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists entities from users or get entity from users by key
+description: |-
+  Lists entities from users or get entity from users by key
+parameters:
+  cmdletParameters:
+  - name: AppendSelected
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Append properties selected with default properties when this switch is on, only works with parameter '-Select'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsistencyLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the requested consistency level.
+      Documentation URL: https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include count of items
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CountVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a count of the total number of items in a collection.
+      By default, this variable will be set in the global scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      user display name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Expand related entities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter items by property values, for more detail about filter query please see: https://learn.microsoft.com/en-us/graph/filter-query-parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the first 'n' objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MailParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StartsWithParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      user mail address
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MailParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      key: id of user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Orderby
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Order items by property values
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Search
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search items by search phrases
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Select properties to be returned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignedIn
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      user mail address
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SignedInUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first 'n' objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MailParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StartsWithParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      user display name starts with
+    aliases:
+    - SearchString
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StartsWithParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserPrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      user principal name
+    aliases:
+    - UPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        [-Count]
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-Filter <String>]
+        [-Orderby <String[]>]
+        [-Search <String>]
+        [-ConsistencyLevel <String>]
+        [-DefaultProfile <PSObject>]
+        [-CountVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        -Mail <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MailParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        -DisplayName <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        -StartsWith <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StartsWithParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        -ObjectId <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        -UserPrincipalName <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADUser
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [-SignedIn]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SignedInUser
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphUser" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get signin user'
+  description: |-
+    ```powershell
+    Get-AzADUser -SignedIn
+    ```
+
+    Get signin user
+- title: 'Example 2: List users'
+  description: |-
+    ```powershell
+    Get-AzADUser -First 10 -Select 'City' -AppendSelected
+    ```
+
+    List first 10 users and append property 'City' after default properties: 'DisplayName', 'Id', 'DeletedDateTime', 'UserPrincipalName', 'UsageLocation', 'GivenName', 'SurName', 'AccountEnabled', 'MailNickName', 'Mail'
+- title: 'Example 3: Get user by display name'
+  description: |-
+    ```powershell
+    Get-AzADUser -DisplayName $name
+    ```
+
+    Get user by display name
+- title: 'Example 4: Get user with filter'
+  description: |-
+    ```powershell
+    Get-AzADUser -Filter "startsWith(DisplayName,'some-name')"
+    ```
+
+    Get user with filter
+- title: 'Example 5: Assign OdataCount to a variable'
+  description: |-
+    ```powershell
+    Get-AzADUser -First 10 -ConsistencyLevel eventual -Count -CountVariable 'result'
+    $result
+    ```
+
+    Assign OdataCount to a variable
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADUser.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azaduser
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADUser.md
+  PlatyPS schema version: 2024-05-01

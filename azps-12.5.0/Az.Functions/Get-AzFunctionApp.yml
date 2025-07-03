@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Functions.Get-AzFunctionApp
+name: Get-AzFunctionApp
+module: Az.Functions
+isPreview: false
+summary: |-
+  Gets function apps in a subscription.
+description: |-
+  Gets function apps in a subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeSlot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use to specify whether to include deployment slots in results.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the function app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the function app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFunctionApp
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzFunctionApp
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByLocation
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFunctionApp
+        -ResourceGroupName <String>
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFunctionApp
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-IncludeSlot]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceGroupName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20231201.ISite" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all function apps.'
+  description: |-
+    ```powershell
+    Get-AzFunctionApp
+    ```
+
+    ```output
+    Name                     Status  OSType  Runtime Location    AppServicePlan ResourceGroupName         SubscriptionId
+    ----                     ------  ------  ------- --------    -------------- -----------------         --------------
+    Functions1-Windows-DoNet Running Windows DotNet  Central US  CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    Functions1-Windows-Java  Running Windows Java    West Europe Premium1-WE    Functions-West-Europe1    aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+- title: 'Example 2: Get function apps by name.'
+  description: |-
+    ```powershell
+    Get-AzFunctionApp -ResourceGroupName Functions-West-Europe-Win -Name Functions1-Windows-DoNet
+    ```
+
+    ```output
+    Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
+    ----                     ------  ------  ------- --------   -------------- -----------------         --------------
+    Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+- title: 'Example 3: Get function apps by resource group name.'
+  description: |-
+    ```powershell
+    Get-AzFunctionApp -ResourceGroupName Functions-West-Europe-Win
+    ```
+
+    ```output
+    Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
+    ----                     ------  ------  ------- --------   -------------- -----------------         --------------
+    Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+- title: 'Example 4: Get function apps for the given subscriptions.'
+  description: |-
+    ```powershell
+    Get-AzFunctionApp -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+
+    ```output
+    Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
+    ----                     ------  ------  ------- --------   -------------- -----------------         --------------
+    Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+- title: 'Example 5: Get function apps by location.'
+  description: |-
+    ```powershell
+    Get-AzFunctionApp -Location "Central US"
+    ```
+
+    ```output
+    Name                     Status  OSType  Runtime Location   AppServicePlan ResourceGroupName         SubscriptionId
+    ----                     ------  ------  ------- --------   -------------- -----------------         --------------
+    Functions1-Windows-DoNet Running Windows DotNet  Central US CentralUSPlan  Functions-West-Europe-Win aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/Get-AzFunctionApp.md
+  document type: cmdlet
+  external help file: Az.Functions-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.functions/get-azfunctionapp
+  Module Name: Az.Functions
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/Get-AzFunctionApp.md
+  PlatyPS schema version: 2024-05-01

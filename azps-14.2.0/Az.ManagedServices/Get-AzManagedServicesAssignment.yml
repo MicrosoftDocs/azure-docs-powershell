@@ -1,0 +1,206 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedServices.Get-AzManagedServicesAssignment
+name: Get-AzManagedServicesAssignment
+module: Az.ManagedServices
+isPreview: false
+summary: |-
+  Gets the details of the specified registration assignment.
+description: |-
+  Gets the details of the specified registration assignment.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandRegistrationDefinition
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag indicating whether to return the registration definition details along with the registration assignment details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GUID of the registration assignment.
+    aliases:
+    - RegistrationAssignmentId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the resource.
+    defaultValue: '"subscriptions/" + (Get-AzContext).Subscription.Id'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesAssignment
+        [-Scope <String>]
+        [-ExpandRegistrationDefinition]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesAssignment
+        -Name <String>
+        [-Scope <String>]
+        [-ExpandRegistrationDefinition]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesAssignment
+        -InputObject <IManagedServicesIdentity>
+        [-ExpandRegistrationDefinition]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IRegistrationAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Azure Lighthouse registration assignments in a subscription'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesAssignment
+    ```
+
+    ```output
+    Name                                 Type
+    ----                                 ----
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft.ManagedServices/registrationAssignments
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft.ManagedServices/registrationAssignments
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft.ManagedServices/registrationAssignments
+    ```
+
+    Lists all the Azure Lighthouse registration assignments in a given subscription in context.
+- title: 'Example 2: Get Azure Lighthouse registration assignment by name with selected properties'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesAssignment -Name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | Format-List -Property Id, Name, Type, RegistrationDefinitionId, ProvisioningState
+    ```
+
+    ```output
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationAssignments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                     : Microsoft.ManagedServices/registrationAssignments
+    RegistrationDefinitionId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ProvisioningState        : Succeeded
+    ```
+
+    Gets Azure Lighthouse registration assignment by name with selected properties.
+- title: 'Example 3: List all Azure Lighthouse registration assignments by scope'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesAssignment -Scope /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | Format-List -Property Id, Name, Type, RegistrationDefinitionId, ProvisioningState
+    ```
+
+    ```output
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationAssignments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                     : Microsoft.ManagedServices/registrationAssignments
+    RegistrationDefinitionId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ProvisioningState        : Succeeded
+
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationAssignments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                     : Microsoft.ManagedServices/registrationAssignments
+    RegistrationDefinitionId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ProvisioningState        : Succeeded
+
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationAssignments/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                     : Microsoft.ManagedServices/registrationAssignments
+    RegistrationDefinitionId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ProvisioningState        : Succeeded
+    ```
+
+    Lists all the Azure Lighthouse registration assignments in a given subscription or resource group scope.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesAssignment.md
+  document type: cmdlet
+  external help file: Az.ManagedServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managedservices/get-azmanagedservicesassignment
+  Module Name: Az.ManagedServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesAssignment.md
+  PlatyPS schema version: 2024-05-01

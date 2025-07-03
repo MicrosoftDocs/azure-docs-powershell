@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Remove-AzureStorageTableStoredAccessPolicy
+name: Remove-AzureStorageTableStoredAccessPolicy
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Removes a stored access policy from an Azure storage table.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureStorageTableStoredAccessPolicy** cmdlet removes a stored access policy from an Azure storage table.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **Boolean** that reflects the success of the operation.
+      By default, this cmdlet does not return a value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the stored access policy, which includes the permissions for this SAS token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Table
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure table name.
+    aliases:
+    - N
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorageTableStoredAccessPolicy
+        [-Table] <String>
+        [-Policy] <String>
+        [-PassThru]
+        [-Context <IStorageContext>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a stored access policy from a storage table'
+  description: |-
+    ```
+    PS C:\>Remove-AzureStorageTableStoredAccessPolicy -Table "MyTable" -Policy "Policy05"
+    ```
+
+    This command removes policy named Policy05 from storage table named MyTable.
+links:
+- text: Get-AzureStorageTableStoredAccessPolicy
+  href: ./Get-AzureStorageTableStoredAccessPolicy.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+- text: New-AzureStorageTableStoredAccessPolicy
+  href: ./New-AzureStorageTableStoredAccessPolicy.yml
+- text: Set-AzureStorageTableStoredAccessPolicy
+  href: ./Set-AzureStorageTableStoredAccessPolicy.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 30CC0D80-505A-4988-B4EC-3B7BC5B76F5D
+  PlatyPS schema version: 2024-05-01

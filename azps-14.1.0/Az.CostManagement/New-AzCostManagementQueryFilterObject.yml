@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CostManagement.New-AzCostManagementQueryFilterObject
+name: New-AzCostManagementQueryFilterObject
+module: Az.CostManagement
+isPreview: false
+summary: |-
+  Create an in-memory object for QueryFilter.
+description: |-
+  Create an in-memory object for QueryFilter.
+parameters:
+  cmdletParameters:
+  - name: And
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The logical "AND" expression.
+      Must have at least 2 items.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dimensions
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryComparisonExpression" data-throw-if-not-resolved="False" />
+    description: |-
+      Has comparison expression for a dimension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Not
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter" data-throw-if-not-resolved="False" />
+    description: |-
+      The logical "NOT" expression.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Or
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The logical "OR" expression.
+      Must have at least 2 items.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.IQueryComparisonExpression" data-throw-if-not-resolved="False" />
+    description: |-
+      Has comparison expression for a tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCostManagementQueryFilterObject
+        [-And <IQueryFilter[]>]
+        [-Dimensions <IQueryComparisonExpression>]
+        [-Not <IQueryFilter>]
+        [-Or <IQueryFilter[]>]
+        [-Tag <IQueryComparisonExpression>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.QueryFilter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a filter object of query for cost management export'
+  description: |-
+    ```powershell
+    $orDimension = New-AzCostManagementQueryComparisonExpressionObject -Name 'ResourceLocation' -Value @('East US', 'West Europe')
+    $orTag = New-AzCostManagementQueryComparisonExpressionObject -Name 'Environment' -Value @('UAT', 'Prod')
+    New-AzCostManagementQueryFilterObject -or @((New-AzCostManagementQueryFilterObject -Dimensions $orDimension), (New-AzCostManagementQueryFilterObject -Tag $orTag))
+    ```
+
+    ```output
+    And       :
+    Dimension : Microsoft.Azure.PowerShell.Cmdlets.Cost.Models.Api20211001.QueryComparisonExpression
+    Not       : Microsoft.Azure.PowerShell.Cmdlets.Cost.Models.Api20211001.QueryFilter
+    Or        : {Microsoft.Azure.PowerShell.Cmdlets.Cost.Models.Api20211001.QueryFilter, Microsoft.Azure.PowerShell.Cmdlets.Cost.Models.Api20211001.QueryFilter}
+    Tag       : Microsoft.Azure.PowerShell.Cmdlets.Cost.Models.Api20211001.QueryComparisonExpression
+    ```
+
+    this command creates a filter object of query for cost management export.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementQueryFilterObject.md
+  document type: cmdlet
+  external help file: Az.CostManagement-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.CostManagement/new-azcostmanagementqueryfilterobject
+  Module Name: Az.CostManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementQueryFilterObject.md
+  PlatyPS schema version: 2024-05-01

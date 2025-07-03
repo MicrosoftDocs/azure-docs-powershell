@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Confluent.Get-AzConfluentMarketplaceAgreement
+name: Get-AzConfluentMarketplaceAgreement
+module: Az.Confluent
+isPreview: false
+summary: |-
+  List Confluent marketplace agreements in the subscription.
+description: |-
+  List Confluent marketplace agreements in the subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Microsoft Azure subscription id
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConfluentMarketplaceAgreement
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Confluent.Models.Api20200301.IConfluentAgreementResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all confluent marketplace agreement under a subscription'
+  description: |-
+    ```powershell
+    Get-AzConfluentMarketplaceAgreement
+    ```
+
+    ```output
+    Name        Type
+    ----        ----
+    marketplace Microsoft.Confluent/agreements
+    confluent   Microsoft.Confluent/offertypes
+    ```
+
+    This command lists all confluent marketplace agreement under a subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/Confluent/help/Get-AzConfluentMarketplaceAgreement.md
+  document type: cmdlet
+  external help file: Az.Confluent-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.confluent/get-azconfluentmarketplaceagreement
+  Module Name: Az.Confluent
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Confluent/Confluent/help/Get-AzConfluentMarketplaceAgreement.md
+  PlatyPS schema version: 2024-05-01

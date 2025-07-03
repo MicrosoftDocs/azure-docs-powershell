@@ -1,0 +1,192 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultRoleDefinition
+name: Get-AzKeyVaultRoleDefinition
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  List role definitions of a given managed HSM at a given scope.
+description: |-
+  List role definitions of a given managed HSM at a given scope.
+parameters:
+  cmdletParameters:
+  - name: Custom
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, only displays the custom created roles in the directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CustomOnly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the role definition to get.
+    aliases:
+    - RoleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope at which the role assignment or definition applies to, e.g., '/' or '/keys' or '/keys/{keyName}'.
+      '/' is used when omitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRoleDefinition
+        [-HsmName] <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Interactive
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRoleDefinition
+        [-HsmName] <String>
+        [-Scope <String>]
+        [-Custom]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CustomOnly
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRoleDefinition
+        [-HsmName] <String>
+        -RoleDefinitionName <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultRoleDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRoleDefinition -HsmName myHsm -Scope "/keys"
+    ```
+
+    ```output
+    RoleName                              Description Permissions
+    --------                              ----------- -----------
+    Managed HSM Administrator                         1 permission(s)
+    Managed HSM Crypto Officer                        1 permission(s)
+    Managed HSM Crypto User                           1 permission(s)
+    Managed HSM Policy Administrator                  1 permission(s)
+    Managed HSM Crypto Auditor                        1 permission(s)
+    Managed HSM Crypto Service Encryption             1 permission(s)
+    Managed HSM Backup                                1 permission(s)
+    ```
+
+    The example lists all the roles at "/keys" scope.
+- title: Example 2
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```powershell
+    $backupRole = Get-AzKeyVaultRoleDefinition -HsmName myHsm -RoleDefinitionName "Managed HSM Backup User"
+
+    $backupRole.Permissions
+
+    Actions     NotActions  DataActions NotDataActions
+    -------     ----------  ----------- --------------
+    0 action(s) 0 action(s) 3 action(s) 0 action(s)
+
+    $backupRole.Permissions.DataActions
+
+    Microsoft.KeyVault/managedHsm/backup/start/action
+    Microsoft.KeyVault/managedHsm/backup/status/action
+    Microsoft.KeyVault/managedHsm/keys/backup/action
+    ```
+
+    The example gets the "Managed HSM Backup" role and inspects its permissions.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRoleDefinition -HsmName myHsm -Custom
+    ```
+
+    This example lists all the custom role definitions belong to "myHsm".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRoleDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultroledefinition
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRoleDefinition.md
+  PlatyPS schema version: 2024-05-01

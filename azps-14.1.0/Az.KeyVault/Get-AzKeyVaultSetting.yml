@@ -1,0 +1,222 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultSetting
+name: Get-AzKeyVaultSetting
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Retrieves a specified key vault account setting or all available key vault account settings that can be configured.
+description: |-
+  The **Get-AzKeyVaultSetting** cmdlet gets key vault account settings.
+  This cmdlet gets a specific key vault account setting or all key vault account settings.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hsm Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetSettingViaHsmId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetSettingViaFlattenParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+    description: |-
+      Hsm Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetSettingViaHsmObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultSetting
+        [-HsmName] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetSettingViaFlattenParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultSetting
+        [-HsmObject] <PSManagedHsm>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetSettingViaHsmObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultSetting
+        [-HsmId] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetSettingViaHsmId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all account settings in a Managed HSM'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultSetting -HsmName testmhsm
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets all account settings in a Managed HSM named `testmhsm`.
+- title: 'Example 2: Get a specific key vault account setting in a Managed HSM'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultSetting -HsmName testmhsm -Name AllowKeyManagementOperationsThroughARM
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed HSM named `testmhsm`.
+- title: 'Example 3: Get a specific key vault account setting in a Managed HSM via HsmObject'
+  description: |-
+    ```powershell
+    $hsmObject = Get-AzKeyVaultManagedHsm -Name testmhsm
+    Get-AzKeyVaultSetting -HsmObject $hsmObject -Name AllowKeyManagementOperationsThroughARM
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed HSM named `testmhsm` via HsmObject.
+- title: 'Example 4: Get a specific key vault account setting in a Managed HSM by piping HsmObject'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -Name testmhsm | Get-AzKeyVaultSetting -Name AllowKeyManagementOperationsThroughARM
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed HSM named `testmhsm` via HsmObject.
+- title: 'Example 4: Get a specific key vault account setting in a Managed HSM by piping HsmObject'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -Name testmhsm | Get-AzKeyVaultSetting -Name AllowKeyManagementOperationsThroughARM
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed HSM named `testmhsm` by piping HsmObject.
+- title: 'Example 5: Get a specific key vault account setting in a Managed HSM via HsmId'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultSetting -HsmId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.KeyVault/managedHSMs/testmhsm -Name AllowKeyManagementOperationsThroughARM
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM false boolean testmhsm
+    ```
+
+    This cmdlet gets a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed HSM named `testmhsm` via HsmId.
+links:
+- text: Update-AzKeyVaultSetting
+  href: ./Update-AzKeyVaultSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultsetting
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultSetting.md
+  PlatyPS schema version: 2024-05-01

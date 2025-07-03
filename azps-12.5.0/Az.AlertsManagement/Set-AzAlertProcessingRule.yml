@@ -1,0 +1,913 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AlertsManagement.Set-AzAlertProcessingRule
+name: Set-AzAlertProcessingRule
+module: Az.AlertsManagement
+isPreview: false
+summary: |-
+  Create or update an alert processing rule.
+description: |-
+  **Set-AzAlertProcessingRule** creates or updates an alert processing rule.
+parameters:
+  cmdletParameters:
+  - name: ActionGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action Group Ids which are to be notified, Comma separated list of values
+      Required only if alert processing rule type is AddActionGroups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AlertProcessingRuleType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert Processing rule Type. Allowed values: AddActionGroups, RemoveAllActionGroups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of Alert Processing Rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicate if the given alert processing rule is enabled or disabled (default is enabled).  Allowed values: False, True.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterAlertContext
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Contains:smartgroups
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterAlertRuleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Equals:/subscriptions/MySubscriptionId/resourceGroups/abvarma/providers/microsoft.insights/metricAlerts/test-mrmc-vm-abvarma
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterAlertRuleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Equals:ARM Name Test1,ARM Name Test2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>} operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Contains:Test Alert
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterMonitorCondition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>} operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      NotEquals:Resolved
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterMonitorService
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>} operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Equals:Platform,Log Analytics
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterSeverity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>} severity: one of <Sev0, Sev1, Sev2, Sev3, Sev4>.
+      For eg.
+      Equals:Sev0,Sev1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterSignalType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Equals:Metric
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterTargetResource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Equals:mySQLDataBaseName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterTargetResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      NotEquals:/subscriptions/\<subscriptionID\>/resourceGroups/test
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterTargetResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expected format - {\<operation\>:\<comma separated list of values\>}  operation: one of <Equals, NotEquals, Contains, DoesNotContain>
+      For eg.
+      Contains:Virtual Machines,Storage Account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.AlertsManagement.OutputModels.PSAlertProcessingRule" data-throw-if-not-resolved="False" />
+    description: |-
+      The alert processing rule resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert Processing Rule Name
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleEndDateTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      End Date Time. Format 2022-09-21 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurence2DaysOfMonth
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of recurrence pattern values Expected format For a monthly recurrence type.
+      comma separated list of values  For eg. 1,3,12
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurence2DaysOfWeek
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of recurrence pattern values Expected format For a weekly recurrence type.
+      comma separated list of values For eg. Monday,Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurence2EndTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurence2StartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurence2Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies when the processing rule should be applied.
+      Allowed values: Daily, Monthly, Weekly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurenceDaysOfMonth
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of recurrence pattern values Expected format For a monthly recurrence type.
+      comma separated list of values  For eg. 1,3,12
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurenceDaysOfWeek
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of recurrence pattern values Expected format For a weekly recurrence type.
+      comma separated list of values For eg. Monday,Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurenceEndTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurenceStartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reccurence Start Time in the timezone of ScheduleTimeZone parameter. Format 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleReccurenceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies when the processing rule should be applied.
+      Allowed values: Daily, Monthly, Weekly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleStartDateTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Start Date Time. Format 2022-09-21 06:00:00
+      Should be mentioned in case of Recurrent  Schedule - Daily, Weekly or Monthly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Schedule time zone.  Default: UTC.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of resource IDs, Comma separated list of values
+      The rule will apply to alerts that fired on resources within that scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert Processing rule tags.
+      For eg.
+      @{"tag1" = "key1";"tag2" = "key2"}
+      Use {} to clear existing tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySimplifiedFormatSuppressionActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: BySimplifiedFormatActionGroupActionRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzAlertProcessingRule
+        -ResourceGroupName <String>
+        -Name <String>
+        -Scope <System.Collections.Generic.List`1[System.String]>
+        -AlertProcessingRuleType <String>
+        [-Description <String>]
+        [-Enabled <String>]
+        [-Tag <Hashtable>]
+        [-FilterSeverity <String>]
+        [-FilterMonitorService <String>]
+        [-FilterMonitorCondition <String>]
+        [-FilterTargetResource <String>]
+        [-FilterTargetResourceType <String>]
+        [-FilterTargetResourceGroup <String>]
+        [-FilterAlertRuleId <String>]
+        [-FilterAlertRuleName <String>]
+        [-FilterDescription <String>]
+        [-FilterAlertContext <String>]
+        [-FilterSignalType <String>]
+        [-ScheduleStartDateTime <String>]
+        [-ScheduleEndDateTime <String>]
+        [-ScheduleTimeZone <String>]
+        [-ScheduleReccurenceType <String>]
+        [-ScheduleReccurence2Type <String>]
+        [-ScheduleReccurenceDaysOfWeek <String>]
+        [-ScheduleReccurence2DaysOfWeek <String>]
+        [-ScheduleReccurenceDaysOfMonth <String>]
+        [-ScheduleReccurence2DaysOfMonth <String>]
+        [-ScheduleReccurenceStartTime <String>]
+        [-ScheduleReccurence2StartTime <String>]
+        [-ScheduleReccurenceEndTime <String>]
+        [-ScheduleReccurence2EndTime <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySimplifiedFormatSuppressionActionRule
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzAlertProcessingRule
+        -InputObject <PSAlertProcessingRule>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzAlertProcessingRule
+        -ResourceGroupName <String>
+        -Name <String>
+        -Scope <System.Collections.Generic.List`1[System.String]>
+        -AlertProcessingRuleType <String>
+        -ActionGroupId <String>
+        [-Description <String>]
+        [-Enabled <String>]
+        [-Tag <Hashtable>]
+        [-FilterSeverity <String>]
+        [-FilterMonitorService <String>]
+        [-FilterMonitorCondition <String>]
+        [-FilterTargetResource <String>]
+        [-FilterTargetResourceType <String>]
+        [-FilterTargetResourceGroup <String>]
+        [-FilterAlertRuleId <String>]
+        [-FilterAlertRuleName <String>]
+        [-FilterDescription <String>]
+        [-FilterAlertContext <String>]
+        [-FilterSignalType <String>]
+        [-ScheduleStartDateTime <String>]
+        [-ScheduleEndDateTime <String>]
+        [-ScheduleTimeZone <String>]
+        [-ScheduleReccurenceType <String>]
+        [-ScheduleReccurence2Type <String>]
+        [-ScheduleReccurenceDaysOfWeek <String>]
+        [-ScheduleReccurence2DaysOfWeek <String>]
+        [-ScheduleReccurenceDaysOfMonth <String>]
+        [-ScheduleReccurence2DaysOfMonth <String>]
+        [-ScheduleReccurenceStartTime <String>]
+        [-ScheduleReccurence2StartTime <String>]
+        [-ScheduleReccurenceEndTime <String>]
+        [-ScheduleReccurence2EndTime <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySimplifiedFormatActionGroupActionRule
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.AlertsManagement.OutputModels.PSActionRule" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.AlertsManagement.OutputModels.PSActionRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzAlertProcessingRule -ResourceGroupName "test-rg" -Name "AddActionGroupToSubscription" -Scope "/subscriptions/MySubscriptionId" -Description "Add ActionGroup1 to all alerts in the subscription" -Enabled "True" -AlertProcessingRuleType "AddActionGroups" -ActionGroupId "/subscriptions/MySubscriptionId/resourcegroups/MyResourceGroup1/providers/microsoft.insights/actiongroups/ActionGroup1"
+    ```
+
+    This cmdlet creates an alert processing rule that adds an action group to all alerts in a resource group.
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-AzAlertProcessingRule -ResourceGroupName "test-rg" -Name "AddActionGroupsBySeverity" -Scope "/subscriptions/MySubscriptionId" -Description "Add AGId1 and AGId2 to all Sev0 and Sev1 alerts in these resourceGroups" -Enabled "True" -AlertProcessingRuleType "AddActionGroups" -ActionGroupId "/subscriptions/MySubscriptionId/resourcegroups/MyResourceGroup1/providers/microsoft.insights/actiongroups/ActionGroup1,/subscriptions/MySubscriptionId/resourceGroups/MyResourceGroup2/providers/microsoft.insights/actionGroups/MyActionGroup2" -FilterMonitorCondition "Equals:Sev0,Sev1"
+    ```
+
+    This cmdlet creates a rule that adds two action groups to all Sev0 and Sev1 alerts
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Set-AzAlertProcessingRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.alertsmanagement/set-azalertprocessingrule
+  Module Name: Az.AlertsManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Set-AzAlertProcessingRule.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,256 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.Test-AzSupportTicketNameAvailability
+name: Test-AzSupportTicketNameAvailability
+module: Az.Support
+isPreview: false
+summary: |-
+  Check the availability of a resource name.
+  This API should be used to check the uniqueness of the name for support ticket creation for the selected subscription.
+description: |-
+  Check the availability of a resource name.
+  This API should be used to check the uniqueness of the name for support ticket creation for the selected subscription.
+parameters:
+  cmdletParameters:
+  - name: CheckNameAvailabilityInput
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ICheckNameAvailabilityInput" data-throw-if-not-resolved="False" />
+    description: |-
+      Input of CheckNameAvailability API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Check
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Check operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CheckViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Check operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CheckViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name to validate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CheckExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CheckExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzSupportTicketNameAvailability
+        -Name <String>
+        -Type <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CheckExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzSupportTicketNameAvailability
+        -CheckNameAvailabilityInput <ICheckNameAvailabilityInput>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Check
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzSupportTicketNameAvailability
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CheckViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzSupportTicketNameAvailability
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CheckViaJsonString
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ICheckNameAvailabilityInput" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ICheckNameAvailabilityOutput" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Check support ticket friendly name availability'
+  description: |-
+    ```powershell
+    Test-AzSupportTicketNameAvailability -Name "testSupportTicketName" -Type "Microsoft.Support/supportTickets"
+    ```
+
+    ```output
+    Message NameAvailable Reason
+    ------- ------------- ------
+                     True
+    ```
+
+    Check the availability of a resource name.
+    This API should be used to check the uniqueness of the name for support ticket creation for the selected subscription.
+    If the provided type is neither Microsoft.Support/supportTickets nor Microsoft.Support/fileWorkspaces, then it will default to Microsoft.Support/supportTickets.
+- title: 'Example 2: Check file workspace friendly name availability'
+  description: |-
+    ```powershell
+    Test-AzSupportTicketNameAvailability -Name "testFileWorkspaceName" -Type "Microsoft.Support/fileWorkspaces"
+    ```
+
+    ```output
+    Message NameAvailable Reason
+    ------- ------------- ------
+                     True
+    ```
+
+    Check the availability of a resource name.
+    This API should be used to check the uniqueness of the name for file workspace creation for the selected subscription.
+    If the provided type is neither Microsoft.Support/supportTickets nor Microsoft.Support/fileWorkspaces, then it will default to Microsoft.Support/supportTickets.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Test-AzSupportTicketNameAvailability.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/test-azsupportticketnameavailability
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Test-AzSupportTicketNameAvailability.md
+  PlatyPS schema version: 2024-05-01

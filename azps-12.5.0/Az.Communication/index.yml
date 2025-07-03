@@ -1,0 +1,43 @@
+### YamlMime:PowerShellModule1
+uid: Az.Communication
+name: Az.Communication Module
+isPreview: false
+cmdletGroups:
+- title: Communication Services
+  cmdlets:
+  - Az.Communication.Get-AzCommunicationService
+  - Az.Communication.Get-AzCommunicationServiceKey
+  - Az.Communication.Get-AzEmailService
+  - Az.Communication.Get-AzEmailServicedataEmailSendResult
+  - Az.Communication.Get-AzEmailServiceDomain
+  - Az.Communication.Get-AzEmailServiceSenderUsername
+  - Az.Communication.Invoke-AzEmailServiceInitiateDomainVerification
+  - Az.Communication.New-AzCommunicationService
+  - Az.Communication.New-AzCommunicationServiceKey
+  - Az.Communication.New-AzEmailService
+  - Az.Communication.New-AzEmailServiceDomain
+  - Az.Communication.New-AzEmailServiceSenderUsername
+  - Az.Communication.Remove-AzCommunicationService
+  - Az.Communication.Remove-AzEmailService
+  - Az.Communication.Remove-AzEmailServiceDomain
+  - Az.Communication.Remove-AzEmailServiceSenderUsername
+  - Az.Communication.Send-AzEmailServicedataEmail
+  - Az.Communication.Set-AzCommunicationServiceNotificationHub
+  - Az.Communication.Stop-AzEmailServiceDomainVerification
+  - Az.Communication.Test-AzCommunicationServiceNameAvailability
+  - Az.Communication.Update-AzCommunicationService
+  - Az.Communication.Update-AzEmailService
+  - Az.Communication.Update-AzEmailServiceDomain
+  - Az.Communication.Update-AzEmailServiceSenderUsername
+description: |-
+  Microsoft Azure PowerShell: Communication cmdlets
+metadata:
+  Module Name: Az.Communication
+  Module Guid: 32c4dede-9b85-43d4-83ab-447e2938c400
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.communication
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Az.Communication.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Az.Communication.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Search-AzDataProtectionJobInAzGraph
+name: Search-AzDataProtectionJobInAzGraph
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Searches for Backup Jobs in Azure Resource Graph and retrieves the expected entries
+description: |-
+  Searches for Backup Jobs in Azure Resource Graph and retrieves the expected entries
+parameters:
+  cmdletParameters:
+  - name: DatasourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DatasourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource Type
+    acceptedValues:
+    - AzureDisk
+    - AzureBlob
+    - AzureDatabaseForPostgreSQL
+    - AzureKubernetesService
+    - AzureDatabaseForPGFlexServer
+    - AzureDatabaseForMySQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      End Time filter for the Backup Job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.JobOperation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Operation filter for the backup job
+    acceptedValues:
+    - OnDemandBackup
+    - ScheduledBackup
+    - Restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Resource Group of Vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Start Time filter for the backup Job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.JobStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Status filter for the backup job
+    acceptedValues:
+    - InProgress
+    - Completed
+    - Failed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription of Vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Name of the vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Search-AzDataProtectionJobInAzGraph
+        -Subscription <String[]>
+        -DatasourceType <DatasourceTypes>
+        [-ResourceGroup <String[]>]
+        [-Vault <String[]>]
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Operation <JobOperation[]>]
+        [-Status <JobStatus[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all jobs in a certain time range'
+  description: |-
+    ```powershell
+    $endtime = Get-Date
+    $starttime = $endtime.AddHours(-5)
+    Search-AzDataProtectionJobInAzGraph -Subscription "xxx-xxx-xxx" -ResourceGroup sarath-rg -Vault sarath-vault -DatasourceType AzureDisk -StartTime $starttime -EndTime $endtime
+    ```
+
+    ```output
+    Name                                 Type
+    ----                                 ----
+    1c1d56c2-b21a-4038-ba46-3c1a0089e66a microsoft.dataprotection/backupvaults/backupjobs
+    79f2804d-a39d-487e-91b5-f2eceffcbb7a microsoft.dataprotection/backupvaults/backupjobs
+    96238abd-6ff3-48e0-8c07-0eabd6928a17 microsoft.dataprotection/backupvaults/backupjobs
+    ```
+
+    This command gets all jobs in a vault in last 5 hours.
+- title: 'Example 2: Get all jobs of a certain operation type'
+  description: |-
+    ```powershell
+    Search-AzDataProtectionJobInAzGraph -Subscription "xxxx-xxx-xxx" -ResourceGroup sarath-rg -Vault sarath-vault -DatasourceType AzureDisk -Operation OnDemandBackup
+    ```
+
+    ```output
+    Name                                 Type
+    ----                                 ----
+    11bc277d-9448-446a-9e79-4721858524d6 microsoft.dataprotection/backupvaults/backupjobs
+    16d7b56a-e169-41d1-aa10-cafcc19c8e12 microsoft.dataprotection/backupvaults/backupjobs
+    1b0b17e3-398f-4265-9d03-ffc1e21fa73a microsoft.dataprotection/backupvaults/backupjobs
+    ```
+
+    This command gets all ondemand backup jobs in a vault.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Search-AzDataProtectionJobInAzGraph.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/search-azdataprotectionjobinazgraph
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Search-AzDataProtectionJobInAzGraph.md
+  PlatyPS schema version: 2024-05-01

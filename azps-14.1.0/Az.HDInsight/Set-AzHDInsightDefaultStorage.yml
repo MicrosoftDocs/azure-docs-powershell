@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Set-AzHDInsightDefaultStorage
+name: Set-AzHDInsightDefaultStorage
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Sets the default Storage account setting in a cluster configuration object.
+description: |-
+  The **Set-AzHDInsightDefaultStorage** cmdlet sets the default Storage account setting in the Azure HDInsight cluster configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Config
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDInsight cluster configuration object that this cmdlet modifies.
+      This object is created by the **New-AzHDInsightClusterConfig** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the account key for the default Azure Storage account that the HDInsight cluster will use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage account name for the storage account to be added to the new cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.HDInsight.Models.Management.StorageType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Gets or sets the type of the default storage account. Defaults to AzureStorage
+    acceptedValues:
+    - AzureStorage
+    - AzureDataLakeStore
+    - AzureDataLakeStorageGen2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzHDInsightDefaultStorage
+        [-Config] <AzureHDInsightConfig>
+        [-StorageAccountResourceId] <String>
+        [[-StorageAccountKey] <String>]
+        [-StorageAccountType <StorageType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the default storage account for the cluster configuration object'
+  description: |-
+    ```powershell
+    # Primary storage account info
+    $storageAccountResourceGroupName = "Group"
+    $storageAccountResourceId = "yourstorageaccountresourceid"
+    $storageAccountName = "yourstorageaccountname"
+    $storageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName $storageAccountResourceGroupName -Name $storageAccountName)[0].value
+
+
+    $storageType = "AzureStorage"
+
+    # Cluster configuration info
+    $location = "East US 2"
+    $clusterResourceGroupName = "Group"
+    $clusterName = "your-hadoop-002"
+    $clusterCreds = Get-Credential
+
+    # If the cluster's resource group doesn't exist yet, run:
+    #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+    # Create the cluster
+    New-AzHDInsightClusterConfig `
+                | Set-AzHDInsightDefaultStorage `
+                    -StorageAccountResourceId $storageAccountResourceId `
+                    -StorageAccountKey $key2 `
+                    -StorageAccountType $storageType `
+                | New-AzHDInsightCluster `
+                    -ClusterType Hadoop `
+                    -OSType Windows `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location
+    ```
+
+    This command sets the default Storage account for a cluster configuration object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Set-AzHDInsightDefaultStorage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/set-azhdinsightdefaultstorage
+  Module Name: Az.HDInsight
+  ms.assetid: 37E41DA2-B65B-4AA2-B6AB-F93CCA881C72
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Set-AzHDInsightDefaultStorage.md
+  PlatyPS schema version: 2024-05-01

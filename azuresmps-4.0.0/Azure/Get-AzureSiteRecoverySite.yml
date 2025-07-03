@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoverySite
+name: Get-AzureSiteRecoverySite
+module: Azure
+isPreview: false
+summary: |-
+  Gets the Hyper-V sites from a Site Recovery vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoverySite** cmdlet gets the Hyper-V sites in an Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="ASRVault" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a vault for which to get sites.
+      To obtain an **ASRVault** object, use the **Get-AzureSiteRecoveryVault** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoverySite
+        [-Vault <ASRVault>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get recovery sites'
+  description: |-
+    ```
+    PS C:\> Get-AzureSiteRecoverySite
+    Type                                    Name                                    ID
+    ----                                    ----                                    --
+    HyperVSite                              RecoverySite07                          f16829b4-5b01-4209-a6cf-8e0aff1fe328
+    ```
+
+    This command gets the recovery sites for the current vault.
+links:
+- text: Get-AzureSiteRecoveryVault
+  href: ./Get-AzureSiteRecoveryVault.yml
+- text: New-AzureSiteRecoverySite
+  href: ./New-AzureSiteRecoverySite.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6DD09F28-BFAE-4F9B-BF9C-F09767F9BFEF
+  PlatyPS schema version: 2024-05-01

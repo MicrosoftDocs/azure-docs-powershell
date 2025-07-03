@@ -1,0 +1,248 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SelfHelp.Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+name: Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+module: Az.SelfHelp
+isPreview: false
+summary: |-
+  Solution discovery using natural language processing.
+description: |-
+  Solution discovery using natural language processing.
+parameters:
+  cmdletParameters:
+  - name: AdditionalContext
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Additional information in the form of a string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiscoverSolutionRequest
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpRequest" data-throw-if-not-resolved="False" />
+    description: |-
+      Discover NLP request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Post
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IssueSummary
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describe the issue with the affected resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Post operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Post operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provide resourceId of affected resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Service Classification id for the resource.
+      You can find required serviceId from Services API: https://learn.microsoft.com/rest/api/support/services/list?tabs=HTTP Service Id is the GUID which can be found under name field in Services List response
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+        [-AdditionalContext <String>]
+        [-IssueSummary <String>]
+        [-ResourceId <String>]
+        [-ServiceId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+        -DiscoverSolutionRequest <IDiscoveryNlpRequest>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Post
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+        -JsonFilePath <String>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+        -JsonString <String>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaJsonString
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpRequest" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.IDiscoveryNlpResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Discover Solution using natural language at tenant scope'
+  description: |-
+    ```powershell
+    Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope -IssueSummary "Billing Issues"
+    ```
+
+    ```output
+    [No output]
+    ```
+
+    Search for relevant Azure Diagnostics, Solutions and Troubleshooters using a natural language issue summary.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope.md
+  document type: cmdlet
+  external help file: Az.SelfHelp-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.selfhelp/invoke-azselfhelpdiscoverysolutionnlptenantscope
+  Module Name: Az.SelfHelp
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope.md
+  PlatyPS schema version: 2024-05-01

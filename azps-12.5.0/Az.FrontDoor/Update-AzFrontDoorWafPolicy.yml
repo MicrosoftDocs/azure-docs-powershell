@@ -1,0 +1,419 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.Update-AzFrontDoorWafPolicy
+name: Update-AzFrontDoorWafPolicy
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Update WAF policy
+description: |-
+  The **Update-AzFrontDoorWafPolicy** cmdlet updates an existing WAF policy. If input parameters are not provided, old parameters from the existing WAF policy will be used.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomBlockResponseBody
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom Response Body
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomBlockResponseStatusCode
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Custom Response Status Code
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Customrule
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSCustomRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Custom rules inside the policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledState
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether the policy is in enabled state or disabled state.
+      Possible values include: 'Disabled', 'Enabled'
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      The FireWallPolicy object to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JavascriptChallengeExpirationInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      setting is only applicable to Premium_AzureFrontDoor. Value must be an integer between 5 and 1440 with the default value being 30.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogScrubbingSetting
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontDoorWafLogScrubbingSetting" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines rules that scrub sensitive fields in the Web Application Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedRule
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Managed rules inside the policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes if it is in detection mode  or prevention mode at policy level.
+      Possible values include:'Prevention', 'Detection'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the FireWallPolicy to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Redirect URL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestBodyCheck
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines if the body should be inspected by managed rules. Possible values include: 'Enabled', 'Disabled'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group to which the FireWallPolicy belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the FireWallPolicy to update
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzFrontDoorWafPolicy
+        -ResourceGroupName <String>
+        -Name <String>
+        [-EnabledState <PSEnabledState>]
+        [-Mode <String>]
+        [-Customrule <PSCustomRule[]>]
+        [-ManagedRule <PSManagedRule[]>]
+        [-RedirectUrl <String>]
+        [-CustomBlockResponseStatusCode <Int32>]
+        [-CustomBlockResponseBody <String>]
+        [-RequestBodyCheck <String>]
+        [-LogScrubbingSetting <PSFrontDoorWafLogScrubbingSetting>]
+        [-JavascriptChallengeExpirationInMinutes <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzFrontDoorWafPolicy
+        -InputObject <PSPolicy>
+        [-EnabledState <PSEnabledState>]
+        [-Mode <String>]
+        [-Customrule <PSCustomRule[]>]
+        [-ManagedRule <PSManagedRule[]>]
+        [-RedirectUrl <String>]
+        [-CustomBlockResponseStatusCode <Int32>]
+        [-CustomBlockResponseBody <String>]
+        [-RequestBodyCheck <String>]
+        [-LogScrubbingSetting <PSFrontDoorWafLogScrubbingSetting>]
+        [-JavascriptChallengeExpirationInMinutes <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzFrontDoorWafPolicy
+        -ResourceId <String>
+        [-EnabledState <PSEnabledState>]
+        [-Mode <String>]
+        [-Customrule <PSCustomRule[]>]
+        [-ManagedRule <PSManagedRule[]>]
+        [-RedirectUrl <String>]
+        [-CustomBlockResponseStatusCode <Int32>]
+        [-CustomBlockResponseBody <String>]
+        [-RequestBodyCheck <String>]
+        [-LogScrubbingSetting <PSFrontDoorWafLogScrubbingSetting>]
+        [-JavascriptChallengeExpirationInMinutes <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Update-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName -CustomBlockResponseStatusCode 403
+    ```
+
+    ```output
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Prevention            Enabled                           403 https://www.bing.com/
+    ```
+
+    Update an existing WAF policy custom status code.
+- title: Example 2
+  description: |-
+    ```powershell
+    Update-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Mode Detection
+    ```
+
+    ```output
+    Name         PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----         ---------- ------------------ ----------------------------- -----------
+    {policyName} Detection            Enabled                           403 https://www.bing.com/
+    ```
+
+    Update an existing WAF policy mode.
+- title: Example 3
+  description: |-
+    ```powershell
+    Update-AzFrontDoorWafPolicy -Name $policyName -ResourceGroupName $resourceGroupName -Mode Detection -EnabledState Disabled
+    ```
+
+    ```output
+    Name          PolicyMode PolicyEnabledState CustomBlockResponseStatusCode RedirectUrl
+    ----          ---------- ------------------ ----------------------------- -----------
+    {policyName}  Detection           Disabled                           403 https://www.bing.com/
+    ```
+
+    Update an existing WAF policy enabled state and mode.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzFrontDoorWafPolicy -ResourceGroupName $resourceGroupName | Update-AzFrontDoorWafPolicy -Mode Detection -EnabledState Disabled
+    ```
+
+    Update all WAF policies in $resourceGroupName
+links:
+- text: New-AzFrontDoorWafPolicy
+  href: ./New-AzFrontDoorWafPolicy.yml
+- text: Get-AzFrontDoorWafPolicy
+  href: ./Get-AzFrontDoorWafPolicy.yml
+- text: New-AzFrontDoorWafManagedRuleObject
+  href: ./New-AzFrontDoorWafManagedRuleObject.yml
+- text: New-AzFrontDoorWafCustomRuleObject
+  href: ./New-AzFrontDoorWafManagedRuleObject.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Update-AzFrontDoorWafPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/update-azfrontdoorwafpolicy
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Update-AzFrontDoorWafPolicy.md
+  PlatyPS schema version: 2024-05-01

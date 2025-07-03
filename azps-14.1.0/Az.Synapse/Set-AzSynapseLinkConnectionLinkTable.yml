@@ -1,0 +1,276 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Set-AzSynapseLinkConnectionLinkTable
+name: Set-AzSynapseLinkConnectionLinkTable
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Edits link tables under a link connection.
+description: |-
+  The **Set-AzSynapseLinkConnectionLinkTables** cmdlet edits link tables under a link connection.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EditTablesRequestFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a local file path for a file to edit link tables
+    aliases:
+    - File
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSLinkConnectionResource" data-throw-if-not-resolved="False" />
+    description: |-
+      The information about the link connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinkConnectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of link connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseLinkConnectionLinkTable
+        -WorkspaceName <String>
+        -EditTablesRequestFile <String>
+        -LinkConnectionName <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseLinkConnectionLinkTable
+        -WorkspaceObject <PSSynapseWorkspace>
+        -EditTablesRequestFile <String>
+        -LinkConnectionName <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseLinkConnectionLinkTable
+        -EditTablesRequestFile <String>
+        -InputObject <PSLinkConnectionResource>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSLinkConnectionResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    <#
+    edittables.json
+    {
+      "linkTables": [
+        {
+          "id": "00000000000000000000000000000000", // please change to your link table Id: a uuid
+          "source": {
+            "tableName": "sampleSourceTable", // please change to your source table name
+            "schemaName": "sampleSourceSchema" // please change to your source database schema name
+          },
+          "target": {
+            "tableName": "sampleTargetTable", // please change to your target table name
+            "schemaName": "sampleTargetSchema", // please change to your target database schema name
+            "distributionOptions": {
+              "type": "Round_RoBin", // please choose a type from Hash, Round_RoBin, Replicate
+              "distributionColumn": "sampleColumn" // please change to the column name
+            }
+          },
+          "operationType": "add" // please choose a value from add, update, remove
+        }
+      ]
+    }
+    #>
+    Set-AzSynapseLinkConnectionLinkTable -WorkspaceName ContosoWorkspace -LinkConnectionName ContosoLinkConnection -EditTablesRequestFile "C:\samples\edittables.json"
+    ```
+
+    This command edits link tables under link connection ContosoLinkConnection in workspace ContosoWorkspace.
+    The command bases the link tables on information in the edittables.json file.
+    This file includes information about edited link table.
+- title: Example 2
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Set-AzSynapseLinkConnectionLinkTable -LinkConnectionName ContosoLinkConnection -EditTablesRequestFile "C:\samples\edittables.json"
+    ```
+
+    This command edits link tables under link connection ContosoLinkConnection in workspace ContosoWorkspace through pipeline.
+    The command bases the link tables on information in the edittables.json file.
+    This file includes information about edited link table.
+- title: Example 3
+  description: |-
+    ```powershell
+    $lc = Get-AzSynapseLinkConnection -WorkspaceName ContosoWorkspace -Name ContosoLinkConnection
+    $lc | Set-AzSynapseLinkConnectionLinkTable -EditTablesRequestFile "C:\samples\edittables.json"
+    ```
+
+    This command edits link tables under a link connection through pipeline.
+    The command bases the link tables on information in the edittables.json file.
+    This file includes information about edited link table.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseLinkConnectionLinkTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/set-azsynapselinkconnectionlinktables
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseLinkConnectionLinkTable.md
+  PlatyPS schema version: 2024-05-01

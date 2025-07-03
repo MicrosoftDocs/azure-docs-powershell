@@ -1,0 +1,220 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.Get-AzWebPubSub
+name: Get-AzWebPubSub
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Get the resource and its properties.
+description: |-
+  Get the resource and its properties.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets subscription Id which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSub
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSub
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSub
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSub
+        -InputObject <IWebPubSubIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.IWebPubSubResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Web PubSub resources in a subscription'
+  description: |-
+    ```powershell
+    Get-AzWebPubSub -SubscriptionId ef72249e-9785-4799-a76b-7cdd80e1b1d0
+    ```
+
+    ```output
+    Name                Location      SkuName
+    ----                --------      -------
+    demo1               eastus        Standard_S1
+    demo2               eastus        Free_F1
+    ```
+- title: 'Example 2: List all Web PubSub resources in a resource group'
+  description: |-
+    ```powershell
+    Get-AzWebPubSub -ResourceGroupName psdemo
+    ```
+
+    ```output
+    Name       Location SkuName
+    ----       -------- -------
+    psdemo-wps eastus   Standard_S1
+    ```
+- title: 'Example 3: Get a specific Web PubSub resource'
+  description: |-
+    ```powershell
+    Get-AzWebPubSub -ResourceGroupName psdemo -Name psdemo-wps
+    ```
+
+    ```output
+    Name       Location SkuName
+    ----       -------- -------
+    psdemo-wps eastus   Standard_S1
+    ```
+- title: 'Example 4: Get a specific Web PubSub resource via identity object'
+  description: |-
+    ```powershell
+    $identity = @{ ResourceGroupName = 'psdemo'
+    ResourceName = 'psdemo-wps'
+    SubscriptionId = $(Get-AzContext).Subscription.Id }
+
+    $identity | Get-AzWebPubSub
+    ```
+
+    ```output
+    Name       Location SkuName
+    ----       -------- -------
+    psdemo-wps eastus   Standard_S1
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSub.md
+  document type: cmdlet
+  external help file: Az.SignalR-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/get-azwebpubsub
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSub.md
+  PlatyPS schema version: 2024-05-01

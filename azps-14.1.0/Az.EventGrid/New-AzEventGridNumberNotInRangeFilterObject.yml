@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridNumberNotInRangeFilterObject
+name: New-AzEventGridNumberNotInRangeFilterObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for NumberNotInRangeFilter.
+description: |-
+  Create an in-memory object for NumberNotInRangeFilter.
+parameters:
+  cmdletParameters:
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The field/property in the event based on which you want to filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" /><span>[</span><xref href="][" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The set of filter values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridNumberNotInRangeFilterObject
+        [-Value <Double[][]>]
+        [-Key <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.NumberNotInRangeFilter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for NumberNotInRangeFilter.'
+  description: |-
+    ```powershell
+    $valuesObj = @(11.11, 22.22, 33.33, 44.44)
+    New-AzEventGridNumberNotInRangeFilterObject -Key "testKey" -Value @(,$valuesObj)
+    ```
+
+    ```output
+    Key     OperatorType
+    ---     ------------
+    testKey NumberNotInRange
+    ```
+
+    Create an in-memory object for NumberNotInRangeFilter.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridNumberNotInRangeFilterObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridnumbernotinrangefilterobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridNumberNotInRangeFilterObject.md
+  PlatyPS schema version: 2024-05-01

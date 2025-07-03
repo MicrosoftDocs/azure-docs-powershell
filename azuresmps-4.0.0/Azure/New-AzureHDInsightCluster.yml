@@ -1,0 +1,558 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureHDInsightCluster
+name: New-AzureHDInsightCluster
+module: Azure
+isPreview: false
+summary: |-
+  Creates an HDInsight cluster.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This version of Azure PowerShell HDInsight is deprecated.
+  These cmdlets will be removed by January 1, 2017.
+  Please use the newer version of Azure PowerShell HDInsight.
+
+  For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell) (/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell).
+  For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically) (/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically).
+  For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
+
+  The **New-AzureHDInsightCluster** cmdlet creates an Azure HDInsight cluster by using the specified parameters or by using a configuration object that is created by using the **New-AzureHDInsightClusterConfig** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the management certificate for an Azure subscription.
+    aliases:
+    - Cert
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterSizeInNodes
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of data nodes to create for a cluster.
+    aliases:
+    - Nodes
+    - Size
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterType
+    type: <xref href="ClusterType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of cluster to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Config
+    type: <xref href="AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a configuration object that is created by using the **New-AzureHDInsightClusterConfig** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Config (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user credentials for HDInsight to use for the default account that is used to remotely access a Hadoop cluster.
+      These credentials are distinct from the subscription credentials of the user.
+    aliases:
+    - Cred
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataNodeVMSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the virtual machine for the data node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultStorageAccountKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the account key for the default storage account that the HDInsight cluster uses.
+    aliases:
+    - StorageKey
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultStorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the default storage account that the HDInsight cluster uses.
+    aliases:
+    - StorageAccount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultStorageContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the default container in the default Azure storage account that an HDInsight cluster uses.
+    aliases:
+    - StorageContainer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndPoint
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint to use to connect to Azure.
+      If you do not specify this parameter, this cmdlet uses the default endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HeadNodeVMSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the virtual machine for the head node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostedService
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the namespace of an HDInsight service.
+      If you do not specify this parameter, this cmdlet uses the default namespace.
+    aliases:
+    - CloudServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreSslErrors
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Secure Sockets Layer (SSL) errors are ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the region in which to create an HDInsight cluster.
+    aliases:
+    - Loc
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure HDInsight cluster to create.
+    aliases:
+    - ClusterName
+    - DnsName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Config (with Specific Subscription Credential)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSType
+    type: <xref href="OSType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operating system for a cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RdpAccessExpiry
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the expiration, as a **DateTime** object, for Remote Desktop Protocol (RDP) access to a cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RdpCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials for RDP access to a cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Secure Shell (SSH) user name and password for the HDInsight cluster.
+      This parameter is valid only for Linux clusters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPublicKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SSH public key for an HDInsight cluster.
+      This parameter is valid only for Linux clusters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure subscription in which to create an HDInsight cluster.
+    aliases:
+    - Sub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the HDInsight cluster version to create.
+    aliases:
+    - Ver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the virtual network into which to provision the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZookeeperNodeVMSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the virtual machine for the ZooKeeper node.
+      This parameter is valid only for HBase or Storm clusters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Cluster By Name (with Specific Subscription Credential)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureHDInsightCluster
+        -Config <AzureHDInsightConfig>
+        -Credential <PSCredential>
+        -Location <String>
+        -Name <String>
+        [-Certificate <X509Certificate2>]
+        [-HostedService <String>]
+        [-EndPoint <Uri>]
+        [-IgnoreSslErrors <Boolean>]
+        [-Subscription <String>]
+        [-Version <String>]
+        [-OSType <OSType>]
+        [-SshCredential <PSCredential>]
+        [-SshPublicKey <String>]
+        [-RdpCredential <PSCredential>]
+        [-RdpAccessExpiry <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster By Config (with Specific Subscription Credential)
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureHDInsightCluster
+        -ClusterSizeInNodes <Int32>
+        -Credential <PSCredential>
+        -DefaultStorageAccountKey <String>
+        -DefaultStorageAccountName <String>
+        -DefaultStorageContainerName <String>
+        -Location <String>
+        -Name <String>
+        [-Certificate <X509Certificate2>]
+        [-HostedService <String>]
+        [-EndPoint <Uri>]
+        [-IgnoreSslErrors <Boolean>]
+        [-Subscription <String>]
+        [-Version <String>]
+        [-HeadNodeVMSize <String>]
+        [-ClusterType <ClusterType>]
+        [-VirtualNetworkId <String>]
+        [-SubnetName <String>]
+        [-DataNodeVMSize <String>]
+        [-ZookeeperNodeVMSize <String>]
+        [-OSType <OSType>]
+        [-SshCredential <PSCredential>]
+        [-SshPublicKey <String>]
+        [-RdpCredential <PSCredential>]
+        [-RdpAccessExpiry <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Cluster By Name (with Specific Subscription Credential)
+  isDefault: false
+examples:
+- title: 'Example 1: Create an HDInsight cluster'
+  description: |-
+    ```
+    PS C:\>$SubId = (Get-AzureSubscription -Current).SubscriptionId
+    PS C:\> $Key1 = Get-AzureStorageKey -StorageAccountName "MyBlobStorage" | %{ $_.Primary }
+    PS C:\> $Key2 = Get-AzureStorageKey -StorageAccountName "MySecondBlobStorage" | %{ $_.Primary }
+    PS C:\> $Creds = Get-Credential
+    PS C:\> $OozieCreds = Get-Credential
+    PS C:\> $HiveCreds = Get-Credential
+    PS C:\> New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4
+        | Set-AzureHDInsightDefaultStorage -StorageAccountName "MyBlobStorage.blob.core.windows.net" -StorageAccountKey $Key1 -StorageContainerName "MyContainer"
+        | Add-AzureHDInsightStorage -StorageAccountName "MySecondBlobStorage.blob.core.windows.net" -StorageAccountKey $Key2
+        | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyOozieDatabaseName" -Credential $OozieCreds -MetastoreType OozieMetastore
+        | Add-AzureHDInsightMetastore -SqlAzureServerName "MySqlServer.database.windows.net" -DatabaseName "MyHiveDatabaseName" -Credential $HiveCreds -MetastoreType HiveMetastore
+        | New-AzureHDInsightCluster -Subscription $SubId -Credential $Creds
+    ```
+
+    This example creates an HDInsight cluster for the current subscription.
+
+    The first command uses the **Get-AzureSubscription** cmdlet to get the current subscription ID, and then stores it in the $SubId variable.
+
+    The second and third commands use the **Get-AzureStorageKey** cmdlet to get the primary storage keys for MyBlobStorage and MySecondBlobStorage, and then store the keys in the $Key1 and $Key2 variables, respectively.
+
+    The fourth, fifth, and sixth commands use the **Get-Credential** cmdlet to get credentials for the current subscription and for Oozie and Hive, and then store the credentials in variables.
+
+    The final command performs a sequence of operations by using these cmdlets:
+
+    - **New-AzureHDInsightClusterConfig** to create an HDInsight cluster configuration.
+    - **Set-AzureHDInsightDefaultStorage** to set the default storage account for the configuration to MyBlobStorage.blob.core.windows.net.
+    - **Add-AzureHDInsightStorage** to add a second storage account named MySecondBlobStorage.blob.core.windows.net to the configuration.
+    - **Add-AzureHDInsightMetastore** to add a metastore for Oozie and a metastore for Hive to the configuration.
+    - **New-AzureHDInsightCluster** to create an HDInsight cluster with the new configuration.
+links:
+- text: Add-AzureHDInsightMetastore
+  href: ./Add-AzureHDInsightMetastore.yml
+- text: Add-AzureHDInsightStorage
+  href: ./Add-AzureHDInsightStorage.yml
+- text: Get-AzureHDInsightCluster
+  href: ./Get-AzureHDInsightCluster.yml
+- text: New-AzureHDInsightClusterConfig
+  href: ./New-AzureHDInsightClusterConfig.yml
+- text: Remove-AzureHDInsightCluster
+  href: ./Remove-AzureHDInsightCluster.yml
+- text: Set-AzureHDInsightDefaultStorage
+  href: ./Set-AzureHDInsightDefaultStorage.yml
+- text: Use-AzureHDInsightCluster
+  href: ./Use-AzureHDInsightCluster.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 3EDD612F-AC5D-4D4D-BB14-2FB8DE5EDCCE
+  PlatyPS schema version: 2024-05-01

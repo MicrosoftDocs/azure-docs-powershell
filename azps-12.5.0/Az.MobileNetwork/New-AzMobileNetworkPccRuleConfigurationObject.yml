@@ -1,0 +1,259 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MobileNetwork.New-AzMobileNetworkPccRuleConfigurationObject
+name: New-AzMobileNetworkPccRuleConfigurationObject
+module: Az.MobileNetwork
+isPreview: false
+summary: |-
+  Create an in-memory object for PccRuleConfiguration.
+description: |-
+  Create an in-memory object for PccRuleConfiguration.
+parameters:
+  cmdletParameters:
+  - name: GuaranteedBitRateDownlink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Downlink bit rate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GuaranteedBitRateUplink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Uplink bit rate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the rule.
+      This must be unique within the parent service.
+      You must not use any of the following reserved strings - 'default', 'requested' or 'service'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RulePrecedence
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      A precedence value that is used to decide between data flow policy rules when identifying the QoS values to use for a particular SIM.
+      A lower value means a higher priority.
+      This value should be unique among all data flow policy rules configured in the mobile network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyAllocationAndRetentionPriorityLevel
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      QoS Flow allocation and retention priority (ARP) level.
+      Flows with higher priority preempt flows with lower priority, if the settings of preemptionCapability and preemptionVulnerability allow it.
+      1 is the highest level of priority.
+      If this field is not specified then 5qi is used to derive the ARP value.
+      See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyFiveQi
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      QoS Flow 5G QoS Indicator value.
+      The 5QI identifies a specific QoS forwarding treatment to be provided to a flow.
+      This must not be a standardized 5QI value corresponding to a GBR (guaranteed bit rate) QoS Flow.
+      The illegal GBR 5QI values are: 1, 2, 3, 4, 65, 66, 67, 71, 72, 73, 74, 75, 76, 82, 83, 84, and 85.
+      See 3GPP TS23.501 section 5.7.2.1 for a full description of the 5QI parameter, and table 5.7.4-1 for the definition of which are the GBR 5QI values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyMaximumBitRateDownlink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Downlink bit rate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyMaximumBitRateUplink
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Uplink bit rate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyPreemptionCapability
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Support.PreemptionCapability" data-throw-if-not-resolved="False" />
+    description: |-
+      QoS Flow preemption capability.
+      The preemption capability of a QoS Flow controls whether it can preempt another QoS Flow with a lower priority level.
+      See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleQoPolicyPreemptionVulnerability
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Support.PreemptionVulnerability" data-throw-if-not-resolved="False" />
+    description: |-
+      QoS Flow preemption vulnerability.
+      The preemption vulnerability of a QoS Flow controls whether it can be preempted by a QoS Flow with a higher priority level.
+      See 3GPP TS23.501 section 5.7.2.2 for a full description of the ARP parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceDataFlowTemplate
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Models.Api20221101.IServiceDataFlowTemplate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The set of data flow templates to use for this data flow policy rule.
+      To construct, see NOTES section for SERVICEDATAFLOWTEMPLATE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficControl
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Support.TrafficControlPermission" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines whether flows that match this data flow policy rule are permitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMobileNetworkPccRuleConfigurationObject
+        -RuleName <String>
+        -RulePrecedence <Int32>
+        -ServiceDataFlowTemplate <IServiceDataFlowTemplate[]>
+        [-GuaranteedBitRateDownlink <String>]
+        [-GuaranteedBitRateUplink <String>]
+        [-RuleQoPolicyAllocationAndRetentionPriorityLevel <Int32>]
+        [-RuleQoPolicyFiveQi <Int32>]
+        [-RuleQoPolicyMaximumBitRateDownlink <String>]
+        [-RuleQoPolicyMaximumBitRateUplink <String>]
+        [-RuleQoPolicyPreemptionCapability <PreemptionCapability>]
+        [-RuleQoPolicyPreemptionVulnerability <PreemptionVulnerability>]
+        [-TrafficControl <TrafficControlPermission>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Models.Api20221101.PccRuleConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for PccRuleConfiguration.'
+  description: |-
+    ```powershell
+    $ServiceDataFlowTemplate = New-AzMobileNetworkServiceDataFlowTemplateObject -Direction "Bidirectional" -Protocol "255" -RemoteIPList "any" -TemplateName azps-mn-flow-template
+
+    New-AzMobileNetworkPccRuleConfigurationObject -RuleName azps-mn-service-rule -RulePrecedence 0 -ServiceDataFlowTemplate $ServiceDataFlowTemplate -TrafficControl 'Enabled' -RuleQoPolicyPreemptionVulnerability 'Preemptable' -RuleQoPolicyPreemptionCapability 'NotPreempt' -RuleQoPolicyAllocationAndRetentionPriorityLevel 9 -RuleQoPolicyMaximumBitRateDownlink "1 Gbps" -RuleQoPolicyMaximumBitRateUplink "500 Mbps"
+    ```
+
+    ```output
+    RuleName             RulePrecedence TrafficControl
+    --------             -------------- --------------
+    azps-mn-service-rule 0              Enabled
+    ```
+
+    Create an in-memory object for PccRuleConfiguration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/New-AzMobileNetworkPccRuleConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.MobileNetwork-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.MobileNetwork/new-AzMobileNetworkPccRuleConfigurationObject
+  Module Name: Az.MobileNetwork
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/New-AzMobileNetworkPccRuleConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

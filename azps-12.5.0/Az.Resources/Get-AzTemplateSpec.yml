@@ -1,0 +1,209 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzTemplateSpec
+name: Get-AzTemplateSpec
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets or lists Template Specs
+description: |-
+  This cmdlet can be used to list Template Specs in a subscription/resource group or get a specific Template Spec
+  by name or id. When getting a specific Template Spec by name/id a specific version can optionally be retrieved
+  by specifying a version name through the **-Version** parameter. When **-Version** is used, only the specific version
+  details will be present within **.Versions* on the returned Template Spec object. If no specific version
+  is specified when retrieving a Template Spec by name/id, all versions will be present within the  **.Versions*
+  property of the returned object.
+
+  **Note**: When listing all Template Specs within a subscription or resource group, each returned Template Spec's
+   *".Versions"* property will be *null*. Version information is only included when -Name or -ResourceId parameters
+  are provided (eg: you are requesting a specific template spec/version).
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetTemplateSpecByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListTemplateSpecsParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified resource Id of the template spec.
+      Example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/templateSpecs/{templateSpecName}
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetTemplateSpecByIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetTemplateSpecByNameParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetTemplateSpecByIdParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTemplateSpec
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListTemplateSpecsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTemplateSpec
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [[-Version] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetTemplateSpecByNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTemplateSpec
+        [[-Version] <String>]
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetTemplateSpecByIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSTemplateSpec" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Template Specs in current subscription'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec
+    ```
+
+    Lists all Template Specs in the current subscription.
+- title: 'Example 2: List Template Specs in a resource group'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec -ResourceGroupName 'myRG'
+    ```
+
+    Lists all Template Specs in the resource group 'myRG' of the current subscription.
+- title: 'Example 3: Get Template Spec (with all versions) by name'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'MyTemplateSpec'
+    ```
+
+    Gets information about the Template Spec named 'MyTemplateSpec' within the resource group 'myRG'.
+
+    **Note**: All of the Template Spec's versions will be present within the "*.Versions*" property
+    of the return object.
+- title: 'Example 4: Get Template Spec (specific version) by name'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'MyTemplateSpec' -Version 'v1.0'
+    ```
+
+    Gets information about version 'v1.0' of the Template Spec named 'MyTemplateSpec' within the resource group 'myRG'.
+
+    **Note**: The *".Versions"* property of the returned object will contain only the specific version requested.
+- title: 'Example 5: Get Template Spec (with all versions) by resource id'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec -ResourceId '/subscriptions/{subId}/resourceGroups/myRG/providers/Microsoft.Resources/templateSpecs/MyTemplateSpec'
+    ```
+
+    Gets information about the Template Spec named 'MyTemplateSpec' within the resource group 'myRG' of subscription \{subId\}.
+
+    **Note**: All of the Template Spec's versions will be present within the "*.Versions*" property
+    of the return object.
+- title: 'Example 6: Get Template Spec (specific version) by resource id'
+  description: |-
+    ```powershell
+    Get-AzTemplateSpec -ResourceId '/subscriptions/{subId}/resourceGroups/myRG/providers/Microsoft.Resources/templateSpecs/MyTemplateSpec' -Version 'v1.0'
+    ```
+
+    Gets information about version 'v1.0' of the Template Spec named 'MyTemplateSpec' within the resource group 'myRG' of subscription \{subId\}.
+
+    **Note**: The *".Versions"* property of the returned object will contain only the specific version requested.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTemplateSpec.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-aztemplatespec
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzTemplateSpec.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Test-AzDataLakeAnalyticsCatalogItem
+name: Test-AzDataLakeAnalyticsCatalogItem
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Checks for the existence of a catalog item.
+description: |-
+  The **Test-AzDataLakeAnalyticsCatalogItem** cmdlet checks for the existence of an Azure Data Lake Analytics catalog item.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Analytics account name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ItemType
+    type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the catalog item type of the item to check.
+      The acceptable values for this parameter are:
+      - Database
+      - Schema
+      - Assembly
+      - Table
+      - TablePartition
+      - TableValuedFunction
+      - TableStatistics
+      - ExternalDataSource
+      - View
+      - Procedure
+      - Secret
+      - Credential
+      - Types
+    acceptedValues:
+    - Database
+    - Schema
+    - Assembly
+    - Table
+    - TablePartition
+    - TableValuedFunction
+    - TableStatistics
+    - ExternalDataSource
+    - View
+    - Procedure
+    - Secret
+    - Credential
+    - Types
+    - Package
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the item to fetch, or the path to the parent item of the items to list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzDataLakeAnalyticsCatalogItem
+        [-Account] <String>
+        [-ItemType] <CatalogItemType>
+        [-Path] <CatalogPathInstance>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+CatalogItemType" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.CatalogPathInstance" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test whether a catalog item exists'
+  description: |-
+    ```powershell
+    Test-AzDataLakeAnalyticsCatalogItem -Account "ContosoAdlAccount" -ItemType Schema -Path "databaseName.schemaName"
+    ```
+
+    This command tests whether a specified Schema item exists.
+links:
+- text: Get-AzDataLakeAnalyticsCatalogItem
+  href: ./Get-AzDataLakeAnalyticsCatalogItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Test-AzDataLakeAnalyticsCatalogItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/test-azdatalakeanalyticscatalogitem
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: ED17430D-4DAF-4B9E-937D-0F8A843DAB96
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Test-AzDataLakeAnalyticsCatalogItem.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.Restart-AzWebAppSlot
+name: Restart-AzWebAppSlot
+module: Az.Websites
+isPreview: false
+description: |-
+  The **Restart-AzWebAppSlot** cmdlet stops and then starts an Azure Web App Slot.
+  If the Web App Slot is in a stopped state, use the Start-AzWebAppSlot cmdlet.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S1
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S1
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Slot Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S1
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebApp
+    type: <xref href="Site" data-throw-if-not-resolved="False" />
+    description: |-
+      WebApp Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: S2
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+inputs:
+- name: <xref href="Site" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'WebApp' accepts value of type 'Site' from the pipeline
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Restart-AzWebAppSlot -ResourceGroupName "Default-Web-WestUS" -Name "ContosoWebApp" -Slot "Slot001"
+    ```
+
+    This command restarts the slot Slot001 for the web app ContosoWebApp associated with the resource group Default-Web-WestUS
+links:
+- text: Get-AzWebAppSlot
+  href: ./Get-AzWebAppSlot.yml
+- text: New-AzWebAppSlot
+  href: ./New-AzWebAppSlot.yml
+- text: Remove-AzWebAppSlot
+  href: ./Remove-AzWebAppSlot.yml
+- text: Set-AzWebAppSlot
+  href: ./Set-AzWebAppSlot.yml
+- text: Start-AzWebAppSlot
+  href: ./Start-AzWebAppSlot.yml
+- text: Stop-AzWebAppSlot
+  href: ./Stop-AzWebAppSlot.yml
+- text: Get-AzWebApp
+  href: ./Get-AzWebApp.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Restart-AzWebAppSlot.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.websites/restart-Azwebappslot
+  Module Name: Az.WebSites
+  ms.assetid: 645E74D2-640D-494F-9798-4375FE6A0AF2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Restart-AzWebAppSlot.md
+  PlatyPS schema version: 2024-05-01

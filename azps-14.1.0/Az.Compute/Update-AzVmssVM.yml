@@ -1,0 +1,327 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Update-AzVmssVM
+name: Update-AzVmssVM
+module: Az.Compute
+isPreview: false
+summary: |-
+  Updates the state of a Vmss VM.
+description: |-
+  Updates the state of a Vmss VM.  For now, the only allowed update is adding a managed data disk.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataDisk
+    type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineDataDisk" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of a VMSS VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectFromScaleIn
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the virtual machine scale set VM shouldn't be considered for deletion during a scale-in operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectFromScaleSetAction
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that model updates or actions (including scale-in) initiated on the VMSS should not be applied to the VMSS VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Resource Group of the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id for the virtual machine scale set VM
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UserData for the Vmss Vm, which will be base-64 encoded. Customer should not pass any secrets in here.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSetVM
+    type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Local virtual machine scale set VM object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScaleSetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the virtual machine scale set
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzVmssVM
+        [-ResourceGroupName] <String>
+        [-VMScaleSetName] <String>
+        [-InstanceId] <String>
+        [-DataDisk <PSVirtualMachineDataDisk[]>]
+        [-ProtectFromScaleIn <Boolean>]
+        [-ProtectFromScaleSetAction <Boolean>]
+        [-AsJob]
+        [-UserData <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzVmssVM
+        [-ResourceId] <String>
+        [-DataDisk <PSVirtualMachineDataDisk[]>]
+        [-ProtectFromScaleIn <Boolean>]
+        [-ProtectFromScaleSetAction <Boolean>]
+        [-AsJob]
+        [-UserData <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVmssVM
+        [-VirtualMachineScaleSetVM] <PSVirtualMachineScaleSetVM>
+        [-DataDisk <PSVirtualMachineDataDisk[]>]
+        [-ProtectFromScaleIn <Boolean>]
+        [-ProtectFromScaleSetAction <Boolean>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectParameter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineDataDisk" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSetVM" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a managed data disk to a Vmss VM using New-AzVMDataDisk'
+  description: |-
+    ```powershell
+    $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname0
+    $datadisk = New-AzVMDataDisk -Caching 'ReadOnly' -Lun 2 -CreateOption Attach -StorageAccountType Standard_LRS -ManagedDiskId $disk.Id
+    $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+    Update-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0 -DataDisk $datadisk
+    ```
+
+    The first command gets an existing managed disk.
+    The next command creates a data disk object with the managed disk.
+    The next command gets an existing Vmss VM given by the resource group name, the vmss name and the instance ID.
+    The final command updates the Vmss VM by adding a new data disk.
+- title: 'Example 2: Add a managed data disk to a Vmss VM using Add-AzVMDataDisk'
+  description: |-
+    ```powershell
+    $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname0
+    $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+    $VmssVM = Add-AzVMDataDisk -VM $VmssVM -Lun 0 -DiskSizeInGB 10 -CreateOption Attach -StorageAccountType Standard_LRS -ManagedDiskId $disk.Id
+    Update-AzVmssVM -VirtualMachineScaleSetVM $VmssVM
+    ```
+
+    The first command gets an existing managed disk.
+    The next command gets an existing Vmss VM given by the resource group name, the vmss name and the instance ID.
+    The next command adds the managed disk to the Vmss VM stored locally in $VmssVM.
+    The final command updates the Vmss VM with added data disk.
+- title: Example 3
+  description: |-
+    Updates the state of a Vmss VM. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Update-AzVmssVM -InstanceId 0 -ProtectFromScaleIn $false -ProtectFromScaleSetAction $false -ResourceGroupName 'myrg' -VMScaleSetName 'myvmss'
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmssVM.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/update-azvmssvm
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmssVM.md
+  PlatyPS schema version: 2024-05-01

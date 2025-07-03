@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzScheduledQueryRuleAlertingAction
+name: New-AzScheduledQueryRuleAlertingAction
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an object of type Alerting Action
+description: |-
+  Creates an object of type Alerting Action
+  This object is to be passed to the command that creates Log Alert Rule
+parameters:
+  cmdletParameters:
+  - name: AznsAction
+    type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAznsAction" data-throw-if-not-resolved="False" />
+    description: |-
+      The AzNS action details
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Severity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The severity for this alert
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThrottlingInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The duration in minutes for which alert should be throttled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Trigger
+    type: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleTriggerCondition" data-throw-if-not-resolved="False" />
+    description: |-
+      The alert trigger condition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzScheduledQueryRuleAlertingAction
+        [-AznsAction <PSScheduledQueryRuleAznsAction>]
+        -Severity <String>
+        [-ThrottlingInMinutes <Int32>]
+        -Trigger <PSScheduledQueryRuleTriggerCondition>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSScheduledQueryRuleAlertingAction" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    PS C:\> $alertingAction = New-AzScheduledQueryRuleAlertingAction -AznsAction $aznsActionGroup -Severity "1" -Trigger $triggerCondition
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzScheduledQueryRuleAlertingAction.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azscheduledqueryrulealertingaction
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzScheduledQueryRuleAlertingAction.md
+  PlatyPS schema version: 2024-05-01

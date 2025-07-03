@@ -1,0 +1,449 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSchedulerStorageQueueJob
+name: New-AzureSchedulerStorageQueueJob
+module: Azure
+isPreview: false
+summary: |-
+  Creates a scheduler job that has a Storage action.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-AzureSchedulerStorageQueueJob** cmdlet creates a scheduler job that has an Azure Storage action.
+parameters:
+  cmdletParameters:
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a time, as a **DateTime** object, for the scheduler to stop initiating the job.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionHeaders
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies headers as a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the method for HTTP and HTTPS action types.
+      Valid values are:
+
+      - GET
+      - PUT
+      - POST
+      - HEAD
+      - DELETE
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionQueueMessageBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the body for Storage job actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionRequestBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the body for PUT and POST job actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionSASToken
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Shared Access Signature (SAS) token for the Storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionStorageAccount
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionStorageQueue
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionURI
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI for the error job action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExecutionCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number occurrences of a job that run.
+      By default, a job recurs indefinitely.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Frequency
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum frequency for this scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Interval
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interval of recurrence at the frequency specified by using the *Frequency* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the collection to contain the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobState
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state for the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SASToken
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SAS token for the Storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a time, as a **DateTime** object, for the job to start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageQueueAccount
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Storage account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageQueueMessage
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the queue message for Storage job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageQueueName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerStorageQueueJob
+        -Location <String>
+        -JobCollectionName <String>
+        -JobName <String>
+        -StorageQueueAccount <String>
+        -StorageQueueName <String>
+        -SASToken <String>
+        [-StorageQueueMessage <String>]
+        [-StartTime <DateTime>]
+        [-Interval <Int32>]
+        [-Frequency <String>]
+        [-EndTime <DateTime>]
+        [-ExecutionCount <Int32>]
+        [-JobState <String>]
+        [-ErrorActionMethod <String>]
+        [-ErrorActionURI <Uri>]
+        [-ErrorActionRequestBody <String>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-ErrorActionStorageAccount <String>]
+        [-ErrorActionStorageQueue <String>]
+        [-ErrorActionSASToken <String>]
+        [-ErrorActionQueueMessageBody <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Required
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerStorageQueueJob
+        [-StorageQueueMessage <String>]
+        [-Interval <Int32>]
+        [-Frequency <String>]
+        [-EndTime <DateTime>]
+        [-ExecutionCount <Int32>]
+        [-JobState <String>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Recurring
+  isDefault: false
+examples:
+- title: 'Example 1: Create a Storage job that runs once'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerStorageQueueJob -JobCollectionName "JobCollection01" -JobName "Job01" -Location "North Central US" -StorageQueueAccount "ContosoStorageAccount" -StorageQueueName "ContosoStorageQueue" -SASToken "?sv=2012-02-12&si=samplePolicy%2F30%2F2014%206%3A37%3A36%20PM&sig=vLQEbSfZbTFh7q3YrzlxBeL%2BjiYKp0gE6lMJ0a5Nb4M%3D"
+    ```
+
+    This command creates a scheduler Storage job as part of the collection named JobCollection01.
+    The command specifies the Storage account, queue name, and SAS token.
+    The job runs once, immediately.
+- title: 'Example 2: Create a Storage job that runs a specified number of times'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerStorageQueueJob -JobCollectionName "JobCollection01" -JobName "Job12" -Location "North Central US"-StorageQueueAccount "ContosoStorageAccount" -StorageQueueName "ContosoStorageQueue" -SASToken "?sv=2012-02-12&si=samplePolicy%2F30%2F2014%206%3A37%3A36%20PM&sig=vLQEbSfZbTFh7q3YrzlxBeL%2BjiYKp0gE6lMJ0a5Nb4M%3D" -ExecutionCount 20 -Frequency "Hour" -Interval 2
+    ```
+
+    This command creates a scheduler Storage job as part of the collection named JobCollection01.
+    The command specifies the Storage account, queue name, and SAS token.
+    The job runs 20 times in total, twice every hour.
+links:
+- text: Set-AzureSchedulerStorageQueueJob
+  href: ./Set-AzureSchedulerStorageQueueJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 7247CF85-78B0-4837-9162-F66077668A74
+  PlatyPS schema version: 2024-05-01

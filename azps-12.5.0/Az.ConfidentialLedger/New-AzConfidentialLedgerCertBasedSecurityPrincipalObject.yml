@@ -1,0 +1,82 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConfidentialLedger.New-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+name: New-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+module: Az.ConfidentialLedger
+isPreview: false
+summary: |-
+  Create an in-memory object for CertBasedSecurityPrincipal.
+description: |-
+  Create an in-memory object for CertBasedSecurityPrincipal.
+parameters:
+  cmdletParameters:
+  - name: Cert
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Public key of the user cert (.pem or .cer).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LedgerRoleName
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Support.LedgerRoleName" data-throw-if-not-resolved="False" />
+    description: |-
+      LedgerRole associated with the Security Principal of Ledger.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+        [-Cert <String>]
+        [-LedgerRoleName <LedgerRoleName>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.CertBasedSecurityPrincipal" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Object creation'
+  description: |-
+    ```powershell
+    New-AzConfidentialLedgerCertBasedSecurityPrincipalObject `
+      -Cert "-----BEGIN CERTIFICATE-----********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************-----END CERTIFICATE-----" `
+      -LedgerRoleName "Reader"
+    ```
+
+    ```output
+    Cert
+    ----
+    -----BEGIN CERTIFICATE-----MIIBsjCCATigAwIBAgIUZWIbyG79TniQLd2UxJuU74tqrKcwCgYIKoZIzj0EAwMwEDEOMAwGA1UEAwwFdXNlcjAwHhc…
+    ```
+
+    Creates an AadBasedSecurityPrincipalObject that may be used for `Az.ConfidentialLedger` commands.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerCertBasedSecurityPrincipalObject.md
+  document type: cmdlet
+  external help file: Az.ConfidentialLedger-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ConfidentialLedger/new-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+  Module Name: Az.ConfidentialLedger
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerCertBasedSecurityPrincipalObject.md
+  PlatyPS schema version: 2024-05-01

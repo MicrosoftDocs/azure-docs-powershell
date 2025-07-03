@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryStorage
+name: Get-AzureSiteRecoveryStorage
+module: Azure
+isPreview: false
+summary: |-
+  Gets Site Recovery Storages for a vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryStorage** cmdlet gets Azure Site Recovery Storages for the current Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="ASRServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a server for Azure Site Recovery Storage.
+      To obtain an **ASRServer** object, use the **Get-AzureSiteRecoveryServer** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryStorage
+        -Server <ASRServer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get site recovery storage'
+  description: |-
+    ```
+    PS C:\> $Servers = Get-AzureSiteRecoveryServer
+    PS C:\> Get-AzureSiteRecoveryStorage -Server $Servers[0]
+    Name           : phase2PrimaryStorageClassification
+    ID             : 00001111-aaaa-2222-bbbb-3333cccc4444
+    FabricObjectID : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ServerId       : 774859b0-1966-48cc-9df7-759c441b7a8c
+    Type           : Classification
+    FabricType     : VMM
+
+    Name           : phase2RecoveryStorageClassification
+    ID             : 00001111-aaaa-2222-bbbb-3333cccc4444
+    FabricObjectID : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ServerId       : 774859b0-1966-48cc-9df7-759c441b7a8c
+    Type           : Classification
+    FabricType     : VMM
+    ```
+
+    The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+    The command stores the Site Recovery servers in the $Servers array variable.
+
+    The second command gets the site recovery storage for the first server in the $Servers array.
+links:
+- text: Get-AzureSiteRecoveryServer
+  href: ./Get-AzureSiteRecoveryServer.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 78DE0AD2-6210-4604-89A8-41915D58BD68
+  PlatyPS schema version: 2024-05-01

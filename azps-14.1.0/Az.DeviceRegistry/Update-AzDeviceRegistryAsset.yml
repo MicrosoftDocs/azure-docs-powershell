@@ -1,0 +1,972 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DeviceRegistry.Update-AzDeviceRegistryAsset
+name: Update-AzDeviceRegistryAsset
+module: Az.DeviceRegistry
+isPreview: false
+summary: |-
+  update a Asset
+description: |-
+  update a Asset
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Attribute
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A set of key-value pairs that contain custom attributes set by the customer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dataset
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IDataset" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Array of datasets that are part of the asset.
+      Each dataset describes the data points that make up the set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultDatasetsConfiguration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Stringified JSON that contains connector-specific default configuration for all datasets.
+      Each dataset can have its own configuration that overrides the default settings here.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultEventsConfiguration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Stringified JSON that contains connector-specific default configuration for all events.
+      Each event can have its own configuration that overrides the default settings here.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultTopicPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The topic path for messages published to an MQTT broker.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultTopicRetain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      When set to 'Keep', messages published to an MQTT broker will have the retain flag set.
+      Default: 'Never'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Human-readable description of the asset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Human-readable display name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DocumentationUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reference to the documentation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enabled/Disabled status of the asset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Event
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IEvent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Array of events that are part of the asset.
+      Each event can have per-event configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HardwareRevision
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Revision number of the hardware.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IDeviceRegistryIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Manufacturer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset manufacturer name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManufacturerUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset manufacturer URI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Model
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset model name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset name parameter.
+    aliases:
+    - AssetName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset product code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SerialNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Asset serial number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SoftwareRevision
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Revision number of the software.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzDeviceRegistryAsset
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Attribute <Hashtable>]
+        [-Dataset <IDataset[]>]
+        [-DefaultDatasetsConfiguration <String>]
+        [-DefaultEventsConfiguration <String>]
+        [-DefaultTopicPath <String>]
+        [-DefaultTopicRetain <String>]
+        [-Description <String>]
+        [-DisplayName <String>]
+        [-DocumentationUri <String>]
+        [-Enabled]
+        [-Event <IEvent[]>]
+        [-HardwareRevision <String>]
+        [-Manufacturer <String>]
+        [-ManufacturerUri <String>]
+        [-Model <String>]
+        [-ProductCode <String>]
+        [-SerialNumber <String>]
+        [-SoftwareRevision <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzDeviceRegistryAsset
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzDeviceRegistryAsset
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzDeviceRegistryAsset
+        -InputObject <IDeviceRegistryIdentity>
+        [-Attribute <Hashtable>]
+        [-Dataset <IDataset[]>]
+        [-DefaultDatasetsConfiguration <String>]
+        [-DefaultEventsConfiguration <String>]
+        [-DefaultTopicPath <String>]
+        [-DefaultTopicRetain <String>]
+        [-Description <String>]
+        [-DisplayName <String>]
+        [-DocumentationUri <String>]
+        [-Enabled]
+        [-Event <IEvent[]>]
+        [-HardwareRevision <String>]
+        [-Manufacturer <String>]
+        [-ManufacturerUri <String>]
+        [-Model <String>]
+        [-ProductCode <String>]
+        [-SerialNumber <String>]
+        [-SoftwareRevision <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IDeviceRegistryIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IAsset" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an asset by name and resource group.'
+  description: |-
+    ```powershell
+    Update-AzDeviceRegistryAsset -Name test-asset -ResourceGroupName test-rg -Model ContosoModel2
+    ```
+
+    ```output
+    Attribute                    : {
+                                   }
+    Dataset                      :
+    DefaultDatasetsConfiguration :
+    DefaultEventsConfiguration   :
+    DefaultTopicPath             :
+    DefaultTopicRetain           :
+    Description                  :
+    DiscoveredAssetRef           :
+    DisplayName                  :
+    DocumentationUri             :
+    Enabled                      :
+    Ref           :
+    Event                        :
+    ExtendedLocationName         :
+    ExtendedLocationType         :
+    ExternalAssetId              :
+    HardwareRevision             :
+    Id                                            : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/providers/Microsoft.DeviceRegistry/locations/EASTUS2/operationStatuses/01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    Location                     :
+    Manufacturer                 :
+    ManufacturerUri              :
+    Model                        :
+    Name                                          : 01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    ProductCode                  :
+    ProvisioningState            :
+    ResourceGroupName            :
+    SerialNumber                 :
+    SoftwareRevision             :
+    StatusDataset                :
+    StatusError                  :
+    StatusEvent                  :
+    StatusVersion                :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         :
+    Uuid                         :
+    Version                      :
+    ```
+
+    This command updates an asset's `Model` property with value `ContosoModel2`.
+    Note: the output response is only the operation status of the update command, not the patched asset.
+- title: 'Example 2: UpdateViaIdentity for asset.'
+  description: |-
+    ```powershell
+    $asset = @{ "ResourceGroupName" = "test-rg"; "AssetName" = "test-asset"; "SubscriptionId" = "xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx"; }
+    Update-AzDeviceRegistryAsset -InputObject $asset -Model ContosoModel2
+    ```
+
+    ```output
+    Attribute                    : {
+                                   }
+    Dataset                      :
+    DefaultDatasetsConfiguration :
+    DefaultEventsConfiguration   :
+    DefaultTopicPath             :
+    DefaultTopicRetain           :
+    Description                  :
+    DiscoveredAssetRef           :
+    DisplayName                  :
+    DocumentationUri             :
+    Enabled                      :
+    Ref           :
+    Event                        :
+    ExtendedLocationName         :
+    ExtendedLocationType         :
+    ExternalAssetId              :
+    HardwareRevision             :
+    Id                                            : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/providers/Microsoft.DeviceRegistry/locations/EASTUS2/operationStatuses/01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    Location                     :
+    Manufacturer                 :
+    ManufacturerUri              :
+    Model                        :
+    Name                                          : 01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    ProductCode                  :
+    ProvisioningState            :
+    ResourceGroupName            :
+    SerialNumber                 :
+    SoftwareRevision             :
+    StatusDataset                :
+    StatusError                  :
+    StatusEvent                  :
+    StatusVersion                :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         :
+    Uuid                         :
+    Version                      :
+    ```
+
+    This command updates an asset's `Model` property with value `ContosoModel2` via Identity input object.
+    Note: the output response is only the operation status of the update command, not the patched asset.
+- title: 'Example 3: Update an asset from a JSON file path'
+  description: |-
+    ```powershell
+    Update-AzDeviceRegistryAsset -Name test-asset -ResourceGroupName test-rg -JsonFilePath "C:\Users\abc\Desktop\assetPatch.json"
+    ```
+
+    ```output
+    Attribute                    : {
+                                   }
+    Dataset                      :
+    DefaultDatasetsConfiguration :
+    DefaultEventsConfiguration   :
+    DefaultTopicPath             :
+    DefaultTopicRetain           :
+    Description                  :
+    DiscoveredAssetRef           :
+    DisplayName                  :
+    DocumentationUri             :
+    Enabled                      :
+    Ref           :
+    Event                        :
+    ExtendedLocationName         :
+    ExtendedLocationType         :
+    ExternalAssetId              :
+    HardwareRevision             :
+    Id                                            : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/providers/Microsoft.DeviceRegistry/locations/EASTUS2/operationStatuses/01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    Location                     :
+    Manufacturer                 :
+    ManufacturerUri              :
+    Model                        :
+    Name                                          : 01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    ProductCode                  :
+    ProvisioningState            :
+    ResourceGroupName            :
+    SerialNumber                 :
+    SoftwareRevision             :
+    StatusDataset                :
+    StatusError                  :
+    StatusEvent                  :
+    StatusVersion                :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         :
+    Uuid                         :
+    Version                      :
+    ```
+
+    This command updates an asset's property(ies) with new value(s) by specifying a JSON file path containing the patch body.
+    Note: the output response is only the operation status of the update command, not the patched asset.
+- title: 'Example 4: Update an asset from a stringified JSON'
+  description: |-
+    ```powershell
+    $jsonStr = '{
+        "properties": {
+            "model": "ContosoModel2"
+        }
+    }'
+    Update-AzDeviceRegistryAsset -Name test-asset -ResourceGroupName test-rg -JsonString $jsonStr
+    ```
+
+    ```output
+    Attribute                    : {
+                                   }
+    Dataset                      :
+    DefaultDatasetsConfiguration :
+    DefaultEventsConfiguration   :
+    DefaultTopicPath             :
+    DefaultTopicRetain           :
+    Description                  :
+    DiscoveredAssetRef           :
+    DisplayName                  :
+    DocumentationUri             :
+    Enabled                      :
+    Ref           :
+    Event                        :
+    ExtendedLocationName         :
+    ExtendedLocationType         :
+    ExternalAssetId              :
+    HardwareRevision             :
+    Id                                            : /subscriptions/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxx/providers/Microsoft.DeviceRegistry/locations/EASTUS2/operationStatuses/01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    Location                     :
+    Manufacturer                 :
+    ManufacturerUri              :
+    Model                        :
+    Name                                          : 01e004d3-5ee4-4e48-b0f3-5d095967ff2f*22287DDA3F72A2BF66887E7D826E011DF68F456D735B7BE37C83763585936277
+    ProductCode                  :
+    ProvisioningState            :
+    ResourceGroupName            :
+    SerialNumber                 :
+    SoftwareRevision             :
+    StatusDataset                :
+    StatusError                  :
+    StatusEvent                  :
+    StatusVersion                :
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         :
+    Uuid                         :
+    Version                      :
+    ```
+
+    This command updates an asset's `Model` property with new value `ContosoModel2` by specifying the patch as a stringified JSON body.
+    Note: the output response is only the operation status of the update command, not the patched asset.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Update-AzDeviceRegistryAsset.md
+  document type: cmdlet
+  external help file: Az.DeviceRegistry-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.deviceregistry/update-azdeviceregistryasset
+  Module Name: Az.DeviceRegistry
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Update-AzDeviceRegistryAsset.md
+  PlatyPS schema version: 2024-05-01

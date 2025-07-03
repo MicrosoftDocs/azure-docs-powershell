@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotHub.Get-AzIotHubQuotaMetric
+name: Get-AzIotHubQuotaMetric
+module: Az.IotHub
+isPreview: false
+summary: |-
+  Gets the Quota Metrics for an IotHub.
+description: |-
+  Gets the Quota Metrics for an IotHub.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the IoT hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIotHubQuotaMetric
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubQuotaMetric" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get the Quota Metrics
+  description: |-
+    ```powershell
+    Get-AzIotHubQuotaMetric -ResourceGroupName "myresourcegroup" -Name "myiothub"
+    ```
+
+    Gets the Quota Metric information for the IotHub named "myiothub"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubQuotaMetric.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubquotametric
+  Module Name: Az.IotHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubQuotaMetric.md
+  PlatyPS schema version: 2024-05-01

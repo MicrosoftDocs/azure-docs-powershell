@@ -1,0 +1,81 @@
+### YamlMime:PowerShellModule1
+uid: Az.SecurityInsights
+name: Az.SecurityInsights Module
+isPreview: false
+cmdletGroups:
+- title: Security Insights
+  cmdlets:
+  - Az.SecurityInsights.Get-AzSentinelAlertRule
+  - Az.SecurityInsights.Get-AzSentinelAlertRuleAction
+  - Az.SecurityInsights.Get-AzSentinelAlertRuleTemplate
+  - Az.SecurityInsights.Get-AzSentinelAutomationRule
+  - Az.SecurityInsights.Get-AzSentinelBookmark
+  - Az.SecurityInsights.Get-AzSentinelBookmarkRelation
+  - Az.SecurityInsights.Get-AzSentinelDataConnector
+  - Az.SecurityInsights.Get-AzSentinelEnrichment
+  - Az.SecurityInsights.Get-AzSentinelEntity
+  - Az.SecurityInsights.Get-AzSentinelEntityActivity
+  - Az.SecurityInsights.Get-AzSentinelEntityInsight
+  - Az.SecurityInsights.Get-AzSentinelEntityQuery
+  - Az.SecurityInsights.Get-AzSentinelEntityQueryTemplate
+  - Az.SecurityInsights.Get-AzSentinelEntityRelation
+  - Az.SecurityInsights.Get-AzSentinelEntityTimeline
+  - Az.SecurityInsights.Get-AzSentinelIncident
+  - Az.SecurityInsights.Get-AzSentinelIncidentAlert
+  - Az.SecurityInsights.Get-AzSentinelIncidentBookmark
+  - Az.SecurityInsights.Get-AzSentinelIncidentComment
+  - Az.SecurityInsights.Get-AzSentinelIncidentEntity
+  - Az.SecurityInsights.Get-AzSentinelIncidentRelation
+  - Az.SecurityInsights.Get-AzSentinelMetadata
+  - Az.SecurityInsights.Get-AzSentinelOnboardingState
+  - Az.SecurityInsights.Get-AzSentinelSetting
+  - Az.SecurityInsights.Get-AzSentinelThreatIntelligenceIndicator
+  - Az.SecurityInsights.Get-AzSentinelThreatIntelligenceIndicatorMetric
+  - Az.SecurityInsights.Invoke-AzSentinelThreatIntelligenceIndicatorQuery
+  - Az.SecurityInsights.New-AzSentinelAlertRule
+  - Az.SecurityInsights.New-AzSentinelAlertRuleAction
+  - Az.SecurityInsights.New-AzSentinelAutomationRule
+  - Az.SecurityInsights.New-AzSentinelBookmark
+  - Az.SecurityInsights.New-AzSentinelBookmarkRelation
+  - Az.SecurityInsights.New-AzSentinelDataConnector
+  - Az.SecurityInsights.New-AzSentinelEntityQuery
+  - Az.SecurityInsights.New-AzSentinelIncident
+  - Az.SecurityInsights.New-AzSentinelIncidentComment
+  - Az.SecurityInsights.New-AzSentinelIncidentRelation
+  - Az.SecurityInsights.New-AzSentinelIncidentTeam
+  - Az.SecurityInsights.New-AzSentinelOnboardingState
+  - Az.SecurityInsights.Remove-AzSentinelAlertRule
+  - Az.SecurityInsights.Remove-AzSentinelAlertRuleAction
+  - Az.SecurityInsights.Remove-AzSentinelAutomationRule
+  - Az.SecurityInsights.Remove-AzSentinelBookmark
+  - Az.SecurityInsights.Remove-AzSentinelBookmarkRelation
+  - Az.SecurityInsights.Remove-AzSentinelDataConnector
+  - Az.SecurityInsights.Remove-AzSentinelEntityQuery
+  - Az.SecurityInsights.Remove-AzSentinelIncident
+  - Az.SecurityInsights.Remove-AzSentinelIncidentComment
+  - Az.SecurityInsights.Remove-AzSentinelIncidentRelation
+  - Az.SecurityInsights.Remove-AzSentinelOnboardingState
+  - Az.SecurityInsights.Test-AzSentinelDataConnectorCheckRequirement
+  - Az.SecurityInsights.Update-AzSentinelAlertRule
+  - Az.SecurityInsights.Update-AzSentinelAlertRuleAction
+  - Az.SecurityInsights.Update-AzSentinelAutomationRule
+  - Az.SecurityInsights.Update-AzSentinelBookmark
+  - Az.SecurityInsights.Update-AzSentinelBookmarkRelation
+  - Az.SecurityInsights.Update-AzSentinelDataConnector
+  - Az.SecurityInsights.Update-AzSentinelEntityQuery
+  - Az.SecurityInsights.Update-AzSentinelIncident
+  - Az.SecurityInsights.Update-AzSentinelIncidentComment
+  - Az.SecurityInsights.Update-AzSentinelIncidentRelation
+  - Az.SecurityInsights.Update-AzSentinelSetting
+description: |-
+  Microsoft Azure PowerShell: SecurityInsights cmdlets
+metadata:
+  Module Name: Az.SecurityInsights
+  Module Guid: 453d4fb9-65ec-4cf1-8358-6a0fbd995d19
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.securityinsights
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Az.SecurityInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Az.SecurityInsights.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

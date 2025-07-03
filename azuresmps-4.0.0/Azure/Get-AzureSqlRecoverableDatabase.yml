@@ -1,0 +1,158 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlRecoverableDatabase
+name: Get-AzureSqlRecoverableDatabase
+module: Azure
+isPreview: false
+summary: |-
+  Gets recoverable databases from a specified server.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlRecoverableDatabase** cmdlet gets recoverable databases from a specified server.
+  This cmdlet gets a specific recoverable database or all recoverable databases on a server.
+notes: |-
+  * You must use certificate-based authentication to run this cmdlet. Run the following commands on the computer where run this cmdlet:
+
+  `PS C:\\\> $subId = \<Subscription ID\>`
+  `PS C:\\\> $thumbprint = \<Certificate Thumbprint\>`
+  `PS C:\\\> $myCert = Get-Item Cert:\CurrentUser\My\$thumbprint`
+  `PS C:\\\> Set-AzureSubscription -SubscriptionName "mySubscription" -SubscriptionId $subId -Certificate $myCert`
+  `PS C:\\\> Select-AzureSubscription -SubscriptionName "mySubscription"`
+parameters:
+  cmdletParameters:
+  - name: Database
+    type: <xref href="RecoverableDatabase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the recoverable database that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GivenDatabaseObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the recoverable database that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GivenDatabaseOnGivenServer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server from which this cmdlet gets recoverable databases.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AllDatabasesOnGivenServer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GivenDatabaseOnGivenServer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlRecoverableDatabase
+        -ServerName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllDatabasesOnGivenServer
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlRecoverableDatabase
+        -ServerName <String>
+        -DatabaseName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GivenDatabaseOnGivenServer
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlRecoverableDatabase
+        -Database <RecoverableDatabase>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GivenDatabaseObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Management.Sql.Models.RecoverableDatabase" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all recoverable databases'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "Server01"
+    ```
+
+    This command gets all recoverable databases on the server named Server01.
+- title: 'Example 2: Get a specific recoverable database'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlRecoverableDatabase -ServerName "Server01" -DatabaseName "Database17"
+    ```
+
+    This command gets retrieves the database named Database17 on the server named Server01.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Get Recoverable Database
+  href: https://msdn.microsoft.com/en-us/library/azure/dn800985.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Start-AzureSqlDatabaseRecovery
+  href: ./Start-AzureSqlDatabaseRecovery.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 83E8DAD8-151A-408D-819F-274CB813ABDA
+  PlatyPS schema version: 2024-05-01

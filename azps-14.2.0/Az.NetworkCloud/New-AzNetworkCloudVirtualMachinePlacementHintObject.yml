@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudVirtualMachinePlacementHintObject
+name: New-AzNetworkCloudVirtualMachinePlacementHintObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for VirtualMachinePlacementHint.
+description: |-
+  Create an in-memory object for VirtualMachinePlacementHint.
+parameters:
+  cmdletParameters:
+  - name: HintType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachinePlacementHintType" data-throw-if-not-resolved="False" />
+    description: |-
+      The specification of whether this hint supports affinity or anti-affinity with the referenced resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the target object that the placement hints will be checked against, e.g., the bare metal node to host the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SchedulingExecution
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineSchedulingExecution" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator of whether the hint is a hard or soft requirement during scheduling.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachinePlacementHintPodAffinityScope" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope for the virtual machine affinity or anti-affinity placement hint.
+      It should always be "Machine" in the case of node affinity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudVirtualMachinePlacementHintObject
+        -HintType <VirtualMachinePlacementHintType>
+        -ResourceId <String>
+        -SchedulingExecution <VirtualMachineSchedulingExecution>
+        -Scope <VirtualMachinePlacementHintPodAffinityScope>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.VirtualMachinePlacementHint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for VirtualMachinePlacementHint.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudVirtualMachinePlacementHintObject -HintType "Affinity" -ResourceId "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/racks/rackName" -SchedulingExecution "Hard" -Scope "Machine"
+    ```
+
+    ```output
+    HintType ResourceId                                                                                                     SchedulingExecution Scope
+    -------- ----------                                                                                                     ------------------- -----
+    Affinity /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/racks/rackName Hard                Machine
+    ```
+
+    Creates an in-memory object for VirtualMachinePlacementHint.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudVirtualMachinePlacementHintObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudVirtualMachinePlacementHintObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudVirtualMachinePlacementHintObject.md
+  PlatyPS schema version: 2024-05-01

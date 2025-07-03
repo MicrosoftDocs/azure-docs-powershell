@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CloudService.New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject
+name: New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject
+module: Az.CloudService
+isPreview: false
+summary: |-
+  Create a in-memory object for LoadBalancerFrontendIPConfiguration
+description: |-
+  Create a in-memory object for LoadBalancerFrontendIPConfiguration
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of FrontendIpConfigration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Private IP Address
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrivateIP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIPAddressId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subnet ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrivateIP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject
+        [-Name <String>]
+        [-PublicIPAddressId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject
+        [-Name <String>]
+        [-PrivateIPAddress <String>]
+        [-SubnetId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PrivateIP
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.LoadBalancerFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create load balancer frontend IP configuration object'
+  description: |-
+    ```powershell
+    $publicIP = Get-AzPublicIpAddress -ResourceGroupName 'ContosoOrg' -Name 'ContosoPublicIP'
+    $feIpConfig = New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject -Name 'ContosoFe' -PublicIPAddressId $publicIp.Id
+    $loadBalancerConfig = New-AzCloudServiceLoadBalancerConfigurationObject -Name 'ContosoLB' -FrontendIPConfiguration $feIpConfig
+    ```
+
+    This command creates load balancer frontend IP configuration object which is used for creating or updating a cloud service.
+    For more details see New-AzCloudService.
+- title: 'Example 2: Create load balancer frontend IP configuration object with Private ID address'
+  description: |-
+    ```powershell
+    # Create role profile object
+    $subnet = New-AzVirtualNetworkSubnetConfig -Name "WebTier" -AddressPrefix "10.0.0.0/24" -WarningAction SilentlyContinue
+    $feIpConfig = New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject -Name 'ContosoFe' -privateIPAddress '10.0.0.6' -subnetId $Subnet.Id
+    $loadBalancerConfig = New-AzCloudServiceLoadBalancerConfigurationObject -Name 'ContosoLB' -FrontendIPConfiguration $feIpConfig
+    ```
+
+    This command creates load balancer frontend IP configuration object with a Private IP address
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.CloudService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudserviceloadbalancerfrontendipconfigurationobject
+  Module Name: Az.CloudService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

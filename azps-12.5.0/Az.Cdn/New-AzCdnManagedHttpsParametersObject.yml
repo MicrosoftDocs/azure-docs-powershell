@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnManagedHttpsParametersObject
+name: New-AzCdnManagedHttpsParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for CdnManagedHttpsParameters.
+description: |-
+  Create an in-memory object for CdnManagedHttpsParameters.
+parameters:
+  cmdletParameters:
+  - name: CertificateSource
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.CertificateSource" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the source of the SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateSourceParameterCertificateType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.CertificateType" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of certificate used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumTlsVersion
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.MinimumTlsVersion" data-throw-if-not-resolved="False" />
+    description: |-
+      TLS protocol version that will be used for Https.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtocolType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.ProtocolType" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the TLS extension protocol that is used for secure delivery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnManagedHttpsParametersObject
+        -CertificateSourceParameterCertificateType <CertificateType>
+        -CertificateSource <CertificateSource>
+        -ProtocolType <ProtocolType>
+        [-MinimumTlsVersion <MinimumTlsVersion>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.CdnManagedHttpsParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureCDN CdnManagedHttpsParameters'
+  description: |-
+    ```powershell
+    New-AzCdnManagedHttpsParametersObject -CertificateSourceParameterCertificateType Dedicated -CertificateSource Cdn -ProtocolType ServerNameIndication
+    ```
+
+    ```output
+    CertificateSource MinimumTlsVersion ProtocolType
+    ----------------- ----------------- ------------
+    Cdn                                 TLS12
+    ```
+
+    Create an in-memory object for AzureCDN CdnManagedHttpsParameters
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnManagedHttpsParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-AzCdnManagedHttpsParametersObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnManagedHttpsParametersObject.md
+  PlatyPS schema version: 2024-05-01

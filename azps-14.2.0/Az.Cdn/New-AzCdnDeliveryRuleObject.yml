@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnDeliveryRuleObject
+name: New-AzCdnDeliveryRuleObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for DeliveryRule.
+description: |-
+  Create an in-memory object for DeliveryRule.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.IDeliveryRuleAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of actions that are executed when all the conditions of a rule are satisfied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Condition
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.IDeliveryRuleCondition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of conditions that must be matched for the actions to be executed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Order
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The order in which the rules are applied for the endpoint.
+      Possible values {0,1,2,3,………}.
+      A rule with a lesser order will be applied before a rule with a greater order.
+      Rule with order 0 is a special rule.
+      It does not require any condition and actions listed in it will always be applied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnDeliveryRuleObject
+        -Action <IDeliveryRuleAction[]>
+        -Order <Int32>
+        [-Condition <IDeliveryRuleCondition[]>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.DeliveryRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureCDN DeliveryRule'
+  description: |-
+    ```powershell
+    $cond1 = New-AzCdnDeliveryRuleCookiesConditionObject -Name Cookies -ParameterOperator Equal -ParameterSelector test -ParameterMatchValue test -ParameterNegateCondition $False -ParameterTransform Lowercase
+    $action1 = New-AzCdnDeliveryRuleResponseHeaderActionObject -Name ModifyResponseHeader -ParameterHeaderAction Append -ParameterHeaderName a1 -ParameterValue a1
+    $action2 = New-AzCdnDeliveryRuleRequestHeaderActionObject -Name ModifyRequestHeader -ParameterHeaderAction Append -ParameterHeaderName a1 -ParameterValue a1
+
+
+    $conditions = @($cond1)
+    $actions = @($action1, $action2)
+    New-AzCdnDeliveryRuleObject -Name "Rule1" -Condition $conditions -Action $actions -Order 1
+    ```
+
+    ```output
+    Name  Order
+    ----  -----
+    Rule1 1
+    ```
+
+    Create an in-memory object for AzureCDN DeliveryRule
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnDeliveryRuleObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azcdndeliveryruleobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnDeliveryRuleObject.md
+  PlatyPS schema version: 2024-05-01

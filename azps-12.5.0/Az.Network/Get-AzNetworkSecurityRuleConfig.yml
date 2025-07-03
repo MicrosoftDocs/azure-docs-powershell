@@ -1,0 +1,131 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkSecurityRuleConfig
+name: Get-AzNetworkSecurityRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Get a network security rule configuration for a network security group.
+description: |-
+  The **Get-AzNetworkSecurityRuleConfig** cmdlet gets a network security rule configuration for an Azure network security group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultRules
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this cmdlet gets a user-created rule configuration or a default rule configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network security rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroup
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **NetworkSecurityGroup** object that contains the network security rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityRuleConfig
+        [-Name <String>]
+        -NetworkSecurityGroup <PSNetworkSecurityGroup>
+        [-DefaultRules]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSSecurityRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Retrieving a network security rule config'
+  description: |-
+    ```powershell
+    Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 `
+        | Get-AzNetworkSecurityRuleConfig -Name AllowInternetOutBound -DefaultRules
+    ```
+
+    This command retrieves the default rule named "AllowInternetOutBound" from Azure network security group named "nsg1" in resource group "rg1"
+- title: 'Example 2: Retrieving a network security rule config using only the name'
+  description: |-
+    ```powershell
+    Get-AzNetworkSecurityGroup -Name nsg1 -ResourceGroupName rg1 `
+        | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
+    ```
+
+    This command retrieves user defined rule named "rdp-rule" from Azure network security group named "nsg1" in resource group "rg1"
+links:
+- text: Add-AzNetworkSecurityRuleConfig
+  href: ./Add-AzNetworkSecurityRuleConfig.yml
+- text: New-AzNetworkSecurityRuleConfig
+  href: ./New-AzNetworkSecurityRuleConfig.yml
+- text: Remove-AzNetworkSecurityRuleConfig
+  href: ./Remove-AzNetworkSecurityRuleConfig.yml
+- text: Set-AzNetworkSecurityRuleConfig
+  href: ./Set-AzNetworkSecurityRuleConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkSecurityRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworksecurityruleconfig
+  Module Name: Az.Network
+  ms.assetid: 5A0D9326-3A8A-4156-8372-EBA93C1BB4E4
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkSecurityRuleConfig.md
+  PlatyPS schema version: 2024-05-01

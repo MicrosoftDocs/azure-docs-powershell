@@ -1,0 +1,293 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzRoleManagementPolicy
+name: Update-AzRoleManagementPolicy
+module: Az.Resources
+isPreview: false
+summary: |-
+  Update a role management policy
+description: |-
+  Update a role management policy
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The role management policy description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The role management policy display name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.Authorization.Models.IAuthorizationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsOrganizationDefault
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The role management policy is default policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name (guid) of the role management policy to upsert.
+    aliases:
+    - RoleManagementPolicyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Rule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.Authorization.Models.Api20201001Preview.IRoleManagementPolicyRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The rule applied to the policy.
+      To construct, see NOTES section for RULE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the role management policy to upsert.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzRoleManagementPolicy
+        -Name <String>
+        -Scope <String>
+        [-Description <String>]
+        [-DisplayName <String>]
+        [-IsOrganizationDefault]
+        [-Rule <IRoleManagementPolicyRule[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzRoleManagementPolicy
+        -InputObject <IAuthorizationIdentity>
+        [-Description <String>]
+        [-DisplayName <String>]
+        [-IsOrganizationDefault]
+        [-Rule <IRoleManagementPolicyRule[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.Authorization.Models.IAuthorizationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.Authorization.Models.Api20201001Preview.IRoleManagementPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update expiration rule of a policy'
+  description: |-
+    ```powershell
+    $scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
+    $expirationRule = [RoleManagementPolicyExpirationRule]@{
+                isExpirationRequired = "false";
+                maximumDuration = "P180D";
+                id = "Expiration_Admin_Eligibility";
+                ruleType = [RoleManagementPolicyRuleType]("RoleManagementPolicyExpirationRule");
+                targetCaller = "Admin";
+                targetOperation = @('All');
+                targetLevel = "Eligibility";
+                targetObject = $null;
+                targetInheritableSetting = $null;
+                targetEnforcedSetting = $null;
+            }
+    $rules = [IRoleManagementPolicyRule[]]@($expirationRule)
+    Update-AzRoleManagementPolicy -Scope $scope -Name "33b520ea-3544-4abc-8565-3588deb8e68e" -Rule $rules
+    ```
+
+    ```output
+    Name                                 Type                                           Scope
+    ----                                 ----                                           -----
+    33b520ea-3544-4abc-8565-3588deb8e68e Microsoft.Authorization/roleManagementPolicies /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d
+    ```
+
+    Each individual `Rule` on a policy can be update independently.
+- title: 'Example 2: Update expiration rule and a notification rule of a policy'
+  description: |-
+    ```powershell
+    $scope = "/subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d/"
+    $expirationRule = [RoleManagementPolicyExpirationRule]@{
+                isExpirationRequired = "false";
+                maximumDuration = "P180D";
+                id = "Expiration_Admin_Eligibility";
+                ruleType = [RoleManagementPolicyRuleType]("RoleManagementPolicyExpirationRule");
+                targetCaller = "Admin";
+                targetOperation = @('All');
+                targetLevel = "Eligibility";
+                targetObject = $null;
+                targetInheritableSetting = $null;
+                targetEnforcedSetting = $null;
+            }
+    $notificationRule = [RoleManagementPolicyNotificationRule]@{
+                notificationType = "Email";
+                recipientType = "Approver";
+                isDefaultRecipientsEnabled = "false";
+                notificationLevel = "Critical";
+                notificationRecipient = $null;
+                id = "Notification_Approver_Admin_Eligibility";
+                ruleType = [RoleManagementPolicyRuleType]("RoleManagementPolicyNotificationRule");
+                targetCaller = "Admin";
+                targetOperation = @('All');
+                targetLevel = "Eligibility";
+                targetObject = $null;
+                targetInheritableSetting = $null;
+                targetEnforcedSetting = $null;
+            }
+    $rules = [IRoleManagementPolicyRule[]]@($expirationRule, $notificationRule)
+    Update-AzRoleManagementPolicy -Scope $scope -Name "33b520ea-3544-4abc-8565-3588deb8e68e" -Rule $rules
+    ```
+
+    ```output
+    Name                                 Type                                           Scope
+    ----                                 ----                                           -----
+    33b520ea-3544-4abc-8565-3588deb8e68e Microsoft.Authorization/roleManagementPolicies /subscriptions/38ab2ccc-3747-4567-b36b-9478f5602f0d
+    ```
+
+    Multiple `Rule` can be updated together.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzRoleManagementPolicy.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/update-azrolemanagementpolicy
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzRoleManagementPolicy.md
+  PlatyPS schema version: 2024-05-01

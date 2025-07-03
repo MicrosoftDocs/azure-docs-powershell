@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppCollectionUsageSummary
+name: Get-AzureRemoteAppCollectionUsageSummary
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves a usage summary for an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppCollectionUsageSummary** cmdlet retrieves a usage summary for an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsageMonth
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a two digit number for the month for which to get a usage summary.
+      If this parameter is not specified, this cmdlet provides usage for the current month.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsageYear
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the four-digit year for which to get a usage summary.
+      If this parameter is not specified, this cmdlet provides a usage summary for the current year will be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppCollectionUsageSummary
+        [-CollectionName] <String>
+        [[-UsageMonth] <String>]
+        [[-UsageYear] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a usage summary'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppCollectionUsageSummary -CollectionName Contoso -UsageMonth 12 -UsageYear 2014
+    ```
+
+    This command gets a usage summary for the month of December in the year 2014, for a collection named Contoso.
+links:
+- text: Get-AzureRemoteAppCollection
+  href: ./Get-AzureRemoteAppCollection.yml
+- text: Get-AzureRemoteAppCollectionUsageDetails
+  href: ./Get-AzureRemoteAppCollectionUsageDetails.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8EF86C66-498F-4183-9070-F178628483F1
+  PlatyPS schema version: 2024-05-01

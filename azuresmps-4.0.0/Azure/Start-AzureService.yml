@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureService
+name: Start-AzureService
+module: Azure
+isPreview: false
+summary: |-
+  Starts the specified hosted service in Windows Azure.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Start-AzureService** cmdlet starts the specified hosted service in Windows Azure, if the service is in the stopped state.
+  Note that the **Publish-AzureServiceProject** cmdlet automatically attempts to start the service.
+parameters:
+  cmdletParameters:
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the hosted service to start.
+      If no name is specified, the cmdlet starts the current hosted service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deployment slot in which to start the service, either Staging or Production.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureService
+        [-ServiceName <String>]
+        [-Slot <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Remove-AzureService
+  href: ./Remove-AzureService.yml
+- text: Start-AzureService
+  href: ./Start-AzureService.yml
+- text: Stop-AzureService
+  href: ./Stop-AzureService.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 821CB3E4-102E-440A-8C92-D1890899A6EE
+  PlatyPS schema version: 2024-05-01

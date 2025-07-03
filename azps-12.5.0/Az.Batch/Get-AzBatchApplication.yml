@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchApplication
+name: Get-AzBatchApplication
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets information about the specified application.
+description: |-
+  The **Get-AzBatchApplication** cmdlet gets information about an application in an Azure Batch account.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Batch account that contains the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the application.
+    aliases:
+    - ApplicationId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the Batch account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchApplication
+        [-AccountName] <String>
+        [-ResourceGroupName] <String>
+        [[-ApplicationName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSApplication" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the applications in a Batch account'
+  description: |-
+    ```powershell
+    Get-AzBatchApplication -AccountName "ContosoBatch" -ResourceGroupName "ContosoBatchGroup"
+    ```
+
+    ```output
+    ApplicationName AllowUpdates DisplayName
+
+    ------------- ------------ ----------------------------
+
+    litware       False        Litware Advanced Reticulator
+    ```
+
+    This command displays all applications in the ContosoBatch account.
+links:
+- text: Get-AzBatchApplicationPackage
+  href: ./Get-AzBatchApplicationPackage.yml
+- text: New-AzBatchApplication
+  href: ./New-AzBatchApplication.yml
+- text: New-AzBatchApplicationPackage
+  href: ./New-AzBatchApplicationPackage.yml
+- text: Remove-AzBatchApplication
+  href: ./Remove-AzBatchApplication.yml
+- text: Remove-AzBatchApplicationPackage
+  href: ./Remove-AzBatchApplicationPackage.yml
+- text: Set-AzBatchApplication
+  href: ./Set-AzBatchApplication.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchApplication.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchapplication
+  Module Name: Az.Batch
+  ms.assetid: CF8B8E94-3C6C-4D68-B55B-956393890946
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchApplication.md
+  PlatyPS schema version: 2024-05-01

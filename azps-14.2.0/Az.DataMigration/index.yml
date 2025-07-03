@@ -1,0 +1,68 @@
+### YamlMime:PowerShellModule1
+uid: Az.DataMigration
+name: Az.DataMigration Module
+isPreview: false
+cmdletGroups:
+- title: Data Migration
+  cmdlets:
+  - Az.DataMigration.Get-AzDataMigrationAssessment
+  - Az.DataMigration.Get-AzDataMigrationPerformanceDataCollection
+  - Az.DataMigration.Get-AzDataMigrationProject
+  - Az.DataMigration.Get-AzDataMigrationService
+  - Az.DataMigration.Get-AzDataMigrationSkuRecommendation
+  - Az.DataMigration.Get-AzDataMigrationSqlService
+  - Az.DataMigration.Get-AzDataMigrationSqlServiceAuthKey
+  - Az.DataMigration.Get-AzDataMigrationSqlServiceIntegrationRuntimeMetric
+  - Az.DataMigration.Get-AzDataMigrationSqlServiceMigration
+  - Az.DataMigration.Get-AzDataMigrationTask
+  - Az.DataMigration.Get-AzDataMigrationToSqlDb
+  - Az.DataMigration.Get-AzDataMigrationToSqlManagedInstance
+  - Az.DataMigration.Get-AzDataMigrationToSqlVM
+  - Az.DataMigration.Invoke-AzDataMigrationCommand
+  - Az.DataMigration.Invoke-AzDataMigrationCutoverToSqlManagedInstance
+  - Az.DataMigration.Invoke-AzDataMigrationCutoverToSqlVM
+  - Az.DataMigration.New-AzDataMigrationAzureActiveDirectoryApp
+  - Az.DataMigration.New-AzDataMigrationConnectionInfo
+  - Az.DataMigration.New-AzDataMigrationDatabaseInfo
+  - Az.DataMigration.New-AzDataMigrationFileShare
+  - Az.DataMigration.New-AzDataMigrationLoginsMigration
+  - Az.DataMigration.New-AzDataMigrationMongoDbCollectionSetting
+  - Az.DataMigration.New-AzDataMigrationMongoDbDatabaseSetting
+  - Az.DataMigration.New-AzDataMigrationProject
+  - Az.DataMigration.New-AzDataMigrationSelectedDBObject
+  - Az.DataMigration.New-AzDataMigrationService
+  - Az.DataMigration.New-AzDataMigrationSqlServerSchema
+  - Az.DataMigration.New-AzDataMigrationSqlService
+  - Az.DataMigration.New-AzDataMigrationSqlServiceAuthKey
+  - Az.DataMigration.New-AzDataMigrationSyncSelectedDBObject
+  - Az.DataMigration.New-AzDataMigrationTask
+  - Az.DataMigration.New-AzDataMigrationTdeCertificateMigration
+  - Az.DataMigration.New-AzDataMigrationToSqlDb
+  - Az.DataMigration.New-AzDataMigrationToSqlManagedInstance
+  - Az.DataMigration.New-AzDataMigrationToSqlVM
+  - Az.DataMigration.Register-AzDataMigrationIntegrationRuntime
+  - Az.DataMigration.Remove-AzDataMigrationProject
+  - Az.DataMigration.Remove-AzDataMigrationService
+  - Az.DataMigration.Remove-AzDataMigrationSqlService
+  - Az.DataMigration.Remove-AzDataMigrationSqlServiceNode
+  - Az.DataMigration.Remove-AzDataMigrationTask
+  - Az.DataMigration.Remove-AzDataMigrationToSqlDb
+  - Az.DataMigration.Start-AzDataMigrationService
+  - Az.DataMigration.Stop-AzDataMigrationService
+  - Az.DataMigration.Stop-AzDataMigrationTask
+  - Az.DataMigration.Stop-AzDataMigrationToSqlDb
+  - Az.DataMigration.Stop-AzDataMigrationToSqlManagedInstance
+  - Az.DataMigration.Stop-AzDataMigrationToSqlVM
+  - Az.DataMigration.Update-AzDataMigrationSqlService
+description: |-
+  {{Azure DataMigration Service Module}}
+metadata:
+  Module Name: Az.DataMigration
+  Module Guid: 150d9544-6348-4373-806f-10cd0b4de4cb
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.datamigration
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Az.DataMigration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Az.DataMigration.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,385 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkSecurityPerimeterAccessRule
+name: Get-AzNetworkSecurityPerimeterAccessRule
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the specified NSP access rule by name.
+description: |-
+  Gets the specified NSP access rule by name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkSecurityPerimeter.Models.INetworkSecurityPerimeterIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the NSP access rule.
+    aliases:
+    - AccessRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityProfile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityNetworkSecurityPerimeter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityPerimeterInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkSecurityPerimeter.Models.INetworkSecurityPerimeterIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityNetworkSecurityPerimeter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkSecurityPerimeter.Models.INetworkSecurityPerimeterIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityProfile
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the NSP profile.
+    aliases:
+    - SecurityPerimeterProfileName
+    - NSPProfileName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityNetworkSecurityPerimeter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityPerimeterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network security perimeter.
+    aliases:
+    - NetworkSecurityPerimeterName
+    - NSPName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SkipToken is only used if a previous operation returned a partial result.
+      If a previous response contains a nextLink element, the value of the nextLink element will include a skipToken parameter that specifies a starting point to use for subsequent calls.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The subscription credentials which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional query parameter which specifies the maximum number of records to be returned by the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityPerimeterAccessRule
+        -ProfileName <String>
+        -ResourceGroupName <String>
+        -SecurityPerimeterName <String>
+        [-SubscriptionId <String[]>]
+        [-SkipToken <String>]
+        [-Top <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityPerimeterAccessRule
+        -Name <String>
+        -ProfileInputObject <INetworkSecurityPerimeterIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityProfile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityPerimeterAccessRule
+        -Name <String>
+        -ProfileName <String>
+        -NetworkSecurityPerimeterInputObject <INetworkSecurityPerimeterIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityNetworkSecurityPerimeter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityPerimeterAccessRule
+        -Name <String>
+        -ProfileName <String>
+        -ResourceGroupName <String>
+        -SecurityPerimeterName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkSecurityPerimeterAccessRule
+        -InputObject <INetworkSecurityPerimeterIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkSecurityPerimeter.Models.INetworkSecurityPerimeterIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkSecurityPerimeter.Models.INspAccessRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List NetworkSecurityPerimeter AccessRules'
+  description: |-
+    ```powershell
+    Get-AzNetworkSecurityPerimeterAccessRule -ProfileName profile-test-1 -ResourceGroupName rg-test-1 -SecurityPerimeterName nsp-test-1
+    ```
+
+    ```output
+    Name                 ResourceGroupName
+    ----                 -----------------
+    access-rule-test-1   rg-test-1
+    access-rule-test-2   rg-test-1
+    ```
+
+    List NetworkSecurityPerimeter AccessRules
+- title: 'Example 2: Get NetworkSecurityPerimeter AccessRule by Name'
+  description: |-
+    ```powershell
+    Get-AzNetworkSecurityPerimeterAccessRule -Name access-rule-test-1 -ProfileName profile-test-1 -ResourceGroupName rg-test-1 -SecurityPerimeterName nsp-test-1
+    ```
+
+    ```output
+    AddressPrefix                : {198.168.0.0/32}
+    Direction                    : Inbound
+    EmailAddress                 : {}
+    FullyQualifiedDomainName     : {}
+    Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-test-1/providers
+                                    /Microsoft.Network/networkSecurityPerimeters/nsp-test-1/profiles/profile-test-1
+                                    /accessRules/access-rule-test-1
+    Name                         : access-rule-test-1
+    NetworkSecurityPerimeter     : {}
+    PhoneNumber                  : {}
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : rg-test-1
+    ServiceTag                   :
+    Subscription                 : {}
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Network/networkSecurityPerimeters/profiles/accessRules
+    ```
+
+    Get NetworkSecurityPerimeter AccessRule by Name
+- title: 'Example 3: Get NetworkSecurityPerimeter AccessRule by Identity (using pipe)'
+  description: |-
+    ```powershell
+    $GETObj = Get-AzNetworkSecurityPerimeterAccessRule -Name access-rule-test-1 -ProfileName profile-test-1 -ResourceGroupName rg-test-1 -SecurityPerimeterName nsp-test-1
+    Get-AzNetworkSecurityPerimeterAccessRule -InputObject $GETObj
+    ```
+
+    ```output
+    AddressPrefix                : {198.168.0.0/32}
+    Direction                    : Inbound
+    EmailAddress                 : {}
+    FullyQualifiedDomainName     : {}
+    Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-test-1/providers
+                                    /Microsoft.Network/networkSecurityPerimeters/nsp-test-1/profiles/profile-test-1
+                                    /accessRules/access-rule-test-1
+    Name                         : access-rule-test-1
+    NetworkSecurityPerimeter     : {}
+    PhoneNumber                  : {}
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : rg-test-1
+    ServiceTag                   :
+    Subscription                 : {}
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Network/networkSecurityPerimeters/profiles/accessRules
+    ```
+
+    Get NetworkSecurityPerimeter AccessRule by Identity (using pipe)
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkSecurityPerimeterAccessRule.md
+  document type: cmdlet
+  external help file: Az.NetworkSecurityPerimeter.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworksecurityperimeteraccessrule
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkSecurityPerimeterAccessRule.md
+  PlatyPS schema version: 2024-05-01

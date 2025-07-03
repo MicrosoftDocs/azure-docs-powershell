@@ -1,0 +1,608 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MongoDB.New-AzMongoDBOrganization
+name: New-AzMongoDBOrganization
+module: Az.MongoDB
+isPreview: false
+summary: |-
+  create a OrganizationResource
+description: |-
+  create a OrganizationResource
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSystemAssignedIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines whether to enable a system-assigned identity for the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MarketplaceSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure subscription id for the the marketplace offer is purchased from
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Organization resource
+    aliases:
+    - OrganizationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailOfferId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Name for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPublisherId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Display Name for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermUnit
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Display Name for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerPropertyOrganizationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization Id in MongoDB system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerPropertyOrganizationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization name in MongoDB system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerPropertyRedirectUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Redirect URL for the MongoDB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The array of user assigned identities associated with the resource.
+      The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserCompanyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Company Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Email address of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserFirstName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      First name of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserLastName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Last name of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserPhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's phone number
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's principal name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMongoDBOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-EnableSystemAssignedIdentity]
+        [-MarketplaceSubscriptionId <String>]
+        [-OfferDetailOfferId <String>]
+        [-OfferDetailPlanId <String>]
+        [-OfferDetailPlanName <String>]
+        [-OfferDetailPublisherId <String>]
+        [-OfferDetailTermId <String>]
+        [-OfferDetailTermUnit <String>]
+        [-PartnerPropertyOrganizationId <String>]
+        [-PartnerPropertyOrganizationName <String>]
+        [-PartnerPropertyRedirectUrl <String>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <String[]>]
+        [-UserCompanyName <String>]
+        [-UserEmailAddress <String>]
+        [-UserFirstName <String>]
+        [-UserLastName <String>]
+        [-UserPhoneNumber <String>]
+        [-UserUpn <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzMongoDBOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMongoDBOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MongoDB.Models.IOrganizationResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new Organization in a Resource Group'
+  description: |-
+    ```powershell
+    New-AzMongoDBOrganization -Name "testorg7" -Location "East US 2" -ResourceGroupName "yashika-rg" -SubscriptionId "61641157-140c-4b97-b365-30ff76d9f82e" -MarketplaceSubscriptionId  "61641157-140c-4b97-b365-30ff76d9f82e" -PartnerPropertyOrganizationName "testorg7" -PartnerPropertyOrganizationId "6805d3e6bb11bf624o2bbaef"  -OfferDetailOfferId "mongodb_atlas_azure_native_prod" -OfferDetailPlanId "private_plan" -OfferDetailPlanName "Pay as You Go (Free) (Private)" -OfferDetailTermUnit "P1M" -OfferDetailPublisherId "mongodb" -OfferDetailTermId "gmz7xq9ge3py" -Tag @{"TestName" = "TestValue"} -UserEmailAddress "yashikajain@microsoft.com" -UserFirstName "" -UserLastName "" -UserUpn "yashikajain@microsoft.com"
+    ```
+
+    ```output
+    Id                              : /subscriptions/61641157-140c-4b97-b365-30ff76d9f82e/resourceGroups/yashika-rg/providers/MongoDB.Atlas/organizations/t
+                                      estorg7
+    IdentityPrincipalId             :
+    IdentityTenantId                :
+    IdentityType                    :
+    IdentityUserAssignedIdentity    : {
+                                      }
+    Location                        : East US 2
+    MarketplaceSubscriptionId       : 113931fe-923b-4b41-c4ad-f72d5a179123
+    MarketplaceSubscriptionStatus   : Subscribed
+    Name                            : testorg7
+    OfferDetailOfferId              : mongodb_atlas_azure_native_prod
+    OfferDetailPlanId               : private_plan
+    OfferDetailPlanName             : Pay as You Go (Free) (Private)
+    OfferDetailPublisherId          : mongodb
+    OfferDetailTermId               : gmz7xq9ge3py
+    OfferDetailTermUnit             : P1M
+    PartnerPropertyOrganizationId   : 6831b60333ded45665ebdf84
+    PartnerPropertyOrganizationName : testorg7
+    PartnerPropertyRedirectUrl      : https://account.mongodb.com/account/reset/password?email=yashikajain%40microsoft.com&orgId=6831b60333ded45665ebdf84&s
+                                      houldRedirect=true
+    ProvisioningState               : Succeeded
+    ResourceGroupName               : yashika-rg
+    SystemDataCreatedAt             : 5/24/2025 12:04:33 PM
+    SystemDataCreatedBy             : yashikajain@microsoft.com
+    SystemDataCreatedByType         : User
+    SystemDataLastModifiedAt        : 5/24/2025 12:06:13 PM
+    SystemDataLastModifiedBy        : b059abce-70fd-4c8f-a117-96d2192e90e1
+    SystemDataLastModifiedByType    : Application
+    Tag                             : {
+                                        "testName": "TestValue"
+                                      }
+    Type                            : mongodb.atlas/organizations
+    UserCompanyName                 :
+    UserEmailAddress                : yashikajain@microsoft.com
+    UserFirstName                   :
+    UserLastName                    :
+    UserPhoneNumber                 :
+    UserUpn                         : yashikajain@microsoft.com
+    ```
+
+    This command will create a new MongoDB Resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MongoDB/MongoDB/help/New-AzMongoDBOrganization.md
+  document type: cmdlet
+  external help file: Az.MongoDB-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.mongodb/new-azmongodborganization
+  Module Name: Az.MongoDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MongoDB/MongoDB/help/New-AzMongoDBOrganization.md
+  PlatyPS schema version: 2024-05-01

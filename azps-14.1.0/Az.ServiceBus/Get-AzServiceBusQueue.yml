@@ -1,0 +1,292 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceBus.Get-AzServiceBusQueue
+name: Get-AzServiceBusQueue
+module: Az.ServiceBus
+isPreview: false
+summary: |-
+  Returns a description for the specified queue.
+description: |-
+  Returns a description for the specified queue.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IServiceBusIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The queue name.
+    aliases:
+    - QueueName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityNamespace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IServiceBusIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityNamespace
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip is only used if a previous operation returned a partial result.
+      If a previous response contains a nextLink element, the value of the nextLink element will include a skip parameter that specifies a starting point to use for subsequent calls.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials that uniquely identify a Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to limit the number of results to the most recent N usageDetails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzServiceBusQueue
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Skip <Int32>]
+        [-Top <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzServiceBusQueue
+        -Name <String>
+        -NamespaceInputObject <IServiceBusIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityNamespace
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzServiceBusQueue
+        -Name <String>
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzServiceBusQueue
+        -InputObject <IServiceBusIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IServiceBusIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.ISbQueue" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Details of a ServiceBus queue'
+  description: |-
+    ```powershell
+    Get-AzServiceBusQueue -ResourceGroupName myResourceGroup -NamespaceName myNamespace -Name myQueue
+    ```
+
+    ```output
+    AccessedAt                                : 1/1/0001 12:00:00 AM
+    AutoDeleteOnIdle                          : 10675199.02:48:05.4775807
+    CountDetailActiveMessageCount             : 0
+    CountDetailDeadLetterMessageCount         : 0
+    CountDetailScheduledMessageCount          : 0
+    CountDetailTransferDeadLetterMessageCount : 0
+    CountDetailTransferMessageCount           : 0
+    CreatedAt                                 : 8/8/2022 10:15:08 AM
+    DeadLetteringOnMessageExpiration          : False
+    DefaultMessageTimeToLive                  : 10675199.02:48:05.4775807
+    DuplicateDetectionHistoryTimeWindow       : 00:10:00
+    EnableBatchedOperations                   : True
+    EnableExpress                             : False
+    EnablePartitioning                        : False
+    ForwardDeadLetteredMessagesTo             :
+    ForwardTo                                 :
+    Id                                        : /subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.ServiceBus/namespaces/myNamespace/queues/myQueue
+    Location                                  : westus
+    LockDuration                              : 00:01:00
+    MaxDeliveryCount                          : 10
+    MaxMessageSizeInKilobytes                 : 1024
+    MaxSizeInMegabytes                        : 1024
+    MessageCount                              : 0
+    Name                                      : myQueue
+    RequiresDuplicateDetection                : False
+    RequiresSession                           : False
+    ResourceGroupName                         : myResourceGroup
+    SizeInByte                                : 0
+    Status                                    : Disabled
+    ```
+
+    Get the details of ServiceBus queue `myQueue` from namespace `myNamespace`.
+- title: 'Example 2: List all queues in a ServiceBus namespace'
+  description: |-
+    ```powershell
+    Get-AzServiceBusQueue -ResourceGroupName myResourceGroup -NamespaceName myNamespace
+    ```
+
+    Lists all queues in ServiceBus namespace `myNamespace`.
+links:
+- text: https://msdn.microsoft.com/en-us/library/azure/mt639380.aspx
+  href: https://msdn.microsoft.com/en-us/library/azure/mt639380.aspx
+- text: https://msdn.microsoft.com/en-us/library/azure/mt639415.aspx
+  href: https://msdn.microsoft.com/en-us/library/azure/mt639415.aspx
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusQueue.md
+  document type: cmdlet
+  external help file: Az.ServiceBus-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicebus/get-azservicebusqueue
+  Module Name: Az.ServiceBus
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Get-AzServiceBusQueue.md
+  PlatyPS schema version: 2024-05-01

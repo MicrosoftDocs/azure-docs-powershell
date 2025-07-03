@@ -1,0 +1,54 @@
+### YamlMime:PowerShellModule1
+uid: Az.StackHCIVM
+name: Az.StackHCIVM Module
+isPreview: false
+cmdletGroups:
+- title: Virtual Machines
+  cmdlets:
+  - Az.StackHCIVM.Add-AzStackHCIVMVirtualMachineNetworkInterface
+  - Az.StackHCIVM.Get-AzStackHCIVMLogicalNetwork
+  - Az.StackHCIVM.Get-AzStackHCIVMNetworkInterface
+  - Az.StackHCIVM.Get-AzStackHCIVMStoragePath
+  - Az.StackHCIVM.Get-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.New-AzStackHCIVMLogicalNetwork
+  - Az.StackHCIVM.New-AzStackHCIVMNetworkInterface
+  - Az.StackHCIVM.New-AzStackHCIVMStoragePath
+  - Az.StackHCIVM.New-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.Remove-AzStackHCIVMLogicalNetwork
+  - Az.StackHCIVM.Remove-AzStackHCIVMNetworkInterface
+  - Az.StackHCIVM.Remove-AzStackHCIVMStoragePath
+  - Az.StackHCIVM.Remove-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.Remove-AzStackHCIVMVirtualMachineNetworkInterface
+  - Az.StackHCIVM.Restart-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.Start-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.Stop-AzStackHCIVMVirtualMachine
+  - Az.StackHCIVM.Update-AzStackHCIVMLogicalNetwork
+  - Az.StackHCIVM.Update-AzStackHCIVMNetworkInterface
+  - Az.StackHCIVM.Update-AzStackHCIVMStoragePath
+  - Az.StackHCIVM.Update-AzStackHCIVMVirtualMachine
+- title: VM Disks
+  cmdlets:
+  - Az.StackHCIVM.Add-AzStackHCIVMVirtualMachineDataDisk
+  - Az.StackHCIVM.Get-AzStackHCIVMVirtualHardDisk
+  - Az.StackHCIVM.New-AzStackHCIVMVirtualHardDisk
+  - Az.StackHCIVM.Remove-AzStackHCIVMVirtualHardDisk
+  - Az.StackHCIVM.Remove-AzStackHCIVMVirtualMachineDataDisk
+  - Az.StackHCIVM.Update-AzStackHCIVMVirtualHardDisk
+- title: VM Images
+  cmdlets:
+  - Az.StackHCIVM.Get-AzStackHCIVMImage
+  - Az.StackHCIVM.New-AzStackHCIVMImage
+  - Az.StackHCIVM.Remove-AzStackHCIVMImage
+  - Az.StackHCIVM.Update-AzStackHCIVMImage
+description: |-
+  Microsoft Azure PowerShell: StackHcivm cmdlets
+metadata:
+  Module Name: Az.StackHCIVM
+  Module Guid: 7389f67c-ec9d-4c13-9c9a-308834413af6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.stackhcivm
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/Az.StackHCIVM.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/Az.StackHCIVM.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

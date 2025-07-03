@@ -1,0 +1,193 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudRackDefinitionObject
+name: New-AzNetworkCloudRackDefinitionObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for RackDefinition.
+description: |-
+  Create an in-memory object for RackDefinition.
+parameters:
+  cmdletParameters:
+  - name: AvailabilityZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The zone name used for this rack when created.
+      Availability zones are used for workload placement.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BareMetalMachineConfigurationData
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.IBareMetalMachineConfigurationData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The unordered list of bare metal machine configuration.
+      To construct, see NOTES section for BAREMETALMACHINECONFIGURATIONDATA properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkRackId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the network rack that matches this rack definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RackLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The free-form description of the rack's location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RackSerialNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier for the rack within Network Cloud cluster.
+      An alternate unique alphanumeric value other than a serial number may be provided if desired.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RackSkuId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the sku for the rack being added.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageApplianceConfigurationData
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.IStorageApplianceConfigurationData" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of storage appliance configuration data for this rack.
+      To construct, see NOTES section for STORAGEAPPLIANCECONFIGURATIONDATA properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudRackDefinitionObject
+        -NetworkRackId <String>
+        -RackSerialNumber <String>
+        -RackSkuId <String>
+        [-AvailabilityZone <String>]
+        [-BareMetalMachineConfigurationData <IBareMetalMachineConfigurationData[]>]
+        [-RackLocation <String>]
+        [-StorageApplianceConfigurationData <IStorageApplianceConfigurationData[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.RackDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for RackDefinition.'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString "********" -AsPlainText -Force
+    $bmmConfigurationData = New-AzNetworkCloudBareMetalMachineConfigurationDataObject -BmcCredentialsPassword $password -BmcCredentialsUsername "username" -BmcMacAddress "00:BB:CC:DD:EE:FF" -BootMacAddress "00:BB:CC:DD:EE:FF" -RackSlot 1 -SerialNumber "serialNumber" -MachineDetail "machineDetail" -MachineName "machineName"
+    $saConfigurationData = New-AzNetworkCloudStorageApplianceConfigurationDataObject -AdminCredentialsPassword $password -AdminCredentialsUsername "username" -RackSlot 1 -SerialNumber "serialNumber" -StorageApplianceName "storageApplianceName"
+
+    $object = New-AzNetworkCloudRackDefinitionObject -NetworkRackId "/subscriptions/subscriptionId/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/vNet/subnets/Subnet" -RackSerialNumber "aa5678" -RackSkuId "/subscriptions/subscriptionId/providers/Microsoft.NetworkCloud/rackSkus/VNearEdge1_Compute_DellR750_16C2M" -AvailabilityZone "1" -BareMetalMachineConfigurationData $bmmConfigurationData -RackLocation "Foo Datacenter, Floor 3, Aisle 9, Rack 2" -StorageApplianceConfigurationData $saConfigurationData
+
+    Write-Host ($object | Format-List | Out-String)
+    ```
+
+    ```output
+    AvailabilityZone                  : 1
+    BareMetalMachineConfigurationData : {{
+                                          "bmcCredentials": {
+                                            "password": "redacted",
+                                            "username": "username"
+                                          },
+                                          "bmcMacAddress": "00:BB:CC:DD:EE:FF",
+                                          "bootMacAddress": "00:BB:CC:DD:EE:FF",
+                                          "machineDetails": "machineDetail",
+                                          "machineName": "machineName",
+                                          "rackSlot": 1,
+                                          "serialNumber": "serialNumber"
+                                        }}
+    NetworkRackId                     : /subscriptions/subscription/resourceGroups/resourceGroup/providers/Microsoft.Network/virtualNetworks/vNet/subnets/Subnet
+    RackLocation                      : Foo Datacenter, Floor 3, Aisle 9, Rack 2
+    RackSerialNumber                  : aa5678
+    RackSkuId                         : /subscriptions/subscriptionId/providers/Microsoft.NetworkCloud/rackSkus/VNearEdge1_Compute_DellR750_16C2M
+    StorageApplianceConfigurationData : {{
+                                          "adminCredentials": {
+                                            "password": "redacted",
+                                            "username": "username"
+                                          },
+                                          "rackSlot": 1,
+                                          "serialNumber": "serialNumber",
+                                          "storageApplianceName": "storageApplianceName"
+                                        }}
+    ```
+
+    Create an in-memory object for RackDefinition.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudRackDefinitionObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudRackDefinitionObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudRackDefinitionObject.md
+  PlatyPS schema version: 2024-05-01

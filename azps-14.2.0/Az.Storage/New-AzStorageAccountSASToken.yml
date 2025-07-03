@@ -1,0 +1,272 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageAccountSASToken
+name: New-AzStorageAccountSASToken
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates an account-level SAS token.
+description: |-
+  The **New-AzStorageAccountSASToken** cmdlet creates an account-level shared access signature (SAS) token for an Azure Storage account.
+  You can use the SAS token to delegate permissions for multiple services, or to delegate permissions for services not available with an object-level SAS token.
+  An account SAS is secured using the storage account key. To create an account SAS, a client application must possess the account key.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context.
+      You can use the New-AzStorageContext cmdlet to get an **AzureStorageContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Encryption scope to use when sending requests authorized with this SAS URI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the time at which the shared access signature becomes invalid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressOrRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+      The range is inclusive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the permissions for Storage account.
+      Permissions are valid only if they match the specified resource type.
+      It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+      For more information about acceptable permission values, see Constructing an Account SAS http://go.microsoft.com/fwlink/?LinkId=799514
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.SharedAccessProtocol" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the protocol permitted for a request made with the account SAS.
+      The acceptable values for this parameter are:
+      - HttpsOnly
+      - HttpsOrHttp
+      The default value is HttpsOrHttp.
+    acceptedValues:
+    - HttpsOnly
+    - HttpsOrHttp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="Microsoft.Azure.Storage.SharedAccessAccountResourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource types that are available with the SAS token.
+      The acceptable values for this parameter are:
+      - None
+      - Service
+      - Container
+      - Object
+    acceptedValues:
+    - None
+    - Service
+    - Container
+    - Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="Microsoft.Azure.Storage.SharedAccessAccountServices" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the service.
+      The acceptable values for this parameter are:
+      - None
+      - Blob
+      - File
+      - Queue
+      - Table
+    acceptedValues:
+    - None
+    - Blob
+    - File
+    - Queue
+    - Table
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the time, as a **DateTime** object, at which the SAS becomes valid.
+      To get a **DateTime** object, use the Get-Date cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageAccountSASToken
+        -Service <SharedAccessAccountServices>
+        -ResourceType <SharedAccessAccountResourceTypes>
+        [-Permission <String>]
+        [-Protocol <SharedAccessProtocol>]
+        [-IPAddressOrRange <String>]
+        [-StartTime <DateTime>]
+        [-ExpiryTime <DateTime>]
+        [-EncryptionScope <String>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an account-level SAS token with full permission'
+  description: |-
+    ```powershell
+    New-AzStorageAccountSASToken -Service Blob,File,Table,Queue -ResourceType Service,Container,Object -Permission "racwdlup"
+    ```
+
+    This command creates an account-level SAS token with full permission.
+- title: 'Example 2: Create an account-level SAS token for a range of IP addresses and EncryptionScope'
+  description: |-
+    ```powershell
+    New-AzStorageAccountSASToken -Service Blob,File,Table,Queue -ResourceType Service,Container,Object -Permission "racwdlup" -Protocol HttpsOnly -IPAddressOrRange 168.1.5.60-168.1.5.70 -EncryptionScope scopename
+    ```
+
+    This command creates an account-level SAS token for HTTPS-only requests from the specified range of IP addresses, with a specific EncryptionScope.
+- title: 'Example 3: Create an account-level SAS token valid for 24 hours'
+  description: |-
+    ```powershell
+    New-AzStorageAccountSASToken -Service Blob -ResourceType Service,Container,Object -Permission "rl" -ExpiryTime (Get-Date).AddDays(1)
+    ```
+
+    This command creates an read-only account-level SAS token that is valid for 24 hours.
+links:
+- text: New-AzStorageBlobSASToken
+  href: ./New-AzStorageBlobSASToken.yml
+- text: New-AzStorageContainerSASToken
+  href: ./New-AzStorageContainerSASToken.yml
+- text: New-AzStorageFileSASToken
+  href: ./New-AzStorageFileSASToken.yml
+- text: New-AzStorageQueueSASToken
+  href: ./New-AzStorageQueueSASToken.yml
+- text: New-AzStorageShareSASToken
+  href: ./New-AzStorageShareSASToken.yml
+- text: New-AzStorageTableSASToken
+  href: ./New-AzStorageTableSASToken.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountSASToken.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azstorageaccountsastoken
+  Module Name: Az.Storage
+  ms.assetid: BCCBB05B-A5D7-4796-BE55-6BE5E18E07FC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageAccountSASToken.md
+  PlatyPS schema version: 2024-05-01

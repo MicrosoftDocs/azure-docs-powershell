@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzExpressRoutePort
+name: Get-AzExpressRoutePort
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an Azure ExpressRoutePort resource.
+description: |-
+  The **Get-AzExpressRoutePort** cmdlet is used to retrieve an ExpressRoutePort object
+  from your subscription. The expressrouteport object returned can be used as input to other cmdlets that
+  operate on ExpressRoutePort.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ExpressRoutePort.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name of the ExpressRoutePort.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceId of the express route port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzExpressRoutePort
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzExpressRoutePort
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRoutePort" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzExpressRoutePort -Name $PortName -ResourceGroupName $rg
+    ```
+
+    Gets the ExpressRoutePort object with name $PortName in resource group $rg in your subscription.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzExpressRoutePort -Name test*
+    ```
+
+    Gets all of the ExpressRoutePort objects whose name starts with "test".
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzExpressRoutePort -ResourceId $id
+    ```
+
+    Gets the ExpressRoutePort object with ResourceId $id.
+links:
+- text: New-AzExpressRoutePort
+  href: ./New-AzExpressRoutePort.yml
+- text: Remove-AzExpressRoutePort
+  href: ./Remove-AzExpressRoutePort.yml
+- text: Set-AzExpressRoutePort
+  href: ./Set-AzExpressRoutePort.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePort.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azexpressrouteport
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRoutePort.md
+  PlatyPS schema version: 2024-05-01

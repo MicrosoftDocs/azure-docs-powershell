@@ -1,0 +1,486 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzFirewallPolicyDraft
+name: Set-AzFirewallPolicyDraft
+module: Az.Network
+isPreview: false
+summary: |-
+  Saves a modified azure firewall policy draft
+description: |-
+  The **Set-AzFirewallPolicyDraft** cmdlet updates an Azure Firewall Policy draft.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureFirewallPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: BasePolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The base policy to inherit from
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsSetting
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyDnsSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      The DNS Setting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExplicitProxy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyExplicitProxy" data-throw-if-not-resolved="False" />
+    description: |-
+      The Explicit Proxy Settings
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallPolicyObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      The AzureFirewall Policy associated with the draft
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByParentInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyDraft" data-throw-if-not-resolved="False" />
+    description: |-
+      The AzureFirewall Policy draft
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IntrusionDetection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyIntrusionDetection" data-throw-if-not-resolved="False" />
+    description: |-
+      The Intrusion Detection Setting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Private IP Range
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Snat
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicySNAT" data-throw-if-not-resolved="False" />
+    description: |-
+      The private IP addresses/IP ranges to which traffic will not be SNAT in Firewall Policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlSetting
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicySqlSetting" data-throw-if-not-resolved="False" />
+    description: |-
+      The SQL related setting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatIntelMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The operation mode for Threat Intelligence.
+    acceptedValues:
+    - Alert
+    - Deny
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatIntelWhitelist
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyThreatIntelWhitelist" data-throw-if-not-resolved="False" />
+    description: |-
+      The allowlist for Threat Intelligence
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyDraft
+        -AzureFirewallPolicyName <String>
+        -ResourceGroupName <String>
+        [-AsJob]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallPolicyThreatIntelWhitelist>]
+        [-BasePolicy <String>]
+        [-DnsSetting <PSAzureFirewallPolicyDnsSettings>]
+        [-SqlSetting <PSAzureFirewallPolicySqlSetting>]
+        [-Tag <Hashtable>]
+        [-IntrusionDetection <PSAzureFirewallPolicyIntrusionDetection>]
+        [-PrivateRange <String[]>]
+        [-ExplicitProxy <PSAzureFirewallPolicyExplicitProxy>]
+        [-Snat <PSAzureFirewallPolicySNAT>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyDraft
+        -InputObject <PSAzureFirewallPolicyDraft>
+        [-AsJob]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallPolicyThreatIntelWhitelist>]
+        [-BasePolicy <String>]
+        [-DnsSetting <PSAzureFirewallPolicyDnsSettings>]
+        [-SqlSetting <PSAzureFirewallPolicySqlSetting>]
+        [-Tag <Hashtable>]
+        [-IntrusionDetection <PSAzureFirewallPolicyIntrusionDetection>]
+        [-PrivateRange <String[]>]
+        [-ExplicitProxy <PSAzureFirewallPolicyExplicitProxy>]
+        [-Snat <PSAzureFirewallPolicySNAT>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyDraft
+        -FirewallPolicyObject <PSAzureFirewallPolicy>
+        [-AsJob]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallPolicyThreatIntelWhitelist>]
+        [-BasePolicy <String>]
+        [-DnsSetting <PSAzureFirewallPolicyDnsSettings>]
+        [-SqlSetting <PSAzureFirewallPolicySqlSetting>]
+        [-Tag <Hashtable>]
+        [-IntrusionDetection <PSAzureFirewallPolicyIntrusionDetection>]
+        [-PrivateRange <String[]>]
+        [-ExplicitProxy <PSAzureFirewallPolicyExplicitProxy>]
+        [-Snat <PSAzureFirewallPolicySNAT>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByParentInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyDraft
+        -ResourceId <String>
+        [-AsJob]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallPolicyThreatIntelWhitelist>]
+        [-BasePolicy <String>]
+        [-DnsSetting <PSAzureFirewallPolicyDnsSettings>]
+        [-SqlSetting <PSAzureFirewallPolicySqlSetting>]
+        [-Tag <Hashtable>]
+        [-IntrusionDetection <PSAzureFirewallPolicyIntrusionDetection>]
+        [-PrivateRange <String[]>]
+        [-ExplicitProxy <PSAzureFirewallPolicyExplicitProxy>]
+        [-Snat <PSAzureFirewallPolicySNAT>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewall" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzFirewallPolicyDraft -InputObject $fpDraft
+    ```
+
+    This example sets the firewall policy draft with the new firewall policy draft value
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-AzFirewallPolicyDraft -AzureFirewallPolicyName firewallPolicy1 -ResourceGroupName TestRg -ThreatIntelMode "Alert"
+    ```
+
+    This example sets the firewall policy draft with the new threat intel mode
+- title: Example 3
+  description: |-
+    ```powershell
+    $threatIntelWhitelist = New-AzFirewallPolicyThreatIntelWhitelist -IpAddress 23.46.72.91,192.79.236.79 -FQDN microsoft.com
+    Set-AzFirewallPolicyDraft -AzureFirewallPolicyName firewallPolicy1 -ResourceGroupName TestRg -ThreatIntelWhitelist $threatIntelWhitelist
+    ```
+
+    This example sets the firewall policy draft with the new threat intel allowlist
+- title: Example 4
+  description: |-
+    ```powershell
+    $exProxy = New-AzFirewallPolicyExplicitProxy -EnableExplicitProxy  -HttpPort 100 -HttpsPort 101 -EnablePacFile  -PacFilePort 130 -PacFile "sampleurlfortesting.blob.core.windowsnet/nothing"
+    Set-AzFirewallPolicyDraft -AzureFirewallPolicyName firewallPolicy1 -ResourceGroupName TestRg -ExplicitProxy $exProxy
+    ```
+
+    ```output
+    BasePolicy	                : null
+    		DnsSettings  	            : null
+    		Etag	                    : null
+    		ExplicitProxy
+    			EnableExplicitProxy	    : true
+    			EnablePacFile	        : true
+    			HttpPort	            : 100
+    			HttpsPort	            : 101
+    			PacFile                 : "sampleurlfortesting.blob.core.windowsnet/nothing"
+    			PacFilePort	            : 130
+    		Id	                        : null
+    		IntrusionDetection	        : null
+    		Location	                : "westcentralus"
+    		Name	                    : "firewallPolicy1"
+    		PrivateRange	            : null
+    		PrivateRangeText	        : "[]"
+    		ProvisioningState	        : null
+    		ResourceGroupName	        : "TestRg"
+    		ResourceGuid	            : null
+    		RuleCollectionGroups	    : null
+    		Snat
+    			AutoLearnPrivateRanges	: null
+    			PrivateRanges	        : null
+    		SqlSetting	                : null
+    		Tag	                        : null
+    		TagsTable	                : null
+    		ThreatIntelMode	            : "Alert"
+    		ThreatIntelWhitelist	    : null
+    		Type	                    : null
+    ```
+
+    This example sets the firewall policy draft with the explicit proxy settings
+links:
+- text: New-AzFirewallPolicyExplicitProxy
+  href: ./New-AzFirewallPolicyExplicitProxy.yml
+- text: New-AzFirewallPolicySnat
+  href: ./New-AzFirewallPolicySnat.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicyDraft.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/Set-AzFirewallPolicyDraft
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicyDraft.md
+  PlatyPS schema version: 2024-05-01

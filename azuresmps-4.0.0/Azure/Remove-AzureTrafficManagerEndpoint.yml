@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureTrafficManagerEndpoint
+name: Remove-AzureTrafficManagerEndpoint
+module: Azure
+isPreview: false
+summary: |-
+  Removes an endpoint from a Traffic Manager profile.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureTrafficManagerEndpoint** cmdlet removes an endpoint from a Microsoft Azure Traffic Manager profile.
+  After you remove an endpoint, pass the result to the **Set-AzureTrafficManagerProfile** cmdlet by using the pipeline operator.
+  That cmdlet connects to Azure to save your changes.
+parameters:
+  cmdletParameters:
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name of the endpoint to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerProfile
+    type: <xref href="IProfileWithDefinition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Traffic Manager profile object from which to remove the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureTrafficManagerEndpoint
+        -DomainName <String>
+        [-Force]
+        -TrafficManagerProfile <IProfileWithDefinition>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.TrafficManager.Models.IProfileWithDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a Traffic Manager profile object, which contains information about the updated profile.
+examples:
+- title: 'Example 1: Remove an endpoint from a profile'
+  description: |-
+    ```
+    PS C:\>$TrafficManagerProfile = Get-AzureTrafficManagerProfile -Name "ContosoProfile"
+    PS C:\> Remove-AzureTrafficManagerEndpoint -TrafficManagerProfile $TrafficManagerProfile -DomainName "Contoso02App.cloudapp.net" | Set-AzureTrafficManagerProfile
+    ```
+
+    The first command uses the **Get-AzureTrafficManagerProfile** cmdlet to get the profile named ContosoProfile, and then stores it in the $TrafficManagerProfile variable.
+
+    The second command removes an endpoint that has the domain name Contoso02App.cloudapp.net from the Traffic Manager profile that is stored in $TrafficManagerProfile.
+    The command passes the profile object to the **Set-AzureTrafficManagerProfile** cmdlet to connect to Azure to save your changes.
+links:
+- text: Add-AzureTrafficManagerEndpoint
+  href: ./Add-AzureTrafficManagerEndpoint.yml
+- text: Set-AzureTrafficManagerEndpoint
+  href: ./Set-AzureTrafficManagerEndpoint.yml
+- text: Get-AzureTrafficManagerProfile
+  href: ./Get-AzureTrafficManagerProfile.yml
+- text: Set-AzureTrafficManagerProfile
+  href: ./Set-AzureTrafficManagerProfile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 50B83AEC-1B32-4089-9804-D388677C3F7E
+  PlatyPS schema version: 2024-05-01

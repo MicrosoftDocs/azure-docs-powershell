@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnProfileUpgradeParametersObject
+name: New-AzFrontDoorCdnProfileUpgradeParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for ProfileUpgradeParameters.
+description: |-
+  Create an in-memory object for ProfileUpgradeParameters.
+parameters:
+  cmdletParameters:
+  - name: WafMappingList
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.IProfileChangeSkuWafMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Web Application Firewall (WAF) and security policy mapping for the profile upgrade.
+      To construct, see NOTES section for WAFMAPPINGLIST properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnProfileUpgradeParametersObject
+        -WafMappingList <IProfileChangeSkuWafMapping[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.ProfileUpgradeParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ProfileUpgradeParameters.'
+  description: |-
+    ```powershell
+    $waf1 = New-AzFrontDoorCdnProfileChangeSkuWafMappingObject -SecurityPolicyName policyName -ChangeToWafPolicyId toWafPolicyId
+    New-AzFrontDoorCdnProfileUpgradeParametersObject -WafMappingList $waf1
+    ```
+
+    ```output
+    WafMappingList
+    --------------
+    {{…
+    ```
+
+    Create an in-memory object for ProfileUpgradeParameters.
+- title: 'Example 2: Create an in-memory object for ProfileUpgradeParameters, show the details of the object.'
+  description: |-
+    ```powershell
+    $waf1 = New-AzFrontDoorCdnProfileChangeSkuWafMappingObject -SecurityPolicyName policyName -ChangeToWafPolicyId toWafPolicyId
+    $upgrade = New-AzFrontDoorCdnProfileUpgradeParametersObject -WafMappingList $waf1
+    $upgrade.ToString()
+    ```
+
+    ```output
+    {
+      "wafMappingList": [
+        {
+          "changeToWafPolicy": {
+            "id": "toWafPolicyId"
+          },
+          "securityPolicyName": "policyName"
+        }
+      ]
+    }
+    ```
+
+    Create an in-memory object for ProfileUpgradeParameters, show the details of the object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileUpgradeParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-AzFrontDoorCdnProfileUpgradeParametersObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileUpgradeParametersObject.md
+  PlatyPS schema version: 2024-05-01

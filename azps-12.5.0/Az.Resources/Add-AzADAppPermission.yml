@@ -1,0 +1,210 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Add-AzADAppPermission
+name: Add-AzADAppPermission
+module: Az.Resources
+isPreview: false
+summary: |-
+  Adds an API permission.
+description: |-
+  Adds an API permission.
+  The list of available permissions of API is property of application represented by service principal in tenant.
+
+  For instance, to get available permissions for Graph API:
+  * Azure Active Directory Graph: `Get-AzAdServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444`
+  * Microsoft Graph: `Get-AzAdServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444`
+
+  Application permissions under the `appRoles` property correspond to `Role` in `-Type`.
+  Delegated permissions under the `oauth2Permissions` property correspond to `Scope` in `-Type`.
+
+  User needs to grant consent via Azure Portal if the permission requires admin consent because Azure PowerShell doesn't support it yet.
+parameters:
+  cmdletParameters:
+  - name: ApiId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier for the resource that the application requires access to.
+      This should be equal to the appId declared on the target resource application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The application Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AppIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier in Azure AD.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier for one of the oauth2PermissionScopes or appRole instances that the resource application exposes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the id property references an oauth2PermissionScopes(Scope, delegated permission) or an appRole(Role, application permission).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzADAppPermission
+        -ApiId <Guid>
+        -PermissionId <String>
+        -ObjectId <Guid>
+        [-Type <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzADAppPermission
+        -ApiId <Guid>
+        -PermissionId <String>
+        -ApplicationId <Guid>
+        [-Type <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AppIdParameterSet
+  isDefault: false
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add API Permission'
+  description: |-
+    ```powershell
+    Add-AzADAppPermission -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -ApiId 00001111-aaaa-2222-bbbb-3333cccc4444 -PermissionId 5f8c59db-677d-491f-a6b8-5f174b11ec1d
+    ```
+
+    Add delegated permission "Group.Read.All" of Microsoft Graph API to AD Application (aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb)
+- title: 'Example 2: Add API Permission'
+  description: |-
+    ```powershell
+    Add-AzADAppPermission -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -ApiId 00001111-aaaa-2222-bbbb-3333cccc4444 -PermissionId 1138cb37-bd11-4084-a2b7-9f71582aeddb -Type Role
+    ```
+
+    Add application permission "Device.ReadWrite.All" of Microsoft Graph API to AD Application (aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb)
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Add-AzADAppPermission.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/add-azadapppermission
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Add-AzADAppPermission.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,467 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkManagerSecurityAdminRule
+name: New-AzNetworkManagerSecurityAdminRule
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a security admin rule.
+description: |-
+  The **New-AzNetworkManagerSecurityAdminRule** cmdlet creates a security admin rule.
+parameters:
+  cmdletParameters:
+  - name: Access
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Access of Rule.
+    acceptedValues:
+    - Allow
+    - Deny
+    - AlwaysAllow
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAddressPrefix
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Destination Address Prefixes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPortRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Destination Port Ranges.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Direction of Rule.
+    acceptedValues:
+    - Inbound
+    - Outbound
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Flag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default Flag Type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Priority of Rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol of Rule.
+    acceptedValues:
+    - Tcp
+    - Udp
+    - Icmp
+    - Esp
+    - Any
+    - Ah
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleCollectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager security admin rule collection name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SecurityAdminConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager security admin configuration name.
+    aliases:
+    - ConfigName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SourceAddressPrefix
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Source Address Prefixes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePortRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Source Port Ranges.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManagerSecurityAdminRule
+        -Name <String>
+        -RuleCollectionName <String>
+        -SecurityAdminConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        -Protocol <String>
+        -Direction <String>
+        -Access <String>
+        -Priority <Int32>
+        [-Description <String>]
+        [-SourceAddressPrefix <PSNetworkManagerAddressPrefixItem[]>]
+        [-DestinationAddressPrefix <PSNetworkManagerAddressPrefixItem[]>]
+        [-SourcePortRange <String[]>]
+        [-DestinationPortRange <String[]>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Custom
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManagerSecurityAdminRule
+        -Name <String>
+        -RuleCollectionName <String>
+        -SecurityAdminConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        -Flag <String>
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityBaseAdminRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Custom Security Admin Rule'
+  description: |-
+    ```powershell
+    $sourceAddressPrefix = New-AzNetworkManagerAddressPrefixItem -AddressPrefix "Internet" -AddressPrefixType "ServiceTag"
+    $destinationAddressPrefix = New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix"
+    $sourcePortList = @("100")
+    $destinationPortList = @("99")
+    New-AzNetworkManagerSecurityAdminRule -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -ConfigName "psSecurityAdminConfig" -RuleCollectionName "psRuleCollection" -Name "psRule" -Description "TestDescription" -Protocol  "TCP" -Direction "Inbound" -Access "Allow" -Priority 100 -SourcePortRange $sourcePortList -DestinationPortRange $destinationPortList -SourceAddressPrefix $sourceAddressPrefix -DestinationAddressPrefix $destinationAddressPrefix
+    ```
+
+    ```output
+    Protocol                  : Tcp
+    Direction                 : Inbound
+    Sources                   : {Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem}
+    Destinations              : {Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem}
+    SourcePortRanges          : {100}
+    DestinationPortRanges     : {99}
+    Access                    : Allow
+    Priority                  : 100
+    SourcesText               : [
+                                  {
+                                    "AddressPrefix": "Internet",
+                                    "AddressPrefixType": "ServiceTag"
+                                  }
+                                ]
+    DestinationsText          : [
+                                  {
+                                    "AddressPrefix": "10.0.0.1",
+                                    "AddressPrefixType": "IPPrefix"
+                                  }
+                                ]
+    SourcePortRangesText      : [
+                                  "100"
+                                ]
+    DestinationPortRangesText : [
+                                  "99"
+                                ]
+    DisplayName               :
+    Description               : TestDescription
+    Type                      : Microsoft.Network/networkManagers/securityAdminConfigurations/ruleCollections/rules
+    ProvisioningState         : Succeeded
+    SystemData                : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText            : {
+                                  "CreatedBy": "jaredgorthy@microsoft.com",
+                                  "CreatedByType": "User",
+                                  "CreatedAt": "2022-08-08T00:39:56.4512419Z",
+                                  "LastModifiedBy": "jaredgorthy@microsoft.com",
+                                  "LastModifiedByType": "User",
+                                  "LastModifiedAt": "2022-08-08T00:39:56.4512419Z"
+                                }
+    Name                      : psRule
+    Etag                      :
+    Id                        : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/securityAdminConfigurations/psSecurityAdminConfig/ruleCollections/psRuleCollection/rules/psRule
+    ```
+
+    Creates a security admin rule.
+links:
+- text: Get-AzNetworkManagerSecurityAdminRule
+  href: ./Get-AzNetworkManagerSecurityAdminRule.yml
+- text: Remove-AzNetworkManagerSecurityAdminRule
+  href: ./Remove-AzNetworkManagerSecurityAdminRule.yml
+- text: Set-AzNetworkManagerSecurityAdminRule
+  href: ./Set-AzNetworkManagerSecurityAdminRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagersecurityadminrule
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminRule.md
+  PlatyPS schema version: 2024-05-01

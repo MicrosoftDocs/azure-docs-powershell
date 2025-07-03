@@ -1,0 +1,252 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Update-AzKeyVaultManagedStorageAccount
+name: Update-AzKeyVaultManagedStorageAccount
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Update editable attributes of a Key Vault managed Azure Storage Account.
+description: |-
+  Update the editable attributes of a Key Vault managed Azure Storage Account.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed storage account
+      name from vault name, currently selected environment and manged storage account name.
+    aliases:
+    - StorageAccountName
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveKeyName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Active key name.
+      If not specified, the existing value of managed storage account's active key name remains unchanged
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoRegenerateKey
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Auto regenerate key.
+      If not specified, the existing value of auto regenerate key of managed storage account remains unchanged
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enable
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      If present, enables a use of a managed storage account key for sas token generation if value is
+      true. Disables use of a managed storage account key for sas token generation if value is false. If
+      not specified, the existing value of the storage account's enabled/disabled state remains
+      unchanged.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Cmdlet does not return object by default. If this switch is specified, return managed storage
+      account object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegenerationPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Regeneration period. If auto regenerate key is enabled, this value specifies the timespan after
+      which managed storage account's inactive keygets auto regenerated and becomes the active key. If
+      not specified, the existing value of regeneration period of keys of managed storage account remains
+      unchanged
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+      Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzKeyVaultManagedStorageAccount
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-ActiveKeyName <String>]
+        [-AutoRegenerateKey <Boolean>]
+        [-RegenerationPeriod <TimeSpan>]
+        [-Enable <Boolean>]
+        [-Tag <Hashtable>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.ManagedStorageAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1:Update the active key to 'key2' on a Key Vault managed Azure Storage Account.
+  description: |-
+    ```
+    PS C:\> Update-AzKeyVaultManagedStorageAccount -VaultName 'myvault' -AccountName 'mystorageaccount' -ActiveKeyName 'key2'
+    ```
+
+    Updates the Key Vault managed Azure Storage Account active key to 'key2'. 'key2' will be used to
+    generate SAS tokens after this update.
+links:
+- text: Az.KeyVault
+  href: /powershell/module/Az.keyvault
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Update-AzKeyVaultManagedStorageAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/update-AzKeyvaultmanagedstorageaccount
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Update-AzKeyVaultManagedStorageAccount.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchSubtask
+name: Get-AzBatchSubtask
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets the subtask information of the specified task.
+description: |-
+  The **Get-AzBatchSubtask** cmdlet retrieves the subtask information about the specified task.
+  Subtasks provide parallel processing for individual tasks, and enable precise monitoring of task execution and progress.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job that contains the task whose subtasks this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of subtasks to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Task
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudTask" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object reference to the task that contain the subtasks that this cmdlet returns.
+      This object reference is created by using the Get-AzBatchTask cmdlet and storing the returned object in a variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObject
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the task whose subtasks this cmdlet returns.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchSubtask
+        [-JobId] <String>
+        [-TaskId] <String>
+        -BatchContext <BatchAccountContext>
+        [-MaxCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchSubtask
+        [[-Task] <PSCloudTask>]
+        -BatchContext <BatchAccountContext>
+        [-MaxCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudTask" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSSubtaskInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Return all subtasks for a specified task'
+  description: |-
+    ```powershell
+    $Context = Get-AzBatchAccountKey -AccountName "contosobatchaccount"
+    Get-AzBatchSubtask -JobId "Job-01" -TaskID "myTask" -BatchContext $Context
+    ```
+
+    These commands return all the subtasks for the task with the ID myTask.
+    To do this, the first command in the example creates an object reference to the account keys for the batch account contosobatchaccount.
+    This object reference is stored in a variable named $context.
+    The second command then uses that object reference and the **Get-AzBatchSubtask** cmdlet to return all the subtasks for myTask, a task that runs as part of job Job-01.
+links:
+- text: Get-AzBatchTask
+  href: ./Get-AzBatchTask.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchSubtask.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchsubtask
+  Module Name: Az.Batch
+  ms.assetid: 7D0D8B46-4BF0-47D5-9261-3306AEB9E7DD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchSubtask.md
+  PlatyPS schema version: 2024-05-01

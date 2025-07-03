@@ -1,0 +1,716 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzVM
+name: New-AzVM
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a virtual machine.
+description: |-
+  The **New-AzVM** cmdlet creates a virtual machine in Azure.
+  This cmdlet takes a virtual machine object as input.
+  Use the New-AzVMConfig cmdlet to create a virtual machine object.
+  Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, Add-AzVMNetworkInterface, and Set-AzVMOSDisk.
+
+  The `SimpleParameterSet` provides a convenient method to create a VM by making common VM creation arguments optional.
+parameters:
+  cmdletParameters:
+  - name: AddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The address prefix for the virtual network which will be created for the VM.
+    defaultValue: 192.168.0.0/16
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllocationMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP allocation method for the public IP which will be created for the VM.
+    acceptedValues:
+    - Static
+    - Dynamic
+    defaultValue: Static
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilitySetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the availability set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      The administrator credentials for the VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableBginfoExtension
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet does not install the **BG Info** extension on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The local path to the virtual hard disk file to be uploaded to the cloud and for creating the VM, and it must have '.vhd' as its suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainNameLabel
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subdomain label for the fully-qualified domain name (FQDN) of the VM.  This will take the form `{domainNameLabel}.{location}.cloudapp.azure.com`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The friendly image name upon which the VM will be built.  These include: Win2016Datacenter, Win2012R2Datacenter, Win2012Datacenter, Win2008R2SP1, UbuntuLTS, CentOS, CoreOS, Debian, openSUSE-Leap, RHEL, SLES.
+    defaultValue: Win2016Datacenter
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a license type, which indicates that the image or disk for the virtual machine was licensed on-premises.
+      This value is used only for images that contain the Windows Server operating system.
+      The acceptable values for this parameter are:
+
+      - Windows_Client
+      - Windows_Server
+
+      This value cannot be updated.
+      If you specify this parameter for an update, the value must match the initial value for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Linux
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the disk file is for Linux VM, if specified; or Windows, if not specified by default.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a location for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VM resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OpenPorts
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of ports to open on the network security group (NSG) for the created VM.  The default value depends on the type of image chosen (i.e., Windows: 3389, 5985 and Linux: 22).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a new (or existing) public IP address for the created VM to use.  If not specified, a name will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a new (or existing) network security group (NSG) for the created VM to use.  If not specified, a name will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Size
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Virtual Machine Size.  The Default Value is: Standard_DS1_v2.
+    defaultValue: Standard_DS1_v2
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The address prefix for the subnet which will be created for the VM.
+    defaultValue: 192.168.1.0/24
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a new (or existing) subnet for the created VM to use.  If not specified, a name will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that resources and resource groups can be tagged with a set of name-value pairs.
+      Adding tags to resources enables you to group resources together across resource groups and to create your own views.
+      Each resource or resource group can have a maximum of 15 tags.
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a new (or existing) virtual network for the created VM to use.  If not specified, a name will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DiskFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a local virtual machine to create.
+      To obtain a virtual machine object, use the New-AzVMConfig cmdlet.
+      Other cmdlets can be used to configure the virtual machine, such as Set-AzVMOperatingSystem, Set-AzVMSourceImage, and Add-AzVMNetworkInterface.
+    aliases:
+    - VMProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the zone list of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVM
+        [[-ResourceGroupName] <String>]
+        [[-Location] <String>]
+        -Name <String>
+        -Credential <PSCredential>
+        [-VirtualNetworkName <String>]
+        [-AddressPrefix <String>]
+        [-SubnetName <String>]
+        [-SubnetAddressPrefix <String>]
+        [-PublicIpAddressName <String>]
+        [-DomainNameLabel <String>]
+        [-AllocationMethod <String>]
+        [-SecurityGroupName <String>]
+        [-OpenPorts <Int32[]>]
+        [-ImageName <String>]
+        [-Size <String>]
+        [-AvailabilitySetName <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SimpleParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVM
+        [-ResourceGroupName] <String>
+        [-Location] <String>
+        [-VM] <PSVirtualMachine>
+        [[-Zone] <String[]>]
+        [-DisableBginfoExtension]
+        [-Tag <Hashtable>]
+        [-LicenseType <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVM
+        [[-ResourceGroupName] <String>]
+        [[-Location] <String>]
+        -Name <String>
+        -DiskFile <String>
+        [-VirtualNetworkName <String>]
+        [-AddressPrefix <String>]
+        [-SubnetName <String>]
+        [-SubnetAddressPrefix <String>]
+        [-PublicIpAddressName <String>]
+        [-DomainNameLabel <String>]
+        [-AllocationMethod <String>]
+        [-SecurityGroupName <String>]
+        [-OpenPorts <Int32[]>]
+        [-Linux]
+        [-Size <String>]
+        [-AvailabilitySetName <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DiskFileParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSAzureOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzVM -Name MyVm
+    ```
+
+    This example script shows how to create a virtual machine.
+    This script uses several other cmdlets.
+- title: 'Example 2: Create a virtual machine from a custom user image'
+  description: |-
+    ```
+    PS C:\> ## VM Account
+    # Credentials for Local Admin account you created in the sysprepped (generalized) vhd image
+    $VMLocalAdminUser = "LocalAdminUser"
+    $VMLocalAdminSecurePassword = ConvertTo-SecureString "Password" -AsPlainText -Force
+    ## Azure Account
+    $LocationName = "eastus2"
+    $ResourceGroupName = "MyResourceGroup"
+    # This a Premium_LRS storage account.
+    # It is required in order to run a client VM with efficiency and high performance.
+    $StorageAccount = "Mydisk"
+
+    ## VM
+    $OSDiskName = "MyClient"
+    $ComputerName = "MyClientVM"
+    $OSDiskUri = "https://Mydisk.blob.core.windows.net/disks/MyOSDisk.vhd"
+    $SourceImageUri = "https://Mydisk.blob.core.windows.net/vhds/MyOSImage.vhd"
+    $VMName = "MyVM"
+    # Modern hardware environment with fast disk, high IOPs performance.
+    # Required to run a client VM with efficiency and performance
+    $VMSize = "Standard_DS3"
+    $OSDiskCaching = "ReadWrite"
+    $OSCreateOption = "FromImage"
+
+    ## Networking
+    $DNSNameLabel = "mydnsname" # mydnsname.westus.cloudapp.azure.com
+    $NetworkName = "MyNet"
+    $NICName = "MyNIC"
+    $PublicIPAddressName = "MyPIP"
+    $SubnetName = "MySubnet"
+    $SubnetAddressPrefix = "10.0.0.0/24"
+    $VnetAddressPrefix = "10.0.0.0/16"
+
+    $SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix
+    $Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $ResourceGroupName -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet
+    $PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $ResourceGroupName -Location $LocationName -AllocationMethod Dynamic
+    $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $ResourceGroupName -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id
+
+    $Credential = New-Object System.Management.Automation.PSCredential ($VMLocalAdminUser, $VMLocalAdminSecurePassword);
+
+    $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize
+    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate
+    $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id
+    $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -Name $OSDiskName -VhdUri $OSDiskUri -SourceImageUri $SourceImageUri -Caching $OSDiskCaching -CreateOption $OSCreateOption -Windows
+
+    New-AzVM -ResourceGroupName $ResourceGroupName -Location $LocationName -VM $VirtualMachine -Verbose
+    ```
+
+    This example takes an existing sys-prepped, generalized custom operating system image and attaches a data disk to it, provisions a new network, deploys the VHD, and runs it.
+
+    This script can be used for automatic provisioning because it uses the local virtual machine admin credentials inline instead of calling **Get-Credential** which requires user interaction.
+
+    This script assumes that you are already logged into your Azure account.
+    You can confirm your login status by using the **Get-AzureSubscription** cmdlet.
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+- text: Remove-AzVM
+  href: ./Remove-AzVM.yml
+- text: Restart-AzVM
+  href: ./Restart-AzVM.yml
+- text: Start-AzVM
+  href: ./Start-AzVM.yml
+- text: Stop-AzVM
+  href: ./Stop-AzVM.yml
+- text: Update-AzVM
+  href: ./Update-AzVM.yml
+- text: Add-AzVMDataDisk
+  href: ./Add-AzVMDataDisk.yml
+- text: Add-AzVMNetworkInterface
+  href: ./Add-AzVMNetworkInterface.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+- text: Set-AzVMOperatingSystem
+  href: ./Set-AzVMOperatingSystem.yml
+- text: Set-AzVMSourceImage
+  href: ./Set-AzVMSourceImage.yml
+- text: Set-AzVMOSDisk
+  href: ./Set-AzVMOSDisk.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVM.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvm
+  Module Name: Az.Compute
+  ms.assetid: 05E6155D-4F0E-406B-9312-77AD97EF66EE
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVM.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Get-AzDataFactory
+name: Get-AzDataFactory
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Gets information about Data Factories.
+description: |-
+  The **Get-AzDataFactory** cmdlet gets information about data factories in an Azure resource group.
+  If you specify the name of a data factory, this cmdlet gets information about that data factory.
+  If you do not specify a name, this cmdlet gets information about all of the data factories in an Azure resource group.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the data factory about which to get information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure resource group.
+      This cmdlet gets information about data factories that belong to the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactory
+        [[-Name] <String>]
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all data factories'
+  description: |-
+    ```powershell
+    Get-AzDataFactory -ResourceGroupName "ADF"
+    ```
+
+    ```output
+    DataFactoryName   : WikiADF
+    ResourceGroupName : ADF
+    Location          : WestUS
+    Tags              : {}
+    Properties        : Microsoft.WindowsAzure.Commands.Utilities.PSDataFactoryConfiguration
+
+    DataFactoryName   : WikiADF2
+    ResourceGroupName : ADF
+    Location          : westus
+    Tags              : {}
+    Properties        : Microsoft.WindowsAzure.Commands.Utilities.PSDataFactoryConfiguration
+    ```
+
+    This command displays information about all data factories in the Azure subscription.
+- title: 'Example 2: Get a specific data factory'
+  description: |-
+    ```powershell
+    $DataFactory = Get-AzDataFactory -ResourceGroupName "ADF" -Name "WikiADF"
+    ```
+
+    ```output
+    DataFactoryName   : WikiADF
+    ResourceGroupName : ADF
+    Location          : westus
+    Tags              : {}
+    Properties        : Microsoft.WindowsAzure.Commands.Utilities.PSDataFactoryConfiguration
+    ```
+
+    This command displays information about the data factory named WikiADF in the subscription for the resource group named ADF, and then stores it in the $DataFactory variable.
+    Specify the *DataFactory* parameter in subsequent cmdlets to use the data factory stored in $DataFactory.
+links:
+- text: New-AzDataFactory
+  href: ./New-AzDataFactory.yml
+- text: Remove-AzDataFactory
+  href: ./Remove-AzDataFactory.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactory.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV1.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactory
+  Module Name: Az.DataFactory
+  ms.assetid: ECE1F469-E3C3-4294-A288-8BAE851E8599
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactory.md
+  PlatyPS schema version: 2024-05-01

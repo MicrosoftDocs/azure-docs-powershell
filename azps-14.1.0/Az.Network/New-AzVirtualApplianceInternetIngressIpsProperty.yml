@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVirtualApplianceInternetIngressIpsProperty
+name: New-AzVirtualApplianceInternetIngressIpsProperty
+module: Az.Network
+isPreview: false
+summary: |-
+  Define a Network Virtual Appliance Internet Ingress IPs Property for the resource.
+description: |-
+  The New-AzVirtualApplianceInternetIngressIpsProperty command defines Public IPs which can be attached for Internet Ingress with Network Virtual Appliance resource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternetIngressPublicIpId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The IDs of the Public IPs which can be given as comma separated input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVirtualApplianceInternetIngressIpsProperty
+        -InternetIngressPublicIpId <String[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualApplianceInternetIngressIpsProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $IngressIps=New-AzVirtualApplianceInternetIngressIpsProperty -InternetIngressPublicIpId "/subscriptions/{subscriptionid}/resourceGroups/{rgname}/providers/Microsoft.Network/publicIPAddresses/{publicipname}"
+    ```
+
+    Create an Internet Ingress Property object to be used with New-AzNetworkVirtualAppliance command.
+- title: Example 2
+  description: |-
+    ```powershell
+    $IngressIps=New-AzVirtualApplianceInternetIngressIpsProperty -InternetIngressPublicIpId "/subscriptions/{subscriptionid}/resourceGroups/{rgname}/providers/Microsoft.Network/publicIPAddresses/{publicipname}", "/subscriptions/{subscriptionid}/resourceGroups/{rgname}/providers/Microsoft.Network/publicIPAddresses/{publicipname}"
+    ```
+
+    Creates a list of Internet Ingress Property object which has 2 Public IPs which can be attached to the Network Virtual Appliance resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceInternetIngressIpsProperty.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualapplianceinternetingressipsproperty
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualApplianceInternetIngressIpsProperty.md
+  PlatyPS schema version: 2024-05-01

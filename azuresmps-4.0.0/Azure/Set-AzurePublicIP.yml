@@ -1,0 +1,218 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzurePublicIP
+name: Set-AzurePublicIP
+module: Azure
+isPreview: false
+summary: |-
+  Adds a Public IP to an Azure virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzurePublicIP** cmdlet adds a Public IP to an Azure virtual machine.
+  If you run this cmdlet for an existing virtual machine, update the virtual machine to implement your changes.
+  You can specify a domain name label to create a corresponding DNS entry for the public IP.
+parameters:
+  cmdletParameters:
+  - name: DomainNameLabel
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name to use for a corresponding DNS entry for the public IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleTimeoutInMinutes
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the TCP idle time-out period in minutes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIPName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Public IP name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine to which this cmdlet adds Public IP.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzurePublicIP
+        [-PublicIPName] <String>
+        [[-IdleTimeoutInMinutes] <Int32>]
+        [[-DomainNameLabel] <String>]
+        -VM <IPersistentVM>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.ServiceManagement.Model.IPersistentVM" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a Public IP to an existing virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "FTPInAzure" -Name "FTPInstance" | Set-AzurePublicIP -PublicIPName "ftpip" | Update-AzureVM
+    ```
+
+    This command gets the virtual machine named FTPInstance in the service named FTPInAzure by using the **Get-AzureVM** cmdlet.
+    The command passes that virtual machine to the current cmdlet by using the pipeline operator.
+    The current cmdlet adds the Public IP name ftpip.
+    The command passes the virtual machine to the **Update-AzureVM** cmdlet, which implements your changes.
+- title: 'Example 2: Add a Public IP to a new virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "FTPInstance" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -AdminUsername "AdminMain" -Password "password" | Set-AzurePublicIP -PublicIPName "ftpip" | New-AzureVM -ServiceName "FTPinAzure" -Location "North Central US"
+    ```
+
+    This command creates a virtual machine configuration object by using the **New-AzureVMConfig** cmdlet.
+    The command passes that object to the **Add-AzureProvisioningConfig** cmdlet, which provides additional configuration.
+    The current cmdlet adds the Public IP name ftpip.
+    The command passes the configuration to the **New-AzureVM** cmdlet, which creates the virtual machine.
+- title: 'Example 3: Add a Public IP and label to an existing virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "FTPInAzure" -Name "FTPInstance" | Set-AzurePublicIP -PublicIPName "ftpip" -DomainNameLabel "ipname" | Update-AzureVM
+    ```
+
+    This command gets the virtual machine named FTPInstance in the service named FTPInAzure by using the **Get-AzureVM** cmdlet.
+    The command passes that virtual machine to the current cmdlet by using the pipeline operator.
+    The current cmdlet adds the Public IP name ftpip and the label ipname.
+    The command updates the virtual machine, which implements your changes.
+- title: 'Example 4: Add a Public IP and label to a new virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "FTPInstance" -InstanceSize Small -ImageName $images[50].ImageName | Add-AzureProvisioningConfig -Windows -AdminUsername "AdminMain" -Password "password" | Set-AzurePublicIP -PublicIPName "ftpip" -DomainNameLabel "ipname" | New-AzureVM -ServiceName "FTPinAzure" -Location "North Central US"
+    ```
+
+    This command creates a virtual machine configuration object, and then passes that object to **Add-AzureProvisioningConfig**, which provides additional configuration.
+    The current cmdlet adds the Public IP name ftpip and the label ipname.
+    The command creates the virtual machine.
+links:
+- text: Get-AzurePublicIP
+  href: ./Get-AzurePublicIP.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: New-AzureVM
+  href: ./New-AzureVM.yml
+- text: New-AzureVMConfig
+  href: ./New-AzureVMConfig.yml
+- text: Remove-AzurePublicIP
+  href: ./Remove-AzurePublicIP.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BFD4E4AD-8F1B-4E4E-BF52-435A6EEAA060
+  PlatyPS schema version: 2024-05-01

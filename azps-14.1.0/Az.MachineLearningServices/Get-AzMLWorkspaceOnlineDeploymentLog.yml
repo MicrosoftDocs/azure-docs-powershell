@@ -1,0 +1,228 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.Get-AzMLWorkspaceOnlineDeploymentLog
+name: Get-AzMLWorkspaceOnlineDeploymentLog
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Polls an Endpoint operation.
+description: |-
+  Polls an Endpoint operation.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ContainerType" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of container to retrieve logs from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndpointName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Inference endpoint name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name and identifier for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tail
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of lines to tail.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure Machine Learning workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMLWorkspaceOnlineDeploymentLog
+        -EndpointName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        [-SubscriptionId <String[]>]
+        [-ContainerType <ContainerType>]
+        [-Tail <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets online deployment log'
+  description: |-
+    ```powershell
+    Get-AzMLWorkspaceOnlineDeploymentLog -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-cli01 -EndpointName online-cli01 -Name blue
+    ```
+
+    ```output
+    Instance status:
+    SystemSetup: Succeeded
+    UserContainerImagePull: Succeeded
+    ModelDownload: Succeeded
+    UserContainerStart: Succeeded
+
+    Container events:
+    Kind: Pod, Name: Pulling, Type: Normal, Time: 20220519-03:11:59.750675, Message: Start pulling container image
+    Kind: Pod, Name: Pulling, Type: Normal, Time: 20220519-03:11:59.843068, Message: Start downloading models
+    Kind: Pod, Name: Pulled, Type: Normal, Time: 20220519-03:12:54.679466, Message: Container image is pulled successfully
+    Kind: Pod, Name: Downloaded, Type: Normal, Time: 20220519-03:12:54.679466, Message: Models are downloaded successfully or no model need to download
+    Kind: Pod, Name: Created, Type: Normal, Time: 20220519-03:12:54.798575, Message: Created container inference-server
+    Kind: Pod, Name: Started, Type: Normal, Time: 20220519-03:12:54.921722, Message: Started container inference-server
+    ```
+
+    Gets online deployment log
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Get-AzMLWorkspaceOnlineDeploymentLog.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearningservices/get-azmlworkspaceonlinedeploymentlog
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Get-AzMLWorkspaceOnlineDeploymentLog.md
+  PlatyPS schema version: 2024-05-01

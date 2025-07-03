@@ -1,0 +1,428 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzRmStorageShare
+name: Get-AzRmStorageShare
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets or lists Storage file shares.
+description: |-
+  The **Get-AzRmStorageShare** cmdlet gets or lists Storage file shares.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter of share name. When specified, only share names starting with the filter will be listed. The filter must be in format: startswith(name, `<prefix>`)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GetShareUsage
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify this parameter to get the Share Usage in Bytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameSingle
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectSingle
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ShareResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeDeleted
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include deleted shares, by default list shares won't include deleted shares
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeSnapshot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include share snapshots, by default list shares won't include share snapshots.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Share Name
+    aliases:
+    - N
+    - ShareName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameSingle
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameSingle
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Input a File Share Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Share SnapshotTime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameSingle
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectSingle
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObjectSingle
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameSingle
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRmStorageShare
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        [-Name <String>]
+        [-SnapshotTime <DateTime>]
+        [-GetShareUsage]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNameSingle
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRmStorageShare
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        [-IncludeDeleted]
+        [-IncludeSnapshot]
+        [-Filter <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRmStorageShare
+        -StorageAccount <PSStorageAccount>
+        -Name <String>
+        [-SnapshotTime <DateTime>]
+        [-GetShareUsage]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectSingle
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRmStorageShare
+        -StorageAccount <PSStorageAccount>
+        [-IncludeDeleted]
+        [-IncludeSnapshot]
+        [-Filter <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRmStorageShare
+        [-ResourceId] <String>
+        [-GetShareUsage]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSShare" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Storage file share with Storage account name and share name'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare"
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes
+    ----     -------- ---------------- ---------- ------- ------- ---------------
+    myshare  5120
+    ```
+
+    This command gets a Storage file share with Storage account name and share name.
+- title: 'Example 2: List all Storage file shares of a Storage account'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount"
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocols AccessTier           Deleted Version ShareUsageBytes
+    ----     -------- ---------------- ----------           ------- ------- ---------------
+    share1   5120                     TransactionOptimized
+    share2   5120                     TransactionOptimized
+    ```
+
+    This command lists all Storage file shares of a Storage account with Storage account name.
+- title: 'Example 3: Get a Storage blob container with Storage account object and container name.'
+  description: |-
+    ```powershell
+    Get-AzStorageAccount -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" | Get-AzRmStorageShare -Name "myshare"
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes
+    ----     -------- ---------------- ---------- ------- ------- ---------------
+    myshare  5120
+    ```
+
+    This command gets a Storage blob container with Storage account object and container name.
+- title: 'Example 4: Get a Storage file share with the share usage in bytes'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "myshare" -GetShareUsage
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name     QuotaGiB EnabledProtocols AccessTier Deleted Version ShareUsageBytes
+    ----     -------- ---------------- ---------- ------- ------- ---------------
+    myshare  5120                                                2097152
+    ```
+
+    This command gets a Storage file share with Storage account name and share name, and include the share usage in bytes.
+- title: 'Example 5: List all Storage file shares of a Storage account, include the deleted shares, include the share snapshots'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -IncludeDeleted -IncludeSnapshot
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version          ShareUsageBytes snapshotTime
+    ----       -------- ---------------- ----------           ------- -------          --------------- ------------
+    testshare1 5120                     TransactionOptimized                                          2021-05-10T08:04:08Z
+    testshare1 5120                     TransactionOptimized
+    share1     100                      TransactionOptimized True    01D61FD1FC5498B6
+    ```
+
+    This command lists all Storage file shares include the deleted shares and share snapshots.
+- title: 'Example 6: Get a single share snapshot'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Name "testshare1" -SnapshotTime "2021-05-10T08:04:08Z"
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version ShareUsageBytes snapshotTime
+    ----       -------- ---------------- ----------           ------- ------- --------------- ------------
+    testshare1 5120                     TransactionOptimized                                 2021-05-10T08:04:08Z
+    ```
+
+    This command gets a single file share snapshot with share name and snapshot time.
+- title: 'Example 7: List Storage file shares of a Storage account with a filter'
+  description: |-
+    ```powershell
+    Get-AzRmStorageShare -ResourceGroupName "myresourcegroup" -StorageAccountName "mystorageaccount" -Filter "startswith(name, test)"
+    ```
+
+    ```output
+    ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name       QuotaGiB EnabledProtocols AccessTier           Deleted Version ShareUsageBytes snapshotTime
+    ----       -------- ---------------- ----------           ------- ------- --------------- ------------
+    testshare1 5120     SMB              TransactionOptimized
+    testshare2 5120     SMB              TransactionOptimized
+    ```
+
+    This command lists all Storage file shares with names that begin with "test".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azrmstorageshare
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzRmStorageShare.md
+  PlatyPS schema version: 2024-05-01

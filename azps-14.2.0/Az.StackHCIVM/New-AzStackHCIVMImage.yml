@@ -1,0 +1,491 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCIVM.New-AzStackHCIVMImage
+name: New-AzStackHCIVMImage
+module: Az.StackHCIVM
+isPreview: false
+summary: |-
+  The operation to create an image.
+  Please note some properties can be set only during  image creation.
+description: |-
+  The operation to create an image.
+  Please note some properties can be set only during image creation.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudInitDataSource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource for the gallery image when provisioning with cloud-init [NoCloud, Azure]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomLocationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ARM Id of the extended location to create image resource in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImagePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Local path of image that the image should be created from.
+
+      This parameter is required for non marketplace images.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GalleryImage
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Image
+      The name must start and end with an alphanumeric character and must contain all alphanumeric characters or '-', '.', or '_'.
+      The max length can be 80 characters and the minimum length is 1 character.
+    aliases:
+    - ImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the marketplace gallery image definition offer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Marketplace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSType
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Operating system type that the gallery image uses [Windows, Linux]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the marketplace gallery image definition publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Marketplace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the marketplace gallery image definition SKU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Marketplace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage ContainerID of the storage container to be used for gallery image
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Container Name of the storage container to be used for gallery image
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group of the Storage Path.
+      The Default value is the Resource Group of the Image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: URN
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URN of the marketplace gallery image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MarketplaceURN
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of the marketplace gallery image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Marketplace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMImage
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OSType <Object>
+        -URN <String>
+        [-SubscriptionId <String>]
+        [-CloudInitDataSource <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-StoragePathId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MarketplaceURN
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMImage
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OSType <Object>
+        -ImagePath <String>
+        [-SubscriptionId <String>]
+        [-CloudInitDataSource <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-StoragePathId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GalleryImage
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMImage
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OSType <Object>
+        -Offer <String>
+        -Publisher <String>
+        -Sku <String>
+        -Version <String>
+        [-SubscriptionId <String>]
+        [-CloudInitDataSource <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-StoragePathId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Marketplace
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCIVM.Models.IGalleryImages" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCIVM.Models.IMarketplaceGalleryImages" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a  Gallery Image'
+  description: |-
+    ```powershell
+    New-AzStackHCIVMImage -Name "testImage" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}" -ImagePath "C:\ClusterStorage\Volume1\Ubunut.vhdx" -OSType "Linux" -Location "eastus"
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testImage       test-rg
+    ```
+
+    This command creates a gallery image from a local path.
+- title: 'Example 2:  Create a Marketplace Gallery Image'
+  description: |-
+    ```powershell
+    New-AzStackHCIVMImage -Name "testMarketplaceImage" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}"  -Location "eastus" -Offer "windowsserver" -Publisher "MicrosoftWindowsServer" -Sku "2022-Datacenter" -Version "latest" -OSType "Windows"
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testMarketplaceImage       test-rg
+    ```
+
+    This command creates a marketplace gallery image using the specified offer , publisher, sku and version.
+- title: 'Example 3: {Create a  Marketplace Gallery Image From URN'
+  description: |-
+    ```powershell
+    New-AzStackHCIVMImage -Name "testMarketplaceImageURN" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}"  -Location "eastus" -URN  "microsoftwindowsserver:windowsserver:2022-datacenter:latest" -OSType "Windows"
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testMarketplaceImageURN       test-rg
+    ```
+
+    This command creates a marketplace gallery image using the specified urn.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/New-AzStackHCIVMImage.md
+  document type: cmdlet
+  external help file: Az.StackHCIVM-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhcivm/new-azstackhcivmimage
+  Module Name: Az.StackHCIVM
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/New-AzStackHCIVMImage.md
+  PlatyPS schema version: 2024-05-01

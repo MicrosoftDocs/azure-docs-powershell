@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureServiceProject
+name: Set-AzureServiceProject
+module: Azure
+isPreview: false
+summary: |-
+  Sets default location, subscription, slot, and storage account for the current service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  The **Set-AzureServiceProject** cmdlet sets the deployment location, slot, storage account, and subscription for the current service.
+  These values are used whenever the service is published to the cloud.
+notes: |-
+  * node-dev, php-dev, python-dev
+parameters:
+  cmdletParameters:
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The region in which the service will be hosted.
+      This value is used whenever the service is published to the cloud.
+      Possible values are: Anywhere Asia, Anywhere Europe, Anywhere US, East Asia, East US, North Central US, North Europe, South Central US, Southeast Asia, West Europe, West US.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns an object representing the item on which it operates.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot (production or staging) in which the service will be hosted.
+      This value is used whenever the service is published to the cloud.
+      Possible values are: Production, Staging.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Storage
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage account to be used when uploading the service package to the cloud.
+      If the storage account doesn't exist, it will be created when the service is published to the cloud.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureServiceProject
+        [-Location <String>]
+        [-Slot <String>]
+        [-Storage <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Basic settings'
+  description: |-
+    ```
+    PS C:\> Set-AzureServiceProject -Location "North Central US" -Slot Production -Storage myStorageAccount -Subscription myAzureSubscription
+    ```
+
+    Sets the deployment location for the service to the North Central US region.
+    Sets the deployment slot to Production.
+    Sets the storage account that will be used to stage the service definition to myStorageAccount.
+    Sets the subscription that will host the service to mySubscription.
+    Whenever the service is published to the cloud, it will be hosted in a data center in the North Central US region, it will update the deployment slot, and it will use the specified subscription and storage account.
+links:
+- text: New-AzureServiceProject
+  href: ./New-AzureServiceProject.yml
+- text: Publish-AzureServiceProject
+  href: ./Publish-AzureServiceProject.yml
+- text: Set-AzureServiceProjectRole
+  href: ./Set-AzureServiceProjectRole.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D0A2B454-7BFF-4D4D-8A85-FDB47249758F
+  PlatyPS schema version: 2024-05-01

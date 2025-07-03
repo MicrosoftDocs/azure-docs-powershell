@@ -1,0 +1,72 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Get-AzDataProtectionPolicyTemplate
+name: Get-AzDataProtectionPolicyTemplate
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Gets default policy template for a selected datasource type.
+description: |-
+  Gets default policy template for a selected datasource type.
+parameters:
+  cmdletParameters:
+  - name: DatasourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DatasourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource Type
+    acceptedValues:
+    - AzureDisk
+    - AzureBlob
+    - AzureDatabaseForPostgreSQL
+    - AzureKubernetesService
+    - AzureDatabaseForPGFlexServer
+    - AzureDatabaseForMySQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataProtectionPolicyTemplate
+        -DatasourceType <DatasourceTypes>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.IBackupPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Azure Disk default policy template'
+  description: |-
+    ```powershell
+    Get-AzDataProtectionPolicyTemplate -DatasourceType AzureDisk
+    ```
+
+    ```output
+    DatasourceType            ObjectType
+    --------------            ----------
+    {Microsoft.Compute/disks} BackupPolicy
+    ```
+
+    This command returns a default policy template for a given datasource type.
+    Use this policy template to create a new policy.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Get-AzDataProtectionPolicyTemplate.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/get-azdataprotectionpolicytemplate
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Get-AzDataProtectionPolicyTemplate.md
+  PlatyPS schema version: 2024-05-01

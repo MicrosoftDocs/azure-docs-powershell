@@ -1,0 +1,234 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceVirtualMachineObject
+name: New-AzMLWorkspaceVirtualMachineObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for VirtualMachine.
+description: |-
+  Create an in-memory object for VirtualMachine.
+parameters:
+  cmdletParameters:
+  - name: Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Public IP address of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorAccountPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Password of admin account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorAccountPrivateKeyData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Private key data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorAccountPublicKeyData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Public key data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorAccountUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username of admin account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the Machine Learning compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsNotebookInstanceCompute
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this compute will be used for running notebooks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotebookServerPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Notebook server port open for ssh connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the underlying compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Size
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Machine size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port open for ssh connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceVirtualMachineObject
+        [-Description <String>]
+        [-DisableLocalAuth <Boolean>]
+        [-ResourceId <String>]
+        [-Address <String>]
+        [-AdministratorAccountPassword <String>]
+        [-AdministratorAccountPrivateKeyData <String>]
+        [-AdministratorAccountPublicKeyData <String>]
+        [-AdministratorAccountUsername <String>]
+        [-IsNotebookInstanceCompute <Boolean>]
+        [-NotebookServerPort <Int32>]
+        [-Size <String>]
+        [-SshPort <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.VirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for VirtualMachine'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceVirtualMachineObject
+    ```
+
+    Create an in-memory object for VirtualMachine
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceVirtualMachineObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.MachineLearningServices/new-AzMLWorkspaceVirtualMachineObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceVirtualMachineObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.New-AzMigrateNicMapping
+name: New-AzMigrateNicMapping
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Creates an object to update NIC properties of a replicating server.
+description: |-
+  The New-AzMigrateNicMapping cmdlet creates a mapping of the source NIC attached to the server to be migrated.
+  This object is provided as an input to the Set-AzMigrateServerReplication cmdlet to update the NIC and its properties for a replicating server.
+parameters:
+  cmdletParameters:
+  - name: NicID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the NIC to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNicIP
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP within the destination subnet to be used for the NIC.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNicName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the NIC to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNicSelectionType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the NIC to be updated will be the primary, secondary or not migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNicSubnet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Subnet name for the NIC in the destination Virtual Network to which the server needs to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestNicIP
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP within the destination test subnet to be used for the NIC.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestNicSubnet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Subnet name for the NIC in the destination Virtual Network to which the server needs to be test migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMigrateNicMapping
+        -NicID <String>
+        [-TargetNicSelectionType <String>]
+        [-TargetNicSubnet <String>]
+        [-TargetNicName <String>]
+        [-TargetNicIP <String>]
+        [-TestNicSubnet <String>]
+        [-TestNicIP <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtNicInput" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a NIC object'
+  description: |-
+    ```powershell
+    New-AzMigrateNicMapping -NicID a2399354-653a-464e-a567-d30ef5467a31 -TargetNicSelectionType primary -TargetNicIP "172.17.1.17"
+    ```
+
+    ```output
+    IsPrimaryNic IsSelectedForMigration NicId                                TargetStaticIPAddress TargetSubnetName
+    ------------ ---------------------- -----                                --------------------- ----------------
+    false        false                  a2399354-653a-464e-a567-d30ef5467a31
+    ```
+
+    Creates a NIC update object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateNicMapping.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/new-azmigratenicmapping
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateNicMapping.md
+  PlatyPS schema version: 2024-05-01

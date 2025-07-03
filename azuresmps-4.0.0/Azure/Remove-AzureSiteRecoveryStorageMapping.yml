@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureSiteRecoveryStorageMapping
+name: Remove-AzureSiteRecoveryStorageMapping
+module: Azure
+isPreview: false
+summary: |-
+  Removes a Storage object mapping for a Site Recovery vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureSiteRecoveryStorageMapping** cmdlet removes a Storage object mapping for the current Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageMapping
+    type: <xref href="ASRStorageMapping" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a network mapping.
+      To obtain an **ASRStorageMapping**, use the **Get-AzureSiteRecoveryStorage** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureSiteRecoveryStorageMapping
+        -StorageMapping <ASRStorageMapping>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove the mapping between a network and a recovery network'
+  description: |-
+    ```
+    PS C:\> $Servers = Get-AzureSiteRecoveryServer
+    PS C:\> $StorageMapping = Get-AzureSiteRecoveryStorageMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[1]
+    PS C:\> Remove-AzureSiteRecoveryStorageMapping -StorageMapping $StorageMapping
+    Get-AzureSiteRecoveryServerGet-AzureSiteRecoveryStorageMappingNew-AzureSiteRecoveryStorageMapping
+    ```
+
+    The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+    The command stores the Site Recovery servers in the $Servers array variable.
+
+    The second command gets the mapping between two Storage objects, and then stores it in the $StorageMapping variable.
+    The command specifies the primary server for the network mapping as the first element of $Servers.
+    The command specifies the server for the recovery network as the second element of $Servers.
+
+    The final command removes the mapping in $StorageMapping.
+links:
+- text: Get-AzureSiteRecoveryStorage
+  href: ./Get-AzureSiteRecoveryStorage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0A1FD05F-6573-46D8-8217-C7EA432F6742
+  PlatyPS schema version: 2024-05-01

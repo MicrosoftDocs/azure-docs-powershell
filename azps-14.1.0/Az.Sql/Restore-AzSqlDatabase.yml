@@ -1,0 +1,947 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Restore-AzSqlDatabase
+name: Restore-AzSqlDatabase
+module: Az.Sql
+isPreview: false
+summary: |-
+  Restores a SQL database.
+description: |-
+  The **Restore-AzSqlDatabase** cmdlet restores a SQL database from a geo-redundant backup, a backup of a deleted database, a long term retention backup, or a point in time in a live database.
+  The restored database is created as a new database.
+  You can create an elastic SQL database by setting the *ElasticPoolName* parameter to an existing elastic pool.
+  You can also perform a cross subscription restore for a datawarehouse database.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate and assign a Microsoft Entra identity for this database for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupStorageRedundancy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Backup storage redundancy used to store backups for the SQL Database. Options are: Local, Zone, Geo and GeoZone.
+    acceptedValues:
+    - Local
+    - Zone
+    - Geo
+    - GeoZone
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute generation to assign to the restored database
+    aliases:
+    - Family
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromGeoBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletionDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deletion date as a **DateTime** object.
+      To get a **DateTime** object, use the Get-Date cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromDeletedDatabaseBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition of the SQL database.
+      The acceptable values for this parameter are:
+      - None
+      - Basic
+      - Standard
+      - Premium
+      - DataWarehouse
+      - Free
+      - Stretch
+      - GeneralPurpose
+      - BusinessCritical
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromGeoBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the elastic pool in which to put the SQL database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromGeoBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionProtector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The encryption protector key for SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionProtectorAutoRotation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The AKV Key Auto Rotation status
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FederatedClientId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The federated client id for the SQL Database. It is used for cross tenant CMK scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromDeletedDatabaseBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores a database from a backup of a deleted SQL database.
+      You can use the Get-AzSqlDeletedDatabaseBackup cmdlet to get the backup of a deleted SQL database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromDeletedDatabaseBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromGeoBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores a SQL database from a geo-redundant backup.
+      You can use the Get-AzSqlDatabaseGeoBackup cmdlet to get a geo-redundant backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromGeoBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromGeoBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromLongTermRetentionBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores a SQL database from a long term retention backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromLongTermRetentionBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromPointInTimeBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet restores a SQL database from a point-in-time backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromPointInTimeBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HAReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The HA Replica Count used to store backups for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AKV keys for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The license type for the Azure Sql database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PointInTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the point in time, as a **DateTime** object, that you want to restore your SQL database to.
+      To get a **DateTime** object, use **Get-Date** cmdlet.
+      Use this parameter together with the *FromPointInTimeBackup* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromPointInTimeBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to which this cmdlet assigns the SQL database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the resource to restore.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL database server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceObjectiveName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service objective.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromGeoBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags to associate with the Azure Sql Database
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database to restore to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of user assigned identity for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCore
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vcore numbers of the restored Azure Sql Database.
+    aliases:
+    - Capacity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromPointInTimeBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromDeletedDatabaseBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromGeoBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromLongTermRetentionBackupWithVcore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The zone redundancy to associate with the Azure Sql Database. This property is only settable for Hyperscale edition databases.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -PointInTime <DateTime>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        [-FromPointInTimeBackup]
+        [-Edition <String>]
+        [-ServiceObjectiveName <String>]
+        [-ElasticPoolName <String>]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromPointInTimeBackup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -PointInTime <DateTime>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        -Edition <String>
+        -ComputeGeneration <String>
+        -VCore <Int32>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromPointInTimeBackupWithVcore
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -DeletionDate <DateTime>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        [-FromDeletedDatabaseBackup]
+        [-PointInTime <DateTime>]
+        [-Edition <String>]
+        [-ServiceObjectiveName <String>]
+        [-ElasticPoolName <String>]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromDeletedDatabaseBackup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -DeletionDate <DateTime>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        -Edition <String>
+        -ComputeGeneration <String>
+        -VCore <Int32>
+        [-FromDeletedDatabaseBackup]
+        [-PointInTime <DateTime>]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromDeletedDatabaseBackupWithVcore
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        [-FromGeoBackup]
+        [-Edition <String>]
+        [-ServiceObjectiveName <String>]
+        [-ElasticPoolName <String>]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromGeoBackup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        -Edition <String>
+        -ComputeGeneration <String>
+        -VCore <Int32>
+        [-FromGeoBackup]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromGeoBackupWithVcore
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        [-FromLongTermRetentionBackup]
+        [-Edition <String>]
+        [-ServiceObjectiveName <String>]
+        [-ElasticPoolName <String>]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromLongTermRetentionBackup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlDatabase
+        [-ResourceGroupName] <String>
+        -ResourceId <String>
+        -ServerName <String>
+        -TargetDatabaseName <String>
+        -Edition <String>
+        -ComputeGeneration <String>
+        -VCore <Int32>
+        [-FromLongTermRetentionBackup]
+        [-AsJob]
+        [-LicenseType <String>]
+        [-HAReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-ZoneRedundant]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromLongTermRetentionBackupWithVcore
+  isDefault: false
+inputs:
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Restore a database from a point in time'
+  description: |-
+    ```powershell
+    $Database = Get-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime UTCDateTime -ResourceGroupName $Database.ResourceGroupName -ServerName $Database.ServerName -TargetDatabaseName "RestoredDatabase" -ResourceId $Database.ResourceID -Edition "Standard" -ServiceObjectiveName "S2"
+    ```
+
+    The first command gets the SQL database named Database01, and then stores it in the $Database variable.
+    The second command restores the database in $Database from the specified point-in-time backup to the database named RestoredDatabase.
+- title: 'Example 2: Restore a database from a point in time to an elastic pool'
+  description: |-
+    ```powershell
+    $Database = Get-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    Restore-AzSqlDatabase -FromPointInTimeBackup -PointInTime UTCDateTime -ResourceGroupName $Database.ResourceGroupName -ServerName $Database.ServerName -TargetDatabaseName "RestoredDatabase" -ResourceId $Database.ResourceID -ElasticPoolName "ElasticPool01"
+    ```
+
+    The first command gets the SQL database named Database01, and then stores it in the $Database variable.
+    The second command restores the database in $Database from the specified point-in-time backup to the SQL database named RestoredDatabase in the elastic pool named elasticpool01.
+- title: 'Example 3: Restore a deleted database'
+  description: |-
+    ```powershell
+    $DeletedDatabase = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate $DeletedDatabase.DeletionDate -ResourceGroupName $DeletedDatabase.ResourceGroupName -ServerName $DeletedDatabase.ServerName -TargetDatabaseName "RestoredDatabase" -ResourceId $DeletedDatabase.ResourceID -Edition "Standard" -ServiceObjectiveName "S2" -PointInTime UTCDateTime
+    ```
+
+    The first command gets the deleted database backup that you want to restore by using [Get-AzSqlDeletedDatabaseBackup](./Get-AzSqlDeletedDatabaseBackup.yml).
+    The second command starts the restore from the deleted database backup by using the [Restore-AzSqlDatabase](./Restore-AzSqlDatabase.yml) cmdlet. If the -PointInTime parameter is not specified, the database will be restored to the deletion time.
+- title: 'Example 4: Restore a deleted database into an elastic pool'
+  description: |-
+    ```powershell
+    $DeletedDatabase = Get-AzSqlDeletedDatabaseBackup -ResourceGroupName $resourceGroupName -ServerName $sqlServerName -DatabaseName 'DatabaseToRestore'
+    Restore-AzSqlDatabase -FromDeletedDatabaseBackup -DeletionDate $DeletedDatabase.DeletionDate -ResourceGroupName $DeletedDatabase.ResourceGroupName -ServerName $DeletedDatabase.ServerName -TargetDatabaseName "RestoredDatabase" -ResourceId $DeletedDatabase.ResourceID -ElasticPoolName "elasticpool01" -PointInTime UTCDateTime
+    ```
+
+    The first command gets the deleted database backup that you want to restore by using [Get-AzSqlDeletedDatabaseBackup](./Get-AzSqlDeletedDatabaseBackup.yml).
+    The second command starts the restore from the deleted database backup by using [Restore-AzSqlDatabase](./Restore-AzSqlDatabase.yml). If the -PointInTime parameter is not specified, the database will be restored to the deletion time.
+- title: 'Example 5: Geo-Restore a database'
+  description: |-
+    ```powershell
+    $GeoBackup = Get-AzSqlDatabaseGeoBackup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    Restore-AzSqlDatabase -FromGeoBackup -ResourceGroupName "TargetResourceGroup" -ServerName "TargetServer" -TargetDatabaseName "RestoredDatabase" -ResourceId $GeoBackup.ResourceID -Edition "Standard" -ServiceObjectiveName "S2"
+    ```
+
+    The first command gets the geo-redundant backup for the database named Database01, and then stores it in the $GeoBackup variable.
+    The second command restores the backup in $GeoBackup to the SQL database named RestoredDatabase.
+links:
+- text: Recover an Azure SQL Database from an outage
+  href: http://go.microsoft.com/fwlink/?LinkId=746882
+- text: Get-AzSqlDatabase
+  href: ./Get-AzSqlDatabase.yml
+- text: Get-AzSqlDatabaseGeoBackup
+  href: ./Get-AzSqlDatabaseGeoBackup.yml
+- text: Get-AzSqlDeletedDatabaseBackup
+  href: ./Get-AzSqlDeletedDatabaseBackup.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Restore-AzSqlDatabase.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/restore-azsqldatabase
+  Module Name: Az.Sql
+  ms.assetid: 72E0E558-74D7-4A50-A975-FA7D0C0B301E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Restore-AzSqlDatabase.md
+  PlatyPS schema version: 2024-05-01

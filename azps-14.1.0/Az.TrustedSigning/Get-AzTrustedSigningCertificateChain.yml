@@ -1,0 +1,200 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TrustedSigning.Get-AzTrustedSigningCertificateChain
+name: Get-AzTrustedSigningCertificateChain
+module: Az.TrustedSigning
+isPreview: false
+summary: |-
+  Retrieve Azure.TrustedSigning Certificate Chain
+description: |-
+  The **Get-AzTrustedSigningCertificateChain** cmdlet retrieves Azure TrustedSigning Cert Chain.
+  Use this cmdlet to retrieve Azure TrustedSigning Cert Chain.
+  There are two sets of parameters. One set uses AccountName, ProfileName, and EndpointUrl.
+  Another set uses MetadataFilePath.
+  Destination is the downloaded cert chain file path, which incldues the file name and extension .der.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning AccountName used to sign CI policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the downloaed cert chain file path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndpointUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning Endpoint used to sign CI policy. It's an Url, format is `https://xxx.trustedsigning.azure.net`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetadataFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning Metadata file path used to sign CI policy. It's a file path, and the metadata content is below. File content example:
+      {
+        "Endpoint": "https://xxx.trustedsigning.azure.net/",
+        "TrustedSigningAccountName": "acstest",
+        "CertificateProfileName": "acstestCert1"
+      }
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMetadataFileParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning ProfileName used to sign CI policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateChain
+        [-AccountName] <String>
+        [-ProfileName] <String>
+        [-EndpointUrl] <String>
+        [-Destination] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAccountProfileNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateChain
+        [-MetadataFilePath] <String>
+        [-Destination] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByMetadataFileParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Azure TrustedSigning AccountName" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Profile Name" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Signing EndpointUrl" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning UnSigned CI Policy File Path" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Signed CI Policy File Path Destination" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Signed CI Policy file" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Retrieve a cert chain by account and profile name'
+  description: |-
+    ```powershell
+    Get-AzTrustedSigningCertificateChain -AccountName 'contoso' -ProfileName 'contososigning' -EndpointUrl 'https://wus.trustedsigning.azure.net' -Destination 'c:\acs\certificatechain.der'
+    ```
+
+    ```output
+    Thumbprint                               Subject
+    ----------                               -------
+    F40042E2E5F7E8EF8189FED15519AECE4        CN=Microsoft Identity Verification Root Certificate Authority 2020, O=Microso
+    8E750F459DAF9A79D6370DB747AD22268        CN=Microsoft ID Verified Code Signing PCA 2021, O=Microsoft Corporation, C=US
+    8BC0201379A2A31BA36EDD20223865C19        CN=Microsoft ID Verified CS EOC CA 02, O=Microsoft Corporation, C=US
+    1248C3FB98958560D5A73A75DEF9F624B        CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+    ```
+
+    This command retrieves a certificate chain that is currently in use for signing by the account and profile.
+- title: 'Example 2: Retrieve a cert chain using the metadata file path configuration'
+  description: |-
+    ```powershell
+    Get-AzTrustedSigningCertificateChain -MetadataFilePath 'c:\cisigning\metadata_input.json' -Destination 'c:\acs\certificatechain.der'
+    ```
+
+    ```output
+    Thumbprint                               Subject
+    ----------                               -------
+    F40042E2E5F7E8EF8189FED15519AECE4        CN=Microsoft Identity Verification Root Certificate Authority 2020, O=Microso
+    8E750F459DAF9A79D6370DB747AD22268        CN=Microsoft ID Verified Code Signing PCA 2021, O=Microsoft Corporation, C=US
+    8BC0201379A2A31BA36EDD20223865C19        CN=Microsoft ID Verified CS EOC CA 02, O=Microsoft Corporation, C=US
+    1248C3FB98958560D5A73A75DEF9F624B        CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+    ```
+
+    This command retrieves a certificate chain that is currently in use for signing by the metadata configuration.
+links:
+- text: Get-AzTrustedSigningCustomerEku
+  href: ./Get-AzTrustedSigningCustomerEku.yml
+- text: Get-AzTrustedSigningCertificateRoot
+  href: ./Get-AzTrustedSigningCertificateRoot.yml
+- text: Invoke-AzTrustedSigningCIPolicySigning
+  href: ./Invoke-AzTrustedSigningCIPolicySigning.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Get-AzTrustedSigningCertificateChain.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.trustedsigning/get-AzTrustedSigningCertificateChain
+  Module Name: Az.TrustedSigning
+  ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Get-AzTrustedSigningCertificateChain.md
+  PlatyPS schema version: 2024-05-01

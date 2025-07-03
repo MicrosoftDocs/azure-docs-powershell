@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackVNet
+name: New-WAPackVNet
+module: Azure
+isPreview: false
+summary: |-
+  Creates a virtualized network.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-WAPackVNet** cmdlet creates a virtualized network.
+parameters:
+  cmdletParameters:
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the virtualized network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicalNetwork
+    type: <xref href="LogicalNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a LogicalNetwork associated with the virtualized network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the virtualized network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackVNet
+        -LogicalNetwork <LogicalNetwork>
+        -Name <String>
+        [-Description <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a virtualized network'
+  description: |-
+    ```
+    PS C:\> $LogicalNetwork = Get-WAPackLogicalNetwork -Name "ContosoLogicalNetwork01"
+    PS C:\> New-WAPackVNet -LogicalNetwork $LogicalNetwork -Name "ContosoVNett01" -Description "A description"
+    ```
+
+    The first command first retrieves the logical network to which we want to add a new virtualized network.
+    This logical network is named ContosoLogicalNetwork01.
+
+    The second and last command creates a virtualized network using the previously retrieved logical network, a name (ContosoVNett01) and a description (A description).
+links:
+- text: Get-WAPackVNet
+  href: ./Get-WAPackVNet.yml
+- text: Remove-WAPackVNet
+  href: ./Remove-WAPackVNet.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CB2936E4-E403-44B3-9CB8-617308E54C50
+  PlatyPS schema version: 2024-05-01

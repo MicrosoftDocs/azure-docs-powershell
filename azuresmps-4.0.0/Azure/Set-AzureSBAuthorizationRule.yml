@@ -1,0 +1,201 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureSBAuthorizationRule
+name: Set-AzureSBAuthorizationRule
+module: Azure
+isPreview: false
+summary: |-
+  Updates existing Service Bus authorization rule.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  Updates existing Service Bus authorization rule.
+
+  [!INCLUDE [sb-deprecation.md](../include/sb-deprecation.yml)]
+parameters:
+  cmdletParameters:
+  - name: EntityName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The entity name to apply rule at.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EntitySAS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EntityType
+    type: <xref href="ServiceBusEntityType" data-throw-if-not-resolved="False" />
+    description: |-
+      The entity type (Queue, Topic, Relay, NotificationHub).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EntitySAS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique authorization rule name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name to apply the authorization rule.
+      If no EntityName provided the rule will be on the namespace level.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="AccessRights" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The authorization permissions (Send, Manage, Listen).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Shared Access Signature primary key.
+      Will be generated if not provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Shared Access Signature secondary key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureSBAuthorizationRule
+        -Name <String>
+        -Namespace <String>
+        -EntityName <String>
+        -EntityType <ServiceBusEntityType>
+        [-Permission <AccessRights[]>]
+        [-PrimaryKey <String>]
+        [-SecondaryKey <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EntitySAS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureSBAuthorizationRule
+        -Name <String>
+        -Namespace <String>
+        [-Permission <AccessRights[]>]
+        [-PrimaryKey <String>]
+        [-SecondaryKey <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NamespaceSAS
+  isDefault: false
+examples:
+- title: 'Example 1: Renew primary key for authorization rule at namespace level'
+  description: |-
+    ```
+    PS C:\> Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Send")
+    ```
+
+    The primary key is renewed.
+- title: 'Example 2: Update authorization rule permission'
+  description: |-
+    ```
+    PS C:\> Set-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace -Permission $("Listen", "Send") -EntityName MyEntity -EntityType Queue
+    ```
+
+    Updates the permissions.
+links:
+- text: Get-AzureSBAuthorizationRule
+  href: ./Get-AzureSBAuthorizationRule.yml
+- text: New-AzureSBAuthorizationRule
+  href: ./New-AzureSBAuthorizationRule.yml
+- text: Remove-AzureSBAuthorizationRule
+  href: ./Remove-AzureSBAuthorizationRule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 17065902-97EA-4F5F-926B-B7CBEE3EAF84
+  PlatyPS schema version: 2024-05-01

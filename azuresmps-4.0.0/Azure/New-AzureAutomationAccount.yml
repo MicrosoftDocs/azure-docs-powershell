@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureAutomationAccount
+name: New-AzureAutomationAccount
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Automation account.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **New-AzureAutomationAccount** cmdlet creates a new account in Microsoft Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the account.
+    aliases:
+    - AutomationAccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationAccount
+        -Name <String>
+        -Location <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.AutomationAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Automation account'
+  description: |-
+    ```
+    PS C:\> New-AzureAutomationAccount -Name "MyAutomationAccount" -Location "East US"
+    ```
+
+    This command creates an Automation account named MyAutomationAccount in the East US region.
+links:
+- text: Get-AzureAutomationAccount
+  href: ./Get-AzureAutomationAccount.yml
+- text: Remove-AzureAutomationAccount
+  href: ./Remove-AzureAutomationAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 59CDE74B-EFB3-4904-A482-466B0EA17F4B
+  PlatyPS schema version: 2024-05-01

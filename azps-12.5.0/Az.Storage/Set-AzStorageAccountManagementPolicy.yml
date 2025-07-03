@@ -1,0 +1,601 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Set-AzStorageAccountManagementPolicy
+name: Set-AzStorageAccountManagementPolicy
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates or modifies the management policy of an Azure Storage account.
+description: |-
+  The **Set-AzStorageAccountManagementPolicy** cmdlet creates or modifies the management policy of an Azure Storage account.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Management Policy Object to Set
+    aliases:
+    - ManagementPolicy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountNamePolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Rule
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicyRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Management Policy rules. Get the object with New-AzStorageAccountManagementPolicyRule cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObjectPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountNamePolicyObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountResourceIdPolicyRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Rule <PSManagementPolicyRule[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNamePolicyRule
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Policy <PSManagementPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNamePolicyObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        -StorageAccount <PSStorageAccount>
+        -Rule <PSManagementPolicyRule[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectPolicyRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        -StorageAccount <PSStorageAccount>
+        -Policy <PSManagementPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectPolicyObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        [-StorageAccountResourceId] <String>
+        -Rule <PSManagementPolicyRule[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountResourceIdPolicyRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageAccountManagementPolicy
+        [-StorageAccountResourceId] <String>
+        -Policy <PSManagementPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountResourceIdPolicyObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create or update the management policy of a Storage account with ManagementPolicy rule objects.'
+  description: |-
+    ```powershell
+    $action1 = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -DaysAfterCreationGreaterThan 100
+    $action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -BaseBlobAction TierToArchive -daysAfterModificationGreaterThan 50 -DaysAfterLastTierChangeGreaterThan 30
+    $action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -BaseBlobAction TierToCool -DaysAfterLastAccessTimeGreaterThan 30 -EnableAutoTierToHotFromCool
+    $action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -SnapshotAction Delete -daysAfterCreationGreaterThan 100
+    $action1 = Add-AzStorageAccountManagementPolicyAction -InputObject $action1 -BlobVersionAction TierToArchive -daysAfterCreationGreaterThan 100 -DaysAfterLastTierChangeGreaterThan 14
+    $filter1 = New-AzStorageAccountManagementPolicyFilter -PrefixMatch ab,cd
+    $rule1 = New-AzStorageAccountManagementPolicyRule -Name Test -Action $action1 -Filter $filter1
+
+    $action2 = Add-AzStorageAccountManagementPolicyAction -BaseBlobAction Delete -daysAfterCreationGreaterThan 100
+    $blobindexmatch1 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag1" -Value "value1"
+    $blobindexmatch2 = New-AzStorageAccountManagementPolicyBlobIndexMatchObject -Name "tag2" -Value "value2"
+    $filter2 = New-AzStorageAccountManagementPolicyFilter -BlobType appendBlob,blockBlob -BlobIndexMatch $blobindexmatch1,$blobindexmatch2
+    $rule2 = New-AzStorageAccountManagementPolicyRule -Name Test2 -Action $action2 -Filter $filter2
+
+    Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Rule $rule1,$rule2
+    ```
+
+    ```output
+    ResourceGroupName  : myresourcegroup
+    StorageAccountName : mystorageaccount
+    Id                 : /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/managementPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/managementPolicies
+    LastModifiedTime   : 7/12/2022 8:32:09 AM
+    Rules              : [
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterModificationGreaterThan":  null,
+                                                                                                        "DaysAfterLastAccessTimeGreaterThan":  30,
+                                                                                                        "DaysAfterCreationGreaterThan":  null,
+                                                                                                        "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                    },
+                                                                                     "TierToArchive":  {
+                                                                                                           "DaysAfterModificationGreaterThan":  50,
+                                                                                                           "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                           "DaysAfterCreationGreaterThan":  null,
+                                                                                                           "DaysAfterLastTierChangeGreaterThan":  30
+                                                                                                       },
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  null,
+                                                                                                    "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "EnableAutoTierToHotFromCool":  true
+                                                                                 },
+                                                                    "Snapshot":  {
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "TierToCool":  null,
+                                                                                     "TierToArchive":  null
+                                                                                 },
+                                                                    "Version":  {
+                                                                                    "Delete":  null,
+                                                                                    "TierToCool":  null,
+                                                                                    "TierToArchive":  {
+                                                                                                          "DaysAfterCreationGreaterThan":  100,
+                                                                                                          "DaysAfterLastTierChangeGreaterThan":  14
+                                                                                                      }
+                                                                                }
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  [
+                                                                                        "ab",
+                                                                                        "cd"
+                                                                                    ],
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ],
+                                                                    "BlobIndexMatch":  null
+                                                                }
+                                                }
+                             },
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test2",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  null,
+                                                                                     "TierToArchive":  null,
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  null,
+                                                                                                    "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "EnableAutoTierToHotFromCool":  null
+                                                                                 },
+                                                                    "Snapshot":  null,
+                                                                    "Version":  null
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  null,
+                                                                    "BlobTypes":  [
+                                                                                      "appendBlob",
+                                                                                      "blockBlob"
+                                                                                  ],
+                                                                    "BlobIndexMatch":  [
+                                                                                           {
+                                                                                               "Name":  "tag1",
+                                                                                               "Op":  "==",
+                                                                                               "Value":  "value1"
+                                                                                           },
+                                                                                           {
+                                                                                               "Name":  "tag2",
+                                                                                               "Op":  "==",
+                                                                                               "Value":  "value2"
+                                                                                           }
+                                                                                       ]
+                                                                }
+                                                }
+                             }
+                         ]
+    ```
+
+    This command first create 2 ManagementPolicy rule objects, then creates or updates the management policy of a Storage account with the 2 ManagementPolicy rule objects.
+- title: 'Example 2: Create or update the management policy of a Storage account with a Json format policy.'
+  description: |-
+    ```powershell
+    Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Policy (@{
+        Rules=(@{
+            Enabled=$true;
+            Name="Test";
+            Definition=(@{
+                Actions=(@{
+                    BaseBlob=(@{
+                        TierToCool=@{DaysAfterLastAccessTimeGreaterThan=30};
+                        TierToArchive=@{DaysAfterModificationGreaterThan=50;DaysAfterLastTierChangeGreaterThan=30};
+                        Delete=@{DaysAfterCreationGreaterThan=100};
+                        EnableAutoTierToHotFromCool="true";
+                    });
+                    Snapshot=(@{
+                        Delete=@{DaysAfterCreationGreaterThan=100}
+                        TierToArchive=@{DaysAfterCreationGreaterThan=50};
+                        TierToCool=@{DaysAfterCreationGreaterThan=60};
+                    });
+                    Version=(@{
+                        Delete=@{DaysAfterCreationGreaterThan=100};
+                        TierToArchive=@{DaysAfterCreationGreaterThan=50;DaysAfterLastTierChangeGreaterThan=20};
+                        TierToCool=@{DaysAfterCreationGreaterThan=60};
+                    });
+                });
+                Filters=(@{
+                    BlobTypes=@("blockBlob");
+                    PrefixMatch=@("prefix1","prefix2");
+                })
+            })
+        },
+        @{
+            Enabled=$false;
+            Name="Test2";
+            Definition=(@{
+                Actions=(@{
+                    BaseBlob=(@{
+                        Delete=@{DaysAfterCreationGreaterThan=100};
+                    });
+                });
+                Filters=(@{
+                    BlobTypes=@("blockBlob","appendBlob");
+                    BlobIndexMatch=(@{Name="tag1";Op="==";Value ="value1"},@{Name="tag2";Op="==";Value="value2"})
+                })
+            })
+        })
+    })
+    ```
+
+    ```output
+    ResourceGroupName  : myresourcegroup
+    StorageAccountName : mystorageaccount
+    Id                 : /subscriptions/{subscription-id}/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/managementPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/managementPolicies
+    LastModifiedTime   : 7/12/2022 8:34:05 AM
+    Rules              : [
+                             {
+                                 "Enabled":  true,
+                                 "Name":  "Test",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterModificationGreaterThan":  null,
+                                                                                                        "DaysAfterLastAccessTimeGreaterThan":  30,
+                                                                                                        "DaysAfterCreationGreaterThan":  null,
+                                                                                                        "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                    },
+                                                                                     "TierToArchive":  {
+                                                                                                           "DaysAfterModificationGreaterThan":  50,
+                                                                                                           "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                           "DaysAfterCreationGreaterThan":  null,
+                                                                                                           "DaysAfterLastTierChangeGreaterThan":  30
+                                                                                                       },
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  null,
+                                                                                                    "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "EnableAutoTierToHotFromCool":  true
+                                                                                 },
+                                                                    "Snapshot":  {
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "TierToCool":  {
+                                                                                                        "DaysAfterCreationGreaterThan":  60,
+                                                                                                        "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                    },
+                                                                                     "TierToArchive":  {
+                                                                                                           "DaysAfterCreationGreaterThan":  50,
+                                                                                                           "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                       }
+                                                                                 },
+                                                                    "Version":  {
+                                                                                    "Delete":  {
+                                                                                                   "DaysAfterCreationGreaterThan":  100,
+                                                                                                   "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                               },
+                                                                                    "TierToCool":  {
+                                                                                                       "DaysAfterCreationGreaterThan":  60,
+                                                                                                       "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                   },
+                                                                                    "TierToArchive":  {
+                                                                                                          "DaysAfterCreationGreaterThan":  50,
+                                                                                                          "DaysAfterLastTierChangeGreaterThan":  20
+                                                                                                      }
+                                                                                }
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  [
+                                                                                        "prefix1",
+                                                                                        "prefix2"
+                                                                                    ],
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob"
+                                                                                  ],
+                                                                    "BlobIndexMatch":  null
+                                                                }
+                                                }
+                             },
+                             {
+                                 "Enabled":  false,
+                                 "Name":  "Test2",
+                                 "Definition":  {
+                                                    "Actions":  {
+                                                                    "BaseBlob":  {
+                                                                                     "TierToCool":  null,
+                                                                                     "TierToArchive":  null,
+                                                                                     "Delete":  {
+                                                                                                    "DaysAfterModificationGreaterThan":  null,
+                                                                                                    "DaysAfterLastAccessTimeGreaterThan":  null,
+                                                                                                    "DaysAfterCreationGreaterThan":  100,
+                                                                                                    "DaysAfterLastTierChangeGreaterThan":  null
+                                                                                                },
+                                                                                     "EnableAutoTierToHotFromCool":  null
+                                                                                 },
+                                                                    "Snapshot":  null,
+                                                                    "Version":  null
+                                                                },
+                                                    "Filters":  {
+                                                                    "PrefixMatch":  null,
+                                                                    "BlobTypes":  [
+                                                                                      "blockBlob",
+                                                                                      "appendBlob"
+                                                                                  ],
+                                                                    "BlobIndexMatch":  [
+                                                                                           {
+                                                                                               "Name":  "tag1",
+                                                                                               "Op":  "==",
+                                                                                               "Value":  "value1"
+                                                                                           },
+                                                                                           {
+                                                                                               "Name":  "tag2",
+                                                                                               "Op":  "==",
+                                                                                               "Value":  "value2"
+                                                                                           }
+                                                                                       ]
+                                                                }
+                                                }
+                             }
+                         ]
+    ```
+
+    This command creates or updates the management policy of a Storage account with a json format policy.
+- title: 'Example 3: Get the management policy from a Storage account, then set it to another Storage account.'
+  description: |-
+    ```powershell
+    $outputPolicy = Get-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" | Set-AzStorageAccountManagementPolicy -ResourceGroupName "myresourcegroup2" -AccountName "mystorageaccount2"
+    ```
+
+    This command first gets the management policy from a Storage account, then set it to another Storage account.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageAccountManagementPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.storage/set-Azstorageaccountmanagementpolicy
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageAccountManagementPolicy.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureVNetGateway
+name: New-AzureVNetGateway
+module: Azure
+isPreview: false
+summary: |-
+  Creates a VPN gateway in a virtual network.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureVNetGateway** cmdlet creates a virtual private network (VPN) gateway in a virtual network.
+  You can also specify the SKU of the gateway, either Default, Standard, or HighPerformance.
+  You can specify the type, either StaticRouting or DynamicRouting.
+parameters:
+  cmdletParameters:
+  - name: GatewaySKU
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SKU of the virtual network gateway that this cmdlet creates.
+      Valid values are:
+
+      - Default
+      - Standard
+      - HighPerformance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of gateway that this cmdlet creates.
+      Valid values are:
+
+      - StaticRouting
+      - DynamicRouting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network in which this cmdlet adds a virtual network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureVNetGateway
+        -VNetName <String>
+        [-GatewayType <String>]
+        [-GatewaySKU <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a virtual network gateway'
+  description: |-
+    ```
+    PS C:\> New-AzureVNetGateway -VNetName "ContosoVN07" -GatewayType "DynamicRouting" -GatewaySKU "Default"
+    ```
+
+    This command creates a virtual network gateway for the virtual network named ContosoVN07.
+    The gateway is the Default SKU and uses dynamic routing.
+links:
+- text: Get-AzureVNetGateway
+  href: ./Get-AzureVNetGateway.yml
+- text: Remove-AzureVNetGateway
+  href: ./Remove-AzureVNetGateway.yml
+- text: Reset-AzureVNetGateway
+  href: ./Reset-AzureVNetGateway.yml
+- text: Resize-AzureVNetGateway
+  href: ./Resize-AzureVNetGateway.yml
+- text: Set-AzureVNetGatewayKey
+  href: ./Set-AzureVNetGatewayKey.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 36DA2BF9-091E-4A2C-B5E1-07B4D2E482FC
+  PlatyPS schema version: 2024-05-01

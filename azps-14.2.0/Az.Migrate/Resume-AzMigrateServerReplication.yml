@@ -1,0 +1,231 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Resume-AzMigrateServerReplication
+name: Resume-AzMigrateServerReplication
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Starts the replication that has been suspended.
+description: |-
+  The Resume-AzMigrateServerReplication starts the replication that has been suspended.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteMigratedResource
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the migrated resources needs to be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IMigrationItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the resume replication needs to be initiated.
+      The server object can be retrieved using the Get-AzMigrateServerReplication cmdlet
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectVMwareCbt
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetObjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the resume replication needs to be initiated.
+      The ID should be retrieved using the Get-AzMigrateServerReplication cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIDVMwareCbt
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resume-AzMigrateServerReplication
+        -TargetObjectID <String>
+        [-DeleteMigratedResource]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIDVMwareCbt
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Resume-AzMigrateServerReplication
+        -InputObject <IMigrationItem>
+        [-DeleteMigratedResource]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectVMwareCbt
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: By machine id.'
+  description: |-
+    ```powershell
+    Resume-AzMigrateServerReplication -TargetObjectID "/Subscriptions/xxx-xxx-xxxxxx-xxx-xxx/resourceGroups/cbtsignoff2201rg/providers/Microsoft.RecoveryServices/vaults/signoffccyapp3352vault/replicationFabrics/signoffccyappae52replicationfabric/replicationProtectionContainers/signoffccyappae52replicationcontainer/replicationMigrationItems/idclab-vcen67-fareast-corp-micr-0f144e99-ba36-4649-b92b-8b06854aa539_5015f6d8-fc84-afdf-de47-1eab79330f00"
+    ```
+
+    ```output
+    ActivityId                       : 0b810233-b0aa-4a4c-a44e-bea4589c0513 ActivityId: ccb4889b-b9ec-4a76-af4d-4eb59c76ebac
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202301.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          :
+    Error                            : {}
+    FriendlyName                     :
+    Id                               : /Subscriptions/xxx-xxx-xxxxxx-xxx-xxx/resourceGroups/cbtsignoff2201rg/providers/Microsoft.RecoveryServices/vaults/signoff
+                                       ccyapp3352vault/replicationJobs/75a6945d-2276-4dbb-926c-d0745e004130
+    Location                         :
+    Name                             : 75a6945d-2276-4dbb-926c-d0745e004130
+    ScenarioName                     :
+    StartTime                        :
+    State                            : NotStarted
+    StateDescription                 : NotStarted
+    TargetInstanceType               : ProtectionEntity
+    TargetObjectId                   :
+    TargetObjectName                 :
+    Task                             : {}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    By machine id.
+- title: 'Example 2: By input object'
+  description: |-
+    ```powershell
+    $obj = Get-AzMigrateServerReplication -ProjectName "signoffccyproj" -ResourceGroupName "cbtsignoff2201rg" -MachineName "Win2k16"
+    Resume-AzMigrateServerReplication -InputObject $obj
+    ```
+
+    ```output
+    ActivityId                       : 0b810233-b0aa-4a4c-a44e-bea4589c0513 ActivityId: ccb4889b-b9ec-4a76-af4d-4eb59c76ebac
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202301.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          :
+    Error                            : {}
+    FriendlyName                     :
+    Id                               : /Subscriptions/xxx-xxx-xxxxxx-xxx-xxx/resourceGroups/cbtsignoff2201rg/providers/Microsoft.RecoveryServices/vaults/signoff
+                                       ccyapp3352vault/replicationJobs/75a6945d-2276-4dbb-926c-d0745e004130
+    Location                         :
+    Name                             : 75a6945d-2276-4dbb-926c-d0745e004130
+    ScenarioName                     :
+    StartTime                        :
+    State                            : NotStarted
+    StateDescription                 : NotStarted
+    TargetInstanceType               : ProtectionEntity
+    TargetObjectId                   :
+    TargetObjectName                 :
+    Task                             : {}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    By input object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Resume-AzMigrateServerReplication.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/resume-azmigrateserverreplication
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Resume-AzMigrateServerReplication.md
+  PlatyPS schema version: 2024-05-01

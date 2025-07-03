@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Get-AzRecoveryServicesVault
+name: Get-AzRecoveryServicesVault
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Gets a list of Recovery Services vaults.
+description: |-
+  The **Get-AzRecoveryServicesVault** cmdlet gets a list of Recovery Services vaults in the current subscription.
+notes: |-
+  Get-AzRecoveryServicesVault in old version of Az.RecoveryServices(<=2.10.0) cannot work with Az.Accounts(>=1.8.1) because of incorrect assembly reference. The module Az.RecoveryServices needs to be upgraded to 2.11.0 or newer if you are using the latest Az or Az.Accounts.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the vault to query for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure resource group from which to retrieve the specified Recovery Services object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Tags to query for
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTagObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TagName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Key of the Tag to query for
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTagNameValueParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TagValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Value of the Tag to query for
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTagNameValueParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesVault
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-TagName <String>]
+        [-TagValue <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTagNameValueParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesVault
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        -Tag <Hashtable>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTagObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesVault
+    ```
+
+    Get the list of vault in selected subscription.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup"
+    ```
+
+    Get the list of vault in resource group in selected subscription.
+- title: 'Example 3: Get vault MSI, PublicNetworkAccess, ImmutabilityState, CrossSubscriptionRestoreState'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+    $vault.Identity | Format-List
+    $vault.Properties.PublicNetworkAccess
+    $vault.Properties.ImmutabilitySettings.ImmutabilityState
+    $vault.Properties.RestoreSettings.CrossSubscriptionRestoreSettings.CrossSubscriptionRestoreState
+    ```
+
+    ```output
+    PrincipalId : XXXXXXXX-XXXX-XXXX
+    TenantId    : XXXXXXXX-XXXX-XXXX
+    Type        : SystemAssigned
+
+    Enabled
+    Disabled
+    Enabled
+    ```
+
+    The first cmdlet gets the vault in resource group with given name. Then we access the MSI information from the vault. Third and fourth commands are used to fetch the public network access, immutability state, cross subscription restore state of the vault.
+- title: 'Example 4: Get Encryption properties of the vault'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+
+    $vault.Properties.EncryptionProperty.KeyVaultProperties
+    $vault.Properties.EncryptionProperty.KekIdentity
+    $vault.Properties.EncryptionProperty.InfrastructureEncryption
+    ```
+
+    ```output
+    KeyUri
+    ------
+    https://oss-pstest-keyvault.vault.azure.net/keys/cmk-pstest-key2
+
+    UseSystemAssignedIdentity UserAssignedIdentity
+    ------------------------- --------------------
+                        False /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/resourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/pstest-uami
+
+    Enabled
+    ```
+
+    The first cmdlet gets the vault in resource group with given name. The second, third and fourth commands are used to fetch the encryption properties (KeyUri, KekIdentity and infrastructure encryption) of the vault for CMK.
+links:
+- text: Get-AzRecoveryServicesVaultSettingsFile
+  href: ./Get-AzRecoveryServicesVaultSettingsFile.yml
+- text: New-AzRecoveryServicesVault
+  href: ./New-AzRecoveryServicesVault.yml
+- text: Remove-AzRecoveryServicesVault
+  href: ./Remove-AzRecoveryServicesVault.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVault.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesvault
+  Module Name: Az.RecoveryServices
+  ms.assetid: 818B5302-91EE-425F-B1CD-86B626F1B7A3
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVault.md
+  PlatyPS schema version: 2024-05-01

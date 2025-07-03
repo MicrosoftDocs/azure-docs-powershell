@@ -1,0 +1,345 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchJob
+name: Get-AzBatchJob
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch jobs for a Batch account or job schedule.
+description: |-
+  The **Get-AzBatchJob** cmdlet gets the Azure Batch jobs for the Batch account specified by the *BatchAccountContext* parameter.
+  You can use the *Id* parameter to get a single job.
+  You can use the *Filter* parameter to get the jobs that match an Open Data Protocol (OData) filter.
+  If you supply a job schedule ID or **PSCloudJobSchedule** instance, this cmdlet returns only the jobs for that job schedule.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Open Data Protocol (OData) expand clause.
+      Specify a value for this parameter to get associated entities of the main entity that you get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData filter clause for jobs.
+      If you do not specify a filter, this cmdlet returns all jobs for the Batch account or job schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job that this cmdlet gets.
+      You cannot specify wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSchedule
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCloudJobSchedule** object that represents the job schedule which contains the jobs.
+      To obtain a **PSCloudJobSchedule** object, use the Get-AzBatchJobSchedule cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObject
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobScheduleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job schedule which contains the jobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of jobs to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchJob
+        -BatchContext <BatchAccountContext>
+        [-JobScheduleId <String>]
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchJob
+        [[-Id] <String>]
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchJob
+        [[-JobSchedule] <PSCloudJobSchedule>]
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Batch job by ID'
+  description: |-
+    ```powershell
+    Get-AzBatchJob -Id "Job01" -BatchContext $Context
+    ```
+
+    ```output
+    CommonEnvironmentSettings   :
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSJobConstraints
+    CreationTime                : 7/25/2015 9:12:07 PM
+    DisplayName                 :
+    ETag                        : 0x8D29535B2941439
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobExecutionInformation
+    Id                          : Job01
+    JobManagerTask              :
+    JobPreparationTask          :
+    JobReleaseTask              :
+    LastModified                : 7/25/2015 9:12:07 PM
+    Metadata                    :
+    PoolInformation             : Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Priority                    : 0
+    State                       : Active
+    StateTransitionTime         : 7/25/2015 9:12:07 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/Job01
+    ```
+
+    This command gets the job that has the ID Job01.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+- title: 'Example 2: Get all active jobs for a job schedule'
+  description: |-
+    ```powershell
+    Get-AzBatchJob -JobScheduleId "JobSchedule27" -Filter "state eq 'active'" -BatchContext $Context
+    ```
+
+    ```output
+    CommonEnvironmentSettings   :
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSJobConstraints
+    CreationTime                : 7/25/2015 9:15:44 PM
+    DisplayName                 :
+    ETag                        : 0x8D2953633DD13E1
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobExecutionInformation
+    Id                          : JobSchedule27:job-1
+    JobManagerTask              :
+    JobPreparationTask          :
+    JobReleaseTask              :
+    LastModified                : 7/25/2015 9:15:44 PM
+    Metadata                    :
+    PoolInformation             : Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Priority                    : 0
+    State                       : Active
+    StateTransitionTime         : 7/25/2015 9:15:44 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/JobSchedule27:job-1
+    ```
+
+    This command gets the active jobs for the job schedule that has the ID JobSchedule27.
+- title: 'Example 3: Gets all jobs under a job schedule by using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzBatchJobSchedule -Id "JobSchedule27" -BatchContext $Context | Get-AzBatchJob -BatchContext $Context
+    ```
+
+    ```output
+    CommonEnvironmentSettings   :
+    Constraints                 : Microsoft.Azure.Commands.Batch.Models.PSJobConstraints
+    CreationTime                : 7/25/2015 9:15:44 PM
+    DisplayName                 :
+    ETag                        : 0x8D2953633DD13E1
+    ExecutionInformation        : Microsoft.Azure.Commands.Batch.Models.PSJobExecutionInformation
+    Id                          : JobSchedule27:job-1
+    JobManagerTask              :
+    JobPreparationTask          :
+    JobReleaseTask              :
+    LastModified                : 7/25/2015 9:15:44 PM
+    Metadata                    :
+    PoolInformation             : Microsoft.Azure.Commands.Batch.Models.PSPoolInformation
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Priority                    : 0
+    State                       : Active
+    StateTransitionTime         : 7/25/2015 9:15:44 PM
+    Statistics                  :
+    Url                         : https://pfuller.westus.batch.azure.com/jobs/JobSchedule27:job-1
+    ```
+
+    This command gets the job schedule that has the ID JobSchedule27 by using the Get-AzBatchJobSchedule cmdlet.
+    The command passes that job schedule to the current cmdlet by using the pipeline operator.
+    The command gets all jobs for that job schedule.
+links:
+- text: Disable-AzBatchJob
+  href: ./Disable-AzBatchJob.yml
+- text: Enable-AzBatchJob
+  href: ./Enable-AzBatchJob.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJobSchedule
+  href: ./Get-AzBatchJobSchedule.yml
+- text: New-AzBatchJob
+  href: ./New-AzBatchJob.yml
+- text: Remove-AzBatchJob
+  href: ./Remove-AzBatchJob.yml
+- text: Stop-AzBatchJob
+  href: ./Stop-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchjob
+  Module Name: Az.Batch
+  ms.assetid: 8BF49C4D-E7CD-4FD0-AFAC-9856239D24EC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJob.md
+  PlatyPS schema version: 2024-05-01

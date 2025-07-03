@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.Get-AzSpringCloudConfigurationService
+name: Get-AzSpringCloudConfigurationService
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Get the Application Configuration Service and its properties.
+description: |-
+  Get the Application Configuration Service and its properties.
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  `INPUTOBJECT <ISpringCloudIdentity>`: Identity Parameter
+    - `[AgentPoolName <String>]`: The name of the build service agent pool resource.
+    - `[AppName <String>]`: The name of the App resource.
+    - `[BindingName <String>]`: The name of the Binding resource.
+    - `[BuildName <String>]`: The name of the build resource.
+    - `[BuildResultName <String>]`: The name of the build result resource.
+    - `[BuildServiceName <String>]`: The name of the build service resource.
+    - `[BuilderName <String>]`: The name of the builder resource.
+    - `[BuildpackBindingName <String>]`: The name of the Buildpack Binding Name
+    - `[BuildpackName <String>]`: The name of the buildpack resource.
+    - `[CertificateName <String>]`: The name of the certificate resource.
+    - `[ConfigurationServiceName <String>]`: The name of Application Configuration Service.
+    - `[DeploymentName <String>]`: The name of the Deployment resource.
+    - `[DomainName <String>]`: The name of the custom domain resource.
+    - `[Id <String>]`: Resource identity path
+    - `[Location <String>]`: the region
+    - `[ResourceGroupName <String>]`: The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+    - `[ServiceName <String>]`: The name of the Service resource.
+    - `[ServiceRegistryName <String>]`: The name of Service Registry.
+    - `[StackName <String>]`: The name of the stack resource.
+    - `[SubscriptionId <String>]`: Gets subscription ID which uniquely identify the Microsoft Azure subscription. The subscription ID forms part of the URI for every service call.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ISpringCloudIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Service resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets subscription ID which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSpringCloudConfigurationService
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSpringCloudConfigurationService
+        -InputObject <ISpringCloudIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ISpringCloudIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.IConfigurationServiceResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Application Configuration Service and its properties'
+  description: |-
+    ```powershell
+    Get-AzSpringCloudConfigurationService -ResourceGroupName SpringCloud-gp-junxi -ServiceName springcloud-01
+    ```
+
+    ```output
+    Name    SystemDataCreatedAt SystemDataCreatedBy     SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedB
+                                                                                                         y
+    ----    ------------------- -------------------     ----------------------- ------------------------ -----------------------
+    default 2022/7/13 3:26:33   v-junxisu@microsoft.com User                    2022/7/13 7:46:06        v-junxisu@microsoft.com
+    ```
+
+    Get all Application Configuration Service and its properties.
+- title: 'Example 2: Get the Application Configuration Service and its properties'
+  description: |-
+    ```powershell
+    Get-AzSpringCloudConfigurationService -ResourceGroupName SpringCloud-gp-junxi -ServiceName springcloud-01
+    ```
+
+    ```output
+    Name    SystemDataCreatedAt SystemDataCreatedBy     SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedB
+                                                                                                         y
+    ----    ------------------- -------------------     ----------------------- ------------------------ -----------------------
+    default 2022/7/13 3:26:33   v-junxisu@microsoft.com User                    2022/7/13 7:46:06        v-junxisu@microsoft.com
+    ```
+
+    Get the Application Configuration Service and its properties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Get-AzSpringCloudConfigurationService.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.springcloud/get-azspringcloudconfigurationservice
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Get-AzSpringCloudConfigurationService.md
+  PlatyPS schema version: 2024-05-01

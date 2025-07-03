@@ -1,0 +1,622 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzRoleAssignment
+name: New-AzRoleAssignment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Assigns the specified RBAC role to the specified principal, at the specified scope.
+description: |-
+  Use the New-AzRoleAssignment command to grant access.
+  Access is granted by assigning the appropriate RBAC role to them at the right scope.
+  To grant access to the entire subscription, assign a role at the subscription scope.
+  To grant access to a specific resource group within a subscription, assign a role at the resource group scope.
+  The subject of the assignment must be specified.
+  To specify a user, use SignInName or Microsoft Entra ObjectId parameters.
+  To specify a security group, use Microsoft Entra ObjectId parameter.
+  And to specify a Microsoft Entra application, use ApplicationId or ObjectId parameters.
+  The role that is being assigned must be specified using the RoleDefinitionName parameter.
+  The scope at which access is being granted may be specified.
+  It defaults to the selected subscription.
+  The scope of the assignment can be specified using one of the following parameter combinations
+          a.
+  Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>
+          b.
+  ResourceGroupName - to grant access to the specified resource group.
+          c.
+  ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - to specify a particular resource within a resource group to grant access to.
+notes: |-
+  Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment
+parameters:
+  cmdletParameters:
+  - name: AllowDelegation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The delegation flag while creating a Role assignment.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Application ID of the ServicePrincipal
+    aliases:
+    - SPN
+    - ServicePrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Microsoft Entra Objectid of the user, group or service principal.
+    aliases:
+    - Id
+    - PrincipalId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdWithScopeAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentResource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource in the hierarchy(of the resource specified using ResourceName parameter).
+      Should only be  used in conjunction with ResourceGroupName, ResourceType and ResourceName parameters to construct a hierarchical scope in the form of a relative URI that identifies a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+      Creates an assignment that is effective at the specified resource group.
+      When used in conjunction with ResourceName, ResourceType and (optionally)ParentResource parameters, the command constructs a hierarchical scope in the form of a relative URI that identifies a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+      For e.g.
+      storageaccountprod.
+      Should only be used in conjunction with ResourceGroupName, ResourceType and (optionally)ParentResource parameters to construct a hierarchical scope in the form of a  relative URI that identifies a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource type.
+      For e.g.
+      Microsoft.Network/virtualNetworks.
+      Should only be used in conjunction with ResourceGroupName, ResourceName and (optionally)ParentResource parameters to construct a hierarchical scope in  the form of a relative URI that identifies a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the RBAC role that needs to be assigned to the principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RoleIdWithScopeAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the RBAC role that needs to be assigned to the principal i.e.
+      Reader, Contributor, Virtual Network Administrator, etc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Scope of the role assignment.
+      In the format of relative URI.
+      For e.g.
+      "/subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG".
+      If not specified, will create the role assignment at subscription level.
+      If specified, it should start with "/subscriptions/{id}".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: RoleIdWithScopeAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address or the user principal name of the user.
+    aliases:
+    - Email
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ObjectId <Guid>
+        -Scope <String>
+        -RoleDefinitionName <String>
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ObjectId <Guid>
+        -ResourceGroupName <String>
+        -RoleDefinitionName <String>
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ObjectId <Guid>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        -RoleDefinitionName <String>
+        [-ParentResource <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ObjectId <Guid>
+        -RoleDefinitionName <String>
+        [-Scope <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ObjectId <Guid>
+        -Scope <String>
+        -RoleDefinitionId <Guid>
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RoleIdWithScopeAndObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -SignInName <String>
+        -ResourceGroupName <String>
+        -RoleDefinitionName <String>
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -SignInName <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        -RoleDefinitionName <String>
+        [-ParentResource <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -SignInName <String>
+        -RoleDefinitionName <String>
+        [-Scope <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ApplicationId <String>
+        -ResourceGroupName <String>
+        -RoleDefinitionName <String>
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithSPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ApplicationId <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        -RoleDefinitionName <String>
+        [-ParentResource <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithSPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRoleAssignment
+        -ApplicationId <String>
+        -RoleDefinitionName <String>
+        [-Scope <String>]
+        [-AllowDelegation]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithSPNParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> New-AzRoleAssignment -ResourceGroupName rg1 -SignInName allen.young@live.com -RoleDefinitionName Reader -AllowDelegation
+    ```
+
+    Grant Reader role access to a user at a resource group scope with the Role Assignment being available for delegation
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -SearchString "Christine Koch Team"
+
+              DisplayName                    Type                           Id
+              -----------                    ----                           --------
+              Christine Koch Team                                           00001111-aaaa-2222-bbbb-3333cccc4444
+
+    PS C:\> New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName Contributor  -ResourceGroupName rg1
+    ```
+
+    Grant access to a security group
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> New-AzRoleAssignment -SignInName john.doe@contoso.com -RoleDefinitionName Owner -Scope "/subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourcegroups/rg1/providers/Microsoft.Web/sites/site1"
+    ```
+
+    Grant access to a user at a resource (website)
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> New-AzRoleAssignment -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -RoleDefinitionName "Virtual Machine Contributor" -ResourceName Devices-Engineering-ProjectRND -ResourceType Microsoft.Network/virtualNetworks/subnets -ParentResource virtualNetworks/VNET-EASTUS-01 -ResourceGroupName Network
+    ```
+
+    Grant access to a group at a nested resource (subnet)
+- title: Example 5
+  description: |-
+    ```
+    PS C:\> $servicePrincipal = New-AzADServicePrincipal -DisplayName "testServiceprincipal"
+    PS C:\> New-AzRoleAssignment -RoleDefinitionName "Reader" -ApplicationId $servicePrincipal.ApplicationId
+    ```
+
+    Grant reader access to a service principal
+links:
+- text: Get-AzRoleAssignment
+  href: ./Get-AzRoleAssignment.yml
+- text: Remove-AzRoleAssignment
+  href: ./Remove-AzRoleAssignment.yml
+- text: Get-AzRoleDefinition
+  href: ./Get-AzRoleDefinition.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzRoleAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azroleassignment
+  Module Name: Az.Resources
+  ms.assetid: E460D108-2BF9-4F57-AF3D-13868DC73EA0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzRoleAssignment.md
+  PlatyPS schema version: 2024-05-01

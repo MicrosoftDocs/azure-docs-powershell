@@ -1,0 +1,221 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlServerActiveDirectoryAdministrator
+name: Set-AzSqlServerActiveDirectoryAdministrator
+module: Az.Sql
+isPreview: false
+summary: |-
+  Provisions a Microsoft Entra administrator for SQL Server.
+description: |-
+  The **Set-AzSqlServerActiveDirectoryAdministrator** cmdlet provisions a Microsoft Entra administrator for AzureSQL Server in the current subscription.
+  You can provision only one administrator at a time.
+  The following members of Microsoft Entra ID can be provisioned as a SQL Server administrator:
+  - Native members of Microsoft Entra ID
+  - Federated members of Microsoft Entra ID
+  - Imported members from other Azure ADs who are native or federated members
+  - Microsoft Entra groups created as security groups
+  Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
+  Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.
+  We recommend that you provision a dedicated Microsoft Entra group as an administrator.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the display name of the Microsoft Entra administrator that this cmdlet provisions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of the Microsoft Entra administrator that this cmdlet provisions.
+      If the display name is not unique, you must specify a value for this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to which the server is assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL Server for which this cmdlet provisions an administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlServerActiveDirectoryAdministrator
+        [-DisplayName] <String>
+        [[-ObjectId] <Guid>]
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ServerActiveDirectoryAdministrator.Model.AzureSqlServerActiveDirectoryAdministratorModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Provision an administrator group for a server'
+  description: |-
+    ```powershell
+    Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DisplayName "DBAs"
+    ```
+
+    ```output
+    ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
+    ----------------- ---------- ----------- -------- ---------------------------
+    ResourceGroup01   Server01   DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb False
+    ```
+
+    This command provisions a Microsoft Entra administrator group named DBAs for the server named Server01.
+    This server is associated with resource group ResourceGroup01.
+- title: 'Example 2: Provision an administrator user for a server'
+  description: |-
+    ```powershell
+    Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DisplayName "David Chew"
+    ```
+
+    ```output
+    ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
+    ----------------- ---------- ----------- --------
+    resourcegroup01   server01   David Chew  11E95548-B179-4FE1-9AF4-ACA49D13ABB9 False
+    ```
+
+    This command provisions a Microsoft Entra user as an administrator for the server named Server01.
+- title: 'Example 3: Provision an administrator group by specifying its ID'
+  description: |-
+    ```powershell
+    Set-AzSqlServerActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DisplayName "DBAs" -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    ```
+
+    ```output
+    ResourceGroupName ServerName DisplayName ObjectId IsAzureADOnlyAuthentication
+    ----------------- ---------- ----------- --------
+    ResourceGroup01   Server01   DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb False
+    ```
+
+    This command provisions a Microsoft Entra administrator group named DBAs for the server named Server01.
+    The command specifies an ID for the *ObjectId* parameter.
+    This makes sure that the command succeeds even if the display name of the group is not unique.
+links:
+- text: Get-AzSqlServerActiveDirectoryAdministrator
+  href: ./Get-AzSqlServerActiveDirectoryAdministrator.yml
+- text: Remove-AzSqlServerActiveDirectoryAdministrator
+  href: ./Remove-AzSqlServerActiveDirectoryAdministrator.yml
+- text: Disable-AzSqlServerActiveDirectoryOnlyAuthentication
+  href: ./Disable-AzSqlServerActiveDirectoryOnlyAuthentication.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerActiveDirectoryAdministrator.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlserveractivedirectoryadministrator
+  Module Name: Az.Sql
+  ms.assetid: 60E0D10F-9B93-45A9-A1FF-5C943B8CA09C
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerActiveDirectoryAdministrator.md
+  PlatyPS schema version: 2024-05-01

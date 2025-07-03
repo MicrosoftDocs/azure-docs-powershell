@@ -1,0 +1,240 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.New-AzDataBoxShippingAddressObject
+name: New-AzDataBoxShippingAddressObject
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Create an in-memory object for ShippingAddress.
+description: |-
+  Create an in-memory object for ShippingAddress.
+parameters:
+  cmdletParameters:
+  - name: AddressType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.AddressType" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: City
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the City.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the company.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Country
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Country.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PostalCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Postal code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipAddressValidation
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to indicate if customer has chosen to skip default address validation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StateOrProvince
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the State or Province.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StreetAddress1
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Street Address line 1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StreetAddress2
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Street Address line 2.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StreetAddress3
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Street Address line 3.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaxIdentificationNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tax Identification Number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZipExtendedCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Extended Zip Code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataBoxShippingAddressObject
+        -Country <String>
+        -StreetAddress1 <String>
+        [-AddressType <AddressType>]
+        [-City <String>]
+        [-CompanyName <String>]
+        [-PostalCode <String>]
+        [-SkipAddressValidation <Boolean>]
+        [-StateOrProvince <String>]
+        [-StreetAddress2 <String>]
+        [-StreetAddress3 <String>]
+        [-TaxIdentificationNumber <String>]
+        [-ZipExtendedCode <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.ShippingAddress" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Shipping Address object'
+  description: |-
+    ```powershell
+    New-AzDataBoxShippingAddressObject -StreetAddress1 "101 TOWNSEND ST" -StateOrProvince "CA" -Country "US" -City "San Francisco" -PostalCode "94107" -AddressType "Commercial"
+    ```
+
+    ```output
+    AddressType City          CompanyName Country PostalCode StateOrProvince StreetAddress1  StreetAddress2 StreetAddress3 ZipExtendedCode
+    ----------- ----          ----------- ------- ---------- --------------- --------------  -------------- -------------- ---------------
+    Commercial  San Francisco             US      94107      CA              101 TOWNSEND ST
+    ```
+
+    Creates a in-memory shipping address object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxShippingAddressObject.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DataBox/new-AzDataBoxShippingAddressObject
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxShippingAddressObject.md
+  PlatyPS schema version: 2024-05-01

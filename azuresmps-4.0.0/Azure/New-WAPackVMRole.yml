@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackVMRole
+name: New-WAPackVMRole
+module: Azure
+isPreview: false
+summary: |-
+  Creates a virtual machine role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-WAPackVMRole** cmdlet creates a virtual machine role.
+parameters:
+  cmdletParameters:
+  - name: CloudService
+    type: <xref href="CloudService" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a cloud service for the virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromCloudService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a label for the virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceDefinition
+    type: <xref href="VMRoleResourceDefinition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a resource definition for the virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackVMRole
+        -Name <String>
+        -Label <String>
+        -ResourceDefinition <VMRoleResourceDefinition>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: QuickCreate
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-WAPackVMRole
+        -Name <String>
+        -Label <String>
+        -ResourceDefinition <VMRoleResourceDefinition>
+        -CloudService <CloudService>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromCloudService
+  isDefault: false
+examples:
+- title: 'Example 1: Create a virtual machine role (emulating WAP behavior)'
+  description: |-
+    ```
+    PS C:\> New-WAPackVMRole -Name "ContosoVMRole01" -Label "ContosoVMRoleLabel01" -ResourceDefinition $resdef
+    ```
+
+    Since we do not specify any cloud service (emulating WAP behavior), the command will create a cloud service for us which will have the same name as the virtual machine role.
+    In this case, the following command will create a virtual machine role with the name ContosoVMRole01, label ContosoVMRoleLabel01.
+    Note that the resource definition being used here has to be manually created though PowerShell.
+links:
+- text: Get-WAPackVMRole
+  href: ./Get-WAPackVMRole.yml
+- text: Remove-WAPackVMRole
+  href: ./Remove-WAPackVMRole.yml
+- text: Set-WAPackVMRole
+  href: ./Set-WAPackVMRole.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6617AA59-CDD1-4BA9-84A7-F3914BF1D4B7
+  PlatyPS schema version: 2024-05-01

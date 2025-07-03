@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Start-AzDataFactoryV2IntegrationRuntime
+name: Start-AzDataFactoryV2IntegrationRuntime
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Starts a managed dedicated integration runtime.
+description: |-
+  The **Start-AzDataFactoryV2IntegrationRuntime** cmdlet starts a managed dedicated integration runtime. The resource is provisioned and after the operation the state is 'Started'.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet without prompting for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime name.
+    aliases:
+    - IntegrationRuntimeName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzDataFactoryV2IntegrationRuntime
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzDataFactoryV2IntegrationRuntime
+        [-ResourceId] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzDataFactoryV2IntegrationRuntime
+        [-InputObject] <PSIntegrationRuntime>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSManagedIntegrationRuntimeStatus" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start an integration runtime'
+  description: |-
+    ```powershell
+    Start-AzDataFactoryV2IntegrationRuntime -ResourceGroupName 'rg-test-dfv2' -DataFactoryName 'test-df-eu2' -Name 'test-dedicated-ir' -Force
+    ```
+
+    ```output
+    CreateTime                   : 9/11/2017 2:16:12 PM
+        Nodes                        : {tvm-1650185656_1-20170911t141751z}
+        OtherErrors                  : {}
+        LastOperation                :
+        State                        : Started
+        Location                     : West US
+        NodeSize                     : Standard_D1_v2
+        NodeCount                    : 1
+        MaxParallelExecutionsPerNode : 1
+        CatalogServerEndpoint        : testsvr.database.windows.net
+        CatalogAdminUserName         : admin
+        CatalogAdminPassword         : **********
+        CatalogPricingTier           : S1
+        VNetId                       :
+        Subnet                       :
+        SubnetId                     :
+        PublicIPs                    :
+        Id                           : /subscriptions/b3ee3a7f-7614-4644-ad07-afa832620b4b/resourceGroups/rg-test-dfv2/providers/Microsoft.DataFactory/factories/test-df-eu2/integrationruntimes/test-dedicated-ir
+        ResourceGroupName            : rg-test-dfv2
+        DataFactoryName              : test-df-eu2
+        Name                         : test-dedicated-ir
+        Description                  : Reserved IR
+    ```
+
+    This cmdlet starts a managed dedicated integration runtime named 'test-dedicated-ir'.
+links:
+- text: Stop-AzDataFactoryV2IntegrationRuntime
+  href: Stop-AzDataFactoryV2IntegrationRuntime.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Start-AzDataFactoryV2IntegrationRuntime.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/start-azdatafactoryv2integrationruntime
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Start-AzDataFactoryV2IntegrationRuntime.md
+  PlatyPS schema version: 2024-05-01

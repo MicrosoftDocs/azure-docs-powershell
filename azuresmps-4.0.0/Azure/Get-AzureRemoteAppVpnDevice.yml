@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppVpnDevice
+name: Get-AzureRemoteAppVpnDevice
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves information about a VPN device.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppVpnDevice** cmdlet retrieves information about a virtual private network (VPN) device.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppVpnDevice
+        [-VNetName] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Return the available VPN device configurations for a virtual network'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteVpnDevice -VNetName "ContosoVNet"
+
+
+    Name                   Platforms
+
+    ----                   ---------
+
+    Cisco Systems, Inc.    {ASA 5500 Series Adaptive Security Appliances, ASR 1000 Series Aggregation Services Routers, ASR 1000 Series Aggregation Services Routers - Dynamic Routing, ISR Series Integrated Services Routers...}
+
+    Juniper Networks, Inc. {SRX Series Routers, SRX Series Routers - Dynamic Routing, J Series Routers, J Series Routers - Dynamic Routing...}
+
+    Microsoft Corporation  {RRAS}
+    ```
+
+    This command returns the available VPN device configurations for the specified virtual network.
+links:
+- text: Get-AzureRemoteAppVNet
+  href: ./Get-AzureRemoteAppVNet.yml
+- text: Get-AzureRemoteAppVpnDeviceConfigScript
+  href: ./Get-AzureRemoteAppVpnDeviceConfigScript.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DF95285F-97F4-4064-8E27-EE6E93843E55
+  PlatyPS schema version: 2024-05-01

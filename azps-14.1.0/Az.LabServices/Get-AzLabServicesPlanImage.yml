@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LabServices.Get-AzLabServicesPlanImage
+name: Get-AzLabServicesPlanImage
+module: Az.LabServices
+isPreview: false
+summary: |-
+  Gets an image resource.
+description: |-
+  Gets an image resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByDisplayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter to apply to the operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabPlan
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      To construct, see NOTES section for LABPLAN properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LabPlan
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the lab plan that uniquely identifies it within containing resource group.
+      Used in resource URIs and in UI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByDisplayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The image name.
+    aliases:
+    - ImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByDisplayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesPlanImage
+        -ResourceId <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesPlanImage
+        -LabPlanName <String>
+        -ResourceGroupName <String>
+        -DisplayName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByDisplayName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesPlanImage
+        -LabPlanName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesPlanImage
+        -LabPlanName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesPlanImage
+        -LabPlan <LabPlan>
+        [-Name <String>]
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LabPlan
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.IImage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all image in the lab plan.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesPlanImage -LabPlanName "Plan Name" -ResourceGroupName "Group Name"
+    ```
+
+    ```output
+    Name
+    ----
+    128technology.128t_networking_platform.128t_networking_platform
+    128technology.128technology_conductor_hourly.128technology_conductor_hourly_427
+    128technology.128technology_conductor_hourly.128technology_conductor_hourly_452
+    ```
+
+    Gets all the available images, this is usually a long list of images.
+- title: 'Example 2: Get specific image in the lab plan.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesPlanImage -LabPlanName "Plan Name"  -ResourceGroupName "Group Name" -Name 'canonical.0001-com-ubuntu-server-focal.20_04-lts'
+    ```
+
+    ```output
+    Name
+    ----
+    canonical.0001-com-ubuntu-server-focal.20_04-lts
+    ```
+
+    Returns the specific image.
+- title: 'Example 3: Get specific image using display name.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesPlanImage -LabPlanName "Plan Name" -ResourceGroupName "Group Name" -DisplayName 'Ubuntu Server 20.04 LTS'
+    ```
+
+    ```output
+    Name
+    ----
+    canonical.0001-com-ubuntu-server-focal.20_04-lts
+    ```
+
+    Returns the specific image with the display name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesPlanImage.md
+  document type: cmdlet
+  external help file: Az.LabServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.labservices/get-azlabservicesplanimage
+  Module Name: Az.LabServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesPlanImage.md
+  PlatyPS schema version: 2024-05-01

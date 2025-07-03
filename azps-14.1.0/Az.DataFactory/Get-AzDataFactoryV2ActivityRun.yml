@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Get-AzDataFactoryV2ActivityRun
+name: Get-AzDataFactoryV2ActivityRun
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Gets information about activity runs for a pipeline run.
+description: |-
+  The **Get-AzDataFactoryV2ActivityRun** cmdlet gets information about runs in Azure Data Factory for the specified pipeline run that happened in the given timeframe. Additionally, you can specify filters for activity name, linked service name that executed the run, and the status of the run.
+parameters:
+  cmdletParameters:
+  - name: ActivityName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the activity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactory
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineRunId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Run ID of the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunStartedAfter
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or after which the pipeline run started to execute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunStartedBefore
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or before which the pipeline run started to execute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The status of the pipeline run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2ActivityRun
+        [-PipelineRunId] <String>
+        [-RunStartedAfter] <DateTime>
+        [-RunStartedBefore] <DateTime>
+        [[-ActivityName] <String>]
+        [[-Status] <String>]
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2ActivityRun
+        [-PipelineRunId] <String>
+        [-RunStartedAfter] <DateTime>
+        [-RunStartedBefore] <DateTime>
+        [[-ActivityName] <String>]
+        [[-Status] <String>]
+        [-DataFactory] <PSDataFactory>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSActivityRun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all activity runs for a pipeline run'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryV2ActivityRun -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -PipelineRunId "f288712d-fb08-4cb8-96ef-82d3b9b30621" -RunStartedAfter "2017-09-01" -RunStartedBefore "2017-09-30"
+    ```
+
+    ```output
+    ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        ActivityName      : MyWebActivity
+        PipelineRunId     : f288712d-fb08-4cb8-96ef-82d3b9b30621
+        PipelineName      : DPWikisample
+        Input             : {method, url, headers, body...}
+        Output            : {operationstatus}
+        ActivityRunStart  : 9/14/2017 12:20:57 AM
+        ActivityRunEnd    : 9/14/2017 12:21:00 AM
+        DurationInMs      : 2768
+        Status            : Succeeded
+        Error             : {errorCode, message, failureType, target}
+    ```
+
+    This command gets details about all activity runs in the pipeline run with ID "f288712d-fb08-4cb8-96ef-82d3b9b30621" that happened between "2017-09-01" and "2017-09-30".
+links:
+- text: Invoke-AzDataFactoryV2Pipeline
+  href: Invoke-AzDataFactoryV2Pipeline.yml
+- text: Get-AzDataFactoryV2PipelineRun
+  href: Get-AzDataFactoryV2PipelineRun.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2ActivityRun.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2activityrun
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2ActivityRun.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Reservations.Get-AzReservationCatalog
+name: Get-AzReservationCatalog
+module: Az.Reservations
+isPreview: false
+summary: |-
+  Get the regions and skus that are available for RI purchase for the specified Azure subscription.
+description: |-
+  Get the regions and skus that are available for RI purchase for the specified Azure subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to filter by Catalog properties.
+      The filter supports 'eq', 'or', and 'and'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filters the skus based on the location specified in this parameter.
+      This can be an Azure region or global
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer id used to get the third party products
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan id used to get the third party products
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublisherId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher id used to get the third party products
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservedResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the resource for which the skus should be provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of reservations to skip from the list before returning results
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Id of the subscription
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Take
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      To number of reservations to return
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzReservationCatalog
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-Location <String>]
+        [-OfferId <String>]
+        [-PlanId <String>]
+        [-PublisherId <String>]
+        [-ReservedResourceType <String>]
+        [-Skip <Single>]
+        [-Take <Single>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzReservationCatalog
+        -InputObject <IReservationsIdentity>
+        [-Filter <String>]
+        [-Location <String>]
+        [-OfferId <String>]
+        [-PlanId <String>]
+        [-PublisherId <String>]
+        [-ReservedResourceType <String>]
+        [-Skip <Single>]
+        [-Take <Single>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.ICatalog" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the list of reserved resource type skus with location'
+  description: |-
+    ```powershell
+    Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Location "westus" -ReservedResourceType "VirtualMachine"
+    ```
+
+    ```output
+    ResourceType    Terms           Name                   Locations
+    ------------    -----           ----                   ---------
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B12ms         {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B16ms         {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B1ls          {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B1ms          {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B1s           {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B20ms         {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B2ms          {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B2s           {westus}
+    virtualMachines {P1Y, P3Y, P5Y} Standard_B4ms          {westus}
+    ```
+
+    This command gets a catalog of reserved resource type skus with location
+- title: 'Example 2: Get the list of reserved resource type skus without location'
+  description: |-
+    ```powershell
+    Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ReservedResourceType "SuseLinux"
+    ```
+
+    ```output
+    ResourceType Terms           Name                            Locations
+    ------------ -----           ----                            ---------
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_3-4_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_1-2_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_standard_5plus_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_1-2_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_5plus_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_hpc_priority_3-4_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_standard_5plus_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_standard_3-4_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_standard_1-2_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_priority_6_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_priority_2-4_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_priority_1_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_priority_8plus_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_5plus_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_1-2_vcpu_vm
+    SuseLinux    {P1Y, P3Y, P5Y} sles_sap_priority_3-4_vcpu_vm
+    ```
+
+    This command gets a catalog of reserved resource type skus without location
+- title: 'Example 3: Get the list of eligible 3pp reserved resource type skus with publisher id, offer id, plan id'
+  description: |-
+    ```powershell
+    Get-AzReservationCatalog -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ReservedResourceType "VirtualMachineSoftware" -PublisherId canonical -OfferId 0001-com-ubuntu-pro-xenial -PlanId pro-16_04-lts
+    ```
+
+    ```output
+    ResourceType           Terms           Name                                                          Locations
+    ------------           -----           ----                                                          ---------
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.10core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.416core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.2core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.36core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.80core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.72core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.sharedcore
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.20core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.40core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.48core
+    VirtualMachineSoftware {P1Y, P3Y, P5Y} canonical.0001-com-ubuntu-pro-xenial.pro-16_04-lts.4core
+    ```
+
+    This command gets a catalog of eligible 3pp reserved resource type skus with publisher id, offer id, plan id
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Get-AzReservationCatalog.md
+  document type: cmdlet
+  external help file: Az.Reservations-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.reservations/get-azreservationcatalog
+  Module Name: Az.Reservations
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Get-AzReservationCatalog.md
+  PlatyPS schema version: 2024-05-01

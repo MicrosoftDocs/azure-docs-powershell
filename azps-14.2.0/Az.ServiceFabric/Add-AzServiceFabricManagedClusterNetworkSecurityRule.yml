@@ -1,0 +1,405 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceFabric.Add-AzServiceFabricManagedClusterNetworkSecurityRule
+name: Add-AzServiceFabricManagedClusterNetworkSecurityRule
+module: Az.ServiceFabric
+isPreview: false
+summary: |-
+  Add network security rule to cluster resource.
+description: |-
+  Add network security rule to cluster resource. This will add network security rule with specified properties
+parameters:
+  cmdletParameters:
+  - name: Access
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.NetworkSecurityAccess" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the network traffic is allowed or denied. Possible values include: Allow, Deny
+    acceptedValues:
+    - Allow
+    - Deny
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets network security rule description
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the destination address prefixes. CIDR or destination IP ranges
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPortRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the destination port ranges
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.NetworkSecurityDirection" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets network security rule direction. Possible values include: Inbound, Outbound
+    acceptedValues:
+    - Inbound
+    - Outbound
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedCluster" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed cluster resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObj
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Network Security Rule name
+    aliases:
+    - NetworkSecurityRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the priority of the rule. The value can be in the range 1000 to 3000. Values outside this range are reserved for Service Fabric ManagerCluster Resource Provider. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.NetworkSecurityProtocol" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets network protocol this rule applies to. Possible values include: http, https, tcp, udp, icmp, ah, esp, any
+    acceptedValues:
+    - https
+    - http
+    - udp
+    - tcp
+    - esp
+    - icmp
+    - ah
+    - any
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceAddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the CIDR or source IP ranges
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePortRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Run cmdlet in the background and return a Job to track progress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzServiceFabricManagedClusterNetworkSecurityRule
+        [-InputObject] <PSManagedCluster>
+        -Access <NetworkSecurityAccess>
+        -DestinationAddressPrefix <String[]>
+        -DestinationPortRange <String[]>
+        -Direction <NetworkSecurityDirection>
+        -Name <String>
+        -Priority <Int32>
+        -Protocol <NetworkSecurityProtocol>
+        -SourceAddressPrefix <String[]>
+        -SourcePortRange <String[]>
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObj
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzServiceFabricManagedClusterNetworkSecurityRule
+        [-ResourceGroupName] <String>
+        [-ClusterName] <String>
+        -Access <NetworkSecurityAccess>
+        -DestinationAddressPrefix <String[]>
+        -DestinationPortRange <String[]>
+        -Direction <NetworkSecurityDirection>
+        -Name <String>
+        -Priority <Int32>
+        -Protocol <NetworkSecurityProtocol>
+        -SourceAddressPrefix <String[]>
+        -SourcePortRange <String[]>
+        [-Description <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $resourceGroupName = "sfmcps-test-rg"
+    $clusterName = "sfmcps-test-cluster"
+    $NSRName = "testSecRule1"
+    $sourcePortRanges = "1-1000"
+    $destinationPortRanges = "1-65535"
+    $destinationAddressPrefixes = "194.69.104.0/25", "194.69.119.64/26", "167.220.249.128/26", "255.255.255.255/32"
+    $sourceAddressPrefixes = "167.220.242.0/27", "167.220.0.0/23", "131.107.132.16/28", "167.220.81.128/26"
+
+    $cluster = Add-AzServiceFabricManagedClusterNetworkSecurityRule -ResourceGroupName $resourceGroupName -ClusterName $clusterName `
+            -Name $NSRName -Access Allow -Direction Outbound -Protocol tcp -Priority 1200 -SourcePortRange $sourcePortRange -DestinationPortRange $destinationPortRanges -DestinationAddressPrefix $destinationAddressPrefixes -SourceAddressPrefix $sourceAddressPrefixes -Verbose
+    ```
+
+    This command will add network security rule with properties above.
+- title: Example 2
+  description: |-
+    ```powershell
+    $resourceGroupName = "sfmcps-test-rg"
+    $clusterName = "sfmcps-test-cluster"
+    $NSRName = "testSecRule2"
+    $sourcePortRanges = "1-1000"
+    $destinationPortRanges = "1-65535"
+    $destinationAddressPrefixes = "194.69.104.0/25", "194.69.119.64/26", "167.220.249.128/26", "255.255.255.255/32"
+    $sourceAddressPrefixes = "167.220.242.0/27", "167.220.0.0/23", "131.107.132.16/28", "167.220.81.128/26"
+
+    $cluster = Add-AzServiceFabricManagedClusterNetworkSecurityRule -ResourceGroupName $resourceGroupName -ClusterName $clusterName `
+            -Name $NSRName -Access Deny -Direction Outbound -Protocol udp -Priority 1300 -SourcePortRange $sourcePortRange -DestinationPortRange $destinationPortRanges -DestinationAddressPrefix $destinationAddressPrefixes -SourceAddressPrefix $sourceAddressPrefixes -Verbose
+    ```
+
+    Similar to Example1 with different properties.
+- title: Example 3
+  description: |-
+    ```powershell
+    $resourceGroupName = "sfmcps-test-rg"
+    $clusterName = "sfmcps-test-cluster"
+    $NSRName = "testSecRule3"
+    $description = "test network security rule"
+    $sourcePortRanges = "1-1000"
+    $destinationPortRanges = "1-65535"
+    $destinationAddressPrefixes = "194.69.104.0/25", "194.69.119.64/26", "167.220.249.128/26", "255.255.255.255/32"
+    $sourceAddressPrefixes = "167.220.242.0/27", "167.220.0.0/23", "131.107.132.16/28", "167.220.81.128/26"
+
+    $cluster = $clusterFromGet | Add-AzServiceFabricManagedClusterNetworkSecurityRule `
+            -Name $NSRName -Access Allow -Description $description -Direction Outbound -Protocol tcp -Priority 1400 -SourcePortRange $sourcePortRanges -DestinationPortRange $destinationPortRanges -DestinationAddressPrefix $destinationAddressPrefixes -SourceAddressPrefix $sourceAddressPrefixes -Verbose
+    ```
+
+    This command will add a network security rule using cluster object with piping.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Add-AzServiceFabricManagedClusterNetworkSecurityRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicefabric/add-azservicefabricmanagedclusternetworksecurityrule
+  Module Name: Az.ServiceFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Add-AzServiceFabricManagedClusterNetworkSecurityRule.md
+  PlatyPS schema version: 2024-05-01

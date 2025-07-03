@@ -1,0 +1,54 @@
+### YamlMime:PowerShellModule1
+uid: Az.LabServices
+name: Az.LabServices Module
+isPreview: false
+cmdletGroups:
+- title: Lab Services
+  cmdlets:
+  - Az.LabServices.Add-AzLabServicesUserQuota
+  - Az.LabServices.Get-AzLabServicesLab
+  - Az.LabServices.Get-AzLabServicesLabForVM
+  - Az.LabServices.Get-AzLabServicesLabPlan
+  - Az.LabServices.Get-AzLabServicesPlanImage
+  - Az.LabServices.Get-AzLabServicesSchedule
+  - Az.LabServices.Get-AzLabServicesTemplateVM
+  - Az.LabServices.Get-AzLabServicesUser
+  - Az.LabServices.Get-AzLabServicesUserVM
+  - Az.LabServices.Get-AzLabServicesVM
+  - Az.LabServices.New-AzLabServicesLab
+  - Az.LabServices.New-AzLabServicesLabPlan
+  - Az.LabServices.New-AzLabServicesSchedule
+  - Az.LabServices.New-AzLabServicesUser
+  - Az.LabServices.Publish-AzLabServicesLab
+  - Az.LabServices.Remove-AzLabServicesLab
+  - Az.LabServices.Remove-AzLabServicesLabPlan
+  - Az.LabServices.Remove-AzLabServicesSchedule
+  - Az.LabServices.Remove-AzLabServicesUser
+  - Az.LabServices.Reset-AzLabServicesVMPassword
+  - Az.LabServices.Save-AzLabServicesLabPlanImage
+  - Az.LabServices.Send-AzLabServicesUserInvite
+  - Az.LabServices.Start-AzLabServicesUserVM
+  - Az.LabServices.Start-AzLabServicesVM
+  - Az.LabServices.Start-AzLabServicesVMRedeployment
+  - Az.LabServices.Stop-AzLabServicesUserVM
+  - Az.LabServices.Stop-AzLabServicesVM
+  - Az.LabServices.Sync-AzLabServicesLabUser
+  - Az.LabServices.Update-AzLabServicesLab
+  - Az.LabServices.Update-AzLabServicesLabPlan
+  - Az.LabServices.Update-AzLabServicesPlanImage
+  - Az.LabServices.Update-AzLabServicesQuota
+  - Az.LabServices.Update-AzLabServicesSchedule
+  - Az.LabServices.Update-AzLabServicesUser
+  - Az.LabServices.Update-AzLabServicesVMReimage
+description: |-
+  Microsoft Azure PowerShell: LabServices cmdlets
+metadata:
+  Module Name: Az.LabServices
+  Module Guid: f4604f08-6749-40ce-bd25-81074c1119e7
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.labservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Az.LabServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Az.LabServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

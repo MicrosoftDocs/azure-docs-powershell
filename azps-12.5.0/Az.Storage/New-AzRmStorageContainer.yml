@@ -1,0 +1,421 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzRmStorageContainer
+name: New-AzRmStorageContainer
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates a Storage blob container
+description: |-
+  The **New-AzRmStorageContainer** cmdlet creates a Storage blob container
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultEncryptionScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default the container to use specified encryption scope for all writes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameEncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectEncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableImmutableStorageWithVersioning
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable immutable Storage with versioning at the container level.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Container Metadata
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container Name
+    aliases:
+    - N
+    - ContainerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreventEncryptionScopeOverride
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Block override of encryption scope from the container default.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNameEncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectEncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicAccess
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSPublicAccess" data-throw-if-not-resolved="False" />
+    description: |-
+      Container PublicAccess
+    acceptedValues:
+    - Container
+    - Blob
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountNameEncryptionScope
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RootSquash
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets reduction of the access rights for the remote superuser. Possible values include: 'NoRootSquash', 'RootSquash', 'AllSquash'
+    acceptedValues:
+    - NoRootSquash
+    - RootSquash
+    - AllSquash
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountObjectEncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountNameEncryptionScope
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRmStorageContainer
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Name <String>
+        [-PublicAccess <PSPublicAccess>]
+        [-Metadata <Hashtable>]
+        [-RootSquash <String>]
+        [-EnableImmutableStorageWithVersioning]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzRmStorageContainer
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Name <String>
+        -DefaultEncryptionScope <String>
+        -PreventEncryptionScopeOverride <Boolean>
+        [-PublicAccess <PSPublicAccess>]
+        [-Metadata <Hashtable>]
+        [-RootSquash <String>]
+        [-EnableImmutableStorageWithVersioning]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNameEncryptionScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRmStorageContainer
+        -StorageAccount <PSStorageAccount>
+        -Name <String>
+        [-PublicAccess <PSPublicAccess>]
+        [-Metadata <Hashtable>]
+        [-RootSquash <String>]
+        [-EnableImmutableStorageWithVersioning]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzRmStorageContainer
+        -StorageAccount <PSStorageAccount>
+        -Name <String>
+        -DefaultEncryptionScope <String>
+        -PreventEncryptionScopeOverride <Boolean>
+        [-PublicAccess <PSPublicAccess>]
+        [-Metadata <Hashtable>]
+        [-RootSquash <String>]
+        [-EnableImmutableStorageWithVersioning]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectEncryptionScope
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSContainer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Storage blob container with Storage account name and container name, with metadata'
+  description: |-
+    ```powershell
+    New-AzRmStorageContainer -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -ContainerName "myContainer" -Metadata @{tag0="value0";tag1="value1";tag2="value2"}
+    ```
+
+    This command creates a Storage blob container with Storage account name and container name, with metadata.
+- title: 'Example 2: Create a Storage blob container with Storage account object and container name, with public access as Blob'
+  description: |-
+    ```powershell
+    $accountObject = Get-AzStorageAccount -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount"
+    New-AzRmStorageContainer -StorageAccount $accountObject -ContainerName "myContainer" -PublicAccess Blob
+    ```
+
+    This command creates a Storage blob container with Storage account object and container name, with public access as Blob.
+- title: 'Example 3: Create a storage container with EncryptionScope setting'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $c = New-AzRmStorageContainer -ResourceGroupName "myResourceGroup" -AccountName "mystorageaccount" -Name testcontainer -DefaultEncryptionScope "testscope" -PreventEncryptionScopeOverride $true
+
+    $c
+
+       ResourceGroupName: myResourceGroup, StorageAccountName: mystorageaccount
+
+    Name          PublicAccess LastModified HasLegalHold HasImmutabilityPolicy
+    ----          ------------ ------------ ------------ ---------------------
+    testcontainer                           False        False
+
+    $c.DefaultEncryptionScope
+    testscope
+
+    $c.DenyEncryptionScopeOverride
+    True
+    ```
+
+    This command creates a storage container with a default encryptionScope, and blocks override of encryption scope from the container default.
+    Then show the related container properties.
+- title: 'Example 4: Create an Azure storage container with RootSquash'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $container = New-AzRmStorageContainer -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Name "mycontainer" -RootSquash AllSquash
+
+    $container.EnableNfsV3AllSquash
+    True
+
+    $container.EnableNfsV3RootSquash
+    False
+    ```
+
+    This command creates a storage container, with RootSquash property set as AllSquash.  RootSquash only works on a storage account that enabled NfsV3.
+- title: 'Example 5: Create a storage container and enable immutable Storage with versioning'
+  description: |-
+    ```powershell
+    $c = New-AzRmStorageContainer -ResourceGroupName "myResourceGroup" -AccountName "mystorageaccount" -Name testcontainer -EnableImmutableStorageWithVersioning
+
+    $c
+    ```
+
+    ```output
+    ResourceGroupName: myResourceGroup, StorageAccountName: mystorageaccount
+
+    Name          PublicAccess LastModified         HasLegalHold HasImmutabilityPolicy Deleted VersionId ImmutableStorageWithVersioning
+    ----          ------------ ------------         ------------ --------------------- ------- --------- ------------------------------
+    testcontainer None         2021-07-19 08:26:19Z False        False                 False             True
+    ```
+
+    This command creates a storage container and enable immutable Storage with versioning.
+    The command only works when the Storage account has already enabled blob versioning.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzRmStorageContainer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azrmstoragecontainer
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzRmStorageContainer.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageServiceMetricsProperty
+name: Get-AzStorageServiceMetricsProperty
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets metrics properties for the Azure Storage service.
+description: |-
+  The **Get-AzStorageServiceMetricsProperty** cmdlet gets metrics properties for the Azure Storage service.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the New-AzStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricsType
+    type: <xref href="Microsoft.WindowsAzure.Commands.Storage.Common.ServiceMetricsType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a metrics type.
+      This cmdlet gets the Azure Storage service metrics properties for the metrics type that this parameter specifies.
+      The acceptable values for this parameter are: Hour and Minute.
+    acceptedValues:
+    - Hour
+    - Minute
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceType
+    type: <xref href="Microsoft.WindowsAzure.Commands.Storage.Common.StorageServiceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage service type.
+      This cmdlet gets the metrics properties for the type that this parameter specifies.
+      The acceptable values for this parameter are:
+      - Blob
+      - Table
+      - Queue
+      - File
+      The value of File is not currently supported.
+    acceptedValues:
+    - Blob
+    - Table
+    - Queue
+    - File
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageServiceMetricsProperty
+        [-ServiceType] <StorageServiceType>
+        [-MetricsType] <ServiceMetricsType>
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Storage.Shared.Protocol.MetricsProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get metrics properties for the Blob service'
+  description: |-
+    ```powershell
+    Get-AzStorageServiceMetricsProperty -ServiceType Blob -MetricsType Hour
+    ```
+
+    This command gets metrics properties for blob storage for the Hour metrics type.
+links:
+- text: New-AzStorageContext
+  href: ./New-AzStorageContext.yml
+- text: Set-AzStorageServiceMetricsProperty
+  href: ./Set-AzStorageServiceMetricsProperty.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageservicemetricsproperty
+  Module Name: Az.Storage
+  ms.assetid: 3B5B828A-6B3E-49BD-8BA9-916F8B69B8E9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageServiceMetricsProperty.md
+  PlatyPS schema version: 2024-05-01

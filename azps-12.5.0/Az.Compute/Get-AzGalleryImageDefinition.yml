@@ -1,0 +1,444 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzGalleryImageDefinition
+name: Get-AzGalleryImageDefinition
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list gallery image definitions.
+description: |-
+  Get or list gallery image definitions.
+parameters:
+  cmdletParameters:
+  - name: Community
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      List community galleries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListCommunityGalleryParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryPublicName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The public name of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommunityGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryUniqueName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique name of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CommunityGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image definition.
+    aliases:
+    - GalleryImageDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SharedGalleryParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CommunityGalleryParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID for the gallery image definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies galleries shared to subscription or tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageDefinition
+        [-ResourceGroupName] <String>
+        [-GalleryName] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageDefinition
+        [[-Name] <String>]
+        -GalleryUniqueName <String>
+        -Location <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SharedGalleryParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageDefinition
+        [[-Name] <String>]
+        -GalleryPublicName <String>
+        -Location <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommunityGalleryParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageDefinition
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageDefinition
+        [-Location <String>]
+        [-Community]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListCommunityGalleryParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImage" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzGalleryImageDefinition -ResourceGroupName rg1 -GalleryName gallery1 -GalleryImageDefinitionName image1
+    ```
+
+    ```output
+    ResourceGroupName   : rg1
+    Eula                : eula
+    PrivacyStatementUri : Https://www.microsoft.com
+    ReleaseNoteUri      : https://www.microsoft.com
+    OsType              : Windows
+    OsState             : Generalized
+    EndOfLifeDate       : 2/18/2025 12:07:00 PM
+    Identifier          :
+      Publisher         : PsSDKTeamTest
+      Offer             : testgalleryoffer1
+      Sku               : testgallerysku1
+    Recommended         :
+      VCPUs             :
+        Min             : 2
+        Max             : 32
+      Memory            :
+        Min             : 1
+        Max             : 100
+    Disallowed          :
+      DiskTypes[0]      : Standard_LRS
+    PurchasePlan        :
+      Name              : PsSDKTestPlan
+      Publisher         : PSSDKTeam
+      Product           : PsSDKTestProductWindowsVm
+    ProvisioningState   : Succeeded
+    Id                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provi
+    ders/Microsoft.Compute/galleries/gallery1/images/image1
+    Name                : image1
+    Type                : Microsoft.Compute/galleries/images
+    Location            : eastus2
+    Tags                : {}
+    ```
+
+    Get the gallery image definition.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzGalleryImageDefinition -ResourceGroupName rg1 -GalleryName gallery1 -GalleryImageDefinitionName image*
+    ```
+
+    ```output
+    ResourceGroupName   : rg1
+    Eula                : eula
+    PrivacyStatementUri : Https://www.microsoft.com
+    ReleaseNoteUri      : https://www.microsoft.com
+    OsType              : Windows
+    OsState             : Generalized
+    EndOfLifeDate       : 2/18/2025 12:07:00 PM
+    Identifier          :
+      Publisher         : PsSDKTeamTest
+      Offer             : testgalleryoffer1
+      Sku               : testgallerysku1
+    Recommended         :
+      VCPUs             :
+        Min             : 2
+        Max             : 32
+      Memory            :
+        Min             : 1
+        Max             : 100
+    Disallowed          :
+      DiskTypes[0]      : Standard_LRS
+    PurchasePlan        :
+      Name              : PsSDKTestPlan
+      Publisher         : PSSDKTeam
+      Product           : PsSDKTestProductWindowsVm
+    ProvisioningState   : Succeeded
+    Id                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provi
+    ders/Microsoft.Compute/galleries/gallery1/images/image1
+    Name                : image1
+    Type                : Microsoft.Compute/galleries/images
+    Location            : eastus2
+    Tags                : {}
+
+    ResourceGroupName   : rg1
+    Eula                : eula
+    PrivacyStatementUri : Https://www.microsoft.com
+    ReleaseNoteUri      : https://www.microsoft.com
+    OsType              : Windows
+    OsState             : Generalized
+    EndOfLifeDate       : 2/18/2025 12:07:00 PM
+    Identifier          :
+      Publisher         : PsSDKTeamTest
+      Offer             : testgalleryoffer1
+      Sku               : testgallerysku1
+    Recommended         :
+      VCPUs             :
+        Min             : 2
+        Max             : 32
+      Memory            :
+        Min             : 1
+        Max             : 100
+    Disallowed          :
+      DiskTypes[0]      : Standard_LRS
+    PurchasePlan        :
+      Name              : PsSDKTestPlan
+      Publisher         : PSSDKTeam
+      Product           : PsSDKTestProductWindowsVm
+    ProvisioningState   : Succeeded
+    Id                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provi
+    ders/Microsoft.Compute/galleries/gallery1/images/image2
+    Name                : image2
+    Type                : Microsoft.Compute/galleries/images
+    Location            : eastus2
+    Tags                : {}
+    ```
+
+    Get the gallery image definition that starts with "image".
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzGalleryImageDefinition -ResourceGroupName rg1 -GalleryName gallery1
+    ```
+
+    ```output
+    ResourceGroupName   : rg1
+    Eula                : eula
+    PrivacyStatementUri : Https://www.microsoft.com
+    ReleaseNoteUri      : https://www.microsoft.com
+    OsType              : Windows
+    OsState             : Generalized
+    EndOfLifeDate       : 2/18/2025 12:07:00 PM
+    Identifier          :
+      Publisher         : PsSDKTeamTest
+      Offer             : testgalleryoffer1
+      Sku               : testgallerysku1
+    Recommended         :
+      VCPUs             :
+        Min             : 2
+        Max             : 32
+      Memory            :
+        Min             : 1
+        Max             : 100
+    Disallowed          :
+      DiskTypes[0]      : Standard_LRS
+    PurchasePlan        :
+      Name              : PsSDKTestPlan
+      Publisher         : PSSDKTeam
+      Product           : PsSDKTestProductWindowsVm
+    ProvisioningState   : Succeeded
+    Id                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provi
+    ders/Microsoft.Compute/galleries/gallery1/images/image1
+    Name                : image1
+    Type                : Microsoft.Compute/galleries/images
+    Location            : eastus2
+    Tags                : {}
+
+    ResourceGroupName   : rg1
+    Eula                : eula
+    PrivacyStatementUri : Https://www.microsoft.com
+    ReleaseNoteUri      : https://www.microsoft.com
+    OsType              : Windows
+    OsState             : Generalized
+    EndOfLifeDate       : 2/18/2025 12:07:00 PM
+    Identifier          :
+      Publisher         : PsSDKTeamTest
+      Offer             : testgalleryoffer1
+      Sku               : testgallerysku1
+    Recommended         :
+      VCPUs             :
+        Min             : 2
+        Max             : 32
+      Memory            :
+        Min             : 1
+        Max             : 100
+    Disallowed          :
+      DiskTypes[0]      : Standard_LRS
+    PurchasePlan        :
+      Name              : PsSDKTestPlan
+      Publisher         : PSSDKTeam
+      Product           : PsSDKTestProductWindowsVm
+    ProvisioningState   : Succeeded
+    Id                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/provi
+    ders/Microsoft.Compute/galleries/gallery1/images/image2
+    Name                : image2
+    Type                : Microsoft.Compute/galleries/images
+    Location            : eastus2
+    Tags                : {}
+    ```
+
+    Get the gallery image definitions in gallery1.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGalleryImageDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azgalleryimagedefinition
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGalleryImageDefinition.md
+  PlatyPS schema version: 2024-05-01

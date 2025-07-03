@@ -1,0 +1,262 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Get-AzDataFactoryV2IntegrationRuntimeNode
+name: Get-AzDataFactoryV2IntegrationRuntimeNode
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Gets an integration runtime node information.
+description: |-
+  The **Get-AzDataFactoryV2IntegrationRuntimeNode** cmdlet gets the detail information of an integration runtime node.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories, copy, activities, integration runtime
+parameters:
+  cmdletParameters:
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IntegrationRuntimeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpAddress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP Address of integration runtime node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime node name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2IntegrationRuntimeNode
+        [-IntegrationRuntimeName] <String>
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        -Name <String>
+        [-IpAddress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2IntegrationRuntimeNode
+        [-ResourceId] <String>
+        -Name <String>
+        [-IpAddress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2IntegrationRuntimeNode
+        [-InputObject] <PSIntegrationRuntime>
+        -Name <String>
+        [-IpAddress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSManagedIntegrationRuntimeNode" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSSelfHostedIntegrationRuntimeNode" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets the detail information of an integration runtime node.'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryV2IntegrationRuntimeNode -ResourceGroupName 'rg-test-dfv2' -DataFactoryName 'test-df-eu2'  -IntegrationRuntimeName 'test-selfhost-ir' -Name 'Node_1'
+    ```
+
+    ```output
+    ResourceGroupName      : rg-test-dfv2
+    DataFactoryName        : test-df-eu2
+    IntegrationRuntimeName : test-selfhost-ir
+    Name                   : Node_1
+    MachineName            : Test-02
+    HostServiceUri         : https://Test-02.redmond.corp.microsoft.com:8050/HostServiceRemote.svc/
+    Status                 : Online
+    Capabilities           : {[serviceBusConnected, True], [httpsPortEnabled, True], [credentialInSync, True], [connectedToResourceManager, True]...}
+    VersionStatus          : UpToDate
+    Version                : 3.2.6519.3
+    RegisterTime           : 12/1/2017 6:48:15 AM
+    LastConnectTime        : 12/1/2017 7:35:03 AM
+    ExpiryTime             :
+    LastStartTime          : 12/1/2017 6:49:26 AM
+    LastStopTime           :
+    LastUpdateResult       : None
+    LastStartUpdateTime    :
+    LastEndUpdateTime      :
+    IsActiveDispatcher     : True
+    ConcurrentJobsLimit    :
+    MaxConcurrentJobs      : 48
+    IpAddress              :
+    ```
+
+    The cmdlet gets information of node named 'Node_1' in self-hosted integration runtime 'test-selfhost-ir' in data factory 'test-df-eu2'.
+- title: 'Example 2: Gets the detail information of an integration runtime node together with IP address.'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryV2IntegrationRuntimeNode -ResourceGroupName 'rg-test-dfv2' -DataFactoryName 'test-df-eu2'  -IntegrationRuntimeName 'test-selfhost-ir' -Name 'Node_1' -IpAddress
+    ```
+
+    ```output
+    ResourceGroupName      : rg-test-dfv2
+    DataFactoryName        : test-df-eu2
+    IntegrationRuntimeName : test-selfhost-ir
+    Name                   : Node_1
+    MachineName            : Test-02
+    HostServiceUri         : https://Test-02.redmond.corp.microsoft.com:8050/HostServiceRemote.svc/
+    Status                 : Online
+    Capabilities           : {[serviceBusConnected, True], [httpsPortEnabled, True], [credentialInSync, True], [connectedToResourceManager, True]...}
+    VersionStatus          : UpToDate
+    Version                : 3.2.6519.3
+    RegisterTime           : 12/1/2017 6:48:15 AM
+    LastConnectTime        : 12/1/2017 7:35:03 AM
+    ExpiryTime             :
+    LastStartTime          : 12/1/2017 6:49:26 AM
+    LastStopTime           :
+    LastUpdateResult       : None
+    LastStartUpdateTime    :
+    LastEndUpdateTime      :
+    IsActiveDispatcher     : True
+    ConcurrentJobsLimit    :
+    MaxConcurrentJobs      : 48
+    IpAddress              : 167.220.1.167
+    ```
+
+    The cmdlet gets information of node named 'Node_1' in self-hosted integration runtime 'test-selfhost-ir' in data factory 'test-df-eu2', including the IP address.
+links:
+- text: Get-AzDataFactoryV2IntegrationRuntime
+  href: Get-AzDataFactoryV2IntegrationRuntime.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2IntegrationRuntimeNode.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2integrationruntimenode
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2IntegrationRuntimeNode.md
+  PlatyPS schema version: 2024-05-01

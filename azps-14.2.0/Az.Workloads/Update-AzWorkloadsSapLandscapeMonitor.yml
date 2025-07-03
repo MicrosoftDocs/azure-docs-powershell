@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.Update-AzWorkloadsSapLandscapeMonitor
+name: Update-AzWorkloadsSapLandscapeMonitor
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Patches the SAP Landscape Monitor Dashboard for the specified subscription, resource group, and SAP monitor name.
+description: |-
+  Patches the SAP Landscape Monitor Dashboard for the specified subscription, resource group, and SAP monitor name.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupingLandscape
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.ISapLandscapeMonitorSidMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of landscape to SID mappings.
+      To construct, see NOTES section for GROUPINGLANDSCAPE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupingSapApplication
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.ISapLandscapeMonitorSidMapping" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of Sap Applications to SID mappings.
+      To construct, see NOTES section for GROUPINGSAPAPPLICATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the SAP monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TopMetricsThreshold
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.ISapLandscapeMonitorMetricThresholds" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list Top Metric Thresholds for SAP Landscape Monitor Dashboard
+      To construct, see NOTES section for TOPMETRICSTHRESHOLD properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzWorkloadsSapLandscapeMonitor
+        -MonitorName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-GroupingLandscape <ISapLandscapeMonitorSidMapping[]>]
+        [-GroupingSapApplication <ISapLandscapeMonitorSidMapping[]>]
+        [-TopMetricsThreshold <ISapLandscapeMonitorMetricThresholds[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzWorkloadsSapLandscapeMonitor
+        -InputObject <IMonitorsIdentity>
+        [-GroupingLandscape <ISapLandscapeMonitorSidMapping[]>]
+        [-GroupingSapApplication <ISapLandscapeMonitorSidMapping[]>]
+        [-TopMetricsThreshold <ISapLandscapeMonitorMetricThresholds[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.ISapLandscapeMonitor" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update SAP Landscape Monitor'
+  description: |-
+    ```powershell
+    New-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId 49d64d54-e966-4c46-a868-1999802b762c -GroupingLandscape '{"name":"Prod","topSid":["SID1","SID2"]}' -GroupingSapApplication '{"name":"ERP1","topSid":["SID1","SID2"]}' -TopMetricsThreshold '{"name":"Instance Availability","green":90,"yellow":75,"red":50}'
+    ```
+
+    ```output
+    GroupingLandscape            : {{
+                                     "name": "Prod",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    GroupingSapApplication       : {{
+                                     "name": "ERP1",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    Id                           : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/suha-0802-rg1/providers/Microsoft.
+                                   Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
+    Name                         : default
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : suha-0802-rg1
+    SystemData                   : {
+                                     "createdBy": "",
+                                     "createdByType": "User",
+                                     "createdAt": "2023-04-06T05:30:54.9427030Z",
+                                     "lastModifiedBy": "",
+                                     "lastModifiedByType": "User",
+                                     "lastModifiedAt": "2023-04-06T05:31:18.7873209Z"
+                                   }
+    SystemDataCreatedAt          : 06-04-2023 05:30:54
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 06-04-2023 05:31:18
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType : User
+    TopMetricsThreshold          : {{
+                                     "name": "Instance Availability",
+                                     "green": 90,
+                                     "yellow": 75,
+                                     "red": 50
+                                   }}
+    Type                         : microsoft.workloads/monitors/saplandscapemonitor
+    ```
+
+    Update the SAP landscape monitor for an AMS instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Update-AzWorkloadsSapLandscapeMonitor.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/update-azworkloadssaplandscapemonitor
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Update-AzWorkloadsSapLandscapeMonitor.md
+  PlatyPS schema version: 2024-05-01

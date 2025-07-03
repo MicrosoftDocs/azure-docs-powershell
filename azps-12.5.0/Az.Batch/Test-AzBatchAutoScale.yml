@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Test-AzBatchAutoScale
+name: Test-AzBatchAutoScale
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets the result of an automatic scaling formula on a pool.
+description: |-
+  The **Test-AzBatchAutoScale** cmdlet gets the result of an automatic scaling formula on the specified pool.
+parameters:
+  cmdletParameters:
+  - name: AutoScaleFormula
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the formula for the desired number of compute nodes in the pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the pool for which to test automatic scaling.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzBatchAutoScale
+        [-Id] <String>
+        [-AutoScaleFormula] <String>
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSAutoScaleRun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Evaluate an autoscale formula on a pool'
+  description: |-
+    ```powershell
+    $Formula = 'totalNodes=($CPUPercent.GetSamplePercent(TimeInterval_Minute*0,TimeInterval_Minute*10)<0.7?5:(min($CPUPercent.GetSample(TimeInterval_Minute*0, TimeInterval_Minute*10))>0.8?($CurrentDedicated*1.1):$CurrentDedicated));$TargetDedicated=min(100,totalNodes);';
+    $Evaluation = Test-AzBatchAutoScale -Id "ContosoPool" -AutoScaleFormula $Formula -BatchContext $Context
+    $Evaluation.Results
+    ```
+
+    ```output
+    $TargetDedicated=5;$NodeDeallocationOption=requeue;totalNodes=5
+    ```
+
+    The first command stores a formula in the $Formula variable for use in the example.
+    The second command evaluates the autoscale formula on the pool that has the ID ContosoPool.
+    The final command displays the **Results** by using standard dot syntax.
+links:
+- text: Disable-AzBatchAutoScale
+  href: ./Disable-AzBatchAutoScale.yml
+- text: Enable-AzBatchAutoScale
+  href: ./Enable-AzBatchAutoScale.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Test-AzBatchAutoScale.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/test-azbatchautoscale
+  Module Name: Az.Batch
+  ms.assetid: BF0C1A2F-2703-492F-A3A7-053416A5D1EB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Test-AzBatchAutoScale.md
+  PlatyPS schema version: 2024-05-01

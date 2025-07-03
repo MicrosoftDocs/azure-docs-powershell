@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Resize-AzureVNetGateway
+name: Resize-AzureVNetGateway
+module: Azure
+isPreview: false
+summary: |-
+  Resizes a VPN gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Resize-AzureVNetGateway** cmdlet resizes a virtual network virtual private network (VPN) gateway to a different SKU.
+  Valid SKUs for a virtual network gateway are Default, Standard, and HighPerformance.
+parameters:
+  cmdletParameters:
+  - name: GatewaySKU
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SKU to which this cmdlet resizes virtual network gateway.
+      Valid values are:
+
+      - Default
+      - Standard
+      - HighPerformance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network in which this cmdlet resizes a virtual network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resize-AzureVNetGateway
+        -VNetName <String>
+        -GatewaySKU <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Change the SKU for a virtual network gateway'
+  description: |-
+    ```
+    PS C:\> Resize-AzureVNetGateway -VNetName "ContosoVN07" -GatewaySKU "HighPerformance"
+    ```
+
+    This command changes the SKU of the virtual network gateway for the virtual network named ContosoVN07 to HighPerformance.
+links:
+- text: Get-AzureVNetGateway
+  href: ./Get-AzureVNetGateway.yml
+- text: New-AzureVNetGateway
+  href: ./New-AzureVNetGateway.yml
+- text: Remove-AzureVNetGateway
+  href: ./Remove-AzureVNetGateway.yml
+- text: Reset-AzureVNetGateway
+  href: ./Reset-AzureVNetGateway.yml
+- text: Set-AzureVNetGatewayKey
+  href: ./Set-AzureVNetGatewayKey.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5765F6BD-38BC-451B-85C5-F5D1A5AF2831
+  PlatyPS schema version: 2024-05-01

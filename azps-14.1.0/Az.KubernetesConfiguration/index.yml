@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: Az.KubernetesConfiguration
+name: Az.KubernetesConfiguration Module
+isPreview: false
+cmdletGroups:
+- title: Kubernetes Configuration
+  cmdlets:
+  - Az.KubernetesConfiguration.Get-AzKubernetesConfigFluxOperationStatus
+  - Az.KubernetesConfiguration.Get-AzKubernetesConfiguration
+  - Az.KubernetesConfiguration.Get-AzKubernetesConfigurationFlux
+  - Az.KubernetesConfiguration.Get-AzKubernetesExtension
+  - Az.KubernetesConfiguration.New-AzKubernetesConfiguration
+  - Az.KubernetesConfiguration.New-AzKubernetesConfigurationFlux
+  - Az.KubernetesConfiguration.New-AzKubernetesExtension
+  - Az.KubernetesConfiguration.Remove-AzKubernetesConfiguration
+  - Az.KubernetesConfiguration.Remove-AzKubernetesConfigurationFlux
+  - Az.KubernetesConfiguration.Remove-AzKubernetesExtension
+  - Az.KubernetesConfiguration.Update-AzKubernetesConfigurationFlux
+  - Az.KubernetesConfiguration.Update-AzKubernetesExtension
+description: |-
+  Microsoft Azure PowerShell: KubernetesConfiguration cmdlets
+metadata:
+  Module Name: Az.KubernetesConfiguration
+  Module Guid: 372af220-241d-455f-a85f-8be57ce75bb7
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.kubernetesconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/KubernetesConfiguration/help/Az.KubernetesConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesConfiguration/KubernetesConfiguration/help/Az.KubernetesConfiguration.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchPoolNodeCount
+name: Get-AzBatchPoolNodeCount
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch node counts per node state grouped by pool id.
+description: |-
+  The Get-AzBatchPoolNodeCount cmdlet allows customers to get back node counts per node state grouped by pool. Possible node states are creating, idle, leavingPool, offline, preempted, rebooting, reimaging, running, starting, startTaskFailed, unknown, unusable and waitingForStartTask. The cmdlet takes PoolId or Pool parameter to filter only pool with pool id specified.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      The BatchAccountContext instance to use when interacting with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service.
+      To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.
+      When using shared key authentication, the primary access key is used by default.
+      To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of pools to return.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pool
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **PSCloudPool** for which to get node counts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of the pool for which to get node counts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PoolId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPoolNodeCount
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureBatchPoolNodeCounts
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPoolNodeCount
+        -BatchContext <BatchAccountContext>
+        [-PoolId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PoolId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPoolNodeCount
+        -BatchContext <BatchAccountContext>
+        [-Pool <PSCloudPool>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchPoolNodeCount
+        -BatchContext <BatchAccountContext>
+        [-MaxCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSPoolNodeCounts" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $batchContext = Get-AzBatchAccountKey -AccountName "contosobatch"
+    Get-AzBatchPoolNodeCount -BatchContext $batchContext
+    ```
+
+    ```output
+    PoolId                         Dedicated                                                    LowPriority
+    ------                         ---------                                                    -----------
+    contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+    contosopool2                   Idle: 1, Rebooting: 1, Total: 2                              Total: 0
+    ```
+
+    List node counts per node state for pools under current batch account context.
+- title: Example 2
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+    ```powershell
+    Get-AzBatchPoolNodeCount -BatchContext $batchContext -PoolId "contosopool1"
+
+    PoolId                         Dedicated                                                    LowPriority
+    ------                         ---------                                                    -----------
+    contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+
+    $poolnodecounts = Get-AzBatchPoolNodeCount -BatchContext $batchContext -PoolId "contosopool1"
+    $poolnodecounts.Dedicated
+
+    Creating            : 1
+    Idle                : 1
+    LeavingPool         : 0
+    Offline             : 0
+    Preempted           : 0
+    Rebooting           : 1
+    Reimaging           : 0
+    Running             : 5
+    Starting            : 0
+    StartTaskFailed     : 0
+    Total               : 8
+    Unknown             : 0
+    Unusable            : 0
+    WaitingForStartTask : 0
+
+    Get-AzBatchPool -Id "contosopool1" -BatchContext $batchContext | Get-AzBatchPoolNodeCount -BatchContext $batchContext
+
+    PoolId                         Dedicated                                                    LowPriority
+    ------                         ---------                                                    -----------
+    contosopool1                   Creating: 1, Idle: 1, Rebooting: 1, Running: 5, Total: 8     Total: 0
+    ```
+
+    Show node counts per node state for a pool given pool id.
+links:
+- text: Get-AzBatchAccountKey
+  href: Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: Get-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: index.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPoolNodeCount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchpoolnodecount
+  Module Name: Az.Batch
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchPoolNodeCount.md
+  PlatyPS schema version: 2024-05-01

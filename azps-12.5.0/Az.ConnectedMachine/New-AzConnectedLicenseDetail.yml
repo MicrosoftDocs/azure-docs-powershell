@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedMachine.New-AzConnectedLicenseDetail
+name: New-AzConnectedLicenseDetail
+module: Az.ConnectedMachine
+isPreview: false
+summary: |-
+  Create an in-memory object for LicenseDetails.
+description: |-
+  Create an in-memory object for LicenseDetails.
+parameters:
+  cmdletParameters:
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the edition of the license.
+      The values are either Standard or Datacenter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Processor
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the number of processors.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the state of the license.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Target
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the license target server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the license core type (pCore or vCore).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeLicenseDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IVolumeLicenseDetails" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of volume license details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzConnectedLicenseDetail
+        [-Edition <String>]
+        [-Processor <Int32>]
+        [-State <String>]
+        [-Target <String>]
+        [-Type <String>]
+        [-VolumeLicenseDetail <IVolumeLicenseDetails[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.LicenseDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: get the detail of an ESU license'
+  description: |-
+    ```powershell
+    New-AzConnectedLicenseDetail -State 'Activated' -Target 'Windows Server 2012' -Edition 'Datacenter' -Type 'pCore' -Processor 16
+    ```
+
+    ```output
+    AssignedLicense     :
+    Edition             : Datacenter
+    ImmutableId         :
+    Processor           : 16
+    State               : Activated
+    Target              : Windows Server 2012
+    Type                : pCore
+    VolumeLicenseDetail :
+    ```
+
+    get the detail of an ESU license
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/New-AzConnectedLicenseDetail.md
+  document type: cmdlet
+  external help file: Az.ConnectedMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ConnectedMachine/new-azconnectedlicensedetail
+  Module Name: Az.ConnectedMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/New-AzConnectedLicenseDetail.md
+  PlatyPS schema version: 2024-05-01

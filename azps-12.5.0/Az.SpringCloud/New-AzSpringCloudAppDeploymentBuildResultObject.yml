@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.New-AzSpringCloudAppDeploymentBuildResultObject
+name: New-AzSpringCloudAppDeploymentBuildResultObject
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for BuildResultUserSourceInfo.
+description: |-
+  Create an in-memory object for BuildResultUserSourceInfo.
+notes: |-
+  ALIASES
+parameters:
+  cmdletParameters:
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version of the source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSpringCloudAppDeploymentBuildResultObject
+        [-Version <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.BuildResultUserSourceInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for BuildResultUserSourceInfo'
+  description: |-
+    ```powershell
+    New-AzSpringCloudAppDeploymentBuildResultObject
+    ```
+
+    ```output
+    Version BuildResultId
+    ------- -------------
+            <default>
+    ```
+
+    Create an in-memory object for BuildResultUserSourceInfo.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudAppDeploymentBuildResultObject.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudAppDeploymentBuildResultObject
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudAppDeploymentBuildResultObject.md
+  PlatyPS schema version: 2024-05-01

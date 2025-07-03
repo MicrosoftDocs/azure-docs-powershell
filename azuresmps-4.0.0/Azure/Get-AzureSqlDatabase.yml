@@ -1,0 +1,265 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabase
+name: Get-AzureSqlDatabase
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves one or more databases.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabase** cmdlet retrieves one or more instances of an Azure SQL Database from an Azure SQL Database server.
+  You can specify the server with an Azure SQL Database server connection context that you create using the **New-AzureSqlDatabaseServerContext** cmdlet.
+  Or, if you specify the Azure SQL Database server name, the cmdlet uses the current Azure subscription information to authenticate the request to access the server.
+
+  If you do not specify a database, the **Get-AzureSqlDatabase** cmdlet returns all databases from the specified server.
+
+  Retrieving restorable dropped databases:
+
+  Retrieve restorable dropped databases by using the *RestorableDropped* parameter.
+  To return all restorable dropped databases use the *RestorableDropped* parameter without *DatabaseName* and *DatabaseDeletionDate*.
+  To return a specific restorable dropped database use the *RestorableDropped* parameter with the *DatabaseName* and *DatabaseDeletionDate* parameters.
+  When retrieving a specific restorable dropped database by using the *DatabaseName* parameter you must also include the *DatabaseDeletionDate* parameter and the specified *DatabaseDeletionDate* value must include milliseconds to match the desired database.
+
+  The **Get-AzureSqlDatabase** cmdlet returns either all restorable dropped databases on a server, or one specific database that matches both *DatabaseName* and *DatabaseDeletionDate*.
+  To return restorable dropped databases that satisfy different criteria, such as all restorable dropped databases of a specific name, you must return all restorable dropped databases, and then filter the results on the client.
+parameters:
+  cmdletParameters:
+  - name: ConnectionContext
+    type: <xref href="IServerDataServiceContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server from which to retrieve a database.
+    aliases:
+    - Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Database
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the database that this cmdlet retrieves.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDeletionDate
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the date and time of a deletion.
+      If you specify the *RestorableDropped* parameter, specify this parameter to retrieve a restorable dropped database based on the deletion date and time.
+
+      The *DatabaseDeletionDate* parameter must include milliseconds to match the time of the desired database.
+      Specifying a value without milliseconds results in the database not being found.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database that this cmdlet retrieves.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestorableDropped
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns *RestorableDroppedDatabase* objects instead of *Database* objects.
+      You can use the *DatabaseDeletionDate* parameter to select a specific restorable dropped database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestorableDroppedDatabase
+    type: <xref href="RestorableDroppedDatabase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the restorable dropped database that this cmdlet retrieves.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that contains the database that this cmdlet retrieves.
+      The cmdlet uses the current Azure subscription to access the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabase
+        -ConnectionContext <IServerDataServiceContext>
+        [-Database <Database>]
+        [-DatabaseName <String>]
+        [-RestorableDropped]
+        [-RestorableDroppedDatabase <RestorableDroppedDatabase>]
+        [-DatabaseDeletionDate <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionContext
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabase
+        -ServerName <String>
+        [-Database <Database>]
+        [-DatabaseName <String>]
+        [-RestorableDropped]
+        [-RestorableDroppedDatabase <RestorableDroppedDatabase>]
+        [-DatabaseDeletionDate <DateTime>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.RestorableDroppedDatabase" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a *Database* object if you do not specify the *RestorableDropped* parameter.
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a *RestorableDroppedDatabase* object if you specify the *RestorableDropped* parameter.
+examples:
+- title: 'Example 1: Retrieve all databases on a server'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y"
+    ```
+
+    This command retrieves all databases on the server named lpqd0zbr8y.
+- title: 'Example 2: Retrieve all restorable dropped databases on a server'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped
+    ```
+
+    This command retrieves all restorable dropped databases on the server named lpqd0zbr8y.
+- title: 'Example 3: Retrieve a database from a server specified by a connection context'
+  description: |-
+    ```
+    PS C:\> $Database01 = Get-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
+    ```
+
+    This command retrieves database named Database01 from the server specified by the connection context $Context.
+- title: 'Example 4: Store a database object in a variable'
+  description: |-
+    ```
+    PS C:\> $Database01 = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
+    ```
+
+    This command retrieves database named Database01 from the server named lpqd0zbr8y.
+    The command stores the database object in the $Database01 variable.
+- title: 'Example 5: Retrieve a restorable dropped database'
+  description: |-
+    ```
+    PS C:\> $DroppedDB = Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01" -DatabaseDeletionDate "2012-11-09T22:59:43.000Z" -RestorableDropped
+    ```
+
+    This command retrieves the restorable dropped database named Database01 that was deleted on 11/9/2012 from the server named lpqd0zbr8y.
+    This command stores the results in the $DroppedDB variable.
+- title: 'Example 6: Retrieve all restorable dropped databases on a server and filter the results'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabase -ServerName "lpqd0zbr8y" -RestorableDropped | Where-Object {$_.Name -eq "ContactDB"}
+    ```
+
+    This command retrieves all restorable dropped databases on the server named lpqd0zbr8y, and then filters the results to only the databases named ContactDB.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: New-AzureSqlDatabase
+  href: ./New-AzureSqlDatabase.yml
+- text: New-AzureSqlDatabaseServerContext
+  href: ./New-AzureSqlDatabaseServerContext.yml
+- text: Remove-AzureSqlDatabase
+  href: ./Remove-AzureSqlDatabase.yml
+- text: Set-AzureSqlDatabase
+  href: ./Set-AzureSqlDatabase.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 7427A101-9439-45B9-B72E-F8C2DA85E412
+  PlatyPS schema version: 2024-05-01

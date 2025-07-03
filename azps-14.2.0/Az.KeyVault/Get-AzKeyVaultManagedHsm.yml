@@ -1,0 +1,269 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultManagedHsm
+name: Get-AzKeyVaultManagedHsm
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Get managed HSMs.
+description: |-
+  The **Get-AzKeyVaultManagedHsm** cmdlet gets information about the managed HSMs in a subscription. You can
+  view all managed HSMs instances in a subscription, or filter your results by a resource group or a
+  particular managed HSM.
+  Note that although specifying the resource group is optional for this cmdlet when you get a single
+  managed HSM, you should do so for better performance.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InRemovedState
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to show the previously deleted managed HSM pool in the output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetDeletedManagedHsm
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListDeletedManagedHsms
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the deleted managed HSM pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetDeletedManagedHsm
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM name. Cmdlet constructs the FQDN of a HSM based on the name and currently selected environment.
+    aliases:
+    - HsmName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetManagedHsm
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group associated with the managed HSM being queried.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetManagedHsm
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the subscription.
+      By default, cmdlets are executed in the subscription that is set in the current context. If the user specifies another subscription, the current cmdlet is executed in the subscription specified by the user.
+      Overriding subscriptions only take effect during the lifecycle of the current cmdlet. It does not change the subscription in the context, and does not affect subsequent cmdlets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key and optional value of the specified tag to filter the list of managed HSMs by.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultManagedHsm
+        [[-Name] <String>]
+        [[-ResourceGroupName] <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetManagedHsm
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultManagedHsm
+        [-Name] <String>
+        [-Location] <String>
+        [-InRemovedState]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetDeletedManagedHsm
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultManagedHsm
+        [-InRemovedState]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListDeletedManagedHsms
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedManagedHsm" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all managed HSMs in your current subscription'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm
+    ```
+
+    ```output
+    Name    Resource Group Name Location SKU        ProvisioningState Security Domain ActivationStatus
+    ----    ------------------- -------- ---        ----------------- --------------------------------
+    myhsm   test-rg              eastus   StandardB1 Succeeded         Active
+    ```
+
+    This command gets all managed HSMs in your current subscription.
+- title: 'Example 2: Get a specific managed HSM'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -Name 'myhsm'
+    ```
+
+    ```output
+    Name    Resource Group Name Location SKU        ProvisioningState Security Domain ActivationStatus
+    ----    ------------------- -------- ---        ----------------- --------------------------------
+    myhsm   test-rg              eastus   StandardB1 Succeeded         Active
+    ```
+
+    This command gets the managed HSM named myhsm in your current subscription.
+- title: 'Example 3: Get managed HSMs in a resource group'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -ResourceGroupName 'myrg1'
+    ```
+
+    ```output
+    Name  Resource Group Name Location    SKU        ProvisioningState Security Domain ActivationStatus
+    ----  ------------------- --------    ---        ----------------- --------------------------------
+    myhsm myrg1               eastus2euap StandardB1 Succeeded         Active
+    ```
+
+    This command gets all managed HSMs in the resource group named myrg1.
+- title: 'Example 4: Get managed HSMs using filtering'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -Name 'myhsm*'
+    ```
+
+    ```output
+    Name  Resource Group Name Location    SKU        ProvisioningState Security Domain ActivationStatus
+    ----  ------------------- --------    ---        ----------------- --------------------------------
+    myhsm myrg1               eastus2euap StandardB1 Succeeded         Active
+    ```
+
+    This command gets all managed HSMs in the subscription that start with "myhsm".
+- title: 'Example 5: List deleted managed HSMs'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -InRemovedState
+    ```
+
+    ```output
+    Name                     Location      DeletionDate           ScheduledPurgeDate    Purge Protection Enabled?
+    ----                     --------      ------------           ------------------    -------------------------
+    xxxxxxxx-mhsm-4op2n2g4xe eastus2       12/30/2021 2:29:00 AM  3/30/2022 2:29:00 AM  True
+    xxxxxxx-mhsm-ertopo7tnxa westus        12/29/2021 11:48:42 PM 3/29/2022 11:48:42 PM True
+    xxxxxxx-mhsm-gg66fgctz67 westus        12/29/2021 11:48:42 PM 3/29/2022 11:48:42 PM False
+    xxxxxxx-mhsm-2m5jiop6mfo westcentralus 12/30/2021 12:26:14 AM 3/30/2022 12:26:14 AM True
+    ```
+
+    This command gets all deleted managed HSMs in current subscription.
+links:
+- text: New-AzKeyVaultManagedHsm
+  href: ./New-AzKeyVaultManagedHsm.yml
+- text: Remove-AzKeyVaultManagedHsm
+  href: ./Remove-AzKeyVaultManagedHsm.yml
+- text: Update-AzKeyVaultManagedHsm
+  href: ./Update-AzKeyVaultManagedHsm.yml
+- text: Undo-AzKeyVaultManagedHsmRemoval
+  href: ./Undo-AzKeyVaultManagedHsmRemoval.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedHsm.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultmanagedhsm
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultManagedHsm.md
+  PlatyPS schema version: 2024-05-01

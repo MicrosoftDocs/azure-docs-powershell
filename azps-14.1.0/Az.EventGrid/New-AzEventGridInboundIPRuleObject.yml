@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridInboundIPRuleObject
+name: New-AzEventGridInboundIPRuleObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for InboundIPRule.
+description: |-
+  Create an in-memory object for InboundIPRule.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to perform based on the match or no match of the IpMask.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPMask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP Address in CIDR notation e.g., 10.0.0.0/8.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridInboundIPRuleObject
+        [-Action <String>]
+        [-IPMask <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.InboundIPRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for InboundIPRule.'
+  description: |-
+    ```powershell
+    New-AzEventGridInboundIPRuleObject -Action Allow -IPMask "12.18.176.1"
+    ```
+
+    ```output
+    Action IPMask
+    ------ ------
+    Allow  12.18.176.1
+    ```
+
+    Create an in-memory object for InboundIPRule.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridInboundIPRuleObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridinboundipruleobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridInboundIPRuleObject.md
+  PlatyPS schema version: 2024-05-01

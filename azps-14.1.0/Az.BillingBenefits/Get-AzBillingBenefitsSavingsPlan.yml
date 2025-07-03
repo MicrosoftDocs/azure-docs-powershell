@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlan
+name: Get-AzBillingBenefitsSavingsPlan
+module: Az.BillingBenefits
+isPreview: false
+summary: |-
+  Get savings plan.
+description: |-
+  Get savings plan.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to expand the detail information of some properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySavingsPlanOrder
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentity
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the savings plan
+    aliases:
+    - SavingsPlanId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySavingsPlanOrder
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Order ID of the savings plan
+    aliases:
+    - SavingsPlanOrderId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SavingsPlanOrderInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySavingsPlanOrder
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsSavingsPlan
+        -OrderId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsSavingsPlan
+        -Id <String>
+        -SavingsPlanOrderInputObject <IBillingBenefitsIdentity>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentitySavingsPlanOrder
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsSavingsPlan
+        -Id <String>
+        -OrderId <String>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsSavingsPlan
+        -InputObject <IBillingBenefitsIdentity>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.ISavingsPlanModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List savings plan under a savings plan order'
+  description: |-
+    ```powershell
+    Get-AzBillingBenefitsSavingsPlan -OrderId d7ea1620-2bba-46e2-8434-11f31bfb984d
+    ```
+
+    ```output
+    Name    Status    ExpiryDate            PurchaseDate          Term Scope  AppliedScopeDisplayName ProductName          CommitmentAmount CommitmentCurrencyCode
+    ----    ------    ----------            ------------          ---- -----  ----------------------- -----------          ---------------- ------------------
+    PSTest7 Succeeded 11/29/2025 2:23:51 AM 11/29/2022 2:20:38 AM P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    ```
+
+    List savings plan under a savings plan order
+- title: 'Example 2: Get a single savings plan'
+  description: |-
+    ```powershell
+    Get-AzBillingBenefitsSavingsPlan -OrderId d7ea1620-2bba-46e2-8434-11f31bfb984d -Id 9fde2a72-776b-49fc-869c-dca8859d7d62
+    ```
+
+    ```output
+    Name    Status    ExpiryDate            PurchaseDate          Term Scope  AppliedScopeDisplayName ProductName          CommitmentAmount CommitmentCurrencyCode
+    ----    ------    ----------            ------------          ---- -----  ----------------------- -----------          ---------------- ------------------
+    PSTest7 Succeeded 11/29/2025 2:23:51 AM 11/29/2022 2:20:38 AM P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    ```
+
+    Get a single savings plan
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsSavingsPlan.md
+  document type: cmdlet
+  external help file: Az.BillingBenefits-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billingbenefits/get-azbillingbenefitssavingsplan
+  Module Name: Az.BillingBenefits
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsSavingsPlan.md
+  PlatyPS schema version: 2024-05-01

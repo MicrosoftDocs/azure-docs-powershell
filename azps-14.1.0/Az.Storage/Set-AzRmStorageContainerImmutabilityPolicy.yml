@@ -1,0 +1,553 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Set-AzRmStorageContainerImmutabilityPolicy
+name: Set-AzRmStorageContainerImmutabilityPolicy
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates or updates ImmutabilityPolicy of a Storage blob containers
+description: |-
+  The **Set-AzRmStorageContainerImmutabilityPolicy** cmdlet creates or updates ImmutabilityPolicy of a Storage blob containers
+parameters:
+  cmdletParameters:
+  - name: AllowProtectedAppendWrite
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      This property can only be changed for unlocked time-based retention policies.
+      With this property enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
+      '-AllowProtectedAppendWrites' and '-AllowProtectedAppendWritesAll' are mutually exclusive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImmutabilityPolicyObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowProtectedAppendWriteAll
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      This property can only be changed for unlocked policies.
+      When enabled, new blocks can be written to both 'Appened and Block Blobs' while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted.
+      This property cannot be changed with ExtendImmutabilityPolicy API. '-AllowProtectedAppendWrites' and '-AllowProtectedAppendWritesAll' are mutually exclusive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImmutabilityPolicyObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Container
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage container object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContainerObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendContainerObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container Name
+    aliases:
+    - N
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendAccountName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendAccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Etag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Immutability policy etag. If -ExtendPolicy is not specified, Etag is optional; else Etag is required.
+    aliases:
+    - IfMatch
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendPolicy
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicate ExtendPolicy to Extend an existing ImmutabilityPolicy.  After ImmutabilityPolicy is locked, it can only be extend.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExtendAccountName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExtendAccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExtendContainerObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExtendImmutabilityPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImmutabilityPeriod
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Immutability period since creation in days.
+    aliases:
+    - ImmutabilityPeriodSinceCreationInDays
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImmutabilityPolicyObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSImmutabilityPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Container Name
+    aliases:
+    - ImmutabilityPolicy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImmutabilityPolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendImmutabilityPolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendAccountName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendAccountObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ExtendAccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -ContainerName <String>
+        [-ImmutabilityPeriod <Int32>]
+        [-AllowProtectedAppendWriteAll <Boolean>]
+        [-AllowProtectedAppendWrite <Boolean>]
+        [-Etag <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -ContainerName <String>
+        -ImmutabilityPeriod <Int32>
+        -Etag <String>
+        [-ExtendPolicy]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExtendAccountName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        -ContainerName <String>
+        -StorageAccount <PSStorageAccount>
+        [-ImmutabilityPeriod <Int32>]
+        [-AllowProtectedAppendWriteAll <Boolean>]
+        [-AllowProtectedAppendWrite <Boolean>]
+        [-Etag <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        -ContainerName <String>
+        -StorageAccount <PSStorageAccount>
+        -ImmutabilityPeriod <Int32>
+        -Etag <String>
+        [-ExtendPolicy]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExtendAccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        -Container <PSContainer>
+        [-ImmutabilityPeriod <Int32>]
+        [-AllowProtectedAppendWriteAll <Boolean>]
+        [-AllowProtectedAppendWrite <Boolean>]
+        [-Etag <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContainerObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        -Container <PSContainer>
+        -ImmutabilityPeriod <Int32>
+        -Etag <String>
+        [-ExtendPolicy]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExtendContainerObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        [-InputObject] <PSImmutabilityPolicy>
+        [-ImmutabilityPeriod <Int32>]
+        [-AllowProtectedAppendWriteAll <Boolean>]
+        [-AllowProtectedAppendWrite <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImmutabilityPolicyObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRmStorageContainerImmutabilityPolicy
+        [-InputObject] <PSImmutabilityPolicy>
+        -ImmutabilityPeriod <Int32>
+        [-ExtendPolicy]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExtendImmutabilityPolicyObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSContainer" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSImmutabilityPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSImmutabilityPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create or update ImmutabilityPolicy of a Storage blob container with Storage account name and container name'
+  description: |-
+    ```powershell
+    Set-AzRmStorageContainerImmutabilityPolicy -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -ContainerName "myContainer" -ImmutabilityPeriod 10
+    ```
+
+    This command creates or updates ImmutabilityPolicy of a Storage blob container with Storage account name and container name.
+- title: 'Example 2: Extend ImmutabilityPolicy of a Storage blob container, with Storage account object'
+  description: |-
+    ```powershell
+    $accountObject = Get-AzStorageAccount -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount"
+    $policy = Get-AzRmStorageContainerImmutabilityPolicy -StorageAccount $accountObject -ContainerName "myContainer"
+    Set-AzRmStorageContainerImmutabilityPolicy -StorageAccount $accountObject -ContainerName "myContainer" -ImmutabilityPeriod 20 -Etag $policy.Etag -ExtendPolicy
+    ```
+
+    This command extend ImmutabilityPolicy of a Storage blob container, with Storage account object. Extend ImmutabilityPolicy can only run after ImmutabilityPolicy is locked.
+- title: 'Example 3: Update ImmutabilityPolicy of a Storage blob container'
+  description: |-
+    ```powershell
+    $containerObject = Get-AzRmStorageContainer -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -Name "myContainer"
+    $policy = Set-AzRmStorageContainerImmutabilityPolicy -Container $containerObject -ImmutabilityPeriod 12
+    $policy = Set-AzRmStorageContainerImmutabilityPolicy -Container $containerObject -ImmutabilityPeriod 9 -Etag $policy.Etag
+    $policy = Set-AzRmStorageContainerImmutabilityPolicy -Container $containerObject -AllowProtectedAppendWrite $true
+    $policy = Set-AzRmStorageContainerImmutabilityPolicy -Container $containerObject -AllowProtectedAppendWrite $false -AllowProtectedAppendWriteAll $true
+    ```
+
+    This command updates ImmutabilityPolicy of a Storage blob container with Storage container object 3 times:
+    First to ImmutabilityPeriod 12 days without etag, then to ImmutabilityPeriod 9 days with etag, then enabled AllowProtectedAppendWrite, finally enabled AllowProtectedAppendWriteAll.
+- title: 'Example 4: Extend ImmutabilityPolicy of a Storage blob container, with ImmutabilityPolicy object'
+  description: |-
+    ```powershell
+    Get-AzRmStorageContainerImmutabilityPolicy -ResourceGroupName "myResourceGroup" -AccountName "myStorageAccount" -ContainerName "myContainer" | Set-AzRmStorageContainerImmutabilityPolicy -ImmutabilityPeriod 15 -ExtendPolicy
+    ```
+
+    This command extend ImmutabilityPolicy of a Storage blob container, with ImmutabilityPolicy object. Extend ImmutabilityPolicy can only run after ImmutabilityPolicy is locked.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzRmStorageContainerImmutabilityPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/set-azrmstoragecontainerimmutabilitypolicy
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzRmStorageContainerImmutabilityPolicy.md
+  PlatyPS schema version: 2024-05-01

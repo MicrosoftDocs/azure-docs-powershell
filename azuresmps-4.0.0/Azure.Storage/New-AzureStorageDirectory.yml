@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.New-AzureStorageDirectory
+name: New-AzureStorageDirectory
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Creates a directory.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorageDirectory** cmdlet creates a directory.
+  This cmdlet returns a **CloudFileDirectory** object.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Directory
+    type: <xref href="CloudFileDirectory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a folder as a **CloudFileDirectory** object.
+      This cmdlet creates the folder in the location that this parameter specifies.
+      To obtain a directory, use the New-AzureStorageDirectory cmdlet.
+      You can also use the Get-AzureStorageFile cmdlet to obtain a directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a folder.
+      This cmdlet creates a folder for the path that this cmdlet specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Share
+    type: <xref href="CloudFileShare" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **CloudFileShare** object.
+      This cmdlet creates a folder in the file share that this parameter specifies.
+      To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+      This object contains the storage context.
+      If you specify this parameter, do not specify the *Context* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet creates a folder in the file share that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorageDirectory
+        [-ShareName] <String>
+        [-Path] <String>
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureStorageDirectory
+        [-Share] <CloudFileShare>
+        [-Path] <String>
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Share
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureStorageDirectory
+        [-Directory] <CloudFileDirectory>
+        [-Path] <String>
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Directory
+  isDefault: false
+examples:
+- title: 'Example 1: Create a folder in a file share'
+  description: |-
+    ```
+    PS C:\>New-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
+    ```
+
+    This command creates a folder named ContosoWorkingFolder in the file share named ContosoShare06.
+- title: 'Example 2: Create a folder in a file share specified in a file share object'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageShare -Name "ContosoShare06" | New-AzureStorageDirectory -Path "ContosoWorkingFolder"
+    ```
+
+    This command uses the **Get-AzureStorageShare** cmdlet to get the file share named ContosoShare06, and then passes it to the current cmdlet by using the pipeline operator.
+    The current cmdlet creates the folder named ContosoWorkingFolder in ContosoShare06.
+links:
+- text: Get-AzureStorageFile
+  href: ./Get-AzureStorageFile.yml
+- text: Get-AzureStorageShare
+  href: ./Get-AzureStorageShare.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+- text: New-AzureStorageDirectory
+  href: ./New-AzureStorageDirectory.yml
+- text: Remove-AzureStorageDirectory
+  href: ./Remove-AzureStorageDirectory.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 65962F9A-CC79-4B8B-9208-A993708FD36F
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,323 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackVM
+name: New-WAPackVM
+module: Azure
+isPreview: false
+summary: |-
+  Creates a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-WAPackVM** cmdlet creates a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AdministratorSSHKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Secure Shell (SSH) key for the Administrator account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateLinuxVMFromTemplate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Linux
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet creates a virtual machine to run the Linux operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateLinuxVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDisk
+    type: <xref href="VirtualHardDisk" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an operating system disk as a **VirtualHardDisk** object.
+      To obtain an operating system disk, use the **Get-WAPackVMOSDisk** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromOSDisk
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a product key.
+      The product key is a 25 digit number that identifies the product license.
+      Use a product key for an operating system that you plan to install on a virtual machine or host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromTemplate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Template
+    type: <xref href="VMTemplate" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a template.
+      The cmdlet creates a virtual machine based on the template that you specify.
+      To obtain a template object, use the Get-WAPackVMTemplate cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CreateLinuxVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credential for the local Administrator account.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CreateLinuxVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSizeProfile
+    type: <xref href="HardwareProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a size profile for a virtual machine as a **HardwareProfile** object.
+      To obtain a size profile, use the **Get-WAPackVMSizeProfile** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromOSDisk
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNet
+    type: <xref href="VMNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual network.
+      The cmdlet connects the virtual machine to the virtual network that you specify.
+      To obtain a virtual network, use the **Get-WAPackVNet** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Windows
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet creates a virtual machine to run the Windows operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateVMFromTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackVM
+        -Name <String>
+        -Template <VMTemplate>
+        -VMCredential <PSCredential>
+        [-VNet <VMNetwork>]
+        [-ProductKey <String>]
+        [-Windows]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateVMFromTemplate
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-WAPackVM
+        -Name <String>
+        -Template <VMTemplate>
+        -VMCredential <PSCredential>
+        [-VNet <VMNetwork>]
+        [-Linux]
+        [-AdministratorSSHKey <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateLinuxVMFromTemplate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-WAPackVM
+        -Name <String>
+        -OSDisk <VirtualHardDisk>
+        -VMSizeProfile <HardwareProfile>
+        [-VNet <VMNetwork>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateVMFromOSDisk
+  isDefault: false
+examples:
+- title: 'Example 1: Create a virtual machine for the Windows operating system by using a template'
+  description: |-
+    ```
+    PS C:\> $Credentials = Get-Credential PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate04"PS C:\> New-WAPackVM -Name "ContosoV023" -Template $Template -VMCredential $Credentials -Windows
+    ```
+
+    The first command creates a **PSCredential** object, and then stores it in the $Credentials variable.
+    The cmdlet prompts you for an account and password.
+    For more information, type `Get-Help Get-Credential`.
+
+    The second command gets the virtual machine template named ContosoTemplate04 by using the **Get-WAPackVMTemplate** cmdlet, and then stores it in the $Template variable.
+
+    The final command creates a virtual machine named ContosoV023, based on the template stored in the $Template variable.
+    The command specifies the *Windows* parameter, and, therefore, the virtual machine must run a version of the Windows operating system.
+- title: 'Example 2: Create a virtual machine for the Linux operating system by using a template'
+  description: |-
+    ```
+    PS C:\> $Credentials = Get-Credential
+    PS C:\> $Template = Get-WAPackVMTemplate -Name "ContosoTemplate19"
+    PS C:\> New-WAPackVM -Linux -Name "ContosoV028" -Template $Template -VMCredential $Credentials
+    ```
+
+    The first command creates a **PSCredential** object, and then stores it in the $Credentials variable.
+
+    The second command gets the virtual machine template named ContosoTemplate19 by using the **Get-WAPackVMTemplate** cmdlet, and then stores it in the $Template variable.
+
+    The final command creates a virtual machine named ContosoV028, based on the template stored in the $Template variable.
+    The command specifies the *Linux* parameter, and, therefore, the virtual machine must run a version of the Linux operating system.
+- title: 'Example 3: Create a virtual machine from an operating system disk and size profile'
+  description: |-
+    ```
+    PS C:\> $OSDisk = Get-WAPackVMOSDisk -Name "ContosoDiskOS"
+    PS C:\> $SizeProfile = Get-WAPackVMSizeProfile -Name "MediumSizeVM"
+    PS C:\> New-WAPackVM -Name "ContosoV073" -OSDisk $OSDisk -VMSizeProfile $SizeProfile
+    ```
+
+    The first command gets an operating system disk named ContosoDiskOS by using the **Get-WAPackVMOSDisk** cmdlet, and then stores it in the $OSDisk variable.
+
+    The second command gets the size profile named MediumSizeVM by using the **Get-WAPackVMSizeProfile** cmdlet, and then stores it in the $SizeProfile variable.
+
+    The final command creates a virtual machine named ContosoV073 from the operating system disk stored in $OSDisk and the size profile stored in $SizeProfile.
+links:
+- text: Get-WAPackVM
+  href: ./Get-WAPackVM.yml
+- text: Remove-WAPackVM
+  href: ./Remove-WAPackVM.yml
+- text: Restart-WAPackVM
+  href: ./Restart-WAPackVM.yml
+- text: Resume-WAPackVM
+  href: ./Resume-WAPackVM.yml
+- text: Set-WAPackVM
+  href: ./Set-WAPackVM.yml
+- text: Start-WAPackVM
+  href: ./Start-WAPackVM.yml
+- text: Stop-WAPackVM
+  href: ./Stop-WAPackVM.yml
+- text: Suspend-WAPackVM
+  href: ./Suspend-WAPackVM.yml
+- text: Get-WAPackVMSizeProfile
+  href: ./Get-WAPackVMSizeProfile.yml
+- text: Get-WAPackVMTemplate
+  href: ./Get-WAPackVMTemplate.yml
+- text: Get-WAPackVMOSDisk
+  href: ./Get-WAPackVMOSDisk.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: AA7BD103-5C91-4E3B-9E46-2CAEDA5BA615
+  PlatyPS schema version: 2024-05-01

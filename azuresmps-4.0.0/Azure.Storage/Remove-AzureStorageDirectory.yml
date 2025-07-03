@@ -1,0 +1,282 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Remove-AzureStorageDirectory
+name: Remove-AzureStorageDirectory
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Deletes a directory.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureStorageDirectory** cmdlet deletes a directory.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the [New-AzureStorageContext](./New-AzureStorageContext.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Directory
+    type: <xref href="CloudFileDirectory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a folder as a **CloudFileDirectory** object.
+      This cmdlet removes the folder that this parameter specifies.
+      To obtain a directory, use the New-AzureStorageDirectory cmdlet.
+      You can also use the **Get-AzureStorageFile** cmdlet to obtain a directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that, if this cmdlet succeeds, it returns a value of $True.
+      If you specify this parameter, and if the cmdlet is unsuccessful because of an inappropriate value for the _Path_ parameter, the cmdlet returns an error.
+      If you do not specify this parameter, this cmdlet does not return a value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a folder.
+      If the folder that this parameter specifies is empty, this cmdlet deletes that folder.
+      If the folder is not empty, this cmdlet makes no change, and returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Share
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Share
+    type: <xref href="CloudFileShare" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **CloudFileShare** object.
+      This cmdlet removes a folder under the file share that this parameter specifies.
+      To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+      This object contains the storage context.
+      If you specify this parameter, do not specify the *Context* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet removes a folder under the file share that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorageDirectory
+        [-ShareName] <String>
+        [-Path] <String>
+        [-PassThru]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorageDirectory
+        [-Share] <CloudFileShare>
+        [-Path] <String>
+        [-PassThru]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Share
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorageDirectory
+        [-Directory] <CloudFileDirectory>
+        [[-Path] <String>]
+        [-PassThru]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Directory
+  isDefault: false
+examples:
+- title: 'Example 1: Delete a folder'
+  description: |-
+    ```
+    PS C:\>Remove-AzureStorageDirectory -ShareName "ContosoShare06" -Path "ContosoWorkingFolder"
+    ```
+
+    This command deletes the folder named ContosoWorkingFolder from the file share named ContosoShare06.
+links:
+- text: Get-AzureStorageShare
+  href: ./Get-AzureStorageShare.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+- text: New-AzureStorageDirectory
+  href: ./New-AzureStorageDirectory.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 53988D79-1F8B-4138-9F92-2912D418C121
+  PlatyPS schema version: 2024-05-01

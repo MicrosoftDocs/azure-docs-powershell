@@ -1,0 +1,432 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Update-AzSqlInstanceLink
+name: Update-AzSqlInstanceLink
+module: Az.Sql
+isPreview: false
+summary: |-
+  Updates the properties of an instance link.
+description: |-
+  **Update-AzSqlInstanceLink** cmdlet modifies properties of an instance link.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance link input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByInputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the managed instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed Instance link name.
+    aliases:
+    - LinkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateByParentObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Replication mode of a Managed Instance link.
+      Parameter will be ignored during link creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateByParentObjectParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateByResourceIdParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance link resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSqlInstanceLink
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        [-ReplicationMode] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzSqlInstanceLink
+        [-Name] <String>
+        [-ReplicationMode] <String>
+        [-InstanceObject] <AzureSqlManagedInstanceModel>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzSqlInstanceLink
+        [[-ReplicationMode] <String>]
+        [-InputObject] <AzureSqlManagedInstanceLinkModel>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzSqlInstanceLink
+        [-ReplicationMode] <String>
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set replication mode of an instance link to Sync'
+  description: |-
+    ```powershell
+    Update-AzSqlInstanceLink -ResourceGroupName "ResourceGroup1" -InstanceName "ManagedInstance01" -Name "Link01" -ReplicationMode "Sync"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Sync
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the replication mode of an instance link to "Sync".
+- title: 'Example 2: Set replication mode of an instance link to Async'
+  description: |-
+    ```powershell
+    Update-AzSqlInstanceLink -ResourceGroupName "ResourceGroup1" -InstanceName "ManagedInstance01" -Name "Link01" -ReplicationMode "Async"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the replication mode of an instance link to "Aync".
+- title: 'Example 3: Set replication mode of an instance link by its resource identifier'
+  description: |-
+    ```powershell
+    Update-AzSqlInstanceLink -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01" -ReplicationMode "Async"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the replication mode of an instance link to "Sync" by its resource identifier.
+- title: 'Example 4: Set replication mode of instance link by its PowerShell object'
+  description: |-
+    ```powershell
+    $managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
+    Update-AzSqlInstanceLink -InputObject $managedInstanceLink -ReplicationMode "Async"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the replication mode of an instance link to "Async" using the input object.
+- title: 'Example 5: Set replication mode of instance link by mutating its object'
+  description: |-
+    ```powershell
+    $managedInstanceLink = Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
+    $managedInstanceLink.ReplicationMode = "Async"
+    Update-AzSqlInstanceLink -InputObject $managedInstanceLink
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the instance link using input object.
+- title: 'Example 6: Set replication mode of an instance link by its parent instance object'
+  description: |-
+    ```powershell
+    $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
+    Update-AzSqlInstanceLink -InstanceObject $instance -Name "Link01" -ReplicationMode "Async"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command sets the replication mode of a instance link to "Async" using parent instance object.
+links:
+- text: Get-AzSqlInstanceLink
+  href: ./Get-AzSqlInstanceLink.yml
+- text: New-AzSqlInstanceLink
+  href: ./New-AzSqlInstanceLink.yml
+- text: Remove-AzSqlInstanceLink
+  href: ./Remove-AzSqlInstanceLink.yml
+- text: Start-AzSqlInstanceLinkFailover
+  href: ./Start-AzSqlInstanceLinkFailover.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceLink.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/update-azsqlinstancelink
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlInstanceLink.md
+  PlatyPS schema version: 2024-05-01

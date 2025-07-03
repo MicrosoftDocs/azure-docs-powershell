@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Elastic.New-AzElasticFilteringTagObject
+name: New-AzElasticFilteringTagObject
+module: Az.Elastic
+isPreview: false
+summary: |-
+  Create a in-memory object for FilteringTag
+description: |-
+  Create a in-memory object for FilteringTag
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Support.TagAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Valid actions for a filtering tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name (also known as the key) of the tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzElasticFilteringTagObject
+        [-Action <TagAction>]
+        [-Name <String>]
+        [-Value <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.Api20240301.FilteringTag" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a in-memory object for FilteringTag used when creating tag rules'
+  description: |-
+    ```powershell
+    $ft = New-AzElasticFilteringTagObject -Action Include -Name key -Value '1'
+    New-AzElasticTagRule -ResourceGroupName azure-elastic-test -MonitorName elastic-pwsh02 -LogRuleFilteringTag $ft
+    ```
+
+    ```output
+    Name    Type
+    ----    ----
+    default microsoft.elastic/monitors/tagrules
+    ```
+
+    This command creates a in-memory object for FilteringTag used when creating tag rules
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/New-AzElasticFilteringTagObject.md
+  document type: cmdlet
+  external help file: Az.Elastic-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Elastic/new-AzElasticFilteringTagObject
+  Module Name: Az.Elastic
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/New-AzElasticFilteringTagObject.md
+  PlatyPS schema version: 2024-05-01

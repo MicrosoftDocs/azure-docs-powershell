@@ -1,0 +1,363 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceConnection
+name: New-AzMLWorkspaceConnection
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Creating or updating a new workspace connection
+description: |-
+  Creating or updating a new workspace connection
+parameters:
+  cmdletParameters:
+  - name: AuthType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ConnectionAuthType" data-throw-if-not-resolved="False" />
+    description: |-
+      Authentication type of the connection target
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Category
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ConnectionCategory" data-throw-if-not-resolved="False" />
+    description: |-
+      Category of the connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsSharedToAll
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Store user metadata for this connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Friendly name of the workspace connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IWorkspaceConnectionPropertiesV2" data-throw-if-not-resolved="False" />
+    description: |-
+      Using one of WorkspaceConnectionPropertiesObject cmdlets to construct
+      To construct, see NOTES section for PROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateWithProperty
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedUserList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Target
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Value details of the workspace connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValueFormat
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ValueFormat" data-throw-if-not-resolved="False" />
+    description: |-
+      format for the workspace connection value
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure Machine Learning workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -AuthType <ConnectionAuthType>
+        [-SubscriptionId <String>]
+        [-Category <ConnectionCategory>]
+        [-ExpiryTime <DateTime>]
+        [-IsSharedToAll]
+        [-Metadata <Hashtable>]
+        [-SharedUserList <String[]>]
+        [-Target <String>]
+        [-Value <String>]
+        [-ValueFormat <ValueFormat>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Property <IWorkspaceConnectionPropertiesV2>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateWithProperty
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IWorkspaceConnectionPropertiesV2BasicResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates a workspace connection'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceConnection -ResourceGroupName ml-rg-test -WorkspaceName mlworkspace-test01 -Name test01 -AuthType 'None' -Category 'ContainerRegistry' -Target "www.facebook.com"
+    ```
+
+    ```output
+    Name   SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----   ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    test01                                                                                                                                                ml-rg-test
+    ```
+
+    Creates a workspace connection
+- title: 'Example 2: Create a workspace connection with workspace connection property'
+  description: |-
+    ```powershell
+    # The Auth type includes "PAT", "ManagedIdentity", "UsernamePassword", "None", "SAS", "AccountKey", "ServicePrincipal", "AccessKey", "ApiKey", "CustomKeys", "OAuth2", "AAD".
+    # You can use following command to create it then pass it as value to Property parameter of the New-AzMLWorkspaceConnection cmdlet.
+    # New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject
+    # New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject
+
+    $connectproperty = New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject -Category 'ContainerRegistry' -Target "www.facebook.com" -IsSharedToAll $true
+    New-AzMLWorkspaceConnection -Name aiservicesconnection -ResourceGroupName ml-test -WorkspaceName mlworkspace-test2 -Property $connectproperty
+    ```
+
+    ```output
+    Name                 SystemDataCreatedAt  SystemDataCreatedBy   SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----                 -------------------  -------------------   ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    aiservicesconnection 7/19/2024 9:20:27 AM t-user@AAexample.com  User                    7/19/2024 9:20:27 AM     t-user@AAexample.com     User                         ml-test
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceConnection.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearningservices/new-azmlworkspaceconnection
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceConnection.md
+  PlatyPS schema version: 2024-05-01

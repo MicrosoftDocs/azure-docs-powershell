@@ -1,0 +1,209 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCIVM.Get-AzStackHCIVMLogicalNetwork
+name: Get-AzStackHCIVMLogicalNetwork
+module: Az.StackHCIVM
+isPreview: false
+summary: |-
+  Gets a logical network
+description: |-
+  Gets a logical network
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the logical network
+    aliases:
+    - LogicalNetworkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ARM ID of the logical network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIVMLogicalNetwork
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIVMLogicalNetwork
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIVMLogicalNetwork
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIVMLogicalNetwork
+        [-ResourceId <String>]
+        [-DefaultProfile <PSObject>]
+        [-NoWait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCIVM.Models.ILogicalNetworks" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:  Get a Logical Network'
+  description: |-
+    ```powershell
+    Get-AzStackHCIVMLogicalNetwork -Name 'testLnet' -ResourceGroupName 'test-rg'
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testLnet       test-rg
+    ```
+
+    This command gets a specific logical network in the specified resource group.
+- title: 'Example 2: List all Logical Networks in a Resource Group'
+  description: |-
+    ```powershell
+    Get-AzStackHCIVMLogicalNetwork -ResourceGroupName 'test-rg'
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testLnet       test-rg
+    ```
+
+    This command lists all logical networks in the specified resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/Get-AzStackHCIVMLogicalNetwork.md
+  document type: cmdlet
+  external help file: Az.StackHCIVM-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhcivm/get-azstackhcivmlogicalnetwork
+  Module Name: Az.StackHCIVM
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/Get-AzStackHCIVMLogicalNetwork.md
+  PlatyPS schema version: 2024-05-01

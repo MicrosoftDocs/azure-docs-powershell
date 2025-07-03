@@ -1,0 +1,412 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzAlertHistory
+name: Get-AzAlertHistory
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets the history of classic alert rules.
+description: |-
+  The **Get-AzAlertHistory** cmdlet gets the history of classic alert rules as they are enabled, disabled, fired, resolved, and so on.
+parameters:
+  cmdletParameters:
+  - name: Caller
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the caller.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DetailedOutput
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Displays full details in the output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the end time of the query in local time.
+      The default is the current time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID the rule is associated with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the start time of the query in local time.
+      The default is the current local time minus one hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAlertHistory
+        [-ResourceId <String>]
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the alert history'
+  description: |-
+    ```powershell
+    Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -DetailedOutput
+    ```
+
+    ```output
+    Authorization        :
+    Caller               : Microsoft.Insights/alertRules
+    Claims               :
+                           http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/alertRules
+    CorrelationId        : /subscriptions/aaaa0000-bb11-2222-33cc-444444dddddd/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzg4ODU3OTI5OTI2
+    Description          : 'CpuTime GreaterThan 3 ([Count]) in the last 5 minutes' has been resolved for Website:
+                           garyyang1 (Default-Web-EastUS)
+    EventDataId          : 769fab1c-fc9f-4e18-bc3a-fa79fbdd3616
+    EventName            : Alert
+    EventSource          : Microsoft.Insights/alertrules
+    EventTimestamp       : 2/11/2015 7:14:45 PM
+    HttpRequest          :
+    Id                   : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/events/769fab1c-fc
+                           9f-4e18-bc3a-fa79fbdd3616/ticks/635592788857929926
+    Level                : Informational
+    OperationId          : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzg4ODU3OTI5OTI2
+    OperationName        : ResolveAlert
+    Properties           :
+                           RuleUri        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-
+                           EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleName       : checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleDescription:
+                           Threshold      : 3
+                           WindowSizeInMinutes: 5
+                           Aggregation    : Total
+                           Operator       : GreaterThan
+                           MetricName     : CpuTime
+                           MetricUnit     : Count
+    ResourceGroupName    : Default-Web-EastUS
+    ResourceProviderName : Microsoft.Insights
+    ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    Status               : Resolved
+    SubmissionTimestamp  : 2/11/2015 7:14:45 PM
+    SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    SubStatus            :
+    Authorization        :
+    Caller               : Microsoft.Insights/alertRules
+    Claims               :
+                           http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/alertRules
+    CorrelationId        : /subscriptions/aaaa0000-bb11-2222-33cc-444444dddddd/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    Description          : 'CpuTime GreaterThan 3 ([Count]) in the last 5 minutes' was activated for Website: garyyang1
+                           (Default-Web-EastUS)
+    EventDataId          : 66277c94-2097-4f5f-860d-e585f1206cd7
+    EventName            : Alert
+    EventSource          : Microsoft.Insights/alertrules
+    EventTimestamp       : 2/11/2015 7:04:46 PM
+    HttpRequest          :
+    Id                   : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           microsoft.web/sites/garyyang1/events/66277c94-2097-4f5f-860d-e585f1206cd7/ticks/6355927828650595
+                           14
+    Level                : Error
+    OperationId          : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    OperationName        : ActivateAlert
+    Properties           :
+                           RuleUri        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-
+                           EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleName       : checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleDescription:
+                           Threshold      : 3
+                           WindowSizeInMinutes: 5
+                           Aggregation    : Total
+                           Operator       : GreaterThan
+                           MetricName     : CpuTime
+                           MetricUnit     : Count
+    ResourceGroupName    : Default-Web-EastUS
+    ResourceProviderName : microsoft.web
+    ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+                           microsoft.web/sites/garyyang1
+    Status               : Activated
+    SubmissionTimestamp  : 2/11/2015 7:04:46 PM
+    SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    SubStatus            :
+    Authorization        :
+    Caller               : Microsoft.Insights/alertRules
+    Claims               :
+                           http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/alertRules
+    CorrelationId        : /subscriptions/aaaa0000-bb11-2222-33cc-444444dddddd/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    Description          : 'CpuTime GreaterThan 3 ([Count]) in the last 5 minutes' was activated for Website: garyyang1
+                           (Default-Web-EastUS)
+    EventDataId          : ec9f7b3c-c6ea-4b45-bd15-ff43e38491e3
+    EventName            : Alert
+    EventSource          : Microsoft.Insights/alertrules
+    EventTimestamp       : 2/11/2015 7:04:46 PM
+    HttpRequest          :
+    Id                   : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/events/ec9f7b3c-c6
+                           ea-4b45-bd15-ff43e38491e3/ticks/635592782865059514
+    Level                : Error
+    OperationId          : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    OperationName        : ActivateAlert
+    Properties           :
+                           RuleUri        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-
+                           EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleName       : checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+                           RuleDescription:
+                           Threshold      : 3
+                           WindowSizeInMinutes: 5
+                           Aggregation    : Total
+                           Operator       : GreaterThan
+                           MetricName     : CpuTime
+                           MetricUnit     : Count
+    ResourceGroupName    : Default-Web-EastUS
+    ResourceProviderName : Microsoft.Insights
+    ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    Status               : Activated
+    SubmissionTimestamp  : 2/11/2015 7:04:46 PM
+    SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    SubStatus            :
+    ```
+
+    This command gets the alert history for the specified time frame for the current subscription.
+- title: 'Example 2: Get alert history for a specified resource'
+  description: |-
+    ```powershell
+    Get-AzAlertHistory -StartTime 2015-02-11T11:00:00 -EndTime 2015-02-11T12:00:00 -ResourceId "/subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -DetailedOutput
+    ```
+
+    ```output
+    Authorization        :
+    Caller               : Microsoft.Insights/alertRules
+    Claims               :
+                           http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/alertRules
+    CorrelationId        : /subscriptions/aaaa0000-bb11-2222-33cc-444444dddddd/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzg4ODU3OTI5OTI2
+    Description          : 'CpuTime GreaterThan 3 ([Count]) in the last 5 minutes' has been resolved for Website:
+                           garyyang1 (Default-Web-EastUS)
+    EventDataId          : 769fab1c-fc9f-4e18-bc3a-fa79fbdd3616
+    EventName            : Alert
+    EventSource          : Microsoft.Insights/alertrules
+    EventTimestamp       : 2/11/2015 7:14:45 PM
+    HttpRequest          :
+    Id                   : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/events/769fab1c-fc
+                           9f-4e18-bc3a-fa79fbdd3616/ticks/635592788857929926
+    Level                : Informational
+    OperationId          : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzg4ODU3OTI5OTI2
+    OperationName        : ResolveAlert
+    Properties           :
+    RuleUri        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-
+                           EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    RuleName       : checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    RuleDescription:
+    Threshold      : 3
+    WindowSizeInMinutes: 5
+    Aggregation    : Total
+    Operator       : GreaterThan
+    MetricName     : CpuTime
+    MetricUnit     : Count
+    ResourceGroupName    : Default-Web-EastUS
+    ResourceProviderName : Microsoft.Insights
+    ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    Status               : Resolved
+    SubmissionTimestamp  : 2/11/2015 7:14:45 PM
+    SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    SubStatus            :
+    Authorization        :
+    Caller               : Microsoft.Insights/alertRules
+    Claims               :
+                           http://schemas.xmlsoap.org/ws/2005/05/identity/claims/spn: Microsoft.Insights/alertRules
+    CorrelationId        : /subscriptions/aaaa0000-bb11-2222-33cc-444444dddddd/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    Description          : 'CpuTime GreaterThan 3 ([Count]) in the last 5 minutes' was activated for Website: garyyang1
+                           (Default-Web-EastUS)
+    EventDataId          : ec9f7b3c-c6ea-4b45-bd15-ff43e38491e3
+    EventName            : Alert
+    EventSource          : Microsoft.Insights/alertrules
+    EventTimestamp       : 2/11/2015 7:04:46 PM
+    HttpRequest          :
+    Id                   : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/events/ec9f7b3c-c6
+                           ea-4b45-bd15-ff43e38491e3/ticks/635592782865059514
+    Level                : Error
+    OperationId          : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/incidents/L3N1YnNj
+                           cmlwdGlvbnMvYTkzZmIwN2MtNmM5My00MGJlLWJmM2ItNGYwZGViYTEwZjRiL3Jlc291cmNlR3JvdXBzL0RlZmF1bHQtV2Vi
+                           LUVhc3RVUy9wcm92aWRlcnMvbWljcm9zb2Z0Lmluc2lnaHRzL2FsZXJ0cnVsZXMvY2hlY2tydWxlMy00YjEzNTQwMS1hMzBj
+                           LTQyMjQtYWUyMS1mYTUzYTViZDI1M2QwNjM1NTkyNzgyODY1MDU5NTE0
+    OperationName        : ActivateAlert
+    Properties           :
+    RuleUri        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/Default-Web-
+                           EastUS/providers/Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    RuleName       : checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    RuleDescription:
+    Threshold      : 3
+    WindowSizeInMinutes: 5
+    Aggregation    : Total
+    Operator       : GreaterThan
+    MetricName     : CpuTime
+    MetricUnit     : Count
+    ResourceGroupName    : Default-Web-EastUS
+    ResourceProviderName : Microsoft.Insights
+    ResourceId           : /subscriptions/ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0/resourceGroups/Default-Web-EastUS/providers/
+                           Microsoft.Insights/alertrules/checkrule3-a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+    Status               : Activated
+    SubmissionTimestamp  : 2/11/2015 7:04:46 PM
+    SubscriptionId       : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    SubStatus            :
+    ```
+
+    This command gets the alert rule-related events for a specified resource.
+links:
+- text: Add-AzMetricAlertRule
+  href: ./Add-AzMetricAlertRule.yml
+- text: Add-AzWebtestAlertRule
+  href: ./Add-AzWebtestAlertRule.yml
+- text: Get-AzAlertRule
+  href: ./Get-AzAlertRule.yml
+- text: Remove-AzAlertRule
+  href: ./Remove-AzAlertRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAlertHistory.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azalerthistory
+  Module Name: Az.Monitor
+  ms.assetid: 1EDFCAC4-6A66-4124-8192-B7F0D3C5BCFC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAlertHistory.md
+  PlatyPS schema version: 2024-05-01

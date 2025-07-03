@@ -1,0 +1,344 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkManager
+name: New-AzNetworkManager
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a network manager.
+description: |-
+  The **New-AzNetworkManager** cmdlet creates a network manager.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkManagerScope
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerScopes" data-throw-if-not-resolved="False" />
+    description: |-
+      Network Manager Scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkManagerScopeAccess
+    type: <xref href="Microsoft.Azure.Commands.Network.NewAzNetworkManagerCommand+NetworkManagerScopeAccessType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Network Manager Scope Access.
+    acceptedValues:
+    - SecurityAdmin
+    - Connectivity
+    - Routing
+    - SecurityUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManager
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-Description <String>]
+        [-Tag <Hashtable>]
+        -NetworkManagerScope <PSNetworkManagerScopes>
+        [-NetworkManagerScopeAccess <NetworkManagerScopeAccessType[]>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerScopes" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManager" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates a connectivity network manager.'
+  description: |-
+    ```powershell
+    $subscriptions  = @("/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884")
+    $managementGroups  = @("/providers/Microsoft.Management/managementGroups/PowerShellTest")
+    $scope = New-AzNetworkManagerScope -Subscription $subscriptions -ManagementGroup $managementGroups
+    $access  = @("Connectivity")
+    New-AzNetworkManager -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -NetworkManagerScope $scope -NetworkManagerScopeAccess $access -Location "westus"
+    ```
+
+    ```output
+    Location                        : westus
+    Tag                             : {}
+    NetworkManagerScopes            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerScopes
+    NetworkManagerScopeAccesses     : {Connectivity}
+    NetworkManagerScopeAccessesText : [
+                                        "Connectivity"
+                                      ]
+    NetworkManagerScopesText        : {
+                                        "ManagementGroups": [
+                                          "/providers/Microsoft.Management/managementGroups/PowerShellTest"
+                                        ],
+                                        "Subscriptions": [
+                                          "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884"
+                                        ]
+                                      }
+    TagsTable                       :
+    DisplayName                     :
+    Description                     :
+    Type                            : Microsoft.Network/networkManagers
+    ProvisioningState               : Succeeded
+    SystemData                      : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText                  : {
+                                        "CreatedBy": "jaredgorthy@microsoft.com",
+                                        "CreatedByType": "User",
+                                        "CreatedAt": "2022-08-07T04:12:51.7463424Z",
+                                        "LastModifiedBy": "jaredgorthy@microsoft.com",
+                                        "LastModifiedByType": "User",
+                                        "LastModifiedAt": "2022-08-07T04:12:51.7463424Z"
+                                      }
+    Name                            : psNetworkManager
+    Etag                            :
+    Id                              : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager
+    ```
+
+    Creates a network manager with connectivity access in West US, with a subscription and management group in scope.
+- title: 'Example 2: Creates a security admin network manager.'
+  description: |-
+    ```powershell
+    $subscriptions  = @("/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884")
+    $scope = New-AzNetworkManagerScope -Subscription $subscriptions
+    $access  = @("SecurityAdmin")
+    New-AzNetworkManager -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -NetworkManagerScope $scope -NetworkManagerScopeAccess $access -Location "westus"
+    ```
+
+    ```output
+    Location                        : westus
+    Tag                             : {}
+    NetworkManagerScopes            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerScopes
+    NetworkManagerScopeAccesses     : {"SecurityAdmin"}
+    NetworkManagerScopeAccessesText : [
+                                        "SecurityAdmin"
+                                      ]
+    NetworkManagerScopesText        : {
+                                        "Subscriptions": [
+                                          "/subscriptions/0fd190fa-dd1c-4724-b7f6-c5cc3ba5c884"
+                                        ]
+                                      }
+    TagsTable                       :
+    DisplayName                     :
+    Description                     :
+    Type                            : Microsoft.Network/networkManagers
+    ProvisioningState               : Succeeded
+    SystemData                      : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText                  : {
+                                        "CreatedBy": "jaredgorthy@microsoft.com",
+                                        "CreatedByType": "User",
+                                        "CreatedAt": "2022-08-07T04:12:51.7463424Z",
+                                        "LastModifiedBy": "jaredgorthy@microsoft.com",
+                                        "LastModifiedByType": "User",
+                                        "LastModifiedAt": "2022-08-07T04:12:51.7463424Z"
+                                      }
+    Name                            : psNetworkManager
+    Etag                            :
+    Id                              : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/pr
+                                      oviders/Microsoft.Network/networkManagers/psNetworkManager
+    ```
+
+    Creates a network manager with security administrator access in West US, with a subscription in scope.
+links:
+- text: New-AzNetworkManagerScope
+  href: ./New-AzNetworkManagerScope.yml
+- text: Get-AzNetworkManager
+  href: ./Get-AzNetworkManager.yml
+- text: Remove-AzNetworkManager
+  href: ./Remove-AzNetworkManager.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManager.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanager
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManager.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,357 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Invoke-AzKeyVaultKeyOperation
+name: Invoke-AzKeyVaultKeyOperation
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Performs operation like "Encrypt", "Decrypt", "Wrap" or "Unwrap" using a specified key stored in a key vault or managed hsm.
+description: |-
+  Invoke-AzKeyVaultKeyOperation cmdlet supports
+  1. Encrypting an arbitrary sequence of bytes using an encryption key.
+  2. Decrypting a single block of encrypted data.
+  3. Wrapping a symmetric key using a specified key.
+  4. Unwrapping a symmetric key using the specified key that was initially used for wrapping that key.
+parameters:
+  cmdletParameters:
+  - name: Algorithm
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Algorithm identifier
+    aliases:
+    - EncryptionAlgorithm
+    - WrapAlgorithm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ByteArrayValue
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The value to be operated in byte array format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByHsmName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Key object
+    aliases:
+    - Key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key name.
+    aliases:
+    - KeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByHsmName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Algorithm identifier
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key version.
+    aliases:
+    - KeyVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzKeyVaultKeyOperation
+        [-Name] <String>
+        [-VaultName] <String>
+        -Operation <String>
+        -Algorithm <String>
+        [-Version <String>]
+        [-ByteArrayValue <Byte[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVaultName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzKeyVaultKeyOperation
+        [-HsmName] <String>
+        [-Name] <String>
+        -Operation <String>
+        -Algorithm <String>
+        [-Version <String>]
+        [-ByteArrayValue <Byte[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByHsmName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzKeyVaultKeyOperation
+        [-InputObject] <PSKeyVaultKeyIdentityItem>
+        -Operation <String>
+        -Algorithm <String>
+        [-Version <String>]
+        [-ByteArrayValue <Byte[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeyInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyOperationResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Encrypts byte array using an encryption key'
+  description: |-
+    ```powershell
+    $byteArray = [Byte[]]@(58, 219)
+    $encryptedData = Invoke-AzKeyVaultKeyOperation -Operation Encrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $byteArray
+    $encryptedData
+    ```
+
+    ```output
+    KeyId     : https://bez-kv.vault.azure.net/keys/bez-key/c96ce0fb18de446c9f4b911b686988af
+    RawResult : {21, 39, 82, 56…}
+    Algorithm : RSA1_5
+    ```
+
+    Encrypts `$byteArray` using test-key stored in test-kv.
+- title: 'Example 2: Decrypts byte array using an encryption key'
+  description: |-
+    ```powershell
+    $decryptedData = Invoke-AzKeyVaultKeyOperation -Operation Decrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $encryptedData.RawResult
+    $decryptedData
+    ```
+
+    ```output
+    KeyId     : https://bez-kv.vault.azure.net/keys/bez-key/c96ce0fb18de446c9f4b911b686988af
+    RawResult : {58, 219}
+    Algorithm : RSA1_5
+    ```
+
+    Decrypts `$encryptedData.RawResult` using test-key stored in test-kv. The `$decryptedData.RawResult` is same with `$byteArray`, which is original data.
+- title: 'Example 3: Encrypts plain text using an encryption key'
+  description: |-
+    ```powershell
+    $plainText = "test"
+    $byteArray = [system.Text.Encoding]::UTF8.GetBytes($plainText)
+    $encryptedData = Invoke-AzKeyVaultKeyOperation -Operation Encrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $byteArray
+    $encryptedData
+    ```
+
+    ```output
+    KeyId     : https://test-kv.vault.azure.net/keys/test-key/bd8b77352a2443d4983bd70e9f660bc6
+    RawResult : {58, 219, 6, 236…}
+    Algorithm : RSA1_5
+    ```
+
+    Encrypts string "test" using test-key stored in test-kv. The `RawResult` is the encrypted result in byte array format.
+- title: 'Example 4: Decrypt encrypted data to plain text'
+  description: |-
+    ```powershell
+    $decryptedData = Invoke-AzKeyVaultKeyOperation -Operation Decrypt -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $encryptedData.RawResult
+    $plainText = [system.Text.Encoding]::UTF8.GetString($decryptedData.RawResult)
+    $plainText
+    ```
+
+    ```output
+    test
+    ```
+
+    Decrypts encrypted data that is encrypted using test-key stored in test-kv. The `RawResult` is the decrypted result in byte array format.
+- title: 'Example 5: Wraps a symmetric key using a specified key'
+  description: |-
+    ```powershell
+    $key = "ovQIlbB0DgWhZA7sgkPxbg9H-Ly-VlNGPSgGrrZvlIo"
+    $byteArray = [system.Text.Encoding]::UTF8.GetBytes($key)
+    $wrappedResult = Invoke-AzKeyVaultKeyOperation -Operation Wrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $byteArray
+    $wrappedResult | Format-List
+    ```
+
+    ```output
+    KeyId     : https://test-kv.vault.azure.net/keys/test-key/375cdf20252043b79c8ca0c57b6c7679
+    RawResult : {58, 219, 6, 236…}
+    Algorithm : RSA1_5
+    ```
+
+    Wraps a symmetric key using key named test-key stored in test-kv. The `RawResult` is wrapped result in byte array format.
+- title: 'Example 6: Unwraps a symmetric key using a specified key'
+  description: |-
+    ```powershell
+    $unwrappedResult = Invoke-AzKeyVaultKeyOperation -Operation Unwrap -Algorithm RSA1_5 -VaultName test-kv -Name test-key -ByteArrayValue $wrappedResult.RawResult
+    $key = [system.Text.Encoding]::UTF8.GetString($unwrappedResult.RawResult)
+    $key
+    ```
+
+    ```output
+    ovQIlbB0DgWhZA7sgkPxbg9H-Ly-VlNGPSgGrrZvlIo
+    ```
+
+    Unwraps a symmetric key using a specified key test-key stored in test-kv. The `RawResult` is unwrapped result in byte array format.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Invoke-AzKeyVaultKeyOperation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/invoke-azkeyvaultkeyoperation
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Invoke-AzKeyVaultKeyOperation.md
+  PlatyPS schema version: 2024-05-01

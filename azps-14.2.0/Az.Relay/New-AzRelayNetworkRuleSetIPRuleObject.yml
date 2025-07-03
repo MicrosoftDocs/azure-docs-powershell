@@ -1,0 +1,77 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Relay.New-AzRelayNetworkRuleSetIPRuleObject
+name: New-AzRelayNetworkRuleSetIPRuleObject
+module: Az.Relay
+isPreview: false
+summary: |-
+  Create an in-memory object for NwRuleSetIPRules.
+description: |-
+  Create an in-memory object for NwRuleSetIPRules.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Support.NetworkRuleIPAction" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP Filter Action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPMask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP Mask.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRelayNetworkRuleSetIPRuleObject
+        [-Action <NetworkRuleIPAction>]
+        [-IPMask <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.NwRuleSetIPRules" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for NwRuleSetIPRules'
+  description: |-
+    ```powershell
+    $rules = @()
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.1"
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.2"
+    $rules += New-AzRelayNetworkRuleSetIPRuleObject -Action 'Allow' -IPMask "1.1.1.3"
+    ```
+
+    This cmdlet creates an in-memory object for NwRuleSetIPRules as the value of the `IPRule` parameter in `New-AzRelayNamespaceNetworkRuleSet`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/New-AzRelayNetworkRuleSetIPRuleObject.md
+  document type: cmdlet
+  external help file: Az.Relay-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Relay/new-AzRelayNetworkRuleSetIPRuleObject
+  Module Name: Az.Relay
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/New-AzRelayNetworkRuleSetIPRuleObject.md
+  PlatyPS schema version: 2024-05-01

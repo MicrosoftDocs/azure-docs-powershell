@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Set-AzBatchJobSchedule
+name: Set-AzBatchJobSchedule
+module: Az.Batch
+isPreview: false
+summary: |-
+  Sets a job schedule.
+description: |-
+  The **Set-AzBatchJobSchedule** cmdlet sets a job schedule in the Azure Batch service.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSchedule
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCloudJobSchedule** object that represents a job schedule.
+      To obtain a **PSCloudJobSchedule** object, use the Get-AzBatchJobSchedule cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzBatchJobSchedule
+        [-JobSchedule] <PSCloudJobSchedule>
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJobSchedule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a job schedule'
+  description: |-
+    ```powershell
+    $JobSchedule = Get-AzBatchJobSchedule -Id "MyJobSchedule" -BatchContext $Context
+    $JobSchedule.Schedule.RecurrenceInterval = New-TimeSpan -Days 2
+    Set-AzBatchJobSchedule -JobSchedule $Job -BatchContext $Context
+    ```
+
+    The first command gets a job by using **Get-AzBatchJobSchedule**, and then stores it in the $JobSchedule variable.
+    The second command modifies the recurrence interval on the `$JobSchedule.Schedule` object.
+    The final command updates the Batch service to match the local object in $JobSchedule.
+links:
+- text: Disable-AzBatchJobSchedule
+  href: ./Disable-AzBatchJobSchedule.yml
+- text: Enable-AzBatchJobSchedule
+  href: ./Enable-AzBatchJobSchedule.yml
+- text: Get-AzBatchJobSchedule
+  href: ./Get-AzBatchJobSchedule.yml
+- text: New-AzBatchJobSchedule
+  href: ./New-AzBatchJobSchedule.yml
+- text: Remove-AzBatchJobSchedule
+  href: ./Remove-AzBatchJobSchedule.yml
+- text: Stop-AzBatchJobSchedule
+  href: ./Stop-AzBatchJobSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchJobSchedule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/set-azbatchjobschedule
+  Module Name: Az.Batch
+  ms.assetid: 14026F0E-4959-4150-A31F-A94BC56ED808
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Set-AzBatchJobSchedule.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,398 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedNetworkFabric.New-AzNetworkFabricRoutePolicy
+name: New-AzNetworkFabricRoutePolicy
+module: Az.ManagedNetworkFabric
+isPreview: false
+summary: |-
+  Implements Route Policy PUT method.
+description: |-
+  Implements Route Policy PUT method.
+parameters:
+  cmdletParameters:
+  - name: AddressFamilyType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AddressFamilyType.
+      This parameter decides whether the given ipv4 or ipv6 route policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Annotation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch configuration description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default action that needs to be applied when no condition is matched.
+      Example: Permit | Deny.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Route Policy.
+    aliases:
+    - RoutePolicyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkFabricId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Arm Resource ID of Network Fabric.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Statement
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IRoutePolicyStatementProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Route Policy statements.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricRoutePolicy
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -NetworkFabricId <String>
+        [-SubscriptionId <String>]
+        [-AddressFamilyType <String>]
+        [-Annotation <String>]
+        [-DefaultAction <String>]
+        [-Statement <IRoutePolicyStatementProperties[]>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricRoutePolicy
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricRoutePolicy
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IRoutePolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create the Route Policy Resource'
+  description: |-
+    ```powershell
+    $statements = @(@{
+        ActionType = "Permit"
+        SequenceNumber = 12345
+        ActionLocalPreference = 123
+        ConditionIPCommunityId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipCommunities/ipCommunityName"
+        ConditionIPPrefixId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipPrefixes/ipPrefixTestName"
+        ConditionType = "Or"
+        IPCommunityPropertyAddIpcommunityId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipCommunities/ipCommunityName"
+    })
+
+    New-AzNetworkFabricRoutePolicy -Name $name -ResourceGroupName $resourceGroupName -Location $location -NetworkFabricId $nfId -AddressFamilyType "IPv4" -DefaultAction "Permit" -Statement $statements
+    ```
+
+    ```output
+    AddressFamilyType AdministrativeState Annotation ConfigurationState DefaultAction Id
+    ----------------- ------------------- ---------- ------------------ ------------- --
+    IPv4                                                                Permit        /subscriptions/<identity>/resourceGrou...
+    ```
+
+    This command creates the Route Policy resource with IPCommunity.
+- title: 'Example 2: Create the Route Policy Resource'
+  description: |-
+    ```powershell
+    $statements = @(@{
+        ActionType = "Permit"
+        SequenceNumber = 12345
+        ActionLocalPreference = 123
+        ConditionIPExtendedCommunityId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/ipExtCommName"
+        ConditionIPPrefixId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipPrefixes/ipPrefixName"
+        ConditionType = "Or"
+        IPExtendedCommunityPropertyAddIpextendedCommunityId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/ipExtendedCommunities/ipExtCommName"
+    })
+
+    New-AzNetworkFabricRoutePolicy -Name $name -ResourceGroupName $resourceGroupName -Location $location -NetworkFabricId $nfId -AddressFamilyType "IPv4" -DefaultAction "Permit" -Statement $statements
+    ```
+
+    ```output
+    AddressFamilyType AdministrativeState Annotation ConfigurationState DefaultAction Id
+    ----------------- ------------------- ---------- ------------------ ------------- --
+    IPv4                                                                Permit        /subscriptions/<identity>/resourceGrou…
+    ```
+
+    This command creates the Route Policy resource with IPExtendedCommunity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/New-AzNetworkFabricRoutePolicy.md
+  document type: cmdlet
+  external help file: Az.ManagedNetworkFabric-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managednetworkfabric/new-aznetworkfabricroutepolicy
+  Module Name: Az.ManagedNetworkFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/New-AzNetworkFabricRoutePolicy.md
+  PlatyPS schema version: 2024-05-01

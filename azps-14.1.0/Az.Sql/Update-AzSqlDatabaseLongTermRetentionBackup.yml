@@ -1,0 +1,322 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Update-AzSqlDatabaseLongTermRetentionBackup
+name: Update-AzSqlDatabaseLongTermRetentionBackup
+module: Az.Sql
+isPreview: false
+summary: |-
+  Updates a long term retention backup.
+description: |-
+  Updates the properties of a long term retention backup.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupDefault
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupStorageRedundancy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Backup storage redundancy used to store backups for the SQL Database.
+      Options are: Local, Zone and Geo.
+    acceptedValues:
+    - Local
+    - Zone
+    - Geo
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database the backup is from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupDefault
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseLongTermRetentionBackupModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The Database Long Term Retention Backup object to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByInputObjectSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the backup's source server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupDefault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupDefault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource ID of the Database Long Term Retention Backup to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Server the backup is under.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateBackupDefault
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSqlDatabaseLongTermRetentionBackup
+        [-Location] <String>
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-BackupName] <String>
+        [-ResourceGroupName <String>]
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateBackupDefault
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzSqlDatabaseLongTermRetentionBackup
+        [-ResourceId] <String>
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateBackupByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzSqlDatabaseLongTermRetentionBackup
+        [-InputObject] <AzureSqlDatabaseLongTermRetentionBackupModel>
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByInputObjectSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseLongTermRetentionBackupModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update Backup Storage Redundancy of a long term retention backup.'
+  description: |-
+    ```powershell
+    Update-AzSqlDatabaseLongTermRetentionBackup -Location southeastasia -ServerName ayang-stage-seas -DatabaseName ltr3 -BackupName 'e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000' -ResourceGroupName testrg -BackupStorageRedundancy Geo
+    ```
+
+    ```output
+    BackupExpirationTime             : 3/19/2021 1:33:52 AM
+    BackupName                       : e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    BackupTime                       : 2/17/2021 1:33:52 AM
+    DatabaseName                     : ltr3
+    DatabaseDeletionTime             : 3/16/2021 6:28:11 AM
+    Location                         : southeastasia
+    ResourceId                       : /subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/testrg/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionServers/ayang-stage-seas/longTermRetentionDatabases/ltr3/longTermRetentionBackups/e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    ServerName                       : ayang-stage-seas
+    ServerCreateTime                 : 4/22/2020 9:58:33 PM
+    ResourceGroupName                : testrg
+    BackupStorageRedundancy			 : Geo
+    ```
+
+    This command sets the Backup Storage Redundancy of the specified backup using location and Resource Group, Server, Database, and Backup names.
+- title: 'Example 2: Update Backup Storage Redundancy of a long term retention backup (using Resource Id).'
+  description: |-
+    ```powershell
+    Update-AzSqlDatabaseLongTermRetentionBackup -ResourceId '/subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/testrg/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionServers/ayang-stage-seas/longTermRetentionDatabases/ltr3/longTermRetentionBackups/e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000' -BackupStorageRedundancy Geo
+    ```
+
+    ```output
+    BackupExpirationTime             : 3/19/2021 1:33:52 AM
+    BackupName                       : e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    BackupTime                       : 2/17/2021 1:33:52 AM
+    DatabaseName                     : ltr3
+    DatabaseDeletionTime             : 3/16/2021 6:28:11 AM
+    Location                         : southeastasia
+    ResourceId                       : /subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/testrg/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionServers/ayang-stage-seas/longTermRetentionDatabases/ltr3/longTermRetentionBackups/e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    ServerName                       : ayang-stage-seas
+    ServerCreateTime                 : 4/22/2020 9:58:33 PM
+    ResourceGroupName                : testrg
+    BackupStorageRedundancy			 : Geo
+    ```
+
+    This command sets the Backup Storage Redundancy of the specified backup using a backup Resource Id.
+links:
+- text: Get-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Get-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Copy-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Copy-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Remove-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Remove-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Get-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: Set-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlDatabaseLongTermRetentionBackup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/update-azsqldatabaselongtermretentionbackup
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Update-AzSqlDatabaseLongTermRetentionBackup.md
+  PlatyPS schema version: 2024-05-01

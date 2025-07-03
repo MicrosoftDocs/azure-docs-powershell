@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Add-AzVmssAdditionalUnattendContent
+name: Add-AzVmssAdditionalUnattendContent
+module: Az.Compute
+isPreview: false
+summary: |-
+  Adds information to the unattended Windows Setup answer file.
+description: |-
+  The **Add-AzVmssAdditionalUnattendContent** cmdlet adds information to the unattended Windows Setup answer file.
+parameters:
+  cmdletParameters:
+  - name: ComponentName
+    type: <xref href="ComponentNames" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the component to configure with the added content.
+      The only allowable value is Microsoft-Windows-Shell-Setup.
+    acceptedValues:
+    - MicrosoftWindowsShellSetup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Content
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassName
+    type: <xref href="PassNames" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the pass that the content applies to.
+      The only allowable value is oobeSystem.
+    acceptedValues:
+    - OobeSystem
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingName
+    type: <xref href="SettingNames" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the setting to which the content applies.
+      The acceptable values for this parameter are::
+
+      - FirstLogonCommands
+      - AutoLogon
+    acceptedValues:
+    - AutoLogon
+    - FirstLogonCommands
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the virtual machine **Scale Set** object.
+      You can use the [New-AzVmssConfig](./New-AzVmssConfig.yml) cmdlet to create the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzVmssAdditionalUnattendContent
+        [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
+        [[-PassName] <PassNames>]
+        [[-ComponentName] <ComponentNames>]
+        [[-SettingName] <SettingNames>]
+        [[-Content] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="VirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add information to the unattended Windows Setup answer file'
+  description: |-
+    ```
+    PS C:\> Add-AzVmssAdditionalUnattendContent -VirtualMachineScaleSet $VMSS -ComponentName  $AUCComponentName -Content  $AUCContent -PassName $AUCPassName -SettingName  $AUCSetting
+    ```
+
+    This command adds information to the unattended Windows Setup answer file.
+links:
+- text: New-AzVmssConfig
+  href: ./New-AzVmssConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/add-azvmssadditionalunattendcontent
+  Module Name: Az.Compute
+  ms.assetid: 9BE2E42C-594B-4B67-866C-BBA3B84AA5FD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Add-AzVmssAdditionalUnattendContent.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,383 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Informatica.Update-AzInformaticaOrganization
+name: Update-AzInformaticaOrganization
+module: Az.Informatica
+isPreview: false
+summary: |-
+  Update a InformaticaOrganizationResource
+description: |-
+  Update a InformaticaOrganizationResource
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IInformaticaIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Organizations resource
+    aliases:
+    - OrganizationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IOrganizationPropertiesCustomUpdate" data-throw-if-not-resolved="False" />
+    description: |-
+      Patchable PropertieInformaticaOrganizationPropertiesUpdates of the Organization observability resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Property <IOrganizationPropertiesCustomUpdate>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzInformaticaOrganization
+        -InputObject <IInformaticaIdentity>
+        [-Property <IOrganizationPropertiesCustomUpdate>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IInformaticaIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IInformaticaOrganizationResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update Informatica Organization'
+  description: |-
+    ```powershell
+    Update-AzInformaticaOrganization -Name "InformaticaTestResource" -ResourceGroupName "InformaticaTestRg" -SubscriptionId "ce37d538-dfa3-49c3-b3cd-149b4b7db48a" -Property @{
+        userDetails = @{
+            firstName = "Test"
+            lastName = ""
+            emailAddress = "Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com"
+            upn = "Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com"
+            phoneNumber = "9876543210"
+        }
+        marketplaceDetails = @{
+            marketplaceSubscriptionId = "c948d31a-c011-4b16-ce29-688c1565fc06"
+            offerDetails = @{
+                offerId = "prod-idmc_as_azure_native_isv_service"
+                publisherId = "informatica"
+                planId = "prod-private_priview_plan_cdi_free"
+                planName = "Pay as you go"
+                termUnit = "P1Y"
+                termId = "zwuaefo5ywwo"
+            }
+        }
+        companyDetails = @{
+            companyName = "TestCompany"
+            country = "India"
+            domain = ""
+            business = ""
+            numberOfEmployees = 0
+        }
+    }
+    ```
+
+    ```output
+    BusinessPhoneNumber                        :
+    CompanyDetailCompanyName                   : Test
+    CompanyDetailCountry                       : India
+    CompanyDetailDomain                        :
+    CompanyDetailNumberOfEmployee              : 0
+    CompanyDetailOfficeAddress                 :
+    Id                                         : /subscriptions/ce37d538-dfa3-49c3-b3cd-149b4b7db48a/resourceGroups/InformaticaTestRg/providers/Informatica.DataManagement/organizations/InformaticaTestResource
+    InformaticaPropertyInformaticaRegion       :
+    InformaticaPropertyOrganizationId          :
+    InformaticaPropertyOrganizationName        :
+    InformaticaPropertySingleSignOnUrl         :
+    LinkOrganizationToken                      :
+    Location                                   : westus2
+    MarketplaceDetailMarketplaceSubscriptionId : 3217f8a7-3349-4473-900d-3a6ec5d7c16c
+    Name                                       : InformaticaTestResource
+    OfferDetailOfferId                         : prod-idmc_as_azure_native_isv_service
+    OfferDetailPlanId                          : prod-private_priview_plan_cdi_free
+    OfferDetailPlanName                        : Pay as you go
+    OfferDetailPublisherId                     : informatica
+    OfferDetailTermId                          : zwuaefo5ywwo
+    OfferDetailTermUnit                        : P1Y
+    ProvisioningState                          : Succeeded
+    ResourceGroupName                          : InformaticaTestRg
+    SystemDataCreatedAt                        : 09-Jul-24 11:48:22 AM
+    SystemDataCreatedBy                        : khanalmas@microsoft.com
+    SystemDataCreatedByType                    : User
+    SystemDataLastModifiedAt                   : 09-Jul-24 12:00:42 PM
+    SystemDataLastModifiedBy                   : khanalmas@microsoft.com
+    SystemDataLastModifiedByType               : User
+    Tag                                        : {}
+    Type                                       : informatica.datamanagement/organizations
+    UserDetailEmailAddress                     : Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com
+    UserDetailFirstName                        : Test
+    UserDetailLastName                         : Test
+    UserDetailPhoneNumber                      : 9876543210
+    UserDetailUpn                              : Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com
+    ```
+
+    Update Informatica resource with the specified properties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Update-AzInformaticaOrganization.md
+  document type: cmdlet
+  external help file: Az.Informatica-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.informatica/update-azinformaticaorganization
+  Module Name: Az.Informatica
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Update-AzInformaticaOrganization.md
+  PlatyPS schema version: 2024-05-01

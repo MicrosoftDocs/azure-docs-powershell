@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Remove-AzKeyVaultKey
+name: Remove-AzKeyVaultKey
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Deletes a key in a key vault.
+description: |-
+  The Remove-AzKeyVaultKey cmdlet deletes a key in a key vault.
+  If the key was accidentally deleted the key can be recovered using Undo-AzKeyVaultKeyRemoval by a user with special 'recover' permissions.
+  This cmdlet has a value of high for the **ConfirmImpact** property.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InRemovedState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Remove the previously deleted key permanently.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the key to remove.
+      This cmdlet constructs the fully qualified domain name (FQDN) of a key based on the name that this parameter specifies, the name of the key vault, and your current environment.
+    aliases:
+    - KeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** object.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the key vault from which to remove the key.
+      This cmdlet constructs the FQDN of a key vault based on the name that this parameter specifies and your current environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzKeyVaultKey
+        [-VaultName] <String>
+        [-Name] <String>
+        [-Force]
+        [-PassThru]
+        [-InRemovedState]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.DeletedKeyBundle" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a value only if you specify the *PassThru* parameter.
+examples:
+- title: 'Example 1: Remove a key from a key vault'
+  description: |-
+    ```
+    PS C:\>Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware'
+    ```
+
+    This command removes the key named ITSoftware from the key vault named Contoso.
+- title: 'Example 2: Remove a key without user confirmation'
+  description: |-
+    ```
+    PS C:\>Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -Force -Confirm:$False
+    ```
+
+    This command removes the key named ITSoftware from the key vault named Contoso.
+    The command specifies the *Force* and *Confirm* parameters, and, therefore, the cmdlet does not prompt you for confirmation.
+- title: 'Example 3: Purge a deleted key from the key vault permanently'
+  description: |-
+    ```
+    PS C:\>Remove-AzKeyVaultKey -VaultName 'Contoso' -Name 'ITSoftware' -InRemovedState
+    ```
+
+    This command removes the key named ITSoftware from the key vault named Contoso permanently.
+    Executing this cmdlet requires the 'purge' permission, which must have been previously and explicitly granted to the user for this key vault.
+- title: 'Example 4: Remove keys by using the pipeline operator'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso' | Where-Object {$_.Attributes.Enabled -eq $False} | Remove-AzKeyVaultKey
+    ```
+
+    This command gets all the keys in the key vault named Contoso, and passes them to the **Where-Object** cmdlet by using the pipeline operator.
+    That cmdlet passes the keys that have a value of $False for the **Enabled** attribute to the current cmdlet.
+    That cmdlet removes those keys.
+links:
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Get-AzKeyVaultKey
+  href: ./Get-AzKeyVaultKey.yml
+- text: Set-AzKeyVaultKeyAttribute
+  href: ./Set-AzKeyVaultKeyAttribute.yml
+- text: Undo-AzKeyVaultKeyRemoval
+  href: ./Undo-AzKeyVaultKeyRemoval.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/remove-AzKeyvaultkey
+  Module Name: Az.KeyVault
+  ms.assetid: 817BF177-519F-47BA-86CF-4591FB402E2Dl
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Remove-AzKeyVaultKey.md
+  PlatyPS schema version: 2024-05-01

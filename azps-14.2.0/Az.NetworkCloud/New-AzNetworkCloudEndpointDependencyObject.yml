@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudEndpointDependencyObject
+name: New-AzNetworkCloudEndpointDependencyObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for EndpointDependency.
+description: |-
+  Create an in-memory object for EndpointDependency.
+parameters:
+  cmdletParameters:
+  - name: DomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The domain name of the dependency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The port of this endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudEndpointDependencyObject
+        -DomainName <String>
+        [-Port <Int64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.EndpointDependency" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for EndpointDependency.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudEndpointDependencyObject -DomainName domainName -Port 1234
+    ```
+
+    ```output
+    DomainName Port
+    ---------- ----
+    domainName 1234
+    ```
+
+    Create an in-memory object for EndpointDependency.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEndpointDependencyObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudEndpointDependencyObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudEndpointDependencyObject.md
+  PlatyPS schema version: 2024-05-01

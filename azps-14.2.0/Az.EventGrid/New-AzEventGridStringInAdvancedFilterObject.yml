@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridStringInAdvancedFilterObject
+name: New-AzEventGridStringInAdvancedFilterObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for StringInAdvancedFilter.
+description: |-
+  Create an in-memory object for StringInAdvancedFilter.
+parameters:
+  cmdletParameters:
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The field/property in the event based on which you want to filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The set of filter values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridStringInAdvancedFilterObject
+        [-Value <String[]>]
+        [-Key <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.StringInAdvancedFilter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for StringInAdvancedFilter.'
+  description: |-
+    ```powershell
+    New-AzEventGridStringInAdvancedFilterObject -Key "testKey" -Value "value1","value2"
+    ```
+
+    ```output
+    Key     OperatorType
+    ---     ------------
+    testKey StringIn
+    ```
+
+    Create an in-memory object for StringInAdvancedFilter.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridStringInAdvancedFilterObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridstringinadvancedfilterobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridStringInAdvancedFilterObject.md
+  PlatyPS schema version: 2024-05-01

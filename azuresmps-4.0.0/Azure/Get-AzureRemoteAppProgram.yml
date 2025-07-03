@@ -1,0 +1,139 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppProgram
+name: Get-AzureRemoteAppProgram
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves the properties of one or more published Azure RemoteApp programs for a collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppProgram** cmdlet retrieves the properties of one or more published Azure RemoteApp programs for a collection.
+parameters:
+  cmdletParameters:
+  - name: Alias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the alias of the program for which to retrieve properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FilterByAlias
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoteAppProgram
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the program for which to retrieve properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FilterByName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppProgram
+        [-CollectionName] <String>
+        [[-RemoteAppProgram] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FilterByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppProgram
+        [-CollectionName] <String>
+        [[-Alias] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FilterByAlias
+  isDefault: false
+examples:
+- title: 'Example 1: Retrieve the properties of a program'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppProgram -CollectionName "ContosoApps" -RemoteAppProgram "Finance App"
+
+    Alias                : edc85816-4b9e-4284-b3dc-faedb505f5d9
+
+    AvailableToUsers     : True
+
+    CommandLineArguments :
+
+    IconPngUris          : Microsoft.Azure.Management.RemoteApp.Models.IconPngUrisType
+
+    IconUri              : https://liverdcxstorage.blob.core.windows.net/icons/12345678-1234-1234-1234-123412341234.ico?se=2015-03-01T17%3A29%3A51Z&amp;amp;sr=b&amp;amp;sp=r&amp;amp;sig=abcdCCavbcF%2asY4RascaBauishCasd2FasdBHtasd2BPasdi5dasdD
+
+    Name                 : Contoso Finance
+
+    Status               : Published
+
+    VirtualPath          : %SYSTEMDRIVE%\Program Files (x86)\Contoso Finance\Finance.exe
+    ```
+
+    This command displays the properties of an Azure RemoteApp program.
+    The program, named Finance App, is in the Azure RemoteApp collection named ContosoApps.
+links:
+- text: Publish-AzureRemoteAppProgram
+  href: ./Publish-AzureRemoteAppProgram.yml
+- text: Unpublish-AzureRemoteAppProgram
+  href: ./Unpublish-AzureRemoteAppProgram.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 636280D6-32C3-48EF-A271-A4E032F8B334
+  PlatyPS schema version: 2024-05-01

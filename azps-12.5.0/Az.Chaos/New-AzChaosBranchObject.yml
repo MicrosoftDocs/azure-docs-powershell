@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Chaos.New-AzChaosBranchObject
+name: New-AzChaosBranchObject
+module: Az.Chaos
+isPreview: false
+summary: |-
+  Create an in-memory object for Branch.
+description: |-
+  Create an in-memory object for Branch.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String of the branch name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzChaosBranchObject
+        -Action <IAction[]>
+        -Name <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.Branch" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Branch.'
+  description: |-
+    ```powershell
+    $actionObj = New-AzChaosActionObject -Name "urn:csci:microsoft:virtualMachine:shutdown/1.0" -Type "continuous"
+    New-AzChaosBranchObject -Action $actionObj -Name "branch1"
+    ```
+
+    ```output
+    Action Name
+    ------ ----
+    {{…    branch1
+    ```
+
+    Create an in-memory object for Branch.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosBranchObject.md
+  document type: cmdlet
+  external help file: Az.Chaos-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Chaos/new-azchaosbranchobject
+  Module Name: Az.Chaos
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosBranchObject.md
+  PlatyPS schema version: 2024-05-01

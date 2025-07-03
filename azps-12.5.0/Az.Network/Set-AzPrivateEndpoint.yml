@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzPrivateEndpoint
+name: Set-AzPrivateEndpoint
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a private endpoint.
+description: |-
+  The **Set-AzPrivateEndpoint** cmdlet updates a private endpoint.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateEndpoint
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPrivateEndpoint" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a private endpoint object representing the state to which the private endpoint should be set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzPrivateEndpoint
+        -PrivateEndpoint <PSPrivateEndpoint>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPrivateEndpoint" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPrivateEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates a private endpoint and replace one of its subnets to another'
+  description: |-
+    ```powershell
+    $virtualNetwork = Get-AzVirtualNetwork -ResourceName MyVirtualNetwork -ResourceGroupName TestResourceGroup
+    $plsConnection= New-AzPrivateLinkServiceConnection -Name MyPLSConnections -PrivateLinkServiceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestResourceGroup/providers/Microsoft.Network/privateLinkServices/privateLinkService" -RequestMessage "Please Approve my request"
+    $privateEndpoint = New-AzPrivateEndpoint -Name MyPrivateEndpoint -ResourceGroupName TestResourceGroup -Location centralus -PrivateLinkServiceConnection $plsConnection -Subnet $virtualNetwork.Subnets[0]
+
+    $privateEndpoint.Subnet = $virtualNetwork.Subnet[1]
+
+    $privateEndpoint | Set-AzPrivateEndpoint
+    ```
+
+    This example creates a private endpoint with one subnet, then it replace to another subnet from the in-memory representation of the virtual network. The Set-PrivateEndpoint cmdlet is then used to write the modified private endpoint state on the service side.
+links:
+- text: Get-AzPrivateEndpoint
+  href: ./Get-AzPrivateEndpoint.yml
+- text: New-AzPrivateEndpoint
+  href: ./New-AzPrivateEndpoint.yml
+- text: Remove-AzPrivateEndpoint
+  href: ./Remove-AzPrivateEndpoint.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateEndpoint.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azprivateendpoint
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzPrivateEndpoint.md
+  PlatyPS schema version: 2024-05-01

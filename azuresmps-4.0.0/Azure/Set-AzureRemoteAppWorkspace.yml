@@ -1,0 +1,83 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureRemoteAppWorkspace
+name: Set-AzureRemoteAppWorkspace
+module: Azure
+isPreview: false
+summary: |-
+  Sets the properties of an Azure RemoteApp workspace.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureRemoteAppWorkspace** cmdlet sets the properties of an Azure RemoteApp workspace.
+notes: |-
+  * All Azure RemoteApp collections for a specified subscription exist within a shared workspace.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppWorkspace
+        [-WorkspaceName] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Set the workspace name'
+  description: |-
+    ```
+    PS C:\> Set-AzureRemoteAppWorkspace -WorkspaceName "Contoso Work Applications"
+
+    TrackingId
+    ----------
+    12345
+    ```
+
+    This command sets the Azure RemoteApp workspace name to Contoso Work Applications.
+links:
+- text: Get-AzureRemoteAppWorkspace
+  href: ./Get-AzureRemoteAppWorkspace.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 608B4B5E-5DB2-4291-966C-0B25F8D4FA13
+  PlatyPS schema version: 2024-05-01

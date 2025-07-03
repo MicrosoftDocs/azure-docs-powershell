@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzExpressRouteCircuitAuthorization
+name: Remove-AzExpressRouteCircuitAuthorization
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes an existing ExpressRoute configuration authorization.
+description: |-
+  The **Remove-AzExpressRouteCircuitAuthorization** cmdlet removes an authorization assigned to
+  an ExpressRoute circuit. ExpressRoute circuits connect your on-premises network to Azure by using a
+  connectivity provider instead of the public Internet. The owner of an ExpressRoute circuit can
+  create as many as 10 authorizations for each circuit; these authorizations generate an
+  authorization key that can be used by a virtual network owner to connect his or her network to the
+  circuit. There can only be one authorization per virtual network. At any time, however, the circuit
+  owner can use **Remove-AzExpressRouteCircuitAuthorization** to remove the authorization
+  assigned to a virtual network. When that happens the corresponding virtual network is no longer
+  able to use the ExpressRoute circuit to connect to Azure.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuit
+    type: <xref href="PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ExpressRouteCircuit object that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the circuit authorization that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzExpressRouteCircuitAuthorization
+        [-Name <String>]
+        -ExpressRouteCircuit <PSExpressRouteCircuit>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts pipelined instances of the
+    **Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
+outputs:
+- name: <xref href="PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet modifies existing instances of the
+    **Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit** object.
+examples:
+- title: 'Example 1: Remove a circuit authorization from an ExpressRoute circuit'
+  description: |-
+    ```
+    $Circuit = Get-AzExpressRouteCircuit -Name "ContosoCircuit" -ResourceGroupName "ContosoResourceGroup"
+    Remove-AzExpressRouteCircuitAuthorization -Name "ContosoCircuitAuthorization" -Circuit $Circuit
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $Circuit
+    ```
+
+    This example removes a circuit authorization from an ExpressRoute circuit. The first command uses
+    the **Get-AzExpressRouteCircuit** cmdlet to create an object reference to an ExpressRoute
+    circuit named ContosoCircuit and stores the result in the variable named $Circuit.
+
+    The second command marks the circuit authorization ContosoCircuitAuthorization for removal.
+
+    The third command uses the Set-AzExpressRouteCircuit cmdlet to confirm the removal of the
+    ExpressRoute circuit stored in the $Circuit variable.
+links:
+- text: Add-AzExpressRouteCircuitAuthorization
+  href: ./Add-AzExpressRouteCircuitAuthorization.yml
+- text: Get-AzExpressRouteCircuit
+  href: ./Get-AzExpressRouteCircuit.yml
+- text: Get-AzExpressRouteCircuitAuthorization
+  href: ./Get-AzExpressRouteCircuitAuthorization.yml
+- text: New-AzExpressRouteCircuitAuthorization
+  href: ./New-AzExpressRouteCircuitAuthorization.yml
+- text: Set-AzExpressRouteCircuit
+  href: ./Set-AzExpressRouteCircuit.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzExpressRouteCircuitAuthorization.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azexpressroutecircuitauthorization
+  Module Name: Az.Network
+  ms.assetid: 38D57CE4-6994-4BDA-A50E-28680EF4E568
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzExpressRouteCircuitAuthorization.md
+  PlatyPS schema version: 2024-05-01

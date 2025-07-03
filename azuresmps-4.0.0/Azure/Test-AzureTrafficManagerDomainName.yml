@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Test-AzureTrafficManagerDomainName
+name: Test-AzureTrafficManagerDomainName
+module: Azure
+isPreview: false
+summary: |-
+  Checks whether a domain name is available as a Traffic Manager profile.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Test-AzureTrafficManagerDomainName** cmdlet checks whether a domain name is available as a Microsoft Azure Traffic Manager profile.
+  If the domain name is available, this cmdlet returns a value of $True.
+parameters:
+  cmdletParameters:
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name to test.
+      You must include the following string:
+
+      .trafficmanager.net
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzureTrafficManagerDomainName
+        -DomainName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates $True or $False.
+    If the domain name is available, this cmdlet returns a value of $True.
+examples:
+- title: 'Example 1: Check whether a domain name is available'
+  description: |-
+    ```
+    PS C:\>Test-AzureTrafficManagerDomainName -DomainName "ContosoApp.trafficmanager.net"
+    $True
+    ```
+
+    This command checks whether the domain name ContosoApp.trafficmanager.net is available as a Traffic Manager profile.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 92E2409B-14BC-428F-8BAF-60D8DAFA5F57
+  PlatyPS schema version: 2024-05-01

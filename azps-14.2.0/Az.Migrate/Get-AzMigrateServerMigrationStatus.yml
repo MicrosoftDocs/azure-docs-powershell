@@ -1,0 +1,285 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Get-AzMigrateServerMigrationStatus
+name: Get-AzMigrateServerMigrationStatus
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Retrieves the details of the replicating server status.
+description: |-
+  The Get-AzMigrateServerMigrationStatus cmdlet retrieves the replication status for the replicating server.
+parameters:
+  cmdletParameters:
+  - name: ApplianceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the appliance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByApplianceName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OData filter options.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Health
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the health issues to show for replicating server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetHealthByMachineName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'GetByPrioritiseServer', Mandatory)]
+       Specifies the display name of the replicating machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByMachineName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetHealthByMachineName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'GetByPrioritiseServer', Mandatory)]
+       Specifies the Azure Migrate project  in the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'GetByPrioritiseServer', Mandatory)]
+       Specifies the Resource Group of the Azure Migrate Project in the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pagination token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateServerMigrationStatus
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        [-SubscriptionId <String>]
+        [-Filter <String>]
+        [-SkipToken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateServerMigrationStatus
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        -ApplianceName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByApplianceName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateServerMigrationStatus
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        -MachineName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByMachineName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMigrateServerMigrationStatus
+        -ResourceGroupName <String>
+        -ProjectName <String>
+        -MachineName <String>
+        [-SubscriptionId <String>]
+        [-Health]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetHealthByMachineName
+  isDefault: false
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List status by project name.'
+  description: |-
+    ```powershell
+    Get-AzMigrateServerMigrationStatus -ResourceGroupName cbtpvtrg -ProjectName migpvt
+    ```
+
+    ```output
+    Appliance Server      State                      Progress TimeElapsed TimeRemaining UploadSpeed Health LastSync               Datastore
+    --------- ------      -----                      -------- ----------- ------------- ----------- ------ --------               ---------
+    migpvt    CVM-Win2019 DeltaReplication Completed -        -           -             -           Normal 12/7/2023, 11:18:07 AM Shared_1TB, datastore1
+    migpvt    CVM-Win2022 DeltaReplication Completed -        -           -             -           Normal 12/7/2023, 10:41:42 AM datastore1
+
+
+
+
+    To resolve the health issue use the command
+    Get-AzMigrateServerMigrationStatus -ProjectName <String> -ResourceGroupName <String> -MachineName <String> -Health
+    ```
+
+    Get by project name.
+- title: 'Example 2: List status by machine name.'
+  description: |-
+    ```powershell
+    Get-AzMigrateServerMigrationStatus -ProjectName "migpvt-ecyproj" -ResourceGroupName "cbtprivatestamprg" -MachineName "CVM-Win2019"
+    ```
+
+    ```output
+    Server CVM-Win2019 is currently healthy.
+
+    Appliance Server      State                      Progress TimeElapsed TimeRemaining UploadSpeed LastSync               Datastore
+    --------- ------      -----                      -------- ----------- ------------- ----------- --------               ---------
+    migpvt    CVM-Win2019 DeltaReplication Completed -        -           -             -           12/7/2023, 11:18:07 AM Shared_1TB, datastore1
+
+
+
+    Disk        State                      Progress TimeElapsed TimeRemaining UploadSpeed Datastore
+    ----        -----                      -------- ----------- ------------- ----------- ---------
+    TestVM      DeltaReplication Completed -        -           -             -           Shared_1TB
+    CVM-Win2019 DeltaReplication Completed -        -           -             -           datastore1
+    ```
+
+    Get by machine name.
+- title: 'Example 2: List status by appliance name.'
+  description: |-
+    ```powershell
+    Get-AzMigrateServerMigrationStatus -ProjectName "migpvt-ecyproj" -ResourceGroupName "cbtprivatestamprg" -ApplianceName "migpvt"
+    ```
+
+    ```output
+    Server      State                      Progress TimeElapsed TimeRemaining UploadSpeed Health LastSync               Datastore
+    ------      -----                      -------- ----------- ------------- ----------- ------ --------               ---------
+    CVM-Win2019 DeltaReplication Completed -        -           -             -           Normal 12/7/2023, 11:18:07 AM Shared_1TB, datastore1
+    CVM-Win2022 DeltaReplication Completed -        -           -             -           Normal 12/7/2023, 10:41:42 AM datastore1
+
+
+    To resolve the health issue use the command
+    Get-AzMigrateServerMigrationStatus -ProjectName <String> -ResourceGroupName <String> -MachineName <String> -Health
+    ```
+
+    Get by appliance name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateServerMigrationStatus.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/get-azmigrateservermigrationstatus
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Get-AzMigrateServerMigrationStatus.md
+  PlatyPS schema version: 2024-05-01

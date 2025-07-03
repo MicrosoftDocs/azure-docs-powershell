@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppUser
+name: Get-AzureRemoteAppUser
+module: Azure
+isPreview: false
+summary: |-
+  Lists the users in an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppUser** cmdlet lists the users in an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: Alias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a published program alias.
+      You can use this parameter only in per-app publishing mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the User Principal Name (UPN) of a user for which to list information.
+      For example, PattiFuller@contoso.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppUser
+        [-CollectionName] <String>
+        [[-UserUpn] <String>]
+        [-Alias <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: List the users of a collection'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppUser -CollectionName "Contoso"
+    ```
+
+    This command lists the users who have access to the Azure RemoteApp collection named Contoso.
+links:
+- text: Add-AzureRemoteAppUser
+  href: ./Add-AzureRemoteAppUser.yml
+- text: Get-AzureRemoteAppSession
+  href: ./Get-AzureRemoteAppSession.yml
+- text: Remove-AzureRemoteAppUser
+  href: ./Remove-AzureRemoteAppUser.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A6F2CC9F-8C95-484D-8676-7DAA5E0AA617
+  PlatyPS schema version: 2024-05-01

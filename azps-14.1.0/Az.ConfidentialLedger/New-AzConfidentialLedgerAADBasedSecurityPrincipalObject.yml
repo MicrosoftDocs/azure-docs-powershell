@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConfidentialLedger.New-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+name: New-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+module: Az.ConfidentialLedger
+isPreview: false
+summary: |-
+  Create an in-memory object for AADBasedSecurityPrincipal.
+description: |-
+  Create an in-memory object for AADBasedSecurityPrincipal.
+parameters:
+  cmdletParameters:
+  - name: LedgerRoleName
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Support.LedgerRoleName" data-throw-if-not-resolved="False" />
+    description: |-
+      LedgerRole associated with the Security Principal of Ledger.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrincipalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UUID/GUID based Principal Id of the Security Principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UUID/GUID based Tenant Id of the Security Principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+        [-LedgerRoleName <LedgerRoleName>]
+        [-PrincipalId <String>]
+        [-TenantId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConfidentialLedger.Models.Api20220513.AadBasedSecurityPrincipal" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Object creation'
+  description: |-
+    ```powershell
+    New-AzConfidentialLedgerAADBasedSecurityPrincipalObject `
+      -LedgerRoleName "Administrator" `
+      -PrincipalId "00001111-aaaa-2222-bbbb-3333cccc4444" `
+      -TenantId "00001111-aaaa-2222-bbbb-3333cccc4444"
+    ```
+
+    ```output
+    LedgerRoleName PrincipalId                          TenantId
+    -------------- -----------                          --------
+    Administrator  00001111-aaaa-2222-bbbb-3333cccc4444 00001111-aaaa-2222-bbbb-3333cccc4444
+    ```
+
+    Creates an AadBasedSecurityPrincipalObject that may be used for `Az.ConfidentialLedger` commands.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerAADBasedSecurityPrincipalObject.md
+  document type: cmdlet
+  external help file: Az.ConfidentialLedger-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ConfidentialLedger/new-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+  Module Name: Az.ConfidentialLedger
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/New-AzConfidentialLedgerAADBasedSecurityPrincipalObject.md
+  PlatyPS schema version: 2024-05-01

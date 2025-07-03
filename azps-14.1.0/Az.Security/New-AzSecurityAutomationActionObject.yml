@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityAutomationActionObject
+name: New-AzSecurityAutomationActionObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Creates new security automation action object
+description: |-
+  Creates new security automation action object
+parameters:
+  cmdletParameters:
+  - name: ConnectionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Event Hub connection string
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionEventHub
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Event Hub Azure Resource ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionEventHub
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicAppResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The triggered Logic App Azure Resource ID.
+      This can also reside on other subscriptions, given that you have permissions to trigger the Logic App
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionLogicApp
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SasPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Event Hub SAS policy name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionEventHub
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Logic App trigger URI endpoint (it will not be included in any response)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionLogicApp
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified Log Analytics Workspace Azure Resource ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SecurityAutomationActionWorkspace
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityAutomationActionObject
+        -LogicAppResourceId <String>
+        -Uri <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SecurityAutomationActionLogicApp
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSecurityAutomationActionObject
+        -EventHubResourceId <String>
+        -ConnectionString <String>
+        [-SasPolicyName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SecurityAutomationActionEventHub
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSecurityAutomationActionObject
+        -WorkspaceResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SecurityAutomationActionWorkspace
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.Automations.PSSecurityAutomationAction" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzSecurityAutomationActionObject -WorkspaceResourceId '/subscriptions/64ac75e7-15ff-4963-8c07-a16016505e0f/resourceGroups/sampleResourceGroup/providers/Microsoft.OperationalInsights/workspaces/surashed-test'
+    ```
+
+    Creates new security automation action with workspace type
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzSecurityAutomationActionObject -LogicAppResourceId '/subscriptions/03b601f1-7eca-4496-8f8d-355219eee254/resourceGroups/sampleResourceGroup/providers/Microsoft.Logic/workflows/LA' -Uri 'https://dummy.com/'
+    ```
+
+    Creates new security automation action with logicApp type
+- title: Example 3
+  description: |-
+    ```powershell
+    New-AzSecurityAutomationActionObject -EventHubResourceId 'subscriptions/03b601f1-7eca-4496-8f8d-355219eee254/resourceGroups/sampleResourceGroup/providers/Microsoft.EventHub/namespaces/cus-wsp-fake-assessment/eventhubs/cus-wsp-fake-assessment' -ConnectionString 'Endpoint=sb://dummy/;SharedAccessKeyName=dummy;SharedAccessKey=dummy;EntityPath=dummy'
+    ```
+
+    Creates new security automation action with even-hub type
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAutomationActionObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/new-azsecurityautomationactionobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAutomationActionObject.md
+  PlatyPS schema version: 2024-05-01

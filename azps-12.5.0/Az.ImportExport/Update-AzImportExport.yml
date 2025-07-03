@@ -1,0 +1,578 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ImportExport.Update-AzImportExport
+name: Update-AzImportExport
+module: Az.ImportExport
+isPreview: false
+summary: |-
+  Updates specific properties of a job.
+  You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
+  It can also be used to cancel an existing job.
+description: |-
+  Updates specific properties of a job.
+  You can call this operation to notify the Import/Export service that the hard drives comprising the import or export job have been shipped to the Microsoft data center.
+  It can also be used to cancel an existing job.
+parameters:
+  cmdletParameters:
+  - name: AcceptLanguage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the preferred language for the response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupDriveManifest
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the manifest files on the drives should be copied to block blobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CancelRequested
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, the value must be true.
+      The service will attempt to cancel the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryPackageCarrierName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the carrier that is used to ship the import or export drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryPackageDriveCount
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of drives included in the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryPackageShipDate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The date when the package is shipped.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeliveryPackageTrackingNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The tracking number of the package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DriveList
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api202101.IDriveStatus" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of drives that comprise the job.
+      To construct, see NOTES section for DRIVELIST properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether error logging or verbose logging is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the import/export job.
+    aliases:
+    - JobName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name uniquely identifies the resource group within the user subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressCity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The city name to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressCountryOrRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The country or region to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Email address of the recipient of the returned drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressPhone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number of the recipient of the returned drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressPostalCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The postal code to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressRecipientName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the recipient who will receive the hard drives when they are returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressStateOrProvince
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The state or province to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressStreetAddress1
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The first line of the street address to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnAddressStreetAddress2
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The second line of the street address to use when returning the drives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnShippingCarrierAccountNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The customer's account number with the carrier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnShippingCarrierName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The carrier's name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, the value must be Shipping, which tells the Import/Export service that the package for the job has been shipped.
+      The ReturnAddress and DeliveryPackage properties must have been set either in this request or in a previous request, otherwise the request will fail.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription ID for the Azure user.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tags that will be assigned to the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzImportExport
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AcceptLanguage <String>]
+        [-BackupDriveManifest]
+        [-CancelRequested]
+        [-DeliveryPackageCarrierName <String>]
+        [-DeliveryPackageDriveCount <Int64>]
+        [-DeliveryPackageShipDate <String>]
+        [-DeliveryPackageTrackingNumber <String>]
+        [-DriveList <IDriveStatus[]>]
+        [-LogLevel <String>]
+        [-ReturnAddressCity <String>]
+        [-ReturnAddressCountryOrRegion <String>]
+        [-ReturnAddressEmail <String>]
+        [-ReturnAddressPhone <String>]
+        [-ReturnAddressPostalCode <String>]
+        [-ReturnAddressRecipientName <String>]
+        [-ReturnAddressStateOrProvince <String>]
+        [-ReturnAddressStreetAddress1 <String>]
+        [-ReturnAddressStreetAddress2 <String>]
+        [-ReturnShippingCarrierAccountNumber <String>]
+        [-ReturnShippingCarrierName <String>]
+        [-State <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzImportExport
+        -InputObject <IImportExportIdentity>
+        [-AcceptLanguage <String>]
+        [-BackupDriveManifest]
+        [-CancelRequested]
+        [-DeliveryPackageCarrierName <String>]
+        [-DeliveryPackageDriveCount <Int64>]
+        [-DeliveryPackageShipDate <String>]
+        [-DeliveryPackageTrackingNumber <String>]
+        [-DriveList <IDriveStatus[]>]
+        [-LogLevel <String>]
+        [-ReturnAddressCity <String>]
+        [-ReturnAddressCountryOrRegion <String>]
+        [-ReturnAddressEmail <String>]
+        [-ReturnAddressPhone <String>]
+        [-ReturnAddressPostalCode <String>]
+        [-ReturnAddressRecipientName <String>]
+        [-ReturnAddressStateOrProvince <String>]
+        [-ReturnAddressStreetAddress1 <String>]
+        [-ReturnAddressStreetAddress2 <String>]
+        [-ReturnShippingCarrierAccountNumber <String>]
+        [-ReturnShippingCarrierName <String>]
+        [-State <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api202101.IJobResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update ImportExport job by resource group and server name'
+  description: |-
+    ```powershell
+    Update-AzImportExport -Name test-job -ResourceGroupName ImportTestRG -DeliveryPackageCarrierName pwsh -DeliveryPackageTrackingNumber pwsh20200000
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet updates ImportExport job by resource group and server name.
+- title: 'Example 2: Update ImportExport job by identity.'
+  description: |-
+    ```powershell
+    Get-AzImportExport -Name test-job -ResourceGroupName ImportTestRG | Update-AzImportExport -CancelRequested
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet updates ImportExport job by identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Update-AzImportExport.md
+  document type: cmdlet
+  external help file: Az.ImportExport-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.importexport/update-azimportexport
+  Module Name: Az.ImportExport
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Update-AzImportExport.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceLinker.New-AzServiceLinkerUserAssignedIdentityAuthInfoObject
+name: New-AzServiceLinkerUserAssignedIdentityAuthInfoObject
+module: Az.ServiceLinker
+isPreview: false
+summary: |-
+  Create an in-memory object for UserAssignedIdentityAuthInfo.
+description: |-
+  Create an in-memory object for UserAssignedIdentityAuthInfo.
+parameters:
+  cmdletParameters:
+  - name: ClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client Id for userAssignedIdentity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Optional, this value specifies the Azure role to be assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription id for userAssignedIdentity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username created in the database which is mapped to a user in AAD.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceLinkerUserAssignedIdentityAuthInfoObject
+        [-ClientId <String>]
+        [-Role <String[]>]
+        [-SubscriptionId <String>]
+        [-UserName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.UserAssignedIdentityAuthInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: create linker's auth info with user assigned identity type"
+  description: |-
+    ```powershell
+    New-AzServiceLinkerUserAssignedIdentityAuthInfoObject -ClientId 00000000-0000-0000-0000-000000000000 -SubscriptionId 00000000-0000-0000-0000-000000000000
+    ```
+
+    ```output
+    AuthType             ClientId                             SubscriptionId
+    --------             --------                             --------------
+    userAssignedIdentity 00000000-0000-0000-0000-000000000000 00000000-0000-0000-0000-0000…
+    ```
+
+    create linker's auth info with user assigned identity type
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerUserAssignedIdentityAuthInfoObject.md
+  document type: cmdlet
+  external help file: Az.ServiceLinker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkeruserassignedidentityauthinfoobject
+  Module Name: Az.ServiceLinker
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerUserAssignedIdentityAuthInfoObject.md
+  PlatyPS schema version: 2024-05-01

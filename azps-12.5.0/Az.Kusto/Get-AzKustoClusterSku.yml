@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Kusto.Get-AzKustoClusterSku
+name: Get-AzKustoClusterSku
+module: Az.Kusto
+isPreview: false
+summary: |-
+  Lists eligible SKUs for Kusto resource provider.
+description: |-
+  Lists eligible SKUs for Kusto resource provider.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Kusto cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKustoClusterSku
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKustoClusterSku
+        -ClusterName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.IAzureResourceSku" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Kusto.Models.Api20230815.ISkuDescription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Lists eligible SKUs'
+  description: |-
+    ```powershell
+    Get-AzKustoClusterSku
+    ```
+
+    ```output
+    Location             Name                        ResourceType Tier
+    --------             ----                        ------------ ----
+    {eastus2}            D13_v2                      clusters     Standard
+    {eastus2}            D14_v2                      clusters     Standard
+    {eastus2}            L8                          clusters     Standard
+    {eastus2}            L16                         clusters     Standard
+    {eastus2}            D11_v2                      clusters     Standard
+    {eastus2}            D12_v2                      clusters     Standard
+    {eastus2}            L4                          clusters     Standard
+    {eastus2}            Standard_D13_v2             clusters     Standard
+    {eastus2}            Standard_D14_v2             clusters     Standard
+    {eastus2}            Standard_L8s                clusters     Standard
+    {eastus2}            Standard_L16s               clusters     Standard
+    {eastus2}            Standard_D11_v2             clusters     Standard
+    {eastus2}            Standard_D12_v2             clusters     Standard
+    {eastus2}            Standard_L4s                clusters     Standard
+    {eastus2}            Standard_DS13_v2+1TB_PS     clusters     Standard
+    {eastus2}            Standard_DS13_v2+2TB_PS     clusters     Standard
+    {eastus2}            Standard_DS14_v2+3TB_PS     clusters     Standard
+    {eastus2}            Standard_DS14_v2+4TB_PS     clusters     Standard
+    {eastus2}            Dev(No SLA)_Standard_D11_v2 clusters     Basic
+    {westcentralus}      D13_v2                      clusters     Standard
+    {westcentralus}      D14_v2                      clusters     Standard
+    {westcentralus}      D11_v2                      clusters     Standard
+    {westcentralus}      D12_v2                      clusters     Standard
+    {westcentralus}      Standard_D13_v2             clusters     Standard
+    {westcentralus}      Standard_D14_v2             clusters     Standard
+    {westcentralus}      Standard_D11_v2             clusters     Standard
+    {westcentralus}      Standard_D12_v2             clusters     Standard
+    {westcentralus}      Standard_DS13_v2+1TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS13_v2+2TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS14_v2+3TB_PS     clusters     Standard
+    {westcentralus}      Standard_DS14_v2+4TB_PS     clusters     Standard
+    ...
+    ```
+
+    The above command lists eligible SKUs.
+- title: 'Example 2: Lists eligible SKUs for specific cluster'
+  description: |-
+    ```powershell
+    Get-AzKustoClusterSku -ResourceGroupName testrg -ClusterName testnewkustocluster
+    ```
+
+    ```output
+    ResourceType
+    ------------
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    Microsoft.Kusto/clusters
+    ...
+    ```
+
+    The above command lists eligible SKUs for specific cluster
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/Kusto/help/Get-AzKustoClusterSku.md
+  document type: cmdlet
+  external help file: Az.Kusto-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.kusto/get-azkustoclustersku
+  Module Name: Az.Kusto
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Kusto/Kusto/help/Get-AzKustoClusterSku.md
+  PlatyPS schema version: 2024-05-01

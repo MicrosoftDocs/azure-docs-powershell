@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureSqlDatabase
+name: Remove-AzureSqlDatabase
+module: Azure
+isPreview: false
+summary: |-
+  Deletes an Azure SQL Database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureSqlDatabase** cmdlet deletes an Azure SQL Database by server connection context or server name.
+  You can create an Azure SQL Database server connection context using the **New-AzureSqlDatabaseServerContext** cmdlet, and then use it with this cmdlet.
+
+  When you delete a database by specifying an Azure SQL Database server name, the **Remove-AzureSqlDatabase** cmdlet uses the name and the current Azure subscription information to perform the operation.
+notes: |-
+  * Because of the severity of the operation, by default, this cmdlet prompts you for confirmation. To skip confirmation, specify the *Force* parameter.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionContext
+    type: <xref href="IServerDataServiceContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server from which this cmdlet removes a database.
+    aliases:
+    - Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByObjectWithConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Database
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the database that this cmdlet removes.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectWithServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameWithServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows the action to complete without prompting the user for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server on which this cmdlet deletes the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameWithServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByObjectWithServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureSqlDatabase
+        -ConnectionContext <IServerDataServiceContext>
+        -DatabaseName <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameWithConnectionContext
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzureSqlDatabase
+        -ConnectionContext <IServerDataServiceContext>
+        -Database <Database>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithConnectionContext
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzureSqlDatabase
+        -ServerName <String>
+        -DatabaseName <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameWithServerName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzureSqlDatabase
+        -ServerName <String>
+        -Database <Database>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithServerName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a database'
+  description: |-
+    ```
+    PS C:\> Remove-AzureSqlDatabase -ConnectionContext $Context -DatabaseName "Database01"
+    ```
+
+    This command removes the database named Database01 from the Azure SQL Database server connection context $Context.
+- title: 'Example 2: Remove a database by using a server name'
+  description: |-
+    ```
+    PS C:\> Remove-AzureSqlDatabase -ServerName "lpqd0zbr8y" -DatabaseName "Database01"
+    ```
+
+    This command removes the database named Database01 from the Azure SQL Database server named lpqd0zbr8y.
+- title: 'Example 3: Remove a database by using the pipeline'
+  description: |-
+    ```
+    PS C:\> $Database01 | Remove-AzureSqlDatabase -ConnectionContext $Context
+    PS C:\> $Database01 | Remove-AzureSqlDatabase -ServerName "lpqd0zbr8y"
+    ```
+
+    This example demonstrates the alternative method of passing the database object through the pipeline.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Delete Database
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505705.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlDatabase
+  href: ./Get-AzureSqlDatabase.yml
+- text: New-AzureSqlDatabase
+  href: ./New-AzureSqlDatabase.yml
+- text: New-AzureSqlDatabaseServerContext
+  href: ./New-AzureSqlDatabaseServerContext.yml
+- text: Set-AzureSqlDatabase
+  href: ./Set-AzureSqlDatabase.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: B3813F54-E5B7-4605-BB1C-67417FDDB076
+  PlatyPS schema version: 2024-05-01

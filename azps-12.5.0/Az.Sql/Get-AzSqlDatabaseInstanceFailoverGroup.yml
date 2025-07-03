@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlDatabaseInstanceFailoverGroup
+name: Get-AzSqlDatabaseInstanceFailoverGroup
+module: Az.Sql
+isPreview: false
+summary: |-
+  Gets or lists Instance Failover Groups.
+description: |-
+  Gets a specific Instance Failover Group or lists the Instance Failover Groups in a region under the user's subscription.
+
+  Either region in the Instance Failover Group may be used to execute the command. The returned values will reflect the state of the Managed Instances in that region with respect to the Instance Failover Group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Local Region from which to retrieve the Instance Failover Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Instance Failover Group to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseInstanceFailoverGroup
+        [[-Name] <String>]
+        [-ResourceGroupName] <String>
+        [-Location] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.InstanceFailoverGroup.Model.AzureSqlInstanceFailoverGroupModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $failoverGroups = Get-AzSqlDatabaseInstanceFailoverGroup -ResourceGroupName rg -Location location
+    ```
+
+    ```output
+    {
+    	ResourceGroupName                     : rg
+    	Location                              : East US
+    	Name                                  : fg
+    	PartnerResourceGroupName              : rg
+    	PartnerRegion                         : West US
+    	PrimaryManagedInstanceName            : managedInstance1
+    	PartnerManagedInstanceName            : managedInstance2
+    	ReplicationRole                       : Primary
+    	ReplicationState                      : CATCH_UP
+    	ReadWriteFailoverPolicy               : Automatic
+    	FailoverWithDataLossGracePeriodHours  : 1
+    	ReadOnlyFailoverPolicy                : Disabled
+    	Id                                    : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg/providers/Microsoft.Sql/locations/eastus/instanceFailoverGroups/fg
+    }
+    ```
+
+    Lists all Failover Groups in the region
+- title: Example 2
+  description: |-
+    ```powershell
+    $failoverGroup = Get-AzSqlDatabaseInstanceFailoverGroup -ResourceGroupName rg -Location location -Name fg
+    ```
+
+    ```output
+    ResourceGroupName                     : rg
+    Location                              : East US
+    Name                                  : fg
+    PartnerResourceGroupName              : rg
+    PartnerRegion                         : West US
+    PrimaryManagedInstanceName            : managedInstance1
+    PartnerManagedInstanceName            : managedInstance2
+    ReplicationRole                       : Primary
+    ReplicationState                      : CATCH_UP
+    ReadWriteFailoverPolicy               : Automatic
+    FailoverWithDataLossGracePeriodHours  : 1
+    ReadOnlyFailoverPolicy                : Disabled
+    Id                                    : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/rg/providers/Microsoft.Sql/locations/eastus/instanceFailoverGroups/fg
+    ```
+
+    Get a specific Instance Failover Group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseInstanceFailoverGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabaseinstancefailovergroup
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseInstanceFailoverGroup.md
+  PlatyPS schema version: 2024-05-01

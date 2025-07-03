@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.New-AzEventHubThrottlingPolicyConfig
+name: New-AzEventHubThrottlingPolicyConfig
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Constructs an IThrottlingPolicy object that can be fed as input to New-AzEventHubApplicationGroup or Set-AzEventHubApplicationGroup
+description: |-
+  Constructs an IThrottlingPolicy object that can be fed as input to New-AzEventHubApplicationGroup or Set-AzEventHubApplicationGroup
+parameters:
+  cmdletParameters:
+  - name: MetricId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Metric Id on which the throttle limit should be set, MetricId can be discovered by hovering over Metric in the Metrics section of Event Hub Namespace inside Azure Portal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Throttling Policy Config
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RateLimitThreshold
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The Threshold limit above which the application group will be throttled.Rate limit is always per second.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventHubThrottlingPolicyConfig
+        -Name <String>
+        -RateLimitThreshold <Int64>
+        -MetricId <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.IThrottlingPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Constructs an IThrottlingPolicy object'
+  description: |-
+    ```powershell
+    New-AzEventHubThrottlingPolicyConfig -Name t1 -RateLimitThreshold 10000 -MetricId IncomingBytes
+    ```
+
+    ```output
+    MetricId      Name RateLimitThreshold Type
+    --------      ---- ------------------ ----
+    IncomingBytes t1                10000 ThrottlingPolicy
+    ```
+
+    Please refer examples for Set-AzEventHubApplicationGroup to know more.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubThrottlingPolicyConfig.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventhub/new-azeventhubthrottlingpolicyconfig
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubThrottlingPolicyConfig.md
+  PlatyPS schema version: 2024-05-01

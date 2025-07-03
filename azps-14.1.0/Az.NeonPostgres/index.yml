@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.NeonPostgres
+name: Az.NeonPostgres Module
+isPreview: false
+cmdletGroups:
+- title: NeonPostgres
+  cmdlets:
+  - Az.NeonPostgres.Get-AzNeonPostgresOrganization
+  - Az.NeonPostgres.New-AzNeonPostgresOrganization
+  - Az.NeonPostgres.Remove-AzNeonPostgresOrganization
+  - Az.NeonPostgres.Update-AzNeonPostgresOrganization
+description: |-
+  Microsoft Azure PowerShell: NeonPostgres cmdlets
+metadata:
+  Module Name: Az.NeonPostgres
+  Module Guid: 0121408b-f2e9-4f4c-9809-26c1d1aaec32
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.neonpostgres
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Az.NeonPostgres.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Az.NeonPostgres.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

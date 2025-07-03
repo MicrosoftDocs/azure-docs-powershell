@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.StorageAction
+name: Az.StorageAction Module
+isPreview: false
+cmdletGroups:
+- title: StorageAction
+  cmdlets:
+  - Az.StorageAction.Get-AzStorageActionTask
+  - Az.StorageAction.Get-AzStorageActionTaskAssignment
+  - Az.StorageAction.Get-AzStorageActionTasksReport
+  - Az.StorageAction.Invoke-AzStorageActionTaskPreviewAction
+  - Az.StorageAction.New-AzStorageActionTask
+  - Az.StorageAction.New-AzStorageActionTaskOperationObject
+  - Az.StorageAction.New-AzStorageActionTaskPreviewBlobPropertiesObject
+  - Az.StorageAction.New-AzStorageActionTaskPreviewKeyValuePropertiesObject
+  - Az.StorageAction.Remove-AzStorageActionTask
+  - Az.StorageAction.Update-AzStorageActionTask
+description: |-
+  Microsoft Azure PowerShell: StorageAction cmdlets
+metadata:
+  Module Name: Az.StorageAction
+  Module Guid: cc1d1de1-1601-4440-82c6-76c6673d8aba
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.storageaction
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/Az.StorageAction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/Az.StorageAction.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

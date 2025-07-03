@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryVaultSettings
+name: Get-AzureSiteRecoveryVaultSettings
+module: Azure
+isPreview: false
+summary: |-
+  Gets settings for a Site Recovery vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryVaultSettings** cmdlet gets settings related to the current Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryVaultSettings
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get settings information'
+  description: |-
+    ```
+    PS C:\> Get-AzureSiteRecoveryVaultSettings
+    ResourceName                                                CloudServiceName
+    ------------                                                ----------------
+    ContosoVault                                                RecoveryServices-6JP23WE3SKKOM5AFQG2YQAI22MNOWK52QDKWMUP...
+    ```
+
+    This command gets settings information for the current  Azure Site Recovery vault.
+links:
+- text: Get-AzureSiteRecoveryVaultSettingsFile
+  href: ./Get-AzureSiteRecoveryVaultSettingsFile.yml
+- text: Import-AzureSiteRecoveryVaultSettingsFile
+  href: ./Import-AzureSiteRecoveryVaultSettingsFile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 305511DC-477F-4A33-8B16-063B39B19ED3
+  PlatyPS schema version: 2024-05-01

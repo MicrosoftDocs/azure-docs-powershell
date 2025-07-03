@@ -1,0 +1,246 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sphere.Get-AzSphereProduct
+name: Get-AzSphereProduct
+module: Az.Sphere
+isPreview: false
+summary: |-
+  Get a Product.
+  '.default' and '.unassigned' are system defined values and cannot be used for product name.
+description: |-
+  Get a Product.
+  '.default' and '.unassigned' are system defined values and cannot be used for product name.
+parameters:
+  cmdletParameters:
+  - name: CatalogInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CatalogName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of catalog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of product.
+    aliases:
+    - ProductName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCatalog
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSphereProduct
+        -CatalogName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSphereProduct
+        -CatalogName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereProduct
+        -Name <String>
+        -CatalogInputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCatalog
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSphereProduct
+        -InputObject <ISphereIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.ISphereIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Sphere.Models.IProduct" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List with specified catalog by resource group'
+  description: |-
+    ```powershell
+    Get-AzSphereProduct -ResourceGroupName group-test -CatalogName test2024
+    ```
+
+    ```output
+    Name        SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----        ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    product2024                                                                                                                                                group-test
+    product0207                                                                                                                                                group-test
+    ```
+
+    This command gets list of product with specified catalog by resource group.
+- title: 'Example 2: Get product with specified catalog and resource group'
+  description: |-
+    ```powershell
+    Get-AzSphereProduct -ResourceGroupName group-test -CatalogName test2024 -Name product2024
+    ```
+
+    ```output
+    Description                  : 222
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789103/resourceGroups/group-test/providers/Microsoft.AzureSphere/catalogs/test2024/products/product2024
+    Name                         : product2024
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : group-test
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.AzureSphere/catalogs/products
+    ```
+
+    This command gets specific product with specified catalog and resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereProduct.md
+  document type: cmdlet
+  external help file: Az.Sphere-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sphere/get-azsphereproduct
+  Module Name: Az.Sphere
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Get-AzSphereProduct.md
+  PlatyPS schema version: 2024-05-01

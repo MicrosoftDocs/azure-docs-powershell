@@ -1,0 +1,517 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Maintenance.New-AzMaintenanceConfiguration
+name: New-AzMaintenanceConfiguration
+module: Az.Maintenance
+isPreview: false
+summary: |-
+  Create or Update configuration record
+description: |-
+  Create or Update configuration record
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Duration
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The duration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpirationDateTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The expirationDateTime of the schedule in format YYYY-MM-DD hh:mm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionProperty
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The Extension properties per resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstallPatchRebootSetting
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Install Patch Reboot Option. Allowed values Never, IfRequired, Always
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxParameterClassificationToInclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of linux patch classifications
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxParameterPackageNameMaskToExclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of packages to exclude during vm patch operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxParameterPackageNameMaskToInclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of packages to include during vm patch operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The maintenance configuration location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Maintenance Scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The maintenance configuration Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PostTask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of tasks executed after schedule. [{'source' :'runbook', 'taskScope': 'Resource', 'parameters': { 'arg1': 'value1'}}]. This parameter is used to specify a command or script that should be run after the maintenance tasks are performed. This can be used to perform any necessary follow-up actions after the maintenance tasks are completed. This parameter accepts a string value that specifies the command or script to be run. The command or script can be specified as a simple string or as an array of strings. If an array of strings is specified, each element in the array will be treated as a separate command or script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreTask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of tasks executed before schedule. e.g. [{'source' :'runbook', 'taskScope': 'Global', 'parameters': { 'arg1': 'value1'}}]. This parameter is used to specify a command or script that should be run before the maintenance tasks are performed. This can be used to perform any necessary preparations or cleanup actions before the maintenance tasks are run. This parameter accepts a string value that specifies the command or script to be run. The command or script can be specified as a simple string or as an array of strings. If an array of strings is specified, each element in the array will be treated as a separate command or script.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurEvery
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The schedule recurrence
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDateTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The StartDateTime of the schedule in format YYYY-MM-DD hh:mm
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The ARM Tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Timezone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The timezone
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Visibility
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The visibility of the scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowParameterClassificationToInclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of windows patch classification
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowParameterExcludeKbRequiringReboot
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Exclude KBs which require reboot
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowParameterKbNumberToExclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of KBs to exclude during vm patch operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowParameterKbNumberToInclude
+    type: <xref href="System.Collections.Generic.HashSet`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of KBs to include during vm patch operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMaintenanceConfiguration
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [-Tag <Hashtable>]
+        [-ExtensionProperty <Hashtable>]
+        [-MaintenanceScope <String>]
+        [-StartDateTime <String>]
+        [-ExpirationDateTime <String>]
+        [-Timezone <String>]
+        [-Duration <TimeSpan>]
+        [-Visibility <String>]
+        [-RecurEvery <String>]
+        [-LinuxParameterPackageNameMaskToInclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-LinuxParameterPackageNameMaskToExclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-LinuxParameterClassificationToInclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-WindowParameterKbNumberToInclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-WindowParameterKbNumberToExclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-WindowParameterClassificationToInclude <System.Collections.Generic.HashSet`1[System.String]>]
+        [-WindowParameterExcludeKbRequiringReboot <Boolean>]
+        [-InstallPatchRebootSetting <String>]
+        [-PreTask <String>]
+        [-PostTask <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Maintenance.Models.PSMaintenanceConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzMaintenanceConfiguration -ResourceGroupName smdtest -Name workervmscentralus -MaintenanceScope Host -Location centralus -StartDateTime "2020-08-01 00:00" -ExpirationDateTime "2021-08-04 00:00" -Timezone "Pacific Standard Time" -Duration 05:00 -RecurEvery Day
+    ```
+
+    ```output
+    Location            : centralus
+    Tags                : {}
+    ExtensionProperties : {}
+    MaintenanceScope    : Host
+    StartDateTime       : 2020-08-01 00:00
+    ExpirationDateTime  : 2021-08-04 00:00
+    TimeZone            : Pacific Standard Time
+    RecurEvery          : Day
+    Duration            : 05:00
+    MaintenanceScope    : Host
+    Visibility          : Custom
+    Id                  : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/smdtest/providers/Microsoft.Maintenance/maintenanceConfigurations/workervmscentralus
+    Name                : workervmscentralus
+    Type                : Microsoft.Maintenance/maintenanceConfigurations
+    ```
+
+    Create a maintenance configuration with scope Host
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzMaintenanceConfiguration -ResourceGroupName sample-rg  -Name PatchSchedule -MaintenanceScope "InGuestPatch" -Location westeurope -Timezone "UTC" -StartDateTime "2025-10-09 12:30" -Duration "3:00" -RecurEvery "Day" -LinuxParameterClassificationToInclude @('Other') -LinuxParameterPackageNameMaskToInclude @('lib', 'kernel') -LinuxParameterPackageNameMaskToExclude @('curl', 'vim') -WindowParameterClassificationToInclude @('Critical', 'Security') -WindowParameterKbNumberToInclude @('5035849', '5035857') -WindowParameterKbNumberToExclude @('5034439')  -ExtensionProperty @{inGuestPatchMode="User"} -InstallPatchRebootSetting "IfRequired"  -Debug
+    ```
+
+    ```output
+    Location                               : westeurope
+    Tags                                   : {"resource":"test"}
+    ExtensionProperties                    : {"inGuestPatchMode":"User"}
+    MaintenanceScope                       : InGuestPatch
+    Id                                     :
+    /subscriptions/783fd652-64f3-4680-81e9-0b978c542005/resourcegroups/sample-rg/providers/Microsoft.Maintenance/maintenanceConfigurations/PatchSchedule
+    Name                                   : PatchSchedule
+    Type                                   : Microsoft.Maintenance/maintenanceConfigurations
+    StartDateTime                          : 2025-10-09 12:30
+    Duration                               : 03:00
+    Timezone                               : UTC
+    Visibility                             : Custom
+    RecurEvery                             : Day
+    LinuxParameterClassificationToInclude  :
+    LinuxParameterPackageNameMaskToExclude :
+    LinuxParameterPackageNameMaskToInclude : apt
+                                             httpd
+    WindowParameterKbNumberToInclude       :
+    WindowParameterKbNumberToExclude       :
+    WindowParameterClassificationToInclude :
+    InstallPatchRebootSetting              : IfRequired
+    ```
+
+    Create a maintenance configuration with scope InGuest
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/New-AzMaintenanceConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Maintenance.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.maintenance/new-azmaintenanceconfiguration
+  Module Name: Az.Maintenance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/New-AzMaintenanceConfiguration.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzDiskEncryptionSet
+name: Get-AzDiskEncryptionSet
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list disk encryption sets.
+description: |-
+  Get or list disk encryption sets.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of disk encryption set.
+    aliases:
+    - DiskEncryptionSetName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDiskEncryptionSet
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDiskEncryptionSet" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDiskEncryptionSet -ResourceGroupName rg1 -Name enc1;
+    ```
+
+    ```output
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+    ```
+
+    Get disk encryption set 'enc1'
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzDiskEncryptionSet
+    ```
+
+    ```output
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc2
+    Name              : enc2
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+    ```
+
+    Get all disk encryption sets in resource group 'rg1'.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzDiskEncryptionSet -ResourceGroupName rg1
+    ```
+
+    ```output
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc1
+    Name              : enc1
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg1
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc2
+    Name              : enc2
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+
+    ResourceGroupName : rg2
+    Identity          : Microsoft.Azure.Management.Compute.Models.EncryptionSetIdentity
+    ActiveKey         : Microsoft.Azure.Management.Compute.Models.KeyVaultAndKeyReference
+    PreviousKeys      : {}
+    ProvisioningState : Succeeded
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/providers/Microsoft.Compute/diskEncryptionSets/enc3
+    Name              : enc3
+    Type              : Microsoft.Compute/diskEncryptionSets
+    Location          : westcentralus
+    Tags              : {}
+    ```
+
+    Get all disk encryption sets in subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzDiskEncryptionSet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azdiskencryptionset
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzDiskEncryptionSet.md
+  PlatyPS schema version: 2024-05-01

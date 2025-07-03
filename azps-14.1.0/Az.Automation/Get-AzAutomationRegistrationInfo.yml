@@ -1,0 +1,105 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationRegistrationInfo
+name: Get-AzAutomationRegistrationInfo
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets registration information for onboarding a DSC node or hybrid worker to Automation.
+description: |-
+  The **Get-AzAutomationRegistrationInfo** cmdlet gets the endpoint and keys required to onboard a Desired State Configuration (DSC) node or hybrid worker into an Azure Automation account.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of Automation account for which this cmdlet gets registration information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+      This cmdlet gets registration information for the resource group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationRegistrationInfo
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.AgentRegistration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get registration information'
+  description: |-
+    ```powershell
+    Get-AzAutomationRegistrationInfo -ResourceGroupName "ResourceGroup01" -AutomationAccountName "AutomationAccount01"
+    ```
+
+    This command gets the registration information for the Automation account named AutomationAccount01 in the Resource Group named ResourceGroup01.
+links:
+- text: Get-AzAutomationAccount
+  href: ./Get-AzAutomationAccount.yml
+- text: Get-AzAutomationDscNode
+  href: ./Get-AzAutomationDscNode.yml
+- text: New-AzAutomationKey
+  href: ./New-AzAutomationKey.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationRegistrationInfo.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationregistrationinfo
+  Module Name: Az.Automation
+  ms.assetid: 09823BE3-A98B-42EF-B6F4-99F95F2B342E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationRegistrationInfo.md
+  PlatyPS schema version: 2024-05-01

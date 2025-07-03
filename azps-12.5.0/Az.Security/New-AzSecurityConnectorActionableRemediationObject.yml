@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityConnectorActionableRemediationObject
+name: New-AzSecurityConnectorActionableRemediationObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for ActionableRemediation.
+description: |-
+  Create an in-memory object for ActionableRemediation.
+parameters:
+  cmdletParameters:
+  - name: BranchConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ITargetBranchConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Repository branch configuration for PR Annotations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CategoryConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ICategoryConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets list of categories and severity levels.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InheritFromParentState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Update Settings.
+
+              Enabled - Resource should inherit configurations from parent.
+              Disabled - Resource should not inherit configurations from parent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ActionableRemediation Setting.
+              None - the setting was never set.
+              Enabled - ActionableRemediation is enabled.
+              Disabled - ActionableRemediation is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityConnectorActionableRemediationObject
+        [-BranchConfiguration <ITargetBranchConfiguration>]
+        [-CategoryConfiguration <ICategoryConfiguration[]>]
+        [-InheritFromParentState <String>]
+        [-State <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ActionableRemediation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new ActionableRemediation object'
+  description: |-
+    ```powershell
+    New-AzSecurityConnectorActionableRemediationObject -State Enabled -InheritFromParentState Disabled `
+                -BranchConfiguration @{AnnotateDefaultBranch="Enabled"; branchName=@("main", "hotfix")} -CategoryConfiguration @( @{category="First"; minimumSeverityLevel="High"}, @{category="Second"; minimumSeverityLevel="Low"})
+    ```
+
+    ```output
+    BranchConfiguration    : {
+                               "branchNames": [ "main", "hotfix" ],
+                               "annotateDefaultBranch": "Enabled"
+                             }
+    CategoryConfiguration  : {{
+                               "minimumSeverityLevel": "High",
+                               "category": "First"
+                             }, {
+                               "minimumSeverityLevel": "Low",
+                               "category": "Second"
+                             }}
+    InheritFromParentState : Disabled
+    State                  : Enabled
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityConnectorActionableRemediationObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecurityconnectoractionableremediationobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityConnectorActionableRemediationObject.md
+  PlatyPS schema version: 2024-05-01

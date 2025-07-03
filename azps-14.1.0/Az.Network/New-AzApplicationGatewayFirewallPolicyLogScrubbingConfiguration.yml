@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration
+name: New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a log scrubbing configuration for firewall policy
+description: |-
+  The **New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration** creates a log scrubbing configuration for firewall policy.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScrubbingRule
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallPolicyLogScrubbingRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The rules that are applied to the logs for scrubbing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the log scrubbing config. Default value is Enabled.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: Enabled
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration
+        -State <String>
+        -ScrubbingRule <PSApplicationGatewayFirewallPolicyLogScrubbingRule[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallPolicySettings" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $logScrubbingRuleConfig = New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration -State Enabled -ScrubbingRule $logScrubbingRule1
+    ```
+
+    The command creates a log scrubbing rule configuration with state as enable, ScrubbingRule as $logScrubbingRule1.
+    The new log scrubbing rule configuration is stored to $logScrubbingRuleConfig.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfirewallpolicylogscrubbingconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallPolicyLogScrubbingConfiguration.md
+  PlatyPS schema version: 2024-05-01

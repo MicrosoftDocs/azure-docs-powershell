@@ -1,0 +1,108 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.New-AzEventHubKeyVaultPropertiesObject
+name: New-AzEventHubKeyVaultPropertiesObject
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Create an in-memory object for KeyVaultProperties.
+description: |-
+  Create an in-memory object for KeyVaultProperties.
+parameters:
+  cmdletParameters:
+  - name: KeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Key from KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Uri of KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key Version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of user Identity selected for encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventHubKeyVaultPropertiesObject
+        [-KeyName <String>]
+        [-KeyVaultUri <String>]
+        [-KeyVersion <String>]
+        [-UserAssignedIdentity <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.KeyVaultProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Construct an in-memory KeyVaultProperties object'
+  description: |-
+    ```powershell
+    New-AzEventHubKeyVaultPropertiesObject -KeyName key1 -KeyVaultUri https://testkeyvault.vault.azure.net
+    ```
+
+    Creates an in-memory object of type `IKeyVaultProperties`.
+    An array of `IKeyVaultProperties` can be fed as
+    input to `KeyVaultProperty` parameter of New-AzEventHubNamespaceV2 and Set-AzEventHubNamespaceV2 to enable encryption.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubKeyVaultPropertiesObject.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventHub/new-azeventhubkeyvaultpropertiesobject
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubKeyVaultPropertiesObject.md
+  PlatyPS schema version: 2024-05-01

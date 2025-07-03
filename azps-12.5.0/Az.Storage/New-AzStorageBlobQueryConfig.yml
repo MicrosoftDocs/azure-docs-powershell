@@ -1,0 +1,200 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageBlobQueryConfig
+name: New-AzStorageBlobQueryConfig
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates a blob query configuration object, which can be used in Get-AzStorageBlobQueryResult.
+description: |-
+  The **New-AzStorageBlobQueryConfig** cmdlet creates a blob query configuration object, which can be used in Get-AzStorageBlobQueryResult.
+parameters:
+  cmdletParameters:
+  - name: AsCsv
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicate to create a Blob Query Configuration for CSV.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Csv
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJson
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicate to create a Blob Query Configuration for Json.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Json
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ColumnSeparator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      The string used to separate columns.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Csv
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EscapeCharacter
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Char" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optional.
+      The char used as an escape character.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Csv
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HasHeader
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Indicate it represent the data has headers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Csv
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QuotationCharacter
+    type: <xref href="System.Char" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      The char used to quote a specific field.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Csv
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordSeparator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      The string used to separate records.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageBlobQueryConfig
+        [-AsCsv]
+        [-RecordSeparator <String>]
+        [-ColumnSeparator <String>]
+        [-QuotationCharacter <Char>]
+        [-EscapeCharacter <Char>]
+        [-HasHeader]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Csv
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzStorageBlobQueryConfig
+        [-AsJson]
+        [-RecordSeparator <String>]
+        [-AsJob]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Json
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.PSBlobQueryTextConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create blob query configures , and query a blob'
+  description: |-
+    ```powershell
+    $inputconfig = New-AzStorageBlobQueryConfig -AsCsv -ColumnSeparator "," -QuotationCharacter """" -EscapeCharacter "\" -RecordSeparator "`n" -HasHeader
+
+    $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n"
+
+    $queryString = "SELECT * FROM BlobStorage WHERE Name = 'a'"
+
+    $result = Get-AzStorageBlobQueryResult -Container $containerName -Blob $blobName -QueryString $queryString -ResultFile "c:\resultfile.json" -InputTextConfiguration $inputconfig -OutputTextConfiguration $outputconfig -Context $ctx
+
+    $result
+    ```
+
+    ```output
+    BytesScanned FailureCount BlobQueryError
+    ------------ ------------ --------------
+             449            0
+    ```
+
+    This command first create input configuration object as csv, and output configuration object as json, then use the 2 configurations to query blob.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobQueryConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.storage/new-azstorageblobqueryconfig
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageBlobQueryConfig.md
+  PlatyPS schema version: 2024-05-01

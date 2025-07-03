@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzP2sVpnGatewayConnectionHealth
+name: Get-AzP2sVpnGatewayConnectionHealth
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the current aggregated point to site connections health information from P2SVpnGateway.
+description: |-
+  The **Get-AzP2sVpnGatewayConnectionHealth** cmdlet enables you to get the current aggregated health of point to site connections from P2SVpnGateway. Aggregated health shows number of point to site clients connected to P2SVpnGateway, total ingress and egress bytes transferred through P2SVpnGateway and allocated ip addresses for connected point to site clients.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The p2s vpn gateway object to be modified
+    aliases:
+    - P2SVpnGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID of the P2SVpnGateway to be modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByP2SVpnGatewayResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzP2sVpnGatewayConnectionHealth
+        -ResourceGroupName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzP2sVpnGatewayConnectionHealth
+        -InputObject <PSP2SVpnGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzP2sVpnGatewayConnectionHealth
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByP2SVpnGatewayResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzP2sVpnGatewayConnectionHealth -ResourceGroupName P2SCortexGATesting -Name 683482ade8564515aed4b8448c9757ea-westus-gw
+    ```
+
+    ```output
+    ResourceGroupName              : P2SCortexGATesting
+    Name                           : 683482ade8564515aed4b8448c9757ea-westus-gw
+    Id                             : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482ade8564515a
+                                     ed4b8448c9757ea-westus-gw
+    Location                       : westus
+    VpnGatewayScaleUnit            : 1
+    VirtualHub                     : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub
+    VpnServerConfiguration         : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/WestUsConfig
+    VpnServerConfigurationLocation :
+    VpnClientConnectionHealth      : {
+    				  "VpnClientConnectionsCount": 2,
+     			          "AllocatedIpAddresses": { "192.168.2.1", "192.168.2.2" },
+     			          "TotalIngressBytesTransferred": 100,
+     			          "TotalEgressBytesTransferred": 200
+    				 }
+    Type                           : Microsoft.Network/p2sVpnGateways
+    ProvisioningState              : Succeeded
+    P2SConnectionConfigurations    : [
+                                       {
+                                         "ProvisioningState": "Succeeded",
+                                         "VpnClientAddressPool": {
+                                           "AddressPrefixes": [
+                                             "192.168.2.0/24"
+                                           ]
+                                         },
+                                         "Name": "P2SConnectionConfigDefault",
+                                         "Etag": "W/\"4b96e6a2-b4d8-46b3-9210-76d40f359bef\"",
+                                         "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482
+                                     ade8564515aed4b8448c9757ea-westus-gw/p2sConnectionConfigurations/P2SConnectionConfigDefault"
+                                       }
+                                     ]
+    ```
+
+    The **Get-AzP2sVpnGatewayConnectionHealth** cmdlet enables you to get the current aggregated health of point to site connections from P2SVpnGateway. Above command let output health shows that number of point to site clients connected to P2SVpnGateway are 2. Total ingress and egress bytes transferred through P2SVpnGateway are 100 and 200 respectively. Allocated ip addresses for connected point to site clients are "192.168.2.1", "192.168.2.2".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzP2sVpnGatewayConnectionHealth.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azp2svpngatewayconnectionhealth
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzP2sVpnGatewayConnectionHealth.md
+  PlatyPS schema version: 2024-05-01

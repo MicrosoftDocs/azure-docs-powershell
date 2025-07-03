@@ -1,0 +1,155 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DiskPool.Get-AzDiskPoolOutboundNetworkDependencyEndpoint
+name: Get-AzDiskPoolOutboundNetworkDependencyEndpoint
+module: Az.DiskPool
+isPreview: false
+summary: |-
+  Gets the network endpoints of all outbound dependencies of a Disk Pool
+description: |-
+  Gets the network endpoints of all outbound dependencies of a Disk Pool
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Disk Pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDiskPoolOutboundNetworkDependencyEndpoint
+        -DiskPoolName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IOutboundEnvironmentEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List network dependency endpoints for a Disk pool'
+  description: |-
+    ```powershell
+    Get-AzDiskPoolOutboundNetworkDependencyEndpoint -DiskPoolName disk-pool-1 -ResourceGroupName storagepool-rg-test | Format-Table -Wrap
+    ```
+
+    ```output
+    Category              Endpoint
+    --------              --------
+    Microsoft Event Hub   {{
+                            "domainName": "evhns-rp-prod-eus2euap.servicebus.windows.net",
+                            "endpointDetails": [
+                              {
+                                "port": 443
+                              }
+                            ]
+                          }}
+    Microsoft Service Bus {{
+                            "domainName": "sb-rp-prod-eus2euap.servicebus.windows.net",
+                            "endpointDetails": [
+                              {
+                                "port": 443
+                              }
+                            ]
+                          }}
+    Microsoft Storage     {{
+                            "domainName": "strpprodeus2euap.blob.core.windows.net",
+                            "endpointDetails": [
+                              {
+                                "port": 443
+                              }
+                            ]
+                          }, {
+                            "domainName": "stbsprodeus2euap.blob.core.windows.net",
+                            "endpointDetails": [
+                              {
+                                "port": 443
+                              }
+                            ]
+                          }}
+    Microsoft Apt Mirror  {{
+                            "domainName": "azure.archive.ubuntu.com",
+                            "endpointDetails": [
+                              {
+                                "port": 443
+                              }
+                            ]
+                          }}
+    ```
+
+    The command lists all outbound network dependency endpoints for a Disk pool.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Get-AzDiskPoolOutboundNetworkDependencyEndpoint.md
+  document type: cmdlet
+  external help file: Az.DiskPool-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.diskpool/get-azdiskpooloutboundnetworkdependencyendpoint
+  Module Name: Az.DiskPool
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Get-AzDiskPoolOutboundNetworkDependencyEndpoint.md
+  PlatyPS schema version: 2024-05-01

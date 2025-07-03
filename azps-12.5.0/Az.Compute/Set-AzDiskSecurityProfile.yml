@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzDiskSecurityProfile
+name: Set-AzDiskSecurityProfile
+module: Az.Compute
+isPreview: false
+summary: |-
+  Set SecurityProfile on managed disk
+description: |-
+  Set the SecurityProfile on managed disks.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disk
+    type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDisk" data-throw-if-not-resolved="False" />
+    description: |-
+      Disk Security Profile
+    aliases:
+    - DiskSecurityProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureVMDiskEncryptionSet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceId of the disk encryption set to use for enabling encryption at rest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Security Type of Disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDiskSecurityProfile
+        [-Disk] <PSDisk>
+        -SecurityType <String>
+        [-SecureVMDiskEncryptionSet <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDisk" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $diskconfig = New-AzDiskConfig -DiskSizeGB 10 -AccountType PremiumLRS -OsType Windows -CreateOption FromImage;
+    $image = '/subscriptions/0000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/images/TestImage123';
+    $diskconfig = Set-AzDiskImageReference -Disk $diskconfig -Id $image -Lun 0;
+    $diskconfig = Set-AzDiskSecurityProfile -Disk $diskconfig -SecurityType "TrustedLaunch";
+    $disk = New-AzDisk -ResourceGroupName 'ResourceGroup01' -DiskName 'Disk01' -Disk $diskconfig;
+    # $disk.Properties.SecurityProfile.SecurityType == "TrustedLaunch";
+    ```
+
+    Customers can set the SecurityType of managed Disks.
+- title: 'Example 2: Create a Disk with a Disk Encryption Set with the encryption type of ConfidentialVM_DiskEncryptedWithCustomerKey'
+  description: |-
+    ```powershell
+    $Location = "northeurope";
+    $KeyVaultName = "val" + $rgname;
+    $KeyName = "key" + $rgname;
+    $DesName= "des" + $rgname;
+    $KeySize = 3072;
+
+    $SecurePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
+    $User = "Username";
+    $Cred = New-Object System.Management.Automation.PSCredential ($User, $SecurePassword);
+
+    New-AzKeyVault -Name $KeyVaultName -Location $Location -ResourceGroupName $ResourceGroupName -Sku Premium -EnablePurgeProtection -EnabledForDiskEncryption;
+
+    # Add Key vault Key
+    Add-AzKeyVaultKey -VaultName $KeyVaultName -Name $KeyName -Size $KeySize -KeyOps wrapKey,unwrapKey -KeyType RSA -Destination HSM -Exportable -UseDefaultCVMPolicy;
+
+    # Capture Keyvault and key details
+    $KeyVaultId = (Get-AzKeyVault -VaultName $KeyVaultName -ResourceGroupName $ResourceGroupName).ResourceId;
+    $KeyUrl = (Get-AzKeyVaultKey -VaultName $KeyVaultName -KeyName $KeyName).Key.Kid;
+
+    # Create new DES Config and DES
+    $diskEncryptionType = "ConfidentialVmEncryptedWithCustomerKey";
+    $desConfig = New-AzDiskEncryptionSetConfig -Location $Location -SourceVaultId $keyvaultId -KeyUrl $keyUrl -IdentityType SystemAssigned -EncryptionType $diskEncryptionType;
+    New-AzDiskEncryptionSet -ResourceGroupName $ResourceGroupName -Name $DesName -DiskEncryptionSet $desConfig;
+    $diskencset = Get-AzDiskEncryptionSet -ResourceGroupName $ResourceGroupName -Name $desName;
+
+    # Assign DES Access Policy to key vault
+    $desIdentity = (Get-AzDiskEncryptionSet -Name $DesName -ResourceGroupName $ResourceGroupName).Identity.PrincipalId;
+    Set-AzKeyVaultAccessPolicy -VaultName $KeyVaultName -ResourceGroupName $ResourceGroupName -ObjectId $desIdentity -PermissionsToKeys wrapKey,unwrapKey,get -BypassObjectIdValidation;
+
+    $diskSecurityType = "ConfidentialVM_DiskEncryptedWithCustomerKey";
+    $diskName = "diskname";
+    $diskconfig = New-AzDiskConfig -AccountType Premium_LRS -OsType Windows -CreateOption FromImage -Location $Location;
+    $diskconfig = Set-AzDiskImageReference -Disk $diskconfig -Id "/Subscriptions/e37510d7-33b6-4676-886f-ee75bcc01871/Providers/Microsoft.Compute/Locations/northeurope/Publishers/MicrosoftWindowsServer/ArtifactTypes/VMImage/Offers/windows-cvm/Skus/2019-datacenter-cvm/Versions/latest";
+    $diskconfig = Set-AzDiskSecurityProfile -Disk $diskconfig -SecurityType $diskSecurityType -SecureVMDiskEncryptionSet $diskencset.id;
+    New-AzDisk -ResourceGroupName $ResourceGroupName -DiskName $diskName -Disk $diskconfig;
+    $disk = Get-AzDisk -ResourceGroupName $ResourceGroupName -DiskName $diskName;
+    # Verify the SecurityType value.
+    # $disk.Properties.SecurityProfile.SecurityType returns "ConfidentialVM";
+    ```
+- title: 'Example 3: Set the SecurityType to Standard to avoid TrustedLaunch defaulting.'
+  description: |-
+    ```powershell
+    $rgname = <Resource Group Name>;
+    $loc = <Azure Region>;
+    New-AzResourceGroup -Name $rgname -Location $loc -Force;
+    $securityTypeStnd = "Standard";
+
+    # Standard SecurityType
+    $diskconfig = New-AzDiskConfig -Location $loc -DiskSizeGB 1 -AccountType "Premium_LRS" -OsType "Windows" -CreateOption "Empty" -HyperVGeneration "V1";
+    $diskname = "diskstnd" + $rgname;
+    $diskconfig = Set-AzDiskSecurityProfile -Disk $diskconfig -SecurityType $securityTypeStnd;
+    $diskPr = New-AzDisk -ResourceGroupName $rgname -DiskName $diskname -Disk $diskconfig;
+    $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname;
+    # Verify $disk.SecurityProfile is null;
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzDiskSecurityProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/set-azdisksecurityprofile
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzDiskSecurityProfile.md
+  PlatyPS schema version: 2024-05-01

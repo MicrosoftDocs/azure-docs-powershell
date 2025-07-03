@@ -1,0 +1,75 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Reset-AzureVirtualNetworkGateway
+name: Reset-AzureVirtualNetworkGateway
+module: Azure
+isPreview: false
+summary: |-
+  Resets a virtual network gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Reset-AzureVirtualNetworkGateway** cmdlet resets a virtual network gateway.
+parameters:
+  cmdletParameters:
+  - name: GatewayId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Reset-AzureVirtualNetworkGateway
+        -GatewayId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Get-AzureVirtualNetworkGateway
+  href: ./Get-AzureVirtualNetworkGateway.yml
+- text: New-AzureVirtualNetworkGateway
+  href: ./New-AzureVirtualNetworkGateway.yml
+- text: Remove-AzureVirtualNetworkGateway
+  href: ./Remove-AzureVirtualNetworkGateway.yml
+- text: Resize-AzureVirtualNetworkGateway
+  href: ./Resize-AzureVirtualNetworkGateway.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CD735391-62A8-40EC-B2F1-9044DC0676CA
+  PlatyPS schema version: 2024-05-01

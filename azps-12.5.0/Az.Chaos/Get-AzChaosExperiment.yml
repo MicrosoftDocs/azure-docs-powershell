@@ -1,0 +1,401 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Chaos.Get-AzChaosExperiment
+name: Get-AzChaosExperiment
+module: Az.Chaos
+isPreview: false
+summary: |-
+  Get a Experiment resource.
+description: |-
+  Get a Experiment resource.
+parameters:
+  cmdletParameters:
+  - name: ContinuationToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String that sets the continuation token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IChaosIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String that represents a Experiment resource name.
+    aliases:
+    - ExperimentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String that represents an Azure resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Running
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional value that indicates whether to filter results based on if the Experiment is currently running.
+      If null, then the results will not be filtered.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      GUID that represents an Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExperiment
+        [-SubscriptionId <String[]>]
+        [-ContinuationToken <String>]
+        [-Running]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExperiment
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExperiment
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-ContinuationToken <String>]
+        [-Running]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzChaosExperiment
+        -InputObject <IChaosIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IChaosIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.IExperiment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Experiment resource.'
+  description: |-
+    ```powershell
+    Get-AzChaosExperiment
+    ```
+
+    ```output
+    Id                           : /subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/Microsoft.Chaos/experiments/experiment-test
+    IdentityPrincipalId          :
+    IdentityTenantId             :
+    IdentityType                 :
+    IdentityUserAssignedIdentity : {
+                                   }
+    Location                     : eastus
+    Name                         : experiment-test
+    ProvisioningState            :
+    ResourceGroupName            : azps_test_group_chaos
+    Selector                     : {{
+                                     "type": "List",
+                                     "id": "84f2321b-b84c-4f61-ae0d-f18521c86477",
+                                     "targets": [
+                                       {
+                                         "type": "ChaosTarget",
+                                         "id": "/subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/microsoft.compute/virtualmachines/exampleVM/providers/Microsoft.C
+                                   haos/targets/microsoft-virtualmachine"
+                                       }
+                                     ]
+                                   }}
+    Step                         : {{
+                                     "name": "Step 1",
+                                     "branches": [
+                                       {
+                                         "name": "Branch 1",
+                                         "actions": [
+                                           {
+                                             "type": "continuous",
+                                             "name": "urn:csci:microsoft:virtualMachine:shutdown/1.0",
+                                             "duration": "PT10M",
+                                             "parameters": [
+                                               {
+                                                 "key": "abruptShutdown",
+                                                 "value": "false"
+                                               }
+                                             ],
+                                             "selectorId": "84f2321b-b84c-4f61-ae0d-f18521c86477"
+                                           }
+                                         ]
+                                       }
+                                     ]
+                                   }}
+    SystemDataCreatedAt          : 2024-03-18 10:35:30 AM
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 2024-03-18 10:35:30 AM
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.Chaos/experiments
+    ```
+
+    List Experiment resource.
+- title: 'Example 2: List Experiment resource.'
+  description: |-
+    ```powershell
+    Get-AzChaosExperiment -ResourceGroupName azps_test_group_chaos
+    ```
+
+    ```output
+    Id                           : /subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/Microsoft.Chaos/experiments/experiment-test
+    IdentityPrincipalId          :
+    IdentityTenantId             :
+    IdentityType                 :
+    IdentityUserAssignedIdentity : {
+                                   }
+    Location                     : eastus
+    Name                         : experiment-test
+    ProvisioningState            :
+    ResourceGroupName            : azps_test_group_chaos
+    Selector                     : {{
+                                     "type": "List",
+                                     "id": "84f2321b-b84c-4f61-ae0d-f18521c86477",
+                                     "targets": [
+                                       {
+                                         "type": "ChaosTarget",
+                                         "id": "/subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/microsoft.compute/virtualmachines/exampleVM/providers/Microsoft.C
+                                   haos/targets/microsoft-virtualmachine"
+                                       }
+                                     ]
+                                   }}
+    Step                         : {{
+                                     "name": "Step 1",
+                                     "branches": [
+                                       {
+                                         "name": "Branch 1",
+                                         "actions": [
+                                           {
+                                             "type": "continuous",
+                                             "name": "urn:csci:microsoft:virtualMachine:shutdown/1.0",
+                                             "duration": "PT10M",
+                                             "parameters": [
+                                               {
+                                                 "key": "abruptShutdown",
+                                                 "value": "false"
+                                               }
+                                             ],
+                                             "selectorId": "84f2321b-b84c-4f61-ae0d-f18521c86477"
+                                           }
+                                         ]
+                                       }
+                                     ]
+                                   }}
+    SystemDataCreatedAt          : 2024-03-18 10:35:30 AM
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 2024-03-18 10:35:30 AM
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.Chaos/experiments
+    ```
+
+    List Experiment resource.
+- title: 'Example 3: Get a Experiment resource.'
+  description: |-
+    ```powershell
+    Get-AzChaosExperiment -ResourceGroupName azps_test_group_chaos -Name experiment-test
+    ```
+
+    ```output
+    Id                           : /subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/Microsoft.Chaos/experiments/experiment-test
+    IdentityPrincipalId          :
+    IdentityTenantId             :
+    IdentityType                 :
+    IdentityUserAssignedIdentity : {
+                                   }
+    Location                     : eastus
+    Name                         : experiment-test
+    ProvisioningState            :
+    ResourceGroupName            : azps_test_group_chaos
+    Selector                     : {{
+                                     "type": "List",
+                                     "id": "84f2321b-b84c-4f61-ae0d-f18521c86477",
+                                     "targets": [
+                                       {
+                                         "type": "ChaosTarget",
+                                         "id": "/subscriptions/{subId}/resourceGroups/azps_test_group_chaos/providers/microsoft.compute/virtualmachines/exampleVM/providers/Microsoft.C
+                                   haos/targets/microsoft-virtualmachine"
+                                       }
+                                     ]
+                                   }}
+    Step                         : {{
+                                     "name": "Step 1",
+                                     "branches": [
+                                       {
+                                         "name": "Branch 1",
+                                         "actions": [
+                                           {
+                                             "type": "continuous",
+                                             "name": "urn:csci:microsoft:virtualMachine:shutdown/1.0",
+                                             "duration": "PT10M",
+                                             "parameters": [
+                                               {
+                                                 "key": "abruptShutdown",
+                                                 "value": "false"
+                                               }
+                                             ],
+                                             "selectorId": "84f2321b-b84c-4f61-ae0d-f18521c86477"
+                                           }
+                                         ]
+                                       }
+                                     ]
+                                   }}
+    SystemDataCreatedAt          : 2024-03-18 10:35:30 AM
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 2024-03-18 10:35:30 AM
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.Chaos/experiments
+    ```
+
+    Get a Experiment resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Get-AzChaosExperiment.md
+  document type: cmdlet
+  external help file: Az.Chaos-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.chaos/get-azchaosexperiment
+  Module Name: Az.Chaos
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Get-AzChaosExperiment.md
+  PlatyPS schema version: 2024-05-01

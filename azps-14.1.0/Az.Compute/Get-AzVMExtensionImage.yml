@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzVMExtensionImage
+name: Get-AzVMExtensionImage
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets all versions for an Azure extension.
+description: |-
+  The **Get-AzVMExtensionImage** cmdlet gets all versions for an Azure extension.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilterExpression
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a filter expression.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of an extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublisherName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an extension publisher.
+      To obtain an extension publisher, use the Get-AzVMImagePublisher cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of the extension.
+      To obtain an extension type, use the Get-AzVMExtensionImageType cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the extension that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVMExtensionImage
+        -Location <String>
+        -PublisherName <String>
+        -Type <String>
+        [-FilterExpression <String>]
+        [-Version <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineExtensionImage" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineExtensionImageDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the versions of an extension image'
+  description: |-
+    ```powershell
+    Get-AzVMExtensionImage -Location "West US" -PublisherName "Chef.Bootstrap.WindowsAzure" -Type "ChefClient"
+    ```
+
+    ```output
+    Id               : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/westus/Pub
+                       lishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/Versions/11.18.6.2
+    Location         : westus
+    PublisherName    : Chef.Bootstrap.WindowsAzure
+    Type             : ChefClient
+    Version          : 11.18.6.2
+    FilterExpression :
+
+    Id               : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/westus/Pub
+                       lishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/Versions/1207.12.3.0
+    Location         : westus
+    PublisherName    : Chef.Bootstrap.WindowsAzure
+    Type             : ChefClient
+    Version          : 1207.12.3.0
+    FilterExpression :
+
+    Id               : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/westus/Pub
+                       lishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/Versions/1210.12.109.
+                       1004
+    Location         : westus
+    PublisherName    : Chef.Bootstrap.WindowsAzure
+    Type             : ChefClient
+    Version          : 1210.12.109.1004
+    FilterExpression :
+    ```
+
+    This command gets all the versions of the extension image for the specified location, publisher, and type.
+- title: 'Example 2: Get the versions of an extension image with filter over version'
+  description: |-
+    ```powershell
+    Get-AzVMExtensionImage -Location "West US" -PublisherName "Chef.Bootstrap.WindowsAzure" -Type "ChefClient" -Version 12*
+    ```
+
+    ```output
+    Id               : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/westus/Pub
+                       lishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/Versions/1207.12.3.0
+    Location         : westus
+    PublisherName    : Chef.Bootstrap.WindowsAzure
+    Type             : ChefClient
+    Version          : 1207.12.3.0
+    FilterExpression :
+
+    Id               : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/westus/Pub
+                       lishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/Versions/1210.12.109.
+                       1004
+    Location         : westus
+    PublisherName    : Chef.Bootstrap.WindowsAzure
+    Type             : ChefClient
+    Version          : 1210.12.109.1004
+    FilterExpression :
+    ```
+
+    This command gets all the versions of the extension image for the specified location, publisher, type, and version starting with 12.
+- title: 'Example 3: Get the versions of an extension image with filter over version'
+  description: |-
+    ```powershell
+    Get-AzVMExtensionImage -Location "West US" -PublisherName "Chef.Bootstrap.WindowsAzure" -Type "ChefClient" -Version 1207.12.3.0
+    ```
+
+    ```output
+    Id                         : /Subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/Providers/Microsoft.Compute/Locations/
+                                 westus/Publishers/Chef.Bootstrap.WindowsAzure/ArtifactTypes/VMExtension/Types/ChefClient/V
+                                 ersions/1207.12.3.0
+    Location                   : westus
+    PublisherName              : Chef.Bootstrap.WindowsAzure
+    Type                       : ChefClient
+    Version                    : 1207.12.3.0
+    FilterExpression           :
+    Name                       :
+    HandlerSchema              :
+    OperatingSystem            : Windows
+    ComputeRole                : IaaS
+    SupportsMultipleExtensions : False
+    VMScaleSetEnabled          : False
+    ```
+
+    This command gets all the versions of the extension image for the specified location, publisher, type, and version.
+links:
+- text: Get-AzVMExtensionImageType
+  href: ./Get-AzVMExtensionImageType.yml
+- text: Get-AzVMImage
+  href: ./Get-AzVMImage.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtensionImage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azvmextensionimage
+  Module Name: Az.Compute
+  ms.assetid: F46041A3-355F-4449-B582-4D2F7314CA05
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVMExtensionImage.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,894 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LabServices.New-AzLabServicesLab
+name: New-AzLabServicesLab
+module: Az.LabServices
+isPreview: false
+summary: |-
+  Operation to create a lab resource.
+description: |-
+  Operation to create a lab resource.
+parameters:
+  cmdletParameters:
+  - name: AdditionalCapabilityInstallGpuDriver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to pre-install dedicated GPU drivers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminUserPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password for the user.
+      This is required for the TemplateVM createOption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminUserUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The username to use when signing in to lab VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileDisconnectDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will stay running after a user disconnects if this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileIdleDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will idle before it is shutdown if this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileNoConnectDelay
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time a VM will stay running before it is shutdown if no connection is made and this behavior is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileShutdownOnDisconnect
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether shutdown on disconnect is enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileShutdownOnIdle
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ShutdownOnIdleMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether a VM will get shutdown when it has idled for a period of time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoShutdownProfileShutdownWhenNotConnected
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether a VM will get shutdown when it hasn't been connected to after a period of time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionProfileClientRdpAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Client Access over RDP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionProfileClientSshAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Client Access over SSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionProfileWebRdpAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Web Access over RDP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionProfileWebSshAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.ConnectionType" data-throw-if-not-resolved="False" />
+    description: |-
+      The enabled access level for Web Access over SSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the lab.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image resource ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceOffer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The image offer if applicable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferencePublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The image publisher
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceSku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The image SKU
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The image version specified on creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabPlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the lab plan.
+      Used during resource creation to provide defaults and acts as a permission container when creating a lab via labs.azure.com.
+      Setting a labPlanId on an existing lab provides organization..
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the lab that uniquely identifies it within containing lab account.
+      Used in resource URIs.
+    aliases:
+    - LabName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkProfileLoadBalancerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The external load balancer resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkProfilePublicIPId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The external public IP resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkProfileSubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The external subnet resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NonAdminUserPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password for the user.
+      This is required for the TemplateVM createOption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NonAdminUserUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The username to use when signing in to lab VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RosterProfileActiveDirectoryGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The AAD group ID which this lab roster is populated from.
+      Having this set enables AAD sync mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RosterProfileLmsInstance
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The base URI identifying the lms instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RosterProfileLtiClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique id of the azure lab services tool in the lms.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RosterProfileLtiContextId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique context identifier for the lab in the lms.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RosterProfileLtiRosterEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The uri of the names and roles service endpoint on the lms for the class attached to this lab.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityProfileOpenAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether any user or only specified users can register to a lab.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      If the SKU supports scale out/in then the capacity integer should be included.
+      If scale out/in is not possible for the resource this may be omitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuFamily
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If the service has different generations of hardware, for the same SKU, then that can be captured here.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the SKU.
+      Ex - P3.
+      It is typically a letter+number code
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SKU size.
+      When the name field is the combination of tier and some other value, this would be the standalone code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.SkuTier" data-throw-if-not-resolved="False" />
+    description: |-
+      This field is required to be implemented by the Resource Provider if the service has more than one tier, but is not required on a PUT.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Title
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The title of the lab.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineProfileCreateOption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.CreateOption" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates what lab virtual machines are created from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineProfileUsageQuota
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The initial quota alloted to each lab user.
+      Must be a time span between 0 and 9999 hours.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineProfileUseSharedPassword
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Support.EnableState" data-throw-if-not-resolved="False" />
+    description: |-
+      Enabling this option will use the same password for all user VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzLabServicesLab
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -Location <String>
+        [-AdditionalCapabilityInstallGpuDriver <EnableState>]
+        [-AdminUserPassword <SecureString>]
+        [-AdminUserUsername <String>]
+        [-AutoShutdownProfileDisconnectDelay <TimeSpan>]
+        [-AutoShutdownProfileIdleDelay <TimeSpan>]
+        [-AutoShutdownProfileNoConnectDelay <TimeSpan>]
+        [-AutoShutdownProfileShutdownOnDisconnect <EnableState>]
+        [-AutoShutdownProfileShutdownOnIdle <ShutdownOnIdleMode>]
+        [-AutoShutdownProfileShutdownWhenNotConnected <EnableState>]
+        [-ConnectionProfileClientRdpAccess <ConnectionType>]
+        [-ConnectionProfileClientSshAccess <ConnectionType>]
+        [-ConnectionProfileWebRdpAccess <ConnectionType>]
+        [-ConnectionProfileWebSshAccess <ConnectionType>]
+        [-Description <String>]
+        [-ImageReferenceId <String>]
+        [-ImageReferenceOffer <String>]
+        [-ImageReferencePublisher <String>]
+        [-ImageReferenceSku <String>]
+        [-ImageReferenceVersion <String>]
+        [-LabPlanId <String>]
+        [-NetworkProfileLoadBalancerId <String>]
+        [-NetworkProfilePublicIPId <String>]
+        [-NetworkProfileSubnetId <String>]
+        [-NonAdminUserPassword <SecureString>]
+        [-NonAdminUserUsername <String>]
+        [-RosterProfileActiveDirectoryGroupId <String>]
+        [-RosterProfileLmsInstance <String>]
+        [-RosterProfileLtiClientId <String>]
+        [-RosterProfileLtiContextId <String>]
+        [-RosterProfileLtiRosterEndpoint <String>]
+        [-SecurityProfileOpenAccess <EnableState>]
+        [-SkuCapacity <Int32>]
+        [-SkuFamily <String>]
+        [-SkuName <String>]
+        [-SkuSize <String>]
+        [-SkuTier <SkuTier>]
+        [-Tag <Hashtable>]
+        [-Title <String>]
+        [-VirtualMachineProfileCreateOption <CreateOption>]
+        [-VirtualMachineProfileUsageQuota <TimeSpan>]
+        [-VirtualMachineProfileUseSharedPassword <EnableState>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.ILab" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new lab.'
+  description: |-
+    ```powershell
+    New-AzLabServicesLab `
+            -Name "NewLab" `
+            -ResourceGroupName $ENV:ResourceGroupName `
+            -Location $ENV:Location `
+            -AdditionalCapabilityInstallGpuDriver Disabled `
+            -AdminUserPassword "PlaceholderPassword" `
+            -AdminUserUsername "PlaceholderAccountName" `
+            -AutoShutdownProfileShutdownOnDisconnect Disabled `
+            -AutoShutdownProfileShutdownOnIdle None `
+            -AutoShutdownProfileShutdownWhenNotConnected Disabled `
+            -ConnectionProfileClientRdpAccess Public `
+            -ConnectionProfileClientSshAccess None `
+            -ConnectionProfileWebRdpAccess None `
+            -ConnectionProfileWebSshAccess None `
+            -Description "New lab description" `
+            -ImageReferenceOffer "Windows-10" `
+            -ImageReferencePublisher "MicrosoftWindowsDesktop" `
+            -ImageReferenceSku "20h2-pro" `
+            -ImageReferenceVersion "latest" `
+            -SecurityProfileOpenAccess Disabled `
+            -SkuCapacity 3 `
+            -SkuName "Standard" `
+            -Title $ENV:NewLabName `
+            -VirtualMachineProfileCreateOption "TemplateVM" `
+            -VirtualMachineProfileUseSharedPassword Enabled
+    ```
+
+    ```output
+    Location Name
+    -------- ----
+    westus2  NewLab
+    ```
+
+    Creates a new Lab.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/New-AzLabServicesLab.md
+  document type: cmdlet
+  external help file: Az.LabServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.labservices/new-azlabserviceslab
+  Module Name: Az.LabServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/New-AzLabServicesLab.md
+  PlatyPS schema version: 2024-05-01

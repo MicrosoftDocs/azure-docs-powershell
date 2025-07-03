@@ -1,0 +1,244 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.New-AzAutomationRunbook
+name: New-AzAutomationRunbook
+module: Az.Automation
+isPreview: false
+summary: |-
+  Creates an Automation runbook.
+description: |-
+  The **New-AzAutomationRunbook** cmdlet creates an empty Azure Automation runbook by using APS.
+  Specify a name for the runbook.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account in which this cmdlet creates a runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogProgress
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether the runbook logs progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogVerbose
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether logging includes detailed information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the runbook.
+    aliases:
+    - RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group for which this cmdlet creates a runbook.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of runbook that this cmdlet creates.
+      Valid values are:
+      - PowerShell
+      - GraphicalPowerShell
+      - PowerShellWorkflow
+      - GraphicalPowerShellWorkflow
+      - Graph
+      - Python2
+      The value Graph is obsolete.
+      It is equivalent to GraphicalPowerShellWorkflow.
+    acceptedValues:
+    - PowerShell
+    - GraphicalPowerShell
+    - PowerShellWorkflow
+    - GraphicalPowerShellWorkflow
+    - Graph
+    - Python2
+    - Python3
+    - Powershell72
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutomationRunbook
+        [-Name] <String>
+        [-Description <String>]
+        [-Tags <IDictionary>]
+        -Type <String>
+        [-LogProgress <Boolean>]
+        [-LogVerbose <Boolean>]
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Runbook" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a runbook'
+  description: |-
+    ```powershell
+    New-AzAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbook02" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    This command creates a runbook named Runbook02 in the Azure Automation account named Contoso17.
+- title: Example 2
+  description: |-
+    Creates an Automation runbook. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    New-AzAutomationRunbook -AutomationAccountName 'Contoso17' -Name 'Runbook02' -ResourceGroupName 'ResourceGroup01' -Type PowerShell
+    ```
+links:
+- text: Export-AzAutomationRunbook
+  href: ./Export-AzAutomationRunbook.yml
+- text: Get-AzAutomationRunbook
+  href: ./Get-AzAutomationRunbook.yml
+- text: Import-AzAutomationRunbook
+  href: ./Import-AzAutomationRunbook.yml
+- text: Publish-AzAutomationRunbook
+  href: ./Publish-AzAutomationRunbook.yml
+- text: Remove-AzAutomationRunbook
+  href: ./Remove-AzAutomationRunbook.yml
+- text: Set-AzAutomationRunbook
+  href: ./Set-AzAutomationRunbook.yml
+- text: Start-AzAutomationRunbook
+  href: ./Start-AzAutomationRunbook.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationRunbook.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationrunbook
+  Module Name: Az.Automation
+  ms.assetid: B6E35D4D-B2C1-4527-94A6-E7E3488F510B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationRunbook.md
+  PlatyPS schema version: 2024-05-01

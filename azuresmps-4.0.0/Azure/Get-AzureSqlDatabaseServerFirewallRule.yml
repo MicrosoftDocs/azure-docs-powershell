@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabaseServerFirewallRule
+name: Get-AzureSqlDatabaseServerFirewallRule
+module: Azure
+isPreview: false
+summary: |-
+  Gets firewall rules for Azure SQL Database Server.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabaseServerFirewallRule** cmdlet gets firewall rules for an instance of Azure SQL Database Server.
+  If you specify a firewall rule by name, this cmdlet returns information about that firewall rule.
+  Otherwise, the cmdlet returns information about all the firewall rules on the specified Azure SQL Database server.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the firewall rule that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a server.
+      This cmdlet gets firewall rules from the server that this parameter specifies.
+      Specify the server name, not the fully qualified DNS name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseServerFirewallRule
+        -ServerName <String>
+        [-RuleName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.SqlDatabaseServerFirewallRuleContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all firewall rules on a server'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y"
+    ```
+
+    This command gets all the firewall rules on the Azure SQL Database server named lpqd0zbr8y.
+- title: 'Example 2: Get a firewall rule by using its name'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseServerFirewallRule -ServerName "lpqd0zbr8y" -RuleName "FirewallRule24"
+    ```
+
+    This command gets the firewall rule named FirewallRule24 on the server named lpqd0zbr8y.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: List Firewall Rules
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505715.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: New-AzureSqlDatabaseServerFirewallRule
+  href: ./New-AzureSqlDatabaseServerFirewallRule.yml
+- text: Remove-AzureSqlDatabaseServerFirewallRule
+  href: ./Remove-AzureSqlDatabaseServerFirewallRule.yml
+- text: Set-AzureSqlDatabaseServerFirewallRule
+  href: ./Set-AzureSqlDatabaseServerFirewallRule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BE00A25D-3ECE-4B27-9D79-78128CFEBDB0
+  PlatyPS schema version: 2024-05-01

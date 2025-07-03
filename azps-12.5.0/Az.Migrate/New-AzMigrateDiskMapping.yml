@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.New-AzMigrateDiskMapping
+name: New-AzMigrateDiskMapping
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Creates a new disk mapping
+description: |-
+  The New-AzMigrateDiskMapping cmdlet creates a mapping of the source disk attached to the server to be migrated
+parameters:
+  cmdletParameters:
+  - name: DiskEncryptionSetID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encryption set to be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk ID of the disk attached to the discovered server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of disks to be used for the Azure VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsOSDisk
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the disk contains the Operating System for the source server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMigrateDiskMapping
+        -DiskID <String>
+        -IsOSDisk <String>
+        -DiskType <String>
+        [-DiskEncryptionSetID <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtDiskInput" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Make disks'
+  description: |-
+    ```powershell
+    New-AzMigrateDiskMapping -DiskID a -DiskType Standard -IsOSDisk 'true'
+    ```
+
+    ```output
+    DiskEncryptionSetId DiskId   DiskType  IsOSDisk LogStorageAccountId LogStorageAccountSasSecretName
+    ------------------- ------   --------  -------- ------------------- ------------------------------
+                          a      Standard  true
+    ```
+
+    Get disks object to provide input for New-AzMigrateServerReplication
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateDiskMapping.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/new-azmigratediskmapping
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateDiskMapping.md
+  PlatyPS schema version: 2024-05-01

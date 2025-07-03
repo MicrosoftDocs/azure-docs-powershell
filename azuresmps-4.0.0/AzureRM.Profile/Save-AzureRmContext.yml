@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Save-AzureRmContext
+name: Save-AzureRmContext
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  Saves the current authentication information for use in other PowerShell sessions.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The Save-AzureRmContext cmdlet saves the current authentication information for use in other PowerShell sessions.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overwrite the given file if it exists
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the file to which to save authentication information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureRmProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure context from which this cmdlet reads.
+      If you do not specify a context, this cmdlet reads from the local default context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Save-AzureRmContext
+        [[-Profile] <AzureRmProfile>]
+        [-Path] <String>
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Models.AzureRMProfile" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: Saving the current session's context"
+  description: |-
+    ```
+    PS C:\> Add-AzureRmAccount
+    PS C:\> Save-AzureRmContext -Path C:\test.json
+    ```
+
+    This example saves the current session's Azure context to the JSON file provided.
+- title: 'Example 2: Saving a given context'
+  description: |-
+    ```
+    PS C:\> Save-AzureRmContext -Profile (Add-AzureRmAccount) -Path C:\test.json
+    ```
+
+    This example saves the Azure context that is passed through to the cmdlet to the JSON file provided.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

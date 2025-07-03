@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageCache.New-AzStorageCacheTargetSpaceAllocationObject
+name: New-AzStorageCacheTargetSpaceAllocationObject
+module: Az.StorageCache
+isPreview: false
+summary: |-
+  Create an in-memory object for StorageTargetSpaceAllocation.
+description: |-
+  Create an in-memory object for StorageTargetSpaceAllocation.
+parameters:
+  cmdletParameters:
+  - name: AllocationPercentage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The percentage of cache space allocated for this storage target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the storage target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageCacheTargetSpaceAllocationObject
+        [-AllocationPercentage <Int32>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.Api20230501.StorageTargetSpaceAllocation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for StorageTargetSpaceAllocation.'
+  description: |-
+    ```powershell
+    New-AzStorageCacheTargetSpaceAllocationObject -AllocationPercentage 100 -Name azps-cachetarget
+    ```
+
+    ```output
+    AllocationPercentage Name
+    -------------------- ----
+    100                  azps-cachetarget
+    ```
+
+    Create an in-memory object for StorageTargetSpaceAllocation.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCacheTargetSpaceAllocationObject.md
+  document type: cmdlet
+  external help file: Az.StorageCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageCache/new-AzStorageCacheTargetSpaceAllocationObject
+  Module Name: Az.StorageCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCacheTargetSpaceAllocationObject.md
+  PlatyPS schema version: 2024-05-01

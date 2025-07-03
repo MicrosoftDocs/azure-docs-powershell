@@ -1,0 +1,530 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppConfigurationObject
+name: New-AzContainerAppConfigurationObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for Configuration.
+description: |-
+  Create an in-memory object for Configuration.
+parameters:
+  cmdletParameters:
+  - name: ActiveRevisionsMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ActiveRevisionsMode controls how active revisions are handled for the Container app:
+              \<list\>\<item\>Multiple: multiple revisions can be active.\</item\>\<item\>Single: Only one revision can be active at a time.
+      Revision weights can not be used in this mode.
+      If no value if provided, this is the default.\</item\>\</list\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyAllowCredentials
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the resource allows credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyAllowedHeader
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the content for the access-control-allow-headers header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyAllowedMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the content for the access-control-allow-methods header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyAllowedOrigin
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the content for the access-control-allow-origins header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyExposeHeader
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the content for the access-control-expose-headers header .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorPolicyMaxAge
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the content for the access-control-max-age header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprAppId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dapr application identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprAppPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Tells Dapr which port your application is listening on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprAppProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tells Dapr which protocol your application is using.
+      Valid options are http and grpc.
+      Default is http.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprEnableApiLogging
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables API logging for the Dapr sidecar.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Boolean indicating if the Dapr side car is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprHttpMaxRequestSize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Increasing max size of request body http and grpc servers parameter in MB to handle uploading of big files.
+      Default is 4 MB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprHttpReadBufferSize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Dapr max size of http header read buffer in KB to handle when sending multi-KB headers.
+      Default is 65KB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaprLogLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the log level for the Dapr sidecar.
+      Allowed values are debug, info, warn, error.
+      Default is info.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressAllowInsecure
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Bool indicating if HTTP connections to is allowed.
+      If set to false HTTP connections are automatically redirected to HTTPS connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressClientCertificateMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client certificate mode for mTLS authentication.
+      Ignore indicates server drops client certificate on forwarding.
+      Accept indicates server forwards client certificate but does not require a client certificate.
+      Require indicates server requires a client certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressCustomDomain
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ICustomDomain" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      custom domain bindings for Container Apps' hostnames.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressExposedPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Exposed Port in containers for TCP traffic from ingress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressExternal
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Bool indicating if app exposes an external http endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressIPSecurityRestriction
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IIPSecurityRestrictionRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Rules to restrict incoming IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressTargetPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Port in containers for traffic from ingress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressTraffic
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ITrafficWeight" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Traffic weights for app's revisions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressTransport
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Ingress transport protocol.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxInactiveRevision
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Max inactive revisions a Container App can have.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Registry
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IRegistryCredentials" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Collection of private container registry credentials for containers used by the Container app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISecret" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Collection of secrets used by a Container app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dev ContainerApp service type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StickySessionAffinity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sticky Session Affinity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppConfigurationObject
+        [-ActiveRevisionsMode <String>]
+        [-CorPolicyAllowCredentials <Boolean>]
+        [-CorPolicyAllowedHeader <String[]>]
+        [-CorPolicyAllowedMethod <String[]>]
+        [-CorPolicyAllowedOrigin <String[]>]
+        [-CorPolicyExposeHeader <String[]>]
+        [-CorPolicyMaxAge <Int32>]
+        [-DaprAppId <String>]
+        [-DaprAppPort <Int32>]
+        [-DaprAppProtocol <String>]
+        [-DaprEnableApiLogging <Boolean>]
+        [-DaprEnabled <Boolean>]
+        [-DaprHttpMaxRequestSize <Int32>]
+        [-DaprHttpReadBufferSize <Int32>]
+        [-DaprLogLevel <String>]
+        [-IngressAllowInsecure <Boolean>]
+        [-IngressClientCertificateMode <String>]
+        [-IngressCustomDomain <ICustomDomain[]>]
+        [-IngressExposedPort <Int32>]
+        [-IngressExternal <Boolean>]
+        [-IngressIPSecurityRestriction <IIPSecurityRestrictionRule[]>]
+        [-IngressTargetPort <Int32>]
+        [-IngressTraffic <ITrafficWeight[]>]
+        [-IngressTransport <String>]
+        [-MaxInactiveRevision <Int32>]
+        [-Registry <IRegistryCredentials[]>]
+        [-Secret <ISecret[]>]
+        [-ServiceType <String>]
+        [-StickySessionAffinity <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.Configuration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Configuration.'
+  description: |-
+    ```powershell
+    $customDomain = New-AzContainerAppCustomDomainObject -Name "www.my-name.com" -BindingType "SniEnabled" -CertificateId "/subscriptions/{subId}/resourceGroups/azps_test_group_app/providers/Microsoft.App/managedEnvironments/{manageEnvName}/certificates/{testcert}"
+    $trafficWeight = New-AzContainerAppTrafficWeightObject -Label "production" -RevisionName "testcontainerApp0-ab1234" -Weight 100
+    $iPSecurityRestrictionRule = New-AzContainerAppIPSecurityRestrictionRuleObject -Action "Allow" -IPAddressRange "192.168.1.1/32" -Name "Allow work IP A subnet"
+
+    New-AzContainerAppConfigurationObject -IngressCustomDomain $customDomain -IngressIPSecurityRestriction $iPSecurityRestrictionRule -IngressTraffic $trafficWeight -IngressExternal:$True -IngressTargetPort 3000 -IngressClientCertificateMode "accept" -CorPolicyAllowedOrigin "https://a.test.com","https://b.test.com" -CorPolicyAllowedMethod "GET","POST" -CorPolicyAllowedHeader "HEADER1","HEADER2" -CorPolicyExposeHeader "HEADER3","HEADER4" -CorPolicyMaxAge 1234 -CorPolicyAllowCredentials:$True -DaprEnabled:$True -DaprAppPort 3000 -DaprAppProtocol "http" -DaprHttpReadBufferSize 30 -DaprHttpMaxRequestSize 10 -DaprLogLevel "debug" -DaprEnableApiLogging:$True -MaxInactiveRevision 10 -ServiceType "redis" -IngressTransport "http"
+    ```
+
+    ```output
+    ActiveRevisionsMode MaxInactiveRevision
+    ------------------- -------------------
+                        10
+    ```
+
+    Create an in-memory object for Configuration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappconfigurationobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

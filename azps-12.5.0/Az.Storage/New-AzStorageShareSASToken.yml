@@ -1,0 +1,260 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageShareSASToken
+name: New-AzStorageShareSASToken
+module: Az.Storage
+isPreview: false
+summary: |-
+  Generate Shared Access Signature token for Azure Storage share.
+description: |-
+  The **New-AzStorageShareSASToken** cmdlet generates a shared access signature token for an Azure Storage share.
+notes: |-
+  * Keywords: common, azure, services, data, storage, blob, queue, table
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure Storage context.
+      To obtain a context, use the New-AzStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the time at which the shared access signature becomes invalid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FullUri
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet return the full blob URI and the shared access signature token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressOrRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address or range of IP addresses from which to accept requests, such as 168.1.5.65 or 168.1.5.60-168.1.5.70.
+      The range is inclusive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the permissions in the token to access the share and files under the share.
+      It is important to note that this is a string, like `rwd` (for Read, Write and Delete).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SasPermission
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the stored access policy for a share.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SasPolicy
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.SharedAccessProtocol" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the protocol permitted for a request.
+      The acceptable values for this parameter are:
+      * HttpsOnly
+      * HttpsOrHttp
+      The default value is HttpsOrHttp.
+    acceptedValues:
+    - HttpsOnly
+    - HttpsOrHttp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage share.
+    aliases:
+    - N
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the time at which the shared access signature becomes valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageShareSASToken
+        [-ShareName] <String>
+        -Policy <String>
+        [-Protocol <SharedAccessProtocol>]
+        [-IPAddressOrRange <String>]
+        [-StartTime <DateTime>]
+        [-ExpiryTime <DateTime>]
+        [-FullUri]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SasPolicy
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzStorageShareSASToken
+        [-ShareName] <String>
+        [-Permission <String>]
+        [-Protocol <SharedAccessProtocol>]
+        [-IPAddressOrRange <String>]
+        [-StartTime <DateTime>]
+        [-ExpiryTime <DateTime>]
+        [-FullUri]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SasPermission
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Generate a shared access signature token for a share'
+  description: |-
+    ```powershell
+    New-AzStorageShareSASToken -ShareName "ContosoShare" -Permission "rwdl"
+    ```
+
+    This command creates a shared access signature token for the share named ContosoShare.
+- title: 'Example 2: Generate multiple shared access signature token by using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzStorageShare -Prefix "test" | New-AzStorageShareSASToken -Permission "rwdl"
+    ```
+
+    This command gets all the Storage shares that match the prefix test.
+    The command passes them to the current cmdlet by using the pipeline operator.
+    The current cmdlet creates a shared access token for each Storage share that has the specified permissions.
+- title: 'Example 3: Generate a shared access signature token that uses a shared access policy'
+  description: |-
+    ```powershell
+    New-AzStorageShareSASToken -ShareName "ContosoShare" -Policy "ContosoPolicy03"
+    ```
+
+    This command creates a shared access signature token for the Storage share named ContosoShare that has the policy named ContosoPolicy03.
+links:
+- text: Get-AzStorageShare
+  href: ./Get-AzStorageShare.yml
+- text: New-AzStorageFileSASToken
+  href: ./New-AzStorageFileSASToken.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageShareSASToken.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragesharesastoken
+  Module Name: Az.Storage
+  ms.assetid: BDF42420-3616-4A64-9562-1A896F828728
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageShareSASToken.md
+  PlatyPS schema version: 2024-05-01

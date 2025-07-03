@@ -1,0 +1,342 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzPrivateEndpointConnection
+name: Remove-AzPrivateEndpointConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes a private endpoint connection.
+description: |-
+  The **Remove-AzPrivateEndpointConnection** cmdlet removes a private endpoint connection.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The reason of action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to delete resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the private endpoint connection.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The private link resource type.
+    acceptedValues:
+    - Microsoft.AgFoodPlatform/farmBeats
+    - Microsoft.ApiManagement/service
+    - Microsoft.AppConfiguration/configurationStores
+    - Microsoft.Attestation/attestationProviders
+    - Microsoft.Authorization/resourceManagementPrivateLinks
+    - Microsoft.Automation/automationAccounts
+    - Microsoft.Batch/batchAccounts
+    - Microsoft.Cache/Redis
+    - Microsoft.Cache/redisEnterprise
+    - Microsoft.CognitiveServices/accounts
+    - Microsoft.Compute/diskAccesses
+    - Microsoft.ContainerRegistry/registries
+    - Microsoft.ContainerService/managedClusters
+    - Microsoft.Databricks/workspaces
+    - Microsoft.DataFactory/factories
+    - Microsoft.DBforMariaDB/servers
+    - Microsoft.DBforMySQL/servers
+    - Microsoft.DBforPostgreSQL/servers
+    - Microsoft.DesktopVirtualization/hostpools
+    - Microsoft.DesktopVirtualization/workspaces
+    - Microsoft.Devices/IotHubs
+    - Microsoft.Devices/ProvisioningServices
+    - Microsoft.DeviceUpdate/accounts
+    - Microsoft.DigitalTwins/digitalTwinsInstances
+    - Microsoft.DocumentDB/databaseAccounts
+    - Microsoft.ElasticSan/elasticSans
+    - Microsoft.EventGrid/topics
+    - Microsoft.EventGrid/domains
+    - Microsoft.EventGrid/partnerNamespaces
+    - Microsoft.EventGrid/namespaces
+    - Microsoft.EventHub/namespaces
+    - Microsoft.HardwareSecurityModules/cloudHsmClusters
+    - Microsoft.HealthcareApis/services
+    - Microsoft.HDInsight/clusters
+    - Microsoft.HybridCompute/privateLinkScopes
+    - Microsoft.Insights/privateLinkScopes
+    - Microsoft.KeyVault/vaults
+    - Microsoft.Keyvault/managedHSMs
+    - Microsoft.MachineLearningServices/workspaces
+    - Microsoft.MachineLearningServices/registries
+    - Microsoft.Media/mediaservices
+    - Microsoft.Media/videoanalyzers
+    - Microsoft.Migrate/assessmentProjects
+    - Microsoft.Migrate/migrateProjects
+    - Microsoft.Monitor/accounts
+    - Microsoft.Network/applicationgateways
+    - Microsoft.Network/privateLinkServices
+    - Microsoft.OffAzure/masterSites
+    - Microsoft.PowerBI/privateLinkServicesForPowerBI
+    - Microsoft.Purview/accounts
+    - Microsoft.RecoveryServices/vaults
+    - Microsoft.Relay/namespaces
+    - Microsoft.Search/searchServices
+    - Microsoft.ServiceBus/namespaces
+    - Microsoft.SignalRService/signalr
+    - Microsoft.SignalRService/webPubSub
+    - Microsoft.Sql/servers
+    - Microsoft.Storage/storageAccounts
+    - Microsoft.StorageSync/storageSyncServices
+    - Microsoft.Synapse/privateLinkHubs
+    - Microsoft.Synapse/workspaces
+    - Microsoft.Web/sites
+    - Microsoft.Web/staticSites
+    - Microsoft.Web/hostingEnvironments
+    - Microsoft.BotService/botServices
+    - Microsoft.OpenEnergyPlatform/energyServices
+    - Microsoft.DBforMySQL/flexibleServers
+    - Microsoft.DBforPostgreSQL/flexibleServers
+    - Microsoft.App/managedEnvironments
+    - Microsoft.VideoIndexer/accounts
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name of the private endpoint connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource manager id of the private endpoint connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of service that the private endpoint connection belong to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateEndpointConnection
+        -ResourceId <String>
+        [-Description <String>]
+        [-Force]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateEndpointConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -PrivateLinkResourceType <String>
+        [-Description <String>]
+        [-Force]
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResource
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AzPrivateEndpointConnection -Name MyPrivateEndpointConnection1 -ResourceGroupName TestResourceGroup -ServiceName MyPrivateLinkServiceName -PrivateLinkResourceType Microsoft.Network/privateLinkServices
+    ```
+
+    This example remove a private endpoint connection named MyPrivateEndpointConnection1
+links:
+- text: Approve-AzPrivateEndpointConnection
+  href: ./Approve-AzPrivateEndpointConnection.yml
+- text: Deny-AzPrivateEndpointConnection
+  href: ./Deny-AzPrivateEndpointConnection.yml
+- text: Get-AzPrivateEndpointConnection
+  href: ./Get-AzPrivateEndpointConnection.yml
+- text: Set-AzPrivateEndpointConnection
+  href: ./Set-AzPrivateEndpointConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateEndpointConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-azprivateendpointconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzPrivateEndpointConnection.md
+  PlatyPS schema version: 2024-05-01

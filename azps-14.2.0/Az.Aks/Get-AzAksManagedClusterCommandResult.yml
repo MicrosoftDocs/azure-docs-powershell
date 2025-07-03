@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Aks.Get-AzAksManagedClusterCommandResult
+name: Get-AzAksManagedClusterCommandResult
+module: Az.Aks
+isPreview: false
+summary: |-
+  Gets the results of a command which has been run on the Managed Cluster.
+description: |-
+  Gets the results of a command which has been run on the Managed Cluster.
+parameters:
+  cmdletParameters:
+  - name: CommandId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityManagedCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Models.IAksIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedClusterInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Models.IAksIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityManagedCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the managed cluster resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAksManagedClusterCommandResult
+        -CommandId <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAksManagedClusterCommandResult
+        -CommandId <String>
+        -ManagedClusterInputObject <IAksIdentity>
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityManagedCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAksManagedClusterCommandResult
+        -InputObject <IAksIdentity>
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Models.IAksIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Models.IRunCommandResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the results of a command which has been run on the Managed Cluster.'
+  description: |-
+    ```powershell
+    Get-AzAksManagedClusterCommandResult -ResourceGroupName mygroup -ResourceName mycluster -CommandId '706de66629b14267b4962cf015122c12'
+    ```
+
+    ```output
+    ExitCode          : 0
+    FinishedAt        : 3/31/2023 9:14:40 AM
+    Id                : 706de66629b14267b4962cf015122c12
+    Log               : NAME                              STATUS   ROLES   AGE   VERSION
+                        aks-default-40136599-vmss000000   Ready    agent   68m   v1.24.9
+                        aks-pool2-22198594-vmss000000     Ready    agent   65m   v1.24.9
+
+    ProvisioningState : Succeeded
+    Reason            :
+    StartedAt         : 3/31/2023 9:14:38 AM
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksManagedClusterCommandResult.md
+  document type: cmdlet
+  external help file: Az.Aks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.aks/get-azaksmanagedclustercommandresult
+  Module Name: Az.Aks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Get-AzAksManagedClusterCommandResult.md
+  PlatyPS schema version: 2024-05-01

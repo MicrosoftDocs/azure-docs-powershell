@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.New-AzStackHciSecuritySetting
+name: New-AzStackHciSecuritySetting
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Create a security setting
+description: |-
+  Create a security setting
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisioningState
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.ProvisioningState" data-throw-if-not-resolved="False" />
+    description: |-
+      The status of the last operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecuredCoreComplianceAssignment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.ComplianceAssignmentType" data-throw-if-not-resolved="False" />
+    description: |-
+      Secured Core Compliance Assignment
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbEncryptionForIntraClusterTrafficComplianceAssignment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.ComplianceAssignmentType" data-throw-if-not-resolved="False" />
+    description: |-
+      SMB encryption for intra-cluster traffic Compliance Assignment
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WdacComplianceAssignment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Support.ComplianceAssignmentType" data-throw-if-not-resolved="False" />
+    description: |-
+      WDAC Compliance Assignment
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStackHciSecuritySetting
+        -ClusterName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-ProvisioningState <ProvisioningState>]
+        [-SecuredCoreComplianceAssignment <ComplianceAssignmentType>]
+        [-SmbEncryptionForIntraClusterTrafficComplianceAssignment <ComplianceAssignmentType>]
+        [-WdacComplianceAssignment <ComplianceAssignmentType>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCI.Models.Api20240401.ISecuritySetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    New-AzStackHciSecuritySetting -ClusterName 's-cluster' -ResourceGroupName 's-cluster-rg'
+    ```
+
+    ```output
+    Name    ResourceGroupName
+    ----    ----------------- .....
+    default s-cluster-rg
+    ```
+
+    Creates a new security setting
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/New-AzStackHciSecuritySetting.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/new-azstackhcisecuritysetting
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/New-AzStackHciSecuritySetting.md
+  PlatyPS schema version: 2024-05-01

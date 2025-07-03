@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureHDInsightHiveJobDefinition
+name: New-AzureHDInsightHiveJobDefinition
+module: Azure
+isPreview: false
+summary: |-
+  Defines a new Hive job for an HDInsight service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This version of Azure PowerShell HDInsight is deprecated.
+  These cmdlets will be removed by January 1, 2017.
+  Please use the newer version of Azure PowerShell HDInsight.
+
+  For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell).
+  For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically).
+  For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
+
+  The **New-AzureHDInsightHiveJobDefinition** cmdlet defines a Hive job for an Azure HDInsight service.
+parameters:
+  cmdletParameters:
+  - name: Arguments
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of arguments for a Hadoop job.
+      The arguments are passed as command-line arguments to each task.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Defines
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Hadoop configuration values to set for when a job runs.
+    aliases:
+    - Params
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: File
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a file that contains a query to run.
+      You can use this parameter instead of the *Query* parameter.
+    aliases:
+    - QueryFile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Files
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a collection of files that are associated with a Hive job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Hive job to define.
+      If you do not specify this parameter, the default name is used: "Hive: \<first 100 characters of query\>".
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Query
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Hive query.
+    aliases:
+    - QueryText
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunAsFileJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a file in the default Azure storage account in which to store a query.
+      This cmdlet submits the job that references this file as a script to run.
+
+      You can use this functionality to handle special characters such as percent sign (%) that would fail on a job submission through Templeton, because Templeton interprets a query with a percent sign as a URL parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StatusFolder
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the folder that contains standard outputs and error outputs for a job, including its exit code and task logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureHDInsightHiveJobDefinition
+        [-Arguments <String[]>]
+        [-Defines <Hashtable>]
+        [-File <String>]
+        [-Files <String[]>]
+        [-JobName <String>]
+        [-Query <String>]
+        [-RunAsFileJob]
+        [-StatusFolder <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a Hive job definition'
+  description: |-
+    ```
+    PS C:\>$HiveJobDefinition = New-AzureHDInsightHiveJobDefinition -Query $QueryString
+    ```
+
+    This command creates a Hive job definition that uses a pre-defined query string, and then stores it in the $HiveJobDefinition variable.
+links:
+- text: New-AzureHDInsightMapReduceJobDefinition
+  href: ./New-AzureHDInsightMapReduceJobDefinition.yml
+- text: New-AzureHDInsightPigJobDefinition
+  href: ./New-AzureHDInsightPigJobDefinition.yml
+- text: New-AzureHDInsightSqoopJobDefinition
+  href: ./New-AzureHDInsightSqoopJobDefinition.yml
+- text: New-AzureHDInsightStreamingMapReduceJobDefinition
+  href: ./New-AzureHDInsightStreamingMapReduceJobDefinition.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0DFCB891-7431-4C00-98DD-263DC2794354
+  PlatyPS schema version: 2024-05-01

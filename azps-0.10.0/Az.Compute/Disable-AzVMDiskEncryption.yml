@@ -1,0 +1,289 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Disable-AzVMDiskEncryption
+name: Disable-AzVMDiskEncryption
+module: Az.Compute
+isPreview: false
+summary: |-
+  Disables encryption on an IaaS virtual machine.
+description: |-
+  The **Disable-AzVMDiskEncryption** cmdlet disables encryption on an infrastructure as a service (IaaS) virtual machine.
+  This cmdlet is only supported on Windows virtual machines and not Linux virtual machines.
+  This cmdlet installs an extension on the virtual machine to disable encryption.
+  If the *Name* parameter is not specified, an extension with the default name "AzureDiskEncryption for Windows VMs" is created.
+  Caution: This cmdlet reboots the virtual machine.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutoUpgradeMinorVersion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables auto-upgrade of the minor version of the extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionPublisherName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension publisher name. Specify this parameter only to override the default value of "Microsoft.Azure.Security".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension type. Specify this parameter to override its default value of "AzureDiskEncryption" for Windows VMs and "AzureDiskEncryptionForLinux" for Linux VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifes the name of the Azure Resource Manager (ARM) resource that represents the extension.
+      If this parameter is not specified, this cmdlet defaults to "AzureDiskEncryption for Windows VMs".
+    aliases:
+    - ExtensionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group name of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeHandlerVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the encryption extension.
+      If you do not specify a value for this parameter, the latest version of the extension is used.
+    aliases:
+    - HandlerVersion
+    - Version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine that this cmdlet disables encryption on.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of virtual machine volumes to perform the encryption operation.
+      For Windows virtual machines, valid values are:
+
+      - All
+      - OS
+      - Data.
+      If you do not specify a value for this parameter, the default value is All.
+      Disable encryption is not currently supported for Linux.
+    acceptedValues:
+    - OS
+    - Data
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzVMDiskEncryption
+        [-ResourceGroupName] <String>
+        [-VMName] <String>
+        [[-VolumeType] <String>]
+        [[-Name] <String>]
+        [[-TypeHandlerVersion] <String>]
+        [-Force]
+        [-DisableAutoUpgradeMinorVersion]
+        [-ExtensionType <String>]
+        [-ExtensionPublisherName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="This cmdlet does not generate any output." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable encryption for all volumes on a Windows virtual machine'
+  description: |-
+    ```
+    PS C:\> Disable-AzVMDiskEncryption -ResourceGroupName "Group001" -VMName "VM002"
+    ```
+
+    This command disables encryption for volumes of type all for the virtual machine named VM002 that belongs to the resource group named Group001.
+    Since the *VolumeType* parameter is not specified, the cmdlet sets the value to All.
+- title: 'Example 2: Disable encryption for data volumes on a Windows virtual machine'
+  description: |-
+    ```
+    PS C:\> $ResourceGroup = "Group002";
+    PS C:\> $VMName = "VM004";
+    PS C:\> Disable-AzVMDiskEncryption -ResourceGroupName "Group002" -VMName "VM004" -VolumeType "Data"
+    ```
+
+    This command disables encryption for volumes of type data for the virtual machine named VM004 that belongs to the resource group named Group002.
+links:
+- text: Get-AzVMDiskEncryptionStatus
+  href: ./Get-AzVMDiskEncryptionStatus.yml
+- text: Remove-AzVMDiskEncryptionExtension
+  href: ./Remove-AzVMDiskEncryptionExtension.yml
+- text: Set-AzVMDiskEncryptionExtension
+  href: ./Set-AzVMDiskEncryptionExtension.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Disable-AzVMDiskEncryption.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/disable-azvmdiskencryption
+  Module Name: Az.Compute
+  ms.assetid: 979E956B-4C74-426E-A617-E50C4EBC8A20
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Disable-AzVMDiskEncryption.md
+  PlatyPS schema version: 2024-05-01

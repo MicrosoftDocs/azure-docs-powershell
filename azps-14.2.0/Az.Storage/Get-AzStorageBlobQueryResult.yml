@@ -1,0 +1,488 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageBlobQueryResult
+name: Get-AzStorageBlobQueryResult
+module: Az.Storage
+isPreview: false
+summary: |-
+  Applies a simple Structured Query Language (SQL) statement on a blob's contents and save only the queried subset of the data to a local file.
+description: |-
+  The **Get-AzStorageBlobQueryResult** cmdlet applies a simple Structured Query Language (SQL) statement on a blob's contents and save the queried subset of the data to a local file.
+parameters:
+  cmdletParameters:
+  - name: Blob
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NamePipeline
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerPipeline
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BlobBaseClient
+    type: <xref href="Azure.Storage.Blobs.Specialized.BlobBaseClient" data-throw-if-not-resolved="False" />
+    description: |-
+      BlobBaseClient Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BlobPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BlobContainerClient
+    type: <xref href="Azure.Storage.Blobs.BlobContainerClient" data-throw-if-not-resolved="False" />
+    description: |-
+      BlobContainerClient Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContainerPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The client side maximum execution time for each request in seconds.
+    aliases:
+    - ClientTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The total amount of concurrent async tasks.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Container
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NamePipeline
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Force to overwrite the existing file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputTextConfiguration
+    type: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.PSBlobQueryTextConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The configuration used to handled the query input text. Create configuration object the with New-AzStorageBlobQueryConfig.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputTextConfiguration
+    type: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.PSBlobQueryTextConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The configuration used to handled the query output text. Create configuration object the with New-AzStorageBlobQueryConfig.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Return whether the specified blob is successfully queried.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Query string, see more details in: https://learn.microsoft.com/azure/storage/blobs/query-acceleration-sql-reference
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Local file path to save the query result.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The server time out for each request in seconds.
+    aliases:
+    - ServerTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Blob SnapshotTime
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NamePipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TagCondition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Tag expression statement to check match condition. The blob request will fail when the blob tags does not match the given expression.See details in https://learn.microsoft.com/en-us/rest/api/storageservices/specifying-conditional-headers-for-blob-service-operations#tags-conditional-operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob VersionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NamePipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ContainerPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageBlobQueryResult
+        [-Blob] <String>
+        [-Container] <String>
+        -QueryString <String>
+        -ResultFile <String>
+        [-SnapshotTime <DateTimeOffset>]
+        [-VersionId <String>]
+        [-InputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-OutputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-PassThru]
+        [-Force]
+        [-TagCondition <String>]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NamePipeline
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageBlobQueryResult
+        -BlobBaseClient <BlobBaseClient>
+        -QueryString <String>
+        -ResultFile <String>
+        [-InputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-OutputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-PassThru]
+        [-Force]
+        [-TagCondition <String>]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BlobPipeline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageBlobQueryResult
+        [-Blob] <String>
+        -BlobContainerClient <BlobContainerClient>
+        -QueryString <String>
+        -ResultFile <String>
+        [-SnapshotTime <DateTimeOffset>]
+        [-VersionId <String>]
+        [-InputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-OutputTextConfiguration <PSBlobQueryTextConfiguration>]
+        [-PassThru]
+        [-Force]
+        [-TagCondition <String>]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContainerPipeline
+  isDefault: false
+inputs:
+- name: <xref href="Azure.Storage.Blobs.Specialized.BlobBaseClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure.Storage.Blobs.BlobContainerClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Query a blob'
+  description: |-
+    ```powershell
+    $inputconfig = New-AzStorageBlobQueryConfig -AsCsv -HasHeader
+
+    $outputconfig = New-AzStorageBlobQueryConfig -AsJson
+
+    $queryString = "SELECT * FROM BlobStorage WHERE Name = 'a'"
+
+    $result = Get-AzStorageBlobQueryResult -Container $containerName -Blob $blobName -QueryString $queryString -ResultFile "c:\resultfile.json" -InputTextConfiguration $inputconfig -OutputTextConfiguration $outputconfig -Context $ctx
+
+    $result
+    ```
+
+    ```output
+    BytesScanned FailureCount BlobQueryError
+    ------------ ------------ --------------
+             449            0
+    ```
+
+    This command queries a blob successfully with input config as csv, and output config as json, and save the output to local file "c:\resultfile.json".
+- title: 'Example 2: Query a blob snapshot'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```powershell
+    $blob = Get-AzStorageBlob -Container $containerName -Blob $blobName -SnapshotTime "2020-07-29T11:08:21.1097874Z" -Context $ctx
+
+    $inputconfig = New-AzStorageBlobQueryConfig -AsCsv -ColumnSeparator "," -QuotationCharacter """" -EscapeCharacter "\" -RecordSeparator "`n" -HasHeader
+
+    $outputconfig = New-AzStorageBlobQueryConfig -AsJson -RecordSeparator "`n"
+
+    $queryString = "SELECT * FROM BlobStorage WHERE _1 LIKE '1%%'"
+
+    $result = $blob | Get-AzStorageBlobQueryResult -QueryString $queryString -ResultFile $localFilePath -InputTextConfiguration $inputconfig -OutputTextConfiguration $outputconfig
+
+    $result
+
+    BytesScanned FailureCount BlobQueryError
+    ------------ ------------ --------------
+       187064971            1 {ParseError}
+
+
+
+    $result.BlobQueryError
+
+    Name       Description                                                   IsFatal Position
+    ----       -----------                                                   ------- --------
+    ParseError Unexpected token '1' at [byte: 3077737]. Expecting token ','.    True  7270632
+    ```
+
+    This command first gets a blob object for blob snapshot, then queries the blob snapshot and show the result include query error.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobQueryResult.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.storage/get-azstorageblobqueryresult
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageBlobQueryResult.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,104 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureEmulator
+name: Start-AzureEmulator
+module: Azure
+isPreview: false
+summary: |-
+  Starts the compute and storage emulators.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Start-AzureEmulator** cmdlet starts both the compute and storage emulators and hosts the current service in the compute emulator.
+parameters:
+  cmdletParameters:
+  - name: Launch
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Opens a new browser window on the service after hosting it in the emulator.
+    aliases:
+    - ln
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="ComputeEmulatorMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the emulator mode.
+      Valid values are: Full and Express.
+      The default value is Express.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureEmulator
+        [-Launch]
+        [-Mode <ComputeEmulatorMode>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Start the emulator and launch a browser'
+  description: |-
+    ```
+    PS C:\> Start-AzureEmulator -L
+    ```
+
+    This example runs the service in the Azure emulator and launches a new browser window on the emulated service.
+links:
+- text: New-AzureServiceProject
+  href: ./New-AzureServiceProject.yml
+- text: Publish-AzureServiceProject
+  href: ./Publish-AzureServiceProject.yml
+- text: Stop-AzureEmulator
+  href: ./Stop-AzureEmulator.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A1815E7F-720E-4526-A779-106C181B840D
+  PlatyPS schema version: 2024-05-01

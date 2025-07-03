@@ -1,0 +1,73 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quota.Get-AzQuotaOperation
+name: Get-AzQuotaOperation
+module: Az.Quota
+isPreview: false
+summary: |-
+  List all the operations supported by the Microsoft.Quota resource provider.
+description: |-
+  List all the operations supported by the Microsoft.Quota resource provider.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzQuotaOperation
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.IOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all the operations supported by the Microsoft.Quota resource provider.'
+  description: |-
+    ```powershell
+    Get-AzQuotaOperation
+    ```
+
+    ```output
+    Name                               Origin
+    ----                               ------
+    Microsoft.Quota/quotas/read
+    Microsoft.Quota/quotas/write
+    Microsoft.Quota/quotaRequests/read
+    Microsoft.Quota/usages/read
+    Microsoft.Quota/operations/read
+    Microsoft.Quota/register/action
+    ```
+
+    List all the operations supported by the Microsoft.Quota resource provider.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuotaOperation.md
+  document type: cmdlet
+  external help file: Az.Quota-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.quota/get-azquotaoperation
+  Module Name: Az.Quota
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuotaOperation.md
+  PlatyPS schema version: 2024-05-01

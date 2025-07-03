@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.New-AzWorkloadsProviderHanaDbInstanceObject
+name: New-AzWorkloadsProviderHanaDbInstanceObject
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Create an in-memory object for HanaDbProviderInstanceProperties.
+description: |-
+  Create an in-memory object for HanaDbProviderInstanceProperties.
+parameters:
+  cmdletParameters:
+  - name: Hostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the target virtual machine size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database instance number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the hana database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the key vault URI to secret with the database password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapSid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP System Identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlPort
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database sql port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the blob URI to SSL certificate for the DB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslHostNameInCertificate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the hostname(s) in the SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Support.SslPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets certificate preference if secure communication is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database user name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWorkloadsProviderHanaDbInstanceObject
+        [-Name <String>]
+        [-Password <String>]
+        [-PasswordUri <String>]
+        [-Username <String>]
+        [-Hostname <String>]
+        [-InstanceNumber <String>]
+        [-SapSid <String>]
+        [-SqlPort <String>]
+        [-SslCertificateUri <String>]
+        [-SslHostNameInCertificate <String>]
+        [-SslPreference <SslPreference>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.HanaDbProviderInstanceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create SAP HANA provider'
+  description: |-
+    ```powershell
+    New-AzWorkloadsProviderHanaDbInstanceObject -Name SYSTEMDB -Password ''  -Username SYSTEM -Hostname 10.0.81.4 -InstanceNumber 00 -SapSid X00 -SqlPort 1433 -SslPreference Disabled
+    ```
+
+    ```output
+    ProviderType DbName   DbPassword DbPasswordUri DbUsername Hostname  InstanceNumber SapSid SqlPort SslCertificateUri SslHostNameInCer
+                                                                                                                        tificate
+    ------------ ------   ---------- ------------- ---------- --------  -------------- ------ ------- ----------------- ----------------
+    SapHana      SYSTEMDB                          SYSTEM     10.0.81.4 00             X00    1433
+    ```
+
+    Create SAP HANA provider for an AMS instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderHanaDbInstanceObject.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/new-azworkloadsproviderhanadbinstanceobject
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderHanaDbInstanceObject.md
+  PlatyPS schema version: 2024-05-01

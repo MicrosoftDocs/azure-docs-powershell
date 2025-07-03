@@ -1,0 +1,223 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlDatabaseFailoverGroup
+name: Set-AzSqlDatabaseFailoverGroup
+module: Az.Sql
+isPreview: false
+summary: |-
+  Modifies the configuration of an Azure SQL Database Failover Group.
+description: |-
+  This command modifies the configuration of an Azure SQL Database Failover Group.
+  The Failover Group's primary server should be used to execute the command.
+  To control the set of databases in the group, use 'Add-AzSqlDatabaseToFailoverGroup' and 'Remove-AzSqlDatabaseFromFailoverGroup' instead.
+  During preview of the Failover Groups feature, only values greater than or equal to 1 hour are supported for the '-GracePeriodWithDataLossHours' parameter.
+parameters:
+  cmdletParameters:
+  - name: AllowReadOnlyFailoverToPrimary
+    type: <xref href="Microsoft.Azure.Commands.Sql.FailoverGroup.Model.AllowReadOnlyFailoverToPrimary" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether outages on the secondary server should trigger automatic failover of the read-only endpoint.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailoverGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database Failover Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailoverPolicy
+    type: <xref href="Microsoft.Azure.Commands.Sql.FailoverGroup.Model.FailoverPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      The failover policy of the Azure SQL Database Failover Group.
+    acceptedValues:
+    - Automatic
+    - Manual
+    defaultValue: Manual
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GracePeriodWithDataLossHours
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Interval before automatic failover is initiated if an outage occurs on the primary server. This indicates that Azure SQL Database will not initiate automatic failover before the grace period expires. Please note that failover operation with AllowDataLoss option might cause data loss due to the nature of asynchronous synchronization.
+    defaultValue: "1"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerServerList
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The list of partner servers in the failover group (empty list for 0 servers).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadOnlyEndpointTargetServer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target server for the read only endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the primary Azure SQL Database Server of the Failover Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlDatabaseFailoverGroup
+        [-ServerName] <String>
+        [-FailoverGroupName] <String>
+        [-FailoverPolicy <FailoverPolicy>]
+        [-GracePeriodWithDataLossHours <Int32>]
+        [-AllowReadOnlyFailoverToPrimary <AllowReadOnlyFailoverToPrimary>]
+        [-PartnerServerList <System.Collections.Generic.List`1[System.String]>]
+        [-ReadOnlyEndpointTargetServer <String>]
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.FailoverGroup.Model.AzureSqlFailoverGroupModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $failoverGroup = Set-AzSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName primaryserver -FailoverGroupName fg -FailoverPolicy Automatic -GracePeriodWithDataLossHours 1
+    ```
+
+    Sets a Failover Group's failover policy to 'Automatic.'
+- title: Example 2
+  description: |-
+    ```powershell
+    $failoverGroup = Get-AzSqlDatabaseFailoverGroup -ResourceGroupName rg -ServerName primaryserver -FailoverGroupName fg | Set-AzSqlDatabaseFailoverGroup -FailoverPolicy Manual
+    ```
+
+    Sets a Failover Group's failover policy to 'Manual' by piping in the Failover Group.
+links:
+- text: New-AzSqlDatabaseFailoverGroup
+  href: ./New-AzSqlDatabaseFailoverGroup.yml
+- text: Get-AzSqlDatabaseFailoverGroup
+  href: ./Get-AzSqlDatabaseFailoverGroup.yml
+- text: Add-AzSqlDatabaseToFailoverGroup
+  href: ./Add-AzSqlDatabaseToFailoverGroup.yml
+- text: Remove-AzSqlDatabaseFromFailoverGroup
+  href: ./Remove-AzSqlDatabaseFromFailoverGroup.yml
+- text: Switch-AzSqlDatabaseFailoverGroup
+  href: ./Switch-AzSqlDatabaseFailoverGroup.yml
+- text: Remove-AzSqlDatabaseFailoverGroup
+  href: ./Remove-AzSqlDatabaseFailoverGroup.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseFailoverGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/set-azsqldatabasefailovergroup
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlDatabaseFailoverGroup.md
+  PlatyPS schema version: 2024-05-01

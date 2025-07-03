@@ -1,0 +1,128 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KubernetesRuntime.New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject
+name: New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject
+module: Az.KubernetesRuntime
+isPreview: false
+summary: |-
+  Create an in-memory object for SmbStorageClassTypeProperties.
+description: |-
+  Create an in-memory object for SmbStorageClassTypeProperties.
+parameters:
+  cmdletParameters:
+  - name: Domain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Server domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Server password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Source
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SMB Source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubDir
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sub directory under share.
+      If the sub directory doesn't exist, driver will create it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Server username.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject
+        -Source <String>
+        [-Domain <String>]
+        [-Password <SecureString>]
+        [-SubDir <String>]
+        [-Username <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.SmbStorageClassTypeProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a SmbStorageClassTypeProperties object'
+  description: |-
+    ```powershell
+    $typeProperties = New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject `
+        -Source "//ip:port" `
+        -Domain "domain" `
+        -Username "username" `
+        -Password $(ConvertTo-SecureString 'password' -AsPlainText) `
+        -SubDir "subdir"
+    ```
+
+    Create a `SmbStorageClassTypeProperties` object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject.md
+  document type: cmdlet
+  external help file: Az.KubernetesRuntime-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.KubernetesRuntime/new-azkubernetesruntimesmbstorageclasstypepropertiesobject
+  Module Name: Az.KubernetesRuntime
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/New-AzKubernetesRuntimeSmbStorageClassTypePropertiesObject.md
+  PlatyPS schema version: 2024-05-01

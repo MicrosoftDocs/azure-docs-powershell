@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureTrafficManagerProfile
+name: Get-AzureTrafficManagerProfile
+module: Azure
+isPreview: false
+summary: |-
+  Gets the details of a Traffic Manager profile.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureTrafficManagerProfile** cmdlet gets the details of a Microsoft Azure Traffic Manager profile.
+  If you do not specify the *Name* parameter, the cmdlet lists the Traffic Manager profiles in the current subscription.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Traffic Manager profile to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureTrafficManagerProfile
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.TrafficManager.Models.IProfileWithDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a Traffic Manager profile object or objects.
+examples:
+- title: 'Example 1: Get the list of Traffic Manager profiles in a subscription'
+  description: |-
+    ```
+    PS C:\>Get-AzureTrafficManagerProfile
+    ```
+
+    This command gets the list of Traffic Manager profiles in your subscription.
+- title: 'Example 2: Get a Traffic Manager profile'
+  description: |-
+    ```
+    PS C:\>Get-AzureTrafficManagerProfile -Name "MyProfile"
+    ```
+
+    This command gets the Traffic Manager profile named MyProfile.
+- title: 'Example 3: Add an endpoint to a Traffic Manager profile'
+  description: |-
+    ```
+    PS C:\>Get-AzureTrafficManagerProfile -Name "MyProfile" | Add-AzureTrafficManagerEndpoint -DomainName "Myapp2.cloudapp.net" -TrafficManagerProfile $MyTrafficManagerProfile -Type "CloudService" -Status "Enabled" | Set-AzureTrafficManagerProfile
+    ```
+
+    This command adds an endpoint to a Traffic Manager profile, and then saves the profile.
+links:
+- text: Add-AzureTrafficManagerEndpoint
+  href: ./Add-AzureTrafficManagerEndpoint.yml
+- text: Disable-AzureTrafficManagerProfile
+  href: ./Disable-AzureTrafficManagerProfile.yml
+- text: Enable-AzureTrafficManagerProfile
+  href: ./Enable-AzureTrafficManagerProfile.yml
+- text: New-AzureTrafficManagerProfile
+  href: ./New-AzureTrafficManagerProfile.yml
+- text: Remove-AzureTrafficManagerProfile
+  href: ./Remove-AzureTrafficManagerProfile.yml
+- text: Set-AzureTrafficManagerProfile
+  href: ./Set-AzureTrafficManagerProfile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 28136DC3-520B-4134-8736-93D86EEABAE1
+  PlatyPS schema version: 2024-05-01

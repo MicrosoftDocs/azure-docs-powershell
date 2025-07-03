@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Terraform.New-AzTerraformExportResourceObject
+name: New-AzTerraformExportResourceObject
+module: Az.Terraform
+isPreview: false
+summary: |-
+  Create an in-memory object for ExportResource.
+description: |-
+  Create an in-memory object for ExportResource.
+parameters:
+  cmdletParameters:
+  - name: FullProperty
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to output all non-computed properties in the generated Terraform configuration? This probably needs manual modifications to make it valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaskSensitive
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Mask sensitive attributes in the Terraform configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamePattern
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name pattern of the Terraform resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The id of the resource to be exported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Terraform resource name.
+      Only works when resourceIds contains only one item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Terraform resource type.
+      Only works when resourceIds contains only one item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetProvider
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Azure Terraform Provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzTerraformExportResourceObject
+        -ResourceId <String[]>
+        [-NamePattern <String>]
+        [-ResourceName <String>]
+        [-ResourceType <String>]
+        [-FullProperty <Boolean>]
+        [-MaskSensitive <Boolean>]
+        [-TargetProvider <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Terraform.Models.ExportResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a query object with single resource id'
+  description: |-
+    ```powershell
+    New-AzTerraformExportResourceObject -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virtualNetworks/test-vnet"
+    ```
+
+    ```output
+    FullProperty   :
+    MaskSensitive  :
+    NamePattern    :
+    ResourceId     : {/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virtualNetworks
+                     /test-vnet}
+    ResourceName   :
+    ResourceType   :
+    TargetProvider :
+    Type           : ExportResource
+    ```
+
+    Create a query object with single resource id
+- title: 'Example 2: Create a query object with multiple resource Ids'
+  description: |-
+    ```powershell
+    New-AzTerraformExportResourceObject -ResourceId "/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virtualNetworks/test-vnet","/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virtualNetworks/test-vnet2"
+    ```
+
+    ```output
+    FullProperty   :
+    MaskSensitive  :
+    NamePattern    :
+    ResourceId     : {/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virtualNetworks
+                     /test-vnet, /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/aztfy-pwsh-test-rg/providers/Microsoft.Network/virt
+                     ualNetworks/test-vnet2}
+    ResourceName   :
+    ResourceType   :
+    TargetProvider :
+    Type           : ExportResource
+    ```
+
+    Create a query object with multiple resource Ids
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Terraform/Terraform/help/New-AzTerraformExportResourceObject.md
+  document type: cmdlet
+  external help file: Az.Terraform-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Terraform/new-azterraformexportresourceobject
+  Module Name: Az.Terraform
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Terraform/Terraform/help/New-AzTerraformExportResourceObject.md
+  PlatyPS schema version: 2024-05-01

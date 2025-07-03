@@ -1,0 +1,382 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Update-AzRecoveryServicesAsrClusterProtectionDirection
+name: Update-AzRecoveryServicesAsrClusterProtectionDirection
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Updates the replication direction for the specified replication protection cluster.
+  Used to re-protect/reverse replicate a failed over replication protection cluster.
+description: |-
+  The **Update-AzRecoveryServicesAsrClusterProtectionDirection** cmdlet updates the replication direction for the specified Azure Site Recovery protection cluster object after the completion of a commit failover operation.
+parameters:
+  cmdletParameters:
+  - name: AzureToAzure
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure to Azure disaster recovery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureToAzureReplicationProtectedItemConfig
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRAzureToAzureReplicationProtectedItemConfig" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of all replication protected items available in protection cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionSecretUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encryption secret URL(Azure disk encryption) to be used be recovery VM after failover.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encryption secret key vault ID(Azure disk encryption) to be used be recovery VM after failover.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKeyUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encryption secret key URL(Azure disk encryption) to be used be recovery VM after failover.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encryption secret key vault ID(Azure disk encryption) to be used be recovery VM after failover.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogStorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account ID to store the replication log of VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainerMapping
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainerMapping" data-throw-if-not-resolved="False" />
+    description: |-
+      Protection container Mapping to be used for replication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryAvailabilitySetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The availability set that the virtual machine should be created in upon failover
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryAvailabilityZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The availability zone that the virtual machine should be created in upon failover
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryBootDiagStorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account for boot diagnostics for recovery azure VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryCapacityReservationGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the capacity reservation group Id to be used by the failover VM in target recovery region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryProximityPlacementGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the recovery proximity placement group to failover this virtual machine to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryResourceGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Recovery resourceGroup id for protected Vm.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryVirtualMachineScaleSetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery virtual machine scale set id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureToAzureWithoutProtectedItemDetails
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationProtectionCluster
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectionCluster" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replication protection cluster object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzRecoveryServicesAsrClusterProtectionDirection
+        -ProtectionContainerMapping <ASRProtectionContainerMapping>
+        -ReplicationProtectionCluster <ASRReplicationProtectionCluster>
+        -RecoveryResourceGroupId <String>
+        -LogStorageAccountId <String>
+        [-AzureToAzure]
+        [-RecoveryAvailabilitySetId <String>]
+        [-RecoveryProximityPlacementGroupId <String>]
+        [-RecoveryVirtualMachineScaleSetId <String>]
+        [-RecoveryCapacityReservationGroupId <String>]
+        [-RecoveryBootDiagStorageAccountId <String>]
+        [-RecoveryAvailabilityZone <String>]
+        [-DiskEncryptionVaultId <String>]
+        [-DiskEncryptionSecretUrl <String>]
+        [-KeyEncryptionKeyUrl <String>]
+        [-KeyEncryptionVaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureToAzureWithoutProtectedItemDetails
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzRecoveryServicesAsrClusterProtectionDirection
+        -ProtectionContainerMapping <ASRProtectionContainerMapping>
+        -AzureToAzureReplicationProtectedItemConfig <ASRAzureToAzureReplicationProtectedItemConfig[]>
+        -ReplicationProtectionCluster <ASRReplicationProtectionCluster>
+        -RecoveryResourceGroupId <String>
+        -LogStorageAccountId <String>
+        [-AzureToAzure]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureToAzure
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectionCluster" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Update-AzRecoveryServicesAsrClusterProtectionDirection -AzureToAzure -ReplicationProtectionCluster $cluster -RecoveryProximityPlacementGroupId $ppg -RecoveryAvailabilitySetId $avset -RecoveryResourceGroupId $rgId -LogStorageAccountId $storage -ProtectionContainerMapping $recoverypcm
+    ```
+
+
+    Start the update direction operation for the specified replication protection cluster in target azure region defined by protection container mapping without protected item replication configuration.
+- title: Example 2
+  description: |-
+    ```powershell
+    Update-AzRecoveryServicesAsrClusterProtectionDirection -AzureToAzure -ReplicationProtectionCluster $cluster -AzureToAzureReplicationProtectedItemConfig $rpis -LogStorageAccountId $storage -ProtectionContainerMapping $recoverypcm -RecoveryResourceGroupId $rgId
+    ```
+
+
+    Start the update direction operation for the specified replication protection cluster in target azure region defined by protection container mapping with protected item replication configuration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesAsrClusterProtectionDirection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/update-azrecoveryservicesasrclusterprotectiondirection
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Update-AzRecoveryServicesAsrClusterProtectionDirection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,221 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVpnSiteLinkConnectionIkeSa
+name: Get-AzVpnSiteLinkConnectionIkeSa
+module: Az.Network
+isPreview: false
+summary: |-
+  Get IKE Security Associations of VPN Site Link Connections
+description: |-
+  The **Get-AzVpnSiteLinkConnectionIkeSa** cmdlet returns the IKE Security Associations of your VPN Link Connection based on the VPN Site Link Connection Name, VPN Connection Name, VPN Gateway Name and Resource Group Name.
+  If the **Get-AzVpnSiteLinkConnectionIkeSa** cmdlet is issued without specifying any of the aforementioned parameters, the output will not show the IKE Security Associations.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSiteLinkConnection" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vpn site link connection object.
+    aliases:
+    - VpnSiteLinkConnection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vpn site link connection name.
+    aliases:
+    - ResourceName
+    - VpnSiteLinkConnectionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID of the Vpn site link connection for which IKE Security Associations needs to be fetched.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnConnectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vpn connection name.
+    aliases:
+    - ParentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnGatewayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vpn gateway name.
+    aliases:
+    - GrandParentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVpnSiteLinkConnectionIkeSa
+        -ResourceGroupName <String>
+        -VpnGatewayName <String>
+        -VpnConnectionName <String>
+        -Name <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVpnSiteLinkConnectionIkeSa
+        -InputObject <PSVpnSiteLinkConnection>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVpnSiteLinkConnectionIkeSa
+        -ResourceId <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSiteLinkConnection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzVpnSiteLinkConnectionIkeSa -ResourceGroupName test-rg -VpnGatewayName test-gateway -VpnConnectionName test-connection -ResourceName test-linkConnection
+    ```
+
+    ```output
+    LocalEndpoint              : 52.148.27.69
+    RemoteEndpoint             : 13.78.223.113
+    InitiatorCookie            : 10994953846917485010
+    ResponderCookie            : 4652217515638795111
+    LocalUdpEncapsulationPort  : 0
+    RemoteUdpEncapsulationPort : 0
+    Encryption                 : AES256
+    Integrity                  : SHA1
+    DhGroup                    : DHGroup2
+    LifeTimeSeconds            : 28800
+    IsSaInitiator              : True
+    ElapsedTimeInseconds       : 21437
+    Quick Mode SA              : 1 item(s)
+    ```
+
+    Returns the IKE Security Associations for the VPN Site Link Connection with the name "test-linkConnection" within the resource group "test-rg"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnSiteLinkConnectionIkeSa.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvpnsitelinkconnectionikesa
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnSiteLinkConnectionIkeSa.md
+  PlatyPS schema version: 2024-05-01

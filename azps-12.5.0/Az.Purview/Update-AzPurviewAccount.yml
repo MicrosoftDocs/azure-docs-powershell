@@ -1,0 +1,377 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.Update-AzPurviewAccount
+name: Update-AzPurviewAccount
+module: Az.Purview
+isPreview: false
+summary: |-
+  Updates an account
+description: |-
+  Updates an account
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purview.Models.IPurviewIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the managed resource group name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purview.Support.PublicNetworkAccess" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the public network access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription identifier
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Tags on the azure resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzPurviewAccount
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-ManagedResourceGroupName <String>]
+        [-PublicNetworkAccess <PublicNetworkAccess>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzPurviewAccount
+        -InputObject <IPurviewIdentity>
+        [-ManagedResourceGroupName <String>]
+        [-PublicNetworkAccess <PublicNetworkAccess>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purview.Models.IPurviewIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purview.Models.Api20210701.IAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a purview account'
+  description: |-
+    ```powershell
+    Update-AzPurviewAccount -Name test-pa -ResourceGroupName test-rg -Tag @{"k"="v"} | Format-List
+    ```
+
+    ```output
+    CloudConnectorAwsExternalId      : xxxxxxxxxx-d074-4f8f-9d7f-10811b250738
+    CreatedAt                        : 8/17/2021 6:18:57 AM
+    CreatedBy                        : xxxxx.xxxxx@microsoft.com
+    CreatedByObjectId                : xxxxxxx-5be9-4f43-abd2-04561777c8b0
+    EndpointCatalog                  : https://test-pa.catalog.purview.azure.com
+    EndpointGuardian                 : https://test-pa.guardian.purview.azure.com
+    EndpointScan                     : https://test-pa.scan.purview.azure.com
+    FriendlyName                     : test-pa
+    Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Purview/a
+                                       ccounts/test-pa
+    Identity                         : {
+                                         "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+                                         "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+                                         "type": "SystemAssigned"
+                                       }
+    IdentityPrincipalId              : aaaaaaaa-bbbb-cccc-1111-222222222222
+    IdentityTenantId                 : aaaabbbb-0000-cccc-1111-dddd2222eeee
+    IdentityType                     : SystemAssigned
+    Location                         : eastus
+    ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
+                                       ft.EventHub/namespaces/Atlas-2bb7cf0b-5348-4811-a336-759242a25d37
+    ManagedResourceGroup             : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj
+    ManagedResourceGroupName         : managed-rg-bbcpgdj
+    ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
+                                       ft.Storage/storageAccounts/scaneastusnkcccgc
+    Name                             : test-pa
+    PrivateEndpointConnection        : {}
+    ProvisioningState                : Succeeded
+    PublicNetworkAccess              : Enabled
+    ResourceGroupName                : test-rg
+    SkuCapacity                      : 1
+    SkuName                          : Standard
+    SystemData                       : {
+                                         "createdAt": "2021-08-17T06:18:57.7274115Z",
+                                         "createdBy": "xxxxx.xxxxx@microsoft.com",
+                                         "createdByType": "User",
+                                         "lastModifiedAt": "xxxxxx-08-17T06:18:57.7274115Z",
+                                         "lastModifiedBy": "xxxxx.xxxxx@microsoft.com",
+                                         "lastModifiedByType": "User"
+                                       }
+    SystemDataCreatedAt              : 8/17/2021 6:18:57 AM
+    SystemDataCreatedBy              : xxxxx.xxxxx@microsoft.com
+    SystemDataCreatedByType          : User
+    SystemDataLastModifiedAt         : 8/17/2021 6:18:57 AM
+    SystemDataLastModifiedBy         : xxxxxx.xxxxx@microsoft.com
+    SystemDataLastModifiedByType     : User
+    Tag                              : {
+                                         "k": "v"
+                                       }
+    Type                             : Microsoft.Purview/account
+    ```
+
+    Update the tag of a purview account named 'test-pa'
+- title: 'Example 2: Update a purview account by InputObject'
+  description: |-
+    ```powershell
+    $get = Get-AzPurviewAccount -Name test-pa -ResourceGroupName test-rg
+    Update-AzPurviewAccount -InputObject $get -Tag @{"k"="v"}
+    ```
+
+    ```output
+    CloudConnectorAwsExternalId      : xxxxxxxxxx-d074-4f8f-9d7f-10811b250738
+    CreatedAt                        : 8/17/2021 6:18:57 AM
+    CreatedBy                        : xxxxx.xxxxx@microsoft.com
+    CreatedByObjectId                : xxxxxxx-5be9-4f43-abd2-04561777c8b0
+    EndpointCatalog                  : https://test-pa.catalog.purview.azure.com
+    EndpointGuardian                 : https://test-pa.guardian.purview.azure.com
+    EndpointScan                     : https://test-pa.scan.purview.azure.com
+    FriendlyName                     : test-pa
+    Id                               : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/test-rg/providers/Microsoft.Purview/a
+                                       ccounts/test-pa
+    Identity                         : {
+                                         "principalId": "aaaaaaaa-bbbb-cccc-1111-222222222222",
+                                         "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+                                         "type": "SystemAssigned"
+                                       }
+    IdentityPrincipalId              : aaaaaaaa-bbbb-cccc-1111-222222222222
+    IdentityTenantId                 : aaaabbbb-0000-cccc-1111-dddd2222eeee
+    IdentityType                     : SystemAssigned
+    Location                         : eastus
+    ManagedResourceEventHubNamespace : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
+                                       ft.EventHub/namespaces/Atlas-2bb7cf0b-5348-4811-a336-759242a25d37
+    ManagedResourceGroup             : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj
+    ManagedResourceGroupName         : managed-rg-bbcpgdj
+    ManagedResourceStorageAccount    : /subscriptions/xxxxxxxx-1bf0-4dda-aec3-cb9272f09590/resourceGroups/managed-rg-bbcpgdj/providers/Microso
+                                       ft.Storage/storageAccounts/scaneastusnkcccgc
+    Name                             : test-pa
+    PrivateEndpointConnection        : {}
+    ProvisioningState                : Succeeded
+    PublicNetworkAccess              : Enabled
+    ResourceGroupName                : test-rg
+    SkuCapacity                      : 1
+    SkuName                          : Standard
+    SystemData                       : {
+                                         "createdAt": "2021-08-17T06:18:57.7274115Z",
+                                         "createdBy": "xxxxx.xxxxx@microsoft.com",
+                                         "createdByType": "User",
+                                         "lastModifiedAt": "xxxxxx-08-17T06:18:57.7274115Z",
+                                         "lastModifiedBy": "xxxxx.xxxxx@microsoft.com",
+                                         "lastModifiedByType": "User"
+                                       }
+    SystemDataCreatedAt              : 8/17/2021 6:18:57 AM
+    SystemDataCreatedBy              : xxxxx.xxxxx@microsoft.com
+    SystemDataCreatedByType          : User
+    SystemDataLastModifiedAt         : 8/17/2021 6:18:57 AM
+    SystemDataLastModifiedBy         : xxxxxx.xxxxx@microsoft.com
+    SystemDataLastModifiedByType     : User
+    Tag                              : {
+                                         "k": "v"
+                                       }
+    Type                             : Microsoft.Purview/account
+    ```
+
+    Update the tag of a purview account named 'test-pa' by InputObject
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Update-AzPurviewAccount.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.purview/update-azpurviewaccount
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Update-AzPurviewAccount.md
+  PlatyPS schema version: 2024-05-01

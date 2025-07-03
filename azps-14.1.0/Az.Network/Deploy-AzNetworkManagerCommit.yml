@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Deploy-AzNetworkManagerCommit
+name: Deploy-AzNetworkManagerCommit
+module: Az.Network
+isPreview: false
+summary: |-
+  Deploys a network manager commit.
+description: |-
+  The **Deploy-AzNetworkManagerCommit** cmdlet deploys a network manager commit.
+parameters:
+  cmdletParameters:
+  - name: CommitType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Commit Type.
+    acceptedValues:
+    - SecurityAdmin
+    - Connectivity
+    - Routing
+    - SecurityUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of configuration ids.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: TargetLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of target locations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Deploy-AzNetworkManagerCommit
+        -Name <String>
+        -ResourceGroupName <String>
+        -TargetLocation <String[]>
+        [-ConfigurationId <String[]>]
+        -CommitType <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerCommit" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $regions = @("eastus", "westus")
+    $configIds = @("/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/connectivityConfigurations/psConnectivityConfigMesh")
+    Deploy-AzNetworkManagerCommit -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -TargetLocation $regions -ConfigurationId $configids -CommitType "Connectivity"
+    ```
+
+    This example is used to commit connecitivity confguration in East US and West US regions.
+- title: Example 2
+  description: |-
+    ```powershell
+    $regions = @( "westus")
+    Deploy-AzNetworkManagerCommit -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -TargetLocation $regions -CommitType "Connectivity"
+    ```
+
+    This example is used to uncommit all connecitivity confgurations in West US region.
+- title: Example 3
+  description: |-
+    ```powershell
+    $regions = @( "westus")
+    $configIds = @("/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/securityAdminConfigurations/psSecurityAdminConfig")
+    Deploy-AzNetworkManagerCommit -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -TargetLocation $regions -CommitType "SecurityAdmin" -ConfigurationId $configids
+    ```
+
+    This example is used to commit a security admin config in West US region.
+- title: Example 3
+  description: |-
+    ```powershell
+    $regions = @( "westus")
+    $configIds = @("/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/routingConfigurations/psRoutingConfig")
+    Deploy-AzNetworkManagerCommit -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -TargetLocation $regions -CommitType "Routing" -ConfigurationId $configids
+    ```
+
+    This example is used to commit a routing config in West US region.
+- title: Example 3
+  description: |-
+    ```powershell
+    $regions = @( "westus")
+    $configIds = @("/subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/securityUserConfigurations/psSecurityUserConfig")
+    Deploy-AzNetworkManagerCommit -ResourceGroupName "psResourceGroup" -Name "psNetworkManager" -TargetLocation $regions -CommitType "SecurityUser" -ConfigurationId $configids
+    ```
+
+    This example is used to commit a security user config in West US region.
+links:
+- text: New-AzNetworkManager
+  href: ./New-AzNetworkManager.yml
+- text: Get-AzNetworkManager
+  href: ./Get-AzNetworkManager.yml
+- text: Remove-AzNetworkManager
+  href: ./Remove-AzNetworkManager.yml
+- text: Set-AzNetworkManager
+  href: ./Set-AzNetworkManager.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Deploy-AzNetworkManagerCommit.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/deploy-aznetworkmanagercommit
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Deploy-AzNetworkManagerCommit.md
+  PlatyPS schema version: 2024-05-01

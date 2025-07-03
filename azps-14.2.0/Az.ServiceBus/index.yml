@@ -1,0 +1,68 @@
+### YamlMime:PowerShellModule1
+uid: Az.ServiceBus
+name: Az.ServiceBus Module
+isPreview: false
+cmdletGroups:
+- title: Service Bus
+  cmdlets:
+  - Az.ServiceBus.Approve-AzServiceBusPrivateEndpointConnection
+  - Az.ServiceBus.Complete-AzServiceBusMigration
+  - Az.ServiceBus.Deny-AzServiceBusPrivateEndpointConnection
+  - Az.ServiceBus.Get-AzServiceBusAuthorizationRule
+  - Az.ServiceBus.Get-AzServiceBusGeoDRConfiguration
+  - Az.ServiceBus.Get-AzServiceBusKey
+  - Az.ServiceBus.Get-AzServiceBusMigration
+  - Az.ServiceBus.Get-AzServiceBusNamespace
+  - Az.ServiceBus.Get-AzServiceBusNetworkRuleSet
+  - Az.ServiceBus.Get-AzServiceBusPrivateEndpointConnection
+  - Az.ServiceBus.Get-AzServiceBusPrivateLink
+  - Az.ServiceBus.Get-AzServiceBusQueue
+  - Az.ServiceBus.Get-AzServiceBusRule
+  - Az.ServiceBus.Get-AzServiceBusSubscription
+  - Az.ServiceBus.Get-AzServiceBusTopic
+  - Az.ServiceBus.New-AzServiceBusAuthorizationRule
+  - Az.ServiceBus.New-AzServiceBusAuthorizationRuleSASToken
+  - Az.ServiceBus.New-AzServiceBusGeoDRConfiguration
+  - Az.ServiceBus.New-AzServiceBusIPRuleConfig
+  - Az.ServiceBus.New-AzServiceBusKey
+  - Az.ServiceBus.New-AzServiceBusKeyVaultPropertiesObject
+  - Az.ServiceBus.New-AzServiceBusNamespace
+  - Az.ServiceBus.New-AzServiceBusQueue
+  - Az.ServiceBus.New-AzServiceBusRule
+  - Az.ServiceBus.New-AzServiceBusSubscription
+  - Az.ServiceBus.New-AzServiceBusTopic
+  - Az.ServiceBus.New-AzServiceBusVirtualNetworkRuleConfig
+  - Az.ServiceBus.Remove-AzServiceBusAuthorizationRule
+  - Az.ServiceBus.Remove-AzServiceBusGeoDRConfiguration
+  - Az.ServiceBus.Remove-AzServiceBusMigration
+  - Az.ServiceBus.Remove-AzServiceBusNamespace
+  - Az.ServiceBus.Remove-AzServiceBusPrivateEndpointConnection
+  - Az.ServiceBus.Remove-AzServiceBusQueue
+  - Az.ServiceBus.Remove-AzServiceBusRule
+  - Az.ServiceBus.Remove-AzServiceBusSubscription
+  - Az.ServiceBus.Remove-AzServiceBusTopic
+  - Az.ServiceBus.Set-AzServiceBusAuthorizationRule
+  - Az.ServiceBus.Set-AzServiceBusGeoDRConfigurationBreakPair
+  - Az.ServiceBus.Set-AzServiceBusGeoDRConfigurationFailOver
+  - Az.ServiceBus.Set-AzServiceBusNamespace
+  - Az.ServiceBus.Set-AzServiceBusNetworkRuleSet
+  - Az.ServiceBus.Set-AzServiceBusQueue
+  - Az.ServiceBus.Set-AzServiceBusRule
+  - Az.ServiceBus.Set-AzServiceBusSubscription
+  - Az.ServiceBus.Set-AzServiceBusTopic
+  - Az.ServiceBus.Start-AzServiceBusMigration
+  - Az.ServiceBus.Stop-AzServiceBusMigration
+  - Az.ServiceBus.Test-AzServiceBusName
+  - Az.ServiceBus.Test-AzServiceBusNameAvailability
+description: |-
+  This topic displays help topics for the Azure Service Bus cmdlets.
+metadata:
+  Module Name: Az.ServiceBus
+  Module Guid: cc69c625-e961-43f4-8b50-0061eba6e4b6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.servicebus
+  Help Version: 4.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Az.ServiceBus.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Az.ServiceBus.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

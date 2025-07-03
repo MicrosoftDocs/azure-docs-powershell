@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AlertsManagement.Get-AzSmartGroup
+name: Get-AzSmartGroup
+module: Az.AlertsManagement
+isPreview: false
+summary: |-
+  Gets Smart Groups information
+description: |-
+  **Get-AzSmartGroup** cmdlet gets smart groups information.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmartGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Unique Identifier of SmartGroup / ResourceId of SmartGroup.
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SmartGroupById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SortBy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert property to use while sorting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SmartGroupsListByFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SortOrder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sort Order
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SmartGroupsListByFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Supported time range values - 1h, 1d, 7d, 30d (Default is 1d)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SmartGroupsListByFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSmartGroup
+        [-SortBy <String>]
+        [-SortOrder <String>]
+        [-TimeRange <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SmartGroupsListByFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSmartGroup
+        -SmartGroupId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SmartGroupById
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.AlertsManagement.OutputModels.PSSmartGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSmartGroup -TimeRange "1h"
+    ```
+
+    List all smart groups formed in last 1 hour. Use Format-List to get the complete details of each smart group in list.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzSmartGroup -SmartGroupId "afbf1b3a-0a6c-4f19-9c9b-644ccd7b1529" | Format-List
+    ```
+
+    Get Smart Group details by Id (GUID) or Resource Id (Complete ARM Id)
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Get-AzSmartGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.AlertsManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.alertsmanagement/get-azsmartgroup
+  Module Name: Az.AlertsManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/Get-AzSmartGroup.md
+  PlatyPS schema version: 2024-05-01

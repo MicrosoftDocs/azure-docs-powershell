@@ -1,0 +1,270 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LabServices.Get-AzLabServicesLab
+name: Get-AzLabServicesLab
+module: Az.LabServices
+isPreview: false
+summary: |-
+  API to get labs.
+description: |-
+  API to get labs.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabPlan
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      To construct, see NOTES section for LABPLAN properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LabPlan
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByLabName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByLabName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesLab
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListBySubscription
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesLab
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByLabName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesLab
+        -LabPlan <LabPlan>
+        [-Name <String>]
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LabPlan
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesLab
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzLabServicesLab
+        -ResourceId <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.LabPlan" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.LabServices.Models.Api20211001Preview.ILab" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all labs'
+  description: |-
+    ```powershell
+    Get-AzLabServicesLab
+    ```
+
+    ```output
+    Location      Name                                               Type
+    --------      ----                                               ----
+    westus2       Lab1                                               Microsoft.LabServices/labs
+    westus2       Lab2                                               Microsoft.LabServices/labs
+    westus2       Lab3                                               Microsoft.LabServices/labs
+    westus2       Lab4                                               Microsoft.LabServices/labs
+    ```
+
+    Returns all labs for the current subscription.
+- title: 'Example 2: Get a specific lab'
+  description: |-
+    ```powershell
+    Get-AzLabServicesLab -ResourceGroupName 'yourgroupname' -Name 'yourlabname'
+    ```
+
+    ```output
+    Location      Name                                               Type
+    --------      ----                                               ----
+    westus2       yourlabName                                        Microsoft.LabServices/labs
+    ```
+
+    Get a specific lab using the resource group name and the lab name.
+- title: 'Example 3: Get all labs created with a lab plan'
+  description: |-
+    ```powershell
+    $plan = Get-AzLabServicesLabPlan -LabPlanName 'lab plan name'
+    $plan | Get-AzLabServicesLab -Name 'lab name'
+    ```
+
+    ```output
+    Location      Name                                               Type
+    --------      ----                                               ----
+    westus2       lab Name                                        Microsoft.LabServices/labs
+    ```
+
+    Get the specific lab in a lab plan using the lab plan object and the lab name.
+- title: 'Example 4: Get labs using wildcards in the lab name.'
+  description: |-
+    ```powershell
+    Get-AzLabServicesLab -ResourceGroupName 'group name' -Name '*lab name'
+    ```
+
+    ```output
+    Location      Name                                               Type
+    --------      ----                                               ----
+    westus2       yourlab Name                                        Microsoft.LabServices/labs
+    westus2       anotherlab Name                                     Microsoft.LabServices/labs
+    ```
+
+    Using the Name parameter and a wildcard all labs in the resource group like the name are returned.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesLab.md
+  document type: cmdlet
+  external help file: Az.LabServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.labservices/get-azlabserviceslab
+  Module Name: Az.LabServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LabServices/LabServices/help/Get-AzLabServicesLab.md
+  PlatyPS schema version: 2024-05-01

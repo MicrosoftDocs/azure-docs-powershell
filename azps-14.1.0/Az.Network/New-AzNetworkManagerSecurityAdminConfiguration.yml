@@ -1,0 +1,319 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkManagerSecurityAdminConfiguration
+name: New-AzNetworkManagerSecurityAdminConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a security admin configuration.
+description: |-
+  The **New-AzNetworkManagerSecurityAdminConfiguration** cmdlet creates a security admin configuration.
+parameters:
+  cmdletParameters:
+  - name: ApplyOnNetworkIntentPolicyBasedService
+    type: <xref href="Microsoft.Azure.Commands.Network.NewAzNetworkManagerSecurityAdminConfigurationCommand+NetworkIntentPolicyBasedServiceType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      ApplyOnNetworkIntentPolicyBasedServices.
+    acceptedValues:
+    - None
+    - All
+    - AllowRulesOnly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteExistingNSG
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      DeleteExistingNSGs Flag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkGroupAddressSpaceAggregationOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      How security admin rules are applied using network group address space aggregation. Valid values include 'None' and 'Manual'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManagerSecurityAdminConfiguration
+        -Name <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-Description <String>]
+        [-ApplyOnNetworkIntentPolicyBasedService <NetworkIntentPolicyBasedServiceType[]>]
+        [-NetworkGroupAddressSpaceAggregationOption <String>]
+        [-DeleteExistingNSG]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityAdminConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $ApplyOnNetworkIntentPolicyBasedService = @("None")
+    New-AzNetworkManagerSecurityAdminConfiguration -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -Name "psSecurityAdminConfig" -Description "TestDescription" -DeleteExistingNSG  -ApplyOnNetworkIntentPolicyBasedService $ApplyOnNetworkIntentPolicyBasedService -NetworkGroupAddressSpaceAggregationOption $NetworkGroupAddressSpaceAggregationOption
+    ```
+
+    ```output
+    SecurityType                                :
+    ApplyOnNetworkIntentPolicyBasedServices     : {None}
+    ApplyOnNetworkIntentPolicyBasedServicesText : [
+                                                    "None"
+                                                  ]
+    DeleteExistingNSGs                          :
+    DisplayName                                 :
+    Description                                 : TestDescription
+    Type                                        : Microsoft.Network/networkManagers/securityAdminConfigurations
+    ProvisioningState                           : Succeeded
+    SystemData                                  : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText                              : {
+                                                    "CreatedBy": "jaredgorthy@microsoft.com",
+                                                    "CreatedByType": "User",
+                                                    "CreatedAt": "2022-08-07T23:58:54.8549506Z",
+                                                    "LastModifiedBy": "jaredgorthy@microsoft.com",
+                                                    "LastModifiedByType": "User",
+                                                    "LastModifiedAt": "2022-08-07T23:59:12.5789979Z"
+                                                  }
+    Name                                        : psSecurityAdminConfig
+    Etag                                        :
+    Id                                          : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/securityAdminConfigurations/psSecurityAdminConfig
+    ```
+
+    Creates a security admin configuration that will delete existing NSGs and not apply on NIP based services.
+- title: Example 2
+  description: |-
+    ```powershell
+    $ApplyOnNetworkIntentPolicyBasedService = @("All")
+    New-AzNetworkManagerSecurityAdminConfiguration -ResourceGroupName "psResourceGroup" -NetworkManagerName "psNetworkManager" -Name "psSecurityAdminConfig" -Description "TestDescription" -ApplyOnNetworkIntentPolicyBasedService $ApplyOnNetworkIntentPolicyBasedService
+    ```
+
+    ```output
+    SecurityType                                :
+    ApplyOnNetworkIntentPolicyBasedServices     : {All}
+    ApplyOnNetworkIntentPolicyBasedServicesText : [
+                                                    "All"
+                                                  ]
+    DeleteExistingNSGs                          :
+    DisplayName                                 :
+    Description                                 : TestDescription
+    Type                                        : Microsoft.Network/networkManagers/securityAdminConfigurations
+    ProvisioningState                           : Succeeded
+    SystemData                                  : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText                              : {
+                                                    "CreatedBy": "jaredgorthy@microsoft.com",
+                                                    "CreatedByType": "User",
+                                                    "CreatedAt": "2022-08-07T23:58:54.8549506Z",
+                                                    "LastModifiedBy": "jaredgorthy@microsoft.com",
+                                                    "LastModifiedByType": "User",
+                                                    "LastModifiedAt": "2022-08-08T00:01:21.391989Z"
+                                                  }
+    Name                                        : psSecurityAdminConfig
+    Etag                                        :
+    Id                                          : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager/securityAdminConfigurations/psSecurityAdminConfig
+    ```
+
+    Creates a security admin configuration that will apply on NIP based services.
+links:
+- text: Get-AzNetworkManagerSecurityAdminConfiguration
+  href: ./Get-AzNetworkManagerSecurityAdminConfiguration.yml
+- text: Remove-AzNetworkManagerSecurityAdminConfiguration
+  href: ./Remove-AzNetworkManagerSecurityAdminConfiguration.yml
+- text: Set-AzNetworkManagerSecurityAdminConfiguration
+  href: ./Set-AzNetworkManagerSecurityAdminConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagersecurityadminconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerSecurityAdminConfiguration.md
+  PlatyPS schema version: 2024-05-01

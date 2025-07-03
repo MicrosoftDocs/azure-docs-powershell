@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureStorSimpleDeviceBackupRestoreJob
+name: Start-AzureStorSimpleDeviceBackupRestoreJob
+module: Azure
+isPreview: false
+summary: |-
+  Starts a job that restores a backup on a StorSimple device.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureStorSimpleDeviceBackupRestoreJob** cmdlet starts a job that restores a backup on a StorSimple device.
+  Specify a backup ID and an optional snapshot ID.
+parameters:
+  cmdletParameters:
+  - name: BackupId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the backup to restore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device on which the backup exists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet does not prompt you for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the snapshot to restore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForComplete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceBackupRestoreJob
+        -DeviceName <String>
+        -BackupId <String>
+        [-WaitForComplete]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceBackupRestoreJob
+        -DeviceName <String>
+        -BackupId <String>
+        -SnapshotId <String>
+        [-WaitForComplete]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyById
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="TaskStatusInfo, TaskResponse" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **TaskStatusInfo** object if you specify the *WaitForComplete* parameter.
+    If you do not specify that parameter, it returns a **TaskResponse** object.
+examples:
+- title: 'Example 1: Start a job to restore a backup'
+  description: |-
+    ```
+    PS C:\>Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -WaitForComplete
+    Confirm
+    Are you sure you want to restore the backup with backupId b3b50534-763c-4b05-9724-5ecf62bde721?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+
+
+    Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
+    JobId      : 217d0647-c001-4f43-9833-f8155a458e95
+    JobSteps   : {}
+    Result     : Succeeded
+    Status     : Completed
+    TaskResult : Succeeded
+    StatusCode : OK
+    RequestId  : e0aa2dcd2f197a8588c40a067fe0e519
+    ```
+
+    This command starts a job that restores the backup object that has the specified ID, and its associated snapshots, on the device named Contoso63-AppVm.
+    The command specifies the *WaitForComplete* parameter, so the job finishes before the cmdlet returns control to the console.
+- title: 'Example 2: Start a job to restore a specific snapshot'
+  description: |-
+    ```
+    PS C:\>Start-AzureStorSimpleDeviceBackupRestoreJob -DeviceName "Contoso63-AppVm" -BackupId "b3b50534-763c-4b05-9724-5ecf62bde721" -SnapshotId "2d0cfad7-46bf-4266-8859-96549646e947_0000000000000000" -Force
+
+    The start job is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId 9102ed9a-078f-4648-a
+    721-3cffbba31336 for tracking the job status
+    ```
+
+    This command starts a job that restores the backup snapshot that has the specified ID.
+    The command specifies the backup object by ID on the device named Contoso63-AppVm.
+    The command specifies the *Force* parameter, so it starts the job without prompting you to confirm.
+links:
+- text: Get-AzureStorSimpleJob
+  href: ./Get-AzureStorSimpleJob.yml
+- text: Start-AzureStorSimpleDeviceBackupJob
+  href: ./Start-AzureStorSimpleDeviceBackupJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F9C8D0AA-ED97-43E8-ADB1-5AE1A4517666
+  PlatyPS schema version: 2024-05-01

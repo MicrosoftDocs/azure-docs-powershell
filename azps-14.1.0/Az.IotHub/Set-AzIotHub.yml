@@ -1,0 +1,428 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotHub.Set-AzIotHub
+name: Set-AzIotHub
+module: Az.IotHub
+isPreview: false
+summary: |-
+  Updates the properties of an IotHub.
+description: |-
+  Updates the properties of an IotHub.
+parameters:
+  cmdletParameters:
+  - name: CloudToDevice
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSCloudToDeviceProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The properties for the cloud to device command queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateCloudToDeviceProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableFileUploadNotifications
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag that specifies whether notifications should be enabled for file upload.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubRetentionTimeInDays
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention time in days.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateEventHubEndpointProperties
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FallbackRoute
+    type: <xref href="Microsoft.Azure.Management.IotHub.Models.PSFallbackRouteMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Fallback Route for Routing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFallbackRouteProperty
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUploadContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the container to upload the files to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUploadNotificationMaxDeliveryCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The maximum delivery count for file upload notifications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUploadNotificationTtl
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Time to live value for the messages in the file upload notification queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUploadSasUriTtl
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Time to live for the for the SAS Uri thats generated for file upload.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUploadStorageConnectionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage connection string to upload the files to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFileUploadProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the IotHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Routes
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSRouteMetadata" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Routes to be added for Routing
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateRouteProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingProperties
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The Routing properties for routing messages to external endpoints
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateRoutingProperties
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHubSku" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Sku.
+    acceptedValues:
+    - F1
+    - S1
+    - S2
+    - S3
+    - B1
+    - B2
+    - B3
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSku
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Units
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of Units
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSku
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        -SkuName <PSIotHubSku>
+        [-Units <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSku
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        -EventHubRetentionTimeInDays <Int64>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateEventHubEndpointProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        -EnableFileUploadNotifications <Boolean>
+        [-FileUploadStorageConnectionString <String>]
+        [-FileUploadContainerName <String>]
+        [-FileUploadSasUriTtl <TimeSpan>]
+        [-FileUploadNotificationTtl <TimeSpan>]
+        [-FileUploadNotificationMaxDeliveryCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateFileUploadProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        -CloudToDevice <PSCloudToDeviceProperties>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateCloudToDeviceProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        [-RoutingProperties <PSRoutingProperties>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateRoutingProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        [-Routes <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Management.IotHub.Models.PSRouteMetadata]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateRouteProperties
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzIotHub
+        -ResourceGroupName <String>
+        -Name <String>
+        [-FallbackRoute <PSFallbackRouteMetadata>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateFallbackRouteProperty
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Update the sku
+  description: |-
+    ```powershell
+    Set-AzIotHub -ResourceGroupName "myresourcegroup" -Name "myiothub" -SkuName S1 -Units 5
+    ```
+
+    Update the sku to S1 and units to 5 for the IotHub named "myiothub"
+- title: Example 2 Update the eventhub properties
+  description: |-
+    ```powershell
+    Set-AzIotHub -ResourceGroupName "myresourcegroup" -Name "myiothub" -EventHubRetentionTimeInDays 4
+    ```
+
+    Update the retention time of telemetry in days to 4 for the IotHub named "myiothub"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHub.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iothub/set-aziothub
+  Module Name: Az.IotHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Set-AzIotHub.md
+  PlatyPS schema version: 2024-05-01

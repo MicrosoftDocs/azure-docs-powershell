@@ -1,0 +1,330 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzADUser
+name: Update-AzADUser
+module: Az.Resources
+isPreview: false
+summary: |-
+  Updates an existing active directory user.
+description: |-
+  Updates an existing active directory user (work/school account also popularly known as org-id).
+  For more information: https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/users-operations#UpdateUser
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      New display name for the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNOrObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UPNParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAccount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      true for enabling the account; otherwise, false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNOrObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UPNParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceChangePasswordNextLogin
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      It must be specified if the user should change the password on the next successful login.
+      Only valid if password is updated otherwise it will be ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser" data-throw-if-not-resolved="False" />
+    description: |-
+      The object representing the user to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The object id of the user to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      New password for the user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNOrObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UPNParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UPNOrObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user principal name or object id of the user to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNOrObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserPrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user principal name of the user to be updated.
+    aliases:
+    - UPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -UPNOrObjectId <String>
+        [-DisplayName <String>]
+        [-EnableAccount <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UPNOrObjectIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -UserPrincipalName <String>
+        [-DisplayName <String>]
+        [-EnableAccount <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -ObjectId <Guid>
+        [-DisplayName <String>]
+        [-EnableAccount <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -InputObject <PSADUser>
+        [-DisplayName <String>]
+        [-EnableAccount <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameters: InputObject (ByValue)
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADUser" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Update the display name of a user using object id
+  description: |-
+    ```
+    PS C:\> Update-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName
+    ```
+
+    Updates the display name of the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to be 'MyNewDisplayName'.
+- title: Example 2 - Update the display name of a user using user principal name
+  description: |-
+    ```
+    PS C:\> Update-AzADUser -UserPrincipalName foo@domain.com -DisplayName MyNewDisplayName
+    ```
+
+    Updates the display name of the user with user principal name 'foo@domain.com' to be 'MyNewDisplayName'.
+- title: Example 3 - Update the display name of a user using piping
+  description: |-
+    ```
+    PS C:\> Get-AzADUser -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Update-AzADUser -DisplayName MyNewDisplayName
+    ```
+
+    Gets the user with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Update-AzADUser cmdlet to update the display name of that user to 'MyNewDisplayName'.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADUser.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/update-Azaduser
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADUser.md
+  PlatyPS schema version: 2024-05-01

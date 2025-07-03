@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ElasticSan.New-AzElasticSanVirtualNetworkRuleObject
+name: New-AzElasticSanVirtualNetworkRuleObject
+module: Az.ElasticSan
+isPreview: false
+summary: |-
+  Create an in-memory object for VirtualNetworkRule.
+description: |-
+  Create an in-memory object for VirtualNetworkRule.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The action of virtual network rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of a subnet, for example: /subscriptions/{subscriptionId}/resourceGroups/{groupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzElasticSanVirtualNetworkRuleObject
+        -VirtualNetworkResourceId <String>
+        [-Action <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.VirtualNetworkRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a virtual network rule object'
+  description: |-
+    ```powershell
+    New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1" -Action Allow
+    ```
+
+    ```output
+    Action State VirtualNetworkResourceId
+    ------ ----- ------------------------
+    Allow        /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1
+    ```
+
+    This command creates a new virtual network rule object using the virtual network resource Id.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/New-AzElasticSanVirtualNetworkRuleObject.md
+  document type: cmdlet
+  external help file: Az.ElasticSan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ElasticSan/new-azelasticsanvirtualnetworkruleobject
+  Module Name: Az.ElasticSan
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/New-AzElasticSanVirtualNetworkRuleObject.md
+  PlatyPS schema version: 2024-05-01

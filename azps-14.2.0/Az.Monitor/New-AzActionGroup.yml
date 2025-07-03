@@ -1,0 +1,688 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroup
+name: New-AzActionGroup
+module: Az.Monitor
+isPreview: false
+summary: |-
+  create a new action group or create an existing one.
+description: |-
+  create a new action group or create an existing one.
+parameters:
+  cmdletParameters:
+  - name: ArmRoleReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IArmRoleReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ARM role receivers that are part of this action group.
+      Roles are Azure RBAC roles and only built-in roles are supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomationRunbookReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IAutomationRunbookReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AutomationRunbook receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAppPushReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IAzureAppPushReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AzureAppPush receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureFunctionReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IAzureFunctionReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of azure function receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IEmailReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of email receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this action group is enabled.
+      If an action group is not enabled, then none of its receivers will receive communications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IEventHubReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of event hub receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupShortName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The short name of the action group.
+      This will be used in SMS messages.
+    aliases:
+    - ShortName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IActionGroupIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ItsmReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IItsmReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ITSM receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicAppReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.ILogicAppReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of logic app receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the action group.
+    aliases:
+    - ActionGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmsReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.ISmsReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of SMS receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VoiceReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IVoiceReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of voice receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookReceiver
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IWebhookReceiver" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of webhook receivers that are part of this action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-ArmRoleReceiver <IArmRoleReceiver[]>]
+        [-AutomationRunbookReceiver <IAutomationRunbookReceiver[]>]
+        [-AzureAppPushReceiver <IAzureAppPushReceiver[]>]
+        [-AzureFunctionReceiver <IAzureFunctionReceiver[]>]
+        [-EmailReceiver <IEmailReceiver[]>]
+        [-Enabled]
+        [-EventHubReceiver <IEventHubReceiver[]>]
+        [-GroupShortName <String>]
+        [-ItsmReceiver <IItsmReceiver[]>]
+        [-LogicAppReceiver <ILogicAppReceiver[]>]
+        [-SmsReceiver <ISmsReceiver[]>]
+        [-Tag <Hashtable>]
+        [-VoiceReceiver <IVoiceReceiver[]>]
+        [-WebhookReceiver <IWebhookReceiver[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzActionGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroup
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroup
+        -InputObject <IActionGroupIdentity>
+        -Location <String>
+        [-ArmRoleReceiver <IArmRoleReceiver[]>]
+        [-AutomationRunbookReceiver <IAutomationRunbookReceiver[]>]
+        [-AzureAppPushReceiver <IAzureAppPushReceiver[]>]
+        [-AzureFunctionReceiver <IAzureFunctionReceiver[]>]
+        [-EmailReceiver <IEmailReceiver[]>]
+        [-Enabled]
+        [-EventHubReceiver <IEventHubReceiver[]>]
+        [-GroupShortName <String>]
+        [-ItsmReceiver <IItsmReceiver[]>]
+        [-LogicAppReceiver <ILogicAppReceiver[]>]
+        [-SmsReceiver <ISmsReceiver[]>]
+        [-Tag <Hashtable>]
+        [-VoiceReceiver <IVoiceReceiver[]>]
+        [-WebhookReceiver <IWebhookReceiver[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IActionGroupIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.IActionGroupResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an action group'
+  description: |-
+    ```powershell
+    $email1 = New-AzActionGroupEmailReceiverObject -EmailAddress user@example.com -Name user1
+    $sms1 = New-AzActionGroupSmsReceiverObject -CountryCode '{countrycode}' -Name user2 -PhoneNumber '{phonenumber}'
+    New-AzActionGroup -Name 'actiongroup1' -ResourceGroupName 'Monitor-Action' -Location northcentralus -GroupShortName ag1 -EmailReceiver $email1 -SmsReceiver $sms1
+    ```
+
+    ```output
+    ArmRoleReceiver           : {}
+    AutomationRunbookReceiver : {}
+    AzureAppPushReceiver      : {}
+    AzureFunctionReceiver     : {}
+    EmailReceiver             : {{
+                                  "name": "user1",
+                                  "emailAddress": "user@example.com",
+                                  "useCommonAlertSchema": false,
+                                  "status": "Enabled"
+                                }}
+    Enabled                   : False
+    EventHubReceiver          : {}
+    GroupShortName            : ag1
+    Id                        : /subscriptions/{subid}/resourceGroups/Monitor-Action/providers/microsoft.insights/actionGroups/actiongroup1
+    ItsmReceiver              : {}
+    Location                  : northcentralus
+    LogicAppReceiver          : {}
+    Name                      : actiongroup1
+    ResourceGroupName         : Monitor-Action
+    SmsReceiver               : {{
+                                  "name": "user2",
+                                  "countryCode": "{countrycode}",
+                                  "phoneNumber": "{phonenumber}",
+                                  "status": "Enabled"
+                                }}
+    Tag                       : {
+                                }
+    Type                      : Microsoft.Insights/ActionGroups
+    VoiceReceiver             : {}
+    WebhookReceiver           : {}
+    ```
+
+    The first two commands create two receivers.
+    The final command creates an action group including the two receivers.
+- title: 'Example 2: create another action group'
+  description: |-
+    ```powershell
+    New-AzActionGroup -Name 'actiongroup1' -ResourceGroupName 'Monitor-Action' -Location northcentralus -GroupShortName ag1
+    ```
+
+    ```output
+    ArmRoleReceiver           : {}
+    AutomationRunbookReceiver : {}
+    AzureAppPushReceiver      : {}
+    AzureFunctionReceiver     : {}
+    EmailReceiver             : {}
+    Enabled                   : False
+    EventHubReceiver          : {}
+    GroupShortName            : ag1
+    Id                        : /subscriptions/{subid}/resourceGroups/Monitor-Action/providers/microsoft.insights/actionGroups/actiongroup1
+    ItsmReceiver              : {}
+    Location                  : northcentralus
+    LogicAppReceiver          : {}
+    Name                      : actiongroup1
+    ResourceGroupName         : Monitor-Action
+    SmsReceiver               : {}
+    Tag                       : {
+                                }
+    Type                      : Microsoft.Insights/ActionGroups
+    VoiceReceiver             : {}
+    WebhookReceiver           : {}
+    ```
+
+    This command creates an action group with no receiver.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroup.md
+  document type: cmdlet
+  external help file: Az.ActionGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/new-azactiongroup
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroup.md
+  PlatyPS schema version: 2024-05-01

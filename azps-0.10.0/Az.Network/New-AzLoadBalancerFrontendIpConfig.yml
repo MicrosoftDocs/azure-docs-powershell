@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzLoadBalancerFrontendIpConfig
+name: New-AzLoadBalancerFrontendIpConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a front-end IP configuration for a load balancer.
+description: |-
+  The **New-AzLoadBalancerFrontendIpConfig** cmdlet creates a front-end IP configuration for an Azure load balancer.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the front-end IP configuration that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateIpAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the private IP address of the load balancer.
+      Specify this parameter only if you also specify the *Subnet* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceSubnet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByResourceIdSubnet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddress
+    type: <xref href="PSPublicIpAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **PublicIpAddress** object to associate with a front-end IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourcePublicIpAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the **PublicIpAddress** object to associate with a front-end IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceIdPublicIpAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subnet
+    type: <xref href="PSSubnet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **Subnet** object in which to create a front-end IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceSubnet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the subnet in which to create a front-end IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceIdSubnet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      A list of availability zones denoting the IP allocated for the resource needs to come from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzLoadBalancerFrontendIpConfig
+        -Name <String>
+        -Subnet <PSSubnet>
+        [-PrivateIpAddress <String>]
+        [-Zone <System.Collections.Generic.List`1[System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceSubnet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzLoadBalancerFrontendIpConfig
+        -Name <String>
+        -SubnetId <String>
+        [-PrivateIpAddress <String>]
+        [-Zone <System.Collections.Generic.List`1[System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceIdSubnet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzLoadBalancerFrontendIpConfig
+        -Name <String>
+        -PublicIpAddressId <String>
+        [-Zone <System.Collections.Generic.List`1[System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceIdPublicIpAddress
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzLoadBalancerFrontendIpConfig
+        -Name <String>
+        -PublicIpAddress <PSPublicIpAddress>
+        [-Zone <System.Collections.Generic.List`1[System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourcePublicIpAddress
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a front-end IP configuration for a load balancer'
+  description: |-
+    ```
+    PS C:\>$publicip = New-AzPublicIpAddress -ResourceGroupName "MyResourceGroup" -Name "MyPublicIP" -Location "West US" -AllocationMethod "Dynamic"
+    PS C:\> New-AzLoadBalancerFrontendIpConfig -Name "FrontendIpConfig01" -PublicIpAddress $publicip
+    ```
+
+    The first command creates a dynamic public IP address named MyPublicIP in the resource group named MyResourceGroup, and then stores it in the $publicip variable.
+
+    The second command creates a front-end IP configuration named FrontendIpConfig01 using the public IP address in $publicip.
+links:
+- text: Add-AzLoadBalancerFrontendIpConfig
+  href: ./Add-AzLoadBalancerFrontendIpConfig.yml
+- text: Get-AzLoadBalancerFrontendIpConfig
+  href: ./Get-AzLoadBalancerFrontendIpConfig.yml
+- text: New-AzPublicIpAddress
+  href: ./New-AzPublicIpAddress.yml
+- text: Remove-AzLoadBalancerFrontendIpConfig
+  href: ./Remove-AzLoadBalancerFrontendIpConfig.yml
+- text: Set-AzLoadBalancerFrontendIpConfig
+  href: ./Set-AzLoadBalancerFrontendIpConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerFrontendIpConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azloadbalancerfrontendipconfig
+  Module Name: Az.Network
+  ms.assetid: D639E4F5-5AAD-4F13-9B48-70E90D2DFFCA
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzLoadBalancerFrontendIpConfig.md
+  PlatyPS schema version: 2024-05-01

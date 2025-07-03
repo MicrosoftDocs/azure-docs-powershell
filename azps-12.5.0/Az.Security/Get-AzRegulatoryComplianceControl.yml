@@ -1,0 +1,211 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzRegulatoryComplianceControl
+name: Get-AzRegulatoryComplianceControl
+module: Az.Security
+isPreview: false
+summary: |-
+  Gets regulatory compliance controls
+description: |-
+  Get a specific control details or list all the controls under specific regulatory compliance standard.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Control Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the security resource that you want to invoke the command on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StandardName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Standard Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRegulatoryComplianceControl
+        -StandardName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionLevelResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRegulatoryComplianceControl
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.SecurityCenter.Models.RegulatoryCompliance.PSSecurityRegulatoryComplianceControl" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzRegulatoryComplianceControl -StandardName "SOC TSP"
+    ```
+
+    ```output
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/A1.1
+    Name               : A1.1
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Current processing capacity and usage are maintained, monitored, and evaluated to manage capacity
+                         demand and to enable the implementation of additional capacity to help meet the entity�s
+                         availability commitments and system requirements.
+    State              : Unsupported
+    PassedAssessments  : 0
+    FailedAssessments  : 0
+    SkippedAssessments : 0
+
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/A1.2
+    Name               : A1.2
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Environmental protections, software, data backup processes, and recovery infrastructure are
+                         designed, developed, implemented, operated, maintained, and monitored to meet availability
+                         commitments and requirements.
+    State              : Passed
+    PassedAssessments  : 3
+    FailedAssessments  : 0
+    SkippedAssessments : 0
+
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/A1.3
+    Name               : A1.3
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Recovery plan procedures supporting system recovery are tested to help meet the entity�s
+                         availability commitments and system requirements.
+    State              : Unsupported
+    PassedAssessments  : 0
+    FailedAssessments  : 0
+    SkippedAssessments : 0
+
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/C1.1
+    Name               : C1.1
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Confidential information is protected during the system design, development, testing,
+                         implementation, and change processes in accordance with confidentiality commitments and
+                         requirements.
+    State              : Unsupported
+    PassedAssessments  : 0
+    FailedAssessments  : 0
+    SkippedAssessments : 0
+    ```
+
+    Get all controls under specific regulatory standard.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzRegulatoryComplianceControl -StandardName "SOC TSP" -Name "C1.2"
+    ```
+
+    ```output
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/C1.2
+    Name               : C1.2
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Confidential information within the boundaries of the system is protected against unauthorized
+                         access, use, and disclosure during input, processing, retention, output, and disposition in
+                         accordance with confidentiality commitments and requirements.
+    State              : Failed
+    PassedAssessments  : 177
+    FailedAssessments  : 22
+    SkippedAssessments : 0
+    ```
+
+    Get specific control details according to control id.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzRegulatoryComplianceControl -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplianceStandards/SOC-TSP/regulatoryComplianceControls/C1.2"
+    ```
+
+    ```output
+    Id                 : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Security/regulatoryComplia
+                         nceStandards/SOC-TSP/regulatoryComplianceControls/C1.2
+    Name               : C1.2
+    Type               : Microsoft.Security/regulatoryComplianceStandards/regulatoryComplianceControls
+    Description        : Confidential information within the boundaries of the system is protected against unauthorized
+                         access, use, and disclosure during input, processing, retention, output, and disposition in
+                         accordance with confidentiality commitments and requirements.
+    State              : Failed
+    PassedAssessments  : 177
+    FailedAssessments  : 22
+    SkippedAssessments : 0
+    ```
+
+    Get specific control details according to resource id.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzRegulatoryComplianceControl.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzRegulatoryComplianceControl
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzRegulatoryComplianceControl.md
+  PlatyPS schema version: 2024-05-01

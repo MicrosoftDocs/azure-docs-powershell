@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.New-AzSpringCloudContentCertificateObject
+name: New-AzSpringCloudContentCertificateObject
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for ContentCertificateProperties.
+description: |-
+  Create an in-memory object for ContentCertificateProperties.
+parameters:
+  cmdletParameters:
+  - name: Content
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The content of uploaded certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSpringCloudContentCertificateObject
+        [-Content <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.ContentCertificateProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ContentCertificateProperties'
+  description: |-
+    ```powershell
+    New-AzSpringCloudContentCertificateObject -Content "ContentCertificate"
+    ```
+
+    ```output
+    ActivateDate DnsName ExpirationDate IssuedDate Issuer SubjectName Thumbprint Content
+    ------------ ------- -------------- ---------- ------ ----------- ---------- -------
+                                                                                 ContentCertificate
+    ```
+
+    Create an in-memory object for ContentCertificateProperties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudContentCertificateObject.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.SpringCloud/new-azspringcloudcontentcertificateobject
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudContentCertificateObject.md
+  PlatyPS schema version: 2024-05-01

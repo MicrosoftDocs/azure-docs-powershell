@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureWebRole
+name: Add-AzureWebRole
+module: Azure
+isPreview: false
+summary: |-
+  Adds a web worker role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Add-AzureWebRole** cmdlet adds a web worker role.
+parameters:
+  cmdletParameters:
+  - name: Instances
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of instances.
+    aliases:
+    - i
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the web role.
+    aliases:
+    - n
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFolder
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the template folder.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureWebRole
+        [-TemplateFolder <String>]
+        [-Name <String>]
+        [-Instances <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Add a default role'
+  description: |-
+    ```
+    PS C:\> Add-AzureWebRole
+    ```
+
+    This command add web role that has the default configuration of Webrole1 as the name and a single instance.
+- title: 'Example 2: Add a role with a name'
+  description: |-
+    ```
+    PS C:\> Add-AzureWebRole -Name "MyWebRole"
+    ```
+
+    This command adds a single web role named MyWebRole to the current application.
+- title: 'Example 3: Add a role with a name and instance count'
+  description: |-
+    ```
+    PS C:\> Add-AzureWebRole -Name "MyWebRole" -Instance 2
+    ```
+
+    This command adds a web role named MyWebRole to the current application.
+    The cmdlet has a role instance count of 2.
+- title: 'Example 4: Add a role with a name and template'
+  description: |-
+    ```
+    PS C:\> Add-AzureWebRole -Name "MyWebRole" -TemplateFolder ".\MyWebTemplateFolder"
+    ```
+
+    This command adds a single web role named MyWebRole to the current application.
+    The command specifies a folder named MyWebTemplateFolder as a scaffolding template.
+links:
+- text: Add-AzureWorkerRole
+  href: ./Add-AzureWorkerRole.yml
+- text: New-AzureRoleTemplate
+  href: ./New-AzureRoleTemplate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: FB5CD696-108D-4A3E-8983-1C6562E8795A
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,263 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureHDInsightConfigValues
+name: Add-AzureHDInsightConfigValues
+module: Azure
+isPreview: false
+summary: |-
+  Adds a Hadoop configuration value customization or a Hive shared library customization to an HDInsight cluster configuration.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This version of Azure PowerShell HDInsight is deprecated.
+  These cmdlets will be removed by January 1, 2017.
+  Please use the newer version of Azure PowerShell HDInsight.
+
+  For information about how to use the new HDInsight to create a cluster, see [Create Linux-based clusters in HDInsight using Azure PowerShell](/azure/hdinsight/hdinsight-hadoop-create-linux-clusters-azure-powershell).
+  For information about how to submit jobs by using Azure PowerShell and other approaches, see [Submit Hadoop jobs in HDInsight](/azure/hdinsight/hadoop/submit-apache-hadoop-jobs-programmatically).
+  For reference information about Azure PowerShell HDInsight, see [Azure HDInsight Cmdlets](/powershell/module/servicemanagement/azure/?view=azuresmps-4.0.0#hd-insights).
+
+  The **Add-AzureHDInsightConfigValues** cmdlet adds a Hadoop configuration value customization, such as Core-site.xml or Hive-site.xml, or a Hive shared library customization to an Azure HDInsight cluster configuration.
+
+  The cmdlet adds custom configuration values to a specified configuration object.
+  The custom settings are added to the configuration files of the relevant Hadoop services when the cluster is deployed.
+parameters:
+  cmdletParameters:
+  - name: Config
+    type: <xref href="AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the configuration object to which to add a Hadoop configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Core
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a set of Hadoop configuration values for Core-site.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HBase
+    type: <xref href="AzureHDInsightHBaseConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a set of HBase configuration values for Hbase-site.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hdfs
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a set of Hadoop configuration values for Hdfs-site.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hive
+    type: <xref href="AzureHDInsightHiveConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for Hadoop Hive service, including a set of Hadoop configuration values for Hive-site.xml and Hive shared libraries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MapReduce
+    type: <xref href="AzureHDInsightMapReduceConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for MapReduce and the capacity scheduler.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Oozie
+    type: <xref href="AzureHDInsightOozieConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for Hadoop Oozie service, including a set of Hadoop configuration values for Oozie-site.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Spark
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for Apache Spark.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Storm
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for Apache Storm.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Yarn
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a customization object for Hadoop YARN, specifying a set of customized YARN configuration values for Yarn-site.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureHDInsightConfigValues
+        -Config <AzureHDInsightConfig>
+        [-Core <Hashtable>]
+        [-Yarn <Hashtable>]
+        [-Hdfs <Hashtable>]
+        [-Hive <AzureHDInsightHiveConfiguration>]
+        [-MapReduce <AzureHDInsightMapReduceConfiguration>]
+        [-Oozie <AzureHDInsightOozieConfiguration>]
+        [-Storm <Hashtable>]
+        [-Spark <Hashtable>]
+        [-HBase <AzureHDInsightHBaseConfiguration>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Configure a cluster'
+  description: |-
+    ```
+    PS C:\>$HiveConfigValues = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightHiveConfiguration'
+    PS C:\> $HiveConfigValues.Configuration = @{ hive.exec.compress.output = true }
+    PS C:\> $HiveConfigValues.AdditionalLibraries = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightDefaultStorageAccount'
+    PS C:\> $HiveConfigValues.AdditionalLibraries.StorageAccountName = "MyStorageAccount.blob.core.windows.net"
+    PS C:\> $HiveConfigValues.AdditionalLibraries.StorageAccountKey = (Get-AzureStorageKey -StorageAccountName "MyStorageAccount").Primary
+    PS C:\> $HiveConfigValues.AdditionalLibraries.StorageContainerName = "MySharedLibContainer"
+    PS C:\> $OozieConfigValues = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightOozieConfiguration'
+    PS C:\> $OozieConfigValues.Configuration = @{ hive.exec.compress.output = true }
+    PS C:\> $MapredConfigValues = New-Object 'Microsoft.WindowsAzure.Management.HDInsight.Cmdlet.DataObjects.AzureHDInsightMapReduceConfiguration'
+    PS C:\> $MapredConfigValues.Configuration = @{ mapred.map.max.attempts = 2 }
+    PS C:\> $MapredConfigValues.CapacitySchedulerConfiguration = @{ mapred.capacity-scheduler.init-poll-interval = 1000 }
+    PS C:\> $Config = New-AzureHDInsightClusterConfig -ClusterSizeInNodes 4
+        | Set-AzureHDInsightDefaultStorage -StorageAccountName MyStorageAccount.blob.core.windows.net -StorageAccountKey (Get-AzureStorageKey -StorageAccountName "MyStorageAccount").Primary -StorageContainerName "MyStorageContainer"
+        | Add-AzureHDInsightConfigValues -Core @{ io.file.buffer.size = 300000 } -MapReduce $MapredConfigValues -Hive $HiveConfigValues -Oozie $OozieConfigValues
+    PS C:\> $Config | New-AzureHDInsightCluster -Subscription $SubId -Credential $Creds -Name "MyCluster" -Location "North Europe"
+    ```
+
+    The first command creates a new **AzureHDInsightHiveConfiguration** object, and then stores it in the $HiveConfigValues variable.
+
+    The next five commands create configuration values for Hive and store those values as members of $HiveConfigValues.
+
+    The seventh command creates an **AzureHDInsightOozieConfiguration** object, and then stores it in the $OozieConfigValues variable.
+    The eighth command creates a configuration value for Oozie, and then stores that values as a member of $OozieConfigValues.
+
+    The ninth command creates an **AzureHDInsightMapReduceConfiguration** object, and then stores it in the $MapredConfigValues variable.
+    The next two commands create configuration values for MapReduce and store those values as members of $MapredConfigValues.
+
+    The twelfth command uses the **New-AzureHDInsightClusterConfig** cmdlet to create an HDInsight cluster configuration, and then stores it in the $Config variable.
+    The command uses the pipeline operator to pass $Config to the **Set-AzureHDInsightDefaultStorage** cmdlet to update the default storage setting and to the **Add-AzureHDInsightConfigValues** cmdlet to add the new configuration values to the cluster configuration.
+
+    The final command uses the pipeline operator to pass $Config to the **New-AzureHDInsightCluster** cmdlet to create a new HDInsight cluster with the customized settings.
+links:
+- text: New-AzureHDInsightCluster
+  href: ./New-AzureHDInsightCluster.yml
+- text: New-AzureHDInsightClusterConfig
+  href: ./New-AzureHDInsightClusterConfig.yml
+- text: Set-AzureHDInsightDefaultStorage
+  href: ./Set-AzureHDInsightDefaultStorage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.HDInsight.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6F89C297-4D3D-4DAD-A63A-FCC51A86BF43
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,158 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayFirewallPolicyExclusion
+name: New-AzApplicationGatewayFirewallPolicyExclusion
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates an exclusion on the Firewall Policy
+description: |-
+  The **New-AzApplicationGatewayFirewallPolicyExclusion** cmdlet a new exclusion rule list for firewall policy.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExclusionManagedRuleSet
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallPolicyExclusionManagedRuleSet" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Exclusion Managed ruleSets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The variable to be excluded.
+    acceptedValues:
+    - RequestHeaderNames
+    - RequestCookieNames
+    - RequestArgNames
+    - RequestHeaderKeys
+    - RequestCookieKeys
+    - RequestArgKeys
+    - RequestHeaderValues
+    - RequestCookieValues
+    - RequestArgValues
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      When variable is a collection, operator used to specify which elements in the collection this exclusion applies to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SelectorMatchOperator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      When variable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
+    acceptedValues:
+    - Equals
+    - Contains
+    - StartsWith
+    - EndsWith
+    - EqualsAny
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayFirewallPolicyExclusion
+        -MatchVariable <String>
+        -SelectorMatchOperator <String>
+        -Selector <String>
+        [-ExclusionManagedRuleSet <PSApplicationGatewayFirewallPolicyExclusionManagedRuleSet[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallPolicyExclusion" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $exclusionEntry = New-AzApplicationGatewayFirewallPolicyExclusion -MatchVariable "RequestHeaderNames" -SelectorMatchOperator "StartsWith" -Selector "xyz"
+    ```
+
+    This command creates a new exclusion-entry for the variable named RequestHeaderNames and operator named StartsWith and Selector named xyz. The exclusion entry is saved in $exclusionEntry.
+- title: Example 2
+  description: |-
+    ```powershell
+    $exclusionEntry = New-AzApplicationGatewayFirewallPolicyExclusion -MatchVariable "RequestHeaderKeys" -SelectorMatchOperator "Contains" -Selector "abc"
+    ```
+
+    This command creates a new exclusion-entry for the variable named RequestHeaderKeys and operator named Contains and Selector named abc. The exclusion entry is saved in $exclusionEntry.
+- title: Example 3
+  description: |-
+    ```powershell
+    $exclusionEntry = New-AzApplicationGatewayFirewallPolicyExclusion -MatchVariable "RequestHeaderNames" -SelectorMatchOperator "StartsWith" -Selector "xyz" -ExclusionManagedRuleSet $exclusionManagedRuleSet
+    ```
+
+    This command creates a new exclusion-entry for the variable named RequestHeaderNames and operator named StartsWith, Selector named xyz and ExclusionManagedRuleSet named $exclusionManagedRuleSet. The exclusion entry is saved in $exclusionEntry.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallPolicyExclusion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfirewallpolicyexclusion
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallPolicyExclusion.md
+  PlatyPS schema version: 2024-05-01

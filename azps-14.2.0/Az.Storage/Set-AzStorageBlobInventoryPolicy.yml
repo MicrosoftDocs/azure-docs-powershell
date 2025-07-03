@@ -1,0 +1,465 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Set-AzStorageBlobInventoryPolicy
+name: Set-AzStorageBlobInventoryPolicy
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates or updates blob inventory policy in a Storage account.
+description: |-
+  The **Set-AzStorageBlobInventoryPolicy** cmdlet creates or updates blob inventory policy in a Storage account.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The Blob Inventory Policy is enabled by default, specify this parameter to disable it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyRule
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSBlobInventoryPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob Inventory Policy Object to Set
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountNamePolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Rule
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSBlobInventoryPolicyRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Blob Inventory  Policy rules.
+      Get the object with New-AzStorageBlobInventoryPolicyRule cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObjectPolicyRule
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountObjectPolicyObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountNamePolicyRule
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccountNamePolicyObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Account Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountResourceIdPolicyRule
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AccountResourceIdPolicyObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Rule <PSBlobInventoryPolicyRule[]>
+        [-Disabled]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNamePolicyRule
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        [-ResourceGroupName] <String>
+        [-StorageAccountName] <String>
+        -Policy <PSBlobInventoryPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountNamePolicyObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        -StorageAccount <PSStorageAccount>
+        -Rule <PSBlobInventoryPolicyRule[]>
+        [-Disabled]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectPolicyRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        -StorageAccount <PSStorageAccount>
+        -Policy <PSBlobInventoryPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObjectPolicyObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        [-StorageAccountResourceId] <String>
+        -Rule <PSBlobInventoryPolicyRule[]>
+        [-Disabled]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountResourceIdPolicyRule
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageBlobInventoryPolicy
+        [-StorageAccountResourceId] <String>
+        -Policy <PSBlobInventoryPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountResourceIdPolicyObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSBlobInventoryPolicyRule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSBlobInventoryPolicySchema" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSManagementPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create or update the blob inventory policy with BlobInventoryPolicy rule objects.'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $rule1 = New-AzStorageBlobInventoryPolicyRule -Name Test1 -Destination $containerName -Disabled -Format Csv -Schedule Daily -ContainerSchemaField Name,Metadata,PublicAccess,Last-mOdified,LeaseStatus,LeaseState,LeaseDuration,HasImmutabilityPolicy,HasLegalHold -PrefixMatch con1,con2
+
+    $rule2 = New-AzStorageBlobInventoryPolicyRule -Name Test2 -Destination $containerName -Format Parquet -Schedule Weekly -IncludeBlobVersion -IncludeSnapshot -BlobType blockBlob,appendBlob -PrefixMatch aaa,bbb `
+                    -BlobSchemaField name,Creation-Time,Last-Modified,Content-Length,Content-MD5,BlobType,AccessTier,AccessTierChangeTime,Expiry-Time,hdi_isfolder,Owner,Group,Permissions,Acl,Metadata
+
+    $rule3 = New-AzStorageBlobInventoryPolicyRule -Name Test3 -Destination $containerName -Format Parquet -Schedule Weekly -IncludeBlobVersion -IncludeSnapshot -IncludeDeleted -BlobType blockBlob,appendBlob -PrefixMatch aaa,bbb `
+                    -ExcludePrefix ccc,ddd -BlobSchemaField name,Last-Modified,BlobType,AccessTier,AccessTierChangeTime,Content-Type,Content-CRC64,CopyId,x-ms-blob-sequence-number,TagCount
+
+    $policy = Set-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -Disabled -Rule $rule1,$rule2,$rule3
+
+    $policy
+
+    StorageAccountName : mystorageaccount
+    ResourceGroupName  : myresourcegroup
+    Name               : DefaultInventoryPolicy
+    Id                 : /subscriptions/{subscription-Id}/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/mystorageaccount/inventoryPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/inventoryPolicies
+    LastModifiedTime   : 5/12/2021 8:53:38 AM
+    Enabled            : False
+    Rules              : {Test1, Test2, Test3}
+
+    $policy.Rules
+
+    Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions IncludeDeleted BlobTypes               PrefixMatch ExcludePrefix  SchemaFields
+    ----  ------- -----------   ---------- ------  -------- ---------------- ------------------- -------------- ---------               ----------- -------------  ------------
+    Test1 False   containername Container  Csv     Daily                                                                                {con1, con2}               {Name, Metadata, PublicAccess, Last-Modified...}
+    Test2 True    containername Blob       Parquet Weekly   True             True                               {blockBlob, appendBlob} {aaa, bbb}                 {Name, Creation-Time, Last-Modified, Content-Length...}
+    Test3 True    containername Blob       Parquet Weekly   True             True                True           {blockBlob, appendBlob} {aaa, bbb}  {ccc, ddd}     {Name, Content-Type, Content-CRC64, Last-Modified...}
+    ```
+
+    This first 2 commands create 3 BlobInventoryPolicy rule objects: rule "Test1" for container inventory; rule "Test2" and "Test3" for blob inventory.
+    The following command sets blob inventory policy to a Storage account with the 2 rule objects, then show the updated policy and rules properties.
+- title: 'Example 2: Create or update the blob inventory policy of a Storage account with a Json format policy.'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $policy = Set-AzStorageBlobInventoryPolicy -ResourceGroupName $resourceGroupName  -StorageAccountName $accountName -Policy (@{
+                    Enabled=$true;
+                    Rules=(@{
+                        Enabled=$true;
+                        Name="Test1";
+                        Destination=$containerName;
+                        Definition=(@{
+                            ObjectType="Blob";
+                            Format="Csv";
+                            Schedule="Weekly";
+                            SchemaFields=@("name","Content-Length","BlobType","Snapshot","VersionId","IsCurrentVersion");
+                            Filters=(@{
+                                BlobTypes=@("blockBlob","appendBlob");
+                                PrefixMatch=@("prefix1","prefix2");
+                                IncludeSnapshots=$true;
+                                IncludeBlobVersions=$true;
+                            })
+                        })
+                    },
+                    @{
+                        Enabled=$false;
+                        Name="Test2";
+                        Destination=$containerName;
+                        Definition=(@{
+                            ObjectType="Container";
+                            Format="Parquet";
+                            Schedule="Daily";
+                            SchemaFields=@("name","Metadata","PublicAccess","DefaultEncryptionScope","DenyEncryptionScopeOverride");
+                            Filters=(@{
+                                PrefixMatch=@("conpre1","conpre2");
+                            })
+                        })
+                    },
+                    @{
+                        Enabled=$false;
+                        Name="Test3";
+                        Destination=$containerName;
+                        Definition=(@{
+                            ObjectType="Blob";
+                            Format="Csv";
+                            Schedule="Weekly";
+                            SchemaFields=@("name","Deleted","RemainingRetentionDays","Content-Type","Content-Language","Cache-Control","Content-Disposition");
+                            Filters=(@{
+                                BlobTypes=@("blockBlob","appendBlob");
+                                PrefixMatch=@("conpre1","conpre2");
+                                ExcludePrefix=@("expre1","expre2");
+                                IncludeDeleted=$true
+                            })
+                        })
+                    })
+                })
+
+
+    $policy
+
+    StorageAccountName : weiadlscanary1
+    ResourceGroupName  : weitry
+    Name               : DefaultInventoryPolicy
+    Id                 : /subscriptions/{subscription-Id}/resourceGroups/weitry/providers/Microsoft.Storage/storageAccounts/weiadlscanary1/inventoryPolicies/default
+    Type               : Microsoft.Storage/storageAccounts/inventoryPolicies
+    LastModifiedTime   : 5/12/2021 9:02:21 AM
+    Enabled            : True
+    Rules              : {Test1, Test2, Test3}
+
+    $policy.Rules
+
+    Name  Enabled Destination   ObjectType Format  Schedule IncludeSnapshots IncludeBlobVersions IncludeDeleted BlobTypes               PrefixMatch        ExcludePrefix    SchemaFields
+    ----  ------- -----------   ---------- ------  -------- ---------------- ------------------- -------------- ---------               -----------        -------------    ------------
+    Test1 True    containername Blob       Csv     Weekly   True             True                               {blockBlob, appendBlob} {prefix1, prefix2}                  {Name, Content-Length, BlobType, Snapshot...}
+    Test2 False   containername Container  Parquet Daily                                                                                {conpre1, conpre2}                  {Name, Metadata, PublicAccess}
+    Test3 False   containername Blob       Csv     Weekly                                        True           {blockBlob, appendBlob} {conpre1, conpre2} {expre1, expre2} {Name, Content-Type, Content-Cache, Content-Language...}                                                                                    {name, Metadata, PublicAccess}
+    ```
+
+    This command creates or updates the blob inventory policy of a Storage account with a json format policy.
+- title: 'Example 3: Get the blob inventory policy from a Storage account, then set it to another Storage account.'
+  description: |-
+    ```powershell
+    $policy = Get-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" | Set-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup2" -AccountName "mystorageaccount2"
+    ```
+
+    This command first gets the blob inventory policy from a Storage account, then set it to another Storage account.
+    The properties： Destination, Enabled, and Rules of the policy will be set to the destination account.
+- title: 'Example 4: Get the blob inventory policy rules from a Storage account, then set it to another Storage account.'
+  description: |-
+    ```powershell
+    $policy = ,((Get-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount").Rules) | Set-AzStorageBlobInventoryPolicy -ResourceGroupName "myresourcegroup2" -AccountName "mystorageaccount2" -Disabled
+    ```
+
+    This command first gets the blob inventory policy from a Storage account, then set it's rules to another Storage account.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobInventoryPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/set-azstorageblobinventorypolicy
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageBlobInventoryPolicy.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,406 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzExpressRouteCircuitPeeringConfig
+name: Set-AzExpressRouteCircuitPeeringConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Saves a modified ExpressRoute peering configuration.
+description: |-
+  The **Set-AzExpressRouteCircuitPeeringConfig** cmdlets saves a modified ExpressRoute peering
+  configuration back to Azure.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuit
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRoute circuit object containing the peering configuration to be modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LegacyMode
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      The legacy mode of the Peering
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftConfigAdvertisedPublicPrefixes
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      For a PeeringType of MicrosoftPeering, you must provide a list of all prefixes you plan to
+      advertise over the BGP session. Only public IP address prefixes are accepted. You can send a comma
+      separated list if you plan to send a set of prefixes. These prefixes must be registered to you in
+      a Routing Registry Name (RIR / IRR).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftConfigCustomerAsn
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      If you are advertising prefixes that are not registered to the peering AS number, you can specify
+      the AS number to which they are registered.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftConfigRoutingRegistryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Routing Registry Name (RIR / IRR) to which the AS number and prefixes are registered.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the peering configuration to be modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerAddressType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      PeerAddressType
+    acceptedValues:
+    - IPv4
+    - IPv6
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerASN
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The AS number of your ExpressRoute circuit. This must be a Public ASN when the PeeringType is
+      AzurePublicPeering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
+      `MicrosoftPeering`
+    acceptedValues:
+    - AzurePrivatePeering
+    - AzurePublicPeering
+    - MicrosoftPeering
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryPeerAddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the IP Address range for the primary routing path of this peering relationship. This must
+      be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+      router interface. Azure will configure the next even-numbered address to the Azure router interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteFilter
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilter" data-throw-if-not-resolved="False" />
+    description: |-
+      This is an existing RouteFilter object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftPeeringConfigRoutFilter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteFilterId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the resource Id of an existing RouteFilter object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftPeeringConfigRoutFilterId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryPeerAddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the IP Address range for the secondary routing path of this peering relationship. This must
+      be a /30 CIDR subnet. The first odd-numbered address in this subnet should be assigned to your
+      router interface. Azure will configure the next even-numbered address to the Azure router interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is an optional MD5 hash used as a pre-shared key for the peering configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VlanId
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the Id number of the VLAN assigned for this peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteCircuitPeeringConfig
+        -Name <String>
+        -ExpressRouteCircuit <PSExpressRouteCircuit>
+        -PeeringType <String>
+        -PeerASN <UInt32>
+        -PrimaryPeerAddressPrefix <String>
+        -SecondaryPeerAddressPrefix <String>
+        -VlanId <Int32>
+        [-SharedKey <String>]
+        [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>]
+        [-MicrosoftConfigCustomerAsn <Int32>]
+        [-MicrosoftConfigRoutingRegistryName <String>]
+        [-PeerAddressType <String>]
+        [-LegacyMode <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteCircuitPeeringConfig
+        -Name <String>
+        -ExpressRouteCircuit <PSExpressRouteCircuit>
+        -PeeringType <String>
+        -PeerASN <UInt32>
+        -PrimaryPeerAddressPrefix <String>
+        -SecondaryPeerAddressPrefix <String>
+        -VlanId <Int32>
+        -RouteFilterId <String>
+        [-SharedKey <String>]
+        [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>]
+        [-MicrosoftConfigCustomerAsn <Int32>]
+        [-MicrosoftConfigRoutingRegistryName <String>]
+        [-PeerAddressType <String>]
+        [-LegacyMode <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftPeeringConfigRoutFilterId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteCircuitPeeringConfig
+        -Name <String>
+        -ExpressRouteCircuit <PSExpressRouteCircuit>
+        -PeeringType <String>
+        -PeerASN <UInt32>
+        -PrimaryPeerAddressPrefix <String>
+        -SecondaryPeerAddressPrefix <String>
+        -VlanId <Int32>
+        -RouteFilter <PSRouteFilter>
+        [-SharedKey <String>]
+        [-MicrosoftConfigAdvertisedPublicPrefixes <String[]>]
+        [-MicrosoftConfigCustomerAsn <Int32>]
+        [-MicrosoftConfigRoutingRegistryName <String>]
+        [-PeerAddressType <String>]
+        [-LegacyMode <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftPeeringConfigRoutFilter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change an existing peering configuration'
+  description: |-
+    ```powershell
+    $circuit = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $rg
+    $parameters = @{
+        Name = 'AzurePrivatePeering'
+        Circuit = $circuit
+        PeeringType = 'AzurePrivatePeering'
+        PeerASN = 100
+        PrimaryPeerAddressPrefix = '10.6.1.0/30'
+        SecondaryPeerAddressPrefix = '10.6.2.0/30'
+        VlanId  = 201
+    }
+    Set-AzExpressRouteCircuitPeeringConfig @parameters
+    Set-AzExpressRouteCircuit -ExpressRouteCircuit $circuit
+    ```
+- title: Example 2
+  description: |-
+    Saves a modified ExpressRoute peering configuration. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Set-AzExpressRouteCircuitPeeringConfig -ExpressRouteCircuit <PSExpressRouteCircuit> -Name 'cert01' -PeerASN 100 -PeerAddressType IPv4 -PeeringType AzurePrivatePeering -PrimaryPeerAddressPrefix '123.0.0.0/30' -SecondaryPeerAddressPrefix '123.0.0.4/30' -VlanId 300
+    ```
+- title: Example 3
+  description: |-
+    Saves a modified ExpressRoute peering configuration. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Set-AzExpressRouteCircuitPeeringConfig -ExpressRouteCircuit <PSExpressRouteCircuit> -MicrosoftConfigAdvertisedPublicPrefixes <String[]> -MicrosoftConfigCustomerAsn <Int32> -MicrosoftConfigRoutingRegistryName <String> -Name 'cert01' -PeerASN 100 -PeerAddressType IPv4 -PeeringType AzurePrivatePeering -PrimaryPeerAddressPrefix '123.0.0.0/30' -SecondaryPeerAddressPrefix '123.0.0.4/30' -VlanId 300
+    ```
+links:
+- text: Add-AzExpressRouteCircuitPeeringConfig
+  href: Add-AzExpressRouteCircuitPeeringConfig.yml
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+- text: New-AzExpressRouteCircuitPeeringConfig
+  href: New-AzExpressRouteCircuitPeeringConfig.yml
+- text: Remove-AzExpressRouteCircuitPeeringConfig
+  href: Remove-AzExpressRouteCircuitPeeringConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzExpressRouteCircuitPeeringConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azexpressroutecircuitpeeringconfig
+  Module Name: Az.Network
+  ms.assetid: 6C0281EC-4D23-4BD0-A268-4C278ABC7B1A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzExpressRouteCircuitPeeringConfig.md
+  PlatyPS schema version: 2024-05-01

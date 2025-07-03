@@ -1,0 +1,301 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Orbital.Get-AzOrbitalAvailableSpacecraftContact
+name: Get-AzOrbitalAvailableSpacecraftContact
+module: Az.Orbital
+isPreview: false
+summary: |-
+  Returns list of available contacts.
+  A contact is available if the spacecraft is visible from the ground station for more than the minimum viable contact duration provided in the contact profile.
+description: |-
+  Returns list of available contacts.
+  A contact is available if the spacecraft is visible from the ground station for more than the minimum viable contact duration provided in the contact profile.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactProfileId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      End time of a contact (ISO 8601 UTC standard).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroundStationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure Ground Station.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Spacecraft ID.
+    aliases:
+    - SpacecraftName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.Api20221101.IContactParameters" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameters that define the contact resource.
+      To construct, see NOTES section for PARAMETER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Start time of a contact (ISO 8601 UTC standard).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalAvailableSpacecraftContact
+        -Name <String>
+        -ResourceGroupName <String>
+        -ContactProfileId <String>
+        -EndTime <DateTime>
+        -GroundStationName <String>
+        -StartTime <DateTime>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalAvailableSpacecraftContact
+        -Name <String>
+        -ResourceGroupName <String>
+        -Parameter <IContactParameters>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.Api20221101.IContactParameters" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.Api20221101.IAvailableContacts" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Returns list of available contacts.'
+  description: |-
+    ```powershell
+    $dateS = Get-Date -Day 9 -Month 5 -AsUTC
+    $dateE = Get-Date -Day 10 -Month 5 -AsUTC
+
+    Get-AzOrbitalAvailableSpacecraftContact -Name SwedenAQUASpacecraft -ResourceGroupName azpstest-gp -EndTime $dateE -StartTime $dateS -GroundStationName Microsoft_Gavle -ContactProfileId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/azpstest-gp/providers/Microsoft.Orbital/contactProfiles/Sweden-contactprofile
+    ```
+
+    ```output
+    GroundStationName StartAzimuthDegree EndAzimuthDegree StartElevationDegree EndElevationDegree MaximumElevationDegree RxStartTime          RxEndTime
+    ----------------- ------------------ ---------------- -------------------- ------------------ ---------------------- -----------          ---------
+    Microsoft_Gavle   13.77217           225.1679         4.999997             5.005328           44.586                 5/9/2023 2:24:07 AM  5/9/2023 2:35:15 AM
+    Microsoft_Gavle   8.178263           275.0042         4.999985             5.018794           14.834                 5/9/2023 4:02:13 AM  5/9/2023 4:10:34 AM
+    Microsoft_Gavle   4.437663           325.7795         4.999995             5.013724           6.46                   5/9/2023 5:40:23 AM  5/9/2023 5:44:10 AM
+    Microsoft_Gavle   22.93799           355.8058         5.000004             5.007165           5.71                   5/9/2023 7:16:26 AM  5/9/2023 7:19:06 AM
+    Microsoft_Gavle   73.33928           352.9607         5.000013             5.031366           11.955                 5/9/2023 8:49:49 AM  5/9/2023 8:57:12 AM
+    Microsoft_Gavle   123.3645           347.7329         4.999993             5.041272           33.262                 5/9/2023 10:24:39 AM 5/9/2023 10:35:21 AM
+    Microsoft_Gavle   173.6422           340.1027         4.999974             5.024394           61.188                 5/9/2023 12:01:46 PM 5/9/2023 12:13:15 PM
+    Microsoft_Gavle   231.5447           325.2475         4.999982             5.020995           14.006                 5/9/2023 1:42:01 PM  5/9/2023 1:50:22 PM
+    Microsoft_Gavle   30.4992            141.2818         5.000002             5.04285            18.785                 5/9/2023 11:50:46 PM 5/10/2023 12:00:14 AM
+    Microsoft_Gavle   18.08898           196.4807         4.999971             5.052687           82.019                 5/10/2023 1:28:09 AM 5/10/2023 1:39:43 AM
+    ```
+
+    Returns list of available contacts.
+    A contact is available if the spacecraft is visible from the ground station for more than the minimum viable contact duration provided in the contact profile.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Get-AzOrbitalAvailableSpacecraftContact.md
+  document type: cmdlet
+  external help file: Az.Orbital-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.orbital/get-azorbitalavailablespacecraftcontact
+  Module Name: Az.Orbital
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Get-AzOrbitalAvailableSpacecraftContact.md
+  PlatyPS schema version: 2024-05-01

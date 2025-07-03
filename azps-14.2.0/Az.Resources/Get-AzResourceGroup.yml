@@ -1,0 +1,221 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzResourceGroup
+name: Get-AzResourceGroup
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets resource groups.
+description: |-
+  The **Get-AzResourceGroup** cmdlet gets Azure resource groups in the current subscription.
+  You can get all resource groups, or specify a resource group by name or by other properties.
+  By default, this cmdlet gets all resource groups in the current subscription.
+  For more information about Azure resources and Azure resource groups, see the New-AzResourceGroup cmdlet.
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the API version that is supported by the resource Provider.
+      You can specify a different version than the default version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the resource group to get.
+      Wildcard characters are not permitted.
+    aliases:
+    - ResourceGroupId
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceGroupId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the resource group to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to get. This parameter supports wildcards at the beginning and/or the end of the string.
+    aliases:
+    - ResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceGroupName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tag hashtable to filter resource groups by.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzResourceGroup
+        [[-Name] <String>]
+        [[-Location] <String>]
+        [-Tag <Hashtable>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceGroupName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzResourceGroup
+        [[-Location] <String>]
+        [-Id <String>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceGroupId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a resource group by name'
+  description: |-
+    ```powershell
+    Get-AzResourceGroup -Name "EngineerBlog"
+    ```
+
+    This command gets the Azure resource group in your subscription named EngineerBlog.
+- title: 'Example 2: Get all tags of a resource group'
+  description: |-
+    ```powershell
+    (Get-AzResourceGroup -Name "ContosoRG").Tags
+    ```
+
+    This command gets the resource group named ContosoRG, and displays the tags associated with that group.
+- title: 'Example 3: Get resource groups based on tag'
+  description: |-
+    ```powershell
+    Get-AzResourceGroup -Tag @{'environment'='prod'}
+    ```
+- title: 'Example 4: Show the Resource groups by location'
+  description: |-
+    ```powershell
+    Get-AzResourceGroup |
+      Sort-Object Location,ResourceGroupName |
+        Format-Table -GroupBy Location ResourceGroupName,ProvisioningState,Tags
+    ```
+- title: 'Example 5: Show the names of all the Resource groups in a particular location'
+  description: |-
+    ```powershell
+    Get-AzResourceGroup -Location westus2 |
+      Sort-Object ResourceGroupName |
+        Format-Wide ResourceGroupName -Column 4
+    ```
+- title: 'Example 6: Show the Resource groups whose names begin with WebServer'
+  description: |-
+    ```powershell
+    Get-AzResourceGroup -Name WebServer*
+    ```
+links:
+- text: New-AzResourceGroup
+  href: ./New-AzResourceGroup.yml
+- text: Remove-AzResourceGroup
+  href: ./Remove-AzResourceGroup.yml
+- text: Set-AzResourceGroup
+  href: ./Set-AzResourceGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzResourceGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azresourcegroup
+  Module Name: Az.Resources
+  ms.assetid: 5B17A241-BF36-48A6-BC29-4C32C08F5F94
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzResourceGroup.md
+  PlatyPS schema version: 2024-05-01

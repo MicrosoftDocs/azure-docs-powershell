@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.ConfidentialLedger
+name: Az.ConfidentialLedger Module
+isPreview: false
+cmdletGroups:
+- title: Confidential Ledger
+  cmdlets:
+  - Az.ConfidentialLedger.Get-AzConfidentialLedger
+  - Az.ConfidentialLedger.New-AzConfidentialLedger
+  - Az.ConfidentialLedger.New-AzConfidentialLedgerAADBasedSecurityPrincipalObject
+  - Az.ConfidentialLedger.New-AzConfidentialLedgerCertBasedSecurityPrincipalObject
+  - Az.ConfidentialLedger.Remove-AzConfidentialLedger
+  - Az.ConfidentialLedger.Test-AzConfidentialLedgerNameAvailability
+  - Az.ConfidentialLedger.Update-AzConfidentialLedger
+description: |-
+  Microsoft Azure PowerShell: ConfidentialLedger cmdlets
+metadata:
+  Module Name: Az.ConfidentialLedger
+  Module Guid: c7eaa9c1-72c4-4251-9e7d-bf9b8e8fa71e
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.confidentialledger
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/Az.ConfidentialLedger.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConfidentialLedger/ConfidentialLedger/help/Az.ConfidentialLedger.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,1347 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlInstance
+name: New-AzSqlInstance
+module: Az.Sql
+isPreview: false
+summary: |-
+  Creates an Azure SQL Managed Instance.
+description: |-
+  The **New-AzSqlInstance** cmdlet creates an Azure SQL Managed instance.
+parameters:
+  cmdletParameters:
+  - name: AdministratorCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      The SQL authentication credential of the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate and assign a Microsoft Entra identity for this Managed instance for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationMetadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred metadata to use for authentication of synced on-prem users. Default is AzureAD.
+    acceptedValues:
+    - AzureAD
+    - Paired
+    - Windows
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupStorageRedundancy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Backup storage redundancy used to store backups for the Sql Azure Managed Instance. Options are: Local, Zone and Geo
+    acceptedValues:
+    - Local
+    - Zone
+    - Geo
+    - GeoZone
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Collation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The collation of the Azure SQL Managed Instance to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute generation for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseFormat
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database format for the instance. Possible values are:
+      - AlwaysUpToDate - The instance gets access to all new SQL engine features as soon as they are released in Azure. Database format keeps evolving to accommodate new features.
+      - SQLServer2022 - The instance keeps getting SQL engine bug fixes, security patches and small functional improvements via Cumulative Updates for SQL Server 2022 during its mainstream support period. Database format remains compatible with SQL Server 2022 during that time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsZonePartner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the partner Managed Server to inherit DnsZone property from for Managed instance creation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The edition for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableActiveDirectoryOnlyAuthentication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Active Directory Only Authentication on the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalAdminName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the display name of the user, group or application which is the Microsoft Entra administrator for the server. This display name must exist in the active directory associated with the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalAdminSID
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the object ID of the user, group or application which is the Microsoft Entra administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of identity to be assigned to the server. Possible values are SystemAssigned, UserAssigned, 'SystemAssigned,UserAssigned' and None.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePool
+    type: <xref href="Microsoft.Azure.Commands.Sql.Instance_Pools.Model.AzureSqlInstancePoolModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance pool parent object.
+    aliases:
+    - ParentObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByInstancePoolParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance pool to place this instance in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePoolResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance pool resource id.
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByInstancePoolResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsGeneralPurposeV2
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether or not this is a GPv2 variant of General Purpose edition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Key Vault URI that is used for encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines which License Type to use. Possible values are:
+      - BasePrice - Azure Hybrid Benefit (AHB) discounted pricing for existing SQL Server license owners is applied. Managed Instance service price will be discounted for existing SQL Server license owners.
+      - LicenseIncluded - Azure Hybrid Benefit (AHB) discount pricing for existing SQL Server license owners is not applied. Managed Instance service price will include a new SQL Server license costs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location in which to create the instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Maintenance configuration id for the Sql Azure Managed Instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimalTlsVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimal TLS version to enforce for Managed instance
+    acceptedValues:
+    - None
+    - "1.0"
+    - "1.1"
+    - "1.2"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance name.
+    aliases:
+    - InstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PricingModel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pricing model for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryUserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The primary User Managed Identity(UMI) id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyOverride
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The connection type used for connecting to the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicDataEndpointEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not the public data endpoint is enabled for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of Service Principal to be used. Possible values are SystemAssigned and None.
+    acceptedValues:
+    - None
+    - SystemAssigned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SKU name for the instance e.g.
+      'GP_Gen4', 'BC_Gen4'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageIOps
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines how much Storage IOps to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageSizeInGB
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines how much Storage size to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Subnet Id to use for instance creation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewBySkuNameParameterSetParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags to associate with the instance
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimezoneId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The time zone id for the instance to set. A list of time zone ids is exposed through the sys.time_zone_info (Transact-SQL) view.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The list of user assigned identities.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCore
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines how much VCore to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use zone redundant storage
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstance
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        -Location <String>
+        -SubnetId <String>
+        -VCore <Int32>
+        -Edition <String>
+        -ComputeGeneration <String>
+        [-AdministratorCredential <PSCredential>]
+        [-LicenseType <String>]
+        [-StorageSizeInGB <Int32>]
+        [-StorageIOps <Int32>]
+        [-IsGeneralPurposeV2 <Boolean>]
+        [-Collation <String>]
+        [-PublicDataEndpointEnabled]
+        [-ProxyOverride <String>]
+        [-TimezoneId <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-DnsZonePartner <String>]
+        [-InstancePoolName <String>]
+        [-MinimalTlsVersion <String>]
+        [-BackupStorageRedundancy <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-AsJob]
+        [-Force]
+        [-EnableActiveDirectoryOnlyAuthentication]
+        [-ExternalAdminName <String>]
+        [-ExternalAdminSID <Guid>]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByEditionAndComputeGenerationParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstance
+        [-InstancePool] <AzureSqlInstancePoolModel>
+        [-Name] <String>
+        -VCore <Int32>
+        [-AdministratorCredential <PSCredential>]
+        [-StorageSizeInGB <Int32>]
+        [-Collation <String>]
+        [-PublicDataEndpointEnabled]
+        [-ProxyOverride <String>]
+        [-TimezoneId <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-DnsZonePartner <String>]
+        [-MinimalTlsVersion <String>]
+        [-BackupStorageRedundancy <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-AsJob]
+        [-Force]
+        [-EnableActiveDirectoryOnlyAuthentication]
+        [-ExternalAdminName <String>]
+        [-ExternalAdminSID <Guid>]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByInstancePoolParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstance
+        [-InstancePoolResourceId] <String>
+        [-Name] <String>
+        -VCore <Int32>
+        [-AdministratorCredential <PSCredential>]
+        [-StorageSizeInGB <Int32>]
+        [-Collation <String>]
+        [-PublicDataEndpointEnabled]
+        [-ProxyOverride <String>]
+        [-TimezoneId <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-DnsZonePartner <String>]
+        [-MinimalTlsVersion <String>]
+        [-BackupStorageRedundancy <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-AsJob]
+        [-Force]
+        [-EnableActiveDirectoryOnlyAuthentication]
+        [-ExternalAdminName <String>]
+        [-ExternalAdminSID <Guid>]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByInstancePoolResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstance
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        -Location <String>
+        -SubnetId <String>
+        -VCore <Int32>
+        -SkuName <String>
+        [-AdministratorCredential <PSCredential>]
+        [-LicenseType <String>]
+        [-StorageSizeInGB <Int32>]
+        [-StorageIOps <Int32>]
+        [-IsGeneralPurposeV2 <Boolean>]
+        [-Collation <String>]
+        [-PublicDataEndpointEnabled]
+        [-ProxyOverride <String>]
+        [-TimezoneId <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-DnsZonePartner <String>]
+        [-InstancePoolName <String>]
+        [-MinimalTlsVersion <String>]
+        [-BackupStorageRedundancy <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-AsJob]
+        [-Force]
+        [-EnableActiveDirectoryOnlyAuthentication]
+        [-ExternalAdminName <String>]
+        [-ExternalAdminSID <Guid>]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewBySkuNameParameterSetParameter
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone"
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    ```
+
+    This command creates a new instance by using the SkuName parameter.
+- title: 'Example 2: Create a new instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance2
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    ```
+
+    This command creates a new instance by using by using Edition and ComputeGeneration parameters.
+- title: 'Example 3: Create a new GPv2 instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name "managedInstance3" -ResourceGroupName "ResourceGroup01" -Location "westcentralus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType "LicenseIncluded" -StorageSizeInGB 1024 -StorageIOps 4000 -VCore 8 -SkuName "GP_Gen5" -IsGeneralPurposeV2 $true
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance3
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : true
+    FullyQualifiedDomainName : managedInstance3.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 8
+    StorageSizeInGB          : 1024
+    StorageIOps              : 4000
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    ```
+
+    This command creates a new GPv2 instance by using the SkuName parameter.
+- title: 'Example 4: Create a new GPv2 instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name "managedInstance4" -ResourceGroupName "ResourceGroup01" -Location "westcentralus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType "LicenseIncluded" -StorageSizeInGB 1024 -StorageIOps 4000 -VCore 8 -Edition "GeneralPurpose" -ComputeGeneration "Gen5" -IsGeneralPurposeV2 $true
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance4
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : true
+    FullyQualifiedDomainName : managedInstance4.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 8
+    StorageSizeInGB          : 1024
+    StorageIOps              : 4000
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    ```
+
+    This command creates a new GPv2 instance by using by using Edition and ComputeGeneration parameters.
+- title: 'Example 5: Create a new instance in an instance pool using an instance pool object'
+  description: |-
+    ```powershell
+    $instancePool = Get-AzSqlInstancePool -ResourceGroupName resourcegroup01 -Name instancepool0
+    $instancePool | New-AzSqlInstance -Name managedInstance2 -AdministratorCredential (Get-Credential) -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 2
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance2
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 2
+    StorageSizeInGB          : 1024
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         : instancepool0
+    ```
+
+    This command creates a new instance in an instance pool using an instance pool object.
+- title: 'Example 6: Create a new instance in an instance pool using an instance pool resource identifier'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance2 -AdministratorCredential (Get-Credential) -StorageSizeInGB 1024 -VCore 2 -InstancePoolResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/instancePools/instancePool0"
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance2
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 2
+    StorageSizeInGB          : 1024
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         : instancepool0
+    ```
+
+    This command creates a new instance in an instance pool using the instance pool's resource identifier.
+- title: 'Example 7: Create a new instance in an instance pool'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName resourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 32 -VCore 2 -ComputeGeneration Gen5 -Edition GeneralPurpose -InstancePoolName instancePool0
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 2
+    StorageSizeInGB          : 32
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         : instancePool0
+    ```
+
+    This command creates a new instance in an instance pool with name instancePool0
+- title: 'Example 8: Create a new instance with maintenance configuration'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName resourcegroup01 -Location "westus" -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -VCore 8 -ComputeGeneration Gen5 -Edition GeneralPurpose -MaintenanceConfigurationId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestUS_MI_2"
+    ```
+
+    ```output
+    Location							: westus
+    Id									: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName					: resourcegroup01
+    ManagedInstanceName					: managedInstance1
+    Tags								:
+    Identity							:
+    Sku									: Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2					: false
+    FullyQualifiedDomainName			: managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin					: adminLogin1
+    AdministratorPassword				:
+    SubnetId							: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType							: LicenseIncluded
+    VCores								: 8
+    StorageSizeInGB						: 256
+    StorageIOps							:
+    Collation							: SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled			: False
+    ProxyOverride						:
+    TimezoneId							: UTC
+    DnsZonePartner						:
+    DnsZone								: ad35cna0mw
+    InstancePoolName					:
+    MinimalTlsVersion					:
+    CurrentBackupStorageRedundancy		: Geo
+    RequestedBackupStorageRedundancy	: Geo
+    MaintenanceConfigurationId			: /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestUS_MI_2
+    ```
+
+    This command creates a new instance with maintenance configuration MI_2
+- title: 'Example 9: Create a new instance with External (Microsoft Entra ID) Administrator, Microsoft Entra-only Authentication and no SqlAdministratorCredentials'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    New-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -ExternalAdminName DummyLogin -EnableActiveDirectoryOnlyAuthentication -Location westcentralus -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition "GeneralPurpose" -ComputeGeneration Gen4
+
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance2
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    Administrators           :
+
+    $val = Get-AzSqlInstance -Name managedInstance2 -ResourceGroupName ResourceGroup01 -ExpandActiveDirectoryAdministrator
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance2
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    Administrators           : Microsoft.Azure.Management.Sql.Models.ManagedInstanceExternalAdministrator
+
+    $val.Administrators
+    AdministratorType         : ActiveDirectory
+    PrincipalType             : Group
+    Login                     : DummyLogin
+    Sid                       : df7667b8-f9fd-4029-a0e3-b43c75ce9538
+    TenantId                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+    AzureADOnlyAuthentication : True
+    ```
+
+    This command creates a new instance with external administrator properties and Microsoft Entra-only authentication enabled.
+- title: 'Example 10: Create a new zone - redundant instance'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -ZoneRedundant
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    ZoneRedundant            : true
+    ```
+
+    This command creates a new zone - redundant instance.
+- title: 'Example 11: Create a new instance with TDE CMK'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -AssignIdentity -IdentityType "UserAssigned" -PrimaryUserAssignedIdentityId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01" -UserAssignedIdentityId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01" -KeyId "https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901"
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    InstancePoolName         :
+    KeyId                    : https://contoso.vault.azure.net/keys/contosokey/01234567890123456789012345678901
+    PrimaryUserAssignedIdentityId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity01
+    ```
+
+    This command creates a new managed instance with TDE CMK enabled.
+- title: 'Example 12: Create a new instance with database format and pricing model'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen4 -DnsZonePartner "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/partnerServerForDnsZone" -DatabaseFormat AlwaysUpToDate -PricingModel Regular
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : false
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    DnsZone                  : ad35cna0mw
+    DatabaseFormat           : AlwaysUpToDate
+    PricingModel             : Regular
+    ```
+
+    This command creates a new instance with database format and pricing model specified.
+- title: 'Example 10: Create a new managed instance which uses Windows authentication metadata mode'
+  description: |-
+    ```powershell
+    New-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -Location westcentralus -AdministratorCredential (Get-Credential) -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name" -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -SkuName GP_Gen5 -AuthenticationMetadata Windows
+    ```
+
+    ```output
+    Location                         : westcentralus
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName                : resourcegroup01
+    ManagedInstanceName              : managedInstance1
+    Tags                             :
+    Identity                         :
+    Sku                              : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName         : managedInstance1.xxxxxxxxxxxx.database.windows.net
+    AdministratorLogin               : adminLogin1
+    AdministratorPassword            :
+    SubnetId                         : subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType                      : LicenseIncluded
+    VCores                           : 16
+    StorageSizeInGB                  : 1024
+    Collation                        : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled        : False
+    ProxyOverride                    : Default
+    TimezoneId                       : UTC
+    DnsZonePartner                   :
+    DnsZone                          : ad35cna0mw
+    InstancePoolName                 :
+    MinimalTlsVersion                : None
+    BackupStorageRedundancy          : Geo
+    RequestedBackupStorageRedundancy : Geo
+    CurrentBackupStorageRedundancy   : Geo
+    MaintenanceConfigurationId       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/
+                                       publicMaintenanceConfigurations/SQL_Default
+    Administrators                   :
+    PrimaryUserAssignedIdentityId    :
+    KeyId                            :
+    ZoneRedundant                    : False
+    ServicePrincipal                 :
+    DatabaseFormat                   : SQLServer2022
+    PricingModel                     : Regular
+    ExternalGovernanceStatus         : Disabled
+    AuthenticationMetadata           : Windows
+    ```
+
+    This command creates a new managed instance which uses Windows metadata for authentication of synced users.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstance.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstance
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstance.md
+  PlatyPS schema version: 2024-05-01

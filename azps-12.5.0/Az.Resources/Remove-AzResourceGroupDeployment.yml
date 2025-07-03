@@ -1,0 +1,208 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Remove-AzResourceGroupDeployment
+name: Remove-AzResourceGroupDeployment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Removes a resource group deployment and any associated operations.
+description: |-
+  The **Remove-AzResourceGroupDeployment** cmdlet removes an Azure resource group deployment and any associated operations.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the resource group deployment to remove.
+    aliases:
+    - DeploymentId
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByResourceGroupDeploymentId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group deployment to remove.
+    aliases:
+    - DeploymentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByResourceGroupName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByResourceGroupName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzResourceGroupDeployment
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByResourceGroupName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzResourceGroupDeployment
+        -Id <String>
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByResourceGroupDeploymentId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Removes a resource group deployment with ResourceId'
+  description: |-
+    ```powershell
+    Remove-AzResourceGroupDeployment -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/testGroup/providers/Microsoft.Resources/deployments/testDeployment1
+    ```
+
+    ```output
+    True
+    ```
+
+    This command removes a resource group deployment with the fully qualified resource Id of the deployment.
+    Successful removal returns true.
+- title: 'Example 2: Removes a resource group deployment with ResourceGroupName and ResourceName'
+  description: |-
+    ```powershell
+    Remove-AzResourceGroupDeployment -ResourceGroupName testGroup -Name testDeployment1
+    ```
+
+    ```output
+    True
+    ```
+
+    This command removes a resource group deployment with the provided ResourceGroupName and ResourceName.
+    Successful removal returns true.
+links:
+- text: Get-AzResourceGroupDeployment
+  href: ./Get-AzResourceGroupDeployment.yml
+- text: New-AzResourceGroupDeployment
+  href: ./New-AzResourceGroupDeployment.yml
+- text: Stop-AzResourceGroupDeployment
+  href: ./Stop-AzResourceGroupDeployment.yml
+- text: Test-AzResourceGroupDeployment
+  href: ./Test-AzResourceGroupDeployment.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceGroupDeployment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/remove-azresourcegroupdeployment
+  Module Name: Az.Resources
+  ms.assetid: C3DD193E-B8FE-468D-BEE7-00C3D99B469E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Remove-AzResourceGroupDeployment.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CognitiveServices.Get-AzCognitiveServicesUsage
+name: Get-AzCognitiveServicesUsage
+module: Az.CognitiveServices
+isPreview: false
+summary: |-
+  Get Usage of Cognitive Services
+description: |-
+  Get Usage of Cognitive Services
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cognitive Services Account Location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCognitiveServicesUsage
+        [-Location] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.CognitiveServices.Models.PSCognitiveServicesUsage" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzCognitiveServicesUsage -Location 'WestUS'
+    ```
+
+    ```output
+    CurrentValue  : 0
+    Name          : CustomVision.Prediction.Transactions
+    Limit         : 10000
+    Status        : Included
+    Unit          : Count
+    QuotaPeriod   : 30.00:00:00
+    NextResetTime : 0001-01-01T00:00:00Z
+    ```
+
+    Get Usage of Cognitive Services
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Get-AzCognitiveServicesUsage.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CognitiveServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cognitiveservices/get-azcognitiveservicesusage
+  Module Name: Az.CognitiveServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Get-AzCognitiveServicesUsage.md
+  PlatyPS schema version: 2024-05-01

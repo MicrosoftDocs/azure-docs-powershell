@@ -1,0 +1,68 @@
+### YamlMime:PowerShellModule1
+uid: Az.VMware
+name: Az.VMware Module
+isPreview: false
+cmdletGroups:
+- title: VMware
+  cmdlets:
+  - Az.VMware.Get-AzVMwareAddon
+  - Az.VMware.Get-AzVMwareAuthorization
+  - Az.VMware.Get-AzVMwareCloudLink
+  - Az.VMware.Get-AzVMwareCluster
+  - Az.VMware.Get-AzVMwareClusterZone
+  - Az.VMware.Get-AzVMwareDatastore
+  - Az.VMware.Get-AzVMwareGlobalReachConnection
+  - Az.VMware.Get-AzVMwareIscsiPath
+  - Az.VMware.Get-AzVMwarePlacementPolicy
+  - Az.VMware.Get-AzVMwarePrivateCloud
+  - Az.VMware.Get-AzVMwarePrivateCloudAdminCredential
+  - Az.VMware.Get-AzVMwareVirtualMachine
+  - Az.VMware.New-AzVMwareAddon
+  - Az.VMware.New-AzVMwareAddonSrmPropertyObject
+  - Az.VMware.New-AzVMwareAddonVrPropertyObject
+  - Az.VMware.New-AzVMwareAuthorization
+  - Az.VMware.New-AzVMwareCloudLink
+  - Az.VMware.New-AzVMwareCluster
+  - Az.VMware.New-AzVMwareDatastore
+  - Az.VMware.New-AzVMwareGlobalReachConnection
+  - Az.VMware.New-AzVMwareIscsiPath
+  - Az.VMware.New-AzVMwarePlacementPolicy
+  - Az.VMware.New-AzVMwarePrivateCloud
+  - Az.VMware.New-AzVMwarePrivateCloudNsxtPassword
+  - Az.VMware.New-AzVMwarePrivateCloudVcenterPassword
+  - Az.VMware.New-AzVMwarePSCredentialExecutionParameterObject
+  - Az.VMware.New-AzVMwareScriptSecureStringExecutionParameterObject
+  - Az.VMware.New-AzVMwareScriptStringExecutionParameterObject
+  - Az.VMware.New-AzVMwareVmHostPlacementPolicyPropertyObject
+  - Az.VMware.New-AzVMwareVMPlacementPolicyPropertyObject
+  - Az.VMware.Remove-AzVMwareAddon
+  - Az.VMware.Remove-AzVMwareAuthorization
+  - Az.VMware.Remove-AzVMwareCloudLink
+  - Az.VMware.Remove-AzVMwareCluster
+  - Az.VMware.Remove-AzVMwareDatastore
+  - Az.VMware.Remove-AzVMwareGlobalReachConnection
+  - Az.VMware.Remove-AzVMwareIscsiPath
+  - Az.VMware.Remove-AzVMwarePlacementPolicy
+  - Az.VMware.Remove-AzVMwarePrivateCloud
+  - Az.VMware.Test-AzVMwareLocationQuotaAvailability
+  - Az.VMware.Test-AzVMwareLocationTrialAvailability
+  - Az.VMware.Update-AzVMwareAuthorization
+  - Az.VMware.Update-AzVMwareCloudLink
+  - Az.VMware.Update-AzVMwareCluster
+  - Az.VMware.Update-AzVMwareDatastore
+  - Az.VMware.Update-AzVMwareGlobalReachConnection
+  - Az.VMware.Update-AzVMwareIscsiPath
+  - Az.VMware.Update-AzVMwarePlacementPolicy
+  - Az.VMware.Update-AzVMwarePrivateCloud
+description: |-
+  Microsoft Azure PowerShell: Azure VMware Solution cmdlets
+metadata:
+  Module Name: Az.VMware
+  Module Guid: 78d2fac8-ec90-47ad-b8aa-a27106b158f5
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.vmware
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Az.VMware.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Az.VMware.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

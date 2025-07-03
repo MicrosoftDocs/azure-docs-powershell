@@ -1,0 +1,1383 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Update-AzVmss
+name: Update-AzVmss
+module: Az.Compute
+isPreview: false
+summary: |-
+  Updates the state of a VMSS.
+description: |-
+  The **Update-AzVmss** cmdlet updates the state of a Virtual Machine Scale Set (VMSS) to the state of a local VMSS object.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticOSUpgrade
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticRepairAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of repair action (replace, restart, reimage) that will be used for repairing unhealthy virtual machines in the scale set. Default value is replace.
+    acceptedValues:
+    - Replace
+    - Restart
+    - Reimage
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomaticRepairGracePeriod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time for which automatic repairs are suspended due to a state change on VM. The grace time starts after the state change has completed. This helps avoid premature or accidental repairs. The time duration should be specified in ISO 8601 format. The minimum allowed grace period is 30 minutes (PT30M), which is also the default value. The maximum allowed grace period is 90 minutes (PT90M).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BaseRegularPriorityCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum number of VMs that must be of Regular priority as a VMSS Flex instance scales out. This parameter is only valid for VMSS instances with Flexible OrchestrationMode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootDiagnosticsEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether boot diagnostics should be enabled on the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootDiagnosticsStorageUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URI of the storage account to use for placing the console output and screenshot.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CapacityReservationGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the capacity reservation Group that is used to allocate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a base-64 encoded string of custom data.
+      This is decoded to a binary array that is saved as a file on the virtual machine.
+      The maximum length of the binary array is 65535 bytes. <br>
+      For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](/azure/virtual-machines/linux/tutorial-automate-vm-deployment).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutoRollback
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Disable Auto Rollback for Auto OS Upgrade Policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisablePasswordAuthentication
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables password authentication for Linux OS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutomaticRepair
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable automatic repairs on the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutomaticUpdate
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the Windows virtual machines in the VMSS are enabled for automatic updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableResilientVMCreate
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether resilient VM creation should be enabled on the virtual machine scale set. The default value is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableResilientVMDelete
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether resilient VM deletion should be enabled on the virtual machine scale set. The default value is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSecureBoot
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether secure boot should be enabled on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableVtpm
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether vTPM should be enabled on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionAtHost
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter can be used by user in the request to enable or disable the Host Encryption for the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of user identities associated with the virtual machine scale set.
+      The user identity references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExplicitIdentityParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Compute.Models.ResourceIdentityType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the type of identity used for the virtual machine scale set.
+      The type 'SystemAssignedUserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+      The type 'None' will remove any identities from the virtual machine scale set.
+      The acceptable values for this parameter are:
+      - SystemAssigned
+      - UserAssigned
+      - SystemAssignedUserAssigned
+      - None
+    acceptedValues:
+    - SystemAssigned
+    - UserAssigned
+    - SystemAssignedUserAssigned
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExplicitIdentityParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      used to make a request conditional for the PUT and other non-safe methods. The server will only return the requested resources if the resource matches one of the listed ETag values. Omit this value to always overwrite the current resource. Specify the last-seen ETag value to prevent accidentally overwriting concurrent changes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfNoneMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to make a request conditional for the GET and HEAD methods. The server will only return the requested resources if none of the listed ETag values match the current entity. Used to make a request conditional for the GET and HEAD methods. The server will only return the requested resources if none of the listed ETag values match the current entity. Set to '*' to allow a new record set to be created, but to prevent updating an existing record set. Other values will result in error from server as they are not supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the image reference ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceOffer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of virtual machine image (VMImage) offer.
+      To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferencePublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a publisher of a VMImage.
+      To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceSku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VMImage SKU.
+      To obtain SKUs, use the Get-AzVMImageSku cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the VMImage.
+      To use the latest version, specify a value of latest instead of a particular version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the blob URI for the user image.
+      VMSS creates an operating system disk in the same container of the user image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the license type, which is for bringing your own license scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedDiskStorageAccountType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account type for managed disk.
+      The acceptable values for this parameter are:
+      - Standard_LRS
+      - Premium_LRS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxBatchInstancePercent
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.
+      As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.
+      If the value is not specified, it is set to 20.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxPrice
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum price you are willing to pay for a low priority VM/VMSS. This price is in US Dollars. This price will be compared with the current low priority price for the VM size. Also, the prices are compared at the time of create/update of low priority VM/VMSS and the operation will only succeed if the maxPrice is greater than the current low priority price. The maxPrice will also be used for evicting a low priority VM/VMSS if the current low priority price goes beyond the maxPrice after creation of VM/VMSS. Possible values are: any decimal value greater than zero. Example: 0.01538.  -1 indicates that the low priority VM/VMSS should not be evicted for price reasons. Also, the default max price is -1 if it is not provided by you.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxUnhealthyInstancePercent
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.
+      This constraint will be checked prior to starting any batch.
+      If the value is not specified, it is set to 20.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxUnhealthyUpgradedInstancePercent
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.
+      This check will happen after each batch is upgraded.
+      If this percentage is ever exceeded, the rolling update aborts.
+      If the value is not specified, it is set to 20.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskCaching
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the caching mode of the operating system disk.
+      The acceptable values for this parameter are:
+      - None
+      - ReadOnly
+      - ReadWrite
+      The default value is ReadWrite.
+      If you change the caching value, the cmdlet will restart the virtual machine.
+      This setting affects the consistency and performance of the disk.
+    acceptedValues:
+    - None
+    - ReadOnly
+    - ReadWrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskWriteAccelerator
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSImageScheduledEventEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the OS Image Scheduled event is enabled or disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSImageScheduledEventNotBeforeTimeoutInMinutes
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The length of time a virtual machine being reimaged or having its OS upgraded will have to potentially approve the OS Image Scheduled Event before the event is auto approved (timed out). The configuration is specified in ISO 8601 format, with the value set to 15 minutes (PT15M).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overprovision
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet overprovisions the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PauseTimeBetweenBatches
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The wait time between completing the update for all virtual machines in one batch and starting the next batch.
+      The time duration should be specified in ISO 8601 format.
+      The default value is 0 seconds (PT0S).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanProduct
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanPromotionCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan promotion code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanPublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisionVMAgent
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether virtual machine agent should be provisioned on the Windows virtual machines in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProximityPlacementGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the Proximity Placement Group to use with this scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegularPriorityPercentage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the desired percentage of VMs, after the BaseRegularCount has been met, that are of Regular priority as the VMSS Flex instance scales out. This property is only valid for VMSS instances with Flexible OrchestrationMode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group the VMSS belongs to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleInPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The rules to be followed when scaling-in a virtual machine scale set.  Possible values are: 'Default', 'OldestVM' and 'NewestVM'.  'Default' when a virtual machine scale set is scaled in, the scale set will first be balanced across zones if it is a zonal scale set.  Then, it will be balanced across Fault Domains as far as possible.  Within each Fault Domain, the virtual machines chosen for removal will be the newest ones that are not protected from scale-in.  'OldestVM' when a virtual machine scale set is being scaled-in, the oldest virtual machines that are not protected from scale-in will be chosen for removal.  For zonal virtual machine scale sets, the scale set will first be balanced across zones.  Within each zone, the oldest virtual machines that are not protected will be chosen for removal.  'NewestVM' when a virtual machine scale set is being scaled-in, the newest virtual machines that are not protected from scale-in will be chosen for removal.  For zonal virtual machine scale sets, the scale set will first be balanced across zones.  Within each zone, the newest virtual machines that are not protected will be chosen for removal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleInPolicyForceDeletion
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Applying Force Deletion when using ScaleIn Policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SecurityType of the virtual machine. It has to be set to any specified value to enable UefiSettings. UefiSettings will not be enabled unless this property is set.
+    acceptedValues:
+    - TrustedLaunch
+    - ConfidentialVM
+    - Standard
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedGalleryImageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specified the shared gallery image unique id for vm deployment. This can be fetched from shared gallery image GET call.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SinglePlacementGroup
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the single placement group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipExtensionsOnOverprovisionedVMs
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the extensions do not run on the extra overprovisioned VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of instances in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of all the instances of VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuProfileAllocationStrategy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Allocation strategy for the SKU profile.
+    acceptedValues:
+    - LowestPrice
+    - CapacityOptimized
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuProfileVmSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Array of VM sizes for the scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tier of VMSS.
+      The acceptable values for this parameter are:
+      - Standard
+      - Basic
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TerminateScheduledEventNotBeforeTimeoutInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Configurable length of time (in minutes) a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TerminateScheduledEvents
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the Terminate Scheduled event is enabled or disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time zone for Windows OS. e.g. \"Pacific Standard Time\". <br>
+      Possible values can be [TimeZoneInfo.Id](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.id?#System_TimeZoneInfo_Id) value from time zones returned by [TimeZoneInfo.GetSystemTimeZones](https://learn.microsoft.com/dotnet/api/system.timezoneinfo.getsystemtimezones).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UltraSSDEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that enables or disables a capability to have one or more managed data disks with UltraSSD_LRS storage account type on the virtual machine scale set.
+      Managed disks with storage account type UltraSSD_LRS can be added to a VMSS only if this property is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradePolicyMode
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.UpgradeMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specified the mode of an upgrade to virtual machines in the scale set.
+      The acceptable values for this parameter are:
+      - Automatic
+      - Manual
+      - Rolling
+    acceptedValues:
+    - Automatic
+    - Manual
+    - Rolling
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UserData for the Vmss, which will be base-64 encoded. Customer should not pass any secrets in here.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdContainer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the container URLs that are used to store operating system disks for the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a local VMSS object.
+      To obtain a VMSS object, use the Get-AzVmss cmdlet.
+      This virtual machine object contains the updated state for the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScaleSetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the VMSS that this cmdlet creates.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzVmss
+        [-ResourceGroupName] <String>
+        [-VMScaleSetName] <String>
+        [[-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>]
+        [-AutomaticOSUpgrade <Boolean>]
+        [-AutomaticRepairGracePeriod <String>]
+        [-EnableAutomaticRepair <Boolean>]
+        [-AutomaticRepairAction <String>]
+        [-BootDiagnosticsEnabled <Boolean>]
+        [-BootDiagnosticsStorageUri <String>]
+        [-CustomData <String>]
+        [-DisableAutoRollback <Boolean>]
+        [-DisablePasswordAuthentication <Boolean>]
+        [-EnableAutomaticUpdate <Boolean>]
+        [-ImageReferenceId <String>]
+        [-ImageReferenceOffer <String>]
+        [-ImageReferencePublisher <String>]
+        [-ImageReferenceSku <String>]
+        [-ImageReferenceVersion <String>]
+        [-ImageUri <String>]
+        [-LicenseType <String>]
+        [-ManagedDiskStorageAccountType <String>]
+        [-MaxBatchInstancePercent <Int32>]
+        [-MaxPrice <Double>]
+        [-MaxUnhealthyInstancePercent <Int32>]
+        [-MaxUnhealthyUpgradedInstancePercent <Int32>]
+        [-OsDiskCaching <CachingTypes>]
+        [-OsDiskWriteAccelerator <Boolean>]
+        [-Overprovision <Boolean>]
+        [-ScaleInPolicyForceDeletion <Boolean>]
+        [-PauseTimeBetweenBatches <String>]
+        [-PlanName <String>]
+        [-PlanProduct <String>]
+        [-PlanPromotionCode <String>]
+        [-PlanPublisher <String>]
+        [-ProvisionVMAgent <Boolean>]
+        [-ProximityPlacementGroupId <String>]
+        [-ScaleInPolicy <String[]>]
+        [-SinglePlacementGroup <Boolean>]
+        [-SkipExtensionsOnOverprovisionedVMs <Boolean>]
+        [-SkuCapacity <Int32>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [-Tag <Hashtable>]
+        [-TerminateScheduledEventNotBeforeTimeoutInMinutes <Int32>]
+        [-TerminateScheduledEvents <Boolean>]
+        [-TimeZone <String>]
+        [-UltraSSDEnabled <Boolean>]
+        [-UpgradePolicyMode <UpgradeMode>]
+        [-CapacityReservationGroupId <String>]
+        [-VhdContainer <String[]>]
+        [-AsJob]
+        [-EncryptionAtHost <Boolean>]
+        [-UserData <String>]
+        [-BaseRegularPriorityCount <Int32>]
+        [-RegularPriorityPercentage <Int32>]
+        [-SharedGalleryImageId <String>]
+        [-OSImageScheduledEventEnabled]
+        [-OSImageScheduledEventNotBeforeTimeoutInMinutes <String>]
+        [-SecurityType <String>]
+        [-EnableVtpm <Boolean>]
+        [-EnableSecureBoot <Boolean>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-SkuProfileVmSize <String[]>]
+        [-SkuProfileAllocationStrategy <String>]
+        [-EnableResilientVMCreate <Boolean>]
+        [-EnableResilientVMDelete <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzVmss
+        [-ResourceGroupName] <String>
+        [-VMScaleSetName] <String>
+        [[-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>]
+        -IdentityType <ResourceIdentityType>
+        [-AutomaticOSUpgrade <Boolean>]
+        [-AutomaticRepairGracePeriod <String>]
+        [-EnableAutomaticRepair <Boolean>]
+        [-AutomaticRepairAction <String>]
+        [-BootDiagnosticsEnabled <Boolean>]
+        [-BootDiagnosticsStorageUri <String>]
+        [-CustomData <String>]
+        [-DisableAutoRollback <Boolean>]
+        [-DisablePasswordAuthentication <Boolean>]
+        [-EnableAutomaticUpdate <Boolean>]
+        [-IdentityId <String[]>]
+        [-ImageReferenceId <String>]
+        [-ImageReferenceOffer <String>]
+        [-ImageReferencePublisher <String>]
+        [-ImageReferenceSku <String>]
+        [-ImageReferenceVersion <String>]
+        [-ImageUri <String>]
+        [-LicenseType <String>]
+        [-ManagedDiskStorageAccountType <String>]
+        [-MaxBatchInstancePercent <Int32>]
+        [-MaxPrice <Double>]
+        [-MaxUnhealthyInstancePercent <Int32>]
+        [-MaxUnhealthyUpgradedInstancePercent <Int32>]
+        [-OsDiskCaching <CachingTypes>]
+        [-OsDiskWriteAccelerator <Boolean>]
+        [-Overprovision <Boolean>]
+        [-ScaleInPolicyForceDeletion <Boolean>]
+        [-PauseTimeBetweenBatches <String>]
+        [-PlanName <String>]
+        [-PlanProduct <String>]
+        [-PlanPromotionCode <String>]
+        [-PlanPublisher <String>]
+        [-ProvisionVMAgent <Boolean>]
+        [-ProximityPlacementGroupId <String>]
+        [-ScaleInPolicy <String[]>]
+        [-SinglePlacementGroup <Boolean>]
+        [-SkipExtensionsOnOverprovisionedVMs <Boolean>]
+        [-SkuCapacity <Int32>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [-Tag <Hashtable>]
+        [-TerminateScheduledEventNotBeforeTimeoutInMinutes <Int32>]
+        [-TerminateScheduledEvents <Boolean>]
+        [-TimeZone <String>]
+        [-UltraSSDEnabled <Boolean>]
+        [-UpgradePolicyMode <UpgradeMode>]
+        [-CapacityReservationGroupId <String>]
+        [-VhdContainer <String[]>]
+        [-AsJob]
+        [-EncryptionAtHost <Boolean>]
+        [-UserData <String>]
+        [-BaseRegularPriorityCount <Int32>]
+        [-RegularPriorityPercentage <Int32>]
+        [-SharedGalleryImageId <String>]
+        [-OSImageScheduledEventEnabled]
+        [-OSImageScheduledEventNotBeforeTimeoutInMinutes <String>]
+        [-SecurityType <String>]
+        [-EnableVtpm <Boolean>]
+        [-EnableSecureBoot <Boolean>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-SkuProfileVmSize <String[]>]
+        [-SkuProfileAllocationStrategy <String>]
+        [-EnableResilientVMCreate <Boolean>]
+        [-EnableResilientVMDelete <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExplicitIdentityParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update the state of a VMSS to the state of a local VMSS object.'
+  description: |-
+    ```powershell
+    Update-AzVmss -ResourceGroupName "Group001" -Name "VMSS001" -VirtualMachineScaleSet $LocalVMSS
+    ```
+
+    This command updates the state of the VMSS named VMSS001 that belongs to the resource group named Group001 to the state of a local VMSS object, $LocalVMSS.
+- title: Example 2
+  description: |-
+    Updates the state of a VMSS. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Update-AzVmss -ResourceGroupName 'Group001' -VMScaleSetName 'VMSS001' -VirtualMachineScaleSet <PSVirtualMachineScaleSet> -IdentityType SystemAssigned
+    ```
+links:
+- text: Get-AzVmss
+  href: ./Get-AzVmss.yml
+- text: New-AzVmss
+  href: ./New-AzVmss.yml
+- text: Remove-AzVmss
+  href: ./Remove-AzVmss.yml
+- text: Restart-AzVmss
+  href: ./Restart-AzVmss.yml
+- text: Set-AzVmss
+  href: ./Set-AzVmss.yml
+- text: Start-AzVmss
+  href: ./Start-AzVmss.yml
+- text: Stop-AzVmss
+  href: ./Stop-AzVmss.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/update-azvmss
+  Module Name: Az.Compute
+  ms.assetid: 9EE192A5-4E3F-41ED-A539-8E0A5D5EA4C9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzVmss.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,71 @@
+### YamlMime:PowerShellModule1
+uid: Az.DataProtection
+name: Az.DataProtection Module
+isPreview: false
+cmdletGroups:
+- title: Data Protection
+  cmdlets:
+  - Az.DataProtection.Backup-AzDataProtectionBackupInstanceAdhoc
+  - Az.DataProtection.Edit-AzDataProtectionPolicyRetentionRuleClientObject
+  - Az.DataProtection.Edit-AzDataProtectionPolicyTagClientObject
+  - Az.DataProtection.Edit-AzDataProtectionPolicyTriggerClientObject
+  - Az.DataProtection.Find-AzDataProtectionRestorableTimeRange
+  - Az.DataProtection.Get-AzDataProtectionBackupInstance
+  - Az.DataProtection.Get-AzDataProtectionBackupInstancesExtensionRouting
+  - Az.DataProtection.Get-AzDataProtectionBackupPolicy
+  - Az.DataProtection.Get-AzDataProtectionBackupVault
+  - Az.DataProtection.Get-AzDataProtectionJob
+  - Az.DataProtection.Get-AzDataProtectionOperation
+  - Az.DataProtection.Get-AzDataProtectionOperationStatus
+  - Az.DataProtection.Get-AzDataProtectionPolicyTemplate
+  - Az.DataProtection.Get-AzDataProtectionRecoveryPoint
+  - Az.DataProtection.Get-AzDataProtectionResourceGuard
+  - Az.DataProtection.Get-AzDataProtectionResourceGuardMapping
+  - Az.DataProtection.Get-AzDataProtectionSoftDeletedBackupInstance
+  - Az.DataProtection.Initialize-AzDataProtectionBackupInstance
+  - Az.DataProtection.Initialize-AzDataProtectionRestoreRequest
+  - Az.DataProtection.New-AzDataProtectionBackupConfigurationClientObject
+  - Az.DataProtection.New-AzDataProtectionBackupInstance
+  - Az.DataProtection.New-AzDataProtectionBackupPolicy
+  - Az.DataProtection.New-AzDataProtectionBackupVault
+  - Az.DataProtection.New-AzDataProtectionBackupVaultStorageSettingObject
+  - Az.DataProtection.New-AzDataProtectionPolicyTagCriteriaClientObject
+  - Az.DataProtection.New-AzDataProtectionPolicyTriggerScheduleClientObject
+  - Az.DataProtection.New-AzDataProtectionResourceGuard
+  - Az.DataProtection.New-AzDataProtectionRestoreConfigurationClientObject
+  - Az.DataProtection.New-AzDataProtectionRetentionLifeCycleClientObject
+  - Az.DataProtection.Remove-AzDataProtectionBackupInstance
+  - Az.DataProtection.Remove-AzDataProtectionBackupPolicy
+  - Az.DataProtection.Remove-AzDataProtectionBackupVault
+  - Az.DataProtection.Remove-AzDataProtectionResourceGuard
+  - Az.DataProtection.Remove-AzDataProtectionResourceGuardMapping
+  - Az.DataProtection.Resume-AzDataProtectionBackupInstanceProtection
+  - Az.DataProtection.Search-AzDataProtectionBackupInstanceInAzGraph
+  - Az.DataProtection.Search-AzDataProtectionBackupVaultInAzGraph
+  - Az.DataProtection.Search-AzDataProtectionJobInAzGraph
+  - Az.DataProtection.Set-AzDataProtectionMSIPermission
+  - Az.DataProtection.Set-AzDataProtectionResourceGuardMapping
+  - Az.DataProtection.Start-AzDataProtectionBackupInstanceRestore
+  - Az.DataProtection.Stop-AzDataProtectionBackupInstanceProtection
+  - Az.DataProtection.Suspend-AzDataProtectionBackupInstanceBackup
+  - Az.DataProtection.Sync-AzDataProtectionBackupInstance
+  - Az.DataProtection.Test-AzDataProtectionBackupInstanceReadiness
+  - Az.DataProtection.Test-AzDataProtectionBackupInstanceRestore
+  - Az.DataProtection.Undo-AzDataProtectionBackupInstanceDeletion
+  - Az.DataProtection.Unlock-AzDataProtectionResourceGuardOperation
+  - Az.DataProtection.Update-AzDataProtectionBackupInstance
+  - Az.DataProtection.Update-AzDataProtectionBackupInstanceAssociatedPolicy
+  - Az.DataProtection.Update-AzDataProtectionBackupVault
+  - Az.DataProtection.Update-AzDataProtectionResourceGuard
+description: |-
+  Microsoft Azure PowerShell: DataProtection cmdlets
+metadata:
+  Module Name: Az.DataProtection
+  Module Guid: 0796af7c-0a7c-417f-8d0d-19f9179dac7a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dataprotection
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Az.DataProtection.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Az.DataProtection.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,451 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceBus.Set-AzServiceBusTopic
+name: Set-AzServiceBusTopic
+module: Az.ServiceBus
+isPreview: false
+summary: |-
+  Updates a ServiceBus Topic
+description: |-
+  Updates a ServiceBus Topic
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoDeleteOnIdle
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      ISO 8061 timeSpan idle interval after which the topic is automatically deleted.
+      The minimum duration is 5 minutes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultMessageTimeToLive
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      ISO 8601 default message timespan to live value.
+      This is the duration after which the message expires, starting from when the message is sent to Service Bus.
+      This is the default value used when TimeToLive is not set on a message itself.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DuplicateDetectionHistoryTimeWindow
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      ISO 8601 timeSpan structure that defines the duration of the duplicate detection history.
+      The default value is 10 minutes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableBatchedOperations
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Value that indicates whether server-side batched operations are enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableExpress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      A value that indicates whether Express Entities are enabled.
+      An express topic holds a message in memory temporarily before writing it to persistent storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IServiceBusIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity parameter.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxMessageSizeInKilobytes
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum size (in KB) of the message payload that can be accepted by the topic.
+      This property is only used in Premium today and default is 1024.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxSizeInMegabytes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum delivery count.
+      A message is automatically deadlettered after this number of deliveries.
+      default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Topic.
+    aliases:
+    - TopicName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of ServiceBus namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enumerates the possible values for the status of a messaging entity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportOrdering
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Value that indicates whether the topic supports ordering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzServiceBusTopic
+        -Name <String>
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AutoDeleteOnIdle <TimeSpan>]
+        [-DefaultMessageTimeToLive <TimeSpan>]
+        [-DuplicateDetectionHistoryTimeWindow <TimeSpan>]
+        [-EnableBatchedOperations]
+        [-EnableExpress]
+        [-SupportOrdering]
+        [-MaxSizeInMegabytes <Int32>]
+        [-MaxMessageSizeInKilobytes <Int64>]
+        [-Status <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzServiceBusTopic
+        -InputObject <IServiceBusIdentity>
+        [-AutoDeleteOnIdle <TimeSpan>]
+        [-DefaultMessageTimeToLive <TimeSpan>]
+        [-DuplicateDetectionHistoryTimeWindow <TimeSpan>]
+        [-EnableBatchedOperations]
+        [-EnableExpress]
+        [-SupportOrdering]
+        [-MaxSizeInMegabytes <Int32>]
+        [-MaxMessageSizeInKilobytes <Int64>]
+        [-Status <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.IServiceBusIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.ISbTopic" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Updates a ServiceBus topic'
+  description: |-
+    ```powershell
+    Set-AzServiceBusTopic -ResourceGroupName myResourceGroup -NamespaceName myNamespace -Name myTopic -DefaultMessageTimeToLive (New-TimeSpan -Days 20) -MaxMessageSizeInKilobytes 102400
+    ```
+
+    ```output
+    AccessedAt                                : 1/1/0001 12:00:00 AM
+    AutoDeleteOnIdle                          : 10675199.02:48:05.4775807
+    CountDetailActiveMessageCount             : 0
+    CountDetailDeadLetterMessageCount         : 0
+    CountDetailScheduledMessageCount          : 0
+    CountDetailTransferDeadLetterMessageCount : 0
+    CountDetailTransferMessageCount           : 0
+    CreatedAt                                 : 1/1/0001 12:00:00 AM
+    DefaultMessageTimeToLive                  : 20.00:00:00
+    DuplicateDetectionHistoryTimeWindow       : 00:10:00
+    EnableBatchedOperations                   : True
+    EnableExpress                             : False
+    EnablePartitioning                        : False
+    Id                                        : /subscriptions/000000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ServiceBus/namespaces/myNamespace/topics/myTopic
+    Location                                  : westus
+    MaxMessageSizeInKilobytes                 : 102400
+    MaxSizeInMegabytes                        : 1024
+    Name                                      : myTopic
+    RequiresDuplicateDetection                : False
+    ResourceGroupName                         : myResourceGroup
+    SizeInByte                                : 0
+    Status                                    : Active
+    SubscriptionCount                         : 0
+    SupportOrdering                           : True
+    ```
+
+    Updates a ServiceBus topic `myTopic` within namespace `myNamespace`.
+- title: 'Example 2: Updates a ServiceBus topic using InputObject parameter set'
+  description: |-
+    ```powershell
+    $topic = Get-AzServiceBusTopic -ResourceGroupName myResourceGroup -NamespaceName myNamespace -Name myTopic
+    Set-AzServiceBusTopic -InputObject $topic -DefaultMessageTimeToLive (New-TimeSpan -Days 20) -MaxMessageSizeInKilobytes 102400
+    ```
+
+    ```output
+    AccessedAt                                : 1/1/0001 12:00:00 AM
+    AutoDeleteOnIdle                          : 10675199.02:48:05.4775807
+    CountDetailActiveMessageCount             : 0
+    CountDetailDeadLetterMessageCount         : 0
+    CountDetailScheduledMessageCount          : 0
+    CountDetailTransferDeadLetterMessageCount : 0
+    CountDetailTransferMessageCount           : 0
+    CreatedAt                                 : 1/1/0001 12:00:00 AM
+    DefaultMessageTimeToLive                  : 20.00:00:00
+    DuplicateDetectionHistoryTimeWindow       : 00:10:00
+    EnableBatchedOperations                   : True
+    EnableExpress                             : False
+    EnablePartitioning                        : False
+    Id                                        : /subscriptions/000000000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ServiceBus/namespaces/myNamespace/topics/myTopic
+    Location                                  : westus
+    MaxMessageSizeInKilobytes                 : 102400
+    MaxSizeInMegabytes                        : 1024
+    Name                                      : myTopic
+    RequiresDuplicateDetection                : False
+    ResourceGroupName                         : myResourceGroup
+    SizeInByte                                : 0
+    Status                                    : Active
+    SubscriptionCount                         : 0
+    SupportOrdering                           : True
+    ```
+
+    Updates a ServiceBus topic `myTopic` within namespace `myNamespace` using InputObject parameter set.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Set-AzServiceBusTopic.md
+  document type: cmdlet
+  external help file: Az.ServiceBus-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicebus/set-azservicebustopic
+  Module Name: Az.ServiceBus
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/Set-AzServiceBusTopic.md
+  PlatyPS schema version: 2024-05-01

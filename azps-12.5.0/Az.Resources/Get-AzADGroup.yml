@@ -1,0 +1,383 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADGroup
+name: Get-AzADGroup
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists entities from groups or get entity from groups by key
+description: |-
+  Lists entities from groups or get entity from groups by key
+parameters:
+  cmdletParameters:
+  - name: AppendSelected
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Append properties selected with default properties when this switch is on, only works with parameter '-Select'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsistencyLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the requested consistency level.
+      Documentation URL: https://developer.microsoft.com/en-us/office/blogs/microsoft-graph-advanced-queries-for-directory-objects-are-now-generally-available/
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include count of items
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CountVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a count of the total number of items in a collection.
+      By default, this variable will be set in the global scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayNameStartsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to find groups that begin with the provided string.
+    aliases:
+    - SearchString
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Expand related entities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter items by property values, for more detail about filter query please see: https://learn.microsoft.com/en-us/graph/filter-query-parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the first 'n' objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      key: id of group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Orderby
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Order items by property values
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Search
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search items by search phrases
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Select properties to be returned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first 'n' objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        [-Count]
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-Filter <String>]
+        [-Orderby <String[]>]
+        [-Search <String>]
+        [-ConsistencyLevel <String>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [-CountVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -DisplayName <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-ConsistencyLevel <String>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -DisplayNameStartsWith <String>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-ConsistencyLevel <String>]
+        [-First <UInt64>]
+        [-Skip <UInt64>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SearchStringParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -ObjectId <Guid>
+        [-Expand <String[]>]
+        [-Select <String[]>]
+        [-ConsistencyLevel <String>]
+        [-AppendSelected]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get group by display name'
+  description: |-
+    ```powershell
+    Get-AzADGroup -DisplayName $gname
+    ```
+
+    Get group by display name
+- title: 'Example 2: List groups'
+  description: |-
+    ```powershell
+    Get-AzADGroup -First 10
+    ```
+
+    List first 10 groups
+- title: 'Example 3: Get group by object id'
+  description: |-
+    ```powershell
+    Get-AzADGroup -ObjectId $id -Select groupTypes -AppendSelected
+    ```
+
+    Get group by object id and append property 'groupTypes' after default properties: 'DisplayName', 'Id', 'DeletedDateTime', 'SecurityEnabled', 'MailEnabled', 'MailNickname', 'Description'
+- title: 'Example 4: Get group with filter'
+  description: |-
+    ```powershell
+    Get-AzADGroup -Filter "startsWith(DisplayName,'some-name')"
+    ```
+
+    Get group with filter
+- title: 'Example 5: Assign OdataCount to a variable'
+  description: |-
+    ```powershell
+    Get-AzADGroup -First 10 -ConsistencyLevel eventual -Count -CountVariable 'result'
+    $result
+    ```
+
+    Assign OdataCount to a variable
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADGroup.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azadgroup
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzADGroup.md
+  PlatyPS schema version: 2024-05-01

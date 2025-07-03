@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Backup-AzRecoveryServicesBackupItem
+name: Backup-AzRecoveryServicesBackupItem
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Starts a backup for a Backup item.
+description: |-
+  The **Backup-AzRecoveryServicesBackupItem** cmdlet takes an adhoc backup of protected Azure backup item.
+  Using this cmdlet you can do an initial backup immediately after you enable protection or start a backup if a scheduled backup fails.
+  This cmdlet can also be used for custom retention with or without expiry date - refer parameters help text for more details.
+parameters:
+  cmdletParameters:
+  - name: BackupType
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupType" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of backup to be performed
+    acceptedValues:
+    - Full
+    - Differential
+    - Log
+    - CopyOnlyFull
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableCompression
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabling compression is required
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryDateTimeUTC
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an expiry time for the Recovery point as a DateTime object, if nothing is given it takes the default value of  30 days. Applicable to VM, SQL (for only Copy-only-full backup type), AFS backup items.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Item
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Backup item for which this cmdlet starts a backup operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of the Recovery Services Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Backup-AzRecoveryServicesBackupItem
+        -Item <ItemBase>
+        [-ExpiryDateTimeUTC <DateTime>]
+        [-BackupType <BackupType>]
+        [-EnableCompression]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start a backup for a Backup item'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+    $NamedContainer = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -FriendlyName "pstestv2vm1" -VaultId $vault.ID
+    $Item = Get-AzRecoveryServicesBackupItem -Container $NamedContainer -WorkloadType AzureVM -VaultId $vault.ID
+    $Job = Backup-AzRecoveryServicesBackupItem -Item $Item -VaultId $vault.ID -ExpiryDateTimeUTC (Get-Date).ToUniversalTime().AddDays(60)
+    $Job
+    ```
+
+    ```output
+    Operation        Status               StartTime            EndTime                   JOBID
+    ------------     ---------            ------               ---------                 -------
+    pstestv2vm1      Backup               InProgress           4/23/2016 5:00:30 PM      cf4b3ef5-2fac-4c8e-a215-d2eba4124f27
+    ```
+
+    The first command gets the Backup container of type AzureVM named pstestv2vm1, and then stores it in the $NamedContainer variable.
+    The second command gets the Backup item corresponding to the container in $NamedContainer, and then stores it in the $Item variable.
+    The last command triggers the backup job for the Backup item in $Item with an expiry time of 60 days from now, default value for expiry time is 30 days if not specified.
+- title: Example 2
+  description: |-
+    Starts a backup for a Backup item. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Backup-AzRecoveryServicesBackupItem -ExpiryDateTimeUTC <DateTime> -Item $Item -VaultId $vault.ID
+    ```
+links:
+- text: Get-AzRecoveryServicesBackupContainer
+  href: ./Get-AzRecoveryServicesBackupContainer.yml
+- text: Get-AzRecoveryServicesBackupItem
+  href: ./Get-AzRecoveryServicesBackupItem.yml
+- text: Restore-AzRecoveryServicesBackupItem
+  href: ./Restore-AzRecoveryServicesBackupItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Backup-AzRecoveryServicesBackupItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/backup-azrecoveryservicesbackupitem
+  Module Name: Az.RecoveryServices
+  ms.assetid: 04D7317E-2089-4197-909D-89F0CEC4851A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Backup-AzRecoveryServicesBackupItem.md
+  PlatyPS schema version: 2024-05-01

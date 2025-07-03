@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CustomLocation.Get-AzCustomLocationEnabledResourceType
+name: Get-AzCustomLocationEnabledResourceType
+module: Az.CustomLocation
+isPreview: false
+summary: |-
+  Gets the list of the Enabled Resource Types.
+description: |-
+  Gets the list of the Enabled Resource Types.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom Locations name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCustomLocationEnabledResourceType
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CustomLocation.Models.IEnabledResourceType" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets the list of the Enabled Resource Types.'
+  description: |-
+    ```powershell
+    Get-AzCustomLocationEnabledResourceType -ResourceGroupName azps_test_group -Name azps_test_cluster
+    ```
+
+    ```output
+    Name                                                             ExtensionType
+    ----                                                             -------------
+    435b5e8926f937f7a473d48f25731707c20916dfb52a47e0401a40181cb28217 microsoft.arcdataservices
+    ```
+
+    Gets the list of the Enabled Resource Types.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Get-AzCustomLocationEnabledResourceType.md
+  document type: cmdlet
+  external help file: Az.CustomLocation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.customlocation/get-azcustomlocationenabledresourcetype
+  Module Name: Az.CustomLocation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Get-AzCustomLocationEnabledResourceType.md
+  PlatyPS schema version: 2024-05-01

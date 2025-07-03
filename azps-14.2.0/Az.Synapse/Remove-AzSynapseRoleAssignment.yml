@@ -1,0 +1,681 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Remove-AzSynapseRoleAssignment
+name: Remove-AzSynapseRoleAssignment
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Deletes a Synapse Analytics role assignment.
+description: |-
+  The **Remove-AzSynapseRoleAssignment** cmdlet permanently deletes an Azure Synapse Analytics role assignment.
+
+  The cmdlet may call below Microsoft Graph API according to input parameters:
+
+  * GET /users/{id}
+  * GET /servicePrincipals/{id}
+
+  >[!Note]
+  > To removing a role assignment for a service principal, pass the object ID of the principal in the ObjectId parameter.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Item
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The item of Azure Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ItemType
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.SynapseConstants+WorkspaceItemType" data-throw-if-not-resolved="False" />
+    description: |-
+      The itemtype of Azure Synapse workspace.
+    acceptedValues:
+    - ApacheSparkPool
+    - IntegrationRuntime
+    - LinkedService
+    - Credential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Microsoft Entra ObjectId of the User, Group or Service Principal.
+    aliases:
+    - Id
+    - PrincipalId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This Cmdlet does not return an object by default.
+      If this switch is specified, it returns true if successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleAssignmentId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the role assignment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the Role that is assigned to the principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Role that is assigned to the principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ServicePrincipalName of the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address or the user principal name of the user.
+    aliases:
+    - Email
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveByWorkspaceObjectAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -SignInName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceNameAndNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleAssignmentId <String>
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceNameAndIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceNameAndObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionId <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceNameAndRoleDefinitionIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -ServicePrincipalName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceNameAndServicePrincipalNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleAssignmentId <String>
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceObjectAndIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -SignInName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceObjectAndNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceObjectAndObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionId <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceObjectAndRoleDefinitionIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -ServicePrincipalName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveByWorkspaceObjectAndServicePrincipalNameParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Remove-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleAssignmentId ContosoRoleAssignmentId
+    ```
+
+    This command deletes an Azure Synapse Analytics role assignment with a role assignment Id.
+- title: Example 2
+  description: |-
+    ```powershell
+    Remove-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleDefinitionName ContosoRole -SignInName ContosoName
+    ```
+
+    This command deletes an Azure Synapse Analytics role assignment at workspace level with a role name and a user principal name.
+- title: Example 3
+  description: |-
+    ```powershell
+    Remove-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleDefinitionName ContosoRole -SignInName ContosoName -ItemType ContosoItemType -Item ContosoItem
+    ```
+
+    This command deletes an Azure Synapse Analytics role assignment with a role name, a user principal name, a item type and a item.
+- title: Example 4
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Remove-AzSynapseRoleAssignment -RoleAssignmentId ContosoRoleAssignmentId
+    ```
+
+    This command deletes an Azure Synapse Analytics role assignment with a role assignment Id through pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Remove-AzSynapseRoleAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/remove-azsynapseroleassignment
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Remove-AzSynapseRoleAssignment.md
+  PlatyPS schema version: 2024-05-01

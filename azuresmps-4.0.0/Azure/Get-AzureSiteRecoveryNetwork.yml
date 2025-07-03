@@ -1,0 +1,93 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryNetwork
+name: Get-AzureSiteRecoveryNetwork
+module: Azure
+isPreview: false
+summary: |-
+  Gets information about the networks managed by Site Recovery for the current vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryNetwork** cmdlet gets information about Azure Site Recovery networks for the current Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Server
+    type: <xref href="ASRServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a Site Recovery server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryNetwork
+        -Server <ASRServer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get site recovery networks'
+  description: |-
+    ```
+    PS C:\> $Servers = Get-AzureSiteRecoveryServer
+    PS C:\> Get-AzureSiteRecoveryNetwork -Server $Servers[0]
+    Name                : phase2RecoveryVMNetwork
+    ID                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+    FabricObjectID      : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ServerId            : 774859b0-1966-48cc-9df7-759c441b7a8c
+    Type                : NoIsolation
+    FabricType          : VMM
+    VmNetworkSubnetList : {}
+
+    Name                : phase2PrimaryVMNetwork
+    ID                  : 00001111-aaaa-2222-bbbb-3333cccc4444
+    FabricObjectID      : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ServerId            : 774859b0-1966-48cc-9df7-759c441b7a8c
+    Type                : NoIsolation
+    FabricType          : VMM
+    VmNetworkSubnetList : {}
+    ```
+
+    The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+    The command stores the Site Recovery servers in the $Servers array variable.
+
+    The second command gets the site recovery network for the first server in the $Servers array.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 615D2C5D-AB31-45DB-9535-9B9C8E957322
+  PlatyPS schema version: 2024-05-01

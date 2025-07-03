@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Resize-AzVirtualNetworkGateway
+name: Resize-AzVirtualNetworkGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Resizes an existing virtual network gateway.
+description: |-
+  The **Resize-AzVirtualNetworkGateway** cmdlet enables you to change the stock-keeping unit (SKU) for a virtual network gateway.
+  SKUs determine the capabilities of a gateway, including such things as throughput and the maximum number of IP tunnels that are allowed.
+  Azure supports Basic, Standard, High-Performance, VpnGw1, VpnGw2, VpnGw3, VpnGw1AZ, VpnGw2AZ, VpnGw3AZ, ErGw1AZ, ErGw2AZ, ErGw3AZ SKUs (sometimes referred to as Small, Medium, and Large SKUs).
+  For detailed information about the capabilities of each SKU type, see the [VPN Gateway documentation](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+  Keep in mind that SKUs differ in pricing as well as capabilities.
+  For more information, see https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/.
+notes: |-
+  You cannot resize from Basic/Standard/HighPerformance SKUs to the new VpnGw1/VpnGw2/VpnGw3 SKUs. Further resize is not allowed from/to VpnGw1AZ/VpnGw2AZ/VpnGw3AZ or ErGw1AZ/ErGw2AZ/ErGw3AZ. Resize is allowed only within the SKU 'series' e.g VpnGw1AZ can be resized to/from VpnGw2AZ/VpnGw3AZ and ErGw1AZ can be resized to/from ErGw2AZ/ErGw3AZ. See https://learn.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways for instructions.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewaySku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the new type of gateway SKU.
+      The acceptable values for this parameter are:
+      - Basic
+      - Standard
+      - High Performance
+      - VpnGw1
+      - VpnGw2
+      - VpnGw3
+      - VpnGw1AZ
+      - VpnGw2AZ
+      - VpnGw3AZ
+      - ErGw1AZ
+      - ErGw2AZ
+      - ErGw3AZ
+    acceptedValues:
+    - Basic
+    - Standard
+    - HighPerformance
+    - UltraPerformance
+    - VpnGw1
+    - VpnGw2
+    - VpnGw3
+    - VpnGw1AZ
+    - VpnGw2AZ
+    - VpnGw3AZ
+    - ErGw1AZ
+    - ErGw2AZ
+    - ErGw3AZ
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object reference to the virtual network gateway to be resized.
+      You can create this object reference by using the Get-AzVirtualNetworkGateway and specifying the name of the gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resize-AzVirtualNetworkGateway
+        -VirtualNetworkGateway <PSVirtualNetworkGateway>
+        -GatewaySku <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change the size of a virtual network gateway'
+  description: |-
+    ```powershell
+    $Gateway = Get-AzVirtualNetworkGateway -Name "ContosoVirtualGateway"
+    Resize-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -GatewaySku "Basic"
+    ```
+
+    This example changes the size of a virtual network gateway named ContosoVirtualGateway.
+    The first command creates an object reference to ContosoVirtualGateway; this object reference is stored in a variable named $Gateway.
+    The second command then uses the **Resize-AzVirtualNetworkGateway** cmdlet to set the *GatewaySku* property to Basic.
+links:
+- text: Get-AzVirtualNetworkGateway
+  href: ./Get-AzVirtualNetworkGateway.yml
+- text: New-AzVirtualNetworkGateway
+  href: ./New-AzVirtualNetworkGateway.yml
+- text: Remove-AzVirtualNetworkGateway
+  href: ./Remove-AzVirtualNetworkGateway.yml
+- text: Reset-AzVirtualNetworkGateway
+  href: ./Reset-AzVirtualNetworkGateway.yml
+- text: Set-AzVirtualNetworkGateway
+  href: ./Set-AzVirtualNetworkGateway.yml
+- text: Get-AzVpnClientPackage
+  href: ./Get-AzVpnClientPackage.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/resize-azvirtualnetworkgateway
+  Module Name: Az.Network
+  ms.assetid: DE2441FC-9504-4F3F-AEAF-37EDCD9B7275
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Resize-AzVirtualNetworkGateway.md
+  PlatyPS schema version: 2024-05-01

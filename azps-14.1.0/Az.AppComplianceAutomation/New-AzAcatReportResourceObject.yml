@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AppComplianceAutomation.New-AzAcatReportResourceObject
+name: New-AzAcatReportResourceObject
+module: Az.AppComplianceAutomation
+isPreview: false
+summary: |-
+  Create an in-memory object for ReportResource.
+description: |-
+  Create an in-memory object for ReportResource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferGuid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Report offer Guid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Resource
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppComplianceAutomation.Models.IResourceMetadata" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of resource data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Report collection trigger time's time zone, the available list can be obtained by executing "Get-TimeZone -ListAvailable" in PowerShell.An example of valid timezone id is "Pacific Standard Time".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TriggerTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Report collection trigger time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAcatReportResourceObject
+        [-Resource <IResourceMetadata[]>]
+        [-TimeZone <String>]
+        [-TriggerTime <DateTime>]
+        [-OfferGuid <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppComplianceAutomation.Models.IReportResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a ReportResource object with default values.'
+  description: |-
+    ```powershell
+    New-AzAcatReportResourceObject -Resource @(@{resourceId="/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"; resourceOrigin="Azure"; resourceType="microsoft.compute/virtualmachines"})
+    ```
+
+    ```output
+    Name SystemDataCreatedAt  SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    ---- -------------------  ------------------- ----------------------- ------------------------ ------------------------
+         1/1/0001 12:00:00 AM                                             1/1/0001 12:00:00 AM
+    ```
+
+    Create a ReportResource object with default values.
+- title: 'Example 2: Create a ReportResource object.'
+  description: |-
+    ```powershell
+    New-AzAcatReportResourceObject -Resource @(@{resourceId="/subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/testrg/providers/Microsoft.Compute/virtualMachines/testvm"; resourceOrigin="Azure"; resourceType="microsoft.compute/virtualmachines"}) -TimeZone "China Standard Time" -TriggerTime "2023-07-19T08:00:00.000Z" -OfferGuid "00000000-0000-0000-0000-000000000001"
+    ```
+
+    ```output
+    Name SystemDataCreatedAt  SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    ---- -------------------  ------------------- ----------------------- ------------------------ ------------------------
+         1/1/0001 12:00:00 AM                                             1/1/0001 12:00:00 AM
+    ```
+
+    Create a ReportResource object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/New-AzAcatReportResourceObject.md
+  document type: cmdlet
+  external help file: Az.AppComplianceAutomation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.appComplianceAutomation/new-azacatreportresourceobject
+  Module Name: Az.AppComplianceAutomation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/New-AzAcatReportResourceObject.md
+  PlatyPS schema version: 2024-05-01

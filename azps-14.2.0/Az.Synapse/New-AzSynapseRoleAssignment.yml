@@ -1,0 +1,521 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.New-AzSynapseRoleAssignment
+name: New-AzSynapseRoleAssignment
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Creates a Synapse Analytics role assignment.
+description: |-
+  The **New-AzSynapseRoleAssignment** cmdlet creates an Azure Synapse Analytics role assignment.
+
+  The cmdlet may call below Microsoft Graph API according to input parameters:
+
+  * GET /users/{id}
+  * GET /servicePrincipals/{id}
+
+  >[!Note]
+  > To create a role assignment for a service principal, pass the object ID of the principal in the ObjectId parameter.
+  > When you are a user with permission to manage Azure RBAC role assignment on the workspace but not a Synapse Administrator, please create Synapse Administrator role by **-RoleDefinitionId** and **-ObjectId** directly but not by **-RoleDefinitionName**, for Synapse Administrator, RoleDefinitionId is "00001111-aaaa-2222-bbbb-3333cccc4444", please take below Example 5 as reference. The reason for this is , when you try to add a "Synapse Administrator" role, the cmdlet needs to get the role ID from the role name which requires workspace read permission, which the current user does not have.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Item
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ItemType
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.SynapseConstants+WorkspaceItemType" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace item type.
+    acceptedValues:
+    - ApacheSparkPool
+    - IntegrationRuntime
+    - LinkedService
+    - Credential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Microsoft Entra ObjectId of the User, Group or Service Principal.
+    aliases:
+    - Id
+    - PrincipalId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the Role that is assigned to the principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Role that is assigned to the principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ServicePrincipalName of the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address or the user principal name of the user.
+    aliases:
+    - Email
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceNameAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceNameAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByWorkspaceObjectAndNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndRoleDefinitionIdAndObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: NewByWorkspaceObjectAndServicePrincipalNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -SignInName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceNameAndNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceNameAndIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionId <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceNameAndRoleDefinitionIdAndObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceName <String>
+        -RoleDefinitionName <String>
+        -ServicePrincipalName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceNameAndServicePrincipalNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -SignInName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceObjectAndNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceObjectAndIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionId <String>
+        -ObjectId <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceObjectAndRoleDefinitionIdAndObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSynapseRoleAssignment
+        -WorkspaceObject <PSSynapseWorkspace>
+        -RoleDefinitionName <String>
+        -ServicePrincipalName <String>
+        [-ItemType <WorkspaceItemType>]
+        [-Item <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewByWorkspaceObjectAndServicePrincipalNameParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSRoleAssignmentDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleDefinitionName ContosoRole -SignInName ContosoName
+    ```
+
+    This command assigns ContosoRole to the user whose principal name is ContosoName.
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleDefinitionName ContosoRole -SignInName ContosoName -ItemType ContosoItemType -Item ContosoItem
+    ```
+
+    This command assigns ContosoRole to the user whose principal name is ContosoName and item type is ContosoItemType, item is ContosoItem.
+- title: Example 3
+  description: |-
+    ```powershell
+    New-AzSynapseRoleAssignment -WorkspaceName ContosoWorkspace -RoleDefinitionName ContosoRole -SignInName ContosoName -ItemType ContosoItemType -Item ContosoItem
+    ```
+
+    This command assigns ContosoRole to the user whose principal name is ContosoName and item type is ContosoItemType, item is ContosoItem.
+- title: Example 4
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | New-AzSynapseRoleAssignment -RoleDefinitionName ContosoRole -SignInName ContosoName
+    ```
+
+    This command assigns ContosoRole to the user whose principal name is ContosoName through pipeline.
+- title: Example 5
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | New-AzSynapseRoleAssignment -RoleDefinitionId "00001111-aaaa-2222-bbbb-3333cccc4444" -ObjectId ContosoObjectId
+    ```
+
+    This command assigns Synapse Administrator role to the user whose object Id is ContosoObjectId through pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseRoleAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/new-azsynapseroleassignment
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/New-AzSynapseRoleAssignment.md
+  PlatyPS schema version: 2024-05-01

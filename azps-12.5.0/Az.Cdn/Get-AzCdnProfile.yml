@@ -1,0 +1,223 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.Get-AzCdnProfile
+name: Get-AzCdnProfile
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Gets an CDN profile with the specified profile name under the specified subscription and resource group.
+description: |-
+  Gets an CDN profile with the specified profile name under the specified subscription and resource group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.ICdnIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the CDN profile which is unique within the resource group.
+    aliases:
+    - ProfileName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCdnProfile
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCdnProfile
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCdnProfile
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCdnProfile
+        -InputObject <ICdnIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.ICdnIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.IProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List AzureCDN profiles under the subscription'
+  description: |-
+    ```powershell
+    Get-AzCdnProfile
+    ```
+
+    ```output
+    Location Name             Kind ResourceGroupName
+    -------- ----             ---- -----------------
+    Global   p-oln142         cdn  testps-rg-godj4q
+    Global   cdn001           cdn  testps-rg-da16jm
+    Global   cdn002           cdn  testps-rg-da16jm
+    ```
+
+    List AzureCDN profiles under the subscription
+- title: 'Example 2: List AzureCDN profiles under the resource group'
+  description: |-
+    ```powershell
+    Get-AzCdnProfile -ResourceGroupName testps-rg-da16jm
+    ```
+
+    ```output
+    Location Name   Kind ResourceGroupName
+    -------- ----   ---- -----------------
+    Global   cdn001 cdn  testps-rg-da16jm
+    Global   cdn002 cdn  testps-rg-da16jm
+    ```
+
+    List AzureCDN profiles under the resource group
+- title: 'Example 3: Get an AzureCDN profile under the resource group'
+  description: |-
+    ```powershell
+    Get-AzCdnProfile -ResourceGroupName testps-rg-da16jm -Name cdn001
+    ```
+
+    ```output
+    Location Name   Kind ResourceGroupName
+    -------- ----   ---- -----------------
+    Global   cdn001 cdn  testps-rg-da16jm
+    ```
+
+    Get an AzureCDN profile under the resource group
+- title: 'Example 4: Get an AzureCDN profile under the resource group via identity'
+  description: |-
+    ```powershell
+    New-AzCdnProfile -ResourceGroupName testps-rg-da16jm -Name cdn001 -SkuName Standard_Microsoft -Location Global | Get-AzCdnProfile
+    ```
+
+    ```output
+    Location Name   Kind ResourceGroupName
+    -------- ----   ---- -----------------
+    Global   cdn001 cdn  testps-rg-da16jm
+    ```
+
+    Get an AzureCDN profile under the resource group via identity
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/Get-AzCdnProfile.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cdn/get-azcdnprofile
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/Get-AzCdnProfile.md
+  PlatyPS schema version: 2024-05-01

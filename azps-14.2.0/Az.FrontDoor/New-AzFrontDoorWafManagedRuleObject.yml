@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorWafManagedRuleObject
+name: New-AzFrontDoorWafManagedRuleObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create ManagedRule Object for WAF policy creation
+description: |-
+  Create ManagedRule Object for WAF policy creation
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Rule Set Action. Possible values include: 'Allow', 'Block', 'Log', 'Redirect'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Exclusion
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Exclusion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleGroupOverride
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSAzureRuleGroupOverride" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of azure managed provider override configuration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of the ruleset
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version of the ruleset
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorWafManagedRuleObject
+        -Type <String>
+        -Version <String>
+        [-Action <String>]
+        [-RuleGroupOverride <PSAzureRuleGroupOverride[]>]
+        [-Exclusion <PSManagedRuleExclusion[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSAzureManagedRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $ruleOverride1 = New-AzFrontDoorWafManagedRuleOverrideObject -RuleId "942250" -Action Log
+    $ruleOverride2 = New-AzFrontDoorWafManagedRuleOverrideObject -RuleId "942251" -Action Log
+    $override1 = New-AzFrontDoorWafRuleGroupOverrideObject -RuleGroupName SQLI -ManagedRuleOverride $ruleOverride1,$ruleOverride2
+
+    $ruleOverride3 = New-AzFrontDoorWafManagedRuleOverrideObject -RuleId "941280" -Action Log
+    $override2 = New-AzFrontDoorWafRuleGroupOverrideObject -RuleGroupName XSS -ManagedRuleOverride $ruleOverride3
+
+    New-AzFrontDoorWafManagedRuleObject -Type DefaultRuleSet -Version "preview-0.1" -RuleGroupOverride $override1,$override2
+    ```
+
+    ```output
+    RuleGroupOverrides RuleSetType    RuleSetVersion
+    ------------------ -----------    --------------
+    {SQLI, XSS}        DefaultRuleSet preview-0.1
+    ```
+
+    Create a ManagedRule Object
+links:
+- text: New-AzFrontDoorWafPolicy
+  href: ./New-AzFrontDoorWafPolicy.yml
+- text: Update-AzFrontDoorWafPolicy
+  href: ./Update-AzFrontDoorWafPolicy.yml
+- text: New-AzFrontDoorWafRuleGroupOverrideObject
+  href: ./New-AzFrontDoorWafRuleGroupOverrideObject.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorwafmanagedruleobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleObject.md
+  PlatyPS schema version: 2024-05-01

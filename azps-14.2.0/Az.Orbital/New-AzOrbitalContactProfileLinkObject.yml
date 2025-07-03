@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Orbital.New-AzOrbitalContactProfileLinkObject
+name: New-AzOrbitalContactProfileLinkObject
+module: Az.Orbital
+isPreview: false
+summary: |-
+  Create an in-memory object for ContactProfileLink.
+description: |-
+  Create an in-memory object for ContactProfileLink.
+parameters:
+  cmdletParameters:
+  - name: Channel
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.IContactProfileLinkChannel" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Contact Profile Link Channel.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Direction (Uplink or Downlink).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EirpdBw
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Effective Isotropic Radiated Power (EIRP) in dBW.
+      It is the required EIRP by the customer.
+      Not used yet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GainOverTemperature
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Gain to noise temperature in db/K.
+      It is the required G/T by the customer.
+      Not used yet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Link name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Polarization
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Polarization.
+      e.g.
+      (RHCP, LHCP).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOrbitalContactProfileLinkObject
+        -Channel <IContactProfileLinkChannel[]>
+        -Direction <String>
+        -Name <String>
+        -Polarization <String>
+        [-EirpdBw <Single>]
+        [-GainOverTemperature <Single>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.ContactProfileLink" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a ContactProfileLink object.'
+  description: |-
+    ```powershell
+    $linkChannel = New-AzOrbitalContactProfileLinkChannelObject -BandwidthMHz 0.036 -CenterFrequencyMHz 2106.4063 -EndPointIPAddress 10.0.1.0 -EndPointName AQUA_command -EndPointPort 4000 -EndPointProtocol TCP -Name channel1 -DecodingConfiguration na -DemodulationConfiguration na -EncodingConfiguration AQUA_CMD_CCSDS -ModulationConfiguration AQUA_UPLINK_BPSK
+
+    New-AzOrbitalContactProfileLinkObject -Channel $linkChannel -Direction uplink -Name RHCP_UL -Polarization RHCP -EirpdBw 45 -GainOverTemperature 0
+    ```
+
+    ```output
+    Direction EirpdBw GainOverTemperature Name    Polarization
+    --------- ------- ------------------- ----    ------------
+    uplink    45      0                   RHCP_UL RHCP
+    ```
+
+    Create a ContactProfileLink object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/New-AzOrbitalContactProfileLinkObject.md
+  document type: cmdlet
+  external help file: Az.Orbital-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Orbital/new-azorbitalcontactprofilelinkobject
+  Module Name: Az.Orbital
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/New-AzOrbitalContactProfileLinkObject.md
+  PlatyPS schema version: 2024-05-01

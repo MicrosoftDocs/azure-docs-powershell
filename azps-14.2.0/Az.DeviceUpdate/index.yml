@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.DeviceUpdate
+name: Az.DeviceUpdate Module
+isPreview: false
+cmdletGroups:
+- title: DeviceUpdate
+  cmdlets:
+  - Az.DeviceUpdate.Get-AzDeviceUpdateAccount
+  - Az.DeviceUpdate.Get-AzDeviceUpdateInstance
+  - Az.DeviceUpdate.New-AzDeviceUpdateAccount
+  - Az.DeviceUpdate.New-AzDeviceUpdateCheckNameAvailabilityRequestObject
+  - Az.DeviceUpdate.New-AzDeviceUpdateInstance
+  - Az.DeviceUpdate.Remove-AzDeviceUpdateAccount
+  - Az.DeviceUpdate.Remove-AzDeviceUpdateInstance
+  - Az.DeviceUpdate.Test-AzDeviceUpdateNameAvailability
+  - Az.DeviceUpdate.Update-AzDeviceUpdateAccount
+  - Az.DeviceUpdate.Update-AzDeviceUpdateInstance
+description: |-
+  Microsoft Azure PowerShell: DeviceUpdate cmdlets
+metadata:
+  Module Name: Az.DeviceUpdate
+  Module Guid: 47841c04-1681-4e5e-884e-afb3faf25061
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.deviceupdate
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/DeviceUpdate/help/Az.DeviceUpdate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/DeviceUpdate/help/Az.DeviceUpdate.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

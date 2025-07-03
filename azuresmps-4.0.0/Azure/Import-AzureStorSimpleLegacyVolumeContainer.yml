@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Import-AzureStorSimpleLegacyVolumeContainer
+name: Import-AzureStorSimpleLegacyVolumeContainer
+module: Azure
+isPreview: false
+summary: |-
+  Starts the migration of volume containers.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Import-AzureStorSimpleLegacyVolumeContainer** cmdlet starts the migration of volume containers from a legacy appliance to the target appliance.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports all volume containers in the imported configuration file to the target device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateAllContainer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports volume container on a different device, even if volume container has been imported on a different device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LegacyConfigId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of the configuration of the legacy appliance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LegacyContainerNames
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of volume container names for which the migration plan applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSpecificContainer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipACRs
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the import process skips access control records for migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-AzureStorSimpleLegacyVolumeContainer
+        -LegacyConfigId <String>
+        -LegacyContainerNames <String[]>
+        [-SkipACRs]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateSpecificContainer
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Import-AzureStorSimpleLegacyVolumeContainer
+        -LegacyConfigId <String>
+        [-All]
+        [-SkipACRs]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateAllContainer
+  isDefault: false
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+  description: |-
+    This command returns the status of the migration import volume container job if it has been successfully started in the appliance.
+examples:
+- title: 'Example 1: Import a legacy volume container'
+  description: |-
+    ```
+    PS C:\>Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -LegacyContainerNames "OneSDKAzureCloud"
+    Import started, Please check status with Get-AzureStorSimpleLegacyVolumeContainerStatus cmdlet
+    ```
+
+    This command imports a legacy volume container for the named container.
+    The cmdlet starts the import, and then returns a message.
+- title: 'Example 2: Import all legacy volume containers'
+  description: |-
+    ```
+    PS C:\>Import-AzureStorSimpleLegacyVolumeContainer -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -All
+    Import started, Please check status with Get-AzureStorSimpleLegacyVolumeContainerStatus cmdlet
+    ```
+
+    This command imports all legacy volume containers from configuration file imported.
+    The cmdlet starts the import, and then returns a message.
+links:
+- text: Get-AzureStorSimpleLegacyVolumeContainerStatus
+  href: ./Get-AzureStorSimpleLegacyVolumeContainerStatus.yml
+- text: Import-AzureStorSimpleLegacyApplianceConfig
+  href: ./Import-AzureStorSimpleLegacyApplianceConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 23272A36-8F55-41A8-AFC9-2EEE0FA55DA3
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,397 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Set-AzKeyVaultKeyRotationPolicy
+name: Set-AzKeyVaultKeyRotationPolicy
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Sets the key rotation policy for the specified key in Key Vault.
+description: |-
+  This cmdlet requires the key update permission. It returns a key rotation policy for the specified key.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiresIn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The expiryTime will be applied on the new key version. It should be at least 28 days. It will be in ISO 8601 Format. Examples: 90 days: P90D, 3 months: P3M, 48 hours: PT48H, 1 year and 10 days: P1Y10D.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByKeyInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Key object
+    aliases:
+    - Key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByRotationPolicyFileViaKeyInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyRotationLifetimeAction
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyRotationLifetimeAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      PSKeyRotationLifetimeAction object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByKeyInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyRotationPolicy
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyRotationPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      PSKeyRotationPolicy object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyRotationPolicyInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key name.
+    aliases:
+    - KeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByRotationPolicyFileViaVaultName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A path to the rotation policy file that contains JSON policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByRotationPolicyFileViaVaultName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByRotationPolicyFileViaKeyInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVaultName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByRotationPolicyFileViaVaultName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultKeyRotationPolicy
+        [-VaultName] <String>
+        [-Name] <String>
+        [-ExpiresIn <String>]
+        [-KeyRotationLifetimeAction <PSKeyRotationLifetimeAction[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVaultName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultKeyRotationPolicy
+        [-VaultName] <String>
+        [-Name] <String>
+        -PolicyPath <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByRotationPolicyFileViaVaultName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultKeyRotationPolicy
+        [-InputObject] <PSKeyVaultKeyIdentityItem>
+        [-ExpiresIn <String>]
+        [-KeyRotationLifetimeAction <PSKeyRotationLifetimeAction[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeyInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultKeyRotationPolicy
+        [-InputObject] <PSKeyVaultKeyIdentityItem>
+        -PolicyPath <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByRotationPolicyFileViaKeyInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultKeyRotationPolicy
+        [-KeyRotationPolicy] <PSKeyRotationPolicy>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeyRotationPolicyInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyRotationPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultKeyIdentityItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyRotationPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Sets key rotation policy by JSON file'
+  description: |-
+    ```powershell
+    <#
+    rotation_policy.json
+    {
+        "lifetimeActions": [
+          {
+            "trigger": {
+              "timeAfterCreate": "P18M",
+              "timeBeforeExpiry": null
+            },
+            "action": {
+              "type": "Rotate"
+            }
+          },
+          {
+            "trigger": {
+              "timeBeforeExpiry": "P30D"
+            },
+            "action": {
+              "type": "Notify"
+            }
+          }
+        ],
+        "attributes": {
+          "expiryTime": "P2Y"
+        }
+      }
+    #>
+    Set-AzKeyVaultKeyRotationPolicy -VaultName test-kv -Name test-key -PolicyPath rotation_policy.json
+    ```
+
+    ```output
+    Id              : https://test-kv.vault.azure.net/keys/test-key/rotationpolicy
+    VaultName       : test-kv
+    KeyName         : test-keyAM +00:00
+    LifetimeActions : {[Action: Notify, TimeAfterCreate: , TimeBeforeExpiry: P30D]}
+    ExpiresIn       : P2Y
+    CreatedOn       : 12/10/2021 3:21:51 AM +00:00
+    UpdatedOn       : 6/9/2022 7:43:27
+    ```
+
+    These commands set the rotation policy of key `test-key` by JSON file.
+- title: 'Example 2: Sets key rotation policy expiry time'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultKeyRotationPolicy -VaultName test-kv -Name test-key -ExpiresIn P2Y
+    ```
+
+    ```output
+    Id              : https://test-kv.vault.azure.net/keys/test-key/rotationpolicy
+    VaultName       : test-kv
+    KeyName         : test-keyAM +00:00
+    LifetimeActions : {[Action: Notify, TimeAfterCreate: , TimeBeforeExpiry: P30D]}
+    ExpiresIn       : P2Y
+    CreatedOn       : 12/10/2021 3:21:51 AM +00:00
+    UpdatedOn       : 6/9/2022 7:43:27
+    ```
+
+    These commands set the expiry time will be applied on the new key version of `test-key` as 2 years.
+- title: 'Example 3: Sets key rotation policy via piping'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultKey -VaultName test-kv -Name test-key | Set-AzKeyVaultKeyRotationPolicy -KeyRotationLifetimeAction @{Action = "Rotate"; TimeBeforeExpiry = "P18M"}
+    ```
+
+    ```output
+    Id              : https://test-kv.vault.azure.net/keys/test-key/rotationpolicy
+    VaultName       : test-kv
+    KeyName         : test-key
+    LifetimeActions : {[Action: Rotate, TimeAfterCreate: , TimeBeforeExpiry: P18M], [Action: Notify, TimeAfterCreate: ,
+                      TimeBeforeExpiry: P30D]}
+    ExpiresIn       : P2Y
+    CreatedOn       : 12/10/2021 3:21:51 AM +00:00
+    UpdatedOn       : 6/9/2022 8:10:43 AM +00:00
+    ```
+
+    These commands set the duration before expiry to attempt to rotate `test-key` as 18 months.
+- title: 'Example 4: Copy key rotation policy to another key via PSKeyRotationPolicy object'
+  description: |-
+    ```powershell
+    $policy = Get-AzKeyVaultKeyRotationPolicy -VaultName test-kv -Name test-key1
+    $policy.KeyName = "test-key2"
+    $policy | Set-AzKeyVaultKeyRotationPolicy
+    ```
+
+    ```output
+    Id              : https://test-kv.vault.azure.net/keys/test-key2/rotationpolicy
+    VaultName       : test-kv
+    KeyName         : test-key2
+    LifetimeActions : {[Action: Rotate, TimeAfterCreate: , TimeBeforeExpiry: P18M], [Action: Notify, TimeAfterCreate: ,
+                      TimeBeforeExpiry: P30D]}
+    ExpiresIn       : P2Y
+    CreatedOn       : 6/9/2022 8:26:35 AM +00:00
+    UpdatedOn       : 6/9/2022 8:26:35 AM +00:00
+    ```
+
+    These commands copy the key rotation policy `test-key1` to key `test-key2`.
+links:
+- text: Get-AzKeyVaultKeyRotationPolicy
+  href: ./Get-AzKeyVaultKeyRotationPolicy.yml
+- text: Invoke-AzKeyVaultKeyRotation
+  href: ./Invoke-AzKeyVaultKeyRotation.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultKeyRotationPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultkeyrotationpolicy
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultKeyRotationPolicy.md
+  PlatyPS schema version: 2024-05-01

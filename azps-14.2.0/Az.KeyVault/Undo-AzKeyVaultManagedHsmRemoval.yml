@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Undo-AzKeyVaultManagedHsmRemoval
+name: Undo-AzKeyVaultManagedHsmRemoval
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Recover a managed HSM.
+description: |-
+  Recover a previously deleted HSM for which soft delete was enabled.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedManagedHsm" data-throw-if-not-resolved="False" />
+    description: |-
+      Deleted HSM object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deleted HSM original Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM name.
+      Cmdlet constructs the FQDN of a managed HSM based on the name and currently selected environment.
+    aliases:
+    - HsmName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the deleted HSM resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the subscription.
+
+      By default, cmdlets are executed in the subscription that is set in the current context.
+      If the user specifies another subscription, the current cmdlet is executed in the subscription specified by the user.
+
+      Overriding subscriptions only take effect during the lifecycle of the current cmdlet.
+      It does not change the subscription in the context, and does not affect subsequent cmdlets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultManagedHsmRemoval
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-Location] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultManagedHsmRemoval
+        [-InputObject] <PSDeletedManagedHsm>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedManagedHsm" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Recover a deleted HSM'
+  description: |-
+    ```powershell
+    Undo-AzKeyVaultManagedHsmRemoval -Name test001 -ResourceGroupName test-rg -Location westus
+    ```
+
+    ```output
+    Name   Resource Group Name Location SKU        ProvisioningState
+    ----   ------------------- -------- ---        -----------------
+    test001 test-rg              West US  StandardB1 Succeeded
+    ```
+
+    This command recovers a managed HSM called `test001` from deleted state.
+- title: 'Example 2: Recover a deleted HSM by piping'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -Name test001 -Location westus -InRemovedState | Undo-AzKeyVaultManagedHsmRemoval
+    ```
+
+    ```output
+    Name   Resource Group Name Location SKU        ProvisioningState
+    ----   ------------------- -------- ---        -----------------
+    test001 test-rg              West US  StandardB1 Succeeded
+    ```
+
+    This command recovers a managed HSM called `test001` from deleted state by piping.
+links:
+- text: New-AzKeyVaultManagedHsm
+  href: ./New-AzKeyVaultManagedHsm.yml
+- text: Get-AzKeyVaultManagedHsm
+  href: ./Get-AzKeyVaultManagedHsm.yml
+- text: Remove-AzKeyVaultManagedHsm
+  href: ./Remove-AzKeyVaultManagedHsm.yml
+- text: Update-AzKeyVaultManagedHsm
+  href: ./Update-AzKeyVaultManagedHsm.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultManagedHsmRemoval.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/undo-azkeyvaultmanagedhsmremoval
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultManagedHsmRemoval.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,328 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.New-AzBatchAccount
+name: New-AzBatchAccount
+module: Az.Batch
+isPreview: false
+summary: |-
+  Creates a Batch account.
+description: |-
+  The **New-AzBatchAccount** cmdlet creates an Azure Batch account for the specified resource group and location.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Batch account that this cmdlet creates.
+      Batch account names must be between 3 and 24 characters long and contain only numbers and lowercase letters.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoStorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of the storage account to be used for auto storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyIdentifier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Key Identifier for customer-based encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeySource
+    type: <xref href="Microsoft.Azure.Management.Batch.Models.KeySource" data-throw-if-not-resolved="False" />
+    description: |-
+      Configures how customer data is encrypted inside the Batch account.
+      By default, accounts are encrypted using a Microsoft managed key.
+      For additional control, a customer-managed key can be used instead.
+    acceptedValues:
+    - MicrosoftBatch
+    - MicrosoftKeyVault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of user assigned identities associated with the BatchAccount. This parameter is only used when IdentityType is set to UserAssigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="Microsoft.Azure.Management.Batch.Models.ResourceIdentityType" data-throw-if-not-resolved="False" />
+    description: |-
+      The identity associated with the BatchAccount
+    acceptedValues:
+    - SystemAssigned
+    - UserAssigned
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the Azure key vault associated with the Batch account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL of the Azure key vault associated with the Batch account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the region where this cmdlet creates the account.
+      For more information, see [Azure Regions](https://azure.microsoft.com/en-us/regions).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolAllocationMode
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Batch.Models.PoolAllocationMode" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The allocation mode for creating pools in the Batch account.
+    acceptedValues:
+    - BatchService
+    - UserSubscription
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="Microsoft.Azure.Management.Batch.Models.PublicNetworkAccessType" data-throw-if-not-resolved="False" />
+    description: |-
+      The public network access type
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group in which this cmdlet creates the account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzBatchAccount
+        [-AccountName] <String>
+        [-Location] <String>
+        [-ResourceGroupName] <String>
+        [[-AutoStorageAccountId] <String>]
+        [-PoolAllocationMode <PoolAllocationMode>]
+        [-KeyVaultId <String>]
+        [-KeyVaultUrl <String>]
+        [-Tag <Hashtable>]
+        [-PublicNetworkAccess <PublicNetworkAccessType>]
+        [-IdentityType <ResourceIdentityType>]
+        [-IdentityId <String[]>]
+        [-EncryptionKeySource <KeySource>]
+        [-EncryptionKeyIdentifier <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Batch account'
+  description: |-
+    ```powershell
+    New-AzBatchAccount -AccountName "pfuller" -ResourceGroupName "ResourceGroup03" -Location "WestUS"
+    ```
+
+    ```output
+    AccountName                  : pfuller
+    Location                     : westus
+    ResourceGroupName            : ResourceGroup03
+    DedicatedCoreQuota           : 20
+    LowPriorityCoreQuota         : 20
+    PoolQuota                    : 20
+    ActiveJobAndJobScheduleQuota : 20
+    Tags                         :
+    TaskTenantUrl                : https://cmdletexample.westus.batch.azure.com
+    ```
+
+    This command creates a Batch account named pfuller using the ResourceGroup03 resource group in the West US location.
+- title: Example 2
+  description: |-
+    Creates a Batch account. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    New-AzBatchAccount -AccountName 'pfuller' -AutoStorageAccountId <String> -Location 'WestUS' -ResourceGroupName 'ResourceGroup03'
+    ```
+links:
+- text: Get-AzBatchAccount
+  href: ./Get-AzBatchAccount.yml
+- text: Remove-AzBatchAccount
+  href: ./Remove-AzBatchAccount.yml
+- text: Set-AzBatchAccount
+  href: ./Set-AzBatchAccount.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/new-azbatchaccount
+  Module Name: Az.Batch
+  ms.assetid: 82C7B128-8818-4390-B1A5-CB40AC9D53CA
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchAccount.md
+  PlatyPS schema version: 2024-05-01

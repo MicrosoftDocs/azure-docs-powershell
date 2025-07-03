@@ -1,0 +1,683 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Informatica.New-AzInformaticaOrganization
+name: New-AzInformaticaOrganization
+module: Az.Informatica
+isPreview: false
+summary: |-
+  Create a InformaticaOrganizationResource
+description: |-
+  Create a InformaticaOrganizationResource
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailBusiness
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Business phone number
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailCompanyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      company Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailCountry
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Country name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailDomain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Domain name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailNumberOfEmployee
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number Of Employees
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailOfficeAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Office Address
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformaticaPropertyInformaticaRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Informatica organization region
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformaticaPropertyOrganizationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformaticaPropertyOrganizationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformaticaPropertySingleSignOnUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Single sing on URL for informatica organization
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinkOrganizationToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Link organization token
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MarketplaceDetailMarketplaceSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Marketplace Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Organizations resource
+    aliases:
+    - OrganizationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailOfferId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the product offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the product offer plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the product offer plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPublisherId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the product publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer plan term id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermUnit
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer plan term unit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User email address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailFirstName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User first name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailLastName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User last name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailPhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number of the user used by for contacting them if needed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailUpn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UPN of user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-CompanyDetailBusiness <String>]
+        [-CompanyDetailCompanyName <String>]
+        [-CompanyDetailCountry <String>]
+        [-CompanyDetailDomain <String>]
+        [-CompanyDetailNumberOfEmployee <Int32>]
+        [-CompanyDetailOfficeAddress <String>]
+        [-InformaticaPropertyInformaticaRegion <String>]
+        [-InformaticaPropertyOrganizationId <String>]
+        [-InformaticaPropertyOrganizationName <String>]
+        [-InformaticaPropertySingleSignOnUrl <String>]
+        [-LinkOrganizationToken <String>]
+        [-MarketplaceDetailMarketplaceSubscriptionId <String>]
+        [-OfferDetailOfferId <String>]
+        [-OfferDetailPlanId <String>]
+        [-OfferDetailPlanName <String>]
+        [-OfferDetailPublisherId <String>]
+        [-OfferDetailTermId <String>]
+        [-OfferDetailTermUnit <String>]
+        [-Tag <Hashtable>]
+        [-UserDetailEmailAddress <String>]
+        [-UserDetailFirstName <String>]
+        [-UserDetailLastName <String>]
+        [-UserDetailPhoneNumber <String>]
+        [-UserDetailUpn <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzInformaticaOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Informatica.Models.IInformaticaOrganizationResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new Informatica Resource'
+  description: |-
+    ```powershell
+    New-AzInformaticaOrganization -Name "NewInformaticaTestResource" -ResourceGroupName "InformaticaTestRg" -Location "westus2" -SubscriptionId "ce37d538-dfa3-49c3-b3cd-149b4b7db48a"  -CompanyDetailCompanyName "Test" -CompanyDetailCountry "India" -CompanyDetailDomain "" -CompanyDetailNumberOfEmployee 0  -BusinessPhoneNumber ""  -MarketplaceDetailMarketplaceSubscriptionId "c948d31a-c011-4b16-ce29-688c1565fc06" -OfferDetailOfferId "prod-idmc_as_azure_native_isv_service" -OfferDetailPlanId "prod-private_priview_plan_cdi_free" -OfferDetailPlanName "Pay as you go" -OfferDetailPublisherId "informatica" -OfferDetailTermId "zwuaefo5ywwo" -OfferDetailTermUnit "P1Y" -UserDetailEmailAddress "Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com" -UserDetailFirstName "Test" -UserDetailLastName "Test" -UserDetailPhoneNumber "9876543210" -UserDetailUpn "Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com"
+    ```
+
+    ```output
+    BusinessPhoneNumber                        :
+    CompanyDetailCompanyName                   : Test
+    CompanyDetailCountry                       : India
+    CompanyDetailDomain                        :
+    CompanyDetailNumberOfEmployee              : 0
+    CompanyDetailOfficeAddress                 :
+    Id                                         : /subscriptions/ce37d538-dfa3-49c3-b3cd-149b4b7db48a/resourceGroups/InformaticaTestRg/providers/Informatica.DataManagement/organizations/NewInformaticaTestResource
+    InformaticaPropertyInformaticaRegion       :
+    InformaticaPropertyOrganizationId          :
+    InformaticaPropertyOrganizationName        :
+    InformaticaPropertySingleSignOnUrl         :
+    LinkOrganizationToken                      :
+    Location                                   : westus2
+    MarketplaceDetailMarketplaceSubscriptionId : 3217f8a7-3349-4473-900d-3a6ec5d7c16c
+    Name                                       : NewInformaticaTestResource
+    OfferDetailOfferId                         : prod-idmc_as_azure_native_isv_service
+    OfferDetailPlanId                          : prod-private_priview_plan_cdi_free
+    OfferDetailPlanName                        : Pay as you go
+    OfferDetailPublisherId                     : informatica
+    OfferDetailTermId                          : zwuaefo5ywwo
+    OfferDetailTermUnit                        : P1Y
+    ProvisioningState                          : Succeeded
+    ResourceGroupName                          : InformaticaTestRg
+    SystemDataCreatedAt                        : 09-Jul-24 11:48:22 AM
+    SystemDataCreatedBy                        : khanalmas@microsoft.com
+    SystemDataCreatedByType                    : User
+    SystemDataLastModifiedAt                   : 09-Jul-24 11:48:52 AM
+    SystemDataLastModifiedBy                   : 1907c93c-5795-4a9c-8ad3-7798b1d72580
+    SystemDataLastModifiedByType               : Application
+    Tag                                        : {}
+    Type                                       : informatica.datamanagement/organizations
+    UserDetailEmailAddress                     : Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com
+    UserDetailFirstName                        : Test
+    UserDetailLastName                         : Test
+    UserDetailPhoneNumber                      : 9876543210
+    UserDetailUpn                              : Test_Infa@mpliftrlogz20210811outlook.onmicrosoft.com
+    ```
+
+    Create new Informatica Resource in the specified resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/New-AzInformaticaOrganization.md
+  document type: cmdlet
+  external help file: Az.Informatica-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.informatica/new-azinformaticaorganization
+  Module Name: Az.Informatica
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/New-AzInformaticaOrganization.md
+  PlatyPS schema version: 2024-05-01

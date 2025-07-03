@@ -1,0 +1,1089 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlInstance
+name: Set-AzSqlInstance
+module: Az.Sql
+isPreview: false
+summary: |-
+  Sets properties for an Azure SQL Managed Instance.
+description: |-
+  The **Set-AzSqlInstance** cmdlet modifies properties of an Azure SQL Managed instance.
+parameters:
+  cmdletParameters:
+  - name: AdministratorPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The new SQL administrator password for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate and assign a Microsoft Entra identity for this instance for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthenticationMetadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred metadata to use for authentication of synced on-prem users. Default is AzureAD.
+    acceptedValues:
+    - AzureAD
+    - Paired
+    - Windows
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupStorageRedundancy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Backup storage redundancy used to store backups for the Sql Azure Managed Instance. Options are: Local, Zone and Geo
+    acceptedValues:
+    - Local
+    - Zone
+    - Geo
+    - GeoZone
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute generation for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseFormat
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database format for the instance. Possible values are:
+      - AlwaysUpToDate - The instance gets access to all new SQL engine features as soon as they are released in Azure. Database format keeps evolving to accommodate new features.
+      - SQLServer2022 - The instance keeps getting SQL engine bug fixes, security patches and small functional improvements via Cumulative Updates for SQL Server 2022 during its mainstream support period. Database format remains compatible with SQL Server 2022 during that time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The edition to assign to the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of identity to be assigned to the server. Possible values are SystemAssigned, UserAssigned, 'SystemAssigned,UserAssigned' and None.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The AzureSqlManagedInstanceModel object to remove
+    aliases:
+    - SqlInstance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetInstanceFromAzureSqlManagedInstanceModelInstanceDefinition
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstancePoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance pool name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsGeneralPurposeV2
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether or not this is a GPv2 variant of General Purpose edition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Key Vault URI that is used for encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines which License Type to use. Possible values are:
+      - BasePrice - Azure Hybrid Benefit (AHB) discounted pricing for existing SQL Server license owners is applied. Managed Instance service price will be discounted for existing SQL Server license owners.
+      - LicenseIncluded - Azure Hybrid Benefit (AHB) discount pricing for existing SQL Server license owners is not applied. Managed Instance service price will include a new SQL Server license costs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Maintenance configuration id for the Sql Azure Managed Instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimalTlsVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimal TLS version to enforce for Managed instance
+    acceptedValues:
+    - None
+    - "1.0"
+    - "1.1"
+    - "1.2"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance name.
+    aliases:
+    - InstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetInstanceFromInputParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PricingModel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pricing model for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewByEditionAndComputeGenerationParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryUserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The primary User Managed Identity(UMI) id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProxyOverride
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The connection type used for connecting to the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicDataEndpointEnabled
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether or not the public data endpoint is enabled for the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetInstanceFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of instance to remove
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetInstanceFromAzureResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of Service Principal to be used. Possible values are SystemAssigned and None.
+    acceptedValues:
+    - None
+    - SystemAssigned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageIOps
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines how much Storage IOps to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageSizeInGB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines how much Storage size to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Subnet Id to use for instance update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags to associate with the instance.
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The list of user assigned identities.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCore
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines how much VCore to associate with instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use zone redundant storage
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstance
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-AdministratorPassword <SecureString>]
+        [-Edition <String>]
+        [-IsGeneralPurposeV2 <Boolean>]
+        [-SubnetId <String>]
+        [-LicenseType <String>]
+        [-StorageSizeInGB <Int32>]
+        [-StorageIOps <Int32>]
+        [-VCore <Int32>]
+        [-PublicDataEndpointEnabled <Boolean>]
+        [-ProxyOverride <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-InstancePoolName <String>]
+        [-MinimalTlsVersion <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-Force]
+        [-ComputeGeneration <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetInstanceFromInputParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstance
+        [-InputObject] <AzureSqlManagedInstanceModel>
+        [-AdministratorPassword <SecureString>]
+        [-Edition <String>]
+        [-IsGeneralPurposeV2 <Boolean>]
+        [-SubnetId <String>]
+        [-LicenseType <String>]
+        [-StorageSizeInGB <Int32>]
+        [-StorageIOps <Int32>]
+        [-VCore <Int32>]
+        [-PublicDataEndpointEnabled <Boolean>]
+        [-ProxyOverride <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-InstancePoolName <String>]
+        [-MinimalTlsVersion <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-Force]
+        [-ComputeGeneration <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetInstanceFromAzureSqlManagedInstanceModelInstanceDefinition
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstance
+        [-ResourceId] <String>
+        [-AdministratorPassword <SecureString>]
+        [-Edition <String>]
+        [-IsGeneralPurposeV2 <Boolean>]
+        [-SubnetId <String>]
+        [-LicenseType <String>]
+        [-StorageSizeInGB <Int32>]
+        [-StorageIOps <Int32>]
+        [-VCore <Int32>]
+        [-PublicDataEndpointEnabled <Boolean>]
+        [-ProxyOverride <String>]
+        [-Tag <Hashtable>]
+        [-AssignIdentity]
+        [-InstancePoolName <String>]
+        [-MinimalTlsVersion <String>]
+        [-PrimaryUserAssignedIdentityId <String>]
+        [-KeyId <String>]
+        [-Force]
+        [-ComputeGeneration <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-UserAssignedIdentityId <System.Collections.Generic.List`1[System.String]>]
+        [-IdentityType <String>]
+        [-BackupStorageRedundancy <String>]
+        [-AsJob]
+        [-ZoneRedundant]
+        [-ServicePrincipalType <String>]
+        [-DatabaseFormat <String>]
+        [-PricingModel <String>]
+        [-AuthenticationMetadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetInstanceFromAzureResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set existing instance using new values for -AdministratorPassword, -LicenseType, -StorageSizeInGB, -VCore and -Edition'
+  description: |-
+    ```powershell
+    $SecureString = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Set-AzSqlInstance -Name "managedinstance1" -ResourceGroupName "ResourceGroup01" -AdministratorPassword $SecureString -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 16 -Edition BusinessCritical
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       :
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    InstancePoolName         :
+    ```
+- title: 'Example 2: Change existing instance hardware generation using new value for -ComputeGeneration'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managedinstance1" -ResourceGroupName "ResourceGroup01" -ComputeGeneration Gen5
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       :
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 16
+    StorageSizeInGB          : 1024
+    StorageIOps              :
+    InstancePoolName         :
+    ```
+
+    This command sets existing instance using new values for -AdministratorPassword, -LicenseType, -StorageSizeInGB and -VCore
+- title: 'Example 3: Change existing instance to GPv2 by setting new values for -Edition, -ComputeGeneration, -IsGeneralPurposeV2. Also set new values for -VCore, StorageSizeInGB, StorageIOps'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managedinstance1" -ResourceGroupName "ResourceGroup01" -Edition "GeneralPurpose" -ComputeGeneration "Gen5" -IsGeneralPurposeV2 $true -VCore 8 -StorageSizeInGB 1024 -StorageIOps 4000
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2       : true
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 8
+    StorageSizeInGB          : 1024
+    StorageIOps              : 4000
+    InstancePoolName         :
+    ```
+
+    This command changes existing instance to GPv2 by setting new values for -Edition, -ComputeGeneration, -IsGeneralPurposeV2. Also sets new values for -VCore, StorageSizeInGB, StorageIOps
+- title: 'Example 4: Set existing instance using new values for -AdministratorPassword, -LicenseType, -StorageSizeInGB and -VCore for an instance within an instance pool'
+  description: |-
+    ```powershell
+    $SecureString = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Set-AzSqlInstance -Name "managedinstance1" -ResourceGroupName "ResourceGroup01" -AdministratorPassword $SecureString -LicenseType LicenseIncluded -StorageSizeInGB 1024 -VCore 2 -InstancePoolName instancePool0
+    ```
+
+    ```output
+    Location                 : westcentralus
+    Id                       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName        : resourcegroup01
+    ManagedInstanceName      : managedInstance1
+    Tags                     :
+    Identity                 : Microsoft.Azure.Management.Sql.Models.ResourceIdentity
+    Sku                      : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName : managedInstance1.wcusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin       : adminLogin1
+    AdministratorPassword    :
+    SubnetId                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType              : LicenseIncluded
+    VCores                   : 2
+    StorageSizeInGB          : 1024
+    InstancePoolName         : instancePool0
+    ```
+
+    This command sets existing instance using new values for -AdministratorPassword, -LicenseType, -StorageSizeInGB and -VCore for an instance within an instance pool
+- title: 'Example 5: Update maintenance configuration for existing instance'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managedInstance1" -ResourceGroupName "resourcegroup01" -MaintenanceConfigurationId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestUS_MI_2"
+    ```
+
+    ```output
+    Location                   : westus
+    Id                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName          : resourcegroup01
+    ManagedInstanceName        : managedInstance1
+    Tags                       :
+    Identity                   :
+    Sku                        : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2         :
+    FullyQualifiedDomainName   : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin         : adminLogin1
+    AdministratorPassword      :
+    SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType                : LicenseIncluded
+    VCores                     : 8
+    StorageSizeInGB            : 256
+    StorageIOps                :
+    Collation                  : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled  : False
+    ProxyOverride              :
+    TimezoneId                 : UTC
+    DnsZonePartner             :
+    DnsZone                    : ad35cna0mw
+    InstancePoolName           :
+    MinimalTlsVersion          :
+    BackupStorageRedundancy    : Geo
+    CurrentBackupStorageRedundancy    : Geo
+    MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_WestUS_MI_2
+    ```
+
+    This command updates existing instance with maintenance configuration MI_2
+- title: 'Example 6: Remove maintenance configuration from existing instance'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -MaintenanceConfigurationId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default"
+    ```
+
+    ```output
+    Location                   : westus
+    Id                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName          : resourcegroup01
+    ManagedInstanceName        : managedInstance1
+    Tags                       :
+    Identity                   :
+    Sku                        : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2         :
+    FullyQualifiedDomainName   : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin         : adminLogin1
+    AdministratorPassword      :
+    SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType                : LicenseIncluded
+    VCores                     : 8
+    StorageSizeInGB            : 256
+    StorageIOps                :
+    Collation                  : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled  : False
+    ProxyOverride              :
+    TimezoneId                 : UTC
+    DnsZonePartner             :
+    DnsZone                    : ad35cna0mw
+    InstancePoolName           :
+    MinimalTlsVersion          :
+    BackupStorageRedundancy    : Geo
+    CurrentBackupStorageRedundancy    : Geo
+    MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    ```
+
+    This command resets maintenance configuration to default for existing instance
+- title: 'Example 7: Move managed instance to another subnet'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -SubnetId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name"
+    ```
+
+    ```output
+    Location                   : westus
+    Id                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName          : resourcegroup01
+    ManagedInstanceName        : managedInstance1
+    Tags                       :
+    Identity                   :
+    Sku                        : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2         :
+    FullyQualifiedDomainName   : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin         : adminLogin1
+    AdministratorPassword      :
+    SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
+    LicenseType                : LicenseIncluded
+    VCores                     : 8
+    StorageSizeInGB            : 256
+    StorageIOps                :
+    Collation                  : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled  : False
+    ProxyOverride              :
+    TimezoneId                 : UTC
+    DnsZonePartner             :
+    DnsZone                    : ad35cna0mw
+    InstancePoolName           :
+    MinimalTlsVersion          :
+    BackupStorageRedundancy    : Geo
+    CurrentBackupStorageRedundancy    : Geo
+    MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    ```
+
+    This command moves managed instance to another subnet
+- title: 'Example 8: Update an existing instance to be zone - redundant'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -ZoneRedundant
+    ```
+
+    ```output
+    Location                   : westus
+    Id                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName          : resourcegroup01
+    ManagedInstanceName        : managedInstance1
+    Tags                       :
+    Identity                   :
+    Sku                        : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2         :
+    FullyQualifiedDomainName   : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin         : adminLogin1
+    AdministratorPassword      :
+    SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
+    LicenseType                : LicenseIncluded
+    VCores                     : 8
+    StorageSizeInGB            : 256
+    StorageIOps                :
+    Collation                  : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled  : False
+    ProxyOverride              :
+    TimezoneId                 : UTC
+    DnsZonePartner             :
+    DnsZone                    : ad35cna0mw
+    InstancePoolName           :
+    MinimalTlsVersion          :
+    BackupStorageRedundancy    : Geo
+    CurrentBackupStorageRedundancy    : Geo
+    MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    ZoneRedundant              : true
+    ```
+
+    This command updates an existing instance to be zone - redundant.
+- title: 'Example 9: Update backup storage redundancy on existing instance'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -BackupStorageRedundancy Local -Force
+    ```
+
+    ```output
+    Location                         : westus
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName                : resourcegroup01
+    ManagedInstanceName              : managedInstance1
+    Tags                             :
+    Identity                         :
+    Sku                              : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2               :
+    FullyQualifiedDomainName         : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin               : adminLogin1
+    AdministratorPassword            :
+    SubnetId                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
+    LicenseType                      : LicenseIncluded
+    VCores                           : 8
+    StorageSizeInGB                  : 256
+    StorageIOps                      :
+    Collation                        : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled        : False
+    ProxyOverride                    :
+    TimezoneId                       : UTC
+    DnsZonePartner                   :
+    DnsZone                          : ad35cna0mw
+    InstancePoolName                 :
+    MinimalTlsVersion                :
+    BackupStorageRedundancy          : Geo
+    CurrentBackupStorageRedundancy   : Geo
+    RequestedBackupStorageRedundancy : Local
+    MaintenanceConfigurationId       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    ZoneRedundant                    : False
+    ```
+
+    This command changes backups storage redundancy type for managed instance
+- title: 'Example 10: Update an existing instance with database format and pricing model'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name "managediInstance1" -ResourceGroupName "Resourcegroup01" -DatabaseFormat AlwaysUpToDate -PricingModel Regular
+    ```
+
+    ```output
+    Location                   : westus
+    Id                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName          : resourcegroup01
+    ManagedInstanceName        : managedInstance1
+    Tags                       :
+    Identity                   :
+    Sku                        : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    IsGeneralPurposeV2         :
+    FullyQualifiedDomainName   : managedInstance1.wusxxxxxxxxxxxxx.database.windows.net
+    AdministratorLogin         : adminLogin1
+    AdministratorPassword      :
+    SubnetId                   : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/target_subnet_name
+    LicenseType                : LicenseIncluded
+    VCores                     : 8
+    StorageSizeInGB            : 256
+    StorageIOps                :
+    Collation                  : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled  : False
+    ProxyOverride              :
+    TimezoneId                 : UTC
+    DnsZonePartner             :
+    DnsZone                    : ad35cna0mw
+    InstancePoolName           :
+    MinimalTlsVersion          :
+    BackupStorageRedundancy    : Geo
+    CurrentBackupStorageRedundancy    : Geo
+    MaintenanceConfigurationId : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    ZoneRedundant              : true
+    DatabaseFormat             : AlwaysUpToDate
+    PricingModel               : Regular
+    ```
+
+    This command updates managed instance with given with database format and pricing model specified.
+- title: 'Example 10: Update an existing managed instance to use Windows authentication metadata mode'
+  description: |-
+    ```powershell
+    Set-AzSqlInstance -Name managedInstance1 -ResourceGroupName ResourceGroup01 -AuthenticationMetadata Windows
+    ```
+
+    ```output
+    Location                         : westcentralus
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/managedInstance1
+    ResourceGroupName                : resourcegroup01
+    ManagedInstanceName              : managedInstance1
+    Tags                             :
+    Identity                         :
+    Sku                              : Microsoft.Azure.Management.Internal.Resources.Models.Sku
+    FullyQualifiedDomainName         : managedInstance1.xxxxxxxxxxxx.database.windows.net
+    AdministratorLogin               : adminLogin1
+    AdministratorPassword            :
+    SubnetId                         : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Network/virtualNetworks/vnet_name/subnets/subnet_name
+    LicenseType                      : LicenseIncluded
+    VCores                           : 8
+    StorageSizeInGB                  : 256
+    Collation                        : SQL_Latin1_General_CP1_CI_AS
+    PublicDataEndpointEnabled        : False
+    ProxyOverride                    : Proxy
+    TimezoneId                       : UTC
+    DnsZonePartner                   :
+    DnsZone                          : ad35cna0mw
+    InstancePoolName                 :
+    MinimalTlsVersion                :
+    BackupStorageRedundancy          : Geo
+    RequestedBackupStorageRedundancy : Geo
+    CurrentBackupStorageRedundancy   : Geo
+    MaintenanceConfigurationId       : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default
+    Administrators                   :
+    PrimaryUserAssignedIdentityId    :
+    KeyId                            :
+    ZoneRedundant                    : False
+    ServicePrincipal                 :
+    DatabaseFormat                   : SQLServer2022
+    PricingModel                     : Regular
+    ExternalGovernanceStatus         : Disabled
+    AuthenticationMetadata           : Windows
+    ```
+
+    This command updates an existing managed instance to use Windows metadata for authentication of synced users.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstance.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstance
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstance.md
+  PlatyPS schema version: 2024-05-01

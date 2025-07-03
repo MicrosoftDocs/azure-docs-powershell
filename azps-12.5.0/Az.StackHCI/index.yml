@@ -1,0 +1,69 @@
+### YamlMime:PowerShellModule1
+uid: Az.StackHCI
+name: Az.StackHCI Module
+isPreview: false
+cmdletGroups:
+- title: Stack HCI
+  cmdlets:
+  - Az.StackHCI.Add-AzStackHCIVMAttestation
+  - Az.StackHCI.Disable-AzStackHCIAttestation
+  - Az.StackHCI.Disable-AzStackHCIRemoteSupport
+  - Az.StackHCI.Enable-AzStackHCIAttestation
+  - Az.StackHCI.Enable-AzStackHCIRemoteSupport
+  - Az.StackHCI.Get-AzStackHciArcSetting
+  - Az.StackHCI.Get-AzStackHciCluster
+  - Az.StackHCI.Get-AzStackHciDeploymentSetting
+  - Az.StackHCI.Get-AzStackHciEdgeDevice
+  - Az.StackHCI.Get-AzStackHciExtension
+  - Az.StackHCI.Get-AzStackHCILogsDirectory
+  - Az.StackHCI.Get-AzStackHCIRemoteSupportAccess
+  - Az.StackHCI.Get-AzStackHCIRemoteSupportSessionHistory
+  - Az.StackHCI.Get-AzStackHciSecuritySetting
+  - Az.StackHCI.Get-AzStackHciUpdate
+  - Az.StackHCI.Get-AzStackHciUpdateRun
+  - Az.StackHCI.Get-AzStackHciUpdateSummary
+  - Az.StackHCI.Get-AzStackHCIVMAttestation
+  - Az.StackHCI.Install-AzStackHCIRemoteSupport
+  - Az.StackHCI.Invoke-AzStackHciConsentAndInstallDefaultExtension
+  - Az.StackHCI.Invoke-AzStackHciExtendClusterSoftwareAssuranceBenefit
+  - Az.StackHCI.Invoke-AzStackHciUpdate
+  - Az.StackHCI.New-AzStackHciArcSetting
+  - Az.StackHCI.New-AzStackHciCluster
+  - Az.StackHCI.New-AzStackHciDeploymentSetting
+  - Az.StackHCI.New-AzStackHciEdgeDevice
+  - Az.StackHCI.New-AzStackHciExtension
+  - Az.StackHCI.New-AzStackHciSecuritySetting
+  - Az.StackHCI.Register-AzStackHCI
+  - Az.StackHCI.Remove-AzStackHciArcSetting
+  - Az.StackHCI.Remove-AzStackHciCluster
+  - Az.StackHCI.Remove-AzStackHciDeploymentSetting
+  - Az.StackHCI.Remove-AzStackHciEdgeDevice
+  - Az.StackHCI.Remove-AzStackHciExtension
+  - Az.StackHCI.Remove-AzStackHCIRemoteSupport
+  - Az.StackHCI.Remove-AzStackHciSecuritySetting
+  - Az.StackHCI.Remove-AzStackHciUpdate
+  - Az.StackHCI.Remove-AzStackHciUpdateRun
+  - Az.StackHCI.Remove-AzStackHciUpdateSummary
+  - Az.StackHCI.Remove-AzStackHCIVMAttestation
+  - Az.StackHCI.Set-AzStackHCI
+  - Az.StackHCI.Set-AzStackHciDeploymentSetting
+  - Az.StackHCI.Set-AzStackHciEdgeDevice
+  - Az.StackHCI.Set-AzStackHciSecuritySetting
+  - Az.StackHCI.Set-AzStackHciUpdate
+  - Az.StackHCI.Set-AzStackHciUpdateRun
+  - Az.StackHCI.Set-AzStackHciUpdateSummary
+  - Az.StackHCI.Test-AzStackHciEdgeDevice
+  - Az.StackHCI.Unregister-AzStackHCI
+  - Az.StackHCI.Update-AzStackHciCluster
+description: |-
+  Microsoft Azure PowerShell: StackHci cmdlets
+metadata:
+  Module Name: Az.StackHCI
+  Module Guid: 7a80d748-b6f0-42d1-a08d-215c5a006769
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.stackhci
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Az.StackHCI.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Az.StackHCI.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

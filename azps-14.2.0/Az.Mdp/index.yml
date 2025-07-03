@@ -1,0 +1,25 @@
+### YamlMime:PowerShellModule1
+uid: Az.Mdp
+name: Az.Mdp Module
+isPreview: false
+cmdletGroups:
+- title: Mdp
+  cmdlets:
+  - Az.Mdp.Get-AzMdpPool
+  - Az.Mdp.Get-AzMdpPoolAgent
+  - Az.Mdp.Get-AzMdpSku
+  - Az.Mdp.New-AzMdpPool
+  - Az.Mdp.Remove-AzMdpPool
+  - Az.Mdp.Update-AzMdpPool
+description: |-
+  Microsoft Azure PowerShell: Mdp cmdlets
+metadata:
+  Module Name: Az.Mdp
+  Module Guid: 7e2acbbd-e572-4bce-85e9-96c2b3a591d2
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.mdp
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Mdp/Mdp/help/Az.Mdp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Mdp/Mdp/help/Az.Mdp.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

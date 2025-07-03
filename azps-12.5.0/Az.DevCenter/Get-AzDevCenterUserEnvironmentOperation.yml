@@ -1,0 +1,362 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DevCenter.Get-AzDevCenterUserEnvironmentOperation
+name: Get-AzDevCenterUserEnvironmentOperation
+module: Az.DevCenter
+isPreview: false
+summary: |-
+  Gets an environment action result.
+description: |-
+  Gets an environment action result.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevCenterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter upon which to execute operations.
+    aliases:
+    - DevCenter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter-specific URI to operate on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnvironmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of the operation on an environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter Project upon which to execute operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The AAD object id of the user.
+      If value is 'me', the identity is taken from the authentication context.
+    defaultValue: me
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByDevCenter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -Endpoint <String>
+        -EnvironmentName <String>
+        -ProjectName <String>
+        [-UserId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -Endpoint <String>
+        -EnvironmentName <String>
+        -ProjectName <String>
+        -OperationId <String>
+        [-UserId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -Endpoint <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -DevCenterName <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -DevCenterName <String>
+        -EnvironmentName <String>
+        -ProjectName <String>
+        [-UserId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserEnvironmentOperation
+        -DevCenterName <String>
+        -EnvironmentName <String>
+        -ProjectName <String>
+        -OperationId <String>
+        [-UserId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByDevCenter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IEnvironmentOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List operations on the environment by endpoint'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserEnvironmentOperation -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -EnvironmentName myEnvironment -ProjectName DevProject
+    ```
+
+    This command lists the operations on the environment "myEnvironment".
+- title: 'Example 2: List operations on the environment by dev center'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserEnvironmentOperation -DevCenterName Contoso -EnvironmentName myEnvironment -ProjectName DevProject
+    ```
+
+    This command lists the operations on the environment "myEnvironment".
+- title: 'Example 3: Get an operation on the environment by endpoint'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserEnvironmentOperation -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -EnvironmentName myEnvironment -ProjectName DevProject -OperationId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+    ```
+
+    This command gets the operation "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" for the environment "myEnvironment".
+- title: 'Example 4: Get an operation on the environment by dev center'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserEnvironmentOperation -DevCenterName Contoso -EnvironmentName myEnvironment -ProjectName DevProject -OperationId "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+    ```
+
+    This command gets the operation "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" for the environment "myEnvironment".
+- title: 'Example 5: Get an operation on the environment by endpoint and InputObject'
+  description: |-
+    ```powershell
+    $environmentInput = @{"EnvironmentName" = "myEnvironment"; "UserId" = "me"; "ProjectName" = "DevProject"; "OperationId" = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"}
+    Get-AzDevCenterUserEnvironmentOperation -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -InputObject $environmentInput
+    ```
+
+    This command gets the operation "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" for the environment "myEnvironment".
+- title: 'Example 6: Get an operation on the environment by dev center and InputObject'
+  description: |-
+    ```powershell
+    $environmentInput = @{"EnvironmentName" = "myEnvironment"; "UserId" = "me"; "ProjectName" = "DevProject"; "OperationId" = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"}
+    Get-AzDevCenterUserEnvironmentOperation -DevCenterName Contoso -InputObject $environmentInput
+    ```
+
+    This command gets the operation "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" for the environment "myEnvironment".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterUserEnvironmentOperation.md
+  document type: cmdlet
+  external help file: Az.DevCenter-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.devcenter/get-azdevcenteruserenvironmentoperation
+  Module Name: Az.DevCenter
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterUserEnvironmentOperation.md
+  PlatyPS schema version: 2024-05-01

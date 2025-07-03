@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-WAPackVMSizeProfile
+name: Get-WAPackVMSizeProfile
+module: Azure
+isPreview: false
+summary: |-
+  Gets size profile objects.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-WAPackVMSizeProfile** cmdlet gets size profile objects for virtual machines.
+parameters:
+  cmdletParameters:
+  - name: ID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of a size profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a size profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSizeProfile
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSizeProfile
+        [-ID <Guid>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSizeProfile
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromName
+  isDefault: false
+examples:
+- title: 'Example 1: Get a size profile by using a name'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMSizeProfile -Name "ContosoSizeProfile07"
+    ```
+
+    This command gets the size profile named ContosoSizeProfile07.
+- title: 'Example 2: Get a size profile by using an ID'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMSizeProfile -ID 66242D17-189F-480D-87CF-8E1D749998C8
+    ```
+
+    This command gets the size profile that has the specified ID.
+- title: 'Example 3: Get all size profiles'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMSizeProfile
+    ```
+
+    This command gets all the size profiles.
+links:
+- text: Get-WAPackVM
+  href: ./Get-WAPackVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 48211644-1B92-443D-A992-BDF517D89341
+  PlatyPS schema version: 2024-05-01

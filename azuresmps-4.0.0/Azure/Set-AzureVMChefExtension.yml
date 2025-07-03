@@ -1,0 +1,441 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureVMChefExtension
+name: Set-AzureVMChefExtension
+module: Azure
+isPreview: false
+summary: |-
+  Adds the Chef extension to the virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureVMChefExtension** cmdlet adds the Chef extension to the virtual machine.
+parameters:
+  cmdletParameters:
+  - name: BootstrapOptions
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies bootstrap options in JavaScript Object Notation (JSON) format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootstrapVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the Chef client that is installed together with the extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ChefDaemonInterval
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the frequency (in minutes) at which the chef-service runs. If in case you don't want the chef-service to be installed on the Azure VM then set value as 0 in this field.
+    aliases:
+    - ChefServiceInterval
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ChefServerUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the Chef server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientRb
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of the Chef client.rb.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Daemon
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Configures the chef-client service for unattended execution. The node platform should be Windows.
+        Allowed options: 'none','service' and 'task'.
+        none - Currently prevents the chef-client service from being configured as a service.
+        service - Configures the chef-client to run automatically in the background as a service.
+        task - Configures the chef-client to run automatically in the background as a secheduled task.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonAttribute
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      A JSON string to be added to the first run of chef-client. e.g. -JsonAttribute '{"foo" : "bar"}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Linux
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a Linux based virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrganizationName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the organization name of the Chef extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunList
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Chef node run list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The encryption key used to encrypt and decrypt the data bag item values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecretFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to the file that contains the encryption key used to encrypt and decrypt the data bag item values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidationClientName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the validation client.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidationPem
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Chef validator .pem file path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version number of the Chef extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the persistent virtual machine object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Windows
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a Windows virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureVMChefExtension
+        -ValidationPem <String>
+        -VM <IPersistentVM>
+        [-Version <String>]
+        [-ClientRb <String>]
+        [-BootstrapOptions <String>]
+        [-RunList <String>]
+        [-JsonAttribute <String>]
+        [-ChefDaemonInterval <String>]
+        [-ChefServerUrl <String>]
+        [-ValidationClientName <String>]
+        [-OrganizationName <String>]
+        [-BootstrapVersion <String>]
+        [-Daemon <String>]
+        [-Secret <String>]
+        [-SecretFile <String>]
+        [-Windows]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Windows
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureVMChefExtension
+        -ValidationPem <String>
+        -VM <IPersistentVM>
+        [-Version <String>]
+        [-ClientRb <String>]
+        [-BootstrapOptions <String>]
+        [-RunList <String>]
+        [-JsonAttribute <String>]
+        [-ChefDaemonInterval <String>]
+        [-ChefServerUrl <String>]
+        [-ValidationClientName <String>]
+        [-OrganizationName <String>]
+        [-BootstrapVersion <String>]
+        [-Daemon <String>]
+        [-Secret <String>]
+        [-SecretFile <String>]
+        [-Linux]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Linux
+  isDefault: false
+examples:
+- title: 'Example 1: Add a Chef extension to a Windows virtual machine'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMChefExtension -VM $VM -ValidationPem "C:\\myorg-validator.pem" -ClientRb "C:\\client.rb" -RunList "Apache" -Windows;
+    ```
+
+    This command adds a Chef extension to a Windows virtual machine.
+    When the virtual machine comes up, it is bootstrapped with Chef and runs Apache on it.
+- title: 'Example 2: Add a Chef extension to a Windows virtual machine with bootstrapping'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMChefExtension -VM $VM -ValidationPem "C:\\myorg-validator.pem" -BootstrapOptions '{"chef_node_name":"your_node_name","chef_server_url":"https://api.opscode.com/organizations/some-org", "validation_client_name":"some-org-validator"}' -RunList "Apache" -Windows;
+    ```
+
+    This command adds the Chef extension to a Windows virtual machine.
+    When the virtual machine launches, it is bootstrapped with Chef and runs Apache on it.
+    After bootstrapping, the virtual machine refers to the *BootstrapOptions* specified in JSON format.
+- title: 'Example 3: Add a Chef extension to a Windows virtual machine and install Apache and GIT'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMChefExtension -VM $VM -ValidationPem "C:\\myorg-validator.pem" -ChefServerUrl "http://ipaddress:port" -ValidationClientName "MyOrg-Validator" -RunList "apache, git" -Windows;
+    ```
+
+    This command adds the Chef extension to a Windows virtual machine.
+    When the virtual machine launches, it is bootstrapped with Chef and have Apache and GIT installed.
+    If you do not provide the client.rb, you need to provide the Chef server URL and validation client name.
+- title: 'Example 4: Add a Chef extension to a Linux virtual machine'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMChefExtension -VM $VM -ValidationPem "C:\\myorg-validator.pem" -ChefServerUrl "http://ipaddress:port" -OrganizationName "MyOrg" -Linux;
+    ```
+
+    This command adds the Chef extension to a Linux virtual machine.
+    When the virtual machine launches, it is bootstrapped with Chef.
+    If you do not provide the client.rb, you need to provide the Chef server URL and organization.
+links:
+- text: Get-AzureVMChefExtension
+  href: ./Get-AzureVMChefExtension.yml
+- text: Remove-AzureVMChefExtension
+  href: ./Remove-AzureVMChefExtension.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 021D4624-AE78-4FBE-B1DE-A8A84DF1FC90
+  PlatyPS schema version: 2024-05-01

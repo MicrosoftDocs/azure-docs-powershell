@@ -1,0 +1,242 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageMover.Get-AzStorageMoverAgent
+name: Get-AzStorageMoverAgent
+module: Az.StorageMover
+isPreview: false
+summary: |-
+  Gets an Agent resource.
+description: |-
+  Gets an Agent resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Agent resource.
+    aliases:
+    - AgentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageMoverName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Storage Mover resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverAgent
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverAgent
+        -Name <String>
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverAgent
+        -InputObject <IStorageMoverIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IAgent" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all agents in a Storage mover'
+  description: |-
+    ```powershell
+    Get-AzStorageMoverAgent -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover
+    ```
+
+    ```output
+    AgentStatus                  : Registering
+    ArcResourceId                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myAgent
+    ArcVMUuid                    : aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    Description                  :
+    ErrorDetailCode              :
+    ErrorDetailMessage           :
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/microsoft.storagemover/storagemovers/myStorageMover/agents/myAgent
+    LastStatusUpdate             :
+    LocalIPAddress               :
+    MemoryInMb                   :
+    Name                         : myAgent
+    NumberOfCores                :
+    ProvisioningState            : Succeeded
+    SystemDataCreatedAt          : 8/2/2022 7:15:19 AM
+    SystemDataCreatedBy          : myAccount@xxx.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 8/2/2022 7:15:19 AM
+    SystemDataLastModifiedBy     : myAccount@xxx.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.storagemover/storagemovers/agents
+    UptimeInSeconds              :
+    Version                      :
+    ```
+
+    This command gets all the agents under a Storage mover
+- title: 'Example 2: Get a specific agent'
+  description: |-
+    ```powershell
+    Get-AzStorageMoverAgent -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover -Name myAgent
+    ```
+
+    ```output
+    AgentStatus                  : Registering
+    ArcResourceId                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.HybridCompute/machines/myAgent
+    ArcVMUuid                    : aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    Description                  :
+    ErrorDetailCode              :
+    ErrorDetailMessage           :
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/microsoft.storagemover/storagemovers/myStorageMover/agents/myAgent
+    LastStatusUpdate             :
+    LocalIPAddress               :
+    MemoryInMb                   :
+    Name                         : myAgent
+    NumberOfCores                :
+    ProvisioningState            : Succeeded
+    SystemDataCreatedAt          : 8/2/2022 7:15:19 AM
+    SystemDataCreatedBy          : myAccount@xxx.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 8/2/2022 7:15:19 AM
+    SystemDataLastModifiedBy     : myAccount@xxx.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.storagemover/storagemovers/agents
+    UptimeInSeconds              :
+    Version                      :
+    ```
+
+    This command gets a specific agent.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Get-AzStorageMoverAgent.md
+  document type: cmdlet
+  external help file: Az.StorageMover-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagemover/get-azstoragemoveragent
+  Module Name: Az.StorageMover
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Get-AzStorageMoverAgent.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,794 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedMachine.Update-AzConnectedMachine
+name: Update-AzConnectedMachine
+module: Az.ConnectedMachine
+isPreview: false
+summary: |-
+  The operation to update a hybrid machine.
+description: |-
+  The operation to update a hybrid machine.
+parameters:
+  cmdletParameters:
+  - name: AgentUpgradeCorrelationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The correlation ID passed in from RSM per upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgentUpgradeDesiredVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version info w.r.t AgentUpgrade for the machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgentUpgradeEnableAutomatic
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if RSM should try to upgrade this machine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSystemAssignedIdentity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Decides if enable a system assigned identity for the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identity type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IConnectedMachineIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates which kind of Arc machine placement on-premises, such as HCI, SCVMM or VMware etc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationDataCity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The city or locality where the resource is located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationDataCountryOrRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The country or region where the resource is located
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationDataDistrict
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The district, state, or province where the resource is located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationDataName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A canonical name for the geographic or physical location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the hybrid machine.
+    aliases:
+    - MachineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSProfile
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IOSProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operating system settings for the hybrid machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IMachineUpdate" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes a hybrid machine Update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentClusterResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the parent cluster (Azure HCI) this machine is assigned to, if any.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkScopeResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the private link scope this machine is assigned to, if any.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-AgentUpgradeCorrelationId <String>]
+        [-AgentUpgradeDesiredVersion <String>]
+        [-AgentUpgradeEnableAutomatic]
+        [-IdentityType <String>]
+        [-Kind <String>]
+        [-LocationDataCity <String>]
+        [-LocationDataCountryOrRegion <String>]
+        [-LocationDataDistrict <String>]
+        [-LocationDataName <String>]
+        [-OSProfile <IOSProfile>]
+        [-ParentClusterResourceId <String>]
+        [-PrivateLinkScopeResourceId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -Parameter <IMachineUpdate>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Update
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -InputObject <IConnectedMachineIdentity>
+        -Parameter <IMachineUpdate>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedMachine
+        -InputObject <IConnectedMachineIdentity>
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-AgentUpgradeCorrelationId <String>]
+        [-AgentUpgradeDesiredVersion <String>]
+        [-AgentUpgradeEnableAutomatic]
+        [-IdentityType <String>]
+        [-Kind <String>]
+        [-LocationDataCity <String>]
+        [-LocationDataCountryOrRegion <String>]
+        [-LocationDataDistrict <String>]
+        [-LocationDataName <String>]
+        [-OSProfile <IOSProfile>]
+        [-ParentClusterResourceId <String>]
+        [-PrivateLinkScopeResourceId <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IConnectedMachineIdentity" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IMachineUpdate" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a hybrid machine'
+  description: |-
+    ```powershell
+    Update-AzConnectedMachine -Name $env.MachineName -ResourceGroupName $env.ResourceGroupName -PrivateLinkScopeResourceId $env.PrivateLinkScopeUri
+    ```
+
+    ```output
+    AdFqdn                                      : ********
+    AgentConfigurationConfigMode                : full
+    AgentConfigurationExtensionsAllowList       : {}
+    AgentConfigurationExtensionsBlockList       : {}
+    AgentConfigurationExtensionsEnabled         : true
+    AgentConfigurationGuestConfigurationEnabled : true
+    AgentConfigurationIncomingConnectionsPort   : {}
+    AgentConfigurationProxyBypass               : {}
+    AgentConfigurationProxyUrl                  :
+    AgentUpgradeCorrelationId                   :
+    AgentUpgradeDesiredVersion                  :
+    AgentUpgradeEnableAutomaticUpgrade          : False
+    AgentUpgradeLastAttemptDesiredVersion       :
+    AgentUpgradeLastAttemptMessage              :
+    AgentUpgradeLastAttemptStatus               :
+    AgentUpgradeLastAttemptTimestamp            :
+    AgentVersion                                : *******
+    ClientPublicKey                             : ********-****-****-****-**********
+    CloudMetadataProvider                       : N/A
+    DetectedProperty                            : {
+                                                    "cloudprovider": "N/A",
+                                                    "coreCount": "4",
+                                                    "logicalCoreCount": "8",
+                                                    "manufacturer": "LENOVO",
+                                                    "model": "*******",
+                                                    "mssqldiscovered": "false",
+                                                    "processorCount": "1",
+                                                    "processorNames": "11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz",
+                                                    "productType": "4",
+                                                    "serialNumber": "********",
+                                                    "smbiosAssetTag": "********",
+                                                    "totalPhysicalMemoryInBytes": "********",
+                                                    "totalPhysicalMemoryInGigabytes": "32",
+                                                    "vmuuidEsu2012": "********-****-****-****-**********"
+                                                  }
+    DisplayName                                 : ********
+    DnsFqdn                                     : ********
+    DomainName                                  : WORKGROUP
+    ErrorDetail                                 : {}
+    Extension                                   :
+    ExtensionServiceStartupType                 : automatic
+    ExtensionServiceStatus                      : running
+    Fqdn                                        : ********
+    GuestConfigurationServiceStartupType        : automatic
+    GuestConfigurationServiceStatus             : running
+    Id                                          : /subscriptions/********-****-****-****-**********/resourceGroups/
+                                                  ********/providers/Microsoft.HybridCompute/machines/********
+    IdentityPrincipalId                         : ********-****-****-****-**********
+    IdentityTenantId                            : ********-****-****-****-**********
+    IdentityType                                : SystemAssigned
+    Kind                                        :
+    LastStatusChange                            : 9/20/2024 1:42:35 AM
+    LicenseProfile                              : {
+                                                    "esuProfile": {
+                                                      "serverType": "Unknown",
+                                                      "esuEligibility": "Ineligible",
+                                                      "esuKeyState": "Inactive",
+                                                      "licenseAssignmentState": "NotAssigned"
+                                                    },
+                                                    "licenseStatus": "Licensed",
+                                                    "licenseChannel": "Retail"
+                                                  }
+    Location                                    : centraluseuap
+    LocationDataCity                            :
+    LocationDataCountryOrRegion                 :
+    LocationDataDistrict                        :
+    LocationDataName                            :
+    MssqlDiscovered                             : false
+    Name                                        : testmachine
+    NetworkProfileNetworkInterface              : {{
+                                                    "ipAddresses": [
+                                                      {
+                                                        "subnet": {
+                                                          "addressPrefix": "********"
+                                                        },
+                                                        "address": "********",
+                                                        "ipAddressVersion": "IPv4"
+                                                      }
+                                                    ]
+                                                  }, {
+                                                    "ipAddresses": [
+                                                      {
+                                                        "subnet": {
+                                                          "addressPrefix": "********"
+                                                        },
+                                                        "address": "********",
+                                                        "ipAddressVersion": "IPv4"
+                                                      }
+                                                    ]
+                                                  }, {
+                                                    "ipAddresses": [
+                                                      {
+                                                        "subnet": {
+                                                          "addressPrefix": "********"
+                                                        },
+                                                        "address": "********",
+                                                        "ipAddressVersion": "IPv6"
+                                                      }
+                                                    ]
+                                                  }}
+    OSEdition                                   : enterprise
+    OSName                                      : windows
+    OSProfile                                   : {
+                                                    "computerName": "********"
+                                                  }
+    OSSku                                       : Windows 10 Enterprise
+    OSType                                      : windows
+    OSVersion                                   : ********
+    ParentClusterResourceId                     :
+    PrivateLinkScopeResourceId                  :
+    ProvisioningState                           : Succeeded
+    Resource                                    :
+    ResourceGroupName                           : ********
+    Status                                      : Connected
+    SystemDataCreatedAt                         :
+    SystemDataCreatedBy                         :
+    SystemDataCreatedByType                     :
+    SystemDataLastModifiedAt                    :
+    SystemDataLastModifiedBy                    :
+    SystemDataLastModifiedByType                :
+    Tags                                        : {
+                                                  }
+    Type                                        : Microsoft.HybridCompute/machines
+    VMId                                        : ********-****-****-****-**********
+    VMUuid                                      : ********-****-****-****-**********
+    ```
+
+    Update a hybrid machine
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Update-AzConnectedMachine.md
+  document type: cmdlet
+  external help file: Az.ConnectedMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedmachine/update-azconnectedmachine
+  Module Name: Az.ConnectedMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Update-AzConnectedMachine.md
+  PlatyPS schema version: 2024-05-01

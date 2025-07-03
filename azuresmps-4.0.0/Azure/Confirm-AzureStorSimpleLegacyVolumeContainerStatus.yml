@@ -1,0 +1,168 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+name: Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+module: Azure
+isPreview: false
+summary: |-
+  Initiates the commit or rollback of the volume containers that are migrated.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Confirm-AzureStorSimpleLegacyVolumeContainerStatus** cmdlet initiates the commit or rollback of the volume containers that are migrated as part of a legacy migration.
+  The rollback restores the appliance to the original ownership.
+  The commit assigns the ownership to the target appliance.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet initiates a roll back or commit operation on all volume containers in the imported configuration file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateAllContainer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LegacyConfigId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of the configuration of the legacy appliance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LegacyContainerNames
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of volume container names for which the migration plan applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSpecificContainer
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigrationOperation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet performs a commit or rollback.
+      Valid values are: Commit and Rollback.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+        -LegacyConfigId <String>
+        -MigrationOperation <String>
+        -LegacyContainerNames <String[]>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateSpecificContainer
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+        -LegacyConfigId <String>
+        -MigrationOperation <String>
+        [-All]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateAllContainer
+  isDefault: false
+examples:
+- title: 'Example 1: Initiate a commit operation on a specific volume container'
+  description: |-
+    ```
+    PS C:\>Confirm-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -LegacyContainerNames "OneSDKAzureCloud" -MigrationOperation Commit
+    Please check the commit/discard status using Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+    ```
+
+    This command initiates a commit operation on the specified volume container for the specified legacy configuration ID.
+    To see the status of the operation, use the **Get-AzureStorSimpleLegacyVolumeContainerStatus** cmdlet.
+- title: 'Example 2: Initiate a rollback operation on a specific volume container'
+  description: |-
+    ```
+    PS C:\>Confirm-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -LegacyContainerNames "OneSDKAzureCloud" -MigrationOperation Rollback
+    Please check the commit/discard status using Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+    ```
+
+    This command initiates a rollback operation on the specified volume container for the specified legacy configuration ID.
+- title: 'Example 3: Initiate a commit operation on all volume containers'
+  description: |-
+    ```
+    PS C:\>Confirm-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -MigrationOperation Commit -All
+    Please check the commit/discard status using Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+    ```
+
+    This command initiates a commit operation on all volume container for the specified legacy configuration ID.
+- title: 'Example 4: Initiate a rollback operation on all volume containers'
+  description: |-
+    ```
+    PS C:\>Confirm-AzureStorSimpleLegacyVolumeContainerStatus -LegacyConfigId "c5a831e1-7888-44f4-adf1-92994be630c3" -MigrationOperation Rollback -All
+    Please check the commit/discard status using Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+    ```
+
+    This command initiates a rollback operation on all volume containers for the specified legacy configuration ID.
+links:
+- text: Get-AzureStorSimpleLegacyVolumeContainerStatus
+  href: ./Get-AzureStorSimpleLegacyVolumeContainerStatus.yml
+- text: Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+  href: ./Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus.yml
+- text: Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+  href: ./Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 97AC691F-3835-4CEE-B47E-430BE9962AF9
+  PlatyPS schema version: 2024-05-01

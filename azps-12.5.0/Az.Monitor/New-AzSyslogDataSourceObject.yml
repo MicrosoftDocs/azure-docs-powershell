@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzSyslogDataSourceObject
+name: New-AzSyslogDataSourceObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for SyslogDataSource.
+description: |-
+  Create an in-memory object for SyslogDataSource.
+parameters:
+  cmdletParameters:
+  - name: FacilityName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of facility names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The log levels to collect.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the data source.
+              This name should be unique across all data sources (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stream
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of streams that this data source will be sent to.
+              A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSyslogDataSourceObject
+        [-FacilityName <String[]>]
+        [-LogLevel <String[]>]
+        [-Name <String>]
+        [-Stream <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.SyslogDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a sys log data source object with cron facility'
+  description: |-
+    ```powershell
+    New-AzSyslogDataSourceObject -FacilityName cron -LogLevel Debug,Critical,Emergency -Name cronSyslog -Stream Microsoft-Syslog
+    ```
+
+    ```output
+    FacilityName LogLevel                     Name       Stream
+    ------------ --------                     ----       ------
+    {cron}       {Debug, Critical, Emergency} cronSyslog {Microsoft-Syslog}
+    ```
+
+    This command creates a sys log data source object.
+- title: 'Example 2: Create a sys log data source object with sys log facility'
+  description: |-
+    ```powershell
+    New-AzSyslogDataSourceObject -FacilityName syslog -LogLevel Alert,Critical,Emergency -Name syslogBase -Stream Microsoft-Syslog
+    ```
+
+    ```output
+    FacilityName LogLevel                     Name       Stream
+    ------------ --------                     ----       ------
+    {syslog}     {Alert, Critical, Emergency} syslogBase {Microsoft-Syslog}
+    ```
+
+    This command creates a sys log data source object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzSyslogDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azsyslogdatasourceobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzSyslogDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

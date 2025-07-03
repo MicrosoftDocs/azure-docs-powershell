@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroupSmsReceiverObject
+name: New-AzActionGroupSmsReceiverObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for SmsReceiver.
+description: |-
+  Create an in-memory object for SmsReceiver.
+parameters:
+  cmdletParameters:
+  - name: CountryCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The country code of the SMS receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the SMS receiver.
+      Names must be unique across all receivers within an action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The phone number of the SMS receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupSmsReceiverObject
+        -CountryCode <String>
+        -Name <String>
+        -PhoneNumber <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.SmsReceiver" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: create action group sms receiver'
+  description: |-
+    ```powershell
+    New-AzActionGroupSmsReceiverObject -CountryCode 86 -Name user1 -PhoneNumber '01234567890'
+    ```
+
+    ```output
+    CountryCode Name  PhoneNumber Status
+    ----------- ----  ----------- ------
+    86          user1 01234567890
+    ```
+
+    This command creates action group sms receiver object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupSmsReceiverObject.md
+  document type: cmdlet
+  external help file: Az.ActionGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azactiongroupsmsreceiverobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupSmsReceiverObject.md
+  PlatyPS schema version: 2024-05-01

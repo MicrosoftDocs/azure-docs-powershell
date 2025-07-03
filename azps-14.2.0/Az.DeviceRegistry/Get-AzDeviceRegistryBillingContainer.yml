@@ -1,0 +1,193 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DeviceRegistry.Get-AzDeviceRegistryBillingContainer
+name: Get-AzDeviceRegistryBillingContainer
+module: Az.DeviceRegistry
+isPreview: false
+summary: |-
+  Get a BillingContainer
+description: |-
+  Get a BillingContainer
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IDeviceRegistryIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the billing container.
+    aliases:
+    - BillingContainerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceRegistryBillingContainer
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceRegistryBillingContainer
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceRegistryBillingContainer
+        -InputObject <IDeviceRegistryIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IDeviceRegistryIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceRegistry.Models.IBillingContainer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: list all billing containers from a specified subscription'
+  description: |-
+    ```powershell
+    Get-AzDeviceRegistryBillingContainer -SubscriptionId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ```
+
+    ```output
+    Name                   SystemDataCreatedAt   SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy             SystemDataLastModifiedByType
+    --------------------   -------------------   ------------------- ----------------------- ------------------------ ------------------------             ----------------------------
+    my-billingContainer1   12/18/2024 7:36:44 PM user@outlook.com    User                    12/18/2024 7:43:58 PM    319f651f-7ddb-4fc6-9857-7aef9250bd05 Application
+    my-billingContainer2   12/19/2024 8:52:54 PM user@outlook.com    User                    12/19/2024 8:53:02 PM    319f651f-7ddb-4fc6-9857-7aef9250bd05 Application
+    ```
+
+    This command lists all the Device Registry billing containers from subscription `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+- title: 'Example 2: get a billing container by name'
+  description: |-
+    ```powershell
+    Get-AzDeviceRegistryBillingContainer -SubscriptionId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -Name my-billingContainer1
+    ```
+
+    ```output
+    Etag                         : "1f00ec86-0000-0500-0000-66e9d6ab0000"
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.DeviceRegistry/billingContainers/adr-billing
+    Name                         : adr-billing
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    SystemDataCreatedAt          : 9/6/2024 12:31:24 AM
+    SystemDataCreatedBy          : 6ce3f5ab-5f16-4633-a660-21ceb8d74c01
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 9/17/2024 7:21:14 PM
+    SystemDataLastModifiedBy     : 6ce3f5ab-5f16-4633-a660-21ceb8d74c01
+    SystemDataLastModifiedByType : Application
+    Type                         : microsoft.deviceregistry/billingcontainers
+    ```
+
+    This command gets the Device Registry billing container `my-billingContainer1` from subscription `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+- title: 'Example 3: GetViaIdentity for billing container'
+  description: |-
+    ```powershell
+    $billingContainer = @{
+      SubscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+      BillingContainerName = "my-billingContainer1"
+    }
+    Get-AzDeviceRegistryBillingContainer -InputObject $billingContainer
+    ```
+
+    ```output
+    Etag                         : "1f00ec86-0000-0500-0000-66e9d6ab0000"
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.DeviceRegistry/billingContainers/adr-billing
+    Name                         : adr-billing
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    SystemDataCreatedAt          : 9/6/2024 12:31:24 AM
+    SystemDataCreatedBy          : 6ce3f5ab-5f16-4633-a660-21ceb8d74c01
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 9/17/2024 7:21:14 PM
+    SystemDataLastModifiedBy     : 6ce3f5ab-5f16-4633-a660-21ceb8d74c01
+    SystemDataLastModifiedByType : Application
+    Type                         : microsoft.deviceregistry/billingcontainers
+    ```
+
+    This command gets the Device Registry billing container `my-billingContainer1` from subscription `xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx` via the Identity input object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Get-AzDeviceRegistryBillingContainer.md
+  document type: cmdlet
+  external help file: Az.DeviceRegistry-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.deviceregistry/get-azdeviceregistrybillingcontainer
+  Module Name: Az.DeviceRegistry
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Get-AzDeviceRegistryBillingContainer.md
+  PlatyPS schema version: 2024-05-01

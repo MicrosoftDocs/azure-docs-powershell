@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureStorSimpleDeviceBackupPolicy
+name: Remove-AzureStorSimpleDeviceBackupPolicy
+module: Azure
+isPreview: false
+summary: |-
+  Removes an existing backup policy.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureStorSimpleDeviceBackupPolicy** cmdlet removes an existing **BackupPolicy** object.
+  After you remove a backup policy, no further backups take place based on that policy.
+  This cmdlet also deletes all schedules associated with the deleted policy.
+parameters:
+  cmdletParameters:
+  - name: BackupPolicy
+    type: <xref href="BackupPolicyDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BackupPolicyDetails** object to delete.
+      To obtain a **BackupPolicyDetails** object, use the **Get-AzureStorSimpleDeviceBackupPolicy** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupPolicyId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the **BackupPolicy** object to delete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device on which to delete the backup policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet does not prompt you for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForComplete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorSimpleDeviceBackupPolicy
+        -DeviceName <String>
+        -BackupPolicyId <String>
+        [-Force]
+        [-WaitForComplete]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyById
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzureStorSimpleDeviceBackupPolicy
+        -DeviceName <String>
+        -BackupPolicy <BackupPolicyDetails>
+        [-Force]
+        [-WaitForComplete]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyByObject
+  isDefault: false
+inputs:
+- name: <xref href="BackupPolicyDetails" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet accepts a **BackupPolicyDetails** object to delete.
+outputs:
+- name: <xref href="TaskStatusInfo, TaskResponse" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **TaskStatusInfo** object if you specify the *WaitForComplete* parameter.
+    If you do not specify that parameter, it returns a **TaskResponse** object.
+examples:
+- title: 'Example 1: Remove a backup policy'
+  description: |-
+    ```
+    PS C:\>Remove-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -Force
+    VERBOSE: ClientRequestId: b3e4d485-eae4-4cf4-a43b-815f3abcd2dd_PS
+    VERBOSE: ClientRequestId: a260ee98-46aa-49e0-91ac-31d4155f4cae_PS
+    VERBOSE: About to create a job to remove your backuppolicy!
+    VERBOSE: ClientRequestId: 92a9c264-90df-4345-a495-92767dd266f2_PS
+    695be190-ac81-4cf2-b1c5-03ef6b08d005
+    VERBOSE: The remove task is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId
+    695be190-ac81-4cf2-b1c5-03ef6b08d005 for tracking the task's status
+    ```
+
+    This command removes the **BackupPolicy** that has the instance ID 00001111-aaaa-2222-bbbb-3333cccc4444, so that no more backups are made based on this policy.
+    The command also deletes all schedules associated with this policy.
+    The command starts the operation that removes the **BackupPolicy** object, and then returns a **TaskResponse** object.
+    To see the status of the task, use the **Get-AzureStorSimpleTask** cmdlet.
+- title: 'Example 2: Remove the first of the backup policies for a device'
+  description: |-
+    ```
+    PS C:\>$Policies = Get-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm"
+    PS C:\> Remove-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyId $Policies[0].InstanceId -Force -WaitForComplete
+    VERBOSE: ClientRequestId: db3b49fa-cffa-446d-ba52-daa6802e00f7_PS
+    VERBOSE: ClientRequestId: 70e2b56f-c2df-40d0-a1e5-d7a4d7e25962_PS
+    VERBOSE: About to run a job to remove your backuppolicy!
+    VERBOSE: ClientRequestId: f8eb3d4d-2c57-4fc9-9f40-79d0f2ea1b6a_PS
+
+
+    JobId        : 820a246e-54b6-41a9-bdd5-15d5daea9b0a
+    JobResult    : Succeeded
+    JobStatus    : Completed
+    ErrorCode    :
+    ErrorMessage :
+    JobSteps     : {Microsoft.WindowsAzure.Management.StorSimple.Models.TaskStep,
+                   Microsoft.WindowsAzure.Management.StorSimple.Models.TaskStep}
+
+    VERBOSE: The job created for your remove operation has completed successfully.
+    ```
+
+    The first command gets the backup policies for the device named Contoso63-AppVm, and then stores them in the $Policies variable.
+
+    The second command removes the first backup policy from Contoso63-AppVm.
+    The command uses standard dot syntax to identify the **InstanceId** property of the first item in $Policies.
+    This command specifies the *WaitForComplete* parameter, so the command completes the task, and then returns a **TaskStatusInfo** object for the task.
+- title: 'Example 3: Remove a backup policy by using the pipeline'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -BackupPolicyName "TSQAVolume01_Default" | Remove-AzureStorSimpleDeviceBackupPolicy -DeviceName "Contoso63-AppVm" -Force -WaitForComplete
+    VERBOSE: ClientRequestId: 60080fb1-2f88-4c17-bfd7-21aa73440a9c_PS
+    VERBOSE: ClientRequestId: 04c91121-50d7-4796-9af6-fc6a7d6b6a0e_PS
+    VERBOSE: ClientRequestId: 47ceb37c-672f-42e8-bd19-1190925c46cd_PS
+    VERBOSE: ClientRequestId: cbc39757-f2cc-4cc5-93ea-4ec0fbfb0ca8_PS
+    VERBOSE: ClientRequestId: 3614d47a-51fc-4500-a5f1-5401301ca4e3_PS
+    VERBOSE: About to create a job to remove your backuppolicy!
+    VERBOSE: ClientRequestId: dbd7166e-1888-4b11-9af9-8d49712a8c8b_PS
+    702ad240-5730-4015-b051-56055bd2c2d3
+    VERBOSE: The remove task is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId
+    702ad240-5730-4015-b051-56055bd2c2d3 for tracking the task's status
+    VERBOSE: BackupPolicy with id bfe0bf8a-2d09-4690-93da-38a4f24e9f4f found!
+    ```
+
+    This command gets a **BackupPolicyDetails** object by using **Get-AzureStorSimpleDeviceBackupPolicy**, and then passes it to the current cmdlet by using the pipeline operator.
+    The current cmdlet removes the backup policy named TSQAVolume01_Default.
+links:
+- text: Get-AzureStorSimpleDeviceBackupPolicy
+  href: ./Get-AzureStorSimpleDeviceBackupPolicy.yml
+- text: New-AzureStorSimpleDeviceBackupPolicy
+  href: ./New-AzureStorSimpleDeviceBackupPolicy.yml
+- text: Set-AzureStorSimpleDeviceBackupPolicy
+  href: ./Set-AzureStorSimpleDeviceBackupPolicy.yml
+- text: Get-AzureStorSimpleJob
+  href: ./Get-AzureStorSimpleJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5AB916CB-A141-4662-8220-6C1FBB58FC69
+  PlatyPS schema version: 2024-05-01

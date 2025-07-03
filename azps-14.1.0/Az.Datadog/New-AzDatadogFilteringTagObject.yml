@@ -1,0 +1,91 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Datadog.New-AzDatadogFilteringTagObject
+name: New-AzDatadogFilteringTagObject
+module: Az.Datadog
+isPreview: false
+summary: |-
+  Create an in-memory object for FilteringTag.
+description: |-
+  Create an in-memory object for FilteringTag.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Valid actions for a filtering tag.
+      Exclusion takes priority over inclusion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name (also known as the key) of the tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDatadogFilteringTagObject
+        [-Action <String>]
+        [-Name <String>]
+        [-Value <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Datadog.Models.FilteringTag" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a in-memory object for FilteringTag'
+  description: |-
+    ```powershell
+    New-AzDatadogFilteringTagObject -Action "Include" -Value "Prod" -Name "Environment"
+    ```
+
+    This command Create a in-memory object for FilteringTag.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/New-AzDatadogFilteringTagObject.md
+  document type: cmdlet
+  external help file: Az.Datadog-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Datadog/new-azdatadogfilteringtagobject
+  Module Name: Az.Datadog
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/New-AzDatadogFilteringTagObject.md
+  PlatyPS schema version: 2024-05-01

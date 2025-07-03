@@ -1,0 +1,672 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzPolicyAssignment
+name: New-AzPolicyAssignment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates or updates a policy assignment.
+description: |-
+  The **New-AzPolicyAssignment** cmdlet creates or updates a policy assignment with the given scope and name.
+  Policy assignments apply to all resources contained within their scope.
+  For example, when you assign a policy at resource group scope, that policy applies to all resources in the group.
+parameters:
+  cmdletParameters:
+  - name: BackwardCompatible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return artifacts using legacy format placing policy-specific properties in a property bag object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefinitionVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicate version of policy definition or policy set definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParameterString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PolicyDefinitionOrPolicySetDefinition
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This message will be part of response in case of policy violation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the policy assignment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnforcementMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy assignment enforcement mode.
+      Possible values are Default and DoNotEnforce.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user identity associated with the policy.
+      The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identity type.
+      This is the only required field when adding a system or user assigned identity to a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the policy assignment.
+      Only required when utilizing managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy assignment metadata.
+      Metadata is an open ended object and is typically a collection of key value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy assignment.
+    aliases:
+    - PolicyAssignmentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NonComplianceMessage
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The messages that describe why a resource is non-compliant with the policy.
+      To construct, see NOTES section for NONCOMPLIANCEMESSAGE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The policy's excluded scopes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Override
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IOverride" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The policy property value override.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinition
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Accept policy definition or policy set definition object
+    aliases:
+    - PolicySetDefinition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParameterString
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyParameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parameter values for the assigned policy rule.
+      The keys are the parameter names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyParameterObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The parameter values for the assigned policy rule.
+      The keys are the parameter names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceSelector
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IResourceSelector" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The resource selector list to filter policies by resource properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the policy assignment.
+      Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPolicyAssignment
+        -Name <String>
+        [-Scope <String>]
+        [-NotScope <String[]>]
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-EnforcementMode <String>]
+        [-IdentityType <String>]
+        [-IdentityId <String>]
+        [-Location <String>]
+        [-NonComplianceMessage <PSObject[]>]
+        [-Override <IOverride[]>]
+        [-ResourceSelector <IResourceSelector[]>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzPolicyAssignment
+        -Name <String>
+        -PolicyParameterObject <Hashtable>
+        [-Scope <String>]
+        [-NotScope <String[]>]
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-EnforcementMode <String>]
+        [-IdentityType <String>]
+        [-IdentityId <String>]
+        [-Location <String>]
+        [-NonComplianceMessage <PSObject[]>]
+        [-Override <IOverride[]>]
+        [-ResourceSelector <IResourceSelector[]>]
+        [-BackwardCompatible]
+        [-PolicyDefinition <PSObject>]
+        [-DefinitionVersion <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzPolicyAssignment
+        -Name <String>
+        -PolicyParameter <String>
+        [-Scope <String>]
+        [-NotScope <String[]>]
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-EnforcementMode <String>]
+        [-IdentityType <String>]
+        [-IdentityId <String>]
+        [-Location <String>]
+        [-NonComplianceMessage <PSObject[]>]
+        [-Override <IOverride[]>]
+        [-ResourceSelector <IResourceSelector[]>]
+        [-BackwardCompatible]
+        [-PolicyDefinition <PSObject>]
+        [-DefinitionVersion <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParameterString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzPolicyAssignment
+        -Name <String>
+        -PolicyDefinition <PSObject>
+        [-Scope <String>]
+        [-NotScope <String[]>]
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-EnforcementMode <String>]
+        [-IdentityType <String>]
+        [-IdentityId <String>]
+        [-Location <String>]
+        [-NonComplianceMessage <PSObject[]>]
+        [-Override <IOverride[]>]
+        [-ResourceSelector <IResourceSelector[]>]
+        [-BackwardCompatible]
+        [-DefinitionVersion <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PolicyDefinitionOrPolicySetDefinition
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Policy assignment at subscription level'
+  description: |-
+    ```powershell
+    $Subscription = Get-AzSubscription -SubscriptionName 'Subscription01'
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Scope "/subscriptions/$($Subscription.Id)"
+    ```
+
+    The first command gets a subscription named Subscription01 by using the Get-AzSubscription cmdlet and stores it in the $Subscription variable.
+    The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy at the level of the subscription identified by the subscription scope string.
+- title: 'Example 2: Policy assignment at resource group level'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy at the level of the resource group identified by the **ResourceId** property of $ResourceGroup.
+- title: 'Example 3: Policy assignment at resource group level with policy parameter object'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -BuiltIn | Where-Object {$_.DisplayName -eq 'Allowed locations'}
+    $Locations = Get-AzLocation | Where-Object displayname -like '*east*'
+    $AllowedLocations = @{'listOfAllowedLocations'=($Locations.location)}
+    New-AzPolicyAssignment -Name 'RestrictLocationPolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -PolicyParameterObject $AllowedLocations
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet.
+    The command stores that object in the $ResourceGroup variable.
+    The second command gets the built-in policy definition for allowed locations by using the Get-AzPolicyDefinition cmdlet.
+    The command stores that object in the $Policy variable.
+    The third and fourth commands create an object containing all Azure regions with "east" in the name.
+    The commands store that object in the $AllowedLocations variable.
+    The final command assigns the policy in $Policy at the level of a resource group using the policy parameter object in $AllowedLocations.
+    The **ResourceId** property of $ResourceGroup identifies the resource group.
+- title: 'Example 4: Policy assignment at resource group level with policy parameter file'
+  description: |-
+    ```powershell
+    '{
+        "listOfAllowedLocations":  {
+          "value": [
+            "westus",
+            "westeurope",
+            "japanwest"
+          ]
+        }
+    }' > .\AllowedLocations.json
+
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -BuiltIn | Where-Object {$_.DisplayName -eq 'Allowed locations'}
+    New-AzPolicyAssignment -Name 'RestrictLocationPolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -PolicyParameter .\AllowedLocations.json
+    ```
+
+    The first command creates a parameter file called _AllowedLocations.json_ in the local working directory.
+    The second command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The third command gets the built-in policy definition for allowed locations by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy at the resource group identified by the **ResourceId** property of $ResourceGroup using the policy parameter file AllowedLocations.json from the local working directory.
+- title: 'Example 5: Policy assignment with a system assigned managed identity'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -Location 'eastus' -IdentityType 'SystemAssigned'
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy to the resource group.
+    A system assigned managed identity is automatically created and assigned to the policy assignment.
+- title: 'Example 6: Policy assignment with a user assigned managed identity'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    $UserAssignedIdentity = Get-AzUserAssignedIdentity -ResourceGroupName 'ResourceGroup1' -Name 'UserAssignedIdentity1'
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -Location 'eastus' -IdentityType 'UserAssigned' -IdentityId $UserAssignedIdentity.Id
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The third command gets the user assigned managed identity named UserAssignedIdentity1 by using the Get-AzUserAssignedIdentity cmdlet and stores it in the $UserAssignedIdentity variable.
+    The final command assigns the policy in $Policy to the resource group.
+    The user assigned managed identity identified by the **Id** property of $UserAssignedIdentity is assigned to the policy assignment by passing the **Id*** property to the IdentityId parameter.
+- title: 'Example 7: Policy assignment with an enforcement mode property'
+  description: |-
+    ```powershell
+    $Subscription = Get-AzSubscription -SubscriptionName 'Subscription01'
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Scope "/subscriptions/$($Subscription.Id)" -EnforcementMode DoNotEnforce
+    ```
+
+    The first command gets a subscription named Subscription01 by using the Get-AzSubscription cmdlet and stores it in the $Subscription variable.
+    The second command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy at the level of the subscription identified by the subscription scope string.
+
+    The assignment is set with an EnforcementMode value of _DoNotEnforce_ i.e.
+    the policy effect is not enforced during resource creation or update.
+- title: 'Example 8: Policy assignment with non-compliance messages'
+  description: |-
+    ```powershell
+    $PolicySet = Get-AzPolicySetDefinition -Name 'VirtualMachinePolicySet'
+    $NonComplianceMessages = @(@{Message="Only DsV2 SKUs are allowed."; PolicyDefinitionReferenceId="DefRef1"}, @{Message="Virtual machines must follow cost management best practices."})
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicySetDefinition $PolicySet -NonComplianceMessage $NonComplianceMessages
+    ```
+
+    The first command gets the policy set definition named VirtualMachinePolicySet by using the Get-AzPolicySetDefinition cmdlet and stores it in the $PolicySet variable.
+    The second command creates an array of non-compliance messages.
+    One general purpose message for the entire assignment and one message specific to a SKU restriction policy within the assigned policy set definition.
+    The final command assigns the policy set definition in $PolicySet to the subscription with two non-compliance messages that will be shown if a resource is denied by policy.
+- title: 'Example 9: Policy assignment with resource selector'
+  description: |-
+    ```powershell
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    $ResourceSelector = @{Name = "MyLocationSelector"; Selector = @(@{Kind = "resourceLocation"; In = @("eastus", "eastus2")})}
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -ResourceSelector $ResourceSelector
+    ```
+
+    The first command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The second command creates a resource selector object that will be used to specify the assignment should only apply to resources located in East US or East US 2 and stores it in the $ResourceSelector variable.
+    The final command assigns the policy definition in $Policy to the subscription with the resource selector specified by $ResourceSelector.
+- title: 'Example 10: Policy assignment with override'
+  description: |-
+    ```powershell
+    $Policy = Get-AzPolicyDefinition -Name 'VirtualMachinePolicy'
+    $Selector = @{Kind = "resourceLocation"; In = @("eastus", "eastus2")}
+    $Override = @(@{Kind = "policyEffect"; Value = 'Disabled'; Selector = @($Selector)})
+    New-AzPolicyAssignment -Name 'VirtualMachinePolicyAssignment' -PolicyDefinition $Policy -Override $Override
+    ```
+
+    The first command gets the policy definition named VirtualMachinePolicy by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The second command creates a location selector specifying East US or East US 2 locations and stores it in the $Selector variable.
+    The third command creates an override object that will be used to specify that the assigned definition should have a Disabled effect in the locations identified by the $Selector object and stores it in the $Override variable.
+    The final command assigns the policy definition in $Policy to the subscription with the override specified by $Override.
+- title: 'Example 11: [Backcompat] Policy assignment at resource group level with policy parameter object'
+  description: |-
+    ```powershell
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -BuiltIn | Where-Object {$_.Properties.DisplayName -eq 'Allowed locations'}
+    $Locations = Get-AzLocation | Where-Object displayname -like '*east*'
+    $AllowedLocations = @{'listOfAllowedLocations'=($Locations.location)}
+    New-AzPolicyAssignment -Name 'RestrictLocationPolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -PolicyParameterObject $AllowedLocations
+    ```
+
+    The first command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet.
+    The command stores that object in the $ResourceGroup variable.
+    The second command gets the built-in policy definition for allowed locations by using the Get-AzPolicyDefinition cmdlet.
+    The command stores that object in the $Policy variable.
+    The third and fourth commands create an object containing all Azure regions with "east" in the name.
+    The commands store that object in the $AllowedLocations variable.
+    The final command assigns the policy in $Policy at the level of a resource group using the policy parameter object in $AllowedLocations.
+    The **ResourceId** property of $ResourceGroup identifies the resource group.
+- title: 'Example 12: [Backcompat] Policy assignment at resource group level with policy parameter file'
+  description: |-
+    ```powershell
+    '{
+        "listOfAllowedLocations":  {
+          "value": [
+            "westus",
+            "westeurope",
+            "japanwest"
+          ]
+        }
+    }' > .\AllowedLocations.json
+
+    $ResourceGroup = Get-AzResourceGroup -Name 'ResourceGroup11'
+    $Policy = Get-AzPolicyDefinition -BuiltIn | Where-Object {$_.Properties.DisplayName -eq 'Allowed locations'}
+    New-AzPolicyAssignment -Name 'RestrictLocationPolicyAssignment' -PolicyDefinition $Policy -Scope $ResourceGroup.ResourceId -PolicyParameter .\AllowedLocations.json
+    ```
+
+    The first command creates a parameter file called _AllowedLocations.json_ in the local working directory.
+    The second command gets a resource group named ResourceGroup11 by using the Get-AzResourceGroup cmdlet and stores it in the $ResourceGroup variable.
+    The third command gets the built-in policy definition for allowed locations by using the Get-AzPolicyDefinition cmdlet and stores it in the $Policy variable.
+    The final command assigns the policy in $Policy at the resource group identified by the **ResourceId** property of $ResourceGroup using the policy parameter file AllowedLocations.json from the local working directory.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyAssignment.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/new-azpolicyassignment
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzPolicyAssignment.md
+  PlatyPS schema version: 2024-05-01

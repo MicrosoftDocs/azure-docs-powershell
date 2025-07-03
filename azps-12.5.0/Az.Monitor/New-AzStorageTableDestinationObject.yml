@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzStorageTableDestinationObject
+name: New-AzStorageTableDestinationObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for StorageTableDestination.
+description: |-
+  Create an in-memory object for StorageTableDestination.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the destination.
+              This name should be unique across all destinations (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TableName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Storage Table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageTableDestinationObject
+        [-Name <String>]
+        [-StorageAccountResourceId <String>]
+        [-TableName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.StorageTableDestination" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create storage table destination object'
+  description: |-
+    ```powershell
+    New-AzStorageTableDestinationObject -TableName table1 -StorageAccountResourceId /subscriptions/ee63c5dc-9b88-42e3-8070-944a5226aea3/resourceGroups/rightregion/providers/Microsoft.Storage/storageAccounts/bar1 -Name storageAccountDestination2
+    ```
+
+    ```output
+    Name                       StorageAccountResourceId                                                                                                        TableName
+    ----                       ------------------------                                                                                                        ---------
+    storageAccountDestination2 /subscriptions/ee63c5dc-9b88-42e3-8070-944a5226aea3/resourceGroups/rightregion/providers/Microsoft.Storage/storageAccounts/bar1 table1
+    ```
+
+    This command creates a storage table destination object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzStorageTableDestinationObject.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azstoragetabledestinationobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzStorageTableDestinationObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.New-AzEventHubVirtualNetworkRuleConfig
+name: New-AzEventHubVirtualNetworkRuleConfig
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Constructs an INwRuleSetVirtualNetworkRules object that can be fed as input to Set-AzEventHubNetworkRuleSet
+description: |-
+  Constructs an INwRuleSetVirtualNetworkRules object that can be fed as input to Set-AzEventHubNetworkRuleSet
+parameters:
+  cmdletParameters:
+  - name: IgnoreMissingVnetServiceEndpoint
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of Virtual Network Subnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of Virtual Network Subnet
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventHubVirtualNetworkRuleConfig
+        -SubnetId <String>
+        [-IgnoreMissingVnetServiceEndpoint]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.INwRuleSetVirtualNetworkRules" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Constructs an INwRuleSetVirtualNetworkRules object'
+  description: |-
+    ```powershell
+    New-AzEventHubVirtualNetworkRuleConfig -SubnetId /subscriptions/subscriptionId/resourcegroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/default
+    ```
+
+    ```output
+    IgnoreMissingVnetServiceEndpoint SubnetId
+    -------------------------------- --------
+                                     /subscriptions/subscriptionId/resourcegroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/myVirtualNetwork/subnets/default
+    ```
+
+    Please refer examples for Set-AzEventHubNetworkRuleSet to know more.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubVirtualNetworkRuleConfig.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventhub/new-azeventhubvirtualnetworkruleconfig
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubVirtualNetworkRuleConfig.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,28 @@
+### YamlMime:PowerShellModule1
+uid: Az.DependencyMap
+name: Az.DependencyMap Module
+isPreview: false
+cmdletGroups:
+- title: DependencyMap
+  cmdlets:
+  - Az.DependencyMap.Get-AzDependencyMap
+  - Az.DependencyMap.Get-AzDependencyMapDiscoverySource
+  - Az.DependencyMap.New-AzDependencyMap
+  - Az.DependencyMap.New-AzDependencyMapDiscoverySource
+  - Az.DependencyMap.New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject
+  - Az.DependencyMap.Remove-AzDependencyMap
+  - Az.DependencyMap.Remove-AzDependencyMapDiscoverySource
+  - Az.DependencyMap.Update-AzDependencyMap
+  - Az.DependencyMap.Update-AzDependencyMapDiscoverySource
+description: |-
+  Microsoft Azure PowerShell: DependencyMap cmdlets
+metadata:
+  Module Name: Az.DependencyMap
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dependencymap
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/Az.DependencyMap.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/Az.DependencyMap.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

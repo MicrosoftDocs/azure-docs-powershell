@@ -1,0 +1,433 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVirtualHubBgpConnection
+name: New-AzVirtualHubBgpConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  The New-AzVirtualHubBgpConnection cmdlet creates a HubBgpConnection resource that peers the Azure Virtual WAN Hub Router with a BGP-enabled peer in a virtual network connected to the Virtual WAN Hub.
+description: |-
+  The New-AzVirtualHubBgpConnection cmdlet creates a HubBgpConnection resource that peers Azure Virtual WAN Hub Router with a BGP-enabled peer in virtual network connected to the Virtual WAN Hub.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerAsn
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The peer ASN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerIp
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The peer IP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHub
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual hub resource.
+    aliases:
+    - ParentObject
+    - ParentVirtualHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObjectByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual hub resource id.
+    aliases:
+    - ParentResourceId
+    - ParentVirtualHubId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubResourceIdByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual hub name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubVnetConnection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSHubVirtualNetworkConnection" data-throw-if-not-resolved="False" />
+    description: |-
+      The VirtualHubVnetConnection resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByHubVirtualNetworkConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubVnetConnectionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The VirtualHubVnetConnection resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByHubVirtualNetworkConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -ResourceGroupName <String>
+        -VirtualHubName <String>
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnection <PSHubVirtualNetworkConnection>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubNameByHubVirtualNetworkConnectionObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -ResourceGroupName <String>
+        -VirtualHubName <String>
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnectionId <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubNameByHubVirtualNetworkConnectionResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnection <PSHubVirtualNetworkConnection>
+        -VirtualHub <PSVirtualHub>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObjectByHubVirtualNetworkConnectionObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnection <PSHubVirtualNetworkConnection>
+        -VirtualHubId <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceIdByHubVirtualNetworkConnectionObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnectionId <String>
+        -VirtualHub <PSVirtualHub>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObjectByHubVirtualNetworkConnectionResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubBgpConnection
+        -PeerIp <String>
+        -PeerAsn <UInt32>
+        -Name <String>
+        -VirtualHubVnetConnectionId <String>
+        -VirtualHubId <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceIdByHubVirtualNetworkConnectionResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSHubVirtualNetworkConnection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBgpConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet -AddressPrefix "192.168.1.0/24"
+    $backendSubnet  = New-AzVirtualNetworkSubnetConfig -Name backendSubnet  -AddressPrefix "192.168.2.0/24"
+    $remoteVirtualNetwork = New-AzVirtualNetwork -Name "testVirtualNetwork" -ResourceGroupName "testRG" -Location "West US" -AddressPrefix "192.168.0.0/16" -Subnet $frontendSubnet,$backendSubnet
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "testWan" -Location "West US"
+    New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "testHub" -AddressPrefix "10.0.1.0/24"
+    $hubVnetConnection = New-AzVirtualHubVnetConnection -ResourceGroupName "testRG" -VirtualHubName "testHub" -Name "testVnetConnection" -RemoteVirtualNetwork $remoteVirtualNetwork
+    New-AzVirtualHubBgpConnection -ResourceGroupName "testRG" -VirtualHubName "testHub" -PeerIp 192.168.1.5 -PeerAsn 20000 -Name "testBgpConnection" -VirtualHubVnetConnection $hubVnetConnection
+    ```
+
+    ```output
+    Name                        : testBgpConnection
+    Id                          : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/testHub/bgpConnections/testBgpConnection
+    HubVirtualNetworkConnection : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/testHub/hubVirtualNetworkConnections/testVnetConnection
+    PeerAsn                     : 20000
+    PeerIp                      : 192.168.1.5
+    ```
+
+    The above will create a resource group, Virtual WAN, Virtual Network, Virtual WAN Hub in West US and connect the Virtual Network to the Virtual WAN Hub in that resource group in Azure. A Virtual WAN Hub BGP Connection will be created thereafter which will peer the Virtual WAN Hub with the network appliance deployed in the Virtual Network.
+- title: Example 2
+  description: |-
+    ```powershell
+    $hubVnetConnection = Get-AzVirtualHubVnetConnection -ResourceGroupName "testRG" -VirtualHubName "testHub" -Name "testVnetConnection"
+    Get-AzVirtualHub -ResourceGroupName "testRG" -Name "testHub" | New-AzVirtualHubBgpConnection -PeerIp 192.168.1.5 -PeerAsn 20000 -Name "testBgpConnection" -VirtualHubVnetConnection $hubVnetConnection
+    ```
+
+    ```output
+    Name                        : testBgpConnection
+    Id                          : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/testHub/bgpConnections/testBgpConnection
+    HubVirtualNetworkConnection : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/testHub/hubVirtualNetworkConnections/testVnetConnection
+    PeerAsn                     : 20000
+    PeerIp                      : 192.168.1.5
+    ```
+
+    The above will create a Virtual WAN Hub BGP Connection for existing Virtual WAN Hub and Virtual WAN Hub Vnet Connection using powershell piping on the output from Get-AzVirtualHub.
+links:
+- text: Get-AzVirtualHubBgpConnection
+  href: ./Get-AzVirtualHubBgpConnection.yml
+- text: Remove-AzVirtualHubBgpConnection
+  href: ./Remove-AzVirtualHubBgpConnection.yml
+- text: Update-AzVirtualHubBgpConnection
+  href: ./Update-AzVirtualHubBgpConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHubBgpConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualhubbgpconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHubBgpConnection.md
+  PlatyPS schema version: 2024-05-01

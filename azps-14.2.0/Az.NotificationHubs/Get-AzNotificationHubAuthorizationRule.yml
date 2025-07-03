@@ -1,0 +1,158 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NotificationHubs.Get-AzNotificationHubAuthorizationRule
+name: Get-AzNotificationHubAuthorizationRule
+module: Az.NotificationHubs
+isPreview: false
+summary: |-
+  Gets information about the authorization rules associated with a notification hub.
+description: |-
+  The **Get-AzNotificationHubAuthorizationRule** cmdlet gets information about the Shared Access Signature (SAS) authorization rules associated with a notification hub.
+  The cmdlet returns information about all the rules associated with a hub or, by including the *AuthorizationRule* parameter, gets information about a specific rule.
+  Authorization rules manage access to your notification hubs.
+  An authorization rule will create links, as a URI, based on different permission levels.
+  Clients are directed to one of these URIs based on the appropriate permission level.
+  For instance, a client with the Listen permission will be directed to the URI for that permission.
+  The **Get-AzNotificationHubAuthorizationRule** cmdlet only gets information about the authorization rules associated with a notification hub.
+  To get information about the hub itself, use Get-AzNotificationHub.
+parameters:
+  cmdletParameters:
+  - name: AuthorizationRule
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an SAS authentication rule.
+      These rules determine the type of access that users have to the notification hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the namespace to which the notification hub is assigned.
+      Namespaces provide a way to group and categorize notification hubs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationHub
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the notification hub that this cmdlet assigns authorization rules.
+      Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group to which the notification hub is assigned.
+      Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simplify inventory management and Azure administration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNotificationHubAuthorizationRule
+        [-ResourceGroup] <String>
+        [-Namespace] <String>
+        [-NotificationHub] <String>
+        [[-AuthorizationRule] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.SharedAccessAuthorizationRuleAttributes" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information for all authorization rules assigned to a notification hub'
+  description: |-
+    ```powershell
+    Get-AzNotificationHubAuthorizationRule -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub"
+    ```
+
+    This command gets information for all the authorization rules assigned to the notification hub named ContosoInternalHub in the namespace ContosoNamespace.
+    You must specify the namespace where the hub is located as well as the resource group that the hub has been assigned to.
+- title: 'Example 2: Get information for an authorization rules assigned to a notification hub'
+  description: |-
+    ```powershell
+    Get-AzNotificationHubAuthorizationRule -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -NotificationHub "ContosoInternalHub" -AuthorizationRule "ListenRule"
+    ```
+
+    This command gets information for all the authorization rules assigned to the notification hub named ContosoInternalHub in the namespace ContosoNamespace.
+    The command uses the *AuthorizationRule* parameter to limit the returned data to a single authorization rule named ListenRule.
+links:
+- text: Get-AzNotificationHubsNamespaceAuthorizationRule
+  href: ./Get-AzNotificationHubsNamespaceAuthorizationRule.yml
+- text: New-AzNotificationHubAuthorizationRule
+  href: ./New-AzNotificationHubAuthorizationRule.yml
+- text: Remove-AzNotificationHubAuthorizationRule
+  href: ./Remove-AzNotificationHubAuthorizationRule.yml
+- text: Set-AzNotificationHubAuthorizationRule
+  href: ./Set-AzNotificationHubAuthorizationRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubAuthorizationRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.notificationhubs/get-aznotificationhubauthorizationrule
+  Module Name: Az.NotificationHubs
+  ms.assetid: 7A9D8F5A-6035-411B-8FDB-96ABFEED05A2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/Get-AzNotificationHubAuthorizationRule.md
+  PlatyPS schema version: 2024-05-01

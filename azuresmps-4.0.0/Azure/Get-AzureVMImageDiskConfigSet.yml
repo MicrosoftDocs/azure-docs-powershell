@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureVMImageDiskConfigSet
+name: Get-AzureVMImageDiskConfigSet
+module: Azure
+isPreview: false
+summary: |-
+  Gets a disk configuration set object from the input image context.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureVMImageDiskConfigSet** cmdlet gets a disk configuration set object from the input image context.
+parameters:
+  cmdletParameters:
+  - name: ImageContext
+    type: <xref href="OSImageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine image context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureVMImageDiskConfigSet
+        [[-ImageContext] <OSImageContext>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.ServiceManagement.Model.VirtualMachineImageDiskConfigSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a disk configuration set object from a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVMImage -ImageName $Img | Get-AzureVMImageDiskConfigSet
+    ```
+
+    This command gets a disk configuration set object from a virtual machine.
+links:
+- text: New-AzureVMImageDiskConfigSet
+  href: ./New-AzureVMImageDiskConfigSet.yml
+- text: Get-AzureVMImage
+  href: ./Get-AzureVMImage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: ACBE32E5-AA8C-43CA-9FF4-4B59906C6B85
+  PlatyPS schema version: 2024-05-01

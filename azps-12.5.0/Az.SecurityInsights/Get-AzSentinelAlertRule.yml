@@ -1,0 +1,234 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SecurityInsights.Get-AzSentinelAlertRule
+name: Get-AzSentinelAlertRule
+module: Az.SecurityInsights
+isPreview: false
+summary: |-
+  Gets the alert rule.
+description: |-
+  Gets the alert rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert rule ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSentinelAlertRule
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSentinelAlertRule
+        -ResourceGroupName <String>
+        -RuleId <String>
+        -WorkspaceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSentinelAlertRule
+        -InputObject <ISecurityInsightsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.ISecurityInsightsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.IAlertRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Alert Rules'
+  description: |-
+    ```powershell
+    Get-AzSentinelAlertRule -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName"
+    ```
+
+    ```output
+    AlertDisplayName : (Preview) TI map IP entity to SigninLogs
+    FriendlyName     : (Preview) TI map IP entity to SigninLogs
+    Description      : Identifies a match in SigninLogs from any IP IOC from TI
+    Kind             : SecurityAlert
+    Name             : d1e4d1dd-8d16-1aed-59bd-a256266d7244
+    ProductName      : Azure Sentinel
+    Status           : New
+    ProviderAlertId  : d6c7a42b-c0da-41ef-9629-b3d2d407b181
+    Tactic           : {Impact}
+    ```
+
+    This command lists all Alert Rules under a Microsoft Sentinel workspace.
+- title: 'Example 2: Get an Alert Rule'
+  description: |-
+    ```powershell
+    Get-AzSentinelAlertRule -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName" -RuleId "d6c7a42b-c0da-41ef-9629-b3d2d407b181"
+    ```
+
+    ```output
+    AlertDisplayName : (Preview) TI map IP entity to SigninLogs
+    FriendlyName     : (Preview) TI map IP entity to SigninLogs
+    Description      : Identifies a match in SigninLogs from any IP IOC from TI
+    Kind             : SecurityAlert
+    Name             : d1e4d1dd-8d16-1aed-59bd-a256266d7244
+    ProductName      : Azure Sentinel
+    Status           : New
+    ProviderAlertId  : d6c7a42b-c0da-41ef-9629-b3d2d407b181
+    Tactic           : {Impact}
+    ```
+
+    This command gets an Alert Rule.
+- title: 'Example 3: Get an Alert Rule by object Id'
+  description: |-
+    ```powershell
+    $rules = Get-AzSentinelAlertRule -ResourceGroupName "myResourceGroupName" -workspaceName "myWorkspaceName"
+     $rules[0] | Get-AzSentinelAlertRule
+    ```
+
+    ```output
+    AlertDisplayName : (Preview) TI map IP entity to SigninLogs
+    FriendlyName     : (Preview) TI map IP entity to SigninLogs
+    Description      : Identifies a match in SigninLogs from any IP IOC from TI
+    Kind             : SecurityAlert
+    Name             : d1e4d1dd-8d16-1aed-59bd-a256266d7244
+    ProductName      : Azure Sentinel
+    Status           : New
+    ProviderAlertId  : d6c7a42b-c0da-41ef-9629-b3d2d407b181
+    Tactic           : {Impact}
+    ```
+
+    This command gets an Alert Rule by object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Get-AzSentinelAlertRule.md
+  document type: cmdlet
+  external help file: Az.SecurityInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.securityinsights/get-azsentinelalertrule
+  Module Name: Az.SecurityInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/Get-AzSentinelAlertRule.md
+  PlatyPS schema version: 2024-05-01

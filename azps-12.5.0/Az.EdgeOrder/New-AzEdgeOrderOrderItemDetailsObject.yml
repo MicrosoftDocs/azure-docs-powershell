@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EdgeOrder.New-AzEdgeOrderOrderItemDetailsObject
+name: New-AzEdgeOrderOrderItemDetailsObject
+module: Az.EdgeOrder
+isPreview: false
+summary: |-
+  Create an in-memory object for OrderItemDetails.
+description: |-
+  Create an in-memory object for OrderItemDetails.
+parameters:
+  cmdletParameters:
+  - name: NotificationEmailList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Additional notification email list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderItemType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Support.OrderItemType" data-throw-if-not-resolved="False" />
+    description: |-
+      Order item type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Preference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Models.Api20211201.IPreferences" data-throw-if-not-resolved="False" />
+    description: |-
+      Customer notification Preferences.
+      To construct, see NOTES section for PREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Models.Api20211201.IProductDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Unique identifier for configuration.
+      To construct, see NOTES section for PRODUCTDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEdgeOrderOrderItemDetailsObject
+        -OrderItemType <OrderItemType>
+        -ProductDetail <IProductDetails>
+        [-NotificationEmailList <String[]>]
+        [-Preference <IPreferences>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Models.Api20211201.OrderItemDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates orderItemDetails object.'
+  description: |-
+    ```powershell
+    $HierarchyInformation=New-AzEdgeOrderHierarchyInformationObject -ProductFamilyName "azurestackedge" -ProductLineName "azurestackedge" -ProductName "azurestackedgegpu" -ConfigurationName "EdgeP_High"
+    $details = New-AzEdgeOrderOrderItemDetailsObject -OrderItemType "Purchase"  -ProductDetail  @{"HierarchyInformation"=$HierarchyInformation}
+    ```
+
+    Create an in-memory object for OrderItemDetails.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderOrderItemDetailsObject.md
+  document type: cmdlet
+  external help file: Az.EdgeOrder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EdgeOrder/new-AzEdgeOrderOrderItemDetailsObject
+  Module Name: Az.EdgeOrder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderOrderItemDetailsObject.md
+  PlatyPS schema version: 2024-05-01

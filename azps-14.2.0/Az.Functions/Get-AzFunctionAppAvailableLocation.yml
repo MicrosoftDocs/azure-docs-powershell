@@ -1,0 +1,228 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Functions.Get-AzFunctionAppAvailableLocation
+name: Get-AzFunctionAppAvailableLocation
+module: Az.Functions
+isPreview: false
+summary: |-
+  Gets the location where a function app for the given os and plan type is available.
+description: |-
+  Gets the location where a function app for the given os and plan type is available.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The OS type for the service plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The plan type.
+      Valid inputs: Consumption or Premium
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFunctionAppAvailableLocation
+        [[-SubscriptionId] <String[]>]
+        [[-PlanType] <String>]
+        [[-OSType] <String>]
+        [[-DefaultProfile] <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20231201.IGeoRegion" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: Get the locations where Premium is available for Windows. If no parameters are specified, PlanType is set to 'Premium' and OSType is set to 'Windows'."
+  description: |-
+    ```powershell
+    Get-AzFunctionAppAvailableLocation
+    ```
+
+    ```output
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    East Asia (Stage)
+    West India
+    South India
+    Canada Central
+    West US 2
+    UK West
+    UK South
+    East US 2 EUAP
+    Central US EUAP
+    Korea Central
+    France Central
+    Australia Central 2
+    Australia Central
+    Germany West Central
+    Norway East
+    ```
+
+    This command gets the locations where Premium is available for Windows.
+- title: 'Example 2: Get the locations where Premium is available for Linux.'
+  description: |-
+    ```powershell
+    Get-AzFunctionAppAvailableLocation -PlanType Premium -OSType Linux
+    ```
+
+    ```output
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    West India
+    Canada Central
+    West Central US
+    West US 2
+    UK West
+    UK South
+    Central US EUAP
+    Korea Central
+    France Central
+    Norway East
+    ```
+
+    This command gets the locations where Premium is available for Linux.
+- title: 'Example 3: Get the locations where Consumption is available for Windows.'
+  description: |-
+    ```powershell
+    Get-AzFunctionAppAvailableLocation -PlanType Consumption -OSType Windows
+    ```
+
+    ```output
+    Name
+    ----
+    Central US
+    North Europe
+    West Europe
+    Southeast Asia
+    East Asia
+    West US
+    East US
+    Japan West
+    Japan East
+    East US 2
+    North Central US
+    South Central US
+    Brazil South
+    Australia East
+    Australia Southeast
+    East Asia (Stage)
+    Central India
+    West India
+    South India
+    Canada Central
+    Canada East
+    West Central US
+    West US 2
+    UK West
+    UK South
+    East US 2 EUAP
+    Central US EUAP
+    Korea Central
+    France Central
+    Australia Central 2
+    Australia Central
+    South Africa North
+    Switzerland North
+    Germany West Central
+    ```
+
+    This command gets the locations where Consumption is available for Windows.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/Get-AzFunctionAppAvailableLocation.md
+  document type: cmdlet
+  external help file: Az.Functions-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.functions/get-azfunctionappavailablelocation
+  Module Name: Az.Functions
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/Get-AzFunctionAppAvailableLocation.md
+  PlatyPS schema version: 2024-05-01

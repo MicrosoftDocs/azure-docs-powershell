@@ -1,0 +1,683 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PolicyInsights.Get-AzPolicyState
+name: Get-AzPolicyState
+module: Az.PolicyInsights
+isPreview: false
+summary: |-
+  Gets policy compliance states for resources.
+description: |-
+  Gets policy compliance states for resources. Policy state records can be queried at various scopes. Based on the time interval specified (defaults to last day), either latest policy states or all policy state transitions can be queried. Results can be filtered, grouped, and group aggregations can be computed.
+parameters:
+  cmdletParameters:
+  - name: All
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Within the specified time interval, get all policy states instead of the latest only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Apply
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Apply expression for aggregations using OData notation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Expand expression using OData notation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Filter expression using OData notation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: From
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      ISO 8601 formatted timestamp specifying the start time of the interval to query.
+      When not specified, defaults to 'To' parameter value minus 1 day.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Management group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderBy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Ordering expression using OData notation.
+      One or more comma-separated column names with an optional 'desc' (the default) or 'asc'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyAssignmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a policy assignment.
+      This policy assignment must have exactly the same scope as the parameter set. It cannot be a management group scope policy assignment.
+      For example: if `-SubscriptionId` and `ResourceGroupName` are specified, the policy assignment must be assigned to that resource group. If only `-SubscriptionId` is specified, then the policy assignment must be assigned to that subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionLevelPolicyAssignmentScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupLevelPolicyAssignmentScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a policy definition.
+      This policy definition must exist in the subscription being queried. It cannot be a management group scope policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PolicyDefinitionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicySetDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a policy set definition.
+      This policy set definition must exist in the subscription being queried. It cannot be a management group scope policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PolicySetDefinitionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupLevelPolicyAssignmentScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Select expression using OData notation.
+      One or more comma-separated column names.
+      Limits the columns on each record to just those requested.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PolicySetDefinitionScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PolicyDefinitionScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubscriptionLevelPolicyAssignmentScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupLevelPolicyAssignmentScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: To
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      ISO 8601 formatted timestamp specifying the end time of the interval to query.
+      When not specified, defaults to time of request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of records to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -ManagementGroupName <String>
+        [-All]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -ResourceGroupName <String>
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -ResourceId <String>
+        [-All]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -PolicySetDefinitionName <String>
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PolicySetDefinitionScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -PolicyDefinitionName <String>
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PolicyDefinitionScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -PolicyAssignmentName <String>
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionLevelPolicyAssignmentScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyState
+        -ResourceGroupName <String>
+        -PolicyAssignmentName <String>
+        [-All]
+        [-SubscriptionId <String>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-Select <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Filter <String>]
+        [-Apply <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupLevelPolicyAssignmentScope
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.PolicyState" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get latest policy states in current subscription scope'
+  description: |-
+    ```powershell
+    Get-AzPolicyState
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+- title: 'Example 2: Get latest policy states in the specified subscription scope'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the specified subscription.
+- title: 'Example 3: Get all policy states in current subscription scope'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -All
+    ```
+
+    Gets all historical policy state records (including latest) generated in the last day for all resources within the subscription in current session context.
+- title: 'Example 4: Get latest policy states in management group scope'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ManagementGroupName "myManagementGroup"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the specified management group.
+- title: 'Example 5: Get latest policy states in resource group scope in current subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceGroupName "myResourceGroup"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the specified resource group (in the subscription in current session context).
+- title: 'Example 6: Get latest policy states in resource group scope in the specified subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -ResourceGroupName "myResourceGroup"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the specified resource group (in the specified subscription).
+- title: 'Example 7: Get latest policy states for a resource'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myns1/eventhubs/eh1/consumergroups/cg1"
+    ```
+
+    Gets latest policy state records generated in the last day for the specified resource.
+- title: 'Example 8: Get latest policy states for a policy set definition in current subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -PolicySetDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy set definition (that exists in the subscription in current session context).
+- title: 'Example 9: Get latest policy states for a policy set definition in the specified subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicySetDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy set definition (that exists in the specified subscription).
+- title: 'Example 10: Get latest policy states for a policy definition in current subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -PolicyDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy definition (that exists in the subscription in current session context).
+- title: 'Example 11: Get latest policy states for a policy definition in the specified subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicyDefinitionName "bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy definition (that exists in the specified subscription).
+- title: 'Example 12: Get latest policy states for a policy assignment in current subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -PolicyAssignmentName "ddd8ef92e3714a5ea3d208c1"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy assignment (that exists at subscription scope in the subscription in current session context).
+- title: 'Example 13: Get latest policy states for a policy assignment with the same scope as the specified subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -PolicyAssignmentName "ddd8ef92e3714a5ea3d208c1"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy assignment (that exists at subscription scope in the specified subscription).
+- title: 'Example 14: Get latest policy states for a policy assignment in the specified resource group in the current subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceGroupName "myResourceGroup" -PolicyAssignmentName "ddd8ef92e3714a5ea3d208c1"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) effected by the specified policy assignment (that exists in the resource group in the subscription in current session context).
+- title: 'Example 15: Get latest policy states in current subscription scope, with OrderBy, Top and Select query options'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -OrderBy "Timestamp desc, PolicyAssignmentName asc" -Top 5 -Select "Timestamp, ResourceId, PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionId, IsCompliant"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command orders the results by timestamp and policy assignment name properties, and takes only top 5 of those listed in that order.
+    It also selects to list only a subset of the columns for each record.
+- title: 'Example 16: Get latest policy states in current subscription scope, with From and To query options'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -From "2018-03-08 00:00:00Z" -To "2018-03-15 00:00:00Z"
+    ```
+
+    Gets latest policy state records generated within the date range specified for all resources within the subscription in current session context.
+- title: 'Example 17: Get latest policy states in current subscription scope, with Filter query option'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -Filter "(PolicyDefinitionAction eq 'deny' or PolicyDefinitionAction eq 'audit') and ComplianceState eq 'NonCompliant' and ResourceLocation ne 'eastus'"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command limits the results returned by filtering based on policy definition action (includes deny or audit actions), compliance status (includes only non-compliant status) and resource location (excludes eastus location).
+- title: 'Example 18: Get latest policy states in current subscription scope, with Apply specifying row count aggregation'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -Apply "aggregate(`$count as NumberOfRecords)"
+    ```
+
+    Gets the number of latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command returns the count of the policy state records only, which is returned inside AdditionalProperties property.
+- title: 'Example 19: Get latest policy states in current subscription scope, with Apply specifying grouping with aggregation'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId), aggregate(`$count as NumStates))" -OrderBy "NumStates desc" -Top 5
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
+    It groups the results based on policy assignment, policy set definition, and policy definition, and computes the number of records in each group, which is returned inside AdditionalProperties property.
+    It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
+- title: 'Example 20: Get latest policy states in current subscription scope, with Apply specifying grouping without aggregation'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((ResourceId))"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
+    It groups the results based on resource id.
+    This generates the list of all resources within the subscription that are non-compliant for at least one policy.
+- title: 'Example 21: Get latest policy states in current subscription scope, with Apply specifying multiple groupings'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -Filter "ComplianceState eq 'NonCompliant'" -Apply "groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId, ResourceId))/groupby((PolicyAssignmentId, PolicySetDefinitionId, PolicyDefinitionReferenceId, PolicyDefinitionId), aggregate(`$count as NumNonCompliantResources))" -OrderBy "NumNonCompliantResources desc" -Top 5
+    ```
+
+    Gets latest policy state records generated in the last day for all resources within the subscription in current session context.
+    The command limits the results returned by filtering based on compliance status (includes only non-compliant status).
+    It groups the results first based on policy assignment, policy set definition, policy definition, and resource id.
+    Then, it further groups the results of this grouping with the same properties except for resource id, and computes the number of records in each of these groups, which is returned inside AdditionalProperties property.
+    It orders the results by the count aggregation in descending order, and takes only top 5 of those listed in that order.
+    This generates the top 5 policies with the most number of non-compliant resources.
+- title: 'Example 22: Get latest policy states including policy evaluation details for a resource'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myns1/eventhubs/eh1/consumergroups/cg1" -Expand "PolicyEvaluationDetails"
+    ```
+
+    Gets latest policy state records generated in the last day for the specified resource and expand policyEvaluationDetails.
+- title: 'Example 23: Get latest component policy states for a resource (eg. vault) given a resource provider mode policy assignment'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myvault" -Filter "policyAssignmentId eq '/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyAssignments/ddd8ef92e3714a5ea3d208c1'" -Expand "Components(`$filter=ComplianceState eq 'NonCompliant' or ComplianceState eq 'Compliant')"
+    ```
+
+    Gets latest component policy state records generated in the last day for the specified resource, given a resource provider mode policy assignment that references a resource provider mode policy definition.
+- title: 'Example 24: Get latest component policy states for a resource (eg. vault) given a policy initiative assignment that contains a resource provider mode policy definition'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myvault" -Filter "policyAssignmentId eq '/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyAssignments/ddd8ef92e3714a5ea3d208c1' and policyDefinitionReferenceId eq 'myResourceProviderModeDefinitionReferenceId'" -Expand "Components(`$filter=ComplianceState eq 'NonCompliant' or ComplianceState eq 'Compliant')"
+    ```
+
+    Gets latest component policy state records generated in the last day for the specified resource, given a resource provider mode policy assignment that references an initiative containing a resource provider mode policy definition.
+- title: 'Example 25: Get latest component counts by compliance state for a resource (eg. vault) given a resource provider mode policy assignment'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myvault" -Filter "policyAssignmentId eq '/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyAssignments/ddd8ef92e3714a5ea3d208c1'" -Expand "Components(`$filter=ComplianceState eq 'NonCompliant' or ComplianceState eq 'Compliant' or ComplianceState eq 'Conflict';`$apply=groupby((complianceState),aggregate(`$count as count)))"
+    ```
+
+    Gets latest component counts generated in the last day grouped by compliance state for the specified resource, given a resource provider mode policy assignment.
+- title: 'Example 26: Get policy states for a management group scope policy assignment'
+  description: |-
+    ```powershell
+    Get-AzPolicyState -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -Filter "policyAssignmentId eq '/providers/Microsoft.Management/managementGroups/myManagementGroup/providers/Microsoft.Authorization/policyAssignments/ddd8ef92e3714a5ea3d208c1'"
+    ```
+
+    Gets latest policy state records generated in the last day for all resources (within the tenant in current session context) in the specified subscription affected by the specified policy assignment (which is assigned to a management group which is an ancestor of the specified subscription).
+links:
+- text: Get-AzPolicyStateSummary
+  href: ./Get-AzPolicyStateSummary.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyState.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.policyinsights/get-azpolicystate
+  Module Name: Az.PolicyInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Get-AzPolicyState.md
+  PlatyPS schema version: 2024-05-01

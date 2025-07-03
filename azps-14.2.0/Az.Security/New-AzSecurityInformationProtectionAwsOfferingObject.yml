@@ -1,0 +1,62 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityInformationProtectionAwsOfferingObject
+name: New-AzSecurityInformationProtectionAwsOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for InformationProtectionAwsOffering.
+description: |-
+  Create an in-memory object for InformationProtectionAwsOffering.
+parameters:
+  cmdletParameters:
+  - name: InformationProtectionCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityInformationProtectionAwsOfferingObject
+        [-InformationProtectionCloudRoleArn <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.InformationProtectionAwsOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new InformationProtectionAwsOffering object'
+  description: |-
+    ```powershell
+    New-AzSecurityInformationProtectionAwsOfferingObject -InformationProtectionCloudRoleArn "arn:aws:iam::123456789012:role/myRole"
+    ```
+
+    ```output
+    Description InformationProtectionCloudRoleArn     OfferingType
+    ----------- ---------------------------------     ------------
+                arn:aws:iam::123456789012:role/myRole InformationProtectionAws
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityInformationProtectionAwsOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecurityinformationprotectionawsofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityInformationProtectionAwsOfferingObject.md
+  PlatyPS schema version: 2024-05-01

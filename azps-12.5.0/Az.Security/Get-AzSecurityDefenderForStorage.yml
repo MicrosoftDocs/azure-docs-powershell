@@ -1,0 +1,93 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecurityDefenderForStorage
+name: Get-AzSecurityDefenderForStorage
+module: Az.Security
+isPreview: false
+summary: |-
+  Gets the Defender for Storage settings for the specified storage account.
+description: |-
+  Gets the Defender for Storage settings for the specified storage account.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityDefenderForStorage
+        -ResourceId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DefenderForStorage.Models.IDefenderForStorageSetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Defender for Storage V2 settings on a storage account'
+  description: |-
+    ```powershell
+    Get-AzSecurityDefenderForStorage -ResourceId "/subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>"
+    ```
+
+    ```output
+    Id                                                 : /subscriptions/<SubscriptionId>/resourcegroups/<ResourceGroupName>/providers/Microsoft.Storage/storageAccounts/<StorageAccountName>
+    IsEnabled                                          : True
+    MalwareScanningOperationStatusCode                 :
+    MalwareScanningOperationStatusMessage              :
+    MalwareScanningScanResultsEventGridTopicResourceId :
+    Name                                               : current
+    OnUploadCapGbPerMonth                              : 5000
+    OnUploadIsEnabled                                  : True
+    OverrideSubscriptionLevelSetting                   : False
+    ResourceGroupName                                  : <ResourceGroupName>
+    SensitiveDataDiscoveryIsEnabled                    : True
+    SensitiveDataDiscoveryOperationStatusCode          :
+    SensitiveDataDiscoveryOperationStatusMessage       :
+    Type                                               : Microsoft.Security/defenderForStorageSettings
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityDefenderForStorage.md
+  document type: cmdlet
+  external help file: Az.DefenderForStorage.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/get-azsecuritydefenderforstorage
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityDefenderForStorage.md
+  PlatyPS schema version: 2024-05-01

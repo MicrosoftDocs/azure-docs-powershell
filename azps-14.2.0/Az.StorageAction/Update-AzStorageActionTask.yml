@@ -1,0 +1,489 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageAction.Update-AzStorageActionTask
+name: Update-AzStorageActionTask
+module: Az.StorageAction
+isPreview: false
+summary: |-
+  Asynchronously update a new storage task resource with the specified parameters.
+  If a storage task is already created and a subsequent update request is issued with different properties, the storage task properties will be updated.
+  If a storage task is already created and a subsequent update request is issued with the exact same set of properties, the request will succeed.
+description: |-
+  Asynchronously update a new storage task resource with the specified parameters.
+  If a storage task is already created and a subsequent update request is issued with different properties, the storage task properties will be updated.
+  If a storage task is already created and a subsequent update request is issued with the exact same set of properties, the request will succeed.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Text that describes the purpose of the storage task
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElseOperation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskOperation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of operations to execute in the else block
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Task is enabled when set to true and disabled when set to false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSystemAssignedIdentity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines whether to enable a system-assigned identity for the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfCondition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Condition predicate to evaluate each object.
+      See https://aka.ms/storagetaskconditions for valid properties and operators.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfOperation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskOperation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of operations to execute when the condition predicate satisfies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageActionIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the storage task within the specified resource group.
+      Storage task names must be between 3 and 18 characters in length and use numbers and lower-case letters only.
+    aliases:
+    - StorageTaskName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The array of user assigned identities associated with the resource.
+      The elements in array will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzStorageActionTask
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Description <String>]
+        [-ElseOperation <IStorageTaskOperation[]>]
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-Enabled]
+        [-IfCondition <String>]
+        [-IfOperation <IStorageTaskOperation[]>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzStorageActionTask
+        -InputObject <IStorageActionIdentity>
+        [-Description <String>]
+        [-ElseOperation <IStorageTaskOperation[]>]
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-Enabled]
+        [-IfCondition <String>]
+        [-IfOperation <IStorageTaskOperation[]>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageActionIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTask" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update storage action task with conditions'
+  description: |-
+    ```powershell
+    $elseoperation = New-AzStorageActionTaskOperationObject -Name DeleteBlob -OnFailure break -OnSuccess continue
+    Update-AzStorageActionTask -Name mytask1 -ResourceGroupName group001 -ElseOperation $elseoperation
+    ```
+
+    ```output
+    CreationTimeInUtc            : 1/23/2024 6:47:43 AM
+    Description                  : my storage task
+    ElseOperation                : {{
+                                     "name": "DeleteBlob",
+                                     "onSuccess": "continue",
+                                     "onFailure": "break"
+                                   }}
+    Enabled                      : False
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask1
+    IdentityPrincipalId          :
+    IdentityTenantId             :
+    IdentityType                 : None
+    IdentityUserAssignedIdentity : {
+                                   }
+    IfCondition                  : [[equals(AccessTier, 'Cool')]]
+    IfOperation                  : {{
+                                     "name": "SetBlobTier",
+                                     "parameters": {
+                                       "tier": "Hot"
+                                     },
+                                     "onSuccess": "continue",
+                                     "onFailure": "break"
+                                   }}
+    Location                     : eastus2euap
+    Name                         : mytask1
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : group001
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    TaskVersion                  : 1
+    Type                         : Microsoft.StorageActions/storageTasks
+    ```
+
+    This command updates storage action task.
+- title: 'Example 2: Update storage action task with conditions'
+  description: |-
+    ```powershell
+    $ifOperation = New-AzStorageActionTaskOperationObject -Name SetBlobTier -Parameter @{"tier"= "Hot"} -OnFailure break -OnSuccess continue
+    Update-AzStorageActionTask -Name mytask3 -ResourceGroupName group001 -IfCondition "[[equals(AccessTier, 'Hot')]]" -IfOperation $ifoperation
+    ```
+
+    ```output
+    CreationTimeInUtc            : 4/12/2024 9:56:05 AM
+    Description                  : my storage task 3
+    ElseOperation                : {{
+                                     "name": "DeleteBlob",
+                                     "onSuccess": "continue",
+                                     "onFailure": "break"
+                                   }}
+    Enabled                      : True
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/mytask3
+    IdentityPrincipalId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    IdentityTenantId             : 11111111-2222-3333-4444-987654321012
+    IdentityType                 : SystemAssigned
+    IdentityUserAssignedIdentity : {
+                                   }
+    IfCondition                  : [[equals(AccessTier, 'Hot')]]
+    IfOperation                  : {{
+                                     "name": "SetBlobTier",
+                                     "parameters": {
+                                       "tier": "Hot"
+                                     },
+                                     "onSuccess": "continue",
+                                     "onFailure": "break"
+                                   }}
+    Location                     : eastus2euap
+    Name                         : mytask3
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : group001
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    TaskVersion                  : 1
+    Type                         : Microsoft.StorageActions/storageTasks
+    ```
+
+    This command updates storage action task.
+- title: 'Example 3: Update storage action task with system assigned'
+  description: |-
+    ```powershell
+    Update-AzStorageActionTask -Name mytask1 -ResourceGroupName group001 -EnableSystemAssignedIdentity 1
+    ```
+
+    ```output
+    CreationTimeInUtc            : 2/27/2024 6:48:18 AM
+    Description                  : my storage task
+    ElseOperation                :
+    Enabled                      : True
+    Id                           : /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group001/providers/Microsoft.StorageActions/storageTasks/myta
+                                   sk1
+    IdentityPrincipalId          : 66aefa04-060e-4eeb-9342-7228e31d1596
+    IdentityTenantId             : 72f988bf-86f1-41af-91ab-2d7cd011db47
+    IdentityType                 : SystemAssigned
+    IdentityUserAssignedIdentity : {
+                                   }
+    IfCondition                  : [[equals(AccessTier, 'Cool')]]
+    IfOperation                  : {{
+                                     "name": "SetBlobTier",
+                                     "parameters": {
+                                       "tier": "Hot"
+                                     },
+                                     "onSuccess": "continue",
+                                     "onFailure": "break"
+                                   }}
+    Location                     : eastus2euap
+    Name                         : mytask1
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : group001
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    TaskVersion                  : 1
+    Type                         : Microsoft.StorageActions/storageTasks
+    ```
+
+    This command updates storage action task.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/Update-AzStorageActionTask.md
+  document type: cmdlet
+  external help file: Az.StorageAction-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storageaction/update-azstorageactiontask
+  Module Name: Az.StorageAction
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/Update-AzStorageActionTask.md
+  PlatyPS schema version: 2024-05-01

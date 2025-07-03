@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Communication.Get-AzCommunicationServiceSmtpUsername
+name: Get-AzCommunicationServiceSmtpUsername
+module: Az.Communication
+isPreview: false
+summary: |-
+  Get a SmtpUsernameResource.
+description: |-
+  Get a SmtpUsernameResource.
+parameters:
+  cmdletParameters:
+  - name: CommunicationServiceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CommunicationServiceSmtpUsername.Models.ICommunicationServiceSmtpUsernameIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCommunicationService
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommunicationServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the CommunicationService resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CommunicationServiceSmtpUsername.Models.ICommunicationServiceSmtpUsernameIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmtpUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the SmtpUsernameResource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCommunicationService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCommunicationServiceSmtpUsername
+        -CommunicationServiceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCommunicationServiceSmtpUsername
+        -CommunicationServiceName <String>
+        -ResourceGroupName <String>
+        -SmtpUsername <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCommunicationServiceSmtpUsername
+        -SmtpUsername <String>
+        -CommunicationServiceInputObject <ICommunicationServiceSmtpUsernameIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCommunicationService
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCommunicationServiceSmtpUsername
+        -InputObject <ICommunicationServiceSmtpUsernameIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CommunicationServiceSmtpUsername.Models.ICommunicationServiceSmtpUsernameIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CommunicationServiceSmtpUsername.Models.ISmtpUsernameResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List existing SMTP Usernames for a Communication Service resource'
+  description: |-
+    ```powershell
+    Get-AzCommunicationServiceSmtpUsername -CommunicationServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1
+    ```
+
+    ```output
+    EntraApplicationId           : aaaa1111-bbbb-2222-3333-aaaa1111abcd
+    Id                           : /subscriptions/11112222-3333-4444-5555-666677778888/resourcegroups/ContosoResourceProvider1/providers/microsoft.communicati
+                                   on/communicationservices/ContosoAcsResource1/SmtpUsernames/ContosoSmtpUsernameResource1
+    Name                         : ContosoSmtpUsernameResource1
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TenantId                     : 72f988bf-86f1-41af-91ab-2d7cd011db47
+    Type                         : communicationservices/smtpusernames
+    Username                     : ContosoUsername1
+
+    EntraApplicationId           : 1e1e1d1a-1111-1111-1111-11ad111bf111
+    Id                           : /subscriptions/11112222-3333-4444-5555-666677778888/resourcegroups/ContosoResourceProvider1/providers/microsoft.communicati
+                                   on/communicationservices/ContosoAcsResource1/SmtpUsernames/ContosoSmtpUsernameResource2
+    Name                         : ContosoSmtpUsernameResource2
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+    Type                         : communicationservices/smtpusernames
+    Username                     : ContosoUsername2
+    ```
+
+    Returns a list of all SMTP Username resources under the specified Communication Services resource.
+- title: 'Example 2: Get the information if single SMTP Username resource is present'
+  description: |-
+    ```powershell
+    Get-AzCommunicationServiceSmtpUsername -CommunicationServiceName ContosoAcsResource1 -ResourceGroupName ContosoResourceProvider1
+    ```
+
+    ```output
+    EntraApplicationId           : 1e1e1d1a-1111-1111-1111-11ad111bf111
+    Id                           : /subscriptions/11112222-3333-4444-5555-666677778888/resourcegroups/ContosoResourceProvider1/pro
+                                   viders/microsoft.communication/communicationservices/ContosoAcsResource1/SmtpUsernames/ContosoSmtpUsernameResource1
+    Name                         : ContosoSmtpUsernameResource1
+    ResourceGroupName            : ContosoResourceProvider1
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TenantId                     : aaaa1111-bbbb-2222-3333-aaaa11112222
+    Type                         : communicationservices/smtpusernames
+    Username                     : ContosoUsername1
+    ```
+
+    Returns information if single SMTP Username resource is present.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzCommunicationServiceSmtpUsername.md
+  document type: cmdlet
+  external help file: Az.Communication-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.communication/get-azcommunicationservicesmtpusername
+  Module Name: Az.Communication
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzCommunicationServiceSmtpUsername.md
+  PlatyPS schema version: 2024-05-01

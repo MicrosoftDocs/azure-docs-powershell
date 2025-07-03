@@ -1,0 +1,416 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Update-AzGalleryImageVersion
+name: Update-AzGalleryImageVersion
+module: Az.Compute
+isPreview: false
+summary: |-
+  Update a gallery image version.
+description: |-
+  Update a gallery image version.
+parameters:
+  cmdletParameters:
+  - name: AllowDeletionOfReplicatedLocation
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether or not removing this Gallery Image Version from replicated regions is allowed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryImageDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image definition.
+    aliases:
+    - GalleryImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImageVersion" data-throw-if-not-resolved="False" />
+    description: |-
+      The PS Gallery Image Version Object.
+    aliases:
+    - GalleryImageVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image version.
+    aliases:
+    - GalleryImageVersionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishingProfileEndOfLifeDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The end of life date of the gallery Image Version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishingProfileExcludeFromLatest
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If it is set, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of replicas of the Image Version to be created per region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID for the gallery image version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetExtendedLocation
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The target extended locations where the Image Version is going to be replicated to. This property is updatable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRegion
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The target regions where the Image Version is going to be replicated to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzGalleryImageVersion
+        [-ResourceGroupName] <String>
+        [-GalleryName] <String>
+        [-GalleryImageDefinitionName] <String>
+        [-Name] <String>
+        [-AsJob]
+        [-PublishingProfileEndOfLifeDate <DateTime>]
+        [-PublishingProfileExcludeFromLatest]
+        [-ReplicaCount <Int32>]
+        [-Tag <Hashtable>]
+        [-TargetRegion <Hashtable[]>]
+        [-TargetExtendedLocation <Hashtable[]>]
+        [-AllowDeletionOfReplicatedLocation <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzGalleryImageVersion
+        [-ResourceId] <String>
+        [-AsJob]
+        [-PublishingProfileEndOfLifeDate <DateTime>]
+        [-PublishingProfileExcludeFromLatest]
+        [-ReplicaCount <Int32>]
+        [-Tag <Hashtable>]
+        [-TargetRegion <Hashtable[]>]
+        [-TargetExtendedLocation <Hashtable[]>]
+        [-AllowDeletionOfReplicatedLocation <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzGalleryImageVersion
+        [-InputObject] <PSGalleryImageVersion>
+        [-AsJob]
+        [-PublishingProfileEndOfLifeDate <DateTime>]
+        [-PublishingProfileExcludeFromLatest]
+        [-ReplicaCount <Int32>]
+        [-Tag <Hashtable>]
+        [-TargetRegion <Hashtable[]>]
+        [-TargetExtendedLocation <Hashtable[]>]
+        [-AllowDeletionOfReplicatedLocation <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectParameter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImageVersion" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImageVersion" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change the replication regions and replica count'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $imageName = "myImage"
+    $versionName = "1.0.0"
+    $region1 = @{Name='West US';ReplicaCount=1}
+    $region2 = @{Name='East US';ReplicaCount=2}
+    $region3 = @{Name='Central US'}
+    $targetRegions = @($region1,$region2,$region3)
+    Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageName -Name $versionName -ReplicaCount 2 -TargetRegion $targetRegions
+    ```
+
+    Update a gallery image version's regions.
+- title: 'Example 2: Change whether an image version should be considered for latest.'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $imageName = "myImage"
+    $versionName = "1.0.0"
+    Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageName -Name $versionName -PublishingProfileExcludeFromLatest:$false
+    ```
+
+    Update a gallery image version's exclude from latest status. To include an image version in consideration for latest, use `-PublishingProfileExcludeFromLatest:$false`. To exclude an image version from consideration for latest, use `-PublishingProfileExcludeFromLatest`.
+- title: 'Example 3: Change the end-of-life date for an image version.'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $imageName = "myImage"
+    $versionName = "1.0.0"
+    $endOfLifeDate = "2024-08-02T00:00:00+00:00"
+    Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageName -Name $versionName -PublishingProfileEndOfLifeDate $endOfLifeDate
+    ```
+
+    Update a gallery image version's end-of-life date. The image version can still be used to create virtual machines after the end-of-life date.
+- title: 'Example 4: Update to remove TargetExtendedLocations.'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $imageName = "myImage"
+    $versionName = "1.0.0"
+
+    Update-AzGalleryImageVersion -ResourceGroupName $rgname -GalleryName $galleryName -GalleryImageDefinitionName $imageName -Name $versionName -TargetExtendedLocation @() -AllowDeletionOfReplicatedLocation $True
+    ```
+
+    Update a gallery image version to remove existing target extended locations. Pass in an empty array for -TargetExtendedLocation and set -AllowDeletionOfReplicatedLocation to true.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzGalleryImageVersion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/update-azgalleryimageversion
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Update-AzGalleryImageVersion.md
+  PlatyPS schema version: 2024-05-01

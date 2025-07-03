@@ -1,0 +1,328 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Update-AzKeyVaultSetting
+name: Update-AzKeyVaultSetting
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Update specific setting associated with the managed HSM.
+description: |-
+  The **Update-AzKeyVaultSetting** cmdlet updates key vault account settings.
+  This cmdlet updates a specific key vault account setting.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hsm Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaHsmId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaFlattenValues
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+    description: |-
+      Hsm Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaHsmObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSetting" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the deleted vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaInputObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaFlattenValues
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateSettingViaHsmObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateSettingViaHsmId
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Cmdlet does not return object by default. If this switch is specified, return Secret object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Value of the setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSettingViaFlattenValues
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateSettingViaHsmObject
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateSettingViaHsmId
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzKeyVaultSetting
+        [-HsmName] <String>
+        [-Name] <String>
+        [-Value] <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSettingViaFlattenValues
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzKeyVaultSetting
+        [[-HsmName] <String>]
+        [[-Value] <String>]
+        [-InputObject] <PSKeyVaultSetting>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSettingViaInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzKeyVaultSetting
+        [-Name] <String>
+        [-Value] <String>
+        [-HsmObject] <PSManagedHsm>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSettingViaHsmObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzKeyVaultSetting
+        [-Name] <String>
+        [-Value] <String>
+        [-HsmId] <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSettingViaHsmId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSetting" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultSetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a specific key vault account setting'
+  description: |-
+    ```powershell
+    Update-AzKeyVaultSetting -HsmName testmhsm -Name AllowKeyManagementOperationsThroughARM -Value true -PassThru
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM true  boolean testmhsm
+    ```
+
+    Update a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed Hsm named `testmhsm`.
+- title: 'Example 2: Update a specific key vault account setting same as another account setting'
+  description: |-
+    ```powershell
+    $setting = Get-AzKeyVaultSetting -HsmName testmhsm1 -Name AllowKeyManagementOperationsThroughARM
+    $setting | Update-AzKeyVaultSetting -HsmName testmhsm2 -PassThru
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM true  boolean testmhsm2
+    ```
+
+    Update a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed Hsm named `testmhsm2` same with `testmhsm1`.
+- title: 'Example 3: Update a specific key vault account setting via HsmObject'
+  description: |-
+    ```powershell
+    $hsmObject = Get-AzKeyVaultManagedHsm -Name testmhsm
+    Update-AzKeyVaultSetting -HsmObject $hsmObject -Name AllowKeyManagementOperationsThroughARM -Value true -PassThru
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM true  boolean testmhsm
+    ```
+
+    Update a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed Hsm named `testmhsm` via HsmObject.
+- title: 'Example 4: Update a specific key vault account setting via HsmId'
+  description: |-
+    ```powershell
+    $hsmObject = Get-AzKeyVaultManagedHsm -Name testmhsm
+    Update-AzKeyVaultSetting -HsmId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.KeyVault/managedHSMs/testmhsm-Name AllowKeyManagementOperationsThroughARM -Value true -PassThru
+    ```
+
+    ```output
+    Name                                   Value Type    HSM Name
+    ----                                   ----- ----    --------
+    AllowKeyManagementOperationsThroughARM true  boolean testmhsm
+    ```
+
+    Update a specific key vault account setting named `AllowKeyManagementOperationsThroughARM` in a Managed Hsm named `testmhsm` via HsmObject.
+links:
+- text: Get-AzKeyVaultSetting
+  href: ./Get-AzKeyVaultSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Update-AzKeyVaultSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/update-azkeyvaultsetting
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Update-AzKeyVaultSetting.md
+  PlatyPS schema version: 2024-05-01

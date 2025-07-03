@@ -1,0 +1,222 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.Get-AzPeeringService
+name: Get-AzPeeringService
+module: Az.Peering
+isPreview: false
+summary: |-
+  Gets an existing peering service with the specified name under the given subscription and resource group.
+description: |-
+  Gets an existing peering service with the specified name under the given subscription and resource group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the peering.
+    aliases:
+    - PeeringServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringService
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringService
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringService
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringService
+        -InputObject <IPeeringIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.IPeeringService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all peering services under subscription'
+  description: |-
+    ```powershell
+    Get-AzPeeringService
+    ```
+
+    ```output
+    Name                               ResourceGroupName PeeringServiceLocation Provider      ProvisioningState Location
+    ----                               ----------------- ---------------------- --------      ----------------- --------
+    TestPrefixForAtlanta               DemoRG            Georgia                MicrosoftEdge Succeeded         East US 2
+    TestExtension                      DemoRG            Virginia               MicrosoftEdge Succeeded         East US
+    TestExtension2                     DemoRG            Virginia               MicrosoftEdge Succeeded         East US
+    DemoPeeringServiceInterCloudLondon DemoRG            London                 InterCloud    Succeeded         UK South
+    DRTestInterCloud                   DemoRG            Ile-de-France          InterCloud    Succeeded         UK South
+    Gaurav Thareja                     DemoRG            Ile-de-France          InterCloud    Succeeded         UK South
+    TestDRInterCloudZurich             DemoRG            Zurich                 InterCloud    Succeeded         France Central
+    DRTest                             DemoRG            Ile-de-France          InterCloud    Succeeded         France Central
+    ```
+
+    Lists all peering services under default subscription
+- title: 'Example 2: List all peering services under a specific resource group'
+  description: |-
+    ```powershell
+    Get-AzPeeringService -ResourceGroupName DemoRG
+    ```
+
+    ```output
+    Name                               ResourceGroupName PeeringServiceLocation Provider      ProvisioningState Location
+    ----                               ----------------- ---------------------- --------      ----------------- --------
+    TestPrefixForAtlanta               DemoRG            Georgia                MicrosoftEdge Succeeded         East US 2
+    TestExtension                      DemoRG            Virginia               MicrosoftEdge Succeeded         East US
+    TestExtension2                     DemoRG            Virginia               MicrosoftEdge Succeeded         East US
+    DemoPeeringServiceInterCloudLondon DemoRG            London                 InterCloud    Succeeded         UK South
+    DRTestInterCloud                   DemoRG            Ile-de-France          InterCloud    Succeeded         UK South
+    Gaurav Thareja                     DemoRG            Ile-de-France          InterCloud    Succeeded         UK South
+    TestDRInterCloudZurich             DemoRG            Zurich                 InterCloud    Succeeded         France Central
+    DRTest                             DemoRG            Ile-de-France          InterCloud    Succeeded         France Central
+    ```
+
+    Lists all the peering services under a resource group
+- title: 'Example 3: List all peering services under a specific resource group'
+  description: |-
+    ```powershell
+    Get-AzPeeringService -ResourceGroupName DemoRG -Name TestExtension
+    ```
+
+    ```output
+    Name                               ResourceGroupName PeeringServiceLocation Provider      ProvisioningState Location
+    ----                               ----------------- ---------------------- --------      ----------------- --------
+    TestExtension                      DemoRG            Virginia               MicrosoftEdge Succeeded         East US
+    ```
+
+    Gets a peering service with matching name and resource group
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringService.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringservice
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringService.md
+  PlatyPS schema version: 2024-05-01

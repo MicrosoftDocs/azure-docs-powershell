@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.Get-AzPeeringServiceProvider
+name: Get-AzPeeringServiceProvider
+module: Az.Peering
+isPreview: false
+summary: |-
+  Lists all of the available peering service locations for the specified kind of peering.
+description: |-
+  Lists all of the available peering service locations for the specified kind of peering.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringServiceProvider
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringServiceProvider" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all peering service providers'
+  description: |-
+    ```powershell
+    Get-AzPeeringServiceProvider
+    ```
+
+    ```output
+    Name                                        PeeringLocation                            ServiceProviderName
+    ----                                        ---------------                            -------------------
+    IIJ                                         {Osaka, Tokyo}                             IIJ
+    NTTCom                                      {Osaka, Tokyo}                             NTTCom
+    Kordia Limited                              {Auckland, Sydney}                         Kordia Limited
+    Liquid Telecommunications Ltd               {Cape Town, Johannesburg, Nairobi}         Liquid Telecommunications Ltd
+    InterCloud                                  {london, Paris, Zurich, Geneva}            InterCloud
+    Computer Concepts Limited                   {Auckland}                                 Computer Concepts Limited
+    Singnet                                     {singapore}                                Singnet
+    NTT Communications - Flexible InterConnect  {Osaka, Tokyo}                             NTT Communications - Flexible InterConnect
+    NAPAfrica                                   {Johannesburg, Cape Town}                  NAPAfrica
+    Vocusgroup NZ                               {Sydney, Auckland}                         Vocusgroup NZ
+    CMC NETWORKS                                {Johannesburg, Nairobi, cape Town}         CMC NETWORKS
+    MainOne                                     {Lisbon, Lagos}                            MainOne
+    Swisscom Switzerland Ltd                    {Geneva, Zurich}                           Swisscom Switzerland Ltd
+    DE-CIX                                      {Frankfurt, Marseille, Newark, Madrid…}    DE-CIX
+    Lumen Technologies                          {denver, los Angeles}                      Lumen Technologies
+    Colt Technology Services                    {Amsterdam, Barcelona, Berlin, Frankfurt…} Colt Technology Services
+    ```
+
+    Lists all peering service providers
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringServiceProvider.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringserviceprovider
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringServiceProvider.md
+  PlatyPS schema version: 2024-05-01

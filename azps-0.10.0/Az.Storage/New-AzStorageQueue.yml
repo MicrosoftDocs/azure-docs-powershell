@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageQueue
+name: New-AzStorageQueue
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates a storage queue.
+description: |-
+  The **New-AzStorageQueue** cmdlet creates a storage queue in Azure.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context.
+      You can create it by using the New-AzStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the queue.
+    aliases:
+    - N
+    - Queue
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageQueue
+        [-Name] <String>
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageQueue" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Azure storage queue'
+  description: |-
+    ```
+    PS C:\>New-AzStorageQueue -Name "queueabc"
+    ```
+
+    This example creates a storage queue named queueabc.
+- title: 'Example 2: Create multiple azure storage queues'
+  description: |-
+    ```
+    PS C:\>"queue1 queue2 queue3".split() | New-AzStorageQueue
+    ```
+
+    This example creates multiple storage queues.
+    It uses the Split method of the .NET String class and then passes the names on the pipeline.
+links:
+- text: Get-AzStorageQueue
+  href: ./Get-AzStorageQueue.yml
+- text: Remove-AzStorageQueue
+  href: ./Remove-AzStorageQueue.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageQueue.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.storage/new-azstoragequeue
+  Module Name: Az.Storage
+  ms.assetid: E9500392-6BE1-46EC-9AF5-9234281025E6
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/New-AzStorageQueue.md
+  PlatyPS schema version: 2024-05-01

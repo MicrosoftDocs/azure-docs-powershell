@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureSchedulerJobCollection
+name: Remove-AzureSchedulerJobCollection
+module: Azure
+isPreview: false
+summary: |-
+  Deletes a scheduler job collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Remove-AzureSchedulerJobCollection** cmdlet deletes a scheduler job collection and any jobs under that collection.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet removes the scheduler job collection without prompting you for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the scheduler job collection to delete.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureSchedulerJobCollection
+        [-Force]
+        [-Location <String>]
+        -JobCollectionName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Delete a job collection for a location'
+  description: |-
+    ```
+    PS C:\> Remove-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
+    ```
+
+    This command deletes the scheduler job collection named JobCollection01 in the North Central US location.
+    The command also deletes the jobs under JobCollection01.
+- title: 'Example 2: Delete a job location'
+  description: |-
+    ```
+    PS C:\> Remove-AzureSchedulerJobCollection -JobCollectionName "JobCollection02"
+    ```
+
+    This command deletes the scheduler job collection named JobCollection02.
+    The command also deletes the jobs under JobCollection02.
+links:
+- text: Get-AzureSchedulerJobCollection
+  href: ./Get-AzureSchedulerJobCollection.yml
+- text: New-AzureSchedulerJobCollection
+  href: ./New-AzureSchedulerJobCollection.yml
+- text: Set-AzureSchedulerJobCollection
+  href: ./Set-AzureSchedulerJobCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D4349562-1392-44B6-9353-6231F0CB5C51
+  PlatyPS schema version: 2024-05-01

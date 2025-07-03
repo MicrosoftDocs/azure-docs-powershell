@@ -1,0 +1,543 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.Update-AzWebPubSub
+name: Update-AzWebPubSub
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Operation to update an exiting resource.
+description: |-
+  Operation to update an exiting resource.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAadAuth
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      DisableLocalAuthEnable or disable aad authWhen set as true, connection with AuthType=aad won't work.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      DisableLocalAuthEnable or disable local auth with AccessKeyWhen set as true, connection with AccessKey=xxx won't work.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableTlsClientCert
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Request client certificate during TLS handshake if enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Support.ManagedIdentityType" data-throw-if-not-resolved="False" />
+    description: |-
+      Represents the identity type: systemAssigned, userAssigned, None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiveTraceCategory
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.ILiveTraceCategory" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of category configurations.
+      To construct, see NOTES section for LIVETRACECATEGORY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LiveTraceEnabled
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether or not enable live trace.When it's set to true, live trace client can connect to the service.Otherwise, live trace client can't connect to the service, so that you are unable to receive any log, no matter what you configure in "categories".Available values: true, false.Case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkAcLDefaultAction
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Support.AclAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Networking ACL Action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateEndpointAcl
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.IPrivateEndpointAcl" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      ACLs for requests from private endpoints
+      To construct, see NOTES section for PRIVATEENDPOINTACL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable public network access.
+      Default to "Enabled".When it's Enabled, network ACLs still apply.When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAllow
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Support.WebPubSubRequestType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Allowed request types.
+      The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkDeny
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Support.WebPubSubRequestType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Denied request types.
+      The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceLogCategory
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.IResourceLogCategory" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of category configurations.
+      To construct, see NOTES section for RESOURCELOGCATEGORY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional, integer.
+      The unit count of the resource.
+      1 by default.If present, following values are allowed: Free: 1; Standard: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100; Premium: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the SKU.
+      Required.Allowed values: Standard_S1, Free_F1, Premium_P1
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Support.WebPubSubSkuTier" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional tier of this particular SKU.
+      'Standard' or 'Free'.
+      `Basic` is deprecated, use `Standard` instead.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets subscription Id which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Tags of the service which is a list of key value pairs that describe the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Get or set the user assigned identities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzWebPubSub
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DisableAadAuth]
+        [-DisableLocalAuth]
+        [-EnableTlsClientCert]
+        [-IdentityType <ManagedIdentityType>]
+        [-LiveTraceCategory <ILiveTraceCategory[]>]
+        [-LiveTraceEnabled <String>]
+        [-NetworkAcLDefaultAction <AclAction>]
+        [-PrivateEndpointAcl <IPrivateEndpointAcl[]>]
+        [-PublicNetworkAccess <String>]
+        [-PublicNetworkAllow <WebPubSubRequestType[]>]
+        [-PublicNetworkDeny <WebPubSubRequestType[]>]
+        [-ResourceLogCategory <IResourceLogCategory[]>]
+        [-SkuCapacity <Int32>]
+        [-SkuName <String>]
+        [-SkuTier <WebPubSubSkuTier>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzWebPubSub
+        -InputObject <IWebPubSubIdentity>
+        [-DisableAadAuth]
+        [-DisableLocalAuth]
+        [-EnableTlsClientCert]
+        [-IdentityType <ManagedIdentityType>]
+        [-LiveTraceCategory <ILiveTraceCategory[]>]
+        [-LiveTraceEnabled <String>]
+        [-NetworkAcLDefaultAction <AclAction>]
+        [-PrivateEndpointAcl <IPrivateEndpointAcl[]>]
+        [-PublicNetworkAccess <String>]
+        [-PublicNetworkAllow <WebPubSubRequestType[]>]
+        [-PublicNetworkDeny <WebPubSubRequestType[]>]
+        [-ResourceLogCategory <IResourceLogCategory[]>]
+        [-SkuCapacity <Int32>]
+        [-SkuName <String>]
+        [-SkuTier <WebPubSubSkuTier>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.IWebPubSubResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a Web PubSub resource'
+  description: |-
+    ```powershell
+    $wps = Update-AzWebPubSub -ResourceGroupName psdemo -Name psdemo-wps `
+    -IdentityType SystemAssigned -LiveTraceEnabled true `
+    -LiveTraceCategory @{ Name='ConnectivityLogs' ; Enabled = 'true' }, @{ Name='MessageLogs' ; Enabled = 'true' }
+    ```
+
+    ```output
+    Name       Location SkuName
+    ----       -------- -------
+    psdemo-wps eastus   Standard_S1
+    ```
+- title: 'Example 2: Update a Web PubSub resource via identity'
+  description: |-
+    ```powershell
+    $identity = @{ ResourceGroupName = 'psdemo'
+    ResourceName = 'psdemo-wps'
+    SubscriptionId = $(Get-AzContext).Subscription.Id }
+    $identity | Update-AzWebPubSub -EnableTlsClientCert
+
+    $wps | Format-List
+    ```
+
+    ```output
+    DisableAadAuth               : False
+    DisableLocalAuth             : False
+    EnableTlsClientCert          : True
+    ExternalIP                   : 20.62.134.186
+    HostName                     : psdemo-wps.webpubsub.azure.com
+    ......
+    Version                      : 1.0
+    ```
+
+    The example constructs a hash table representing the identity of a Web PubSub resource, and then it pipes the identity object to the `Update` cmdlet.
+    At last it pipes the result of `Update` cmdlet to `Format-List` to see all the property values.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Update-AzWebPubSub.md
+  document type: cmdlet
+  external help file: Az.SignalR-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/update-azwebpubsub
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Update-AzWebPubSub.md
+  PlatyPS schema version: 2024-05-01

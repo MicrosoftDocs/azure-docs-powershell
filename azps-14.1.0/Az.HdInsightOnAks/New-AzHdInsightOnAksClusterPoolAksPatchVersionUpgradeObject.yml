@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject
+name: New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Create an in-memory object for ClusterPoolAksPatchVersionUpgradeProperties.
+description: |-
+  Create an in-memory object for ClusterPoolAksPatchVersionUpgradeProperties.
+parameters:
+  cmdletParameters:
+  - name: TargetAksVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target AKS version.
+      When it's not set, latest version will be used.
+      When upgradeClusterPool is true and upgradeAllClusterNodes is false, target version should be greater or equal to current version.
+      When upgradeClusterPool is false and upgradeAllClusterNodes is true, target version should be equal to AKS version of cluster pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeAllClusterNode
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      whether upgrade all clusters' nodes.
+      If it's true, upgradeClusterPool should be false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeClusterPool
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      whether upgrade cluster pool or not.
+      If it's true, upgradeAllClusterNodes should be false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject
+        [-TargetAksVersion <String>]
+        [-UpgradeAllClusterNode <Boolean>]
+        [-UpgradeClusterPool <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ClusterPoolAksPatchVersionUpgradeProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an object to hold the cluster pool upgrade parameters.'
+  description: |-
+    ```powershell
+    New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject -TargetAksVersion "1.27.9" -UpgradeClusterPool $true
+    ```
+
+    ```output
+    Property                                                                                                                                    UpgradeType
+    --------                                                                                                                                    -----------
+    {…                                                                                                                                          AKSPatchUpgrade
+    ```
+
+    Create an object to hold the flink cluster AKSPatchUpgrade parameters.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclusterpoolakspatchversionupgradeobject
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,258 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AppConfiguration.Test-AzAppConfigurationKeyValue
+name: Test-AzAppConfigurationKeyValue
+module: Az.AppConfiguration
+isPreview: false
+summary: |-
+  Requests the headers and status of the given resource.
+description: |-
+  Requests the headers and status of the given resource.
+parameters:
+  cmdletParameters:
+  - name: AcceptDatetime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Requests the server to respond with the state of the resource at the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The endpoint of the App Configuration instance to send requests to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to perform an operation only if the targeted resource's etag matches the value provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfNoneMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to perform an operation only if the targeted resource's etag does not match the value provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppConfigurationdata.Models.IAppConfigurationdataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CheckViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The key of the key-value to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Check
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The label of the key-value to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Used to select what fields are present in the returned resource(s).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to guarantee real-time consistency between requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzAppConfigurationKeyValue
+        -Endpoint <String>
+        -Key <String>
+        [-Label <String>]
+        [-Select <System.Collections.Generic.List`1[System.String]>]
+        [-AcceptDatetime <String>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-SyncToken <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Check
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzAppConfigurationKeyValue
+        -Endpoint <String>
+        -InputObject <IAppConfigurationdataIdentity>
+        [-Label <String>]
+        [-Select <System.Collections.Generic.List`1[System.String]>]
+        [-AcceptDatetime <String>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-SyncToken <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CheckViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppConfigurationdata.Models.IAppConfigurationdataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test a key-value in an App Configuration store'
+  description: |-
+    ```powershell
+    Test-AzAppConfigurationKeyValue -Endpoint $endpoint -Key keyName1
+    ```
+
+    Test a key-value in an App Configuration store
+- title: 'Example 2: Test a key-value in an App Configuration store with wildcard'
+  description: |-
+    ```powershell
+    Test-AzAppConfigurationKeyValue -Endpoint $endpoint -Key keyName*
+    ```
+
+    Test a key-value in an App Configuration store with wildcard
+- title: 'Example 3: Test a key-value in an App Configuration store'
+  description: |-
+    ```powershell
+    Test-AzAppConfigurationKeyValue -Endpoint $endpoint -Key keyName5
+    ```
+
+    ```output
+    Test-AzAppConfigurationKeyValue_Check: The server responded with a Request Error, Status: NotFound
+    ```
+
+    If the key-value does not exist, the cmdlet will throw an error.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Test-AzAppConfigurationKeyValue.md
+  document type: cmdlet
+  external help file: Az.AppConfiguration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.appconfiguration/test-azappconfigurationkeyvalue
+  Module Name: Az.AppConfiguration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Test-AzAppConfigurationKeyValue.md
+  PlatyPS schema version: 2024-05-01

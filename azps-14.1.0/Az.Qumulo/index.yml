@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.Qumulo
+name: Az.Qumulo Module
+isPreview: false
+cmdletGroups:
+- title: Qumulo
+  cmdlets:
+  - Az.Qumulo.Get-AzQumuloFileSystem
+  - Az.Qumulo.New-AzQumuloFileSystem
+  - Az.Qumulo.Remove-AzQumuloFileSystem
+  - Az.Qumulo.Update-AzQumuloFileSystem
+description: |-
+  Microsoft Azure PowerShell: Qumulo cmdlets
+metadata:
+  Module Name: Az.Qumulo
+  Module Guid: 181af76f-3704-40ce-9fa9-c5826313916c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.qumulo
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Qumulo/Qumulo/help/Az.Qumulo.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Qumulo/Qumulo/help/Az.Qumulo.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

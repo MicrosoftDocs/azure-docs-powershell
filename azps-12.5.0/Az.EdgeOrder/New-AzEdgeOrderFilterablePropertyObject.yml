@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EdgeOrder.New-AzEdgeOrderFilterablePropertyObject
+name: New-AzEdgeOrderFilterablePropertyObject
+module: Az.EdgeOrder
+isPreview: false
+summary: |-
+  Create an in-memory object for FilterableProperty.
+description: |-
+  Create an in-memory object for FilterableProperty.
+parameters:
+  cmdletParameters:
+  - name: SupportedValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Values to be filtered.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Support.SupportedFilterTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of product filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEdgeOrderFilterablePropertyObject
+        -SupportedValue <String[]>
+        -Type <SupportedFilterTypes>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EdgeOrder.Models.Api20211201.FilterableProperty" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Filterable property object'
+  description: |-
+    ```powershell
+    $filterableProperty = New-AzEdgeOrderFilterablePropertyObject -Type "ShipToCountries" -SupportedValue @("US")
+    $filterableProperty | Format-List
+    ```
+
+    ```output
+    SupportedValue : {US}
+    Type           : ShipToCountries
+    ```
+
+    ShipToCountries is mandatory filterable type, SupportedValue can be list of 2 letter valid ISO country codes.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderFilterablePropertyObject.md
+  document type: cmdlet
+  external help file: Az.EdgeOrder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EdgeOrder/new-AzEdgeOrderFilterablePropertyObject
+  Module Name: Az.EdgeOrder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EdgeOrder/EdgeOrder/help/New-AzEdgeOrderFilterablePropertyObject.md
+  PlatyPS schema version: 2024-05-01

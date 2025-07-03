@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Az.DataBox
+name: Az.DataBox Module
+isPreview: false
+cmdletGroups:
+- title: DataBox
+  cmdlets:
+  - Az.DataBox.Get-AzDataBoxJob
+  - Az.DataBox.Get-AzDataBoxJobCredential
+  - Az.DataBox.New-AzDataBoxContactDetailsObject
+  - Az.DataBox.New-AzDataBoxCustomerDiskJobDetailsObject
+  - Az.DataBox.New-AzDataBoxDiskJobDetailsObject
+  - Az.DataBox.New-AzDataBoxHeavyJobDetailsObject
+  - Az.DataBox.New-AzDataBoxJob
+  - Az.DataBox.New-AzDataBoxJobDetailsObject
+  - Az.DataBox.New-AzDataBoxKeyEncryptionKeyObject
+  - Az.DataBox.New-AzDataBoxManagedDiskDetailsObject
+  - Az.DataBox.New-AzDataBoxShippingAddressObject
+  - Az.DataBox.New-AzDataBoxStorageAccountDetailsObject
+  - Az.DataBox.New-AzDataBoxTransferConfigurationObject
+  - Az.DataBox.Remove-AzDataBoxJob
+  - Az.DataBox.Stop-AzDataBoxJob
+  - Az.DataBox.Update-AzDataBoxJob
+description: |-
+  Microsoft Azure PowerShell: DataBox cmdlets
+metadata:
+  Module Name: Az.DataBox
+  Module Guid: 9602a6b3-8b77-4f08-a6ed-edefff13e149
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.databox
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Az.DataBox.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/Az.DataBox.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

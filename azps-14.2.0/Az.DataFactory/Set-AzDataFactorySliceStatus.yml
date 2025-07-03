@@ -1,0 +1,256 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Set-AzDataFactorySliceStatus
+name: Set-AzDataFactorySliceStatus
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Sets the status of slices for a dataset in Azure Data Factory.
+description: |-
+  The **Set-AzDataFactorySliceStatus** cmdlet sets the status of slices for a dataset in Azure Data Factory.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: DataFactory
+    type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSDataFactory** object.
+      This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a data factory.
+      This cmdlet modifies the status of slices that belong to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatasetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the dataset for which this cmdlet modifies slices.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end of a time period as a **DateTime** object.
+      This time is the end of a data slice.
+      For more information about **DateTime** objects, type `Get-Help Get-Date`.
+      *EndDateTime* must be specified in the ISO8601 format as in the following examples:
+      2015-01-01Z
+      2015-01-01T00:00:00Z
+      2015-01-01T00:00:00.000Z (UTC)
+      2015-01-01T00:00:00-08:00 (Pacific Standard Time)
+      The default time zone designator is UTC.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure resource group.
+      This cmdlet modifies the status of slices that belong to the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start of a time period as a **DateTime** object.
+      This time is the beginning of a data slice.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a status to assign to the data slice.
+      The acceptable values for this parameter are:
+      - Waiting.
+      Data slice is waiting for validation against validation policies before being processed.
+      - Ready.
+      Data processing has completed and the data slice is ready.
+      - InProgress.
+      Data processing is in-progress.
+      - Failed.
+      Data processing failed.
+      - Skipped.
+      Skipped processing the data slice.
+    acceptedValues:
+    - Failed
+    - InProgress
+    - Ready
+    - Skipped
+    - Waiting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpdateType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of update to the slice.
+      The acceptable values for this parameter are:
+      - Individual.
+      Sets the status of each slice for the dataset in the specified time range.
+      - UpstreamInPipeline.
+      Sets the status of each slice for the dataset and all the dependent datasets, which are used as input datasets for activities in the pipeline.
+    acceptedValues:
+    - Individual
+    - UpstreamInPipeline
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactorySliceStatus
+        [[-EndDateTime] <DateTime>]
+        [-Status] <String>
+        [[-UpdateType] <String>]
+        [-DataFactoryName] <String>
+        [-DatasetName] <String>
+        [-StartDateTime] <DateTime>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactorySliceStatus
+        [[-EndDateTime] <DateTime>]
+        [-Status] <String>
+        [[-UpdateType] <String>]
+        [-DataFactory] <PSDataFactory>
+        [-DatasetName] <String>
+        [-StartDateTime] <DateTime>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the status of all slices'
+  description: |-
+    ```powershell
+    Set-AzDataFactorySliceStatus -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -DatasetName "DAWikiAggregatedData" -StartDateTime 2014-05-21T16:00:00Z -EndDateTime 2014-05-21T20:00:00Z -Status "Waiting" -UpdateType "UpstreamInPipeline"
+    ```
+
+    ```output
+    True
+    ```
+
+    This command sets the status of all slices for the dataset named DAWikiAggregatedData to Waiting in the data factory named WikiADF.
+    The *UpdateType* parameter has a value of UpstreamInPipeline, and so the command sets the status of each slice for the dataset and all dependent datasets.
+    Dependent datasets are used as input datasets for activities in the pipeline.
+    This command returns a value of $True.
+links:
+- text: Get-AzDataFactorySlice
+  href: ./Get-AzDataFactorySlice.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Set-AzDataFactorySliceStatus.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV1.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryslicestatus
+  Module Name: Az.DataFactory
+  ms.assetid: 1D07222C-17D1-421C-8C9B-37043CBCF517
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Set-AzDataFactorySliceStatus.md
+  PlatyPS schema version: 2024-05-01

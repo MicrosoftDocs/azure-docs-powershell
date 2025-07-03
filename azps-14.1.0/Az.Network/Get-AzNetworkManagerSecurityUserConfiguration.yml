@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerSecurityUserConfiguration
+name: Get-AzNetworkManagerSecurityUserConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a network security user configuration in a network manager.
+description: |-
+  The **Get-AzNetworkManagerSecurityUserConfiguration** cmdlet gets a security user configuration in a network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkManager SecurityUserConfiguration Id
+    aliases:
+    - SecurityUserConfigurationId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserConfiguration
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByList
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserConfiguration
+        -Name <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserConfiguration
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityUserConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserConfiguration  -Name "TestSecConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name               : TestSecConfig
+    Description        : Description
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig
+    Type               : Microsoft.Network/networkManagers/securityUserConfigurations
+    Etag               : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState  : Succeeded
+    SystemData         : {
+                           "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                           "CreatedByType": "Application",
+                           "CreatedAt": "2021-10-18T04:05:57",
+                           "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                           "LastModifiedByType": "Application",
+                           "LastModifiedAt": "2021-10-18T04:05:59"
+                         }
+    ```
+
+    Get a security user configuration.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserConfiguration -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name               : TestSecConfig
+    Description        : Description
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig
+    Type               : Microsoft.Network/networkManagers/securityUserConfigurations
+    Etag               : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState  : Succeeded
+    SystemData         : {
+                           "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                           "CreatedByType": "Application",
+                           "CreatedAt": "2021-10-18T04:05:57",
+                           "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                           "LastModifiedByType": "Application",
+                           "LastModifiedAt": "2021-10-18T04:05:59"
+                         }
+
+                         Name               : TestSecConfig2
+    Description        : Description
+    Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig2
+    Type               : Microsoft.Network/networkManagers/securityUserConfigurations
+    Etag               : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState  : Succeeded
+    SystemData         : {
+                           "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                           "CreatedByType": "Application",
+                           "CreatedAt": "2021-10-18T04:05:57",
+                           "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                           "LastModifiedByType": "Application",
+                           "LastModifiedAt": "2021-10-18T04:05:59"
+                         }
+    ```
+
+    Gets all security user configurations on a network manager.
+links:
+- text: New-AzNetworkManagerSecurityUserConfiguration
+  href: ./New-AzNetworkManagerSecurityUserConfiguration.yml
+- text: Remove-AzNetworkManagerSecurityUserConfiguration
+  href: ./Remove-AzNetworkManagerSecurityUserConfiguration.yml
+- text: Set-AzNetworkManagerSecurityUserConfiguration
+  href: ./Set-AzNetworkManagerSecurityUserConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagersecurityuserconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserConfiguration.md
+  PlatyPS schema version: 2024-05-01

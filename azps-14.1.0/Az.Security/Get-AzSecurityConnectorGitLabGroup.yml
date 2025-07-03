@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecurityConnectorGitLabGroup
+name: Get-AzSecurityConnectorGitLabGroup
+module: Az.Security
+isPreview: false
+summary: |-
+  Returns a monitored GitLab Group resource for a given fully-qualified name.
+description: |-
+  Returns a monitored GitLab Group resource for a given fully-qualified name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupFqName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GitLab group fully-qualified name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityConnectorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The security connector name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure subscription ID
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnectorGitLabGroup
+        -ResourceGroupName <String>
+        -SecurityConnectorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnectorGitLabGroup
+        -GroupFqName <String>
+        -ResourceGroupName <String>
+        -SecurityConnectorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnectorGitLabGroup
+        -InputObject <ISecurityIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IGitLabGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get discovered GitLab group by name'
+  description: |-
+    ```powershell
+    Get-AzSecurityConnectorGitLabGroup -ResourceGroupName dfdtest-sdk -SecurityConnectorName dfdsdktests-gl-01 -GroupFqName dfdsdktests
+    ```
+
+    ```output
+    FullyQualifiedFriendlyName      : Defender for DevOps SDK Tests
+    FullyQualifiedName              : dfdsdktests
+    Id                              : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourceGroups/dfdtest-sdk/providers/Microsoft.Security/securityConnectors/dfdsdktests-gl-01/devops/default/gitLabGroups/dfdsdktests
+    Name                            : dfdsdktests
+    OnboardingState                 : Onboarded
+    ProvisioningState               : Succeeded
+    ProvisioningStatusMessage       : Resource modification successful.
+    ProvisioningStatusUpdateTimeUtc : 2/23/2024 10:42:28 PM
+    ResourceGroupName               : dfdtest-sdk
+    SystemDataCreatedAt             :
+    SystemDataCreatedBy             :
+    SystemDataCreatedByType         :
+    SystemDataLastModifiedAt        :
+    SystemDataLastModifiedBy        :
+    SystemDataLastModifiedByType    :
+    Type                            : Microsoft.Security/securityConnectors/devops/gitLabGroups
+    Url                             : https://gitlab.com/groups/dfdsdktests
+    ```
+- title: 'Example 2: List discovered GitLab groups'
+  description: |-
+    ```powershell
+    Get-AzSecurityConnectorGitLabGroup -ResourceGroupName dfdtest-sdk -SecurityConnectorName dfdsdktests-gl-01
+    ```
+
+    ```output
+    Name              ResourceGroupName
+    ----              -----------------
+    dfdsdktests       dfdtest-sdk
+    dfdsdktests2      dfdtest-sdk
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityConnectorGitLabGroup.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/get-azsecurityconnectorgitlabgroup
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityConnectorGitLabGroup.md
+  PlatyPS schema version: 2024-05-01

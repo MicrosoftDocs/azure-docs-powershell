@@ -1,0 +1,305 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Reservations.Invoke-AzReservationReturn
+name: Invoke-AzReservationReturn
+module: Az.Reservations
+isPreview: false
+summary: |-
+  Return a Reservation.
+description: |-
+  Return a Reservation.
+parameters:
+  cmdletParameters:
+  - name: Body
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IRefundRequest" data-throw-if-not-resolved="False" />
+    description: |-
+      The return request body.
+      To construct, see NOTES section for BODY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Post
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservationOrderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reservation Order Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Post
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservationToReturnQuantity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Quantity to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservationToReturnReservationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reservation Id to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReturnReason
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The reason for this reservation return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of this return, e.g.
+      Reservation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The session id obtained from Invoke-AzReservationCalculateRefund..
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzReservationReturn
+        -ReservationOrderId <String>
+        -ReservationToReturnReservationId <String>
+        -ReservationToReturnQuantity <Int32>
+        -SessionId <String>
+        -Scope <String>
+        -ReturnReason <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzReservationReturn
+        -InputObject <IReservationsIdentity>
+        -Body <IRefundRequest>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzReservationReturn
+        -InputObject <IReservationsIdentity>
+        -ReservationToReturnReservationId <String>
+        -ReservationToReturnQuantity <Int32>
+        -SessionId <String>
+        -Scope <String>
+        -ReturnReason <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzReservationReturn
+        -ReservationOrderId <String>
+        -Body <IRefundRequest>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Post
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IReservationOrderResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Return a reservation using the session ID obtained from calculateRefund command.'
+  description: |-
+    ```powershell
+    $orderId = "50000000-aaaa-bbbb-cccc-100000000003"
+    $fullyQualifiedId = "/providers/microsoft.capacity/reservationOrders/50000000-aaaa-bbbb-cccc-100000000003/reservations/30000000-aaaa-bbbb-cccc-100000000003"
+    $fullyQualifiedOrderId = "/providers/microsoft.capacity/reservationOrders/50000000-aaaa-bbbb-cccc-100000000003"
+
+    Invoke-AzReservationCalculateRefund -ReservationOrderId $orderId -ReservationToReturnQuantity 1 -ReservationToReturnReservationId $fullyQualifiedId  -Id $fullyQualifiedOrderId -Scope "Reservation"
+    ```
+
+    ```output
+    ReservationOrderId                   DisplayName            Term State     Quantity Reservations
+    ------------------                   -----------            ---- -----     -------- ------------
+    179ef21b-90ec-4fe4-9423-f794b856dfee VM_RI_08-20-2021_15-47 P3Y  Succeeded 1        {{…
+    ```
+
+    Proceed reservations return with session ID obtained from Invoke-AzReservationCalculateRefund.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Invoke-AzReservationReturn.md
+  document type: cmdlet
+  external help file: Az.Reservations-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.reservations/invoke-azreservationreturn
+  Module Name: Az.Reservations
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Invoke-AzReservationReturn.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Get-AzDataLakeStoreFirewallRule
+name: Get-AzDataLakeStoreFirewallRule
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Gets the specified firewall rules in the specified Data Lake Store.
+  If no firewall rule is specified, then lists all firewall rules for the account.
+description: |-
+  The Get-AzDataLakeStoreFirewallRule cmdlet gets the specified firewall rules in the specified Data Lake Store.
+  If no firewall rule is specified, then lists all firewall rules for the account.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Data Lake Store account to retrieve the firewall rule from.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the firewall rule to retrieve
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of resource group under which want to retrieve the specified account's specified firewall rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeStoreFirewallRule
+        [-Account] <String>
+        [[-Name] <String>]
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreFirewallRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Retrieve a specific firewall rule'
+  description: |-
+    ```powershell
+    Get-AzDataLakeStoreFirewallRule -AccountName "ContosoADL" -Name MyFirewallRule
+    ```
+
+    Returns the firewall rule named "MyFirewallRule" from account "ContosoADL"
+- title: 'Example 2: List all firewall rules in an account'
+  description: |-
+    ```powershell
+    Get-AzDataLakeStoreFirewallRule -AccountName "ContosoADL"
+    ```
+
+    Returns all firewall rules in account "ContosoADL"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreFirewallRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/get-azdatalakestorefirewallrule
+  Module Name: Az.DataLakeStore
+  ms.assetid: 7D27F7B1-BAF8-4A01-8BA7-A75A4CFAE370
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreFirewallRule.md
+  PlatyPS schema version: 2024-05-01

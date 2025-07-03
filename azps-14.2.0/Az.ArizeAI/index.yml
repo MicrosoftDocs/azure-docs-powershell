@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.ArizeAI
+name: Az.ArizeAI Module
+isPreview: false
+cmdletGroups:
+- title: ArizeAI
+  cmdlets:
+  - Az.ArizeAI.Get-AzArizeAIOrganization
+  - Az.ArizeAI.New-AzArizeAIOrganization
+  - Az.ArizeAI.Remove-AzArizeAIOrganization
+  - Az.ArizeAI.Update-AzArizeAIOrganization
+description: |-
+  Microsoft Azure PowerShell: ArizeAI cmdlets
+metadata:
+  Module Name: Az.ArizeAI
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.arizeai
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArizeAI/ArizeAI/help/Az.ArizeAI.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArizeAI/ArizeAI/help/Az.ArizeAI.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

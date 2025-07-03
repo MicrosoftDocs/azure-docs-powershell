@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BillingBenefits.Invoke-AzBillingBenefitsElevateSavingPlanOrder
+name: Invoke-AzBillingBenefitsElevateSavingPlanOrder
+module: Az.BillingBenefits
+isPreview: false
+summary: |-
+  Elevate as owner on savings plan order based on billing permissions.
+description: |-
+  Elevate as owner on savings plan order based on billing permissions.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ElevateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SavingsPlanOrderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Order ID of the savings plan
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Elevate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzBillingBenefitsElevateSavingPlanOrder
+        -SavingsPlanOrderId <String>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Elevate
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzBillingBenefitsElevateSavingPlanOrder
+        -InputObject <IBillingBenefitsIdentity>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ElevateViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IRoleAssignmentEntity" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Elevate savings plan order'
+  description: |-
+    ```powershell
+    Invoke-AzBillingBenefitsElevateSavingPlanOrder -SavingsPlanOrderId "e0b1f446-5684-4fa6-a0c8-d394368eda11"
+    ```
+
+    ```output
+    Name                                 PrincipalId                          RoleDefinitionId                                                                        Scope
+    ----                                 -----------                          ----------------                                                                        -----
+    5c545baf-2ef5-4016-9c31-6e0e23c397a0 067e7443-3a55-40b6-a2d8-0a7a12a9da2d /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635 /providers/Microsoft.BillingBenefits/savingsplanorders/e45905d2-9207-4f24-8549-f615c203b49b
+    ```
+
+    Elevate savings plan order
+- title: 'Example 2: Elevate savings plan order via identity'
+  description: |-
+    ```powershell
+    $identity = @{
+                SavingsPlanOrderId = "e45905d2-9207-4f24-8549-f615c203b49b"
+    }
+    $response = Invoke-AzBillingBenefitsElevateSavingPlanOrder -InputObject $identity
+    ```
+
+    ```output
+    Name                                 PrincipalId                          RoleDefinitionId                                                                        Scope
+    ----                                 -----------                          ----------------                                                                        -----
+    5c545baf-2ef5-4016-9c31-6e0e23c397a0 067e7443-3a55-40b6-a2d8-0a7a12a9da2d /providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635 /providers/Microsoft.BillingBenefits/savingsplanorders/e45905d2-9207-4f24-8549-f615c203b49b
+    ```
+
+    Elevate savings plan order
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Invoke-AzBillingBenefitsElevateSavingPlanOrder.md
+  document type: cmdlet
+  external help file: Az.BillingBenefits-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billingbenefits/invoke-azbillingbenefitselevatesavingplanorder
+  Module Name: Az.BillingBenefits
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Invoke-AzBillingBenefitsElevateSavingPlanOrder.md
+  PlatyPS schema version: 2024-05-01

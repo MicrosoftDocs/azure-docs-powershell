@@ -1,0 +1,196 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementNetworkStatus
+name: Get-AzApiManagementNetworkStatus
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets the Connectivity Status to the external resources on which the Api Management service depends from inside the Cloud Service. This also returns the DNS Servers as visible to the CloudService.
+description: |-
+  Gets the Network status of their Api Management service
+parameters:
+  cmdletParameters:
+  - name: ApiManagementObject
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagement. This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the API Management Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of API Management.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of resource group under which API Management exists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExpandedParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNetworkStatus
+        -ApiManagementObject <PsApiManagement>
+        [-Location <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementNetworkStatus
+        -ResourceGroupName <String>
+        -Name <String>
+        [-Location <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExpandedParameter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementNetworkStatus" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    Get-AzApiManagementNetworkStatus -ResourceGroupName powershelltest -Name powershellsdkservice
+
+    Location DnsServers      ConnectivityStatus
+    -------- ----------      ------------------
+    West US  {168.63.129.16} {apimgmtstaoonqs7wwzjosky.blob.core.windows.net, apimgmtstaoonqs7wwzjosky.file.core.windows.net, apimgmtstaoonqs7wwzjosky.queue.core.windows.net, apimgmtstaoonqs7wwzjosk...
+
+
+    $networkStatus = Get-AzApiManagementNetworkStatus -ResourceGroupName powershelltest -Name powershellsdkservice
+    $networkStatus.ConnectivityStatus
+
+
+    Name             : apimgmtstaoonqs7wwzjosky.blob.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.file.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.queue.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : apimgmtstaoonqs7wwzjosky.table.core.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : bx9gltecfv.database.windows.net
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:41 PM
+    LastStatusChange : 1/30/2019 5:31:39 PM
+
+    Name             : https://prod3.metrics.nsatc.net:1886/RecoveryService
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:07:11 PM
+    LastStatusChange : 4/29/2019 1:31:30 PM
+
+    Name             : prod.warmpath.msftcloudes.com
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:06:38 PM
+    LastStatusChange : 1/30/2019 5:31:38 PM
+
+    Name             : Scm
+    Status           : success
+    Error            :
+    LastUpdated      : 5/2/2019 5:04:27 PM
+    LastStatusChange : 4/30/2019 11:16:20 PM
+    ```
+
+    Gets the connectivity status of the different resources on which ApiManagement service depends upon.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNetworkStatus.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementnetworkstatus
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementNetworkStatus.md
+  PlatyPS schema version: 2024-05-01

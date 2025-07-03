@@ -1,0 +1,59 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KubernetesRuntime.New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject
+name: New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject
+module: Az.KubernetesRuntime
+isPreview: false
+summary: |-
+  Create an in-memory object for RwxStorageClassTypeProperties.
+description: |-
+  Create an in-memory object for RwxStorageClassTypeProperties.
+parameters:
+  cmdletParameters:
+  - name: BackingStorageClassName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The backing storageclass used to create new storageclass.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject
+        -BackingStorageClassName <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.RwxStorageClassTypeProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a RwxStorageClassTypeProperties object'
+  description: |-
+    ```powershell
+    $typeProperties = New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject `
+        -BackingStorageClassName "default"
+    ```
+
+    Create a `RwxStorageClassTypeProperties` object and set `default` storage class as its backing storage class.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject.md
+  document type: cmdlet
+  external help file: Az.KubernetesRuntime-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.KubernetesRuntime/new-azkubernetesruntimerwxstorageclasstypepropertiesobject
+  Module Name: Az.KubernetesRuntime
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/New-AzKubernetesRuntimeRwxStorageClassTypePropertiesObject.md
+  PlatyPS schema version: 2024-05-01

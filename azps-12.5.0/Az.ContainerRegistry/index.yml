@@ -1,0 +1,69 @@
+### YamlMime:PowerShellModule1
+uid: Az.ContainerRegistry
+name: Az.ContainerRegistry Module
+isPreview: false
+cmdletGroups:
+- title: Container Registry
+  cmdlets:
+  - Az.ContainerRegistry.Connect-AzContainerRegistry
+  - Az.ContainerRegistry.Get-AzContainerRegistry
+  - Az.ContainerRegistry.Get-AzContainerRegistryAgentPool
+  - Az.ContainerRegistry.Get-AzContainerRegistryAgentPoolQueueStatus
+  - Az.ContainerRegistry.Get-AzContainerRegistryCredential
+  - Az.ContainerRegistry.Get-AzContainerRegistryExportPipeline
+  - Az.ContainerRegistry.Get-AzContainerRegistryImportPipeline
+  - Az.ContainerRegistry.Get-AzContainerRegistryManifest
+  - Az.ContainerRegistry.Get-AzContainerRegistryReplication
+  - Az.ContainerRegistry.Get-AzContainerRegistryRepository
+  - Az.ContainerRegistry.Get-AzContainerRegistryScopeMap
+  - Az.ContainerRegistry.Get-AzContainerRegistryTag
+  - Az.ContainerRegistry.Get-AzContainerRegistryToken
+  - Az.ContainerRegistry.Get-AzContainerRegistryUsage
+  - Az.ContainerRegistry.Get-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Get-AzContainerRegistryWebhookCallbackConfig
+  - Az.ContainerRegistry.Get-AzContainerRegistryWebhookEvent
+  - Az.ContainerRegistry.Import-AzContainerRegistryImage
+  - Az.ContainerRegistry.New-AzContainerRegistry
+  - Az.ContainerRegistry.New-AzContainerRegistryAgentPool
+  - Az.ContainerRegistry.New-AzContainerRegistryCredentials
+  - Az.ContainerRegistry.New-AzContainerRegistryExportPipeline
+  - Az.ContainerRegistry.New-AzContainerRegistryImportPipeline
+  - Az.ContainerRegistry.New-AzContainerRegistryIPRuleObject
+  - Az.ContainerRegistry.New-AzContainerRegistryReplication
+  - Az.ContainerRegistry.New-AzContainerRegistryScopeMap
+  - Az.ContainerRegistry.New-AzContainerRegistryToken
+  - Az.ContainerRegistry.New-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Remove-AzContainerRegistry
+  - Az.ContainerRegistry.Remove-AzContainerRegistryAgentPool
+  - Az.ContainerRegistry.Remove-AzContainerRegistryExportPipeline
+  - Az.ContainerRegistry.Remove-AzContainerRegistryImportPipeline
+  - Az.ContainerRegistry.Remove-AzContainerRegistryManifest
+  - Az.ContainerRegistry.Remove-AzContainerRegistryReplication
+  - Az.ContainerRegistry.Remove-AzContainerRegistryRepository
+  - Az.ContainerRegistry.Remove-AzContainerRegistryScopeMap
+  - Az.ContainerRegistry.Remove-AzContainerRegistryTag
+  - Az.ContainerRegistry.Remove-AzContainerRegistryToken
+  - Az.ContainerRegistry.Remove-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Test-AzContainerRegistryNameAvailability
+  - Az.ContainerRegistry.Test-AzContainerRegistryWebhook
+  - Az.ContainerRegistry.Update-AzContainerRegistry
+  - Az.ContainerRegistry.Update-AzContainerRegistryAgentPool
+  - Az.ContainerRegistry.Update-AzContainerRegistryCredential
+  - Az.ContainerRegistry.Update-AzContainerRegistryManifest
+  - Az.ContainerRegistry.Update-AzContainerRegistryRepository
+  - Az.ContainerRegistry.Update-AzContainerRegistryScopeMap
+  - Az.ContainerRegistry.Update-AzContainerRegistryTag
+  - Az.ContainerRegistry.Update-AzContainerRegistryToken
+  - Az.ContainerRegistry.Update-AzContainerRegistryWebhook
+description: |-
+  This topic displays help topics for the Azure Container Registry Management Cmdlets.
+metadata:
+  Module Name: Az.ContainerRegistry
+  Module Guid: b3ca459c-feb9-41cc-a954-46222505acb3
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.containerregistry
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Az.ContainerRegistry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Az.ContainerRegistry.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkVirtualApplianceSku
+name: Get-AzNetworkVirtualApplianceSku
+module: Az.Network
+isPreview: false
+summary: |-
+  Get or List available Network Virtual Appliance Skus in the inventory.
+description: |-
+  The Get-AzNetworkVirtualApplianceSku gets or lists available Network Virtual Appliance Skus in the Microsoft Azure inventory.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Sku name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkVirtualApplianceSku
+        [-SkuName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSku" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkVirtualApplianceSku -SkuName barracudasdwanrelease
+    ```
+
+    ```output
+    Vendor              : barracudasdwanrelease
+    AvailableVersions   : {8.1.0038301, latest}
+    AvailableScaleUnits : {Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances, Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances}
+    Name                : barracudasdwanrelease
+    Etag                : 00000000-0000-0000-0000-000000000000
+    Id                  :
+    ```
+
+    Get a sku by name.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkVirtualApplianceSku
+    ```
+
+    ```output
+    Vendor              : barracuda sdwan nightly
+    AvailableVersions   : {latest}
+    AvailableScaleUnits : {Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances}
+    Name                : barracuda sdwan nightly
+    Etag                : 00000000-0000-0000-0000-000000000000
+    Id                  :
+
+    Vendor              : barracuda sdwan
+    AvailableVersions   : {latest}
+    AvailableScaleUnits : {Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances}
+    Name                : barracuda sdwan
+    Etag                : 00000000-0000-0000-0000-000000000000
+    Id                  :
+
+    Vendor              : barracudasdwanrelease
+    AvailableVersions   : {8.1.0038301, latest}
+    AvailableScaleUnits : {Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances, Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceSkuInstances}
+    Name                : barracudasdwanrelease
+    Etag                : 00000000-0000-0000-0000-000000000000
+    Id                  :
+    ```
+
+    List all available Skus of Network Virtual Appliance.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkVirtualApplianceSku.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkvirtualappliancesku
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkVirtualApplianceSku.md
+  PlatyPS schema version: 2024-05-01

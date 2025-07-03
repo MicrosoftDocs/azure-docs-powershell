@@ -1,0 +1,469 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageFileContent
+name: Get-AzStorageFileContent
+module: Az.Storage
+isPreview: false
+summary: |-
+  Downloads the contents of a file.
+description: |-
+  The **Get-AzStorageFileContent** cmdlet downloads the contents of a file, and then saves it to a destination that you specify.
+  This cmdlet does not return the contents of the file.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CheckMd5
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to check the Md5 sum for the downloaded file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request. If the previous call fails in the specified interval, this cmdlet retries the request. If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    aliases:
+    - ClientTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum concurrent network calls. You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls. The specified value is an absolute count and is not multiplied by the core count. This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second. The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure Storage context. To obtain a context, use the New-AzStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the destination path.
+      This cmdlet downloads the file contents to the location that this parameter specifies.
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisAllowTrailingDot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disallow trailing dot (.) to suffix directory and file names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns the **AzureStorageFile** object that it downloads.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a file.
+      This cmdlet gets the contents the file that this parameter specifies.
+      If the file does not exist, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Share
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Directory
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreserveSMBAttribute
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Keep the source File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in destination File. This parameter is only available on Windows.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the service side time-out interval, in seconds, for a request. If the specified interval elapses before the service processes the request, the storage service returns an error.
+    aliases:
+    - ServerTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareClient object indicated the share where the file would be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareDirectoryClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareDirectoryClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareDirectoryClient object indicated the cloud directory where the file would be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareFileClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareFileClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareFileClient object indicated the cloud file to be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet downloads the contents of the file in the share this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileContent
+        [-ShareName] <String>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-DisAllowTrailingDot]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileContent
+        [-ShareClient] <ShareClient>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Share
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileContent
+        [-ShareDirectoryClient] <ShareDirectoryClient>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Directory
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileContent
+        [-ShareFileClient] <ShareFileClient>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: false
+inputs:
+- name: <xref href="Azure.Storage.Files.Shares.ShareClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure.Storage.Files.Shares.ShareDirectoryClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure.Storage.Files.Shares.ShareFileClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageFile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Download a file from a folder'
+  description: |-
+    ```powershell
+    Get-AzStorageFileContent -ShareName "ContosoShare06" -Path "ContosoWorkingFolder/CurrentDataFile"
+    ```
+
+    This command downloads a file that is named CurrentDataFile in the folder ContosoWorkingFolder from the file share ContosoShare06 to current folder.
+- title: 'Example 2: Downloads the files under sample file share'
+  description: |-
+    ```powershell
+    Get-AzStorageFile -ShareName sample | Where-Object {$_.GetType().Name -eq "AzureStorageFile"} | Get-AzStorageFileContent
+    ```
+
+    This example downloads the files under sample file share
+- title: 'Example 3: Download an Azure file to a local file, and perserve the Azure File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the local file.'
+  description: |-
+    ```powershell
+    Get-AzStorageFileContent -ShareName sample -Path "dir1/file1" -Destination $localFilePath -PreserveSMBAttribute
+    ```
+
+    This example downloads an Azure file to a local file, and perserves the Azure File SMB properties (File Attributtes, File Creation Time, File Last Write Time) in the local file.
+links:
+- text: Get-AzStorageFile
+  href: ./Get-AzStorageFile.yml
+- text: Set-AzStorageFileContent
+  href: ./Set-AzStorageFileContent.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragefilecontent
+  Module Name: Az.Storage
+  ms.assetid: 6420CBE1-BF9D-493D-BCA8-E8C6688FAF3B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileContent.md
+  PlatyPS schema version: 2024-05-01

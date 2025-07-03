@@ -1,0 +1,181 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzExpressRouteCrossConnectionPeering
+name: Remove-AzExpressRouteCrossConnectionPeering
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes an ExpressRoute cross connection peering configuration.
+description: |-
+  The **Remove-AzExpressRouteCrossConnectionPeering** cmdlet removes an ExpressRoute cross connection
+  peering configuration.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCrossConnection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRoute cross connection containing the peering configuration to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the peering configuration to be removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerAddressType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Address family of the peering
+    acceptedValues:
+    - IPv4
+    - IPv6
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzExpressRouteCrossConnectionPeering
+        -ExpressRouteCrossConnection <PSExpressRouteCrossConnection>
+        [-Name <String>]
+        [-PeerAddressType <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'ExpressRouteCrossConnection' accepts value of type 'PSExpressRouteCrossConnection' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCrossConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a peering configuration from an ExpressRoute cross connection'
+  description: |-
+    ```powershell
+    $cc = Get-AzExpressRouteCrossConnection -Name $CrossConnectionName -ResourceGroupName $rg
+    Remove-AzExpressRouteCrossConnectionPeering -Name 'AzurePrivatePeering' -ExpressRouteCrossConnection $cc
+    Set-AzExpressRouteCrossConnection -ExpressRouteCrossConnection $cc
+    ```
+links:
+- text: Add-AzExpressRouteCrossConnectionPeering
+  href: Add-AzExpressRouteCrossConnectionPeering.yml
+- text: Get-AzExpressRouteCrossConnectionPeering
+  href: ./Get-AzExpressRouteCrossConnectionPeering.yml
+- text: Get-AzExpressRouteCrossConnection
+  href: Get-AzExpressRouteCrossConnection.yml
+- text: Set-AzExpressRouteCrossConnection
+  href: Set-AzExpressRouteCrossConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteCrossConnectionPeering.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/Remove-AzExpressRouteCrossConnectionPeering
+  Module Name: Az.Network
+  ms.assetid: 462F3EF7-4C15-41F8-853D-CDCC8E67673D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzExpressRouteCrossConnectionPeering.md
+  PlatyPS schema version: 2024-05-01

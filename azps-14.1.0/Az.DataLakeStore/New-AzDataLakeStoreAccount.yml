@@ -1,0 +1,274 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.New-AzDataLakeStoreAccount
+name: New-AzDataLakeStoreAccount
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Creates a new Data Lake Store account.
+description: |-
+  The **New-AzDataLakeStoreAccount** cmdlet creates a new Data Lake Store account.
+parameters:
+  cmdletParameters:
+  - name: DefaultGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the AzureActive Directory group to use as the default group owner for new files and folders.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the account will not have any form of encryption applied to it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableEncryption
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encryption
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.EncryptionConfigType" data-throw-if-not-resolved="False" /><span>]</span>
+    acceptedValues:
+    - UserManaged
+    - ServiceManaged
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserOrSystemAssignedEncryption
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserOrSystemAssignedEncryption
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserOrSystemAssignedEncryption
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserOrSystemAssignedEncryption
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location to use for the account.
+      The acceptable values for this parameter are:
+      - East US 2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the account to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies tags as key-value pairs.
+      You can use tags to identify a Data Lake Store account from other Azure resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tier
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.TierType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The desired commitment tier for this account to use.
+    acceptedValues:
+    - Consumption
+    - Commitment1TB
+    - Commitment10TB
+    - Commitment100TB
+    - Commitment500TB
+    - Commitment1PB
+    - Commitment5PB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataLakeStoreAccount
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [[-DefaultGroup] <String>]
+        [[-Tag] <Hashtable>]
+        [[-Encryption] <EncryptionConfigType>]
+        [[-KeyVaultId] <String>]
+        [[-KeyName] <String>]
+        [[-KeyVersion] <String>]
+        [-Tier <TierType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserOrSystemAssignedEncryption
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDataLakeStoreAccount
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [[-DefaultGroup] <String>]
+        [[-Tag] <Hashtable>]
+        [-DisableEncryption]
+        [-Tier <TierType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableEncryption
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.PSDataLakeStoreAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an account'
+  description: |-
+    ```powershell
+    New-AzDataLakeStoreAccount -Name "ContosoADL" -ResourceGroupName "ContosoOrg" -Location "East US 2"
+    ```
+
+    This command creates a Data Lake Store account named ContosoADL for the East US 2 location.
+links:
+- text: Get-AzDataLakeStoreAccount
+  href: ./Get-AzDataLakeStoreAccount.yml
+- text: Remove-AzDataLakeStoreAccount
+  href: ./Remove-AzDataLakeStoreAccount.yml
+- text: Set-AzDataLakeStoreAccount
+  href: ./Set-AzDataLakeStoreAccount.yml
+- text: Test-AzDataLakeStoreAccount
+  href: ./Test-AzDataLakeStoreAccount.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/New-AzDataLakeStoreAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/new-azdatalakestoreaccount
+  Module Name: Az.DataLakeStore
+  ms.assetid: 58AAA284-45A3-4360-B321-FBE0A3F5D7A9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/New-AzDataLakeStoreAccount.md
+  PlatyPS schema version: 2024-05-01

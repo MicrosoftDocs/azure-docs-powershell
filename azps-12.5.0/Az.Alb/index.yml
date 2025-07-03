@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: Az.Alb
+name: Az.Alb Module
+isPreview: false
+cmdletGroups:
+- title: Alb
+  cmdlets:
+  - Az.Alb.Get-AzAlb
+  - Az.Alb.Get-AzAlbAssociation
+  - Az.Alb.Get-AzAlbFrontend
+  - Az.Alb.New-AzAlb
+  - Az.Alb.New-AzAlbAssociation
+  - Az.Alb.New-AzAlbFrontend
+  - Az.Alb.Remove-AzAlb
+  - Az.Alb.Remove-AzAlbAssociation
+  - Az.Alb.Remove-AzAlbFrontend
+  - Az.Alb.Update-AzAlb
+  - Az.Alb.Update-AzAlbAssociation
+  - Az.Alb.Update-AzAlbFrontend
+description: |-
+  Microsoft Azure PowerShell: Alb cmdlets
+metadata:
+  Module Name: Az.Alb
+  Module Guid: 1ee185fc-e626-4b80-be4c-0e42e44db17c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.alb
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Alb/Alb/help/Az.Alb.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Alb/Alb/help/Az.Alb.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

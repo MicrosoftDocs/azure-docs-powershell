@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-WAPackVMRole
+name: Get-WAPackVMRole
+module: Azure
+isPreview: false
+summary: |-
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: CloudServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cloud service name of virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromCloudService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: FromCloudService
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMRole
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMRole
+        -Name <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMRole
+        -Name <String>
+        -CloudServiceName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromCloudService
+  isDefault: false
+examples:
+- title: 'Example 1: Get a virtual machine role (created through the portal)'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMRole -Name "ContosoVMRole01"
+    ```
+
+    This command gets a virtual machine role which has been created through the portal named ContosoVMRole01.
+- title: 'Example 2: Get a virtual machine role by using a name and a cloud service name'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMRole -CloudServiceName "ContosoCloudService01" -Name "ContosoVMRole02"
+    ```
+
+    This command gets a virtual machine role named ContosoVMRole02 which stand on a cloud service named ContosoCloudService01.
+- title: 'Example 3: Get all virtual machine role'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVMRole
+    ```
+
+    This command gets all existing virtual machine role.
+links:
+- text: New-WAPackVMRole
+  href: ./New-WAPackVMRole.yml
+- text: Remove-WAPackVMRole
+  href: ./Remove-WAPackVMRole.yml
+- text: Set-WAPackVMRole
+  href: ./Set-WAPackVMRole.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D7EB9FE4-BDEB-43A5-B6D3-FEAB16BC2711
+  PlatyPS schema version: 2024-05-01

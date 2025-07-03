@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.OperationalInsights.New-AzOperationalInsightsAzureActivityLogDataSource
+name: New-AzOperationalInsightsAzureActivityLogDataSource
+module: Az.OperationalInsights
+isPreview: false
+summary: |-
+  Collect Azure Activity log from given subscription.
+description: |-
+  The New-AzOperationalInsightsAzureActivityLogDataSource cmdlet enables Log Analytics to collect Azure activity log from given subscription.
+parameters:
+  cmdletParameters:
+  - name: BackfillStartTime
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      You can choose to backfill logs from a week ago.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Workspace
+    type: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsAzureActivityLogDataSource
+        [-ResourceGroupName] <String>
+        [-WorkspaceName] <String>
+        [-Name] <String>
+        [-SubscriptionId] <String>
+        [-BackfillStartTime <DateTimeOffset>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsAzureActivityLogDataSource
+        [-Workspace] <PSWorkspace>
+        [-Name] <String>
+        [-SubscriptionId] <String>
+        [-BackfillStartTime <DateTimeOffset>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzOperationalInsightsAzureActivityLogDataSource -ResourceGroupName testrg -WorkspaceName LogAnalyticsworkspace -Name test -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+
+    ```output
+    Name              : test
+    ResourceGroupName : testrg
+    WorkspaceName     : LogAnalyticsworkspace
+    ResourceId        : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testrg/providers/Microsoft.OperationalInsights/workspaces/LogAnalyticsworkspace/datasources/test
+    Kind              : AzureActivityLog
+    Properties        : {"linkedResourceId":"/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/microsoft.insights/eventtypes/management","backfillStartTime":"0001-01-01T00:00:00+00:00"}
+    ```
+
+    This command enables Log Analytics to collect Azure activity log from given subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsAzureActivityLogDataSource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.operationalinsights/new-azoperationalinsightsazureactivitylogdatasource
+  Module Name: Az.OperationalInsights
+  ms.assetid: B4EC9132-8DB9-498D-8B3F-2AB51D8EA03A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsAzureActivityLogDataSource.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Get-AzEventHubPrivateLink
+name: Get-AzEventHubPrivateLink
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Gets lists of resources that supports Privatelinks.
+description: |-
+  Gets lists of resources that supports Privatelinks.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Namespace name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group within the azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials that uniquely identify a Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEventHubPrivateLink
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.IPrivateLinkResourcesListResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get private links associated with an EventHub namespace'
+  description: |-
+    ```powershell
+    Get-AzEventHubPrivateLink -ResourceGroupName myResourceGroup -NamespaceName myNamespace
+    ```
+
+    ```output
+    GroupId          : namespace
+    Id               : subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myNamespace/privateLinkResources/namespace
+    Name             : namespace
+    RequiredMember   : {namespace}
+    RequiredZoneName : {privatelink.servicebus.windows.net}
+    Type             : Microsoft.EventHub/namespaces/privateLinkResources
+    ```
+
+    Gets private link resources available on EventHubs namespace `myNamespace`.
+links:
+- text: https://msdn.microsoft.com/en-us/library/azure/mt639379.aspx
+  href: https://msdn.microsoft.com/en-us/library/azure/mt639379.aspx
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Get-AzEventHubPrivateLink.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventhub/get-azeventhubprivatelink
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Get-AzEventHubPrivateLink.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Elastic.Update-AzElasticTagRule
+name: Update-AzElasticTagRule
+module: Az.Elastic
+isPreview: false
+summary: |-
+  update a tag rule set for a given monitor resource.
+description: |-
+  update a tag rule set for a given monitor resource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.IElasticIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleFilteringTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.IFilteringTag" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of filtering tags to be used for capturing logs.
+      This only takes effect if SendActivityLogs flag is enabled.
+      If empty, all resources will be captured.
+      If only Exclude action is specified, the rules will apply to the list of all available resources.
+      If Include actions are specified, the rules will only include resources with the associated tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendAadLog
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if AAD logs should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendActivityLog
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendSubscriptionLog
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if subscription logs should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.IElasticIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityMonitorExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Monitor resource name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleSetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tag Rule Set resource name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityMonitorExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzElasticTagRule
+        -MonitorName <String>
+        -ResourceGroupName <String>
+        -RuleSetName <String>
+        [-SubscriptionId <String>]
+        [-LogRuleFilteringTag <IFilteringTag[]>]
+        [-LogRuleSendAadLog]
+        [-LogRuleSendActivityLog]
+        [-LogRuleSendSubscriptionLog]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzElasticTagRule
+        -RuleSetName <String>
+        -MonitorInputObject <IElasticIdentity>
+        [-LogRuleFilteringTag <IFilteringTag[]>]
+        [-LogRuleSendAadLog]
+        [-LogRuleSendActivityLog]
+        [-LogRuleSendSubscriptionLog]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityMonitorExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzElasticTagRule
+        -InputObject <IElasticIdentity>
+        [-LogRuleFilteringTag <IFilteringTag[]>]
+        [-LogRuleSendAadLog]
+        [-LogRuleSendActivityLog]
+        [-LogRuleSendSubscriptionLog]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.IElasticIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Elastic.Models.IMonitoringTagRules" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a tag rule set for a given monitor resource'
+  description: |-
+    ```powershell
+    Update-AzElasticTagRule -ResourceGroupName azps-elastic-test -MonitorName elastic-pwsh02 -LogRuleSendActivityLog
+    ```
+
+    ```output
+    Name    ProvisioningState ResourceGroupName
+    ----    ----------------- -----------------
+    default Succeeded         azps-elastic-test
+    ```
+
+    This command updates a tag rule set for a given monitor resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/Update-AzElasticTagRule.md
+  document type: cmdlet
+  external help file: Az.Elastic-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.elastic/update-azelastictagrule
+  Module Name: Az.Elastic
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/Update-AzElasticTagRule.md
+  PlatyPS schema version: 2024-05-01

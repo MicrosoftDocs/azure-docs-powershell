@@ -1,0 +1,733 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Functions.New-AzFunctionApp
+name: New-AzFunctionApp
+module: Az.Functions
+isPreview: false
+summary: |-
+  Creates a function app.
+description: |-
+  Creates a function app.
+parameters:
+  cmdletParameters:
+  - name: ApplicationInsightsKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Instrumentation key of App Insights to be added.
+    aliases:
+    - AppInsightsKey
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationInsightsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the existing App Insights project to be added to the function app.
+    aliases:
+    - AppInsightsName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppSetting
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Function app settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet as a background job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableApplicationInsights
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disable creating application insights resource during the function app creation.
+      No logs will be available.
+    aliases:
+    - DisableAppInsights
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Environment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the container app environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FunctionsVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Functions version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Consumption
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByAppServicePlan
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of user identities associated with the function app.
+                  The user identity references will be ARM resource ids in the form:
+                  '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Support.ManagedServiceIdentityType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of identity used for the function app.
+                  The acceptable values for this parameter are:
+                  - SystemAssigned
+                  - UserAssigned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container image name, e.g., publisher/image-name:tag.
+    aliases:
+    - DockerImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location for the consumption plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Consumption
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the function app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Starts the operation and returns immediately, before the operation is completed.
+      In order to determine if the operation has successfully been completed, use some other mechanism.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The OS to host the function app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Consumption
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByAppServicePlan
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the service plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAppServicePlan
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CustomDockerImage
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      The container registry username and password.
+      Required for private registries.
+    aliases:
+    - DockerRegistryCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CustomDockerImage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryServer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The container registry server hostname, e.g.
+      myregistry.azurecr.io.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceCpu
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The CPU in cores of the container app.
+      e.g., 0.75.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceMemory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The memory size of the container app.
+      e.g., 1.0Gi.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Runtime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The function runtime.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Consumption
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByAppServicePlan
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuntimeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The function runtime.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Consumption
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByAppServicePlan
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleMaxReplica
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of replicas when creating a function app on container app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleMinReplica
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of replicas when create function app on container app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkloadProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload profile name to run the container app on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnvironmentForContainerApp
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFunctionApp
+        -ResourceGroupName <String>
+        -Name <String>
+        -StorageAccountName <String>
+        -Location <String>
+        -Runtime <String>
+        [-SubscriptionId <String>]
+        [-ApplicationInsightsName <String>]
+        [-ApplicationInsightsKey <String>]
+        [-OSType <String>]
+        [-RuntimeVersion <String>]
+        [-FunctionsVersion <String>]
+        [-DisableApplicationInsights]
+        [-PassThru]
+        [-Tag <Hashtable>]
+        [-AppSetting <Hashtable>]
+        [-IdentityType <ManagedServiceIdentityType>]
+        [-IdentityID <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-NoWait]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Consumption
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzFunctionApp
+        -ResourceGroupName <String>
+        -Name <String>
+        -StorageAccountName <String>
+        -Runtime <String>
+        -PlanName <String>
+        [-SubscriptionId <String>]
+        [-ApplicationInsightsName <String>]
+        [-ApplicationInsightsKey <String>]
+        [-OSType <String>]
+        [-RuntimeVersion <String>]
+        [-FunctionsVersion <String>]
+        [-DisableApplicationInsights]
+        [-PassThru]
+        [-Tag <Hashtable>]
+        [-AppSetting <Hashtable>]
+        [-IdentityType <ManagedServiceIdentityType>]
+        [-IdentityID <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-NoWait]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAppServicePlan
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzFunctionApp
+        -ResourceGroupName <String>
+        -Name <String>
+        -StorageAccountName <String>
+        -Environment <String>
+        [-SubscriptionId <String>]
+        [-ApplicationInsightsName <String>]
+        [-ApplicationInsightsKey <String>]
+        [-DisableApplicationInsights]
+        [-PassThru]
+        [-Tag <Hashtable>]
+        [-AppSetting <Hashtable>]
+        [-IdentityType <ManagedServiceIdentityType>]
+        [-IdentityID <String[]>]
+        [-Image <String>]
+        [-RegistryCredential <PSCredential>]
+        [-WorkloadProfileName <String>]
+        [-ResourceCpu <Double>]
+        [-ResourceMemory <String>]
+        [-ScaleMaxReplica <Int32>]
+        [-ScaleMinReplica <Int32>]
+        [-RegistryServer <String>]
+        [-DefaultProfile <PSObject>]
+        [-NoWait]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnvironmentForContainerApp
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzFunctionApp
+        -ResourceGroupName <String>
+        -Name <String>
+        -StorageAccountName <String>
+        -Image <String>
+        -PlanName <String>
+        [-SubscriptionId <String>]
+        [-ApplicationInsightsName <String>]
+        [-ApplicationInsightsKey <String>]
+        [-DisableApplicationInsights]
+        [-PassThru]
+        [-Tag <Hashtable>]
+        [-AppSetting <Hashtable>]
+        [-IdentityType <ManagedServiceIdentityType>]
+        [-IdentityID <String[]>]
+        [-RegistryCredential <PSCredential>]
+        [-DefaultProfile <PSObject>]
+        [-NoWait]
+        [-AsJob]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CustomDockerImage
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Functions.Models.Api20231201.ISite" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a consumption PowerShell function app in Central US.'
+  description: |-
+    ```powershell
+    New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                      -ResourceGroupName MyResourceGroupName `
+                      -Location centralUS `
+                      -StorageAccountName MyStorageAccountName `
+                      -Runtime PowerShell
+    ```
+
+    This command creates a consumption PowerShell function app in Central US.
+- title: 'Example 2: Create a PowerShell function app which will be hosted in a service plan.'
+  description: |-
+    ```powershell
+    New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                      -ResourceGroupName MyResourceGroupName `
+                      -PlanName MyPlanName `
+                      -StorageAccountName MyStorageAccountName `
+                      -Runtime PowerShell
+    ```
+
+    This command creates a PowerShell function app which will be hosted in a service plan.
+- title: 'Example 3: Create a function app using a using a private ACR image.'
+  description: |-
+    ```powershell
+    New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                      -ResourceGroupName MyResourceGroupName `
+                      -PlanName MyPlanName `
+                      -StorageAccountName MyStorageAccountName `
+                      -DockerImageName myacr.azurecr.io/myimage:tag
+    ```
+
+    This command creates a function app using a using a private ACR image.
+- title: 'Example 4: Create a function app on container app.'
+  description: |-
+    ```powershell
+    New-AzFunctionApp -Name MyUniqueFunctionAppName `
+                      -ResourceGroupName MyResourceGroupName `
+                      -StorageAccountName MyStorageAccountName `
+                      -Environment MyEnvironment `
+                      -WorkloadProfileName MyWorkloadProfileName
+    ```
+
+    This command create a function app on container app using the default .Net image.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/New-AzFunctionApp.md
+  document type: cmdlet
+  external help file: Az.Functions-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.functions/new-azfunctionapp
+  Module Name: Az.Functions
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Functions/Functions/help/New-AzFunctionApp.md
+  PlatyPS schema version: 2024-05-01

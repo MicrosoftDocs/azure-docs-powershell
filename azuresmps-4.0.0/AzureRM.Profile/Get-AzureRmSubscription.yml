@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Get-AzureRmSubscription
+name: Get-AzureRmSubscription
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  Get subscriptions that the current account can access.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The Get-AzureRmSubscription cmdlet gets the subscription ID, subscription name, and home tenant for subscriptions that the current account can access.
+parameters:
+  cmdletParameters:
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the subscription to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByIdInTenant
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the subscription to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByNameInTenant
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the tenant that contains subscriptions to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRmSubscription
+        [-SubscriptionId <String>]
+        [-TenantId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByIdInTenant
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureRmSubscription
+        [-SubscriptionName <String>]
+        [-TenantId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByNameInTenant
+  isDefault: false
+outputs:
+- name: <xref href="PSAzureSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all subscriptions in all tenants'
+  description: |-
+    ```
+    PS C:\>Get-AzureRmSubscription -All
+
+    Subscription Name : Contoso Subscription 1
+    SubscriptionId    : xxxx-xxxx-xxxx-xxxx
+    TenantId          : yyyy-yyyy-yyyy-yyyy
+    ```
+
+    This command gets all subscriptions in all tenants that are authorized for the current account.
+- title: 'Example 2: Get all subscriptions for a specific tenant'
+  description: |-
+    ```
+    PS C:\>Get-AzureRmSubscription -TenantId "xxxx-xxxx-xxxx-xxxx"
+
+    Subscription Name : Contoso Subscription 1
+    SubscriptionId    : yyyy-yyyy-yyyy-yyyy
+    TenantId          : xxxx-xxxx-xxxx-xxxx
+
+    Subscription Name : Contoso Subscription 2
+    SubscriptionId    : yyyy-yyyy-yyyy-yyyy
+    TenantId          : xxxx-xxxx-xxxx-xxxx
+    ```
+
+    List all subscriptions in the given tenant that are authorized for the current account.
+- title: 'Example 3: Get all subscriptions in the current tenant'
+  description: |-
+    ```
+    PS C:\>Get-AzureRmSubscription
+
+    Subscription Name : Contoso Subscription 1
+    SubscriptionId    : yyyy-yyyy-yyyy-yyyy
+    TenantId          : xxxx-xxxx-xxxx-xxxx
+
+    Subscription Name : Contoso Subscription 2
+    SubscriptionId    : yyyy-yyyy-yyyy-yyyy
+    TenantId          : xxxx-xxxx-xxxx-xxxx
+    ```
+
+    This command gets all subscriptions in the current tenant that are authorized for the current user.
+- title: 'Example 4: Change the current context to use a specific subscription'
+  description: |-
+    ```
+    PS C:\>Get-AzureRmSubscription -SubscriptionId "xxxx-xxxx-xxxx-xxxx" -TenantId "yyyy-yyyy-yyyy-yyyy" | Set-AzureRmContext
+
+    Subscription Name : Contoso Subscription 1
+    SubscriptionId    : xxxx-xxxx-xxxx-xxxx
+    TenantId          : yyyy-yyyy-yyyy-yyyy
+    ```
+
+    This command gets the specified subscription, and then sets the current context to use it.
+    All subsequent cmdlets in this session use the new subscription (Contoso Subscription 1) by default.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

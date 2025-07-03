@@ -1,0 +1,510 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceFabric.New-AzServiceFabricManagedCluster
+name: New-AzServiceFabricManagedCluster
+module: Az.ServiceFabric
+isPreview: false
+summary: |-
+  Create new managed cluster.
+description: |-
+  This cmdlet will create a managed cluster resource without node types. To bootstrap the cluster A primary node type needs to be added use [New-AzServiceFabricManagedNodeType](./New-AzServiceFabricManagedNodeType.yml).
+parameters:
+  cmdletParameters:
+  - name: AdminPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Admin password used for the virtual machines.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Admin password used for the virtual machines.
+      Default: vmadmin.
+    defaultValue: vmadmin
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientCertCommonName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client certificate common name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClientCertByCn
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientCertIsAdmin
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use to specify if the client certificate has administrator level.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientCertIssuerThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Issuer thumbprints for the client certificate.
+      Only use in combination with ClientCertCommonName.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClientCertByCn
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientCertThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client certificate thumbprint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ClientCertByTp
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientConnectionPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port used for client connections to the cluster.
+      Default: 19000.
+    defaultValue: "19000"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CodeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster service fabric code version.
+      Only use if upgrade mode is Manual.
+    aliases:
+    - ClusterCodeVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster's dns name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpGatewayConnectionPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port used for http connections to the cluster.
+      Default: 19080.
+    defaultValue: "19080"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the cluster.
+    aliases:
+    - ClusterName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.ManagedClusterSku" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster's Sku, the options are Basic: it will have a minimum of 3 seed nodes and only allows 1 node type and Standard: it will have a minimum of 5 seed nodes and allows multiple node types.
+    acceptedValues:
+    - Basic
+    - Standard
+    defaultValue: Basic
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the tags as key/value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeCadence
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSClusterUpgradeCadence" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates when new cluster runtime version upgrades will be applied after they are released. By default is Wave0.
+    acceptedValues:
+    - Wave0
+    - Wave1
+    - Wave2
+    aliases:
+    - ClusterUpgradeCadence
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeMode
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.ClusterUpgradeMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster service fabric code version upgrade mode.
+      Automatic or Manual.
+    acceptedValues:
+    - Automatic
+    - Manual
+    aliases:
+    - ClusterUpgradeMode
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseTestExtension
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If Specify The cluster will be crated with service test vmss extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZonalResiliency
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates if the cluster has zone resiliency.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceFabricManagedCluster
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        -Location <String>
+        -ClientCertThumbprint <String>
+        -AdminPassword <SecureString>
+        [-UpgradeMode <ClusterUpgradeMode>]
+        [-CodeVersion <String>]
+        [-UpgradeCadence <PSClusterUpgradeCadence>]
+        [-ClientCertIsAdmin]
+        [-AdminUserName <String>]
+        [-HttpGatewayConnectionPort <Int32>]
+        [-ClientConnectionPort <Int32>]
+        [-DnsName <String>]
+        [-Sku <ManagedClusterSku>]
+        [-UseTestExtension]
+        [-ZonalResiliency]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClientCertByTp
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzServiceFabricManagedCluster
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        -Location <String>
+        -ClientCertCommonName <String>
+        -AdminPassword <SecureString>
+        [-UpgradeMode <ClusterUpgradeMode>]
+        [-CodeVersion <String>]
+        [-UpgradeCadence <PSClusterUpgradeCadence>]
+        [-ClientCertIsAdmin]
+        [-ClientCertIssuerThumbprint <String[]>]
+        [-AdminUserName <String>]
+        [-HttpGatewayConnectionPort <Int32>]
+        [-ClientConnectionPort <Int32>]
+        [-DnsName <String>]
+        [-Sku <ManagedClusterSku>]
+        [-UseTestExtension]
+        [-ZonalResiliency]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ClientCertByCn
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $rgName = "testRG"
+    $clusterName = "testCluster"
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $tags = @{"test"="tag"}
+
+    New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Tag $tags -Verbose
+    ```
+
+    This command creates a cluster resource with default basic sku.
+- title: Example 2
+  description: |-
+    ```powershell
+    $rgName = "testRG"
+    $clusterName = "testCluster"
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -ClientCertThumbprint XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -ClientCertIsAdmin -AdminPassword $password -Sku Standard -Verbose
+    ```
+
+    This command creates a cluster resource in centraluseuap with an initial admin client certificate and standard sku.
+- title: Example 3
+  description: |-
+    ```powershell
+    $rgName = "testRG"
+    $clusterName = "testCluster"
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Sku Standard -UpgradeMode Automatic -UpgradeCadence Wave1 -ZonalResiliency -Verbose
+    ```
+
+    This command creates a cluster with upgrade cadence in wave1 and zonal resiliency enabled.
+- title: Example 4
+  description: |-
+    ```powershell
+    $rgName = "testRG"
+    $clusterName = "testCluster"
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    New-AzServiceFabricManagedCluster -ResourceGroupName $rgName -Location centraluseuap -ClusterName $clusterName -AdminPassword $password -Sku Standard -UpgradeMode Manual -CodeVersion 7.2.477.9590 -Verbose
+    ```
+
+    This command creates a cluster with manual upgrade mode and 7.2.477.9590 code version.
+links:
+- text: New-AzServiceFabricManagedNodeType
+  href: ./New-AzServiceFabricManagedNodeType.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricManagedCluster.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicefabric/new-azservicefabricmanagedcluster
+  Module Name: Az.ServiceFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/New-AzServiceFabricManagedCluster.md
+  PlatyPS schema version: 2024-05-01

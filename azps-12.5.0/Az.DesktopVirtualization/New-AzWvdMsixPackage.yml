@@ -1,0 +1,413 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.New-AzWvdMsixPackage
+name: New-AzWvdMsixPackage
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  Create or update a MSIX package.
+description: |-
+  Create or update a MSIX package.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User friendly Name to be displayed in the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FullName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version specific package full name of the MSIX package within specified hostpool
+    aliases:
+    - MsixPackageFullName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the host pool within the specified resource group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImagePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      VHD/CIM image path on Network Share.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsActive
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Make this version of the package the active one across the hostpool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsRegularRegistration
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how to register Package in feed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastUpdated
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Date Package was last updated, found in the appxmanifest.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageAlias
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Package Alias from extract MSIX Image
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PackageAlias
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageApplication
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IMsixPackageApplications" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of package applications.
+
+      To construct, see NOTES section for PACKAGEAPPLICATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageDependency
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IMsixPackageDependencies" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of package dependencies.
+
+      To construct, see NOTES section for PACKAGEDEPENDENCY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageFamilyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Package Family Name from appxmanifest.xml.
+      Contains Package Name and Publisher name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Package Name from appxmanifest.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PackageRelativePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Relative Path to the package inside the image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Package Version found in the appxmanifest.xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWvdMsixPackage
+        -HostPoolName <String>
+        -ResourceGroupName <String>
+        -FullName <String>
+        [-SubscriptionId <String>]
+        [-DisplayName <String>]
+        [-ImagePath <String>]
+        [-IsActive]
+        [-IsRegularRegistration]
+        [-LastUpdated <DateTime>]
+        [-PackageApplication <IMsixPackageApplications[]>]
+        [-PackageDependency <IMsixPackageDependencies[]>]
+        [-PackageFamilyName <String>]
+        [-PackageName <String>]
+        [-PackageRelativePath <String>]
+        [-Version <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzWvdMsixPackage
+        -HostPoolName <String>
+        -ResourceGroupName <String>
+        -PackageAlias <String>
+        [-SubscriptionId <String>]
+        [-DisplayName <String>]
+        [-ImagePath <String>]
+        [-IsActive]
+        [-IsRegularRegistration]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PackageAlias
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IMsixPackage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates New MSIX Package in the HostPool via Package Alias'
+  description: |-
+    ```powershell
+    New-AzWvdMsixPackage -HostPoolName HostPoolName `
+                         -ResourceGroupName resourceGroupName `
+                         -SubscriptionId SubscriptionId `
+                         -PackageAlias packagealias `
+                         -ImagePath ImagePathURI
+    ```
+
+    This command adds MSIX package from specified image path to HostPool
+- title: 'Example 2: Creates New MSIX Package in the HostPool'
+  description: |-
+    ```powershell
+    $apps = "<PackagedApplication>"
+    $deps = "<PackageDependencies>"
+    New-AzWvdMsixPackage -FullName PackageFullName `
+                         -HostPoolName HostPoolName `
+                         -ResourceGroupName ResourceGroupName `
+                         -SubscriptionId SubscriptionId `
+                         -DisplayName displayname `
+                         -ImagePath imageURI `
+                         -IsActive:$false `
+                         -IsRegularRegistration:$false `
+                         -LastUpdated datelastupdated `
+                         -PackageApplication $apps `
+                         -PackageDependency $deps `
+                         -PackageFamilyName packagefamilyname `
+                         -PackageName packagename `
+                         -PackageRelativePath packagerelativepath `
+                         -Version packageversion
+    ```
+
+    ```output
+    Name                              Type
+    ----                              ----
+    HotPoolName/PackageFullName       Microsoft.DesktopVirtualization/hostpools/msixpackages
+    ```
+
+    This command adds MSIX Package in the specified HostPool
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/New-AzWvdMsixPackage.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/new-azwvdmsixpackage
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/New-AzWvdMsixPackage.md
+  PlatyPS schema version: 2024-05-01

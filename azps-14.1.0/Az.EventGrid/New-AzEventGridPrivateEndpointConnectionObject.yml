@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridPrivateEndpointConnectionObject
+name: New-AzEventGridPrivateEndpointConnectionObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for PrivateEndpointConnection.
+description: |-
+  Create an in-memory object for PrivateEndpointConnection.
+parameters:
+  cmdletParameters:
+  - name: GroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      GroupIds from the private link service resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateEndpointId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ARM identifier for Private Endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkServiceConnectionStateActionsRequired
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Actions required (if any).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkServiceConnectionStateDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the connection state.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateLinkServiceConnectionStateStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Status of the connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisioningState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Provisioning state of the Private Endpoint Connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridPrivateEndpointConnectionObject
+        [-GroupId <String[]>]
+        [-PrivateEndpointId <String>]
+        [-PrivateLinkServiceConnectionStateActionsRequired <String>]
+        [-PrivateLinkServiceConnectionStateDescription <String>]
+        [-PrivateLinkServiceConnectionStateStatus <String>]
+        [-ProvisioningState <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.PrivateEndpointConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for PrivateEndpointConnection.'
+  description: |-
+    ```powershell
+    New-AzEventGridPrivateEndpointConnectionObject -GroupId "TestId" -PrivateEndpointId "TestPrivateEndpointId" -PrivateLinkServiceConnectionStateActionsRequired "TestActionsRequired" -PrivateLinkServiceConnectionStateDescription "TestDescription" -PrivateLinkServiceConnectionStateStatus Approved -ProvisioningState Succeeded | Format-List
+    ```
+
+    ```output
+    GroupId                                          : {TestId}
+    Id                                               :
+    Name                                             :
+    PrivateEndpointId                                : TestPrivateEndpointId
+    PrivateLinkServiceConnectionStateActionsRequired : TestActionsRequired
+    PrivateLinkServiceConnectionStateDescription     : TestDescription
+    PrivateLinkServiceConnectionStateStatus          : Approved
+    ProvisioningState                                : Succeeded
+    ResourceGroupName                                :
+    Type                                             :
+    ```
+
+    Create an in-memory object for PrivateEndpointConnection.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridPrivateEndpointConnectionObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgridprivateendpointconnectionobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridPrivateEndpointConnectionObject.md
+  PlatyPS schema version: 2024-05-01

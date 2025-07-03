@@ -1,0 +1,1161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SecurityInsights.New-AzSentinelDataConnector
+name: New-AzSentinelDataConnector
+module: Az.SecurityInsights
+isPreview: false
+summary: |-
+  Creates or updates the data connector.
+description: |-
+  Creates or updates the data connector.
+parameters:
+  cmdletParameters:
+  - name: Alerts
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AADAATP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftCloudAppSecurity
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftDefenderAdvancedThreatProtection
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: OfficeATP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: OfficeIRM
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AzureSecurityCenter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: APIRootURL
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ASCSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ASC Subscription Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureSecurityCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilityIsPreview
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilityStatus
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling')]
+    defaultValue: "1"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AWSRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AmazonWebServicesCloudTrail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AmazonWebServicesS3
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BingSafetyPhishingURL
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BingSafetyPhishingUrlLookbackPeriod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDataServiceActivity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Dynamics365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DetinationTable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AmazonWebServicesS3
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiscoveryLog
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftCloudAppSecurity
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Exchange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Office365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id of the Data Connector.
+    defaultValue: (New-Guid).Guid
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Incident
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftThreatProtection
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Indicator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Support.DataConnectorKind" data-throw-if-not-resolved="False" />
+    description: |-
+      Kind of the the data connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Log
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AmazonWebServicesCloudTrail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftEmergingThreatFeed
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftEmergingThreatFeedLookbackPeriod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MicrosoftThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionCustom
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.PermissionsCustomsItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling')]
+      To construct, see NOTES section for PERMISSIONCUSTOM properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionResourceProvider
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.PermissionsResourceProviderItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling')]
+      To construct, see NOTES section for PERMISSIONRESOURCEPROVIDER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PollingFrequency
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Support.PollingFrequency" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharePoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Office365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SQSURL
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AmazonWebServicesS3
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets subscription credentials which uniquely identify Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaxiiLookbackPeriod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Teams
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Office365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The TenantId.
+    defaultValue: (Get-AzContext).Tenant.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AADAATP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Dynamics365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftCloudAppSecurity
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftDefenderAdvancedThreatProtection
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MicrosoftThreatProtection
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Office365
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: OfficeATP
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: OfficeIRM
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ThreatIntelligence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigConnectivityCriterion
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.ConnectivityCriteria" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+      To construct, see NOTES section for UICONFIGCONNECTIVITYCRITERION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigCustomImage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling')]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigDataType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.LastDataReceivedDataType" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+      To construct, see NOTES section for UICONFIGDATATYPE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigDescriptionMarkdown
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigGraphQueriesTableName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigGraphQuery
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.GraphQueries" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+      To construct, see NOTES section for UICONFIGGRAPHQUERY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigInstructionStep
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.InstructionSteps" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+      To construct, see NOTES section for UICONFIGINSTRUCTIONSTEP properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigPublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigSampleQuery
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.SampleQueries" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+      To construct, see NOTES section for UICONFIGSAMPLEQUERY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UiConfigTitle
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Parameter(ParameterSetName = 'APIPolling', Mandatory)]
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GenericUI
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ThreatIntelligenceTaxii
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Alerts <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AADAATP
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-CommonDataServiceActivity <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Dynamics365
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Alerts <String>]
+        [-DiscoveryLog <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftCloudAppSecurity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Alerts <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftDefenderAdvancedThreatProtection
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-BingSafetyPhishingURL <String>]
+        [-BingSafetyPhishingUrlLookbackPeriod <String>]
+        [-MicrosoftEmergingThreatFeed <String>]
+        [-MicrosoftEmergingThreatFeedLookbackPeriod <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftThreatIntelligence
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Incident <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MicrosoftThreatProtection
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Exchange <String>]
+        [-SharePoint <String>]
+        [-Teams <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Office365
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Alerts <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OfficeATP
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Alerts <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OfficeIRM
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-Indicator <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ThreatIntelligence
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        -WorkspaceId <String>
+        -FriendlyName <String>
+        -APIRootURL <String>
+        -CollectionId <String>
+        -PollingFrequency <PollingFrequency>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-TenantId <String>]
+        [-UserName <String>]
+        [-Password <String>]
+        [-TaxiiLookbackPeriod <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ThreatIntelligenceTaxii
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        -ASCSubscriptionId <String>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-Alerts <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureSecurityCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        -AWSRoleArn <String>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-Log <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AmazonWebServicesCloudTrail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        -AWSRoleArn <String>
+        -Log <String>
+        -SQSURL <String[]>
+        -DetinationTable <String>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AmazonWebServicesS3
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSentinelDataConnector
+        -ResourceGroupName <String>
+        -WorkspaceName <String>
+        -Kind <DataConnectorKind>
+        -UiConfigTitle <String>
+        -UiConfigPublisher <String>
+        -UiConfigDescriptionMarkdown <String>
+        -UiConfigGraphQueriesTableName <String>
+        -UiConfigGraphQuery <GraphQueries[]>
+        -UiConfigSampleQuery <SampleQueries[]>
+        -UiConfigDataType <LastDataReceivedDataType[]>
+        -UiConfigConnectivityCriterion <ConnectivityCriteria[]>
+        -AvailabilityIsPreview <Boolean>
+        -UiConfigInstructionStep <InstructionSteps[]>
+        [-SubscriptionId <String>]
+        [-Id <String>]
+        [-UiConfigCustomImage <String>]
+        [-AvailabilityStatus <Int32>]
+        [-PermissionResourceProvider <PermissionsResourceProviderItem[]>]
+        [-PermissionCustom <PermissionsCustomsItem[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GenericUI
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SecurityInsights.Models.Api20210901Preview.DataConnector" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable a data connector.'
+  description: |-
+    ```powershell
+    New-AzSentinelDataConnector -ResourceGroupName "myResourceGroupName" -WorkspaceName "myWorkspaceName" -Kind 'MicrosoftThreatIntelligence' -BingSafetyPhishingURL Enabled -BingSafetyPhishingUrlLookbackPeriod All  -MicrosoftEmergingThreatFeed Enabled -MicrosoftEmergingThreatFeedLookbackPeriod All
+    ```
+
+    This command enables the Threat Intelligence data connector
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/New-AzSentinelDataConnector.md
+  document type: cmdlet
+  external help file: Az.SecurityInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.securityinsights/new-azsentineldataconnector
+  Module Name: Az.SecurityInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SecurityInsights/SecurityInsights/help/New-AzSentinelDataConnector.md
+  PlatyPS schema version: 2024-05-01

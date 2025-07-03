@@ -1,0 +1,228 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchJobPreparationAndReleaseTaskStatus
+name: Get-AzBatchJobPreparationAndReleaseTaskStatus
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch job preparation and release task status.
+description: |-
+  The **Get-AzBatchJobPreparationAndReleaseTaskStatus** cmdlet gets the Azure Batch job preparation and release task status for a Batch job.
+  You must supply the *Id* parameter or a **PSCloudJob** instance to this cmdlet.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      The BatchAccountContext instance to use when interacting with the Batch service.
+      Use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Open Data Protocol (OData) expand clause.
+      Specify a value for this parameter to get associated entities of the main entity that you get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData filter clause.
+      If you do not specify a filter, this cmdlet returns all job preparation and release task status' for the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job whose preparation and release tasks should be retrieved.
+      You cannot specify wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSCloudJob** object that represents the job to get the preparation and release task status from.
+      To obtain a **PSCloudJob** object, use the Get-AzBatchJob cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of jobs preparation and release task status' to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchJobPreparationAndReleaseTaskStatus
+        [-Id] <String>
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchJobPreparationAndReleaseTaskStatus
+        [-InputObject] <PSCloudJob>
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudJob" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobPreparationAndReleaseTaskExecutionInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the job preparation and release status of a job'
+  description: |-
+    ```powershell
+    Get-AzBatchJobPreparationAndReleaseTaskStatus -BatchContext $Context -Id Test
+    ```
+
+    ```output
+    ComputeNodeId                          : tvm-2316545714_1-20170613t201733z
+    ComputeNodeUrl                         : https://account.westus.batch.azure.com/pools/test/nodes/tvm-2316545714_1-20170613t201733z
+    JobPreparationTaskExecutionInformation : Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTaskExecutionInformation
+    JobReleaseTaskExecutionInformation     :
+    PoolId                                 : test
+    ```
+
+    This command gets the job preparation and release task status for job "Test".
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+- title: 'Example 2: Get the job preparation and release status of a job with Filter and Select specified'
+  description: |-
+    ```powershell
+    Get-AzBatchJobPreparationAndReleaseTaskStatus -BatchContext $context -Id Test -Filter "nodeId eq 'tvm-2316545714_1-20170613t201733z'" -Select "jobPreparationTaskExecutionInfo"
+    ```
+
+    ```output
+    ComputeNodeId                          :
+    ComputeNodeUrl                         :
+    JobPreparationTaskExecutionInformation : Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTaskExecutionInformation
+    JobReleaseTaskExecutionInformation     :
+    PoolId                                 :
+    ```
+
+    This command gets the job preparation and release task status for job "Test" on node "tvm-2316545714_1-20170613t201733z" and uses the Select clause to specify to only return the JobPreparationTaskExecutionInformation information
+links:
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJobPreparationAndReleaseTaskStatus.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchjobpreparationandreleasetaskstatus
+  Module Name: Az.Batch
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchJobPreparationAndReleaseTaskStatus.md
+  PlatyPS schema version: 2024-05-01

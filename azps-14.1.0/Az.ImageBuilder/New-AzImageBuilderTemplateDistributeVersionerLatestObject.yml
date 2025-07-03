@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ImageBuilder.New-AzImageBuilderTemplateDistributeVersionerLatestObject
+name: New-AzImageBuilderTemplateDistributeVersionerLatestObject
+module: Az.ImageBuilder
+isPreview: false
+summary: |-
+  Create an in-memory object for DistributeVersionerLatest.
+description: |-
+  Create an in-memory object for DistributeVersionerLatest.
+parameters:
+  cmdletParameters:
+  - name: Major
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Major version for the generated version number.
+      Determine what is "latest" based on versions with this value as the major version.
+      -1 is equivalent to leaving it unset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateDistributeVersionerLatestObject
+        [-Major <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.DistributeVersionerLatest" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DistributeVersionerLatest.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateDistributeVersionerLatestObject -Major 10
+    ```
+
+    ```output
+    Scheme Major
+    ------ -----
+    Latest 10
+    ```
+
+    Create an in-memory object for DistributeVersionerLatest.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateDistributeVersionerLatestObject.md
+  document type: cmdlet
+  external help file: Az.ImageBuilder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ImageBuilder/new-azimagebuildertemplatedistributeversionerlatestobject
+  Module Name: Az.ImageBuilder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateDistributeVersionerLatestObject.md
+  PlatyPS schema version: 2024-05-01

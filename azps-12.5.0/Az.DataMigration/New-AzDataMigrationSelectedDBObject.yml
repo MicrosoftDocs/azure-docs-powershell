@@ -1,0 +1,205 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.New-AzDataMigrationSelectedDBObject
+name: New-AzDataMigrationSelectedDBObject
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Creates a database input object that contains information about source and target databases for migration.
+description: |-
+  The New-AzDataMigrationSelectedDB cmdlet creates a database info object that contains information about source and target databases, as well as the table mappings, for migration. This cmdlet can be used as a parameter with the New-AzDataMigrationTask cmdlet.
+parameters:
+  cmdletParameters:
+  - name: BackupFileShare
+    type: <xref href="Microsoft.Azure.Management.DataMigration.Models.FileShare" data-throw-if-not-resolved="False" />
+    description: |-
+      File share where the source server database files for this database should be backed up.
+      Use this setting to override file share information for each database.
+      Use fully qualified domain name for the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSqlServerSqlDbMi
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MakeSourceDbReadOnly
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set Database to readonly before migration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSqlServerSqlDb
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigrateSqlServerSqlDb
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set migration type to SQL Server to SQL DB Migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSqlServerSqlDb
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigrateSqlServerSqlDbMi
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Set migration type to SQL Server to SQL DB MI Migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSqlServerSqlDbMi
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the source database.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TableMap
+    type: <xref href="System.Collections.Generic.IDictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      mapping of source to target tables
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MigrateSqlServerSqlDb
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataMigrationSelectedDBObject
+        -SourceDatabaseName <String>
+        -TargetDatabaseName <String>
+        [-MigrateSqlServerSqlDb]
+        [-MakeSourceDbReadOnly]
+        [-TableMap <System.Collections.Generic.IDictionary`2[System.String,System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateSqlServerSqlDb
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDataMigrationSelectedDBObject
+        -SourceDatabaseName <String>
+        -TargetDatabaseName <String>
+        [-MigrateSqlServerSqlDbMi]
+        [-BackupFileShare <FileShare>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MigrateSqlServerSqlDbMi
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Management.DataMigration.Models.FileShare" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataMigration.Models.MigrateSqlServerSqlDbDatabaseInput" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzDataMigrationSelectedDBObject -MigrateSqlServerSqlDb -Name "HR" -TargetDatabaseName "HR_PSTEST" -TableMap $tableMap
+    ```
+
+    ```output
+    Name TargetDatabaseName MakeSourceDbReadOnly TableMap
+    ---- ------------------ -------------------- --------
+    HR   HR_PSTEST                         False {[HR.COUNTRIES, HR.COUNTRIES]}
+    ```
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzDataMigrationSelectedDBObject -MigrateSqlServerSqlDbMi -Name "HR" -TargetDatabaseName "HR_PSTEST" -BackupFileShare $backupFileShare
+    ```
+
+    ```output
+    Name RestoreDatabaseName BackupFileShare
+    ---- ------------------- ---------------
+    HR   HRTest              Microsoft.Azure.Management.DataMigration.Models.FileShare
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSelectedDBObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/New-AzDataMigrationSelectedDBObject
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationSelectedDBObject.md
+  PlatyPS schema version: 2024-05-01

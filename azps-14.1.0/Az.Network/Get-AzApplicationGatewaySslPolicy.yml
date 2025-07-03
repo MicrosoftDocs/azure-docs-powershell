@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGatewaySslPolicy
+name: Get-AzApplicationGatewaySslPolicy
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the SSL policy of an application gateway.
+description: |-
+  The **Get-AzApplicationGatewaySslPolicy** cmdlet gets the SSL policy of an application gateway.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway of the SSL policy that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGatewaySslPolicy
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    $AppGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $sslpolicy = Get-AzApplicationGatewaySslPolicy -ApplicationGateway $AppGW
+    ```
+
+    The first command gets the Application Gateway named ApplicationGateway01 and stores the result in the variable named $AppGW.
+    The second command gets the ssl policy from the Application Gateway stored in the variable named $AppGW.
+links:
+- text: New-AzApplicationGatewaySslPolicy
+  href: ./New-AzApplicationGatewaySslPolicy.yml
+- text: Set-AzApplicationGatewaySslPolicy
+  href: ./Set-AzApplicationGatewaySslPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysslpolicy
+  Module Name: Az.Network
+  ms.assetid: AF02FFF8-F00D-4446-968F-F3C9008C39F0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslPolicy.md
+  PlatyPS schema version: 2024-05-01

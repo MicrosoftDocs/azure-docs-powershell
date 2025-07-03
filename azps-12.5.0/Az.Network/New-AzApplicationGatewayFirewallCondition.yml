@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayFirewallCondition
+name: New-AzApplicationGatewayFirewallCondition
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a match condition for custom rule
+description: |-
+  The **New-AzApplicationGatewayFirewallCondition** creates a match condition for firewall custom rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Match value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchVariable
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallMatchVariable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of match variables.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NegationCondition
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes if this is negate condition or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes operator to be matched.
+    acceptedValues:
+    - IPMatch
+    - Equal
+    - Contains
+    - LessThan
+    - GreaterThan
+    - LessThanOrEqual
+    - GreaterThanOrEqual
+    - BeginsWith
+    - EndsWith
+    - Regex
+    - GeoMatch
+    - Any
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Transform
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of transforms.
+    acceptedValues:
+    - Uppercase
+    - Lowercase
+    - Trim
+    - UrlDecode
+    - UrlEncode
+    - RemoveNulls
+    - HtmlEntityDecode
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayFirewallCondition
+        -MatchVariable <PSApplicationGatewayFirewallMatchVariable[]>
+        -Operator <String>
+        [-NegationCondition <Boolean>]
+        [-MatchValue <String[]>]
+        [-Transform <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $condition = New-AzApplicationGatewayFirewallCondition -MatchVariable $variable -Operator Contains -NegationCondition false -Transform Lowercase, Trim -MatchValue abc, cde
+    ```
+
+    The command creates a new match condition using the match variable defined in the $variable, the operator is Contains and negation condition is false, Transforms including lowercase and trim, the match value is abc and cde. The new match condition is saved in $condition.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallCondition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfirewallcondition
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallCondition.md
+  PlatyPS schema version: 2024-05-01

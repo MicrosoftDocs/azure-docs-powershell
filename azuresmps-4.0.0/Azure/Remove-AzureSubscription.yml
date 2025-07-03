@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureSubscription
+name: Remove-AzureSubscription
+module: Azure
+isPreview: false
+summary: |-
+  Deletes an Azure subscription from Windows PowerShell.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureSubscription** cmdlet deletes an Azure subscription from your subscription data file so Windows PowerShell can't find it.
+  This cmdlet does not delete the subscription from Microsoft Azure, or change the actual subscription in any way.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Suppresses the confirmation prompt.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns $True if the command succeeds and $False if it fails.
+      By default, this cmdlet does not return any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureSubscription
+        -SubscriptionName <String>
+        [-Force]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzureSubscription
+        -SubscriptionId <String>
+        [-Force]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="None or System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
+    Otherwise, it does not return any output.
+examples:
+- title: 'Example 1: Delete a subscription'
+  description: |-
+    ```
+    C:\PS> Remove-AzureSubscription -SubscriptionName Test
+
+    Confirm
+    Are you sure you want to perform this action?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    ```
+
+    This command deletes the "Test" subscription from the default subscription data file.
+- title: 'Example 2: Delete from an alternate subscription data file'
+  description: |-
+    ```
+    C:\PS> Remove-AzureSubscription -SubscriptionName Test -SubscriptionDataFile C:\Subs\MySubscriptions.xml -Force
+    ```
+
+    This command deletes the Test subscription from the MySubscriptions.xml subscription data file.
+    The command uses the *Force* parameter to suppress the confirmation prompt.
+- title: 'Example 3: Delete a subscription in a script'
+  description: |-
+    ```
+    C:\PS> ...if (Remove-AzureSubscription -SubscriptionName Test -PassThru) {...}
+    ```
+
+    This command uses the **Remove-AzureSubscription** command in an **If** statement.
+    It uses the *PassThru* parameter, which returns a Boolean value, to determine whether the script block in the **If** statement is executed.
+links:
+- text: Get-AzureSubscription
+  href: ./Get-AzureSubscription.yml
+- text: Select-AzureSubscription
+  href: ./Select-AzureSubscription.yml
+- text: Set-AzureSubscription
+  href: ./Set-AzureSubscription.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: ABC303ED-8712-4958-B871-E95357012277
+  PlatyPS schema version: 2024-05-01

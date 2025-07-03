@@ -1,0 +1,191 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerGroup
+name: Get-AzNetworkManagerGroup
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets network group(s) in a network manager.
+description: |-
+  The **Get-AzNetworkManagerGroup** cmdlet gets a network group in a network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoExpand
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerGroup
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoExpand
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerGroup
+        -Name <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Expand
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerGroup  -Name "TestGroup" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name                  : TestGroup
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup
+    Description           :
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    ConditionalMembership :
+    MemberType            :
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-17T21:13:02",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-17T21:13:02"
+                            }
+    ```
+
+    Gets a network group 'TestGroup' in a network manager.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerGroup -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name                  : TestGroup
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup
+    Description           :
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    ConditionalMembership :
+    MemberType            :
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-17T21:13:02",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-17T21:13:02"
+                            }
+
+                            Name                  : TestGroup2
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/TestGroup2
+    Description           :
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    ConditionalMembership :
+    MemberType            :
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-17T21:13:02",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-17T21:13:02"
+                            }
+    ```
+
+    Gets all network groups in a network manager.
+links:
+- text: New-AzNetworkManagerGroup
+  href: ./New-AzNetworkManagerGroup.yml
+- text: Remove-AzNetworkManagerGroup
+  href: ./Remove-AzNetworkManagerGroup.yml
+- text: Set-AzNetworkManagerGroup
+  href: ./Set-AzNetworkManagerGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagergroup
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerGroup.md
+  PlatyPS schema version: 2024-05-01

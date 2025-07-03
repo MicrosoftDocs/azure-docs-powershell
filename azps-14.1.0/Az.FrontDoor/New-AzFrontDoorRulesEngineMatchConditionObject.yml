@@ -1,0 +1,205 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorRulesEngineMatchConditionObject
+name: New-AzFrontDoorRulesEngineMatchConditionObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+description: |-
+  Create a PSRulesEngineMatchCondition object for creating a rules engine rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Match values to match against.
+      The operator will apply to each value in here with OR semantics.
+      If any of them match the variable with the given operator this match condition is considered a match.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchVariable
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchVariable" data-throw-if-not-resolved="False" />
+    description: |-
+      Match Variable.
+      Possible values are IsMobile, RemoteAddr, RequestMethod, QueryString, PostArg, RequestUri, RequestPath, RequestFileName, RequestfilenameExtension, RequestHeader, RequestBody, RequestScheme
+    acceptedValues:
+    - IsMobile
+    - RemoteAddr
+    - RequestMethod
+    - QueryString
+    - PostArgs
+    - RequestUri
+    - RequestPath
+    - RequestFilename
+    - RequestFilenameExtension
+    - RequestHeader
+    - RequestBody
+    - RequestScheme
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NegateCondition
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes if this is negate condition or not
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineOperator" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes operator to apply to the match condition.
+      Possible values are Any, IPMatch, GeoMatch, Equal, Contains, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, BeginsWith, EndsWith.
+    acceptedValues:
+    - Any
+    - IPMatch
+    - GeoMatch
+    - Equal
+    - Contains
+    - LessThan
+    - GreaterThan
+    - LessThanOrEqual
+    - GreaterThanOrEqual
+    - BeginsWith
+    - EndsWith
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of selector in RequestHeader or RequestBody to be matched
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Transform
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSTransform" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of what transforms are applied before matching. Possible individual transform values are Lowercase, Uppercase, Trim, UrlDecode, UrlEncode, RemoveNulls.
+    acceptedValues:
+    - Lowercase
+    - Uppercase
+    - Trim
+    - UrlDecode
+    - UrlEncode
+    - RemoveNulls
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRulesEngineMatchConditionObject
+        -MatchVariable <PSRulesEngineMatchVariable>
+        -MatchValue <String[]>
+        [-Selector <String>]
+        [-Operator <PSRulesEngineOperator>]
+        [-NegateCondition <Boolean>]
+        [-Transform <PSTransform[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineMatchCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzFrontDoorRulesEngineMatchConditionObject -MatchVariable RequestHeader -Operator Equal -MatchValue allowoverride -Transform "LowerCase", "UpperCase"-Selector Rules-Engine-Route-Forward -NegateCondition $false
+    ```
+
+    ```output
+    RulesEngineMatchVariable : RequestHeader
+    RulesEngineMatchValue    : {allowoverride}
+    Selector                 : Rules-Engine-Route-Forward
+    RulesEngineOperator      : Equal
+    NegateCondition          : False
+    Transform                : {Lowercase, Uppercase}
+    ```
+
+    Greate a new PSRulesEngineMatchCondition object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesenginematchconditionobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineMatchConditionObject.md
+  PlatyPS schema version: 2024-05-01

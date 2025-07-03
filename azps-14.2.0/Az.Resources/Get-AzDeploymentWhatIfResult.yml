@@ -1,0 +1,723 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzDeploymentWhatIfResult
+name: Get-AzDeploymentWhatIfResult
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets a template What-If result for a deployment at subscription scope.
+description: |-
+  The **Get-AzDeploymentWhatIfResult** cmdlet gets the ARM template What-If result for a template deployment at the current subscription scope. It returns a list of changes indicating what resources will be updated if the deployment is applied without making any changes to real resources. To specify the format for the returning result, use the *ResultFormat* parameter.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeChangeType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Comma-separated list of resource change types to be excluded from What-If results.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location to store deployment data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the deployment it's going to create. If not specified, defaults to the template file name when a template file is provided; defaults to the current time when a template object is provided, e.g. "20131223140835".
+    aliases:
+    - DeploymentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultFormat
+    type: <xref href="Microsoft.Azure.Management.Resources.Models.WhatIfResultFormat" data-throw-if-not-resolved="False" />
+    description: |-
+      The What-If result format.
+    acceptedValues:
+    - ResourceIdOnly
+    - FullResourcePayloads
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipTemplateParameterPrompt
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skips the PowerShell dynamic parameter processing that checks if the provided template parameter contains all necessary parameters used by the template.
+      This check would prompt the user to provide a value for the missing parameters, but providing the -SkipTemplateParameterPrompt will ignore this prompt and error out immediately if a parameter was found not to be bound in the template.
+      For non-interactive scripts, -SkipTemplateParameterPrompt can be provided to provide a better error message in the case where not all required parameters are satisfied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Local path to the template file. Supported template file type: json and bicep.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hash table which represents the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameter file to use for the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParams
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByParameterFileWithNoTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hash table which represents the parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Uri to the template parameter file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateSpecId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the templateSpec to be deployed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateSpecResourceIdAndParamsObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParams
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Uri to the template file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidationLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the validation level for validate/what-if. ValidationLevel can be Template(Skips provider validation), Provider(Performs full validation), or ProviderNoRbac(Performs full validation using RBAC read checks instead of RBAC write checks for provider validation).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithNoParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateObject <Hashtable>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateSpecId <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParamsObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterFile <String>
+        -TemplateObject <Hashtable>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterFile <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterFile <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterFile <String>
+        -TemplateSpecId <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParams
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterFile <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParameterFileWithNoTemplate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterUri <String>
+        -TemplateObject <Hashtable>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterUri <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterUri <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateParameterUri <String>
+        -TemplateSpecId <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParamsUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateObject <Hashtable>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentWhatIfResult
+        -Location <String>
+        -TemplateSpecId <String>
+        [-Name <String>]
+        [-ResultFormat <WhatIfResultFormat>]
+        [-ExcludeChangeType <String[]>]
+        [-ValidationLevel <String>]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.Deployments.PSWhatIfOperationResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a What-If result at subscription scope'
+  description: |-
+    ```powershell
+    Get-AzDeploymentWhatIfResult `
+        -DeploymentName "deploy-01" `
+        -Location "West US" `
+        -TemplateFile "D:\Azure\Templates\ServiceTemplate.json" `
+        -TemplateParameterFile "D:\Azure\Templates\ServiceParameters.json" `
+        -ResultFormat "FullResourcePayloads"
+    ```
+
+    This command gets a What-If result at the current subscription scope by using a custom template file and a parameter file on disk.
+    The command uses the *Location* parameter to specify where to store the deployment data.
+    The command uses the *TemplateFile* parameter to specify a template file.
+    The command uses the *TemplateParameterFile* parameter to specify a template parameter file.
+    The command uses the *ResultFormat* parameter to set the What-If result to include full resource payloads.
+- title: 'Example 2: Get a What-If result at subscription scope with ResourceIdOnly'
+  description: |-
+    ```powershell
+    Get-AzDeploymentWhatIfResult `
+        -DeploymentName "deploy-01" `
+        -Location "West US" `
+        -TemplateFile "D:\Azure\Templates\ServiceTemplate.json" `
+        -TemplateParameterFile "D:\Azure\Templates\ServiceParameters.json" `
+        -ResultFormat "ResourceIdOnly"
+    ```
+
+    This command gets a What-If result at the current subscription scope by using a custom template file and a parameter file on disk.
+    The command uses the *Location* parameter to specify where to store the deployment data.
+    The command uses the *TemplateFile* parameter to specify a template file.
+    The command uses the *TemplateParameterFile* parameter to specify a template parameter file.
+    The command uses the *ResultFormat* parameter to set the What-If result to only contain resource IDs.
+- title: 'Example 3: Use a .bicepparam file to calculate What-If'
+  description: |-
+    ```powershell
+    Get-AzDeploymentWhatIfResult -Location "West US" -TemplateParameterFile "./parameters.bicepparam"
+    ```
+
+    This command gets a What-If result at the current subscription scope by using a .bicepparam file on disk.
+    The command uses the *TemplateParameterFile* parameter to specify a .bicepparam file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentWhatIfResult.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azdeploymentwhatifresult
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentWhatIfResult.md
+  PlatyPS schema version: 2024-05-01

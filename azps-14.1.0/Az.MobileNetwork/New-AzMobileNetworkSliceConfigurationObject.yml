@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MobileNetwork.New-AzMobileNetworkSliceConfigurationObject
+name: New-AzMobileNetworkSliceConfigurationObject
+module: Az.MobileNetwork
+isPreview: false
+summary: |-
+  Create an in-memory object for SliceConfiguration.
+description: |-
+  Create an in-memory object for SliceConfiguration.
+parameters:
+  cmdletParameters:
+  - name: DataNetworkConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Models.IDataNetworkConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The allowed data networks and the settings to use for them.
+      The list must not contain duplicate items and must contain at least one item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultDataNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Data network resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SliceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Slice resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMobileNetworkSliceConfigurationObject
+        -DataNetworkConfiguration <IDataNetworkConfiguration[]>
+        -DefaultDataNetworkId <String>
+        -SliceId <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MobileNetwork.Models.SliceConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for SliceConfiguration.'
+  description: |-
+    ```powershell
+    $ServiceResourceId = New-AzMobileNetworkServiceResourceIdObject -Id "/subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.MobileNetwork/mobileNetworks/azps-mn/services/azps-mn-service"
+
+    $DataNetworkConfiguration = New-AzMobileNetworkDataNetworkConfigurationObject -AllowedService $ServiceResourceId -DataNetworkId "/subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.MobileNetwork/mobileNetworks/azps-mn/dataNetworks/azps-mn-datanetwork" -SessionAmbrDownlink "1 Gbps" -SessionAmbrUplink "500 Mbps" -FiveQi 9 -AllocationAndRetentionPriorityLevel 9 -DefaultSessionType 'IPv4' -MaximumNumberOfBufferedPacket 200 -PreemptionCapability 'NotPreempt' -PreemptionVulnerability 'Preemptable'
+
+    New-AzMobileNetworkSliceConfigurationObject -DataNetworkConfiguration $DataNetworkConfiguration -DefaultDataNetworkId "/subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.MobileNetwork/mobileNetworks/azps-mn/dataNetworks/azps-mn-datanetwork" -SliceId "/subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.MobileNetwork/mobileNetworks/azps-mn/slices/azps-mn-slice"
+    ```
+
+    ```output
+    DataNetworkConfiguration
+    ------------------------
+    {{…
+    ```
+
+    Create an in-memory object for SliceConfiguration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/New-AzMobileNetworkSliceConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.MobileNetwork-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.MobileNetwork/new-AzMobileNetworkSliceConfigurationObject
+  Module Name: Az.MobileNetwork
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/New-AzMobileNetworkSliceConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

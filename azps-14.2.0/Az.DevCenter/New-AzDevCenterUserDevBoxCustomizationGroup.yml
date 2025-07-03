@@ -1,0 +1,353 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DevCenter.New-AzDevCenterUserDevBoxCustomizationGroup
+name: New-AzDevCenterUserDevBoxCustomizationGroup
+module: Az.DevCenter
+isPreview: false
+summary: |-
+  Applies customizations to the Dev Box.
+description: |-
+  Applies customizations to the Dev Box.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomizationGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A customization group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevBoxName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a Dev Box.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevCenterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter upon which to execute operations.
+    aliases:
+    - DevCenter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter-specific URI to operate on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter Project upon which to execute operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Task
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20240501Preview.ICustomizationTask" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Tasks to apply.
+      Note by default tasks are excluded from the response when listing customization groups.
+      To include them, use the `include=tasks` queryparameter.
+      To construct, see NOTES section for TASK properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The AAD object id of the user.
+      If value is 'me', the identity is taken from the
+       authentication context.
+    defaultValue: me
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateExpandedByDevCenter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDevCenterUserDevBoxCustomizationGroup
+        -Endpoint <String>
+        -CustomizationGroupName <String>
+        -DevBoxName <String>
+        -ProjectName <String>
+        [-UserId <String>]
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDevCenterUserDevBoxCustomizationGroup
+        -Endpoint <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzDevCenterUserDevBoxCustomizationGroup
+        -DevCenterName <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpandedByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzDevCenterUserDevBoxCustomizationGroup
+        -DevCenterName <String>
+        -CustomizationGroupName <String>
+        -DevBoxName <String>
+        -ProjectName <String>
+        [-UserId <String>]
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpandedByDevCenter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20240501Preview.ICustomizationGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a customization group by endpoint'
+  description: |-
+    ```powershell
+    $task = @{
+        Name = "catalogName/choco"
+        DisplayName = "choco"
+        Parameter = @{
+            PackageName = "vscode"
+            PackageVersion = "1.0.0"
+        }
+        RunAs = "System"
+        TimeoutInSecond = 120
+    }
+    $tasks = @($task)
+    New-AzDevCenterUserDevBoxCustomizationGroup -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -ProjectName DevProject -UserId 786a823c-8037-48ab-89b8-8599901e67d0 -DevBoxName myDevBox -CustomizationGroupName Provisioning -Task $tasks
+    ```
+
+    This command creates the customization group "Provisioning" for the dev box "myDevBox".
+- title: 'Example 2: Create a customization group by dev center'
+  description: |-
+    ```powershell
+    New-AzDevCenterUserDevBoxCustomizationGroup -DevCenterName Contoso -ProjectName DevProject -UserId "me" -DevBoxName myDevBox -CustomizationGroupName Provisioning -Task $tasks
+    ```
+
+    This command creates the customization group "Provisioning" for the dev box "myDevBox".
+- title: 'Example 3: Create a customization group by endpoint and InputObject'
+  description: |-
+    ```powershell
+    $customizationGroupInput = @{"CustomizationGroupName" = "Provisioning"; "DevBoxName" = "myDevBox"; "UserId" = "me"; "ProjectName" = "DevProject" }
+    New-AzDevCenterUserDevBoxCustomizationGroup -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -InputObject $customizationGroupInput -Task $tasks
+    ```
+
+    This command creates the customization group "Provisioning" for the dev box "myDevBox".
+- title: 'Example 4: Create a customization group by dev center and InputObject'
+  description: |-
+    ```powershell
+    $customizationGroupInput = @{"CustomizationGroupName" = "Provisioning"; "DevBoxName" = "myDevBox"; "UserId" = "786a823c-8037-48ab-89b8-8599901e67d0"; "ProjectName" = "DevProject" }
+    New-AzDevCenterUserDevBoxCustomizationGroup -DevCenterName Contoso -InputObject $customizationGroupInput -Task $tasks
+    ```
+
+    This command creates the customization group "Provisioning" for the dev box "myDevBox".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/New-AzDevCenterUserDevBoxCustomizationGroup.md
+  document type: cmdlet
+  external help file: Az.DevCenter-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.devcenter/new-azdevcenteruserdevboxcustomizationgroup
+  Module Name: Az.DevCenter
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/New-AzDevCenterUserDevBoxCustomizationGroup.md
+  PlatyPS schema version: 2024-05-01

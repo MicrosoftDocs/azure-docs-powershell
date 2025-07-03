@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayPrivateLinkConfiguration
+name: New-AzApplicationGatewayPrivateLinkConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a private link configuration for an application gateway
+description: |-
+  The **New-AzApplicationGatewayPrivateLinkConfiguration** cmdlet creates an PrivateLink Configuration for an Azure application gateway.
+  The private link configuration must be associated to a frontend ip configuration to enable the private link functionality.
+  One private link configuration can atmost be associated to only one frontend ip configuration on application gateway.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPrivateLinkIpConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ipConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the privateLink configuration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayPrivateLinkConfiguration
+        -Name <String>
+        -IpConfiguration <PSApplicationGatewayPrivateLinkIpConfiguration[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPrivateLinkIpConfiguration" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPrivateLinkConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Private Link Configuration with single Ip Configuration'
+  description: |-
+    ```powershell
+    $PrivateLinkIpConfiguration1 = New-AzApplicationGatewayPrivateLinkIpConfiguration -Name "ipConfig01" -Subnet $subnet -Primary
+    $PrivateLinkConfiguration = New-AzApplicationGatewayPrivateLinkConfiguration -Name "privateLinkConfig01" -IpConfiguration $privateLinkIpConfiguration1
+    ```
+
+    This command creates an PrivateLink configuration named 'privateLinkConfig01' and stores the result in the variable named $PrivateLinkConfiguration.
+- title: 'Example 2: Create an Private Link Configuration with multiple Ip Configurations'
+  description: |-
+    ```powershell
+    $PrivateLinkIpConfiguration1 = New-AzApplicationGatewayPrivateLinkIpConfiguration -Name "ipConfig01" -Subnet $subnet -Primary
+    $PrivateLinkIpConfiguration2 = New-AzApplicationGatewayPrivateLinkIpConfiguration -Name "ipConfig02" -Subnet $subnet
+    $PrivateLinkConfiguration = New-AzApplicationGatewayPrivateLinkConfiguration -Name "privateLinkConfig01" -IpConfiguration $privateLinkIpConfiguration1, $privateLinkIpConfiguration2
+    ```
+
+    This command creates an PrivateLink configuration named 'privateLinkConfig01' with two ipConfigurations and stores the result in the variable named $PrivateLinkConfiguration.
+links:
+- text: Get-AzApplicationGatewayPrivateLinkConfiguration
+  href: ./Get-AzApplicationGatewayPrivateLinkConfiguration.yml
+- text: Add-AzApplicationGatewayPrivateLinkConfiguration
+  href: ./Add-AzApplicationGatewayPrivateLinkConfiguration.yml
+- text: Remove-AzApplicationGatewayPrivateLinkConfiguration
+  href: ./Remove-AzApplicationGatewayPrivateLinkConfiguration.yml
+- text: Set-AzApplicationGatewayPrivateLinkConfiguration
+  href: ./Set-AzApplicationGatewayPrivateLinkConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayPrivateLinkConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayprivatelinkconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayPrivateLinkConfiguration.md
+  PlatyPS schema version: 2024-05-01

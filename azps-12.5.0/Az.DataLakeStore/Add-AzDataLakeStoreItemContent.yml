@@ -1,0 +1,149 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Add-AzDataLakeStoreItemContent
+name: Add-AzDataLakeStoreItemContent
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Adds content to an item in a Data Lake Store.
+description: |-
+  The **Add-AzDataLakeStoreItemContent** cmdlet adds content to an item in an Azure Data Lake Store.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encoding
+    type: <xref href="System.Text.Encoding" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the encoding for the item to create.
+      The acceptable values for this parameter are:
+      - Unknown
+      - String
+      - Unicode
+      - Byte
+      - BigEndianUnicode
+      - UTF8
+      - UTF7
+      - Ascii
+      - Default
+      - Oem
+      - BigEndianUTF32
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store path of the item to modify, starting with the root directory (/).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the content to add to the item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzDataLakeStoreItemContent
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-Value] <Object>
+        [[-Encoding] <Encoding>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Text.Encoding" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add content to a file'
+  description: |-
+    ```powershell
+    Add-AzDataLakeStoreItemContent -AccountName "ContosoADLS" -Path /abc/myFile.txt -Value "My content here"
+    ```
+
+    This command adds content to the file myFile.txt.
+links:
+- text: Get-AzDataLakeStoreItemContent
+  href: ./Get-AzDataLakeStoreItemContent.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreItemContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/add-azdatalakestoreitemcontent
+  Module Name: Az.DataLakeStore
+  ms.assetid: B008028D-27FC-4469-BE71-54F7218C068B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Add-AzDataLakeStoreItemContent.md
+  PlatyPS schema version: 2024-05-01

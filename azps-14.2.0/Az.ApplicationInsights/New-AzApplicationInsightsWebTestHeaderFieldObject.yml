@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApplicationInsights.New-AzApplicationInsightsWebTestHeaderFieldObject
+name: New-AzApplicationInsightsWebTestHeaderFieldObject
+module: Az.ApplicationInsights
+isPreview: false
+summary: |-
+  Create a in-memory object for HeaderField
+description: |-
+  Create a in-memory object for HeaderField
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the header.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationInsightsWebTestHeaderFieldObject
+        [-Name <String>]
+        [-Value <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ApplicationInsights.Models.Api20220615.HeaderField" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a in-memory object for HeaderField'
+  description: |-
+    ```powershell
+    New-AzApplicationInsightsWebTestHeaderFieldObject -Name 'version' -Value '2.0.1'
+    ```
+
+    ```output
+    Name    Value
+    ----    -----
+    version 2.0.1
+    ```
+
+    This command creates a in-memory object for HeaderField,  As value of the `RequestHeader` parameter in `New-AzApplicationInsightsWebTest`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestHeaderFieldObject.md
+  document type: cmdlet
+  external help file: Az.ApplicationInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ApplicationInsights/new-AzApplicationInsightsWebTestHeaderFieldObject
+  Module Name: Az.ApplicationInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/New-AzApplicationInsightsWebTestHeaderFieldObject.md
+  PlatyPS schema version: 2024-05-01

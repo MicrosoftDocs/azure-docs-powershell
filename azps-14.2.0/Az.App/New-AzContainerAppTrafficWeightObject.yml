@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppTrafficWeightObject
+name: New-AzContainerAppTrafficWeightObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for TrafficWeight.
+description: |-
+  Create an in-memory object for TrafficWeight.
+parameters:
+  cmdletParameters:
+  - name: Label
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Associates a traffic label with a revision.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LatestRevision
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the traffic weight belongs to a latest stable revision.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RevisionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a revision.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Weight
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Traffic weight assigned to a revision.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppTrafficWeightObject
+        [-Label <String>]
+        [-LatestRevision <Boolean>]
+        [-RevisionName <String>]
+        [-Weight <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.TrafficWeight" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for TrafficWeight.'
+  description: |-
+    ```powershell
+    New-AzContainerAppTrafficWeightObject -Label "production" -Weight 100 -LatestRevision:$True
+    ```
+
+    ```output
+    Label      LatestRevision RevisionName Weight
+    -----      -------------- ------------ ------
+    production True                        100
+    ```
+
+    Create an in-memory object for TrafficWeight.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppTrafficWeightObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerapptrafficweightobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppTrafficWeightObject.md
+  PlatyPS schema version: 2024-05-01

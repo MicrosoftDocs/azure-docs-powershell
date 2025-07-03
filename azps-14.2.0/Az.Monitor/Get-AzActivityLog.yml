@@ -1,0 +1,423 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzActivityLog
+name: Get-AzActivityLog
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Retrieve Activity Log events.
+description: |-
+  The Get-AzActivityLog cmdlet retrieve Activity Log events. The events can be associated with the current subscription ID, correlation ID, resource group, resource ID, or resource provider.
+parameters:
+  cmdletParameters:
+  - name: Caller
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The caller of the events to fetch
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorrelationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The CorrelationId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByCorrelationId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DetailedOutput
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Return object with all the details of the events (the default is to return only some attributes, i.e.
+      no detail)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The endTime of the query
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxRecord
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of records to fetch.
+      Alias: MaxRecords, MaxEvents
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name
+    aliases:
+    - ResourceGroup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceProvider
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ResourceProvider name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceProvider
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The startTime of the query
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The status of the events to fetch
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzActivityLog
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-MaxRecord <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetBySubscription
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzActivityLog
+        [-CorrelationId] <String>
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-MaxRecord <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByCorrelationId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzActivityLog
+        [-ResourceGroupName] <String>
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-MaxRecord <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzActivityLog
+        [-ResourceId] <String>
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-MaxRecord <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzActivityLog
+        [-ResourceProvider] <String>
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Status <String>]
+        [-Caller <String>]
+        [-DetailedOutput]
+        [-MaxRecord <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceProvider
+  isDefault: false
+inputs:
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSEventData" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an event log by subscription ID'
+  description: |-
+    ```powershell
+    Get-AzActivityLog
+    ```
+
+    This command lists at most 1000 events associated with the user's subscription ID that took place 7 days from the current date/time.
+- title: 'Example 2: Get an event log by subscription ID with a maximum number of events'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -MaxRecord 100
+    ```
+
+    This command lists at most 100 events associated with the user's subscription ID that took place 7 days from the current date/time.
+- title: 'Example 3: Get an event log by subscription ID with a start time.'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -StartTime 2017-06-01T10:30
+    ```
+
+    This command lists at most 1000 events associated with the user's subscription ID that took place on or after 2017-06-01T10:30 local time if that date/time is not older than 90 days from the current date/time.
+- title: 'Example 4: Get an event log by subscription ID with a start time and end time.'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -StartTime 2017-04-01T10:30 -EndTime 2017-04-14T11:30
+    ```
+
+    This command lists at most 1000 of the events associated with the user's subscription ID that took place on or after 2017-04-01T10:30 local time, and before 2017-04-14T11:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
+- title: 'Example 5: Get an event log by correlation ID'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444"
+    ```
+
+    This command lists at most 1000 events associated with the specified correlation ID that took place 7 days from the current date/time.
+    **NOTE**: this is usually only one event.
+- title: 'Example 6: Get an event log by correlation ID with a maximum number of events'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -MaxRecord 100
+    ```
+
+    This command lists at most 100 events associated with the specified correlation ID that took place 7 days from the current date/time.
+    **NOTE**: this is usually only one event.
+- title: 'Example 7: Get an event log by correlation ID and start time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -StartTime 2017-05-22T04:30:00
+    ```
+
+    This command lists at most 1000 events associated with the specified correlation ID that took place on or after 2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
+    **NOTE**: this is usually only one event.
+- title: 'Example 8: Get an event log by correlation ID with start time and end time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -CorrelationId "00001111-aaaa-2222-bbbb-3333cccc4444" -StartTime 2017-04-15T04:30:00 -EndTime 2017-04-25T12:30:00
+    ```
+
+    This command lists at most 1000 events associated with the specified correlation ID that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
+- title: 'Example 9: Get an event log for a resource group'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceGroupName "Contoso-Web-CentralUS"
+    ```
+
+    This command lists at most 1000 the events associated with the specified resource group that took place 7 days from the current date/time.
+- title: 'Example 10: Get an event log for a resource group with a maximum number of events'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceGroup "Contoso-Web-CentralUS" -MaxRecord 100
+    ```
+
+    This command lists at most 100 events associated with the specified resource group that took place 7 days from the current date/time.
+- title: 'Example 11: Get an event log for a resource group by start time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceGroup "Contoso-Web-CentralUS" -StartTime 2017-05-22T04:30:00
+    ```
+
+    This command lists at most 1000 events associated with the specified resource group that took place on or after 2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
+- title: 'Example 12: Get an event log for a resource group with a start time and end time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceGroup "Contoso-Web-CentralUS" -StartTime 2017-04-15T04:30 -EndTime 2017-04-25T12:30
+    ```
+
+    This command lists at most 1000 events associated with the specified resource group that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
+- title: 'Example 13: Get an event log by resource ID'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1"
+    ```
+
+    This command lists at most 1000 events associated with the specified resource ID that took place 7 days from the current date/time.
+- title: 'Example 14: Get an event log by resource ID with a maximum number of events'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -MaxRecord 100
+    ```
+
+    This command lists at most 100 events associated with the specified resource ID that took place 7 days from the current date/time.
+- title: 'Example 15: Get an event log by resource ID with a start time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-05-22T04:30
+    ```
+
+    This command lists at most 1000 events associated with the specified resource ID that took place on or after 2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
+- title: 'Example 16: Get an event log by resource ID with a start time and end time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceId "/subscriptions/623d50f1-4fa8-4e46-a967-a9214aed43ab/ResourceGroups/Contoso-Web-CentralUS/providers/Microsoft.Web/ServerFarms/Contoso1" -StartTime 2017-04-15T04:30 -EndTime 2017-04-25T12:30
+    ```
+
+    This command lists at most 1000 events associated with the specified resource ID that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
+- title: 'Example 17: Get an event log by resource provider'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceProvider "Microsoft.Web"
+    ```
+
+    This command lists at most 1000 events associated with the specified resource provider that took place 7 days from the current date/time.
+- title: 'Example 18: Get an event log by resource provider with a maximum number of events'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceProvider "Microsoft.Web" -MaxRecord 100
+    ```
+
+    This command lists at most 100 events associated with the specified resource provider that took place 7 days from the current date/time.
+- title: 'Example 19: Get an event log by resource provider with a start time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceProvider "Microsoft.Web" -StartTime 2017-05-22T04:30
+    ```
+
+    This command lists at most 1000 events associated with the specified resource provider that took place on or after  2017-05-22T04:30:00 local time if the start time is not older than 90 days from the current date/time.
+- title: 'Example 20: Get an event log by resource provider with a start time and end time'
+  description: |-
+    ```powershell
+    Get-AzActivityLog -ResourceProvider "Microsoft.Web" -StartTime 2017-04-15T04:30 -EndTime 2017-04-25T12:30
+    ```
+
+    This command lists at most 1000 events associated with the specified resource provider that took place on or after 2017-04-15T04:30 local time, but before 2017-04-25T12:30 local time if the whole date/time range is not older than 90 days from the current date/time, i.e.: the retention period.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLog.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azactivitylog
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzActivityLog.md
+  PlatyPS schema version: 2024-05-01

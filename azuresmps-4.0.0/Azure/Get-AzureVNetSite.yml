@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureVNetSite
+name: Get-AzureVNetSite
+module: Azure
+isPreview: false
+summary: |-
+  Gets a list object with information about Azure virtual networks.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureVNetSite** cmdlet gets a list object with information about Azure virtual networks for the current subscription.
+  If you specify a virtual network name, only information for that virtual network is returned.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual network name to return information about.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureVNetSite
+        [[-VNetName] <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get information about all virtual networks in the current subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzureVNetSite
+    ```
+
+    This command gets information about all the virtual networks in the current subscription.
+- title: 'Example 2: Get information about a specific virtual network in the current subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzureVNetSite -VNetName "MyProductionNetwork"
+    ```
+
+    This command retrieves information on the MyProductionNetwork virtual network only.
+links:
+- text: Get-AzureVNetConfig
+  href: ./Get-AzureVNetConfig.yml
+- text: Remove-AzureVNetConfig
+  href: ./Remove-AzureVNetConfig.yml
+- text: Set-AzureVNetConfig
+  href: ./Set-AzureVNetConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CFAA371E-F320-4FC3-80E0-5C857E5C0998
+  PlatyPS schema version: 2024-05-01

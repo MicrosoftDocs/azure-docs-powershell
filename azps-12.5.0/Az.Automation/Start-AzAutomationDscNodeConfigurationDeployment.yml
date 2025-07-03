@@ -1,0 +1,303 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Start-AzAutomationDscNodeConfigurationDeployment
+name: Start-AzAutomationDscNodeConfigurationDeployment
+module: Az.Automation
+isPreview: false
+summary: |-
+  Deploys a DSC Node configuration in Automation.
+description: |-
+  The **Start-AzAutomationDscNodeConfigurationDeployment** cmdlet deploys a Desired State Configuration (DSC) node configuration in Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account that contains the DSC configuration that this cmdlet compiles.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      ps_force
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment" data-throw-if-not-resolved="False" />
+    description: |-
+      Input object for Piping
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the DSC node configuration that this cmdlet deploys.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NodeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><xref href="][" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the names of the nodes to which the Node Configuration would be deployed to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group in which this cmdlet compiles a configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Schedule
+    type: <xref href="Microsoft.Azure.Commands.Automation.Model.Schedule" data-throw-if-not-resolved="False" />
+    description: |-
+      Automation Schedule object to schedule the deployment job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzAutomationDscNodeConfigurationDeployment
+        [-NodeConfigurationName] <String>
+        [-NodeName] <String[][]>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-Schedule <Schedule>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzAutomationDscNodeConfigurationDeployment
+        [-NodeConfigurationName] <String>
+        [-NodeName] <String[][]>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -InputObject <NodeConfigurationDeployment>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.NodeConfigurationDeployment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Deploy an Azure DSC node configuration in Automation'
+  description: |-
+    ```powershell
+    $pilot = @("WebServerPilot1", "WebServerPilot2")
+    $prod = @("WebServerProd1", "WebServerProd2")
+    $nodes = @($pilot, $prod)
+    Start-AzAutomationDscNodeConfigurationDeployment `
+                -NodeConfigurationName "Config01.Node1" `
+                -AutomationAccountName "Contoso01"  `
+                -ResourceGroupName "ResourceGroup01" `
+                -NodeName $nodes
+    ```
+
+    ```output
+    Starting a node configuration deployment.
+    Starting a node configuration deployment. It will override any existing node configurations assigned to the node.
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Yes
+
+    ResourceGroupName     : ResourceGroup01
+    AutomationAccountName : Contoso01
+    JobId                 : 35b14eb4-52b7-4a1d-ad62-8e9f84adc657
+    Job                   : Microsoft.Azure.Commands.Automation.Model.Job
+    JobStatus             : New
+    NodeStatus            :
+    NodeConfigurationName : Config01.Node1
+    JobSchedule           :
+    JobScheduleId         : 00000000-0000-0000-0000-000000000000
+    ```
+
+    The above command deploys the DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner.
+- title: 'Example 2: Schedule an Azure DSC node configuration deployment in Automation'
+  description: |-
+    ```powershell
+    $sched = New-AzAutomationSchedule -AutomationAccountName "Contoso01" `
+                -ResourceGroupName "ResourceGroup01" `
+                -Name "TestSchedule" `
+                -StartTime "23:00" `
+                -OneTime
+    $pilot = @("WebServerPilot1", "WebServerPilot2")
+    $prod = @("WebServerProd1", "WebServerProd2")
+    $nodes = @($pilot, $prod)
+    Start-AzAutomationDscNodeConfigurationDeployment `
+                -NodeConfigurationName "Config01.Node1" `
+                -AutomationAccountName "Contoso01"  `
+                -ResourceGroupName "ResourceGroup01" `
+                -NodeName $nodes `
+                -Schedule $sched
+    ```
+
+    ```output
+    Starting a node configuration deployment.
+    Starting a node configuration deployment. It will override any existing node configurations assigned to the node.
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+
+    ResourceGroupName     : ResourceGroup01
+    AutomationAccountName : Contoso01
+    JobId                 : 00000000-0000-0000-0000-000000000000
+    Job                   :
+    JobStatus             :
+    NodeStatus            :
+    NodeConfigurationName : Config01.Node1
+    JobSchedule           : Microsoft.Azure.Commands.Automation.Model.JobSchedule
+    JobScheduleId         : 2b1d7738-093d-4ff7-b87b-e4b2321319e5
+    ```
+
+    The above command schedules a deployment of a DSC node configuration named "Config01.Node1" to the given two-dimensional array of Node Names. The deployment happens in a staged manner and will be executed based on the schedule.
+links:
+- text: Start-AzAutomationDscCompilationJob
+  href: ./Start-AzAutomationDscCompilationJob.yml
+- text: Import-AzAutomationDscNodeConfiguration
+  href: ./Import-AzAutomationDscNodeConfiguration.yml
+- text: Stop-AzAutomationDscNodeConfigurationDeployment
+  href: ./Stop-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Get-AzAutomationDscNodeConfigurationDeployment
+  href: ./Get-AzAutomationDscNodeConfigurationDeployment.yml
+- text: Get-AzAutomationDscNodeConfigurationDeploymentSchedule
+  href: ./Get-AzAutomationDscNodeConfigurationDeploymentSchedule.yml
+- text: New-AzAutomationSchedule
+  href: ./New-AzAutomationSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Start-AzAutomationDscNodeConfigurationDeployment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/start-azautomationdscnodeconfigurationdeployment
+  Module Name: Az.Automation
+  ms.assetid: 32CF9BF7-519F-4B5D-9F2B-3CC556A77A48
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Start-AzAutomationDscNodeConfigurationDeployment.md
+  PlatyPS schema version: 2024-05-01

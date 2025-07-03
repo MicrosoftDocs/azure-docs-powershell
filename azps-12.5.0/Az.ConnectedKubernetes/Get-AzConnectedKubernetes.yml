@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedKubernetes.Get-AzConnectedKubernetes
+name: Get-AzConnectedKubernetes
+module: Az.ConnectedKubernetes
+isPreview: false
+summary: |-
+  Returns the properties of the specified connected cluster, including name, identity, properties, and additional cluster details.
+description: |-
+  Returns the properties of the specified connected cluster, including name, identity, properties, and additional cluster details.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Kubernetes cluster on which get is called.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.IConnectedKubernetesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedKubernetes
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedKubernetes
+        -ClusterName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedKubernetes
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedKubernetes
+        -InputObject <IConnectedKubernetesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.IConnectedKubernetesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedKubernetes.Models.Api20240715Preview.IConnectedCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all connected kubernetes under a subscription.'
+  description: |-
+    ```powershell
+    Get-AzConnectedKubernetes
+    ```
+
+    ```output
+    Location Name                  ResourceGroupName
+    -------- ----                  -----------------
+    eastus   azps_test_cluster     azps_test_group
+    eastus   azps_test_cluster_ahb azps_test_group
+    ```
+
+    This command gets all connected kubernetes under a subscription.
+- title: 'Example 2: Get all connected kubernetes under the resource group.'
+  description: |-
+    ```powershell
+    Get-AzConnectedKubernetes -ResourceGroupName azps_test_group
+    ```
+
+    ```output
+    Location Name                  ResourceGroupName
+    -------- ----                  -----------------
+    eastus   azps_test_cluster     azps_test_group
+    eastus   azps_test_cluster_ahb azps_test_group
+    ```
+
+    This command gets all connected kubernetes under the resource group.
+- title: 'Example 3: Get a connected kubernetes.'
+  description: |-
+    ```powershell
+    Get-AzConnectedKubernetes -ResourceGroupName azps_test_group -Name azps_test_cluster
+    ```
+
+    ```output
+    Location Name              ResourceGroupName
+    -------- ----              -----------------
+    eastus   azps_test_cluster azps_test_group
+    ```
+
+    This command gets a connected kubernetes.
+- title: 'Example 4: Get a connected kubernetes by object.'
+  description: |-
+    ```powershell
+    $conAks = Get-AzConnectedKubernetes -ClusterName azps_test_cluster_ahb -ResourceGroupName azps_test_group
+    Get-AzConnectedKubernetes -InputObject $conAks
+    ```
+
+    ```output
+    Location Name                  ResourceGroupName
+    -------- ----                  -----------------
+    eastus   azps_test_cluster_ahb azps_test_group
+    ```
+
+    This command gets a connected kubernetes by object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Get-AzConnectedKubernetes.md
+  document type: cmdlet
+  external help file: Az.ConnectedKubernetes-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedkubernetes/get-azconnectedkubernetes
+  Module Name: Az.ConnectedKubernetes
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Get-AzConnectedKubernetes.md
+  PlatyPS schema version: 2024-05-01

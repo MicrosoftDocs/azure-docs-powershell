@@ -1,0 +1,38 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityCspmMonitorGithubOfferingObject
+name: New-AzSecurityCspmMonitorGithubOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for CspmMonitorGithubOffering.
+description: |-
+  Create an in-memory object for CspmMonitorGithubOffering.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityCspmMonitorGithubOfferingObject
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.CspmMonitorGithubOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new CspmMonitorGithubOffering object'
+  description: |-
+    ```powershell
+    New-AzSecurityCspmMonitorGithubOfferingObject
+    ```
+
+    ```output
+    Description OfferingType
+    ----------- ------------
+                CspmMonitorGithub
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorGithubOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritycspmmonitorgithubofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorGithubOfferingObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureEnvironment
+name: Get-AzureEnvironment
+module: Azure
+isPreview: false
+summary: |-
+  Gets Azure environments
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureEnvironment** cmdlet gets the Azure environments that are available to Windows PowerShell.
+
+  An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
+  You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
+  For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/)).
+
+  The **Get-AzureEnvironment** cmdlet gets environments from your subscription data file, not from Azure.
+  If the subscription data file is outdated, run the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlet to refresh it.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the specified environment.
+      Type the environment name.
+      The parameter value is case-sensitive.
+      Wildcard characters are not permitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureEnvironment
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="System.Management.Automation.PSCustomObject" data-throw-if-not-resolved="False" />
+  description: |-
+    By default, **Get-AzureEnvironment** returns a custom object.
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Common.WindowsAzureEnvironment" data-throw-if-not-resolved="False" />
+  description: |-
+    When you run **Get-AzureEnvironment** with the **Name** parameter, it returns a  **WindowsAzureEnvironment** object.
+examples:
+- title: 'Example 1: Get all environments'
+  description: |-
+    ```
+    PS C:\> Get-AzureEnvironment
+
+    EnvironmentName               ServiceEndpoint               ResourceManagerEndpoint       PublishSettingsFileUrl
+    ---------------               ---------------               -----------------------       ----------------------
+
+    AzureCloud                    https://management.core.wi... https://management.azure.com/ https://go.microsoft.com/fw...
+    AzureChinaCloud               https://management.core.ch... https://not-supported-serv... https://go.microsoft.com/fw...
+    ```
+
+    This command gets all environments that are available to Windows PowerShell.
+- title: 'Example 2: Get an environment by name'
+  description: |-
+    ```
+    PS C:\> Get-AzureEnvironment -Name AzureCloud
+
+    Name                          : AzureCloud
+
+    PublishSettingsFileUrl        : https://go.microsoft.com/fwlink/?LinkID=301775
+
+    ServiceEndpoint               : https://management.core.windows.net/
+
+    ResourceManagerEndpoint       : https://management.azure.com/
+
+    ManagementPortalUrl           : https://go.microsoft.com/fwlink/?LinkId=254433
+
+    ActiveDirectoryEndpoint       : https://login.windows.net/
+
+    ActiveDirectoryCommonTenantId : common
+
+    StorageEndpointSuffix         : core.windows.net
+
+    StorageBlobEndpointFormat     : {0}://{1}.blob.core.windows.net/
+
+    StorageQueueEndpointFormat    : {0}://{1}.queue.core.windows.net/
+
+    StorageTableEndpointFormat    : {0}://{1}.table.core.windows.net/
+
+    GalleryEndpoint               : https://gallery.azure.com/
+    ```
+
+    This example gets the AzureCloud environment.
+- title: 'Example 3: Get all properties of all environments'
+  description: |-
+    ```
+    PS C:\> Get-AzureEnvironment | ForEach-Object {Get-AzureEnvironment -Name $_.EnvironmentName}
+    ```
+
+    This command gets all properties of all environments.
+
+    The command uses the **Get-AzureEnvironment** cmdlet to get all Azure environments for this account.
+    Then, it uses the **Foreach-Object** cmdlet to run a **Get-AzureEnvironment** command with the **Name** parameter on each environment.
+    The value of the **Name** parameter is the **EnvironmentName** property of each environment.
+
+    Without parameters, **Get-AzureEnvironment** gets only selected properties of an environment.
+links:
+- text: Add-AzureAccount
+  href: ./Add-AzureAccount.yml
+- text: Add-AzureEnvironment
+  href: ./Add-AzureEnvironment.yml
+- text: Get-AzurePublishSettingsFile
+  href: ./Get-AzurePublishSettingsFile.yml
+- text: Import-AzurePublishSettingsFile
+  href: ./Import-AzurePublishSettingsFile.yml
+- text: Remove-AzureEnvironment
+  href: ./Remove-AzureEnvironment.yml
+- text: Set-AzureEnvironment
+  href: ./Set-AzureEnvironment.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BF5E3E1A-14B6-4630-8168-628057009D5E
+  PlatyPS schema version: 2024-05-01

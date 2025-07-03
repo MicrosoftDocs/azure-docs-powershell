@@ -1,0 +1,106 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quantum.Get-AzQuantumOffering
+name: Get-AzQuantumOffering
+module: Az.Quantum
+isPreview: false
+summary: |-
+  Returns the list of all provider offerings available for the given location.
+description: |-
+  Returns the list of all provider offerings available for the given location.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzQuantumOffering
+        -LocationName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quantum.Models.IProviderDescription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Returns the list of all provider offerings available for the given location.'
+  description: |-
+    ```powershell
+    Get-AzQuantumOffering -LocationName eastus
+    ```
+
+    ```output
+    Name
+    ----
+    1Qloud Optimization Platform
+    IonQ
+    Microsoft QIO
+    Microsoft Quantum Computing
+    Quantinuum
+    Rigetti Quantum
+    SQBM+ Cloud on Azure Quantum
+    ```
+
+    Returns the list of all provider offerings available for the given location.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Get-AzQuantumOffering.md
+  document type: cmdlet
+  external help file: Az.Quantum-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.quantum/get-azquantumoffering
+  Module Name: Az.Quantum
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/Get-AzQuantumOffering.md
+  PlatyPS schema version: 2024-05-01

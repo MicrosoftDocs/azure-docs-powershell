@@ -1,0 +1,59 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Oracle.New-AzOracleCustomerContactObject
+name: New-AzOracleCustomerContactObject
+module: Az.Oracle
+isPreview: false
+summary: |-
+  Create an in-memory object for CustomerContact.
+description: |-
+  Create an in-memory object for CustomerContact.
+parameters:
+  cmdletParameters:
+  - name: Email
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address used by Oracle to send notifications regarding databases and infrastructure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOracleCustomerContactObject
+        -Email <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.CustomerContact" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for CustomerContact'
+  description: |-
+    ```powershell
+    New-AzOracleCustomerContactObject -Email "example@oracle.com"
+    ```
+
+    Create an in-memory object for CustomerContact.
+    For more information, execute `Get-Help New-AzOracleNsgCidrObject`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/New-AzOracleCustomerContactObject.md
+  document type: cmdlet
+  external help file: Az.Oracle-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Oracle/new-azoraclecustomercontactobject
+  Module Name: Az.Oracle
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/New-AzOracleCustomerContactObject.md
+  PlatyPS schema version: 2024-05-01

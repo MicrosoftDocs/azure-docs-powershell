@@ -1,0 +1,333 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.New-AzBatchJob
+name: New-AzBatchJob
+module: Az.Batch
+isPreview: false
+summary: |-
+  Creates a job in the Batch service.
+description: |-
+  The **New-AzBatchJob** cmdlet creates a job in the Azure Batch service in the account specified by the *BatchAccountContext* parameter.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonEnvironmentSettings
+    type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the common environment variables, as key/value pairs, that this cmdlet sets for all tasks in the job.
+      The key is the environment variable name.
+      The value is the environment variable value.
+    aliases:
+    - CommonEnvironmentSetting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Constraints
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobConstraints" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the execution constraints for the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the display name for the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an ID for the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobManagerTask
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobManagerTask" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Job Manager task.
+      The Batch service runs the Job Manager task when the job is started.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobPreparationTask
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobPreparationTask" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Job Preparation task.
+      The Batch service runs the Job Preparation task on a compute node before it starts any tasks of that job on that compute node.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobReleaseTask
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSJobReleaseTask" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Job Release task.
+      The Batch service runs the Job Release task when the job ends.
+      The Batch service runs the Job Release task on each compute node where it ran any task of the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies metadata, as key/value pairs, to add to the job.
+      The key is the metadata name.
+      The value is the metadata value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnAllTasksComplete
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.OnAllTasksComplete" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an action the Batch service takes if all tasks in the job are in the completed state.
+    acceptedValues:
+    - NoAction
+    - TerminateJob
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnTaskFailure
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Batch.Common.OnTaskFailure" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an action the Batch service takes if any task in the job fails.
+    acceptedValues:
+    - NoAction
+    - PerformExitOptionsJobAction
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolInformation
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSPoolInformation" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the details of the pool on which the Batch service runs the tasks of the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority of the job.
+      Valid values are: integers from -1000 to 1000.
+      A value of -1000 is the lowest priority.
+      A value of 1000 is the highest priority.
+      The default value is 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsesTaskDependencies
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzBatchJob
+        [-Id] <String>
+        [-CommonEnvironmentSettings <IDictionary>]
+        [-DisplayName <String>]
+        [-Constraints <PSJobConstraints>]
+        [-JobManagerTask <PSJobManagerTask>]
+        [-JobPreparationTask <PSJobPreparationTask>]
+        [-JobReleaseTask <PSJobReleaseTask>]
+        [-Metadata <IDictionary>]
+        -PoolInformation <PSPoolInformation>
+        [-Priority <Int32>]
+        [-UsesTaskDependencies]
+        [-OnTaskFailure <OnTaskFailure>]
+        [-OnAllTasksComplete <OnAllTasksComplete>]
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a job'
+  description: |-
+    ```powershell
+    $PoolInformation = New-Object -TypeName "Microsoft.Azure.Commands.Batch.Models.PSPoolInformation"
+    $PoolInformation.PoolId = "Pool22"
+    New-AzBatchJob -Id "ContosoJob35" -PoolInformation $PoolInformation -BatchContext $Context
+    ```
+
+    The first command creates a **PSPoolInformation** object by using the New-Object cmdlet.
+    The command stores that object in the $PoolInformation variable.
+    The second command assigns the ID Pool22 to the **PoolId** property of the object in $PoolInformation.
+    The final command creates a job that has the ID ContosoJob35.
+    Tasks added to the job run on the pool that has the ID Pool22.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+links:
+- text: Disable-AzBatchJob
+  href: ./Disable-AzBatchJob.yml
+- text: Enable-AzBatchJob
+  href: ./Enable-AzBatchJob.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchJob
+  href: ./Get-AzBatchJob.yml
+- text: Get-AzBatchJobSchedule
+  href: ./Get-AzBatchJobSchedule.yml
+- text: Remove-AzBatchJob
+  href: ./Remove-AzBatchJob.yml
+- text: Stop-AzBatchJob
+  href: ./Stop-AzBatchJob.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/new-azbatchjob
+  Module Name: Az.Batch
+  ms.assetid: B6229D26-D38C-44CD-B9CA-7F39365C8B9D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchJob.md
+  PlatyPS schema version: 2024-05-01

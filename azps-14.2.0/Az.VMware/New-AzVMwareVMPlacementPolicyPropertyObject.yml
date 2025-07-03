@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.VMware.New-AzVMwareVMPlacementPolicyPropertyObject
+name: New-AzVMwareVMPlacementPolicyPropertyObject
+module: Az.VMware
+isPreview: false
+summary: |-
+  Create an in-memory object for VMPlacementPolicyProperties.
+description: |-
+  Create an in-memory object for VMPlacementPolicyProperties.
+parameters:
+  cmdletParameters:
+  - name: AffinityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      placement policy affinity type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Display name of the placement policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether the placement policy is enabled or disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMMember
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Virtual machine members list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVMwareVMPlacementPolicyPropertyObject
+        -AffinityType <String>
+        -VMMember <String[]>
+        [-DisplayName <String>]
+        [-State <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.VMPlacementPolicyProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for VMPlacementPolicyProperties.'
+  description: |-
+    ```powershell
+    New-AzVMwareVMPlacementPolicyPropertyObject -AffinityType 'Affinity' -VMMember @{"test"="test"}
+    ```
+
+    ```output
+    AffinityType      : Affinity
+    DisplayName       :
+    ProvisioningState :
+    State             :
+    Type              : VmVm
+    VMMember          : {System.Collections.Hashtable}
+    ```
+
+    Create an in-memory object for VMPlacementPolicyProperties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareVMPlacementPolicyPropertyObject.md
+  document type: cmdlet
+  external help file: Az.VMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.VMware/new-azvmwarevmplacementpolicypropertyobject
+  Module Name: Az.VMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareVMPlacementPolicyPropertyObject.md
+  PlatyPS schema version: 2024-05-01

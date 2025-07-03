@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Oracle.Get-AzOracleAutonomousDatabaseVersion
+name: Get-AzOracleAutonomousDatabaseVersion
+module: Az.Oracle
+isPreview: false
+summary: |-
+  Get a AutonomousDbVersion
+description: |-
+  Get a AutonomousDbVersion
+parameters:
+  cmdletParameters:
+  - name: Autonomousdbversionsname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AutonomousDbVersion name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityLocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzOracleAutonomousDatabaseVersion
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzOracleAutonomousDatabaseVersion
+        -Autonomousdbversionsname <String>
+        -LocationInputObject <IOracleIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityLocation
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOracleAutonomousDatabaseVersion
+        -Autonomousdbversionsname <String>
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOracleAutonomousDatabaseVersion
+        -InputObject <IOracleIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IAutonomousDbVersion" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of the Autonomous Database Versions by location'
+  description: |-
+    ```powershell
+    Get-AzOracleAutonomousDatabaseVersion -Location "eastus"
+    ```
+
+    ```output
+    Name SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ---- ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    19c
+    19c
+    19c
+    ```
+
+    Get a list of the Autonomous Database Versions by location.
+    For more information, execute `Get-Help Get-AzOracleAutonomousDatabaseVersion`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Get-AzOracleAutonomousDatabaseVersion.md
+  document type: cmdlet
+  external help file: Az.Oracle-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.oracle/get-azoracleautonomousdatabaseversion
+  Module Name: Az.Oracle
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Get-AzOracleAutonomousDatabaseVersion.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJobRecurrence
+name: Get-AzDataLakeAnalyticsJobRecurrence
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Gets a Data Lake Analytics Job recurrence or recurrences.
+description: |-
+  The **Get-AzDataLakeAnalyticsJobRecurrence** gets a specified Azure Data Lake Analytics Job recurrence or a list of recurrence.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Data Lake Analytics account name under which want to retrieve the job recurrence.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the specific job recurrence to return information for.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetBySpecificJobRecurrence
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedAfter
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional filter which returns job recurrence(s) only submitted after the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedBefore
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional filter which returns job recurrence(s) only submitted before the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJobRecurrence
+        [-Account] <String>
+        [-SubmittedAfter <DateTimeOffset>]
+        [-SubmittedBefore <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllInAccount
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJobRecurrence
+        [-Account] <String>
+        [-RecurrenceId] <Guid>
+        [-SubmittedAfter <DateTimeOffset>]
+        [-SubmittedBefore <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetBySpecificJobRecurrence
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSJobRecurrenceInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified recurrence'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJobRecurrence -Account "contosoadla" -RecurrenceId 83cb7ad2-3523-4b82-b909-d478b0d8aea3
+    ```
+
+    This command gets the specified job recurrence with id '83cb7ad2-3523-4b82-b909-d478b0d8aea3' in account 'contosoadla'.
+- title: 'Example 2: Get a list of all recurrences in the account'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJobRecurrence -AccountName "contosoadla"
+    ```
+
+    This command gets a list of all recurrences in the account "contosoadla"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobRecurrence.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjobrecurrence
+  Module Name: Az.DataLakeAnalytics
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobRecurrence.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,879 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlElasticJobStep
+name: Set-AzSqlElasticJobStep
+module: Az.Sql
+isPreview: false
+summary: |-
+  Updates a job step
+description: |-
+  The Set-AzSqlElasticJobStep cmdlet updates a job step
+parameters:
+  cmdletParameters:
+  - name: AgentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The agent name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutput
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommandText
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The command text
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CredentialName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The credential name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitialRetryIntervalSeconds
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The initial retry interval seconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ElasticJobs.Model.AzureSqlElasticJobStepModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The job step object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutputUsingParentObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The job name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutput
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumRetryIntervalSeconds
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The maximum retry interval seconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The step name
+    aliases:
+    - StepName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutput
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputCredentialName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The output credential name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ObjectSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputDatabaseObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The output database object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ObjectSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputDatabaseResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The output database resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WithAddOutput
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputSchemaName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The output schema name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ObjectSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputTableName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The output table name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ObjectSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveOutput
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag to indicate whether to remove output
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WithRemoveOutput
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutputUsingParentObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutputUsingParentResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutput
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The job step resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutputUsingParentResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WithAddOutputUsingParentResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryAttempts
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The retry attemps
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetryIntervalBackoffMultiplier
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Double" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The retry interval backoff multiplier
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The server name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithRemoveOutput
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WithAddOutput
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StepId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The step id text
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target group name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeoutSeconds
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The timeout seconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceGroupName] <String>
+        [-ServerName] <String>
+        [-AgentName] <String>
+        [-JobName] <String>
+        -Name <String>
+        [-OutputDatabaseObject <AzureSqlDatabaseModel>]
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceGroupName] <String>
+        [-ServerName] <String>
+        [-AgentName] <String>
+        [-JobName] <String>
+        -Name <String>
+        [-RemoveOutput]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithRemoveOutput
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceGroupName] <String>
+        [-ServerName] <String>
+        [-AgentName] <String>
+        [-JobName] <String>
+        -Name <String>
+        -OutputDatabaseResourceId <String>
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithAddOutput
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-InputObject] <AzureSqlElasticJobStepModel>
+        [-OutputDatabaseObject <AzureSqlDatabaseModel>]
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-InputObject] <AzureSqlElasticJobStepModel>
+        [-RemoveOutput]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithRemoveOutputUsingParentObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-InputObject] <AzureSqlElasticJobStepModel>
+        -OutputDatabaseResourceId <String>
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithAddOutputUsingParentObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceId] <String>
+        [-OutputDatabaseObject <AzureSqlDatabaseModel>]
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceId] <String>
+        [-RemoveOutput]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithRemoveOutputUsingParentResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlElasticJobStep
+        [-ResourceId] <String>
+        -OutputDatabaseResourceId <String>
+        [-OutputCredentialName <String>]
+        [-OutputTableName <String>]
+        [-OutputSchemaName <String>]
+        [-TargetGroupName <String>]
+        [-CredentialName <String>]
+        [-CommandText <String>]
+        [-StepId <Int32>]
+        [-TimeoutSeconds <Int32>]
+        [-RetryAttempts <Int32>]
+        [-InitialRetryIntervalSeconds <Int32>]
+        [-MaximumRetryIntervalSeconds <Int32>]
+        [-RetryIntervalBackoffMultiplier <Double>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WithAddOutputUsingParentResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ElasticJobs.Model.AzureSqlElasticJobStepModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ElasticJobs.Model.AzureSqlElasticJobStepModel" data-throw-if-not-resolved="False" />
+examples:
+- title: "Example 1: Updates a job step's target group for a job"
+  description: |-
+    ```powershell
+    $jobStep = Get-AzSqlElasticJobStep -ResourceGroupName rg -ServerName elasticjobserver -AgentName agent -JobName job1 -StepName step1
+    $jobStep | Set-AzSqlElasticJobStep -TargetGroupName tg2
+    ```
+
+    ```output
+    JobName StepName StepId TargetGroupName CredentialName Output ExecutionOptions   CommandText
+    ------- -------- ------ --------------- -------------- ------ ----------------   -----------
+    job1    step1    1      tg2             cred1                 (43200,10,1,120,2) SELECT 1
+    ```
+- title: "Example 2: Updates a job step's T-SQL script for a job"
+  description: |-
+    ```powershell
+    $jobStep = Get-AzSqlElasticJobStep -ResourceGroupName rg -ServerName elasticjobserver -AgentName agent -JobName job1 -StepName step1
+    $jobStep | Set-AzSqlElasticJobStep -CommandText "SELECT 2"
+    ```
+
+    ```output
+    JobName StepName StepId TargetGroupName CredentialName Output ExecutionOptions   CommandText
+    ------- -------- ------ --------------- -------------- ------ ----------------   -----------
+    job1    step1    1      tg1             cred1                 (43200,10,1,120,2) SELECT 2
+    ```
+
+    Updates a job step from a job
+- title: Example 3
+  description: |-
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Set-AzSqlElasticJobStep -AgentName agent -CommandText 'SELECT 2' -JobName job1 -Name step1 -ResourceGroupName MyResourceGroup -ServerName s1
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticJobStep.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.sql/set-Azsqlelasticjobstep
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlElasticJobStep.md
+  PlatyPS schema version: 2024-05-01

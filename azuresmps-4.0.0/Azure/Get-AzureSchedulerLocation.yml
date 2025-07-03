@@ -1,0 +1,68 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSchedulerLocation
+name: Get-AzureSchedulerLocation
+module: Azure
+isPreview: false
+summary: |-
+  Gets available scheduler locations.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-AzureSchedulerLocation** cmdlet gets available scheduler locations.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSchedulerLocation
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get available scheduler locations'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerLocation
+    ```
+
+    This command gets available scheduler locations.
+links:
+- text: Get-AzureSchedulerJob
+  href: ./Get-AzureSchedulerJob.yml
+- text: Get-AzureSchedulerJobCollection
+  href: ./Get-AzureSchedulerJobCollection.yml
+- text: Get-AzureSchedulerJobHistory
+  href: ./Get-AzureSchedulerJobHistory.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 410A58A3-CB0E-43FE-B490-B1520BD1CCEC
+  PlatyPS schema version: 2024-05-01

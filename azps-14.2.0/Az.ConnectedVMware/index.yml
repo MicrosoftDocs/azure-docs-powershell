@@ -1,0 +1,57 @@
+### YamlMime:PowerShellModule1
+uid: Az.ConnectedVMware
+name: Az.ConnectedVMware Module
+isPreview: false
+cmdletGroups:
+- title: VMware
+  cmdlets:
+  - Az.ConnectedVMware.Get-AzConnectedVMwareCluster
+  - Az.ConnectedVMware.Get-AzConnectedVMwareDatastore
+  - Az.ConnectedVMware.Get-AzConnectedVMwareHost
+  - Az.ConnectedVMware.Get-AzConnectedVMwareInventoryItem
+  - Az.ConnectedVMware.Get-AzConnectedVMwareResourcePool
+  - Az.ConnectedVMware.Get-AzConnectedVMwareVCenter
+  - Az.ConnectedVMware.Get-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Get-AzConnectedVMwareVMGuestAgent
+  - Az.ConnectedVMware.Get-AzConnectedVMwareVMTemplate
+  - Az.ConnectedVMware.Get-AzConnectedVMwareVNet
+  - Az.ConnectedVMware.New-AzConnectedVMwareCluster
+  - Az.ConnectedVMware.New-AzConnectedVMwareDatastore
+  - Az.ConnectedVMware.New-AzConnectedVMwareHost
+  - Az.ConnectedVMware.New-AzConnectedVMwareResourcePool
+  - Az.ConnectedVMware.New-AzConnectedVMwareVCenter
+  - Az.ConnectedVMware.New-AzConnectedVMwareVM
+  - Az.ConnectedVMware.New-AzConnectedVMwareVMGuestAgent
+  - Az.ConnectedVMware.New-AzConnectedVMwareVMTemplate
+  - Az.ConnectedVMware.New-AzConnectedVMwareVNet
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareCluster
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareDatastore
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareHost
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareResourcePool
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareVCenter
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareVMTemplate
+  - Az.ConnectedVMware.Remove-AzConnectedVMwareVNet
+  - Az.ConnectedVMware.Restart-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Start-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Stop-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Update-AzConnectedVMwareCluster
+  - Az.ConnectedVMware.Update-AzConnectedVMwareDatastore
+  - Az.ConnectedVMware.Update-AzConnectedVMwareHost
+  - Az.ConnectedVMware.Update-AzConnectedVMwareResourcePool
+  - Az.ConnectedVMware.Update-AzConnectedVMwareVCenter
+  - Az.ConnectedVMware.Update-AzConnectedVMwareVM
+  - Az.ConnectedVMware.Update-AzConnectedVMwareVMTemplate
+  - Az.ConnectedVMware.Update-AzConnectedVMwareVNet
+description: |-
+  Microsoft Azure PowerShell: ConnectedVMware cmdlets
+metadata:
+  Module Name: Az.ConnectedVMware
+  Module Guid: a0ad279a-4e68-428d-8864-28b698ac90f8
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.connectedvmware
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Az.ConnectedVMware.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Az.ConnectedVMware.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

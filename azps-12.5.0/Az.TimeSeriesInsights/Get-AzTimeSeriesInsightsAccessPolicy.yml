@@ -1,0 +1,218 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsAccessPolicy
+name: Get-AzTimeSeriesInsightsAccessPolicy
+module: Az.TimeSeriesInsights
+isPreview: false
+summary: |-
+  Gets the access policy with the specified name in the specified environment.
+description: |-
+  Gets the access policy with the specified name in the specified environment.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnvironmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Time Series Insights environment associated with the specified resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Time Series Insights access policy associated with the specified environment.
+    aliases:
+    - AccessPolicyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of an Azure Resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsAccessPolicy
+        -EnvironmentName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsAccessPolicy
+        -EnvironmentName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsAccessPolicy
+        -InputObject <ITimeSeriesInsightsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.IAccessPolicyResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all access policies under a specified environment'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsAccessPolicy -EnvironmentName tsitest001 -ResourceGroupName testgroup
+    ```
+
+    ```output
+    Name      Type
+    ----      ----
+    policy001 Microsoft.TimeSeriesInsights/Environments/AccessPolicies
+    policy002 Microsoft.TimeSeriesInsights/Environments/AccessPolicies
+    ```
+
+    This command lists all access policies under a specified environment.
+- title: 'Example 2: Get a specified access policy by name'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsAccessPolicy -EnvironmentName tsitest001 -ResourceGroupName testgroup -Name policy001
+    ```
+
+    ```output
+    Name      Type
+    ----      ----
+    policy001 Microsoft.TimeSeriesInsights/Environments/AccessPolicies
+    ```
+
+    This command gets a specified access policy.
+- title: 'Example 3: Get a specified access policy by object'
+  description: |-
+    ```powershell
+    $ap = Get-AzTimeSeriesInsightsAccessPolicy -EnvironmentName tsi-envv8u56x -ResourceGroupName tsi-test-i01k5l -Name tsi-apilgj5y
+    Get-AzTimeSeriesInsightsAccessPolicy -InputObject $ap
+    ```
+
+    ```output
+    Name      Type
+    ----      ----
+    policy001 Microsoft.TimeSeriesInsights/Environments/AccessPolicies
+    ```
+
+    This command gets a specified access policy.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsAccessPolicy.md
+  document type: cmdlet
+  external help file: Az.TimeSeriesInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightsaccesspolicy
+  Module Name: Az.TimeSeriesInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsAccessPolicy.md
+  PlatyPS schema version: 2024-05-01

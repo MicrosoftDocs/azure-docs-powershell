@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Az.Billing
+name: Az.Billing Module
+isPreview: false
+cmdletGroups:
+- title: Billing
+  cmdlets:
+  - Az.Billing.Get-AzBillingAccount
+  - Az.Billing.Get-AzBillingInvoice
+  - Az.Billing.Get-AzBillingPeriod
+  - Az.Billing.Get-AzBillingProfile
+  - Az.Billing.Get-AzConsumptionBudget
+  - Az.Billing.Get-AzConsumptionMarketplace
+  - Az.Billing.Get-AzConsumptionPriceSheet
+  - Az.Billing.Get-AzConsumptionReservationDetail
+  - Az.Billing.Get-AzConsumptionReservationSummary
+  - Az.Billing.Get-AzConsumptionUsageDetail
+  - Az.Billing.Get-AzEnrollmentAccount
+  - Az.Billing.Get-AzInvoiceSection
+  - Az.Billing.Get-AzUsageAggregate
+  - Az.Billing.New-AzConsumptionBudget
+  - Az.Billing.Remove-AzConsumptionBudget
+  - Az.Billing.Set-AzConsumptionBudget
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure Billing in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.Billing namespace.
+metadata:
+  Module Name: Az.Billing
+  Module Guid: a1f34ce9-bf46-4180-b36c-be232a1f8f63
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.billing
+  Help Version: 2.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Az.Billing.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Az.Billing.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

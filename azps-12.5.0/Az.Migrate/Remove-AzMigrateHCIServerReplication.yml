@@ -1,0 +1,253 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Remove-AzMigrateHCIServerReplication
+name: Remove-AzMigrateHCIServerReplication
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Stops replication for the migrated server.
+description: |-
+  The Remove-AzMigrateHCIServerReplication cmdlet stops the replication for a migrated server.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceRemove
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the replication needs to be force removed.
+      Default to "false".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.IMigrateIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the replication needs to be disabled.
+      The server object can be retrieved using the Get-AzMigrateHCIServerReplication cmdlet.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetObjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the replication needs to be disabled.
+      The ID should be retrieved using the Get-AzMigrateHCIServerReplication cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByID
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzMigrateHCIServerReplication
+        -TargetObjectID <String>
+        [-SubscriptionId <String>]
+        [-ForceRemove <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByID
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzMigrateHCIServerReplication
+        -InputObject <IMigrateIdentity>
+        [-SubscriptionId <String>]
+        [-ForceRemove <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.IMigrateIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.IWorkflowModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove replication by Id'
+  description: |-
+    ```powershell
+    Remove-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444"
+    ```
+
+    ```output
+    ActivityId                         :  ActivityId: 00000000-0000-0000-0000-000000000000
+    AllowedAction                      : {Cancel}
+    CustomPropertyAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.WorkflowModelCustomPropertiesAffectedObjectDetails
+    CustomPropertyInstanceType         : WorkflowDetails
+    DisplayName                        : Delete protected item
+    EndTime                            :
+    Error                              : {}
+    Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/jobs/2b0b356e-d106-43af-ad26-02631fcaebba
+    Name                               : 2b0b356e-d106-43af-ad26-02631fcaebba
+    ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ObjectInternalId                   : a40ecd8e-6413-574d-b1f8-2ef925e087fc
+    ObjectInternalName                 : testmachine
+    ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ObjectType                         : ProtectedItem
+    ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
+    SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
+    StartTime                          : 7/25/2023 10:14:42 PM
+    State                              : Started
+    SystemDataCreatedAt                :
+    SystemDataCreatedBy                :
+    SystemDataCreatedByType            :
+    SystemDataLastModifiedAt           :
+    SystemDataLastModifiedBy           :
+    SystemDataLastModifiedByType       :
+    Tag                                : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.WorkflowModelTags
+    TargetFabricProviderId             : 22f00372-a1b7-467f-87ce-d95e17a6e7c7
+    Task                               : {Prerequisite check, Deleting protected item}
+    Type                               : Microsoft.DataReplication/replicationVaults/jobs
+    ```
+
+    Remove AzStackHCI replication by Id.
+- title: 'Example 2: Remove replication by input object'
+  description: |-
+    ```powershell
+    $InputObject = Get-AzMigrateHCIServerReplication -TargetObjectID "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/00001111-aaaa-2222-bbbb-3333cccc4444"
+
+    Remove-AzMigrateHCIServerReplication -InputObject $InputObject
+
+    $InputObject | Remove-AzMigrateHCIServerReplication
+    ```
+
+    ```output
+    ActivityId                         :  ActivityId: 00000000-0000-0000-0000-000000000000
+    AllowedAction                      : {Cancel}
+    CustomPropertyAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.WorkflowModelCustomPropertiesAffectedObjectDetails
+    CustomPropertyInstanceType         : WorkflowDetails
+    DisplayName                        : Delete protected item
+    EndTime                            :
+    Error                              : {}
+    Id                                 : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/jobs/2b0b356e-d106-43af-ad26-02631fcaebba
+    Name                               : 2b0b356e-d106-43af-ad26-02631fcaebba
+    ObjectId                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/test-rg/providers/Microsoft.DataReplication/replicationVaults/testproj1234replicationvault/protectedItems/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ObjectInternalId                   : a40ecd8e-6413-574d-b1f8-2ef925e087fc
+    ObjectInternalName                 : testmachine
+    ObjectName                         : aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ObjectType                         : ProtectedItem
+    ReplicationProviderId              : 4de0fddc-bdfe-40d9-b60e-678bdce89630
+    SourceFabricProviderId             : b35da11c-d69e-4220-9a90-d81ed93ad2fc
+    StartTime                          : 7/25/2023 10:14:42 PM
+    State                              : Started
+    SystemDataCreatedAt                :
+    SystemDataCreatedBy                :
+    SystemDataCreatedByType            :
+    SystemDataLastModifiedAt           :
+    SystemDataLastModifiedBy           :
+    SystemDataLastModifiedByType       :
+    Tag                                : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20210216Preview.WorkflowModelTags
+    TargetFabricProviderId             : 22f00372-a1b7-467f-87ce-d95e17a6e7c7
+    Task                               : {Prerequisite check, Deleting protected item}
+    Type                               : Microsoft.DataReplication/replicationVaults/jobs
+    ```
+
+    Remove AzStackHCI replication by replication input object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Remove-AzMigrateHCIServerReplication.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/remove-azmigratehciserverreplication
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Remove-AzMigrateHCIServerReplication.md
+  PlatyPS schema version: 2024-05-01

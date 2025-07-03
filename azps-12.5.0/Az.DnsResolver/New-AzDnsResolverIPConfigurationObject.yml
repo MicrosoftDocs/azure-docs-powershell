@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DnsResolver.New-AzDnsResolverIPConfigurationObject
+name: New-AzDnsResolverIPConfigurationObject
+module: Az.DnsResolver
+isPreview: false
+summary: |-
+  Create a in-memory object for IPConfiguration
+description: |-
+  Create a in-memory object for IPConfiguration
+parameters:
+  cmdletParameters:
+  - name: PrivateIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Private IP address of the IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateIPAllocationMethod
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Support.IPAllocationMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Private IP address allocation method.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDnsResolverIPConfigurationObject
+        [-PrivateIPAddress <String>]
+        [-PrivateIPAllocationMethod <IPAllocationMethod>]
+        [-SubnetId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DnsResolver.Models.Api20220701.IPConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an IPConfiguration'
+  description: |-
+    ```powershell
+    New-AzDnsResolverIPConfigurationObject -PrivateIPAddress 1.1.2.12 -PrivateIPAllocationMethod Dynamic -SubnetId /subscriptions/0e5a46b1-de0b-4ec3-a5d7-dda908b4e076/resourceGroups/powershell-test-rg/providers/Microsoft.Network/virtualNetworks/psvirtualnetworkname44yqt9mb/subnets/pssubnetname44c6v0lr
+    ```
+
+    ```output
+    PrivateIPAddress PrivateIPAllocationMethod
+    ---------------- -------------------------
+    1.1.2.12         Dynamic
+    ```
+
+    This command creates an IPConfiguration
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/DnsResolver/help/New-AzDnsResolverIPConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.DnsResolver-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dnsresolver/new-azdnsresolveripconfigurationobject
+  Module Name: Az.DnsResolver
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/DnsResolver/help/New-AzDnsResolverIPConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

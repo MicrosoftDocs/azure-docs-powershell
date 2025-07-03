@@ -1,0 +1,49 @@
+### YamlMime:PowerShellModule1
+uid: Az.CloudService
+name: Az.CloudService Module
+isPreview: false
+cmdletGroups:
+- title: Cloud Services
+  cmdlets:
+  - Az.CloudService.Get-AzCloudService
+  - Az.CloudService.Get-AzCloudServiceInstanceView
+  - Az.CloudService.Get-AzCloudServiceNetworkInterface
+  - Az.CloudService.Get-AzCloudServiceOSFamily
+  - Az.CloudService.Get-AzCloudServiceOSVersion
+  - Az.CloudService.Get-AzCloudServicePublicIPAddress
+  - Az.CloudService.Get-AzCloudServiceRoleInstance
+  - Az.CloudService.Get-AzCloudServiceRoleInstanceRemoteDesktopFile
+  - Az.CloudService.Get-AzCloudServiceRoleInstanceView
+  - Az.CloudService.Invoke-AzCloudServiceRebuild
+  - Az.CloudService.Invoke-AzCloudServiceReimage
+  - Az.CloudService.Invoke-AzCloudServiceRoleInstanceRebuild
+  - Az.CloudService.Invoke-AzCloudServiceRoleInstanceReimage
+  - Az.CloudService.New-AzCloudService
+  - Az.CloudService.New-AzCloudServiceDiagnosticsExtension
+  - Az.CloudService.New-AzCloudServiceExtensionObject
+  - Az.CloudService.New-AzCloudServiceLoadBalancerConfigurationObject
+  - Az.CloudService.New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject
+  - Az.CloudService.New-AzCloudServiceRemoteDesktopExtensionObject
+  - Az.CloudService.New-AzCloudServiceRoleProfilePropertiesObject
+  - Az.CloudService.New-AzCloudServiceVaultSecretGroupObject
+  - Az.CloudService.Remove-AzCloudService
+  - Az.CloudService.Remove-AzCloudServiceRoleInstance
+  - Az.CloudService.Restart-AzCloudService
+  - Az.CloudService.Restart-AzCloudServiceRoleInstance
+  - Az.CloudService.Set-AzCloudServiceUpdateDomain
+  - Az.CloudService.Start-AzCloudService
+  - Az.CloudService.Stop-AzCloudService
+  - Az.CloudService.Switch-AzCloudService
+  - Az.CloudService.Update-AzCloudService
+description: |-
+  Microsoft Azure PowerShell: CloudService cmdlets
+metadata:
+  Module Name: Az.CloudService
+  Module Guid: a41eb61d-c5a1-4e9b-81a7-b8905fff7f2c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.cloudservice
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/Az.CloudService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/Az.CloudService.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

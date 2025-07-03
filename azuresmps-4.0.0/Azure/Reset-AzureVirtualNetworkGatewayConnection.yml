@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Reset-AzureVirtualNetworkGatewayConnection
+name: Reset-AzureVirtualNetworkGatewayConnection
+module: Azure
+isPreview: false
+summary: |-
+  Resets a virtual network gateway connection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Reset-AzureVirtualNetworkGatewayConnection** cmdlet resets a virtual network gateway connection.
+parameters:
+  cmdletParameters:
+  - name: ConnectedEntityId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a connected entity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableBgp
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables Border Gateway Protocol (BGP).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingWeight
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a shared key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Reset-AzureVirtualNetworkGatewayConnection
+        -GatewayId <String>
+        -ConnectedEntityId <String>
+        -RoutingWeight <Int32>
+        [-SharedKey <String>]
+        [-EnableBgp <Boolean>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Get-AzureVirtualNetworkGatewayConnection
+  href: ./Get-AzureVirtualNetworkGatewayConnection.yml
+- text: New-AzureVirtualNetworkGatewayConnection
+  href: ./New-AzureVirtualNetworkGatewayConnection.yml
+- text: Remove-AzureVirtualNetworkGatewayConnection
+  href: ./Remove-AzureVirtualNetworkGatewayConnection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 09642B94-E888-4A22-9E8E-62109DB9394E
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,37 @@
+### YamlMime:PowerShellModule1
+uid: Az.AksArc
+name: Az.AksArc Module
+isPreview: false
+cmdletGroups:
+- title: AksArc
+  cmdlets:
+  - Az.AksArc.Get-AzAksArcCluster
+  - Az.AksArc.Get-AzAksArcClusterAdminKubeconfig
+  - Az.AksArc.Get-AzAksArcClusterUpgrade
+  - Az.AksArc.Get-AzAksArcClusterUserKubeconfig
+  - Az.AksArc.Get-AzAksArcKubernetesVersion
+  - Az.AksArc.Get-AzAksArcLog
+  - Az.AksArc.Get-AzAksArcNodepool
+  - Az.AksArc.Get-AzAksArcVirtualNetwork
+  - Az.AksArc.Get-AzAksArcVMSku
+  - Az.AksArc.Invoke-AzAksArcClusterUpgrade
+  - Az.AksArc.New-AzAksArcCluster
+  - Az.AksArc.New-AzAksArcNodepool
+  - Az.AksArc.New-AzAksArcVirtualNetwork
+  - Az.AksArc.Remove-AzAksArcCluster
+  - Az.AksArc.Remove-AzAksArcNodepool
+  - Az.AksArc.Remove-AzAksArcVirtualNetwork
+  - Az.AksArc.Update-AzAksArcCluster
+  - Az.AksArc.Update-AzAksArcNodepool
+description: |-
+  Microsoft Azure PowerShell: AksArc cmdlets
+metadata:
+  Module Name: Az.AksArc
+  Module Guid: d47feb3b-21f7-4102-9a9e-dc6bdb42565a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.aksarc
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AksArc/AksArc/help/Az.AksArc.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AksArc/AksArc/help/Az.AksArc.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

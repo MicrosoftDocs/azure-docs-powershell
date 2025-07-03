@@ -1,0 +1,781 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Test-AzResourceGroupDeployment
+name: Test-AzResourceGroupDeployment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Validates a resource group deployment.
+description: |-
+  The **Test-AzResourceGroupDeployment** cmdlet determines whether an Azure resource group deployment template and its parameter values are valid.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="Microsoft.Azure.Management.Resources.Models.DeploymentMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deployment mode.
+      The acceptable values for this parameter are:
+      - Incremental
+      - Complete
+    acceptedValues:
+    - Incremental
+    - Complete
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The query string (for example, a SAS token) to be used with the TemplateUri parameter. Would be used in case of linked templates
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to test.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollBackDeploymentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Rollback to the successful deployment with the given name in the resource group, should not be used if -RollbackToLastDeployment is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollbackToLastDeployment
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Rollback to the last successful deployment in the resource group, should not be present if -RollBackDeploymentName is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipTemplateParameterPrompt
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skips the PowerShell dynamic parameter processing that checks if the provided template parameter contains all necessary parameters used by the template. This check would prompt the user to provide a value for the missing parameters, but providing the -SkipTemplateParameterPrompt will ignore this prompt and error out immediately if a parameter was found not to be bound in the template. For non-interactive scripts, -SkipTemplateParameterPrompt can be provided to provide a better error message in the case where not all required parameters are satisfied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SuppressDiagnostics
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, validation diagnostics will not be shown for valid deployments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of a template file. Supported template file type: json and bicep.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hash table which represents the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateObjectWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of a JSON file that contains the names and values of the template parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParams
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByParameterFileWithNoTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a hash table of template parameter names and values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI of a template parameters file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateObjectAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateSpecId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the templateSpec to be deployed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateSpecResourceIdAndParamsObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParams
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceIdAndParamsUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI of a template file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidationLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the validation level for validate/what-if. ValidationLevel can be Template(Skips provider validation), Provider(Performs full validation), or ProviderNoRbac(Performs full validation using RBAC read checks instead of RBAC write checks for provider validation).
+    defaultValue: None(Provider)
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateFile <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithNoParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateObject <Hashtable>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateFile <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateUri <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateSpecId <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParamsObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateObject <Hashtable>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateFile <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateUri <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateSpecId <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParams
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParameterFileWithNoTemplate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateObject <Hashtable>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateFile <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateUri <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateSpecId <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceIdAndParamsUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateObject <Hashtable>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateObjectWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateUri <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateSpecId <String>
+        [-Mode <DeploymentMode>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-QueryString <String>]
+        [-ValidationLevel <String>]
+        [-SuppressDiagnostics]
+        [-SkipTemplateParameterPrompt]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.ResourceManager.Models.DeploymentMode" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSResourceManagerError" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Test deployment with a custom template object and parameter file'
+  description: |-
+    ```powershell
+    $TemplateFileText = [System.IO.File]::ReadAllText("D:\Azure\Templates\EngineeringSite.json")
+    $TemplateObject = ConvertFrom-Json $TemplateFileText -AsHashtable
+    Test-AzResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateObject $TemplateObject -TemplateParameterFile "D:\Azure\Templates\EngSiteParams.json"
+    ```
+
+    This command tests a deployment in the given resource group using the an in-memory hashtable created from the given template file and a parameter file.
+- title: 'Example 2: Test deployment via template file and parameter file'
+  description: |-
+    ```powershell
+    Test-AzResourceGroupDeployment -ResourceGroupName testRG01 -TemplateFile "D:\Azure\Templates\sampleDeploymentTemplate.json" -TemplateParameterFile "D:\Azure\Templates\sampleDeploymentTemplateParams.json"
+    ```
+
+    This command tests a deployment in the given resource group and resource using the provided template file and a parameter file.
+- title: 'Example 3: Use a .bicepparam file to validate a deployment'
+  description: |-
+    ```powershell
+    Test-AzResourceGroupDeployment -ResourceGroupName "myRG1" -TemplateParameterFile "./parameters.bicepparam"
+    ```
+
+    This command validates the deployment at the resource group scope by using a .bicepparam file on disk.
+    The command uses the *TemplateParameterFile* parameter to specify a .bicepparam file.
+links:
+- text: Get-AzResourceGroupDeployment
+  href: ./Get-AzResourceGroupDeployment.yml
+- text: New-AzResourceGroupDeployment
+  href: ./New-AzResourceGroupDeployment.yml
+- text: Remove-AzResourceGroupDeployment
+  href: ./Remove-AzResourceGroupDeployment.yml
+- text: Stop-AzResourceGroupDeployment
+  href: ./Stop-AzResourceGroupDeployment.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Test-AzResourceGroupDeployment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/test-azresourcegroupdeployment
+  Module Name: Az.Resources
+  ms.assetid: 0143CE35-3B1D-4829-B880-A5CA25B83883
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Test-AzResourceGroupDeployment.md
+  PlatyPS schema version: 2024-05-01

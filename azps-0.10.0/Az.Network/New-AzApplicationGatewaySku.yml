@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewaySku
+name: New-AzApplicationGatewaySku
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a SKU for an application gateway.
+description: |-
+  The **New-AzApplicationGatewaySku** cmdlet creates a stock keeping unit (SKU) for an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: Capacity
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of instances of an application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SKU.
+
+      The acceptable values for this parameter are:
+
+      - Standard_Small
+      - Standard_Medium
+      - Standard_Large
+      - WAF_Medium
+      - WAF_Large
+    acceptedValues:
+    - Standard_Small
+    - Standard_Medium
+    - Standard_Large
+    - WAF_Medium
+    - WAF_Large
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tier of the SKU.
+      The acceptable values for this parameter are:
+
+      - Standard
+      - WAF
+    acceptedValues:
+    - Standard
+    - WAF
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewaySku
+        -Name <String>
+        -Tier <String>
+        -Capacity <Int32>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a SKU for an Azure application gateway'
+  description: |-
+    ```
+    PS C:\>$SKU = New-AzApplicationGatewaySku -Name "Standard_Small" -Tier "Standard" -Capacity 2
+    ```
+
+    This command creates a SKU named Standard_Small for an Azure application gateway and stores the result in the variable named $SKU.
+links:
+- text: Get-AzApplicationGatewaySku
+  href: ./Get-AzApplicationGatewaySku.yml
+- text: Set-AzApplicationGatewaySku
+  href: ./Set-AzApplicationGatewaySku.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzApplicationGatewaySku.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/new-azapplicationgatewaysku
+  Module Name: Az.Network
+  ms.assetid: 48C33FAF-83C1-4725-AD2A-CF48D0718182
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/New-AzApplicationGatewaySku.md
+  PlatyPS schema version: 2024-05-01

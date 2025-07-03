@@ -1,0 +1,94 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.New-AzDataBoxTransferConfigurationObject
+name: New-AzDataBoxTransferConfigurationObject
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Create an in-memory object for TransferConfiguration.
+description: |-
+  Create an in-memory object for TransferConfiguration.
+parameters:
+  cmdletParameters:
+  - name: TransferAllDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20221201.ITransferConfigurationTransferAllDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Map of filter type and the details to transfer all data.
+      This field is required only if the TransferConfigurationType is given as TransferAll.
+      To construct, see NOTES section for TRANSFERALLDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransferFilterDetail
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20221201.ITransferConfigurationTransferFilterDetails" data-throw-if-not-resolved="False" />
+    description: |-
+      Map of filter type and the details to filter.
+      This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
+      To construct, see NOTES section for TRANSFERFILTERDETAIL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.TransferConfigurationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of the configuration for transfer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataBoxTransferConfigurationObject
+        -Type <TransferConfigurationType>
+        [-TransferAllDetail <ITransferConfigurationTransferAllDetails>]
+        [-TransferFilterDetail <ITransferConfigurationTransferFilterDetails>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20221201.TransferConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: In-memory object for export job transfer configuration'
+  description: |-
+    ```powershell
+    New-AzDataBoxTransferConfigurationObject -Type "TransferAll" -TransferAllDetail @{"IncludeDataAccountType"="StorageAccount";"IncludeTransferAllBlob"= "True"; "IncludeTransferAllFile"="True"}
+    ```
+
+    Create a in-memory object for export jobs TransferConfiguration
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxTransferConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DataBox/new-AzDataBoxTransferConfigurationObject
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxTransferConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

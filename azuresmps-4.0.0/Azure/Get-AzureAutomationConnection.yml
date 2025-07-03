@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationConnection
+name: Get-AzureAutomationConnection
+module: Azure
+isPreview: false
+summary: |-
+  Gets an Azure Automation connection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationConnection** cmdlet gets one or more Microsoft Azure Automation connections.
+  By default, all connections are returned.
+  To get a specific connection, specify its name.
+  To get all connections of a certain type, specify the connection type name.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the automation account with the connection to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionTypeName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a connection type for the connections to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionTypeName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a connection to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationConnection
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationConnection
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationConnection
+        -ConnectionTypeName <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionTypeName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Connection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all connections'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17"
+    ```
+
+    This command gets all connections in the Automation account named Contoso17.
+- title: 'Example 2: Get all connections of a type'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -ConnectionTypeName "Azure"
+    ```
+
+    This command gets all Azure connections in the Automation account named Contoso17.
+- title: 'Example 3: Get a connection'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationConnection -AutomationAccountName "Contoso17" -Name "Azure"
+    ```
+
+    This command gets the connection named MyConnection.
+links:
+- text: New-AzureAutomationConnection
+  href: ./New-AzureAutomationConnection.yml
+- text: Remove-AzureAutomationConnection
+  href: ./Remove-AzureAutomationConnection.yml
+- text: Set-AzureAutomationConnectionFieldValue
+  href: ./Set-AzureAutomationConnectionFieldValue.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DD881317-7366-4B55-B1CC-6AF0286F1C5D
+  PlatyPS schema version: 2024-05-01

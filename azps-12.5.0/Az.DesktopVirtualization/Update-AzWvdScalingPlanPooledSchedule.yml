@@ -1,0 +1,579 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.Update-AzWvdScalingPlanPooledSchedule
+name: Update-AzWvdScalingPlanPooledSchedule
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  Update a ScalingPlanPooledSchedule.
+description: |-
+  Update a ScalingPlanPooledSchedule.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfWeek
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Set of days of the week on which this schedule is active.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakLoadBalancingAlgorithm
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.SessionHostLoadBalancingAlgorithm" data-throw-if-not-resolved="False" />
+    description: |-
+      Load balancing algorithm for off-peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakLoadBalancingAlgorithm
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.SessionHostLoadBalancingAlgorithm" data-throw-if-not-resolved="False" />
+    description: |-
+      Load balancing algorithm for peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownCapacityThresholdPct
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Capacity threshold for ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownForceLogoffUser
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Should users be logged off forcefully from hosts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownLoadBalancingAlgorithm
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.SessionHostLoadBalancingAlgorithm" data-throw-if-not-resolved="False" />
+    description: |-
+      Load balancing algorithm for ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownMinimumHostsPct
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum host percentage for ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownNotificationMessage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Notification message for users during ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStopHostsWhen
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.StopHostsWhen" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies when to stop hosts during ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownWaitTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of minutes to wait to stop hosts during ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpCapacityThresholdPct
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Capacity threshold for ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpLoadBalancingAlgorithm
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Support.SessionHostLoadBalancingAlgorithm" data-throw-if-not-resolved="False" />
+    description: |-
+      Load balancing algorithm for ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpMinimumHostsPct
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum host percentage for ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalingPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the scaling plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalingPlanScheduleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ScalingPlanSchedule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzWvdScalingPlanPooledSchedule
+        -ResourceGroupName <String>
+        -ScalingPlanName <String>
+        -ScalingPlanScheduleName <String>
+        [-SubscriptionId <String>]
+        [-DaysOfWeek <DayOfWeek[]>]
+        [-OffPeakLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-OffPeakStartTimeHour <Int32>]
+        [-OffPeakStartTimeMinute <Int32>]
+        [-PeakLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-PeakStartTimeHour <Int32>]
+        [-PeakStartTimeMinute <Int32>]
+        [-RampDownCapacityThresholdPct <Int32>]
+        [-RampDownForceLogoffUser]
+        [-RampDownLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-RampDownMinimumHostsPct <Int32>]
+        [-RampDownNotificationMessage <String>]
+        [-RampDownStartTimeHour <Int32>]
+        [-RampDownStartTimeMinute <Int32>]
+        [-RampDownStopHostsWhen <StopHostsWhen>]
+        [-RampDownWaitTimeMinute <Int32>]
+        [-RampUpCapacityThresholdPct <Int32>]
+        [-RampUpLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-RampUpMinimumHostsPct <Int32>]
+        [-RampUpStartTimeHour <Int32>]
+        [-RampUpStartTimeMinute <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzWvdScalingPlanPooledSchedule
+        -InputObject <IDesktopVirtualizationIdentity>
+        [-DaysOfWeek <DayOfWeek[]>]
+        [-OffPeakLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-OffPeakStartTimeHour <Int32>]
+        [-OffPeakStartTimeMinute <Int32>]
+        [-PeakLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-PeakStartTimeHour <Int32>]
+        [-PeakStartTimeMinute <Int32>]
+        [-RampDownCapacityThresholdPct <Int32>]
+        [-RampDownForceLogoffUser]
+        [-RampDownLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-RampDownMinimumHostsPct <Int32>]
+        [-RampDownNotificationMessage <String>]
+        [-RampDownStartTimeHour <Int32>]
+        [-RampDownStartTimeMinute <Int32>]
+        [-RampDownStopHostsWhen <StopHostsWhen>]
+        [-RampDownWaitTimeMinute <Int32>]
+        [-RampUpCapacityThresholdPct <Int32>]
+        [-RampUpLoadBalancingAlgorithm <SessionHostLoadBalancingAlgorithm>]
+        [-RampUpMinimumHostsPct <Int32>]
+        [-RampUpStartTimeHour <Int32>]
+        [-RampUpStartTimeMinute <Int32>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IDesktopVirtualizationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.Api20230905.IScalingPlanPooledSchedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a ScalingPlanPooledSchedule'
+  description: |-
+    ```powershell
+    Update-AzWvdScalingPlanPooledSchedule -ResourceGroupName rgName `
+                                            -ScalingPlanName spName `
+                                            -ScalingPlanScheduleName scheduleName `
+                                            -DaysOfWeek @('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday') `
+                                            -RampUpStartTimeHour 6 `
+                                            -RampUpStartTimeMinute 30 `
+                                            -RampUpLoadBalancingAlgorithm BreadthFirst `
+                                            -RampUpMinimumHostsPct 20 `
+                                            -RampUpCapacityThresholdPct 20 `
+                                            -PeakStartTimeHour 8 `
+                                            -PeakStartTimeMinute 30 `
+                                            -PeakLoadBalancingAlgorithm DepthFirst `
+                                            -RampDownStartTimeHour 16 `
+                                            -RampDownStartTimeMinute 0 `
+                                            -RampDownLoadBalancingAlgorithm BreadthFirst `
+                                            -RampDownMinimumHostsPct 20 `
+                                            -RampDownCapacityThresholdPct 20 `
+                                            -RampDownForceLogoffUser:$true `
+                                            -RampDownWaitTimeMinute 30 `
+                                            -RampDownNotificationMessage "Log out now, please." `
+                                            -RampDownStopHostsWhen ZeroSessions `
+                                            -OffPeakStartTimeHour 22 `
+                                            -OffPeakStartTimeMinute 45 `
+                                            -OffPeakLoadBalancingAlgorithm DepthFirst
+    ```
+
+    ```output
+    Name
+    ----
+    spName/scheduleName
+    ```
+
+    Updates an existing PooledSchedule in a Scaling Plan.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Update-AzWvdScalingPlanPooledSchedule.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/update-azwvdscalingplanpooledschedule
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Update-AzWvdScalingPlanPooledSchedule.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ScVmm.New-AzScVmmNetworkInterfaceUpdateObject
+name: New-AzScVmmNetworkInterfaceUpdateObject
+module: Az.ScVmm
+isPreview: false
+summary: |-
+  Create an in-memory object for NetworkInterfaceUpdate.
+description: |-
+  Create an in-memory object for NetworkInterfaceUpdate.
+parameters:
+  cmdletParameters:
+  - name: Ipv4AddressType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the ipv4 address type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv6AddressType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the ipv6 address type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MacAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the nic MAC address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MacAddressType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the mac address type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the name of the network interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the nic id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the ARM Id of the Microsoft.ScVmm/virtualNetwork resource to connect the nic.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzScVmmNetworkInterfaceUpdateObject
+        [-Ipv4AddressType <String>]
+        [-Ipv6AddressType <String>]
+        [-MacAddress <String>]
+        [-MacAddressType <String>]
+        [-Name <String>]
+        [-NicId <String>]
+        [-VirtualNetworkId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ScVmm.Models.NetworkInterfaceUpdate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a NetworkInterfaceUpdate object in memory'
+  description: |-
+    ```powershell
+    New-AzScVmmNetworkInterfaceUpdateObject -Name 'NIC-Obj-1' -macAddressType 'Dynamic' -ipv4AddressType 'Dynamic'
+    ```
+
+    ```output
+    DisplayName      :
+    Ipv4Address      :
+    Ipv4AddressType  : Dynamic
+    Ipv6Address      :
+    Ipv6AddressType  :
+    MacAddress       :
+    MacAddressType   : Dynamic
+    Name             : NIC-Obj-1
+    NetworkName      :
+    NicId            :
+    VirtualNetworkId :
+    ```
+
+    Create a NetworkInterfaceUpdate object in memory.
+    Used internally for NIC patch operations on VM.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmNetworkInterfaceUpdateObject.md
+  document type: cmdlet
+  external help file: Az.ScVmm-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ScVmm/new-azscvmmnetworkinterfaceupdateobject
+  Module Name: Az.ScVmm
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmNetworkInterfaceUpdateObject.md
+  PlatyPS schema version: 2024-05-01

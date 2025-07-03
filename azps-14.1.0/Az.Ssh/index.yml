@@ -1,0 +1,22 @@
+### YamlMime:PowerShellModule1
+uid: Az.Ssh
+name: Az.Ssh Module
+isPreview: false
+cmdletGroups:
+- title: SSH
+  cmdlets:
+  - Az.Ssh.Enter-AzVM
+  - Az.Ssh.Export-AzSshConfig
+description: |-
+  This module allows you to create an interactive shell connection to Azure Resources, such as Azure VMs or Arc Servers, using SSH (Secure Shell). The connection can be established using Microsoft Entra accounts, or local machine accounts. Note that this module requires that OpenSSH be installed and discoverable on the client machine.
+  Important note: When connecting to Azure Arc resources, this module requires the Az.Ssh.ArcProxy module to also be installed in the client machine. The cmdlets will attempt to install the module from the PowerShell Gallery, but the user also has the option to install it themselves. It is important that the user also has permission to execute the Proxy files in the Az.Ssh.ArcProxy module, or the connection will fail. You can find the Az.Ssh.ArcServer module in the PowerShell Gallery: https://aka.ms/PowerShellGallery-Az.Ssh.ArcProxy.
+metadata:
+  Module Name: Az.Ssh
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.ssh
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Az.Ssh.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Ssh/Ssh/help/Az.Ssh.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

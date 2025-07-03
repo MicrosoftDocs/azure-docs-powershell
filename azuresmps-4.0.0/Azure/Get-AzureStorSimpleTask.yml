@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleTask
+name: Get-AzureStorSimpleTask
+module: Azure
+isPreview: false
+summary: |-
+  Gets status of a task on a StorSimple device.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleTask** cmdlet retrieves the status of a task that runs asynchronously on an Azure StorSimple device.
+
+  While you manage a StorSimple device, most create, read, update, and delete actions can run asynchronously.
+  Windows PowerShell returns a **TaskId**.
+  Use the ID to get the current status of the task.
+parameters:
+  cmdletParameters:
+  - name: InstanceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the task for which this cmdlet tracks status.
+    aliases:
+    - TaskId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleTask
+        -InstanceId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="JobStatusInfo" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **TaskStatusInfo** object which contains the following fields:
+
+    - **Error**.
+    **ErrorDetails**, which contains **Code** and **Message**.
+    - **TaskId**.
+    **String**.
+    The ID of the task for which status is returned.
+    - **TaskSteps**.
+    **IList\<TaskStep\>**.
+    Each **TaskStep** object contains **Detail**, **ErrorCode**, **Message**, **Result**, and **Status**.
+    - **Result**.
+    **TaskResult**, which contains the overall result of the task.
+    Valid values are: Failed, Succeeded, PartialSuccess, Cancelled, and Invalid.
+    - **Status**.
+    **TaskStatus**, which contains the overall running status of the task.
+    Valid values are: Inprogress, Invalid, and Completed.
+    - **TaskResult**.
+    **TaskResult**, a value computed based on **Result** and **Status**.
+    Valid values are: Failed, Succeeded, InProgress, PartialSuccess, Cancelled, and Invalid.
+examples:
+- title: 'Example 1: Get the status of a task'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleTask -TaskId "53816d8d-a8b5-4c1d-a177-e59007608d6d"
+    VERBOSE: ClientRequestId: d9c1e8a7-994f-4698-8b42-064600b45cad_PS
+    VERBOSE: ClientRequestId: aae17c82-6fd3-435e-a965-1c66b3c955fe_PS
+
+
+    AsyncTaskAggregatedResult : Succeeded
+    Error                     : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
+    Result                    : Succeeded
+    Status                    : Completed
+    TaskId                    : 53816d8d-a8b5-4c1d-a177-e59007608d6d
+    TaskSteps                 : {}
+    StatusCode                : OK
+    RequestId                 : e9174990825750bba69383748f23019c
+    ```
+
+    This command gets the status of the task that has the specified ID.
+    The results show that the task has a status of completed and a result of successful.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CF3548F6-03FE-44D6-AA2C-1015611C657A
+  PlatyPS schema version: 2024-05-01

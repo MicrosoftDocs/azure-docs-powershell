@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJobPipeline
+name: Get-AzDataLakeAnalyticsJobPipeline
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Gets a Data Lake Analytics Job pipeline or pipelines.
+description: |-
+  The **Get-AzDataLakeAnalyticsJobPipeline** gets a specified Azure Data Lake Analytics Job pipeline or a list of pipelines.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Data Lake Analytics account name under which want to retrieve the job pipeline.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the specific job pipeline to return information for.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetBySpecificJobPipeline
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedAfter
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional filter which returns job pipeline(s) only submitted after the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedBefore
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional filter which returns job pipeline(s) only submitted before the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJobPipeline
+        [-Account] <String>
+        [-SubmittedAfter <DateTimeOffset>]
+        [-SubmittedBefore <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllInAccount
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJobPipeline
+        [-Account] <String>
+        [-PipelineId] <Guid>
+        [-SubmittedAfter <DateTimeOffset>]
+        [-SubmittedBefore <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetBySpecificJobPipeline
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSJobPipelineInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified pipeline'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJobPipeline -Account "contosoadla" -PipelineId 83cb7ad2-3523-4b82-b909-d478b0d8aea3
+    ```
+
+    This command gets the specified pipeline with id '83cb7ad2-3523-4b82-b909-d478b0d8aea3' in account 'contosoadla'.
+- title: 'Example 2: Get a list of all pipelines in the account'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJobPipeline -AccountName "contosoadla"
+    ```
+
+    This command gets a list of all pipelines in the account "contosoadla"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobPipeline.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjobpipeline
+  Module Name: Az.DataLakeAnalytics
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJobPipeline.md
+  PlatyPS schema version: 2024-05-01

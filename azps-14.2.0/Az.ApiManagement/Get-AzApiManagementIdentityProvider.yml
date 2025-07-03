@@ -1,0 +1,166 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementIdentityProvider
+name: Get-AzApiManagementIdentityProvider
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Get the identity provider configuration details.
+description: |-
+  Get the identity provider configuration details.
+  ClientSecret will not be included into result details. To get client secret, use **Get-AzApiManagementIdentityProviderClientSecret**.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of a Identity Provider.
+      If specified will try to find identity provider configuration by the identifier.
+      This parameter is optional.
+    acceptedValues:
+    - Facebook
+    - Google
+    - Microsoft
+    - Twitter
+    - Aad
+    - AadB2C
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentityProviderByType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementIdentityProvider
+        -Context <PsApiManagementContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllIdentityProviders
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementIdentityProvider
+        -Context <PsApiManagementContext>
+        -Type <PsApiManagementIdentityProviderType>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentityProviderByType
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProviderType" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementIdentityProvider" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Identity Providers'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementIdentityProvider -Context $apimContext
+    ```
+
+    Get all the identity provider Configuration on the service.
+- title: 'Example 2: Get the AAD Type Identity Provider'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementIdentityProvider -Context $apimContext -Type Aad
+    ```
+
+    ```output
+    Type                     : Aad
+    ClientId                 : aaa
+    ClientSecret             : xxxxx
+    AllowedTenants           : {contosotest.onmicrosoft.com}
+    Authority                : login.microsoftonline.com
+    SignupPolicyName         :
+    SigninPolicyName         :
+    ProfileEditingPolicyName :
+    PasswordResetPolicyName  :
+    SigninTenant             :
+    Id                       : /subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/identityProviders/Aad
+    ResourceGroupName        : Api-Default-West-US
+    ServiceName              : contoso
+    ```
+
+    Gets the Identity Provider Configuration of Azure Active Directory.
+- title: 'Example 3: Get the AAD B2C Type Identity Provider'
+  description: |-
+    ```powershell
+    $context = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementIdentityProvider -Context $context -Type AadB2C
+    ```
+
+    ```output
+    Type                     : AadB2C
+    ClientId                 : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ClientSecret             : xxxxxx
+    AllowedTenants           : {contosoaadb2c.onmicrosoft.com}
+    Authority                : login.microsoftonline.com
+    SignupPolicyName         : B2C_1_policy-signup
+    SigninPolicyName         : B2C_1_policy-signin
+    ProfileEditingPolicyName :
+    PasswordResetPolicyName  :
+    SigninTenant             : contosoaadb2c.onmicrosoft.com
+    Id                       : /subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/identityProviders/AadB2C
+    ResourceGroupName        : Api-Default-West-US
+    ServiceName              : contoso
+    ```
+
+    Gets the Identity Provider Configuration of Azure Active Directory.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementIdentityProvider.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementidentityprovider
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementIdentityProvider.md
+  PlatyPS schema version: 2024-05-01

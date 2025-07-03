@@ -1,0 +1,53 @@
+### YamlMime:PowerShellModule1
+uid: Az.Elastic
+name: Az.Elastic Module
+isPreview: false
+cmdletGroups:
+- title: Elastic
+  cmdlets:
+  - Az.Elastic.Get-AzElasticAllTrafficFilter
+  - Az.Elastic.Get-AzElasticBillingInfo
+  - Az.Elastic.Get-AzElasticConnectedPartnerResource
+  - Az.Elastic.Get-AzElasticDeploymentInfo
+  - Az.Elastic.Get-AzElasticDetailUpgradableVersion
+  - Az.Elastic.Get-AzElasticDetailVMIngestion
+  - Az.Elastic.Get-AzElasticListAssociatedTrafficFilter
+  - Az.Elastic.Get-AzElasticMonitor
+  - Az.Elastic.Get-AzElasticMonitoredResource
+  - Az.Elastic.Get-AzElasticOpenAi
+  - Az.Elastic.Get-AzElasticOpenAiStatus
+  - Az.Elastic.Get-AzElasticOrganizationApiKey
+  - Az.Elastic.Get-AzElasticOrganizationElasticToAzureSubscriptionMapping
+  - Az.Elastic.Get-AzElasticTagRule
+  - Az.Elastic.Get-AzElasticVersion
+  - Az.Elastic.Get-AzElasticVMHost
+  - Az.Elastic.Join-AzElasticAssociateTrafficFilter
+  - Az.Elastic.New-AzElasticCreateAndAssociateIPFilter
+  - Az.Elastic.New-AzElasticCreateAndAssociatePlFilter
+  - Az.Elastic.New-AzElasticExternalUser
+  - Az.Elastic.New-AzElasticFilteringTagObject
+  - Az.Elastic.New-AzElasticMonitor
+  - Az.Elastic.New-AzElasticOpenAi
+  - Az.Elastic.New-AzElasticTagRule
+  - Az.Elastic.Remove-AzElasticDetachAndDeleteTrafficFilter
+  - Az.Elastic.Remove-AzElasticMonitor
+  - Az.Elastic.Remove-AzElasticOpenAi
+  - Az.Elastic.Remove-AzElasticTrafficFilter
+  - Az.Elastic.Update-AzElasticDetachTrafficFilter
+  - Az.Elastic.Update-AzElasticExternalUser
+  - Az.Elastic.Update-AzElasticMonitor
+  - Az.Elastic.Update-AzElasticOpenAi
+  - Az.Elastic.Update-AzElasticTagRule
+  - Az.Elastic.Update-AzElasticVMCollection
+description: |-
+  Microsoft Azure PowerShell: Elastic cmdlets
+metadata:
+  Module Name: Az.Elastic
+  Module Guid: ac429574-aa9e-48ba-b46c-129fe2b846d2
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.elastic
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/Az.Elastic.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Elastic/Elastic/help/Az.Elastic.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

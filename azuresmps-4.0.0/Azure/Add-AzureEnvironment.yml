@@ -1,0 +1,378 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureEnvironment
+name: Add-AzureEnvironment
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Azure environment.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureEnvironment** cmdlet creates a new custom Azure account environment and saves it in your roaming user profile.
+  The cmdlet returns an object that represents the new environment.
+  When the command completes, you can use the environment in Windows PowerShell.
+
+  An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
+  You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
+  For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
+
+  Only the **Name** parameter of this cmdlet is mandatory.
+  If you omit a parameter, its value is null ($Null), and the service that uses that endpoint might not function properly.
+  To add or change the value of an environment property, use the **Set-AzureEnvironment** cmdlet.
+
+  NOTE: Changing your environment can cause your account to fail.
+  Typically, environments are added only for testing or troubleshooting.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: ActiveDirectoryEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for Microsoft Entra authentication in the new environment.
+    aliases:
+    - AdEndpointUrl
+    - ActiveDirectory
+    - ActiveDirectoryAuthority
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectoryServiceEndpointResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of a management API whose access is managed by Microsoft Entra ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdTenant
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureKeyVaultDnsSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureKeyVaultServiceEndpointResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAdfsAuthentication
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - OnPremise
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for the Azure Resource Manager gallery, which stores resource group gallery templates.
+      For more information about Azure resource groups and gallery templates, see the help topic for Get-AzureResourceGroupGalleryTemplatehttps://go.microsoft.com/fwlink/?LinkID=393052.
+    aliases:
+    - Gallery
+    - GalleryUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GraphEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Graph
+    - GraphUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementPortalUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the Azure Management Portal in the new environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the environment.
+      This parameter is required.
+      Do not use the names of the default environments, AzureCloud and AzureChinaCloud.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishSettingsFileUrl
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the publish settings files for your account.
+      An Azure publish settings file is an XML file that contains information about your account and a management certificate that allows Windows PowerShell to sign into your Azure account on your behalf.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceManagerEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for Azure Resource Manager data, including data about resource groups associated with the account.
+    aliases:
+    - ResourceManager
+    - ResourceManagerUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the Azure service endpoint.
+      The Azure service endpoint determines whether your application is managed by the global Azure platform, Azure operated by 21Vianet in China, or a private Azure installation.
+    aliases:
+    - ServiceManagement
+    - ServiceManagementUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlDatabaseDnsSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default endpoint of storage services in the new environment.
+    aliases:
+    - StorageEndpointSuffix
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerDnsSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureEnvironment
+        -Name <String>
+        [-PublishSettingsFileUrl <String>]
+        [-ServiceEndpoint <String>]
+        [-ManagementPortalUrl <String>]
+        [-StorageEndpoint <String>]
+        [-ActiveDirectoryEndpoint <String>]
+        [-ResourceManagerEndpoint <String>]
+        [-GalleryEndpoint <String>]
+        [-ActiveDirectoryServiceEndpointResourceId <String>]
+        [-GraphEndpoint <String>]
+        [-AzureKeyVaultDnsSuffix <String>]
+        [-AzureKeyVaultServiceEndpointResourceId <String>]
+        [-TrafficManagerDnsSuffix <String>]
+        [-SqlDatabaseDnsSuffix <String>]
+        [-EnableAdfsAuthentication]
+        [-AdTenant <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Common.WindowsAzureEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an Azure environment'
+  description: |-
+    ```
+    PS C:\> Add-AzureEnvironment -Name ContosoEnv -PublishSettingsFileUrl https://contoso.com/fwlink/?LinkID=101 -ServiceEndpoint https://contoso.com/fwlink/?LinkID=102
+
+    Name                          : ContosoEnv
+
+    PublishSettingsFileUrl        : https://contoso.com/fwlink/?LinkID=101
+
+    ServiceEndpoint               : https://contoso.com/fwlink/?LinkID=102
+
+    ResourceManagerEndpoint       :
+
+    ManagementPortalUrl           :
+
+    ActiveDirectoryEndpoint       :
+
+    ActiveDirectoryCommonTenantId :
+
+    StorageEndpointSuffix         :
+
+    StorageBlobEndpointFormat     :
+
+    StorageQueueEndpointFormat    :
+
+    StorageTableEndpointFormat    :
+
+    GalleryEndpoint               :
+    ```
+
+    This command creates the ContosoEnv Azure environment.
+links:
+- text: Get-AzureEnvironment
+  href: ./Get-AzureEnvironment.yml
+- text: Remove-AzureEnvironment
+  href: ./Remove-AzureEnvironment.yml
+- text: Set-AzureEnvironment
+  href: ./Set-AzureEnvironment.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6C435518-06EA-41B7-9585-44107B026FF1
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,59 @@
+### YamlMime:PowerShellModule1
+uid: Az.StorageCache
+name: Az.StorageCache Module
+isPreview: false
+cmdletGroups:
+- title: StorageCache
+  cmdlets:
+  - Az.StorageCache.Clear-AzStorageCache
+  - Az.StorageCache.Clear-AzStorageCacheTarget
+  - Az.StorageCache.Debug-AzStorageCache
+  - Az.StorageCache.Get-AzStorageCache
+  - Az.StorageCache.Get-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Get-AzStorageCacheAmlFileSystemSubnetRequiredSize
+  - Az.StorageCache.Get-AzStorageCacheAscUsage
+  - Az.StorageCache.Get-AzStorageCacheSku
+  - Az.StorageCache.Get-AzStorageCacheTarget
+  - Az.StorageCache.Get-AzStorageCacheUsageModel
+  - Az.StorageCache.Invoke-AzStorageCacheAmlFileSystemArchive
+  - Az.StorageCache.Invoke-AzStorageCacheInvalidateTarget
+  - Az.StorageCache.New-AzStorageCache
+  - Az.StorageCache.New-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.New-AzStorageCacheDirectorySettingObject
+  - Az.StorageCache.New-AzStorageCacheNamespaceJunctionObject
+  - Az.StorageCache.New-AzStorageCacheNfsAccessPolicyObject
+  - Az.StorageCache.New-AzStorageCacheNfsAccessRuleObject
+  - Az.StorageCache.New-AzStorageCachePrimingJobObject
+  - Az.StorageCache.New-AzStorageCacheTarget
+  - Az.StorageCache.New-AzStorageCacheTargetSpaceAllocationObject
+  - Az.StorageCache.Remove-AzStorageCache
+  - Az.StorageCache.Remove-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Remove-AzStorageCacheTarget
+  - Az.StorageCache.Restore-AzStorageCacheTargetSetting
+  - Az.StorageCache.Resume-AzStorageCachePrimingJob
+  - Az.StorageCache.Resume-AzStorageCacheTarget
+  - Az.StorageCache.Start-AzStorageCache
+  - Az.StorageCache.Start-AzStorageCachePrimingJob
+  - Az.StorageCache.Stop-AzStorageCache
+  - Az.StorageCache.Stop-AzStorageCacheAmlFilesystemArchive
+  - Az.StorageCache.Stop-AzStorageCachePrimingJob
+  - Az.StorageCache.Suspend-AzStorageCachePrimingJob
+  - Az.StorageCache.Suspend-AzStorageCacheTarget
+  - Az.StorageCache.Test-AzStorageCacheAmlFileSystemSubnet
+  - Az.StorageCache.Update-AzStorageCache
+  - Az.StorageCache.Update-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Update-AzStorageCacheFirmware
+  - Az.StorageCache.Update-AzStorageCacheSpaceAllocation
+  - Az.StorageCache.Update-AzStorageCacheTargetDns
+description: |-
+  Microsoft Azure PowerShell: StorageCache cmdlets
+metadata:
+  Module Name: Az.StorageCache
+  Module Guid: 113964d9-7d75-4a3d-ac1c-0014ed44358b
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.storagecache
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

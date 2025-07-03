@@ -1,0 +1,262 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HanaOnAzure.Get-AzSapMonitorProviderInstance
+name: Get-AzSapMonitorProviderInstance
+module: Az.HanaOnAzure
+isPreview: false
+summary: |-
+  Gets properties of a provider instance for the specified subscription, resource group, SapMonitor name, and resource name.
+description: |-
+  Gets properties of a provider instance for the specified subscription, resource group, SapMonitor name, and resource name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HanaOnAzure.Models.IHanaOnAzureIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the provider instance.
+    aliases:
+    - ProviderInstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySapMonitor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapMonitorInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HanaOnAzure.Models.IHanaOnAzureIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySapMonitor
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapMonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the SAP monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription ID which uniquely identify Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSapMonitorProviderInstance
+        -ResourceGroupName <String>
+        -SapMonitorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSapMonitorProviderInstance
+        -Name <String>
+        -SapMonitorInputObject <IHanaOnAzureIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentitySapMonitor
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSapMonitorProviderInstance
+        -Name <String>
+        -ResourceGroupName <String>
+        -SapMonitorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSapMonitorProviderInstance
+        -InputObject <IHanaOnAzureIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HanaOnAzure.Models.IHanaOnAzureIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HanaOnAzure.Models.IProviderInstance" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all instances under a SAP monitor'
+  description: |-
+    ```powershell
+    Get-AzSapMonitorProviderInstance -ResourceGroupName nancyc-hn1 -SapMonitorName ps-spamonitor-t01
+    ```
+
+    ```output
+    Name                 Type
+    ----                 ----
+    ps-sapmonitorins-t01 Microsoft.HanaOnAzure/sapMonitors/providerInstances
+    ps-sapmonitorins-t02 Microsoft.HanaOnAzure/sapMonitors/providerInstances
+    ```
+
+    This command gets all instances under a SAP monitor.
+- title: 'Example 2: Get an instances of SAP monitor by name'
+  description: |-
+    ```powershell
+    Get-AzSapMonitorProviderInstance -ResourceGroupName nancyc-hn1 -SapMonitorName ps-spamonitor-t01 -Name ps-sapmonitorins-t02
+    ```
+
+    ```output
+    Name                 Type
+    ----                 ----
+    ps-sapmonitorins-t02 Microsoft.HanaOnAzure/sapMonitors/providerInstances
+    ```
+
+    This command gets an instances of SAP monitor by name.
+- title: 'Example 3: Get an instances of SAP monitor by object'
+  description: |-
+    ```powershell
+    $sapIns = Get-AzSapMonitorProviderInstance -ResourceGroupName nancyc-hn1 -SapMonitorName ps-spamonitor-t01 -Name ps-sapmonitorins-t02
+    Get-AzSapMonitorProviderInstance -InputObject $sapIns
+    ```
+
+    ```output
+    Name                 Type
+    ----                 ----
+    ps-sapmonitorins-t02 Microsoft.HanaOnAzure/sapMonitors/providerInstances
+    ```
+
+    This command gets an instances of SAP monitor by object.
+- title: 'Example 4: Get an instances of SAP monitor by pipeline'
+  description: |-
+    ```powershell
+    @{Id = "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/nancyc-hn1/providers/Microsoft.HanaOnAzure/sapMonitors/ps-spamonitor-t01/providerInstances/ps-sapmonitorins-t02"} | Get-AzSapMonitorProviderInstance
+    ```
+
+    ```output
+    Name                 Type
+    ----                 ----
+    ps-sapmonitorins-t02 Microsoft.HanaOnAzure/sapMonitors/providerInstances
+    ```
+
+    This command gets an instances of SAP monitor by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Get-AzSapMonitorProviderInstance.md
+  document type: cmdlet
+  external help file: Az.HanaOnAzure-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hanaonazure/get-azsapmonitorproviderinstance
+  Module Name: Az.HanaOnAzure
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Get-AzSapMonitorProviderInstance.md
+  PlatyPS schema version: 2024-05-01

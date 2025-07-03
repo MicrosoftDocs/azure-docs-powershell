@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Get-AzHDInsightJob
+name: Get-AzHDInsightJob
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Gets the list of jobs from a cluster and lists them in reverse chronological order, or retrieves a specific job.
+description: |-
+  The **Get-AzHDInsightJob** cmdlet gets recent jobs for a specified Azure HDInsight cluster in reverse chronological order, with the most recent job at the top of the list.
+  Get a specific job by providing the *JobId* parameter.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpCredential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the cluster login (HTTP) credentials for the cluster.
+    aliases:
+    - ClusterCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job ID of the job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NumOfJobs
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of jobs to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzHDInsightJob
+        [-ClusterName] <String>
+        [-HttpCredential] <PSCredential>
+        [[-JobId] <String>]
+        [-NumOfJobs <Int32>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get recent jobs for a specified Azure HDInsight cluster'
+  description: |-
+    ```powershell
+    # Cluster info
+    $clusterName = "your-hadoop-001"
+    $clusterCreds = Get-Credential
+
+    # Hive job details
+    $statusFolder = "tempStatusFolder/"
+    $query = "SHOW TABLES"
+
+    New-AzHDInsightHiveJobDefinition -StatusFolder $statusFolder `
+                -Query $query `
+            | Start-AzHDInsightJob -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds `
+            | Get-AzHDInsightJob -ClusterName $clusterName `
+                -ClusterCredential $clusterCreds
+    ```
+
+    This command gets all recent jobs for the cluster named your-hadoop-001.
+links:
+- text: New-AzHDInsightHiveJobDefinition
+  href: ./New-AzHDInsightHiveJobDefinition.yml
+- text: Start-AzHDInsightJob
+  href: ./Start-AzHDInsightJob.yml
+- text: Stop-AzHDInsightJob
+  href: ./Stop-AzHDInsightJob.yml
+- text: Wait-AzHDInsightJob
+  href: ./Wait-AzHDInsightJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightjob
+  Module Name: Az.HDInsight
+  ms.assetid: AFE90092-8B25-4897-8D3A-3E732CC5CBA6
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightJob.md
+  PlatyPS schema version: 2024-05-01

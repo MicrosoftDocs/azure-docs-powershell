@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudNetworkAttachmentObject
+name: New-AzNetworkCloudNetworkAttachmentObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for NetworkAttachment.
+description: |-
+  Create an in-memory object for NetworkAttachment.
+parameters:
+  cmdletParameters:
+  - name: AttachedNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the associated network attached to the virtual machine.
+              It can be one of cloudServicesNetwork, l3Network, l2Network or trunkedNetwork resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultGateway
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.DefaultGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator of whether this is the default gateway.
+              Only one of the attached networks (including the CloudServicesNetwork attachment) for a single machine may be specified as True.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAllocationMethod
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineIPAllocationMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP allocation mechanism for the virtual machine.
+              Dynamic and Static are only valid for l3Network which may also specify Disabled.
+              Otherwise, Disabled is the only permitted value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv4Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv4 address of the virtual machine.
+
+              This field is used only if the attached network has IPAllocationType of IPV4 or DualStack.
+
+              If IPAllocationMethod is:
+              Static - this field must contain a user specified IPv4 address from within the subnet specified in the attached network.
+              Dynamic - this field is read-only, but will be populated with an address from within the subnet specified in the attached network.
+              Disabled - this field will be empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv6 address of the virtual machine.
+
+              This field is used only if the attached network has IPAllocationType of IPV6 or DualStack.
+
+              If IPAllocationMethod is:
+              Static - this field must contain an IPv6 address range from within the range specified in the attached network.
+              Dynamic - this field is read-only, but will be populated with an range from within the subnet specified in the attached network.
+              Disabled - this field will be empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The associated network's interface name.
+              If specified, the network attachment name has a maximum length of 15 characters and must be unique to this virtual machine.
+              If the user doesn't specify this value, the default interface name of the network resource will be used.
+              For a CloudServicesNetwork resource, this name will be ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudNetworkAttachmentObject
+        -AttachedNetworkId <String>
+        -IPAllocationMethod <VirtualMachineIPAllocationMethod>
+        [-DefaultGateway <DefaultGateway>]
+        [-Ipv4Address <String>]
+        [-Ipv6Address <String>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.NetworkAttachment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for NetworkAttachment.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudNetworkAttachmentObject -AttachedNetworkId "/subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l3Networks/l3NetworkName" -IPAllocationMethod "Dynamic" -DefaultGateway "True" -Ipv4Address "198.51.100.1" -Ipv6Address "2001:0db8:0000:0000:0000:0000:0000:0001" -Name "netAttachName01"
+    ```
+
+    ```output
+    AttachedNetworkId                                                                                                        DefaultGateway IPAllocationMethod Ipv4Address  Ipv6Address
+    -----------------                                                                                                        -------------- ------------------ -----------  -----------
+    /subscriptions/subscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.NetworkCloud/l3Networks/l3NetworkName True           Dynamic            198.51.100.1 2001:0db8:0000:0000:0000:0000…
+    ```
+
+    Create an in-memory object for NetworkAttachment.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudNetworkAttachmentObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudNetworkAttachmentObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudNetworkAttachmentObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationModule
+name: Get-AzureAutomationModule
+module: Azure
+isPreview: false
+summary: |-
+  Get an Azure Automation module.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationModule** cmdlet gets one or more Microsoft Azure Automation modules.
+  By default, all modules are returned.
+  To get a specific module, specify its name.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account with the runbook to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a module to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationModule
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationModule
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Module" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all modules'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17"
+    ```
+
+    This command gets all modules in the Azure Automation account named Contoso17.
+- title: 'Example 2: Get a module'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule"
+    ```
+
+    This command gets a module named ContosoModule in the Azure Automation account named Contoso17.
+links:
+- text: New-AzureAutomationModule
+  href: ./New-AzureAutomationModule.yml
+- text: Remove-AzureAutomationModule
+  href: ./Remove-AzureAutomationModule.yml
+- text: Set-AzureAutomationModule
+  href: ./Set-AzureAutomationModule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 73F90276-FABD-414A-B29D-83F371C1ED21
+  PlatyPS schema version: 2024-05-01

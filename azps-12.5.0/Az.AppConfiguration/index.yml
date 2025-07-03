@@ -1,0 +1,37 @@
+### YamlMime:PowerShellModule1
+uid: Az.AppConfiguration
+name: Az.AppConfiguration Module
+isPreview: false
+cmdletGroups:
+- title: App Configuration
+  cmdlets:
+  - Az.AppConfiguration.Clear-AzAppConfigurationDeletedStore
+  - Az.AppConfiguration.Get-AzAppConfigurationDeletedStore
+  - Az.AppConfiguration.Get-AzAppConfigurationKey
+  - Az.AppConfiguration.Get-AzAppConfigurationKeyValue
+  - Az.AppConfiguration.Get-AzAppConfigurationLabel
+  - Az.AppConfiguration.Get-AzAppConfigurationRevision
+  - Az.AppConfiguration.Get-AzAppConfigurationStore
+  - Az.AppConfiguration.Get-AzAppConfigurationStoreKey
+  - Az.AppConfiguration.New-AzAppConfigurationStore
+  - Az.AppConfiguration.New-AzAppConfigurationStoreKey
+  - Az.AppConfiguration.Remove-AzAppConfigurationKeyValue
+  - Az.AppConfiguration.Remove-AzAppConfigurationLock
+  - Az.AppConfiguration.Remove-AzAppConfigurationStore
+  - Az.AppConfiguration.Set-AzAppConfigurationKeyValue
+  - Az.AppConfiguration.Set-AzAppConfigurationLock
+  - Az.AppConfiguration.Test-AzAppConfigurationKeyValue
+  - Az.AppConfiguration.Test-AzAppConfigurationStoreNameAvailability
+  - Az.AppConfiguration.Update-AzAppConfigurationStore
+description: |-
+  Microsoft Azure PowerShell: AppConfiguration cmdlets
+metadata:
+  Module Name: Az.AppConfiguration
+  Module Guid: d297739c-d9bb-4bdc-8b1c-b3b577d9215a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.appconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Az.AppConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Az.AppConfiguration.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

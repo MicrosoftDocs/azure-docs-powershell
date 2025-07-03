@@ -1,0 +1,105 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGatewayAuthenticationCertificate
+name: Get-AzApplicationGatewayAuthenticationCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an authentication certificate for an application gateway.
+description: |-
+  The **Get-AzApplicationGatewayAuthenticationCertificate** cmdlet gets an authentication certificate for an Azure application gateway.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of application gateway for which this cmdlet gets an authentication certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the authentication certificate that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGatewayAuthenticationCertificate
+        [-Name <String>]
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayAuthenticationCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: '1:'
+  description: |-
+    ```
+
+    ```
+links:
+- text: Add-AzApplicationGatewayAuthenticationCertificate
+  href: ./Add-AzApplicationGatewayAuthenticationCertificate.yml
+- text: New-AzApplicationGatewayAuthenticationCertificate
+  href: ./New-AzApplicationGatewayAuthenticationCertificate.yml
+- text: Remove-AzApplicationGatewayAuthenticationCertificate
+  href: ./Remove-AzApplicationGatewayAuthenticationCertificate.yml
+- text: Set-AzApplicationGatewayAuthenticationCertificate
+  href: ./Set-AzApplicationGatewayAuthenticationCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzApplicationGatewayAuthenticationCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azapplicationgatewayauthenticationcertificate
+  Module Name: Az.Network
+  ms.assetid: 706C918B-1D1A-476C-BB74-EBB4EE72AC0C
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzApplicationGatewayAuthenticationCertificate.md
+  PlatyPS schema version: 2024-05-01

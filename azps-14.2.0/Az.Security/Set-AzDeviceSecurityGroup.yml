@@ -1,0 +1,302 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Set-AzDeviceSecurityGroup
+name: Set-AzDeviceSecurityGroup
+module: Az.Security
+isPreview: false
+summary: |-
+  Create or update device security group
+description: |-
+  The Set-AzDeviceSecurityGroup cmdlet creates or updates a device security group defined in iot security solution.
+parameters:
+  cmdletParameters:
+  - name: AllowlistRule
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSAllowlistCustomAlertRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Allow list rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenylistRule
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDenylistCustomAlertRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Deny list rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Hub resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDeviceSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Input Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the security resource that you want to invoke the command on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThresholdRule
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSThresholdCustomAlertRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Threshold rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeWindowRule
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSTimeWindowCustomAlertRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Time window rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDeviceSecurityGroup
+        -Name <String>
+        -HubResourceId <String>
+        [-ThresholdRule <PSThresholdCustomAlertRule[]>]
+        [-TimeWindowRule <PSTimeWindowCustomAlertRule[]>]
+        [-AllowlistRule <PSAllowlistCustomAlertRule[]>]
+        [-DenylistRule <PSDenylistCustomAlertRule[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdLevelResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDeviceSecurityGroup
+        -InputObject <PSDeviceSecurityGroup>
+        [-ThresholdRule <PSThresholdCustomAlertRule[]>]
+        [-TimeWindowRule <PSTimeWindowCustomAlertRule[]>]
+        [-AllowlistRule <PSAllowlistCustomAlertRule[]>]
+        [-DenylistRule <PSDenylistCustomAlertRule[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDeviceSecurityGroup
+        -ResourceId <String>
+        [-ThresholdRule <PSThresholdCustomAlertRule[]>]
+        [-TimeWindowRule <PSTimeWindowCustomAlertRule[]>]
+        [-AllowlistRule <PSAllowlistCustomAlertRule[]>]
+        [-DenylistRule <PSDenylistCustomAlertRule[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSThresholdCustomAlertRule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSTimeWindowCustomAlertRule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSAllowlistCustomAlertRule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDenylistCustomAlertRule" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDeviceSecurityGroup" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDeviceSecurityGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $TimeWindowSize = New-TimeSpan -Minutes 5
+    $TimeWindowRule = New-AzDeviceSecurityGroupTimeWindowRuleObject -Type "ActiveConnectionsNotInAllowedRange" -Enabled $true `
+    -MaxThreshold 30 -MinThreshold 0 -TimeWindowSize $TimeWindowSize
+    Set-AzDeviceSecurityGroup -Name "MySecurityGroup" `
+    -HubResourceId "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub" `
+    -TimeWindowRule $TimeWindowRules
+    ```
+
+    ```output
+    Id: "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub/providers/Microsoft.Security/deviceSecurityGroups/MySecurityGroup"
+    Name: "MySecurityGroup"
+    Type: "Microsoft.Security/deviceSecurityGroups"
+    ThresholdRules: []
+    TimeWindowRules: [
+    			{
+                  RuleType: "ActiveConnectionsNotInAllowedRange"
+                  DisplayName: "Number of active connections is not in allowed range"
+                  Description: "Get an alert when the number of active connections of a device in the time window is not in the allowed range"
+                  IsEnabled: true
+                  MinThreshold: 0
+                  MaxThreshold: 0
+                  TimeWindowSize: "PT5M"
+                }]
+    AllowlistRules: [
+    			{
+                  RuleType": "ConnectionToIpNotAllowed",
+                  DisplayName: "Outbound connection to an ip that isn't allowed"
+                  Description: "Get an alert when an outbound connection is created between your device and an ip that isn't allowed"
+                  IsEnabled: false
+                  ValueType: "IpCidr"
+                  AllowlistValues: []
+                },
+                {
+                  RuleType: "LocalUserNotAllowed"
+                  DisplayName: "Login by a local user that isn't allowed"
+                  Description: "Get an alert when a local user that isn't allowed logins to the device"
+                  IsEnabled: false
+                  ValueType: "String"
+                  AllowlistValues: []
+                }]
+    DenylistRules: []
+    ```
+
+    Update existing device security group from IoT Hub "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub" with rule type "ActiveConnectionsNotInAllowedRange"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzDeviceSecurityGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Set-AzDeviceSecurityGroup
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzDeviceSecurityGroup.md
+  PlatyPS schema version: 2024-05-01

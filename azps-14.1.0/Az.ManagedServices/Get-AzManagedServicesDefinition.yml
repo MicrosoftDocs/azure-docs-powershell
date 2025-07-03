@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedServices.Get-AzManagedServicesDefinition
+name: Get-AzManagedServicesDefinition
+module: Az.ManagedServices
+isPreview: false
+summary: |-
+  Gets the registration definition details.
+description: |-
+  Gets the registration definition details.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GUID of the registration definition.
+    aliases:
+    - RegistrationDefinitionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the resource.
+    defaultValue: '"subscriptions/" + (Get-AzContext).Subscription.Id'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesDefinition
+        [-Scope <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesDefinition
+        -Name <String>
+        [-Scope <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesDefinition
+        -InputObject <IManagedServicesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IRegistrationDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Azure Lighthouse registration definitions in a subscription'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesDefinition
+    ```
+
+    ```output
+    Name                                 Type
+    ----                                 ----
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft.ManagedServices/registrationDefinitions
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Microsoft.ManagedServices/registrationDefinitions
+    ```
+
+    Lists all the Azure Lighthouse registration definitions in a given subscription in context.
+- title: 'Example 2: Get Azure Lighthouse registration definition by name with selected properties'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesDefinition -Name xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx |Format-List -Property Id, Name, Type, ManagedByTenantId, Authorization, EligibleAuthorization
+    ```
+
+    ```output
+    Id                    : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                  : Microsoft.ManagedServices/registrationDefinitions
+    ManagedByTenantId     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Authorization         : {Test user}
+    EligibleAuthorization : {Test user}
+    ```
+
+    Gets Azure Lighthouse registration definition by name with selected properties.
+- title: 'Example 3: List all Azure Lighthouse registration definitions by scope'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesDefinition -Scope /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx | Format-List -Property Id, Name, Type, ManagedByTenantId, Authorization, EligibleAuthorization
+    ```
+
+    ```output
+    Id                    : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                  : Microsoft.ManagedServices/registrationDefinitions
+    ManagedByTenantId     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Authorization         : {Test user}
+    EligibleAuthorization : {Test user}
+
+    Id                    : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/providers/Microsoft.ManagedServices/registrationDefinitions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Name                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Type                  : Microsoft.ManagedServices/registrationDefinitions
+    ManagedByTenantId     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Authorization         : {}
+    EligibleAuthorization :
+    ```
+
+    Lists all Azure Lighthouse registration definitions by given subscription scope.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesDefinition.md
+  document type: cmdlet
+  external help file: Az.ManagedServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managedservices/get-azmanagedservicesdefinition
+  Module Name: Az.ManagedServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesDefinition.md
+  PlatyPS schema version: 2024-05-01

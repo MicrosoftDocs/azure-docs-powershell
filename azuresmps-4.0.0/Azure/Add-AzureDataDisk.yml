@@ -1,0 +1,349 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureDataDisk
+name: Add-AzureDataDisk
+module: Azure
+isPreview: false
+summary: |-
+  Adds a data disk to a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureDataDisk** cmdlet adds a new or existing data disk to an Azure virtual machine object.
+  Use the *CreateNew* parameter to create a new data disk that has a specified size and label.
+  Use the *Import* parameter to attach an existing disk from the image repository.
+  Use the *ImportFrom* parameter to attach an existing disk from a blob in a storage account.
+  You can specify the host-cache mode of the attached data disk.
+parameters:
+  cmdletParameters:
+  - name: CreateNew
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a data disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNew
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskLabel
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk label for a new data disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNew
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImportFrom
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a data disk in the disk repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Import
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskSizeInGB
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logical disk size, in gigabytes, for a new data disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNew
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostCaching
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the host level caching settings of the disk.
+      Valid values are:
+
+      - None
+      - ReadOnly
+      - ReadWrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Import
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports an existing data disk from the image repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Import
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportFrom
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet imports an existing data disk from a blob in a storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImportFrom
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LUN
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the logical unit number (LUN) for the data drive in the virtual machine.
+      Valid values are: 0 through 15.
+      Each data disk must have a unique LUN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MediaLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the blob in an Azure storage account where this cmdlet stores the data disk.
+      If you do not specify a location, the cmdlet stores the data disk in the vhds container in the default storage account for the current subscription.
+      If a vhds container does not exist, the cmdlet creates a vhds container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateNew
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine object to which this cmdlet attaches a data disk.
+      To obtain a virtual machine object, use the **Get-AzureVM** cmdlet.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureDataDisk
+        [-DiskSizeInGB] <Int32>
+        [-DiskLabel] <String>
+        [-LUN] <Int32>
+        -VM <IPersistentVM>
+        [-CreateNew]
+        [-MediaLocation <String>]
+        [-HostCaching <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateNew
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzureDataDisk
+        [-DiskName] <String>
+        [-LUN] <Int32>
+        -VM <IPersistentVM>
+        [-Import]
+        [-HostCaching <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Import
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzureDataDisk
+        [-DiskLabel] <String>
+        [-LUN] <Int32>
+        -MediaLocation <String>
+        -VM <IPersistentVM>
+        [-ImportFrom]
+        [-HostCaching <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImportFrom
+  isDefault: false
+examples:
+- title: 'Example 1: Import a data disk from the repository'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine07" | Add-AzureDataDisk -Import -DiskName "Disk68" -LUN 0 | Update-AzureVM
+    ```
+
+    This command gets a virtual machine object for the virtual machine named VirtualMachine07 in the ContosoService cloud service by using the **Get-AzureVM** cmdlet.
+    The command passes it to the current cmdlet by using the pipeline operator.
+    That command attaches an existing data disk from the repository to the virtual machine.
+    The data disk has a LUN of 0.
+    The command updates the virtual machine to reflect your changes by using the **Update-AzureVM** cmdlet.
+- title: 'Example 2: Add a new data disk'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM "ContosoService" -Name "VirtualMachine08" | Add-AzureDataDisk -CreateNew -DiskSizeInGB 128 -DiskLabel "main" -LUN 0 | Update-AzureVM
+    ```
+
+    This command gets a virtual machine object for the virtual machine named VirtualMachine08.
+    The command passes it to the current cmdlet.
+    That command attaches a new data disk named MyNewDisk.vhd.
+    The cmdlet creates the disk in the vhds container in the default storage account of the current subscription.
+    The command updates the virtual machine to reflect your changes.
+- title: 'Example 3: Add a data disk from a specified location'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM "ContosoService" -Name "Database" | Add-AzureDataDisk -ImportFrom -MediaLocation "https://contosostorage.blob.core.windows.net/container07/Disk14.vhd" -DiskLabel "main" -LUN 0 | Update-AzureVM
+    ```
+
+    This command gets a virtual machine object for the virtual machine named Database.
+    The command passes it to the current cmdlet.
+    That command attaches an existing data disk named Disk14.vhd from the specified location.
+    The command updates the virtual machine to reflect your changes.
+links:
+- text: Get-AzureDataDisk
+  href: ./Get-AzureDataDisk.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: Remove-AzureDataDisk
+  href: ./Remove-AzureDataDisk.yml
+- text: Set-AzureDataDisk
+  href: ./Set-AzureDataDisk.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: FDEDBF4F-7507-43FF-A983-7E431C0C1950
+  PlatyPS schema version: 2024-05-01

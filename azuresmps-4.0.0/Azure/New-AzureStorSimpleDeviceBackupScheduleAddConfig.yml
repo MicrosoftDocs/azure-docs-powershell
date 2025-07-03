@@ -1,0 +1,185 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureStorSimpleDeviceBackupScheduleAddConfig
+name: New-AzureStorSimpleDeviceBackupScheduleAddConfig
+module: Azure
+isPreview: false
+summary: |-
+  Creates a backup schedule configuration object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorSimpleDeviceBackupScheduleAddConfig** cmdlet creates a **BackupScheduleBase** configuration object.
+  Use this configuration object to create new backup policy by using the **New-AzureStorSimpleDeviceBackupPolicy** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: BackupType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backup type.
+      Valid values are: LocalSnapshot and CloudSnapshot.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable the backup schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of recurrence for this backup schedule.
+      Valid values are:
+
+      - Minutes
+      - Hourly
+      - Daily
+      - Weekly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceValue
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how often to make a backup.
+      This parameter uses the unit specified by the *RecurrenceType* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionCount
+    type: <xref href="Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of days to keep a backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartFromDateTime
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the date from which to start making backups.
+      The default value is the current time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorSimpleDeviceBackupScheduleAddConfig
+        -BackupType <String>
+        -RecurrenceType <String>
+        -RecurrenceValue <Int32>
+        -RetentionCount <Int64>
+        [-StartFromDateTime <String>]
+        -Enabled <Boolean>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="BackupScheduleBase" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **BackupScheduleBase** object.
+    Use a **BackupScheduleBase** to construct new backup policy.
+examples:
+- title: 'Example 1: Create a backup configuration object'
+  description: |-
+    ```
+    PS C:\>New-AzureStorSimpleDeviceBackupScheduleAddConfig -BackupType CloudSnapshot -RecurrenceType Daily -RecurrenceValue 1 -RetentionCount 100 -Enabled $True
+    VERBOSE: ClientRequestId: 426a79ee-fed3-4d3d-9123-e371f83222b3_PS
+
+
+    BackupType     : CloudSnapshot
+    Recurrence     : Microsoft.WindowsAzure.Management.StorSimple.Models.ScheduleRecurrence
+    RetentionCount : 100
+    StartTime      : 2014-12-16T00:37:19+05:30
+    Status         : Enabled
+    ```
+
+    This command creates a backup schedule base object for cloud snapshot backups.
+    The backup occurs every day, and the backups are kept for 100 days.
+    This schedule is enabled from the default time, which is the current time.
+links:
+- text: New-AzureStorSimpleDeviceBackupScheduleUpdateConfig
+  href: ./New-AzureStorSimpleDeviceBackupScheduleUpdateConfig.yml
+- text: New-AzureStorSimpleDeviceBackupPolicy
+  href: ./New-AzureStorSimpleDeviceBackupPolicy.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: EE7EC812-640B-4672-B23C-673F912F0EDC
+  PlatyPS schema version: 2024-05-01

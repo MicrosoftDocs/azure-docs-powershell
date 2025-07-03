@@ -1,0 +1,567 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Communication.Send-AzEmailServicedataEmail
+name: Send-AzEmailServicedataEmail
+module: Az.Communication
+isPreview: false
+summary: |-
+  Queues an email message to be sent to one or more recipients
+description: |-
+  Queues an email message to be sent to one or more recipients
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Attachment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailAttachment" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of attachments.
+      Please note that we limit the total size of an email request (which includes both regular and inline attachments) to 10MB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientRequestId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tracking ID sent with the request to help with debugging.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentHtml
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Html version of the email message.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentPlainText
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plain text version of the email message.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentSubject
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subject of the email message
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The communication resource, for example `https://my-resource.communication.azure.com`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Header
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom email headers to be passed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Send operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Send operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Message
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailMessage" data-throw-if-not-resolved="False" />
+    description: |-
+      Message payload for sending an email
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Send
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the ID provided by the customer to identify the long running operation.
+      If an ID is not provided by the customer, the service will generate one.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecipientBcc
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email BCC recipients
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecipientCc
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email CC recipients
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecipientTo
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email To recipients
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplyTo
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email addresses where recipients' replies will be sent to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SenderAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sender email address from a verified domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserEngagementTrackingDisabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether user engagement tracking should be disabled for this request if the resource-level user engagement tracking setting was already enabled in the control plane.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SendExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Send-AzEmailServicedataEmail
+        -Endpoint <String>
+        -Message <IEmailMessage>
+        [-ClientRequestId <String>]
+        [-OperationId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Send
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Send-AzEmailServicedataEmail
+        -Endpoint <String>
+        -ContentSubject <String>
+        -RecipientTo <IEmailAddress[]>
+        -SenderAddress <String>
+        [-ClientRequestId <String>]
+        [-OperationId <String>]
+        [-Attachment <IEmailAttachment[]>]
+        [-ContentHtml <String>]
+        [-ContentPlainText <String>]
+        [-Header <Hashtable>]
+        [-RecipientBcc <IEmailAddress[]>]
+        [-RecipientCc <IEmailAddress[]>]
+        [-ReplyTo <IEmailAddress[]>]
+        [-UserEngagementTrackingDisabled]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SendExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Send-AzEmailServicedataEmail
+        -Endpoint <String>
+        -JsonFilePath <String>
+        [-ClientRequestId <String>]
+        [-OperationId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SendViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Send-AzEmailServicedataEmail
+        -Endpoint <String>
+        -JsonString <String>
+        [-ClientRequestId <String>]
+        [-OperationId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SendViaJsonString
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailMessage" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailSendResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Queues an email message to be sent to one or more recipients'
+  description: |-
+    ```powershell
+    $emailRecipientTo = @(
+       @{
+            Address = "abc@contoso.com"
+            DisplayName = "abc"
+        }
+    )
+
+    $message = @{
+    	ContentSubject = "Test Email"
+    	RecipientTo = @($emailRecipientTo)  # Array of email address objects
+    	SenderAddress = 'info@contoso.com'
+    	ContentPlainText = "This is the first email from ACS - HTML"
+    }
+
+    Send-AzEmailServicedataEmail -Message $Message -endpoint "https://contoso.unitedstates.communication.azure.com"
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    Id                : 1111c0de-899f-5cce-acb5-3ec493af3800
+    Message           :
+    ResourceGroupName :
+    RetryAfter        :
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Queues an email message to be sent to one or more recipients, above is the example with only required fields.
+- title: 'Example 2: Queues an email message to be sent to one or more recipients'
+  description: |-
+    ```powershell
+    $emailRecipientTo = @(
+       @{
+            Address = "abc@contoso.com"
+            DisplayName = "abc"
+        },
+       @{
+            Address = "def@contoso.com"
+            DisplayName = "def"
+        }
+    )
+
+    $fileBytes1 = [System.IO.File]::ReadAllBytes("<file path>")
+
+    $fileBytes2 = [System.IO.File]::ReadAllBytes("<image file path>")
+
+    $emailAttachment = @(
+    	@{
+    		ContentInBase64 = $fileBytes1
+    		ContentType = "<text/plain>"
+    		Name = "<test.txt>"
+    	},
+    	@{
+    		ContentInBase64 = $fileBytes2
+    		ContentType = "image/png"
+    		Name = "<inline-attachment.png>"
+    		contentId = "<inline-attachment>"
+    	}
+    )
+
+    $headers = @{
+        "Key1" = "Value1"
+        "Key2" = "Value2"
+    	"Importance" = "high"
+    }
+
+    $emailRecipientBcc = @(
+       @{
+            Address = "abc@contoso.com"
+            DisplayName = "abc"
+        }
+    )
+
+    $emailRecipientCc = @(
+       @{
+            Address = "abc@contoso.com"
+            DisplayName = "abc"
+        }
+    )
+
+    $emailRecipientReplyTo = @(
+       @{
+            Address = "abc@contoso.com"
+            DisplayName = "abc"
+        }
+    )
+
+    $message = @{
+    	ContentSubject = "Test Email"
+    	RecipientTo = @($emailRecipientTo)  # Array of email address objects
+    	SenderAddress = 'info@contoso.com'
+    	Attachment = @($emailAttachment) # Array of attachments
+    	ContentHtml = "<html><head><title>Enter title</title></head><body><img src='cid:inline-attachment' alt='Company Logo'/><h1>This is the first email from ACS - HTML</h1></body></html>"
+    	ContentPlainText = "This is the first email from ACS - HTML"
+    	Header = $headers  # Importance = high/medium/low or X-Priority = 2/3/4
+    	RecipientBcc = @($emailRecipientBcc) # Array of email address objects
+    	RecipientCc = @($emailRecipientCc) # Array of email address objects
+    	ReplyTo = @($emailRecipientReplyTo) # Array of email address objects
+    	UserEngagementTrackingDisabled = $true
+    }
+
+    Send-AzEmailServicedataEmail -Message $Message -endpoint "https://contoso.unitedstates.communication.azure.com"
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    Id                : 1111c0de-899f-5cce-acb5-3ec493af3801
+    Message           :
+    ResourceGroupName :
+    RetryAfter        :
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Queues an email message to be sent to one or more recipients, above is the example with all the fields.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Send-AzEmailServicedataEmail.md
+  document type: cmdlet
+  external help file: Az.Communication-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.communication/send-azemailservicedataemail
+  Module Name: Az.Communication
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Send-AzEmailServicedataEmail.md
+  PlatyPS schema version: 2024-05-01

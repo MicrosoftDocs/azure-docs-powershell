@@ -1,0 +1,363 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlDatabaseSensitivityClassification
+name: Get-AzSqlDatabaseSensitivityClassification
+module: Az.Sql
+isPreview: false
+summary: |-
+  Gets the current information types and sensitivity labels of columns in the database.
+description: |-
+  The Get-AzSqlDatabaseSensitivityClassification cmdlet returns the current information types and sensitivity labels of columns in the Azure SQL database.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ColumnName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of column.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DatabaseObjectColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ColumnParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The SQL database object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DatabaseObjectColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ColumnParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SchemaName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DatabaseObjectColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL server name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ColumnParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TableName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DatabaseObjectColumnParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseSensitivityClassification
+        -DatabaseObject <AzureSqlDatabaseModel>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DatabaseObjectParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseSensitivityClassification
+        [-ResourceGroupName] <String>
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DatabaseParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseSensitivityClassification
+        [-ResourceGroupName] <String>
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        -SchemaName <String>
+        -TableName <String>
+        -ColumnName <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ColumnParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSqlDatabaseSensitivityClassification
+        -DatabaseObject <AzureSqlDatabaseModel>
+        -SchemaName <String>
+        -TableName <String>
+        -ColumnName <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DatabaseObjectColumnParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataClassification.Model.SqlDatabaseSensitivityClassificationModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get current information types and sensitivity labels of an Azure SQL Database.'
+  description: |-
+    ```powershell
+    Get-AzSqlDatabaseSensitivityClassification -ResourceGroupName resourceGroup -ServerName server -DatabaseName database
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+- title: 'Example 2: Get current information types and sensitivity labels of an Azure SQL Database with Piping.'
+  description: |-
+    ```powershell
+    Get-AzSqlDatabase -ResourceGroupName resourceGroup -ServerName server -DatabaseName database | Get-AzSqlDatabaseSensitivityClassification
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+- title: 'Example 3: Get current information type and sensitivity label of a specific column of an Azure SQL Database.'
+  description: |-
+    ```powershell
+    Get-AzSqlDatabaseSensitivityClassification -ResourceGroupName resourceGroup -ServerName server -DatabaseName database -SchemaName dbo -TableName EMailLog -ColumnName BounceEmailSubject
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+- title: 'Example 4: Get current information type and sensitivity label of a specific column of an Azure SQL Database using Piping.'
+  description: |-
+    ```powershell
+    Get-AzSqlDatabase -ResourceGroupName resourceGroup -ServerName server -DatabaseName database | Get-AzSqlDatabaseSensitivityClassification -SchemaName dbo -TableName EMailLog -ColumnName BounceEmailSubject
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    ServerName        : server
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+links:
+- text: Learn more about Azure SQL Database data discovery and classification
+  href: https://learn.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseSensitivityClassification.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqldatabasesensitivityclassification
+  Module Name: Az.Sql
+  ms.assetid: 14814BF3-51AF-4E51-A8A6-661825BD88D1
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlDatabaseSensitivityClassification.md
+  PlatyPS schema version: 2024-05-01

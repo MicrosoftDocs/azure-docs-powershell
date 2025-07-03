@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: Az.TrustedSigning
+name: Az.TrustedSigning Module
+isPreview: false
+cmdletGroups:
+- title: TrustedSigning
+  cmdlets:
+  - Az.TrustedSigning.Get-AzTrustedSigningAccount
+  - Az.TrustedSigning.Get-AzTrustedSigningCertificateChain
+  - Az.TrustedSigning.Get-AzTrustedSigningCertificateProfile
+  - Az.TrustedSigning.Get-AzTrustedSigningCertificateRoot
+  - Az.TrustedSigning.Get-AzTrustedSigningCustomerEku
+  - Az.TrustedSigning.Invoke-AzTrustedSigningCIPolicySigning
+  - Az.TrustedSigning.New-AzTrustedSigningAccount
+  - Az.TrustedSigning.New-AzTrustedSigningCertificateProfile
+  - Az.TrustedSigning.Remove-AzTrustedSigningAccount
+  - Az.TrustedSigning.Remove-AzTrustedSigningCertificateProfile
+  - Az.TrustedSigning.Test-AzTrustedSigningAccountNameAvailability
+  - Az.TrustedSigning.Update-AzTrustedSigningAccount
+description: |-
+  Microsoft Azure PowerShell: TrustedSigning cmdlets
+metadata:
+  Module Name: Az.TrustedSigning
+  Module Guid: 4b038ccd-b128-4b3d-be04-8a9921c69093
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.trustedsigning
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Az.TrustedSigning.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Az.TrustedSigning.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

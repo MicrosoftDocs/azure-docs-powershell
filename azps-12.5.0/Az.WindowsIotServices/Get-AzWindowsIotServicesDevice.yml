@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.WindowsIotServices.Get-AzWindowsIotServicesDevice
+name: Get-AzWindowsIotServicesDevice
+module: Az.WindowsIotServices
+isPreview: false
+summary: |-
+  Get the non-security related metadata of a Windows IoT Device Service.
+description: |-
+  Get the non-security related metadata of a Windows IoT Device Service.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WindowsIotServices.Models.IWindowsIotServicesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Windows IoT Device Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the Windows IoT Device Service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The subscription identifier.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWindowsIotServicesDevice
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWindowsIotServicesDevice
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWindowsIotServicesDevice
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWindowsIotServicesDevice
+        -InputObject <IWindowsIotServicesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WindowsIotServices.Models.IWindowsIotServicesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WindowsIotServices.Models.Api20190601.IDeviceService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Windows IoT services under a subscription'
+  description: |-
+    ```powershell
+    Get-AzWindowsIotServicesDevice
+    ```
+
+    ```output
+    Location Name    Type                                Etag
+    -------- ----    ----                                ----
+    West US  wsi-t01 Microsoft.WindowsIoT/DeviceServices "5c006e63-0000-0700-0000-5faa37830000"
+    eastus   wsi-t02 Microsoft.WindowsIoT/DeviceServices "5c006ad2-0000-0700-0000-5faa3e090000"
+    ```
+
+    This command gets all Windows IoT services under a subscription.
+- title: 'Example 2: Get all Windows IoT services under a resource group'
+  description: |-
+    ```powershell
+    Get-AzWindowsIotServicesDevice -ResourceGroupName azure-rg-test
+    ```
+
+    ```output
+    Location Name    Type                                Etag
+    -------- ----    ----                                ----
+    West US  wsi-t01 Microsoft.WindowsIoT/DeviceServices "5c006e63-0000-0700-0000-5faa37830000"
+    eastus   wsi-t02 Microsoft.WindowsIoT/DeviceServices "5c006ad2-0000-0700-0000-5faa3e090000"
+    ```
+
+    This command gets all Windows IoT services under a resource group.
+- title: 'Example 3: Get a Windows IoT service by name'
+  description: |-
+    ```powershell
+    Get-AzWindowsIotServicesDevice -ResourceGroupName azure-rg-test -Name wsi-t01
+    ```
+
+    ```output
+    Location Name    Type                                Etag
+    -------- ----    ----                                ----
+    West US  wsi-t01 Microsoft.WindowsIoT/DeviceServices "5c006e63-0000-0700-0000-5faa37830000"
+    ```
+
+    This command gets a Windows IoT service by name.
+- title: 'Example 4: Get a Windows IoT service by object'
+  description: |-
+    ```powershell
+    $wsi = New-AzWindowsIotServicesDevice -Name wsi-t01 -ResourceGroupName azure-rg-test -Location eastus -Quantity 10 -BillingDomainName 'microsoft.onmicrosoft.com' -AdminDomainName 'microsoft.onmicrosoft.com'
+    Get-AzWindowsIotServicesDevice -InputObject $wsi
+    ```
+
+    ```output
+    Location Name    Type                                Etag
+    -------- ----    ----                                ----
+    West US  wsi-t01 Microsoft.WindowsIoT/DeviceServices "5c006e63-0000-0700-0000-5faa37830000"
+    ```
+
+    This command gets a Windows IoT service by object.
+- title: 'Example 5: Get a Windows IoT service by pipeline'
+  description: |-
+    ```powershell
+    $wsi = New-AzWindowsIotServicesDevice -Name wsi-t01 -ResourceGroupName azure-rg-test -Location eastus -Quantity 10 -BillingDomainName 'microsoft.onmicrosoft.com' -AdminDomainName 'microsoft.onmicrosoft.com' | Get-AzWindowsIotServicesDevice
+    ```
+
+    ```output
+    Location Name    Type                                Etag
+    -------- ----    ----                                ----
+    West US  wsi-t01 Microsoft.WindowsIoT/DeviceServices "5c006e63-0000-0700-0000-5faa37830000"
+    ```
+
+    This command gets a Windows IoT service by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/WindowsIotServices/help/Get-AzWindowsIotServicesDevice.md
+  document type: cmdlet
+  external help file: Az.WindowsIotServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.windowsiotservices/get-azwindowsiotservicesdevice
+  Module Name: Az.WindowsIotServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/WindowsIotServices/WindowsIotServices/help/Get-AzWindowsIotServicesDevice.md
+  PlatyPS schema version: 2024-05-01

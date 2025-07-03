@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzManagementGroupEntity
+name: Get-AzManagementGroupEntity
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists all Entities under the current Tenant
+description: |-
+  The **Get-AzManagementGroupEntity** cmdlet gets all entities (Management Groups and Subscriptions) under the current tenant.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagementGroupEntity
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSEntityInfo" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSEntityInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Management Groups'
+  description: |-
+    ```powershell
+    Get-AzManagementGroupEntity
+    ```
+
+    ```output
+    Id          : /providers/Microsoft.Management/managementGroups/TestGroup
+    Type        : Microsoft.Management/managementGroups
+    Name        : TestGroup
+    TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName : TestGroupDisplayName
+
+    Id          : /providers/Microsoft.Management/managementGroups/TestGroupChild
+    Type        : /providers/Microsoft.Management/managementGroups
+    Name        : TestGroupChild
+    TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName : TestGroupChildDisplayName
+    ```
+
+    This cmdlet get all the ManagementGroupEntity under this tenant.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupEntity.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azmanagementgroupentity
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupEntity.md
+  PlatyPS schema version: 2024-05-01

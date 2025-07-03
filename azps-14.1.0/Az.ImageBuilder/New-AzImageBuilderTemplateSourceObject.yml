@@ -1,0 +1,285 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ImageBuilder.New-AzImageBuilderTemplateSourceObject
+name: New-AzImageBuilderTemplateSourceObject
+module: Az.ImageBuilder
+isPreview: false
+summary: |-
+  Create an in-memory object for ImageTemplateSource.
+description: |-
+  Create an in-memory object for ImageTemplateSource.
+parameters:
+  cmdletParameters:
+  - name: ImageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the managed image in customer subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedImageSource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageVersionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the image version.
+      When image version name is 'latest', the version is evaluated when the image build takes place.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageVersionSource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedImageSource
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes an image source that is a managed image in customer subscription.
+      This image must reside in the same subscription and region as the Image Builder template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedImageSource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image offer from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanInfoPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanInfoPlanProduct
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Product of the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanInfoPlanPublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher of the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlatformImageSource
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes an image source from [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image Publisher in [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedImageVersionSource
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes an image source that is an image version in a shared image gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageVersionSource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image sku from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image version from the [Azure Gallery Images](https://learn.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
+      If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlatformImageSource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateSourceObject
+        [-PlatformImageSource]
+        [-Offer <String>]
+        [-PlanInfoPlanName <String>]
+        [-PlanInfoPlanProduct <String>]
+        [-PlanInfoPlanPublisher <String>]
+        [-Publisher <String>]
+        [-Sku <String>]
+        [-Version <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PlatformImageSource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateSourceObject
+        -ImageId <String>
+        [-ManagedImageSource]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagedImageSource
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateSourceObject
+        -ImageVersionId <String>
+        [-SharedImageVersionSource]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SharedImageVersionSource
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplateManagedImageSource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplatePlatformImageSource" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplateSharedImageVersionSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a managed image source.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateSourceObject -ManagedImageSource -ImageId "/subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/images/azps-vm-image"
+    ```
+
+    ```output
+    ImageId
+    -------
+    /subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/images/azps-vm-image
+    ```
+
+    This command creates a managed image source.
+- title: 'Example 2: Create a shared image source.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateSourceObject -ImageVersionId "/subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/galleries/azpsazurecomputergallery/images/azps-vm-image/versions/1.0.0"
+    ```
+
+    ```output
+    ExactVersion ImageVersionId
+    ------------ --------------
+                 /subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute...
+    ```
+
+    This command creates a shared image source.
+- title: 'Example 3: Create a platfrom image source.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateSourceObject -Publisher 'Canonical' -Offer 'UbuntuServer' -Sku '18.04-LTS' -Version 'latest'
+    ```
+
+    ```output
+    ExactVersion Offer        Publisher Sku       Version
+    ------------ -----        --------- ---       -------
+                 UbuntuServer Canonical 18.04-LTS latest
+    ```
+
+    This command creates a platfrom image source.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateSourceObject.md
+  document type: cmdlet
+  external help file: Az.ImageBuilder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatesourceobject
+  Module Name: Az.ImageBuilder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateSourceObject.md
+  PlatyPS schema version: 2024-05-01

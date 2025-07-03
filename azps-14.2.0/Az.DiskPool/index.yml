@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Az.DiskPool
+name: Az.DiskPool Module
+isPreview: false
+cmdletGroups:
+- title: DiskPool
+  cmdlets:
+  - Az.DiskPool.Get-AzDiskPool
+  - Az.DiskPool.Get-AzDiskPoolIscsiTarget
+  - Az.DiskPool.Get-AzDiskPoolOutboundNetworkDependencyEndpoint
+  - Az.DiskPool.Get-AzDiskPoolResourceSku
+  - Az.DiskPool.Get-AzDiskPoolZone
+  - Az.DiskPool.Invoke-AzDiskPoolRedeployment
+  - Az.DiskPool.New-AzDiskPool
+  - Az.DiskPool.New-AzDiskPoolAclObject
+  - Az.DiskPool.New-AzDiskPoolIscsiLunObject
+  - Az.DiskPool.New-AzDiskPoolIscsiTarget
+  - Az.DiskPool.Remove-AzDiskPool
+  - Az.DiskPool.Remove-AzDiskPoolIscsiTarget
+  - Az.DiskPool.Start-AzDiskPool
+  - Az.DiskPool.Stop-AzDiskPool
+  - Az.DiskPool.Update-AzDiskPool
+  - Az.DiskPool.Update-AzDiskPoolIscsiTarget
+description: |-
+  Microsoft Azure PowerShell: DiskPool cmdlets
+metadata:
+  Module Name: Az.DiskPool
+  Module Guid: 4ef9a257-25da-4db7-832b-0c44a0e44cf0
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.diskpool
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Az.DiskPool.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Az.DiskPool.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,290 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzFirewallPolicyRuleCollectionGroupDraft
+name: Set-AzFirewallPolicyRuleCollectionGroupDraft
+module: Az.Network
+isPreview: false
+summary: |-
+  Sets a modified Azure Firewall Policy Rule Collection Group draft.
+description: |-
+  The **Set-AzFirewallPolicyRuleCollectionGroupDraft** cmdlet updates a rule collection group draft in an Azure Firewall Policy.
+parameters:
+  cmdletParameters:
+  - name: AzureFirewallPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the firewall policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureFirewallPolicyRuleCollectionGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the rule collection group associated with the draft.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallPolicyObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Firewall Policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByParentInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyRuleCollectionGroupDraftWrapper" data-throw-if-not-resolved="False" />
+    description: |-
+      The rule collection group draft.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The priority of the rule group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByParentInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SetByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Id of the Rule collection group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleCollection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyBaseRuleCollection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of rule collections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyRuleCollectionGroupDraft
+        -AzureFirewallPolicyRuleCollectionGroupName <String>
+        -ResourceGroupName <String>
+        -AzureFirewallPolicyName <String>
+        -Priority <UInt32>
+        [-RuleCollection <PSAzureFirewallPolicyBaseRuleCollection[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyRuleCollectionGroupDraft
+        -AzureFirewallPolicyRuleCollectionGroupName <String>
+        -FirewallPolicyObject <PSAzureFirewallPolicy>
+        -Priority <UInt32>
+        [-RuleCollection <PSAzureFirewallPolicyBaseRuleCollection[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByParentInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyRuleCollectionGroupDraft
+
+        -InputObject <PSAzureFirewallPolicyRuleCollectionGroupDraftWrapper>
+        [-Priority <UInt32>]
+        [-RuleCollection <PSAzureFirewallPolicyBaseRuleCollection[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzFirewallPolicyRuleCollectionGroupDraft
+        -ResourceId <String>
+        -Priority <UInt32>
+        [-RuleCollection <PSAzureFirewallPolicyBaseRuleCollection[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicy" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicyRuleCollectionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzFirewallPolicyRuleCollectionGroupDraft -AzureFirewallPolicyRuleCollectionGroupName rg1 -ResourceGroupName TestRg -Priority 200 -RuleCollection $filterRule1 -AzureFirewallPolicyName "firewallPolicy"
+    ```
+
+    This example updates a rule collection group draft in the firewall policy $fp.
+- title: Example 2
+  description: |-
+    Sets a modified Azure Firewall Policy Rule Collection Group draft. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Set-AzFirewallPolicyRuleCollectionGroupDraft -AzureFirewallPolicyName <String> -AzureFirewallPolicyRuleCollectionGroupName rg1 -Priority 200 -ResourceGroupName TestRg -RuleCollection <PSAzureFirewallPolicyBaseRuleCollection[]>
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicyRuleCollectionGroupDraft.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/Set-AzFirewallPolicyRuleCollectionGroupDraft
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzFirewallPolicyRuleCollectionGroupDraft.md
+  PlatyPS schema version: 2024-05-01

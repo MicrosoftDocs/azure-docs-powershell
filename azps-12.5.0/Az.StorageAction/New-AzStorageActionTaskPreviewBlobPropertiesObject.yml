@@ -1,0 +1,126 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageAction.New-AzStorageActionTaskPreviewBlobPropertiesObject
+name: New-AzStorageActionTaskPreviewBlobPropertiesObject
+module: Az.StorageAction
+isPreview: false
+summary: |-
+  Create an in-memory object for StorageTaskPreviewBlobProperties.
+description: |-
+  Create an in-memory object for StorageTaskPreviewBlobProperties.
+parameters:
+  cmdletParameters:
+  - name: Metadata
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskPreviewKeyValueProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      metadata key value pairs to be tested for a match against the provided condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of test blob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskPreviewKeyValueProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      properties key value pairs to be tested for a match against the provided condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskPreviewKeyValueProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      tags key value pairs to be tested for a match against the provided condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageActionTaskPreviewBlobPropertiesObject
+        [-Metadata <IStorageTaskPreviewKeyValueProperties[]>]
+        [-Name <String>]
+        [-Property <IStorageTaskPreviewKeyValueProperties[]>]
+        [-Tag <IStorageTaskPreviewKeyValueProperties[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.StorageTaskPreviewBlobProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create blob property object'
+  description: |-
+    ```powershell
+    $creationTime = New-AzStorageActionTaskPreviewKeyValuePropertiesObject -Key "Creation-Time" -Value "Wed, 07 Jun 2023 05:23:29 GMT"
+    $metadata = New-AzStorageActionTaskPreviewKeyValuePropertiesObject -Key "mKey1" -Value "mValue1"
+    $tags = New-AzStorageActionTaskPreviewKeyValuePropertiesObject -Key "tKey1" -Value "tValue1"
+    New-AzStorageActionTaskPreviewBlobPropertiesObject -Name 'folder1/file1.txt' -Metadata $metadata -Property $creationTime -Tag $tags
+    ```
+
+    ```output
+    MatchedBlock :
+    Metadata     : {{
+                     "key": "mKey1",
+                     "value": "mValue1"
+                   }}
+    Name         : folder1/file1.txt
+    Property     : {{
+                     "key": "Creation-Time",
+                     "value": "Wed, 07 Jun 2023 05:23:29 GMT"
+                   }}
+    Tag          : {{
+                     "key": "tKey1",
+                     "value": "tValue1"
+                   }}
+    ```
+
+    This command create a blob property object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/New-AzStorageActionTaskPreviewBlobPropertiesObject.md
+  document type: cmdlet
+  external help file: Az.StorageAction-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageAction/new-azstorageactiontaskpreviewblobpropertiesobject
+  Module Name: Az.StorageAction
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/New-AzStorageActionTaskPreviewBlobPropertiesObject.md
+  PlatyPS schema version: 2024-05-01

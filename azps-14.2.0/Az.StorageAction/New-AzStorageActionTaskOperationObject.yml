@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageAction.New-AzStorageActionTaskOperationObject
+name: New-AzStorageActionTaskOperationObject
+module: Az.StorageAction
+isPreview: false
+summary: |-
+  Create an in-memory object for StorageTaskOperation.
+description: |-
+  Create an in-memory object for StorageTaskOperation.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The operation to be performed on the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnFailure
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken when the operation fails for a object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnSuccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken when the operation is successful for a object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.IStorageTaskOperationParameters" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value parameters for the operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageActionTaskOperationObject
+        -Name <String>
+        [-OnFailure <String>]
+        [-OnSuccess <String>]
+        [-Parameter <IStorageTaskOperationParameters>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageAction.Models.StorageTaskOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a operation object'
+  description: |-
+    ```powershell
+    New-AzStorageActionTaskOperationObject -Name SetBlobTier -Parameter @{"tier"= "Hot"} -OnFailure break -OnSuccess continue | Format-List
+    ```
+
+    ```output
+    Name      : SetBlobTier
+    OnFailure : break
+    OnSuccess : continue
+    Parameter : {
+                  "tier": "Hot"
+                }
+    ```
+
+    This command creates a operation object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/New-AzStorageActionTaskOperationObject.md
+  document type: cmdlet
+  external help file: Az.StorageAction-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageAction/new-azstorageactiontaskoperationobject
+  Module Name: Az.StorageAction
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageAction/StorageAction/help/New-AzStorageActionTaskOperationObject.md
+  PlatyPS schema version: 2024-05-01

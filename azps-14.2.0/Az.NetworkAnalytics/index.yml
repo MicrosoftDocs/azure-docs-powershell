@@ -1,0 +1,25 @@
+### YamlMime:PowerShellModule1
+uid: Az.NetworkAnalytics
+name: Az.NetworkAnalytics Module
+isPreview: false
+cmdletGroups:
+- title: NetworkAnalytics
+  cmdlets:
+  - Az.NetworkAnalytics.Add-AzNetworkAnalyticsDataProductUserRole
+  - Az.NetworkAnalytics.Get-AzNetworkAnalyticsDataProduct
+  - Az.NetworkAnalytics.Get-AzNetworkAnalyticsDataProductRoleAssignment
+  - Az.NetworkAnalytics.New-AzNetworkAnalyticsDataProduct
+  - Az.NetworkAnalytics.Remove-AzNetworkAnalyticsDataProduct
+  - Az.NetworkAnalytics.Remove-AzNetworkAnalyticsDataProductUserRole
+description: |-
+  Microsoft Azure PowerShell: NetworkAnalytics cmdlets
+metadata:
+  Module Name: Az.NetworkAnalytics
+  Module Guid: fc3cf493-678e-4df4-9c18-64daa0ab008a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.networkanalytics
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkAnalytics/NetworkAnalytics/help/Az.NetworkAnalytics.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkAnalytics/NetworkAnalytics/help/Az.NetworkAnalytics.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

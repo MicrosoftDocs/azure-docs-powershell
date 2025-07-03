@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzDdosProtectionPlan
+name: Get-AzDdosProtectionPlan
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a DDoS protection plan.
+description: |-
+  The Get-AzDdosProtectionPlan cmdlet gets a DDoS protection plan.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the DDoS protection plan.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the DDoS protection plan resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDdosProtectionPlan
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDdosProtectionPlan" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific DDoS protection plan'
+  description: |-
+    ```powershell
+    Get-AzDdosProtectionPlan -ResourceGroupName ResourceGroupName -Name DdosProtectionPlanName
+    ```
+
+    ```output
+    Name              : DdosProtectionPlanName
+    Id                : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/DdosProtectionPlanName
+    Etag              : W/"a20e5592-9b51-423b-9758-b00cd322f744"
+    ProvisioningState : Succeeded
+    VirtualNetworks   : [
+                          {
+                            "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName"
+                          }
+                        ]
+    ```
+
+    In this case, we need to specify both **ResourceGroupName** and **Name** attributes, which correspond to the resource group and the name of the DDoS protection plan, respectively.
+- title: 'Example 2: Get all DDoS protection plans in a resource group'
+  description: |-
+    ```powershell
+    Get-AzDdosProtectionPlan -ResourceGroupName ResourceGroupName
+    ```
+
+    ```output
+    Name              : DdosProtectionPlanName
+    Id                : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/DdosProtectionPlanName
+    Etag              : W/"a20e5592-9b51-423b-9758-b00cd322f744"
+    ProvisioningState : Succeeded
+    VirtualNetworks   : [
+                          {
+                            "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName"
+                          }
+                        ]
+    ```
+
+    In this scenario, we only specify the parameter **ResourceGroupName** to get a list of DDoS protection plans.
+- title: 'Example 3: Get all DDoS protection plans in a subscription'
+  description: |-
+    ```powershell
+    Get-AzDdosProtectionPlan
+    ```
+
+    ```output
+    Name              : DdosProtectionPlanName
+    Id                : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/DdosProtectionPlanName
+    Etag              : W/"a20e5592-9b51-423b-9758-b00cd322f744"
+    ProvisioningState : Succeeded
+    VirtualNetworks   : [
+                          {
+                            "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName"
+                          }
+                        ]
+    ```
+
+    Here, we do not specify any parameters to get a list of all DDoS protection plans in a subscription.
+- title: 'Example 4: Get all DDoS protection plans in a subscription'
+  description: |-
+    ```powershell
+    Get-AzDdosProtectionPlan -Name test*
+    ```
+
+    ```output
+    Name              : test1
+    Id                : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/test1
+    Etag              : W/"a20e5592-9b51-423b-9758-b00cd322f744"
+    ProvisioningState : Succeeded
+    VirtualNetworks   : [
+                          {
+                            "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName"
+                          }
+                        ]
+
+    Name              : test2
+    Id                : /subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/ddosProtectionPlans/test2
+    Etag              : W/"a20e5592-9b51-423b-9758-b00cd322f744"
+    ProvisioningState : Succeeded
+    VirtualNetworks   : [
+                          {
+                            "Id": "/subscriptions/d1dbd366-9871-45ac-84b7-fb318152a9e0/resourceGroups/ResourceGroupName/providers/Microsoft.Network/virtualNetworks/VnetName"
+                          }
+                        ]
+    ```
+
+    This cmdlet returns all DdosProtectionPlans that start with "test".
+links:
+- text: New-AzDdosProtectionPlan
+  href: ./New-AzDdosProtectionPlan.yml
+- text: Remove-AzDdosProtectionPlan
+  href: ./Remove-AzDdosProtectionPlan.yml
+- text: New-AzVirtualNetwork
+  href: ./New-AzVirtualNetwork.yml
+- text: Set-AzVirtualNetwork
+  href: ./Set-AzVirtualNetwork.yml
+- text: Get-AzVirtualNetwork
+  href: ./Get-AzVirtualNetwork.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzDdosProtectionPlan.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azddosprotectionplan
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzDdosProtectionPlan.md
+  PlatyPS schema version: 2024-05-01

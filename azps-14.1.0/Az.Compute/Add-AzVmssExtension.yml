@@ -1,0 +1,347 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Add-AzVmssExtension
+name: Add-AzVmssExtension
+module: Az.Compute
+isPreview: false
+summary: |-
+  Adds an extension to the VMSS.
+description: |-
+  The **Add-AzVmssExtension** cmdlet adds an extension to the Virtual Machine Scale Set (VMSS).
+parameters:
+  cmdletParameters:
+  - name: AutoUpgradeMinorVersion
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates whether the extension version should be automatically updated to a newer minor version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutomaticUpgrade
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceUpdateTag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the extension that this cmdlet adds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectedSetting
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies private configuration for the extension, as a string.
+      This cmdlet encrypts the private configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisionAfterExtension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Collection of extension names after which this extension needs to be provisioned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the extension publisher.
+      The publisher provides a name when the publisher registers an extension.
+      This can use the [Get-AzVMImagePublisher](./Get-AzVMImagePublisher.yml) cmdlet to get the publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Setting
+    type: <xref href="System.Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the public configuration, as a string, for the extension.
+      This cmdlet does not encrypt public configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension type.
+      You can use the [Get-AzVMExtensionImageType](./Get-AzVMExtensionImageType.yml) cmdlet to get the extension type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeHandlerVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the extension to use for this virtual machine.
+      You can use the [Get-AzVMExtensionImage](./Get-AzVMExtensionImage.yml) cmdlet to get the version of the extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the VMSS object.
+      You can use the [New-AzVmssConfig](./New-AzVmssConfig.yml) to create the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzVmssExtension
+        [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
+        [[-Name] <String>]
+        [[-Publisher] <String>]
+        [[-Type] <String>]
+        [[-TypeHandlerVersion] <String>]
+        [[-AutoUpgradeMinorVersion] <Boolean>]
+        [[-Setting] <Object>]
+        [[-ProtectedSetting] <Object>]
+        [-EnableAutomaticUpgrade <Boolean>]
+        [-ForceUpdateTag <String>]
+        [-ProvisionAfterExtension <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an extension to the VMSS'
+  description: |-
+    ```powershell
+    Add-AzVmssExtension -VirtualMachineScaleSet $VMSS -Name $ExtName -Publisher $Publisher -Type $ExtType -TypeHandlerVersion $ExtVer -AutoUpgradeMinorVersion $True
+    ```
+
+    This command adds an extension to the VMSS.
+- title: 'Example 2: Add an extension to the VMSS with settings and protected settings'
+  description: |-
+    ```powershell
+    $Settings = @{"fileUris" = "[]"; "commandToExecute" = ""};
+    $ProtectedSettings = @{"storageAccountName" = $stoname; "storageAccountKey" = $stokey};
+
+    Add-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $vmssExtensionName -Publisher $vmssPublisher  `
+      -Type $vmssExtensionType -TypeHandlerVersion $ExtVer -AutoUpgradeMinorVersion $True  `
+      -Setting $Settings -ProtectedSetting $ProtectedSettings
+    ```
+- title: 'Example 3: Add an extension to the VMSS with settings and protected settings'
+  description: |-
+    ```powershell
+    $BatchFile = "runbook.sh"
+    $ResourceGroupName = "HelloRG"
+    $VMScaleSetName = "HelloVmSS"
+    $TypeHandlerVersion = 2.1
+
+    #Best Practice for securd paramaters.
+    $protectedSettings = @{
+    "managedIdentity" = @{ "clientId" = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"};
+    }
+
+    $publicSettings = @{
+    "fileUris"= (,"https://storage.blob.core.windows.net/itfiles/$($BatchFile)");
+    "commandToExecute"= "sh $($BatchFile)"
+    }
+
+    # Get information about the scale set
+    $vmss = Get-AzVmss `
+                -ResourceGroupName $ResourceGroupName `
+                -VMScaleSetName $VMScaleSetName
+
+    Add-AzVmssExtension -VirtualMachineScaleSet $vmss `
+        -Name "CustomScript" `
+        -Publisher "Microsoft.Azure.Extensions" `
+        -Type "CustomScript" `
+        -TypeHandlerVersion $TypeHandlerVersion `
+        -AutoUpgradeMinorVersion $true `
+        -Setting $publicSettings `
+        -ProtectedSetting $protectedSettings
+
+    Update-AzVmss `
+        -ResourceGroupName $ResourceGroupName `
+        -Name $VMScaleSetName `
+        -VirtualMachineScaleSet $vmss
+    ```
+
+    This command adds an extension to the VMSS with a sample bash script on a blob storage, specify the url of blob storage and executable command in settings and security access in protected settings.
+links:
+- text: Remove-AzVmssExtension
+  href: ./Remove-AzVmssExtension.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMExtensionImageType
+  href: ./Get-AzVMExtensionImageType.yml
+- text: Get-AzVMExtensionImage
+  href: ./Get-AzVMExtensionImage.yml
+- text: New-AzVmssConfig
+  href: ./New-AzVmssConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssExtension.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/add-azvmssextension
+  Module Name: Az.Compute
+  ms.assetid: 7EC166C7-151D-4DA0-9B10-165E735D4F12
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Add-AzVmssExtension.md
+  PlatyPS schema version: 2024-05-01

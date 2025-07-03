@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzVirtualNetworkPeering
+name: Set-AzVirtualNetworkPeering
+module: Az.Network
+isPreview: false
+summary: |-
+  Configures a virtual network peering.
+description: |-
+  The **Set-AzVirtualNetworkPeering** cmdlet configures a virtual network peering.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkPeering
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkPeering
+        -VirtualNetworkPeering <PSVirtualNetworkPeering>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkPeering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change forwarded traffic configuration of a virtual network peering'
+  description: |-
+    ```powershell
+    # Get the virtual network peering you want to update information for
+    $myVnet1ToMyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "ResourceGroup" -Name "myVnet1ToMyVnet2"
+
+    # Change value of AllowForwardedTraffic property
+    $myVnet1ToMyVnet2.AllowForwardedTraffic = $True
+
+    # Update the peering with changes made
+    Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1ToMyVnet2
+    ```
+- title: 'Example 2: Change virtual network access of a virtual network peering'
+  description: |-
+    ```powershell
+    # Get the virtual network peering
+    $myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "myResourceGroup" -Name "myVnet1TomyVnet2"
+
+    # Change AllowVirtualNetworkAccess property
+    $myVnet1TomyVnet2.AllowVirtualNetworkAccess = $False
+
+    # Update virtual network peering
+    Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
+    ```
+- title: 'Example 3: Change gateway transit property configuration of a virtual network peering'
+  description: |-
+    ```powershell
+    # Get the virtual network peering
+    $myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "myResourceGroup" -Name "myVnet1TomyVnet2"
+
+    # Change AllowGatewayTransit property
+    $myVnet1TomyVnet2.AllowGatewayTransit = $True
+
+    # Update the virtual network peering
+    Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
+    ```
+- title: 'Example 4: Use remote gateways in virtual network peering'
+  description: |-
+    ```powershell
+    # Get the virtual network peering
+    $myVnet1TomyVnet2 = Get-AzVirtualNetworkPeering -VirtualNetworkName "myVnet1" -ResourceGroupName "ResourceGroup001" -Name "myVnet1TomyVnet2"
+
+    # Change the UseRemoteGateways property
+    $myVnet1TomyVnet2.UseRemoteGateways = $True
+
+    # Update the virtual network peering
+    Set-AzVirtualNetworkPeering -VirtualNetworkPeering $myVnet1TomyVnet2
+    ```
+
+    By changing this property to $True, your peer's VNet gateway can be used.
+    However, the peer VNet must have a gateway configured and **AllowGatewayTransit** must have a value of $True.
+    This property cannot be used if a gateway has already been configured.
+links:
+- text: Add-AzVirtualNetworkPeering
+  href: ./Add-AzVirtualNetworkPeering.yml
+- text: Get-AzVirtualNetworkPeering
+  href: ./Get-AzVirtualNetworkPeering.yml
+- text: Remove-AzVirtualNetworkPeering
+  href: ./Remove-AzVirtualNetworkPeering.yml
+- text: Sync-AzVirtualNetworkPeering
+  href: ./Sync-AzVirtualNetworkPeering.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkPeering.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworkpeering
+  Module Name: Az.Network
+  ms.assetid: 06DAD751-3A43-4EF6-94C5-AA7AC1A67FC8
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkPeering.md
+  PlatyPS schema version: 2024-05-01

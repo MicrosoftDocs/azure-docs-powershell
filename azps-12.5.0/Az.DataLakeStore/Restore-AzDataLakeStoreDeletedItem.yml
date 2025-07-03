@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Restore-AzDataLakeStoreDeletedItem
+name: Restore-AzDataLakeStoreDeletedItem
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Restore a deleted file or folder in Azure Data Lake.
+description: |-
+  The **Restore-AzDataLakeStoreDeletedItem** cmdlet restores a deleted file or folder in Data Lake Store. Requires the path of deleted item in trash returned by Get-AzDataLakeStoreDeletedItem.
+  Caution: Undeleting files is a best effort operation. There are no guarantees that a file can be restored once it is deleted. The use of this API is enabled via allowlisting.
+  If your ADL account is not allowlisted, then using this api will throw Not implemented exception. For further information and assistance please contact Microsoft support.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletedItem
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreDeletedItem" data-throw-if-not-resolved="False" />
+    description: |-
+      The deleted item object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The destination path to where the deleted file or folder should be restored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Return boolean true on success.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path of the deleted file or folder in trash.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestoreAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to take on destination name conflicts - "copy" or "overwrite"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of entry being restored - "file" or "folder"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-AzDataLakeStoreDeletedItem
+        [-Account] <String>
+        [-Path] <String>
+        [-Destination] <String>
+        [-Type] <String>
+        [-RestoreAction <String>]
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Restore-AzDataLakeStoreDeletedItem
+        [-Account] <String>
+        [-DeletedItem] <DataLakeStoreDeletedItem>
+        [-RestoreAction <String>]
+        [-PassThru]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Restore a file from the Data Lake Store using -force option'
+  description: |-
+    ```powershell
+    Restore-AzDataLakeStoreDeletedItem -Account ml1ptrashtest -Path 927e8fb1-a287-4353-b50e-3b4a39ae4088 -Destination adl://ml1ptrashtest.azuredatalake.com/test0/file_1230 -Type "file" -Force
+    ```
+    This command restores a file from the Data Lake Store using -force option
+- title: 'Example 2: Restore a file from Data Lake Store using user confirmation'
+  description: |-
+    ```powershell
+    Restore-AzDataLakeStoreDeletedItem -Account ml1ptrashtest -Path 927e8fb1-a287-4353-b50e-3b4a39ae4088 -Destination adl://ml1ptrashtest.azuredatalake.com/test4/file_1115 -Type file
+    ```
+
+    ```output
+    Restore user data ?
+    From - 927e8fb1-a287-4353-b50e-3b4a39ae4088
+    To   - adl://ml1ptrashtest.azuredatalake.com/test4/file_1115
+    Type - file
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+    ```
+    This command restores a file from Data Lake Store using user confirmation
+links:
+- text: Get-AzDataLakeStoreDeletedItem
+  href: ./Get-AzDataLakeStoreDeletedItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Restore-AzDataLakeStoreDeletedItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/restore-azdatalakestoredeleteditem
+  Module Name: Az.DataLakeStore
+  ms.assetid: D231E9A0-DC1E-411B-A87A-56A8C767F6C5
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Restore-AzDataLakeStoreDeletedItem.md
+  PlatyPS schema version: 2024-05-01

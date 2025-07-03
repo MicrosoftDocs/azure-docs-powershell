@@ -1,0 +1,63 @@
+### YamlMime:PowerShellModule1
+uid: Az.DnsResolver
+name: Az.DnsResolver Module
+isPreview: false
+cmdletGroups:
+- title: DNS
+  cmdlets:
+  - Az.DnsResolver.Get-AzDnsForwardingRuleset
+  - Az.DnsResolver.Get-AzDnsForwardingRulesetForwardingRule
+  - Az.DnsResolver.Get-AzDnsResolver
+  - Az.DnsResolver.Get-AzDnsResolverDomainList
+  - Az.DnsResolver.Get-AzDnsResolverInboundEndpoint
+  - Az.DnsResolver.Get-AzDnsResolverOutboundEndpoint
+  - Az.DnsResolver.Get-AzDnsResolverPolicy
+  - Az.DnsResolver.Get-AzDnsResolverPolicyDnsSecurityRule
+  - Az.DnsResolver.New-AzDnsForwardingRuleset
+  - Az.DnsResolver.New-AzDnsForwardingRulesetForwardingRule
+  - Az.DnsResolver.New-AzDnsResolver
+  - Az.DnsResolver.New-AzDnsResolverDomainList
+  - Az.DnsResolver.New-AzDnsResolverInboundEndpoint
+  - Az.DnsResolver.New-AzDnsResolverIPConfigurationObject
+  - Az.DnsResolver.New-AzDnsResolverOutboundEndpoint
+  - Az.DnsResolver.New-AzDnsResolverPolicy
+  - Az.DnsResolver.New-AzDnsResolverPolicyDnsSecurityRule
+  - Az.DnsResolver.New-AzDnsResolverTargetDnsServerObject
+  - Az.DnsResolver.Remove-AzDnsForwardingRuleset
+  - Az.DnsResolver.Remove-AzDnsForwardingRulesetForwardingRule
+  - Az.DnsResolver.Remove-AzDnsResolver
+  - Az.DnsResolver.Remove-AzDnsResolverDomainList
+  - Az.DnsResolver.Remove-AzDnsResolverInboundEndpoint
+  - Az.DnsResolver.Remove-AzDnsResolverOutboundEndpoint
+  - Az.DnsResolver.Remove-AzDnsResolverPolicy
+  - Az.DnsResolver.Remove-AzDnsResolverPolicyDnsSecurityRule
+  - Az.DnsResolver.Update-AzDnsForwardingRuleset
+  - Az.DnsResolver.Update-AzDnsForwardingRulesetForwardingRule
+  - Az.DnsResolver.Update-AzDnsResolver
+  - Az.DnsResolver.Update-AzDnsResolverDomainList
+  - Az.DnsResolver.Update-AzDnsResolverInboundEndpoint
+  - Az.DnsResolver.Update-AzDnsResolverOutboundEndpoint
+  - Az.DnsResolver.Update-AzDnsResolverPolicy
+  - Az.DnsResolver.Update-AzDnsResolverPolicyDnsSecurityRule
+- title: Virtual Network
+  cmdlets:
+  - Az.DnsResolver.Get-AzDnsForwardingRulesetVirtualNetworkLink
+  - Az.DnsResolver.Get-AzDnsResolverPolicyVirtualNetworkLink
+  - Az.DnsResolver.New-AzDnsForwardingRulesetVirtualNetworkLink
+  - Az.DnsResolver.New-AzDnsResolverPolicyVirtualNetworkLink
+  - Az.DnsResolver.Remove-AzDnsForwardingRulesetVirtualNetworkLink
+  - Az.DnsResolver.Remove-AzDnsResolverPolicyVirtualNetworkLink
+  - Az.DnsResolver.Update-AzDnsForwardingRulesetVirtualNetworkLink
+  - Az.DnsResolver.Update-AzDnsResolverPolicyVirtualNetworkLink
+description: |-
+  Microsoft Azure PowerShell: DnsResolver cmdlets
+metadata:
+  Module Name: Az.DnsResolver
+  Module Guid: 88e239b3-f615-4018-adf3-f0952a0f46a8
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.dnsresolver
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/DnsResolver/help/Az.DnsResolver.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DnsResolver/DnsResolver/help/Az.DnsResolver.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

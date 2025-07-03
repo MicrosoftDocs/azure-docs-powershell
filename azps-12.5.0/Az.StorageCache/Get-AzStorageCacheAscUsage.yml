@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageCache.Get-AzStorageCacheAscUsage
+name: Get-AzStorageCacheAscUsage
+module: Az.StorageCache
+isPreview: false
+summary: |-
+  Gets the quantity used and quota limit for resources
+description: |-
+  Gets the quantity used and quota limit for resources
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the region to query for usage information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageCacheAscUsage
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.Api20230501.IResourceUsage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets the quantity used and quota limit for resources.'
+  description: |-
+    ```powershell
+    Get-AzStorageCacheAscUsage -Location eastus
+    ```
+
+    ```output
+    CurrentValue Limit Unit
+    ------------ ----- ----
+    1            4     Count
+    0            4     Count
+    ```
+
+    Gets the quantity used and quota limit for resources.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Get-AzStorageCacheAscUsage.md
+  document type: cmdlet
+  external help file: Az.StorageCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagecache/get-azstoragecacheascusage
+  Module Name: Az.StorageCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Get-AzStorageCacheAscUsage.md
+  PlatyPS schema version: 2024-05-01

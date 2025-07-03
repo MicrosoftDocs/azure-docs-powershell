@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerSecurityUserRule
+name: Get-AzNetworkManagerSecurityUserRule
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a security user rule in a network manager.
+description: |-
+  The **Get-AzNetworkManagerSecurityUserRule** cmdlets gets security user rule in a network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkManager SecurityUserRule Id
+    aliases:
+    - SecurityUserRuleId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleCollectionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager security user rule collection name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SecurityUserConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager security user configuration name.
+    aliases:
+    - ConfigName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRule
+        -RuleCollectionName <String>
+        -SecurityUserConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByList
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRule
+        -Name <String>
+        -RuleCollectionName <String>
+        -SecurityUserConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRule
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityBaseUserRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserRule  -Name "testRule" -RuleCollectionName "TestRC" -SecurityUserConfigurationName "TestSecConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name                  : testRule
+    Description           : Description
+    Type                  : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC/rules/testRule
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    Protocol              : Tcp
+    Direction             : Inbound
+    Sources               : [
+                              {
+                                "AddressPrefix": "Internet",
+                                "AddressPrefixType": "ServiceTag"
+                              }
+                            ]
+    Destinations          : [
+                              {
+                                "AddressPrefix": "10.0.0.1",
+                                "AddressPrefixType": "IPPrefix"
+                              }
+                            ]
+    SourcePortRanges      : [
+                              "100"
+                            ]
+    DestinationPortRanges : [
+                              "99"
+                            ]
+    Access                : Allow
+    Priority              : 100
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-18T04:06:05",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-18T04:06:06"
+                            }
+    ```
+
+    Gets a security user rule in a rule collection.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserRule  -RuleCollectionName "TestRC" -SecurityUserConfigurationName "TestSecConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name                  : testRule
+    Description           : Description
+    Type                  : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC/rules/testRule
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    Protocol              : Tcp
+    Direction             : Inbound
+    Sources               : [
+                              {
+                                "AddressPrefix": "Internet",
+                                "AddressPrefixType": "ServiceTag"
+                              }
+                            ]
+    Destinations          : [
+                              {
+                                "AddressPrefix": "10.0.0.1",
+                                "AddressPrefixType": "IPPrefix"
+                              }
+                            ]
+    SourcePortRanges      : [
+                              "100"
+                            ]
+    DestinationPortRanges : [
+                              "99"
+                            ]
+    Access                : Allow
+    Priority              : 100
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-18T04:06:05",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-18T04:06:06"
+                            }
+
+                            Name                  : testRule2
+    Description           : Description
+    Type                  : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections/rules
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC/rules/testRule2
+    Etag                  : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState     : Succeeded
+    Protocol              : Tcp
+    Direction             : Inbound
+    Sources               : [
+                              {
+                                "AddressPrefix": "Internet",
+                                "AddressPrefixType": "ServiceTag"
+                              }
+                            ]
+    Destinations          : [
+                              {
+                                "AddressPrefix": "10.0.0.1",
+                                "AddressPrefixType": "IPPrefix"
+                              }
+                            ]
+    SourcePortRanges      : [
+                              "100"
+                            ]
+    DestinationPortRanges : [
+                              "99"
+                            ]
+    Access                : Allow
+    Priority              : 100
+    SystemData            : {
+                              "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                              "CreatedByType": "Application",
+                              "CreatedAt": "2021-10-18T04:06:05",
+                              "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                              "LastModifiedByType": "Application",
+                              "LastModifiedAt": "2021-10-18T04:06:06"
+                            }
+    ```
+
+    Gets all rules within a security user rule collection.
+links:
+- text: New-AzNetworkManagerSecurityUserRule
+  href: ./New-AzNetworkManagerSecurityUserRule.yml
+- text: Remove-AzNetworkManagerSecurityUserRule
+  href: ./Remove-AzNetworkManagerSecurityUserRule.yml
+- text: Set-AzNetworkManagerSecurityUserRule
+  href: ./Set-AzNetworkManagerSecurityUserRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagersecurityuserrule
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserRule.md
+  PlatyPS schema version: 2024-05-01

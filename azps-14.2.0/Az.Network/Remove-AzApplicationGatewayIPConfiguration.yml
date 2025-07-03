@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzApplicationGatewayIPConfiguration
+name: Remove-AzApplicationGatewayIPConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes an IP configuration from an application gateway.
+description: |-
+  The **Remove-AzApplicationGatewayIPConfiguration** cmdlet removes an IP configuration from an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway from which to remove an IP configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the IP configuration to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzApplicationGatewayIPConfiguration
+        -Name <String>
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an IP configuration from an Azure application gateway'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    Remove-AzApplicationGatewayIPConfiguration -ApplicationGateway $AppGw -Name "Subnet02"
+    Set-AzApplicationGateway -ApplicationGateway $AppGW
+    ```
+
+    The first command gets an application gateway and stores it in the $AppGw variable.
+    The second command removes the IP configuration named Subnet02 from the application gateway stored in $AppGw.
+    The last command updates the application gateway.
+links:
+- text: Add-AzApplicationGatewayIPConfiguration
+  href: ./Add-AzApplicationGatewayIPConfiguration.yml
+- text: Get-AzApplicationGatewayIPConfiguration
+  href: ./Get-AzApplicationGatewayIPConfiguration.yml
+- text: New-AzApplicationGatewayIPConfiguration
+  href: ./New-AzApplicationGatewayIPConfiguration.yml
+- text: Set-AzApplicationGatewayIPConfiguration
+  href: ./Set-AzApplicationGatewayIPConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewayIPConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-azapplicationgatewayipconfiguration
+  Module Name: Az.Network
+  ms.assetid: 6943BB5C-D709-4A80-AF5E-DC9501C20680
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewayIPConfiguration.md
+  PlatyPS schema version: 2024-05-01

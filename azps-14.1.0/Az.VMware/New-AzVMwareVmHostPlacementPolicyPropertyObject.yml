@@ -1,0 +1,166 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.VMware.New-AzVMwareVmHostPlacementPolicyPropertyObject
+name: New-AzVMwareVmHostPlacementPolicyPropertyObject
+module: Az.VMware
+isPreview: false
+summary: |-
+  Create an in-memory object for VmHostPlacementPolicyProperties.
+description: |-
+  Create an in-memory object for VmHostPlacementPolicyProperties.
+parameters:
+  cmdletParameters:
+  - name: AffinityStrength
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      vm-host placement policy affinity strength (should/must).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AffinityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      placement policy affinity type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureHybridBenefitType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      placement policy azure hybrid benefit opt-in type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Display name of the placement policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostMember
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Host members list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether the placement policy is enabled or disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMMember
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Virtual machine members list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVMwareVmHostPlacementPolicyPropertyObject
+        -AffinityType <String>
+        -HostMember <String[]>
+        -VMMember <String[]>
+        [-AffinityStrength <String>]
+        [-AzureHybridBenefitType <String>]
+        [-DisplayName <String>]
+        [-State <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.VMHostPlacementPolicyProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for VmHostPlacementPolicyProperties.'
+  description: |-
+    ```powershell
+    New-AzVMwareVmHostPlacementPolicyPropertyObject -AffinityType 'AntiAffinity' -HostMember @{"test"="test"} -VMMember @{"test"="test"}
+    ```
+
+    ```output
+    AffinityStrength       :
+    AffinityType           : AntiAffinity
+    AzureHybridBenefitType :
+    DisplayName            :
+    HostMember             : {System.Collections.Hashtable}
+    ProvisioningState      :
+    State                  :
+    Type                   : VmHost
+    VMMember               : {System.Collections.Hashtable}
+    ```
+
+    Create an in-memory object for VmHostPlacementPolicyProperties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareVmHostPlacementPolicyPropertyObject.md
+  document type: cmdlet
+  external help file: Az.VMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.VMware/new-azvmwarevmhostplacementpolicypropertyobject
+  Module Name: Az.VMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareVmHostPlacementPolicyPropertyObject.md
+  PlatyPS schema version: 2024-05-01

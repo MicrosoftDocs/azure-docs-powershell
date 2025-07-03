@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Stop-AzureStorSimpleJob
+name: Stop-AzureStorSimpleJob
+module: Azure
+isPreview: false
+summary: |-
+  Stops a StorSimple job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Stop-AzureStorSimpleJob** cmdlet stops an on-going StorSimple job.
+  You can specify a jobs by supplying an instance ID or a job name.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the device job to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzureStorSimpleJob
+        -InstanceId <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="DeviceJobDetails" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet gets details of the **DeviceJob** that this cmdlet stops.
+examples:
+- title: 'Example 1: Stop jobs for a device'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleJob -DeviceName "Device07" | Stop-AzureStorSimpleJob -Force
+    ```
+
+    This command gets the jobs for the device named Device07, by using the **Get-AzureStorSimpleJob** cmdlet.
+    The command passes the jobs to the current cmdlet by using the pipeline operator.
+    The current cmdlet stops any jobs that the command passes to it.
+    The command specifies the *Force* parameter, and, so, it does not prompt you for confirmation before it stops a job.
+- title: 'Example 2: Stop a specific job'
+  description: |-
+    ```
+    PS C:\>Stop-AzureStorSimpleJob -InstanceId "574f47e0-44e9-495c-b8a5-0203c57ebf6d" -Force
+    ```
+
+    This command stops the job that has the specified instance ID.
+links:
+- text: Get-AzureStorSimpleJob
+  href: ./Get-AzureStorSimpleJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A1E143A8-70F2-4158-9A10-F2082AD62A73
+  PlatyPS schema version: 2024-05-01

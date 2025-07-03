@@ -1,0 +1,94 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzAutoscaleScaleRuleMetricDimensionObject
+name: New-AzAutoscaleScaleRuleMetricDimensionObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for ScaleRuleMetricDimension.
+description: |-
+  Create an in-memory object for ScaleRuleMetricDimension.
+parameters:
+  cmdletParameters:
+  - name: DimensionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the dimension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Support.ScaleRuleMetricDimensionOperationType" data-throw-if-not-resolved="False" />
+    description: |-
+      the dimension operator.
+      Only 'Equals' and 'NotEquals' are supported.
+      'Equals' being equal to any of the values.
+      'NotEquals' being not equal to all of the values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      list of dimension values.
+      For example: ["App1","App2"].
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutoscaleScaleRuleMetricDimensionObject
+        -DimensionName <String>
+        -Operator <ScaleRuleMetricDimensionOperationType>
+        -Value <String[]>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.ScaleRuleMetricDimension" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create scale rule metric dimension object'
+  description: |-
+    ```powershell
+    New-AzAutoscaleScaleRuleMetricDimensionObject -DimensionName VMName -Operator 'Equals' -Value test-vm
+    ```
+
+    Create scale rule metric dimension object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleMetricDimensionObject.md
+  document type: cmdlet
+  external help file: Az.Autoscale.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleScaleRuleMetricDimensionObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleScaleRuleMetricDimensionObject.md
+  PlatyPS schema version: 2024-05-01

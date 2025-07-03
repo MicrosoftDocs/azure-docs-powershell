@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryStorageMapping
+name: Get-AzureSiteRecoveryStorageMapping
+module: Azure
+isPreview: false
+summary: |-
+  Gets mappings of Site Recovery Storage objects for a vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryStorageMapping** cmdlet gets mappings of Azure Site Recovery Storage objects for the current Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: PrimaryServer
+    type: <xref href="ASRServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary server.
+      To obtain a server, use the **Get-AzureSiteRecoveryServer** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryServer
+    type: <xref href="ASRServer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery server.
+      To obtain a server, use **Get-AzureSiteRecoveryServer**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryStorageMapping
+        -PrimaryServer <ASRServer>
+        -RecoveryServer <ASRServer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get the mapping between a Storage object and a recovery Storage object'
+  description: |-
+    ```
+    PS C:\> $Servers = Get-AzureSiteRecoveryServer
+    PS C:\> Get-AzureSiteRecoveryStorageMapping -PrimaryServer $Servers[0] -RecoveryServer $Servers[1]
+    PrimaryServerId     : 774859b0-1966-48cc-9df7-759c441b7a8c
+    PrimaryStorageId    : 1c1d0c0b-0c50-4675-af1a-1fdac70dbb6d
+    PrimaryStorageName  : phase2PrimaryStorageClassification
+    RecoveryServerId    : 774859b0-1966-48cc-9df7-759c441b7a8c
+    RecoveryStorageId   : 20cf8d92-fd5d-4872-985a-0f4562b8a0bf
+    RecoveryStorageName : phase2RecoveryStorageClassification
+    ```
+
+    The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+    The command stores the Site Recovery servers in the $Servers array variable.
+
+    The second command gets the mapping between two Azure Storage objects.
+    The command specifies the primary server for the Storage object mapping as the first element of $Servers.
+    The command specifies the server for the recovery Storage object as the second element of $Servers.
+links:
+- text: Get-AzureSiteRecoveryServer
+  href: ./Get-AzureSiteRecoveryServer.yml
+- text: New-AzureSiteRecoveryStorageMapping
+  href: ./New-AzureSiteRecoveryStorageMapping.yml
+- text: Remove-AzureSiteRecoveryStorageMapping
+  href: ./Remove-AzureSiteRecoveryStorageMapping.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 4F083EBC-7D7E-4836-8AAB-6BF2B08162DF
+  PlatyPS schema version: 2024-05-01

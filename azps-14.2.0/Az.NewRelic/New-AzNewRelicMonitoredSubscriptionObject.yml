@@ -1,0 +1,229 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NewRelic.New-AzNewRelicMonitoredSubscriptionObject
+name: New-AzNewRelicMonitoredSubscriptionObject
+module: Az.NewRelic
+isPreview: false
+summary: |-
+  Create an in-memory object for MonitoredSubscription.
+description: |-
+  Create an in-memory object for MonitoredSubscription.
+parameters:
+  cmdletParameters:
+  - name: Error
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The reason of not monitoring the subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleFilteringTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IFilteringTag" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of filtering tags to be used for capturing logs.
+      This only takes effect if SendActivityLogs flag is enabled.
+      If empty, all resources will be captured.
+              If only Exclude action is specified, the rules will apply to the list of all available resources.
+      If Include actions are specified, the rules will only include resources with the associated tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendAadLog
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if AAD logs should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendActivityLog
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogRuleSendSubscriptionLog
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if subscription logs should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricRuleFilteringTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IFilteringTag" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of filtering tags to be used for capturing metrics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricRuleSendMetric
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag specifying if metrics should be sent for the Monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricRuleUserEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User Email.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The state of monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscriptionId to be monitored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNewRelicMonitoredSubscriptionObject
+        [-Error <String>]
+        [-LogRuleFilteringTag <IFilteringTag[]>]
+        [-LogRuleSendAadLog <String>]
+        [-LogRuleSendActivityLog <String>]
+        [-LogRuleSendSubscriptionLog <String>]
+        [-MetricRuleFilteringTag <IFilteringTag[]>]
+        [-MetricRuleSendMetric <String>]
+        [-MetricRuleUserEmail <String>]
+        [-Status <String>]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.MonitoredSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create subscription object'
+  description: |-
+    ```powershell
+    $includeFT = New-AzNewRelicFilteringTagObject -Action Include -Name testLogRule1 -Value filteringTag1
+    New-AzNewRelicMonitoredSubscriptionObject -LogRuleFilteringTag $includeFT -LogRuleSendAadLog Enabled -LogRuleSendActivityLog Enabled -LogRuleSendSubscriptionLog Enabled -MetricRuleFilteringTag $includeFT -MetricRuleUserEmail test@testing.com -Status Active -SubscriptionId 00000000-0000-0000-0000-000000000000
+    ```
+
+    ```output
+    Error                      :
+    LogRuleFilteringTag        : {{
+                                   "name": "testLogRule1",
+                                   "value": "filteringTag1",
+                                   "action": "Include"
+                                 }}
+    LogRuleSendAadLog          : Enabled
+    LogRuleSendActivityLog     : Enabled
+    LogRuleSendSubscriptionLog : Enabled
+    MetricRuleFilteringTag     : {{
+                                   "name": "testLogRule1",
+                                   "value": "filteringTag1",
+                                   "action": "Include"
+                                 }}
+    MetricRuleSendMetric       :
+    MetricRuleUserEmail        : test@testing.com
+    Status                     : Active
+    SubscriptionId             : 00000000-0000-0000-0000-000000000000
+    TagRuleProvisioningState   :
+    ```
+
+    This command creates a subscription object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/New-AzNewRelicMonitoredSubscriptionObject.md
+  document type: cmdlet
+  external help file: Az.NewRelic-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NewRelic/new-aznewrelicmonitoredsubscriptionobject
+  Module Name: Az.NewRelic
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/New-AzNewRelicMonitoredSubscriptionObject.md
+  PlatyPS schema version: 2024-05-01

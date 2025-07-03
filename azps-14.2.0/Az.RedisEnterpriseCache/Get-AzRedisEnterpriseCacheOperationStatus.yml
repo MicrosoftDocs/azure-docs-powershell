@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheOperationStatus
+name: Get-AzRedisEnterpriseCacheOperationStatus
+module: Az.RedisEnterpriseCache
+isPreview: false
+summary: |-
+  Gets the status of operation.
+description: |-
+  Gets the status of operation.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of an ongoing async operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRedisEnterpriseCacheOperationStatus
+        -Location <String>
+        -OperationId <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.Api20250501Preview.IOperationStatus" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get operation status'
+  description: |-
+    ```powershell
+    Get-AzRedisEnterpriseCacheOperationStatus -Location "East US" -OperationId "6432a8f9-0fe6-4339-9303-772c92f35d02"
+    ```
+
+    ```output
+    EndTime                           Name                                 StartTime                         Status
+    -------                           ----                                 ---------                         ------
+    2020-12-01T00:12:45.7107366+00:00 6432a8f9-0fe6-4339-9303-772c92f35d02 2020-12-01T00:04:35.7061294+00:00 Succeeded
+    ```
+
+    This command gets the status of an operation.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Get-AzRedisEnterpriseCacheOperationStatus.md
+  document type: cmdlet
+  external help file: Az.RedisEnterpriseCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/get-azredisenterprisecacheoperationstatus
+  Module Name: Az.RedisEnterpriseCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Get-AzRedisEnterpriseCacheOperationStatus.md
+  PlatyPS schema version: 2024-05-01

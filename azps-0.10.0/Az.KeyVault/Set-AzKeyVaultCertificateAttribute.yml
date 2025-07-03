@@ -1,0 +1,247 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Set-AzKeyVaultCertificateAttribute
+name: Set-AzKeyVaultCertificateAttribute
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Modifies editable attributes of a certificate.
+description: |-
+  The **Set-AzKeyVaultCertificateAttribute** cmdlet modifies the editable attributes of a certificate.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enable
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable or disable a certificate.
+      Specify $True to enable or $False to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the certificate to modify. This cmdlet constructs the FQDN of a certificate
+      based on the key vault name, your currently selected environment, the certificate name, and the
+      certificate version.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key vault name in which this cmdlet modifies a certificate.
+      This cmdlet constructs the FQDN of a key vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of a certificate.
+      This cmdlet constructs the FQDN of a certificate based on the key vault name, your currently selected environment, the certificate name, and the certificate version.
+    aliases:
+    - CertificateVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultCertificateAttribute
+        [-VaultName] <String>
+        [-Name] <String>
+        [[-Version] <String>]
+        [-Enable <Boolean>]
+        [-Tag <Hashtable>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.KeyVaultCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify the tags associated with a certificate'
+  description: |-
+    ```
+    PS C:\>$Tags = @{ "Team" = "Azure" ; "Role" = "Engg" }
+    PS C:\> Set-AzKeyVaultCertificateAttribute -VaultName "ContosoKV01" -Name "TestCert01" -Tag $Tags
+    PS C:\> Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
+    Name        : "TestCert01"
+    Certificate : [Subject]
+                    CN=AZURE
+
+                  [Issuer]
+                    CN=AZURE
+
+                  [Serial Number]
+                    5A2EF60501F241D6A4336841B36FEA41
+
+                  [Not Before]
+                    7/27/2016 6:50:01 PM
+
+                  [Not After]
+                    7/27/2018 7:00:01 PM
+
+                  [Thumbprint]
+                    A565D568082FEE2BE33B356ECC3703C2E9886555
+
+    Id          : https://ContosoKV01.vault.azure.net:443/certificates/tt02
+    KeyId       : https://ContosoKV01.vault.azure.net:443/keys/tt02
+    SecretId    : https://ContosoKV01.vault.azure.net:443/secrets/tt02
+    Thumbprint  : A565D568082FEE2BE33B356ECC3703C2E9886555
+    Tags        : {[Role, Engg], [Team, Azure]}
+    Enabled     : True
+    Created     : 7/28/2016 2:00:01 AM
+    Updated     : 8/1/2016 5:37:48 PM
+    ```
+
+    The first command assigns an array of key/value pairs to the $Tags variable.
+
+    The second command sets the tags value of the certificate named TestCert01 to be $Tags.
+
+    The final command displays the TestCert01 certificate by using the Get-AzKeyVaultCertificate cmdlet to verify the operation.
+links:
+- text: Add-AzKeyVaultCertificate
+  href: ./Add-AzKeyVaultCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificateAttribute.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/set-AzKeyvaultcertificateattribute
+  Module Name: Az.KeyVault
+  ms.assetid: 3BD243C7-A40E-4061-93FF-DDE7DECAD0A7
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultCertificateAttribute.md
+  PlatyPS schema version: 2024-05-01

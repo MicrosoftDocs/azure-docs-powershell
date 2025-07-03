@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureCertificateSetting
+name: New-AzureCertificateSetting
+module: Azure
+isPreview: false
+summary: |-
+  Creates a certificate setting object for a certificate is in a service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  The **New-AzureCertificateSetting** cmdlet creates a certificate setting object for a certificate that is in an Azure service.
+
+  You can use a certificate setting object to create a configuration object by using the **Add-AzureProvisioningConfig** cmdlet.
+  Use a configuration object to create virtual machine by using the **New-AzureVM** cmdlet.
+  You can use a certificate setting object to create a virtual machine by using the **New-AzureQuickVM** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoreName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate store in which to put the certificate.
+      Valid values are:
+
+      - AddressBook
+      - AuthRoot
+      - CertificateAuthority
+      - Disallowed
+      - My
+      - Root
+      - TrustedPeople
+      - TrustedPublisher
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureCertificateSetting
+        [[-StoreName] <String>]
+        [-Thumbprint] <String>
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a certificate setting object'
+  description: |-
+    ```
+    PS C:\> New-AzureCertificateSetting -Thumbprint "D7BECD4D63EBAF86023BB41FA5FBF5C2C924902A" -StoreName "My"
+    ```
+
+    This command creates a certificate setting object for an existing certificate.
+- title: 'Example 2: Create a virtual machine that uses a configuration setting object'
+  description: |-
+    ```
+    PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy "C:\temp\ContosoCert.cer"
+    PS C:\> $CertificateSetting = New-AzureCertificateSetting -Thumbprint "D7BECD4D63EBAF86023BB41FA5FBF5C2C924902A" -StoreName "My"
+    PS C:\> $Image = Get-AzureVMImage -ImageName "ContosoStandard"
+    PS C:\> New-AzureVMConfig -Name "VirtualMachine17" -InstanceSize Small -ImageName $Image | Add-AzureProvisioningConfig -Windows -Certificates $CertificateSetting -Password "password" | New-AzureVM -ServiceName "ContosoService"
+    ```
+
+    The first command adds the certificate ContosoCert.cer to the service named ContosoService by using the **Add-AzureCertificate** cmdlet.
+
+    The second command creates a certificate setting object, and then stores it in the $CertificateSetting variable.
+
+    The third command gets an image from the image repository by using the **Get-AzureVMImage** cmdlet.
+    This command store the image in the $Image variable.
+
+    The final command creates a virtual machine configuration object based on the image in $Image by using the **New-AzureVMConfig** cmdlet.
+    The command passes that object to the **Add-AzureProvisioningConfig** cmdlet by using the pipeline operator.
+    That cmdlet add provisioning information to the configuration.
+    The command passes the object to the **New-AzureVM** cmdlet, which creates the virtual machine.
+links:
+- text: Add-AzureCertificate
+  href: ./Add-AzureCertificate.yml
+- text: Add-AzureProvisioningConfig
+  href: ./Add-AzureProvisioningConfig.yml
+- text: Get-AzureCertificate
+  href: ./Get-AzureCertificate.yml
+- text: Get-AzureVMImage
+  href: ./Get-AzureVMImage.yml
+- text: New-AzureQuickVM
+  href: ./New-AzureQuickVM.yml
+- text: New-AzureVM
+  href: ./New-AzureVM.yml
+- text: Remove-AzureCertificate
+  href: ./Remove-AzureCertificate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 11919623-9EDF-42A3-93FE-54E93D76D3D0
+  PlatyPS schema version: 2024-05-01

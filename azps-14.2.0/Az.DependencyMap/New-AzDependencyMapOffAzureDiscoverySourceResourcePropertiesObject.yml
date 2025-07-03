@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DependencyMap.New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject
+name: New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject
+module: Az.DependencyMap
+isPreview: false
+summary: |-
+  Create an in-memory object for OffAzureDiscoverySourceResourceProperties.
+description: |-
+  Create an in-memory object for OffAzureDiscoverySourceResourceProperties.
+parameters:
+  cmdletParameters:
+  - name: SourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Source ArmId of Discovery Source resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject
+        [-SourceId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DependencyMap.Models.OffAzureDiscoverySourceResourceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an instance of the OffAzureDiscoverySourceResourceProperties class.'
+  description: |-
+    ```powershell
+    New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject -SourceId testSourceId
+    ```
+
+    ```output
+    ProvisioningState SourceId     SourceType
+    ----------------- --------     ----------
+                      testSourceId OffAzure
+    ```
+
+    This command creates an instance of the OffAzureDiscoverySourceResourceProperties class.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject.md
+  document type: cmdlet
+  external help file: Az.DependencyMap-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DependencyMap/new-azdependencymapoffazurediscoverysourceresourcepropertiesobject
+  Module Name: Az.DependencyMap
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DependencyMap/DependencyMap/help/New-AzDependencyMapOffAzureDiscoverySourceResourcePropertiesObject.md
+  PlatyPS schema version: 2024-05-01

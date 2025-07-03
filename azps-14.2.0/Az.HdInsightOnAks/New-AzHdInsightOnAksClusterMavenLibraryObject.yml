@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksClusterMavenLibraryObject
+name: New-AzHdInsightOnAksClusterMavenLibraryObject
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Create an in-memory object for MavenLibraryProperties.
+description: |-
+  Create an in-memory object for MavenLibraryProperties.
+parameters:
+  cmdletParameters:
+  - name: GroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      GroupId of the Maven package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ArtifactId of the Maven package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Remark
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Remark of the latest library management operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version of the Maven package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksClusterMavenLibraryObject
+        -GroupId <String>
+        -Name <String>
+        [-Version <String>]
+        [-Remark <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterLibrary" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a library object for maven.'
+  description: |-
+    ```powershell
+    New-AzHdInsightOnAksClusterMavenLibraryObject -GroupId "com.azure.resourcemanager" -Name "azure-resourcemanager-hdinsight-containers" -Version "1.0.0-beta.2" -Remark "Maven lib"
+    ```
+
+    ```output
+    Name                         :
+    PropertiesType               : maven
+    Property                     : {
+                                     "type": "maven",
+                                     "remarks": "Maven lib",
+                                     "groupId": "com.azure.resourcemanager",
+                                     "name": "azure-resourcemanager-hdinsight-containers",
+                                     "version": "1.0.0-beta.2"
+                                   }
+    Remark                       : Maven lib
+    ```
+
+    Create a library object for maven.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterMavenLibraryObject.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclustermavenlibraryobject
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterMavenLibraryObject.md
+  PlatyPS schema version: 2024-05-01

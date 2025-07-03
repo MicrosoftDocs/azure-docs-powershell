@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGateway
+name: Get-AzApplicationGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an application gateway.
+description: |-
+  The **Get-AzApplicationGateway** cmdlet gets an application gateway.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the application gateway that this cmdlet gets.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGateway
+        [-Name <String>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified application gateway'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    ```output
+    Sku                                 : Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
+    SslPolicy                           :
+    GatewayIPConfigurations             : {appGatewayFrontendIP}
+    AuthenticationCertificates          : {}
+    SslCertificates                     : {}
+    TrustedRootCertificates             : {}
+    FrontendIPConfigurations            : {appGatewayFrontendIP}
+    FrontendPorts                       : {appGatewayFrontendPort}
+    Probes                              : {}
+    BackendAddressPools                 : {appGatewayBackendPool}
+    BackendHttpSettingsCollection       : {appGatewayBackendHttpSettings}
+    HttpListeners                       : {appGatewayHttpListener}
+    UrlPathMaps                         : {}
+    RequestRoutingRules                 : {rule1}
+    RewriteRuleSets                     : {}
+    RedirectConfigurations              : {}
+    WebApplicationFirewallConfiguration :
+    AutoscaleConfiguration              :
+    CustomErrorConfigurations           : {}
+    EnableHttp2                         :
+    EnableFips                          :
+    ForceFirewallPolicyAssociation      :
+    Zones                               : {}
+    OperationalState                    : Running
+    ProvisioningState                   : Succeeded
+    Identity                            :
+    DefaultPredefinedSslPolicy          : AppGwSslPolicy20150501
+    GatewayIpConfigurationsText         : []
+    AuthenticationCertificatesText      : []
+    SslCertificatesText                 : []
+    FrontendIpConfigurationsText        : []
+    FrontendPortsText                   : []
+    BackendAddressPoolsText             : []
+    BackendHttpSettingsCollectionText   : []
+    HttpListenersText                   : []
+    RewriteRuleSetsText                 : []
+    RequestRoutingRulesText             : []
+    ProbesText                          : []
+    UrlPathMapsText                     : []
+    IdentityText                        : null
+    SslPolicyText                       : null
+    ResourceGroupName                   : tjp-rg
+    Location                            : westus
+    ResourceGuid                        : 00000000-0000-0000-0000-000000000000
+    Type                                : Microsoft.Network/applicationGateways
+    Tag                                 : {}
+    TagsTable                           :
+    Name                                : ApplicationGateway01
+    Etag                                : W/"00000000-0000-0000-0000-000000000000"
+    Id                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/provide
+                                          rs/Microsoft.Network/applicationGateways/ApplicationGateway01
+    ```
+
+    This command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
+- title: 'Example 2: Get a list of application gateways in a resource group'
+  description: |-
+    ```powershell
+    $AppGwList = Get-AzApplicationGateway -ResourceGroupName "ResourceGroup01"
+    ```
+
+    ```output
+    Sku                                 : Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
+    SslPolicy                           :
+    GatewayIPConfigurations             : {appGatewayFrontendIP}
+    AuthenticationCertificates          : {}
+    SslCertificates                     : {}
+    TrustedRootCertificates             : {}
+    FrontendIPConfigurations            : {appGatewayFrontendIP}
+    FrontendPorts                       : {appGatewayFrontendPort}
+    Probes                              : {}
+    BackendAddressPools                 : {appGatewayBackendPool}
+    BackendHttpSettingsCollection       : {appGatewayBackendHttpSettings}
+    HttpListeners                       : {appGatewayHttpListener}
+    UrlPathMaps                         : {}
+    RequestRoutingRules                 : {rule1}
+    RewriteRuleSets                     : {}
+    RedirectConfigurations              : {}
+    WebApplicationFirewallConfiguration :
+    AutoscaleConfiguration              :
+    CustomErrorConfigurations           : {}
+    EnableHttp2                         :
+    EnableFips                          :
+    ForceFirewallPolicyAssociation      :
+    Zones                               : {}
+    OperationalState                    : Running
+    ProvisioningState                   : Succeeded
+    Identity                            :
+    DefaultPredefinedSslPolicy          : AppGwSslPolicy20150501
+    GatewayIpConfigurationsText         : []
+    AuthenticationCertificatesText      : []
+    SslCertificatesText                 : []
+    FrontendIpConfigurationsText        : []
+    FrontendPortsText                   : []
+    BackendAddressPoolsText             : []
+    BackendHttpSettingsCollectionText   : []
+    HttpListenersText                   : []
+    RewriteRuleSetsText                 : []
+    RequestRoutingRulesText             : []
+    ProbesText                          : []
+    UrlPathMapsText                     : []
+    IdentityText                        : null
+    SslPolicyText                       : null
+    ResourceGroupName                   : tjp-rg
+    Location                            : westus
+    ResourceGuid                        : 00000000-0000-0000-0000-000000000000
+    Type                                : Microsoft.Network/applicationGateways
+    Tag                                 : {}
+    TagsTable                           :
+    Name                                : ApplicationGateway01
+    Etag                                : W/"00000000-0000-0000-0000-000000000000"
+    Id                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/provide
+                                          rs/Microsoft.Network/applicationGateways/ApplicationGateway01
+    ```
+
+    This command gets a list of all the application gateways in the resource group named ResourceGroup01 and stores it in the $AppGwList variable.
+- title: 'Example 3: Get a list of application gateways in a subscription'
+  description: |-
+    ```powershell
+    $AppGwList = Get-AzApplicationGateway
+    ```
+
+    ```output
+    Sku                                 : Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
+    SslPolicy                           :
+    GatewayIPConfigurations             : {appGatewayFrontendIP}
+    AuthenticationCertificates          : {}
+    SslCertificates                     : {}
+    TrustedRootCertificates             : {}
+    FrontendIPConfigurations            : {appGatewayFrontendIP}
+    FrontendPorts                       : {appGatewayFrontendPort}
+    Probes                              : {}
+    BackendAddressPools                 : {appGatewayBackendPool}
+    BackendHttpSettingsCollection       : {appGatewayBackendHttpSettings}
+    HttpListeners                       : {appGatewayHttpListener}
+    UrlPathMaps                         : {}
+    RequestRoutingRules                 : {rule1}
+    RewriteRuleSets                     : {}
+    RedirectConfigurations              : {}
+    WebApplicationFirewallConfiguration :
+    AutoscaleConfiguration              :
+    CustomErrorConfigurations           : {}
+    EnableHttp2                         :
+    EnableFips                          :
+    ForceFirewallPolicyAssociation      :
+    Zones                               : {}
+    OperationalState                    : Running
+    ProvisioningState                   : Succeeded
+    Identity                            :
+    DefaultPredefinedSslPolicy          : AppGwSslPolicy20150501
+    GatewayIpConfigurationsText         : []
+    AuthenticationCertificatesText      : []
+    SslCertificatesText                 : []
+    FrontendIpConfigurationsText        : []
+    FrontendPortsText                   : []
+    BackendAddressPoolsText             : []
+    BackendHttpSettingsCollectionText   : []
+    HttpListenersText                   : []
+    RewriteRuleSetsText                 : []
+    RequestRoutingRulesText             : []
+    ProbesText                          : []
+    UrlPathMapsText                     : []
+    IdentityText                        : null
+    SslPolicyText                       : null
+    ResourceGroupName                   : tjp-rg
+    Location                            : westus
+    ResourceGuid                        : 00000000-0000-0000-0000-000000000000
+    Type                                : Microsoft.Network/applicationGateways
+    Tag                                 : {}
+    TagsTable                           :
+    Name                                : ApplicationGateway01
+    Etag                                : W/"00000000-0000-0000-0000-000000000000"
+    Id                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/provide
+                                          rs/Microsoft.Network/applicationGateways/ApplicationGateway01
+    ```
+
+    This command gets a list of all the application gateways in the subscription and stores it in the $AppGwList variable.
+- title: 'Example 4: Get a list of application gateways in a subscription using filtering'
+  description: |-
+    ```powershell
+    $AppGwList = Get-AzApplicationGateway -Name ApplicationGateway*
+    ```
+
+    ```output
+    Sku                                 : Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySku
+    SslPolicy                           :
+    GatewayIPConfigurations             : {appGatewayFrontendIP}
+    AuthenticationCertificates          : {}
+    SslCertificates                     : {}
+    TrustedRootCertificates             : {}
+    FrontendIPConfigurations            : {appGatewayFrontendIP}
+    FrontendPorts                       : {appGatewayFrontendPort}
+    Probes                              : {}
+    BackendAddressPools                 : {appGatewayBackendPool}
+    BackendHttpSettingsCollection       : {appGatewayBackendHttpSettings}
+    HttpListeners                       : {appGatewayHttpListener}
+    UrlPathMaps                         : {}
+    RequestRoutingRules                 : {rule1}
+    RewriteRuleSets                     : {}
+    RedirectConfigurations              : {}
+    WebApplicationFirewallConfiguration :
+    AutoscaleConfiguration              :
+    CustomErrorConfigurations           : {}
+    EnableHttp2                         :
+    EnableFips                          :
+    ForceFirewallPolicyAssociation      :
+    Zones                               : {}
+    OperationalState                    : Running
+    ProvisioningState                   : Succeeded
+    Identity                            :
+    DefaultPredefinedSslPolicy          : AppGwSslPolicy20150501
+    GatewayIpConfigurationsText         : []
+    AuthenticationCertificatesText      : []
+    SslCertificatesText                 : []
+    FrontendIpConfigurationsText        : []
+    FrontendPortsText                   : []
+    BackendAddressPoolsText             : []
+    BackendHttpSettingsCollectionText   : []
+    HttpListenersText                   : []
+    RewriteRuleSetsText                 : []
+    RequestRoutingRulesText             : []
+    ProbesText                          : []
+    UrlPathMapsText                     : []
+    IdentityText                        : null
+    SslPolicyText                       : null
+    ResourceGroupName                   : tjp-rg
+    Location                            : westus
+    ResourceGuid                        : 00000000-0000-0000-0000-000000000000
+    Type                                : Microsoft.Network/applicationGateways
+    Tag                                 : {}
+    TagsTable                           :
+    Name                                : ApplicationGateway01
+    Etag                                : W/"00000000-0000-0000-0000-000000000000"
+    Id                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ResourceGroup01/provide
+                                          rs/Microsoft.Network/applicationGateways/ApplicationGateway01
+    ```
+
+    This command gets a list of all the application gateways in the subscription that start with "ApplicationGateway01" and stores it in the $AppGwList variable.
+links:
+- text: Stop-AzApplicationGateway
+  href: ./Stop-AzApplicationGateway.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgateway
+  Module Name: Az.Network
+  ms.assetid: 77CDEE77-FD5D-4C2D-B027-FF1F6FF6618E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGateway.md
+  PlatyPS schema version: 2024-05-01

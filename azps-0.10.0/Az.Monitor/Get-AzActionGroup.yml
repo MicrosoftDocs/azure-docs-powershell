@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzActionGroup
+name: Get-AzActionGroup
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets action group(s).
+description: |-
+  The **Get-AzActionGroup** cmdlet gets one or more action groups.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySubscriptionOrResourceGroup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzActionGroup
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySubscriptionOrResourceGroup
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzActionGroup
+        -ResourceGroupName <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an action group by subscription ID'
+  description: |-
+    ```
+    PS C:\>Get-AzActionGroup
+    ```
+
+    This command lists all the action group for the current subscription.
+- title: 'Example 2: Get action groups for the given resource group'
+  description: |-
+    ```
+    PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts"
+    ```
+
+    This command lists action groups for the given resource group.
+- title: 'Example 3: Get an action group.'
+  description: |-
+    ```
+    PS C:\>Get-AzActionGroup -ResourceGroup "Default-activityLogAlerts" -Name "actionGroup1"
+    ```
+
+    This command lists one (a list with a single element) action group.
+links:
+- text: Set-AzActionGroup
+  href: ./Set-AzActionGroup.yml
+- text: Remove-AzActionGroup
+  href: ./Remove-AzActionGroup.yml
+- text: New-AzActionGroupReceiver
+  href: ./New-AzActionGroupReceiver.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzActionGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/get-azactiongroup
+  Module Name: Az.Monitor
+  ms.assetid: 1CA26790-C791-4BFD-B986-70F28E3B095B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzActionGroup.md
+  PlatyPS schema version: 2024-05-01

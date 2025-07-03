@@ -1,0 +1,288 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.New-AzDataProtectionRestoreConfigurationClientObject
+name: New-AzDataProtectionRestoreConfigurationClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Creates new restore configuration object
+description: |-
+  Creates new restore configuration object
+parameters:
+  cmdletParameters:
+  - name: ConflictPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Conflict policy for restore.
+      Allowed values are Skip, Patch.
+      Default value is Skip
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatasourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DatasourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource Type
+    acceptedValues:
+    - AzureDisk
+    - AzureBlob
+    - AzureDatabaseForPostgreSQL
+    - AzureKubernetesService
+    - AzureDatabaseForPGFlexServer
+    - AzureDatabaseForMySQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of namespaces to be excluded for restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of resource types to be excluded for restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeClusterScopeResource
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Boolean parameter to decide whether cluster scope resources are included for restore.
+      By default this is taken as true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of namespaces to be included for restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of resource types to be included for restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabelSelector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of labels for internal filtering for restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceMapping
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.KubernetesClusterRestoreCriteriaNamespaceMappings" data-throw-if-not-resolved="False" />
+    description: |-
+      Namespaces mapping from source namespaces to target namespaces to resolve namespace naming conflicts in the target cluster.
+      To construct, see NOTES section for NAMESPACEMAPPING properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PersistentVolumeRestoreMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Restore mode for persistent volumes.
+      Allowed values are RestoreWithVolumeData, RestoreWithoutVolumeData.
+      Default value is RestoreWithVolumeData
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceModifierReference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.NamespacedNameResource" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource modifier reference to be executed during restore.
+      To construct, see NOTES section for RESOURCEMODIFIERREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestoreHookReference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.NamespacedNameResource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Hook reference to be executed during restore.
+      To construct, see NOTES section for RESTOREHOOKREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StagingResourceGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Staging resource group Id for restore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StagingStorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Staging storage account Id for restore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionRestoreConfigurationClientObject
+        -DatasourceType <DatasourceTypes>
+        [-ExcludedResourceType <String[]>]
+        [-IncludedResourceType <String[]>]
+        [-ExcludedNamespace <String[]>]
+        [-IncludedNamespace <String[]>]
+        [-LabelSelector <String[]>]
+        [-IncludeClusterScopeResource <Boolean>]
+        [-ConflictPolicy <String>]
+        [-NamespaceMapping <KubernetesClusterRestoreCriteriaNamespaceMappings>]
+        [-PersistentVolumeRestoreMode <String>]
+        [-RestoreHookReference <NamespacedNameResource[]>]
+        [-ResourceModifierReference <NamespacedNameResource>]
+        [-StagingResourceGroupId <String>]
+        [-StagingStorageAccountId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a RestoreConfiguration for restoring with AzureKubernetesService'
+  description: |-
+    ```powershell
+    $restoreConfig = New-AzDataProtectionRestoreConfigurationClientObject -DatasourceType AzureKubernetesService -PersistentVolumeRestoreMode RestoreWithVolumeData -IncludeClusterScopeResource $true -NamespaceMapping  @{"sourcenamespace1"="targetnamespace1";"sourcenamespace2"="targetnamespace2"} -ExcludedNamespace "excludeNS1","excludeNS2" -RestoreHookReference @(@{name='restorehookname';namespace='default'},@{name='restorehookname1';namespace='hrweb'})
+    ```
+
+    ```output
+    ObjectType                       ConflictPolicy ExcludedNamespace        ExcludedResourceType IncludeClusterScopeResource IncludedNamespace IncludedResourceType LabelSelector PersistentVolumeRestoreMode
+    ----------                       -------------- -----------------        -------------------- --------------------------- ----------------- -------------------- ------------- ---------------------------
+    KubernetesClusterRestoreCriteria Skip           {excludeNS1, excludeNS2}                      True                                                                             RestoreWithVolumeData
+    ```
+
+    This command can be used to create a restore configuration client object used for Kubernetes cluster restore.
+    RestoreHookReferences is a list of references to RestoreHooks that should be executed during restore.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionRestoreConfigurationClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionrestoreconfigurationclientobject
+  Module Name: Az.Dataprotection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionRestoreConfigurationClientObject.md
+  PlatyPS schema version: 2024-05-01

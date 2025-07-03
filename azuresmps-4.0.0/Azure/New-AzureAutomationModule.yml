@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureAutomationModule
+name: New-AzureAutomationModule
+module: Azure
+isPreview: false
+summary: |-
+  Imports a module into Automation.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **New-AzureAutomationModule** cmdlet imports a module into Azure Automation.
+  A module is a compressed file, with a .zip extension, that contains a folder which includes one of the following file types:
+
+  - A Windows PowerShell module (psm1 file).
+
+  - A Windows PowerShell module manifest (psd1 file).
+
+  - An assembly (dll file).
+
+  The names of the zip file, the folder in the zip file, and file in the folder (.psm1, psd.1, or .dll) must match.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account the module will be stored in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentLink
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Public URL such as a website or Azure blob storage specifying the path to the module file.
+      This location must be publically accessible.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies one or more tags related to the module.
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationModule
+        -Name <String>
+        -ContentLink <Uri>
+        [-Tags <IDictionary>]
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Module" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import a module'
+  description: |-
+    ```
+    PS C:\> New-AzureAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip"
+    ```
+
+    This command imports a module named ContosoModule into the Automation account named Contoso17.
+    The module is stored in an Azure blob in a storage account named contosostorage and a container named modules.
+links:
+- text: Get-AzureAutomationModule
+  href: ./Get-AzureAutomationModule.yml
+- text: Remove-AzureAutomationModule
+  href: ./Remove-AzureAutomationModule.yml
+- text: Set-AzureAutomationModule
+  href: ./Set-AzureAutomationModule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 1F875179-E3CA-4BBB-822A-600777B2D980
+  PlatyPS schema version: 2024-05-01

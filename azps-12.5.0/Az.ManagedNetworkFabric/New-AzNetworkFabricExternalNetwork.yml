@@ -1,0 +1,805 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedNetworkFabric.New-AzNetworkFabricExternalNetwork
+name: New-AzNetworkFabricExternalNetwork
+module: Az.ManagedNetworkFabric
+isPreview: false
+summary: |-
+  Create ExternalNetwork PUT method.
+description: |-
+  Create ExternalNetwork PUT method.
+parameters:
+  cmdletParameters:
+  - name: Annotation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch configuration description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Body
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IExternalNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the External Network resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityL3IsolationDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExportRoutePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IExportRoutePolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Export Route Policy either IPv4 or IPv6.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExportRoutePolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Resource ID of the RoutePolicy.
+      This is used for the backward compatibility.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportRoutePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IImportRoutePolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Import Route Policy either IPv4 or IPv6.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImportRoutePolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Resource ID of the RoutePolicy.
+      This is used for the backward compatibility.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: L3IsolationDomainInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: L3IsolationDomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the L3 Isolation Domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the External Network.
+    aliases:
+    - ExternalNetworkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyBfdConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IBfdConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      BFD configuration properties
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyEgressAclId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Egress Acl.
+      ARM resource ID of Access Control Lists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyIngressAclId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Ingress Acl.
+      ARM resource ID of Access Control Lists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyMtu
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      MTU to use for option A peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyPeerAsn
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Peer ASN number.Example : 28
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyPrimaryIpv4Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IPv4 Address Prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyPrimaryIpv6Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IPv6 Address Prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertySecondaryIpv4Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary IPv4 Address Prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertySecondaryIpv6Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary IPv6 Address Prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionAPropertyVlanId
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Vlan identifier.
+      Example : 501
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionBProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IL3OptionBProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      option B properties object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Peering option list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityL3IsolationDomainExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricExternalNetwork
+        -Name <String>
+        -L3IsolationDomainName <String>
+        -ResourceGroupName <String>
+        -PeeringOption <String>
+        [-SubscriptionId <String>]
+        [-Annotation <String>]
+        [-ExportRoutePolicy <IExportRoutePolicy>]
+        [-ExportRoutePolicyId <String>]
+        [-ImportRoutePolicy <IImportRoutePolicy>]
+        [-ImportRoutePolicyId <String>]
+        [-OptionAPropertyBfdConfiguration <IBfdConfiguration>]
+        [-OptionAPropertyEgressAclId <String>]
+        [-OptionAPropertyIngressAclId <String>]
+        [-OptionAPropertyMtu <Int32>]
+        [-OptionAPropertyPeerAsn <Int64>]
+        [-OptionAPropertyPrimaryIpv4Prefix <String>]
+        [-OptionAPropertyPrimaryIpv6Prefix <String>]
+        [-OptionAPropertySecondaryIpv4Prefix <String>]
+        [-OptionAPropertySecondaryIpv6Prefix <String>]
+        [-OptionAPropertyVlanId <Int32>]
+        [-OptionBProperty <IL3OptionBProperties>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricExternalNetwork
+        -Name <String>
+        -L3IsolationDomainName <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricExternalNetwork
+        -Name <String>
+        -L3IsolationDomainName <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricExternalNetwork
+        -Name <String>
+        -L3IsolationDomainInputObject <IManagedNetworkFabricIdentity>
+        -PeeringOption <String>
+        [-Annotation <String>]
+        [-ExportRoutePolicy <IExportRoutePolicy>]
+        [-ExportRoutePolicyId <String>]
+        [-ImportRoutePolicy <IImportRoutePolicy>]
+        [-ImportRoutePolicyId <String>]
+        [-OptionAPropertyBfdConfiguration <IBfdConfiguration>]
+        [-OptionAPropertyEgressAclId <String>]
+        [-OptionAPropertyIngressAclId <String>]
+        [-OptionAPropertyMtu <Int32>]
+        [-OptionAPropertyPeerAsn <Int64>]
+        [-OptionAPropertyPrimaryIpv4Prefix <String>]
+        [-OptionAPropertyPrimaryIpv6Prefix <String>]
+        [-OptionAPropertySecondaryIpv4Prefix <String>]
+        [-OptionAPropertySecondaryIpv6Prefix <String>]
+        [-OptionAPropertyVlanId <Int32>]
+        [-OptionBProperty <IL3OptionBProperties>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityL3IsolationDomainExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNetworkFabricExternalNetwork
+        -Name <String>
+        -L3IsolationDomainInputObject <IManagedNetworkFabricIdentity>
+        -Body <IExternalNetwork>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityL3IsolationDomain
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IExternalNetwork" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IExternalNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create the External Network Resource'
+  description: |-
+    ```powershell
+    $exportRoutePolicy = @{
+        ExportIpv4RoutePolicyId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/RoutePolicyName"
+        ExportIpv6RoutePolicyId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/RoutePolicyName"
+    }
+    $importRoutePolicy = @{
+        ImportIpv4RoutePolicyId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/RoutePolicyName"
+        ImportIpv6RoutePolicyId = "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/routePolicies/RoutePolicyName"
+    }
+    $routeTarget = @{
+        ExportIpv4RouteTarget = @("65046:10039")
+        ExportIpv6RouteTarget = @("65046:10039")
+        ImportIpv4RouteTarget = @("65046:10039")
+        ImportIpv6RouteTarget = @("65046:10039")
+    }
+    $optionBProperty = @{
+        RouteTarget = $routeTarget
+    }
+
+    $optionAPropertyBfdConfiguration = @{
+        IntervalInMilliSecond = 300
+        Multiplier = 3
+    }
+
+    New-AzNetworkFabricExternalNetwork -L3IsolationDomainName $l3domainName -Name $name -ResourceGroupName $resourceGroupName -PeeringOption "OptionB" -ExportRoutePolicy $exportRoutePolicy -ImportRoutePolicy $importRoutePolicy -OptionBProperty $optionBProperty
+    ```
+
+    ```output
+    AdministrativeState Annotation ConfigurationState ExportRoutePolicy
+    ------------------- ---------- ------------------ -----------------
+    Enabled
+    ```
+
+    This command creates the External Network resource with Option B Properties.
+- title: 'Example 2: Create the External Network Resource'
+  description: |-
+    ```powershell
+    New-AzNetworkFabricExternalNetwork -L3IsolationDomainName $l3domainName -Name $name -ResourceGroupName $resourceGroupName -PeeringOption "OptionA" -ExportRoutePolicy $exportRoutePolicy -ImportRoutePolicy $importRoutePolicy -OptionAPropertyBfdConfiguration $optionAPropertyBfdConfiguration -OptionAPropertyEgressAclId "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/egressAclName" -OptionAPropertyIngressAclId "/subscriptions/subscriptionId/resourceGroups/example-rg/providers/Microsoft.ManagedNetworkFabric/accessControlLists/ingressAclName" -OptionAPropertyMtu 1500 -OptionAPropertyPeerAsn 65123 -OptionAPropertyPrimaryIpv4Prefix "172.31.0.0/30" -OptionAPropertySecondaryIpv4Prefix "172.31.0.0/30" -OptionAPropertyVlanId 501
+    ```
+
+    ```output
+    AdministrativeState Annotation ConfigurationState ExportRoutePolicy
+    ------------------- ---------- ------------------ -----------------
+    Enabled
+    ```
+
+    This command creates the External Network resource with Option A Properties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/New-AzNetworkFabricExternalNetwork.md
+  document type: cmdlet
+  external help file: Az.ManagedNetworkFabric-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managednetworkfabric/new-aznetworkfabricexternalnetwork
+  Module Name: Az.ManagedNetworkFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/New-AzNetworkFabricExternalNetwork.md
+  PlatyPS schema version: 2024-05-01

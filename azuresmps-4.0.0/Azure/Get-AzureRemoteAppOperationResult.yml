@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppOperationResult
+name: Get-AzureRemoteAppOperationResult
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves the result of an Azure RemoteApp operation.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppOperationResult** cmdlet retrieves the result of a long-running Azure RemoteApp operation.
+  Azure RemoteApp uses long-running operations for many actions that require processing by the service and cannot return immediately.
+  Examples of cmdlets that return tracking IDs include **Update-AzureRemoteAppCollection**, **Set-AzureRemoteAppWorkspace**, **Disconnect-AzureRemoteAppSession**, and others.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrackingId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tracking ID of an operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppOperationResult
+        [-TrackingId] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Use a tracking ID to get an operation result'
+  description: |-
+    ```
+    PS C:\> $result = New-AzureRemoteAppCollection -CollectionName Contoso -ImageName "Windows Server 2012 R2" -Plan Standard -Location "West US" -Description CloudOnly
+    PS C:\> Get-AzureRemoteAppOperationResult -TrackingId $result.Tracking
+    ```
+
+    This command saves the tracking ID returned from an Azure RemoteApp operation.
+    The tracking ID is passed to **Get-AzureRemoteAppOperationResult** in the command that follows.
+links:
+- text: Disconnect-AzureRemoteAppSession
+  href: ./Disconnect-AzureRemoteAppSession.yml
+- text: Set-AzureRemoteAppWorkspace
+  href: ./Set-AzureRemoteAppWorkspace.yml
+- text: Update-AzureRemoteAppCollection
+  href: ./Update-AzureRemoteAppCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 4136A0EF-2682-4B17-BC37-53CD43F5940B
+  PlatyPS schema version: 2024-05-01

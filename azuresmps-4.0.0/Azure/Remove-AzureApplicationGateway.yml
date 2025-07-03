@@ -1,0 +1,89 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureApplicationGateway
+name: Remove-AzureApplicationGateway
+module: Azure
+isPreview: false
+summary: |-
+  Removes an application gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureApplicationGateway** cmdlet removes an application gateway.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the application gateway that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureApplicationGateway
+        -Name <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Management.ApplicationGateway.Models.ApplicationGatewayOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an application gateway'
+  description: |-
+    ```
+    PS C:\> Remove-AzureApplicationGateway -Name "ApplicationGateway06"
+    ```
+
+    This command removes the application gateway named ApplicationGateway06.
+links:
+- text: Get-AzureApplicationGateway
+  href: ./Get-AzureApplicationGateway.yml
+- text: New-AzureApplicationGateway
+  href: ./New-AzureApplicationGateway.yml
+- text: Start-AzureApplicationGateway
+  href: ./Start-AzureApplicationGateway.yml
+- text: Stop-AzureApplicationGateway
+  href: ./Stop-AzureApplicationGateway.yml
+- text: Update-AzureApplicationGateway
+  href: ./Update-AzureApplicationGateway.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 128AD64D-709A-4B59-B233-4221A9120AE1
+  PlatyPS schema version: 2024-05-01

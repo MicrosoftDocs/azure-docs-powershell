@@ -1,0 +1,229 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Update-AzureSiteRecoveryProtectionDirection
+name: Update-AzureSiteRecoveryProtectionDirection
+module: Azure
+isPreview: false
+summary: |-
+  Updates the source and target server for the protection of a Site Recovery object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Update-AzureSiteRecoveryProtectionDirection** cmdlet updates the source and target server for the protection of an Azure Site Recovery object after a commit failover operation finishes.
+parameters:
+  cmdletParameters:
+  - name: Direction
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the direction of the commit.
+      The acceptable values for this parameter are:
+
+      - PrimaryToRecovery
+      - RecoveryToPrimary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainerId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected container.
+      This cmdlet modifies the direction for a protected virtual machine that belongs to the container that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntity
+    type: <xref href="ASRProtectionEntity" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protection entity object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntityId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected virtual machine.
+      This cmdlet modifies the direction for the protected virtual machine that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryPlan
+    type: <xref href="ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a recovery plan object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RPId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a recovery plan.
+      This cmdlet modifies the direction for the recovery plan that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForCompletion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzureSiteRecoveryProtectionDirection
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzureSiteRecoveryProtectionDirection
+        -RPId <String>
+        -Direction <String>
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzureSiteRecoveryProtectionDirection
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        -Direction <String>
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzureSiteRecoveryProtectionDirection
+        -ProtectionEntity <ASRProtectionEntity>
+        -Direction <String>
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObject
+  isDefault: false
+examples:
+- title: 'Example 1: Modify the direction for a protected object in a container'
+  description: |-
+    ```
+    PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer
+    PS C:\> $Protected = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container
+    PS C:\> Update-AzureSiteRecoveryProtectionDirection -Direction RecoveryToPrimary -ProtectionEntity $Protected
+    ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
+    ClientRequestId  : 32ace403-0916-4967-83a1-529176bd6e88-2014-49-06 15:49:24Z-P
+    State            : NotStarted
+    StateDescription : NotStarted
+    StartTime        :
+    EndTime          :
+    AllowedActions   : {}
+    Name             :
+    Tasks            : {}
+    Errors           : {}
+    ```
+
+    The first command gets the protected containers in the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $Container variable.
+
+    The second command gets the virtual machines that belong to the container stored in $Container by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
+    The command stores the results in the $Protected variable.
+
+    The final command sets the direction to RecoverToPrimary for the objects stored in $Protected.
+links:
+- text: Get-AzureSiteRecoveryProtectionContainer
+  href: ./Get-AzureSiteRecoveryProtectionContainer.yml
+- text: Get-AzureSiteRecoveryProtectionEntity
+  href: ./Get-AzureSiteRecoveryProtectionEntity.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 870EE77E-57D9-4B52-9F80-CB24D642E6E7
+  PlatyPS schema version: 2024-05-01

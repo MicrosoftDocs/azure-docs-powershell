@@ -1,0 +1,30 @@
+### YamlMime:PowerShellModule1
+uid: Az.CustomLocation
+name: Az.CustomLocation Module
+isPreview: false
+cmdletGroups:
+- title: CustomLocation
+  cmdlets:
+  - Az.CustomLocation.Find-AzCustomLocationTargetResourceGroup
+  - Az.CustomLocation.Get-AzCustomLocation
+  - Az.CustomLocation.Get-AzCustomLocationEnabledResourceType
+  - Az.CustomLocation.Get-AzCustomLocationResourceSyncRule
+  - Az.CustomLocation.New-AzCustomLocation
+  - Az.CustomLocation.New-AzCustomLocationMatchExpressionsObject
+  - Az.CustomLocation.New-AzCustomLocationResourceSyncRule
+  - Az.CustomLocation.Remove-AzCustomLocation
+  - Az.CustomLocation.Remove-AzCustomLocationResourceSyncRule
+  - Az.CustomLocation.Update-AzCustomLocation
+  - Az.CustomLocation.Update-AzCustomLocationResourceSyncRule
+description: |-
+  Microsoft Azure PowerShell: CustomLocation cmdlets
+metadata:
+  Module Name: Az.CustomLocation
+  Module Guid: b5a68592-6b36-4d8f-b582-a157eb4dfacf
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.customlocation
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Az.CustomLocation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Az.CustomLocation.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.ResourceGraph
+name: Az.ResourceGraph Module
+isPreview: false
+cmdletGroups:
+- title: ResourceGraph
+  cmdlets:
+  - Az.ResourceGraph.Get-AzResourceGraphQuery
+  - Az.ResourceGraph.New-AzResourceGraphQuery
+  - Az.ResourceGraph.Remove-AzResourceGraphQuery
+  - Az.ResourceGraph.Search-AzGraph
+  - Az.ResourceGraph.Update-AzResourceGraphQuery
+description: |-
+  Microsoft Azure PowerShell: ResourceGraph cmdlets
+metadata:
+  Module Name: Az.ResourceGraph
+  Module Guid: a290eead-f293-4588-b61e-b465b237591e
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.resourcegraph
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Az.ResourceGraph.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceGraph/ResourceGraph/help/Az.ResourceGraph.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

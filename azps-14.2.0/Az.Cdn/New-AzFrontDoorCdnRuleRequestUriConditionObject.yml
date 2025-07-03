@@ -1,0 +1,128 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnRuleRequestUriConditionObject
+name: New-AzFrontDoorCdnRuleRequestUriConditionObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for DeliveryRuleRequestUriCondition.
+description: |-
+  Create an in-memory object for DeliveryRuleRequestUriCondition.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the condition for the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterMatchValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The match value for the condition of the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterNegateCondition
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes if this is negate condition or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterOperator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes operator to be matched.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterTransform
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of transforms.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnRuleRequestUriConditionObject
+        -ParameterOperator <String>
+        -Name <String>
+        [-ParameterMatchValue <String[]>]
+        [-ParameterNegateCondition <Boolean>]
+        [-ParameterTransform <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.DeliveryRuleRequestUriCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DeliveryRuleRequestUriCondition'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnRuleRequestUriConditionObject -Name RequestUri -ParameterOperator Equal -ParameterMatchValue /test
+    ```
+
+    ```output
+    Name
+    ----
+    RequestUri
+    ```
+
+    Create an in-memory object for DeliveryRuleRequestUriCondition
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestUriConditionObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnrulerequesturiconditionobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestUriConditionObject.md
+  PlatyPS schema version: 2024-05-01

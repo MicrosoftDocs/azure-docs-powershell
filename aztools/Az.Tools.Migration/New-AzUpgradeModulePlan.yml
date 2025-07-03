@@ -1,0 +1,239 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Tools.Migration.New-AzUpgradeModulePlan
+name: New-AzUpgradeModulePlan
+module: Az.Tools.Migration
+isPreview: false
+summary: |-
+  Generates a new upgrade plan for migrating to the **Az** PowerShell module.
+description: |-
+  Generates a new upgrade plan for migrating to the **Az** PowerShell module. The upgrade plan details
+  the specific file/offset points that require changes when moving from **AzureRM** commands to Az
+  commands.
+parameters:
+  cmdletParameters:
+  - name: AzAliasMappingSpec
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an optional parameter to provide a pre-loaded Az cmdlet alias mapping table, returned from
+      `Get-AzUpgradeAliasSpec`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzModuleSpec
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,CommandDefinition" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an optional parameter to provide a pre-loaded **Az** module spec, returned from
+      `Get-AzUpgradeCmdletSpec`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureRmCmdReference
+    type: <xref href="CommandReference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the **AzureRM** command references output from the `Find-AzUpgradeCommandReference`
+      cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromReferences
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureRmModuleSpec
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,CommandDefinition" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an optional parameter to provide a pre-loaded **AzureRM** module spec, returned from
+      `Get-AzUpgradeCmdletSpec`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectoryPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a folder where PowerShell scripts or modules reside.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromNewSearchByDirectory
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a single PowerShell file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromNewSearchByFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromAzureRmVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **AzureRM** module version used in your existing PowerShell scripts(s) or modules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromNewSearchByDirectory
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FromNewSearchByFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ToAzVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **Az** module version to upgrade to. Currently, only Az version 10.3 is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzUpgradeModulePlan
+        -AzureRmCmdReference <CommandReference[]>
+        -ToAzVersion <String>
+        [-AzureRmModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzAliasMappingSpec <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromReferences
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzUpgradeModulePlan
+        -FromAzureRmVersion <String>
+        -DirectoryPath <String>
+        -ToAzVersion <String>
+        [-AzureRmModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzAliasMappingSpec <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromNewSearchByDirectory
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzUpgradeModulePlan
+        -FromAzureRmVersion <String>
+        -FilePath <String>
+        -ToAzVersion <String>
+        [-AzureRmModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzModuleSpec <System.Collections.Generic.Dictionary`2[System.String,CommandDefinition]>]
+        [-AzAliasMappingSpec <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromNewSearchByFile
+  isDefault: false
+examples:
+- title: EXAMPLE 1
+  description: |-
+    The following example generates a new **Az** module upgrade plan for the script file
+    `C:\Scripts\my-azure-script.ps1`.
+
+    ```powershell
+    New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion latest -FilePath 'C:\Scripts\my-azure-script.ps1'
+    ```
+- title: EXAMPLE 2
+  description: |-
+    The following example generates a new **Az** module upgrade plan for the script and module files
+    located under `C:\Scripts`.
+
+    ```powershell
+    New-AzUpgradeModulePlan -FromAzureRmVersion 6.13.1 -ToAzVersion latest -DirectoryPath 'C:\Scripts'
+    ```
+- title: EXAMPLE 3
+  description: |-
+    The following example generates a new **Az** module upgrade plan for the script and module files
+    under `C:\Scripts`.
+
+    ```powershell
+    $references = Find-AzUpgradeCommandReference -DirectoryPath 'C:\Scripts' -AzureRmVersion '6.13.1'
+    New-AzUpgradeModulePlan -ToAzVersion latest -AzureRmCmdReference $references
+    ```
+- title: EXAMPLE 4
+  description: |-
+    The following example generates a new **Az** module upgrade plan for the script and module files
+    under several directories. Module specs are pre-loaded here to avoid re-loading the spec each time a
+    plan is generated.
+
+    ```powershell
+    # pre-load specifications
+
+    $armSpec = Get-AzUpgradeCmdletSpec -AzureRM
+    $azSpec = Get-AzUpgradeCmdletSpec -Az -ModuleVersion latest
+    $azAliases = Get-AzUpgradeAliasSpec -ModuleVersion latest
+
+    # execute a batch of module upgrades
+
+    $plan1 = New-AzUpgradeModulePlan -DirectoryPath 'C:\Scripts1' -FromAzureRmVersion '6.13.1' -ToAzVersion latest -AzureRmModuleSpec $armSpec -AzModuleSpec $azSpec -AzAliasMappingSpec $azAliases
+    $plan2 = New-AzUpgradeModulePlan -DirectoryPath 'C:\Scripts2' -FromAzureRmVersion '6.13.1' -ToAzVersion latest -AzureRmModuleSpec $armSpec -AzModuleSpec $azSpec -AzAliasMappingSpec $azAliases
+    $plan3 = New-AzUpgradeModulePlan -DirectoryPath 'C:\Scripts3' -FromAzureRmVersion '6.13.1' -ToAzVersion latest -AzureRmModuleSpec $armSpec -AzModuleSpec $azSpec -AzAliasMappingSpec $azAliases
+    ```
+metadata:
+  document type: cmdlet
+  external help file: Az.Tools.Migration-help.xml
+  HelpUri: 
+  Module Name: az.tools.migration
+  original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/New-AzUpgradeModulePlan.md
+  PlatyPS schema version: 2024-05-01

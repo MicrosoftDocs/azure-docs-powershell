@@ -1,0 +1,429 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DevCenter.Get-AzDevCenterUserDevBox
+name: Get-AzDevCenterUserDevBox
+module: Az.DevCenter
+isPreview: false
+summary: |-
+  Gets a Dev Box
+description: |-
+  Gets a Dev Box
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevCenterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter upon which to execute operations.
+    aliases:
+    - DevCenter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2ByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1ByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter-specific URI to operate on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of a Dev Box.
+    aliases:
+    - DevBoxName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter Project upon which to execute operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2ByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The AAD object id of the user.
+      If value is 'me', the identity is taken from the authentication context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List2ByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1ByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -Endpoint <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -Endpoint <String>
+        -ProjectName <String>
+        -UserId <String>
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -Endpoint <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -Endpoint <String>
+        -UserId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -Endpoint <String>
+        -ProjectName <String>
+        -UserId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List2
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -DevCenterName <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -DevCenterName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -DevCenterName <String>
+        -ProjectName <String>
+        -UserId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List2ByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -DevCenterName <String>
+        -UserId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1ByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDevCenterUserDevBox
+        -DevCenterName <String>
+        -ProjectName <String>
+        -UserId <String>
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByDevCenter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20231001Preview.IDevBox" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List dev boxes by endpoint'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/"
+    ```
+
+    This command lists dev boxes under the endpoint.
+- title: 'Example 2: List dev boxes by endpoint and user id'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -UserId 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+    ```
+
+    This command lists dev boxes under the endpoint assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
+- title: 'Example 3: List dev boxes by endpoint, user id, and project'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -ProjectName DevProject -UserId "me"
+    ```
+
+    This command lists dev boxes under the project "DevProject" assigned to the currently signed-in user.
+- title: 'Example 4: List dev boxes by dev center name'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -DevCenterName Contoso
+    ```
+
+    This command lists dev boxes under the dev center "Contoso".
+- title: 'Example 5: List dev boxes by dev center and user id'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -DevCenterName Contoso -UserId "me"
+    ```
+
+    This command lists dev boxes under the dev center "Contoso" assigned to the currently signed-in user.
+- title: 'Example 6: List dev boxes by dev center, user id, and project'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -DevCenterName Contoso -ProjectName DevProject -UserId 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
+    ```
+
+    This command lists dev boxes under the project "DevProject" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
+- title: 'Example 7: Get a dev box by endpoint'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -ProjectName DevProject -UserId 00aa00aa-bb11-cc22-dd33-44ee44ee44ee -Name myDevBox
+    ```
+
+    This command gets the dev box "myDevBox" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
+- title: 'Example 8: Get a dev box by dev center'
+  description: |-
+    ```powershell
+    Get-AzDevCenterUserDevBox -DevCenterName Contoso -ProjectName DevProject -UserId "me" -Name myDevBox
+    ```
+
+    This command gets the dev box "myDevBox" assigned to the currently signed-in user.
+- title: 'Example 9: Get a dev box by endpoint and InputObject'
+  description: |-
+    ```powershell
+    $devBoxInput = @{"DevBoxName" = "myDevBox"; "UserId" = "me"; "ProjectName" = "DevProject" }
+    Get-AzDevCenterUserDevBox -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -InputObject $devBoxInput
+    ```
+
+    This command gets the dev box "myDevBox" assigned to the currently signed-in user.
+- title: 'Example 10: Get a dev box by dev center and InputObject'
+  description: |-
+    ```powershell
+    $devBoxInput = @{"DevBoxName" = "myDevBox"; "UserId" = "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"; "ProjectName" = "DevProject" }
+    Get-AzDevCenterUserDevBox -DevCenterName Contoso -InputObject $devBoxInput
+    ```
+
+    This command gets the dev box "myDevBox" assigned to user "00aa00aa-bb11-cc22-dd33-44ee44ee44ee".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterUserDevBox.md
+  document type: cmdlet
+  external help file: Az.DevCenter-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.devcenter/get-azdevcenteruserdevbox
+  Module Name: Az.DevCenter
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Get-AzDevCenterUserDevBox.md
+  PlatyPS schema version: 2024-05-01

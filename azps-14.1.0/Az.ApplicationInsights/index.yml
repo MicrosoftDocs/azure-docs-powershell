@@ -1,0 +1,56 @@
+### YamlMime:PowerShellModule1
+uid: Az.ApplicationInsights
+name: Az.ApplicationInsights Module
+isPreview: false
+cmdletGroups:
+- title: Application Insights
+  cmdlets:
+  - Az.ApplicationInsights.Get-AzApplicationInsights
+  - Az.ApplicationInsights.Get-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.Get-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Get-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.Get-AzApplicationInsightsMyWorkbook
+  - Az.ApplicationInsights.Get-AzApplicationInsightsWebTest
+  - Az.ApplicationInsights.Get-AzApplicationInsightsWorkbook
+  - Az.ApplicationInsights.Get-AzApplicationInsightsWorkbookRevision
+  - Az.ApplicationInsights.Get-AzApplicationInsightsWorkbookTemplate
+  - Az.ApplicationInsights.New-AzApplicationInsights
+  - Az.ApplicationInsights.New-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.New-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.New-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.New-AzApplicationInsightsMyWorkbook
+  - Az.ApplicationInsights.New-AzApplicationInsightsWebTest
+  - Az.ApplicationInsights.New-AzApplicationInsightsWebTestGeolocationObject
+  - Az.ApplicationInsights.New-AzApplicationInsightsWebTestHeaderFieldObject
+  - Az.ApplicationInsights.New-AzApplicationInsightsWorkbook
+  - Az.ApplicationInsights.New-AzApplicationInsightsWorkbookTemplate
+  - Az.ApplicationInsights.New-AzApplicationInsightsWorkbookTemplateGalleryObject
+  - Az.ApplicationInsights.Remove-AzApplicationInsights
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsApiKey
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsMyWorkbook
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsWebTest
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsWorkbook
+  - Az.ApplicationInsights.Remove-AzApplicationInsightsWorkbookTemplate
+  - Az.ApplicationInsights.Set-AzApplicationInsightsContinuousExport
+  - Az.ApplicationInsights.Set-AzApplicationInsightsDailyCap
+  - Az.ApplicationInsights.Set-AzApplicationInsightsPricingPlan
+  - Az.ApplicationInsights.Update-AzApplicationInsights
+  - Az.ApplicationInsights.Update-AzApplicationInsightsLinkedStorageAccount
+  - Az.ApplicationInsights.Update-AzApplicationInsightsMyWorkbook
+  - Az.ApplicationInsights.Update-AzApplicationInsightsWebTestTag
+  - Az.ApplicationInsights.Update-AzApplicationInsightsWorkbook
+  - Az.ApplicationInsights.Update-AzApplicationInsightsWorkbookTemplate
+description: |-
+  Microsoft Azure PowerShell: ApplicationInsights cmdlets
+metadata:
+  Module Name: Az.ApplicationInsights
+  Module Guid: 031a685e-5904-433f-b2f8-4fcef3cd15d8
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.applicationinsights
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/Az.ApplicationInsights.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApplicationInsights/ApplicationInsights/help/Az.ApplicationInsights.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

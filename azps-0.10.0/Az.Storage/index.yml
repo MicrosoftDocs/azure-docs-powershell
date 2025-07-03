@@ -1,0 +1,98 @@
+### YamlMime:PowerShellModule1
+uid: Az.Storage
+name: Az.Storage Module
+isPreview: false
+cmdletGroups:
+- title: Storage
+  cmdlets:
+  - Az.Storage.Add-AzStorageAccountNetworkRule
+  - Az.Storage.Disable-AzStorageDeleteRetentionPolicy
+  - Az.Storage.Enable-AzStorageDeleteRetentionPolicy
+  - Az.Storage.Get-AzStorageAccount
+  - Az.Storage.Get-AzStorageAccountKey
+  - Az.Storage.Get-AzStorageAccountNameAvailability
+  - Az.Storage.Get-AzStorageAccountNetworkRuleSet
+  - Az.Storage.Get-AzStorageBlob
+  - Az.Storage.Get-AzStorageBlobContent
+  - Az.Storage.Get-AzStorageBlobCopyState
+  - Az.Storage.Get-AzStorageContainer
+  - Az.Storage.Get-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Get-AzStorageCORSRule
+  - Az.Storage.Get-AzStorageFile
+  - Az.Storage.Get-AzStorageFileContent
+  - Az.Storage.Get-AzStorageFileCopyState
+  - Az.Storage.Get-AzStorageQueue
+  - Az.Storage.Get-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Get-AzStorageServiceLoggingProperty
+  - Az.Storage.Get-AzStorageServiceMetricsProperty
+  - Az.Storage.Get-AzStorageServiceProperty
+  - Az.Storage.Get-AzStorageShare
+  - Az.Storage.Get-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Get-AzStorageTable
+  - Az.Storage.Get-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Get-AzStorageUsage
+  - Az.Storage.New-AzStorageAccount
+  - Az.Storage.New-AzStorageAccountKey
+  - Az.Storage.New-AzStorageAccountSASToken
+  - Az.Storage.New-AzStorageBlobSASToken
+  - Az.Storage.New-AzStorageContainer
+  - Az.Storage.New-AzStorageContainerSASToken
+  - Az.Storage.New-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.New-AzStorageContext
+  - Az.Storage.New-AzStorageDirectory
+  - Az.Storage.New-AzStorageFileSASToken
+  - Az.Storage.New-AzStorageQueue
+  - Az.Storage.New-AzStorageQueueSASToken
+  - Az.Storage.New-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.New-AzStorageShare
+  - Az.Storage.New-AzStorageShareSASToken
+  - Az.Storage.New-AzStorageShareStoredAccessPolicy
+  - Az.Storage.New-AzStorageTable
+  - Az.Storage.New-AzStorageTableSASToken
+  - Az.Storage.New-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageAccount
+  - Az.Storage.Remove-AzStorageAccountNetworkRule
+  - Az.Storage.Remove-AzStorageBlob
+  - Az.Storage.Remove-AzStorageContainer
+  - Az.Storage.Remove-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageCORSRule
+  - Az.Storage.Remove-AzStorageDirectory
+  - Az.Storage.Remove-AzStorageFile
+  - Az.Storage.Remove-AzStorageQueue
+  - Az.Storage.Remove-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageShare
+  - Az.Storage.Remove-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Remove-AzStorageTable
+  - Az.Storage.Remove-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Set-AzCurrentStorageAccount
+  - Az.Storage.Set-AzStorageAccount
+  - Az.Storage.Set-AzStorageBlobContent
+  - Az.Storage.Set-AzStorageContainerAcl
+  - Az.Storage.Set-AzStorageContainerStoredAccessPolicy
+  - Az.Storage.Set-AzStorageCORSRule
+  - Az.Storage.Set-AzStorageFileContent
+  - Az.Storage.Set-AzStorageQueueStoredAccessPolicy
+  - Az.Storage.Set-AzStorageServiceLoggingProperty
+  - Az.Storage.Set-AzStorageServiceMetricsProperty
+  - Az.Storage.Set-AzStorageShareQuota
+  - Az.Storage.Set-AzStorageShareStoredAccessPolicy
+  - Az.Storage.Set-AzStorageTableStoredAccessPolicy
+  - Az.Storage.Start-AzStorageBlobCopy
+  - Az.Storage.Start-AzStorageBlobIncrementalCopy
+  - Az.Storage.Start-AzStorageFileCopy
+  - Az.Storage.Stop-AzStorageBlobCopy
+  - Az.Storage.Stop-AzStorageFileCopy
+  - Az.Storage.Update-AzStorageAccountNetworkRuleSet
+  - Az.Storage.Update-AzStorageServiceProperty
+description: |-
+  This topic displays help topics for the Azure Storage Cmdlets.
+metadata:
+  Module Name: Az.Storage
+  Module Guid: dfa9e4ea-1407-446d-9111-79122977ab20
+  HelpInfoUri: https://learn.microsoft.com/en-us/powershell/module/az.storage
+  Help Version: 4.2.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Az.Storage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Az.Storage.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

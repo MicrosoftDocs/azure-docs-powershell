@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewPowerBIDataSourceObject
+name: New-AzPurviewPowerBIDataSourceObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for PowerBIDataSource.
+description: |-
+  Create an in-memory object for PowerBIDataSource.
+parameters:
+  cmdletParameters:
+  - name: CollectionReferenceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tenant
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewPowerBIDataSourceObject
+        [-CollectionReferenceName <String>]
+        [-CollectionType <String>]
+        [-Tenant <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.PowerBiDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create PowerBI data source object'
+  description: |-
+    ```powershell
+    New-AzPurviewPowerBIDataSourceObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -Tenant 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx'
+    ```
+
+    ```output
+    CollectionLastModifiedAt :
+    CollectionReferenceName  : parv-brs-2
+    CollectionType           : CollectionReference
+    CreatedAt                :
+    Id                       :
+    Kind                     : PowerBI
+    LastModifiedAt           :
+    Name                     :
+    Scan                     :
+    Tenant                   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx
+    ```
+
+    Create PowerBI data source object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewPowerBIDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewpowerbidatasourceobject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewPowerBIDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

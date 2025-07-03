@@ -1,0 +1,266 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzDataLakeGen2ChildItem
+name: Get-AzDataLakeGen2ChildItem
+module: Az.Storage
+isPreview: false
+summary: |-
+  Lists sub directories and files from a directory or filesystem root.
+description: |-
+  The **Get-AzDataLakeGen2ChildItem** cmdlet lists sub directories and files in a directory or Filesystem in an Azure storage account.
+  This cmdlet only works if Hierarchical Namespace is enabled for the Storage account. This kind of account can be created by run "New-AzStorageAccount" cmdlet with "-EnableHierarchicalNamespace $true".
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContinuationToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Continuation Token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FetchProperty
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Fetch the datalake item properties and ACL.
+    aliases:
+    - FetchPermission
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSystem
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      FileSystem name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The max count of the blobs that can return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputUserPrincipalName
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specify this parameter, the user identity values returned in the owner and group fields of each list entry will be transformed from Microsoft Entra Object IDs to User Principal Names. If not specify this parameter, the values will be returned as Microsoft Entra Object IDs. Note that group and application Object IDs are not translated because they do not have unique friendly names.
+    aliases:
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path in the specified Filesystem that should be retrieved.
+      Should be a directory, in the format 'directory1/directory2/'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Recurse
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates if will recursively get the Child Item.
+      The default is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeGen2ChildItem
+        [-FileSystem] <String>
+        [[-Path] <String>]
+        [-FetchProperty]
+        [-Recurse]
+        [-MaxCount <Int32>]
+        [-ContinuationToken <String>]
+        [-AsJob]
+        [-OutputUserPrincipalName]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List the direct sub items from a Filesystem'
+  description: |-
+    ```powershell
+    Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1"
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1                 True                         2020-03-13 13:07:34Z rwxr-x---    $superuser           $superuser
+    dir2                 True                         2020-03-23 09:28:36Z rwxr-x---    $superuser           $superuser
+    ```
+
+    This command lists the direct sub items from a Filesystem
+- title: 'Example 2: List recursively from a directory, and fetch Properties/ACL'
+  description: |-
+    ```powershell
+    Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" -Path "dir1/" -Recurse -FetchProperty
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1/dir3            True                         2020-03-23 09:34:31Z rwx---rwx    $superuser           $superuser
+    dir1/file1           False        1024            2020-03-23 09:29:18Z rwx---rwx    $superuser           $superuser
+    dir1/testfile_1K_0   False        1024            2020-03-23 09:29:21Z rw-r-----    $superuser           $superuser
+    ```
+
+    This command lists the direct sub items from a Filesystem
+- title: 'Example 3: List items recursively from a Filesystem in multiple batches'
+  description: |-
+    ```powershell
+    $MaxReturn = 1000
+    $FileSystemName = "filesystem1"
+    $Total = 0
+    $Token = $Null
+    do
+     {
+         $items = Get-AzDataLakeGen2ChildItem -FileSystem $FileSystemName -Recurse -MaxCount $MaxReturn  -ContinuationToken $Token
+         $Total += $items.Count
+         if($items.Length -le 0) { Break;}
+         $Token = $items[$items.Count -1].ContinuationToken;
+     }
+     While ($null -ne $Token)
+    Echo "Total $Total items in Filesystem $FileSystemName"
+    ```
+
+    This example uses the *MaxCount* and *ContinuationToken* parameters to list items recursively from a Filesystem in multiple batches.
+    A small *MaxCount* can limit the number of items returned from a single request, may help prevent operation timeout errors, and reduce the memory usage of PowerShell.
+    The first four commands assign values to variables to use in the example.
+    The fifth command specifies a **Do-While** statement that uses the **Get-AzDataLakeGen2ChildItem** cmdlet to list items.
+    The statement includes the continuation token stored in the $Token variable.
+    $Token changes value as the loop runs.
+    The final command uses the **Echo** command to display the total.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2childitem
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2ChildItem.md
+  PlatyPS schema version: 2024-05-01

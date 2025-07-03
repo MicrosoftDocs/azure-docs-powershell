@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerManagementGroupConnection
+name: Get-AzNetworkManagerManagementGroupConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a network manager management group connection.
+description: |-
+  The **Get-AzNetworkManagerManagementGroupConnection** cmdlet gets a network manager connection on a management group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The management group ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoExpand
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerManagementGroupConnection
+        -ManagementGroupId <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoExpand
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerManagementGroupConnection
+        -ManagementGroupId <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Expand
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerManagementGroupConnection -ManagementGroupId "newMG" -Name "psConnection"
+    ```
+
+    ```output
+    NetworkManagerId  : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager
+    ConnectionState   : Pending
+    DisplayName       :
+    Description       : sample description
+    Type              : Microsoft.Network/networkManagerConnections
+    ProvisioningState :
+    SystemData        :
+    SystemDataText    : null
+    Name              : psConnection
+    Etag              :
+    Id                : /providers/Microsoft.Management/managementGroups/newMG/providers/Microsoft.Network/networkManagerConnections/psConnection
+    ```
+
+    Gets a network manager connection on management group 'newMG'.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerManagementGroupConnection -ManagementGroupId "newMG"
+    ```
+
+    ```output
+    NetworkManagerId  : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/jaredgorthy-testResources/providers/Microsoft.Network/networkManagers/jaredgorthy
+    ConnectionState   : Pending
+    DisplayName       :
+    Description       :
+    Type              : Microsoft.Network/networkManagerConnections
+    ProvisioningState :
+    SystemData        :
+    SystemDataText    : null
+    Name              : mgConnection
+    Etag              :
+    Id                : /providers/Microsoft.Management/managementGroups/newMG/providers/Microsoft.Network/networkManagerConnections/mgConnection
+
+    NetworkManagerId  : /subscriptions/f0dc2b34-dfad-40e4-83e0-2309fed8d00b/resourceGroups/psResourceGroup/providers/Microsoft.Network/networkManagers/psNetworkManager
+    ConnectionState   : Pending
+    DisplayName       :
+    Description       : sample description
+    Type              : Microsoft.Network/networkManagerConnections
+    ProvisioningState :
+    SystemData        :
+    SystemDataText    : null
+    Name              : psConnection
+    Etag              :
+    Id                : /providers/Microsoft.Management/managementGroups/newMG/providers/Microsoft.Network/networkManagerConnections/psConnection
+    ```
+
+    Gets all network manager connections on management group 'newMG'.
+links:
+- text: New-AzNetworkManagerManagementGroupConnection
+  href: ./New-AzNetworkManagerManagementGroupConnection.yml
+- text: Set-AzNetworkManagerManagementGroupConnection
+  href: ./Set-AzNetworkManagerManagementGroupConnection.yml
+- text: Remove-AzNetworkManagerManagementGroupConnection
+  href: ./Remove-AzNetworkManagerManagementGroupConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerManagementGroupConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagermanagementgroupconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerManagementGroupConnection.md
+  PlatyPS schema version: 2024-05-01

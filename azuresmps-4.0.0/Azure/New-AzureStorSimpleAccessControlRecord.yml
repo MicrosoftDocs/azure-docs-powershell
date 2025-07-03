@@ -1,0 +1,146 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureStorSimpleAccessControlRecord
+name: New-AzureStorSimpleAccessControlRecord
+module: Azure
+isPreview: false
+summary: |-
+  Creates an access control record.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorSimpleAccessControlRecord** cmdlet creates an access control record.
+  You can use an **AccessControlRecord** object to configure volumes.
+parameters:
+  cmdletParameters:
+  - name: ACRName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the access control record.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IQNInitiatorName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the iSCSI qualified name (IQN) of the iSCSI initiator to which this cmdlet provides access for the volume.
+    aliases:
+    - IQN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForComplete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorSimpleAccessControlRecord
+        -ACRName <String>
+        -IQNInitiatorName <String>
+        [-WaitForComplete]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="TaskStatusInfo, TaskResponse" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **TaskStatusInfo** object if you specify the *WaitForComplete* parameter.
+    If you do not specify that parameter, it returns a **TaskResponse** object.
+examples:
+- title: 'Example 1: Create an Access Control record and wait for the resultaccess control'
+  description: |-
+    ```
+    PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr10" -IQNInitiatorName "Iqn10" -WaitForComplete
+    Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
+    JobId      : 08719243-3a76-43a5-a88b-e5f2b63ed3d9
+    JobSteps   : {}
+    Result     : Succeeded
+    Status     : Completed
+    TaskResult : Succeeded
+    StatusCode : OK
+    RequestId  : e12362c2c06615108ba8436cf85fcd40
+    ```
+
+    This command creates an access control record named Acr10 for the iSCSI initiator named Iqn10.
+    This command specifies the *WaitForComplete* parameter, and, therefore, the command waits until the operation is complete, and then returns a **TaskStatusInfo** object.
+- title: 'Example 2: Create an Access Control record'
+  description: |-
+    ```
+    PS C:\>New-AzureStorSimpleAccessControlRecord -ACRName "Acr11" -IQNInitiatorName "Iqn11"
+    VERBOSE: The create job is submitted successfully. Please use the command Get-AzureStorSimpleTask -InstanceId
+    2bd56fbb-4b95-4f2c-b99f-6321231a018d for tracking the job status
+    ```
+
+    This command creates an access control record named Acr11 for the iSCSI initiator named Iqn11.
+    This command does not specify the *WaitForComplete* parameter, and, therefore, the command starts the task, and then returns a **TaskResponse** object.
+    To see the status of the task, use the **Get-AzureStorSimpleTask** cmdlet.
+links:
+- text: Get-AzureStorSimpleAccessControlRecord
+  href: ./Get-AzureStorSimpleAccessControlRecord.yml
+- text: Remove-AzureStorSimpleAccessControlRecord
+  href: ./Remove-AzureStorSimpleAccessControlRecord.yml
+- text: Set-AzureStorSimpleAccessControlRecord
+  href: ./Set-AzureStorSimpleAccessControlRecord.yml
+- text: Get-AzureStorSimpleJob
+  href: ./Get-AzureStorSimpleJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: ED6CDEA3-0A5D-47E6-B9D7-47D1862212DF
+  PlatyPS schema version: 2024-05-01

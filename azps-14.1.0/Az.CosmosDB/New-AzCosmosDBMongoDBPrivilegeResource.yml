@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.New-AzCosmosDBMongoDBPrivilegeResource
+name: New-AzCosmosDBMongoDBPrivilegeResource
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Creates a new CosmosDB MongoDB PrivilegeResource object to be used to create or update  a CosmosDB MongoDB Role Definition.
+description: |-
+  Creates a new CosmosDB MongoDB PrivilegeResource object to be used to create or update a CosmosDB MongoDB Role Definition.
+parameters:
+  cmdletParameters:
+  - name: Collection
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Collection Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Database
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCosmosDBMongoDBPrivilegeResource
+        -Database <String>
+        -Collection <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSMongoPrivilegeResource" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $db = 'test'
+    $collection = 'coll'
+
+    New-AzCosmosDBMongoDBPrivilegeResource -Database $db -Collection $collection
+    ```
+
+    ```output
+    Object
+    Microsoft.Azure.Commands.CosmosDB.Models.PSMongoPrivilegeResource
+    ```
+links:
+- text: New-AzCosmosDBMongoDBRoleDefinition
+  href: ./New-AzCosmosDBMongoDBRoleDefinition.yml
+- text: Update-AzCosmosDBMongoDBRoleDefinition
+  href: ./Update-AzCosmosDBMongoDBRoleDefinition.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBMongoDBPrivilegeResource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/new-azcosmosdbmongodbprivilegeresource
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/New-AzCosmosDBMongoDBPrivilegeResource.md
+  PlatyPS schema version: 2024-05-01

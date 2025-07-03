@@ -1,0 +1,571 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Set-AzEventHub
+name: Set-AzEventHub
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Updates an EventHub Entity
+description: |-
+  Updates an EventHub Entity
+parameters:
+  cmdletParameters:
+  - name: ArchiveNameFormat
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob naming convention for archive, e.g.
+      {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}.
+      Here all the parameters (Namespace,EventHub ..
+      etc) are mandatory irrespective of order
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BlobContainer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob container Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CaptureEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      A value that indicates whether capture description is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name for capture destination
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encoding
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enumerates the possible values for the encoding format of capture description.
+      Note: 'AvroDeflate' will be deprecated in New API Version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.IEventHubIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity parameter.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IntervalInSeconds
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of EventHub Entity.
+    aliases:
+    - EventHubName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of EventHub namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionCount
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of partitions created for the Event Hub.
+      allowed values are from 1 to 32 partitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionTimeInHour
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of hours to retain the events for this Event Hub.
+      This value is only used when cleanupPolicy is Delete.
+      If cleanupPolicy is Compaction the returned value of this property is Long.MaxValue
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SizeLimitInBytes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipEmptyArchive
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      A value that indicates whether to Skip Empty Archives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enumerates the possible values for the status of the Event Hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource id of the storage account to be used to create the blobs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TombstoneRetentionTimeInHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of hours to retain the tombstone markers of a compacted Event Hub.
+      This value is only used when cleanupPolicy is Compaction.
+      Consumer must complete reading the tombstone marker within this specified amount of time if consumer begins from starting offset to ensure they get a valid snapshot for the specific key described by the tombstone marker within the compacted Event Hub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Properties for User Assigned Identities
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzEventHub
+        -Name <String>
+        -NamespaceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-CaptureEnabled]
+        [-Encoding <String>]
+        [-IntervalInSeconds <Int32>]
+        [-SizeLimitInBytes <Int32>]
+        [-SkipEmptyArchive]
+        [-RetentionTimeInHour <Int64>]
+        [-TombstoneRetentionTimeInHour <Int32>]
+        [-Status <String>]
+        [-DestinationName <String>]
+        [-IdentityType <String>]
+        [-UserAssignedIdentityId <String>]
+        [-PartitionCount <Int64>]
+        [-StorageAccountResourceId <String>]
+        [-ArchiveNameFormat <String>]
+        [-BlobContainer <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzEventHub
+        -InputObject <IEventHubIdentity>
+        [-CaptureEnabled]
+        [-Encoding <String>]
+        [-IntervalInSeconds <Int32>]
+        [-SizeLimitInBytes <Int32>]
+        [-SkipEmptyArchive]
+        [-RetentionTimeInHour <Int64>]
+        [-TombstoneRetentionTimeInHour <Int32>]
+        [-Status <String>]
+        [-DestinationName <String>]
+        [-IdentityType <String>]
+        [-UserAssignedIdentityId <String>]
+        [-PartitionCount <Int64>]
+        [-StorageAccountResourceId <String>]
+        [-ArchiveNameFormat <String>]
+        [-BlobContainer <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.IEventHubIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.IEventhub" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set capture on an existing EventHub entity'
+  description: |-
+    ```powershell
+    Set-AzEventHub -Name myEventHub -ResourceGroupName myResourceGroup -NamespaceName myNamespace -ArchiveNameFormat "{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}" -BlobContainer container -CaptureEnabled -DestinationName EventHubArchive.AzureBlockBlob -Encoding Avro -IntervalInSeconds 600 -SizeLimitInBytes 11000000 -SkipEmptyArchive -StorageAccountResourceId "/subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount"
+    ```
+
+    ```output
+    ArchiveNameFormat            : {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}
+    BlobContainer                : container
+    CaptureEnabled               : True
+    CleanupPolicy                : Delete
+    CreatedAt                    : 1/1/0001 12:00:00 AM
+    DataLakeAccountName          :
+    DataLakeFolderPath           :
+    DataLakeSubscriptionId       :
+    DestinationName              : EventHubArchive.AzureBlockBlob
+    Encoding                     : Avro
+    Id                           : /subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/namespace3/eventhubs/myEventHub
+    IntervalInSeconds            : 600
+    Location                     : eastus
+    MessageRetentionInDay        : 7
+    Name                         : myEventHub
+    PartitionCount               : 5
+    PartitionId                  : {}
+    ResourceGroupName            : myResourceGroup
+    RetentionTimeInHour          : 168
+    SizeLimitInBytes             : 11000000
+    SkipEmptyArchive             : True
+    Status                       : Active
+    StorageAccountResourceId     : /subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TombstoneRetentionTimeInHour :
+    Type                         : Microsoft.EventHub/namespaces/eventhubs
+    UpdatedAt                    : 1/1/0001 12:00:00 AM
+    ```
+
+    Updates EventHub entity `myEventHub` from namespace `myNamespace` to enable capture on it.
+- title: 'Example 2: Update EventHub EventHub entity using InputObject parameter set'
+  description: |-
+    ```powershell
+    $eventhub = Get-AzEventHub -Name myEventHub -ResourceGroupName myResourceGroup -NamespaceName myNamespace
+    Set-AzEventHub -InputObject $eventhub -RetentionTimeInHour 72
+    ```
+
+    ```output
+    ArchiveNameFormat            : {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}
+    BlobContainer                : container1entHub]>
+    CaptureEnabled               : True
+    CleanupPolicy                : Delete
+    CreatedAt                    : 1/1/0001 12:00:00 AM
+    DataLakeAccountName          :
+    DataLakeFolderPath           :
+    DataLakeSubscriptionId       :
+    DestinationName              : EventHubArchive.AzureBlockBlob
+    Encoding                     : Avro
+    Id                           : /subscriptions/subscriptionId/resourceGroups/myResourceGroup/providers/Microsoft.EventHub/namespaces/myNamespace/eventhubs/myEventHub
+    IntervalInSeconds            : 600
+    Location                     : eastus
+    MessageRetentionInDay        : 3
+    Name                         : myEventHub
+    PartitionCount               : 5
+    PartitionId                  : {}
+    ResourceGroupName            : myResourceGroup
+    RetentionTimeInHour          : 72
+    SizeLimitInBytes             : 11000000
+    SkipEmptyArchive             : True
+    Status                       : Active
+    StorageAccountResourceId     : /subscriptions/subscriptionId/resourceGroups/myResourcegroup/providers/Microsoft.Storage/storageAccounts/myStorageAccount
+                                   1
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TombstoneRetentionTimeInHour :
+    Type                         : Microsoft.EventHub/namespaces/eventhubs
+    UpdatedAt                    : 1/1/0001 12:00:00 AM
+    ```
+
+    Updates `RetentionTimeInHour` in EventHub entity `myEventHub` to 72 hours.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Set-AzEventHub.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventhub/set-azeventhub
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Set-AzEventHub.md
+  PlatyPS schema version: 2024-05-01

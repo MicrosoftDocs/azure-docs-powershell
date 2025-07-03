@@ -1,0 +1,28 @@
+### YamlMime:PowerShellModule1
+uid: Az.BotService
+name: Az.BotService Module
+isPreview: false
+cmdletGroups:
+- title: Bot Services
+  cmdlets:
+  - Az.BotService.Export-AzBotServiceApp
+  - Az.BotService.Get-AzBotService
+  - Az.BotService.Get-AzBotServiceHostSetting
+  - Az.BotService.Initialize-AzBotServicePrepareDeploy
+  - Az.BotService.New-AzBotService
+  - Az.BotService.New-AzBotServiceDirectLineKey
+  - Az.BotService.Publish-AzBotServiceApp
+  - Az.BotService.Remove-AzBotService
+  - Az.BotService.Update-AzBotService
+description: |-
+  Microsoft Azure PowerShell: BotService cmdlets
+metadata:
+  Module Name: Az.BotService
+  Module Guid: 0fbff4fb-215b-4aca-b867-d1acfecab531
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.botservice
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Az.BotService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Az.BotService.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

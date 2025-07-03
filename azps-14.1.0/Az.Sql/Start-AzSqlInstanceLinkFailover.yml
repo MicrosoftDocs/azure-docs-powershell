@@ -1,0 +1,338 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Start-AzSqlInstanceLinkFailover
+name: Start-AzSqlInstanceLinkFailover
+module: Az.Sql
+isPreview: false
+summary: |-
+  Failovers an instance link.
+description: |-
+  **Start-AzSqlInstanceLinkFailover** cmdlet failovers an instance link.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailoverType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The failover type, can be ForcedAllowDataLoss or Planned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance link input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByInputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the managed instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed Instance link name.
+    aliases:
+    - LinkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FailoverByParentObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: FailoverByInputObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance link resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FailoverByResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzSqlInstanceLinkFailover
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        -FailoverType <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FailoverByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzSqlInstanceLinkFailover
+        [-Name] <String>
+        [-InstanceObject] <AzureSqlManagedInstanceModel>
+        -FailoverType <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FailoverByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzSqlInstanceLinkFailover
+        [-Name] <String>
+        [-InputObject] <AzureSqlManagedInstanceLinkModel>
+        -FailoverType <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FailoverByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzSqlInstanceLinkFailover
+        [-ResourceId] <String>
+        -FailoverType <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FailoverByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Start-AzSqlInstanceLinkFailover -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01" -FailoverType "ForcedAllowDataLoss"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Primary
+    PartnerLinkRole                  : Secondary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command does forced failover of the instance link with name "Link01".
+- title: Example 2
+  description: |-
+    ```powershell
+    $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
+    $instance | Start-AzSqlInstanceLinkFailover -Name "Link01" -FailoverType "Planned"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Primary
+    PartnerLinkRole                  : Secondary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command does planned failover of the instance link by piping an instance object.
+links:
+- text: New-AzSqlInstanceLink
+  href: ./New-AzSqlInstanceLink.yml
+- text: Get-AzSqlInstanceLink
+  href: ./Get-AzSqlInstanceLink.yml
+- text: Update-AzSqlInstanceLink
+  href: ./Update-AzSqlInstanceLink.yml
+- text: Remove-AzSqlInstanceLink
+  href: ./Remove-AzSqlInstanceLink.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Start-AzSqlInstanceLinkFailover.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/start-azsqlinstancelinkfailover
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Start-AzSqlInstanceLinkFailover.md
+  PlatyPS schema version: 2024-05-01

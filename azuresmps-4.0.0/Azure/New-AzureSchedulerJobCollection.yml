@@ -1,0 +1,187 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSchedulerJobCollection
+name: New-AzureSchedulerJobCollection
+module: Azure
+isPreview: false
+summary: |-
+  Creates a scheduler job collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-AzureSchedulerJobCollection** cmdlet creates a scheduler job collection.
+  If you do not specify a value for the *Plan* parameter, the cmdlet creates a standard job collection.
+parameters:
+  cmdletParameters:
+  - name: Frequency
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum frequency that can be specified on any job in this scheduler job collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Interval
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interval of recurrence at the frequency specified by using the *Frequency* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the new scheduler job collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxJobCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of jobs that can be created in the scheduler job collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Plan
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scheduler job collection plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerJobCollection
+        -Location <String>
+        -JobCollectionName <String>
+        [-Plan <String>]
+        [-MaxJobCount <Int32>]
+        [-Frequency <String>]
+        [-Interval <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a scheduler job collection that includes default values'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerJobCollection -JobCollectionName "JobCollection01" -Location "North Central US" -Plan "Standard"
+    ```
+
+    This command creates a standard scheduler job collection named JobCollection01.
+    The new collection has a default job count and maximum recurrence values for a standard scheduler job collection.
+- title: 'Example 2: Create a scheduler job collection with specified values'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerJobCollection -JobCollectionName "JobCollection02" -Location "North Central US" -Frequency "Hour" -Interval 12 -MaxJobCount 30 -Plan "Standard"
+    ```
+
+    This command creates a standard scheduler job collection named JobCollection02.
+    The new collection has a maximum job count of 30 and a maximum recurrence of 12 per hour.
+links:
+- text: Get-AzureSchedulerJobCollection
+  href: ./Get-AzureSchedulerJobCollection.yml
+- text: Remove-AzureSchedulerJobCollection
+  href: ./Remove-AzureSchedulerJobCollection.yml
+- text: Set-AzureSchedulerJobCollection
+  href: ./Set-AzureSchedulerJobCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DF12406D-894C-4732-95EE-D75524023B82
+  PlatyPS schema version: 2024-05-01

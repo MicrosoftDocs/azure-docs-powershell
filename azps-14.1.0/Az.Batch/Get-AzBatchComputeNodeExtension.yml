@@ -1,0 +1,212 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchComputeNodeExtension
+name: Get-AzBatchComputeNodeExtension
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch compute node extensions from a compute node.
+description: |-
+  If an extension name is provided, a single extension with a matching name is returned from the provided compute node (if found). Otherwise, all extensions on teh compute node is returned. Further extension details can be found on the extension's VmExtension Property.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      The BatchAccountContext instance to use when interacting with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service.
+      To use shared key authentication instead, use the Get-AzBatchAccountKeys cmdlet to get a BatchAccountContext object with its access keys populated.
+      When using shared key authentication, the primary access key is used by default.
+      To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeNodeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of the compute node to which the extension belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of compute node extensions to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the extension to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pool
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+    description: |-
+      The pool to which the extension's compute node belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of the pool to which the extension's compute node belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchComputeNodeExtension
+        [-PoolId] <String>
+        [-ComputeNodeId] <String>
+        [[-Name] <String>]
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-MaxCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchComputeNodeExtension
+        [-Pool] <PSCloudPool>
+        [-ComputeNodeId] <String>
+        [[-Name] <String>]
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-MaxCount <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSNodeVMExtension" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get all extensions from a compute node.
+  description: |-
+    ```powershell
+    Get-AzBatchComputeNodeExtension "testPool" "testNode" -BatchContext $context
+    ```
+
+    ```output
+    InstanceView                                                    ProvisioningState VmExtension
+    ------------                                                    ----------------- -----------
+    Microsoft.Azure.Commands.Batch.Models.PSVMExtensionInstanceView Succeeded         Microsoft.Azure.Commands.Batch.Models.PSVMExtension
+    Microsoft.Azure.Commands.Batch.Models.PSVMExtensionInstanceView Failed            Microsoft.Azure.Commands.Batch.Models.PSVMExtension
+    ```
+- title: Example 2 Get a specific extension from a compute node.
+  description: |-
+    ```powershell
+    Get-AzBatchComputeNodeExtension "testPool" "testNode" "secretext" -BatchContext $context
+    ```
+
+    ```output
+    InstanceView                                                    ProvisioningState VmExtension
+    ------------                                                    ----------------- -----------
+    Microsoft.Azure.Commands.Batch.Models.PSVMExtensionInstanceView Failed            Microsoft.Azure.Commands.Batch.Models.PSVMExtension
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNodeExtension.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchcomputenodeextension
+  Module Name: Az.Batch
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNodeExtension.md
+  PlatyPS schema version: 2024-05-01

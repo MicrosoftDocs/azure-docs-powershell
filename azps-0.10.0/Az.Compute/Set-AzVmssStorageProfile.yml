@@ -1,0 +1,391 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVmssStorageProfile
+name: Set-AzVmssStorageProfile
+module: Az.Compute
+isPreview: false
+summary: |-
+  Sets the storage profile properties for the VMSS.
+description: |-
+  The **Set-AzVmssStorageProfile** cmdlet sets the storage profile properties for the Virtual Machine Scale Set (VMSS).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataDisk
+    type: <xref href="VirtualMachineScaleSetDataDisk" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the data disk object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the blob URI for the user image.
+      VMSS creates an operating system disk in the same container of the user image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the image reference ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceOffer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of virtual machine image (VMImage) offer.
+      To obtain an image offer, use the Get-AzVMImageOffer cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferencePublisher
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a publisher of a VMImage.
+      To obtain a publisher, use the Get-AzVMImagePublisher cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceSku
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VMImage SKU.
+      To obtain SKUs, use the Get-AzVMImageSku cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageReferenceVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the VMImage.
+      To use the latest version, specify a value of latest instead of a particular version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedDisk
+    type: <xref href="StorageAccountTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the managed disk.
+    acceptedValues:
+    - StandardLRS
+    - PremiumLRS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskCaching
+    type: <xref href="CachingTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the caching mode of the operating system disk.
+      The acceptable values for this parameter are:
+
+      - ReadOnly
+      - ReadWrite
+
+      The default value is ReadWrite.
+      If you change the caching value, the cmdlet will restart the virtual machine.
+
+      This setting affects the consistency and performance of the disk.
+    acceptedValues:
+    - None
+    - ReadOnly
+    - ReadWrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskCreateOption
+    type: <xref href="DiskCreateOptionTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet creates the VMSS virtual machines.
+
+      The acceptable values for this parameter are:
+
+      - Attach : This value is used when you are using a specialized disk to create the VMSS virtual machine.
+      - FromImage : This value is used when you are using an image to create the VMSS virtual machine.
+      If you are using a platform image, you will also use the *imageReference* parameter.
+    acceptedValues:
+    - FromImage
+    - Empty
+    - Attach
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the operating system disk.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskOsType
+    type: <xref href="OperatingSystemTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of operating system on the disk.
+      This is only needed for user image scenarios and not for a platform image.
+    acceptedValues:
+    - Windows
+    - Linux
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsDiskWriteAccelerator
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether WriteAccelerator should be enabled or disabled on the OS disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdContainer
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the container URLs that are used to store operating system disks for the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VMSS object.
+      To obtain the object, use the New-AzVmssConfig object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVmssStorageProfile
+        [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
+        [[-ImageReferencePublisher] <String>]
+        [[-ImageReferenceOffer] <String>]
+        [[-ImageReferenceSku] <String>]
+        [[-ImageReferenceVersion] <String>]
+        [[-OsDiskName] <String>]
+        [[-OsDiskCaching] <CachingTypes>]
+        [[-OsDiskCreateOption] <DiskCreateOptionTypes>]
+        [[-OsDiskOsType] <OperatingSystemTypes>]
+        [[-Image] <String>]
+        [[-VhdContainer] <String[]>]
+        [-ImageReferenceId <String>]
+        [-OsDiskWriteAccelerator]
+        [-ManagedDisk <StorageAccountTypes>]
+        [-DataDisk <VirtualMachineScaleSetDataDisk[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not generate any output.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the storage profile properties for the VMSS'
+  description: |-
+    ```
+    PS C:\> Set-AzVmssStorageProfile -VirtualMachineScaleSet "ContosoVMSS" -Name "Test" -OsDiskCreateOption "FromImage" -OsDiskCaching "None" `
+                -ImageReferenceOffer $ImgRef.Offer -ImageReferenceSku $ImgRef.Skus -ImageReferenceVersion $ImgRef.Version `
+                -ImageReferencePublisher $ImgRef.PublisherName -VhdContainer $VhdContainer
+    ```
+
+    This command sets the storage profile properties for the VMSS named ContosoVMSS.
+links:
+- text: Get-AzVMImageOffer
+  href: ./Get-AzVMImageOffer.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMImageSku
+  href: ./Get-AzVMImageSku.yml
+- text: New-AzVmssConfig
+  href: ./New-AzVmssConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssstorageprofile
+  Module Name: Az.Compute
+  ms.assetid: 230DAE05-C197-451F-A24C-F4A2DAE4AD04
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssStorageProfile.md
+  PlatyPS schema version: 2024-05-01

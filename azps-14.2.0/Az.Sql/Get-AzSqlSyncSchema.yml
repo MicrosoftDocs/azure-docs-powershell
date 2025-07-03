@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlSyncSchema
+name: Get-AzSqlSyncSchema
+module: Az.Sql
+isPreview: false
+summary: |-
+  Returns information about the sync schema of a member database or a hub database.
+description: |-
+  The **Get-AzSqlSyncSchema** cmdlet returns information about the sync schema of a member database or a hub database.
+parameters:
+  cmdletParameters:
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sync group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncMemberName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sync member name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlSyncSchema
+        [-SyncGroupName] <String>
+        [-SyncMemberName <String>]
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncFullSchemaModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the sync schema for a hub database'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncSchema -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "database01" -SyncGroupName "syncGroup01"
+    ```
+
+    ```output
+    Tables                     LastUpdateTime
+    ------                     --------------
+    {dbo.Table_1, dbo.Table_2} 6/13/2017 10:03:44 AM
+    ```
+
+    This command gets the sync schema for the hub database in the sync group syncGroup01.
+- title: 'Example 2: Get the sync schema for a hub database, and expand Tables'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncSchema -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "database01" -SyncGroupName "syncGroup01"  | Select-Object -ExpandProperty Tables
+    ```
+
+    ```output
+    Columns    : {column1, column2}
+    ErrorId    : Schema_TableHasNoPrimaryKey
+    HasError   : True
+    Name       : dbo.Table_1
+    QuotedName : [dbo].[Table_1]
+
+    Columns    : {column2, column4}
+    ErrorId    : Schema_TableHasNoPrimaryKey
+    HasError   : True
+    Name       : dbo.Table_2
+    QuotedName : [dbo].[Table_2]
+    ```
+
+    This command gets the sync schema for the hub database in the sync group syncGroup01 and expand Tables property.
+- title: 'Example 3: Get the sync schema for a member database'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncSchema -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "database01" -SyncGroupName "syncGroup01" -SyncMemberName "syncMember01"
+    ```
+
+    ```output
+    The schema payload is the same as Example 1.
+    ```
+
+    This command gets the sync schema for the member database in the sync member syncMember01.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncSchema.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlsyncschema
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncSchema.md
+  PlatyPS schema version: 2024-05-01

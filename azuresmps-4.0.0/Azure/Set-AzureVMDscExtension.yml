@@ -1,0 +1,451 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureVMDscExtension
+name: Set-AzureVMDscExtension
+module: Azure
+isPreview: false
+summary: |-
+  Configures the DSC extension on a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureVMDscExtension** cmdlet configures the Desired State Configuration (DSC) extension on a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: ConfigurationArchive
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the configuration package (.zip file) that was previously uploaded by Publish-AzureVMDscConfiguration.
+      This parameter must specify only the name of the file, without any path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationArgument
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a hashtable specifying the arguments to the configuration function.
+      The keys correspond to the parameter names and the values to the parameter values.
+
+      The acceptable values for this parameter are:
+
+      - primitive types
+      - string
+      - array
+      - PSCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationDataPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a .psd1 file that specifies the data for the configuration function.
+      This file must contain a hashtable as described in Separating Configuration and Environment Datahttps://msdn.microsoft.com/en-us/PowerShell/DSC/configData.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the configuration script or module that is invoked by the DSC extension.
+
+      The value of this parameter must be the name of one of the configuration functions contained in the scripts or modules packaged in *ConfigurationArchive*.
+
+      This cmdlet defaults to the name of the file given by the *ConfigurationArchive* parameter if you omit this parameter, excluding any extension.
+      For instance, if *ConfigurationArchive* is "SalesWebSite.ps1.zip", the default value for *ConfigurationName* is "SalesWebSite".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure storage container where the *ConfigurationArchive* is located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataCollection
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet overwrites existing blobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReferenceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user-defined string that can be used to refer to an extension.
+      This parameter is specified when the extension is added to the virtual machine for the first time.
+      For subsequent updates, you should specify the previously used reference name while you update the extension.
+      The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContext
+    type: <xref href="AzureStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context that provides the security settings used to access the configuration script.
+      This context provides read access to the container specified by the *ContainerName* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEndpointSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS endpoint suffix for all storage services, for instance, "core.contoso.net".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the specific version of the DSC extension to use.
+      The default value is set to "1.*" if this parameter is not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the persistent virtual machine object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WmfVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the Windows Management Framework (WMF) to install on the virtual machine.
+      The DSC Extension depends on DSC features that are only available in the WMF updates.
+      This parameter specifies which version of the update to install on the virtual machine.
+      The acceptable values for this parameter are:
+
+      - 4.0.
+      Installs WMF 4.0 unless a newer version is already installed.
+      - 5.0.
+      Installs the latest release of WMF 5.0.
+      - latest.
+      Installs the latest WMF, currently WMF 5.0.
+
+      The default value is latest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureVMDscExtension
+        [-ReferenceName <String>]
+        [-ConfigurationArgument <Hashtable>]
+        [-ConfigurationDataPath <String>]
+        [-ConfigurationArchive] <String>
+        [-ConfigurationName <String>]
+        [-ContainerName <String>]
+        [-Force]
+        [-StorageContext <AzureStorageContext>]
+        [-Version <String>]
+        [-StorageEndpointSuffix <String>]
+        [-WmfVersion <String>]
+        [-DataCollection <String>]
+        -VM <IPersistentVM>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Configure the DSC extension on a virtual machine'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMDscExtension -VM $VM -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Path = 'C:\MyDirectory' }
+    DeploymentName              : my-vm-svc
+    Name                        : my-vm
+    Label                       :
+    VM                          : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVM
+    InstanceStatus              : ReadyRole
+    IpAddress                   : 10.10.10.10
+    InstanceStateDetails        :
+    PowerState                  : Started
+    InstanceErrorCode           :
+    InstanceFaultDomain         : 0
+    InstanceName                : my-vm
+    InstanceUpgradeDomain       : 0
+    InstanceSize                : Small
+    AvailabilitySetName         :
+    DNSName                     : http://my-vm-svc.cloudapp.net/
+    Status                      : ReadyRole
+    GuestAgentStatus            : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVMModel.GuestAgentStatus
+    ResourceExtensionStatusList : {Contoso.Compute.BGInfo}
+    PublicIPAddress             :
+    PublicIPName                :
+    ServiceName                 : my-vm-svc
+    OperationDescription        : Get-AzureVM
+    OperationId                 : a0217a7af900c1f8a212299a3333cdbd6
+    OperationStatus             : OK
+    ```
+
+    This command configures the DSC extension on a virtual machine.
+
+    The MyConfiguration.ps1.zip package must have been previously uploaded to Azure storage using the **Publish-AzureVMDscConfiguration** command and includes the MyConfiguration.ps1 script and the modules it depends on.
+
+    The MyConfiguration argument indicates the specific DSC configuration within the script to execute.
+    The -*ConfigurationArgument* parameter specifies a hashtable with the arguments that is passed to the configuration function.
+- title: 'Example 2: Configure the DSC extension on a virtual machine using a path to the configuration data'
+  description: |-
+    ```
+    PS C:\> $VM | Set-AzureVMDscExtension -ConfigurationArchive MyConfiguration.ps1.zip  -ConfigurationName MyConfiguration -ConfigurationArgument @{ Credential = Get-Credential } -ConfigurationDataPath MyConfigurationData.psd1
+    DeploymentName              : my-vm-svc
+    Name                        : my-vm
+    Label                       :
+    VM                          : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVM
+    InstanceStatus              : ReadyRole
+    IpAddress                   : 10.10.10.10
+    InstanceStateDetails        :
+    PowerState                  : Started
+    InstanceErrorCode           :
+    InstanceFaultDomain         : 0
+    InstanceName                : my-vm
+    InstanceUpgradeDomain       : 0
+    InstanceSize                : Small
+    AvailabilitySetName         :
+    DNSName                     : http://my-vm-svc.cloudapp.net/
+    Status                      : ReadyRole
+    GuestAgentStatus            : Microsoft.WindowsAzure.Commands.ServiceManagement.Model.PersistentVMModel.GuestAgentStatus
+    ResourceExtensionStatusList : {Microsoft.Compute.BGInfo, Microsoft.Powershell.DSC}
+    PublicIPAddress             :
+    PublicIPName                :
+    ServiceName                 : my-vm-svc
+    OperationDescription        : Get-AzureVM
+    OperationId                 : a0217a7af900c1f8a212299a3333cdbd7
+    OperationStatus             : OK
+    ```
+
+    This command configures the DSC extension on a virtual machine using a path to the configuration data.
+links:
+- text: Get-AzureVMDscExtension
+  href: ./Get-AzureVMDscExtension.yml
+- text: Remove-AzureVMDscExtension
+  href: ./Remove-AzureVMDscExtension.yml
+- text: Remove-AzureVMDscExtension
+  href: ./Remove-AzureVMDscExtension.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: Publish-AzureVMDscConfiguration
+  href: ./Publish-AzureVMDscConfiguration.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 649D0A6C-77CE-4E49-AFF8-DF70ABE9FA13
+  PlatyPS schema version: 2024-05-01

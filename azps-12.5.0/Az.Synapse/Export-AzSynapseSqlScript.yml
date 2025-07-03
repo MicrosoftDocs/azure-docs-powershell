@@ -1,0 +1,202 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Export-AzSynapseSqlScript
+name: Export-AzSynapseSqlScript
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Exports a sql script from a Synapse workspace.
+description: |-
+  The **Export-AzSynapseSqlScript** cmdlet exports an Azure Synapse sql script to a SQL Server query(.sql) file. If you specify the name of a sql script, the cmdlet exports the specified sql script. If you do not specify a name, the cmdlet export all sql scripts in the workspace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSqlScriptResource" data-throw-if-not-resolved="False" />
+    description: |-
+      The sql script object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExportByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sql script name.
+    aliases:
+    - SqlScriptName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExportByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ExportByObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFolder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The folder where the sql scripts should be placed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExportByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExportByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-AzSynapseSqlScript
+        -WorkspaceName <String>
+        -OutputFolder <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExportByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Export-AzSynapseSqlScript
+        -WorkspaceObject <PSSynapseWorkspace>
+        -OutputFolder <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExportByObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Export-AzSynapseSqlScript
+        -InputObject <PSSqlScriptResource>
+        -OutputFolder <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExportByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSqlScriptResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Export-AzSynapseSqlScript -WorkspaceName ContosoWorkspace -OutputFolder "C:\sqlscript"
+    ```
+
+    Exports all sql scripts in the workspace ContosoWorkspace to the folder "C:\sqlscript".
+- title: Example 2
+  description: |-
+    ```powershell
+    Export-AzSynapseSqlScript -WorkspaceName ContosoWorkspace -OutputFolder "C:\sqlscript" -Name "ContosoSqlScript"
+    ```
+
+    Exports a single sql script named ContosoSqlScript in the workspace ContosoWorkspace to the folder "C:\sqlscript".
+- title: Example 3
+  description: |-
+    ```powershell
+    $ws = Get-AzSynapseWorkspace -Name ContosoWorkspace
+    $ws | Export-AzSynapseSqlScript -Name ContosoSqlScript -OutputFolder "C:\sqlscript"
+    ```
+
+    Exports a single sql script called ContosoSqlScript in the workspace ContosoWorkspace to the folder "C:\sqlscript" through pipeline.
+- title: Example 4
+  description: |-
+    ```powershell
+    $sqlscript = Get-AzSynapseSqlScript  -WorkspaceName ContosoWorkspace -Name ContosoSqlScript
+    $sqlscript | Export-AzSynapseSqlScript -OutputFolder "C:\sqlscript"
+    ```
+
+    Exports a single sql script called ContosoSqlScript in the workspace ContosoWorkspace to the folder "C:\sqlscript" through pipeline.
+links:
+- text: Get-AzSynapseSqlScript
+  href: ./Get-AzSynapseSqlScript.yml
+- text: Remove-AzSynapseSqlScript
+  href: ./Remove-AzSynapseSqlScript.yml
+- text: Set-AzSynapseSqlScript
+  href: ./Set-AzSynapseSqlScript.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseSqlScript.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/export-azsynapsesqlscript
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Export-AzSynapseSqlScript.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.Astro
+name: Az.Astro Module
+isPreview: false
+cmdletGroups:
+- title: Astro
+  cmdlets:
+  - Az.Astro.Get-AzAstroOrganization
+  - Az.Astro.New-AzAstroOrganization
+  - Az.Astro.Remove-AzAstroOrganization
+  - Az.Astro.Update-AzAstroOrganization
+description: |-
+  Microsoft Azure PowerShell: Astro cmdlets
+metadata:
+  Module Name: Az.Astro
+  Module Guid: cd321cf6-e0e1-4d48-b7c9-ccdc2cb185f9
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.astro
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Astro/Astro/help/Az.Astro.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Astro/Astro/help/Az.Astro.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,1010 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzADUser
+name: Update-AzADUser
+module: Az.Resources
+isPreview: false
+summary: |-
+  Updates entity in users
+description: |-
+  Updates entity in users
+notes: |-
+  ALIASES
+
+  Set-AzADUser
+parameters:
+  cmdletParameters:
+  - name: AccountEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      true for enabling the account; otherwise, false.
+      Always true when combined with `-Password`.
+      `-AccountEnabled $false` is ignored when changing the account's password.
+    aliases:
+    - EnableAccount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgeGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the age group of the user.
+      Allowed values: null, minor, notAdult and adult.
+      Refer to the legal age group property definitions for further information.
+      Supports $filter (eq, ne, NOT, and in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: City
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The city in which the user is located.
+      Maximum length is 128 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The company name which the user is associated.
+      This property can be useful for describing the company that an external user comes from.
+      The maximum length of the company name is 64 characters.Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsentProvidedForMinor
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets whether consent has been obtained for minors.
+      Allowed values: null, granted, denied and notRequired.
+      Refer to the legal age group property definitions for further information.
+      Supports $filter (eq, ne, NOT, and in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Country
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The country/region in which the user is located; for example, US or UK.
+      Maximum length is 128 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletedDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Department
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name for the department in which the user works.
+      Maximum length is 64 characters.Supports $filter (eq, ne, NOT , ge, le, and in operators).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name displayed in the address book for the user.
+      This value is usually the combination of the user's first name, middle initial, and last name.
+      This property is required when a user is created and it cannot be cleared during updates.
+      Maximum length is 256 characters.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith), $orderBy, and $search.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmployeeHireDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The date and time when the user was hired or will start work in case of a future hire.
+      Supports $filter (eq, ne, NOT , ge, le, in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmployeeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The employee identifier assigned to the user by the organization.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmployeeType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Captures enterprise worker type.
+      For example, Employee, Contractor, Consultant, or Vendor.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalUserState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      For an external user invited to the tenant using the invitation API, this property represents the invited user's invitation status.
+      For invited users, the state can be PendingAcceptance or Accepted, or null for all other users.
+      Supports $filter (eq, ne, NOT , in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExternalUserStateChangeDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows the timestamp for the latest change to the externalUserState property.
+      Supports $filter (eq, ne, NOT , in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FaxNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fax number of the user.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceChangePasswordNextLogin
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      It must be specified if the user must change the password on the next successful login (true).
+      Default behavior is (false) to not change the password on the next successful login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GivenName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The given name (first name) of the user.
+      Maximum length is 64 characters.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Read-only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identity
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphObjectIdentity" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Represents the identities that can be used to sign in to this user account.
+      An identity can be provided by Microsoft (also known as a local account), by organizations, or by social identity providers such as Facebook, Google, and Microsoft, and tied to a user account.
+      May contain multiple items with the same signInType value.
+      Supports $filter (eq) only where the signInType is not userPrincipalName.
+      To construct, see NOTES section for IDENTITY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphUser" data-throw-if-not-resolved="False" />
+    description: |-
+      user input object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsResourceAccount
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not use - reserved for future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobTitle
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user's job title.
+      Maximum length is 128 characters.
+      Supports $filter (eq, ne, NOT , ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SMTP address for the user, for example, admin@contoso.com.
+      Changes to this property will also update the user's proxyAddresses collection to include the value as an SMTP address.
+      While this property can contain accent characters, using them can cause access issues with other Microsoft applications for the user.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MailNickname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The mail alias for the user.
+      This property must be specified when a user is created.
+      Maximum length is 64 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user principal name of the user to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfficeLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The office location in the user's place of business.
+      Maximum length is 128 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnPremisesImmutableId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This property is used to associate an on-premises Active Directory user account to their Azure AD user object.
+      This property must be specified when creating a new user account in the Graph if you are using a federated domain for the user's userPrincipalName (UPN) property.
+      NOTE: The $ and _ characters cannot be used when specifying this property.
+      Returned only on $select.
+      Supports $filter (eq, ne, NOT, ge, le, in)..
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OtherMail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.Supports $filter (eq, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password for the user.
+      This property is required when a user is created.
+
+      It can be updated, but the user will be required to change the password on the next login.
+
+      The password must satisfy minimum requirements as specified by the user's passwordPolicies property.
+      By default, a strong password is required.
+      When changing the password using this method, AccountEnabled is set to true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies password policies for the user.
+      This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified.
+      DisablePasswordExpiration can also be specified.
+      The two may be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.Supports $filter (ne, NOT).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordProfile
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphPasswordProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      passwordProfile
+      To construct, see NOTES section for PASSWORDPROFILE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PostalCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The postal code for the user's postal address.
+      The postal code is specific to the user's country/region.
+      In the United States of America, this attribute contains the ZIP code.
+      Maximum length is 40 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredLanguage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The preferred language for the user.
+      Should follow ISO 639-1 Code; for example en-US.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShowInAddressList
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      true if the Outlook global address list should contain this user, otherwise false.
+      If not set, this will be treated as true.
+      For users invited through the invitation manager, this property will be set to false.
+      Supports $filter (eq, ne, NOT, in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The state or province in the user's address.
+      Maximum length is 128 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StreetAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The street address of the user's place of business.
+      Maximum length is 1024 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Surname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user's surname (family name or last name).
+      Maximum length is 64 characters.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UPNOrObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user principal name or object id of the user to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNOrObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsageLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A two letter country code (ISO standard 3166).
+      Required for users that will be assigned licenses due to legal requirement to check for availability of services in countries.
+      Examples include: US, JP, and GB.
+      Not nullable.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserPrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user principal name (UPN) of the user.
+      The UPN is an Internet-style login name for the user based on the Internet standard RFC 822.
+      By convention, this should map to the user's email name.
+      The general format is alias@domain, where domain must be present in the tenant's collection of verified domains.
+      This property is required when a user is created.
+      The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: While this property can contain accent characters, they can cause access issues to first-party applications for the user.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith, endsWith) and $orderBy.
+    aliases:
+    - UPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string value that can be used to classify user types in your directory, such as Member and Guest.
+      Supports $filter (eq, ne, NOT, in,).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -UPNOrObjectId <String>
+        [-AccountEnabled <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-AgeGroup <String>]
+        [-City <String>]
+        [-CompanyName <String>]
+        [-ConsentProvidedForMinor <String>]
+        [-Country <String>]
+        [-DeletedDateTime <DateTime>]
+        [-Department <String>]
+        [-DisplayName <String>]
+        [-EmployeeHireDate <DateTime>]
+        [-EmployeeId <String>]
+        [-EmployeeType <String>]
+        [-ExternalUserState <String>]
+        [-ExternalUserStateChangeDateTime <DateTime>]
+        [-FaxNumber <String>]
+        [-GivenName <String>]
+        [-Id <String>]
+        [-Identity <IMicrosoftGraphObjectIdentity[]>]
+        [-IsResourceAccount]
+        [-JobTitle <String>]
+        [-Mail <String>]
+        [-MailNickname <String>]
+        [-OfficeLocation <String>]
+        [-OnPremisesImmutableId <String>]
+        [-OtherMail <String[]>]
+        [-PasswordPolicy <String>]
+        [-PasswordProfile <IMicrosoftGraphPasswordProfile>]
+        [-PostalCode <String>]
+        [-PreferredLanguage <String>]
+        [-ShowInAddressList]
+        [-State <String>]
+        [-StreetAddress <String>]
+        [-Surname <String>]
+        [-UsageLocation <String>]
+        [-UserType <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UPNOrObjectIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -ObjectId <String>
+        [-AccountEnabled <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-AgeGroup <String>]
+        [-City <String>]
+        [-CompanyName <String>]
+        [-ConsentProvidedForMinor <String>]
+        [-Country <String>]
+        [-DeletedDateTime <DateTime>]
+        [-Department <String>]
+        [-DisplayName <String>]
+        [-EmployeeHireDate <DateTime>]
+        [-EmployeeId <String>]
+        [-EmployeeType <String>]
+        [-ExternalUserState <String>]
+        [-ExternalUserStateChangeDateTime <DateTime>]
+        [-FaxNumber <String>]
+        [-GivenName <String>]
+        [-Id <String>]
+        [-Identity <IMicrosoftGraphObjectIdentity[]>]
+        [-IsResourceAccount]
+        [-JobTitle <String>]
+        [-Mail <String>]
+        [-MailNickname <String>]
+        [-OfficeLocation <String>]
+        [-OnPremisesImmutableId <String>]
+        [-OtherMail <String[]>]
+        [-PasswordPolicy <String>]
+        [-PasswordProfile <IMicrosoftGraphPasswordProfile>]
+        [-PostalCode <String>]
+        [-PreferredLanguage <String>]
+        [-ShowInAddressList]
+        [-State <String>]
+        [-StreetAddress <String>]
+        [-Surname <String>]
+        [-UsageLocation <String>]
+        [-UserType <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -InputObject <IMicrosoftGraphUser>
+        [-AccountEnabled <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-AgeGroup <String>]
+        [-City <String>]
+        [-CompanyName <String>]
+        [-ConsentProvidedForMinor <String>]
+        [-Country <String>]
+        [-DeletedDateTime <DateTime>]
+        [-Department <String>]
+        [-DisplayName <String>]
+        [-EmployeeHireDate <DateTime>]
+        [-EmployeeId <String>]
+        [-EmployeeType <String>]
+        [-ExternalUserState <String>]
+        [-ExternalUserStateChangeDateTime <DateTime>]
+        [-FaxNumber <String>]
+        [-GivenName <String>]
+        [-Id <String>]
+        [-Identity <IMicrosoftGraphObjectIdentity[]>]
+        [-IsResourceAccount]
+        [-JobTitle <String>]
+        [-Mail <String>]
+        [-MailNickname <String>]
+        [-OfficeLocation <String>]
+        [-OnPremisesImmutableId <String>]
+        [-OtherMail <String[]>]
+        [-PasswordPolicy <String>]
+        [-PasswordProfile <IMicrosoftGraphPasswordProfile>]
+        [-PostalCode <String>]
+        [-PreferredLanguage <String>]
+        [-ShowInAddressList]
+        [-State <String>]
+        [-StreetAddress <String>]
+        [-Surname <String>]
+        [-UsageLocation <String>]
+        [-UserType <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADUser
+        -UserPrincipalName <String>
+        [-AccountEnabled <Boolean>]
+        [-Password <SecureString>]
+        [-ForceChangePasswordNextLogin]
+        [-AgeGroup <String>]
+        [-City <String>]
+        [-CompanyName <String>]
+        [-ConsentProvidedForMinor <String>]
+        [-Country <String>]
+        [-DeletedDateTime <DateTime>]
+        [-Department <String>]
+        [-DisplayName <String>]
+        [-EmployeeHireDate <DateTime>]
+        [-EmployeeId <String>]
+        [-EmployeeType <String>]
+        [-ExternalUserState <String>]
+        [-ExternalUserStateChangeDateTime <DateTime>]
+        [-FaxNumber <String>]
+        [-GivenName <String>]
+        [-Id <String>]
+        [-Identity <IMicrosoftGraphObjectIdentity[]>]
+        [-IsResourceAccount]
+        [-JobTitle <String>]
+        [-Mail <String>]
+        [-MailNickname <String>]
+        [-OfficeLocation <String>]
+        [-OnPremisesImmutableId <String>]
+        [-OtherMail <String[]>]
+        [-PasswordPolicy <String>]
+        [-PasswordProfile <IMicrosoftGraphPasswordProfile>]
+        [-PostalCode <String>]
+        [-PreferredLanguage <String>]
+        [-ShowInAddressList]
+        [-State <String>]
+        [-StreetAddress <String>]
+        [-Surname <String>]
+        [-UsageLocation <String>]
+        [-UserType <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UPNParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphUser" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update user by user principal name'
+  description: |-
+    ```powershell
+    Update-AzADUser -UPNOrObjectId $upn -City $city
+    ```
+
+    Update user by user principal name
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzADUser.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/update-azaduser
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzADUser.md
+  PlatyPS schema version: 2024-05-01

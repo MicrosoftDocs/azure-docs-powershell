@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SelfHelp.Get-AzSelfHelpSolutionSelfHelp
+name: Get-AzSelfHelpSolutionSelfHelp
+module: Az.SelfHelp
+isPreview: false
+summary: |-
+  Finds and Executes a Self Help Solution based on the Solution Id.
+  These are static self help content to help users troubleshoot their issues.
+description: |-
+  Finds and Executes a Self Help Solution based on the Solution Id.
+  These are static self help content to help users troubleshoot their issues.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SolutionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SolutionId is a unique id to identify a solution.
+      You can retrieve the solution id using the Discovery api - https://learn.microsoft.com/en-us/rest/api/help/discovery-solution/list?view=rest-help-2023-09-01-preview&tabs=HTTP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSelfHelpSolutionSelfHelp
+        -SolutionId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSelfHelpSolutionSelfHelp
+        -InputObject <ISelfHelpIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISelfHelpIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SelfHelp.Models.ISolutionResourceSelfHelp" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Self Help Solutions for a given solutionId'
+  description: |-
+    ```powershell
+    Get-AzSelfHelpSolutionSelfHelp -SolutionId "apollo-48996ff7-002f-47c1-85b2-df138843d5d5"
+    ```
+
+    ```output
+    Name                                        SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----                                        ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    apollo-48996ff7-002f-47c1-85b2-df138843d5d5
+    ```
+
+    Gets Self Help Solutions for a given solutionId.
+    Self Help Solutions consist of rich instructional video tutorials, links and guides to public documentation related to a specific problem that enables users to troubleshoot Azure issues.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Get-AzSelfHelpSolutionSelfHelp.md
+  document type: cmdlet
+  external help file: Az.SelfHelp-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.selfhelp/get-azselfhelpsolutionselfhelp
+  Module Name: Az.SelfHelp
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Get-AzSelfHelpSolutionSelfHelp.md
+  PlatyPS schema version: 2024-05-01

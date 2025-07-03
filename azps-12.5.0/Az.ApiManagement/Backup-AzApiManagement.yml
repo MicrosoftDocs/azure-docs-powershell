@@ -1,0 +1,264 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Backup-AzApiManagement
+name: Backup-AzApiManagement
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Backs up an API Management service.
+description: |-
+  The **Backup-AzApiManagement** cmdlet backs up an instance of an Azure API Management service.
+  This cmdlet stores the backup as an Azure Storage blob.
+parameters:
+  cmdletParameters:
+  - name: AccessType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of access to be used for the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of user assigned managed identity. Required only if accessType is set to UserAssignedManagedIdentity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the API Management deployment that this cmdlet backs up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns the backed up **PsApiManagement** object, if the operation succeeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the of resource group under which the API Management deployment exists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContext
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a storage connection context.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetBlobName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the blob for the backup.
+      If the blob does not exist, this cmdlet creates it.
+      This cmdlet generates a default value based on the following pattern:
+      {Name}-{yyyy-MM-dd-HH-mm}.apimbackup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the container of the blob for the backup.
+      If the container does not exist, this cmdlet creates it.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Backup-AzApiManagement
+        -ResourceGroupName <String>
+        -Name <String>
+        -StorageContext <IStorageContext>
+        -TargetContainerName <String>
+        [-TargetBlobName <String>]
+        [-AccessType <String>]
+        [-IdentityClientId <String>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Back up an API Management service'
+  description: |-
+    ```powershell
+    New-AzStorageAccount -StorageAccountName "ContosoStorage" -Location $location -ResourceGroupName "ContosoGroup02" -Type Standard_LRS
+    $storageKey = (Get-AzStorageAccountKey -ResourceGroupName "ContosoGroup02" -StorageAccountName "ContosoStorage")[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName "ContosoStorage" -StorageAccountKey $storageKey
+    Backup-AzApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -StorageContext $StorageContext -TargetContainerName "contosobackups" -TargetBlobName "contosobackups.apimbackup"
+    ```
+- title: 'Example 2: Back up using Managed Identity'
+  description: |-
+    ```powershell
+    $storageContext=New-AzStorageContext -StorageAccountName apimbackupmsi
+    $resourceGroupName="contosogroup2";
+    $apiManagementName="contosoapi";
+    $containerName="apimbackupcontainer";
+    $backupName="test-sdk-backup-1";
+    $msiClientId="00001111-aaaa-2222-bbbb-3333cccc4444"
+    Backup-AzApiManagement -ResourceGroupName $resourceGroupName -Name $apiManagementName -StorageContext $storageContext -TargetContainerName $containerName -TargetBlobName $backupName -AccessType "UserAssignedManagedIdentity" -IdentityClientId $msiClientId -PassThru
+    ```
+
+    ```output
+    PublicIPAddresses                     : {52.143.79.150}
+    PrivateIPAddresses                    :
+    Id                                    : /subscriptions/4f5285a3-9fd7-40ad-91b1-d8fc3823983d/resourceGroups/contosogroup2/providers/Microsoft.ApiManagement/service/contosoapi
+    Name                                  : contosoapi
+    Location                              : West US 2
+    Sku                                   : Premium
+    Capacity                              : 1
+    CreatedTimeUtc                        : 10/13/2021 5:49:32 PM
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://contosoapi.azure-api.net
+    RuntimeRegionalUrl                    : https://contosoapi-westus2-01.regional.azure-api.net
+    PortalUrl                             : https://contosoapi.portal.azure-api.net
+    DeveloperPortalUrl                    : https://contosoapi.developer.azure-api.net
+    ManagementApiUrl                      : https://contosoapi.management.azure-api.net
+    ScmUrl                                : https://contosoapi.scm.azure-api.net
+    PublisherEmail                        : foobar@microsoft.com
+    OrganizationName                      : fsdfsdfs
+    NotificationSenderEmail               : apimgmt-noreply@mail.windowsazure.com
+    VirtualNetwork                        :
+    VpnType                               : None
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {contosoapi.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementServiceIdentity
+    EnableClientCertificate               :
+    Zone                                  :
+    DisableGateway                        : False
+    MinimalControlPlaneApiVersion         :
+    PublicIpAddressId                     :
+    PlatformVersion                       : stv2
+    PublicNetworkAccess                   : Enabled
+    PrivateEndpointConnections            :
+    ResourceGroupName                     : contosogroup2
+    ```
+
+    This command backs up an API Management service to a Storage blob using UserAssigned Managed Identity
+links:
+- text: Get-AzApiManagement
+  href: ./Get-AzApiManagement.yml
+- text: New-AzApiManagement
+  href: ./New-AzApiManagement.yml
+- text: Remove-AzApiManagement
+  href: ./Remove-AzApiManagement.yml
+- text: Restore-AzApiManagement
+  href: ./Restore-AzApiManagement.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Backup-AzApiManagement.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/backup-azapimanagement
+  Module Name: Az.ApiManagement
+  ms.assetid: 5846BBB7-DA8E-41B5-A894-BA2B61C2212C
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Backup-AzApiManagement.md
+  PlatyPS schema version: 2024-05-01

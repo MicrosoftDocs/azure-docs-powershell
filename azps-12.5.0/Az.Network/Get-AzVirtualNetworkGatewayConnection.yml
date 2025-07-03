@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualNetworkGatewayConnection
+name: Get-AzVirtualNetworkGatewayConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a Virtual Network Gateway Connection
+description: |-
+  The Virtual Network Gateway Connection is the object representing the IPsec tunnel (Site-to-Site or Vnet-to-Vnet) connected to your Virtual Network Gateway in Azure.
+  The **Get-AzVirtualNetworkGatewayConnection** cmdlet returns the object of your connection based on Name and Resource Group Name.
+  If the **Get-AzVirtualNetworkGatewayConnection** cmdlet is issued without specifying the -Name parameter, the output will not show ConnectionStatus and SharedKey details.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualNetworkGatewayConnection
+        [-Name <String>]
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Virtual Network Gateway Connection'
+  description: |-
+    ```powershell
+    Get-AzVirtualNetworkGatewayConnection -Name myTunnel -ResourceGroupName myRG
+    ```
+
+    Returns the object of the Virtual Network Gateway Connection with the name "myTunnel" within the resource group "myRG"
+- title: 'Example 2: Get all Virtual Network Gateway Connections using filtering'
+  description: |-
+    ```powershell
+    Get-AzVirtualNetworkGatewayConnection -Name myTunnel* -ResourceGroupName myRG
+    ```
+
+    Returns all Virtual Network Gateway Connections that start with "myTunnel" within the resource group "myRG"
+links:
+- text: New-AzVirtualNetworkGatewayConnection
+  href: ./New-AzVirtualNetworkGatewayConnection.yml
+- text: Remove-AzVirtualNetworkGatewayConnection
+  href: ./Remove-AzVirtualNetworkGatewayConnection.yml
+- text: Set-AzVirtualNetworkGatewayConnection
+  href: ./Set-AzVirtualNetworkGatewayConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayconnection
+  Module Name: Az.Network
+  ms.assetid: 617FB2F9-05EA-4224-B9A9-2F00A7599486
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayConnection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,311 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureProfile
+name: New-AzureProfile
+module: Azure
+isPreview: false
+summary: |-
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+parameters:
+  cmdletParameters:
+  - name: AccessToken
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Token
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Token
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Certificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Credentials
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Environment
+    type: <xref href="AzureEnvironment" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Certificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ServicePrincipal
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Token
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Credentials
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Empty
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Properties
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PropertyBag
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipal
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccount
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Certificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ServicePrincipal
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Token
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Credentials
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Certificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Token
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Credentials
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tenant
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - TenantId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -SubscriptionId <String>
+        -Certificate <X509Certificate2>
+        [-Environment <AzureEnvironment>]
+        [-StorageAccount <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Certificate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -SubscriptionId <String>
+        -Credential <PSCredential>
+        -Tenant <String>
+        [-Environment <AzureEnvironment>]
+        [-StorageAccount <String>]
+        [-ServicePrincipal]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServicePrincipal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -SubscriptionId <String>
+        -AccessToken <String>
+        -AccountId <String>
+        [-Environment <AzureEnvironment>]
+        [-StorageAccount <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Token
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -SubscriptionId <String>
+        -Credential <PSCredential>
+        [-Environment <AzureEnvironment>]
+        [-StorageAccount <String>]
+        [-Tenant <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Credentials
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        [-Environment <AzureEnvironment>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -Path <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureProfile
+        -Properties <Hashtable>
+        [<CommonParameters>]
+    ```
+  parameterSetName: PropertyBag
+  isDefault: false
+examples:
+- title: '1:'
+  description: |-
+    ```
+    PS C:\>
+    ```
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 159CAD26-710A-4E65-B015-015A2C336A91
+  PlatyPS schema version: 2024-05-01

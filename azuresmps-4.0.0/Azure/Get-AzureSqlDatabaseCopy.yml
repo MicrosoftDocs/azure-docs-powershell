@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabaseCopy
+name: Get-AzureSqlDatabaseCopy
+module: Azure
+isPreview: false
+summary: |-
+  Checks the status of copy relationships.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabaseCopy** cmdlet checks the status of one or more active copy relationships.
+  Run this cmdlet after you run the Start-AzureSqlDatabaseCopy or Stop-AzureSqlDatabaseCopy cmdlet.
+  You can check a specific copy relationship, all copy relationships, or a filtered list of copy relationships, such as all copies on a specific target server.
+  You can run this cmdlet on the server that hosts the source or target database.
+
+  This cmdlet is synchronous.
+  The cmdlet blocks the Azure PowerShell console until it returns a status object.
+
+  The *PartnerServer* and *PartnerDatabase* parameters are optional.
+  If you do not specify either parameter, this cmdlet returns a table of results.
+  To see the status for only a particular database, specify both parameters.
+notes: |-
+  * Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see the New-AzureSqlDatabaseServerContext cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Database
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the source Azure SQL Database.
+      This cmdlet gets the copy status of the database that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseCopy
+    type: <xref href="DatabaseCopy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents a database.
+      This cmdlet gets the copy status of the database that this parameter specifies.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source database.
+      This cmdlet gets that copy status of the database that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerNameOnly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerDatabase
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies name of the secondary database.
+      If this database is not found in the sys.dm_database_copies dynamic management view, this cmdlet returns an empty status object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerNameOnly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that hosts the target database.
+      If this server is not found in the sys.dm_database_copies dynamic management view, this cmdlet returns an empty status object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerNameOnly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server on which the database copy resides.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseCopy
+        -ServerName <String>
+        [-DatabaseName <String>]
+        [-PartnerServer <String>]
+        [-PartnerDatabase <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerNameOnly
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -DatabaseCopy <DatabaseCopy>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -Database <Database>
+        [-PartnerServer <String>]
+        [-PartnerDatabase <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDatabase
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.DatabaseCopy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.DatabaseCopy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the copy status of a database'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf658"
+    ```
+
+    This command gets the status of the database named Orders on the server named lpqd0zbr8y.
+    The *PartnerServer* parameter restricts this command to the bk0b8kf658 server.
+- title: 'Example 2: Get the status of all copies on a serverGet the status of all copies on a server'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y"
+    ```
+
+    This command gets the status of all active copies on the server named lpqd0zbr8y.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Start-AzureSqlDatabaseCopy
+  href: ./Start-AzureSqlDatabaseCopy.yml
+- text: Stop-AzureSqlDatabaseCopy
+  href: ./Stop-AzureSqlDatabaseCopy.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5AEF7D44-624D-4794-86FF-156E6729BB56
+  PlatyPS schema version: 2024-05-01

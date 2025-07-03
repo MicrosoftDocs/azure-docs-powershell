@@ -1,0 +1,564 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlElasticPool
+name: New-AzSqlElasticPool
+module: Az.Sql
+isPreview: false
+summary: |-
+  Creates an elastic database pool for a SQL Database.
+description: |-
+  The **New-AzSqlElasticPool** cmdlet creates an elastic database pool for an Azure SQL Database.
+  Several parameters (*-Dtu, -DatabaseDtuMin, and -DatabaseDtuMax*) require the value being set is from the list of valid values for that parameter. For example, -DatabaseDtuMax for a Standard 100 eDTU pool can only be set to 10, 20, 50, or 100.  For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute generation to assign.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDtuMax
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of Database Throughput Units (DTUs) that any single database in the pool can consume.
+      The default values for the different editions are as follows:
+      - Basic. 5 DTUs
+      - Standard. 100 DTUs
+      - Premium. 125 DTUs
+      For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDtuMin
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the minimum number of DTUs that the elastic pool guarantees to all the databases in the pool.
+      The default value is zero (0).
+      For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseVCoreMax
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum VCore number any SqlAzure Database can consume in the pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseVCoreMin
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum VCore number any SqlAzure Database can consume in the pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dtu
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the total number of shared DTUs for the elastic pool.
+      The default values for the different editions are as follows:
+      - Basic.
+      100 DTUs
+      - Standard.
+      100 DTUs
+      - Premium.
+      125 DTUs
+      For details about which values are valid, see the table for your specific size pool in [elastic pools](https://learn.microsoft.com/azure/sql-database/sql-database-elastic-pool).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition of the Azure SQL Database used for the elastic pool.
+      The acceptable values for this parameter are:
+      - None
+      - Basic
+      - Standard
+      - Premium
+      - DataWarehouse
+      - Free
+      - Stretch
+      - GeneralPurpose
+      - BusinessCritical
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedPool
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the elastic pool that this cmdlet creates.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HighAvailabilityReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The total number of high availability replicas associated with the elastic pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The license type for the Azure Sql database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Maintenance configuration id for the SQL Elastic Pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredEnclaveType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The preferred enclave type for the Azure SQL Elastic Pool. Possible values are Default and VBS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to which this cmdlet assigns the elastic pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that hosts the elastic pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageMB
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage limit, in megabytes, for the elastic pool. If you do not specify this
+      parameter, this cmdlet calculates a value that depends on the value of the *Dtu* parameter.
+      See [eDTU and storage limits](/azure/sql-database/sql-database-elastic-pool#edtu-and-storage-limits-for-elastic-pools) for possible values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a dictionary of Key-value pairs in the form of a hash table that this cmdlet associates
+      with the elastic pool. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCore
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The total shared number of Vcores for the Sql Azure Elastic Pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The zone redundancy to associate with the Azure Sql Elastic Pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlElasticPool
+        [-ElasticPoolName] <String>
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        [-Edition <String>]
+        [-Dtu <Int32>]
+        [-StorageMB <Int32>]
+        [-DatabaseDtuMin <Int32>]
+        [-DatabaseDtuMax <Int32>]
+        [-Tags <Hashtable>]
+        [-ZoneRedundant]
+        [-LicenseType <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-HighAvailabilityReplicaCount <Int32>]
+        [-PreferredEnclaveType <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DtuBasedPool
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSqlElasticPool
+        [-ElasticPoolName] <String>
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        -Edition <String>
+        -VCore <Int32>
+        -ComputeGeneration <String>
+        [-StorageMB <Int32>]
+        [-DatabaseVCoreMin <Double>]
+        [-DatabaseVCoreMax <Double>]
+        [-Tags <Hashtable>]
+        [-ZoneRedundant]
+        [-LicenseType <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-HighAvailabilityReplicaCount <Int32>]
+        [-PreferredEnclaveType <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VcoreBasedPool
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ElasticPool.Model.AzureSqlElasticPoolModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a DTU elastic pool'
+  description: |-
+    ```powershell
+    New-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Edition "Standard" -Dtu 400 -DatabaseDtuMin 10 -DatabaseDtuMax 100
+    ```
+
+    ```output
+    ResourceId        : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/resourcegroup01/providers/Microsoft.Sql/servers/server01/elasticPools/elasticpool01
+    ResourceGroupName : resourcegroup01
+    ServerName        : server01
+    ElasticPoolName   : elasticpool01
+    Location          : Central US
+    CreationDate      : 8/26/2015 10:00:17 PM
+    State             : Ready
+    Edition           : Standard
+    Dtu               : 400
+    DatabaseDtuMax    : 100
+    DatabaseDtuMin    : 10
+    StorageMB         : 409600
+    Tags              :
+    ```
+
+    This command creates an elastic pool in the Standard service tier named ElasticPool01. The server
+    named server01, assigned to an Azure resource group named ResourceGroup01, hosts the elastic pool
+    in. The command specifies DTU property values for the pool and the databases in the pool.
+- title: 'Example 2: Create a vCore elastic pool'
+  description: |-
+    ```powershell
+    New-AzSqlElasticPool -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -ElasticPoolName "ElasticPool01" -Edition "GeneralPurpose" -vCore 2 -ComputeGeneration Gen5
+    ```
+
+    ```output
+    ResourceId          : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/servers/server01/elasticPools/ElasticPool01
+    ResourceGroupName   : ResourceGroup01
+    ServerName          : Server01
+    ElasticPoolName     : ElasticPool01
+    Location            : Central US
+    CreationDate        : 8/29/2019 2:16:40 AM
+    State               : Ready
+    Edition             : GeneralPurpose
+    SkuName             : GP_Gen5
+    Dtu                 : 2
+    DatabaseDtuMax      : 2
+    DatabaseDtuMin      : 0
+    Capacity            : 2
+    DatabaseCapacityMin : 0
+    DatabaseCapacityMax : 2
+    Family              : Gen5
+    MaxSizeBytes        : 34359738368
+    StorageMB           : 32768
+    Tags                :
+    ```
+
+    This command creates an elastic pool in the GeneralPurpose service tier named ElasticPool01. The server
+    named server01, assigned to an Azure resource group named ResourceGroup01, hosts the elastic pool
+    in. The command specifies the vCore property values for the pool and the databases in the pool.
+- title: Example 3
+  description: |-
+    Creates an elastic database pool for a SQL Database. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    New-AzSqlElasticPool -ComputeGeneration Gen5 -Edition 'GeneralPurpose' -ElasticPoolName 'ElasticPool01' -ResourceGroupName 'ResourceGroup01' -ServerName 'Server01' -StorageMB 2097152 -VCore 2
+    ```
+- title: 'Example 4: Creates an elastic pool with preferred enclave type as VBS'
+  description: |-
+    ```powershell
+    New-AzSqlElasticPool -ComputeGeneration Gen5 -Edition 'GeneralPurpose' -ElasticPoolName 'ElasticPool01' -ResourceGroupName 'ResourceGroup01' -ServerName 'Server01' -VCore 2 -PreferredEnclaveType 'VBS'
+    ```
+
+    ```output
+    ResourceId          : /subscriptions/00000000-0000-0000-0000-000000000001/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/servers/server01/elasticPools/ElasticPool01
+    ResourceGroupName   : ResourceGroup01
+    ServerName          : Server01
+    ElasticPoolName     : ElasticPool01
+    Location            : Central US
+    CreationDate        : 8/29/2019 2:16:40 AM
+    State               : Ready
+    Edition             : GeneralPurpose
+    SkuName             : GP_Gen5
+    Dtu                 : 2
+    DatabaseDtuMax      : 2
+    DatabaseDtuMin      : 0
+    Capacity            : 2
+    DatabaseCapacityMin : 0
+    DatabaseCapacityMax : 2
+    Family              : Gen5
+    MaxSizeBytes        : 34359738368
+    StorageMB           : 32768
+    PreferredEnclaveType: VBS
+    Tags                :
+    ```
+
+    This command creates an elastic pool configured with VBS enclave
+links:
+- text: Get-AzSqlElasticPool
+  href: ./Get-AzSqlElasticPool.yml
+- text: Get-AzSqlElasticPoolActivity
+  href: ./Get-AzSqlElasticPoolActivity.yml
+- text: Get-AzSqlElasticPoolDatabase
+  href: ./Get-AzSqlElasticPoolDatabase.yml
+- text: Remove-AzSqlElasticPool
+  href: ./Remove-AzSqlElasticPool.yml
+- text: Set-AzSqlElasticPool
+  href: ./Set-AzSqlElasticPool.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlElasticPool.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlelasticpool
+  Module Name: Az.Sql
+  ms.assetid: 009899E5-83BF-4A3F-877E-70C16D5CD1AC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlElasticPool.md
+  PlatyPS schema version: 2024-05-01

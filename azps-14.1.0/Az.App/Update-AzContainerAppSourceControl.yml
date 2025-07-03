@@ -1,0 +1,615 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.Update-AzContainerAppSourceControl
+name: Update-AzContainerAppSourceControl
+module: Az.App
+isPreview: false
+summary: |-
+  update the SourceControl for a Container App.
+description: |-
+  update the SourceControl for a Container App.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureClientSecret
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Client Secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureKind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Kind of auth github does for deploying the template
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Branch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The branch which will trigger the auto deployment
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerAppInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityContainerAppExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerAppName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Container App.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubAccessToken
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      One time Github PAT to configure github environment
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubConfigurationImage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Image name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubContextPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Context path
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubOS
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Operation system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubPublishType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Code or Image
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubRuntimeStack
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Runtime stack
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GithubRuntimeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Runtime version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Container App SourceControl.
+    aliases:
+    - SourceControlName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityContainerAppExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      registry secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      registry server Url.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      registry username.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepoUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The repo url which will be integrated to ContainerApp.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzContainerAppSourceControl
+        -ContainerAppName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AzureClientId <String>]
+        [-AzureClientSecret <SecureString>]
+        [-AzureKind <String>]
+        [-AzureSubscriptionId <String>]
+        [-AzureTenantId <String>]
+        [-Branch <String>]
+        [-GithubAccessToken <SecureString>]
+        [-GithubConfigurationImage <String>]
+        [-GithubContextPath <String>]
+        [-GithubOS <String>]
+        [-GithubPublishType <String>]
+        [-GithubRuntimeStack <String>]
+        [-GithubRuntimeVersion <String>]
+        [-RegistryPassword <SecureString>]
+        [-RegistryUrl <String>]
+        [-RegistryUserName <String>]
+        [-RepoUrl <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzContainerAppSourceControl
+        -Name <String>
+        -ContainerAppInputObject <IAppIdentity>
+        [-AzureClientId <String>]
+        [-AzureClientSecret <SecureString>]
+        [-AzureKind <String>]
+        [-AzureSubscriptionId <String>]
+        [-AzureTenantId <String>]
+        [-Branch <String>]
+        [-GithubAccessToken <SecureString>]
+        [-GithubConfigurationImage <String>]
+        [-GithubContextPath <String>]
+        [-GithubOS <String>]
+        [-GithubPublishType <String>]
+        [-GithubRuntimeStack <String>]
+        [-GithubRuntimeVersion <String>]
+        [-RegistryPassword <SecureString>]
+        [-RegistryUrl <String>]
+        [-RegistryUserName <String>]
+        [-RepoUrl <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityContainerAppExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzContainerAppSourceControl
+        -InputObject <IAppIdentity>
+        [-AzureClientId <String>]
+        [-AzureClientSecret <SecureString>]
+        [-AzureKind <String>]
+        [-AzureSubscriptionId <String>]
+        [-AzureTenantId <String>]
+        [-Branch <String>]
+        [-GithubAccessToken <SecureString>]
+        [-GithubConfigurationImage <String>]
+        [-GithubContextPath <String>]
+        [-GithubOS <String>]
+        [-GithubPublishType <String>]
+        [-GithubRuntimeStack <String>]
+        [-GithubRuntimeVersion <String>]
+        [-RegistryPassword <SecureString>]
+        [-RegistryUrl <String>]
+        [-RegistryUserName <String>]
+        [-RepoUrl <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IAppIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ISourceControl" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update source control for a Container App.'
+  description: |-
+    ```powershell
+    $AzureClientSecret = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $RegistryPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $GithubAccessToken = ConvertTo-SecureString -String "****" -AsPlainText -Force
+
+    Update-AzContainerAppSourceControl -ContainerAppName azps-containerapp-1 -ResourceGroupName azps_test_group_app -Name current -AzureClientId "UserObjectId" -AzureClientSecret $AzureClientSecret -AzureKind "feaderated" -AzureTenantId "UserDirectoryID" -Branch "main" -GithubContextPath "./" -GithubAccessToken $GithubAccessToken -GithubConfigurationImage "azps-containerapp-1" -RegistryPassword $RegistryPassword -RegistryUrl "azpscontainerregistry.azurecr.io" -RegistryUserName "azpscontainerregistry" -RepoUrl "https://github.com/lijinpei2008/ghatest"
+    ```
+
+    ```output
+    Branch Name    RepoUrl                                 RegistryInfoRegistryUserName ResourceGroupName
+    ------ ----    -------                                 ---------------------------- -----------------
+    main   current https://github.com/lijinpei2008/ghatest azpscontainerregistry        azps_test_group_app
+    ```
+
+    Update source control for a Container App.
+- title: 'Example 2: Update source control for a Container App.'
+  description: |-
+    ```powershell
+    $AzureClientSecret = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $RegistryPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $GithubAccessToken = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $sourcecontrol = Get-AzContainerAppSourceControl -ContainerAppName azps-containerapp-1 -ResourceGroupName azps_test_group_app -Name current
+
+    Update-AzContainerAppSourceControl -InputObject $sourcecontrol -AzureClientId "UserObjectId" -AzureClientSecret $AzureClientSecret -AzureKind "feaderated" -AzureTenantId "UserDirectoryID" -Branch "main" -GithubContextPath "./" -GithubAccessToken $GithubAccessToken -GithubConfigurationImage "azps-containerapp-1" -RegistryPassword $RegistryPassword -RegistryUrl "azpscontainerregistry.azurecr.io" -RegistryUserName "azpscontainerregistry" -RepoUrl "https://github.com/lijinpei2008/ghatest"
+    ```
+
+    ```output
+    Branch Name    RepoUrl                                 RegistryInfoRegistryUserName ResourceGroupName
+    ------ ----    -------                                 ---------------------------- -----------------
+    main   current https://github.com/lijinpei2008/ghatest azpscontainerregistry        azps_test_group_app
+    ```
+
+    Update source control for a Container App.
+- title: 'Example 3: Update source control for a Container App.'
+  description: |-
+    ```powershell
+    $AzureClientSecret = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $RegistryPassword = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $GithubAccessToken = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $containerapp = Get-AzContainerApp -ResourceGroupName azps_test_group_app -Name azps-containerapp-1
+
+    Update-AzContainerAppSourceControl -ContainerAppInputObject $containerapp -Name current -AzureClientId "UserObjectId" -AzureClientSecret $AzureClientSecret -AzureKind "feaderated" -AzureTenantId "UserDirectoryID" -Branch "main" -GithubContextPath "./" -GithubAccessToken $GithubAccessToken -GithubConfigurationImage "azps-containerapp-1" -RegistryPassword $RegistryPassword -RegistryUrl "azpscontainerregistry.azurecr.io" -RegistryUserName "azpscontainerregistry" -RepoUrl "https://github.com/lijinpei2008/ghatest"
+    ```
+
+    ```output
+    Branch Name    RepoUrl                                 RegistryInfoRegistryUserName ResourceGroupName
+    ------ ----    -------                                 ---------------------------- -----------------
+    main   current https://github.com/lijinpei2008/ghatest azpscontainerregistry        azps_test_group_app
+    ```
+
+    Update source control for a Container App.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Update-AzContainerAppSourceControl.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.app/update-azcontainerappsourcecontrol
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Update-AzContainerAppSourceControl.md
+  PlatyPS schema version: 2024-05-01

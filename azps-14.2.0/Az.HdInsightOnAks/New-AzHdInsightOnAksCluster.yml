@@ -1,0 +1,3793 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksCluster
+name: New-AzHdInsightOnAksCluster
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  create a cluster.
+description: |-
+  create a cluster.
+parameters:
+  cmdletParameters:
+  - name: ApplicationLogStdErrorEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      True if stderror is enabled, otherwise false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationLogStdOutEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      True if stdout is enabled, otherwise false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedIdentityClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ClientId of the MSI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedIdentityObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ObjectId of the MSI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedIdentityResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceId of the MSI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      AAD group Ids authorized for data plane access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationUserId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      AAD user Ids authorized for data plane access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoscaleProfileAutoscaleType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User to specify which type of Autoscale to be implemented - Scheduled Based or Load Based.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoscaleProfileEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This indicates whether auto scale is enabled on HDInsight on AKS cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoscaleProfileGracefulDecommissionTimeout
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      This property is for graceful decommission timeout; It has a default setting of 3600 seconds before forced shutdown takes place.
+      This is the maximal time to wait for running containers and applications to complete before transition a DECOMMISSIONING node into DECOMMISSIONED.
+      The default value is 3600 seconds.
+      Negative value (like -1) is handled as infinite timeout.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterAccessProfileEnableInternalIngress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to create cluster using private IP instead of public IP.
+      This property must be set at create time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterpoolInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IHdInsightOnAksIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version with 3/4 part.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeProfileAvailabilityZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Availability zones to use for AKS VMSS nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeProfileNode
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.INodeProfile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The nodes definitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoordinatorDebugEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that if enable debug or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoordinatorDebugPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The debug port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoordinatorDebugSuspend
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that if suspend debug or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoordinatorHighAvailabilityEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that if enable coordinator HA, uses multiple coordinator replicas with auto failover, one per each head node.
+      Default: true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database URL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabasePasswordSecretRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reference for the database password
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the database user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskStorageDataDiskSize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed Disk size in GB.
+      The maximum supported disk size for Standard and Premium HDD/SSD is 32TB, except for Premium SSD v2, which supports up to 64TB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskStorageDataDiskType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed Disk Type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableLogAnalytics
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      True if log analytics is enabled for the cluster, otherwise false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkHiveCatalogDbConnectionUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Connection string for hive metastore database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkHiveCatalogDbPasswordSecretName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secret reference name from secretsProfile.secrets containing password for database connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkHiveCatalogDbUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User name for database connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkProfileDeploymentMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that indicates the deployment mode of Flink cluster.
+      It can have one of the following enum values =\> Application, Session.
+      Default value is Session
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkStorageUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account uri which is used for savepoint and checkpoint state.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FlinkTaskManagerReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of task managers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HdInsightOnAksCluster
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ICluster" data-throw-if-not-resolved="False" />
+    description: |-
+      The cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityClusterpool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Create
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HistoryServerCpu
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      The required CPU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HistoryServerMemory
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The required memory in MB, Container memory will be 110 percentile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HiveMetastoreDbConnectionAuthenticationMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The authentication mode to connect to your Hive metastore database.
+      More details: https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql#authentication-and-authorization
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IHdInsightOnAksIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobManagerCpu
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      The required CPU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobManagerMemory
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The required memory in MB, Container memory will be 110 percentile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecArg
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property representing additional JVM arguments for the Flink job.
+      It should be space separated value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecEntryClass
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that specifies the entry class for the Flink job.
+      If not specified, the entry point is auto-detected from the flink job jar package.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecJarName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that represents the name of the job JAR.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecJobJarDirectory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that specifies the directory where the job JAR is located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecSavePointName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that represents the name of the savepoint for the Flink job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobSpecUpgradeMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string property that indicates the upgrade mode to be performed on the Flink job.
+      It can have one of the following enum values =\> STATELESS_UPDATE, UPDATE, LAST_STATE_UPDATE.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KafkaProfileEnableKRaft
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Expose Kafka cluster in KRaft mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KafkaProfileEnablePublicEndpoint
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Expose worker nodes as public endpoints.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KafkaProfileRemoteStorageUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Fully qualified path of Azure Storage container used for Tiered Storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the user Key Vault where all the cluster specific user secrets are stored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LlapProfile
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      LLAP cluster profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBasedConfigCooldownPeriod
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      This is a cool down period, this is a time period in seconds, which determines the amount of time that must elapse between a scaling activity started by a rule and the start of the next scaling activity, regardless of the rule that triggers it.
+      The default value is 300 seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBasedConfigMaxNode
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      User needs to set the maximum number of nodes for load based scaling, the load based scaling will use this to scale up and scale down between minimum and maximum number of nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBasedConfigMinNode
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      User needs to set the minimum number of nodes for load based scaling, the load based scaling will use this to scale up and scale down between minimum and maximum number of nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBasedConfigPollInterval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      User can specify the poll interval, this is the time period (in seconds) after which scaling metrics are polled for triggering a scaling operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBasedConfigScalingRule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IScalingRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The scaling rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticProfileMetricsEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      True if metrics are enabled, otherwise false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedIdentityProfileIdentityList
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IManagedIdentitySpec" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetastoreSpecDbConnectionAuthenticationMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The authentication mode to connect to your Hive metastore database.
+      More details: https://learn.microsoft.com/en-us/azure/azure-sql/database/logins-create-manage?view=azuresql#authentication-and-authorization
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the HDInsight cluster.
+    aliases:
+    - ClusterName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpool
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Create
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OssVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Version with three part.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the cluster pool.
+    aliases:
+    - ClusterPoolName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Create
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrometheuProfileEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Prometheus for cluster or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerAdmin
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of usernames that should be marked as ranger admins.
+      These usernames should match the user principal name (UPN) of the respective AAD users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerAuditStorageAccount
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure storage location of the blobs.
+      MSI should have read/write access to this Storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerPluginProfileEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Ranger for cluster or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerUsersyncEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Denotes whether usersync service should be enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerUsersyncGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of groups that should be synced.
+      These group names should match the object id of the respective AAD groups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerUsersyncMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User & groups can be synced automatically or via a static list that's refreshed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerUsersyncUser
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of user names that should be synced.
+      These usernames should match the User principal name of the respective AAD users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RangerUsersyncUserMappingLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure storage location of a mapping file that lists user & group associations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Create
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleBasedConfigDefaultCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Setting default node count of current schedule configuration.
+      Default node count specifies the number of nodes which are default when an specified scaling operation is executed (scale up/scale down)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleBasedConfigSchedule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ISchedule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      This specifies the schedules where scheduled based Autoscale to be enabled, the user has a choice to set multiple rules within the schedule across days and times (start/end).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleBasedConfigTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User has to specify the timezone on which the schedule has to be set for schedule based autoscale configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScriptActionProfile
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IScriptActionProfile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The script action profile list.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecretReference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ISecretReference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Properties of Key Vault secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceConfigsProfile
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterServiceConfigsProfile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The service configs profiles.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkHiveCatalogDbName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkHiveCatalogDbPasswordSecretName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The secret name which contains the database user password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkHiveCatalogDbServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database server host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkHiveCatalogDbUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The database user name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkHiveCatalogKeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The key vault resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkStorageUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default storage URL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SparkThriftUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The thrift url.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshProfileCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of ssh pods per cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshProfileVMSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine SKU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageHivecatalogName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hive Catalog name used to mount external tables on the logs written by trino, if not specified there tables are not created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageHivecatalogSchema
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Schema of the above catalog to use, to mount query logs as external tables, if not specified tables will be mounted under schema trinologs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePartitionRetentionInDay
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention period for query log table partitions, this doesn't have any affect on actual data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure storage location of the blobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StubProfile
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Stub cluster profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Create
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaskManagerCpu
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      The required CPU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaskManagerMemory
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The required memory in MB, Container memory will be 110 percentile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrinoHiveCatalog
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IHiveCatalogOption" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      hive catalog options.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrinoProfileUserPluginsSpecPlugin
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ITrinoUserPlugin" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Trino user plugins.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkerDebugEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that if enable debug or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkerDebugPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The debug port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkerDebugSuspend
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag that if suspend debug or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityClusterpoolExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -PoolName <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-ApplicationLogStdErrorEnabled]
+        [-ApplicationLogStdOutEnabled]
+        [-AssignedIdentityClientId <String>]
+        [-AssignedIdentityObjectId <String>]
+        [-AssignedIdentityResourceId <String>]
+        [-AuthorizationGroupId <String[]>]
+        [-AuthorizationUserId <String[]>]
+        [-AutoscaleProfileAutoscaleType <String>]
+        [-AutoscaleProfileEnabled]
+        [-AutoscaleProfileGracefulDecommissionTimeout <Int32>]
+        [-ClusterAccessProfileEnableInternalIngress]
+        [-ClusterType <String>]
+        [-ClusterVersion <String>]
+        [-ComputeProfileAvailabilityZone <String[]>]
+        [-ComputeProfileNode <INodeProfile[]>]
+        [-CoordinatorDebugEnable]
+        [-CoordinatorDebugPort <Int32>]
+        [-CoordinatorDebugSuspend]
+        [-CoordinatorHighAvailabilityEnabled]
+        [-DatabaseHost <String>]
+        [-DatabaseName <String>]
+        [-DatabasePasswordSecretRef <String>]
+        [-DatabaseUsername <String>]
+        [-DiskStorageDataDiskSize <Int32>]
+        [-DiskStorageDataDiskType <String>]
+        [-EnableLogAnalytics]
+        [-FlinkHiveCatalogDbConnectionUrl <String>]
+        [-FlinkHiveCatalogDbPasswordSecretName <String>]
+        [-FlinkHiveCatalogDbUserName <String>]
+        [-FlinkProfileDeploymentMode <String>]
+        [-FlinkStorageUrl <String>]
+        [-FlinkTaskManagerReplicaCount <Int32>]
+        [-HistoryServerCpu <Single>]
+        [-HistoryServerMemory <Int64>]
+        [-HiveMetastoreDbConnectionAuthenticationMode <String>]
+        [-JobManagerCpu <Single>]
+        [-JobManagerMemory <Int64>]
+        [-JobSpecArg <String>]
+        [-JobSpecEntryClass <String>]
+        [-JobSpecJarName <String>]
+        [-JobSpecJobJarDirectory <String>]
+        [-JobSpecSavePointName <String>]
+        [-JobSpecUpgradeMode <String>]
+        [-KafkaProfileEnableKRaft]
+        [-KafkaProfileEnablePublicEndpoint]
+        [-KafkaProfileRemoteStorageUri <String>]
+        [-KeyVaultResourceId <String>]
+        [-LlapProfile <Hashtable>]
+        [-LoadBasedConfigCooldownPeriod <Int32>]
+        [-LoadBasedConfigMaxNode <Int32>]
+        [-LoadBasedConfigMinNode <Int32>]
+        [-LoadBasedConfigPollInterval <Int32>]
+        [-LoadBasedConfigScalingRule <IScalingRule[]>]
+        [-LogAnalyticProfileMetricsEnabled]
+        [-ManagedIdentityProfileIdentityList <IManagedIdentitySpec[]>]
+        [-MetastoreSpecDbConnectionAuthenticationMode <String>]
+        [-OssVersion <String>]
+        [-PrometheuProfileEnabled]
+        [-RangerAdmin <String[]>]
+        [-RangerAuditStorageAccount <String>]
+        [-RangerPluginProfileEnabled]
+        [-RangerUsersyncEnabled]
+        [-RangerUsersyncGroup <String[]>]
+        [-RangerUsersyncMode <String>]
+        [-RangerUsersyncUser <String[]>]
+        [-RangerUsersyncUserMappingLocation <String>]
+        [-ScheduleBasedConfigDefaultCount <Int32>]
+        [-ScheduleBasedConfigSchedule <ISchedule[]>]
+        [-ScheduleBasedConfigTimeZone <String>]
+        [-ScriptActionProfile <IScriptActionProfile[]>]
+        [-SecretReference <ISecretReference[]>]
+        [-ServiceConfigsProfile <IClusterServiceConfigsProfile[]>]
+        [-SparkHiveCatalogDbName <String>]
+        [-SparkHiveCatalogDbPasswordSecretName <String>]
+        [-SparkHiveCatalogDbServerName <String>]
+        [-SparkHiveCatalogDbUserName <String>]
+        [-SparkHiveCatalogKeyVaultId <String>]
+        [-SparkStorageUrl <String>]
+        [-SparkThriftUrl <String>]
+        [-SshProfileCount <Int32>]
+        [-SshProfileVMSize <String>]
+        [-StorageHivecatalogName <String>]
+        [-StorageHivecatalogSchema <String>]
+        [-StoragePartitionRetentionInDay <Int32>]
+        [-StoragePath <String>]
+        [-StubProfile <Hashtable>]
+        [-Tag <Hashtable>]
+        [-TaskManagerCpu <Single>]
+        [-TaskManagerMemory <Int64>]
+        [-TrinoHiveCatalog <IHiveCatalogOption[]>]
+        [-TrinoProfileUserPluginsSpecPlugin <ITrinoUserPlugin[]>]
+        [-WorkerDebugEnable]
+        [-WorkerDebugPort <Int32>]
+        [-WorkerDebugSuspend]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -PoolName <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -PoolName <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -ClusterpoolInputObject <IHdInsightOnAksIdentity>
+        -Location <String>
+        [-ApplicationLogStdErrorEnabled]
+        [-ApplicationLogStdOutEnabled]
+        [-AssignedIdentityClientId <String>]
+        [-AssignedIdentityObjectId <String>]
+        [-AssignedIdentityResourceId <String>]
+        [-AuthorizationGroupId <String[]>]
+        [-AuthorizationUserId <String[]>]
+        [-AutoscaleProfileAutoscaleType <String>]
+        [-AutoscaleProfileEnabled]
+        [-AutoscaleProfileGracefulDecommissionTimeout <Int32>]
+        [-ClusterAccessProfileEnableInternalIngress]
+        [-ClusterType <String>]
+        [-ClusterVersion <String>]
+        [-ComputeProfileAvailabilityZone <String[]>]
+        [-ComputeProfileNode <INodeProfile[]>]
+        [-CoordinatorDebugEnable]
+        [-CoordinatorDebugPort <Int32>]
+        [-CoordinatorDebugSuspend]
+        [-CoordinatorHighAvailabilityEnabled]
+        [-DatabaseHost <String>]
+        [-DatabaseName <String>]
+        [-DatabasePasswordSecretRef <String>]
+        [-DatabaseUsername <String>]
+        [-DiskStorageDataDiskSize <Int32>]
+        [-DiskStorageDataDiskType <String>]
+        [-EnableLogAnalytics]
+        [-FlinkHiveCatalogDbConnectionUrl <String>]
+        [-FlinkHiveCatalogDbPasswordSecretName <String>]
+        [-FlinkHiveCatalogDbUserName <String>]
+        [-FlinkProfileDeploymentMode <String>]
+        [-FlinkStorageUrl <String>]
+        [-FlinkTaskManagerReplicaCount <Int32>]
+        [-HistoryServerCpu <Single>]
+        [-HistoryServerMemory <Int64>]
+        [-HiveMetastoreDbConnectionAuthenticationMode <String>]
+        [-JobManagerCpu <Single>]
+        [-JobManagerMemory <Int64>]
+        [-JobSpecArg <String>]
+        [-JobSpecEntryClass <String>]
+        [-JobSpecJarName <String>]
+        [-JobSpecJobJarDirectory <String>]
+        [-JobSpecSavePointName <String>]
+        [-JobSpecUpgradeMode <String>]
+        [-KafkaProfileEnableKRaft]
+        [-KafkaProfileEnablePublicEndpoint]
+        [-KafkaProfileRemoteStorageUri <String>]
+        [-KeyVaultResourceId <String>]
+        [-LlapProfile <Hashtable>]
+        [-LoadBasedConfigCooldownPeriod <Int32>]
+        [-LoadBasedConfigMaxNode <Int32>]
+        [-LoadBasedConfigMinNode <Int32>]
+        [-LoadBasedConfigPollInterval <Int32>]
+        [-LoadBasedConfigScalingRule <IScalingRule[]>]
+        [-LogAnalyticProfileMetricsEnabled]
+        [-ManagedIdentityProfileIdentityList <IManagedIdentitySpec[]>]
+        [-MetastoreSpecDbConnectionAuthenticationMode <String>]
+        [-OssVersion <String>]
+        [-PrometheuProfileEnabled]
+        [-RangerAdmin <String[]>]
+        [-RangerAuditStorageAccount <String>]
+        [-RangerPluginProfileEnabled]
+        [-RangerUsersyncEnabled]
+        [-RangerUsersyncGroup <String[]>]
+        [-RangerUsersyncMode <String>]
+        [-RangerUsersyncUser <String[]>]
+        [-RangerUsersyncUserMappingLocation <String>]
+        [-ScheduleBasedConfigDefaultCount <Int32>]
+        [-ScheduleBasedConfigSchedule <ISchedule[]>]
+        [-ScheduleBasedConfigTimeZone <String>]
+        [-ScriptActionProfile <IScriptActionProfile[]>]
+        [-SecretReference <ISecretReference[]>]
+        [-ServiceConfigsProfile <IClusterServiceConfigsProfile[]>]
+        [-SparkHiveCatalogDbName <String>]
+        [-SparkHiveCatalogDbPasswordSecretName <String>]
+        [-SparkHiveCatalogDbServerName <String>]
+        [-SparkHiveCatalogDbUserName <String>]
+        [-SparkHiveCatalogKeyVaultId <String>]
+        [-SparkStorageUrl <String>]
+        [-SparkThriftUrl <String>]
+        [-SshProfileCount <Int32>]
+        [-SshProfileVMSize <String>]
+        [-StorageHivecatalogName <String>]
+        [-StorageHivecatalogSchema <String>]
+        [-StoragePartitionRetentionInDay <Int32>]
+        [-StoragePath <String>]
+        [-StubProfile <Hashtable>]
+        [-Tag <Hashtable>]
+        [-TaskManagerCpu <Single>]
+        [-TaskManagerMemory <Int64>]
+        [-TrinoHiveCatalog <IHiveCatalogOption[]>]
+        [-TrinoProfileUserPluginsSpecPlugin <ITrinoUserPlugin[]>]
+        [-WorkerDebugEnable]
+        [-WorkerDebugPort <Int32>]
+        [-WorkerDebugSuspend]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityClusterpoolExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -ClusterpoolInputObject <IHdInsightOnAksIdentity>
+        -HdInsightOnAksCluster <ICluster>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityClusterpool
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -Name <String>
+        -PoolName <String>
+        -ResourceGroupName <String>
+        -HdInsightOnAksCluster <ICluster>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Create
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -InputObject <IHdInsightOnAksIdentity>
+        -Location <String>
+        [-ApplicationLogStdErrorEnabled]
+        [-ApplicationLogStdOutEnabled]
+        [-AssignedIdentityClientId <String>]
+        [-AssignedIdentityObjectId <String>]
+        [-AssignedIdentityResourceId <String>]
+        [-AuthorizationGroupId <String[]>]
+        [-AuthorizationUserId <String[]>]
+        [-AutoscaleProfileAutoscaleType <String>]
+        [-AutoscaleProfileEnabled]
+        [-AutoscaleProfileGracefulDecommissionTimeout <Int32>]
+        [-ClusterAccessProfileEnableInternalIngress]
+        [-ClusterType <String>]
+        [-ClusterVersion <String>]
+        [-ComputeProfileAvailabilityZone <String[]>]
+        [-ComputeProfileNode <INodeProfile[]>]
+        [-CoordinatorDebugEnable]
+        [-CoordinatorDebugPort <Int32>]
+        [-CoordinatorDebugSuspend]
+        [-CoordinatorHighAvailabilityEnabled]
+        [-DatabaseHost <String>]
+        [-DatabaseName <String>]
+        [-DatabasePasswordSecretRef <String>]
+        [-DatabaseUsername <String>]
+        [-DiskStorageDataDiskSize <Int32>]
+        [-DiskStorageDataDiskType <String>]
+        [-EnableLogAnalytics]
+        [-FlinkHiveCatalogDbConnectionUrl <String>]
+        [-FlinkHiveCatalogDbPasswordSecretName <String>]
+        [-FlinkHiveCatalogDbUserName <String>]
+        [-FlinkProfileDeploymentMode <String>]
+        [-FlinkStorageUrl <String>]
+        [-FlinkTaskManagerReplicaCount <Int32>]
+        [-HistoryServerCpu <Single>]
+        [-HistoryServerMemory <Int64>]
+        [-HiveMetastoreDbConnectionAuthenticationMode <String>]
+        [-JobManagerCpu <Single>]
+        [-JobManagerMemory <Int64>]
+        [-JobSpecArg <String>]
+        [-JobSpecEntryClass <String>]
+        [-JobSpecJarName <String>]
+        [-JobSpecJobJarDirectory <String>]
+        [-JobSpecSavePointName <String>]
+        [-JobSpecUpgradeMode <String>]
+        [-KafkaProfileEnableKRaft]
+        [-KafkaProfileEnablePublicEndpoint]
+        [-KafkaProfileRemoteStorageUri <String>]
+        [-KeyVaultResourceId <String>]
+        [-LlapProfile <Hashtable>]
+        [-LoadBasedConfigCooldownPeriod <Int32>]
+        [-LoadBasedConfigMaxNode <Int32>]
+        [-LoadBasedConfigMinNode <Int32>]
+        [-LoadBasedConfigPollInterval <Int32>]
+        [-LoadBasedConfigScalingRule <IScalingRule[]>]
+        [-LogAnalyticProfileMetricsEnabled]
+        [-ManagedIdentityProfileIdentityList <IManagedIdentitySpec[]>]
+        [-MetastoreSpecDbConnectionAuthenticationMode <String>]
+        [-OssVersion <String>]
+        [-PrometheuProfileEnabled]
+        [-RangerAdmin <String[]>]
+        [-RangerAuditStorageAccount <String>]
+        [-RangerPluginProfileEnabled]
+        [-RangerUsersyncEnabled]
+        [-RangerUsersyncGroup <String[]>]
+        [-RangerUsersyncMode <String>]
+        [-RangerUsersyncUser <String[]>]
+        [-RangerUsersyncUserMappingLocation <String>]
+        [-ScheduleBasedConfigDefaultCount <Int32>]
+        [-ScheduleBasedConfigSchedule <ISchedule[]>]
+        [-ScheduleBasedConfigTimeZone <String>]
+        [-ScriptActionProfile <IScriptActionProfile[]>]
+        [-SecretReference <ISecretReference[]>]
+        [-ServiceConfigsProfile <IClusterServiceConfigsProfile[]>]
+        [-SparkHiveCatalogDbName <String>]
+        [-SparkHiveCatalogDbPasswordSecretName <String>]
+        [-SparkHiveCatalogDbServerName <String>]
+        [-SparkHiveCatalogDbUserName <String>]
+        [-SparkHiveCatalogKeyVaultId <String>]
+        [-SparkStorageUrl <String>]
+        [-SparkThriftUrl <String>]
+        [-SshProfileCount <Int32>]
+        [-SshProfileVMSize <String>]
+        [-StorageHivecatalogName <String>]
+        [-StorageHivecatalogSchema <String>]
+        [-StoragePartitionRetentionInDay <Int32>]
+        [-StoragePath <String>]
+        [-StubProfile <Hashtable>]
+        [-Tag <Hashtable>]
+        [-TaskManagerCpu <Single>]
+        [-TaskManagerMemory <Int64>]
+        [-TrinoHiveCatalog <IHiveCatalogOption[]>]
+        [-TrinoProfileUserPluginsSpecPlugin <ITrinoUserPlugin[]>]
+        [-WorkerDebugEnable]
+        [-WorkerDebugPort <Int32>]
+        [-WorkerDebugSuspend]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksCluster
+        -InputObject <IHdInsightOnAksIdentity>
+        -HdInsightOnAksCluster <ICluster>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ICluster" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IHdInsightOnAksIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ICluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create simple Trino cluster'
+  description: |-
+    ```powershell
+    # Create Simple Trino Cluster
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Trino"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8ads_v5";
+    $workerCount=5;
+
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    $clusterName="{your cluster name}";
+
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Trino
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Trino cluster with least parameters.
+- title: 'Example 2: Create Trino cluster with hive catalog'
+  description: |-
+    ```powershell
+    # Create trino cluster with Hive catalog
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Trino"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    # user msi related parameters
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    # cluster authorization information
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8ads_v5";
+    $workerCount=5;
+
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    $keyVaultResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/{your resource group name}/providers/Microsoft.KeyVault/vaults/{your vault name}";
+    $secretName="{your secret name}"
+    $referenceName="{your secret reference name}";
+
+    $secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName
+
+    #hive catalog configuration
+
+    $catalogName="{your catalog name}"
+    $metastoreDbConnectionURL="jdbc:sqlserver://{your sql server url};database={your db name};encrypt=true;trustServerCertificate=true;loginTimeout=30;";
+    $metastoreDbUserName="{your db user name}";
+    $metastoreDbPasswordSecret=$secretName;
+    $metastoreWarehouseDir="abfs://{your container name}@{your adls gen2 endpoint}/{your path}";
+
+    $trinoHiveCatalogOption=New-AzHdInsightOnAksTrinoHiveCatalogObject -CatalogName $catalogName -MetastoreDbConnectionUrl $metastoreDbConnectionURL -MetastoreDbConnectionUserName $metastoreDbUserName -MetastoreDbConnectionPasswordSecret $metastoreDbPasswordSecret -MetastoreWarehouseDir $metastoreWarehouseDir
+
+    $clusterName="{your cluster name}";
+
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId `
+                                -KeyVaultResourceId $keyVaultResourceId `
+                                -SecretReference $secretReference `
+                                -TrinoHiveCatalog $trinoHiveCatalogOption
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Trino
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Trino cluster with hive catalog feature.
+- title: 'Example 3: Create simple spark cluster'
+  description: |-
+    ```powershell
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Spark"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8d_v5";
+    $workerCount=5;
+
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    $sparkStorageUrl="abfs://{your container name}@{your adls gen2 endpoint}"
+
+    $clusterName="{your cluster name}";
+
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId `
+                                -SparkStorageUrl $sparkStorageUrl
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Spark
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Spark cluster with least parameters.
+- title: 'Example 4: Create Spark cluster with hive catalog'
+  description: |-
+    ```powershell
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Spark"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8s_v3";
+    $workerCount=5;
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    # secret profile
+    $keyVaultResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/{your resource group name}/providers/Microsoft.KeyVault/vaults/{your vault name}";
+    $secretName="{your secret name}"
+    $referenceName="{your secret reference name}";
+
+    $secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName
+
+    # Spark config
+    $sparkStorageUrl="abfs://{your container}@{your adls gen2 endpoint}" # example abfs://container@adlsgen2storage.dfs.core.windows.net
+
+    # Spark Hive catalog config
+    $metastoreDbName="{your db name}"
+    $metastoreServerName="{your sql server endpoint}" # example: server1.database.windows.net
+    $metastoreDbUserName="{your db user name}"
+    $metastoreDbPasswordSecret=$secretName
+
+    $clusterName="{your cluster name}";
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId `
+                                -KeyVaultResourceId $keyVaultResourceId `
+                                -SecretReference $secretReference `
+                                -SparkStorageUrl $sparkStorageUrl `
+                                -SparkHiveCatalogDbName $metastoreDbName `
+                                -SparkHiveCatalogDbPasswordSecretName $metastoreDbPasswordSecret `
+                                -SparkHiveCatalogDbServerName $metastoreServerName `
+                                -SparkHiveCatalogDbUserName $metastoreDbUserName `
+                                -SparkHiveCatalogKeyVaultId $keyVaultResourceId
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Spark
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Spark cluster with hive catalog feature.
+- title: 'Example 5: Create simple Flink cluster'
+  description: |-
+    ```powershell
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Flink"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8d_v5";
+    $workerCount=5;
+
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    # Flink config
+    $flinkStorageUrl="abfs://{your container}@{your adls gen2 endpoint}" # example abfs://container@adlsgen2storage.dfs.core.windows.net
+    $taskManagerCpu=1
+    $taskManagerMemory=4096  # memory in MB
+
+    $jobManagerCpu=1
+    $jobManagerMemory=4096   # memory in MB
+
+    $clusterName="{your cluster name}";
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId `
+                                -FlinkStorageUrl $flinkStorageUrl `
+                                -JobManagerCpu $jobManagerCpu `
+                                -JobManagerMemory $jobManagerMemory `
+                                -TaskManagerCpu $taskManagerCpu `
+                                -TaskManagerMemory $taskManagerMemory
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Flink
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Flink cluster with least parameters.
+- title: 'Example 6: Create Flink cluster with hive catalog'
+  description: |-
+    ```powershell
+    $clusterPoolName="{your cluster pool name}";
+    $resourceGroupName="{your resource group name}";
+    $location="West US 2";
+
+    $clusterType="Flink"
+    # Get available cluster version based the command Get-AzHdInsightOnAksAvailableClusterVersion
+    $clusterVersion= (Get-AzHdInsightOnAksAvailableClusterVersion -Location $location | Where-Object {$_.ClusterType -eq $clusterType})[0]
+
+    $msiResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/{your resource group name}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{your msi}";
+    $msiClientId="00000000-0000-0000-0000-000000000000";
+    $msiObjectId="00000000-0000-0000-0000-000000000000";
+
+    $userId="00000000-0000-0000-0000-000000000000";
+
+    # create node profile
+    $vmSize="Standard_E8d_v5";
+    $workerCount=5;
+
+    $nodeProfile = New-AzHdInsightOnAksNodeProfileObject -Type Worker -Count $workerCount -VMSize $vmSize
+
+    # Flink config
+    $flinkStorageUrl="abfs://{your container}@{your adls gen2 endpoint}" # example abfs://container@adlsgen2storage.dfs.core.windows.net
+    $taskManagerCpu=1
+    $taskManagerMemory=4096  # memory in MB
+
+    $jobManagerCpu=1
+    $jobManagerMemory=4096   # memory in MB
+
+    # secret profile
+    $keyVaultResourceId="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/{your resource group name}/providers/Microsoft.KeyVault/vaults/{your vault name}";
+    $secretName="{your secret name}"
+    $referenceName="{your secret reference name}";
+
+    $secretReference=New-AzHdInsightOnAksSecretReferenceObject -SecretName $secretName -ReferenceName $referenceName
+
+    # Flink hive catalog config
+    $metastoreDbConnectionUrl="jdbc:sqlserver://{your sql server url};database={your db name};encrypt=true;trustServerCertificate=true;loginTimeout=30;";
+    $metastoreDbUserName="{your db user name}"
+    $metastoreDbPasswordSecret=$secretName
+
+    $clusterName="{your cluster name}";
+
+    New-AzHdInsightOnAksCluster -Name $clusterName `
+                                -PoolName $clusterPoolName `
+                                -ResourceGroupName $resourceGroupName `
+                                -Location $location `
+                                -ClusterType $clusterType `
+                                -ClusterVersion $clusterVersion.ClusterVersionValue `
+                                -OssVersion $clusterVersion.OssVersion `
+                                -AssignedIdentityResourceId $msiResourceId `
+                                -AssignedIdentityClientId $msiClientId `
+                                -AssignedIdentityObjectId $msiObjectId `
+                                -ComputeProfileNode $nodeProfile `
+                                -AuthorizationUserId $userId `
+                                -KeyVaultResourceId $keyVaultResourceId `
+                                -SecretReference $secretReference `
+                                -FlinkStorageUrl $flinkStorageUrl `
+                                -JobManagerCpu $jobManagerCpu `
+                                -JobManagerMemory $jobManagerMemory `
+                                -TaskManagerCpu $taskManagerCpu `
+                                -TaskManagerMemory $taskManagerMemory `
+                                -FlinkHiveCatalogDbConnectionUrl $metastoreDbConnectionUrl `
+                                -FlinkHiveCatalogDbUserName $metastoreDbUserName `
+                                -FlinkHiveCatalogDbPasswordSecretName $metastoreDbPasswordSecret
+    ```
+
+    ```output
+    ApplicationLogStdErrorEnabled               : False
+    ApplicationLogStdOutEnabled                 : False
+    AuthorizationProfileGroupId                 :
+    AuthorizationProfileUserId                  : {00000000-0000-0000-0000-000000000000}
+    AutoscaleProfileAutoscaleType               :
+    AutoscaleProfileEnabled                     : False
+    AutoscaleProfileGracefulDecommissionTimeout :
+    ClusterType                                 : Flink
+    ComputeProfileNode                          : {Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProfil
+                                                  e, Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.NodeProf
+                                                  ile}
+    ConnectivityProfileSsh                      :
+    CoordinatorDebugEnable                      :
+    ...
+    ```
+
+    Create Flink cluster with hive catalog feature.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksCluster.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsightonaks/new-azhdinsightonakscluster
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksCluster.md
+  PlatyPS schema version: 2024-05-01

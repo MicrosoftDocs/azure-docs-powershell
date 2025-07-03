@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzDeploymentOperation
+name: Get-AzDeploymentOperation
+module: Az.Resources
+isPreview: false
+summary: |-
+  Get deployment operation
+description: |-
+  The **Get-AzDeploymentOperation** cmdlet lists all the operations that were part of a deployment to help you identify and give more information about the exact operations that failed for a particular deployment.
+  It can also show the response and the request content for each deployment operation.
+  This is the same information provided in the deployment details on the portal.
+
+  To get the request and the response content, enable the setting when submitting a deployment through **New-AzDeployment**.
+  It can potentially log and expose secrets like passwords used in the resource property or **listKeys** operations that are then returned when you retrieve the deployment operations.
+  For more on this setting and how to enable it, see New-AzDeployment and Debugging ARM template deployments
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The deployment name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByDeploymentName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentObject
+    type: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDeployment" data-throw-if-not-resolved="False" />
+    description: |-
+      The deployment object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByDeploymentObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The deployment operation Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByDeploymentName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentOperation
+        -DeploymentName <String>
+        [-OperationId <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByDeploymentName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDeploymentOperation
+        -DeploymentObject <PSDeployment>
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByDeploymentObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDeployment" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDeploymentOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get deployment operations given a deployment name'
+  description: |-
+    ```powershell
+    Get-AzDeploymentOperation -DeploymentName test
+    ```
+
+    Gets deployment operation with name "test" at the current subscription scope.
+- title: 'Example 2: Get a deployment and get its deployment operations'
+  description: |-
+    ```powershell
+    Get-AzDeployment -Name "test" | Get-AzDeploymentOperation
+    ```
+
+    This command gets the deployment "test" at the current subscription scope and get its deployment operations.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentOperation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azdeploymentoperation
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDeploymentOperation.md
+  PlatyPS schema version: 2024-05-01

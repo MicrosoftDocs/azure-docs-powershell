@@ -1,0 +1,142 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSiteRecoveryProtectionProfileDissociationJob
+name: Start-AzureSiteRecoveryProtectionProfileDissociationJob
+module: Azure
+isPreview: false
+summary: |-
+  Starts a dissociation job on a replication policy associated with a Site Recovery protection container.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSiteRecoveryProtectionProfileDissociationJob** cmdlet initiates a dissociation job on the replication policy associated with an Azure Site Recovery protection container.
+parameters:
+  cmdletParameters:
+  - name: PrimaryProtectionContainer
+    type: <xref href="ASRProtectionContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a primary protection container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionProfile
+    type: <xref href="ASRProtectionProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protection profile settings to disassociate from the protection containers.
+      Specifies the protection profile settings to apply to the protection containers.
+      To obtain an **ASRProtectionProfile** object, use the New-AzureSiteRecoveryProtectionProfileObject cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryProtectionContainer
+    type: <xref href="ASRProtectionContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a recovery protection container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryProtectionProfileDissociationJob
+        -ProtectionProfile <ASRProtectionProfile>
+        -PrimaryProtectionContainer <ASRProtectionContainer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToAzure
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryProtectionProfileDissociationJob
+        -ProtectionProfile <ASRProtectionProfile>
+        -PrimaryProtectionContainer <ASRProtectionContainer>
+        -RecoveryProtectionContainer <ASRProtectionContainer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToEnterprise
+  isDefault: false
+examples:
+- title: 'Example 1: Dissociate a protection profile'
+  description: |-
+    ```
+    PS C:\> $ProtectionContainer01 = Get-AzureSiteRecoveryProtectionContainer -Id "5ba2ea95-856d-4033-9ca3-91e3e2c080b9"
+    PS C:\> $ProtectionContainer02 = Get-AzureSiteRecoveryProtectionContainer -Id "cf011f2a-aa19-443c-9f60-357f6b8afb77"
+    PS C:\> Start-AzureSiteRecoveryProtectionProfileDissociationJob -PrimaryProtectionContainer $ProtectionContainer01 -ProtectionProfile $ProtectionContainer01.AvailableProtectionProfiles[0] -RecoveryProtectionContainer $ProtectionContainer02
+    Name             : MyProtectionProfile
+    ID               : 51978b0f-9241-4153-9171-2e19344f0805
+    ClientRequestId  : bb6f3200-b7c6-4c6f-bcbc-a70bb9946f03-2015-01-30 02:55:55Z-P
+    State            : NotStarted
+    StateDescription : NotStarted
+    StartTime        :
+    EndTime          :
+    AllowedActions   :
+    Tasks            : {}
+    Errors           : {}
+    ```
+
+    The first command gets a protection container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that container in the $ProtectionContainer01 variable.
+
+    The second command gets a protection container, and then stores it in the $ProtectionContainer02 variable.
+
+    The final command dissociates the protection profile from the container stored in $ProtectionContainer01 as the primary protection container.
+    The command dissociates the container stored in $ProtectionContainer02 as the recovery protection container.
+links:
+- text: Get-AzureSiteRecoveryProtectionContainer
+  href: ./Get-AzureSiteRecoveryProtectionContainer.yml
+- text: New-AzureSiteRecoveryProtectionProfileObject
+  href: ./New-AzureSiteRecoveryProtectionProfileObject.yml
+- text: Start-AzureSiteRecoveryProtectionProfileAssociationJob
+  href: ./Start-AzureSiteRecoveryProtectionProfileAssociationJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 185506BC-6155-4517-BCBD-BCDE7450C7A8
+  PlatyPS schema version: 2024-05-01

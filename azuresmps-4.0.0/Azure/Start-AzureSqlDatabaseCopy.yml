@@ -1,0 +1,366 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSqlDatabaseCopy
+name: Start-AzureSqlDatabaseCopy
+module: Azure
+isPreview: false
+summary: |-
+  Starts a copy operation of an Azure SQL Database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSqlDatabaseCopy** cmdlet starts a one-time copy operation or a continuous copy operation of a specific Azure SQL Database.
+  This cmdlet is not transactional.
+
+  The original database is the source database.
+  The copy is the secondary or target database.
+  For a continuous copy, the source and target databases cannot reside on the same server, and the servers that host the source and target databases must be part of the same subscription.
+
+  If you do not specify the *ContinuousCopy* parameter, this cmdlet creates a one-time copy of the source database.
+  When the response is received, the operation can still be in progress.
+  You can monitor the operation by using the Get-AzureSqlDatabaseCopy or Get-AzureSqlDatabaseOperation cmdlet.
+
+  If you specify *ContinuousCopy*, this cmdlet creates a continuous copy of the source database.
+  When the response is received, the operation will be in progress.
+  You can monitor the operation by using **Get-AzureSqlDatabaseCopy** or **Get-AzureSqlDatabaseOperation**.
+
+  You can create a continuous copy as an online or offline database.
+  The online continuous copy is used to configure Active Geo-Replication for Azure SQL Database/azure/azure-sql/database/active-geo-replication-overview.
+  The offline continuous copy is used to configure Standard Geo-Replication for Azure SQL Database/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview.
+notes: |-
+  * Authentication: This cmdlet requires certificate-based authentication. For an example of how to use certificate-based authentication to set the current subscription, see New-AzureSqlDatabaseServerContext cmdlet.
+  * Monitoring: To check for the status of one or more continuous copy relationships that are active on the server, use the **Get-AzureSqlDatabaseCopy** cmdlet. To verify the status of the operations at both the source and target of the continuous copy relationship, use the **Get-AzureSqlDatabaseOperation** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContinuousCopy
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the database copy will be a continuous-copy (a replica database).
+      Continuous copy is not supported within the same server.
+      If this parameter is not specified, then a one-time copy is performed.
+      For a one-time copy, the source and partner databases must be on the same server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectContinuous
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabaseNameContinuous
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Database
+    type: <xref href="Database" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an object that represents the source Azure SQL Database.
+      This parameter accepts pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectContinuous
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the source database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabaseNameContinuous
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfflineSecondary
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that a continuous copy is a passive copy rather than an active copy.
+      If the source database is a Standard edition database, then this parameter is required.
+      If this parameter is specified then *ContinuousCopy* must also be specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectContinuous
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabaseNameContinuous
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerDatabase
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies name of the target database.
+      If you specify the *ContinuousCopy* parameter, the value for *PartnerDatabase* must match the name of the source database.
+      If you do not specify *ContinuousCopy*, you must specify a name for the target database, which can be different from the source database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabaseName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerServer
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that hosts the target database.
+      This server must be in the same Azure subscription as the source database server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDatabaseName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server on which the source database resides.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -Database <Database>
+        -PartnerDatabase <String>
+        [-PartnerServer <String>]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -Database <Database>
+        -PartnerServer <String>
+        [-PartnerDatabase <String>]
+        [-ContinuousCopy]
+        [-OfflineSecondary]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectContinuous
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -DatabaseName <String>
+        -PartnerDatabase <String>
+        [-PartnerServer <String>]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDatabaseName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseCopy
+        -ServerName <String>
+        -DatabaseName <String>
+        -PartnerServer <String>
+        [-PartnerDatabase <String>]
+        [-ContinuousCopy]
+        [-OfflineSecondary]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDatabaseNameContinuous
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.Database" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.DatabaseCopy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Schedule a continuous database copy'
+  description: |-
+    ```
+    PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy
+    ```
+
+    This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.
+    The command creates a target database on the server named bk0b8kf658.
+- title: 'Example 2: Create a one-time copy on the same server'
+  description: |-
+    ```
+    PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerDatabase "OrdersCopy"
+    ```
+
+    This command creates a one-time copy of the database named Orders on the server named lpqd0zbr8y.
+    The command creates a copy named OrdersCopy on the same server.
+- title: 'Example 3: Schedule a continuous offline database copy'
+  description: |-
+    ```
+    PS C:\> Start-AzureSqlDatabaseCopy -ServerName "lpqd0zbr8y" -DatabaseName "Orders" -PartnerServer "bk0b8kf65" -ContinuousCopy -OfflineSecondary
+    ```
+
+    This command schedules a continuous copy of the database named Orders on the server named lpqd0zbr8y.
+    This command creates an offline target database on the server named bk0b8kf658.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Start Database Copy
+  href: https://msdn.microsoft.com/en-us/library/azure/dn509576.aspx
+- text: Get-AzureSqlDatabaseCopy
+  href: ./Get-AzureSqlDatabaseCopy.yml
+- text: Stop-AzureSqlDatabaseCopy
+  href: ./Stop-AzureSqlDatabaseCopy.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: B7F07494-FBCA-4A77-92BF-E0A2D7ACCD21
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Rename-AzureRemoteAppTemplateImage
+name: Rename-AzureRemoteAppTemplateImage
+module: Azure
+isPreview: false
+summary: |-
+  Renames an Azure RemoteApp template image.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Rename-AzureRemoteAppTemplateImage** cmdlet renames an Azure RemoteApp template image.
+parameters:
+  cmdletParameters:
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure RemoteApp template image to rename.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NewName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a new name for an Azure RemoteApp template image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Rename-AzureRemoteAppTemplateImage
+        [-ImageName] <String>
+        [-NewName] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Rename a template image'
+  description: |-
+    ```
+    PS C:\> Rename-AzureRemoteAppTemplateImage -ImageName "ContosoApps" -NewName "ContosoFinanceApps"
+    ```
+
+    This command renames the Azure RemoteApp template image named ContosoApps to ContosoFinanceApps.
+links:
+- text: Get-AzureRemoteAppTemplateImage
+  href: ./Get-AzureRemoteAppTemplateImage.yml
+- text: New-AzureRemoteAppTemplateImage
+  href: ./New-AzureRemoteAppTemplateImage.yml
+- text: Remove-AzureRemoteAppTemplateImage
+  href: ./Remove-AzureRemoteAppTemplateImage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 22571840-C27C-4208-A755-EF89E6C4B604
+  PlatyPS schema version: 2024-05-01

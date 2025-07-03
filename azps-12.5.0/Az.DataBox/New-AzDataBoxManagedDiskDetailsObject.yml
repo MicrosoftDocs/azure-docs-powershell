@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.New-AzDataBoxManagedDiskDetailsObject
+name: New-AzDataBoxManagedDiskDetailsObject
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Create an in-memory object for ManagedDiskDetails.
+description: |-
+  Create an in-memory object for ManagedDiskDetails.
+parameters:
+  cmdletParameters:
+  - name: DataAccountType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Support.DataAccountType" data-throw-if-not-resolved="False" />
+    description: |-
+      Account Type of the data to be transferred.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Id of the compute disks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharePassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Password for all the shares to be created on the device.
+      Should not be passed for TransferType:ExportFromAzure jobs.
+      If this is not passed, the service will generate password itself.
+      This will not be returned in Get Call.
+      Password Requirements :  Password must be minimum of 12 and maximum of 64 characters.
+      Password must have at least one uppercase alphabet, one number and one special character.
+      Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StagingStorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the storage account that can be used to copy the vhd for staging.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataBoxManagedDiskDetailsObject
+        -ResourceGroupId <String>
+        -StagingStorageAccountId <String>
+        -DataAccountType <DataAccountType>
+        [-SharePassword <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20221201.ManagedDiskDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: ManagedDisk object'
+  description: |-
+    ```powershell
+    New-AzDataBoxManagedDiskDetailsObject -ResourceGroupId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName" -StagingStorageAccountId "/subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Storage/storageAccounts/stagingAccountName" -DataAccountType "ManagedDisk"
+    ```
+
+    ```output
+    DataAccountType SharePassword ResourceGroupId                                                StagingStorageAccountId
+    --------------- ------------- ---------------                                                -----------------------
+    ManagedDisk                   /subscriptions/SubscriptionId/resourceGroups/resourceGroupName /subscriptions/SubscriptionId/resourceGroups/resourceGroupName/providers/Microsoft.Storage/storageAccounts/stagingAccountName
+    ```
+
+    Creates a in-memory managed disk object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxManagedDiskDetailsObject.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DataBox/new-AzDataBoxManagedDiskDetailsObject
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxManagedDiskDetailsObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,73 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureLocalNetworkGateway
+name: Get-AzureLocalNetworkGateway
+module: Azure
+isPreview: false
+summary: |-
+  Gets a local network gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureLocalNetworkGateway** cmdlet gets a local network gateway.
+parameters:
+  cmdletParameters:
+  - name: GatewayId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the gateway to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureLocalNetworkGateway
+        [-GatewayId <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: New-AzureLocalNetworkGateway
+  href: ./New-AzureLocalNetworkGateway.yml
+- text: Remove-AzureLocalNetworkGateway
+  href: ./Remove-AzureLocalNetworkGateway.yml
+- text: Reset-AzureLocalNetworkGateway
+  href: ./Reset-AzureLocalNetworkGateway.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D7A50D71-1D23-431E-9ACD-3A0D1BDC2B17
+  PlatyPS schema version: 2024-05-01

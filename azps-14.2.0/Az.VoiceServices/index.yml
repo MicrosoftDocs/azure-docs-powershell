@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.VoiceServices
+name: Az.VoiceServices Module
+isPreview: false
+cmdletGroups:
+- title: VoiceServices
+  cmdlets:
+  - Az.VoiceServices.Get-AzVoiceServicesCommunicationsGateway
+  - Az.VoiceServices.Get-AzVoiceServicesCommunicationsTestLine
+  - Az.VoiceServices.New-AzVoiceServicesCommunicationsGateway
+  - Az.VoiceServices.New-AzVoiceServicesCommunicationsGatewayServiceRegionObject
+  - Az.VoiceServices.New-AzVoiceServicesCommunicationsTestLine
+  - Az.VoiceServices.Remove-AzVoiceServicesCommunicationsGateway
+  - Az.VoiceServices.Remove-AzVoiceServicesCommunicationsTestLine
+  - Az.VoiceServices.Test-AzVoiceServicesNameAvailability
+  - Az.VoiceServices.Update-AzVoiceServicesCommunicationsGateway
+  - Az.VoiceServices.Update-AzVoiceServicesCommunicationsTestLine
+description: |-
+  Microsoft Azure PowerShell: VoiceServices cmdlets
+metadata:
+  Module Name: Az.VoiceServices
+  Module Guid: 2104c31d-8a79-4ea7-9485-2fe25d5c97be
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.voiceservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VoiceServices/VoiceServices/help/Az.VoiceServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VoiceServices/VoiceServices/help/Az.VoiceServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

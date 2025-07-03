@@ -1,0 +1,291 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzApplicationGatewayListener
+name: Set-AzApplicationGatewayListener
+module: Az.Network
+isPreview: false
+summary: |-
+  Modifies a TCP\TLS listener for an application gateway.
+description: |-
+  The **Set-AzApplicationGatewayListener** cmdlet modifies a TCP\TLS listener for an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The applicationGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendIPConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendIPConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway FrontendIPConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendIPConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway FrontendIPConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendPort
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFrontendPort" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway FrontendPort
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendPortId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway FrontendPort
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostNames
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Host names
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Listener
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol
+    acceptedValues:
+    - TCP
+    - TLS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificate
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway SslCertificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway SslCertificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslProfile
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      SslProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslProfileId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SslProfileId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayListener
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -Protocol <String>
+        [-FrontendIPConfiguration <PSApplicationGatewayFrontendIPConfiguration>]
+        [-FrontendPort <PSApplicationGatewayFrontendPort>]
+        [-SslCertificate <PSApplicationGatewaySslCertificate>]
+        [-SslProfile <PSApplicationGatewaySslProfile>]
+        [-HostNames <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayListener
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -Protocol <String>
+        [-FrontendIPConfigurationId <String>]
+        [-FrontendPortId <String>]
+        [-SslCertificateId <String>]
+        [-SslProfileId <String>]
+        [-HostNames <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set a TCP listener'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $AppGw = Set-AzApplicationGatewayListener -ApplicationGateway $AppGw -Name "Listener01" -Protocol Tcp -FrontendIpConfiguration $FIP01 -FrontendPort 80
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
+    The second command sets the listener for the gateway to use the front-end configuration stored in $FIP01 with the Tcp protocol on port 80.
+- title: 'Example 2: Add a TLS listener with SSL Certificate'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $AppGw = Set-AzApplicationGatewayListener -ApplicationGateway $AppGw -Name "Listener01" -Protocol "Tls" -FrontendIpConfiguration $FIP01 -FrontendPort $FP01 -SslCertificate $SSLCert01
+    ```
+
+    The first command gets the application gateway and stores it in the $AppGw variable.
+    The second command adds the listener, which uses the Tls protocol, with SSL Certificates , to the application gateway.
+links:
+- text: Add-AzApplicationGatewayListener
+  href: ./Add-AzApplicationGatewayListener.yml
+- text: Get-AzApplicationGatewayListener
+  href: ./Get-AzApplicationGatewayListener.yml
+- text: New-AzApplicationGatewayListener
+  href: ./New-AzApplicationGatewayListener.yml
+- text: Remove-AzApplicationGatewayListener
+  href: ./Remove-AzApplicationGatewayListener.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayListener.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewaylistener
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayListener.md
+  PlatyPS schema version: 2024-05-01

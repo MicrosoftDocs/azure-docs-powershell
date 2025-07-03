@@ -1,0 +1,242 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchCertificate
+name: Get-AzBatchCertificate
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets the certificates in a Batch account.
+description: |-
+  The **Get-AzBatchCertificate** cmdlet gets the certificates in the Azure Batch account that the *BatchContext* parameter specifies.
+  To obtain a particular certificate, specify the *ThumbprintAlgorithm* and *Thumbprint* parameters.
+  Specify the *Filter* parameter to get the certificates that match an Open Data Protocol (OData) filter.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData filter clause.
+      If you specify this parameter, this cmdlet gets the certificates that match the filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of certificates to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the thumbprint of the certificate that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Thumbprint
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThumbprintAlgorithm
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the algorithm used to derive the *Thumbprint* parameter.
+      Currently, the only valid value is sha1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Thumbprint
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchCertificate
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchCertificate
+        [-ThumbprintAlgorithm] <String>
+        [-Thumbprint] <String>
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Thumbprint
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a certificate by thumbprint'
+  description: |-
+    ```powershell
+    Get-AzBatchCertificate -ThumbprintAlgorithm "sha1" -Thumbprint "C1******7C" -BatchContext $Context
+    ```
+
+    ```output
+    Thumbprint                  : C1******7C
+    ThumbprintAlgorithm         : sha1
+    Url                         : https://pstests.eastus.batch.azure.com/certificates(thumbprintAlgorithm=sha1,thumbprint=C1******47
+    C)
+    State                       : Active
+    StateTransitionTime         : 10/6/2015 6:21:16 PM
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Data                        :
+    CertificateFormat           :
+    Password                    :
+    PublicData                  : MI******FJ
+    DeleteCertificateError      :
+    ```
+
+    This command gets a single certificate that has the specified thumbprint.
+    The certificate thumbprint algorithm is sha1.
+- title: 'Example 2: Get filtered certificates'
+  description: |-
+    ```powershell
+    Get-AzBatchCertificate -Filter "state eq 'active'" -BatchContext $Context
+    ```
+
+    ```output
+    Thumbprint                  : 025b351b087a084c5067f5e71eff8591970323f9
+    ThumbprintAlgorithm         : sha1
+    Url                         : https://pstests.eastus.batch.azure.com/certificates(thumbprintAlgorithm=sha1,thumbprint=02******f9)
+    State                       : Active
+    StateTransitionTime         : 10/6/2015 6:21:17 PM
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Data                        :
+    CertificateFormat           :
+    Password                    :
+    PublicData                  : ********************************
+    DeleteCertificateError      :
+
+    Thumbprint                  : C1******7C
+    ThumbprintAlgorithm         : sha1
+    Url                         : https://pstests.eastus.batch.azure.com/certificates(thumbprintAlgorithm=sha1,thumbprint=C1******7C)
+    State                       : Active
+    StateTransitionTime         : 10/6/2015 6:21:16 PM
+    PreviousState               :
+    PreviousStateTransitionTime :
+    Data                        :
+    CertificateFormat           :
+    Password                    :
+    PublicData                  : ********************************
+    DeleteCertificateError      :
+    ```
+
+    This command gets all certificates in the active state from the Batch account.
+    The *Filter* parameter specifies the state.
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: New-AzBatchCertificate
+  href: ./New-AzBatchCertificate.yml
+- text: Remove-AzBatchCertificate
+  href: ./Remove-AzBatchCertificate.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchcertificate
+  Module Name: Az.Batch
+  ms.assetid: A9C98F8F-90F2-4BF4-A234-31966FBB975B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchCertificate.md
+  PlatyPS schema version: 2024-05-01

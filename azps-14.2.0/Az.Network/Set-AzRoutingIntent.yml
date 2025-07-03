@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzRoutingIntent
+name: Set-AzRoutingIntent
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a routing intent resource associated with a VirtualHub.
+description: |-
+  Updates the specified routing intent that is associated with the specified virtual hub. If a list of routing policies is provided, these will overwrite the existing policies on the current routing intent resource.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingIntent" data-throw-if-not-resolved="False" />
+    description: |-
+      The RoutingIntent resource to Set.
+    aliases:
+    - RoutingIntent
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRoutingIntentObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - RoutingIntentName
+    - RouteTableName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRoutingIntentName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent virtual hub object of this resource.
+    aliases:
+    - VirtualHub
+    - ParentVirtualHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource name.
+    aliases:
+    - VirtualHubName
+    - ParentVirtualHubName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRoutingIntentName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRoutingIntentName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the RoutingIntent resource to Set.
+    aliases:
+    - RoutingIntentId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRoutingIntentResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of RoutingPolicies to update in this routing intent resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzRoutingIntent
+        -ResourceGroupName <String>
+        -ParentResourceName <String>
+        -Name <String>
+        [-RoutingPolicy <PSRoutingPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRoutingIntentName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzRoutingIntent
+        -Name <String>
+        -ParentObject <PSVirtualHub>
+        [-RoutingPolicy <PSRoutingPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRoutingIntent
+        -InputObject <PSRoutingIntent>
+        [-RoutingPolicy <PSRoutingPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRoutingIntentObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRoutingIntent
+        -ResourceId <String>
+        [-RoutingPolicy <PSRoutingPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRoutingIntentResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingIntent" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingIntent" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan" -Location "westcentralus" -VirtualWANType "Standard" -AllowVnetToVnetTraffic -AllowBranchToBranchTraffic
+    $virtualWan = Get-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan"
+
+    New-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub" -Location "westcentralus" -AddressPrefix "10.0.0.0/16" -VirtualWan $virtualWan
+    $virtualHub = Get-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub"
+
+    $fwIp = New-AzFirewallHubPublicIpAddress -Count 1
+    $hubIpAddresses = New-AzFirewallHubIpAddress -PublicIP $fwIp
+
+    New-AzFirewall -Name "testFirewall" -ResourceGroupName "testRg" -Location "westcentralus" -Sku AZFW_Hub -VirtualHubId $virtualHub.Id -HubIPAddress $hubIpAddresses
+    $firewall = Get-AzFirewall -Name "testFirewall" -ResourceGroupName "testRg"
+
+    $policy1 = New-AzRoutingPolicy -Name "PrivateTraffic" -Destination @("PrivateTraffic") -NextHop $firewall.Id
+    New-AzRoutingIntent -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRoutingIntent" -RoutingPolicy @($policy1)
+
+    $policy2 = New-AzRoutingPolicy -Name "PublicTraffic" -Destination @("Internet") -NextHop $firewall.Id
+    Set-AzRoutingIntent -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRoutingIntent" -RoutingPolicy @($policy2)
+    ```
+
+    ```output
+    ProvisioningState   : Succeeded
+    RoutingPolicies     : {PublicTraffic}
+    RoutingPoliciesText : [
+                            {
+                              "Name": "PublicTraffic",
+                              "DestinationType": "TrafficType",
+                              "Destinations": [
+                                "Internet"
+                              ],
+                              "NextHopType": "ResourceId",
+                              "NextHop": "/subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/azureFirewalls/testFirewall"
+                            }
+                          ]
+    Name                : testRoutingIntent
+    Etag                : W/"etag"
+    Id                  : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/routingIntent/testRoutingIntent
+    ```
+
+    This command deletes the hub RoutingPolicy table of the virtual hub.
+links:
+- text: Add-AzRoutingPolicy
+  href: ./Add-AzRoutingPolicy.yml
+- text: Get-AzRoutingIntent
+  href: ./Get-AzRoutingIntent.yml
+- text: Get-AzRoutingPolicy
+  href: ./Get-AzRoutingPolicy.yml
+- text: New-AzRoutingPolicy
+  href: ./New-AzRoutingPolicy.yml
+- text: Remove-AzRoutingIntent
+  href: ./Remove-AzRoutingIntent.yml
+- text: Remove-AzRoutingPolicy
+  href: ./Remove-AzRoutingPolicy.yml
+- text: Set-AzRoutingPolicy
+  href: ./Set-AzRoutingPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzRoutingIntent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azroutingintent
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzRoutingIntent.md
+  PlatyPS schema version: 2024-05-01

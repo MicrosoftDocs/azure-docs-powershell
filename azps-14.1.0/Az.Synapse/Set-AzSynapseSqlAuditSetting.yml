@@ -1,0 +1,539 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Set-AzSynapseSqlAuditSetting
+name: Set-AzSynapseSqlAuditSetting
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Changes the auditing settings of an Azure Synapse Analytics Workspace.
+description: |-
+  The **Set-AzSynapseSqlAuditSetting** cmdlet changes the auditing settings of an Azure Synapse Analytics Workspace.
+  When blob storage is a destination for audit logs, specify the *StorageAccountResourceId* parameter to determine the storage account for the audit logs and the *StorageKeyType* parameter to define the storage keys. You can also define retention for the audit logs by setting the value of the *RetentionInDays* parameter to define the period for the audit logs.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuditActionGroup
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.Auditing.AuditActionGroups" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The recommended set of action groups to use is the following combination - this will audit all the queries and stored procedures executed against the database, as well as successful and failed logins:
+
+
+
+      "BATCH_COMPLETED_GROUP",
+
+      "SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP",
+
+      "FAILED_DATABASE_AUTHENTICATION_GROUP"
+
+      This above combination is also the set that is configured by default.
+      These groups cover all SQL statements and stored procedures executed against the database, and should not be used in combination with other groups as this will result in duplicate audit logs.
+
+      For more information, see https://learn.microsoft.com/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups.
+    acceptedValues:
+    - BATCH_STARTED_GROUP
+    - BATCH_COMPLETED_GROUP
+    - APPLICATION_ROLE_CHANGE_PASSWORD_GROUP
+    - BACKUP_RESTORE_GROUP
+    - DATABASE_LOGOUT_GROUP
+    - DATABASE_OBJECT_CHANGE_GROUP
+    - DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP
+    - DATABASE_OBJECT_PERMISSION_CHANGE_GROUP
+    - DATABASE_OPERATION_GROUP
+    - DATABASE_PERMISSION_CHANGE_GROUP
+    - DATABASE_PRINCIPAL_CHANGE_GROUP
+    - DATABASE_PRINCIPAL_IMPERSONATION_GROUP
+    - DATABASE_ROLE_MEMBER_CHANGE_GROUP
+    - FAILED_DATABASE_AUTHENTICATION_GROUP
+    - SCHEMA_OBJECT_ACCESS_GROUP
+    - SCHEMA_OBJECT_CHANGE_GROUP
+    - SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP
+    - SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP
+    - SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP
+    - USER_CHANGE_PASSWORD_GROUP
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BlobStorageTargetState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether blob storage is a destination for audit records.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubAuthorizationRuleResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Id for the event hub authorization rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the event hub. If none is specified when providing EventHubAuthorizationRuleResourceId, the default event hub will be selected.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubTargetState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether event hub is a destination for audit records.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticsTargetState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether log analytics is a destination for audit records.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      This Cmdlet does not return an object by default.
+      If this switch is specified, it returns true if successful.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PredicateExpression
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The T-SQL predicate (WHERE clause) used to filter audit logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WorkspaceParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WorkspaceResourceIdParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionInDays
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.UInt32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The number of retention days for the audit logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage account resource id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageKeyType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies which of the storage access keys to use.
+    acceptedValues:
+    - Primary
+    - Secondary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WorkspaceParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      workspace input object, usually passed through the pipeline.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WorkspaceObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Audit Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlAuditSetting
+        [[-ResourceGroupName] <String>]
+        [-WorkspaceName] <String>
+        [-AuditActionGroup <AuditActionGroups[]>]
+        [-PredicateExpression <String>]
+        [-StorageKeyType <String>]
+        [-RetentionInDays <UInt32>]
+        [-BlobStorageTargetState <String>]
+        [-StorageAccountResourceId <String>]
+        [-EventHubTargetState <String>]
+        [-EventHubName <String>]
+        [-EventHubAuthorizationRuleResourceId <String>]
+        [-LogAnalyticsTargetState <String>]
+        [-WorkspaceResourceId <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WorkspaceParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlAuditSetting
+        -WorkspaceObject <PSSynapseWorkspace>
+        [-AuditActionGroup <AuditActionGroups[]>]
+        [-PredicateExpression <String>]
+        [-StorageKeyType <String>]
+        [-RetentionInDays <UInt32>]
+        [-BlobStorageTargetState <String>]
+        [-StorageAccountResourceId <String>]
+        [-EventHubTargetState <String>]
+        [-EventHubName <String>]
+        [-EventHubAuthorizationRuleResourceId <String>]
+        [-LogAnalyticsTargetState <String>]
+        [-WorkspaceResourceId <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WorkspaceObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSynapseSqlAuditSetting
+        -ResourceId <String>
+        [-AuditActionGroup <AuditActionGroups[]>]
+        [-PredicateExpression <String>]
+        [-StorageKeyType <String>]
+        [-RetentionInDays <UInt32>]
+        [-BlobStorageTargetState <String>]
+        [-StorageAccountResourceId <String>]
+        [-EventHubTargetState <String>]
+        [-EventHubName <String>]
+        [-EventHubAuthorizationRuleResourceId <String>]
+        [-LogAnalyticsTargetState <String>]
+        [-WorkspaceResourceId <String>]
+        [-PassThru]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WorkspaceResourceIdParameterSetName
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseWorkspace" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.WorkspaceAuditModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -BlobStorageTargetState Enabled -StorageAccountResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage" -StorageKeyType Primary
+    ```
+
+    Enable the blob storage auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -BlobStorageTargetState Disabled
+    ```
+
+    Disable the blob storage auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 3
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -BlobStorageTargetState Enabled -StorageAccountResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage" -StorageKeyType Primary -PredicateExpression "statement <> 'select 1'"
+    ```
+
+    Enable the blob storage auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace with advanced filtering using a T-SQL predicate.
+- title: Example 4
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -PredicateExpression ""
+    ```
+
+    Remove the advanced filtering setting from the auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 5
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -EventHubTargetState Enabled -EventHubName "EventHubName" -EventHubAuthorizationRuleResourceId "EventHubAuthorizationRuleResourceId"
+    ```
+
+    Enable the event hub auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 6
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -EventHubTargetState Disabled
+    ```
+
+    Disable the event hub auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 7
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -LogAnalyticsTargetState Enabled -WorkspaceResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/myworkspace"
+    ```
+
+    Enable the log analytics auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 8
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -LogAnalyticsTargetState Disabled
+    ```
+
+    Disable the log analytics auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace.
+- title: Example 9
+  description: |-
+    ```powershell
+    Get-AzSynapseWorkspace -Name ContosoWorkspace | Set-AzSynapseSqlAuditSetting -BlobStorageTargetState Disabled
+    ```
+
+    Disable the blob storage auditing policy of an Azure Synapse Analytics Workspace named ContosoWorkspace through pipeline.
+- title: Example 10
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -LogAnalyticsTargetState Enabled -WorkspaceResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/myworkspace" -BlobStorageTargetState Disabled
+    ```
+
+     Disable sending audit records of an Azure Synapse Analytics Workspace to blob storage, and enable sending them to log analytics.
+- title: Example 11
+  description: |-
+    ```powershell
+    Set-AzSynapseSqlAuditSetting -WorkspaceName ContosoWorkspace -BlobStorageTargetState Enabled -StorageAccountResourceId "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup01/providers/Microsoft.Storage/storageAccounts/mystorage" -EventHubTargetState Enabled -EventHubName "EventHubName" -EventHubAuthorizationRuleResourceId "EventHubAuthorizationRuleResourceId" -LogAnalyticsTargetState Enabled  -WorkspaceResourceId "/subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2"
+    ```
+
+    Enable sending audit records of an Azure Synapse Analytics Workspace to blob storage, event hub and log analytics.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlAuditSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/set-azsynapsesqlauditsetting
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Set-AzSynapseSqlAuditSetting.md
+  PlatyPS schema version: 2024-05-01

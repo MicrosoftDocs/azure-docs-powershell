@@ -1,0 +1,432 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorRulesEngineActionObject
+name: New-AzFrontDoorRulesEngineActionObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create a PSRulesEngineAction object for creating a rules engine rule.
+description: |-
+  Create a PSRulesEngineAction object for creating a rules engine rule.
+
+  Use cmdlet "New-AzFrontDoorHeaderActionObject" to create PSHeaderObjects to pass into the parameters "-RequestHeaderActions" and "-ResponseHeaderActions".
+parameters:
+  cmdletParameters:
+  - name: BackendPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the BackendPool which this rule routes to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomForwardingPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The custom path used to rewrite resource paths matched by this rule.
+      Leave empty to use incoming path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomFragment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Fragment to add to the redirect URL.
+      Fragment is the part of the URL that comes after #.
+      Do not include the #.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host to redirect.
+      Leave empty to use the incoming host as the destination host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The full path to redirect.
+      Path cannot be empty and must start with /.
+      Leave empty to use the incoming path as destination path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomQueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of query strings to be placed in the redirect URL.
+      Setting this value would replace any existing query string; leave empty to preserve the incoming query string.
+      Query string must be in \<key\>=\<value\> format.
+      The first ?
+      and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicCompression
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to enable dynamic compression for cached content.
+      Default value is Enabled
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableCaching
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to enable caching for this route.
+      Default value is false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForwardingProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The protocol this rule will use when forwarding traffic to backends.
+      Default value is MatchRequest
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontDoorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Front Door to which this routing rule belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryParameterStripDirective
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The treatment of URL query terms when forming the cache key.
+      Default value is StripAll
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The protocol of the destination to where the traffic is redirected.
+      Default value is MatchRequest
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The redirect type the rule will use when redirecting traffic.
+      Default Value is Moved
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestHeaderAction
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      A list of header actions to apply from the request from AFD to the origin.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name that the RoutingRule will be created in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponseHeaderAction
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      A list of header actions to apply from the response from AFD to the client.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRulesEngineActionObject
+
+        [-RequestHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-ResponseHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsWithRegularActionParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRulesEngineActionObject
+
+        -ResourceGroupName <String>
+        -FrontDoorName <String>
+        -BackendPoolName <String>
+        [-RequestHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-ResponseHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-CustomForwardingPath <String>]
+        [-ForwardingProtocol <String>]
+        [-EnableCaching <Boolean>]
+        [-QueryParameterStripDirective <String>]
+        [-DynamicCompression <PSEnabledState>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsWithForwardingParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRulesEngineActionObject
+
+        [-RequestHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-ResponseHeaderAction <System.Collections.Generic.List`1[Microsoft.Azure.Commands.FrontDoor.Models.PSHeaderAction]>]
+        [-RedirectType <String>]
+        [-RedirectProtocol <String>]
+        [-CustomHost <String>]
+        [-CustomPath <String>]
+        [-CustomFragment <String>]
+        [-CustomQueryString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsWithRedirectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRulesEngineAction" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    $headerActions = New-AzFrontDoorHeaderActionObject -HeaderActionType "Append" -HeaderName "X-Content-Type-Options" -Value "nosniff"
+    $headerActions
+
+    HeaderName             HeaderActionType Value
+    ----------             ---------------- -----
+    X-Content-Type-Options           Append nosniff
+
+    $rulesEngineAction = New-AzFrontDoorRulesEngineActionObject -ResponseHeaderAction $headerActions
+    $rulesEngineAction
+
+    RequestHeaderActions ResponseHeaderActions    RouteConfigurationOverride
+    -------------------- ---------------------    --------------------------
+    {}                   {X-Content-Type-Options}
+
+    ```
+
+    Create a rules engine action that append response header value and show how to view the properties of the rules engine action created.
+- title: Example 2
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    $rulesEngineAction = New-AzFrontDoorRulesEngineActionObject -RequestHeaderAction $headerActions -ForwardingProtocol HttpsOnly -BackendPoolName mybackendpool -ResourceGroupName Jessicl-Test-RG -FrontDoorName jessicl-test-myappfrontend -QueryParameterStripDirective StripNone -DynamicCompression Disabled -EnableCaching $true
+    $rulesEngineAction
+
+    RequestHeaderAction            ResponseHeaderAction RouteConfigurationOverride
+    -------------------            -------------------- --------------------------
+    {headeraction1, headeraction2} {}                   Microsoft.Azure.Commands.FrontDoor.Models.PSForwardingConfiguration
+
+    $rulesEngineAction.RequestHeaderAction
+
+    HeaderName    HeaderActionType Value
+    ----------    ---------------- -----
+    headeraction1        Overwrite
+    headeraction2           Append
+
+    $rulesEngineAction.ResponseHeaderAction
+    $rulesEngineAction.RouteConfigurationOverride
+
+    CustomForwardingPath         :
+    ForwardingProtocol           : HttpsOnly
+    BackendPoolId                : /subscriptions/47f4bc68-6fe4-43a2-be8b-dfd0e290efa2/resourceGroups/myresourcegroup/provi
+                                   ders/Microsoft.Network/frontDoors/myfrontdoor/BackendPools/mybackendpool
+    QueryParameterStripDirective : StripNone
+    DynamicCompression           : Disabled
+    EnableCaching                : True
+    ```
+
+    Create a rules engine action that forwards the requests to a speicific backend pool and show how to view the properties of the rules engine action created.
+- title: Example 3
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    $rulesEngineAction = New-AzFrontDoorRulesEngineActionObject -RedirectType Moved -RedirectProtocol MatchRequest -CustomHost www.contoso.com
+    $rulesEngineAction
+
+    RequestHeaderActions ResponseHeaderActions RouteConfigurationOverride
+    -------------------- --------------------- --------------------------
+    {}                   {}                    Microsoft.Azure.Commands.FrontDoor.Models.PSRedirectConfiguration
+
+    $rulesEngineAction.RouteConfigurationOverride
+
+    RedirectType      : Moved
+    RedirectProtocol  : MatchRequest
+    CustomHost        : www.contoso.com
+    CustomPath        :
+    CustomFragment    :
+    CustomQueryString :
+
+    ```
+
+    Create a rules engine action that redirects the requests to another host and show how to view the properties of the rules engine action created.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineActionObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorrulesengineactionobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRulesEngineActionObject.md
+  PlatyPS schema version: 2024-05-01

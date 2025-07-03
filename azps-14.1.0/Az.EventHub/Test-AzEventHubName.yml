@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.Test-AzEventHubName
+name: Test-AzEventHubName
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Checks availability of a namespace name or disaster recovery alias.
+description: |-
+  Checks availability of a namespace name or disaster recovery alias.
+parameters:
+  cmdletParameters:
+  - name: AliasName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of Disaster Recovery Config alias.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AliasAvailability
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of EventHub namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AliasAvailability
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzEventHubName
+        -NamespaceName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NamespaceAvailability
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzEventHubName
+        -NamespaceName <String>
+        -AliasName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AliasAvailability
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.ICheckNameAvailabilityResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Check the availability of an EventHub namespace name'
+  description: |-
+    ```powershell
+    Test-AzEventHubName -NamespaceName myNamespace
+    ```
+
+    ```output
+    Message                                                                                                NameAvailable Reason
+    -------                                                                                                ------------- ------
+    The specified name is not available. For more information visit https://aka.ms/eventhubsarmexceptions.         False NameInUse
+    ```
+
+    Checks the availability of namespace name `myNamespace`.
+- title: 'Example 2: Check the availability of an EventHub Geo Disaster Recovery Alias'
+  description: |-
+    ```powershell
+    Test-AzEventHubName -NamespaceName myNamespace -ResourceGroupName myResourceGroup -AliasName myAlias
+    ```
+
+    ```output
+    Message                                                                                                NameAvailable Reason
+    -------                                                                                                ------------- ------
+    The specified name is not available. For more information visit https://aka.ms/eventhubsarmexceptions.         False NameInUse
+    ```
+
+    Checks the availability of alias name `myAlias` on namespace `myNamepace`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Test-AzEventHubName.md
+  document type: cmdlet
+  external help file: Az.EventHub-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.eventhub/test-azeventhubname
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/Test-AzEventHubName.md
+  PlatyPS schema version: 2024-05-01

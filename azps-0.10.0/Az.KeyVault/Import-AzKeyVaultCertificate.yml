@@ -1,0 +1,310 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Import-AzKeyVaultCertificate
+name: Import-AzKeyVaultCertificate
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Imports a certificate to a key vault.
+description: |-
+  The **Import-AzKeyVaultCertificate** cmdlet imports a certificate into a key vault.
+
+  You can create the certificate to import by using one of the following methods:
+
+  - Use the New-AzKeyVaultCertificateSigningRequest cmdlet to create a certificate signing request and submit it to a certificate authority.
+  - Use an existing certificate package file, such as a .pfx or .p12 file, which contains both the certificate and private key.
+parameters:
+  cmdletParameters:
+  - name: CertificateCollection
+    type: <xref href="X509Certificate2Collection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate collection to add to a key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImportWithPrivateKeyFromCollection
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateString
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImportWithPrivateKeyFromString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the certificate file that this cmdlet imports.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImportCertificateFromFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImportWithPrivateKeyFromFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate name. This cmdlet constructs the fully qualified domain name (FQDN) of a
+      certificate from key vault name, currently selected environment, and certificate name.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for a certificate file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ImportWithPrivateKeyFromFile
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ImportWithPrivateKeyFromString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key vault name into which this cmdlet imports certificates.
+      This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        -FilePath <String>
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImportCertificateFromFile
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Import-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        -FilePath <String>
+        [-Password <SecureString>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImportWithPrivateKeyFromFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Import-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        -CertificateString <String>
+        [-Password <SecureString>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImportWithPrivateKeyFromString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Import-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        -CertificateCollection <X509Certificate2Collection>
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ImportWithPrivateKeyFromCollection
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.CertificateBundle" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import a key vault certificate'
+  description: |-
+    ```
+    PS C:\>$Password = ConvertTo-SecureString -String "123" -AsPlainText -Force
+    PS C:\> Import-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "ImportCert01" -FilePath "C:\Users\contosoUser\Desktop\import.pfx" -Password $Password
+    Name        : importCert01
+    Certificate : [Subject]
+                    CN=contoso.com
+
+                  [Issuer]
+                    CN=contoso.com
+
+                  [Serial Number]
+                    05979C5A2F0741D5A3B6F97673E8A118
+
+                  [Not Before]
+                    2/8/2016 3:11:45 PM
+
+                  [Not After]
+                    8/8/2016 4:21:45 PM
+
+                  [Thumbprint]
+                    3E9B6848AD1834284157D68B060F748037F663C8
+
+    Thumbprint  : 3E9B6848AD1834284157D68B060F748037F663C8
+    Tags        :
+    Enabled     : True
+    Created     : 2/8/2016 11:50:43 PM
+    Updated     : 2/8/2016 11:50:43 PM
+    ```
+
+    The first command uses the ConvertTo-SecureString cmdlet to create a secure password, and then
+    stores it in the $Password variable.
+
+    The second command imports the certificate named ImportCert01 into the CosotosoKV01 key vault.
+links:
+- text: Remove-AzKeyVaultCertificate
+  href: ./Remove-AzKeyVaultCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Import-AzKeyVaultCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/import-AzKeyvaultcertificate
+  Module Name: Az.KeyVault
+  ms.assetid: D4188DC6-A8AB-4B45-9781-94B74C338C63
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Import-AzKeyVaultCertificate.md
+  PlatyPS schema version: 2024-05-01

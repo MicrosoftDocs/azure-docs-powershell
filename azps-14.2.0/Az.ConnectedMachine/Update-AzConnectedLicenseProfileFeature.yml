@@ -1,0 +1,75 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedMachine.Update-AzConnectedLicenseProfileFeature
+name: Update-AzConnectedLicenseProfileFeature
+module: Az.ConnectedMachine
+isPreview: false
+summary: |-
+  Create an in-memory object for ProductFeatureUpdate.
+description: |-
+  Create an in-memory object for ProductFeatureUpdate.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Product feature name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the new status of the product feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzConnectedLicenseProfileFeature
+        [-Name <String>]
+        [-SubscriptionStatus <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.ProductFeatureUpdate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an object to pass into license profile'
+  description: |-
+    ```powershell
+    $productfeature = Update-AzConnectedLicenseProfileFeature -Name "Hotpatch" -SubscriptionStatus "Enable"
+    $productfeature | Should -Not -BeNullOrEmpty
+    ```
+
+    Update an object to pass into license profile
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Update-AzConnectedLicenseProfileFeature.md
+  document type: cmdlet
+  external help file: Az.ConnectedMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ConnectedMachine/update-azconnectedlicenseprofilefeature
+  Module Name: Az.ConnectedMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Update-AzConnectedLicenseProfileFeature.md
+  PlatyPS schema version: 2024-05-01

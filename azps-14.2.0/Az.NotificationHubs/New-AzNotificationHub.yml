@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NotificationHubs.New-AzNotificationHub
+name: New-AzNotificationHub
+module: Az.NotificationHubs
+isPreview: false
+summary: |-
+  Creates a notification hub.
+description: |-
+  The **New-AzNotificationHub** cmdlet creates a notification hub.
+  Notification hubs are used to send push notifications to multiple clients regardless of the platform used by those clients.
+  Notification hubs are roughly equivalent to individual apps: each of your apps will typically have its own notification hub.
+  The **New-AzNotificationHub** cmdlet provides two ways to create a new notification hub.
+  You can create an instance of the **NotificationHubAttributes** object and then configure that object.
+  You can then copy those property values to your new hub by through the *NotificationHubObj* parameter.
+  Alternatively, you can create a JSON (JavaScript Object Notation) file containing the relevant configuration values and  then apply those values by using the *InputFile* parameter.
+  When used in conjunction with the **New-AzNotificationHub** cmdlet, the preceding JSON sample creates a notification hub named ContosoNotificationHub located on the West US datacenter.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to a JSON file containing configuration values for the new notification hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputFileParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the namespace to which the notification hub will be assigned.
+      Namespaces provide a way to group and categorize notification hubs.
+      Notification hubs must be assigned to an existing namespace.
+      The **New-AzNotificationHub** cmdlet cannot create a new namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationHubObj
+    type: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.NotificationHubAttributes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **NotificationHubAttributes** object that contains configuration information for the new hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NotificationHubParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group to which the notification hub will be assigned.
+      Resource groups organize items such as namespaces, notification hubs, and authorization rules in ways that help simply inventory management and Azure administration.
+      You must use an existing resource group.
+      The **New-AzNotificationHub** cmdlet cannot create a new resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNotificationHub
+        [-ResourceGroup] <String>
+        [-Namespace] <String>
+        [-InputFile] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputFileParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzNotificationHub
+        [-ResourceGroup] <String>
+        [-Namespace] <String>
+        [-NotificationHubObj] <NotificationHubAttributes>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NotificationHubParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NotificationHubs.Models.NotificationHubAttributes" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a notification hub'
+  description: |-
+    ```powershell
+    New-AzNotificationHub -Namespace "ContosoNamespace" -ResourceGroup "ContosoNotificationsGroup" -InputFile "C:\Configurations\InternalHub.json"
+    ```
+
+    This command creates a notification hub in the namespace ContosoNamespace.
+    The new hub will be assigned to the ContosoNotificationsGroup.
+    You do not need to specify a name or any other configuration information for the hub; that information will be taken from the input file C:\Configurations\InternalHub.json.
+links:
+- text: Get-AzNotificationHub
+  href: ./Get-AzNotificationHub.yml
+- text: Remove-AzNotificationHub
+  href: ./Remove-AzNotificationHub.yml
+- text: Set-AzNotificationHub
+  href: ./Set-AzNotificationHub.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/New-AzNotificationHub.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NotificationHubs.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.notificationhubs/new-aznotificationhub
+  Module Name: Az.NotificationHubs
+  ms.assetid: 8EDDA991-55B6-4151-8619-E13E14599ECD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NotificationHubs/NotificationHubs/help/New-AzNotificationHub.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: Az.Fabric
+name: Az.Fabric Module
+isPreview: false
+cmdletGroups:
+- title: Fabric
+  cmdlets:
+  - Az.Fabric.Get-AzFabricCapacity
+  - Az.Fabric.Get-AzFabricCapacitySku
+  - Az.Fabric.New-AzFabricCapacity
+  - Az.Fabric.Remove-AzFabricCapacity
+  - Az.Fabric.Resume-AzFabricCapacity
+  - Az.Fabric.Suspend-AzFabricCapacity
+  - Az.Fabric.Test-AzFabricCapacityNameAvailability
+  - Az.Fabric.Update-AzFabricCapacity
+description: |-
+  Microsoft Azure PowerShell: Fabric cmdlets
+metadata:
+  Module Name: Az.Fabric
+  Module Guid: 16472234-05df-4c1c-9c01-0c46bf5c61f4
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.fabric
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fabric/Fabric/help/Az.Fabric.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fabric/Fabric/help/Az.Fabric.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

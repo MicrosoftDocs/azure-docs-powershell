@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.Get-AzWebAppCertificate
+name: Get-AzWebAppCertificate
+module: Az.Websites
+isPreview: false
+summary: |-
+  Gets an Azure Web App certificate.
+description: |-
+  The **Get-AzWebAppCertificate** cmdlet gets information about Azure Web App certificates associated with a specified resource group.
+  If you know the certificate thumbprint you can also use this cmdlet to get information about a specified certificate.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that the certificate is assigned to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Thumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique identifier for the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWebAppCertificate
+        [[-ResourceGroupName] <String>]
+        [[-Thumbprint] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+examples:
+- title: 'Example 1: Get Web App certificates in a resource group'
+  description: |-
+    ```
+    PS C:\>Get-AzWebAppCertificate -ResourceGroupName "ContosoResourceGroup"
+    ```
+
+    This command returns information about the uploaded Web App certificates associated with the resource group ContosoResourceGroup.
+- title: 'Example 2: Get a specified web app certificate'
+  description: |-
+    ```
+    PS C:\>Get-AzWebAppCertificate -ResourceGroupName "ContosoResourceGroup" -Thumbprint "E3A38EBA60CAA1C162785A2E1C44A15AD450199C3"
+    ```
+
+    This command gets the ContosoResourceGroup Web App certificate with the thumbprint E3A38EBA60CAA1C162785A2E1C44A15AD450199C3.
+links:
+- text: Get-AzWebAppSSLBinding
+  href: ./Get-AzWebAppSSLBinding.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Websites.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.websites/get-Azwebappcertificate
+  Module Name: Az.WebSites
+  ms.assetid: 2D83D38F-3A5C-40DB-BE8B-D52E5CAFCF6E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Websites/Websites/help/Get-AzWebAppCertificate.md
+  PlatyPS schema version: 2024-05-01

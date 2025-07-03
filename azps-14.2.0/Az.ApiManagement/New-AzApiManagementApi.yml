@@ -1,0 +1,580 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagementApi
+name: New-AzApiManagementApi
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Creates an API.
+description: |-
+  The **New-AzApiManagementApi** cmdlet creates an Azure API Management API.
+parameters:
+  cmdletParameters:
+  - name: ApiId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the API to create.
+      If you do not specify this parameter, this cmdlet generates an ID for you.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Type of API to create (http, soap, websocket, graphql). This parameter is optional.
+    acceptedValues:
+    - Http
+    - Soap
+    - WebSocket
+    - GraphQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Api Version of the Api to create. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiVersionDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Api Version Description. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiVersionSetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A resource identifier for the related Api Version Set. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the OAuth operations scope.
+      The default value is $Null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationServerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the OAuth authorization server ID.
+      The default value is $Null.
+      You must specify this parameter if *AuthorizationScope* is specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BearerTokenSendingMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      OpenId authorization server mechanism by which access token is passed to the API. Refer to https://datatracker.ietf.org/doc/html/rfc6749#section-4. This parameter is optional. Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address of the contact person/organization. MUST be in the format of an email address. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifying name of the contact person/organization. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL pointing to the contact information. MUST be in the format of a URL. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PsApiManagementContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the web API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The license name used for the API. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A URL to the Terms of Service for the API. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the web API.
+      This is the public name of the API as it appears on the developer and admin portals.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OpenIdProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OpenId authorization server identifier. This parameter is optional. Default value is $null. Must be specified if BearerTokenSendingMethods is specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the web API path, which is the last part of the API's public URL and corresponds to the Web API URL suffix field in the admin portal.
+      This URL is used by API consumers to send requests to the web service, and must be one to 400 characters long.
+      The default value is $Null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductIds
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of product IDs to which to add the new API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocols
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of web API protocols.
+      Valid values are http, https.
+      These are the web protocols over which the API is made available.
+      The default value is $Null.
+    acceptedValues:
+    - Http
+    - Https
+    - Ws
+    - Wss
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL of the web service that exposes the API.
+      This URL is used only by Azure API Management, and is not made public.
+      The URL must be one to 2000 characters long.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceApiId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Api identifier of the source API. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceApiRevision
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Api Revision of the source API. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionKeyHeaderName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subscription key header name.
+      The default value is $Null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionKeyQueryParamName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subscription key query string parameter name.
+      The default value is $Null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionRequired
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to enforce SubscriptionRequired for requests to the Api. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TermsOfServiceUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A URL to the Terms of Service for the API. This parameter is optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementApi
+        -Context <PsApiManagementContext>
+        [-ApiId <String>]
+        -Name <String>
+        [-Description <String>]
+        -ServiceUrl <String>
+        -Path <String>
+        -Protocols <PsApiManagementSchema[]>
+        [-AuthorizationServerId <String>]
+        [-AuthorizationScope <String>]
+        [-OpenIdProviderId <String>]
+        [-BearerTokenSendingMethod <String[]>]
+        [-SubscriptionKeyHeaderName <String>]
+        [-SubscriptionKeyQueryParamName <String>]
+        [-ProductIds <String[]>]
+        [-SubscriptionRequired]
+        [-ApiVersionDescription <String>]
+        [-ApiVersionSetId <String>]
+        [-ApiVersion <String>]
+        [-SourceApiId <String>]
+        [-SourceApiRevision <String>]
+        [-ApiType <PsApiManagementApiType>]
+        [-TermsOfServiceUrl <String>]
+        [-ContactName <String>]
+        [-ContactUrl <String>]
+        [-ContactEmail <String>]
+        [-LicenseName <String>]
+        [-LicenseUrl <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementSchema" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApi" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an API'
+  description: |-
+    ```powershell
+    $ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    New-AzApiManagementApi -Context $ApiMgmtContext -Name "Echo api" -ServiceUrl "https://contoso.com/apis/echo" -Protocols @("http", "https") -Path "testapi"
+    ```
+
+    This command creates an API named EchoApi with the specified URL.
+- title: 'Example 2: Create an API by copying all operation, Tags, Products and Policies from echo-api and into an ApiVersionSet'
+  description: |-
+    ```powershell
+    $context = New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso
+    $versionSet = Get-AzApiManagementApiVersionSet -Context $context -ApiVersionSetId "xmsVersionSet"
+    New-AzApiManagementApi -Context $context -Name "echoapiv4" -Description "Create Echo Api V4" -SubscriptionRequired -ServiceUrl "https://echoapi.cloudapp.net/v4" -Path "echov3" -Protocols @("http", "https") -ApiVersionSetId $versionSet.ApiVersionSetId -SourceApiId "echo-api" -ApiVersion "v4"
+    ```
+
+    ```output
+    ApiId                         : 691b7d410125414a929c108541c60e06
+    Name                          : echoapiv4
+    Description                   : Create Echo Api V4
+    ServiceUrl                    : https://echoapi.cloudapp.net/v4
+    Path                          : echov3
+    ApiType                       : http
+    Protocols                     : {Http, Https}
+    AuthorizationServerId         :
+    AuthorizationScope            :
+    OpenidProviderId              :
+    BearerTokenSendingMethod      : {}
+    SubscriptionKeyHeaderName     : Ocp-Apim-Subscription-Key
+    SubscriptionKeyQueryParamName : subscription-key
+    ApiRevision                   : 1
+    ApiVersion                    : v4
+    IsCurrent                     : True
+    IsOnline                      : False
+    SubscriptionRequired          : True
+    ApiRevisionDescription        :
+    ApiVersionSetDescription      :
+    ApiVersionSetId               : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apiVersionSets/xmsVersionSet
+    Id                            : /subscriptions/subid/resourceGroups/Api-Default-West-US/providers/Microsoft.ApiManagement/service/contoso/apis/691b7d410125414a929c108541c60e06
+    ResourceGroupName             : Api-Default-West-US
+    ServiceName                   : contoso
+    ```
+
+    This command creates an API `echoapiv3` in ApiVersionSet `xmsVersionSet` and copies all operation, Tags and Policies from source Api `echo-api`. It overrides the SubscriptionRequired, ServiceUrl, Path, Protocols
+- title: Example 3
+  description: |-
+    Creates an API. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    New-AzApiManagementApi -ApiId '0001' -Context <PsApiManagementContext> -Name 'Echo api' -Path 'echov3' -Protocols Http -ServiceUrl 'https://contoso.com/apis/echo'
+    ```
+links:
+- text: Export-AzApiManagementApi
+  href: ./Export-AzApiManagementApi.yml
+- text: Get-AzApiManagementApi
+  href: ./Get-AzApiManagementApi.yml
+- text: Import-AzApiManagementApi
+  href: ./Import-AzApiManagementApi.yml
+- text: Remove-AzApiManagementApi
+  href: ./Remove-AzApiManagementApi.yml
+- text: Set-AzApiManagementApi
+  href: ./Set-AzApiManagementApi.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementApi.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementapi
+  Module Name: Az.ApiManagement
+  ms.assetid: 664CF009-FC52-4F1B-933B-3DEBD05AC8C5
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementApi.md
+  PlatyPS schema version: 2024-05-01

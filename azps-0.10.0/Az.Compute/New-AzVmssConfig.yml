@@ -1,0 +1,648 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzVmssConfig
+name: New-AzVmssConfig
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a VMSS configuration object.
+description: |-
+  The **New-AzVmssConfig** cmdlet creates a configurable local Virtual Manager Scale Set (VMSS)
+  object. Other cmdlets are needed to configure the VMSS object. These cmdlets are:
+
+  - Set-AzVmssOsProfile
+  - Set-AzVmssStorageProfile
+  - Add-AzVmssNetworkInterfaceConfiguration
+  - Add-AzVmssExtension
+parameters:
+  cmdletParameters:
+  - name: AssignIdentity
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the system assigned identity for the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AssignIdentityParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoOSUpgrade
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets whether OS upgrades should automatically be applied to scale set instances in a rolling fashion when a newer version of the image becomes available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootDiagnostic
+    type: <xref href="BootDiagnostics" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine scale set boot diagnostics profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Extension
+    type: <xref href="VirtualMachineScaleSetExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the extension information object for the VMSS. You can use the
+      **Add-AzVmssExtension** cmdlet to add this object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthProbeId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a load balancer probe used to determine the health of an instance in the virtual machine scale set.
+      HealthProbeId is in the form of '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityId
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of user identities associated with the virtual machine scale set.
+      The user identity references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/identities/{identityName}'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExplicitIdentityParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="ResourceIdentityType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of identity used for the virtual machine scale set.
+      The type 'SystemAssignedUserAssigned' includes both an implicitly created identity and a set of user assigned identities.
+      The type 'None' will remove any identities from the virtual machine scale set.
+      The acceptable values for this parameter are:
+
+      - SystemAssigned
+      - UserAssigned
+      - SystemAssignedUserAssigned
+      - None
+    acceptedValues:
+    - SystemAssigned
+    - UserAssigned
+    - SystemAssignedUserAssigned
+    - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ExplicitIdentityParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the license type, which is for bringing your own license scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure location where the VMSS is created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkInterfaceConfiguration
+    type: <xref href="VirtualMachineScaleSetNetworkConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the network profile object that contains the networking properties for the VMSS configuration.
+      You can use the **Add-AzVmssNetworkInterfaceConfiguration** cmdlet to add this object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsProfile
+    type: <xref href="VirtualMachineScaleSetOSProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operating system profile object that contains the operating system properties for the VMSS configuration.
+      You can use the **Set-AzVmssOsProfile** cmdlet to set this object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overprovision
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the cmdlet overprovisions the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanProduct
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan product.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanPromotionCode
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan promotion code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlanPublisher
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority for the virtual machines in the scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollingUpgradePolicy
+    type: <xref href="RollingUpgradePolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the rolling upgrade policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SinglePlacementGroup
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the single placement group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of instances in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of all the instances of VMSS.
+    aliases:
+    - AccountType
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tier of VMSS. The acceptable values for this parameter are:
+
+      - Standard
+      - Basic
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageProfile
+    type: <xref href="VirtualMachineScaleSetStorageProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage profile object that contains the disk properties for the VMSS configuration.
+      You can use the **Set-AzVmssStorageProfile** cmdlet to set this object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradePolicyMode
+    type: <xref href="UpgradeMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specified the mode of an upgrade to virtual machines in the scale set.
+
+      The acceptable values for this parameter are:
+
+      - Automatic
+      - Manual
+    acceptedValues:
+    - Automatic
+    - Manual
+    - Rolling
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the zone list for the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVmssConfig
+        [[-Overprovision] <Boolean>]
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        [[-SkuName] <String>]
+        [[-SkuTier] <String>]
+        [[-SkuCapacity] <Int32>]
+        [[-UpgradePolicyMode] <UpgradeMode>]
+        [[-OsProfile] <VirtualMachineScaleSetOSProfile>]
+        [[-StorageProfile] <VirtualMachineScaleSetStorageProfile>]
+        [[-NetworkInterfaceConfiguration] <VirtualMachineScaleSetNetworkConfiguration[]>]
+        [[-Extension] <VirtualMachineScaleSetExtension[]>]
+        [-SinglePlacementGroup <Boolean>]
+        [-Zone <String[]>]
+        [-PlanName <String>]
+        [-PlanPublisher <String>]
+        [-PlanProduct <String>]
+        [-PlanPromotionCode <String>]
+        [-RollingUpgradePolicy <RollingUpgradePolicy>]
+        [-AutoOSUpgrade]
+        [-HealthProbeId <String>]
+        [-BootDiagnostic <BootDiagnostics>]
+        [-LicenseType <String>]
+        [-Priority <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVmssConfig
+        [[-Overprovision] <Boolean>]
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        [[-SkuName] <String>]
+        [[-SkuTier] <String>]
+        [[-SkuCapacity] <Int32>]
+        [[-UpgradePolicyMode] <UpgradeMode>]
+        [[-OsProfile] <VirtualMachineScaleSetOSProfile>]
+        [[-StorageProfile] <VirtualMachineScaleSetStorageProfile>]
+        [[-NetworkInterfaceConfiguration] <VirtualMachineScaleSetNetworkConfiguration[]>]
+        [[-Extension] <VirtualMachineScaleSetExtension[]>]
+        -IdentityType <ResourceIdentityType>
+        [-SinglePlacementGroup <Boolean>]
+        [-Zone <String[]>]
+        [-PlanName <String>]
+        [-PlanPublisher <String>]
+        [-PlanProduct <String>]
+        [-PlanPromotionCode <String>]
+        [-RollingUpgradePolicy <RollingUpgradePolicy>]
+        [-AutoOSUpgrade]
+        [-HealthProbeId <String>]
+        [-BootDiagnostic <BootDiagnostics>]
+        [-LicenseType <String>]
+        [-Priority <String>]
+        [-IdentityId <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ExplicitIdentityParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVmssConfig
+        [[-Overprovision] <Boolean>]
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        [[-SkuName] <String>]
+        [[-SkuTier] <String>]
+        [[-SkuCapacity] <Int32>]
+        [[-UpgradePolicyMode] <UpgradeMode>]
+        [[-OsProfile] <VirtualMachineScaleSetOSProfile>]
+        [[-StorageProfile] <VirtualMachineScaleSetStorageProfile>]
+        [[-NetworkInterfaceConfiguration] <VirtualMachineScaleSetNetworkConfiguration[]>]
+        [[-Extension] <VirtualMachineScaleSetExtension[]>]
+        [-SinglePlacementGroup <Boolean>]
+        [-Zone <String[]>]
+        [-PlanName <String>]
+        [-PlanPublisher <String>]
+        [-PlanProduct <String>]
+        [-PlanPromotionCode <String>]
+        [-RollingUpgradePolicy <RollingUpgradePolicy>]
+        [-AutoOSUpgrade]
+        [-HealthProbeId <String>]
+        [-BootDiagnostic <BootDiagnostics>]
+        [-LicenseType <String>]
+        [-Priority <String>]
+        [-AssignIdentity]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AssignIdentityParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a VMSS configuration object'
+  description: |-
+    ```
+    PS C:\> $VMSS = New-AzVmssConfig -Location $Loc -SkuCapacity 2 -SkuName "Standard_A0" -UpgradePolicyMode "Automatic" -NetworkInterfaceConfiguration $NetCfg `
+                | Add-AzVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
+                | Set-AzVmssOSProfile -ComputerNamePrefix "Test" -AdminUsername $adminUsername -AdminPassword $AdminPassword `
+                | Set-AzVmssStorageProfile -Name "Test" -OsDiskCreateOption "FromImage" -OsDiskCaching "None" `
+                -ImageReferenceOffer $ImgRef.Offer -ImageReferenceSku $ImgRef.Skus -ImageReferenceVersion $ImgRef.Version `
+                -ImageReferencePublisher $ImgRef.PublisherName -VhdContainer $VHDContainer `
+                | Add-AzVmssAdditionalUnattendContent -ComponentName  $AUCComponentName -Content  $AUCContent -PassName  $AUCPassName -SettingName  $AUCSetting `
+                | Remove-AzVmssAdditionalUnattendContent -ComponentName  $AUCComponentName;
+
+    New-AzVmss -ResourceGroupName $RGName -Name $VMSSName -VirtualMachineScaleSet $VMSS;
+    ```
+
+    This example creates a VMSS configuration object. The first command uses the
+    **New-AzVmssConfig** cmdlet to create a VMSS configuration object and stores the result in the
+    variable named $VMSS. The second command uses the **New-AzVmss** cmdlet to create a VMSS that
+    uses the VMSS configuration object created in the first command.
+links:
+- text: Set-AzVmssOsProfile
+  href: ./Set-AzVmssOsProfile.yml
+- text: Set-AzVmssStorageProfile
+  href: ./Set-AzVmssStorageProfile.yml
+- text: Add-AzVmssNetworkInterfaceConfiguration
+  href: ./Add-AzVmssNetworkInterfaceConfiguration.yml
+- text: Add-AzVmssExtension
+  href: ./Add-AzVmssExtension.yml
+- text: New-AzVmss
+  href: ./New-AzVmss.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmssconfig
+  Module Name: Az.Compute
+  ms.assetid: CE32F620-8DB2-4004-8012-F1C4AA235B60
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmssConfig.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,381 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzVirtualNetworkGateway
+name: Set-AzVirtualNetworkGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a virtual network gateway.
+description: |-
+  The **Set-AzVirtualNetworkGateway** cmdlet updates a virtual network gateway.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Asn
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network gateway Autonomous System Number (ASN) that is used to set up Border Gateway Protocol (BGP) sessions inside IPsec tunnels.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableActiveActiveFeature
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disables the active-active feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableActiveActiveFeature
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables the active-active feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayDefaultSite
+    type: <xref href="PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default site to use for force tunneling.
+      If a default site is specified, all internet traffic from the gateway's Virtual Private Network (VPN) is routed to that site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewaySku
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the stock keeping unit (SKU) of the virtual network gateway.
+      The acceptable values for this parameter are:
+
+      - Basic
+      - Standard
+      - HighPerformance
+      - VpnGw1
+      - VpnGw2
+      - VpnGw3
+    acceptedValues:
+    - Basic
+    - Standard
+    - HighPerformance
+    - UltraPerformance
+    - VpnGw1
+    - VpnGw2
+    - VpnGw3
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerWeight
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the weight added to routes learned over BGP from this virtual network gateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RadiusServerAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RadiusServerConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RadiusServerSecret
+    type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RadiusServerConfiguration
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGateway
+    type: <xref href="PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network gateway object to base modifications off of.
+      You can use the Get-AzVirtualNetworkGateway cmdlet to get the virtual network gateway object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientAddressPool
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the address space that this cmdlet uses to allocate VPN client IP addresses from.
+      This should not overlap with virtual network or on-premise ranges.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientProtocol
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    acceptedValues:
+    - SSTP
+    - IkeV2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientRevokedCertificates
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a list of revoked VPN client certificates.
+      A VPN client presenting a certificate that matches one of these is removed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientRootCertificates
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a list of VPN client root certificates to use for VPN client authentication.
+      Connecting VPN clients must present certificates generated from one of these root certificates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGateway
+        -VirtualNetworkGateway <PSVirtualNetworkGateway>
+        [-GatewaySku <String>]
+        [-GatewayDefaultSite <PSLocalNetworkGateway>]
+        [-VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>]
+        [-VpnClientProtocol <System.Collections.Generic.List`1[System.String]>]
+        [-VpnClientRootCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]>]
+        [-VpnClientRevokedCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]>]
+        [-Asn <UInt32>]
+        [-PeerWeight <Int32>]
+        [-EnableActiveActiveFeature]
+        [-DisableActiveActiveFeature]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGateway
+        -VirtualNetworkGateway <PSVirtualNetworkGateway>
+        -RadiusServerAddress <String>
+        -RadiusServerSecret <SecureString>
+        [-GatewaySku <String>]
+        [-GatewayDefaultSite <PSLocalNetworkGateway>]
+        [-VpnClientAddressPool <System.Collections.Generic.List`1[System.String]>]
+        [-VpnClientProtocol <System.Collections.Generic.List`1[System.String]>]
+        [-VpnClientRootCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRootCertificate]>]
+        [-VpnClientRevokedCertificates <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSVpnClientRevokedCertificate]>]
+        [-Asn <UInt32>]
+        [-PeerWeight <Int32>]
+        [-EnableActiveActiveFeature]
+        [-DisableActiveActiveFeature]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RadiusServerConfiguration
+  isDefault: false
+inputs:
+- name: <xref href="PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VirtualNetworkGateway' accepts value of type 'PSVirtualNetworkGateway' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the goal state a virtual network gateway'
+  description: |-
+    ```
+    PS C:\>$Gateway = Get-AzVirtualNetworkGateway -ResourceGroupName "ResourceGroup001" -Name "Gateway001"
+    PS C:\> Set-AzVirtualNetworkGateway -VirtualNetworkGateway $Gateway -Asn 1337
+    ```
+
+    The first command gets a virtual network gateway named Gateway01 that belongs to resource group ResourceGroup001 and stores it to the variable named $Gateway
+
+    The second command sets the goal state for the virtual network gateway stored in variable $Gateway.
+    The command also sets the ASN to 1337.
+links:
+- text: Get-AzVirtualNetworkGateway
+  href: ./Get-AzVirtualNetworkGateway.yml
+- text: New-AzVirtualNetworkGateway
+  href: ./New-AzVirtualNetworkGateway.yml
+- text: Remove-AzVirtualNetworkGateway
+  href: ./Remove-AzVirtualNetworkGateway.yml
+- text: Reset-AzVirtualNetworkGateway
+  href: ./Reset-AzVirtualNetworkGateway.yml
+- text: Resize-AzVirtualNetworkGateway
+  href: ./Resize-AzVirtualNetworkGateway.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azvirtualnetworkgateway
+  Module Name: Az.Network
+  ms.assetid: 5C309071-A2ED-464C-9197-0A77859C8FBB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzVirtualNetworkGateway.md
+  PlatyPS schema version: 2024-05-01

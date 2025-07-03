@@ -1,0 +1,147 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageAccountKey
+name: Get-AzStorageAccountKey
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets the access keys for an Azure Storage account.
+description: |-
+  The **Get-AzStorageAccountKey** cmdlet gets the access keys for an Azure Storage account.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ListKerbKey
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Lists the Kerberos keys (if active directory enabled) for the specified storage account.
+      Kerberos key is generated per storage account for Azure Files identity based authentication either with Microsoft Entra Domain Service (Microsoft Entra Domain Services) or Active Directory Domain Service (AD DS).
+      It is used as the password of the identity registered in the domain service that represents the storage account.
+      Kerberos key does not provide access permission to perform any control or data plane read or write operations against the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Storage account for which this cmdlet gets keys.
+    aliases:
+    - StorageAccountName
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the Storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageAccountKey
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-ListKerbKey]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Storage.Models.StorageAccountKey" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the access keys for a Storage account'
+  description: |-
+    ```powershell
+    Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccount"
+    ```
+
+    This command gets the keys for the specified Azure Storage account.
+- title: 'Example 2: Get a specific access key for a Storage account'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    This command gets a specific key for a Storage account.
+    (Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccount")| Where-Object {$_.KeyName -eq "key1"}
+
+    KeyName Value             Permissions CreationTime
+    ------- -----             ----------- ------------
+    key1    <KeyValue>        Full
+
+    This command gets a specific key value for a Storage account.
+    (Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccount")[0].Value
+
+    <KeyValue>
+    ```
+- title: 'Example 3: Lists the access keys for a Storage account, include the Kerberos keys (if active directory enabled)'
+  description: |-
+    ```powershell
+    Get-AzStorageAccountKey -ResourceGroupName "RG01" -Name "mystorageaccount" -ListKerbKey
+    ```
+
+    This command gets the keys for the specified Azure Storage account.
+links:
+- text: New-AzStorageAccountKey
+  href: ./New-AzStorageAccountKey.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstorageaccountkey
+  Module Name: Az.Storage
+  ms.assetid: A57A9EFA-47AC-44D8-BFA7-CDE0E2A612B3
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageAccountKey.md
+  PlatyPS schema version: 2024-05-01

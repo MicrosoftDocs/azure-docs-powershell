@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureApplicationGatewayConfig
+name: Get-AzureApplicationGatewayConfig
+module: Azure
+isPreview: false
+summary: |-
+  Gets an Application Gateway configuration context.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureApplicationGatewayConfig** cmdlet gets an Azure Application Gateway configuration context.
+  A context includes both a configuration object and XML configuration.
+  You can save the XML configuration to a file.
+parameters:
+  cmdletParameters:
+  - name: ExportToFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file path to which this cmdlet saves the configuration in XML format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Application Gateway for which this cmdlet gets configuration information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureApplicationGatewayConfig
+        -Name <String>
+        [-ExportToFile <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Networking.ApplicationGatewayObjectModel.ApplicationGatewayConfigContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an Application Gateway configuration and save it to a file'
+  description: |-
+    ```
+    PS C:\> Get-AzureApplicationGatewayConfig -Name "ApplicationGateway06" -ExportToFile "D:\config.xml"
+    ```
+
+    This command gets the configuration for an Application Gateway named ApplicationGateway06.
+    The command saves it in the file in the specified path.
+links:
+- text: Set-AzureApplicationGatewayConfig
+  href: ./Set-AzureApplicationGatewayConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A2F0ECAD-595C-45E6-98AC-2C7DB8E4BEF0
+  PlatyPS schema version: 2024-05-01

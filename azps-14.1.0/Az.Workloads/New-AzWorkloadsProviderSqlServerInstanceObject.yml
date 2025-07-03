@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.New-AzWorkloadsProviderSqlServerInstanceObject
+name: New-AzWorkloadsProviderSqlServerInstanceObject
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Create an in-memory object for MsSqlServerProviderInstanceProperties.
+description: |-
+  Create an in-memory object for MsSqlServerProviderInstanceProperties.
+parameters:
+  cmdletParameters:
+  - name: Hostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SQL server host name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the key vault URI to secret with the database password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database sql port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapSid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP System Identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the blob URI to SSL certificate for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Support.SslPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets certificate preference if secure communication is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the database user name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWorkloadsProviderSqlServerInstanceObject
+        [-Password <String>]
+        [-PasswordUri <String>]
+        [-Port <String>]
+        [-Username <String>]
+        [-Hostname <String>]
+        [-SapSid <String>]
+        [-SslCertificateUri <String>]
+        [-SslPreference <SslPreference>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.MSSqlServerProviderInstanceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Microsoft SQL server provider'
+  description: |-
+    ```powershell
+    New-AzWorkloadsProviderSqlServerInstanceObject -Password $password -Port 1433 -Username ams -Hostname 10.1.14.5 -SapSid X00 -SslPreference Disabled
+    ```
+
+    ```output
+    ProviderType DbPassword   DbPasswordUri DbPort DbUsername Hostname  SapSid SslCertificateUri SslPreference
+    ------------ ----------   ------------- ------ ---------- --------  ------ ----------------- -------------
+    MsSqlServer  $password                  1433   ams        10.1.14.5 X00                      Disabled
+    ```
+
+    Create Microsoft SQL server provider for an AMS instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderSqlServerInstanceObject.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/new-azworkloadsprovidersqlserverinstanceobject
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderSqlServerInstanceObject.md
+  PlatyPS schema version: 2024-05-01

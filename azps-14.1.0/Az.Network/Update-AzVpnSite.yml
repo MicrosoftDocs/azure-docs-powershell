@@ -1,0 +1,842 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Update-AzVpnSite
+name: Update-AzVpnSite
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a VPN site.
+description: |-
+  The **Update-AzVpnSite** cmdlet updates a VPN site.
+parameters:
+  cmdletParameters:
+  - name: AddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The address prefixes of the virtual network.
+      Use this or AddressSpaceObject but not both.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpAsn
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The BGP ASN for this VpnSite.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpPeeringAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The BGP Peering Address for this VpnSite.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BgpPeeringWeight
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The BGP Peering weight for this VpnSite.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceModel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The device model of the remote vpn device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceVendor
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The device vendor of the remote vpn device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSite" data-throw-if-not-resolved="False" />
+    description: |-
+      The vpn site object to be modified
+    aliases:
+    - VpnSite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteObjectByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectNoVirtualWanUpdate
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP address of local network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinkSpeedInMbps
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The device model of the remote vpn device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VpnSiteName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameNoVirtualWanUpdate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: O365Policy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSO365PolicyProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The office 365 traffic breakout policy for this VpnSite.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameNoVirtualWanUpdate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteNameByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID for the vpn site.
+    aliases:
+    - VpnSiteId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteResourceIdByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdNoVirtualWanUpdate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualWan
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualWan" data-throw-if-not-resolved="False" />
+    description: |-
+      The VirtualWan this VpnSite needs to be connected to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualWanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ResourceId VirtualWan this VpnSite needs to be connected to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualWanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VirtualWan this VpnSite needs to be connected to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualWanResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name of the VirtualWan this VpnSite needs to be connected to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnSiteNameByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteObjectByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVpnSiteResourceIdByVirtualWanName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnSiteLink
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSiteLink" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of VpnSiteLinks that this VpnSite have.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceGroupName <String>
+        -Name <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteNameNoVirtualWanUpdate
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceGroupName <String>
+        -Name <String>
+        -VirtualWanResourceGroupName <String>
+        -VirtualWanName <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteNameByVirtualWanName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceGroupName <String>
+        -Name <String>
+        -VirtualWanId <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteNameByVirtualWanResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceGroupName <String>
+        -Name <String>
+        -VirtualWan <PSVirtualWan>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteNameByVirtualWanObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -InputObject <PSVpnSite>
+        -VirtualWanResourceGroupName <String>
+        -VirtualWanName <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteObjectByVirtualWanName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -InputObject <PSVpnSite>
+        -VirtualWanId <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteObjectByVirtualWanResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -InputObject <PSVpnSite>
+        -VirtualWan <PSVirtualWan>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteObjectByVirtualWanObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -InputObject <PSVpnSite>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteObjectNoVirtualWanUpdate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceId <String>
+        -VirtualWanResourceGroupName <String>
+        -VirtualWanName <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteResourceIdByVirtualWanName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceId <String>
+        -VirtualWanId <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteResourceIdByVirtualWanResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceId <String>
+        -VirtualWan <PSVirtualWan>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteResourceIdByVirtualWanObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnSite
+        -ResourceId <String>
+        [-IpAddress <String>]
+        [-AddressSpace <String[]>]
+        [-DeviceModel <String>]
+        [-DeviceVendor <String>]
+        [-LinkSpeedInMbps <UInt32>]
+        [-BgpAsn <UInt32>]
+        [-BgpPeeringAddress <String>]
+        [-BgpPeeringWeight <UInt32>]
+        [-VpnSiteLink <PSVpnSiteLink[]>]
+        [-O365Policy <PSO365PolicyProperties>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnSiteResourceIdNoVirtualWanUpdate
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSite" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSite" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West US"
+    $vpnSiteAddressSpaces = New-Object string[] 2
+    $vpnSiteAddressSpaces[0] = "192.168.2.0/24"
+    $vpnSiteAddressSpaces[1] = "192.168.3.0/24"
+    New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US" -VirtualWan $virtualWan -IpAddress "1.2.3.4" -AddressSpace $vpnSiteAddressSpaces -DeviceModel "SomeDevice" -DeviceVendor "SomeDeviceVendor" -LinkSpeedInMbps "10"
+    New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US" -VirtualWan $virtualWan -IpAddress "2.3.5.5"
+    ```
+
+    ```output
+    ResourceGroupName : testRG
+    Name              : testVpnSite
+    Id                : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/vpnSites/testVpnSite
+    Location          : eastus2euap
+    IpAddress         : 2.3.4.5
+    VirtualWan        : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    AddressSpace      : {192.168.2.0/24, 192.168.3.0/24}
+    BgpSettings       :
+    Type              : Microsoft.Network/vpnSites
+    ProvisioningState : Succeeded
+    ```
+
+    The above will create a resource group, Virtual WAN in West US in "testRG" resource group in Azure.
+
+    Then it creates a VpnSite to represent a customer branch and links it to the Virtual WAN.
+
+    Once the site is created, it updates the IpAddress of the site using the Set-AzVpnSite command.
+links:
+- text: Get-AzVpnSite
+  href: ./Get-AzVpnSite.yml
+- text: New-AzVpnSite
+  href: ./New-AzVpnSite.yml
+- text: Remove-AzVpnSite
+  href: ./Remove-AzVpnSite.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnSite.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/update-azvpnsite
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnSite.md
+  PlatyPS schema version: 2024-05-01

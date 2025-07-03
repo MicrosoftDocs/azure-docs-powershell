@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzDelegation
+name: New-AzDelegation
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a service delegation.
+description: |-
+  The **New-AzDelegation** cmdlet creates a service delegation that can be added to a subnet.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the delegation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the service to which the subnet should be delegated
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDelegation
+        -Name <String>
+        -ServiceName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSDelegation" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $delegation = New-AzDelegation -Name "myDelegation" -ServiceName "Microsoft.Sql/servers"
+    $vnet = Get-AzVirtualNetwork -Name "myVNet" -ResourceGroupName "myResourceGroup"
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name "mySubnet" -VirtualNetwork $vnet
+    $subnet.Delegations.Add($delegation)
+    Set-AzVirtualNetwork -VirtualNetwork $vnet
+    ```
+
+    The first cmdlet creates a delegation that can be added to a subnet, and stores it in the $delegation variable. The second and third cmdlets retrieve the subnet to be delegated. The fourth cmdlet adds the created delegation to the subnet of interest, and the final cmdlet sends the updated configuration to the server.
+links:
+- text: Add-AzDelegation
+  href: ./Add-AzDelegation.yml
+- text: Get-AzDelegation
+  href: ./Get-AzDelegation.yml
+- text: Remove-AzDelegation
+  href: ./Remove-AzDelegation.yml
+- text: Get-AzVirtualNetwork
+  href: ./Get-AzVirtualNetwork.yml
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+- text: Set-AzVirtualNetwork
+  href: ./Set-AzVirtualNetwork.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzDelegation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azdelegation
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzDelegation.md
+  PlatyPS schema version: 2024-05-01

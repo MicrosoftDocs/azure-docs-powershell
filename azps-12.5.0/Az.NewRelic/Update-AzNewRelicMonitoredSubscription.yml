@@ -1,0 +1,268 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NewRelic.Update-AzNewRelicMonitoredSubscription
+name: Update-AzNewRelicMonitoredSubscription
+module: Az.NewRelic
+isPreview: false
+summary: |-
+  Add the subscriptions that should be monitored by the NewRelic monitor resource.
+description: |-
+  Add the subscriptions that should be monitored by the NewRelic monitor resource.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.INewRelicIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitoredSubscriptionList
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IMonitoredSubscription" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of subscriptions and the state of the monitoring.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Monitors resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PatchOperation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The operation for the patch on the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzNewRelicMonitoredSubscription
+        -MonitorName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-MonitoredSubscriptionList <IMonitoredSubscription[]>]
+        [-PatchOperation <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzNewRelicMonitoredSubscription
+        -InputObject <INewRelicIdentity>
+        [-MonitoredSubscriptionList <IMonitoredSubscription[]>]
+        [-PatchOperation <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.INewRelicIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NewRelic.Models.IMonitoredSubscriptionProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update the subscriptions that are being monitored by the NewRelic monitor resource'
+  description: |-
+    ```powershell
+    $includeFT = New-AzNewRelicFilteringTagObject -Action Include -Name testLogRule1 -Value filteringTag1
+    $sub1 = New-AzNewRelicMonitoredSubscriptionObject -LogRuleFilteringTag $includeFT -LogRuleSendAadLog Enabled -LogRuleSendActivityLog Enabled -LogRuleSendSubscriptionLog Enabled -MetricRuleFilteringTag $includeFT -MetricRuleUserEmail user1@outlook.com -Status Active -SubscriptionId 11111111-2222-3333-4444-12345678910122
+    Update-AzNewRelicMonitoredSubscription -MonitorName test-01 -ResourceGroupName group-test -PatchOperation AddComplete -MonitoredSubscriptionList $sub1
+    ```
+
+    ```output
+    Id                        : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/group_test/providers/NewRelic.Observability/monitors/test-01/monitoredSubscriptions/default
+    MonitoredSubscriptionList : {{
+                                  "tagRules": {
+                                    "provisioningState": "Accepted"
+                                  },
+                                  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+                                  "status": "Active"
+                                }, {
+                                  "tagRules": {
+                                    "provisioningState": "Accepted"
+                                  },
+                                  "subscriptionId": "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e",
+                                  "status": "Active"
+                                }}
+    Name                      : default
+    PatchOperation            :
+    ProvisioningState         :
+    ResourceGroupName         : group_test
+    Type                      : NewRelic.Observability/monitors/monitoredSubscriptions
+    ```
+
+    This command updates the subscriptions that are being monitored by the NewRelic monitor resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Update-AzNewRelicMonitoredSubscription.md
+  document type: cmdlet
+  external help file: Az.NewRelic-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.newrelic/update-aznewrelicmonitoredsubscription
+  Module Name: Az.NewRelic
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Update-AzNewRelicMonitoredSubscription.md
+  PlatyPS schema version: 2024-05-01

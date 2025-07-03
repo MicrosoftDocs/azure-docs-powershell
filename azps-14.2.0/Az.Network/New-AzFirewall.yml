@@ -1,0 +1,908 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzFirewall
+name: New-AzFirewall
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a new Firewall in a resource group.
+description: |-
+  The **New-AzFirewall** cmdlet creates an Azure Firewall.
+parameters:
+  cmdletParameters:
+  - name: AllowActiveFTP
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows Active FTP on the Firewall. By default it is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationRuleCollection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the collections of application rules for the new Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsServer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of DNS Servers to be used for DNS resolution,
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableDnsProxy
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable DNS Proxy. By default it is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableFatFlowLogging
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Fat Flow Logging. By default it is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableUDPLogOptimization
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable UDP Log Optimization. By default it is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallPolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The firewall policy attached to the firewall
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubIPAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallHubIpAddresses" data-throw-if-not-resolved="False" />
+    description: |-
+      The ip addresses for the firewall attached to a virtual hub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the region for the Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementPublicIpAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      One or more Public IP Addresses to use for management traffic. The Public IP addresses must use Standard SKU and must belong to the same resource group as the Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IpConfigurationParameterValues
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCapacity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The maximum number of capacity units for this azure firewall
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinCapacity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The minimum number of capacity units for this azure firewall
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure Firewall that this cmdlet creates.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NatRuleCollection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AzureFirewallNatRuleCollections
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkRuleCollection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AzureFirewallNetworkRuleCollections
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The private IP ranges to which traffic won't be SNAT'ed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      One or more Public IP Addresses. The Public IP addresses must use Standard SKU and must belong to the same resource group as the Firewall. No input needed for Forced Tunneling Firewalls.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Public Ip Name. The Public IP must use Standard SKU and must belong to the same resource group as the Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OldIpConfigurationParameterValues
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group to contain the Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteServerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Route Server Id for the firewall
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sku name for firewall
+    acceptedValues:
+    - AZFW_Hub
+    - AZFW_VNet
+    aliases:
+    - Sku
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sku tier for firewall
+    acceptedValues:
+    - Standard
+    - Premium
+    - Basic
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatIntelMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operation mode for Threat Intelligence. Default mode is Alert, not Off.
+    acceptedValues:
+    - Alert
+    - Deny
+    - Off
+    defaultValue: Alert
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatIntelWhitelist
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallThreatIntelWhitelist" data-throw-if-not-resolved="False" />
+    description: |-
+      The allowlist for Threat Intelligence
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual hub that a firewall is attached to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Network
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IpConfigurationParameterValues
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual network for which the Firewall will be deployed. Virtual network and Firewall must belong to the same resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: OldIpConfigurationParameterValues
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of availability zones denoting where the firewall needs to come from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFirewall
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-PublicIpAddress <PSPublicIpAddress[]>]
+        [-ApplicationRuleCollection <PSAzureFirewallApplicationRuleCollection[]>]
+        [-NatRuleCollection <PSAzureFirewallNatRuleCollection[]>]
+        [-NetworkRuleCollection <PSAzureFirewallNetworkRuleCollection[]>]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallThreatIntelWhitelist>]
+        [-PrivateRange <String[]>]
+        [-EnableDnsProxy]
+        [-DnsServer <String[]>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-Zone <String[]>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [-VirtualHubId <String>]
+        [-HubIPAddress <PSAzureFirewallHubIpAddresses>]
+        [-FirewallPolicyId <String>]
+        [-AllowActiveFTP]
+        [-EnableFatFlowLogging]
+        [-EnableUDPLogOptimization]
+        [-RouteServerId <String>]
+        [-MinCapacity <Int32>]
+        [-MaxCapacity <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzFirewall
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -VirtualNetworkName <String>
+        [-PublicIpName <String>]
+        [-PublicIpAddress <PSPublicIpAddress[]>]
+        [-ApplicationRuleCollection <PSAzureFirewallApplicationRuleCollection[]>]
+        [-NatRuleCollection <PSAzureFirewallNatRuleCollection[]>]
+        [-NetworkRuleCollection <PSAzureFirewallNetworkRuleCollection[]>]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallThreatIntelWhitelist>]
+        [-PrivateRange <String[]>]
+        [-EnableDnsProxy]
+        [-DnsServer <String[]>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-Zone <String[]>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [-VirtualHubId <String>]
+        [-HubIPAddress <PSAzureFirewallHubIpAddresses>]
+        [-FirewallPolicyId <String>]
+        [-AllowActiveFTP]
+        [-EnableFatFlowLogging]
+        [-EnableUDPLogOptimization]
+        [-RouteServerId <String>]
+        [-MinCapacity <Int32>]
+        [-MaxCapacity <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: OldIpConfigurationParameterValues
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzFirewall
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-PublicIpAddress <PSPublicIpAddress[]>]
+        [-ManagementPublicIpAddress <PSPublicIpAddress>]
+        [-ApplicationRuleCollection <PSAzureFirewallApplicationRuleCollection[]>]
+        [-NatRuleCollection <PSAzureFirewallNatRuleCollection[]>]
+        [-NetworkRuleCollection <PSAzureFirewallNetworkRuleCollection[]>]
+        [-ThreatIntelMode <String>]
+        [-ThreatIntelWhitelist <PSAzureFirewallThreatIntelWhitelist>]
+        [-PrivateRange <String[]>]
+        [-EnableDnsProxy]
+        [-DnsServer <String[]>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-Zone <String[]>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [-VirtualHubId <String>]
+        [-HubIPAddress <PSAzureFirewallHubIpAddresses>]
+        [-FirewallPolicyId <String>]
+        [-AllowActiveFTP]
+        [-EnableFatFlowLogging]
+        [-EnableUDPLogOptimization]
+        [-RouteServerId <String>]
+        [-MinCapacity <Int32>]
+        [-MaxCapacity <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IpConfigurationParameterValues
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallApplicationRuleCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNatRuleCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallNetworkRuleCollection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewall" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Firewall attached to a virtual network'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip
+    ```
+
+    This example creates a Firewall attached to virtual network "vnet" in the same resource group as the firewall.
+    Since no rules were specified, the firewall will block all traffic (default behavior).
+    Threat Intel will also run in default mode - Alert - which means malicious traffic will be logged, but not denied.
+- title: 'Example 2: Create a Firewall which allows all HTTPS traffic'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+
+    $rule = New-AzFirewallApplicationRule -Name R1 -Protocol "https:443" -TargetFqdn "*"
+    $ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ApplicationRuleCollection $ruleCollection
+    ```
+
+    This example creates a Firewall which allows all HTTPS traffic on port 443.
+    Threat Intel will run in default mode - Alert - which means malicious traffic will be logged, but not denied.
+- title: 'Example 3: DNAT - redirect traffic destined to 10.1.2.3:80 to 10.2.3.4:8080'
+  description: |-
+    ```powershell
+    $rule = New-AzFirewallNatRule -Name "natRule" -Protocol "TCP" -SourceAddress "*" -DestinationAddress "10.1.2.3" -DestinationPort "80" -TranslatedAddress "10.2.3.4" -TranslatedPort "8080"
+    $ruleCollection = New-AzFirewallNatRuleCollection -Name "NatRuleCollection" -Priority 1000 -Rule $rule
+    New-AzFirewall -Name "azFw" -ResourceGroupName "rg" -Location centralus -NatRuleCollection $ruleCollection -ThreatIntelMode Off
+    ```
+
+    This example created a Firewall which translated the destination IP and port of all packets destined to 10.1.2.3:80 to 10.2.3.4:8080
+    Threat Intel is turned off in this example.
+- title: 'Example 4: Create a Firewall with no rules and with Threat Intel in Alert mode'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ThreatIntelMode Alert
+    ```
+
+    This example creates a Firewall which blocks all traffic (default behavior) and has Threat Intel running in Alert mode.
+    This means alerting logs are emitted for malicious traffic before applying the other rules (in this case just the default rule - Deny All)
+- title: 'Example 5: Create a Firewall which allows all HTTP traffic on port 8080, but blocks malicious domains identified by Threat Intel'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+
+    $rule = New-AzFirewallApplicationRule -Name R1 -Protocol "http:8080" -TargetFqdn "*"
+    $ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ApplicationRuleCollection $ruleCollection -ThreatIntelMode Deny
+    ```
+
+    This example creates a Firewall which allows all HTTP traffic on port 8080 unless it is considered malicious by Threat Intel.
+    When running in Deny mode, unlike Alert, traffic considered malicious by Threat Intel is not just logged, but also blocked.
+- title: 'Example 6: Create a Firewall with no rules and with availability zones'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetworkName $vnet.Name -PublicIpName $pip.Name -Zone 1,2,3
+    ```
+
+    This example creates a Firewall with all available availability zones.
+- title: 'Example 7: Create a Firewall with two or more Public IP Addresses'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -Name "vnet" -ResourceGroupName $rgName
+    $pip1 = New-AzPublicIpAddress -Name "AzFwPublicIp1" -ResourceGroupName "rg" -Sku "Basic" -Tier "Regional" -Location "centralus" -AllocationMethod Static
+    $pip2 = New-AzPublicIpAddress -Name "AzFwPublicIp2" -ResourceGroupName "rg" -Sku "Basic" -Tier "Regional" -Location "centralus" -AllocationMethod Static
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress @($pip1, $pip2)
+    ```
+
+    This example creates a Firewall attached to virtual network "vnet" with two public IP addresses.
+- title: 'Example 8: Create a Firewall which allows MSSQL traffic to specific SQL database'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+
+    $rule = New-AzFirewallApplicationRule -Name R1 -Protocol "mssql:1433" -TargetFqdn "sql1.database.windows.net"
+    $ruleCollection = New-AzFirewallApplicationRuleCollection -Name RC1 -Priority 100 -Rule $rule -ActionType "Allow"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ApplicationRuleCollection $ruleCollection -ThreatIntelMode Deny
+    ```
+
+    This example creates a Firewall which allows MSSQL traffic on standard port 1433 to SQL database sql1.database.windows.net.
+- title: 'Example 9: Create a Firewall attached to a virtual hub'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $fp = Get-AzFirewallPolicy -ResourceGroupName $rgName -Name "fp"
+    $fpId = $fp.Id
+    $vHub = Get-AzVirtualHub -Name "hub"
+    $vHubId = $vHub.Id
+
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -SkuName AZFW_Hub -VirtualHubId $vHubId -FirewallPolicyId -$fpId
+    ```
+
+    This example creates a Firewall attached to virtual hub "vHub". A firewall policy $fp will be attached to the firewall. This firewall allows/denies the traffic based on the rules mentioned in the firewall policy $fp. The virtual hub and the firewall should be in the same regions.
+- title: 'Example 10: Create a Firewall with threat intelligence allowlist setup'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+
+    $tiWhitelist = New-AzFirewallThreatIntelWhitelist -FQDN @("www.microsoft.com") -IpAddress @("8.8.8.8")
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ThreatIntelWhitelist $tiWhitelist
+    ```
+
+    This example creates a Firewall that allowlists "www.microsoft.com" and "8.8.8.8" from threat intelligence
+- title: 'Example 11: Create a Firewall with customized private range setup'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -PrivateRange @("99.99.99.0/24", "66.66.0.0/16")
+    ```
+
+    This example creates a Firewall that treats "99.99.99.0/24" and "66.66.0.0/16" as private ip ranges and won't snat traffic to those addresses
+- title: 'Example 12: Create a Firewall with a management subnet and Public IP address'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    $mgmtPip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "managementPublicIpName"
+
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -ManagementPublicIpAddress $mgmtPip
+    ```
+
+    This example creates a Firewall attached to virtual network "vnet" in the same resource group as the firewall.
+    Since no rules were specified, the firewall will block all traffic (default behavior).
+    Threat Intel will also run in default mode - Alert - which means malicious traffic will be logged, but not denied.
+
+    To support "forced tunneling" scenarios, this firewall will use the subnet "AzureFirewallManagementSubnet" and the management public IP address for its management traffic
+- title: 'Example 13: Create a Firewall with Firewall Policy attached to a virtual network'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    $fp = Get-AzFirewallPolicy -ResourceGroupName $rgName -Name "fp"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -FirewallPolicyId $fp
+    ```
+
+    This example creates a Firewall attached to virtual network "vnet" in the same resource group as the firewall.
+    The rules and threat intelligence that will be applied to the firewall will be taken from the firewall policy
+- title: 'Example 14: Create a Firewall with DNS Proxy and DNS Servers'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -DnsServer @("10.10.10.1", "20.20.20.2")
+    ```
+
+    This example creates a Firewall attached to virtual network "vnet" in the same resource group as the firewall.
+    DNS Proxy is enabled for this firewall and 2 DNS Servers are provided. Also Require DNS Proxy for Network rules is set
+    so if there are any Network rules with FQDNs then DNS proxy will be used for them too.
+- title: 'Example 15: Create a Firewall with multiple IPs. The Firewall can be associated with the Virtual Hub'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vHub = Get-AzVirtualHub -Name "hub"
+    $vHubId = $vHub.Id
+    $fwpips = New-AzFirewallHubPublicIpAddress -Count 2
+    $hubIpAddresses = New-AzFirewallHubIpAddress -PublicIP $fwpips
+    $fw=New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location westus -SkuName AZFW_Hub -HubIPAddress $hubIpAddresses -VirtualHubId $vHubId
+    ```
+
+    This example creates a Firewall attached to virtual hub "hub" in the same resource group as the firewall.
+    The Firewall will be assigned 2 public IPs that are created implicitly.
+- title: 'Example 16:  Create a Firewall with Allow Active FTP.'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $pip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "publicIpName"
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -PublicIpAddress $pip -AllowActiveFTP
+    ```
+
+    This example creates a Firewall with allow active FTP flag.
+- title: 'Example 17: Create a Firewall with a management subnet and no data Public IP address'
+  description: |-
+    ```powershell
+    $rgName = "resourceGroupName"
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName $rgName -Name "vnet"
+    $mgmtPip = Get-AzPublicIpAddress -ResourceGroupName $rgName -Name "managementPublicIpName"
+
+    New-AzFirewall -Name "azFw" -ResourceGroupName $rgName -Location centralus -VirtualNetwork $vnet -ManagementPublicIpAddress $mgmtPip
+    ```
+
+    This example creates a "forced tunneling" Firewall that uses the subnet "AzureFirewallManagementSubnet" and the management public IP address for its management traffic.
+    In this scenario, users do not have to specify a data Public IP if they are only using firewall for private traffic only.
+links:
+- text: Get-AzFirewall
+  href: ./Get-AzFirewall.yml
+- text: Remove-AzFirewall
+  href: ./Remove-AzFirewall.yml
+- text: Set-AzFirewall
+  href: ./Set-AzFirewall.yml
+- text: New-AzFirewallApplicationRuleCollection
+  href: ./New-AzFirewallApplicationRuleCollection.yml
+- text: New-AzFirewallNatRuleCollection
+  href: ./New-AzFirewallNatRuleCollection.yml
+- text: New-AzFirewallNetworkRuleCollection
+  href: ./New-AzFirewallNetworkRuleCollection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewall.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azfirewall
+  Module Name: Az.Network
+  ms.assetid: A3D60CF1-2E66-4EE5-9C68-932DD8DF80BD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewall.md
+  PlatyPS schema version: 2024-05-01

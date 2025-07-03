@@ -1,0 +1,120 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityGcpProjectEnvironmentObject
+name: New-AzSecurityGcpProjectEnvironmentObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for GcpProjectEnvironment.
+description: |-
+  Create an in-memory object for GcpProjectEnvironment.
+parameters:
+  cmdletParameters:
+  - name: OrganizationalData
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IGcpOrganizationalData" data-throw-if-not-resolved="False" />
+    description: |-
+      The Gcp project's organizational data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectDetailProjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GCP Project id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectDetailProjectNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique GCP Project number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanInterval
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Scan interval in hours (value should be between 1-hour to 24-hours).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityGcpProjectEnvironmentObject
+        [-OrganizationalData <IGcpOrganizationalData>]
+        [-ProjectDetailProjectId <String>]
+        [-ProjectDetailProjectNumber <String>]
+        [-ScanInterval <Int64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.GcpProjectEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new GcpOrganizationalDataOrganization object'
+  description: |-
+    ```powershell
+    $orgData = New-AzSecurityGcpOrganizationalDataOrganizationObject -WorkloadIdentityProviderId "provider" -ServiceAccountEmailAddress "my@email.com" -ExcludedProjectNumber @(1,2)
+    New-AzSecurityGcpProjectEnvironmentObject -ProjectDetailProjectId "asc-sdk-samples" -ScanInterval 24 -OrganizationalData $orgData -ProjectDetailProjectNumber "1234"
+    ```
+
+    ```output
+    EnvironmentType                     : GcpProject
+    OrganizationalData                  : {
+                                            "organizationMembershipType": "Organization",
+                                            "excludedProjectNumbers": [ "1", "2" ],
+                                            "serviceAccountEmailAddress": "my@email.com",
+                                            "workloadIdentityProviderId": "provider"
+                                          }
+    ProjectDetailProjectId              : asc-sdk-samples
+    ProjectDetailProjectName            :
+    ProjectDetailProjectNumber          : 1234
+    ProjectDetailWorkloadIdentityPoolId :
+    ScanInterval                        : 24
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGcpProjectEnvironmentObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritygcpprojectenvironmentobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGcpProjectEnvironmentObject.md
+  PlatyPS schema version: 2024-05-01

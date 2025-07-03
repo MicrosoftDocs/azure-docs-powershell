@@ -1,0 +1,286 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzADServicePrincipalAppRoleAssignment
+name: New-AzADServicePrincipalAppRoleAssignment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Create new navigation property to appRoleAssignments for servicePrincipals
+description: |-
+  Create new navigation property to appRoleAssignments for servicePrincipals
+parameters:
+  cmdletParameters:
+  - name: AdditionalProperties
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      ParameterSetName='CreateExpanded')]
+      Additional Parameters
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRoleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier (id) for the app role which is assigned to the principal.
+      This app role must be exposed in the appRoles property on the resource application's service principal (resourceId).
+      If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles.
+      Required on create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceDisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the resource app's service principal to which the assignment is made.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdWithResourceDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SPNWithResourceDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier (id) for the resource service principal for which the assignment is made.
+      Required on create.
+      Supports $filter (eq only).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdWithResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SPNWithResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalDisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name displayed in directory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SPNWithResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SPNWithResourceDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier (id) for the user, group or service principal being granted the app role.
+      Required on create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdWithResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ObjectIdWithResourceDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipalAppRoleAssignment
+        -ServicePrincipalId <String>
+        -ResourceId <String>
+        [-AdditionalProperties <Hashtable>]
+        [-AppRoleId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdWithResourceIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipalAppRoleAssignment
+        -ServicePrincipalId <String>
+        -ResourceDisplayName <String>
+        [-AdditionalProperties <Hashtable>]
+        [-AppRoleId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdWithResourceDisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipalAppRoleAssignment
+        -ResourceId <String>
+        -ServicePrincipalDisplayName <String>
+        [-AdditionalProperties <Hashtable>]
+        [-AppRoleId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SPNWithResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipalAppRoleAssignment
+        -ResourceDisplayName <String>
+        -ServicePrincipalDisplayName <String>
+        [-AdditionalProperties <Hashtable>]
+        [-AppRoleId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SPNWithResourceDisplayNameParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRoleAssignment" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRoleAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: ObjectIdWithResourceIdParameterSet'
+  description: |-
+    ```powershell
+    New-AzADServicePrincipalAppRoleAssignment -ServicePrincipalId 00001111-aaaa-2222-bbbb-3333cccc4444 -ResourceId a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 -AppRoleId b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
+    ```
+
+    ```output
+    Id                                          AppRoleId                            PrincipalDisplayName PrincipalId                          CreatedDateTime
+    --                                          ---------                            -------------------- -----------                          ---------------
+    Zbm-cUeDXUmlicIc3eenIkgIm8kv9kJPj4MFhepACNE b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 funapp1214           00001111-aaaa-2222-bbbb-3333cccc4444 12/14/2023 7:04:28 AM
+    ```
+
+    Create an appRoleAssignment using ServicePrincipalId and ResourceId.
+- title: 'Example 2: SPNWithResourceDisplayNameParameterSet'
+  description: |-
+    ```powershell
+    New-AzADServicePrincipalAppRoleAssignment -ServicePrincipalDisplayName funapp1214 -ResourceDisplayName nori-sp -AppRoleId b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
+    ```
+
+    ```output
+    Id                                          AppRoleId                            PrincipalDisplayName PrincipalId                          CreatedDateTime
+    --                                          ---------                            -------------------- -----------                          ---------------
+    Zbm-cUeDXUmlicIc3eenIlqgWRlWp2hFrXIJiqP2j78 b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2 funapp1214           00001111-aaaa-2222-bbbb-3333cccc4444 12/14/2023 7:07:16 AM
+    ```
+
+    Create an appRoleAssignment for service principal using ServicePrincipal DisplayName and Resource DisplayName.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzADServicePrincipalAppRoleAssignment.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/new-azadserviceprincipalapproleassignment
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzADServicePrincipalAppRoleAssignment.md
+  PlatyPS schema version: 2024-05-01

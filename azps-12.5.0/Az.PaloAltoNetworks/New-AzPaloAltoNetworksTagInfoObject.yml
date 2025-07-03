@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PaloAltoNetworks.New-AzPaloAltoNetworksTagInfoObject
+name: New-AzPaloAltoNetworksTagInfoObject
+module: Az.PaloAltoNetworks
+isPreview: false
+summary: |-
+  Create an in-memory object for TagInfo.
+description: |-
+  Create an in-memory object for TagInfo.
+parameters:
+  cmdletParameters:
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      tag name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      tag value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPaloAltoNetworksTagInfoObject
+        -Key <String>
+        -Value <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.TagInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for TagInfo.'
+  description: |-
+    ```powershell
+    New-AzPaloAltoNetworksTagInfoObject -Key "abc" -Value "123"
+    ```
+
+    ```output
+    Key Value
+    --- -----
+    abc 123
+    ```
+
+    Create an in-memory object for TagInfo.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksTagInfoObject.md
+  document type: cmdlet
+  external help file: Az.PaloAltoNetworks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.PaloAltoNetworks/new-azpaloaltonetworkstaginfoobject
+  Module Name: Az.PaloAltoNetworks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksTagInfoObject.md
+  PlatyPS schema version: 2024-05-01

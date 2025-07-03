@@ -1,0 +1,32 @@
+### YamlMime:PowerShellModule1
+uid: Az.Informatica
+name: Az.Informatica Module
+isPreview: false
+cmdletGroups:
+- title: Informatica
+  cmdlets:
+  - Az.Informatica.Get-AzInformaticaOrganization
+  - Az.Informatica.Get-AzInformaticaOrganizationServerlessMetadata
+  - Az.Informatica.Get-AzInformaticaOrganizationServerlessRuntime
+  - Az.Informatica.Get-AzInformaticaServerlessRuntime
+  - Az.Informatica.Invoke-AzInformaticaServerlessRuntimeResource
+  - Az.Informatica.New-AzInformaticaOrganization
+  - Az.Informatica.New-AzInformaticaServerlessRuntime
+  - Az.Informatica.Remove-AzInformaticaOrganization
+  - Az.Informatica.Remove-AzInformaticaServerlessRuntime
+  - Az.Informatica.Start-AzInformaticaServerlessRuntimeFailedServerlessRuntime
+  - Az.Informatica.Test-AzInformaticaServerlessRuntimeDependency
+  - Az.Informatica.Update-AzInformaticaOrganization
+  - Az.Informatica.Update-AzInformaticaServerlessRuntime
+description: |-
+  Microsoft Azure PowerShell: Informatica cmdlets
+metadata:
+  Module Name: Az.Informatica
+  Module Guid: 3e11ebdb-a052-49a9-a4a4-3b51ea521d09
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.informatica
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Az.Informatica.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Informatica/Informatica/help/Az.Informatica.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

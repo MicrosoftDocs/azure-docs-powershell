@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-WAPackVM
+name: Remove-WAPackVM
+module: Azure
+isPreview: false
+summary: |-
+  Removes virtual machine objects.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Remove-WAPackVM** cmdlet removes virtual machine objects.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet removes a virtual machine without prompting you for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet returns a Boolean value.
+      If the operation succeeds, the cmdlet returns a value of $True.
+      Otherwise, it returns a value of $False.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="VirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual machine.
+      To obtain a virtual machine, use the **Get-WAPackVM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-WAPackVM
+        -VM <VirtualMachine>
+        [-PassThru]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a virtual machine'
+  description: |-
+    ```
+    PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+    PS C:\> Remove-WAPackVM -VM $VirtualMachine
+    ```
+
+    The first command gets the virtual machine named ContosoV126 by using the **Get-WAPackVM** cmdlet, and then stores that object in the $VirtualMachine variable.
+
+    The second command removes the virtual machine stored in $VirtualMachine.
+    The command prompts you for confirmation.
+- title: 'Example 2: Remove a virtual machine without confirmation'
+  description: |-
+    ```
+    PS C:\> $VirtualMachine = Get-WAPackVM -Name "ContosoV126"
+    PS C:\> Remove-WAPackVM -VM $VirtualMachine -Force
+    ```
+
+    The first command gets the virtual machine named ContosoV126 by using the **Get-WAPackVM** cmdlet, and then stores that object in the $VirtualMachine variable.
+
+    The second command removes the virtual machine stored in $VirtualMachine.
+    This command includes the *Force* parameter.
+    The command does not prompt you for confirmation.
+links:
+- text: Get-WAPackVM
+  href: ./Get-WAPackVM.yml
+- text: New-WAPackVM
+  href: ./New-WAPackVM.yml
+- text: Restart-WAPackVM
+  href: ./Restart-WAPackVM.yml
+- text: Resume-WAPackVM
+  href: ./Resume-WAPackVM.yml
+- text: Set-WAPackVM
+  href: ./Set-WAPackVM.yml
+- text: Start-WAPackVM
+  href: ./Start-WAPackVM.yml
+- text: Stop-WAPackVM
+  href: ./Stop-WAPackVM.yml
+- text: Suspend-WAPackVM
+  href: ./Suspend-WAPackVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D04D79CE-F183-4A8D-B925-F640D89377BD
+  PlatyPS schema version: 2024-05-01

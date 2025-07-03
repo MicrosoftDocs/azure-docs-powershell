@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGatewaySslCertificate
+name: Get-AzApplicationGatewaySslCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an SSL certificate for an application gateway.
+description: |-
+  The **Get-AzApplicationGatewaySslCertificate** cmdlet gets an SSL certificate for an application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway object that contains the SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of SSL certificate pool that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGatewaySslCertificate
+        [-Name <String>]
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific SSL certificate'
+  description: |-
+    ```powershell
+    $AppGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $Cert = Get-AzApplicationGatewaySslCertificate -Name "Cert01" -ApplicationGateway $AppGW
+    ```
+
+    The first command gets the Application Gateway named ApplicationGateway01 and stores the result in the variable named $AppGW.
+    The second command gets the SSL certificate named Cert01 from the application gateway stored in the variable named $AppGW.
+    The command stores the certificate in the variable named $Cert.
+- title: 'Example 2: Get a list of SSL certificates'
+  description: |-
+    ```powershell
+    $AppGW = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $Certs = Get-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGW
+    ```
+
+    The first command gets the Application Gateway named ApplicationGateway01 and stores the result in the variable named $AppGW.
+    This second command gets a list of SSL certificates from the application gateway stored in the variable named $AppGW.
+    The command then stores the results in the variable named $Certs.
+links:
+- text: Add-AzApplicationGatewaySslCertificate
+  href: ./Add-AzApplicationGatewaySslCertificate.yml
+- text: New-AzApplicationGatewaySslCertificate
+  href: ./New-AzApplicationGatewaySslCertificate.yml
+- text: Remove-AzApplicationGatewaySslCertificate
+  href: ./Remove-AzApplicationGatewaySslCertificate.yml
+- text: Set-AzApplicationGatewaySslCertificate
+  href: ./Set-AzApplicationGatewaySslCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysslcertificate
+  Module Name: Az.Network
+  ms.assetid: 919B3755-81D4-43FB-AE8C-B071329A61D9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslCertificate.md
+  PlatyPS schema version: 2024-05-01

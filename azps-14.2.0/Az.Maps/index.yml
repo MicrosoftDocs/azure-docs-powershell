@@ -1,0 +1,30 @@
+### YamlMime:PowerShellModule1
+uid: Az.Maps
+name: Az.Maps Module
+isPreview: false
+cmdletGroups:
+- title: Maps
+  cmdlets:
+  - Az.Maps.Get-AzMapsAccount
+  - Az.Maps.Get-AzMapsAccountKey
+  - Az.Maps.Get-AzMapsCreator
+  - Az.Maps.Get-AzMapsSubscriptionOperation
+  - Az.Maps.New-AzMapsAccount
+  - Az.Maps.New-AzMapsAccountKey
+  - Az.Maps.New-AzMapsCreator
+  - Az.Maps.Remove-AzMapsAccount
+  - Az.Maps.Remove-AzMapsCreator
+  - Az.Maps.Update-AzMapsAccount
+  - Az.Maps.Update-AzMapsCreator
+description: |-
+  Microsoft Azure PowerShell: Maps cmdlets
+metadata:
+  Module Name: Az.Maps
+  Module Guid: dc0410d0-8396-4441-a4d3-fdaaa915369d
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.maps
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Az.Maps.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Az.Maps.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

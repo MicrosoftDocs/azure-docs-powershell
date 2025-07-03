@@ -1,0 +1,641 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVirtualNetworkGatewayConnection
+name: New-AzVirtualNetworkGatewayConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates the Site-to-Site VPN connection between the virtual network gateway and the on-prem VPN device.
+description: |-
+  Creates the Site-to-Site VPN connection between the virtual network gateway and the on-prem VPN device.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AuthorizationKey.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Network Gateway Connection Mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gateway connection protocol:IKEv1/IKEv2
+    acceptedValues:
+    - IKEv1
+    - IKEv2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gateway connection type:IPsec/Vnet2Vnet/ExpressRoute/VPNClient
+    acceptedValues:
+    - IPsec
+    - Vnet2Vnet
+    - ExpressRoute
+    - VPNClient
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DpdTimeoutInSeconds
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Dead Peer Detection Timeout of the connection in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EgressNatRule
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSResourceId" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of egress  NAT rules that are associated with this Connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableBgp
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to establish a BGP session over a S2S VPN tunnel
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnablePrivateLinkFastPath
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Bypass the ExpressRoute gateway when accessing private-links.
+      ExpressRoute FastPath (ExpressRouteGatewayBypass) must be enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteGatewayBypass
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to use accelerated virtual network access by bypassing gateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayCustomBgpIpAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSGatewayCustomBgpIpConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The GatewayCustomBgpIpAddress of Virtual network gateway used in this connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressNatRule
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSResourceId" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ingress NAT rules that are associated with this Connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpsecPolicies
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of IPSec policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalNetworkGateway2
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      local network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Peer
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" />
+    description: |-
+      Peer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      PeerId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingWeight
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      RoutingWeight.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Ipsec share key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficSelectorPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of traffic selector policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseLocalAzureIpAddress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to use PrivateIP for this S2S VPN tunnel
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsePolicyBasedTrafficSelectors
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to use policy-based traffic selectors for a S2S connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGateway1
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      First virtual network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGateway2
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Second virtual network gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVirtualNetworkGatewayConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -VirtualNetworkGateway1 <PSVirtualNetworkGateway>
+        -ConnectionType <String>
+        [-AuthorizationKey <String>]
+        [-VirtualNetworkGateway2 <PSVirtualNetworkGateway>]
+        [-LocalNetworkGateway2 <PSLocalNetworkGateway>]
+        [-RoutingWeight <Int32>]
+        [-DpdTimeoutInSeconds <Int32>]
+        [-ConnectionMode <String>]
+        [-SharedKey <String>]
+        [-Peer <PSPeering>]
+        [-EnableBgp <Boolean>]
+        [-UseLocalAzureIpAddress]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-IpsecPolicies <PSIpsecPolicy[]>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-ConnectionProtocol <String>]
+        [-IngressNatRule <PSResourceId[]>]
+        [-EgressNatRule <PSResourceId[]>]
+        [-GatewayCustomBgpIpAddress <PSGatewayCustomBgpIpConfiguration[]>]
+        [-AsJob]
+        [-ExpressRouteGatewayBypass]
+        [-EnablePrivateLinkFastPath]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVirtualNetworkGatewayConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -VirtualNetworkGateway1 <PSVirtualNetworkGateway>
+        -ConnectionType <String>
+        [-AuthorizationKey <String>]
+        [-VirtualNetworkGateway2 <PSVirtualNetworkGateway>]
+        [-LocalNetworkGateway2 <PSLocalNetworkGateway>]
+        [-RoutingWeight <Int32>]
+        [-DpdTimeoutInSeconds <Int32>]
+        [-ConnectionMode <String>]
+        [-SharedKey <String>]
+        [-PeerId <String>]
+        [-EnableBgp <Boolean>]
+        [-UseLocalAzureIpAddress]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-IpsecPolicies <PSIpsecPolicy[]>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-ConnectionProtocol <String>]
+        [-IngressNatRule <PSResourceId[]>]
+        [-EgressNatRule <PSResourceId[]>]
+        [-GatewayCustomBgpIpAddress <PSGatewayCustomBgpIpConfiguration[]>]
+        [-AsJob]
+        [-ExpressRouteGatewayBypass]
+        [-EnablePrivateLinkFastPath]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSGatewayCustomBgpIpConfiguration" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $vnetgw1 = Get-AzVirtualNetworkGateway -ResourceGroupName "Rg1" -Name "gw1"
+    $vnetgw2 = Get-AzVirtualNetworkGateway -ResourceGroupName "Rg1" -Name "gw2"
+    New-AzVirtualNetworkGatewayConnection -Name conn-client-1 -ResourceGroupName "Rg1" -VirtualNetworkGateway1 $vnetgw1 -VirtualNetworkGateway2 $vnetgw2 -Location "eastus" -ConnectionType Vnet2Vnet -SharedKey 'a1b2c3d4e5'
+    ```
+- title: Example 2 Add/Update IngressNatRule/EgressNatRule to an existing virtual network gateway connection
+  description: |-
+    ```powershell
+    $vnetgw1 = Get-AzVirtualNetworkGateway -ResourceGroupName "Rg1" -Name "vnetgw1"
+    $vnetgw2 = Get-AzVirtualNetworkGateway -ResourceGroupName "Rg1" -Name "vnetgw2"
+    $ingressnatrule = Get-AzVirtualNetworkGatewayNatRule -ResourceGroupName "Rg1" -Name "natRule1" -ParentResourceName vnetgw1
+    $egressnatrule = Get-AzVirtualNetworkGatewayNatRule -ResourceGroupName "Rg1" -Name "natRule2" -ParentResourceName vnetgw1
+    New-AzVirtualNetworkGatewayConnection -Name conn-client-1 -ResourceGroupName $RG1 -VirtualNetworkGateway1 $vnetgw1 -VirtualNetworkGateway2 $vnetgw2 -Location "eastus" -ConnectionType Vnet2Vnet -SharedKey 'a1b2c3d4e5' `
+    -IngressNatRule $ingressnatrule -EgressNatRule $egressnatrule
+    ```
+
+    The first command gets a virtual network gateway natRule named natRule1 that's type is IngressSnat.
+    The second command gets a virtual network gateway natRule named natRule2 that's type is EgressSnat.
+    The third command creates this new virtual Network gateway connection with Ingress and Egress NatRules.
+- title: Example 3 Add GatewayCustomBgpIpAddress to virtual network gateway connection
+  description: |-
+    ```powershell
+    $LocalnetGateway = Get-AzLocalNetworkGateway -ResourceGroupName "PS_testing" -name "testLng"
+    $gateway = Get-AzVirtualNetworkGateway -ResourceGroupName PS_testing -ResourceName testGw
+    $address = New-AzGatewayCustomBgpIpConfigurationObject -IpConfigurationId "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw/ipConfigurations/default" -CustomBgpIpAddress "169.254.21.1"
+
+    New-AzVirtualNetworkGatewayConnection -ResourceGroupName "PS_testing" -name "Conn" -location "eastus" -VirtualNetworkGateway1 $gateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -RoutingWeight 3 -SharedKey abc -GatewayCustomBgpIpAddress $address -EnableBgp $true
+    ```
+
+    The two command gets a local network gateway and virtual network gateway.
+    The thrid command creates a AzGatewayCustomBgpIpConfigurationObject.
+    The third command creates this new virtual Network gateway connection with GatewayCustomBgpIpAddress.
+links:
+- text: Get-AzVirtualNetworkGatewayConnection
+  href: ./Get-AzVirtualNetworkGatewayConnection.yml
+- text: Remove-AzVirtualNetworkGatewayConnection
+  href: ./Remove-AzVirtualNetworkGatewayConnection.yml
+- text: Set-AzVirtualNetworkGatewayConnection
+  href: ./Set-AzVirtualNetworkGatewayConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGatewayConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualnetworkgatewayconnection
+  Module Name: Az.Network
+  ms.assetid: 0F141A92-4994-45B3-AE94-09865BC691C4
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualNetworkGatewayConnection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,565 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSchedulerHttpJob
+name: New-AzureSchedulerHttpJob
+module: Azure
+isPreview: false
+summary: |-
+  Creates a scheduler job that has an HTTP action.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-AzureSchedulerHttpJob** cmdlet creates a scheduler job that has an HTTP action.
+parameters:
+  cmdletParameters:
+  - name: ClientCertificatePassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Authentication
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientCertificatePfx
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Authentication
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a time, as a **DateTime** object, for the scheduler to stop initiating jobs.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Recurring
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionHeaders
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies headers as a hashtable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the method for HTTP and HTTPS action types.
+      Valid values are:
+
+      - GET
+      - PUT
+      - POST
+      - HEAD
+      - DELETE
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionQueueMessageBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the body for storage job actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionRequestBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the body for PUT and POST job actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionSASToken
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Shared Access Signature (SAS) token for the storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionStorageAccount
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionStorageQueue
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the storage queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ErrorActionURI
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI for the error job action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExecutionCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number occurrences of a job that run.
+      By default, a job recurs indefinitely.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Recurring
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Frequency
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum frequency for this scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Recurring
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Headers
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the headers as a hashtable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpAuthenticationType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Interval
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the interval of recurrence at the frequency specified by using the *Frequency* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Recurring
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the collection to contain the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobState
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state for the scheduler job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Method
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the method for HTTP and HTTPS action types.
+      Valid values are:
+
+      - GET
+      - PUT
+      - POST
+      - HEAD
+      - DELETE
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestBody
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the body for PUT and POST job actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PutPost
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a time, as a **DateTime** object, for the job to start.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: URI
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a URI for a job action.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Required
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerHttpJob
+        -Location <String>
+        -JobCollectionName <String>
+        -JobName <String>
+        -Method <String>
+        -URI <Uri>
+        [-RequestBody <String>]
+        [-StartTime <DateTime>]
+        [-Interval <Int32>]
+        [-Frequency <String>]
+        [-ExecutionCount <Int32>]
+        [-EndTime <DateTime>]
+        [-JobState <String>]
+        [-Headers <Hashtable>]
+        [-ErrorActionMethod <String>]
+        [-ErrorActionURI <Uri>]
+        [-ErrorActionRequestBody <String>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-ErrorActionStorageAccount <String>]
+        [-ErrorActionStorageQueue <String>]
+        [-ErrorActionSASToken <String>]
+        [-ErrorActionQueueMessageBody <String>]
+        [-HttpAuthenticationType <String>]
+        [-ClientCertificatePfx <Object>]
+        [-ClientCertificatePassword <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Required
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerHttpJob
+        [-RequestBody <String>]
+        [-JobState <String>]
+        [-Headers <Hashtable>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PutPost
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerHttpJob
+        [-Interval <Int32>]
+        [-Frequency <String>]
+        [-ExecutionCount <Int32>]
+        [-EndTime <DateTime>]
+        [-JobState <String>]
+        [-Headers <Hashtable>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Recurring
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSchedulerHttpJob
+        -HttpAuthenticationType <String>
+        [-JobState <String>]
+        [-Headers <Hashtable>]
+        [-ErrorActionHeaders <Hashtable>]
+        [-ClientCertificatePfx <Object>]
+        [-ClientCertificatePassword <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Authentication
+  isDefault: false
+examples:
+- title: 'Example 1: Create an HTTP job'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01" -JobName "Job01" -Location "North Central US" -Method "GET" -URI http://www.contoso.com
+    ```
+
+    This command creates a scheduler HTTP job in the job collection named JobCollection01.
+    The command specifies a URI and specifies GET as the method.
+- title: 'Example 2: Create an HTTP job for a specific run count'
+  description: |-
+    ```
+    PS C:\> New-AzureSchedulerHttpJob -JobCollectionName "JobCollection01 -JobName "Job23" -Location "North Central US" -Method "GET" -URI http://www.contoso.com -ExecutionCount 20
+    ```
+
+    This command creates scheduler http job in the job collection named JobCollection01.
+    The command specifies a URI and specifies GET as the method.
+    This command causes the job to run 20 times.
+links:
+- text: Set-AzureSchedulerHttpJob
+  href: ./Set-AzureSchedulerHttpJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: C608BBDD-DC2B-4BEF-812D-0BAE94FB4395
+  PlatyPS schema version: 2024-05-01

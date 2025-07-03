@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.SqlVirtualMachine
+name: Az.SqlVirtualMachine Module
+isPreview: false
+cmdletGroups:
+- title: Sql VM
+  cmdlets:
+  - Az.SqlVirtualMachine.Assert-AzSqlVMEntraAuth
+  - Az.SqlVirtualMachine.Get-AzAvailabilityGroupListener
+  - Az.SqlVirtualMachine.Get-AzSqlVM
+  - Az.SqlVirtualMachine.Get-AzSqlVMGroup
+  - Az.SqlVirtualMachine.Invoke-AzRedeploySqlVM
+  - Az.SqlVirtualMachine.Invoke-AzSqlVMTroubleshoot
+  - Az.SqlVirtualMachine.New-AzAvailabilityGroupListener
+  - Az.SqlVirtualMachine.New-AzSqlVirtualMachineAgReplicaObject
+  - Az.SqlVirtualMachine.New-AzSqlVirtualMachineMultiSubnetIPConfigurationObject
+  - Az.SqlVirtualMachine.New-AzSqlVM
+  - Az.SqlVirtualMachine.New-AzSqlVMGroup
+  - Az.SqlVirtualMachine.Remove-AzAvailabilityGroupListener
+  - Az.SqlVirtualMachine.Remove-AzSqlVM
+  - Az.SqlVirtualMachine.Remove-AzSqlVMGroup
+  - Az.SqlVirtualMachine.Start-AzSqlVMAssessment
+  - Az.SqlVirtualMachine.Update-AzSqlVM
+  - Az.SqlVirtualMachine.Update-AzSqlVMGroup
+description: |-
+  Microsoft Azure PowerShell: SqlVirtualMachine cmdlets
+metadata:
+  Module Name: Az.SqlVirtualMachine
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.sqlvirtualmachine
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Az.SqlVirtualMachine.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Az.SqlVirtualMachine.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,238 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzIpsecPolicy
+name: New-AzIpsecPolicy
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates an IPSec Policy.
+description: |-
+  The New-AzIpsecPolicy cmdlet creates an IPSec policy proposal to be used in a virtual network gateway connection.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DhGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DH Groups used in IKE Phase 1 for initial SA
+    acceptedValues:
+    - None
+    - DHGroup1
+    - DHGroup14
+    - DHGroup2
+    - DHGroup2048
+    - DHGroup24
+    - ECP256
+    - ECP384
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IkeEncryption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IKE encryption algorithm (IKE Phase 1)
+    acceptedValues:
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IkeIntegrity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IKE integrity algorithm (IKE Phase 1)
+    acceptedValues:
+    - MD5
+    - SHA1
+    - SHA256
+    - SHA384
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpsecEncryption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPSec encryption algorithm (IKE Phase 2)
+    acceptedValues:
+    - None
+    - DES
+    - DES3
+    - AES128
+    - AES192
+    - AES256
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpsecIntegrity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPSec integrity algorithm (IKE Phase 2)
+    acceptedValues:
+    - MD5
+    - SHA1
+    - SHA256
+    - GCMAES128
+    - GCMAES192
+    - GCMAES256
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PfsGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DH Groups used in IKE Phase 2 for new child SA
+    acceptedValues:
+    - None
+    - PFS1
+    - PFS2
+    - PFS2048
+    - PFS24
+    - ECP256
+    - ECP384
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SADataSizeKilobytes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SALifeTimeSeconds
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzIpsecPolicy
+        [-SALifeTimeSeconds <Int32>]
+        [-SADataSizeKilobytes <Int32>]
+        -IpsecEncryption <String>
+        -IpsecIntegrity <String>
+        -IkeEncryption <String>
+        -IkeIntegrity <String>
+        -DhGroup <String>
+        -PfsGroup <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $ipsecPolicy = New-AzIpsecPolicy -SALifeTimeSeconds 1000 -SADataSizeKilobytes 2000 -IpsecEncryption "GCMAES256" -IpsecIntegrity "GCMAES256" -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -PfsGroup "PFS2048"
+    New-AzVirtualNetworkGatewayConnection -ResourceGroupName $rgname -name $vnetConnectionName -location $location -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localnetGateway -ConnectionType IPsec -RoutingWeight 3 -SharedKey $sharedKey -UsePolicyBasedTrafficSelectors $true -IpsecPolicies $ipsecPolicy
+    ```
+
+    Creating an IPSec policy to be used for a new virtual network gateway connection.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzIpsecPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azipsecpolicy
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzIpsecPolicy.md
+  PlatyPS schema version: 2024-05-01

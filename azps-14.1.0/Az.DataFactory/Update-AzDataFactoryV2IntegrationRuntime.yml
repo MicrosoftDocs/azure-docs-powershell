@@ -1,0 +1,278 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Update-AzDataFactoryV2IntegrationRuntime
+name: Update-AzDataFactoryV2IntegrationRuntime
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Updates an integration runtime.
+description: |-
+  The **Update-AzDataFactoryV2IntegrationRuntime** cmdlet updates integration runtime properties. Currently the cmdlet only supports updating 'AutoUpdate' and 'AutoUpdateDelayOffset' for self-hosted integration runtime.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories, copy, activities, integration runtime
+parameters:
+  cmdletParameters:
+  - name: AutoUpdate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable the self-hosted integration runtime auto-update.
+    acceptedValues:
+    - On
+    - Off
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoUpdateDelayOffset
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The time in hour of the day for the self-hosted integration runtime auto-update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The integration runtime name.
+    aliases:
+    - IntegrationRuntimeName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIntegrationRuntimeName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzDataFactoryV2IntegrationRuntime
+        [-Name] <String>
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-AutoUpdate <String>]
+        [-AutoUpdateDelayOffset <TimeSpan>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzDataFactoryV2IntegrationRuntime
+        [-ResourceId] <String>
+        [-AutoUpdate <String>]
+        [-AutoUpdateDelayOffset <TimeSpan>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzDataFactoryV2IntegrationRuntime
+        [-InputObject] <PSIntegrationRuntime>
+        [-AutoUpdate <String>]
+        [-AutoUpdateDelayOffset <TimeSpan>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIntegrationRuntimeObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSIntegrationRuntime" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSSelfHostedIntegrationRuntimeStatus" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Updates an integration runtime'
+  description: |-
+    ```powershell
+    $ts = New-TimeSpan -Hours 3
+    Update-AzDataFactoryV2IntegrationRuntime `
+        -ResourceGroupName 'rg-test-dfv2' `
+        -DataFactoryName 'test-df-eu2' `
+        -Name 'test-selfhost-ir' `
+        -AutoUpdate Off `
+        -AutoUpdateDelayOffset $ts
+    ```
+
+    ```output
+    Nodes                     : {Node_1}
+    CreateTime                : 11/18/2017 2:45:38 PM
+    InternalChannelEncryption :
+    Version                   : 3.2.6519.3
+    Capabilities              : {[serviceBusConnected, True], [httpsPortEnabled, True], [credentialInSync, True], [connectedToResourceManager, True]...}
+    ScheduledUpdateDate       :
+    UpdateDelayOffset         :
+    LocalTimeZoneOffset       :
+    AutoUpdate                : Off
+    ServiceUrls               : {wu.frontend.int.clouddatahub-int.net, *.servicebus.windows.net}
+    State                     : Online
+    Id                        : /subscriptions/41fcbc45-c594-4152-a8f1-fcbcd6452aea/resourceGroups/rg-test-dfv2/providers/Microsoft.DataFactory/factories/test-df-eu2/integrationruntimes/test-selfhost-ir
+    Type                      : SelfHosted
+    ResourceGroupName         : rg-test-dfv2
+    DataFactoryName           : test-df-eu2
+    Name                      : test-selfhost-ir
+    Description               : New 2 description
+    ```
+
+    The cmdlet updates self-hosted integration runtime named 'test-selfhost-ir'.
+links:
+- text: Set-AzDataFactoryV2IntegrationRuntime
+  href: Set-AzDataFactoryV2IntegrationRuntime.yml
+- text: Get-AzDataFactoryV2IntegrationRuntime
+  href: Get-AzDataFactoryV2IntegrationRuntime.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Update-AzDataFactoryV2IntegrationRuntime.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/update-azdatafactoryv2integrationruntime
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Update-AzDataFactoryV2IntegrationRuntime.md
+  PlatyPS schema version: 2024-05-01

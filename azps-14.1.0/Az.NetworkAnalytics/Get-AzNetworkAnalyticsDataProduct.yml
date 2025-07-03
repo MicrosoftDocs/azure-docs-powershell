@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkAnalytics.Get-AzNetworkAnalyticsDataProduct
+name: Get-AzNetworkAnalyticsDataProduct
+module: Az.NetworkAnalytics
+isPreview: false
+summary: |-
+  Retrieve data product resource.
+description: |-
+  Retrieve data product resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkAnalytics.Models.INetworkAnalyticsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data product resource name
+    aliases:
+    - DataProductName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkAnalyticsDataProduct
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkAnalyticsDataProduct
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkAnalyticsDataProduct
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkAnalyticsDataProduct
+        -InputObject <INetworkAnalyticsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkAnalytics.Models.INetworkAnalyticsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkAnalytics.Models.Api20231115.IDataProduct" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get data product resource by data product name.'
+  description: |-
+    ```powershell
+    Get-AzNetworkAnalyticsDataProduct -DataProductName "pwshdp01" -ResourceGroupName "ResourceGroupName"
+    ```
+
+    ```output
+    Location       Name     SystemDataCreatedAt    SystemDataCreatedBy    SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    --------       ----     -------------------    -------------------    ----------------------- ------------------------ -------------
+    southcentralus pwshdp01 10/13/2023 11:22:54 AM user1@microsoft.com User                    10/13/2023 11:22:54 AM   user1@microsoft.com
+    ```
+
+    Get data product resource by data product name.
+- title: 'Example 2: List all data product resource for a resoure group.'
+  description: |-
+    ```powershell
+    $GetDataProductsForRG = Get-AzNetworkAnalyticsDataProduct -ResourceGroupName "ResourceGroupName"
+
+    $GetDataProductsForRG | select Name,ResourceGroupName,Location,ProvisioningState,Product,MajorVersion,Publisher | Format-Table
+    ```
+
+    ```output
+    Name         ResourceGroupName Location    ProvisioningState Product MajorVersion Publisher SystemDataCreatedBy
+    ----         ----------------- --------    ----------------- ------- ------------ --------- -------------------
+    dpinstance1  powershell-test    eastus      Succeeded         MCC     2.0.0        Microsoft user1@microsoft.com
+    dpinstance2  powershell-test    uksouth     Succeeded         MCC     2.0.0        Microsoft user1@microsoft.com
+    dpinstance3  powershell-test    westus      Succeeded         MCC     2.0.0        Microsoft user2@microsoft.com
+    dpinstance4  powershell-test    uksouth     Succeeded         MCC     2.0.0        Microsoft user3@microsoft.com
+    ```
+
+    List all data product resource for a resoure group.
+- title: 'Example 3: List all data product resource for a subscription.'
+  description: |-
+    ```powershell
+    $GetDataProductsForSub = Get-AzNetworkAnalyticsDataProduct
+
+    $GetDataProductsForRG | select Name,ResourceGroupName,Location,ProvisioningState,Product,MajorVersion,Publisher | Format-Table
+    ```
+
+    ```output
+    Name         ResourceGroupName Location    ProvisioningState Product MajorVersion Publisher SystemDataCreatedBy
+    ----         ----------------- --------    ----------------- ------- ------------ --------- -------------------
+    dpinstance1  powershell-test    eastus      Succeeded         MCC     1.0.0        Microsoft user1@microsoft.com
+    dpinstance2  powershell-test    uksouth     Succeeded         MCC     1.0.0        Microsoft user1@microsoft.com
+    dpinstance3  powershell-test    westus      Succeeded         MCC     2.0.0        Microsoft user2@microsoft.com
+    dpinstance4  powershell-test    uksouth     Succeeded         MCC     2.0.0        Microsoft user3@microsoft.com
+    ```
+
+    List all data product resource for a subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkAnalytics/NetworkAnalytics/help/Get-AzNetworkAnalyticsDataProduct.md
+  document type: cmdlet
+  external help file: Az.NetworkAnalytics-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.networkanalytics/get-aznetworkanalyticsdataproduct
+  Module Name: Az.NetworkAnalytics
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkAnalytics/NetworkAnalytics/help/Get-AzNetworkAnalyticsDataProduct.md
+  PlatyPS schema version: 2024-05-01

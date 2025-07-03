@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroupEventHubReceiverObject
+name: New-AzActionGroupEventHubReceiverObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for EventHubReceiver.
+description: |-
+  Create an in-memory object for EventHubReceiver.
+parameters:
+  cmdletParameters:
+  - name: EventHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the specific Event Hub queue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EventHubNameSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Event Hub namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Event hub receiver.
+      Names must be unique across all receivers within an action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id for the subscription containing this event hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The tenant Id for the subscription containing this event hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseCommonAlertSchema
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to use common alert schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupEventHubReceiverObject
+        -EventHubName <String>
+        -EventHubNameSpace <String>
+        -Name <String>
+        -SubscriptionId <String>
+        [-TenantId <String>]
+        [-UseCommonAlertSchema <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.EventHubReceiver" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: create action group event hub receiver'
+  description: |-
+    ```powershell
+    New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "testEventHubNameSpace" -Name "sample eventhub" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -TenantId "aaaabbbb-0000-cccc-1111-dddd2222eeee"
+    ```
+
+    ```output
+    EventHubName         : testEventHub
+    EventHubNameSpace    : testEventHubNameSpace
+    Name                 : sample eventhub
+    SubscriptionId       : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    TenantId             : aaaabbbb-0000-cccc-1111-dddd2222eeee
+    UseCommonAlertSchema :
+    ```
+
+    This command creates action group event hub receiver object.
+- title: 'Example 2: create another action group event hub receiver'
+  description: |-
+    ```powershell
+    New-AzActionGroupEventHubReceiverObject -EventHubName "testEventHub" -EventHubNameSpace "actiongrouptest" -Name "sample eventhub" -SubscriptionId bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
+    ```
+
+    ```output
+    EventHubName         : testEventHub
+    EventHubNameSpace    : actiongrouptest
+    Name                 : sample eventhub
+    SubscriptionId       : bbbb1b1b-cc2c-dd3d-ee4e-ffffff5f5f5f
+    TenantId             :
+    UseCommonAlertSchema :
+    ```
+
+    This command creates another action group event hub receiver object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupEventHubReceiverObject.md
+  document type: cmdlet
+  external help file: Az.ActionGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azactiongroupeventhubreceiverobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupEventHubReceiverObject.md
+  PlatyPS schema version: 2024-05-01

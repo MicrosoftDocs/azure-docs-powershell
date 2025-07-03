@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IoTOperationsService.Get-AzIoTOperationsServiceDataflowProfile
+name: Get-AzIoTOperationsServiceDataflowProfile
+module: Az.IoTOperationsService
+isPreview: false
+summary: |-
+  Get a DataflowProfileResource
+description: |-
+  Get a DataflowProfileResource
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityInstance
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Instance dataflowProfile resource
+    aliases:
+    - DataflowProfileName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityInstance
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIoTOperationsServiceDataflowProfile
+        -InstanceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzIoTOperationsServiceDataflowProfile
+        -InstanceName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzIoTOperationsServiceDataflowProfile
+        -Name <String>
+        -InstanceInputObject <IIoTOperationsServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityInstance
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzIoTOperationsServiceDataflowProfile
+        -InputObject <IIoTOperationsServiceIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IIoTOperationsServiceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowProfileResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List DataflowProfiles'
+  description: |-
+    ```powershell
+    Get-AzIoTOperationsServiceDataflowProfile -InstanceName  "aio-3lrx4" -ResourceGroupName "aio-validation-117026523"
+    ```
+
+    ```output
+    Name               SystemDataCreatedAt SystemDataCreatedBy                  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    ----               ------------------- -------------------                  ----------------------- ------------------------ ------------------------
+    default            3/5/2025 5:07:34 PM 739f5293-922a-4616-b106-3662530ef99f Application             3/5/2025 5:29:52 PM      319f651f-7ddb-4fc6-9857-7ae…
+    dataflowdeployment 3/5/2025 5:28:56 PM 739f5293-922a-4616-b106-3662530ef99f Application             3/5/2025 5:30:03 PM      319f651f-7ddb-4fc6-9857-7ae…
+    quickstart-profile 3/5/2025 5:30:44 PM 739f5293-922a-4616-b106-3662530ef99f Application             3/5/2025 5:31:30 PM      319f651f-7ddb-4fc6-9857-7ae…
+    ```
+
+    This command list dataflow profiles
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Get-AzIoTOperationsServiceDataflowProfile.md
+  document type: cmdlet
+  external help file: Az.IoTOperationsService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iotoperationsservice/get-aziotoperationsservicedataflowprofile
+  Module Name: Az.IoTOperationsService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Get-AzIoTOperationsServiceDataflowProfile.md
+  PlatyPS schema version: 2024-05-01

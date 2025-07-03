@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Add-AzHDInsightComponentVersion
+name: Add-AzHDInsightComponentVersion
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Adds a version for a service running in a cluster to a cluster configuration object.
+description: |-
+  The Add-AzHDInsightComponentVersion cmdlet adds a version for a service running in a cluster to the Azure HDInsight configuration object created by the New-AzHDInsightClusterConfig cmdlet.
+parameters:
+  cmdletParameters:
+  - name: ComponentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComponentVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Config
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzHDInsightComponentVersion
+        [-Config] <AzureHDInsightConfig>
+        [-ComponentName] <String>
+        [-ComponentVersion] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightConfig" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a version for Spark to the cluster configuration object.'
+  description: |-
+    ```powershell
+    # Primary storage account info
+            $storageAccountResourceGroupName = "Group"
+            $storageAccountName = "yourstorageacct001"
+            $storageAccountResourceId = "yourstorageaccountresourceid"
+            $storageAccountKey = Get-AzStorageAccountKey `
+                -ResourceGroupName $storageAccountResourceGroupName `
+                -Name $storageAccountName | ForEach-Object{ $_.Key1 }
+            $storageContainer = "container001"
+
+            # Cluster configuration info
+            $location = "East US 2"
+            $clusterResourceGroupName = "Group"
+            $clusterName = "your-spark-001"
+            $clusterCreds = Get-Credential
+            $sshClusterCreds = Get-Credential
+
+            # If the cluster's resource group doesn't exist yet, run:
+            #   New-AzResourceGroup -Name $clusterResourceGroupName -Location $location
+
+            # Create the cluster
+            New-AzHDInsightClusterConfig `
+                | Add-AzHDInsightComponentVersion `
+                    -ComponentName "Spark" `
+                    -ComponentVersion "2.0" `
+                | New-AzHDInsightCluster `
+                    -ClusterType Spark `
+                    -OSType Linux `
+                    -ClusterSizeInNodes 4 `
+                    -ResourceGroupName $clusterResourceGroupName `
+                    -ClusterName $clusterName `
+                    -HttpCredential $clusterCreds `
+                    -Location $location `
+                    -StorageAccountResourceId $storageAccountResourceId `
+                    -StorageAccountKey $storageAccountKey `
+                    -StorageContainer $storageContainer `
+                    -SshCredential $sshCredentials `
+                    -Version "3.5"
+    ```
+
+    This command adds the version of Spark to the HDInsight cluster named 'your-spark-001'.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightComponentVersion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/add-azhdinsightcomponentversion
+  Module Name: Az.HDInsight
+  ms.assetid: 774848C9-47A1-4C43-B6FA-B3C0C3C76470
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Add-AzHDInsightComponentVersion.md
+  PlatyPS schema version: 2024-05-01

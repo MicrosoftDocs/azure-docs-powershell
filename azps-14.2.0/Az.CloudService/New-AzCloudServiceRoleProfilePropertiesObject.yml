@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CloudService.New-AzCloudServiceRoleProfilePropertiesObject
+name: New-AzCloudServiceRoleProfilePropertiesObject
+module: Az.CloudService
+isPreview: false
+summary: |-
+  Create a in-memory object for CloudServiceRoleProfileProperties
+description: |-
+  Create a in-memory object for CloudServiceRoleProfileProperties
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of role profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of role instances in the cloud service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sku name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SkuTier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCloudServiceRoleProfilePropertiesObject
+        [-Name <String>]
+        [-SkuCapacity <Int64>]
+        [-SkuName <String>]
+        [-SkuTier <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.CloudServiceRoleProfileProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create role profile properties object'
+  description: |-
+    ```powershell
+    $role = New-AzCloudServiceRoleProfilePropertiesObject -Name 'WebRole' -SkuName 'Standard_D1_v2' -SkuTier 'Standard' -SkuCapacity 2
+    ```
+
+    This command creates role profile properties object which is used for creating or updating a cloud service.
+    For more details see New-AzCloudService.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceRoleProfilePropertiesObject.md
+  document type: cmdlet
+  external help file: Az.CloudService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudserviceroleprofilepropertiesobject
+  Module Name: Az.CloudService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceRoleProfilePropertiesObject.md
+  PlatyPS schema version: 2024-05-01

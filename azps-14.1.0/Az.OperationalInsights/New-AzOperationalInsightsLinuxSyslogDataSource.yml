@@ -1,0 +1,390 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.OperationalInsights.New-AzOperationalInsightsLinuxSyslogDataSource
+name: New-AzOperationalInsightsLinuxSyslogDataSource
+module: Az.OperationalInsights
+isPreview: false
+summary: |-
+  Adds a data source to Linux computers.
+description: |-
+  The **New-AzOperationalInsightsLinuxSyslogDataSource** cmdlet adds a syslog data source to connected Linux computers in a workspace.
+  Azure Operational Insights can collect syslog data.
+parameters:
+  cmdletParameters:
+  - name: CollectAlert
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects alert messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectCritical
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects critical messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectDebug
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects debug messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectEmergency
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects emergency messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectError
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects error messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectInformational
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects informational messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectNotice
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Operational Insights collects notice messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectWarning
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the syslog includes warning messages.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Facility
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a facility code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the data source. The name is not exposed in the Azure Portal and any string can be used as long as it is unique.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group that contains Linux computers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Workspace
+    type: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a workspace in which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a workspace in which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWorkspaceName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsLinuxSyslogDataSource
+        [-ResourceGroupName] <String>
+        [-WorkspaceName] <String>
+        [-Name] <String>
+        [-Facility] <String>
+        [-CollectEmergency]
+        [-CollectAlert]
+        [-CollectCritical]
+        [-CollectError]
+        [-CollectWarning]
+        [-CollectNotice]
+        [-CollectDebug]
+        [-CollectInformational]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzOperationalInsightsLinuxSyslogDataSource
+        [-Workspace] <PSWorkspace>
+        [-Name] <String>
+        [-Facility] <String>
+        [-CollectEmergency]
+        [-CollectAlert]
+        [-CollectCritical]
+        [-CollectError]
+        [-CollectWarning]
+        [-CollectNotice]
+        [-CollectDebug]
+        [-CollectInformational]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWorkspaceObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSWorkspace" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.OperationalInsights.Models.PSDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create syslog data sources'
+  description: |-
+    ```powershell
+    $FacilityNames       = @()
+    $FacilityNames      += 'auth'
+    $FacilityNames      += 'authpriv'
+    $FacilityNames      += 'cron'
+    $FacilityNames      += 'daemon'
+    $FacilityNames      += 'ftp'
+    $FacilityNames      += 'kern'
+    $FacilityNames      += 'mail'
+    $FacilityNames      += 'syslog'
+    $FacilityNames      += 'user'
+    $FacilityNames      += 'uucp'
+    $ResourceGroupName   = 'MyResourceGroup'
+    $WorkspaceName       = 'MyWorkspaceName'
+
+    $Count = 0
+    foreach ($FacilityName in $FacilityNames) {
+        $Count++
+        $null = New-AzOperationalInsightsLinuxSyslogDataSource `
+        -ResourceGroupName $ResourceGroupName `
+        -WorkspaceName $WorkspaceName `
+        -Name "Linux-syslog-$($Count)" `
+        -Facility $FacilityName `
+        -CollectEmergency `
+        -CollectAlert `
+        -CollectCritical `
+        -CollectError `
+        -CollectWarning `
+        -CollectNotice `
+        -CollectDebug `
+        -CollectInformational
+    }
+
+    Get-AzOperationalInsightsDataSource `
+       -ResourceGroupName $ResourceGroupName `
+       -WorkspaceName $WorkspaceName `
+       -Kind 'LinuxSyslog'
+    ```
+
+    Adds a syslog data source to connected Linux computers in a workspace.
+    Azure Operational Insights can collect syslog data.
+links:
+- text: Disable-AzOperationalInsightsLinuxSyslogCollection
+  href: ./Disable-AzOperationalInsightsLinuxSyslogCollection.yml
+- text: Enable-AzOperationalInsightsLinuxSyslogCollection
+  href: ./Enable-AzOperationalInsightsLinuxSyslogCollection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsLinuxSyslogDataSource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.OperationalInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.operationalinsights/new-azoperationalinsightslinuxsyslogdatasource
+  Module Name: Az.OperationalInsights
+  ms.assetid: D6CBDF09-E243-425B-8677-256163A6DFBF
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/OperationalInsights/OperationalInsights/help/New-AzOperationalInsightsLinuxSyslogDataSource.md
+  PlatyPS schema version: 2024-05-01

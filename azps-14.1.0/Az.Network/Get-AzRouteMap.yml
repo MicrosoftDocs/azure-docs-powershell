@@ -1,0 +1,257 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzRouteMap
+name: Get-AzRouteMap
+module: Az.Network
+isPreview: false
+summary: |-
+  Retrieves a route map of a VirtualHub.
+description: |-
+  Gets the route map from a VirtualHub.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The route map name.
+    aliases:
+    - ResourceName
+    - RouteMapName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Virtual Hub name.
+    aliases:
+    - ParentVirtualHubName
+    - ParentResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The Virtual Hub Object.
+    aliases:
+    - ParentObject
+    - ParentVirtualHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Virtual Hub Resource Id.
+    aliases:
+    - VirtualHubId
+    - ParentVirtualHubId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRouteMap
+        [-ResourceGroupName <String>]
+        [-VirtualHubName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRouteMap
+        [-VirtualHubObject <PSVirtualHub>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRouteMap
+        [-VirtualHubResourceId <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteMap" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan" -Location "westcentralus" -VirtualWANType "Standard" -AllowVnetToVnetTraffic -AllowBranchToBranchTraffic
+    $virtualWan = Get-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan"
+
+    New-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub" -Location "westcentralus" -AddressPrefix "10.0.0.0/16" -VirtualWan $virtualWan
+    $virtualHub = Get-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub"
+
+    # creating new route map rules and a new route map resource and new routing configuration
+    $routeMapMatchCriterion1 = New-AzRouteMapRuleCriterion -MatchCondition "Contains" -RoutePrefix @("10.0.0.0/16")
+    $routeMapActionParameter1 = New-AzRouteMapRuleActionParameter -AsPath @("12345")
+    $routeMapAction1 = New-AzRouteMapRuleAction -Type "Add" -Parameter @($routeMapActionParameter1)
+    $routeMapRule1 = New-AzRouteMapRule -Name "rule1" -MatchCriteria @($routeMapMatchCriterion1) -RouteMapRuleAction @($routeMapAction1) -NextStepIfMatched "Continue"
+
+    $routeMapMatchCriterion2 = New-AzRouteMapRuleCriterion -MatchCondition "Equals" -AsPath @("12345")
+    $routeMapAction2 = New-AzRouteMapRuleAction -Type "Drop"
+    $routeMapRule2 = New-AzRouteMapRule -Name "rule2" -MatchCriteria @($routeMapMatchCriterion2) -RouteMapRuleAction @($routeMapAction2) -NextStepIfMatched "Terminate"
+
+    New-AzRouteMap -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRouteMap" -RouteMapRule @($routeMapRule1, $routeMapRule2)
+    Get-AzRouteMap -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRouteMap"
+    ```
+
+    ```output
+    Name                          : testRouteMap
+    Id                            : /subscriptions/62364504-2406-418e-971c-05822ff72fad/resourceGroups/routemap0419/providers/Microsoft.Network/virtualHubs/westcentralus_hub1/routeMaps/testRouteMap
+    ProvisioningState             : Succeeded
+    RouteMapRules                 : [
+                                      {
+                                        "Name": "rule1",
+                                        "MatchCriteria": [
+                                          {
+                                            "MatchCondition": "Contains",
+                                            "RoutePrefix": [
+                                              "10.0.0.0/16"
+                                            ],
+                                            "Community": [],
+                                            "AsPath": []
+                                          }
+                                        ],
+                                        "Actions": [
+                                          {
+                                            "Type": "Add",
+                                            "Parameters": [
+                                              {
+                                                "RoutePrefix": [],
+                                                "Community": [],
+                                                "AsPath": [
+                                                  "12345"
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ],
+                                        "NextStepIfMatched": "Continue"
+                                      },
+                                      {
+                                        "Name": "rule2",
+                                        "MatchCriteria": [
+                                          {
+                                            "MatchCondition": "Equals",
+                                            "RoutePrefix": [],
+                                            "Community": [],
+                                            "AsPath": [
+                                              "12345"
+                                            ]
+                                          }
+                                        ],
+                                        "Actions": [
+                                          {
+                                            "Type": "Drop",
+                                            "Parameters": []
+                                          }
+                                        ],
+                                        "NextStepIfMatched": "Terminate"
+                                      }
+                                    ]
+    AssociatedInboundConnections  : []
+    AssociatedOutboundConnections : []
+    ```
+links:
+- text: New-AzRouteMap
+  href: ./New-AzRouteMap.yml
+- text: New-AzRouteMapRule
+  href: ./New-AzRouteMapRule.yml
+- text: Update-AzRouteMap
+  href: ./Update-AzRouteMap.yml
+- text: Remove-AzRouteMap
+  href: ./Remove-AzRouteMap.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteMap.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azroutemap
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteMap.md
+  PlatyPS schema version: 2024-05-01

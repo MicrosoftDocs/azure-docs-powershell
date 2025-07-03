@@ -1,0 +1,60 @@
+### YamlMime:PowerShellModule1
+uid: Az.Migrate
+name: Az.Migrate Module
+isPreview: false
+cmdletGroups:
+- title: Migrate
+  cmdlets:
+  - Az.Migrate.Get-AzMigrateDiscoveredServer
+  - Az.Migrate.Get-AzMigrateHCIJob
+  - Az.Migrate.Get-AzMigrateHCIReplicationFabric
+  - Az.Migrate.Get-AzMigrateHCIServerReplication
+  - Az.Migrate.Get-AzMigrateJob
+  - Az.Migrate.Get-AzMigrateProject
+  - Az.Migrate.Get-AzMigrateReplicationFabric
+  - Az.Migrate.Get-AzMigrateReplicationPolicy
+  - Az.Migrate.Get-AzMigrateReplicationProtectionContainer
+  - Az.Migrate.Get-AzMigrateReplicationProtectionContainerMapping
+  - Az.Migrate.Get-AzMigrateReplicationRecoveryServicesProvider
+  - Az.Migrate.Get-AzMigrateRunAsAccount
+  - Az.Migrate.Get-AzMigrateServerReplication
+  - Az.Migrate.Get-AzMigrateSite
+  - Az.Migrate.Get-AzMigrateSolution
+  - Az.Migrate.Initialize-AzMigrateHCIReplicationInfrastructure
+  - Az.Migrate.Initialize-AzMigrateReplicationInfrastructure
+  - Az.Migrate.New-AzMigrateDiskMapping
+  - Az.Migrate.New-AzMigrateHCIDiskMappingObject
+  - Az.Migrate.New-AzMigrateHCINicMappingObject
+  - Az.Migrate.New-AzMigrateHCIServerReplication
+  - Az.Migrate.New-AzMigrateNicMapping
+  - Az.Migrate.New-AzMigrateProject
+  - Az.Migrate.New-AzMigrateReplicationPolicy
+  - Az.Migrate.New-AzMigrateReplicationProtectionContainerMapping
+  - Az.Migrate.New-AzMigrateServerReplication
+  - Az.Migrate.New-AzMigrateTestNicMapping
+  - Az.Migrate.Register-AzMigrateProjectTool
+  - Az.Migrate.Remove-AzMigrateHCIServerReplication
+  - Az.Migrate.Remove-AzMigrateProject
+  - Az.Migrate.Remove-AzMigrateServerReplication
+  - Az.Migrate.Restart-AzMigrateServerReplication
+  - Az.Migrate.Resume-AzMigrateServerReplication
+  - Az.Migrate.Set-AzMigrateDiskMapping
+  - Az.Migrate.Set-AzMigrateHCIServerReplication
+  - Az.Migrate.Set-AzMigrateServerReplication
+  - Az.Migrate.Start-AzMigrateHCIServerMigration
+  - Az.Migrate.Start-AzMigrateServerMigration
+  - Az.Migrate.Start-AzMigrateTestMigration
+  - Az.Migrate.Start-AzMigrateTestMigrationCleanup
+  - Az.Migrate.Suspend-AzMigrateServerReplication
+description: |-
+  Microsoft Azure PowerShell: Migrate cmdlets
+metadata:
+  Module Name: Az.Migrate
+  Module Guid: c638312b-9fd1-4611-a5cc-11a8caa5b698
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.migrate
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Az.Migrate.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Az.Migrate.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

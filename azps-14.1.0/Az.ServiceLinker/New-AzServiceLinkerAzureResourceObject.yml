@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceLinker.New-AzServiceLinkerAzureResourceObject
+name: New-AzServiceLinkerAzureResourceObject
+module: Az.ServiceLinker
+isPreview: false
+summary: |-
+  Create an in-memory object for AzureResource.
+description: |-
+  Create an in-memory object for AzureResource.
+parameters:
+  cmdletParameters:
+  - name: ConnectAsKubernetesCsiDriver
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      True if connect via Kubernetes CSI Driver.
+      Source must be AKS and target must be KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id of azure resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceLinkerAzureResourceObject
+        -Id <String>
+        [-ConnectAsKubernetesCsiDriver <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceLinker.Models.AzureResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an target resource object for azure resource'
+  description: |-
+    ```powershell
+    New-AzServiceLinkerAzureResourceObject -Id /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-group/providers/Microsoft.KeyVault/vaults/servicelinker-test-kv -ConnectAsKubernetesCsiDriver 1
+    ```
+
+    ```output
+    Id
+    --
+    /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/servicelinker-test-…
+    ```
+
+    Create an AzureResourceObject as the param of `-TargetService`
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerAzureResourceObject.md
+  document type: cmdlet
+  external help file: Az.ServiceLinker-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ServiceLinker/new-azservicelinkerazureresourceobject
+  Module Name: Az.ServiceLinker
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/New-AzServiceLinkerAzureResourceObject.md
+  PlatyPS schema version: 2024-05-01

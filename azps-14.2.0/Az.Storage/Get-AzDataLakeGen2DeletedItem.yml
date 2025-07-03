@@ -1,0 +1,188 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzDataLakeGen2DeletedItem
+name: Get-AzDataLakeGen2DeletedItem
+module: Az.Storage
+isPreview: false
+summary: |-
+  List all deleted files or directories from a directory or filesystem root.
+description: |-
+  The **Get-AzDataLakeGen2DeletedItem** cmdlet lists all deleted files or directories from a directory or filesystem in an Azure storage account.
+  This cmdlet only works if Hierarchical Namespace is enabled for the Storage account. This kind of account can be created by run "New-AzStorageAccount" cmdlet with "-EnableHierarchicalNamespace $true".
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContinuationToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Continuation Token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSystem
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      FileSystem name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The max count of the blobs that can return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path in the specified FileSystem that should be retrieved.
+      Can be a directory In the format 'directory1/directory2/', Skip set this parameter to list items from root directory of the Filesystem.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeGen2DeletedItem
+        [-FileSystem] <String>
+        [[-Path] <String>]
+        [-MaxCount <Int32>]
+        [-ContinuationToken <String>]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2DeletedItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all deleted files or directories from a Filesystem'
+  description: |-
+    ```powershell
+    Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1"
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 DeletionId           DeletedOn            RemainingRetentionDays
+    ----                 ----------           ---------            ----------------------
+    dir0/dir1/file1      132658816156507617   2021-05-19 07:06:55Z 3
+    dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3
+    dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3
+    ```
+
+    This command lists all deleted files or directories from a Filesystem.
+- title: 'Example 2: List all deleted files or directories from a directory'
+  description: |-
+    ```powershell
+    Get-AzDataLakeGen2DeletedItem -FileSystem "filesystem1" -Path dir0/dir2
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 DeletionId           DeletedOn            RemainingRetentionDays
+    ----                 ----------           ---------            ----------------------
+    dir0/dir2            132658834541610122   2021-05-19 07:37:34Z 3
+    dir0/dir2/file3      132658834534174806   2021-05-19 07:37:33Z 3
+    ```
+
+    This command lists all deleted files or directories from a directory.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2DeletedItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2deleteditem
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2DeletedItem.md
+  PlatyPS schema version: 2024-05-01

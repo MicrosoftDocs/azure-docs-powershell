@@ -1,0 +1,178 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CostManagement.Get-AzCostManagementExport
+name: Get-AzCostManagementExport
+module: Az.CostManagement
+isPreview: false
+summary: |-
+  The operation to get the export for the defined scope by export name.
+description: |-
+  The operation to get the export for the defined scope by export name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to expand the properties within an export.
+      Currently only 'runHistory' is supported and will return information for the last 10 executions of the export.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostManagementIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Export Name.
+    aliases:
+    - ExportName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter defines the scope of costmanagement from different perspectives 'Subscription','ResourceGroup' and 'Provide Service'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCostManagementExport
+        -Scope <String>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCostManagementExport
+        -Name <String>
+        -Scope <String>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCostManagementExport
+        -InputObject <ICostManagementIdentity>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostManagementIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.Api20211001.IExport" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all AzCostManagementExports by scope'
+  description: |-
+    ```powershell
+    Get-AzCostManagementExport -Scope 'subscriptions/**********'
+    ```
+
+    ```output
+    ETag              Name                               Type
+    ----              ----                               ----
+    "************" TestExport                         Microsoft.CostManagement/exports
+    "************" TestExport1                        Microsoft.CostManagement/exports
+    "************" TestExport2                        Microsoft.CostManagement/exports
+    ```
+
+    Get all AzCostManagementExports by Scope
+- title: 'Example 2: Get AzCostManagementExport by Name and scope'
+  description: |-
+    ```powershell
+    Get-AzCostManagementExport -Name 'TestExport' -Scope 'subscriptions/**********'
+    ```
+
+    ```output
+    ETag              Name       Type
+    ----              ----       ----
+    "************" TestExport Microsoft.CostManagement/exports
+    ```
+
+    Get AzCostManagementExport by Name and scope
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Get-AzCostManagementExport.md
+  document type: cmdlet
+  external help file: Az.CostManagement-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.costmanagement/get-azcostmanagementexport
+  Module Name: Az.CostManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Get-AzCostManagementExport.md
+  PlatyPS schema version: 2024-05-01

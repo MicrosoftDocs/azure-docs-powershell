@@ -1,0 +1,140 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVMSecurityProfile
+name: Set-AzVMSecurityProfile
+module: Az.Compute
+isPreview: false
+summary: |-
+  Sets the SecurityType enum for Virtual Machines.
+description: |-
+  The **Set-AzVMSecurityProfile** cmdlet sets the Security Type of the VM
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SecurityType of the virtual machine. It has to be set to any specified value to enable UefiSettings. By default, UefiSettings will not be enabled unless this property is set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine profile.
+    aliases:
+    - VMProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVMSecurityProfile
+        [-VM] <PSVirtualMachine>
+        [-SecurityType <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.SecurityTypes" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $VM = Get-AzVM -ResourceGroupName "ResourceGroup11" -VMName "ContosoVM07"
+    $VM = Set-AzVMSecurityProfile -VM $VM -SecurityType "TrustedLaunch"
+    ```
+
+    The first command gets the virtual machine named ContosoVM07 by using **Get-AzVm**.
+    The command stores it in the $VM variable.
+    The second command sets the SecurityType enum to "TrustedLaunch". Trusted launch requires the creation of new virtual machines. You can't enable trusted launch on existing virtual machines that were initially created without it.
+- title: 'Example 2: Create a ConfidentialVM Virtual Machine and the Disk encrypted with the VMGuestStateOnly type.'
+  description: |-
+    ```powershell
+    $vmSize = "Standard_DC2as_v5";
+    $DNSNameLabel = "cvm1" +$ResourceGroupName;
+    $SubnetAddressPrefix = "10.0.0.0/24";
+    $VnetAddressPrefix = "10.0.0.0/16";
+
+    # Credential setup.
+    $securePassword = ConvertTo-SecureString -String "****" -AsPlainText -Force;
+    $credential = New-Object System.Management.Automation.PSCredential ($user, $securePassword);
+
+    $SecurityType = "ConfidentialVM";
+    $vmDiskSecurityEncryptionType = "VMGuestStateOnly";
+    $VirtualMachine = New-AzVMConfig -VMName $VMName -VMSize $VMSize;
+
+    # Create the Network resources and VM OS setup.
+    $SingleSubnet = New-AzVirtualNetworkSubnetConfig -Name $SubnetName -AddressPrefix $SubnetAddressPrefix;
+    $Vnet = New-AzVirtualNetwork -Name $NetworkName -ResourceGroupName $rgname -Location $LocationName -AddressPrefix $VnetAddressPrefix -Subnet $SingleSubnet;
+    $PIP = New-AzPublicIpAddress -Name $PublicIPAddressName -DomainNameLabel $DNSNameLabel -ResourceGroupName $rgname -Location $LocationName -AllocationMethod Dynamic;
+    $NIC = New-AzNetworkInterface -Name $NICName -ResourceGroupName $rgname -Location $LocationName -SubnetId $Vnet.Subnets[0].Id -PublicIpAddressId $PIP.Id;
+    $VirtualMachine = Set-AzVMOperatingSystem -VM $VirtualMachine -Windows -ComputerName $ComputerName -Credential $Credential -ProvisionVMAgent -EnableAutoUpdate;
+    $VirtualMachine = Add-AzVMNetworkInterface -VM $VirtualMachine -Id $NIC.Id;
+    $VirtualMachine = Set-AzVMSourceImage -VM $VirtualMachine -PublisherName 'MicrosoftWindowsServer' -Offer 'windowsserver' -Skus '2022-datacenter-smalldisk-g2' -Version 'latest';
+    $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -StorageAccountType "StandardSSD_LRS" -CreateOption "FromImage";
+
+    # Set the SecurityType and necessary values on the Uefi settings.
+    $VirtualMachine = Set-AzVMSecurityProfile -VM $VirtualMachine -SecurityType $SecurityType;
+    $VirtualMachine = Set-AzVMUefi -VM $VirtualMachine -EnableVtpm $true -EnableSecureBoot $true;
+
+    # Set the Disk Encryption Type.
+    $VirtualMachine = Set-AzVMOSDisk -VM $VirtualMachine -StorageAccountType "StandardSSD_LRS" -CreateOption "FromImage" -SecurityEncryptionType $vmDiskSecurityEncryptionType;
+
+    $vm = New-AzVM -ResourceGroupName $rgname -Location $LocationName -VM $VirtualMachine;
+    $vm = Get-AzVM -ResourceGroupName $rgname -Name $vmname;
+    # Verify SecurityType value.
+    # $vm.SecurityProfile.SecurityType == "ConfidentialVM";
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMSecurityProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/set-azvmsecurityprofile
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVMSecurityProfile.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,501 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Oracle.Invoke-AzOracleActionDbNode
+name: Invoke-AzOracleActionDbNode
+module: Az.Oracle
+isPreview: false
+summary: |-
+  VM actions on DbNode of VM Cluster by the provided filter
+description: |-
+  VM actions on DbNode of VM Cluster by the provided filter
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Db action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaIdentityCloudVMClusterExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudVMClusterInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionViaIdentityCloudVMClusterExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cloudvmclustername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CloudVmCluster name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dbnodeocid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      DbNode OCID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaIdentityCloudVMClusterExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Action operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Action operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ActionExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ActionViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzOracleActionDbNode
+        -Cloudvmclustername <String>
+        -Dbnodeocid <String>
+        -ResourceGroupName <String>
+        -Action <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActionExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzOracleActionDbNode
+        -Cloudvmclustername <String>
+        -Dbnodeocid <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActionViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzOracleActionDbNode
+        -Cloudvmclustername <String>
+        -Dbnodeocid <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActionViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzOracleActionDbNode
+        -Dbnodeocid <String>
+        -CloudVMClusterInputObject <IOracleIdentity>
+        -Action <String>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActionViaIdentityCloudVMClusterExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzOracleActionDbNode
+        -InputObject <IOracleIdentity>
+        -Action <String>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ActionViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IDbNode" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop a VM in a Cloud VM Cluster resource'
+  description: |-
+    ```powershell
+    $vmClusterName = "OFake_PowerShellTestVmCluster"
+    $resourceGroup = "PowerShellTestRg"
+    $stopActionName = "Stop"
+
+    $dbNodeList = Get-AzOracleDbNode -Cloudvmclustername $vmClusterName -ResourceGroupName $resourceGroup
+    $dbNodeOcid1 = $dbNodeList[0].Name
+
+    Invoke-AzOracleActionDbNode -Cloudvmclustername $vmClusterName -Dbnodeocid $dbNodeOcid1 -ResourceGroupName $resourceGroup -Action $stopActionName
+    ```
+
+    ```output
+    AdditionalDetail             :
+    BackupIPId                   : ocid1.privateIp.fake.2.1
+    BackupVnic2Id                : ocid1.vnic.fake.2.1
+    BackupVnicId                 :
+    CpuCoreCount                 : 2
+    DbServerId                   : ocid1.dbserver.oc1.iad.anuwcljrowjpydqar5ljy52di4siacvp4h4hzwp6jcz7yrmkiaglyi7nfwdq
+    DbSystemId                   : ocid1.cloudvmcluster.oc1.iad.anuwcljrnirvylqanh37nglmlhotsnvzwivsfnomoa6lc7t6l5gwwocoovcq
+    FaultDomain                  :
+    HostIPId                     : ocid1.privateIp.fake.1.1
+    Hostname                     : host-wq5t62
+    Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PowerShellTestRg/providers/Oracle.Database/cloudVmClusters/OFake_PowerShellTestVmCluster/dbNodes/ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz
+                                   22lazevdaoiye7bh4iy2nwfa
+    LifecycleDetail              :
+    LifecycleState               :
+    MaintenanceType              :
+    MemorySizeInGb               : 45
+    Name                         : ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz22lazevdaoiye7bh4iy2nwfa
+    Ocid                         : ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz22lazevdaoiye7bh4iy2nwfa
+    ProvisioningState            : Stopping
+    ResourceGroupName            : PowerShellTestRg
+    SoftwareStorageSizeInGb      :
+    StorageSizeInGb              : 90
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TimeCreated                  : 04/07/2024 16:09:39
+    TimeMaintenanceWindowEnd     :
+    TimeMaintenanceWindowStart   :
+    Type                         : Oracle.Database/cloudVmClusters/dbNodes
+    Vnic2Id                      : ocid1.vnic.fake.1.1
+    VnicId                       :
+    ```
+
+    Stop a VM in a Cloud VM Cluster resource.
+    For more information, execute `Get-Help Invoke-AzOracleActionDbNode`.
+- title: 'Example 2: Start a VM in a Cloud VM Cluster resource'
+  description: |-
+    ```powershell
+    $vmClusterName = "OFake_PowerShellTestVmCluster"
+    $resourceGroup = "PowerShellTestRg"
+    $startActionName = "Start"
+
+    $dbNodeList = Get-AzOracleDbNode -Cloudvmclustername $vmClusterName -ResourceGroupName $resourceGroup
+    $dbNodeOcid1 = $dbNodeList[0].Name
+
+    Invoke-AzOracleActionDbNode -Cloudvmclustername $vmClusterName -Dbnodeocid $dbNodeOcid1 -ResourceGroupName $resourceGroup -Action $startActionName
+    ```
+
+    ```output
+    AdditionalDetail             :
+    BackupIPId                   : ocid1.privateIp.fake.2.1
+    BackupVnic2Id                : ocid1.vnic.fake.2.1
+    BackupVnicId                 :
+    CpuCoreCount                 : 2
+    DbServerId                   : ocid1.dbserver.oc1.iad.anuwcljrowjpydqar5ljy52di4siacvp4h4hzwp6jcz7yrmkiaglyi7nfwdq
+    DbSystemId                   : ocid1.cloudvmcluster.oc1.iad.anuwcljrnirvylqanh37nglmlhotsnvzwivsfnomoa6lc7t6l5gwwocoovcq
+    FaultDomain                  :
+    HostIPId                     : ocid1.privateIp.fake.1.1
+    Hostname                     : host-wq5t62
+    Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PowerShellTestRg/providers/Oracle.Database/cloudVmClusters/OFake_PowerShellTestVmCluster/dbNodes/ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz
+                                   22lazevdaoiye7bh4iy2nwfa
+    LifecycleDetail              :
+    LifecycleState               :
+    MaintenanceType              :
+    MemorySizeInGb               : 45
+    Name                         : ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz22lazevdaoiye7bh4iy2nwfa
+    Ocid                         : ocid1.dbnode.oc1.iad.anuwcljrnirvylqapfxspunpsxyaehha5wwz22lazevdaoiye7bh4iy2nwfa
+    ProvisioningState            : Starting
+    ResourceGroupName            : PowerShellTestRg
+    SoftwareStorageSizeInGb      :
+    StorageSizeInGb              : 90
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    TimeCreated                  : 04/07/2024 16:09:39
+    TimeMaintenanceWindowEnd     :
+    TimeMaintenanceWindowStart   :
+    Type                         : Oracle.Database/cloudVmClusters/dbNodes
+    Vnic2Id                      : ocid1.vnic.fake.1.1
+    VnicId                       :
+    ```
+
+    Start a VM in a Cloud VM Cluster resource.
+    For more information, execute `Get-Help Invoke-AzOracleActionDbNode`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Invoke-AzOracleActionDbNode.md
+  document type: cmdlet
+  external help file: Az.Oracle-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.oracle/invoke-azoracleactiondbnode
+  Module Name: Az.Oracle
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Invoke-AzOracleActionDbNode.md
+  PlatyPS schema version: 2024-05-01

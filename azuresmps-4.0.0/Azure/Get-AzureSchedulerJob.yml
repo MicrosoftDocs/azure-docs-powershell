@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSchedulerJob
+name: Get-AzureSchedulerJob
+module: Azure
+isPreview: false
+summary: |-
+  Gets a list of scheduler jobs or a particular scheduler job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-AzureSchedulerJobCollection** cmdlet gets a list of scheduler jobs or a particular scheduler job.
+parameters:
+  cmdletParameters:
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the collection that contains the scheduler job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a scheduler job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobState
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state of scheduler jobs to get.
+      The acceptable values for this parameter are:
+
+      - Enabled
+      - Disabled
+      - Faulted
+      - Completed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      The acceptable values for this parameter are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSchedulerJob
+        -Location <String>
+        -JobCollectionName <String>
+        [-JobName <String>]
+        [-JobState <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get all jobs in a collection'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01"
+    ```
+
+    This command gets scheduler jobs that are part of the job collection named JobCollection01.
+- title: 'Example 2: Get a named job'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJob -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
+    ```
+
+    This command gets the job named Job01 from the collection named JobCollection01 in the specified location.
+- title: 'Example 3: Get disabled jobs in a collection'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01" -JobState "Disabled"
+    ```
+
+    This command gets all disabled scheduler jobs that are part of JobCollection01 in the specified location.
+links:
+- text: Remove-AzureSchedulerJob
+  href: ./Remove-AzureSchedulerJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8EED9813-5106-4D6C-B869-97BCBD7845AC
+  PlatyPS schema version: 2024-05-01

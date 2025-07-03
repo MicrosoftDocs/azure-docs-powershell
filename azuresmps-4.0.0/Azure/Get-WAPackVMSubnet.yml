@@ -1,0 +1,152 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-WAPackVMSubnet
+name: Get-WAPackVMSubnet
+module: Azure
+isPreview: false
+summary: |-
+  Gets virtual machine subnet objects.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-WAPackVMSubnet** cmdlet gets virtual machine subnet objects.
+parameters:
+  cmdletParameters:
+  - name: ID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of a virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNet
+    type: <xref href="VMNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VNet associated with a virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSubnet
+        -VNet <VMNetwork>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromVMNetworkObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSubnet
+        -VNet <VMNetwork>
+        -Name <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WAPackVMSubnet
+        -VNet <VMNetwork>
+        -ID <Guid>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromId
+  isDefault: false
+examples:
+- title: 'Example 1: Get a virtual machine subnet by using a name'
+  description: |-
+    ```
+    PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+    PS C:\> Get-WAPackVMTemplate -VNet $VNet -Name "ContosoSubnet01"
+    ```
+
+    This command gets the virtual machine subnet named ContosoSubnet01.
+- title: 'Example 2: Get a virtual machine subnet by using an ID'
+  description: |-
+    ```
+    PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+    PS C:\> Get-WAPackVMSubnet -VNet $VNet -Id 66242D17-189F-480D-87CF-8E1D749998C8
+    ```
+
+    This command gets the virtual machine subnet that has the specified ID.
+- title: 'Example 3: Get all virtual machine subnets from a given virtualized network'
+  description: |-
+    ```
+    PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+    PS C:\> Get-WAPackVMSubnet -VNet $VNet
+    ```
+
+    This command gets all the virtual machine subnets from a given virtualized network.
+links:
+- text: Get-WAPackVNet
+  href: ./Get-WAPackVNet.yml
+- text: New-WAPackVMSubnet
+  href: ./New-WAPackVMSubnet.yml
+- text: Remove-WAPackVMSubnet
+  href: ./Remove-WAPackVMSubnet.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0E358CEF-69E4-4639-918C-CE593E97B189
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAccount
+name: Get-AzureAccount
+module: Azure
+isPreview: false
+summary: |-
+  Gets Azure accounts that are available to Azure PowerShell.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureAccount** cmdlet gets the Azure accounts that are available to Windows PowerShell.
+  To make your accounts available to Windows PowerShell, use the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlets.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the specified account.
+      The default is all accounts that are available to Windows PowerShell.
+      Enter the account name.
+      The **Name** value is case-sensitive.
+      Wildcards are not permitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAccount
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not return any output.
+examples:
+- title: 'Example 1: Get all accounts'
+  description: |-
+    ```
+    PS C:\> Get-AzureAccount
+
+    Name                         ActiveDirectories
+    ----                         -----------------
+    contosoadmin@outlook.com     {{ ActiveDirectoryTenantId = abcde5cd-bcc3-441a-bd86-e6a...
+    contosotest1@outlook.com     {{ ActiveDirectoryTenantId = aaeabcde-386c-4466-bf70-794...
+    ```
+
+    This command gets all accounts associated with the specified user.
+- title: 'Example 2: Get an account by name'
+  description: |-
+    ```
+    PS C:\> Get-AzureAccount -Name contosoadmin@outlook.com
+
+    Name                         ActiveDirectories
+    ----                         -----------------
+    contosoadmin@outlook.com     {{ ActiveDirectoryTenantId = abcde5cd-bcc3-441a-bd86-e6a...
+    ```
+
+    This command gets the ContosoAdmin account.
+links:
+- text: Add-AzureAccount
+  href: ./Add-AzureAccount.yml
+- text: Get-AzurePublishSettingsFile
+  href: ./Get-AzurePublishSettingsFile.yml
+- text: Import-AzurePublishSettingsFile
+  href: ./Import-AzurePublishSettingsFile.yml
+- text: Remove-AzureAccount
+  href: ./Remove-AzureAccount.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 70ADAF16-BC52-47BF-A85A-A84DEACDA027
+  PlatyPS schema version: 2024-05-01

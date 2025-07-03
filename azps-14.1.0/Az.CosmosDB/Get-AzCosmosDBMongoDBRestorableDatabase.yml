@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.Get-AzCosmosDBMongoDBRestorableDatabase
+name: Get-AzCosmosDBMongoDBRestorableDatabase
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Gets the list of all the restorable Azure Cosmos DB MongoDB databases available under the restorable account.
+description: |-
+  Gets the list of all the restorable Azure Cosmos DB MongoDB database events available under the restorable account.
+  The list would have entries corresponding to create, replace and delete events of all live and deleted databases.
+  This list is useful to identify the restore timestamp based on the changes in the database.
+  For example, if user wants to restore the database account to a timestamp when a database named foo is deleted, the user can find corresponding database delete event from this list, and choose a timestamp before the delete event for restore.
+parameters:
+  cmdletParameters:
+  - name: DatabaseAccountInstanceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance Id of the CosmosDB database account.
+      (This is returned as a part of database account properties).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Management.CosmosDB.Models.PSRestorableDatabaseAccountGetResult" data-throw-if-not-resolved="False" />
+    description: |-
+      CosmosDB Restorable Database Account object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Location in string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCosmosDBMongoDBRestorableDatabase
+        -Location <String>
+        -DatabaseAccountInstanceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCosmosDBMongoDBRestorableDatabase
+        -InputObject <PSRestorableDatabaseAccountGetResult>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.CosmosDB.Models.PSRestorableMongodbDatabaseGetResult" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzCosmosDBMongoDBRestorableDatabase -Location "location" -DatabaseAccountInstanceId "DatabaseAccountInstanceId"
+    ```
+
+    ```output
+    Name            : cb04fbfc-4142-413d-b2c5-c91723a17e28
+    Id              : /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{DatabaseAccountInstanceId}/restorableMongoDBDatabases/cb04fbfc-4142-413d-b2c5-c91723
+                      a17e28
+    Type            : Microsoft.DocumentDB/locations/restorableDatabaseAccounts/restorableMongoDBDatabases
+    _rid            : a+35ZwAAAA==
+    OperationType   : Create
+    EventTimestamp  : 01/20/2021 18:42:37
+    OwnerId         : foo-db1
+    OwnerResourceId : Ts0YAA==
+    ```
+
+    The resource object contains the properties of the database resource
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBMongoDBRestorableDatabase.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdbmongodbrestorabledatabase
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBMongoDBRestorableDatabase.md
+  PlatyPS schema version: 2024-05-01

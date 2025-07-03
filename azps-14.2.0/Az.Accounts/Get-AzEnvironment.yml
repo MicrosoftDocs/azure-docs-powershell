@@ -1,0 +1,163 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Get-AzEnvironment
+name: Get-AzEnvironment
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Get endpoints and metadata for an instance of Azure services.
+  `GalleryUrl` will be removed from ArmMetadata and so Azure PowerShell will no longer provide for its value in `PSAzureEnvironment`. Currently `GalleryUrl` is not used in Azure PowerShell products. Please do not reply on `GalleryUrl` anymore.
+description: |-
+  The Get-AzEnvironment cmdlet gets endpoints and metadata for an instance of Azure services.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure instance to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEnvironment
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Getting all Azure environments'
+  description: |-
+    ```powershell
+    Get-AzEnvironment
+    ```
+
+    ```Output
+    Name              Resource Manager Url                  ActiveDirectory Authority          Type
+    ----              --------------------                  -------------------------          ----
+    AzureUSGovernment https://management.usgovcloudapi.net/ https://login.microsoftonline.us/  Built-in
+    AzureCloud        https://management.azure.com/         https://login.microsoftonline.com/ Built-in
+    AzureChinaCloud   https://management.chinacloudapi.cn/  https://login.chinacloudapi.cn/    Built-in
+    ```
+
+    This example shows how to get the endpoints and metadata for the AzureCloud (default) environment.
+- title: 'Example 2: Getting the AzureCloud environment'
+  description: |-
+    ```powershell
+    Get-AzEnvironment -Name AzureCloud
+    ```
+
+    ```Output
+    Name       Resource Manager Url          ActiveDirectory Authority          Type
+    ----       --------------------          -------------------------          ----
+    AzureCloud https://management.azure.com/ https://login.microsoftonline.com/ Built-in
+    ```
+
+    This example shows how to get the endpoints and metadata for the AzureCloud (default) environment.
+- title: 'Example 3: Getting the AzureChinaCloud environment'
+  description: |-
+    ```powershell
+    Get-AzEnvironment -Name AzureChinaCloud | Format-List
+    ```
+
+    ```Output
+    Name                                              : AzureChinaCloud
+    Type                                              : Built-in
+    EnableAdfsAuthentication                          : False
+    OnPremise                                         : False
+    ActiveDirectoryServiceEndpointResourceId          : https://management.core.chinacloudapi.cn/
+    AdTenant                                          : Common
+    GalleryUrl                                        : https://gallery.azure.com/
+    ManagementPortalUrl                               : https://go.microsoft.com/fwlink/?LinkId=301902
+    ServiceManagementUrl                              : https://management.core.chinacloudapi.cn/
+    PublishSettingsFileUrl                            : https://go.microsoft.com/fwlink/?LinkID=301776
+    ResourceManagerUrl                                : https://management.chinacloudapi.cn/
+    SqlDatabaseDnsSuffix                              : .database.chinacloudapi.cn
+    StorageEndpointSuffix                             : core.chinacloudapi.cn
+    ActiveDirectoryAuthority                          : https://login.chinacloudapi.cn/
+    GraphUrl                                          : https://graph.chinacloudapi.cn/
+    GraphEndpointResourceId                           : https://graph.chinacloudapi.cn/
+    TrafficManagerDnsSuffix                           : trafficmanager.cn
+    AzureKeyVaultDnsSuffix                            : vault.azure.cn
+    DataLakeEndpointResourceId                        :
+    AzureDataLakeStoreFileSystemEndpointSuffix        :
+    AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix :
+    AzureKeyVaultServiceEndpointResourceId            : https://vault.azure.cn
+    ContainerRegistryEndpointSuffix                   : azurecr.cn
+    AzureOperationalInsightsEndpointResourceId        :
+    AzureOperationalInsightsEndpoint                  :
+    AzureAnalysisServicesEndpointSuffix               : asazure.chinacloudapi.cn
+    AnalysisServicesEndpointResourceId                : https://region.asazure.chinacloudapi.cn
+    AzureAttestationServiceEndpointSuffix             :
+    AzureAttestationServiceEndpointResourceId         :
+    AzureSynapseAnalyticsEndpointSuffix               : dev.azuresynapse.azure.cn
+    AzureSynapseAnalyticsEndpointResourceId           : https://dev.azuresynapse.azure.cn
+    ```
+
+    This example shows how to get the endpoints and metadata for the AzureChinaCloud environment.
+- title: 'Example 4: Getting the AzureUSGovernment environment'
+  description: |-
+    ```powershell
+    Get-AzEnvironment -Name AzureUSGovernment
+    ```
+
+    ```Output
+    Name              Resource Manager Url                  ActiveDirectory Authority         Type
+    ----              --------------------                  -------------------------         ----
+    AzureUSGovernment https://management.usgovcloudapi.net/ https://login.microsoftonline.us/ Built-in
+    ```
+
+    This example shows how to get the endpoints and metadata for the AzureUSGovernment environment.
+links:
+- text: Add-AzEnvironment
+  href: ./Add-AzEnvironment.yml
+- text: Remove-AzEnvironment
+  href: ./Remove-AzEnvironment.yml
+- text: Set-AzEnvironment
+  href: ./Set-AzEnvironment.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzEnvironment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/get-azenvironment
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzEnvironment.md
+  PlatyPS schema version: 2024-05-01

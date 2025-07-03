@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Websites.Get-AzWebAppSlotWebJob
+name: Get-AzWebAppSlotWebJob
+module: Az.Websites
+isPreview: false
+summary: |-
+  List webjobs for a deployment slot.
+description: |-
+  List webjobs for a deployment slot.
+parameters:
+  cmdletParameters:
+  - name: AppName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Site name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group to which the resource belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SlotName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the deployment slot.
+      If a slot is not specified, the API returns deployments for the production slot.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Your Azure subscription ID.
+      This is a GUID-formatted string (e.g.
+      00000000-0000-0000-0000-000000000000).
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWebAppSlotWebJob
+        -AppName <String>
+        -ResourceGroupName <String>
+        -SlotName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Websites.Models.Api20210201.IWebJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List webjobs for a deployment slot'
+  description: |-
+    ```powershell
+    Get-AzWebAppSlotWebJob -ResourceGroupName webjob-rg-test -AppName appService-test01 -SlotName slot01
+    ```
+
+    ```output
+    Name                                          Kind WebJobType ResourceGroupName
+    ----                                          ---- ---------- -----------------
+    appService-test01/slot01/slottriggeredjob-03                  webjob-rg-test
+    appService-test01/slot01/slottriggeredjob-04                  webjob-rg-test
+    appService-test01/slot01/slotcontinuousjob-03                 webjob-rg-test
+    appService-test01/slot01/slotcontinuousjob-04                 webjob-rg-test
+    ```
+
+    This command lists webjobs for a deployment slot.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotWebJob.md
+  document type: cmdlet
+  external help file: Az.Websites-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.websites/get-azwebappslotwebjob
+  Module Name: Az.Websites
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Websites/Websites/help/Get-AzWebAppSlotWebJob.md
+  PlatyPS schema version: 2024-05-01

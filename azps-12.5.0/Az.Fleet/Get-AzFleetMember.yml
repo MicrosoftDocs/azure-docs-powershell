@@ -1,0 +1,248 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Fleet.Get-AzFleetMember
+name: Get-AzFleetMember
+module: Az.Fleet
+isPreview: false
+summary: |-
+  Get a FleetMember
+description: |-
+  Get a FleetMember
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityFleet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Fleet resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Fleet member resource.
+    aliases:
+    - FleetMemberName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityFleet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFleetMember
+        -FleetName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzFleetMember
+        -FleetName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFleetMember
+        -Name <String>
+        -FleetInputObject <IFleetIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityFleet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFleetMember
+        -InputObject <IFleetIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetMember" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get specific fleet member with specified name'
+  description: |-
+    ```powershell
+    Get-AzFleetMember -FleetName testfleet01 -ResourceGroupName K8sFleet-Test -Name testmember
+    ```
+
+    ```output
+    ClusterResourceId            : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/K8sFleet-Test/providers/microsoft.containerservice/managedClusters/TestCluster01
+    ETag                         : "6205a537-0000-0100-0000-655430760000"
+    Group                        :
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/K8sFleet-Test/providers/Microsoft.ContainerService/fleets/testfleet01/members/testmember
+    Name                         : testmember
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : K8sFleet-Test
+    SystemDataCreatedAt          : 11/15/2023 2:43:32 AM
+    SystemDataCreatedBy          : user1@example.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/15/2023 2:43:32 AM
+    SystemDataLastModifiedBy     : user1@example.com
+    SystemDataLastModifiedByType : User
+    Type                         : Microsoft.ContainerService/fleets/members
+    ```
+
+    This command gets specific fleet member with specified name.
+- title: 'Example 2: Get a list of fleet member with specified fleet'
+  description: |-
+    ```powershell
+    Get-AzFleetMember -FleetName testfleet01 -ResourceGroupName K8sFleet-Test
+    ```
+
+    ```output
+    Name        SystemDataCreatedAt   SystemDataCreatedBy   SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ETag                                   Resource
+                                                                                                                                                                                                          GroupNam
+                                                                                                                                                                                                          e
+    ----        -------------------   -------------------   ----------------------- ------------------------ ------------------------ ---------------------------- ----                                   --------
+    testmember  11/21/2023 3:13:50 AM user1@example.com     User                    11/21/2023 3:13:50 AM    user1@example.com        User                         "bc061fb4-0000-0100-0000-655c208e0000" K8sFlee…
+    testmember2 11/21/2023 4:11:24 AM user1@example.com     User                    11/21/2023 4:11:24 AM    user1@example.com        User                         "be067cf2-0000-0100-0000-655c2e280000" K8sFlee…
+    ```
+
+    This command gets a list of fleet member with specified fleet.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Get-AzFleetMember.md
+  document type: cmdlet
+  external help file: Az.Fleet-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.fleet/get-azfleetmember
+  Module Name: Az.Fleet
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Get-AzFleetMember.md
+  PlatyPS schema version: 2024-05-01

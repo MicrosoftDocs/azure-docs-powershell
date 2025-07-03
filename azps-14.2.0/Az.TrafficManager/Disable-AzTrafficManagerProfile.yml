@@ -1,0 +1,204 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TrafficManager.Disable-AzTrafficManagerProfile
+name: Disable-AzTrafficManagerProfile
+module: Az.TrafficManager
+isPreview: false
+summary: |-
+  Disables a Traffic Manager profile.
+description: |-
+  The **Disable-AzTrafficManagerProfile** cmdlet disables an Azure Traffic Manager profile.
+  You can specify the profile object by using the pipeline or as a parameter value.
+  Alternatively, you can specify the profile by using the *Name* and *ResourceGroupName* parameters.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Traffic Manager profile that this cmdlet disables.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+      This cmdlet disables a Traffic Manager profile in the group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerProfile
+    type: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **TrafficManagerProfile** object to disable.
+      To obtain a **TrafficManagerProfile** object, use the Get-AzTrafficManagerProfile cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzTrafficManagerProfile
+        -Name <String>
+        -ResourceGroupName <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fields
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-AzTrafficManagerProfile
+        -TrafficManagerProfile <TrafficManagerProfile>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.TrafficManager.Models.TrafficManagerProfile" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable a profile specified by name'
+  description: |-
+    ```powershell
+    Disable-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11"
+    ```
+
+    This command disables the profile named ContosoProfile in ResourceGroup11.
+    The command prompts you for confirmation.
+- title: 'Example 2: Disable a profile by using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzTrafficManagerProfile -Name "ContosoProfile" -ResourceGroupName "ResourceGroup11" | Disable-AzTrafficManagerProfile -Force
+    ```
+
+    This command gets the profile named ContosoProfile in ResourceGroup11.
+    The command then passes that profile to the **Disable-AzTrafficManagerProfile** cmdlet by using the pipeline operator.
+    That cmdlet disables that profile.
+    The command specifies the *Force* parameter.
+    Therefore, it does not prompt you for confirmation.
+links:
+- text: Enable-AzTrafficManagerProfile
+  href: ./Enable-AzTrafficManagerProfile.yml
+- text: Get-AzTrafficManagerProfile
+  href: ./Get-AzTrafficManagerProfile.yml
+- text: New-AzTrafficManagerProfile
+  href: ./New-AzTrafficManagerProfile.yml
+- text: Remove-AzTrafficManagerProfile
+  href: ./Remove-AzTrafficManagerProfile.yml
+- text: Set-AzTrafficManagerProfile
+  href: ./Set-AzTrafficManagerProfile.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Disable-AzTrafficManagerProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrafficManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.trafficmanager/disable-aztrafficmanagerprofile
+  Module Name: Az.TrafficManager
+  ms.assetid: B6E043FF-F4DD-44B7-BEAA-6B17C8F21D58
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrafficManager/TrafficManager/help/Disable-AzTrafficManagerProfile.md
+  PlatyPS schema version: 2024-05-01

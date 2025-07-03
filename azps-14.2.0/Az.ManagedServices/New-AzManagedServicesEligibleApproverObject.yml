@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedServices.New-AzManagedServicesEligibleApproverObject
+name: New-AzManagedServicesEligibleApproverObject
+module: Az.ManagedServices
+isPreview: false
+summary: |-
+  Create an in-memory object for EligibleApprover.
+description: |-
+  Create an in-memory object for EligibleApprover.
+parameters:
+  cmdletParameters:
+  - name: PrincipalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier of the Azure Active Directory principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrincipalIdDisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the Azure Active Directory principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzManagedServicesEligibleApproverObject
+        -PrincipalId <String>
+        [-PrincipalIdDisplayName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.EligibleApprover" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates Azure Lighthouse eligible authorization approver object'
+  description: |-
+    ```powershell
+    New-AzManagedServicesEligibleApproverObject -PrincipalId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -PrincipalIdDisplayName "Approvers group"
+    ```
+
+    ```output
+    PrincipalId                          PrincipalIdDisplayName
+    -----------                          ----------------------
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Approvers group
+    ```
+
+    Creates Azure Lighthouse eligible authorization approver object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesEligibleApproverObject.md
+  document type: cmdlet
+  external help file: Az.ManagedServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ManagedServices/new-AzManagedServicesEligibleApproverObject
+  Module Name: Az.ManagedServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesEligibleApproverObject.md
+  PlatyPS schema version: 2024-05-01

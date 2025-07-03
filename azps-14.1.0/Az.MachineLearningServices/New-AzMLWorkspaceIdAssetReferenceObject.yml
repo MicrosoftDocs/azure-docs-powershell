@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceIdAssetReferenceObject
+name: New-AzMLWorkspaceIdAssetReferenceObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for IdAssetReference.
+description: |-
+  Create an in-memory object for IdAssetReference.
+parameters:
+  cmdletParameters:
+  - name: AssetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] ARM resource ID of the asset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReferenceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ReferenceType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies the type of asset reference.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceIdAssetReferenceObject
+        -AssetId <String>
+        -ReferenceType <ReferenceType>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IdAssetReference" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create model reference'
+  description: |-
+    ```powershell
+    $model = Get-AzMLWorkspaceModelVersion -ResourceGroupName group-test -WorkspaceName mlworkspace-test -Version 1 -Name model1
+    New-AzMLWorkspaceIdAssetReferenceObject -AssetId $model.Id -ReferenceType 'Id'
+    ```
+
+    ```output
+    ReferenceType AssetId
+    ------------- -------
+    Id            /subscriptions/11111111-2222-3333-4444-123456789101/resourceGroups/group-test/providers/Microsoft.MachineLearningServices/workspaces/mlworkspace-test/models/model1
+    ```
+
+    This command creates model reference object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceIdAssetReferenceObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceIdAssetReferenceObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceIdAssetReferenceObject.md
+  PlatyPS schema version: 2024-05-01

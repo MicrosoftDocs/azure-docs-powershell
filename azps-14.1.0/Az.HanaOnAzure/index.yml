@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: Az.HanaOnAzure
+name: Az.HanaOnAzure Module
+isPreview: false
+cmdletGroups:
+- title: SAP HANA on Azure
+  cmdlets:
+  - Az.HanaOnAzure.Get-AzSapMonitor
+  - Az.HanaOnAzure.Get-AzSapMonitorProviderInstance
+  - Az.HanaOnAzure.New-AzSapMonitor
+  - Az.HanaOnAzure.New-AzSapMonitorProviderInstance
+  - Az.HanaOnAzure.Remove-AzSapMonitor
+  - Az.HanaOnAzure.Remove-AzSapMonitorProviderInstance
+  - Az.HanaOnAzure.Update-AzSapMonitor
+  - Az.HanaOnAzure.Update-AzSapMonitorProviderInstance
+description: |-
+  Microsoft Azure PowerShell: HanaOn cmdlets
+metadata:
+  Module Name: Az.HanaOnAzure
+  Module Guid: 79ad50da-e6b5-4703-885a-d36974a4d9b9
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.hanaonazure
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Az.HanaOnAzure.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HanaOnAzure/HanaOnAzure/help/Az.HanaOnAzure.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

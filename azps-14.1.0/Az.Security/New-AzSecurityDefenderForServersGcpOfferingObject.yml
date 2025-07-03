@@ -1,0 +1,274 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderForServersGcpOfferingObject
+name: New-AzSecurityDefenderForServersGcpOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderForServersGcpOffering.
+description: |-
+  Create an in-memory object for DefenderForServersGcpOffering.
+parameters:
+  cmdletParameters:
+  - name: ArcAutoProvisioningEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is arc auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationExclusionTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IDefenderForServersGcpOfferingVMScannersConfigurationExclusionTags" data-throw-if-not-resolved="False" />
+    description: |-
+      VM tags that indicate that VM should not be scanned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationPrivateLinkScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Arc private link scope resource id to link the Arc agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationProxy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional HTTP proxy endpoint to use for the Arc agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationScanningMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning mode for the VM scan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vulnerability Assessment solution to be provisioned.
+      Can be either 'TVM' or 'Qualys'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefenderForServerServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefenderForServerWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdeAutoProvisioningConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IAny" data-throw-if-not-resolved="False" />
+    description: |-
+      configuration for Microsoft Defender for Endpoint autoprovisioning.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdeAutoProvisioningEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender for Endpoint auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubPlanType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The available sub plans.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaAutoProvisioningEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Vulnerability Assessment auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScannerEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender for Server VM scanning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderForServersGcpOfferingObject
+        [-ArcAutoProvisioningEnabled <Boolean>]
+        [-ConfigurationExclusionTag <IDefenderForServersGcpOfferingVMScannersConfigurationExclusionTags>]
+        [-ConfigurationPrivateLinkScope <String>]
+        [-ConfigurationProxy <String>]
+        [-ConfigurationScanningMode <String>]
+        [-ConfigurationType <String>]
+        [-DefenderForServerServiceAccountEmailAddress <String>]
+        [-DefenderForServerWorkloadIdentityProviderId <String>]
+        [-MdeAutoProvisioningConfiguration <IAny>]
+        [-MdeAutoProvisioningEnabled <Boolean>]
+        [-SubPlanType <String>]
+        [-VMScannerEnabled <Boolean>]
+        [-VaAutoProvisioningEnabled <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderForServersGcpOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderForServersGcpOffering object'
+  description: |-
+    ```powershell
+    $emailSuffix = "myproject.iam.gserviceaccount.com"
+    New-AzSecurityDefenderForServersGcpOfferingObject `
+        -DefenderForServerServiceAccountEmailAddress "microsoft-defender-for-servers@$emailSuffix" -DefenderForServerWorkloadIdentityProviderId "defender-for-servers" `
+        -ArcAutoProvisioningEnabled $true -MdeAutoProvisioningEnabled $true -VaAutoProvisioningEnabled $true -ConfigurationType TVM `
+        -VMScannerEnabled $true -ConfigurationScanningMode Default `
+        -SubPlanType P2
+    ```
+
+    ```output
+    ArcAutoProvisioningEnabled                  : True
+    ConfigurationExclusionTag                   : {
+                                                  }
+    ConfigurationPrivateLinkScope               :
+    ConfigurationProxy                          :
+    ConfigurationScanningMode                   : Default
+    ConfigurationType                           : TVM
+    DefenderForServerServiceAccountEmailAddress : microsoft-defender-for-servers@myproject.iam.gserviceaccount.com
+    DefenderForServerWorkloadIdentityProviderId : defender-for-servers
+    Description                                 :
+    MdeAutoProvisioningConfiguration            : {
+                                                  }
+    MdeAutoProvisioningEnabled                  : True
+    OfferingType                                : DefenderForServersGcp
+    SubPlanType                                 : P2
+    VMScannerEnabled                            : True
+    VaAutoProvisioningEnabled                   : True
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForServersGcpOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefenderforserversgcpofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForServersGcpOfferingObject.md
+  PlatyPS schema version: 2024-05-01

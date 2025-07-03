@@ -1,0 +1,93 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureNetworkSecurityGroup
+name: Get-AzureNetworkSecurityGroup
+module: Azure
+isPreview: false
+summary: |-
+  Gets details for a network security group.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureNetworkSecurityGroup** cmdlet returns details for an Azure network security group.
+  Specify the *Detailed* parameter to display the network security rules.
+parameters:
+  cmdletParameters:
+  - name: Detailed
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns the network security rules for the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network security group that this cmdlet gets.
+
+      > [!NOTE]
+      > When a classic network security group is created in a resource group other than
+      > ***Default-Networking*** using the Azure portal, you must use the following PowerShell syntax:
+      > `Get-AzureNetworkSecurityGroup -Name 'Group myResourceGroup myNetworkSecurityGroup'`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureNetworkSecurityGroup
+        [-Name <String>]
+        [-Detailed]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: New-AzureNetworkSecurityGroup
+  href: ./New-AzureNetworkSecurityGroup.yml
+- text: Remove-AzureNetworkSecurityGroup
+  href: ./Remove-AzureNetworkSecurityGroup.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 4E19A767-8233-42A0-95C5-1547B4DF297E
+  PlatyPS schema version: 2024-05-01

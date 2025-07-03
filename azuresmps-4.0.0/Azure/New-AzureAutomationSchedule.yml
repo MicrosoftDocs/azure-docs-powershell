@@ -1,0 +1,239 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureAutomationSchedule
+name: New-AzureAutomationSchedule
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Automation schedule.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **New-AzureAutomationSchedule** cmdlet creates a schedule in Microsoft Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DayInterval
+    type: <xref href="Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in days, for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDaily
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the expiry time of a schedule.
+      A string can be provided if it can be converted to a valid **DateTime**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDaily
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByHourly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HourInterval
+    type: <xref href="Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in hours, for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByHourly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OneTime
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation creates a one-time schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOneTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start time of a schedule.
+      A string can be provided if it can be converted to a valid **DateTime**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationSchedule
+        -Name <String>
+        -StartTime <DateTimeOffset>
+        -DayInterval <Byte>
+        -AutomationAccountName <String>
+        [-Description <String>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDaily
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationSchedule
+        -Name <String>
+        -StartTime <DateTimeOffset>
+        -AutomationAccountName <String>
+        [-Description <String>]
+        [-OneTime]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOneTime
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureAutomationSchedule
+        -Name <String>
+        -StartTime <DateTimeOffset>
+        -HourInterval <Byte>
+        -AutomationAccountName <String>
+        [-Description <String>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByHourly
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Schedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a one-time schedule'
+  description: |-
+    ```
+    PS C:\> New-AzureAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -StartTime "23:00" -OneTime
+    ```
+
+    The following command creates a schedule that runs one time on the current date at 11:00 PM.
+- title: 'Example 2: Create a recurring schedule'
+  description: |-
+    ```
+    PS C:\> $StartTime = Get-Date "13:00:00"
+    PS C:\> $EndTime = $StartTime.AddYears(1)
+    PS C:\> New-AzureAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule02" -StartTime $StartTime -ExpiryTime $EndTime -DailyInterval 1
+    ```
+
+    The following commands create a new schedule that runs at 1:00 PM every day for one year starting on the current day.
+links:
+- text: Get-AzureAutomationSchedule
+  href: ./Get-AzureAutomationSchedule.yml
+- text: Remove-AzureAutomationSchedule
+  href: ./Remove-AzureAutomationSchedule.yml
+- text: Set-AzureAutomationSchedule
+  href: ./Set-AzureAutomationSchedule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D28DD808-E8EF-4C71-A353-8BF1E458DF6F
+  PlatyPS schema version: 2024-05-01

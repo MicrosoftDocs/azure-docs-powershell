@@ -1,0 +1,246 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Reservations.Move-AzReservationDirectory
+name: Move-AzReservationDirectory
+module: Az.Reservations
+isPreview: false
+summary: |-
+  Change directory (tenant) of `ReservationOrder` and all `Reservation` under it to specified tenant id
+description: |-
+  Change directory (tenant) of `ReservationOrder` and all `Reservation` under it to specified tenant id
+parameters:
+  cmdletParameters:
+  - name: Body
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IChangeDirectoryRequest" data-throw-if-not-resolved="False" />
+    description: |-
+      Request body for change directory of a reservation.
+      To construct, see NOTES section for BODY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Change
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ChangeViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant id GUID that reservation order is to be transferred to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ChangeExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ChangeViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ChangeViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ChangeViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservationOrderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Order Id of the reservation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ChangeExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Change
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Move-AzReservationDirectory
+        -ReservationOrderId <String>
+        [-DestinationTenantId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ChangeExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Move-AzReservationDirectory
+        -ReservationOrderId <String>
+        -Body <IChangeDirectoryRequest>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Change
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzReservationDirectory
+        -InputObject <IReservationsIdentity>
+        [-DestinationTenantId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ChangeViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzReservationDirectory
+        -InputObject <IReservationsIdentity>
+        -Body <IChangeDirectoryRequest>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ChangeViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IChangeDirectoryRequest" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.IReservationsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Reservations.Models.Api20221101.IChangeDirectoryResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Move reservation order from one tenant to another'
+  description: |-
+    ```powershell
+    Move-AzReservationDirectory -ReservationOrderId "00001111-aaaa-2222-bbbb-3333cccc4444" -DestinationTenantId "f65fbe9a-14b0-44c6-8c0d-2ef2c4543040"
+    ```
+
+    ```output
+    Reservation                 : {{
+                                    "id": "e2ce59da-9753-47f6-8576-2a2fab559409",
+                                    "name": "VM_RI_05-26-2022_16-53",
+                                    "isSucceeded": true
+                                  }, {
+                                    "id": "9a852181-9cec-43a4-852e-8cfd0bec11aa",
+                                    "name": "VM_RI_05-26-2022_16-53",
+                                    "isSucceeded": true
+                                  }, {
+                                    "id": "6dc205d9-8049-4179-9d60-29eb1d0082b3",
+                                    "name": "VM_RI_05-26-2022_16-53",
+                                    "isSucceeded": true
+                                  }}
+    ReservationOrderError       :
+    ReservationOrderId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ReservationOrderIsSucceeded : True
+    ReservationOrderName        : VM_RI_05-26-2022_16-53
+    ```
+
+    Move reservation order from one tenant to another
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Move-AzReservationDirectory.md
+  document type: cmdlet
+  external help file: Az.Reservations-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.reservations/move-azreservationdirectory
+  Module Name: Az.Reservations
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Reservations/Reservations/help/Move-AzReservationDirectory.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewaySslCertificate
+name: New-AzApplicationGatewaySslCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates an SSL certificate for an Azure application gateway.
+description: |-
+  The **New-AzApplicationGatewaySslCertificate** cmdlet creates an SSL certificate for an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: CertificateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the .pfx file of the SSL certificate that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultSecretId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SecretId (uri) of the KeyVault Secret. Use this option when a specific version of secret needs to be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SSL certificate that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the SSL that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewaySslCertificate
+        -Name <String>
+        [-CertificateFile <String>]
+        [-Password <SecureString>]
+        [-KeyVaultSecretId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an SSL certificate for an Azure application gateway.'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $cert = New-AzApplicationGatewaySslCertificate -Name "Cert01" -CertificateFile "D:\cert01.pfx" -Password $password
+    ```
+
+    This command creates a SSL certificate named Cert01 for the default application gateway and stores the result in the variable named $Cert.
+- title: 'Example 2: Create an SSL certificate using KeyVault Secret (version-less secretId) and add to an application gateway.'
+  description: |-
+    ```powershell
+    $secret = Get-AzKeyVaultSecret -VaultName "keyvault01" -Name "sslCert01"
+    $secretId = $secret.Id.Replace($secret.Version, "") # https://<keyvaultname>.vault.azure.net/secrets/
+    $cert = New-AzApplicationGatewaySslCertificate -Name "Cert01" -KeyVaultSecretId $secretId
+    ```
+
+    Get the secret and create an SSL Certificate using `New-AzApplicationGatewaySslCertificate`.
+    Note: As version-less secretId is provided here, Application Gateway will sync the certificate in regular intervals with the KeyVault.
+- title: 'Example 3: Create an SSL certificate using KeyVault Secret and add to an Application Gateway.'
+  description: |-
+    ```powershell
+    $secret = Get-AzKeyVaultSecret -VaultName "keyvault01" -Name "sslCert01"
+    $secretId = $secret.Id # https://<keyvaultname>.vault.azure.net/secrets/<hash>
+    $cert = New-AzApplicationGatewaySslCertificate -Name "Cert01" -KeyVaultSecretId $secretId
+    ```
+
+    Get the secret and create an SSL Certificate using `New-AzApplicationGatewaySslCertificate`.
+    Note: If it is required that Application Gateway syncs the certificate with the KeyVault, please provide the version-less secretId.
+links:
+- text: Add-AzApplicationGatewaySslCertificate
+  href: ./Add-AzApplicationGatewaySslCertificate.yml
+- text: Get-AzApplicationGatewaySslCertificate
+  href: ./Get-AzApplicationGatewaySslCertificate.yml
+- text: Remove-AzApplicationGatewaySslCertificate
+  href: ./Remove-AzApplicationGatewaySslCertificate.yml
+- text: Set-AzApplicationGatewaySslCertificate
+  href: ./Set-AzApplicationGatewaySslCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewaySslCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewaysslcertificate
+  Module Name: Az.Network
+  ms.assetid: 6FFE1B64-C80B-423D-A043-55C90A224752
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewaySslCertificate.md
+  PlatyPS schema version: 2024-05-01

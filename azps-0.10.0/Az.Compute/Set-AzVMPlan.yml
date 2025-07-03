@@ -1,0 +1,157 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVMPlan
+name: Set-AzVMPlan
+module: Az.Compute
+isPreview: false
+summary: |-
+  Sets the Marketplace plan information on a virtual machine.
+description: |-
+  The **Set-AzVMPlan** cmdlet sets the Azure Marketplace plan information for a virtual machine.
+
+  Before being able to deploy a Marketplace image through the command-line, programmatic access must be enabled or the virtual machine must be deployed by using the Azure portal.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the image from the Marketplace.
+      This is the same value that is returned by the Get-AzVMImageSku cmdlet.
+      For more information about how to find image information, see [Find and use Azure Marketplace VM images with Azure PowerShell](/azure/virtual-machines/windows/cli-ps-findimage) in the Microsoft Azure documentation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Product
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the product of the image from the Marketplace.
+      This is the same information as the **Offer** value of the **imageReference** element.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PromotionCode
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a promotion code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the publisher of the image.
+      You can find this information by using the Get-AzVMImagePublisher cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine object for which to set a Marketplace plan.
+      You can use the Get-AzVM cmdlet to obtain a virtual machine object.
+      You can use the New-AzVMConfig cmdlet to create a virtual machine object.
+    aliases:
+    - VMProfile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVMPlan
+        [-VM] <PSVirtualMachine>
+        [-Name] <String>
+        [[-Product] <String>]
+        [[-PromotionCode] <String>]
+        [[-Publisher] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSVirtualMachine" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VM' accepts value of type 'PSVirtualMachine' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+links:
+- text: Get-AzVM
+  href: ./Get-AzVM.yml
+- text: Get-AzVMImagePublisher
+  href: ./Get-AzVMImagePublisher.yml
+- text: Get-AzVMImageSku
+  href: ./Get-AzVMImageSku.yml
+- text: New-AzVMConfig
+  href: ./New-AzVMConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMPlan.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmplan
+  Module Name: Az.Compute
+  ms.assetid: A1EA7D34-A8B4-4FA0-BD8C-3E846715AFBA
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVMPlan.md
+  PlatyPS schema version: 2024-05-01

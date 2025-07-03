@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagementPartner.Get-AzManagementPartner
+name: Get-AzManagementPartner
+module: Az.ManagementPartner
+isPreview: false
+summary: |-
+  Gets the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
+description: |-
+  Gets the Microsoft Partner Network(MPN) ID of the current authenticated user or service principal.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The management partner id, it is a 6 digits number
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagementPartner
+        [[-PartnerId] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ManagementPartner.PSManagementPartner" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzManagementPartner
+    ```
+
+    ```output
+    PartnerId   : 4977985
+    PartnerName : Test_Test_DPORTest
+    TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
+    State       : Active
+    ```
+
+    Get the current management partner id
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzManagementPartner -PartnerId 4977985
+    ```
+
+    ```output
+    PartnerId   : 4977985
+    PartnerName : Test_Test_DPORTest
+    TenantId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    ObjectId    : aa67f786-0552-423e-8849-244ed12bf581
+    State       : Active
+    ```
+
+    Get the current management partner id using a partner id, if they don't match, it will fail
+links:
+- text: Remove-AzManagementPartner
+  href: ./Remove-AzManagementPartner.yml
+- text: New-AzManagementPartner
+  href: ./New-AzManagementPartner.yml
+- text: Update-AzManagementPartner
+  href: ./Update-AzManagementPartner.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagementPartner/ManagementPartner/help/Get-AzManagementPartner.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ManagementPartner.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managementpartner/get-azmanagementpartner
+  Module Name: Az.ManagementPartner
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagementPartner/ManagementPartner/help/Get-AzManagementPartner.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,28 @@
+### YamlMime:PowerShellModule1
+uid: Az.Subscription
+name: Az.Subscription Module
+isPreview: false
+cmdletGroups:
+- title: Subscription
+  cmdlets:
+  - Az.Subscription.Disable-AzSubscription
+  - Az.Subscription.Enable-AzSubscription
+  - Az.Subscription.Get-AzSubscriptionAcceptOwnershipStatus
+  - Az.Subscription.Get-AzSubscriptionAlias
+  - Az.Subscription.Get-AzSubscriptionPolicy
+  - Az.Subscription.Invoke-AzSubscriptionAcceptOwnership
+  - Az.Subscription.New-AzSubscriptionAlias
+  - Az.Subscription.Remove-AzSubscriptionAlias
+  - Az.Subscription.Rename-AzSubscription
+description: |-
+  Microsoft Azure PowerShell: Subscription cmdlets
+metadata:
+  Module Name: Az.Subscription
+  Module Guid: d687e965-0990-42dd-a1cd-a2e30af042c9
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.subscription
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Az.Subscription.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Az.Subscription.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,433 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVmssDiskEncryptionExtension
+name: Set-AzVmssDiskEncryptionExtension
+module: Az.Compute
+isPreview: false
+summary: |-
+  Enables disk encryption on a VM scale set.
+description: |-
+  The **Set-AzVmssDiskEncryptionExtension** cmdlet enables encryption on a VM scale set. This cmdlet enables encryption by installing the disk encryption extension on the VM scale set.
+
+  For Linux virtual machines, the *VolumeType* parameter must be present and must be set to "Data"
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutoUpgradeMinorVersion
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disable auto-upgrade of minor version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionKeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceID of the KeyVault where generated encryption key will be placed to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionKeyVaultUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URL of the KeyVault where generated encryption key will be placed to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptFormatAll
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      EncryptFormatAll data drives that are not already encrypted
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the managed identity with access to keyvault for ADE operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension name.
+      If this parameter is not specified, default values used are AzureDiskEncryption for Windows VMs and AzureDiskEncryptionForLinux for Linux VMs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionPublisherName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension publisher name. If this parameter is not specified, default value is Microsoft.Azure.Security for Windows VMs and Linux VMs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extension type. Specify this parameter to override its default value of "AzureDiskEncryption" for Windows VMs and "AzureDiskEncryptionForLinux" for Linux VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      To force enabling encryption on the virtual machine scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceUpdate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate a tag for force update.  This should be given to perform repeated encryption operations on the same VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionAlgorithm
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyEncryption Algorithm used to encrypt the volume encryption key
+    acceptedValues:
+    - RSA-OAEP
+    - RSA1_5
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKeyUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Versioned KeyVault URL of the KeyEncryptionKey used to encrypt the disk encryption key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceID of the KeyVault containing the KeyEncryptionKey used to encrypt the disk encryption key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Passphrase
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The passphrase specified in parameters.
+      This parameter only works for Linux VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name to which the VM Scale Set belongs to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TypeHandlerVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type handler version.
+    aliases:
+    - HandlerVersion
+    - Version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScaleSetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the virtual machine scale set
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of virtual machine volumes on which to perform encryption operation: OS, Data, or All.
+
+      Linux: The **VolumeType** parameter must be present and must be set to Data.
+
+      Windows: The **VolumeType** parameter, if present, must be set to either All or OS. If the **VolumeType** parameter is omitted it defaults to "All".
+    acceptedValues:
+    - OS
+    - Data
+    - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVmssDiskEncryptionExtension
+        [-ResourceGroupName] <String>
+        [-VMScaleSetName] <String>
+        [-DiskEncryptionKeyVaultUrl] <String>
+        [-DiskEncryptionKeyVaultId] <String>
+        [-EncryptionIdentity <String>]
+        [-KeyEncryptionKeyUrl <String>]
+        [-KeyEncryptionKeyVaultId <String>]
+        [-KeyEncryptionAlgorithm <String>]
+        [-VolumeType <String>]
+        [-ForceUpdate]
+        [-TypeHandlerVersion <String>]
+        [-ExtensionPublisherName <String>]
+        [-ExtensionName <String>]
+        [-ExtensionType <String>]
+        [-EncryptFormatAll]
+        [-Passphrase <String>]
+        [-Force]
+        [-DisableAutoUpgradeMinorVersion]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineScaleSetExtension" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $RGName = "MyResourceGroup"
+    $VmssName = "MyTestVmss"
+    $VaultName= "MyKeyVault"
+    $KeyVault = Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName
+    $DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
+    $KeyVaultResourceId = $KeyVault.ResourceId
+
+    Set-AzVmssDiskEncryptionExtension -ResourceGroupName $RGName -VMScaleSetName $VmssName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId
+    ```
+
+    This command enables encryption on all disks of all Windows VMs in a VM scale set.
+- title: Example 2
+  description: |-
+    ```powershell
+    $RGName = "MyResourceGroup"
+    $VmssName = "MyTestVmss"
+    $VaultName= "MyKeyVault"
+    $KeyVault = Get-AzKeyVault -VaultName $VaultName -ResourceGroupName $RGName
+    $DiskEncryptionKeyVaultUrl = $KeyVault.VaultUri
+    $KeyVaultResourceId = $KeyVault.ResourceId
+    $VolumeType = "Data"
+
+    Set-AzVmssDiskEncryptionExtension -ResourceGroupName $RGName -VMScaleSetName $VmssName -DiskEncryptionKeyVaultUrl $DiskEncryptionKeyVaultUrl -DiskEncryptionKeyVaultId $KeyVaultResourceId `
+     -VolumeType $volumeType
+    ```
+
+    This command enables encryption on the data disks of all Linux VMs in a VM scale set.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssDiskEncryptionExtension.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/set-azvmssdiskencryptionextension
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Set-AzVmssDiskEncryptionExtension.md
+  PlatyPS schema version: 2024-05-01

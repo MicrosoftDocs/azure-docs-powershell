@@ -1,0 +1,148 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Remove-AzureRmEnvironment
+name: Remove-AzureRmEnvironment
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  Removes endpoints and metadata for connecting to a given Azure instance.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The Remove-AzureRmEnvironment cmdlet removes endpoints and metadata information for connecting to a given Azure instance.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the environment to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureRmEnvironment
+        [-Name] <String>
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="PSAzureEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creating and removing a test environment'
+  description: |-
+    ```
+    PS C:\> Add-AzureRmEnvironment -Name TestEnvironment `
+            -ActiveDirectoryEndpoint TestADEndpoint `
+            -ActiveDirectoryServiceEndpointResourceId TestADApplicationId `
+            -ResourceManagerEndpoint TestRMEndpoint `
+            -GalleryEndpoint TestGalleryEndpoint `
+            -GraphEndpoint TestGraphEndpoint
+
+    Name                                              : TestEnvironment
+    EnableAdfsAuthentication                          : False
+    ActiveDirectoryServiceEndpointResourceId          : TestADApplicationId
+    AdTenant                                          :
+    GalleryUrl                                        : TestGalleryEndpoint
+    ManagementPortalUrl                               :
+    ServiceManagementUrl                              :
+    PublishSettingsFileUrl                            :
+    ResourceManagerUrl                                : TestRMEndpoint
+    SqlDatabaseDnsSuffix                              :
+    StorageEndpointSuffix                             :
+    ActiveDirectoryAuthority                          : TestADEndpoint
+    GraphUrl                                          : TestGraphEndpoint
+    GraphEndpointResourceId                           :
+    TrafficManagerDnsSuffix                           :
+    AzureKeyVaultDnsSuffix                            :
+    AzureDataLakeStoreFileSystemEndpointSuffix        :
+    AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix :
+    AzureKeyVaultServiceEndpointResourceId            :
+
+    PS C:\> Remove-AzureRmEnvironment -Name TestEnvironment
+
+    Name                                              : TestEnvironment
+    EnableAdfsAuthentication                          : False
+    ActiveDirectoryServiceEndpointResourceId          : TestADApplicationId
+    AdTenant                                          :
+    GalleryUrl                                        : TestGalleryEndpoint
+    ManagementPortalUrl                               :
+    ServiceManagementUrl                              :
+    PublishSettingsFileUrl                            :
+    ResourceManagerUrl                                : TestRMEndpoint
+    SqlDatabaseDnsSuffix                              :
+    StorageEndpointSuffix                             :
+    ActiveDirectoryAuthority                          : TestADEndpoint
+    GraphUrl                                          : TestGraphEndpoint
+    GraphEndpointResourceId                           :
+    TrafficManagerDnsSuffix                           :
+    AzureKeyVaultDnsSuffix                            :
+    AzureDataLakeStoreFileSystemEndpointSuffix        :
+    AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix :
+    AzureKeyVaultServiceEndpointResourceId            :
+    ```
+
+    This example shows how to create an environment using Add-AzureRmEnvironment, and then how to delete the environment using Remove-AzureRmEnvironment.
+links:
+- text: Add-AzureRMEnvironment
+  href: Add-AzureRMEnvironment.yml
+- text: Get-AzureRMEnvironment
+  href: Get-AzureRMEnvironment.yml
+- text: Set-AzureRMEnvironment
+  href: Set-AzureRMEnvironment.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

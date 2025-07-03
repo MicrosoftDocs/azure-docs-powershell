@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Get-AzureRmTenant
+name: Get-AzureRmTenant
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  Gets tenants that are authorized for the current user.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The Get-AzureRmTenant cmdlet gets tenants authorized for the current user.
+parameters:
+  cmdletParameters:
+  - name: TenantId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the tenant that this cmdlet gets.
+    aliases:
+    - Domain
+    - Tenant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRmTenant
+        [[-TenantId] <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="PSAzureTenant" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns the tenant ID and associated domain information for tenants authorized for the current account.
+examples:
+- title: 'Example 1: Getting all tenants'
+  description: |-
+    ```
+    PS C:\> Add-AzureRmAccount
+    PS C:\> Get-AzureRmTenant
+
+    TenantId : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Domain   : microsoft.com
+
+    TenantId : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Domain   : microsoft.com
+    ```
+
+    This example shows how to get all of the authorized tenants of an Azure account.
+- title: 'Example 2: Getting a specific tenant'
+  description: |-
+    ```
+    PS C:\> Add-AzureRmAccount
+    PS C:\> Get-AzureRmTenant -TenantId xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+    TenantId : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Domain   : microsoft.com
+    ```
+
+    This example shows how to get a specific authorized tenant of an Azure account.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

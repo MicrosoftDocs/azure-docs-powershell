@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StandbyPool.Get-AzStandbyContainerGroupPoolStatus
+name: Get-AzStandbyContainerGroupPoolStatus
+module: Az.StandbyPool
+isPreview: false
+summary: |-
+  Get a StandbyContainerGroupPoolRuntimeViewResource
+description: |-
+  Get a StandbyContainerGroupPoolRuntimeViewResource
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StandbyPool.Models.IStandbyPoolIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the standby container group pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StandbyContainerGroupPoolInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StandbyPool.Models.IStandbyPoolIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityStandbyContainerGroupPool
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStandbyContainerGroupPoolStatus
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStandbyContainerGroupPoolStatus
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStandbyContainerGroupPoolStatus
+        -InputObject <IStandbyPoolIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStandbyContainerGroupPoolStatus
+        -StandbyContainerGroupPoolInputObject <IStandbyPoolIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityStandbyContainerGroupPool
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StandbyPool.Models.IStandbyPoolIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StandbyPool.Models.IStandbyContainerGroupPoolRuntimeViewResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get runtime view of a standby container group pool'
+  description: |-
+    ```powershell
+    Get-AzStandbyContainerGroupPoolStatus `
+    -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e `
+    -Name testPool `
+    -ResourceGroupName test-standbypool
+    ```
+
+    ```output
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-standbypool/providers/Microsoft.Standb
+                                   yPool/standbyContainerGroupPools/testPool/runtimeViews/latest
+    InstanceCountSummary         : {{
+                                     "instanceCountsByState": [
+                                       {
+                                         "state": "Creating",
+                                         "count": 1
+                                       },
+                                       {
+                                         "state": "Running",
+                                         "count": 0
+                                       },
+                                       {
+                                         "state": "Deleting",
+                                         "count": 0
+                                       }
+                                     ]
+                                   }}
+    Name                         : latest
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : test-standbypool
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.StandbyPool/standbyContainerGroupPools/runtimeViews
+    ```
+
+    Above command is getting a runtime view of standby container group pool.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Get-AzStandbyContainerGroupPoolStatus.md
+  document type: cmdlet
+  external help file: Az.StandbyPool-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.standbypool/get-azstandbycontainergrouppoolstatus
+  Module Name: Az.StandbyPool
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StandbyPool/StandbyPool/help/Get-AzStandbyContainerGroupPoolStatus.md
+  PlatyPS schema version: 2024-05-01

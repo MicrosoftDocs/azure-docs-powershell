@@ -1,0 +1,348 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzContainerServiceConfig
+name: New-AzContainerServiceConfig
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a local configuration object for a container service.
+description: |-
+  The **New-AzContainerServiceConfig** cmdlet creates a local configuration object for a container service.
+  Provide this object to the New-AzContainerService cmdlet to create a container service.
+parameters:
+  cmdletParameters:
+  - name: AdminUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator account name to use for a Linux-based container service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgentPoolProfile
+    type: <xref href="ContainerServiceAgentPoolProfile" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of agent pool profile objects for the container service.
+      Add a profile by using the Add-AzContainerServiceAgentPoolProfile cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomProfileOrchestrator
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the custom profile orchestrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location in which to create the container service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MasterCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of master virtual machines to create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MasterDnsPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS prefix for the master virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrchestratorType
+    type: <xref href="ContainerServiceOrchestratorTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of orchestrator for the container service.
+      The acceptable values for this parameter are: DCOS and Swarm.
+    acceptedValues:
+    - Swarm
+    - DCOS
+    - Custom
+    - Kubernetes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalProfileClientId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the principal profile client ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalProfileSecret
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the principal profile secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPublicKey
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the SSH public key for a Linux-based container service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmDiagnosticsEnabled
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether this configuration enables diagnostics for the container service virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsProfileAdminPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator password for a container service that uses the Windows operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsProfileAdminUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator username for a container service that uses the Windows operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerServiceConfig
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        [[-OrchestratorType] <ContainerServiceOrchestratorTypes>]
+        [[-MasterCount] <Int32>]
+        [[-MasterDnsPrefix] <String>]
+        [[-AgentPoolProfile] <ContainerServiceAgentPoolProfile[]>]
+        [[-WindowsProfileAdminUsername] <String>]
+        [[-WindowsProfileAdminPassword] <String>]
+        [[-AdminUsername] <String>]
+        [[-SshPublicKey] <String[]>]
+        [[-VmDiagnosticsEnabled] <Boolean>]
+        [-CustomProfileOrchestrator <String>]
+        [-ServicePrincipalProfileClientId <String>]
+        [-ServicePrincipalProfileSecret <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSContainerService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a container service configuration'
+  description: |-
+    ```
+    PS C:\> $Container = New-AzContainerServiceConfig -Location "Australia Southeast" -OrchestratorType "DCOS" -MasterDnsPrefix "MasterResourceGroup17" -AdminUsername "AcsLinuxAdmin" -SshPublicKey "<ssh-key>"
+    PS C:\> $Container | Add-AzContainerServiceAgentPoolProfile -Name "AgentPool01" -VmSize "Standard_A1" -DnsPrefix "APResourceGroup17"
+    ```
+
+    This command creates a container, and then stores it in the $Container variable.
+
+    The command specifies various settings for the container service configuration. The command passes
+    the configuration object to the Add-AzContainerServiceAgentPoolProfile cmdlet by using the
+    pipeline operator. That cmdlet adds an agent pool profile.
+
+    Specify the object in $Container for the *ContainerService* parameter of **New-AzContainerService**.
+links:
+- text: Add-AzContainerServiceAgentPoolProfile
+  href: ./Add-AzContainerServiceAgentPoolProfile.yml
+- text: New-AzContainerService
+  href: ./New-AzContainerService.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzContainerServiceConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azcontainerserviceconfig
+  Module Name: Az.Compute
+  ms.assetid: EC8C915A-A0BC-41DE-9DBF-3617536E3D1A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzContainerServiceConfig.md
+  PlatyPS schema version: 2024-05-01

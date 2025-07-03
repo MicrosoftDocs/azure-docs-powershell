@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Select-AzureRmProfile
+name: Select-AzureRmProfile
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  Loads Azure authentication information from a file.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The Select-AzureRmProfile cmdlet loads authentication information from a file to set the Azure environment and context.
+  Cmdlets that you run in the current session use this information to authenticate requests to Azure Resource Manager.
+parameters:
+  cmdletParameters:
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to profile information saved by using Save-AzureRMProfile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProfileFromDisk
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureRMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InMemoryProfile
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Select-AzureRmProfile
+        [-Profile] <AzureRMProfile>
+        [<CommonParameters>]
+    ```
+  parameterSetName: InMemoryProfile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureRmProfile
+        [-Path] <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: ProfileFromDisk
+  isDefault: false
+outputs:
+- name: <xref href="PSAzureProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Selecting a profile from a PSAzureProfile'
+  description: |-
+    ```
+    PS C:\> Select-AzureRmProfile -Profile (Add-AzureRmAccount)
+
+    Environment           : AzureCloud
+    Account               : test@outlook.com
+    TenantId              : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    SubscriptionId        : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SubscriptionName      : Test Subscription
+    CurrentStorageAccount :
+    ```
+
+    This example selects a profile from a PSAzureProfile that is passed through to the cmdlet.
+- title: 'Example 2: Selecting a profile from a JSON file'
+  description: |-
+    ```
+    PS C:\> Select-AzureRmProfile -Path C:\test.json
+
+    Environment           : AzureCloud
+    Account               : test@outlook.com
+    TenantId              : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    SubscriptionId        : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SubscriptionName      : Test Subscription
+    CurrentStorageAccount :
+    ```
+
+    This example selects a profile from a JSON file that is passed through to the cmdlet. This JSON file can be created from Save-AzureRmProfile.
+links:
+- text: Get-AzureRMContext
+  href: Get-AzureRMContext.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

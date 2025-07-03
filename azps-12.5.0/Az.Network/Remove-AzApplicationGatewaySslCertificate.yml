@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzApplicationGatewaySslCertificate
+name: Remove-AzApplicationGatewaySslCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes an SSL certificate from an Azure application gateway.
+description: |-
+  The **Remove-AzApplicationGatewaySslCertificate** cmdlet removes a Secure Sockets Layer (SSL) certificate from an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway from which this cmdlet removes an SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an SSL certificate that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzApplicationGatewaySslCertificate
+        -Name <String>
+        -ApplicationGateway <PSApplicationGateway>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an SSL certificate from an application gateway'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    Remove-AzApplicationGatewaySslCertificate -ApplicationGateway $AppGw -Name "Cert02"
+    Set-AzApplicationGateway -ApplicationGateway $AppGw
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 and stores the result in the variable named $AppGw.
+    The second command removes the SSL certificate named Cert02 from the application gateway stored in the $AppGw variable.
+    The last command "Set-AzApplicationGateway" updates the application gateway configuration changes to the $AppGw variable that holds the current configuration of Application gateway.
+links:
+- text: Add-AzApplicationGatewaySslCertificate
+  href: ./Add-AzApplicationGatewaySslCertificate.yml
+- text: Get-AzApplicationGatewaySslCertificate
+  href: ./Get-AzApplicationGatewaySslCertificate.yml
+- text: New-AzApplicationGatewaySslCertificate
+  href: ./New-AzApplicationGatewaySslCertificate.yml
+- text: Set-AzApplicationGatewaySslCertificate
+  href: ./Set-AzApplicationGatewaySslCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewaySslCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/remove-azapplicationgatewaysslcertificate
+  Module Name: Az.Network
+  ms.assetid: 5D788B84-0179-4A35-AC35-27C6F5FECB39
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Remove-AzApplicationGatewaySslCertificate.md
+  PlatyPS schema version: 2024-05-01

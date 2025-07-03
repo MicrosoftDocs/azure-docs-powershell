@@ -1,0 +1,223 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.Get-AzSupportChatTranscriptsNoSubscription
+name: Get-AzSupportChatTranscriptsNoSubscription
+module: Az.Support
+isPreview: false
+summary: |-
+  Returns chatTranscript details for a no subscription support ticket.
+description: |-
+  Returns chatTranscript details for a no subscription support ticket.
+parameters:
+  cmdletParameters:
+  - name: ChatTranscriptName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ChatTranscript name.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySupportTicket
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySupportTicket
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support ticket name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSupportChatTranscriptsNoSubscription
+        -SupportTicketName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSupportChatTranscriptsNoSubscription
+        -ChatTranscriptName <String>
+        -SupportTicketInputObject <ISupportIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentitySupportTicket
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSupportChatTranscriptsNoSubscription
+        -ChatTranscriptName <String>
+        -SupportTicketName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSupportChatTranscriptsNoSubscription
+        -InputObject <ISupportIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.IChatTranscriptDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List chat transcripts under a no subscription support ticket'
+  description: |-
+    ```powershell
+    Get-AzSupportChatTranscriptsNoSubscription -SupportTicketName test12345
+    ```
+
+    ```output
+    Name                                 StartTime
+    ----                                 ---------
+    595df7b4-167f-4f3e-8292-f0ba2b8a53f9 8/11/2023 7:27:49 PM
+    f8b45cd6-a8ec-40e2-b846-a28b848553cf 8/11/2023 7:52:44 PM
+    ```
+
+    List chat transcripts under a no subscription support ticket
+- title: 'Example 2: Get details of a chat transcript under a no subscription support ticket'
+  description: |-
+    ```powershell
+    Get-AzSupportChatTranscriptsNoSubscription -SupportTicketName test12345 -Name 595df7b4-167f-4f3e-8292-f0ba2b8a53f9
+    ```
+
+    ```output
+    Id                           : /providers/Microsoft.Support/supportT
+                                   ickets/58cf91d7-bedfb285-617ecf73-d627-4bfd-9298-5950da2170b7/chatTranscripts/595df7b4-1
+                                   67f-4f3e-8292-f0ba2b8a53f9
+    Message                      : {{
+                                     "contentType": "text",
+                                     "communicationDirection": "Inbound",
+                                     "sender": "",
+                                     "body": "Hey",
+                                     "createdDate": "2023-08-11T19:19:33.0000000Z"
+                                   }, {
+                                     "contentType": "text",
+                                     "communicationDirection": "Outbound",
+                                     "sender": "Aditi Takle",
+                                     "body": "hi",
+                                     "createdDate": "2023-08-11T19:19:38.0000000Z"
+                                   }, {
+                                     "contentType": "text",
+                                     "communicationDirection": "Outbound",
+                                     "sender": "Damian Spoltore",
+                                     "body": "hi Aditi, I\u0027m Damian",
+                                     "createdDate": "2023-08-11T19:24:19.0000000Z"
+                                   }, {
+                                     "contentType": "text",
+                                     "communicationDirection": "Outbound",
+                                     "sender": "Damian Spoltore",
+                                     "body": "I was entering to test",
+                                     "createdDate": "2023-08-11T19:24:24.0000000Z"
+                                   }}
+    Name                         : 595df7b4-167f-4f3e-8292-f0ba2b8a53f9
+    ResourceGroupName            :
+    StartTime                    : 8/11/2023 7:27:49 PM
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Type                         : Microsoft.Support/chatTranscripts
+    ```
+
+    Get details of a chat transcript under a no subscription support ticket
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportChatTranscriptsNoSubscription.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/get-azsupportchattranscriptsnosubscription
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportChatTranscriptsNoSubscription.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,444 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchNodeFileContent
+name: Get-AzBatchNodeFileContent
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets a Batch node file.
+description: |-
+  The **Get-AzBatchNodeFileContent** cmdlet gets an Azure Batch node file and saves it as a file or to a stream.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ByteRangeEnd
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The end of the byte range to be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ByteRangeStart
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The start of the byte range to be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeNodeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the compute node that contains the node file that this cmdlet returns.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputeNode_Id_Path
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Stream
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file path where this cmdlet saves the node file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Task_Id_Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObject_Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationStream
+    type: <xref href="System.IO.Stream" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the stream into which this cmdlet writes the node file contents.
+      This cmdlet does not close or rewind this stream.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Task_Id_Stream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Stream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObject_Stream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSNodeFile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file that this cmdlet gets, as a **PSNodeFile** object.
+      To obtain a node file object, use the Get-AzBatchNodeFile cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject_Path
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObject_Stream
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job that contains the target task.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Task_Id_Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Task_Id_Stream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path of the node file to download.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Task_Id_Path
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Task_Id_Stream
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Path
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Stream
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the pool that contains the compute node that contains the node file that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ComputeNode_Id_Path
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ComputeNode_Id_Stream
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the task.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Task_Id_Path
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Task_Id_Stream
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [-Path] <String>
+        -JobId <String>
+        -TaskId <String>
+        -DestinationPath <String>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Task_Id_Path
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [-Path] <String>
+        -JobId <String>
+        -TaskId <String>
+        -DestinationStream <Stream>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Task_Id_Stream
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [-PoolId] <String>
+        [-ComputeNodeId] <String>
+        [-Path] <String>
+        -DestinationPath <String>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputeNode_Id_Path
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [-PoolId] <String>
+        [-ComputeNodeId] <String>
+        [-Path] <String>
+        -DestinationStream <Stream>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ComputeNode_Id_Stream
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [[-InputObject] <PSNodeFile>]
+        -DestinationPath <String>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject_Path
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchNodeFileContent
+        [[-InputObject] <PSNodeFile>]
+        -DestinationStream <Stream>
+        -BatchContext <BatchAccountContext>
+        [-ByteRangeStart <Int64>]
+        [-ByteRangeEnd <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject_Stream
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSNodeFile" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Batch node file associated with a task and save the file'
+  description: |-
+    ```powershell
+    Get-AzBatchNodeFileContent -JobId "Job01" -TaskId "Task01" -Path "StdOut.txt" -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+    ```
+
+    This command gets the node file that is named StdOut.txt, and saves it to the E:\PowerShell\StdOut.txt file path on the local computer.
+    The StdOut.txt node file is associated with task that has the ID Task01 for the job that has the ID Job01.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+- title: 'Example 2: Get a Batch node file and save it to a specified file path using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzBatchNodeFile -JobId "Job02" -TaskId "Task02" -Path "StdErr.txt" -BatchContext $Context | Get-AzBatchNodeFileContent -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+    ```
+
+    This command gets the node file that is named StdErr.txt by using the Get-AzBatchNodeFile cmdlet.
+    The command passes that file to the current cmdlet by using the pipeline operator.
+    The current cmdlet saves that file to the E:\PowerShell\StdOut.txt file path on the local computer.
+    The StdOut.txt node file is associated with the task that has the ID Task02 for the job that has the ID Job02.
+- title: 'Example 3: Get a Batch node file associated with a task and direct it to a stream'
+  description: |-
+    ```powershell
+    $Stream = New-Object -TypeName "System.IO.MemoryStream"
+    Get-AzBatchNodeFileContent -JobId "Job03" -TaskId "Task11" -Path "StdOut.txt" -DestinationStream $Stream -BatchContext $Context
+    ```
+
+    The first command creates a stream by using the New-Object cmdlet, and then stores it in the $Stream variable.
+    The second command gets the node file that is named StdOut.txt from the task that has the ID Task11 for the job that has the ID Job03.
+    The command directs file contents to the stream in $Stream.
+- title: 'Example 4: Get a node file from a compute node and save it'
+  description: |-
+    ```powershell
+    Get-AzBatchNodeFileContent -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "Startup\StdOut.txt" -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+    ```
+
+    This command gets the node file Startup\StdOut.txt from the compute node that has the ID ComputeNode01 in the pool that has the ID Pool01.
+    The command saves the file to the E:\PowerShell\StdOut.txt file path on the local computer.
+- title: 'Example 5: Get a node file from a compute node and save it by using the pipeline'
+  description: |-
+    ```powershell
+    Get-AzBatchNodeFile -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "Startup\StdOut.txt" -BatchContext $Context | Get-AzBatchNodeFileContent -DestinationPath "E:\PowerShell\StdOut.txt" -BatchContext $Context
+    ```
+
+    This command gets the node file Startup\StdOut.txt by using Get-AzBatchNodeFile from the compute node that has the ID ComputeNode01.
+    The compute node is in the pool that has the ID Pool01.
+    The command passes that node file to the current cmdlet.
+    That cmdlet saves the file to the E:\PowerShell\StdOut.txt file path on the local computer.
+- title: 'Example 6: Get a node file from a compute node and direct it to a stream'
+  description: |-
+    ```powershell
+    $Stream = New-Object -TypeName "System.IO.MemoryStream"
+    Get-AzBatchNodeFileContent -PoolId "Pool01" -ComputeNodeId "ComputeNode01" -Path "startup\stdout.txt" -DestinationStream $Stream -BatchContext $Context
+    ```
+
+    The first command creates a stream by using the New-Object cmdlet, and then stores it in the $Stream variable.
+    The second command gets the node file that is named StdOut.txt from the compute node that has the ID ComputeNode01 in the pool that has the ID Pool01.
+    The command directs file contents to the stream in $Stream.
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchNodeFile
+  href: ./Get-AzBatchNodeFile.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchNodeFileContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchnodefilecontent
+  Module Name: Az.Batch
+  ms.assetid: C9E2D9EC-3B6A-492D-B183-9856185548CD
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchNodeFileContent.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,336 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVpnServerConfigurationPolicyGroup
+name: New-AzVpnServerConfigurationPolicyGroup
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a new VpnServerConfigurationPolicyGroup that can be attached to P2SVpnGateway.
+description: |-
+  The **New-AzVpnServerConfigurationPolicyGroup** cmdlet enables you to create a new VpnServerConfigurationPolicyGroup under VpnServerConfiguration which can be attached to P2SVpnGateway for Point to site connectivity from Point to site clients to Azure VirtualWan.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultPolicyGroup
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to set this as Default Policy Group on this VpnServerConfiguration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VpnServerConfigurationPolicyGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyMember
+    type: <xref href="PSVpnServerConfigurationPolicyGroupMember" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Policy members.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The Priority of the policy group.
+      Priority should be in consecutive orders.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The VpnServerConfiguration name this PolicyGroup is linked to.
+    aliases:
+    - ParentVpnServerConfigurationName
+    - VpnServerConfigurationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationObject
+    type: <xref href="PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The VpnServerConfiguration object this PolicyGroup is linked to.
+    aliases:
+    - ParentVpnServerConfiguration
+    - VpnServerConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of VpnServerConfiguration object this PolicyGroup is linked to.
+    aliases:
+    - ParentVpnServerConfigurationId
+    - VpnServerConfigurationId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVpnServerConfigurationPolicyGroup
+        -ResourceGroupName <String>
+        -ServerConfigurationName <String>
+        -Name <String>
+        -Priority <Int32>
+        [-DefaultPolicyGroup]
+        [-PolicyMember <PSVpnServerConfigurationPolicyGroupMember[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVpnServerConfigurationPolicyGroup
+        -ServerConfigurationObject <PSVpnServerConfiguration>
+        -Priority <Int32>
+        [-DefaultPolicyGroup]
+        [-PolicyMember <PSVpnServerConfigurationPolicyGroupMember[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzVpnServerConfigurationPolicyGroup
+        -ServerConfigurationResourceId <String>
+        -Priority <Int32>
+        [-DefaultPolicyGroup]
+        [-PolicyMember <PSVpnServerConfigurationPolicyGroupMember[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfigurationPolicyGroupMember" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfigurationPolicyGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+
+    # Create a PolicyMember1 Object
+    $policyGroupMember1 = New-Object -TypeName Microsoft.Azure.Commands.Network.Models.PSVpnServerConfigurationPolicyGroupMember
+    $policyGroupMember1.Name = "policyGroupMember1"
+    $policyGroupMember1.AttributeType = "AADGroupId"
+    $policyGroupMember1.AttributeValue = "41b23e61-6c1e-4545-b367-cd054e0ed4b5"
+
+    # Create a PolicyGroup1
+    New-AzVpnServerConfigurationPolicyGroup -ResourceGroupName TestRG -ServerConfigurationName VpnServerConfig2 -Name Group3 -Priority 3 -PolicyMember $policyGroupMember1
+    ```
+
+    ```output
+    ProvisioningState               : Succeeded
+    IsDefault                       : True
+    Priority                        : 0
+    PolicyMembers                   : {AADPolicy, CertPolicy1, RadiusPolicy1}
+    P2SConnectionConfigurations     : {/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/TestingRG/providers/Microsoft.Network/p2sVpnGateways/4e72273faa1346ad9b910c37a5667c99-westcentralus-gw/p2sConnectio
+                                      nConfigurations/P2SConfig1, /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/TestingRG/providers/Microsoft.Network/p2sVpnGateways/f6d6b5d6711641028c480bf342478392-we
+                                      stcentralus-p2s-gw/p2sConnectionConfigurations/Config1}
+    PolicyMembersText               : [
+                                        {
+                                          "Name": "AADPolicy",
+                                          "AttributeType": "AADGroupId",
+                                          "AttributeValue": "41b23e61-6c1e-4545-b367-cd054e0ed4b4"
+                                        },
+                                        {
+                                          "Name": "CertPolicy1",
+                                          "AttributeType": "CertificateGroupId",
+                                          "AttributeValue": "ab"
+                                        },
+                                        {
+                                          "Name": "RadiusPolicy1",
+                                          "AttributeType": "RadiusAzureGroupId",
+                                          "AttributeValue": "6ad1bd09"
+                                        }
+                                      ]
+    P2SConnectionConfigurationsText : [
+                                        {
+                                          "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/TestingRG/providers/Microsoft.Network/p2sVpnGateways/4e72273faa1346ad9b910c37a5667c99-westcentralus-gw/p2
+                                      sConnectionConfigurations/P2SConfig1"
+                                        },
+                                        {
+                                          "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/TestingRG/providers/Microsoft.Network/p2sVpnGateways/f6d6b5d6711641028c480bf342478392-westcentralus-p2s-g
+                                      w/p2sConnectionConfigurations/Config1"
+                                        }
+                                      ]
+    Name                            : Group1
+    Id                              : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/TestingRG/providers/Microsoft.Network/vpnServerConfigurations/MPConfig/configurationPolicyGroups/Group1
+    ```
+
+    Creates a new VpnServerConfiguration PolicyGroup.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnServerConfigurationPolicyGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvpnserverconfigurationpolicygroup
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVpnServerConfigurationPolicyGroup.md
+  PlatyPS schema version: 2024-05-01

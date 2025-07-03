@@ -1,0 +1,139 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.New-AzHDInsightClusterAutoscaleScheduleCondition
+name: New-AzHDInsightClusterAutoscaleScheduleCondition
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Creates Schedule-based autoscale condition.
+description: |-
+  The **New-AzHDInsightClusterAutoscaleScheduleCondition** cmdlet creates Schedule-based autoscale condition.
+parameters:
+  cmdletParameters:
+  - name: Day
+    type: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightDaysOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the days of Autoscale schedule condition.
+    acceptedValues:
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Time
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the time of Autoscale schedule condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkerNodeCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the schedule workernode count of Autoscale schedule condition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHDInsightClusterAutoscaleScheduleCondition
+        -Time <DateTime>
+        -WorkerNodeCount <Int32>
+        -Day <AzureHDInsightDaysOfWeek[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.AzureHDInsightAutoscaleCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzHDInsightClusterAutoscaleScheduleCondition -Time 09:00 -WorkerNodeCount 5 -Day Monday,Wednesday
+    ```
+
+    This command creates a condition where cluster autoscale to 5 worker nodes at 09:00 every Monday, Wednesday.
+- title: 'Example 2: Enable Schedule-based autoscale of a cluster with autoscale condition.'
+  description: |-
+    ```powershell
+    # create a autoscale condition
+    $condition=New-AzHDInsightClusterAutoscaleScheduleCondition -Time 09:00 -WorkerNodeCount 5 -Day Monday,Wednesday
+
+    # Set the cluster autoscale configuration
+    $clusterResourceGroup="group"
+    $clusterName="MyCluster"
+    Set-AzHDInsightClusterAutoscaleConfiguration -ResourceGroupName $clusterResourceGroup -ClusterName $clusterName -Schedule -TimeZone "Pacific Standard Time" -Condition $condition
+    ```
+
+    This command creates a condition where cluster autoscale to 5 worker nodes at 09:00 every Monday, Wednesday.
+links:
+- text: New-AzHDInsightClusterAutoscaleConfiguration
+  href: ./New-AzHDInsightClusterAutoscaleConfiguration.yml
+- text: Set-AzHDInsightClusterAutoscaleConfiguration
+  href: ./Set-AzHDInsightClusterAutoscaleConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleScheduleCondition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/new-azhdinsightclusterautoscaleschedulecondition
+  Module Name: Az.HDInsight
+  ms.assetid: 86276DF3-95E2-405F-BA46-F188B7AE3B9B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/New-AzHDInsightClusterAutoscaleScheduleCondition.md
+  PlatyPS schema version: 2024-05-01

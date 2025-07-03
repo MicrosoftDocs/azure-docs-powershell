@@ -1,0 +1,228 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.Start-AzMigrateTestMigration
+name: Start-AzMigrateTestMigration
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Starts the test migration for the replicating server.
+description: |-
+  The Start-AzMigrateTestMigration cmdlet initiates the test migration for the replicating server.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IMigrationItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the test migration needs to be initiated.
+      The server object can be retrieved using the Get-AzMigrateServerReplication cmdlet.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectVMwareCbt
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicToUpdate
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtNicInput" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Updates the NIC for the Azure VM to be created.
+      To construct, see NOTES section for NICTOUPDATE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsUpgradeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target version to which the Os has to be upgraded to.
+      The valid values can be selected from SupportedOSVersions retrieved using Get-AzMigrateServerReplication cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetObjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the replicating server for which the test migration needs to be initiated.
+      The ID should be retrieved using the Get-AzMigrateServerReplication cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIDVMwareCbt
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestNetworkID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Updates the Virtual Network id within the destination Azure subscription to be used for test migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzMigrateTestMigration
+        -TestNetworkID <String>
+        -TargetObjectID <String>
+        [-OsUpgradeVersion <String>]
+        [-NicToUpdate <IVMwareCbtNicInput[]>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIDVMwareCbt
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzMigrateTestMigration
+        -TestNetworkID <String>
+        -InputObject <IMigrationItem>
+        [-OsUpgradeVersion <String>]
+        [-NicToUpdate <IVMwareCbtNicInput[]>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectVMwareCbt
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: By machine id.'
+  description: |-
+    ```powershell
+    Start-AzMigrateTestMigration -TargetObjectID '/Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.RecoveryServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationFabrics/AzMigratePWSHTc8d1replicationfabric/replicationProtectionContainers/AzMigratePWSHTc8d1replicationcontainer/replicationMigrationItems/bcdr-vcenter-fareast-corp-micro-cfcc5a24-a40e-56b9-a6af-e206c9ca4f93_50063baa-9806-d6d6-7e09-c0ae87309b4f' -TestNetworkId '/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG/providers/Microsoft.Network/virtualNetworks/AzMigrateTargetNetwork'
+    ```
+
+    ```output
+    ActivityId                       : da958651-96b3-4e65-a41e-897d4b06f7dd ActivityId: 3a4c8d4d-920a-47cd-82c3-f3dcce90a588
+    AllowedAction                    : {Cancel}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          :
+    Error                            : {}
+    FriendlyName                     : Test Migrate
+    Id                               : /Subscriptions/xxx-xxx-xxxresourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/931dde9a-de67-4a30-a045-bb9d6162f8ab
+    Location                         :
+    Name                             : 931dde9a-de67-4a30-a045-bb9d6162f8ab
+    ScenarioName                     : TestMigrate
+    StartTime                        : 9/25/20 9:20:08 PM
+    State                            : InProgress
+    StateDescription                 : InProgress
+    TargetInstanceType               : ProtectionEntity
+    TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    TargetObjectName                 : prsadhu-TestVM
+    Task                             : {DisableProtectionOnPrimary, UpdateDraState}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    By machine id.
+- title: 'Example 2: By input object'
+  description: |-
+    ```powershell
+    $obj = Get-AzMigrateServerReplication -TargetObjectID $env.srsMachineId -SubscriptionId $env.srsSubscriptionId
+    Start-AzMigrateTestMigration -InputObject $obj -TestNetworkId '/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG/providers/Microsoft.Network/virtualNetworks/AzMigrateTargetNetwork'
+    ```
+
+    ```output
+    ActivityId                       : da958651-96b3-4e65-a41e-897d4b06f7dd ActivityId: 3a4c8d4d-920a-47cd-82c3-f3dcce90a588
+    AllowedAction                    : {Cancel}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          :
+    Error                            : {}
+    FriendlyName                     : Test Migrate
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/931dde9a-de67-4a30-a045-bb9d6162f8ab
+    Location                         :
+    Name                             : 931dde9a-de67-4a30-a045-bb9d6162f8ab
+    ScenarioName                     : TestMigrate
+    StartTime                        : 9/25/20 9:20:08 PM
+    State                            : InProgress
+    StateDescription                 : InProgress
+    TargetInstanceType               : ProtectionEntity
+    TargetObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    TargetObjectName                 : prsadhu-TestVM
+    Task                             : {DisableProtectionOnPrimary, UpdateDraState}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    By input object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Start-AzMigrateTestMigration.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/start-azmigratetestmigration
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/Start-AzMigrateTestMigration.md
+  PlatyPS schema version: 2024-05-01

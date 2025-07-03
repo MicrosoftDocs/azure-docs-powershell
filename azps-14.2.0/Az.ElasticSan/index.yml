@@ -1,0 +1,38 @@
+### YamlMime:PowerShellModule1
+uid: Az.ElasticSan
+name: Az.ElasticSan Module
+isPreview: false
+cmdletGroups:
+- title: ElasticSan
+  cmdlets:
+  - Az.ElasticSan.Add-AzElasticSanVolumeGroupNetworkRule
+  - Az.ElasticSan.Get-AzElasticSan
+  - Az.ElasticSan.Get-AzElasticSanSkuList
+  - Az.ElasticSan.Get-AzElasticSanVolume
+  - Az.ElasticSan.Get-AzElasticSanVolumeGroup
+  - Az.ElasticSan.Get-AzElasticSanVolumeSnapshot
+  - Az.ElasticSan.New-AzElasticSan
+  - Az.ElasticSan.New-AzElasticSanVirtualNetworkRuleObject
+  - Az.ElasticSan.New-AzElasticSanVolume
+  - Az.ElasticSan.New-AzElasticSanVolumeGroup
+  - Az.ElasticSan.New-AzElasticSanVolumeSnapshot
+  - Az.ElasticSan.Remove-AzElasticSan
+  - Az.ElasticSan.Remove-AzElasticSanVolume
+  - Az.ElasticSan.Remove-AzElasticSanVolumeGroup
+  - Az.ElasticSan.Remove-AzElasticSanVolumeGroupNetworkRule
+  - Az.ElasticSan.Remove-AzElasticSanVolumeSnapshot
+  - Az.ElasticSan.Update-AzElasticSan
+  - Az.ElasticSan.Update-AzElasticSanVolume
+  - Az.ElasticSan.Update-AzElasticSanVolumeGroup
+description: |-
+  Microsoft Azure PowerShell: ElasticSan cmdlets
+metadata:
+  Module Name: Az.ElasticSan
+  Module Guid: ed90c36c-f150-4ad2-96ae-57e0ebb0a376
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.elasticsan
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Az.ElasticSan.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Az.ElasticSan.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

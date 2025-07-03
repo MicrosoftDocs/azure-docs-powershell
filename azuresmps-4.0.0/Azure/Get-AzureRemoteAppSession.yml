@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppSession
+name: Get-AzureRemoteAppSession
+module: Azure
+isPreview: false
+summary: |-
+  Lists all active and disconnected Azure RemoteApp sessions for a collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppSession** cmdlet lists all active and disconnected Azure RemoteApp sessions for an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user Principal Name (UPN) of a user for which to get Azure RemoteApp sessions.
+      For example, the UPN can be in the following format: PattiFuller@contoso.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppSession
+        [-CollectionName] <String>
+        [[-UserUpn] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: List all the sessions in a collection'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppSession -CollectionName "ContosoApps"
+    ```
+
+    This command lists all sessions in the Azure RemoteApp collection named ContosoApps.
+links:
+- text: Disconnect-AzureRemoteAppSession
+  href: ./Disconnect-AzureRemoteAppSession.yml
+- text: Invoke-AzureRemoteAppSessionLogoff
+  href: ./Invoke-AzureRemoteAppSessionLogoff.yml
+- text: Send-AzureRemoteAppSessionMessage
+  href: ./Send-AzureRemoteAppSessionMessage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A6B274EA-7FF2-46B0-8622-0DD17E9ADDD6
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-WAPackVM
+name: Get-WAPackVM
+module: Azure
+isPreview: false
+summary: |-
+  Gets virtual machine objects.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-WAPackVM** cmdlet gets virtual machine objects.
+parameters:
+  cmdletParameters:
+  - name: ID
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unique ID of a virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WAPackVM
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WAPackVM
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-WAPackVM
+        [-ID <Guid>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromId
+  isDefault: false
+examples:
+- title: 'Example 1: Get a virtual machine by using a name'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVM -Name "ContosoV126"
+    ```
+
+    This command gets the virtual machine named ContosoV126.
+- title: 'Example 2: Get a virtual machine by using an ID'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVM -Id 66242D17-189F-480D-87CF-8E1D749998C8
+    ```
+
+    This command gets the virtual machine that has the specified ID.
+- title: 'Example 3: Get all virtual machines'
+  description: |-
+    ```
+    PS C:\> Get-WAPackVM
+    ```
+
+    This command gets all virtual machines.
+links:
+- text: New-WAPackVM
+  href: ./New-WAPackVM.yml
+- text: Remove-WAPackVM
+  href: ./Remove-WAPackVM.yml
+- text: Restart-WAPackVM
+  href: ./Restart-WAPackVM.yml
+- text: Resume-WAPackVM
+  href: ./Resume-WAPackVM.yml
+- text: Set-WAPackVM
+  href: ./Set-WAPackVM.yml
+- text: Start-WAPackVM
+  href: ./Start-WAPackVM.yml
+- text: Stop-WAPackVM
+  href: ./Stop-WAPackVM.yml
+- text: Suspend-WAPackVM
+  href: ./Suspend-WAPackVM.yml
+- text: Get-WAPackVMOSDisk
+  href: ./Get-WAPackVMOSDisk.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 047C5FBD-CB0D-47BF-AE03-4DF32B4FAD87
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,311 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayFirewallCustomRule
+name: New-AzApplicationGatewayFirewallCustomRule
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a new custom rule for the application gateway firewall policy.
+description: |-
+  The **New-AzApplicationGatewayFirewallCustomRule** creates a custom rule for firewall policy.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of Actions.
+    acceptedValues:
+    - Allow
+    - Block
+    - Log
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupByUserSession
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCustomRuleGroupByUserSession" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of match conditions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchCondition
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCondition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of match conditions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Name of the Rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes priority of the rule.
+      Rules with a lower value will be evaluated before rules with a higher value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RateLimitDuration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes duration over which Rate Limit policy will be applied. Applies only when ruleType is RateLimitRule.
+    acceptedValues:
+    - OneMin
+    - FiveMins
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RateLimitThreshold
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes rate limit threshold. Applies only when ruleType is RateLimitRule.Accepted range for this value is 1 - 5000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes type of rule.
+    acceptedValues:
+    - MatchRule
+    - RateLimitRule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      State variable of the custom rule.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: Enabled
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayFirewallCustomRule
+        -Name <String>
+        -Priority <Int32>
+        [-RateLimitDuration <String>]
+        [-RateLimitThreshold <Int32>]
+        -RuleType <String>
+        -MatchCondition <PSApplicationGatewayFirewallCondition[]>
+        [-GroupByUserSession <PSApplicationGatewayFirewallCustomRuleGroupByUserSession[]>]
+        -Action <String>
+        [-State <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCustomRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzApplicationGatewayFirewallCustomRule -Name example-rule -Priority 1 -RuleType MatchRule -MatchCondition $condition -Action Allow
+    ```
+
+    ```output
+    Name                : example-rule
+    Priority            : 1
+    RuleType            : MatchRule
+    MatchConditions     : {Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCondition}
+    Action              : Allow
+    State               : Enabled
+    MatchConditionsText : [
+                            {
+                              "MatchVariables": [
+                                {
+                                  "VariableName": "RequestHeaders",
+                                  "Selector": "Malicious-Header"
+                                }
+                              ],
+                              "OperatorProperty": "Any",
+                              "NegationConditon": false
+                            }
+                          ]
+    ```
+
+    The command creates a new custom rule with name of example-rule, priority 1 and the rule type will be MatchRule with condition defined in the condition variable, the action will the allow.
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzApplicationGatewayFirewallCustomRule -Name example-rule -Priority 2 -RuleType MatchRule -MatchCondition $condition -Action Allow -State Disabled
+    ```
+
+    ```output
+    Name                : example-rule
+    Priority            : 2
+    RuleType            : MatchRule
+    MatchConditions     : {Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCondition}
+    Action              : Allow
+    State               : Disabled
+    MatchConditionsText : [
+                            {
+                              "MatchVariables": [
+                                {
+                                  "VariableName": "RequestHeaders",
+                                  "Selector": "Malicious-Header"
+                                }
+                              ],
+                              "OperatorProperty": "Any",
+                              "NegationConditon": false
+                            }
+                          ]
+    ```
+
+    The command creates a new custom rule with name of example-rule, state as Disabled, priority 2 and the rule type will be MatchRule with condition defined in the condition variable, the action will the allow.
+- title: Example 3
+  description: |-
+    ```powershell
+    New-AzApplicationGatewayFirewallCustomRule -Name RateLimitRule3 -Priority 3 -RateLimitDuration OneMin -RateLimitThreshold 10 -RuleType RateLimitRule -MatchCondition $condition -GroupByUserSession $groupbyUserSes -Action Allow -State Disabled
+    ```
+
+    ```output
+    Name                : RateLimitRule3
+    Priority            : 3
+    RateLimitDuration   : OneMin
+    RateLimitThreshold  : 10
+    RuleType            : RateLimitRule
+    MatchConditions     : {Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCondition}
+    GroupByUserSession  : {Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayFirewallCustomRuleGroupByUserSession}
+    Action              : Allow
+    State               : Disabled
+    MatchConditionsText : [
+                            {
+                              "MatchVariables": [
+                                {
+                                  "VariableName": "RequestHeaders",
+                                  "Selector": "Malicious-Header"
+                                }
+                              ],
+                              "OperatorProperty": "Any",
+                              "NegationConditon": false
+                            }
+                          ]
+    GroupByUserSessionText : [
+                            {
+                              "groupByVariables": [
+                                {
+                                  "variableName": "ClientAddr"
+                                }
+                              ]
+                            }
+                          ]
+    ```
+
+    The command creates a new custom rule with name of RateLimitRule3, state as Disabled, priority 3, RateLimitDuration OneMin, RateLimitThreshold 10 and the rule type will be RateLimitRule with condition defined in the condition variable, the action will the allow, the GroupByUserSession defined in the GroupByUserSession condition variable.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallCustomRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayfirewallcustomrule
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayFirewallCustomRule.md
+  PlatyPS schema version: 2024-05-01

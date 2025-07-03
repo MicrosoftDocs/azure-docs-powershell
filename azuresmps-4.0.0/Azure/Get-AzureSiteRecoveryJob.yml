@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryJob
+name: Get-AzureSiteRecoveryJob
+module: Azure
+isPreview: false
+summary: |-
+  Gets the operation information for a Site Recovery vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryJob** cmdlet gets Azure Site Recovery jobs.
+  You can use this cmdlet to view the operation information for the current Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: EndTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end time for the jobs.
+      This cmdlet gets all jobs that started before the specified time.
+      To obtain a **DateTime** object, use the **Get-Date** cmdlet.
+      For more information, type `Get-Help Get-Date`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Job
+    type: <xref href="ASRJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start time for the jobs.
+      This cmdlet gets all jobs that started after the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the input state for a Site Recovery job.
+      This cmdlet gets all jobs that match the specified state.
+      The acceptable values for this parameter are:
+
+      - NotStarted
+      - InProgress
+      - Succeeded
+      - Other
+      - Failed
+      - Cancelled
+      - Suspended
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetObjectId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the object targeted by the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParam
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryJob
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-TargetObjectId <String>]
+        [-State <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParam
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryJob
+        -Id <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryJob
+        -Job <ASRJob>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: false
+examples:
+- title: 'Example 1: Get a job by specifying an ID'
+  description: |-
+    ```
+    PS C:\> Get-AzureSiteRecoveryJob -Id "033785cc-9f72-4f07-8e78-e4d1e942a7ae"
+    Name             : SaveRecoveryPlan
+    ID               : 033785cc-9f72-4f07-8e78-e4d1e942a7ae
+    ClientRequestId  : d604206b-32e1-4d5b-9a23-32b118d14a1e-2015-02-20 07:20:42Z-P
+    State            : Succeeded
+    StateDescription : Completed
+    StartTime        : 20-02-2015 07:20:45 +05:30
+    EndTime          : 20-02-2015 07:20:46 +05:30
+    TargetObjectId   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    TargetObjectType : RecoveryPlan
+    TargetObjectName : RP
+    AllowedActions   : {Cancel}
+    Tasks            : {Save a recovery plan task}
+    Errors           : {}
+    ```
+
+    This command gets the  Azure Site Recovery job that has the specified ID.
+- title: 'Example 2: Gets a job based on time'
+  description: |-
+    ```
+    PS C:\> Get-AzureSiteRecoveryJob -StartTime "20-02-2015 01:00:00" -EndTime "21-02-2015 01:00:00"
+    Name             : SaveRecoveryPlan
+    ID               : 033785cc-9f72-4f07-8e78-e4d1e942a7ae
+    ClientRequestId  : d604206b-32e1-4d5b-9a23-32b118d14a1e-2015-02-20 07:20:42Z-P
+    State            : Succeeded
+    StateDescription : Completed
+    StartTime        : 20-02-2015 07:20:45 +05:30
+    EndTime          : 20-02-2015 07:20:46 +05:30
+    TargetObjectId   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    TargetObjectType : RecoveryPlan
+    TargetObjectName : RP
+    AllowedActions   : {Cancel}
+    Tasks            : {Save a recovery plan task}
+    Errors           : {}
+    ```
+
+    This command gets Site Recovery jobs that fall between the specified start time and end time.
+links:
+- text: Restart-AzureSiteRecoveryJob
+  href: ./Restart-AzureSiteRecoveryJob.yml
+- text: Resume-AzureSiteRecoveryJob
+  href: ./Resume-AzureSiteRecoveryJob.yml
+- text: Stop-AzureSiteRecoveryJob
+  href: ./Stop-AzureSiteRecoveryJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 2957C0DE-3A2F-4337-A778-2B95654972E7
+  PlatyPS schema version: 2024-05-01

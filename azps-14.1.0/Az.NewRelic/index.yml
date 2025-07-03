@@ -1,0 +1,44 @@
+### YamlMime:PowerShellModule1
+uid: Az.NewRelic
+name: Az.NewRelic Module
+isPreview: false
+cmdletGroups:
+- title: NewRelic
+  cmdlets:
+  - Az.NewRelic.Get-AzNewRelicAccount
+  - Az.NewRelic.Get-AzNewRelicBillingInfo
+  - Az.NewRelic.Get-AzNewRelicConnectedPartnerResource
+  - Az.NewRelic.Get-AzNewRelicMonitor
+  - Az.NewRelic.Get-AzNewRelicMonitoredAppService
+  - Az.NewRelic.Get-AzNewRelicMonitoredHost
+  - Az.NewRelic.Get-AzNewRelicMonitoredSubscription
+  - Az.NewRelic.Get-AzNewRelicMonitorMetricRule
+  - Az.NewRelic.Get-AzNewRelicMonitorMetricStatus
+  - Az.NewRelic.Get-AzNewRelicMonitorMonitoredResource
+  - Az.NewRelic.Get-AzNewRelicMonitorTagRule
+  - Az.NewRelic.Get-AzNewRelicOrganization
+  - Az.NewRelic.Get-AzNewRelicPlan
+  - Az.NewRelic.Invoke-AzNewRelicHostMonitor
+  - Az.NewRelic.New-AzNewRelicFilteringTagObject
+  - Az.NewRelic.New-AzNewRelicMonitor
+  - Az.NewRelic.New-AzNewRelicMonitoredSubscription
+  - Az.NewRelic.New-AzNewRelicMonitoredSubscriptionObject
+  - Az.NewRelic.New-AzNewRelicMonitorTagRule
+  - Az.NewRelic.Remove-AzNewRelicMonitor
+  - Az.NewRelic.Remove-AzNewRelicMonitoredSubscription
+  - Az.NewRelic.Remove-AzNewRelicMonitorTagRule
+  - Az.NewRelic.Switch-AzNewRelicMonitorBilling
+  - Az.NewRelic.Update-AzNewRelicMonitoredSubscription
+  - Az.NewRelic.Update-AzNewRelicMonitorTagRule
+description: |-
+  Microsoft Azure PowerShell: NewRelic cmdlets
+metadata:
+  Module Name: Az.NewRelic
+  Module Guid: fcb6df7e-4a86-4278-88de-1e16f349572c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.newrelic
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Az.NewRelic.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NewRelic/NewRelic/help/Az.NewRelic.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

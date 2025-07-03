@@ -1,0 +1,134 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureRemoteAppUser
+name: Remove-AzureRemoteAppUser
+module: Azure
+isPreview: false
+summary: |-
+  Removes a user from an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureRemoteAppUser** cmdlet removes a user from an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: Alias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a published program alias.
+      You can use this parameter only in per-app publishing mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="PrincipalProviderType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user type.
+      The acceptable values for this parameter are: OrgId or MicrosoftAccount.
+    acceptedValues:
+    - OrgId
+    - MicrosoftAccount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the User Principal Name (UPN) of a user, for example, user@contoso.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureRemoteAppUser
+        [-CollectionName] <String>
+        [-Type] <PrincipalProviderType>
+        [-UserUpn] <String[]>
+        [-Alias <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example1: Remove a user from a collection'
+  description: |-
+    ```
+    PS C:\> Remove-AzureRemoteAppUser -CollectionName "Contoso" -Type OrgId -UserUpn "PattiFuller@contoso.com"
+    ```
+
+    This command removes the Azure ActiveDirectory user PattiFuller@contoso.com from the Contoso collection.
+links:
+- text: Add-AzureRemoteAppUser
+  href: ./Add-AzureRemoteAppUser.yml
+- text: Get-AzureRemoteAppUser
+  href: ./Get-AzureRemoteAppUser.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DE89F1C4-8441-4438-B235-F5E0F726EFF8
+  PlatyPS schema version: 2024-05-01

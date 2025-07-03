@@ -1,0 +1,288 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Select-AzureSubscription
+name: Select-AzureSubscription
+module: Azure
+isPreview: false
+summary: |-
+  Changes the current and default Azure subscriptions.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Select-AzureSubscription** cmdlet sets and clears the current and default Azure subscriptions.
+
+  The "current subscription" is the subscription that is used by default in the current Windows PowerShell session.
+  The "default subscription" is used by default in all Windows PowerShell sessions.
+  The "current subscription" label lets you specify a different subscription to be used by default for the current session without changing the "default subscription" for all other sessions.
+
+  The "default" subscription designation is saved in your subscription data file.
+  The session-specific "current" designation is not saved.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Current
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SelectSubscriptionByNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SelectSubscriptionByIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Default
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SelectDefaultSubscriptionByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SelectDefaultSubscriptionByIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoCurrent
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoCurrentSubscriptionParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoDefault
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoDefaultSubscriptionParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns $True if the command succeeds and $False if it fails.
+      By default, this cmdlet does not return any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SelectSubscriptionByIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SelectDefaultSubscriptionByIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SelectSubscriptionByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SelectDefaultSubscriptionByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        -SubscriptionName <String>
+        [-Account <String>]
+        [-Current]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SelectSubscriptionByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        -SubscriptionName <String>
+        [-Account <String>]
+        [-Default]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SelectDefaultSubscriptionByNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        -SubscriptionId <String>
+        [-Account <String>]
+        [-Current]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SelectSubscriptionByIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        -SubscriptionId <String>
+        [-Account <String>]
+        [-Default]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SelectDefaultSubscriptionByIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        [-Account <String>]
+        [-NoCurrent]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoCurrentSubscriptionParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureSubscription
+        [-Account <String>]
+        [-NoDefault]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoDefaultSubscriptionParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="None or System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    If you use the *PassThru* parameter, this cmdlet returns a Boolean value.
+    By default, it does not generate any output.
+examples:
+- title: 'Example 1: Set the current subscription'
+  description: |-
+    ```
+    C:\PS> Select-AzureSubscription -Current -SubscriptionName ContosoEngineering
+    ```
+
+    This command makes "ContosoEngineering" the current subscription.
+- title: 'Example 2: Set the default subscription'
+  description: |-
+    ```
+    C:\PS> Select-AzureSubscription -Default -SubscriptionName ContosoFinance -SubscriptionDataFile "C:\subs\MySubscriptions.xml"
+    ```
+
+    This command changes the default subscription to "ContosoFinance." It saves the setting in the Subscriptions.xml subscription data file, instead of the default subscription data file.
+links:
+- text: Get-AzureSubscription
+  href: ./Get-AzureSubscription.yml
+- text: Remove-AzureSubscription
+  href: ./Remove-AzureSubscription.yml
+- text: Set-AzureSubscription
+  href: ./Set-AzureSubscription.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 7A45DCAD-88DC-40F0-BBF7-0F531A571CA6
+  PlatyPS schema version: 2024-05-01

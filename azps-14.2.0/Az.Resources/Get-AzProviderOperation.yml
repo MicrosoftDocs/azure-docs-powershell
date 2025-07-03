@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzProviderOperation
+name: Get-AzProviderOperation
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets the operations for an Azure resource provider that are securable using Azure RBAC.
+description: |-
+  The Get-AzProviderOperation gets the operations exposed by Azure resource providers.
+  Operations can be composed to create custom roles in Azure RBAC.
+  The command takes as input an operation search string (with possible wildcard(*) character(s)) which determines the operations details to display.
+  Use Get-AzProviderOperation * to get all operations for all Azure resource providers.
+  Use Get-AzProviderOperation Microsoft.Compute/* to get all operations of Microsoft.Compute resource provider.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationSearchString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The operation search string (with possible wildcard (*) characters)
+    aliases:
+    - Name
+    defaultValue: '*'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzProviderOperation
+        [[-OperationSearchString] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.PSResourceProviderOperation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all actions for all providers'
+  description: |-
+    ```powershell
+    Get-AzProviderOperation *
+    ```
+- title: 'Example 2: Get actions for a particular resource provider'
+  description: |-
+    ```powershell
+    Get-AzProviderOperation Microsoft.Insights/*
+    ```
+- title: 'Example 3: Get all actions that can be performed on virtual machines'
+  description: |-
+    ```powershell
+    Get-AzProviderOperation */virtualMachines/*
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzProviderOperation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azprovideroperation
+  Module Name: Az.Resources
+  ms.assetid: 6424B740-DBFB-490C-AEAA-EDD60952B435
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzProviderOperation.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,258 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
+name: Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
+module: Az.Network
+isPreview: false
+summary: |-
+  Get the list of vpn client connection health of an Azure virtual network gateway for per vpn client connection
+description: |-
+  List  all connected vpn client connection health. This includes:
+  vpnConnectionId
+  vpnConnectionDuration
+  vpnConnectionTime
+  publicIpAddress
+  privateIpAddress
+  vpnUserName
+  maxBandwidth
+  egressPacketsTransferred
+  egressBytesTransferred
+  ingressPacketsTransferred
+  ingressBytesTransferred
+  maxPacketsPerSecond
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual network gateway object
+    aliases:
+    - VirtualNetworkGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual network gateway resource group's name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual network gateway resource Id
+    aliases:
+    - VirtualNetworkGatewayId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGatewayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual network gateway name
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
+        -VirtualNetworkGatewayName <String>
+        -ResourceGroupName <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
+        [-ResourceId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualNetworkGatewayVpnClientConnectionHealth
+        [-InputObject <PSVirtualNetworkGateway>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSGatewayRoute" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzVirtualNetworkGatewayVpnClientConnectionHealth -ResourceName gatewayName -ResourceGroupName resourceGroup
+    ```
+
+    ```output
+    VpnConnectionId           : OVPN_0085393D-B345-4846-0426-140616833F4C
+    VpnConnectionDuration     : 27878
+    VpnConnectionTime         : 05/30/2019 16:03:11
+    PublicIpAddress           : 13.78.148.224:39672
+    PrivateIpAddress          : 10.1.1.131
+    VpnUserName               : GWP2SChildCert
+    MaxBandwidth              : 48000000
+    EgressPacketsTransferred  : 104084
+    EgressBytesTransferred    : 4059276
+    IngressPacketsTransferred : 1410
+    IngressBytesTransferred   : 67680
+    MaxPacketsPerSecond       : 1
+
+    VpnConnectionId           : OVPN_00F692AC-2D6F-DE7B-DCAF-07BE896233A0
+    VpnConnectionDuration     : 27878
+    VpnConnectionTime         : 05/30/2019 16:03:11
+    PublicIpAddress           : 13.78.148.224:39692
+    PrivateIpAddress          : 10.1.1.79
+    VpnUserName               : GWP2SChildCert
+    MaxBandwidth              : 48000000
+    EgressPacketsTransferred  : 104623
+    EgressBytesTransferred    : 4080297
+    IngressPacketsTransferred : 1416
+    IngressBytesTransferred   : 67968
+    MaxPacketsPerSecond       : 1
+    ```
+
+    For the Azure virtual network gateway named gatewayname in resource group resourceGroup, retrieves the currently connected vpn client connection by using OpenVpn.
+- title: Example 2
+  description: |-
+    Get the list of vpn client connection health of an Azure virtual network gateway for per vpn client connection. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Get-AzVirtualNetworkGatewayVpnClientConnectionHealth -ResourceGroupName resourceGroup -VirtualNetworkGatewayName 'ContosoVirtualNetwork'
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayVpnClientConnectionHealth.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualnetworkgatewayvpnclientconnectionhealth
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualNetworkGatewayVpnClientConnectionHealth.md
+  PlatyPS schema version: 2024-05-01

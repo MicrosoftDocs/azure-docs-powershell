@@ -1,0 +1,651 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerInstance.New-AzContainerInstanceContainerGroupProfile
+name: New-AzContainerInstanceContainerGroupProfile
+module: Az.ContainerInstance
+isPreview: false
+summary: |-
+  Create or update container group profiles with specified configurations.
+description: |-
+  Create or update container group profiles with specified configurations.
+parameters:
+  cmdletParameters:
+  - name: ConfidentialComputePropertyCcePolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The base64 encoded confidential compute enforcement policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Container
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IContainer" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The containers within the container group.
+      To construct, see NOTES section for CONTAINER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPropertyIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The keyvault managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPropertyKeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The encryption key name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPropertyKeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The encryption key version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionPropertyVaultBaseUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The keyvault base url.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Extension
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IDeploymentExtensionSpec" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      extensions used by virtual kubelet
+      To construct, see NOTES section for EXTENSION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageRegistryCredential
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IImageRegistryCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The image registry credentials by which the container group is created from.
+      To construct, see NOTES section for IMAGEREGISTRYCREDENTIAL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InitContainer
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IInitContainerDefinition" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The init containers for a container group.
+      To construct, see NOTES section for INITCONTAINER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressAutoGeneratedDomainNameLabelScope
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.DnsNameLabelReusePolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      The value representing the security enum.
+      The 'Unsecure' value is the default value if not selected and means the object's domain name label is not secured against subdomain takeover.
+      The 'TenantReuse' value is the default value if selected and means the object's domain name label can be reused within the same tenant.
+      The 'SubscriptionReuse' value means the object's domain name label can be reused within the same subscription.
+      The 'ResourceGroupReuse' value means the object's domain name label can be reused within the same resource group.
+      The 'NoReuse' value means the object's domain name label cannot be reused within the same resource group, subscription, or tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressDnsNameLabel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Dns name label for the IP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressIP
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP exposed to the public internet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressPort
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IPort" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ports exposed on the container group.
+      To construct, see NOTES section for IPADDRESSPORT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.ContainerGroupIPAddressType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if the IP is exposed to the public internet or private VNET.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticLogType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.LogAnalyticsLogType" data-throw-if-not-resolved="False" />
+    description: |-
+      The log type to be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticMetadata
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata for log analytics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticWorkspaceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace id for log analytics
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticWorkspaceKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace key for log analytics
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogAnalyticWorkspaceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workspace resource id for log analytics
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the container group profile.
+    aliases:
+    - ContainerGroupProfileName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.OperatingSystemTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      The operating system type required by the containers in the container group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.ContainerGroupPriority" data-throw-if-not-resolved="False" />
+    description: |-
+      The priority of the container group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestartPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.ContainerGroupRestartPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Restart policy for all containers within the container group.
+      - `Always` Always restart- `OnFailure` Restart on failure- `Never` Never restart
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Support.ContainerGroupSku" data-throw-if-not-resolved="False" />
+    description: |-
+      The SKU for a container group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Volume
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IVolume" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of volumes that can be mounted by containers in this container group.
+      To construct, see NOTES section for VOLUME properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The zones for the container group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerInstanceContainerGroupProfile
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -Container <IContainer[]>
+        -OSType <OperatingSystemTypes>
+        [-ConfidentialComputePropertyCcePolicy <String>]
+        [-EncryptionPropertyIdentity <String>]
+        [-EncryptionPropertyKeyName <String>]
+        [-EncryptionPropertyKeyVersion <String>]
+        [-EncryptionPropertyVaultBaseUrl <String>]
+        [-Extension <IDeploymentExtensionSpec[]>]
+        [-IPAddressAutoGeneratedDomainNameLabelScope <DnsNameLabelReusePolicy>]
+        [-IPAddressDnsNameLabel <String>]
+        [-IPAddressIP <String>]
+        [-IPAddressPort <IPort[]>]
+        [-IPAddressType <ContainerGroupIPAddressType>]
+        [-ImageRegistryCredential <IImageRegistryCredential[]>]
+        [-InitContainer <IInitContainerDefinition[]>]
+        [-Location <String>]
+        [-LogAnalyticLogType <LogAnalyticsLogType>]
+        [-LogAnalyticMetadata <Hashtable>]
+        [-LogAnalyticWorkspaceId <String>]
+        [-LogAnalyticWorkspaceKey <String>]
+        [-LogAnalyticWorkspaceResourceId <String>]
+        [-Priority <ContainerGroupPriority>]
+        [-RestartPolicy <ContainerGroupRestartPolicy>]
+        [-Sku <ContainerGroupSku>]
+        [-Tag <Hashtable>]
+        [-Volume <IVolume[]>]
+        [-Zone <String[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IContainerGroupProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a container group profile with a container instance and request a public IP address with opening ports'
+  description: |-
+    ```powershell
+    $port1 = New-AzContainerInstancePortObject -Port 8000 -Protocol TCP
+    $port2 = New-AzContainerInstancePortObject -Port 8001 -Protocol TCP
+    $container = New-AzContainerInstanceObject -Name test-container -Image nginx -RequestCpu 1 -RequestMemoryInGb 1.5 -Port @($port1, $port2)
+    $containerGroupProfile = New-AzContainerInstanceContainerGroupProfile -ResourceGroupName test-rg -Name test-cgp -Location eastus -Container $container -OsType Linux -RestartPolicy "Never" -IpAddressType Public
+    ```
+
+    ```output
+    Location Name    Zone ResourceGroupName
+    -------- ----    ---- -----------------
+    eastus   test-cgp      test-rg
+    ```
+
+    This commands creates a container group profile with a container instance, whose image is latest nginx, and requests a public IP address with opening port 8000 and 8001.
+- title: 'Example 2: Create container group profile and runs a custom script inside the container.'
+  description: |-
+    ```powershell
+    $pwd = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $env1 = New-AzContainerInstanceEnvironmentVariableObject -Name "env1" -Value "value1"
+    $env2 = New-AzContainerInstanceEnvironmentVariableObject -Name "env2" -SecureValue $pwd
+    $container = New-AzContainerInstanceObject -Name test-container -Image alpine -Command "/bin/sh -c myscript.sh" -EnvironmentVariable @($env1, $env2) -RequestCpu 1 -RequestMemoryInGb 1.5
+    $containerGroupProfile = New-AzContainerInstanceContainerGroupProfile -ResourceGroupName test-rg -Name test-cgp -Location eastus -Container $container -OsType Linux
+    ```
+
+    ```output
+    Location Name    Zone ResourceGroupName
+    -------- ----    ---- -----------------
+    eastus   test-cgp      test-rg
+    ```
+
+    This commands creates a container group profile and runs a custom script inside the container.
+- title: 'Example 3: Create a container group profile with a container instance using image nginx in Azure Container Registry'
+  description: |-
+    ```powershell
+    $pwd = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    $container = New-AzContainerInstanceObject -Name test-container -Image myacr.azurecr.io/nginx:latest -RequestCpu 1 -RequestMemoryInGb 1.5
+    $imageRegistryCredential = New-AzContainerGroupImageRegistryCredentialObject -Server "myacr.azurecr.io" -Username "username" -Password $pwd
+    $containerGroupProfile = New-AzContainerInstanceContainerGroupProfile -ResourceGroupName test-rg -Name test-cgp -Location eastus -Container $container -ImageRegistryCredential $imageRegistryCredential -OsType Linux
+    ```
+
+    ```output
+    Location Name    Zone ResourceGroupName
+    -------- ----    ---- -----------------
+    eastus   test-cgp      test-rg
+    ```
+
+    This commands creates a container group profile with a container instance, whose image is nginx in Azure Container Registry.
+- title: 'Example 4: Create a container group profile with Spot priority and a container instance using nginx image'
+  description: |-
+    ```powershell
+    $container = New-AzContainerInstanceObject -Name test-container -Image nginx -RequestCpu 1 -RequestMemoryInGb 1.5
+    $containerGroupProfile = New-AzContainerInstanceContainerGroupProfile -ResourceGroupName test-rg -Name test-cgp -Location eastus -Container $container -OsType Linux -RestartPolicy Never -Priority Spot
+    ```
+
+    ```output
+    Location Name    Zone ResourceGroupName
+    -------- ----    ---- -----------------
+    eastus   test-cgp      test-rg
+    ```
+
+    This commands creates a container group profile with spot priority and a container instance, whose image is nginx.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceContainerGroupProfile.md
+  document type: cmdlet
+  external help file: Az.ContainerInstance-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.containerinstance/new-azcontainerinstancecontainergroupprofile
+  Module Name: Az.ContainerInstance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceContainerGroupProfile.md
+  PlatyPS schema version: 2024-05-01

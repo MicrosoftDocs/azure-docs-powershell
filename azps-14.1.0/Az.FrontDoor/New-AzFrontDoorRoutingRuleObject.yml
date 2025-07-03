@@ -1,0 +1,459 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorRoutingRuleObject
+name: New-AzFrontDoorRoutingRuleObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create a PSRoutingRuleObject for Front Door creation
+description: |-
+  Create a PSRoutingRuleObject for Front Door creation
+parameters:
+  cmdletParameters:
+  - name: AcceptedProtocol
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSProtocol" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Protocol schemes to match for this rule.
+      Default value is {Https, Http}
+    acceptedValues:
+    - Http
+    - Https
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource id of the BackendPool which this rule routes to
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomForwardingPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The custom path used to rewrite resource paths matched by this rule.
+      Leave empty to use incoming path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomFragment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host to redirect. Leave empty to use the incoming host as the destination host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomQueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in `<key>=<value>` format. The first ? and & will be added automatically so do not include them in the front, but do separate multiple query strings with &.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicCompression
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to enable dynamic compression for cached content when caching is enabled.
+      Default value is Enabled
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableCaching
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to enable caching for this route.
+      Default value is false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledState
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSEnabledState" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether to enable use of this rule.
+      Default value is Enabled
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForwardingProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The protocol this rule will use when forwarding traffic to backends
+      Default value is MatchRequest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontDoorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Front Door to which this routing rule belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendEndpointName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The names of Frontend endpoints associated with this rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      RoutingRule name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PatternToMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The route patterns of the rule,  Must not have any * except possibly after the final / at the end of the path.
+      Default value is /*
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryParameterStripDirective
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The treatment of URL query terms when forming the cache key.
+      Default value is StripAll
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithForwardingParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectProtocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The protocol of the destination to where the traffic is redirected. Default value is MatchRequest
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The redirect type the rule will use when redirecting traffic. Default Value is Moved
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsWithRedirectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name that the RoutingRule will be created in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RulesEngineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A reference to a specific Rules Engine Configuration to apply to this route.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRoutingRuleObject
+        -ResourceGroupName <String>
+        -FrontDoorName <String>
+        -Name <String>
+        -FrontendEndpointName <String[]>
+        -BackendPoolName <String>
+        [-AcceptedProtocol <PSProtocol[]>]
+        [-PatternToMatch <String[]>]
+        [-CustomForwardingPath <String>]
+        [-ForwardingProtocol <String>]
+        [-EnableCaching <Boolean>]
+        [-QueryParameterStripDirective <String>]
+        [-DynamicCompression <PSEnabledState>]
+        [-EnabledState <PSEnabledState>]
+        [-RulesEngineName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsWithForwardingParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorRoutingRuleObject
+        -ResourceGroupName <String>
+        -FrontDoorName <String>
+        -Name <String>
+        -FrontendEndpointName <String[]>
+        [-AcceptedProtocol <PSProtocol[]>]
+        [-PatternToMatch <String[]>]
+        [-RedirectType <String>]
+        [-RedirectProtocol <String>]
+        [-CustomHost <String>]
+        [-CustomPath <String>]
+        [-CustomFragment <String>]
+        [-CustomQueryString <String>]
+        [-EnabledState <PSEnabledState>]
+        [-RulesEngineName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsWithRedirectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSRoutingRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a PSRoutingRuleObject for Front Door creation with a forwarding rule'
+  description: |-
+    ```powershell
+    New-AzFrontDoorRoutingRuleObject -Name $routingRuleName -FrontDoorName $frontDoorName -ResourceGroupName $rgname -FrontendEndpointName "frontendEndpoint1" -BackendPoolName "backendPool1"
+    ```
+
+    ```output
+    FrontendEndpointIds          : {/subscriptions/{subid}/resourceGroups/{rgname}/pro
+                                   viders/Microsoft.Network/frontDoors/{frontdoorname}/FrontendEndpoints/frontendEndpoint1}
+    AcceptedProtocols            : {Http, Https}
+    PatternsToMatch              : {/*}
+    HealthProbeSettings          :
+    RouteConfiguration           : Microsoft.Azure.Commands.FrontDoor.Models.PSForwardingConfiguration
+    EnabledState                 : Enabled
+    ResourceState                :
+    Id                           :
+    Name                         : {routingRuleName}
+    Type                         :
+    ```
+- title: 'Example 2: Create a PSRoutingRuleObject for Front Door creation with a redirect rule'
+  description: |-
+    ```powershell
+    $customHost = "www.contoso.com"
+    $customPath = "/images/contoso.png"
+    $queryString = "field1=value1&field2=value2"
+    $destinationFragment = "section-header-2"
+    New-AzFrontDoorRoutingRuleObject -Name $routingRuleName -FrontDoorName $frontDoorName -ResourceGroupName $rgname -FrontendEndpointName "frontendEndpoint1" -CustomHost $customHost -CustomPath $customPath -CustomQueryString $queryString -CustomFragment $destinationFragment
+    ```
+
+    ```output
+    FrontendEndpointIds          : {/subscriptions/{subid}/resourceGroups/{rgname}/pro
+                                   viders/Microsoft.Network/frontDoors/{frontdoorname}/FrontendEndpoints/frontendEndpoint1}
+    AcceptedProtocols            : {Http, Https}
+    PatternsToMatch              : {/*}
+    HealthProbeSettings          :
+    RouteConfiguration           : Microsoft.Azure.Commands.FrontDoor.Models.PSRedirectConfiguration
+    EnabledState                 : Enabled
+    ResourceState                :
+    Id                           :
+    Name                         : {routingRuleName}
+    Type                         :
+    ```
+
+    Create a PSRoutingRuleObject for Front Door creation
+links:
+- text: New-AzFrontDoor
+  href: ./New-AzFrontDoor.yml
+- text: Set-AzFrontDoor
+  href: ./Set-AzFrontDoor.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRoutingRuleObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorroutingruleobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorRoutingRuleObject.md
+  PlatyPS schema version: 2024-05-01

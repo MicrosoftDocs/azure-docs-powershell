@@ -1,0 +1,203 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureStorSimpleDeviceFailoverJob
+name: Start-AzureStorSimpleDeviceFailoverJob
+module: Azure
+isPreview: false
+summary: |-
+  Initiates a failover operation of volume container groups.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureStorSimpleDeviceFailoverJob** cmdlet initiates a failover operation of one or more volume container groups from one device to another.
+parameters:
+  cmdletParameters:
+  - name: DeviceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the StorSimple device on which the volume container groups exist.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device on which the volume container groups exist.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDeviceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the StorSimple device to which this cmdlet fails over the volume container groups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device to which this cmdlet fails over the volume container groups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumecontainerGroups
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.WindowsAzure.Management.StorSimple.Models.DataContainerGroup" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the list of volume container groups that this cmdlet fails over to another device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceFailoverJob
+
+        -VolumecontainerGroups <System.Collections.Generic.List`1[Microsoft.WindowsAzure.Management.StorSimple.Models.DataContainerGroup]>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceFailoverJob
+        -DeviceId <String>
+        -VolumecontainerGroups <System.Collections.Generic.List`1[Microsoft.WindowsAzure.Management.StorSimple.Models.DataContainerGroup]>
+        -TargetDeviceId <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceFailoverJob
+        -DeviceName <String>
+        -VolumecontainerGroups <System.Collections.Generic.List`1[Microsoft.WindowsAzure.Management.StorSimple.Models.DataContainerGroup]>
+        -TargetDeviceName <String>
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyByName
+  isDefault: false
+inputs:
+- name: <xref href="List" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe a list of volume container groups to this cmdlet.
+outputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start a failover job for a named device and named target device'
+  description: |-
+    ```
+    PS C:\>(Get-AzureStorSimpleFailoverVolumeContainers -DeviceName "ChewD_App7") | Where-Object {$_.IsDCGroupEligibleForDR -eq $True} | Start-AzureStorSimpleDeviceFailoverJob -DeviceName "ChewD_App7" -TargetDeviceName "Fuller05" -Force
+    a3d902be-8ffb-42a4-bbf8-0a1b30db71b2_0ee59ae9-0293-46e2-ae56-bc308c8e5520
+    ```
+
+    This command gets the failover volume containers for the device named ChewD_App7 by using the **Get-AzureStorSimpleFailoverVolumeContainers** cmdlet.
+    The command passes the results to the **Where-Object** cmdlet, which drops those containers that have a value other than $True for the **IsDCGroupEligibleForDR** property.
+    For more information, type `Get-Help Where-Object`.
+    The current cmdlet starts failover jobs for the remaining failover volume containers.
+    The command specifies the device name and target device name.
+    The command returns the instance ID of the job that the cmdlet starts.
+- title: 'Example 2: Start a failover job for a device and target device specified by ID'
+  description: |-
+    ```
+    PS C:\>(Get-AzureStorSimpleFailoverVolumeContainers -DeviceId "3825f272-1efb-4c14-b63f-22605ce3b925") | Where-Object {$_.IsDCGroupEligibleForDR -eq $True} | Select-Object -First 1 | Start-AzureStorSimpleDeviceFailoverJob -DeviceId "3825f272-1efb-4c14-b63f-22605ce3b925" -TargetDeviceId "0ee59ae9-0293-46e2-ae56-bc308c8e5520" -Force
+    4c5ac0d0-4b66-465c-98f5-aec90505ad12_0ee59ae9-0293-46e2-ae56-bc308c8e5520
+    ```
+
+    This command gets the failover volume containers for the device named ChewD_App7 by using **Get-AzureStorSimpleFailoverVolumeContainers**.
+    The command passes the results to **Where-Object**, which drops those containers that have a value other than $True for the **IsDCGroupEligibleForDR** property.
+    The cmdlet passes the results to the **Select-Object** cmdlet, which selects the first object to pass to the current cmdlet.
+    For more information, type `Get-Help Select-Object`.
+    The current cmdlet starts failover jobs for the selected failover volume container.
+    The command specifies the device ID and target device ID.
+    The command returns the instance ID of the job that the cmdlet starts.
+links:
+- text: Get-AzureStorSimpleFailoverVolumeContainers
+  href: ./Get-AzureStorSimpleFailoverVolumeContainers.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 53580FF1-D905-40FD-A5F0-D5FBCD036E0B
+  PlatyPS schema version: 2024-05-01

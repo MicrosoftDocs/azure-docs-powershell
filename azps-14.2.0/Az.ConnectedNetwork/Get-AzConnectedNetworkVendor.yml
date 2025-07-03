@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedNetwork.Get-AzConnectedNetworkVendor
+name: Get-AzConnectedNetworkVendor
+module: Az.ConnectedNetwork
+isPreview: false
+summary: |-
+  Gets information about the specified vendor.
+description: |-
+  Gets information about the specified vendor.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the vendor.
+    aliases:
+    - VendorName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendor
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendor
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendor
+        -InputObject <IConnectedNetworkIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IVendor" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get-AzConnectedNetworkVendor using vendor name'
+  description: |-
+    ```powershell
+    Get-AzConnectedNetworkVendor -Name myVendor
+    ```
+
+    ```output
+    Id                           : /subscriptions/xxxxx-00000-xxxxx-00000/providers/Microsoft.HybridNetwork/vendors/myVendor
+    Name                         : myVendor
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    Sku                          :
+    SystemDataCreatedAt          : 9/7/2021 3:02:02 AM
+    SystemDataCreatedBy          : user@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 9/7/2021 3:02:03 AM
+    SystemDataLastModifiedBy     : xxxxx-11111-xxxxx-11111
+    SystemDataLastModifiedByType : Application
+    Type                         : microsoft.hybridnetwork/vendors
+    ```
+
+    Getting information about the vendor with vendor name myVendor.
+- title: 'Example 2: Get-AzConnectedNetworkVendor using Identity'
+  description: |-
+    ```powershell
+    $vendor = @{ VendorName = "myVendor1"; SubscriptionId = "xxxxx-00000-xxxxx-00000"}
+    Get-AzConnectedNetworkVendor -InputObject $vendor
+    ```
+
+    ```output
+    Id                           : /subscriptions/xxxxx-00000-xxxxx-00000/providers/Microsoft.HybridNetwork/vendors/myVendor1
+    Name                         : myVendor1
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    Sku                          :
+    SystemDataCreatedAt          : 9/7/2021 3:02:02 AM
+    SystemDataCreatedBy          : user@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 9/7/2021 3:02:03 AM
+    SystemDataLastModifiedBy     : xxxxx-11111-xxxxx-11111
+    SystemDataLastModifiedByType : Application
+    Type                         : microsoft.hybridnetwork/vendors
+    ```
+
+    Creating an identity with VendorName myVendor1 and the given subscription.
+    Getting information about the vendor using this identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Get-AzConnectedNetworkVendor.md
+  document type: cmdlet
+  external help file: Az.ConnectedNetwork-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectednetwork/get-azconnectednetworkvendor
+  Module Name: Az.ConnectedNetwork
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Get-AzConnectedNetworkVendor.md
+  PlatyPS schema version: 2024-05-01

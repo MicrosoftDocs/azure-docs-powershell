@@ -1,0 +1,274 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationJob
+name: Get-AzAutomationJob
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets Automation runbook jobs.
+description: |-
+  The **Get-AzAutomationJob** cmdlet gets runbook jobs in Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account for which this cmdlet gets jobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the end time for a job as a **DateTimeOffset** object.
+      You can specify a string that can be converted to a valid **DateTimeOffset**.
+      This cmdlet gets jobs that have an end time at or before the value that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a job that this cmdlet gets.
+    aliases:
+    - JobId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByJobId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group in which this cmdlet gets jobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook for which this cmdlet gets jobs.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the start time of a job as a **DateTimeOffset** object.
+      This cmdlet gets jobs that have a start time at or after the value that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status of a job.
+      This cmdlet gets jobs that have a status matching this parameter.
+      Valid values are:
+      - Activating
+      - Completed
+      - Failed
+      - Queued
+      - Resuming
+      - Running
+      - Starting
+      - Stopped
+      - Stopping
+      - Suspended
+      - Suspending
+    acceptedValues:
+    - Completed
+    - Failed
+    - Queued
+    - Starting
+    - Resuming
+    - Running
+    - Stopped
+    - Stopping
+    - Suspended
+    - Suspending
+    - Activating
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationJob
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-Status <String>]
+        [-StartTime <DateTimeOffset>]
+        [-EndTime <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationJob
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -Id <Guid>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByJobId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationJob
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -RunbookName <String>
+        [-Status <String>]
+        [-StartTime <DateTimeOffset>]
+        [-EndTime <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookName
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Job" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific runbook job'
+  description: |-
+    ```powershell
+    Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
+    ```
+
+    This command gets the job that has the specified GUID.
+- title: 'Example 2: Get all jobs for a runbook'
+  description: |-
+    ```powershell
+    Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbook02"
+    ```
+
+    This command gets all jobs associated with a runbook named Runbook02.
+- title: 'Example 3: Get all running jobs'
+  description: |-
+    ```powershell
+    Get-AzAutomationJob -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -Status "Running"
+    ```
+
+    This command gets all running jobs in the Automation account named Contoso17.
+links:
+- text: Get-AzAutomationJobOutput
+  href: ./Get-AzAutomationJobOutput.yml
+- text: Resume-AzAutomationJob
+  href: ./Resume-AzAutomationJob.yml
+- text: Stop-AzAutomationJob
+  href: ./Stop-AzAutomationJob.yml
+- text: Suspend-AzAutomationJob
+  href: ./Suspend-AzAutomationJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationjob
+  Module Name: Az.Automation
+  ms.assetid: BD32B909-296B-4E46-A24F-6E2BD4B9764B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationJob.md
+  PlatyPS schema version: 2024-05-01

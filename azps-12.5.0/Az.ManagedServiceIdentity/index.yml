@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.ManagedServiceIdentity
+name: Az.ManagedServiceIdentity Module
+isPreview: false
+cmdletGroups:
+- title: Managed Service Identity
+  cmdlets:
+  - Az.ManagedServiceIdentity.Get-AzFederatedIdentityCredential
+  - Az.ManagedServiceIdentity.Get-AzSystemAssignedIdentity
+  - Az.ManagedServiceIdentity.Get-AzUserAssignedIdentity
+  - Az.ManagedServiceIdentity.Get-AzUserAssignedIdentityAssociatedResource
+  - Az.ManagedServiceIdentity.New-AzFederatedIdentityCredential
+  - Az.ManagedServiceIdentity.New-AzUserAssignedIdentity
+  - Az.ManagedServiceIdentity.Remove-AzFederatedIdentityCredential
+  - Az.ManagedServiceIdentity.Remove-AzUserAssignedIdentity
+  - Az.ManagedServiceIdentity.Update-AzFederatedIdentityCredential
+  - Az.ManagedServiceIdentity.Update-AzUserAssignedIdentity
+description: |-
+  Microsoft Azure PowerShell: ManagedServiceIdentity cmdlets
+metadata:
+  Module Name: Az.ManagedServiceIdentity
+  Module Guid: 1f09fbda-2563-4cfc-9098-100c27b52fa1
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.managedserviceidentity
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/ManagedServiceIdentity/help/Az.ManagedServiceIdentity.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServiceIdentity/ManagedServiceIdentity/help/Az.ManagedServiceIdentity.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,286 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Media.New-AzMediaService
+name: New-AzMediaService
+module: Az.Media
+isPreview: false
+summary: |-
+  Creates a media service if the media service already exists, all its properties are updated with the input provided.
+description: |-
+  The **New-AzMediaService** cmdlet creates a media service.
+  If the media service already exists, this cmdlet update its properties.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the media service that this cmdlet creates.
+    aliases:
+    - Name
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the region that this cmdlet creates the media service in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that the media service is assigned to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account associated with the media service account.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StorageAccountIdParamSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccounts
+    type: <xref href="Microsoft.Azure.Commands.Media.Models.PSStorageAccount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of storage accounts to associate with the media service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StorageAccountsParamSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags associated with the media service account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMediaService
+        [-ResourceGroupName] <String>
+        [-AccountName] <String>
+        [-Location] <String>
+        [-StorageAccountId] <String>
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StorageAccountIdParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMediaService
+        [-ResourceGroupName] <String>
+        [-AccountName] <String>
+        [-Location] <String>
+        [-StorageAccounts] <PSStorageAccount[]>
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StorageAccountsParamSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSStorageAccount" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Media.Models.PSMediaService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example1: Create a media service with the primary storage account only'
+  description: |-
+    ```powershell
+    # Variables
+    ## Global
+    $ResourceGroupName = "ResourceGroup001"
+    $Location = "East US"
+
+    ## Storage
+    $StorageName = "Storage1"
+    $StorageType = "Standard_GRS"
+
+    ## Media Service
+    $Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+    $MediaServiceName = "MediaService1"
+
+    # Resource Group
+    New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+    # Storage
+    $StorageAccount = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName -Location $Location -Type $StorageType
+
+    # Media Service
+    New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccountId $StorageAccount.Id -Tag $Tags
+    ```
+
+    This example shows how to  create a media service with specifying primary storage account only.
+    This script uses several other cmdlets.
+- title: 'Example 2: Create a media service with multiple storage'
+  description: |-
+    ```powershell
+    # Variables
+
+    ## Global
+    $ResourceGroupName = "ResourceGroup001"
+    $Location = "East US"
+
+    ## Storage
+    $StorageName1 = "storage1"
+    $StorageName2 = "storage2"
+    $StorageType = "Standard_GRS"
+
+    ## Media Service
+    $Tags = @{"tag1" = "value1"; "tag2" = "value2"}
+    $MediaServiceName = "MediaService1"
+
+    # Resource Group
+    New-AzResourceGroup -Name $ResourceGroupName -Location $Location
+
+    # Storage
+    $StorageAccount1 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName1 -Location $Location -Type $StorageType
+
+
+    $StorageAccount2 = New-AzStorageAccount -ResourceGroupName $ResourceGroupName -Name $StorageName2 -Location $Location -Type $StorageType
+
+    # Media Service
+
+    ## Setup the storage configuration object.
+    $PrimaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount1.Id -IsPrimary
+    $SecondaryStorageAccount = New-AzMediaServiceStorageConfig -StorageAccountId $StorageAccount2.Id
+    $StorageAccounts = @($PrimaryStorageAccount, $SecondaryStorageAccount)
+
+    ## Create a media service.New-AzMediaService -ResourceGroupName $ResourceGroupName -AccountName $MediaServiceName -Location $Location -StorageAccounts $StorageAccounts -Tag $Tags
+    ```
+
+    This example shows how to create a media service with multiple storage accounts.
+    This script uses several other cmdlets.
+links:
+- text: Get-AzMediaService
+  href: ./Get-AzMediaService.yml
+- text: Remove-AzMediaService
+  href: ./Remove-AzMediaService.yml
+- text: Set-AzMediaService
+  href: ./Set-AzMediaService.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Media.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.media/new-azmediaservice
+  Module Name: Az.Media
+  ms.assetid: 5CEA7323-4CF7-42B2-BA94-BB3C8F73D2E9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Media/Media/help/New-AzMediaService.md
+  PlatyPS schema version: 2024-05-01

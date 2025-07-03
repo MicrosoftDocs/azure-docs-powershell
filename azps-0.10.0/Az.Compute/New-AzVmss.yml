@@ -1,0 +1,622 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzVmss
+name: New-AzVmss
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a VMSS.
+description: |-
+  The **New-AzVmss** cmdlet creates a Virtual Machine Scale Set (VMSS) in Azure.
+  This cmdlet takes a **VirtualMachineScaleSet** object as input.
+parameters:
+  cmdletParameters:
+  - name: AllocationMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Allocation method for the Public IP Address of the Scale Set (Static or Dynamic).  If no value is supplied, allocation will be static.
+    acceptedValues:
+    - Static
+    - Dynamic
+    defaultValue: Static
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendPoolName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the backend address pool to use in the load balancer for this Scale Set.  If no value is provided, a new backend pool will be created, with the same name as the Scale Set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Backend port numbers used by the Scale Set load balancer to communicate with VMs in the Scale Set.  If no values are specified, ports 3389 and 5985 will be used for Windows VMS, and port 22 will be used for Linux VMs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      The administrator credentials (username and password) for VMs in this Scale Set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainNameLabel
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The domain name label for the public Fully-Qualified domain name (FQDN) for this Scale Set. This is the first component of the domain name that is automatically assigned to the Scale Set. Automatically assigned Domain names use the form (`<DomainNameLabel>.<Location>.cloudapp.azure.com`). If no value is supplied, the default domain name label will be the concatenation of `<ScaleSetName>` and `<ResourceGroupName>`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendPoolName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the frontend address pool to usein the Scale Set locad balancer.  If no value is supplied, a new Frontend Address Pool will be created, with the same name as the scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the image for VMs in this Scale Set. If no value is provided, the "Windows Server 2016 DataCenter" image will be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of VM images in the Scale Set.  If no value is provided, 2 instances will be created.
+    defaultValue: "2"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the load balancer to use with this Scale Set.  A new load balancer using the same name as the Scale Set will be created if no value is specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure location where this Scale Set will be created.  If no value is specified, the location will be inferred from the location of other resources referenced in the parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NatBackendPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Backend port for inbound network address translation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the public IP Address to use with this scale set.  A new Public IPAddress with the same name as the Scale Set will be created if no value is provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group of the VMSS.  If no value is specified, a new ResourceGroup will be created using the same name as the Scale Set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network security group to apply to this Scale Set.  If no value is provided, a default network security group with the same name as the Scale Set will be created and applied to the Scale Set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The address prefix of the Subnet this ScaleSet will use. Default Subnet settings (192.168.1.0/24) will be applied if no value is provided.
+    defaultValue: 192.168.1.0/24
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the subnet to use with this Scale Set.  A new Subnet will be created with the same name as the Scale Set if no value is provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradePolicyMode
+    type: <xref href="UpgradeMode" data-throw-if-not-resolved="False" />
+    description: |-
+      The upgrade policy mode for VM instances in this Scale Set.  Upgrade policy could specify Automatic, Manual, or Rolling upgrades.
+    acceptedValues:
+    - Automatic
+    - Manual
+    - Rolling
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **VirtualMachineScaleSet** object that contains the properties of the VMSS that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "3"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name fo the Virtual Network to use with this scale set.  If no value is supplied, a new virtual network with the same name as the Scale Set will be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScaleSetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the VMSS that this cmdlet creates.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The size of the VM instances in this scale set.  A default size (Standard_DS1_v2) will be used if no Size is specified.
+    defaultValue: Standard_DS1_v2
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The address prefix for the virtual network used with this Scale Set.  Default virtual network address prefix settings (192.168.0.0/16) will be used if no value is supplied.
+    defaultValue: 192.168.0.0/16
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      A list of availability zones denoting the IP allocated for the resource needs to come from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVmss
+        [-ResourceGroupName] <String>
+        [-VMScaleSetName] <String>
+        [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVmss
+        [[-ResourceGroupName] <String>]
+        [-VMScaleSetName] <String>
+        -Credential <PSCredential>
+        [-AsJob]
+        [-ImageName <String>]
+        [-InstanceCount <Int32>]
+        [-VirtualNetworkName <String>]
+        [-SubnetName <String>]
+        [-PublicIpAddressName <String>]
+        [-DomainNameLabel <String>]
+        [-SecurityGroupName <String>]
+        [-LoadBalancerName <String>]
+        [-BackendPort <Int32[]>]
+        [-Location <String>]
+        [-VmSize <String>]
+        [-UpgradePolicyMode <UpgradeMode>]
+        [-AllocationMethod <String>]
+        [-VnetAddressPrefix <String>]
+        [-SubnetAddressPrefix <String>]
+        [-FrontendPoolName <String>]
+        [-BackendPoolName <String>]
+        [-Zone <System.Collections.Generic.List`1[System.String]>]
+        [-NatBackendPort <Int32[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SimpleParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="VirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet' from the pipeline
+outputs:
+- name: <xref href="This cmdlet does not generate any output." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a VMSS'
+  description: |-
+    ```
+    # Common
+    $LOC = "WestUs";
+    $RGName = "rgkyvms";
+
+    New-AzResourceGroup -Name $RGName -Location $LOC -Force;
+
+    # SRP
+    $STOName = "STO" + $RGName;
+    $STOType = "Standard_GRS";
+    New-AzStorageAccount -ResourceGroupName $RGName -Name $STOName -Location $LOC -Type $STOType;
+    $STOAccount = Get-AzStorageAccount -ResourceGroupName $RGName -Name $STOName;
+
+    # NRP
+    $SubNet = New-AzVirtualNetworkSubnetConfig -Name ("subnet" + $RGName) -AddressPrefix "10.0.0.0/24";
+    $VNet = New-AzVirtualNetwork -Force -Name ("vnet" + $RGName) -ResourceGroupName $RGName -Location $LOC -AddressPrefix "10.0.0.0/16" -DnsServer "10.1.1.1" -Subnet $SubNet;
+    $VNet = Get-AzVirtualNetwork -Name ('vnet' + $RGName) -ResourceGroupName $RGName;
+    $SubNetId = $VNet.Subnets[0].Id;
+
+    $PubIP = New-AzPublicIpAddress -Force -Name ("PubIP" + $RGName) -ResourceGroupName $RGName -Location $LOC -AllocationMethod Dynamic -DomainNameLabel ("PubIP" + $RGName);
+    $PubIP = Get-AzPublicIpAddress -Name ("PubIP"  + $RGName) -ResourceGroupName $RGName;
+
+    # Create LoadBalancer
+    $FrontendName = "fe" + $RGName
+    $BackendAddressPoolName = "bepool" + $RGName
+    $ProbeName = "vmssprobe" + $RGName
+    $InboundNatPoolName  = "innatpool" + $RGName
+    $LBRuleName = "lbrule" + $RGName
+    $LBName = "vmsslb" + $RGName
+
+    $Frontend = New-AzLoadBalancerFrontendIpConfig -Name $FrontendName -PublicIpAddress $PubIP
+    $BackendAddressPool = New-AzLoadBalancerBackendAddressPoolConfig -Name $BackendAddressPoolName
+    $Probe = New-AzLoadBalancerProbeConfig -Name $ProbeName -RequestPath healthcheck.aspx -Protocol http -Port 80 -IntervalInSeconds 15 -ProbeCount 2
+    $InboundNatPool = New-AzLoadBalancerInboundNatPoolConfig -Name $InboundNatPoolName  -FrontendIPConfigurationId `
+        $Frontend.Id -Protocol Tcp -FrontendPortRangeStart 3360 -FrontendPortRangeEnd 3362 -BackendPort 3370;
+    $LBRule = New-AzLoadBalancerRuleConfig -Name $LBRuleName `
+        -FrontendIPConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+        -Probe $Probe -Protocol Tcp -FrontendPort 80 -BackendPort 80 `
+        -IdleTimeoutInMinutes 15 -EnableFloatingIP -LoadDistribution SourceIP;
+    $ActualLb = New-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName -Location $LOC `
+        -FrontendIpConfiguration $Frontend -BackendAddressPool $BackendAddressPool `
+        -Probe $Probe -LoadBalancingRule $LBRule -InboundNatPool $InboundNatPool;
+    $ExpectedLb = Get-AzLoadBalancer -Name $LBName -ResourceGroupName $RGName
+
+    # New VMSS Parameters
+    $VMSSName = "VMSS" + $RGName;
+
+    $AdminUsername = "Admin01";
+    $AdminPassword = "p4ssw0rd@123" + $RGName;
+
+    $PublisherName = "MicrosoftWindowsServer"
+    $Offer         = "WindowsServer"
+    $Sku           = "2012-R2-Datacenter"
+    $Version       = "latest"
+
+    $VHDContainer = "https://" + $STOName + ".blob.core.contoso.net/" + $VMSSName;
+
+    $ExtName = "CSETest";
+    $Publisher = "Microsoft.Compute";
+    $ExtType = "BGInfo";
+    $ExtVer = "2.1";
+
+    #IP Config for the NIC
+    $IPCfg = New-AzVmssIPConfig -Name "Test" `
+        -LoadBalancerInboundNatPoolsId $ExpectedLb.InboundNatPools[0].Id `
+        -LoadBalancerBackendAddressPoolsId $ExpectedLb.BackendAddressPools[0].Id `
+        -SubnetId $SubNetId;
+
+    #VMSS Config
+    $VMSS = New-AzVmssConfig -Location $LOC -SkuCapacity 2 -SkuName "Standard_A2" -UpgradePolicyMode "Automatic" `
+        | Add-AzVmssNetworkInterfaceConfiguration -Name "Test" -Primary $True -IPConfiguration $IPCfg `
+        | Add-AzVmssNetworkInterfaceConfiguration -Name "Test2"  -IPConfiguration $IPCfg `
+        | Set-AzVmssOSProfile -ComputerNamePrefix "Test"  -AdminUsername $AdminUsername -AdminPassword $AdminPassword `
+        | Set-AzVmssStorageProfile -Name "Test"  -OsDiskCreateOption 'FromImage' -OsDiskCaching "None" `
+        -ImageReferenceOffer $Offer -ImageReferenceSku $Sku -ImageReferenceVersion $Version `
+        -ImageReferencePublisher $PublisherName -VhdContainer $VHDContainer `
+        | Add-AzVmssExtension -Name $ExtName -Publisher $Publisher -Type $ExtType -TypeHandlerVersion $ExtVer -AutoUpgradeMinorVersion $True
+
+    #Create the VMSS
+    New-AzVmss -ResourceGroupName $RGName -Name $VMSSName -VirtualMachineScaleSet $VMSS;
+    ```
+
+    The following complex example creates a VMSS.
+    The first command creates a resource group with the specified name and location.
+    The second command uses the **New-AzStorageAccount** cmdlet to create a storage account.
+    The third command then uses the **Get-AzStorageAccount** cmdlet to get the storage account created in the second command and stores the result in the $STOAccount variable.
+    The fifth command uses the **New-AzVirtualNetworkSubnetConfig** cmdlet to create a subnet and stores the result in the variable named $SubNet.
+    The sixth command uses the **New-AzVirtualNetwork** cmdlet to create a virtual network and stores the result in the variable named $VNet.
+    The seventh command uses the **Get-AzVirtualNetwork** to get information about the virtual network created in the sixth command and stores the information in the variable named $VNet.
+    The eighth and ninth command uses the **New-AzPublicIpAddress** and **Get- AzureRmPublicIpAddress** to create and get information from that public IP address.
+    The commands store the information in the variable named $PubIP.
+    The tenth command uses the **New- AzureRmLoadBalancerFrontendIpConfig** cmdlet to create a frontend load balancer and stores the result in the variable named $Frontend.
+    The eleventh command uses the **New-AzLoadBalancerBackendAddressPoolConfig** to create a backend address pool configuration and stores the result in the variable named $BackendAddressPool.
+    The twelfth command uses the **New-AzLoadBalancerProbeConfig** to create a probe and stores the probe information in the variable named $Probe.
+    The thirteenth command uses the **New-AzLoadBalancerInboundNatPoolConfig** cmdlet to create a load balancer inbound network address translation (NAT) pool configuration.
+    The fourteenth command uses the **New-AzLoadBalancerRuleConfig** to create a load balancer rule configuration and stores the result in the variable named $LBRule.
+    The fifteenth command uses the **New-AzLoadBalancer** cmdlet to create a load balancer and stores the result in the variable named $ActualLb.
+    The sixteenth command uses the **Get-AzLoadBalancer** to get information about the load balancer that was created in the fifteenth command and stores the information in the variable named $ExpectedLb.
+    The seventeenth command uses the **New-AzVmssIPConfig** cmdlet to create a VMSS IP configuration and stores the information in the variable named $IPCfg.
+    The eighteenth command uses the **New-AzVmssConfig** cmdlet to create a VMSS configuration object and stores the result in the variable named $VMSS.
+    The nineteenth command uses the **New-AzVmss** cmdlet to create the VMSS.
+links:
+- text: Get-AzVmss
+  href: ./Get-AzVmss.yml
+- text: Remove-AzVmss
+  href: ./Remove-AzVmss.yml
+- text: Restart-AzVmss
+  href: ./Restart-AzVmss.yml
+- text: Set-AzVmss
+  href: ./Set-AzVmss.yml
+- text: Start-AzVmss
+  href: ./Start-AzVmss.yml
+- text: Stop-AzVmss
+  href: ./Stop-AzVmss.yml
+- text: Update-AzVmss
+  href: ./Update-AzVmss.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmss.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/new-azvmss
+  Module Name: Az.Compute
+  ms.assetid: 1A2C843C-6962-4B0E-ACBF-A5EFF609A5BE
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/New-AzVmss.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzApplicationGatewaySslPredefinedPolicy
+name: Get-AzApplicationGatewaySslPredefinedPolicy
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets Predefined SSL Policies provided by Application Gateway.
+description: |-
+  The **Get-AzApplicationGatewaySslPredefinedPolicy** cmdlet gets Predefined SSL Policies provided by Application Gateway.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the ssl predefined policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApplicationGatewaySslPredefinedPolicy
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewaySslPredefinedPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzApplicationGatewaySslPredefinedPolicy
+    ```
+
+    ```output
+    Name: AppGwSslPolicy20150501
+    MinProtocolVersion: TLSv1_0
+    CipherSuites:
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+        TLS_DHE_DSS_WITH_AES_128_CBC_SHA256
+        TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+        TLS_DHE_DSS_WITH_AES_128_CBC_SHA
+        TLS_RSA_WITH_3DES_EDE_CBC_SHA
+        TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA
+
+
+    Name: AppGwSslPolicy20170401
+    MinProtocolVersion: TLSv1_1
+    CipherSuites:
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+
+
+    Name: AppGwSslPolicy20170401S
+    MinProtocolVersion: TLSv1_2
+    CipherSuites:
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+    ```
+
+    This commands returns all the predefined SSL policies.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzApplicationGatewaySslPredefinedPolicy -Name AppGwSslPolicy20170401
+    ```
+
+    ```output
+    Name: AppGwSslPolicy20170401
+    MinProtocolVersion: TLSv1_1
+    CipherSuites:
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+    ```
+
+    This commands returns predefined policy with name AppGwSslPolicy20170401.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzApplicationGatewaySslPredefinedPolicy -Name AppGwSslPolicy2017*
+    ```
+
+    ```output
+    Name: AppGwSslPolicy20170401
+    MinProtocolVersion: TLSv1_1
+    CipherSuites:
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+
+
+    Name: AppGwSslPolicy20170401S
+    MinProtocolVersion: TLSv1_2
+    CipherSuites:
+        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+        TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256
+        TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+        TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_256_GCM_SHA384
+        TLS_RSA_WITH_AES_128_GCM_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA256
+        TLS_RSA_WITH_AES_128_CBC_SHA256
+        TLS_RSA_WITH_AES_256_CBC_SHA
+        TLS_RSA_WITH_AES_128_CBC_SHA
+    ```
+
+    This commands returns predefined policy with name starting with "AppGwSslPolicy2017".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslPredefinedPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azapplicationgatewaysslpredefinedpolicy
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzApplicationGatewaySslPredefinedPolicy.md
+  PlatyPS schema version: 2024-05-01

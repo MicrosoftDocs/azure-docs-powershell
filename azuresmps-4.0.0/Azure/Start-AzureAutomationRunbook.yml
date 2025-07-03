@@ -1,0 +1,138 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureAutomationRunbook
+name: Start-AzureAutomationRunbook
+module: Azure
+isPreview: false
+summary: |-
+  Starts a runbook job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Start-AzureAutomationRunbook** cmdlet starts a Microsoft Azure Automation runbook job.
+  Specify the ID or name of a runbook.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook.
+    aliases:
+    - RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameters
+    type: <xref href="IDictionary" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunOn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - HybridWorker
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureAutomationRunbook
+        -Name <String>
+        [-Parameters <IDictionary>]
+        [-RunOn <String>]
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Job" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Start a runbook job'
+  description: |-
+    ```
+    PS C:\> Start-AzureAutomationRunbook -AutomationAccountName "Contoso17" -Name "Runbk01"
+    ```
+
+    This command starts a runbook job for the runbook named Runbk01 in the Automation account named Contoso17.
+links:
+- text: Get-AzureAutomationRunbook
+  href: ./Get-AzureAutomationRunbook.yml
+- text: New-AzureAutomationRunbook
+  href: ./New-AzureAutomationRunbook.yml
+- text: Publish-AzureAutomationRunbook
+  href: ./Publish-AzureAutomationRunbook.yml
+- text: Remove-AzureAutomationRunbook
+  href: ./Remove-AzureAutomationRunbook.yml
+- text: Set-AzureAutomationRunbook
+  href: ./Set-AzureAutomationRunbook.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: B0AE1969-71FD-4B6E-B0C0-1B744814BD5E
+  PlatyPS schema version: 2024-05-01

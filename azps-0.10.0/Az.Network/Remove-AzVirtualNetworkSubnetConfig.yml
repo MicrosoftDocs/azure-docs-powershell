@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Remove-AzVirtualNetworkSubnetConfig
+name: Remove-AzVirtualNetworkSubnetConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Removes a subnet configuration from a virtual network.
+description: |-
+  The **Remove-AzVirtualNetworkSubnetConfig** cmdlet removes a subnet from an Azure virtual network.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the subnet configuration to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="PSVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **VirtualNetwork** object that contains the subnet configuration to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzVirtualNetworkSubnetConfig
+        [-Name <String>]
+        -VirtualNetwork <PSVirtualNetwork>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSVirtualNetwork" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VirtualNetwork' accepts value of type 'PSVirtualNetwork' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: '1: Remove a subnet from a virtual network and update the virtual network'
+  description: |-
+    ```
+    New-AzResourceGroup -Name TestResourceGroup -Location centralus
+        $frontendSubnet = New-AzVirtualNetworkSubnetConfig -Name frontendSubnet
+        -AddressPrefix "10.0.1.0/24"
+
+    $backendSubnet = New-AzVirtualNetworkSubnetConfig -Name backendSubnet -AddressPrefix
+        "10.0.2.0/24"
+
+    $virtualNetwork = New-AzVirtualNetwork -Name MyVirtualNetwork -ResourceGroupName
+        TestResourceGroup -Location centralus -AddressPrefix "10.0.0.0/16" -Subnet
+        $frontendSubnet,$backendSubnet
+
+    Remove-AzVirtualNetworkSubnetConfig -Name backendSubnet -VirtualNetwork
+        $virtualNetwork
+        $virtualNetwork | Set-AzVirtualNetwork
+    ```
+
+    This example creates a resource group and a virtual network with two subnets. It then
+        uses the Remove-AzVirtualNetworkSubnetConfig command to remove the backend subnet
+        from the in-memory representation of the virtual network. Set-AzVirtualNetwork is
+        then called to modify the virtual network on the server side.
+links:
+- text: Add-AzVirtualNetworkSubnetConfig
+  href: ./Add-AzVirtualNetworkSubnetConfig.yml
+- text: Get-AzVirtualNetworkSubnetConfig
+  href: ./Get-AzVirtualNetworkSubnetConfig.yml
+- text: New-AzVirtualNetworkSubnetConfig
+  href: ./New-AzVirtualNetworkSubnetConfig.yml
+- text: Set-AzVirtualNetworkSubnetConfig
+  href: ./Set-AzVirtualNetworkSubnetConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/remove-azvirtualnetworksubnetconfig
+  Module Name: Az.Network
+  ms.assetid: 47FE9EF4-6000-4096-8F04-26A0C6661FDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Remove-AzVirtualNetworkSubnetConfig.md
+  PlatyPS schema version: 2024-05-01

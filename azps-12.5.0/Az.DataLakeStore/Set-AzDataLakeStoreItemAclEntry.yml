@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Set-AzDataLakeStoreItemAclEntry
+name: Set-AzDataLakeStoreItemAclEntry
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Modifies an entry in the ACL of a file or folder in Data Lake Store.
+description: |-
+  The **Set-AzDataLakeStoreItemAclEntry** cmdlet modifies an entry (ACE) in the access control list (ACL) of a file or folder in Data Lake Store.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AceType
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of ACE to modify.
+      The acceptable values for this parameter are:
+      - User
+      - Group
+      - Mask
+      - Other
+    acceptedValues:
+    - User
+    - Group
+    - Mask
+    - Other
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetSpecificACE
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Acl
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the ACL object that contains the entries to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByACLObject
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Concurrency
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of files/directories processed in parallel. Optional: a reasonable default will be selected
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Default
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation modifies the default ACE from the specified ACL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetSpecificACE
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the AzureActive Directory user, group, or service principal for which to modify an ACE.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetSpecificACE
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the resulting ACL should be returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store path of the item for which to modify an ACE, starting with the root directory (/).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permissions
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+Permission" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the permissions for the ACE.
+      The acceptable values for this parameter are:
+      - None
+      - Execute
+      - Write
+      - WriteExecute
+      - Read
+      - ReadExecute
+      - ReadWrite
+      - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetSpecificACE
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Recurse
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the ACL to be modified recursively to the child subdirectories and files
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShowProgress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If passed then progress status is showed. Only applicable when recursive Acl modify is done.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeStoreItemAclEntry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-Acl] <DataLakeStoreItemAce[]>
+        [-PassThru]
+        [-Recurse]
+        [-Concurrency <Int32>]
+        [-ShowProgress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByACLObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeStoreItemAclEntry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-AceType] <AceType>
+        [[-Id] <Guid>]
+        [-Permissions] <Permission>
+        [-Default]
+        [-PassThru]
+        [-Recurse]
+        [-Concurrency <Int32>]
+        [-ShowProgress]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetSpecificACE
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+AceType" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+Permission" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItemAce" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify permissions for an ACE'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All
+    ```
+
+    This command modifies the ACE for Patti Fuller to have all permissions.
+- title: 'Example 2: Modify permissions for an ACE recursively'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -AceType User -Id (Get-AzADUser -Mail "PattiFuller@contoso.com").ObjectId -Permissions All -Recurse -Concurrency 128
+    ```
+- title: 'Example 3: Modify permissions for an ACE recursively using Acl object'
+  description: |-
+    ```powershell
+    $fullAcl="user:userid1:--x,default:user:userid1:--x"
+    $newFullAcl = $fullAcl.Split(",")
+    Set-AzDataLakeStoreItemAclEntry -AccountName "ContosoADL" -Path / -Acl $newFullAcl -Recurse -Concurrency 128 -ShowProgress -Verbose
+    ```
+
+    This command recursively modifies the ACE for Patti Fuller to have all permissions to root and all its subdirectories and files.
+links:
+- text: Remove-AzDataLakeStoreItemAclEntry
+  href: ./Remove-AzDataLakeStoreItemAclEntry.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemAclEntry.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/set-azdatalakestoreitemaclentry
+  Module Name: Az.DataLakeStore
+  ms.assetid: 0671D833-8B3A-4480-A576-92F1A9E8CE92
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemAclEntry.md
+  PlatyPS schema version: 2024-05-01

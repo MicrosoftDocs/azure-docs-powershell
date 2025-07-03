@@ -1,0 +1,388 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearning.Update-AzMlWebService
+name: Update-AzMlWebService
+module: Az.MachineLearning
+isPreview: false
+summary: |-
+  Updates properties of an existing web service resource.
+description: |-
+  The Update-AzMlWebService cmdlet allows you to update the non-static properties of a web service.
+  The cmdlet works as a patch operation.
+  Pass only the properties that you want modified.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
+parameters:
+  cmdletParameters:
+  - name: Assets
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of assets (e.g. modules, datasets) that make up the web service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The new value for the web service's description.
+      This is visible in the service's Swagger API schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Diagnostics
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.DiagnosticsConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The settings that control the diagnostics traces collection for the web service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Input
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification" data-throw-if-not-resolved="False" />
+    description: |-
+      The definition for the web service's input(s), provided as a Swagger schema construct.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsReadOnly
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this web service is readonly.
+      Once set, the web service can longer be updated, including changing the value of this property, and can only be deleted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Keys
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys" data-throw-if-not-resolved="False" />
+    description: |-
+      Updates one or both of the access keys used to authenticate calls to the service's runtime APIs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the web service resource to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Output
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.ServiceInputOutputSpecification" data-throw-if-not-resolved="False" />
+    description: |-
+      The definition for the web service's output(s), provided as a Swagger schema construct.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.GraphPackage" data-throw-if-not-resolved="False" />
+    description: |-
+      The definition of the graph package that defines this web service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameters
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of global parameters values defined for the web service, given as a global parameter name -\> default value collection.
+      If no default value is specified, the parameter is considered to be required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RealtimeConfiguration
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.RealtimeConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Updates for the configuration of the service's realtime endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group that contains the web service to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUpdates
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+    description: |-
+      A set of updates to apply to the web service provided as a web service definition instance.
+      Only non-static fields are modified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Rotates the access key for the storage account associated with the web service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Title
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The new value for the web service's title.
+      This is visible in the service's Swagger API schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateFromParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzMlWebService
+        -ResourceGroupName <String>
+        -Name <String>
+        [-Title <String>]
+        [-Description <String>]
+        [-IsReadOnly]
+        [-Keys <WebServiceKeys>]
+        [-StorageAccountKey <String>]
+        [-Diagnostics <DiagnosticsConfiguration>]
+        [-RealtimeConfiguration <RealtimeConfiguration>]
+        [-Assets <Hashtable>]
+        [-Input <ServiceInputOutputSpecification>]
+        [-Output <ServiceInputOutputSpecification>]
+        [-Parameters <Hashtable>]
+        [-Package <GraphPackage>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateFromParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzMlWebService
+        -ResourceGroupName <String>
+        -Name <String>
+        -ServiceUpdates <WebService>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateFromObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Selective update arguments'
+  description: |-
+    ```powershell
+    Update-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -Description "new update to description" -Keys @{Primary='changed primary key'} -Diagnostics @{Level='All'}
+    ```
+
+    Here, we change the description, primary access key and enable the diagnostics collection for all traces during runtime for the web service.
+- title: 'Example 2: Update based on a web service instance'
+  description: |-
+    ```powershell
+    $updates = @{ Properties = @{ Title="New Title"; RealtimeConfiguration = @{ MaxConcurrentCalls=25 }}}
+
+    Update-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename" -ServiceUpdates $updates
+    ```
+
+    The example first creates a web service definition, that only contains the fields to be updated, and then calls the Update-AzMlWebService to apply them using the ServiceUpdates parameter.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Update-AzMlWebService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearning/update-azmlwebservice
+  Module Name: Az.MachineLearning
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Update-AzMlWebService.md
+  PlatyPS schema version: 2024-05-01

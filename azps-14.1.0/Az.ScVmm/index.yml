@@ -1,0 +1,68 @@
+### YamlMime:PowerShellModule1
+uid: Az.ScVmm
+name: Az.ScVmm Module
+isPreview: false
+cmdletGroups:
+- title: ScVmm
+  cmdlets:
+  - Az.ScVmm.Add-AzScVmmVMDisk
+  - Az.ScVmm.Add-AzScVmmVMNic
+  - Az.ScVmm.Get-AzScVmmAvailabilitySet
+  - Az.ScVmm.Get-AzScVmmCloud
+  - Az.ScVmm.Get-AzScVmmInventoryItem
+  - Az.ScVmm.Get-AzScVmmServer
+  - Az.ScVmm.Get-AzScVmmVirtualNetwork
+  - Az.ScVmm.Get-AzScVmmVM
+  - Az.ScVmm.Get-AzScVmmVMDisk
+  - Az.ScVmm.Get-AzScVmmVMExtension
+  - Az.ScVmm.Get-AzScVmmVMGuestAgent
+  - Az.ScVmm.Get-AzScVmmVMNic
+  - Az.ScVmm.Get-AzScVmmVMTemplate
+  - Az.ScVmm.New-AzScVmmAvailabilitySet
+  - Az.ScVmm.New-AzScVmmCloud
+  - Az.ScVmm.New-AzScVmmNetworkInterfaceObject
+  - Az.ScVmm.New-AzScVmmNetworkInterfaceUpdateObject
+  - Az.ScVmm.New-AzScVmmServer
+  - Az.ScVmm.New-AzScVmmVirtualDiskObject
+  - Az.ScVmm.New-AzScVmmVirtualDiskUpdateObject
+  - Az.ScVmm.New-AzScVmmVirtualNetwork
+  - Az.ScVmm.New-AzScVmmVM
+  - Az.ScVmm.New-AzScVmmVMCheckpoint
+  - Az.ScVmm.New-AzScVmmVMExtension
+  - Az.ScVmm.New-AzScVmmVMGuestAgent
+  - Az.ScVmm.New-AzScVmmVMTemplate
+  - Az.ScVmm.Remove-AzScVmmAvailabilitySet
+  - Az.ScVmm.Remove-AzScVmmCloud
+  - Az.ScVmm.Remove-AzScVmmServer
+  - Az.ScVmm.Remove-AzScVmmVirtualNetwork
+  - Az.ScVmm.Remove-AzScVmmVM
+  - Az.ScVmm.Remove-AzScVmmVMCheckpoint
+  - Az.ScVmm.Remove-AzScVmmVMDisk
+  - Az.ScVmm.Remove-AzScVmmVMExtension
+  - Az.ScVmm.Remove-AzScVmmVMNic
+  - Az.ScVmm.Remove-AzScVmmVMTemplate
+  - Az.ScVmm.Restart-AzScVmmVM
+  - Az.ScVmm.Restore-AzScVmmVMCheckpoint
+  - Az.ScVmm.Start-AzScVmmVM
+  - Az.ScVmm.Stop-AzScVmmVM
+  - Az.ScVmm.Update-AzScVmmAvailabilitySet
+  - Az.ScVmm.Update-AzScVmmCloud
+  - Az.ScVmm.Update-AzScVmmServer
+  - Az.ScVmm.Update-AzScVmmVirtualNetwork
+  - Az.ScVmm.Update-AzScVmmVM
+  - Az.ScVmm.Update-AzScVmmVMDisk
+  - Az.ScVmm.Update-AzScVmmVMExtension
+  - Az.ScVmm.Update-AzScVmmVMNic
+  - Az.ScVmm.Update-AzScVmmVMTemplate
+description: |-
+  Azure PowerShell cmdlets for managing Arc for SCVMM resources
+metadata:
+  Module Name: Az.ScVmm
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.ScVmm
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Az.ScVmm.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Az.ScVmm.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

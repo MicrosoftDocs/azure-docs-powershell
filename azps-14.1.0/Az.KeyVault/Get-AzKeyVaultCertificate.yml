@@ -1,0 +1,538 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultCertificate
+name: Get-AzKeyVaultCertificate
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Gets a certificate from a key vault.
+description: |-
+  The **Get-AzKeyVaultCertificate** cmdlet gets the specified certificate or the versions of a certificate from a key vault in Azure Key Vault.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludePending
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to include pending certificates in the output
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeVersions
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation gets all versions of the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificateAllVersions
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateAllVersionsInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateAllVersionsResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyVault object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateNameAndVersionInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateAllVersionsInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InRemovedState
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to include previously deleted certificates in the output
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the certificate to get.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameInputObject
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByNameResourceId
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyVault Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByCertificateNameAndVersionResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByCertificateAllVersionsResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateNameAndVersion
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateAllVersions
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of a certificate.
+    aliases:
+    - CertificateVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificateNameAndVersion
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateNameAndVersionInputObject
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByCertificateNameAndVersionResourceId
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [[-Name] <String>]
+        [-InRemovedState]
+        [-IncludePending]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        [-Version] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateNameAndVersion
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-VaultName] <String>
+        [-Name] <String>
+        [-IncludeVersions]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateAllVersions
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-InputObject] <PSKeyVault>
+        [[-Name] <String>]
+        [-InRemovedState]
+        [-IncludePending]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-InputObject] <PSKeyVault>
+        [-Name] <String>
+        [-Version] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateNameAndVersionInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-InputObject] <PSKeyVault>
+        [-Name] <String>
+        [-IncludeVersions]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateAllVersionsInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-ResourceId] <String>
+        [[-Name] <String>]
+        [-InRemovedState]
+        [-IncludePending]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-ResourceId] <String>
+        [-Name] <String>
+        [-Version] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateNameAndVersionResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultCertificate
+        [-ResourceId] <String>
+        [-Name] <String>
+        [-IncludeVersions]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateAllVersionsResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificate" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificate" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a certificate'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "TestCert01"
+    ```
+
+    ```output
+    Name        : testCert01
+    Certificate : [Subject]
+                    CN=contoso.com
+
+                  [Issuer]
+                    CN=contoso.com
+
+                  [Serial Number]
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+                  [Not Before]
+                    2/8/2016 3:11:45 PM
+
+                  [Not After]
+                    8/8/2016 4:21:45 PM
+
+                  [Thumbprint]
+                    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    KeyId       : https://contoso.vault.azure.net:443/keys/TestCert01/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    SecretId    : https://contoso.vault.azure.net:443/secrets/TestCert01/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    Thumbprint  : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    Tags        :
+    Enabled     : True
+    Created     : 2/8/2016 11:21:45 PM
+    Updated     : 2/8/2016 11:21:45 PM
+    ```
+
+    This command gets the certificate named `TestCert01` from the key vault named `ContosoKV01`
+- title: 'Example 2: Get cert and save it as pfx'
+  description: |-
+    ```powershell
+    $CertBase64 = Get-AzKeyVaultSecret -VaultName $vaultName -Name $certName -AsPlainText
+    $CertBytes = [Convert]::FromBase64String($CertBase64)
+    Set-Content -Path cert.pfx -Value $CertBytes -AsByteStream
+    ```
+
+    This command gets the certificate named `$certName` from the key vault named `$vaultName`. These commands access secret `$certName` and then save the content as a pfx file.
+- title: 'Example 3: Get all the certificates that have been deleted but not purged for this key vault.'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultCertificate -VaultName 'contoso' -InRemovedState
+    ```
+
+    ```output
+    DeletedDate        : 5/24/2018 6:08:32 PM
+    Enabled            : True
+    Expires            : 11/24/2018 6:08:13 PM
+    NotBefore          : 5/24/2018 5:58:13 PM
+    Created            : 5/24/2018 6:08:13 PM
+    Updated            : 5/24/2018 6:08:13 PM
+    Tags               :
+    VaultName          : contoso
+    Name               : test1
+    Version            :
+    Id                 : https://contoso.vault.azure.net:443/certificates/test1
+
+    ScheduledPurgeDate : 8/22/2018 6:10:47 PM
+    DeletedDate        : 5/24/2018 6:10:47 PM
+    Enabled            : True
+    Expires            : 11/24/2018 6:09:44 PM
+    NotBefore          : 5/24/2018 5:59:44 PM
+    Created            : 5/24/2018 6:09:44 PM
+    Updated            : 5/24/2018 6:09:44 PM
+    Tags               :
+    VaultName          : contoso
+    Name               : test2
+    Version            :
+    Id                 : https://contoso.vault.azure.net:443/certificates/test2
+    ```
+
+    This command gets all the certificates that have been previously deleted, but not purged, in the key vault named Contoso.
+- title: 'Example 4: Gets the certificate MyCert that has been deleted but not purged for this key vault.'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultCertificate -VaultName 'contoso' -Name 'test1' -InRemovedState
+    ```
+
+    ```output
+    Certificate        : [Subject]
+                           CN=contoso.com
+
+                         [Issuer]
+                           CN=contoso.com
+
+                         [Serial Number]
+                           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+                         [Not Before]
+                           5/24/2018 10:58:13 AM
+
+                         [Not After]
+                           11/24/2018 10:08:13 AM
+
+                         [Thumbprint]
+                           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    KeyId              : https://contoso.vault.azure.net:443/keys/test1/7fe415d5518240c1a6fce89986b8d334
+    SecretId           : https://contoso.vault.azure.net:443/secrets/test1/7fe415d5518240c1a6fce89986b8d334
+    Thumbprint         : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    RecoveryLevel      : Recoverable+Purgeable
+    ScheduledPurgeDate : 8/22/2018 6:08:32 PM
+    DeletedDate        : 5/24/2018 6:08:32 PM
+    Enabled            : True
+    Expires            : 11/24/2018 6:08:13 PM
+    NotBefore          : 5/24/2018 5:58:13 PM
+    Created            : 5/24/2018 6:08:13 PM
+    Updated            : 5/24/2018 6:08:13 PM
+    Tags               :
+    VaultName          : contoso
+    Name               : test1
+    Version            : 7fe415d5518240c1a6fce89986b8d334
+    Id                 : https://contoso.vault.azure.net:443/certificates/test1/7fe415d5518240c1a6fce89986b8d334
+    ```
+
+    This command gets the certificate named 'MyCert' that has been previously deleted, but not purged, in the key vault named Contoso.
+    This command will return metadata such as the deletion date, and the scheduled purging date of this deleted certificate.
+- title: 'Example 5: List certificates using filtering'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultCertificate -VaultName "ContosoKV01" -Name "test*"
+    ```
+
+    ```output
+    Enabled   : True
+    Expires   : 8/5/2019 2:39:25 AM
+    NotBefore : 2/5/2019 2:29:25 AM
+    Created   : 2/5/2019 2:39:25 AM
+    Updated   : 2/5/2019 2:39:25 AM
+    Tags      :
+    VaultName : ContosoKV01
+    Name      : test1
+    Version   :
+    Id        : https://ContosoKV01.vault.azure.net:443/certificates/test1
+
+    Enabled   : True
+    Expires   : 8/5/2019 2:39:25 AM
+    NotBefore : 2/5/2019 2:29:25 AM
+    Created   : 2/5/2019 2:39:25 AM
+    Updated   : 2/5/2019 2:39:25 AM
+    Tags      :
+    VaultName : ContosoKV01
+    Name      : test2
+    Version   :
+    Id        : https://ContosoKV01.vault.azure.net:443/certificates/test2
+    ```
+
+    This command gets all certificates starting with "test" from the key vault named ContosoKV01.
+links:
+- text: Add-AzKeyVaultCertificate
+  href: ./Add-AzKeyVaultCertificate.yml
+- text: Import-AzKeyVaultCertificate
+  href: ./Import-AzKeyVaultCertificate.yml
+- text: Remove-AzKeyVaultCertificate
+  href: ./Remove-AzKeyVaultCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultcertificate
+  Module Name: Az.KeyVault
+  ms.assetid: 363FA51E-D075-4800-A4BE-BFF63FD25C90
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultCertificate.md
+  PlatyPS schema version: 2024-05-01

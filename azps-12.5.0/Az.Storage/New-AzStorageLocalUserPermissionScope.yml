@@ -1,0 +1,136 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageLocalUserPermissionScope
+name: New-AzStorageLocalUserPermissionScope
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates a permission scope object, which can be used in Set-AzStorageLocalUser.
+description: |-
+  The **New-AzStorageLocalUserPermissionScope** cmdlet creates a permission scope object, which can be used in Set-AzStorageLocalUser.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the permissions for the local user. Possible values include: Read(r), Write (w), Delete (d), List (l), and Create (c).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of resource, normally the container name or the file share name, used by the local user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the service used by the local user, e.g.
+      blob, file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageLocalUserPermissionScope
+        -Permission <String>
+        -Service <String>
+        -ResourceName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSPermissionScope" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create permission scope objects, then create or update local user with the permission scope objects.'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $permissionScope1 = New-AzStorageLocalUserPermissionScope -Permission rw -Service blob -ResourceName container1
+
+    $permissionScope2 = New-AzStorageLocalUserPermissionScope -Permission rwd -Service file -ResourceName share2
+
+    $localuser = Set-AzStorageLocalUser -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -UserName testuser1 -HomeDirectory "/" -PermissionScope $permissionScope1,$permissionScope2
+
+    $localuser
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys
+    ----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------
+    testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /                                                   [container1,...]
+
+    $localuser.PermissionScopes
+
+    Permissions Service ResourceName
+    ----------- ------- ------------
+    rw          blob    container1
+    rwd         file    share2
+    ```
+
+    This first 2 commands create 2 permission scope objects.
+    The following commands create or update a local user with the permission scope objects, then show the updated local user properties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserPermissionScope.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragelocaluserpermissionscope
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserPermissionScope.md
+  PlatyPS schema version: 2024-05-01

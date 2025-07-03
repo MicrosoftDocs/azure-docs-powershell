@@ -1,0 +1,52 @@
+### YamlMime:PowerShellModule1
+uid: Az.Marketplace
+name: Az.Marketplace Module
+isPreview: false
+cmdletGroups:
+- title: Marketplace
+  cmdlets:
+  - Az.Marketplace.Copy-AzMarketplacePrivateStoreCollectionOffer
+  - Az.Marketplace.Disable-AzMarketplacePrivateStoreCollectionAllItem
+  - Az.Marketplace.Enable-AzMarketplacePrivateStoreCollectionAllItem
+  - Az.Marketplace.Get-AzMarketplaceBillingPrivateStoreAccount
+  - Az.Marketplace.Get-AzMarketplaceCollectionToSubscriptionMapping
+  - Az.Marketplace.Get-AzMarketplacePrivateStore
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreAllSubscriptionInTenant
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreCollection
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreCollectionMapOffersToContext
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreCollectionOffer
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreCollectionRule
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreNewPlanNotification
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreOffer
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreSubscription
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreUserOffer
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreUserRule
+  - Az.Marketplace.Get-AzMarketplacePrivateStoreV1
+  - Az.Marketplace.Get-AzMarketplaceQueryPrivateStoreOffer
+  - Az.Marketplace.New-AzMarketplacePrivateStore
+  - Az.Marketplace.New-AzMarketplacePrivateStoreCollection
+  - Az.Marketplace.New-AzMarketplacePrivateStoreCollectionOffer
+  - Az.Marketplace.New-AzMarketplacePrivateStoreCollectionOfferMultiContext
+  - Az.Marketplace.Remove-AzMarketplacePrivateStoreCollection
+  - Az.Marketplace.Remove-AzMarketplacePrivateStoreCollectionOffer
+  - Az.Marketplace.Remove-AzMarketplacePrivateStoreOffer
+  - Az.Marketplace.Set-AzMarketplaceBulkPrivateStoreCollectionAction
+  - Az.Marketplace.Set-AzMarketplacePrivateStore
+  - Az.Marketplace.Set-AzMarketplacePrivateStoreCollection
+  - Az.Marketplace.Set-AzMarketplacePrivateStoreCollectionOffer
+  - Az.Marketplace.Set-AzMarketplacePrivateStoreOffer
+  - Az.Marketplace.Test-AzMarketplacePrivateStoreAnyExistingOffer
+  - Az.Marketplace.Update-AzMarketplacePrivateStoreCollection
+  - Az.Marketplace.Update-AzMarketplacePrivateStoreCollectionOffer
+description: |-
+  Commands to interact with Azure Marketplace.
+metadata:
+  Module Name: Az.Marketplace
+  Module Guid: 91832aaa-dc11-4583-8239-bce5fd531604
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.marketplace
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Az.Marketplace.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Marketplace/Marketplace/help/Az.Marketplace.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

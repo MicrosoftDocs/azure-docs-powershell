@@ -1,0 +1,663 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzADServicePrincipal
+name: New-AzADServicePrincipal
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates a new Microsoft Entra service principal.
+description: |-
+  Creates a new Microsoft Entra service principal. The default parameter set uses default values for parameters if the user does not provide one for them. For more information on the default values used, please see the description for the given parameters below.
+  This cmdlet has the ability to assign a role to the service principal with the `Role` and `Scope` parameters; if neither of these parameters are provided, no role will be assigned to the service principal. The default values for the `Role` and `Scope` parameters are "Contributor" and the current subscription, respectively (_note_: the defaults are only used when the user provides a value for one of the two parameters, but not the other).
+  The cmdlet also implicitly creates an application and sets its properties (if the ApplicationId is not provided). In order to update the application specific parameters please use Set-AzADApplication cmdlet.
+
+  > [!WARNING]
+  > When you create a service principal using the **New-AzADServicePrincipal** command, the output includes credentials that you must protect. As an alternative, consider using [managed identities](/azure/active-directory/managed-identities-azure-resources/overview) to avoid the need to use credentials.
+  >
+  > By default, **New-AzADServicePrincipal** assigns the [Contributor](/azure/role-based-access-control/built-in-roles#contributor) role to the service principal at the subscription scope. To reduce your risk of a compromised service principal, assign a more specific role and narrow the scope to a resource or resource group. See [Steps to add a role assignment](/azure/role-based-access-control/role-assignments-steps) for more information.
+notes: |-
+  Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment
+parameters:
+  cmdletParameters:
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique application id for a service principal in a tenant.
+      Once created this property cannot be changed.
+      If an application id is not specified, one will be generated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationObject
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      The object representing the application for which the service principal is created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObjectWithoutCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithPasswordPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithPasswordCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithKeyPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithKeyCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the "asymmetric" credential type.
+      It represents the base 64 encoded certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithKeyPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DisplayNameWithKeyPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The friendly name of the service principal. If a display name is not provided, this value will default to 'azure-powershell-MM-dd-yyyy-HH-mm-ss', where the suffix is the time of application creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective end date of the credential usage.
+      The default end date value is one year from today.
+      For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithPasswordPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyCredential
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The collection of key credentials associated with the application.
+    aliases:
+    - KeyCredentials
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithKeyCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DisplayNameWithKeyCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password to be associated with the service principal. If a password is not provided, a random GUID will be generated and used as the password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordCredential
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The collection of password credentials associated with the application.
+    aliases:
+    - PasswordCredentials
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithPasswordCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DisplayNameWithPasswordCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The role that the service principal has over the scope. If a value for `Scope` is provided, but no value is provided for `Role`, then `Role` will default to the 'Contributor' role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope that the service principal has permissions on. If a value for `Role` is provided, but no value is provided for `Scope`, then `Scope` will default to the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipAssignment
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If set, will skip creating the default role assignment for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective start date of the credential usage.
+      The default start date value is today.
+      For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithPasswordPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ApplicationObjectWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        [-ApplicationId <Guid>]
+        [-DisplayName <String>]
+        [-Password <SecureString>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-Scope <String>]
+        [-Role <String>]
+        [-SkipAssignment]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SimpleParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationId <Guid>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithoutCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationId <Guid>
+        -Password <SecureString>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithPasswordPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationId <Guid>
+        -PasswordCredential <PSADPasswordCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithPasswordCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationId <Guid>
+        -CertValue <String>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithKeyPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationId <Guid>
+        -KeyCredential <PSADKeyCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithKeyCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithoutCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -Password <SecureString>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithPasswordPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -PasswordCredential <PSADPasswordCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithPasswordCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -CertValue <String>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithKeyPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -KeyCredential <PSADKeyCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithKeyCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <PSADApplication>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectWithoutCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <PSADApplication>
+        -Password <SecureString>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectWithPasswordPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <PSADApplication>
+        -PasswordCredential <PSADPasswordCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectWithPasswordCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <PSADApplication>
+        -CertValue <String>
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectWithKeyPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <PSADApplication>
+        -KeyCredential <PSADKeyCredential[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectWithKeyCredentialParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameters: ApplicationObject (ByValue)
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.Authorization.PSADServicePrincipalWrapper" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Simple AD service principal creation
+  description: |-
+    ```
+    PS C:\> New-AzADServicePrincipal
+
+    Secret                : System.Security.SecureString
+    ServicePrincipalNames : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx, http://azure-powershell-05-22-2018-18-23-43}
+    ApplicationId         : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    DisplayName           : azure-powershell-05-22-2018-18-23-43
+    Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Type                  : ServicePrincipal
+    ```
+
+    The above command creates an AD service principal using default values for parameters not provided. Since an application id was not provided, an application was created for the service principal. Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.
+- title: Example 2 - Simple AD service principal creation with a specified role and default scope
+  description: |-
+    ```
+    PS C:\> New-AzADServicePrincipal -Role Reader
+
+    Secret                : System.Security.SecureString
+    ServicePrincipalNames : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx, http://azure-powershell-05-22-2018-18-23-43}
+    ApplicationId         : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    DisplayName           : azure-powershell-05-22-2018-18-23-43
+    Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Type                  : ServicePrincipal
+
+    WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz' to the new service principal.
+    ```
+
+    The above command creates an AD service principal using the default values for parameters not provided. Since the application id was not provided, an application was created for the service principal. The service principal was created with "Reader" permissions over the current subscription (since no value was provided for the `Scope` parameter).
+- title: Example 3 - Simple AD service principal creation with a specified scope and default role
+  description: |-
+    ```
+    PS C:\> New-AzADServicePrincipal -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
+
+    Secret                : System.Security.SecureString
+    ServicePrincipalNames : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx, http://azure-powershell-05-22-2018-18-23-43}
+    ApplicationId         : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    DisplayName           : azure-powershell-05-22-2018-18-23-43
+    Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Type                  : ServicePrincipal
+
+    WARNING: Assigning role 'Contributor' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
+    ```
+
+    The above command creates an AD service principal using the default values for parameters not provided. Since the application id was not provided, an application was created for the service principal. The service principal was created with "Contributor" permissions (since no value was provided for the `Role` parameter) over the provided resource group scope.
+- title: Example 4 - Simple AD service principal creation with a specified scope and role
+  description: |-
+    ```
+    PS C:\> New-AzADServicePrincipal -Role Reader -Scope /subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup
+
+    Secret                : System.Security.SecureString
+    ServicePrincipalNames : {xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx, http://azure-powershell-05-22-2018-18-23-43}
+    ApplicationId         : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    DisplayName           : azure-powershell-05-22-2018-18-23-43
+    Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Type                  : ServicePrincipal
+
+    WARNING: Assigning role 'Reader' over scope '/subscriptions/zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz/resourceGroups/myResourceGroup' to the new service principal.
+    ```
+
+    The above command creates an AD service principal using the default values for parameters not provided. Since the application id was not provided, an application was created for the service principal. The service principal was created with "Reader" permissions over the provided resource group scope.
+- title: Example 5 - Create a new AD service principal using application id with role assignment
+  description: |-
+    ```
+    PS C:\> New-AzADServicePrincipal -ApplicationId 00001111-aaaa-2222-bbbb-3333cccc4444
+
+    ServicePrincipalNames : {00001111-aaaa-2222-bbbb-3333cccc4444, http://my-temp-app}
+    ApplicationId         : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName           : my-temp-app
+    Id                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    Type                  : ServicePrincipal
+    ```
+
+    Creates a new AD service principal for the application with application id '00001111-aaaa-2222-bbbb-3333cccc4444'. Since no values were provided for `Role` or `Scope`, the created service principal does not have any permissions.
+- title: Example 6 - Create a new AD service principal using piping
+  description: |-
+    ```
+    PS C:\> Get-AzADApplication -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | New-AzADServicePrincipal
+    ```
+
+    Gets the application with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the New-AzADServicePrincipal cmdlet to create a new AD service principal for that application.
+links:
+- text: Remove-AzADServicePrincipal
+  href: ./Remove-AzADServicePrincipal.yml
+- text: Get-AzADServicePrincipal
+  href: ./Get-AzADServicePrincipal.yml
+- text: New-AzADApplication
+  href: ./New-AzADApplication.yml
+- text: Remove-AzADApplication
+  href: ./Remove-AzADApplication.yml
+- text: Get-AzADSpCredential
+  href: ./Get-AzADSpCredential.yml
+- text: New-AzADSpCredential
+  href: ./New-AzADSpCredential.yml
+- text: Remove-AzADSpCredential
+  href: ./Remove-AzADSpCredential.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADServicePrincipal.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azadserviceprincipal
+  Module Name: Az.Resources
+  ms.assetid: D602F910-B26F-473D-B5B6-C7BDFB0A14CB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADServicePrincipal.md
+  PlatyPS schema version: 2024-05-01

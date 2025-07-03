@@ -1,0 +1,44 @@
+### YamlMime:PowerShellModule1
+uid: Az.ProviderHub
+name: Az.ProviderHub Module
+isPreview: false
+cmdletGroups:
+- title: ProviderHub
+  cmdlets:
+  - Az.ProviderHub.Get-AzProviderHubCustomRollout
+  - Az.ProviderHub.Get-AzProviderHubDefaultRollout
+  - Az.ProviderHub.Get-AzProviderHubNotificationRegistration
+  - Az.ProviderHub.Get-AzProviderHubProviderRegistration
+  - Az.ProviderHub.Get-AzProviderHubResourceTypeRegistration
+  - Az.ProviderHub.Get-AzProviderHubSku
+  - Az.ProviderHub.Invoke-AzProviderHubManifestCheckin
+  - Az.ProviderHub.New-AzProviderHubCustomRollout
+  - Az.ProviderHub.New-AzProviderHubDefaultRollout
+  - Az.ProviderHub.New-AzProviderHubManifest
+  - Az.ProviderHub.New-AzProviderHubNotificationRegistration
+  - Az.ProviderHub.New-AzProviderHubProviderRegistration
+  - Az.ProviderHub.New-AzProviderHubResourceTypeRegistration
+  - Az.ProviderHub.New-AzProviderHubSku
+  - Az.ProviderHub.Remove-AzProviderHubDefaultRollout
+  - Az.ProviderHub.Remove-AzProviderHubNotificationRegistration
+  - Az.ProviderHub.Remove-AzProviderHubProviderRegistration
+  - Az.ProviderHub.Remove-AzProviderHubResourceTypeRegistration
+  - Az.ProviderHub.Remove-AzProviderHubSku
+  - Az.ProviderHub.Stop-AzProviderHubDefaultRollout
+  - Az.ProviderHub.Update-AzProviderHubCustomRollout
+  - Az.ProviderHub.Update-AzProviderHubDefaultRollout
+  - Az.ProviderHub.Update-AzProviderHubNotificationRegistration
+  - Az.ProviderHub.Update-AzProviderHubProviderRegistration
+  - Az.ProviderHub.Update-AzProviderHubResourceTypeRegistration
+description: |-
+  Microsoft Azure PowerShell: ProviderHub cmdlets
+metadata:
+  Module Name: Az.ProviderHub
+  Module Guid: b1f92a18-bc07-49c3-9938-cde7ef64659f
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.providerhub
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/ProviderHub/help/Az.ProviderHub.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ProviderHub/ProviderHub/help/Az.ProviderHub.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

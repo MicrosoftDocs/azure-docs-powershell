@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PaloAltoNetworks.New-AzPaloAltoNetworksFrontendSettingObject
+name: New-AzPaloAltoNetworksFrontendSettingObject
+module: Az.PaloAltoNetworks
+isPreview: false
+summary: |-
+  Create an in-memory object for FrontendSetting.
+description: |-
+  Create an in-memory object for FrontendSetting.
+parameters:
+  cmdletParameters:
+  - name: Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendConfigurationAddress1
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendConfigurationAddressResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendConfigurationPort
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      port ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendConfigurationAddressResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendConfigurationPort
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      port ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Settings name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol Type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPaloAltoNetworksFrontendSettingObject
+        -BackendConfigurationPort <String>
+        -FrontendConfigurationPort <String>
+        -Name <String>
+        -Protocol <String>
+        [-Address <String>]
+        [-BackendConfigurationAddress1 <String>]
+        [-BackendConfigurationAddressResourceId <String>]
+        [-FrontendConfigurationAddressResourceId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.FrontendSetting" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for FrontendSetting.'
+  description: |-
+    ```powershell
+    New-AzPaloAltoNetworksFrontendSettingObject -BackendConfigurationPort "80" -FrontendConfigurationPort "80" -Name "azps-panfs" -Protocol 'TCP' -Address "20.22.91.251" -BackendConfigurationAddress1 "20.22.32.136" -BackendConfigurationAddressResourceId "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/mj-liftr-integration/providers/Microsoft.Network/publicIPAddresses/mj-liftr-integration-frontendSettingIp2" -FrontendConfigurationAddressResourceId "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/mj-liftr-integration/providers/Microsoft.Network/publicIPAddresses/mj-liftr-integration-frontendSettingIp1"
+    ```
+
+    ```output
+    Name       Protocol
+    ----       --------
+    azps-panfs TCP
+    ```
+
+    Create an in-memory object for FrontendSetting.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksFrontendSettingObject.md
+  document type: cmdlet
+  external help file: Az.PaloAltoNetworks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.PaloAltoNetworks/new-azpaloaltonetworksfrontendsettingobject
+  Module Name: Az.PaloAltoNetworks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksFrontendSettingObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryRecoveryPlan
+name: Get-AzureSiteRecoveryRecoveryPlan
+module: Azure
+isPreview: false
+summary: |-
+  Gets a recovery plan in Site Recovery.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryRecoveryPlan** cmdlet gets a recovery plan in Azure Site Recovery.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the recovery plan to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the recovery plan to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryRecoveryPlan
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryRecoveryPlan
+        -Id <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryRecoveryPlan
+        -Name <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+examples:
+- title: 'Example 1: Get a recovery plan'
+  description: |-
+    ```
+    PS C:\> Get-AzureSiteRecoveryRecoveryPlan
+    ID                            Name                          ServerId                      TargetServerId
+    --                            ----                          --------                      --------------
+    71de8ebc-1e9a-4242-aec3-ee... ContosoPlan                   4a94c4a9-c856-4577-afbd-36... 78facf56-b273-4941-82fd-cc...
+    ```
+
+    This command gets information about the recovery plan for the current Azure Site Recovery vault.
+links:
+- text: New-AzureSiteRecoveryRecoveryPlan
+  href: ./New-AzureSiteRecoveryRecoveryPlan.yml
+- text: Remove-AzureSiteRecoveryRecoveryPlan
+  href: ./Remove-AzureSiteRecoveryRecoveryPlan.yml
+- text: Update-AzureSiteRecoveryRecoveryPlan
+  href: ./Update-AzureSiteRecoveryRecoveryPlan.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8557B04E-DE35-473E-8F5D-B72B70300AA6
+  PlatyPS schema version: 2024-05-01

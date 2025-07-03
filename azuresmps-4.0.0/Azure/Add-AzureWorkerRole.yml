@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureWorkerRole
+name: Add-AzureWorkerRole
+module: Azure
+isPreview: false
+summary: |-
+  Creates required files and configuration for a custom worker role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Add-AzureWorkerRole** cmdlet creates required files and configuration, sometimes referred to as scaffolding, for a custom worker role.
+parameters:
+  cmdletParameters:
+  - name: Instances
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of role instances for this worker role.
+      The default is 1.
+    aliases:
+    - i
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the worker role.
+      This value determines the folder name that contains the scaffolding for the custom application that will be hosted in the worker role.
+      The default is WorkerRolenumber, where number is the number of worker roles in the service.
+    aliases:
+    - n
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFolder
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scaffolding template folder to be used to create the worker role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureWorkerRole
+        [-TemplateFolder <String>]
+        [-Name <String>]
+        [-Instances <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a single instance worker role'
+  description: |-
+    ```
+    PS C:\> Add-AzureWorkerRole -Name MyWorkerRole
+    ```
+
+    This example adds scaffolding for a single worker role named MyWorkerRole to the current application.
+- title: 'Example 2: Create a multiple instance worker role'
+  description: |-
+    ```
+    PS C:\> Add-AzureWorkerRole MyWorkerRole -I 2
+    ```
+
+    This example adds scaffolding for a new worker role named MyWorkerRole to the current application, with a role instance count of 2.
+- title: 'Example 3: Create worker role with custom scaffolding'
+  description: |-
+    ```
+    PS C:\> Add-AzureWorkerRole MyWorkerRole -TemplateFolder .\MyWorkerRoleTemplate
+    ```
+
+    This example creates a worker role with custom scaffolding.
+links:
+- text: Add-AzureWebRole
+  href: ./Add-AzureWebRole.yml
+- text: New-AzureRoleTemplate
+  href: ./New-AzureRoleTemplate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8632A865-D4CC-4AE5-8307-055CDD776D26
+  PlatyPS schema version: 2024-05-01

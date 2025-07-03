@@ -1,0 +1,100 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Disconnect-AzureRemoteAppSession
+name: Disconnect-AzureRemoteAppSession
+module: Azure
+isPreview: false
+summary: |-
+  Disconnects an Azure RemoteApp session.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Disconnect-AzureRemoteAppSession** cmdlet disconnects a user's Azure RemoteApp session.
+  The user's client disconnects from their Azure RemoteApp session, but the user's programs continue to run.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the User Principal Name (UPN) of a user, for example PattiFuller@contoso.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disconnect-AzureRemoteAppSession
+        [-CollectionName] <String>
+        [-UserUpn] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: "Example 1: Disconnect a user's session"
+  description: |-
+    ```
+    PS C:\> Disconnect-AzureRemoteAppSession -CollectionName "ContosoApps" -UserUpn "PattiFuller@contoso.com"
+    ```
+
+    This command disconnects the Azure RemoteApp session in the ContosoApps collection for the user whose UPN is PattiFuller@contoso.com.
+links:
+- text: Get-AzureRemoteAppSession
+  href: ./Get-AzureRemoteAppSession.yml
+- text: Invoke-AzureRemoteAppSessionLogoff
+  href: ./Invoke-AzureRemoteAppSessionLogoff.yml
+- text: Send-AzureRemoteAppSessionMessage
+  href: ./Send-AzureRemoteAppSessionMessage.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 514C33F8-F0B8-4F37-AB2D-BB54DD754931
+  PlatyPS schema version: 2024-05-01

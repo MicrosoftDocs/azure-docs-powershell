@@ -1,0 +1,279 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzVMDataDisk
+name: New-AzVMDataDisk
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a local data disk object for a virtual machine or a Vmss VM.
+description: |-
+  The **New-AzVMDataDisk** cmdlet creates a local data disk object for a virtual machine or a Vmss VM.
+parameters:
+  cmdletParameters:
+  - name: Caching
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine data disk's caching.
+    acceptedValues:
+    - None
+    - ReadOnly
+    - ReadWrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreateOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine data disk's create option.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionSetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine managed disk encryption set's Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskSizeInGB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The virtual machine data disk's size in GB.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Lun
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine data disk's Lun.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedDiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine managed disk's Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedDiskParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine data disk's name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceImageUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine OS disk's source image Uri.
+    aliases:
+    - SourceImage
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NormalDiskParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine managed disk's account type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedDiskParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine data disk's Vhd Uri.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NormalDiskParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WriteAccelerator
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether WriteAccelerator should be enabled or disabled on a managed data disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedDiskParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVMDataDisk
+        [-Lun] <Int32>
+        [-CreateOption] <String>
+        [-Name <String>]
+        [-Caching <CachingTypes>]
+        [-DiskSizeInGB <Int32>]
+        [-VhdUri <String>]
+        [-SourceImageUri <String>]
+        [-DiskEncryptionSetId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NormalDiskParameterSetName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzVMDataDisk
+        [-Lun] <Int32>
+        [-CreateOption] <String>
+        [-Name <String>]
+        [-Caching <CachingTypes>]
+        [-DiskSizeInGB <Int32>]
+        [-ManagedDiskId <String>]
+        [-StorageAccountType <String>]
+        [-DiskEncryptionSetId <String>]
+        [-WriteAccelerator]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagedDiskParameterSetName
+  isDefault: false
+inputs:
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.CachingTypes" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineDataDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a managed data disk to a Vmss VM.'
+  description: |-
+    ```powershell
+    $disk = Get-AzDisk -ResourceGroupName $rgname -DiskName $diskname0
+    $datadisk = New-AzVMDataDisk -Caching 'ReadOnly' -Lun 2 -CreateOption Attach -StorageAccountType Standard_LRS -ManagedDiskId $disk.Id
+    $VmssVM = Get-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0
+    Update-AzVmssVM -ResourceGroupName "myrg" -VMScaleSetName "myvmss" -InstanceId 0 -DataDisk $datadisk
+    ```
+
+    The first command gets an existing managed disk.
+    The next command creates a data disk object with the managed disk.
+    The next command gets an existing Vmss VM given by the resource group name, the vmss name and the instance ID.
+    The final command updates the Vmss VM by adding a new data disk.
+- title: Example 2
+  description: |-
+    Creates a local data disk object for a virtual machine or a Vmss VM. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    New-AzVMDataDisk -Caching None -CreateOption Attach -DiskSizeInGB 1 -Lun 2 -Name 'AgentPool01'
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVMDataDisk.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/new-azvmdatadisk
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVMDataDisk.md
+  PlatyPS schema version: 2024-05-01

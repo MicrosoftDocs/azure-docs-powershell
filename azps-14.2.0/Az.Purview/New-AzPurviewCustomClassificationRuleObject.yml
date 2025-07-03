@@ -1,0 +1,151 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewCustomClassificationRuleObject
+name: New-AzPurviewCustomClassificationRuleObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for CustomClassificationRule.
+description: |-
+  Create an in-memory object for CustomClassificationRule.
+parameters:
+  cmdletParameters:
+  - name: ClassificationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ColumnPattern
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.IClassificationRulePattern" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataPattern
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.IClassificationRulePattern" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumPercentageMatch
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewCustomClassificationRuleObject
+        [-ClassificationName <String>]
+        [-ColumnPattern <IClassificationRulePattern[]>]
+        [-DataPattern <IClassificationRulePattern[]>]
+        [-Description <String>]
+        [-MinimumPercentageMatch <Double>]
+        [-RuleStatus <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.CustomClassificationRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create custom classification rule object'
+  description: |-
+    ```powershell
+    $reg1 = New-AzPurviewRegexClassificationRulePatternObject -Pattern '^col1$'
+    $reg2 = New-AzPurviewRegexClassificationRulePatternObject -Pattern '^col2$'
+    $regexarr = @($reg1, $reg2)
+    New-AzPurviewCustomClassificationRuleObject -ClassificationName ClassificationRule4 -MinimumPercentageMatch 60 -RuleStatus 'Enabled' -Description 'This is a rule2' -ColumnPattern $regexarr
+    ```
+
+    ```output
+    ClassificationAction   :
+    ClassificationName     : ClassificationRule4
+    ColumnPattern          : {{
+                               "kind": "Regex",
+                               "pattern": "^col1$"
+                             }, {
+                               "kind": "Regex",
+                               "pattern": "^col2$"
+                             }}
+    CreatedAt              :
+    DataPattern            :
+    Description            : This is a rule2
+    Id                     :
+    Kind                   : Custom
+    LastModifiedAt         :
+    MinimumPercentageMatch : 60
+    Name                   :
+    RuleStatus             : Enabled
+    Version                :
+    ```
+
+    Create custom classification rule object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewCustomClassificationRuleObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewcustomclassificationruleobject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewCustomClassificationRuleObject.md
+  PlatyPS schema version: 2024-05-01

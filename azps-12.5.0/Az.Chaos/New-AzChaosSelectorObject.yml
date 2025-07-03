@@ -1,0 +1,87 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Chaos.New-AzChaosSelectorObject
+name: New-AzChaosSelectorObject
+module: Az.Chaos
+isPreview: false
+summary: |-
+  Create an in-memory object for Selector.
+description: |-
+  Create an in-memory object for Selector.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      String of the selector ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enum of the selector type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzChaosSelectorObject
+        -Id <String>
+        -Type <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Chaos.Models.Selector" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Selector.'
+  description: |-
+    ```powershell
+    New-AzChaosSelectorObject -Id "selector1" -Type List
+    ```
+
+    ```output
+    Filter               : {
+                             "type": "Simple"
+                           }
+    FilterType           : Simple
+    Id                   : selector1
+    Type                 : List
+    Keys                 : {}
+    Values               : {}
+    Count                : 0
+    AdditionalProperties : {}
+    ```
+
+    Create an in-memory object for Selector.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosSelectorObject.md
+  document type: cmdlet
+  external help file: Az.Chaos-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Chaos/new-azchaosselectorobject
+  Module Name: Az.Chaos
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/New-AzChaosSelectorObject.md
+  PlatyPS schema version: 2024-05-01

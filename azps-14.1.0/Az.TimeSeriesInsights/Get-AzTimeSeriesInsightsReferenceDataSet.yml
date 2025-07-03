@@ -1,0 +1,218 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsReferenceDataSet
+name: Get-AzTimeSeriesInsightsReferenceDataSet
+module: Az.TimeSeriesInsights
+isPreview: false
+summary: |-
+  Gets the reference data set with the specified name in the specified environment.
+description: |-
+  Gets the reference data set with the specified name in the specified environment.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnvironmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Time Series Insights environment associated with the specified resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Time Series Insights reference data set associated with the specified environment.
+    aliases:
+    - ReferenceDataSetName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of an Azure Resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsReferenceDataSet
+        -EnvironmentName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsReferenceDataSet
+        -EnvironmentName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsReferenceDataSet
+        -InputObject <ITimeSeriesInsightsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.IReferenceDataSetResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all reference data sets under the specified environment'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsReferenceDataSet -EnvironmentName tsitest001 -ResourceGroupName testgroup
+    ```
+
+    ```output
+    Location Name      Type
+    -------- ----      ----
+    eastus   dstest001 Microsoft.TimeSeriesInsights/Environments/ReferenceDataSets
+    eastus   dstest002 Microsoft.TimeSeriesInsights/Environments/ReferenceDataSets
+    ```
+
+    This command lists all reference data sets under the specified environment.
+- title: 'Example 2: Get a specified reference data set by name'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsReferenceDataSet -EnvironmentName tsitest001 -ResourceGroupName testgroup -ReferenceDataSetName dstest001
+    ```
+
+    ```output
+    Location Name      Type
+    -------- ----      ----
+    eastus   dstest001 Microsoft.TimeSeriesInsights/Environments/ReferenceDataSets
+    ```
+
+    This command gets a specified reference data set.
+- title: 'Example 3: Get a specified reference data set by object'
+  description: |-
+    ```powershell
+    $ds = Get-AzTimeSeriesInsightsReferenceDataSet -ResourceGroupName tsi-test-i01k5l -EnvironmentName tsi-envv8u56x -Name tsirdsqwufij
+    Get-AzTimeSeriesInsightsReferenceDataSet -InputObject $ds
+    ```
+
+    ```output
+    Location Name         Type
+    -------- ----         ----
+    eastus2  tsirdsqwufij Microsoft.TimeSeriesInsights/Environments/ReferenceDataSets
+    ```
+
+    This command gets a specified reference data set.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsReferenceDataSet.md
+  document type: cmdlet
+  external help file: Az.TimeSeriesInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightsreferencedataset
+  Module Name: Az.TimeSeriesInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsReferenceDataSet.md
+  PlatyPS schema version: 2024-05-01

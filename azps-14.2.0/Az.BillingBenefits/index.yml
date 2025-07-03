@@ -1,0 +1,31 @@
+### YamlMime:PowerShellModule1
+uid: Az.BillingBenefits
+name: Az.BillingBenefits Module
+isPreview: false
+cmdletGroups:
+- title: BillingBenefits
+  cmdlets:
+  - Az.BillingBenefits.Get-AzBillingBenefitsReservationOrderAlias
+  - Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlan
+  - Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlanList
+  - Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlanOrder
+  - Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlanOrderAlias
+  - Az.BillingBenefits.Invoke-AzBillingBenefitsElevateSavingPlanOrder
+  - Az.BillingBenefits.Invoke-AzBillingBenefitsSavingsPlanPurchaseValidation
+  - Az.BillingBenefits.Invoke-AzBillingBenefitsSavingsPlanUpdateValidation
+  - Az.BillingBenefits.New-AzBillingBenefitsReservationOrderAlias
+  - Az.BillingBenefits.New-AzBillingBenefitsSavingsPlanOrderAlias
+  - Az.BillingBenefits.Update-AzBillingBenefitsSavingsPlan
+  - Az.BillingBenefits.Update-AzBillingBenefitsSavingsPlanOrderAlias
+description: |-
+  Microsoft Azure PowerShell: BillingBenefits cmdlets
+metadata:
+  Module Name: Az.BillingBenefits
+  Module Guid: 7c220d70-27ec-4403-aedd-429aa925a6a6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.billingbenefits
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Az.BillingBenefits.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Az.BillingBenefits.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

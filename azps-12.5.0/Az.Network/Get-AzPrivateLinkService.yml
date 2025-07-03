@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzPrivateLinkService
+name: Get-AzPrivateLinkService
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets private link service
+description: |-
+  The **Get-AzPrivateLinkService** cmdlet gets one or more private link services.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandResource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource reference to be expanded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Expand
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoExpand
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NoExpand
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPrivateLinkService
+        [-Name <String>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoExpand
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPrivateLinkService
+        -Name <String>
+        -ResourceGroupName <String>
+        -ExpandResource <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Expand
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPrivateLinkService" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzPrivateLinkService -Name MyPLS -ResourceGroupName TestResourceGroup
+    ```
+
+    ```output
+    Name                                 : MyPLS
+    ResourceGroupName                    : TestResourceGroup
+    Id                                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestResourceGroup/prov
+                                           iders/Microsoft.Network/privateLinkServices/MyPLS
+    Location                             : eastus2euap
+    Type                                 : Microsoft.Network/privateLinkServices
+    Etag                                 : W/"00000000-0000-0000-0000-000000000000"
+    Tag                                  : {}
+    ProvisioningState                    : Succeeded
+    Visibility                           :
+    AutoApproval                         :
+    Alias                                :
+    LoadBalancerFrontendIpConfigurations : []
+    IpConfigurations                     : [
+                                             {
+                                               "PrivateIPAddress": "10.0.2.5",
+                                               "PrivateIPAllocationMethod": "Static",
+                                               "ProvisioningState": "Failed",
+                                               "PrivateIPAddressVersion": "IPv4",
+                                               "Name": "IP-Config",
+                                               "Subnet": {
+                                                 "Delegations": [],
+                                                 "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/
+                                           TestResourceGroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/backendSubne
+                                           t",
+                                                 "ServiceAssociationLinks": []
+                                               }
+                                             }
+                                           ]
+    PrivateEndpointConnections           : []
+    NetworkInterfaces                    : [
+                                             {
+                                               "TapConfigurations": [],
+                                               "HostedWorkloads": [],
+                                               "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestResourceGroup/providers/Microsoft.Network/networkInterfaces/mytestinterface"
+                                             }
+                                           ]
+    ```
+
+    This commandlet gets a private link service in the resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzPrivateLinkService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azprivatelinkservice
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzPrivateLinkService.md
+  PlatyPS schema version: 2024-05-01

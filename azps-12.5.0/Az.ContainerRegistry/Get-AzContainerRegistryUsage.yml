@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerRegistry.Get-AzContainerRegistryUsage
+name: Get-AzContainerRegistryUsage
+module: Az.ContainerRegistry
+isPreview: false
+summary: |-
+  Gets the quota usages for the specified container registry.
+description: |-
+  Gets the quota usages for the specified container registry.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the container registry.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzContainerRegistryUsage
+        -RegistryName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegistryUsage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Usage of an azure container registry.'
+  description: |-
+    ```powershell
+    Get-AzContainerRegistryUsage -ResourceGroupName "MyResourceGroup" -RegistryName "RegistryExample"
+    ```
+
+    ```output
+    CurrentValue Limit        Name                       Unit
+    ------------ -----        ----                       ----
+    0            536870912000 Size                       Bytes
+    0            500          Webhooks                   Count
+    2            -1           Geo-replications           Count
+    0            100          IPRules                    Count
+    0            100          VNetRules                  Count
+    0            200          PrivateEndpointConnections Count
+    0            50000        ScopeMaps                  Count
+    0            50000        Tokens                     Count
+    ```
+
+    Get Usage of an azure container registry.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistryUsage.md
+  document type: cmdlet
+  external help file: Az.ContainerRegistry-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.containerregistry/get-azcontainerregistryusage
+  Module Name: Az.ContainerRegistry
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistryUsage.md
+  PlatyPS schema version: 2024-05-01

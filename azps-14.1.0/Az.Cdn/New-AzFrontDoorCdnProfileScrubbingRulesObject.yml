@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnProfileScrubbingRulesObject
+name: New-AzFrontDoorCdnProfileScrubbingRulesObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for ProfileScrubbingRules.
+description: |-
+  Create an in-memory object for ProfileScrubbingRules.
+parameters:
+  cmdletParameters:
+  - name: MatchVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The variable to be scrubbed from the logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      When matchVariable is a collection, operator used to specify which elements in the collection this rule applies to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the state of a log scrubbing rule.
+      Default value is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnProfileScrubbingRulesObject
+        -MatchVariable <String>
+        [-Selector <String>]
+        [-State <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.ProfileScrubbingRules" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ProfileScrubbingRules and the value of matchVariable is RequestIPAddress'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnProfileScrubbingRulesObject -MatchVariable RequestIPAddress -State Enabled
+    ```
+
+    ```output
+    MatchVariable    Selector SelectorMatchOperator State
+    -------------    -------- --------------------- -----
+    RequestIPAddress          EqualsAny             Enabled
+    ```
+
+    Create an in-memory object for ProfileScrubbingRules and the value of matchVariable is RequestIPAddress
+- title: 'Example 2: Create an in-memory object for ProfileScrubbingRules and disbale the Scrubbing rule'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnProfileScrubbingRulesObject -MatchVariable RequestUri -State Disabled
+    ```
+
+    ```output
+    MatchVariable Selector SelectorMatchOperator State
+    ------------- -------- --------------------- -----
+    RequestUri             EqualsAny             Disabled
+    ```
+
+    Create an in-memory object for ProfileScrubbingRules and disbale the Scrubbing rule
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileScrubbingRulesObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnprofilescrubbingrulesobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnProfileScrubbingRulesObject.md
+  PlatyPS schema version: 2024-05-01

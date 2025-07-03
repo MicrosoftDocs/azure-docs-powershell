@@ -1,0 +1,843 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzADApplication
+name: Update-AzADApplication
+module: Az.Resources
+isPreview: false
+summary: |-
+  Updates entity in applications
+description: |-
+  Updates entity in applications
+notes: |-
+  ALIASES
+
+  Set-AzADApplication
+parameters:
+  cmdletParameters:
+  - name: AddIn
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAddIn" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Defines custom behavior that a consuming service can use to call an app in specific contexts.
+      For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality.
+      This will let services like Office 365 call the application in the context of a document the user is working on.
+      To construct, see NOTES section for ADDIN properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Api
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApiApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      apiApplication
+      To construct, see NOTES section for API properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      key: application id
+    aliases:
+    - AppId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationIdWithUpdateParamsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationTemplateId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Unique identifier of the applicationTemplate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRole
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRole" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The collection of roles assigned to the application.
+      With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications.
+      Not nullable.
+      To construct, see NOTES section for APPROLE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailableToOtherTenants
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      The value specifying whether the application is a single tenant or a multi-tenant.
+      Is equivalent to '-SignInAudience AzureADMultipleOrgs' when switch is on
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreatedOnBehalfOfDeletedDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletedDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional description of the application.
+      Returned by default.
+      Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisabledByMicrosoftStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Microsoft has disabled the registered application.
+      Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+      Supports $filter (eq, ne, NOT).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name for the application.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupMembershipClaim
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects.
+      To set this attribute, use one of the following string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HomePage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      home page url for web
+    aliases:
+    - WebHomePageUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HomeRealmDiscoveryPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphHomeRealmDiscoveryPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+      To construct, see NOTES section for HOMEREALMDISCOVERYPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentifierUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The URIs that identify the application within its Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
+      For more information, see Application Objects and Service Principal Objects.
+      The any operator is required for filter expressions on multi-valued properties.
+      Not nullable.
+      Supports $filter (eq, ne, ge, le, startsWith).
+    aliases:
+    - IdentifierUris
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Info
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphInformationalUrl" data-throw-if-not-resolved="False" />
+    description: |-
+      informationalUrl
+      To construct, see NOTES section for INFO properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      key: application object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectWithUpdateParamsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsDeviceOnlyAuthSupported
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this application supports device authentication without a user.
+      The default is false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsFallbackPublicClient
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fallback application type as public client, such as an installed application running on a mobile device.
+      The default value is false which means the fallback application type is confidential client such as a web app.
+      There are certain scenarios where Azure AD cannot determine the client application type.
+      For example, the ROPC flow where the application is configured without specifying a redirect URI.
+      In those cases Azure AD interprets the application type based on the value of this property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogoInputFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Input File for Logo (The main logo for the application.
+      Not nullable.)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Note
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Notes relevant for the management of the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Oauth2RequirePostResponse
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      key: id of application
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObjectIdWithUpdateParamsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OptionalClaim
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphOptionalClaims" data-throw-if-not-resolved="False" />
+    description: |-
+      optionalClaims
+      To construct, see NOTES section for OPTIONALCLAIM properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentalControlSetting
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphParentalControlSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      parentalControlSettings
+      To construct, see NOTES section for PARENTALCONTROLSETTING properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicClientRedirectUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplyUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The application reply Urls.
+    aliases:
+    - ReplyUrls
+    - WebRedirectUri
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequiredResourceAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphRequiredResourceAccess" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the resources that the application needs to access.
+      This property also specifies the set of OAuth permission scopes and application roles that it needs for each of those resources.
+      This configuration of access to the required resources drives the consent experience.
+      Not nullable.
+      Supports $filter (eq, NOT, ge, le).
+      To construct, see NOTES section for REQUIREDRESOURCEACCESS properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceManagementReference
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      References application or service contact information from a Service or Asset Management database.
+      Nullable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Microsoft accounts that are supported for the current application.
+      Supported values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount, PersonalMicrosoftAccount.
+      See more in the table below.
+      Supports $filter (eq, ne, NOT).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SPARedirectUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Custom strings that can be used to categorize and identify the application.
+      Not nullable.Supports $filter (eq, NOT, ge, le, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenEncryptionKeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the keyId of a public key from the keyCredentials collection.
+      When configured, Azure AD encrypts all the tokens it emits by using the key this property points to.
+      The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenIssuancePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphTokenIssuancePolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+      To construct, see NOTES section for TOKENISSUANCEPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenLifetimePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphTokenLifetimePolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The tokenLifetimePolicies assigned to this application.
+      Supports $expand.
+      To construct, see NOTES section for TOKENLIFETIMEPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Web
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphWebApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      webApplication
+      To construct, see NOTES section for WEB properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzADApplication
+        -ObjectId <String>
+        [-HomePage <String>]
+        [-ReplyUrl <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-Api <IMicrosoftGraphApiApplication>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-ApplicationTemplateId <String>]
+        [-CreatedOnBehalfOfDeletedDateTime <DateTime>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-DisplayName <String>]
+        [-GroupMembershipClaim <String>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-IdentifierUri <String[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-IsDeviceOnlyAuthSupported]
+        [-IsFallbackPublicClient]
+        [-LogoInputFile <String>]
+        [-Note <String>]
+        [-Oauth2RequirePostResponse]
+        [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
+        [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>]
+        [-PublicClientRedirectUri <String[]>]
+        [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>]
+        [-ServiceManagementReference <String>]
+        [-SignInAudience <String>]
+        [-SPARedirectUri <String[]>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-Web <IMicrosoftGraphWebApplication>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectIdWithUpdateParamsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzADApplication
+        -ApplicationId <Guid>
+        [-HomePage <String>]
+        [-ReplyUrl <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-Api <IMicrosoftGraphApiApplication>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-ApplicationTemplateId <String>]
+        [-CreatedOnBehalfOfDeletedDateTime <DateTime>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-DisplayName <String>]
+        [-GroupMembershipClaim <String>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-IdentifierUri <String[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-IsDeviceOnlyAuthSupported]
+        [-IsFallbackPublicClient]
+        [-LogoInputFile <String>]
+        [-Note <String>]
+        [-Oauth2RequirePostResponse]
+        [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
+        [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>]
+        [-PublicClientRedirectUri <String[]>]
+        [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>]
+        [-ServiceManagementReference <String>]
+        [-SignInAudience <String>]
+        [-SPARedirectUri <String[]>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-Web <IMicrosoftGraphWebApplication>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationIdWithUpdateParamsParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADApplication
+        -InputObject <IMicrosoftGraphApplication>
+        [-HomePage <String>]
+        [-ReplyUrl <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-Api <IMicrosoftGraphApiApplication>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-ApplicationTemplateId <String>]
+        [-CreatedOnBehalfOfDeletedDateTime <DateTime>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-DisplayName <String>]
+        [-GroupMembershipClaim <String>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-IdentifierUri <String[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-IsDeviceOnlyAuthSupported]
+        [-IsFallbackPublicClient]
+        [-LogoInputFile <String>]
+        [-Note <String>]
+        [-Oauth2RequirePostResponse]
+        [-OptionalClaim <IMicrosoftGraphOptionalClaims>]
+        [-ParentalControlSetting <IMicrosoftGraphParentalControlSettings>]
+        [-PublicClientRedirectUri <String[]>]
+        [-RequiredResourceAccess <IMicrosoftGraphRequiredResourceAccess[]>]
+        [-ServiceManagementReference <String>]
+        [-SignInAudience <String>]
+        [-SPARedirectUri <String[]>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-Web <IMicrosoftGraphWebApplication>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectWithUpdateParamsParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update application by display name'
+  description: |-
+    ```powershell
+    Update-AzADApplication -DisplayName $name -HomePage $homepage
+    ```
+
+    Update application by display name
+- title: 'Example 2: Update application by pipeline input'
+  description: |-
+    ```powershell
+    Get-AzADApplication -ObjectId $id | Update-AzADApplication -ReplyUrl $replyurl
+    ```
+
+    Update application by pipeline input
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzADApplication.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/update-azadapplication
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzADApplication.md
+  PlatyPS schema version: 2024-05-01

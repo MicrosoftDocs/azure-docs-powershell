@@ -1,0 +1,563 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.New-AzAutomationSchedule
+name: New-AzAutomationSchedule
+module: Az.Automation
+isPreview: false
+summary: |-
+  Creates an Automation schedule.
+description: |-
+  The **New-AzAutomationSchedule** cmdlet creates a schedule in Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Automation account for which this cmdlet creates a schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DayInterval
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in days, for the schedule.
+      If you do not specify this parameter, and you do not specify the *OneTime* parameter, the default value is one (1).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDaily
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DayOfWeek
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DayOfWeek" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a list of days of the week for the weekly schedule.
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMonthlyDayOfWeek
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DayOfWeekOccurrence
+    type: <xref href="Microsoft.Azure.Commands.Automation.Cmdlet.DayOfWeekOccurrence" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the occurrence of the week within the month that the schedule runs.
+      psdx_paramvalues
+      - 1
+      - 2
+      - 3
+      - 4
+      - -1
+      - First
+      - Second
+      - Third
+      - Fourth
+      - LastDay
+    acceptedValues:
+    - First
+    - Second
+    - Third
+    - Fourth
+    - Last
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMonthlyDayOfWeek
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfMonth
+    type: <xref href="Microsoft.Azure.Commands.Automation.Cmdlet.DaysOfMonth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a list of days of the month for the monthly schedule.
+    acceptedValues:
+    - One
+    - Two
+    - Three
+    - Four
+    - Five
+    - Six
+    - Seventh
+    - Eighth
+    - Ninth
+    - Tenth
+    - Eleventh
+    - Twelfth
+    - Thirteenth
+    - Fourteenth
+    - Fifteenth
+    - Sixteenth
+    - Seventeenth
+    - Eighteenth
+    - Nineteenth
+    - Twentieth
+    - TwentyFirst
+    - TwentySecond
+    - TwentyThird
+    - TwentyFourth
+    - TwentyFifth
+    - TwentySixth
+    - TwentySeventh
+    - TwentyEighth
+    - TwentyNinth
+    - Thirtieth
+    - ThirtyFirst
+    - LastDay
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMonthlyDaysOfMonth
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfWeek
+    type: <xref href="System.DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a list of days of the week for the weekly schedule.
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWeekly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiryTime
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the expiry time of a schedule as a **DateTimeOffset** object.
+      You can specify a string that can be converted to a valid **DateTimeOffset**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDaily
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByWeekly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByMonthlyDaysOfMonth
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByMonthlyDayOfWeek
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByHourly
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForUpdateConfiguration
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this schedule object will be used for scheduling a software update configuration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HourInterval
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in hours, for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByHourly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonthInterval
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in Months, for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMonthlyDaysOfMonth
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByMonthlyDayOfWeek
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OneTime
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that the cmdlet creates a one-time schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOneTime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group for which this cmdlet creates a schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start time of a schedule as a **DateTimeOffset** object.
+      You can specify a string that can be converted to a valid **DateTimeOffset**.
+      If the *TimeZone* is provided, *StartTime* is calculated by adding the Offset of Input *TimeZone*.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time zone for the schedule.
+      This string can be the IANA ID or the Windows Time Zone ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WeekInterval
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an interval, in weeks, for the schedule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByWeekly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -DayInterval <Byte>
+        [-Description <String>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDaily
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -WeekInterval <Byte>
+        [-Description <String>]
+        [-DaysOfWeek <DayOfWeek[]>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByWeekly
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -MonthInterval <Byte>
+        [-Description <String>]
+        [-DaysOfMonth <DaysOfMonth[]>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByMonthlyDaysOfMonth
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -MonthInterval <Byte>
+        [-Description <String>]
+        [-DayOfWeek <DayOfWeek>]
+        [-DayOfWeekOccurrence <DayOfWeekOccurrence>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByMonthlyDayOfWeek
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-Description <String>]
+        [-OneTime]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOneTime
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzAutomationSchedule
+        [-Name] <String>
+        [-StartTime] <DateTimeOffset>
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -HourInterval <Byte>
+        [-Description <String>]
+        [-ExpiryTime <DateTimeOffset>]
+        [-TimeZone <String>]
+        [-ForUpdateConfiguration]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByHourly
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Schedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a one-time schedule in local time'
+  description: |-
+    ```powershell
+    $TimeZone = ([System.TimeZoneInfo]::Local).Id
+    New-AzAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -StartTime "23:00" -OneTime -ResourceGroupName "ResourceGroup01" -TimeZone $TimeZone
+    ```
+
+    The first command gets the time zone ID from the system and stores it in the $TimeZone variable.
+    The second command creates a schedule that runs one time on the current date at 11:00 PM in the specified time zone.
+- title: 'Example 2: Create a one-time schedule in another time zone'
+  description: |-
+    ```powershell
+    $TimeZone = "Europe/Paris"
+    New-AzAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule01" -StartTime "23:00Z" -OneTime -ResourceGroupName "ResourceGroup01" -TimeZone $TimeZone
+    ```
+
+    The first command initializes a $TimeZone variable with value `Europe/Paris`
+    The second command creates a schedule that runs one time on the current date at 23:00 UTC in the specified time zone.
+    > Note: Schedule *StartTime* is calculated by adding the *TimeZone* Offset to provided *StartTime*
+- title: 'Example 3: Create a recurring schedule'
+  description: |-
+    ```powershell
+    $StartTime = Get-Date "13:00:00"
+    $EndTime = $StartTime.AddYears(1)
+    New-AzAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule02" -StartTime $StartTime -ExpiryTime $EndTime -DayInterval 1 -ResourceGroupName "ResourceGroup01"
+    ```
+
+    The first command creates a date object by using the **Get-Date** cmdlet, and then stores the object in the $StartDate variable.
+    Specify a time that is at least five minutes in the future.
+    The second command creates a date object by using the **Get-Date** cmdlet, and then stores the object in the $EndDate variable.
+    The command specifies a future time.
+    The final command creates a daily schedule named Schedule02 to begin at the time stored in $StartDate and expire at the time stored in $EndDate.
+- title: 'Example 4: Create a weekly recurring schedule'
+  description: |-
+    ```powershell
+    $StartTime = (Get-Date "13:00:00").AddDays(1)
+    [System.DayOfWeek[]]$WeekDays = @([System.DayOfWeek]::Monday..[System.DayOfWeek]::Friday)
+    New-AzAutomationSchedule -AutomationAccountName "Contoso17" -Name "Schedule03" -StartTime $StartTime -WeekInterval 1 -DaysOfWeek $WeekDays -ResourceGroupName "ResourceGroup01"
+    ```
+
+    The first command creates a date object by using the **Get-Date** cmdlet, and then stores the object in the $StartDate variable.
+    The second command creates an array of week days that contains Monday, Tuesday, Wednesday, Thursday and Friday.
+    The final command creates a daily schedule named Schedule03 that will run Monday to Friday each week at 13:00. The schedule will never expire.
+links:
+- text: Get-AzAutomationSchedule
+  href: ./Get-AzAutomationSchedule.yml
+- text: Remove-AzAutomationSchedule
+  href: ./Remove-AzAutomationSchedule.yml
+- text: Set-AzAutomationSchedule
+  href: ./Set-AzAutomationSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationSchedule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationschedule
+  Module Name: Az.Automation
+  ms.assetid: CB621890-EF8A-4F14-8F18-D8806E624DAB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationSchedule.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,171 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureStorSimpleDeviceBackupJob
+name: Start-AzureStorSimpleDeviceBackupJob
+module: Azure
+isPreview: false
+summary: |-
+  Starts a new job that creates a backup from an existing backup policy.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureStorSimpleDeviceBackupJob** cmdlet starts a new job that creates a backup from an existing backup policy on a StorSimple device.
+  By default, this cmdlet creates a local snapshot backup.
+  To create a cloud backup, specify a value of CloudSnapshot for the *BackupType* parameter.
+parameters:
+  cmdletParameters:
+  - name: BackupPolicyId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the backup policy to use to create the backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the backup type.
+      Valid values are: LocalSnapshot and CloudSnapshot.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackupTypeGiven
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device on which to start the backup job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForComplete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceBackupJob
+        -DeviceName <String>
+        -BackupPolicyId <String>
+        [-WaitForComplete]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureStorSimpleDeviceBackupJob
+        -DeviceName <String>
+        -BackupPolicyId <String>
+        -BackupType <String>
+        [-WaitForComplete]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BackupTypeGiven
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="TaskStatusInfo, TaskResponse" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **TaskStatusInfo** object if you specify the *WaitForComplete* parameter.
+    If you do not specify that parameter, it returns a **TaskResponse** object.
+examples:
+- title: 'Example 1: Create a local snapshot backup'
+  description: |-
+    ```
+    PS C:\>Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444"
+    JobId                                                                StatusCode RequestId
+    -----                                                                ---------- ---------
+    fb9acdca-ed6f-4b69-93f2-5c0bce0a1e08                                 Accepted   456cf6bafd427103b71c07145e26d35c
+
+    VERBOSE: Your backup operation has been submitted for processing. Use commandlet "Get-AzureStorSimpleJob -JobId
+    fb9acdca-ed6f-4b69-93f2-5c0bce0a1e08" to track status.
+    ```
+
+    This command creates a local snapshot backup for the specified policy ID.
+    This command starts the job, and then returns a **TaskResponse** object.
+    To see the status of the job, use the **Get-AzureStorSimpleTask** cmdlet.
+- title: 'Example 2: Create a cloud snapshot backup and wait to finish'
+  description: |-
+    ```
+    PS C:\>Start-AzureStorSimpleDeviceBackupJob -DeviceName "Contoso63-AppVm" -BackupPolicyId "00001111-aaaa-2222-bbbb-3333cccc4444" -BackupType CloudSnapshot -WaitForComplete
+    Error      : Microsoft.WindowsAzure.Management.StorSimple.Models.ErrorDetails
+    JobId      : fb9acdca-ed6f-4b69-93f2-5c0bce0a1e08
+    JobSteps   : {}
+    Result     : Succeeded
+    Status     : Completed
+    TaskResult : Succeeded
+    StatusCode : OK
+    RequestId  : f28ecf6cf75a7f128ca18e6ae14f9003
+    ```
+
+    This command creates a cloud snapshot backup for the specified policy ID.
+    This command specifies the *WaitForComplete* parameter, so the command completes the task, and then returns a **TaskStatusInfo** object for the job.
+links:
+- text: Get-AzureStorSimpleJob
+  href: ./Get-AzureStorSimpleJob.yml
+- text: Start-AzureStorSimpleDeviceBackupRestoreJob
+  href: ./Start-AzureStorSimpleDeviceBackupRestoreJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 76826524-480F-458E-A996-A9DBACB8BA9E
+  PlatyPS schema version: 2024-05-01

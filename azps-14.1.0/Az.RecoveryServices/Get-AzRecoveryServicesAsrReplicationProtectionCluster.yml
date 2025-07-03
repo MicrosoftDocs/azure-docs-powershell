@@ -1,0 +1,126 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Get-AzRecoveryServicesAsrReplicationProtectionCluster
+name: Get-AzRecoveryServicesAsrReplicationProtectionCluster
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Gets a replication protection cluster or all the replication protection clusters in a protection container or all the replication protection clusters in the Recovery Services vault
+description: |-
+  The **Get-AzRecoveryServicesAsrReplicationProtectionCluster** cmdlet gets the details of the specified replication protection cluster or all the replication protection clusters in a protection container or all the replication protection clusters in the Recovery Services vault.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the replication protection cluster to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainer
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Site Recovery protection container object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrReplicationProtectionCluster
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrReplicationProtectionCluster
+        -Name <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrReplicationProtectionCluster
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectionCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesAsrReplicationProtectionCluster -Name $ClusterName -ProtectionContainer $ProtectionContainer
+    ```
+
+    Gets the replication protection cluster with the specified name.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesAsrReplicationProtectionCluster -ProtectionContainer $ProtectionContainer
+    ```
+
+    Gets the replication protection cluster in a protection container.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrReplicationProtectionCluster.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesasrreplicationprotectioncluster
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrReplicationProtectionCluster.md
+  PlatyPS schema version: 2024-05-01

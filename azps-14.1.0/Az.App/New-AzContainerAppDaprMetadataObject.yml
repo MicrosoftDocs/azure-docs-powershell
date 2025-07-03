@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppDaprMetadataObject
+name: New-AzContainerAppDaprMetadataObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for DaprMetadata.
+description: |-
+  Create an in-memory object for DaprMetadata.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata property name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecretRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Dapr Component secret from which to pull the metadata property value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata property value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppDaprMetadataObject
+        [-Name <String>]
+        [-SecretRef <String>]
+        [-Value <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.DaprMetadata" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a DaprMetaData object for ManagedEnvDaprMetadata.'
+  description: |-
+    ```powershell
+    New-AzContainerAppDaprMetadataObject -Name "masterkey" -Value "masterkey"
+    ```
+
+    ```output
+    Name      SecretRef Value
+    ----      --------- -----
+    masterkey           masterkey
+    ```
+
+    Create a DaprMetaData object for ManagedEnvDaprMetadata.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppDaprMetadataObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappdaprmetadataobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppDaprMetadataObject.md
+  PlatyPS schema version: 2024-05-01

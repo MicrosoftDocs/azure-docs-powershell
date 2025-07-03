@@ -1,0 +1,347 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.Stop-AzWorkloadsSapVirtualInstance
+name: Stop-AzWorkloadsSapVirtualInstance
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Stops the SAP Application, that is the Application server instances and Central Services instance.
+description: |-
+  Stops the SAP Application, that is the Application server instances and Central Services instance.
+notes: |-
+  ALIASES
+
+  Stop-AzVIS
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeallocateVM
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The boolean value indicates whether to Stop and deallocate the virtual machines along with the SAP instances.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.SapVirtualInstance.Models.ISapVirtualInstanceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Virtual Instances for SAP solutions resource
+    aliases:
+    - SapVirtualInstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SoftStopTimeoutSecond
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter defines how long (in seconds) the soft shutdown waits until the RFC/HTTP clients no longer consider the server for calls with load balancing.
+      Value 0 means that the kernel does not wait, but goes directly into the next shutdown state, i.e.
+      hard stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzWorkloadsSapVirtualInstance
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DeallocateVM]
+        [-SoftStopTimeoutSecond <Int64>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzWorkloadsSapVirtualInstance
+        -InputObject <ISapVirtualInstanceIdentity>
+        [-DeallocateVM]
+        [-SoftStopTimeoutSecond <Int64>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.SapVirtualInstance.Models.ISapVirtualInstanceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.SapVirtualInstance.Models.Api50.IOperationStatusResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop an SAP system'
+  description: |-
+    ```powershell
+    Stop-AzWorkloadsSapVirtualInstance -Name DB0 -ResourceGroupName db0-vis-rg
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    EndTime           : 15-03-2023 09:04:37
+    Id                : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/providers/Microsoft.Workloads/locations/CENTRALUSEUAP/operationStatuses/7ff215e4-afb
+                        8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Message           :
+    Name              : 7ff215e4-afb8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Operation         :
+    PercentComplete   :
+    ResourceGroupName :
+    StartTime         : 15-03-2023 09:01:24
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Stop-AzWorkloadsSapVirtualInstance cmdlet stops the SAP application tier, that is App servers and ASCS instances of the system.
+    In this example, you can see that system can be stopped by passing the VIS name and ResourceGroupName of the VIS as inputs.
+- title: 'Example 2: Stop an SAP system'
+  description: |-
+    ```powershell
+    Stop-AzWorkloadsSapVirtualInstance -InputObject /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/resourceGroups/db0-vis-rg/providers/Microsoft.Workloads/sapVirtualInstances/DB0
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    EndTime           : 15-03-2023 09:04:37
+    Id                : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/providers/Microsoft.Workloads/locations/CENTRALUSEUAP/operationStatuses/7ff215e4-afb
+                        8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Message           :
+    Name              : 7ff215e4-afb8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Operation         :
+    PercentComplete   :
+    ResourceGroupName :
+    StartTime         : 15-03-2023 09:01:24
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Stop-AzWorkloadsSapVirtualInstance cmdlet stops the SAP application tier, that is App servers and ASCS instances of the system.
+    In this example, you can see that system can be stopped by providing the VIS Azure resource ID as InputObject to the cmdlet.
+- title: 'Example 3: Stop an SAP system and its underlying Virtual Machine(s)'
+  description: |-
+    ```powershell
+    Stop-AzWorkloadsSapVirtualInstance -Name DB0 -ResourceGroupName db0-vis-rg -DeallocateVM
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    EndTime           : 15-03-2023 09:04:37
+    Id                : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/providers/Microsoft.Workloads/locations/CENTRALUSEUAP/operationStatuses/7ff215e4-afb
+                        8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Message           :
+    Name              : 7ff215e4-afb8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Operation         :
+    PercentComplete   :
+    ResourceGroupName :
+    StartTime         : 15-03-2023 09:01:24
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Stop-AzWorkloadsSapVirtualInstance cmdlet stops the SAP application tier and its underlying VIrtual Machine, that is App servers and ASCS instances of the system.
+    In this example, you can see that SAP application and the VMs can be stopped by passing the VIS name, ResourceGroupName of the VIS, and DeallocateVM parameter as inputs.
+- title: 'Example 4: Soft Stop an SAP system'
+  description: |-
+    ```powershell
+    Stop-AzWorkloadsSapVirtualInstance -Name DB0 -ResourceGroupName db0-vis-rg -SoftStopTimeoutSecond 300
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    EndTime           : 15-03-2023 09:04:37
+    Id                : /subscriptions/49d64d54-e966-4c46-a868-1999802b762c/providers/Microsoft.Workloads/locations/CENTRALUSEUAP/operationStatuses/7ff215e4-afb
+                        8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Message           :
+    Name              : 7ff215e4-afb8-41fa-b281-0111da9a0cce*D9A8F8EF15D6E75CE64E8F442A39F1D7AF307793D262CE855530D335419055E3
+    Operation         :
+    PercentComplete   :
+    ResourceGroupName :
+    StartTime         : 15-03-2023 09:01:24
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Stop-AzWorkloadsSapVirtualInstance cmdlet soft stops the SAP application tier, that is App servers and ASCS instances of the system.
+    In this example, you can see that system can be soft stopped by passing the VIS name, ResourceGroupName of the VIS and soft stop timeout seconds as inputs.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Stop-AzWorkloadsSapVirtualInstance.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/stop-azworkloadssapvirtualinstance
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Stop-AzWorkloadsSapVirtualInstance.md
+  PlatyPS schema version: 2024-05-01

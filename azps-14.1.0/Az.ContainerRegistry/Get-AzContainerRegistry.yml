@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerRegistry.Get-AzContainerRegistry
+name: Get-AzContainerRegistry
+module: Az.ContainerRegistry
+isPreview: false
+summary: |-
+  Gets the properties of the specified container registry.
+description: |-
+  Gets the properties of the specified container registry.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeDetail
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Usage of an azure container registry.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the container registry.
+    aliases:
+    - RegistryName
+    - ResourceName
+    - ContainerRegistryName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List2
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzContainerRegistry
+        [-SubscriptionId <String[]>]
+        [-IncludeDetail]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List2
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzContainerRegistry
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-IncludeDetail]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzContainerRegistry
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-IncludeDetail]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzContainerRegistry
+        -InputObject <IContainerRegistryIdentity>
+        [-IncludeDetail]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api202301Preview.IRegistry" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified container registry'
+  description: |-
+    ```powershell
+    Get-AzContainerRegistry -ResourceGroupName "MyResourceGroup" -Name "MyRegistry"
+    ```
+
+    ```output
+    Name  SkuName LoginServer      CreationDate          ProvisioningState AdminUserEnabled
+    ----  ------- -----------      ------------          ----------------- ----------------
+    testc Premium testc.azurecr.io 16/01/2023 8:45:50 pm Succeeded         True
+    ```
+
+    This command gets the specified container registry.
+- title: 'Example 2: Get all the container registries in a resource group'
+  description: |-
+    ```powershell
+    Get-AzContainerRegistry -ResourceGroupName "MyResourceGroup"
+    ```
+
+    ```output
+    Name   SkuName LoginServer       CreationDate          ProvisioningState AdminUserEnabled
+    ----   ------- -----------       ------------          ----------------- ----------------
+    testc2 Premium testc2.azurecr.io 17/01/2023 3:47:50 pm Succeeded         True
+    testc  Premium testc.azurecr.io  16/01/2023 8:45:50 pm Succeeded         True
+    ```
+
+    This command gets all the container registries in a resource group.
+- title: 'Example 3:  Get all the container registries in the subscription'
+  description: |-
+    ```powershell
+    Get-AzContainerRegistry
+    ```
+
+    ```output
+    Name   SkuName LoginServer       CreationDate          ProvisioningState AdminUserEnabled
+    ----   ------- -----------       ------------          ----------------- ----------------
+    testc2 Premium testc2.azurecr.io 17/01/2023 3:47:50 pm Succeeded         True
+    testc  Premium testc.azurecr.io  16/01/2023 8:45:50 pm Succeeded         True
+    ```
+
+    This command gets all the container registries in the subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistry.md
+  document type: cmdlet
+  external help file: Az.ContainerRegistry-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.containerregistry/get-azcontainerregistry
+  Module Name: Az.ContainerRegistry
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerRegistry/ContainerRegistry/help/Get-AzContainerRegistry.md
+  PlatyPS schema version: 2024-05-01

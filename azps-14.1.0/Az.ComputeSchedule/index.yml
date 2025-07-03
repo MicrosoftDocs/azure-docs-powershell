@@ -1,0 +1,28 @@
+### YamlMime:PowerShellModule1
+uid: Az.ComputeSchedule
+name: Az.ComputeSchedule Module
+isPreview: false
+cmdletGroups:
+- title: ComputeSchedule
+  cmdlets:
+  - Az.ComputeSchedule.Get-AzComputeScheduleOperationError
+  - Az.ComputeSchedule.Get-AzComputeScheduleOperationStatus
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleExecuteDeallocate
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleExecuteHibernate
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleExecuteStart
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleSubmitDeallocate
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleSubmitHibernate
+  - Az.ComputeSchedule.Invoke-AzComputeScheduleSubmitStart
+  - Az.ComputeSchedule.Stop-AzComputeScheduleScheduledAction
+description: |-
+  Microsoft Azure PowerShell: ComputeSchedule cmdlets
+metadata:
+  Module Name: Az.ComputeSchedule
+  Module Guid: 76375f5d-b721-447e-ba62-aa330dbf596a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.computeschedule
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeSchedule/ComputeSchedule/help/Az.ComputeSchedule.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeSchedule/ComputeSchedule/help/Az.ComputeSchedule.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

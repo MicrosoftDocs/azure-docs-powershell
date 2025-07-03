@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HDInsight.Get-AzHDInsightMonitoring
+name: Get-AzHDInsightMonitoring
+module: Az.HDInsight
+isPreview: false
+summary: |-
+  Gets the status of the Classic Azure Monitor logs integration on an HDInsight cluster.
+description: |-
+  The **Get-AzHDInsightMonitoring** cmdlet gets the status of the Classic Azure Monitor logs integration on an HDInsight cluster. If monitoring is enabled then it will also return the log analytics workspace id.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the cluster to get the status of monitoring.
+    aliases:
+    - ClusterName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzHDInsightMonitoring
+        [-Name] <String>
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.HDInsight.Models.Management.AzureHDInsightMonitoring" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzHDInsightMonitoring -Name testcluster
+    ```
+
+    ```output
+    {'ClusterMonitoringEnabled':'true', 'workspaceId':'1d364e89-bb71-4503-aa3d-a23535aea7bd'}
+    ```
+
+    Monitoring is enabled on the cluster because the ClusterMonitoringEnabled property is true. The monitoring workspace id where the logs are flowing is 1d364e89-bb71-4503-aa3d-a23535aea7bd
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzHDInsightMonitoring -Name testcluster -ResourceGroupName testrg
+    ```
+
+    ```output
+    {'ClusterMonitoringEnabled':'true', 'workspaceId':'1d364e89-bb71-4503-aa3d-a23535aea7bd'}
+    ```
+
+    Monitoring is enabled on the cluster because the ClusterMonitoringEnabled property is true. The monitoring workspace id where the logs are flowing is 1d364e89-bb71-4503-aa3d-a23535aea7bd
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzHDInsightMonitoring -Name testcluster
+    ```
+
+    ```output
+    {'ClusterMonitoringEnabled':'false', 'workspaceId': null}
+    ```
+
+    Monitoring is disabled on the cluster because the ClusterMonitoringEnabled property is false.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzHDInsightMonitoring -Name testcluster -ResourceGroupName testrg
+    ```
+
+    ```output
+    {'ClusterMonitoringEnabled':'false', 'workspaceId': null}
+    ```
+
+    Monitoring is disabled on the cluster because the ClusterMonitoringEnabled property is false.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightMonitoring.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.HDInsight.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsight/get-azhdinsightmonitoring
+  Module Name: Az.HDInsight
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HDInsight/HDInsight/help/Get-AzHDInsightMonitoring.md
+  PlatyPS schema version: 2024-05-01

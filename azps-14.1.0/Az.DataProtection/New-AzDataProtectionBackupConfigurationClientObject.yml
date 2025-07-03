@@ -1,0 +1,286 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.New-AzDataProtectionBackupConfigurationClientObject
+name: New-AzDataProtectionBackupConfigurationClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Creates new backup configuration object
+description: |-
+  Creates new backup configuration object
+parameters:
+  cmdletParameters:
+  - name: BackupHookReference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.NamespacedNameResource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Hook reference to be executed during backup.
+      To construct, see NOTES section for BACKUPHOOKREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatasourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DatasourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource Type
+    acceptedValues:
+    - AzureDisk
+    - AzureBlob
+    - AzureDatabaseForPostgreSQL
+    - AzureKubernetesService
+    - AzureDatabaseForPGFlexServer
+    - AzureDatabaseForMySQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of namespaces to be excluded from backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludedResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of resource types to be excluded from backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeAllContainer
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch parameter to include all containers to be backed up inside the VaultStore.
+      Use this parameter for DatasourceType AzureBlob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeClusterScopeResource
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Boolean parameter to decide whether cluster scope resources are included for backup.
+      By default this is taken as true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of namespaces to be included for backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of resource types to be included for backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LabelSelector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of labels for internal filtering for backup
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotVolume
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Boolean parameter to decide whether snapshot volumes are included for backup.
+      By default this is taken as true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account where the Datasource is present.
+      Use this parameter for DatasourceType AzureBlob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account resource group name where the Datasource is present.
+      Use this parameter for DatasourceType AzureBlob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultedBackupContainer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of containers to be backed up inside the VaultStore.
+      Use this parameter for DatasourceType AzureBlob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionBackupConfigurationClientObject
+        -DatasourceType <DatasourceTypes>
+        [-ExcludedResourceType <String[]>]
+        [-IncludedResourceType <String[]>]
+        [-ExcludedNamespace <String[]>]
+        [-IncludedNamespace <String[]>]
+        [-LabelSelector <String[]>]
+        [-SnapshotVolume <Boolean>]
+        [-IncludeClusterScopeResource <Boolean>]
+        [-BackupHookReference <NamespacedNameResource[]>]
+        [-VaultedBackupContainer <String[]>]
+        [-IncludeAllContainer]
+        [-StorageAccountName <String>]
+        [-StorageAccountResourceGroupName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a BackupConfiguration for configuring protection with AzureKubernetesService'
+  description: |-
+    ```powershell
+    $backupConfig = New-AzDataProtectionBackupConfigurationClientObject -SnapshotVolume $true -IncludeClusterScopeResource $true -DatasourceType AzureKubernetesService -LabelSelector "key=val","foo=bar" -ExcludedNamespace "excludeNS1","excludeNS2" -BackupHookReference @(@{name='bkphookname';namespace='default'},@{name='bkphookname1';namespace='hrweb'})
+    ```
+
+    ```output
+    ObjectType                                  ExcludedNamespace        ExcludedResourceType IncludeClusterScopeResource IncludedNamespace IncludedResourceType LabelSelector      SnapshotVolume
+    ----------                                  -----------------        -------------------- --------------------------- ----------------- -------------------- -------------      --------------
+    KubernetesClusterBackupDatasourceParameters {excludeNS1, excludeNS2}                      True                                                               {key=val, foo=bar} True
+    ```
+
+    This command can be used to create a backup configuration client object used for configuring backup for a Kubernetes cluster.
+    BackupHookReferences is a list of references to BackupHooks that should be executed before and after the backup is executed.
+- title: 'Example 2: Create a BackupConfiguration to select specific containers for configuring vaulted backups for AzureBlob.'
+  description: |-
+    ```powershell
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName $resourceGroupName -Name $storageAccountName
+    $containers=Get-AzStorageContainer -Context $storageAccount.Context
+    $backupConfig = New-AzDataProtectionBackupConfigurationClientObject -DatasourceType AzureBlob -VaultedBackupContainer $containers.Name[1,3,4]
+    ```
+
+    ```output
+    ObjectType                     ContainersList
+    ----------                     --------------
+    BlobBackupDatasourceParameters {conabb, conwxy, conzzz}
+    ```
+
+    This command can be used to create a backup configuration client object used for configuring backup for vaulted Blob backup containers.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionBackupConfigurationClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionbackupconfigurationclientobject
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionBackupConfigurationClientObject.md
+  PlatyPS schema version: 2024-05-01

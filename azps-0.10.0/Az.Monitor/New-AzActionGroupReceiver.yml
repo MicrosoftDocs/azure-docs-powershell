@@ -1,0 +1,785 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroupReceiver
+name: New-AzActionGroupReceiver
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an new action group receiver.
+description: |-
+  The **New-AzActionGroupReceiver** cmdlet creates new action group receiver in memory.
+parameters:
+  cmdletParameters:
+  - name: ArmRoleReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a ArmRoleReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewArmRoleReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomationAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the AutomationAccountId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomationRunbookReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a AutomationRunbookReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutomationRunbookServiceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the URI where webhooks should be sent
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAppPushEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the AzureAppPushEmailAddress
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureAppPushReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAppPushReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a AzureAppPushReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureAppPushReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureFunctionReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a ArmRoleReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureFunctionReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CallbackUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the CallbackUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewLogicAppReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the itsm connection id of this receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewItsmReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CountryCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the country code for the SMS receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewSmsReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the address for the Email receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewEmailReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to create an Email receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewEmailReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FunctionAppResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the function app resourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureFunctionReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FunctionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the functionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureFunctionReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpTriggerUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the httpTriggerUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAzureFunctionReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentifierUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the Identifier uri for aad auth
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsGlobalRunbook
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      indicating whether this instance is global runbook
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ItsmReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a ItsmReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewItsmReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogicAppReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a LogicAppReceiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewLogicAppReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the webhook app object Id for aad auth
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the phone number for the SMS receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewSmsReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Region
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the itsm Region of this receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewItsmReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewLogicAppReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The arm role id of the receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewArmRoleReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the RunbookName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI for the webhook receiver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmsReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to create a SMS receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewSmsReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the tenant id for aad auth
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TicketConfiguration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the itsm TicketConfiguration of this receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewItsmReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseAadAuth
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      the flag to use add auth
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseCommonAlertSchema
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag whether to use common alert schema . This value will be neglectedfor SMS, Azure App push , ITSM and Voice recievers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VoiceCountryCode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The country code of the voice receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewVoiceReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VoicePhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The phone number of the voice receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewVoiceReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VoiceReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Create a voice receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewVoiceReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookReceiver
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to create a webhook receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewWebhookReceiver
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the WebhookResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewAutomationRunbookReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the itsm workspace id of this receiver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewItsmReceiver
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -EmailAddress <String>
+        [-UseCommonAlertSchema]
+        [-EmailReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewEmailReceiver
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -PhoneNumber <String>
+        [-UseCommonAlertSchema]
+        [-SmsReceiver]
+        [-CountryCode <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewSmsReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -ServiceUri <String>
+        [-UseCommonAlertSchema]
+        [-WebhookReceiver]
+        [-UseAadAuth]
+        [-ObjectId <String>]
+        [-IdentifierUri <String>]
+        [-TenantId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewWebhookReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -WorkspaceId <String>
+        -ConnectionId <String>
+        -TicketConfiguration <String>
+        -Region <String>
+        [-UseCommonAlertSchema]
+        [-ItsmReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewItsmReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -VoicePhoneNumber <String>
+        [-UseCommonAlertSchema]
+        [-VoiceReceiver]
+        [-VoiceCountryCode <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewVoiceReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -RoleId <String>
+        [-UseCommonAlertSchema]
+        [-ArmRoleReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewArmRoleReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -FunctionAppResourceId <String>
+        -HttpTriggerUrl <String>
+        -FunctionName <String>
+        [-UseCommonAlertSchema]
+        [-AzureFunctionReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewAzureFunctionReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -ResourceId <String>
+        -CallbackUrl <String>
+        [-UseCommonAlertSchema]
+        [-LogicAppReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewLogicAppReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -AutomationAccountId <String>
+        -RunbookName <String>
+        -AutomationRunbookServiceUri <String>
+        -WebhookResourceId <String>
+        [-UseCommonAlertSchema]
+        [-AutomationRunbookReceiver]
+        [-IsGlobalRunbook]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewAutomationRunbookReceiver
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupReceiver
+        -Name <String>
+        -AzureAppPushEmailAddress <String>
+        [-UseCommonAlertSchema]
+        [-AzureAppPushReceiver]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewAzureAppPushReceiver
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSActionGroupReceiverBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new Email receiver in memory.'
+  description: |-
+    ```
+    PS C:\>$emailReceiver = New-AzActionGroupReceiver -Name 'emailReceiver1' -EmailReceiver -EmailAddress 'user1@example.com'
+    ```
+
+    This command creates a new Email receiver in memory.
+- title: 'Example 2: Create a new SMS receiver in memory.'
+  description: |-
+    ```
+    PS C:\>$smsReceiver = New-AzActionGroupReceiver -Name 'smsReceiver1' -SmsReceiver -CountryCode '1' -PhoneNumber '5555555555'
+    ```
+
+    This command creates a new SMS receiver in memory.
+- title: 'Example 3: Create a new webhook receiver in memory.'
+  description: |-
+    ```
+    PS C:\>$webhookReceiver = New-AzActionGroupReceiver -Name 'webhookReceiver1' -WebhookReceiver -ServiceUri 'http://test.com'
+    ```
+
+    This command creates a new webhook receiver in memory.
+links:
+- text: Set-AzActionGroup
+  href: ./Set-AzActionGroup.yml
+- text: Get-AzActionGroup
+  href: ./Get-AzActionGroup.yml
+- text: Remove-AzActionGroup
+  href: ./Remove-AzActionGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActionGroupReceiver.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azactiongroupreceiver
+  Module Name: Az.Monitor
+  ms.assetid: 9830CD16-D797-47EB-BEF5-6CFE3454BCAA
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActionGroupReceiver.md
+  PlatyPS schema version: 2024-05-01

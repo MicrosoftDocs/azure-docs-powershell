@@ -1,0 +1,896 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzSubscriptionDeploymentStack
+name: New-AzSubscriptionDeploymentStack
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates a new Subscription scoped Deployment Stack.
+description: |-
+  Create a subscription scoped deployment stack.
+parameters:
+  cmdletParameters:
+  - name: ActionOnUnmanage
+    type: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.DeploymentStacks.PSActionOnUnmanage" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to take on resources that become unmanaged on deletion or update of the deployment stack. Possible values include: 'detachAll' (do not delete any unmanaged resources), 'deleteResources' (delete all unmanaged resources that are not RGs or MGs), and 'deleteAll' (delete every unmanaged resource).
+    acceptedValues:
+    - DetachAll
+    - DeleteResources
+    - DeleteAll
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BypassStackOutOfSyncError
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Bypass errors for the stack being out of sync when running the operation. If the stack is out of sync and this parameter is not set, the operation will fail. Only include this parameter if instructed to do so on a failed stack operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenySettingsApplyToChildScopes
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Apply to child scopes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenySettingsExcludedAction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of role-based management operations that are excluded from the denySettings. Up to 200 actions are permitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenySettingsExcludedPrincipal
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of AAD principal IDs excluded from the lock. Up to 5 principals are permitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenySettingsMode
+    type: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDenySettingsMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Mode for DenySettings.
+      Possible values include: 'denyDelete', 'denyWriteAndDelete', and 'none'.
+    acceptedValues:
+    - None
+    - DenyDelete
+    - DenyWriteAndDelete
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ResourceGroup at which the deployment will be created. If none is specified, it will default to the subscription level scope of the deployment stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description for the stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation when overwriting an existing stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the deploymentStack to create
+    aliases:
+    - StackName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      When set, indicates that the cmdlet should use pre-release API versions when automatically determining which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The query string (for example, a SAS token) to be used with the TemplateUri parameter. Would be used in case of linked templates
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipTemplateParameterPrompt
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skips the PowerShell dynamic parameter processing that checks if the provided template parameter contains all necessary parameters used by the template. This check would prompt the user to provide a value for the missing parameters, but providing the -SkipTemplateParameterPrompt will ignore this prompt and error out immediately if a parameter was found not to be bound in the template. For non-interactive scripts, -SkipTemplateParameterPrompt can be provided to provide a better error message in the case where not all required parameters are satisfied.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags to put on the deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      TemplateFile to be used to create the stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameter file to use for the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByParameterFileWithNoTemplate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hash table which represents the parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the Parameter file to use for the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateSpecId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceId of the TemplateSpec to be used to create the stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateSpecWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateSpecWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the Template to be used to create the stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateUriWithParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateFile <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithNoParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateFile <String>
+        -TemplateParameterFile <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateFile <String>
+        -TemplateParameterUri <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateFile <String>
+        -TemplateParameterObject <Hashtable>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateUri <String>
+        -TemplateParameterFile <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateUri <String>
+        -TemplateParameterUri <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateUri <String>
+        -TemplateParameterObject <Hashtable>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateUri <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateSpecId <String>
+        -TemplateParameterFile <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecWithParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateSpecId <String>
+        -TemplateParameterUri <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecWithParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateSpecId <String>
+        -TemplateParameterObject <Hashtable>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecWithParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateSpecId <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateSpecWithNoParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzSubscriptionDeploymentStack
+        [-Name] <String>
+        -Location <String>
+        -ActionOnUnmanage <PSActionOnUnmanage>
+        -DenySettingsMode <PSDenySettingsMode>
+        -TemplateParameterFile <String>
+        [-Description <String>]
+        [-DenySettingsExcludedPrincipal <String[]>]
+        [-DenySettingsExcludedAction <String[]>]
+        [-DenySettingsApplyToChildScopes]
+        [-DeploymentResourceGroupName <String>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-BypassStackOutOfSyncError]
+        [-SkipTemplateParameterPrompt]
+        [-QueryString <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParameterFileWithNoTemplate
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSDeploymentStack" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a subscription scoped deployment stack MySubStack at westus location'
+  description: |-
+    ```powershell
+    New-AzSubscriptionDeploymentStack -Name MySubStack -TemplateFile myTemplate.json -Location westus -DenySettingsMode DenyDelete
+    ```
+
+    Create a new subscription scoped deployment stack named 'MySubStack' in the default subscription, with deny settings being DenyDelete.
+- title: 'Example 2: Use a .bicepparam file to create a stack'
+  description: |-
+    ```powershell
+    New-AzSubscriptionDeploymentStack -Name MySubStack -Location westus -DenySettingsMode DenyDelete -TemplateParameterFile "./parameters.bicepparam"
+    ```
+
+    This command creates a new stack at the subscription scope by using a .bicepparam file on disk.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzSubscriptionDeploymentStack.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/New-AzSubscriptionDeploymentStack
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzSubscriptionDeploymentStack.md
+  PlatyPS schema version: 2024-05-01

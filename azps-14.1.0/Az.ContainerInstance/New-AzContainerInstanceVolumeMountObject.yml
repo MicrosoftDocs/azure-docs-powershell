@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerInstance.New-AzContainerInstanceVolumeMountObject
+name: New-AzContainerInstanceVolumeMountObject
+module: Az.ContainerInstance
+isPreview: false
+summary: |-
+  Create a in-memory object for VolumeMount
+description: |-
+  Create a in-memory object for VolumeMount
+parameters:
+  cmdletParameters:
+  - name: MountPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path within the container where the volume should be mounted.
+      Must not contain colon (:).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the volume mount.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadOnly
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      The flag indicating whether the volume mount is read-only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerInstanceVolumeMountObject
+        -MountPath <String>
+        -Name <String>
+        [-ReadOnly <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.VolumeMount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Specify a volume mount available to a container instance'
+  description: |-
+    ```powershell
+    New-AzContainerInstanceVolumeMountObject -Name "mnt" -MountPath "/mnt/azfile" -ReadOnly $true
+    ```
+
+    ```output
+    MountPath   Name ReadOnly
+    ---------   ---- --------
+    /mnt/azfile mnt  True
+    ```
+
+    This command specifies a volume mount available to a container instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceVolumeMountObject.md
+  document type: cmdlet
+  external help file: Az.ContainerInstance-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerInstanceVolumeMountObject
+  Module Name: Az.ContainerInstance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceVolumeMountObject.md
+  PlatyPS schema version: 2024-05-01

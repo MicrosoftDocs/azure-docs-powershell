@@ -1,0 +1,299 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Publish-AzureServiceProject
+name: Publish-AzureServiceProject
+module: Azure
+isPreview: false
+summary: |-
+  Publish the current service to Windows Azure.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Publish-AzureServiceProject** cmdlet publishes the current service to the cloud.
+  You can specify publishing configuration (such as **Subscription**, **StorageAccountName**, **Location**, **Slot**) on the command line, or in local settings through the **Set-AzureServiceProject** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: AffinityGroup
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the affinity group that you want the service to use.
+    aliases:
+    - ag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Configuration
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the service configuration file.
+      If you specify this parameter, specify the *Package* parameter.
+    aliases:
+    - cc
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PublishFromPackage
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deployment name.
+    aliases:
+    - dn
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceUpgrade
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    aliases:
+    - f
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Launch
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Opens a browser window so you can view the application after it is deployed.
+    aliases:
+    - ln
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The region in which the application will be hosted.
+      Possible values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+
+      If no Location is specified, the location specified in the last call to **Set-AzureServiceProject** will be used.
+      If no Location was ever specified, the Location will be randomly chosen from 'North Central US' and 'South Central US' locations.
+    aliases:
+    - l
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the package file to deploy.
+      Specify either a local file that has the .cspkg file name extension or a URI of a blob that contains the package.
+      If you specify this parameter, do not specify the *ServiceName* parameter.
+    aliases:
+    - sp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PublishFromPackage
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name to be used for the service when publishing to Windows Azure.
+      The name determines part of the label in the cloudapp.net subdomain that is used to address the service when hosted in Windows Azure (that is, **name**.cloudapp.net).
+      Any name specified while publishing the service overrides the name given when the service was created.
+      (See the **New-AzureServiceProject** cmdlet).
+    aliases:
+    - sv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PublishFromServiceDefinition
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The deployment slot to be used for this service.
+      Possible values are 'Staging' and 'Production'.
+      If no slot is specified, the slot provided in the last call to Set-AzureDeploymentSlot is used.
+      If no slot has ever been specified, the 'Production' slot is used.
+    aliases:
+    - sl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Windows Azure storage account name to be used while publishing the service.
+      This value is not used until the service is published.
+      When this parameter is not specified, the value is obtained from the last **Set-AzureServiceProject** command.
+      If no storage account was ever specified, a storage account matching the name of the service will be used.
+      If no such storage account exists, the cmdlet attempts to create a new one.
+      However, the attempt may fail if a storage account matching the service name exists in another subscription.
+    aliases:
+    - st
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Publish-AzureServiceProject
+        [-ServiceName <String>]
+        [-StorageAccountName <String>]
+        [-Location <String>]
+        [-Slot <String>]
+        [-Launch]
+        [-AffinityGroup <String>]
+        [-DeploymentName <String>]
+        [-ForceUpgrade]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PublishFromServiceDefinition
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Publish-AzureServiceProject
+        -Configuration <String>
+        [-Package <String>]
+        [-StorageAccountName <String>]
+        [-Location <String>]
+        [-Slot <String>]
+        [-Launch]
+        [-AffinityGroup <String>]
+        [-DeploymentName <String>]
+        [-ForceUpgrade]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PublishFromPackage
+  isDefault: false
+examples:
+- title: 'Example 1: Publish a service project with default values'
+  description: |-
+    ```
+    PS C:\> Publish-AzureServiceProject
+    ```
+
+    This example publishes the current service, using the current service settings and the current Azure publish profile.
+- title: 'Example 2: Create a deployment package'
+  description: |-
+    ```
+    PS C:\> Publish-AzureServiceProject -PackageOnly
+    ```
+
+    This example creates a deployment package (.cspkg) file in the service directory and does not publish to Windows Azure.
+links:
+- text: Enable-AzureServiceProjectRemoteDesktop
+  href: ./Enable-AzureServiceProjectRemoteDesktop.yml
+- text: Set-AzureServiceProject
+  href: ./Set-AzureServiceProject.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CF7E7C62-88FC-48CA-940F-9A6C7442BEF2
+  PlatyPS schema version: 2024-05-01

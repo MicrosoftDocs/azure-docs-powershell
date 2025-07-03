@@ -1,0 +1,330 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageMover.Get-AzStorageMoverJobRun
+name: Get-AzStorageMoverJobRun
+module: Az.StorageMover
+isPreview: false
+summary: |-
+  Gets a Job Run resource.
+description: |-
+  Gets a Job Run resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Job Definition resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Job Run resource.
+    aliases:
+    - JobRunName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Project resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageMoverName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Storage Mover resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverJobRun
+        -JobDefinitionName <String>
+        -ProjectName <String>
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverJobRun
+        -JobDefinitionName <String>
+        -Name <String>
+        -ProjectName <String>
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageMoverJobRun
+        -InputObject <IStorageMoverIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IJobRun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all job runs with a job definition'
+  description: |-
+    ```powershell
+    Get-AzStorageMoverJobRun -JobDefinitionName myJobDefinition -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover -ProjectName myProject
+    ```
+
+    ```output
+    AgentName                    : myAgent
+    AgentResourceId              : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/agents/myAgent
+    BytesExcluded                : 0
+    BytesFailed                  : 0
+    BytesNoTransferNeeded        : 0
+    BytesScanned                 : 0
+    BytesTransferred             : 0
+    BytesUnsupported             : 0
+    ErrorCode                    :
+    ErrorMessage                 :
+    ExecutionEndTime             :
+    ExecutionStartTime           : 2/24/2023 12:27:58 AM
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/projects/myProject/jobDefinitions/myJob/
+                                   jobRuns/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    ItemsExcluded                : 0
+    ItemsFailed                  : 0
+    ItemsNoTransferNeeded        : 0
+    ItemsScanned                 : 0
+    ItemsTransferred             : 0
+    ItemsUnsupported             : 0
+    JobDefinitionProperty        : {
+                                   }
+    LastStatusUpdate             : 2/24/2023 12:27:39 AM
+    Name                         : aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    ProvisioningState            : Succeeded
+    ScanStatus                   : NotStarted
+    SourceName                   : sourceendpoint
+    SourceProperty               : {
+                                   }
+    SourceResourceId             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/endpoints/sourceendpoint
+    Status                       : Started
+    SystemDataCreatedAt          : 2/24/2023 12:27:39 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 2/24/2023 12:36:01 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Target                       :
+    TargetName                   : targetendpoint
+    TargetProperty               : {
+                                   }
+    TargetResourceId             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/endpoints/targetendpoint
+    Type                         : microsoft.storagemover/storagemovers/projects/jobdefinitions/jobruns
+    ```
+
+    This command gets all the job runs under a specific job definition
+- title: 'Example 2: Get a specific job run'
+  description: |-
+    ```powershell
+    Get-AzStorageMoverJobRun -Name myJobRun -JobDefinitionName myJobDefinition -ResourceGroupName myResourceGroup -StorageMoverName myStorageMover -ProjectName myProject
+    ```
+
+    ```output
+    AgentName                    : myAgent
+    AgentResourceId              : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/agents/myAgent
+    BytesExcluded                : 0
+    BytesFailed                  : 0
+    BytesNoTransferNeeded        : 0
+    BytesScanned                 : 0
+    BytesTransferred             : 0
+    BytesUnsupported             : 0
+    ErrorCode                    :
+    ErrorMessage                 :
+    ExecutionEndTime             :
+    ExecutionStartTime           : 2/24/2023 12:27:58 AM
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/projects/myProject/jobDefinitions/myJob/
+                                   jobRuns/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    ItemsExcluded                : 0
+    ItemsFailed                  : 0
+    ItemsNoTransferNeeded        : 0
+    ItemsScanned                 : 0
+    ItemsTransferred             : 0
+    ItemsUnsupported             : 0
+    JobDefinitionProperty        : {
+                                   }
+    LastStatusUpdate             : 2/24/2023 12:27:39 AM
+    Name                         : aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+    ProvisioningState            : Succeeded
+    ScanStatus                   : NotStarted
+    SourceName                   : sourceendpoint
+    SourceProperty               : {
+                                   }
+    SourceResourceId             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/endpoints/sourceendpoint
+    Status                       : Started
+    SystemDataCreatedAt          : 2/24/2023 12:27:39 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 2/24/2023 12:36:01 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Target                       :
+    TargetName                   : targetendpoint
+    TargetProperty               : {
+                                   }
+    TargetResourceId             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroup/providers/Microsoft.StorageMover/storageMovers/myStorageMover/endpoints/targetendpoint
+    Type                         : microsoft.storagemover/storagemovers/projects/jobdefinitions/jobruns
+    ```
+
+    This command gets a specific job run.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Get-AzStorageMoverJobRun.md
+  document type: cmdlet
+  external help file: Az.StorageMover-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagemover/get-azstoragemoverjobrun
+  Module Name: Az.StorageMover
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Get-AzStorageMoverJobRun.md
+  PlatyPS schema version: 2024-05-01

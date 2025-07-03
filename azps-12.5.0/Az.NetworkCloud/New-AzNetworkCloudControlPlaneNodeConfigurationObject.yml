@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudControlPlaneNodeConfigurationObject
+name: New-AzNetworkCloudControlPlaneNodeConfigurationObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for ControlPlaneNodeConfiguration.
+description: |-
+  Create an in-memory object for ControlPlaneNodeConfiguration.
+parameters:
+  cmdletParameters:
+  - name: AdministratorConfigurationAdminUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user name for the administrator that will be applied to the operating systems that run Kubernetes nodes.
+      If not supplied, a user name will be chosen by the service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdministratorConfigurationSshPublicKey
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.ISshPublicKey" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The SSH configuration for the operating systems that run the nodes in the Kubernetes cluster.
+      In some cases, specification of public keys may be required to produce a working environment.
+      To construct, see NOTES section for ADMINISTRATORCONFIGURATIONSSHPUBLICKEY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilityZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of availability zones of the Network Cloud cluster to be used for the provisioning of nodes in the control plane.
+      If not specified, all availability zones will be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of virtual machines that use this configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VM SKU supplied during creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudControlPlaneNodeConfigurationObject
+        -Count <Int64>
+        -VMSkuName <String>
+        [-AdministratorConfigurationAdminUsername <String>]
+        [-AdministratorConfigurationSshPublicKey <ISshPublicKey[]>]
+        [-AvailabilityZone <String[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.ControlPlaneNodeConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ControlPlaneNodeConfiguration.'
+  description: |-
+    ```powershell
+    $sshPublicKey=@{
+        keyData= "ssh-rsa"
+    }
+    New-AzNetworkCloudControlPlaneNodeConfigurationObject -Count 1 -VMSkuName vmSkuName -AdministratorConfigurationAdminUsername userName -AdministratorConfigurationSshPublicKey $sshPublicKey -AvailabilityZone @("1","2","3")
+    ```
+
+    ```output
+    AvailabilityZone Count VMSkuName
+    ---------------- ----- ---------
+    {1, 2, 3}        1     vmSkuName
+    ```
+
+    Create an in-memory object for ControlPlaneNodeConfiguration.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudControlPlaneNodeConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudControlPlaneNodeConfigurationObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudControlPlaneNodeConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

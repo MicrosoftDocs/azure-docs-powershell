@@ -1,0 +1,110 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzLoadBalancerRuleConfig
+name: Get-AzLoadBalancerRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the rule configuration for a load balancer.
+description: |-
+  The **Get-AzLoadBalancerRuleConfig** cmdlet gets one or more rule configurations for a load balancer.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancer
+    type: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the load balancer that is associated with the rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the rule configuration to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLoadBalancerRuleConfig
+        [-Name <String>]
+        -LoadBalancer <PSLoadBalancer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'LoadBalancer' accepts value of type 'PSLoadBalancer' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancingRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the rule configuration of a load balancer'
+  description: |-
+    ```
+    PS C:\>$slb = Get-AzLoadBalancer -Name "MyLoadBalancer" -ResourceGroupName "MyResourceGroup"
+    PS C:\> Get-AzLoadBalancerRuleConfig -Name "MyLBrulename" -LoadBalancer $slb
+    ```
+
+    The first command gets the load balancer named MyLoadBalancer, and then stores it in the variable $slb.
+
+    The second command gets the associated rule configuration named MyLBrulename from the load balancer in $slb.
+links:
+- text: Add-AzLoadBalancerRuleConfig
+  href: ./Add-AzLoadBalancerRuleConfig.yml
+- text: Get-AzLoadBalancer
+  href: ./Get-AzLoadBalancer.yml
+- text: Remove-AzLoadBalancerRuleConfig
+  href: ./Remove-AzLoadBalancerRuleConfig.yml
+- text: Set-AzLoadBalancerRuleConfig
+  href: ./Set-AzLoadBalancerRuleConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzLoadBalancerRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azloadbalancerruleconfig
+  Module Name: Az.Network
+  ms.assetid: B2CF11FC-520C-4C14-9A1B-13F06B250B5D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzLoadBalancerRuleConfig.md
+  PlatyPS schema version: 2024-05-01

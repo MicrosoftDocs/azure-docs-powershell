@@ -1,0 +1,194 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureDeployment
+name: Remove-AzureDeployment
+module: Azure
+isPreview: false
+summary: |-
+  Deletes a deployment of a cloud service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  The **Remove-AzureDeployment** cmdlet deletes a deployment of an Azure cloud service.
+  To delete a deployment, first suspend it.
+parameters:
+  cmdletParameters:
+  - name: DeleteVHD
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet removes the deployment and the virtual hard disks (VHDs) from blob storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service for which this cmdlet deletes a deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deployment environment from which this cmdlet deletes the deployment.
+      Valid values are: Staging and Production.
+      The default value is Production.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureDeployment
+        [-ServiceName] <String>
+        [-Slot] <String>
+        [-DeleteVHD]
+        [-Force]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="ManagementOperationContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a deployment'
+  description: |-
+    ```
+    PS C:\> Remove-AzureDeployment -ServiceName "ContosoService"
+    ```
+
+    This command removes the deployment of the Azure service named ContosoService.
+    Because this command does not specify a slot, it removes the service from the production environment.
+- title: 'Example 2: Remove a deployment and virtual hard disks'
+  description: |-
+    ```
+    PS C:\> Remove-AzureDeployment -ServiceName "ContosoService" -DeleteVHD
+    ```
+
+    This command removes the deployment of the service named ContosoService from the production environment.
+    The command also removes the underlying virtual hard disks.
+links:
+- text: Get-AzureDeployment
+  href: ./Get-AzureDeployment.yml
+- text: Get-AzureDeploymentEvent
+  href: ./Get-AzureDeploymentEvent.yml
+- text: Move-AzureDeployment
+  href: ./Move-AzureDeployment.yml
+- text: New-AzureDeployment
+  href: ./New-AzureDeployment.yml
+- text: Set-AzureDeployment
+  href: ./Set-AzureDeployment.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D6D54096-670D-43E4-93EB-24C8FBA199A4
+  PlatyPS schema version: 2024-05-01

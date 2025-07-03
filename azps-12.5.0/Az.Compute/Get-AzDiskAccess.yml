@@ -1,0 +1,240 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzDiskAccess
+name: Get-AzDiskAccess
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets the properties of Disk Accesses
+description: |-
+  The **Get-AzDiskAccess** cmdlet gets the properties of Disk Accesses
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a disk access.
+    aliases:
+    - diskAccessName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID for your disk access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIDParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDiskAccess
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDiskAccess
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIDParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSDiskAccess" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Using Default Parameter Set'
+  description: |-
+    ```powershell
+    Get-AzDiskAccess -ResourceGroupName 'ResourceGroup01' -Name 'DiskAccess01'
+    ```
+
+    ```output
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:02:50 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess01
+    Name                       : DiskAccess01
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+    ```
+
+    This command gets the properties of a Disk Access resource named 'DiskAccess01' in the resource group 'ResourceGroup01'.
+- title: 'Example 2: Get-AzDiskAccess by Resource Group'
+  description: |-
+    ```powershell
+    Get-AzDiskAccess -ResourceGroupName 'ResourceGroup01'
+    ```
+
+    ```output
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:02:50 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess01
+    Name                       : DiskAccess01
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:05:19 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess02
+    Name                       : DiskAccess02
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+    ```
+
+    This command gets the properties of all disk accesses in the resource group 'ResourceGroup01'.
+- title: 'Example 3: Getting all Disk Access'
+  description: |-
+    ```powershell
+    Get-AzDiskAccess
+    ```
+
+    ```output
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:02:50 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess01
+    Name                       : DiskAccess01
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:05:19 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup21/providers/Microsoft.Compute/diskAccesses/DiskAccess02
+    Name                       : DiskAccess02
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:05:19 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup08/providers/Microsoft.Compute/diskAccesses/DiskAccess03
+    Name                       : DiskAccess03
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+    ```
+
+    This command gets the properties of all disk accesses under the subscription.
+- title: 'Example 4: Get all Disk Access using Wildcard Character'
+  description: |-
+    ```powershell
+    Get-AzDiskAccess -Name DiskAccessMicrosoft*
+    ```
+
+    ```output
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:02:50 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccessMicrosoftAzure
+    Name                       : DiskAccessMicrosoftAzure
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:05:19 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccessMicrosoftTeams
+    Name                       : DiskAccessMicrosoftTeams
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+    ```
+
+    This command gets the properties of all disk accesses under the subscription name starting with 'DiskAccessMicrosoft'.
+- title: 'Example 5: Get Disk Access using ResourceId.'
+  description: |-
+    ```powershell
+    Get-AzDiskAccess -ResourceId '/subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess01'
+    ```
+
+    ```output
+    PrivateEndpointConnections : {}
+    ProvisioningState          : Succeeded
+    TimeCreated                : 8/13/2020 7:02:50 PM
+    Location                   : northcentralus
+    Id                         : /subscriptions/xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Compute/diskAccesses/DiskAccess01
+    Name                       : DiskAccess01
+    Type                       : Microsoft.Compute/diskAccesses
+    Tags                       : {}
+    ```
+
+    This command gets the properties of a Disk Access with the given ResourceId.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzDiskAccess.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzDiskAccess.md
+  PlatyPS schema version: 2024-05-01

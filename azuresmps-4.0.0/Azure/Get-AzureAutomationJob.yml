@@ -1,0 +1,236 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationJob
+name: Get-AzureAutomationJob
+module: Azure
+isPreview: false
+summary: |-
+  Gets one or more Azure Automation runbook jobs.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationJob** cmdlet gets one or more runbook jobs in Microsoft Azure Automation.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end time for a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a job.
+    aliases:
+    - JobId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByJobId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start time of a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status of a job.
+      This cmdlet gets jobs that have a status matching this parameter.
+      Valid values are:
+
+      - Completed
+      - Failed
+      - Queued
+      - Starting
+      - Resuming
+      - Running
+      - Stopped
+      - Stopping
+      - Suspended
+      - Suspending
+      - Activating
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRunbookName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationJob
+        -AutomationAccountName <String>
+        [-Status <String>]
+        [-StartTime <DateTimeOffset>]
+        [-EndTime <DateTimeOffset>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationJob
+        -Id <Guid>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByJobId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationJob
+        -RunbookName <String>
+        -AutomationAccountName <String>
+        [-Status <String>]
+        [-StartTime <DateTimeOffset>]
+        [-EndTime <DateTimeOffset>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Job" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific runbook job'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Id 2989b069-24fe-40b9-b3bd-cb7e5eac4b647
+    ```
+
+    This command gets the job that has the specified GUID.
+- title: 'Example 2: Get all jobs for a runbook'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -RunbookName "MyRunbook"
+    ```
+
+    This command gets all jobs associated with a runbook named MyRunbook.
+- title: 'Example 2: Get all running jobs'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationJob -AutomationAccountName "Contoso17" -Status "Running"
+    ```
+
+    This command gets all running jobs in the automation account with the name Contoso17.
+links:
+- text: Resume-AzureAutomationJob
+  href: ./Resume-AzureAutomationJob.yml
+- text: Stop-AzureAutomationJob
+  href: ./Stop-AzureAutomationJob.yml
+- text: Suspend-AzureAutomationJob
+  href: ./Suspend-AzureAutomationJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6527FF45-9C16-47E8-8E70-619A0581D2F8
+  PlatyPS schema version: 2024-05-01

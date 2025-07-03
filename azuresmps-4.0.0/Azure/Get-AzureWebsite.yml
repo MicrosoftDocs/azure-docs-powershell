@@ -1,0 +1,171 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureWebsite
+name: Get-AzureWebsite
+module: Azure
+isPreview: false
+summary: |-
+  Gets Azure websites in the current subscription.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureWebsite** cmdlet gets information about Azure websites in the current subscription.
+
+  By default, **Get-AzureWebsite** gets all Azure websites in the current subscription and returns an object that provides basic information about the sites.
+  When you use the *Name* parameter, **Get-AzureWebsite** returns an object with extensive information, including configuration details.
+
+  The current subscription is the subscription that is designated as "current." To find the current subscription, use the *Current* parameter of the [Get-AzureSubscription](/powershell/module/servicemanagement/azure/get-azuresubscription) cmdlet.
+  To change the current subscription, use the [Select-AzureSubscription](/powershell/module/servicemanagement/azure/select-azuresubscription) cmdlet.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets detailed configuration information about the specified website.
+      Enter the name of one website in the subscription.
+      By default, **Get-AzureWebsite** gets all websites in the current subscription.
+      The *Name* value does not support wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets the specified deployment slot of the website.
+      Enter the slot name, such as "Staging" or "Production".
+      For more information about deployment slots, see [Staged Deployment on Microsoft Azure Web Sites](/azure/app-service/deploy-staging-slots).
+      To add a deployment slot to an existing Azure website, use the Set-AzureWebsite cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsite
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Websites.Services.WebEntities.Site" data-throw-if-not-resolved="False" />
+  description: |-
+    By default, **Get-AzureWebsite** returns an array of **Site** objects.
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Websites.Services.WebEntities.SiteWithConfig" data-throw-if-not-resolved="False" />
+  description: |-
+    When you use the *Name* parameter, **Get-AzureWebsite** returns a **SiteWithConfig** object.
+examples:
+- title: 'Example 1: Get all websites in the subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsite
+    ```
+
+    This command gets all Azure websites in the current subscription.
+- title: 'Example 2: Get a website by name'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsite -Name ContosoWeb
+    ```
+
+    This command gets detailed information about the ContosoWeb Azure website, including configuration information.
+    When you use the *Name* parameter, **Get-AzureWebsite** returns a **SiteWithConfig** object with extended information about the website.
+- title: 'Example 3: Get detailed information about all websites'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsite | ForEach-Object {Get-AzureWebsite -Name $_.Name}
+    ```
+
+    This command gets detailed information about all websites in the subscription.
+    It uses a **Get-AzureWebsite** command to get all websites and then uses the **ForEach-Object** cmdlet to get each website by name.
+- title: 'Example 4: Get information about a deployment slot'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsite -Name ContosoWeb -Slot Staging
+    ```
+
+    This command gets the Staging deployment slot of the ContosoWeb website.
+    Deployment slots let you test different versions of your Azure website without releasing them to the public.
+- title: 'Example 5: Get website instances'
+  description: |-
+    ```
+    PS C:\>(Get-AzureWebsite -Name ContosoWeb).Instances
+
+    InstanceId
+    ----------
+    2d8e712fb8f85d061c30fd793a534e6700a175f9a9ab12ca55cb3b0edfcc10ee
+    5834916b8cef49249b18187708223a33fbbc4352d33b48369f3166644bdd3445
+
+    PS C:\>(Get-AzureWebsite -Name ContosoWeb).Instances.Count
+    2
+    ```
+
+    The commands in this example use the Instances property of an Azure website to get information about currently running website instances.
+    The **Instances** property was added to the **SiteWithConfig** object in version 0.8.3 of the Azure module.
+
+    The first command gets the instance IDs of all currently running instances of a website.
+    The second command gets the number of running instances of the website.
+    You can use the **Count** property on any array.
+links:
+- text: New-AzureWebsite
+  href: ./New-AzureWebsite.yml
+- text: Remove-AzureWebsite
+  href: ./Remove-AzureWebsite.yml
+- text: Start-AzureWebsite
+  href: ./Start-AzureWebsite.yml
+- text: Stop-AzureWebsite
+  href: ./Stop-AzureWebsite.yml
+- text: Show-AzureWebsite
+  href: ./Show-AzureWebsite.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: E4B1AA31-1185-4035-86E6-2BB2587285C6
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksClusterHotfixUpgradeObject
+name: New-AzHdInsightOnAksClusterHotfixUpgradeObject
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Create an in-memory object for ClusterHotfixUpgradeProperties.
+description: |-
+  Create an in-memory object for ClusterHotfixUpgradeProperties.
+parameters:
+  cmdletParameters:
+  - name: ComponentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of component to be upgraded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetBuildNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target build number of component to be upgraded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetClusterVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target cluster version of component to be upgraded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetOssVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target OSS version of component to be upgraded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksClusterHotfixUpgradeObject
+        [-ComponentName <String>]
+        [-TargetBuildNumber <String>]
+        [-TargetClusterVersion <String>]
+        [-TargetOssVersion <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterUpgrade" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an object to hold the upgrade parameters.'
+  description: |-
+    ```powershell
+    $hotfixObj = New-AzHdInsightOnAksClusterHotfixUpgradeObject -ComponentName Webssh -TargetBuildNumber 7 -TargetClusterVersion "1.1.1" -TargetOssVersion "0.4.2"
+    ```
+
+    ```output
+    Property                                    UpgradeType
+    --------                                    -----------
+    {…                                          HotfixUpgrade
+    ```
+
+    Create an object to hold the flink cluster HotfixUpgrade parameters.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterHotfixUpgradeObject.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclusterhotfixupgradeobject
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterHotfixUpgradeObject.md
+  PlatyPS schema version: 2024-05-01

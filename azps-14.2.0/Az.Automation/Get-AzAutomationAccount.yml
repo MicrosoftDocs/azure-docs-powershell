@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationAccount
+name: Get-AzAutomationAccount
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets Automation accounts in a resource group.
+description: |-
+  The **Get-AzAutomationAccount** cmdlet gets Azure Automation accounts in a resource group.
+  For more information about Automation accounts, see the New-AzAutomationAccount cmdlet.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account that this cmdlet gets.
+    aliases:
+    - AutomationAccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAutomationAccountName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group in which this cmdlet gets Automation accounts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationAccount
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationAccount
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAutomationAccountName
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.AutomationAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all accounts'
+  description: |-
+    ```powershell
+    Get-AzAutomationAccount -ResourceGroupName "ResourceGroup03"
+    ```
+
+    This command gets all Automation accounts in the resource group named ResourceGroup03.
+- title: 'Example 2: Get an account'
+  description: |-
+    ```powershell
+    Get-AzAutomationAccount -ResourceGroupName "ResourceGroup03" -Name "ContosoAutomationAccount"
+    ```
+
+    This command gets the Automation account named ContosoAutomationAccount in the resource group named ContosoResourceGroup.
+links:
+- text: New-AzAutomationAccount
+  href: ./New-AzAutomationAccount.yml
+- text: Remove-AzAutomationAccount
+  href: ./Remove-AzAutomationAccount.yml
+- text: Set-AzAutomationAccount
+  href: ./Set-AzAutomationAccount.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationaccount
+  Module Name: Az.Automation
+  ms.assetid: B32A8423-A7AA-418E-A95D-6C18566741AB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationAccount.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,338 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DigitalTwins.Update-AzDigitalTwinsInstance
+name: Update-AzDigitalTwinsInstance
+module: Az.DigitalTwins
+isPreview: false
+summary: |-
+  Update the metadata of a DigitalTwinsInstance.
+  The usual pattern to modify a property is to retrieve the DigitalTwinsInstance and security metadata, and then combine them with the modified values in a new body to update the DigitalTwinsInstance.
+description: |-
+  Update the metadata of a DigitalTwinsInstance.
+  The usual pattern to modify a property is to retrieve the DigitalTwinsInstance and security metadata, and then combine them with the modified values in a new body to update the DigitalTwinsInstance.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSystemAssignedIdentity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines whether to enable a system-assigned identity for the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IDigitalTwinsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateEndpointConnection
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IPrivateEndpointConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The private endpoint connections.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Public network access for the DigitalTwinsInstance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the DigitalTwinsInstance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the DigitalTwinsInstance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription identifier.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzDigitalTwinsInstance
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String>]
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-PrivateEndpointConnection <IPrivateEndpointConnection[]>]
+        [-PublicNetworkAccess <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzDigitalTwinsInstance
+        -InputObject <IDigitalTwinsIdentity>
+        [-EnableSystemAssignedIdentity <Boolean>]
+        [-PrivateEndpointConnection <IPrivateEndpointConnection[]>]
+        [-PublicNetworkAccess <String>]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IDigitalTwinsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IDigitalTwinsDescription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update metadata of DigitalTwinsInstance.'
+  description: |-
+    ```powershell
+    Update-AzDigitalTwinsInstance -ResourceGroupName azps_test_group -ResourceName azps-digitaltwins-instance -Tag @{"abc"="123"}
+    ```
+
+    ```output
+    CreatedTime                  : 2025-06-06 09:44:17 AM
+    HostName                     : azps-digitaltwins-instance.api.eus.digitaltwins.azure.net
+    Id                           : /subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.DigitalTwins/digitalTwinsInstances/azps-digitaltwins-instance
+    IdentityPrincipalId          : 6463ae74-a748-4f95-acf9-7d76e1d343b3
+    IdentityTenantId             : 213e87ed-8e08-4eb4-a63c-c073058f7b00
+    IdentityType                 : SystemAssigned
+    LastUpdatedTime              : 2025-06-06 11:27:24 AM
+    Location                     : eastus
+    Name                         : azps-digitaltwins-instance
+    PrivateEndpointConnection    : {}
+    ProvisioningState            : Succeeded
+    PublicNetworkAccess          : Enabled
+    ResourceGroupName            : azps_test_group
+    SystemDataCreatedAt          : 2025-06-06 09:44:15 AM
+    SystemDataCreatedBy          : xxxxx.xxxxx@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 2025-06-06 11:27:22 AM
+    SystemDataLastModifiedBy     : xxxxx.xxxxx@microsoft.com
+    SystemDataLastModifiedByType : User
+    Tag                          : {
+                                     "abc": "123"
+                                   }
+    Type                         : Microsoft.DigitalTwins/digitalTwinsInstances
+    ```
+
+    Update metadata of DigitalTwinsInstance.
+- title: 'Example 2: Update the AzDigitalTwinsInstance by another AzDigitalTwinsInstance.'
+  description: |-
+    ```powershell
+    Get-AzDigitalTwinsInstance -ResourceGroupName azps_test_group -ResourceName azps-digitaltwins-instance | Update-AzDigitalTwinsInstance -Tag @{"1234"="abcd"}
+    ```
+
+    ```output
+    CreatedTime                  : 2025-06-06 09:44:17 AM
+    HostName                     : azps-digitaltwins-instance.api.eus.digitaltwins.azure.net
+    Id                           : /subscriptions/{subId}/resourceGroups/azps_test_group/providers/Microsoft.DigitalTwins/digitalTwinsInstances/azps-digitaltwins-instance
+    IdentityPrincipalId          : 6463ae74-a748-4f95-acf9-7d76e1d343b3
+    IdentityTenantId             : 213e87ed-8e08-4eb4-a63c-c073058f7b00
+    IdentityType                 : SystemAssigned
+    LastUpdatedTime              : 2025-06-06 11:29:03 AM
+    Location                     : eastus
+    Name                         : azps-digitaltwins-instance
+    PrivateEndpointConnection    : {}
+    ProvisioningState            : Succeeded
+    PublicNetworkAccess          : Enabled
+    ResourceGroupName            : azps_test_group
+    SystemDataCreatedAt          : 2025-06-06 09:44:15 AM
+    SystemDataCreatedBy          : xxxxx.xxxxx@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 2025-06-06 11:29:01 AM
+    SystemDataLastModifiedBy     : xxxxx.xxxxx@microsoft.com
+    SystemDataLastModifiedByType : User
+    Tag                          : {
+                                     "1234": "abcd"
+                                   }
+    Type                         : Microsoft.DigitalTwins/digitalTwinsInstances
+    ```
+
+    Update the AzDigitalTwinsInstance by another AzDigitalTwinsInstance.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/DigitalTwins/help/Update-AzDigitalTwinsInstance.md
+  document type: cmdlet
+  external help file: Az.DigitalTwins-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.digitaltwins/update-azdigitaltwinsinstance
+  Module Name: Az.DigitalTwins
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/DigitalTwins/help/Update-AzDigitalTwinsInstance.md
+  PlatyPS schema version: 2024-05-01

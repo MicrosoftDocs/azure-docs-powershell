@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.Get-AzStackHCIRemoteSupportAccess
+name: Get-AzStackHCIRemoteSupportAccess
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Gets Remote Support Access.
+description: |-
+  Gets remote support access.
+parameters:
+  cmdletParameters:
+  - name: Cluster
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Defaults to false.
+      Indicates whether to show remote support sessions across cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeExpired
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Defaults to false.
+      Indicates whether to include past expired entries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIRemoteSupportAccess
+        [-Cluster]
+        [-IncludeExpired]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    Get-AzStackHCIRemoteSupportAccess -Cluster
+    ```
+
+    ```output
+    Microsoft.AzureStack.Deployment.RemoteSupport is loaded already ...
+    Getting RemoteSupport Access on this node
+    Retrieving Remote Support access. IncludeExpired is set to 'False'
+
+
+    State         : Active
+    CreatedAt     : 3/29/2022 10:30:55 AM +00:00
+    UpdatedAt     : 3/29/2022 10:30:55 AM +00:00
+    TargetService : PowerShell
+    AccessLevel   : Diagnostics
+    ExpiresAt     : 3/30/2022 10:30:55 AM +00:00
+    SasCredential :
+    ```
+
+    Get remote access across a cluster
+- title: 'Example 2:'
+  description: |-
+    ```powershell
+    Get-AzStackHCIRemoteSupportAccess -Cluster -IncludeExpired
+    ```
+
+    ```output
+    Microsoft.AzureStack.Deployment.RemoteSupport is loaded already ...
+    Getting RemoteSupport Access on this node
+    Retrieving Remote Support access. IncludeExpired is set to 'True'
+
+
+    State         : Active
+    CreatedAt     : 3/29/2022 10:30:55 AM +00:00
+    UpdatedAt     : 3/29/2022 10:30:55 AM +00:00
+    TargetService : PowerShell
+    AccessLevel   : Diagnostics
+    ExpiresAt     : 3/30/2022 10:30:55 AM +00:00
+    SasCredential :
+    ```
+
+    Get remote access across a cluster with expired entries
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIRemoteSupportAccess.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportaccess
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIRemoteSupportAccess.md
+  PlatyPS schema version: 2024-05-01

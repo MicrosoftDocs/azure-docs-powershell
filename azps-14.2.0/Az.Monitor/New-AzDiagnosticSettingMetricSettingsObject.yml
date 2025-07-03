@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzDiagnosticSettingMetricSettingsObject
+name: New-AzDiagnosticSettingMetricSettingsObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for MetricSettings.
+description: |-
+  Create an in-memory object for MetricSettings.
+parameters:
+  cmdletParameters:
+  - name: Category
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a Diagnostic Metric category for a resource type this setting is applied to.
+      To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      a value indicating whether this category is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionPolicyDay
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      the number of days for the retention in days.
+      A value of 0 will retain the events indefinitely.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionPolicyEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      a value indicating whether the retention policy is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeGrain
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      the timegrain of the metric in ISO8601 format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDiagnosticSettingMetricSettingsObject
+        -Enabled <Boolean>
+        [-Category <String>]
+        [-RetentionPolicyDay <Int32>]
+        [-RetentionPolicyEnabled <Boolean>]
+        [-TimeGrain <TimeSpan>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DiagnosticSetting.Models.Api20210501Preview.MetricSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create metric setting object'
+  description: |-
+    ```powershell
+    New-AzDiagnosticSettingMetricSettingsObject -Enabled $true -Category AllMetrics -RetentionPolicyDay 7 -RetentionPolicyEnabled $true
+    ```
+
+    Create metric setting object, to get supported categories for resource, please see `Get-AzDiagnosticSettingCategory`
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingMetricSettingsObject.md
+  document type: cmdlet
+  external help file: Az.DiagnosticSetting.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzDiagnosticSettingMetricSettingsObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingMetricSettingsObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearning.Get-AzMlWebService
+name: Get-AzMlWebService
+module: Az.MachineLearning
+isPreview: false
+summary: |-
+  Retrieves the summary information for one or more web services.
+description: |-
+  Retrieves web service definition information.
+  Depending on the parameters passed, the cmdlet returns the definition for a specific web service, a collection of definitions for the web services for a specified resource group within the current subscription, or a collection of definitions for the web services within the current subscription.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the web service for which the details are retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Region
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of region
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group from which the details for the web service are retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMlWebService
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-Region <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get details of specific web service'
+  description: |-
+    ```powershell
+    Get-AzMlWebService -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
+    ```
+- title: 'Example 2: Get all web service resources in current subscription'
+  description: |-
+    ```powershell
+    Get-AzMlWebService
+    ```
+- title: 'Example 3: Get all web services in the current subscription and given resource group'
+  description: |-
+    ```powershell
+    Get-AzMlWebService -ResourceGroupName "myresourcegroup"
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlWebService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearning/get-azmlwebservice
+  Module Name: Az.MachineLearning
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlWebService.md
+  PlatyPS schema version: 2024-05-01

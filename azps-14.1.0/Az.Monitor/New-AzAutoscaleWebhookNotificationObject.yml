@@ -1,0 +1,76 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzAutoscaleWebhookNotificationObject
+name: New-AzAutoscaleWebhookNotificationObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for WebhookNotification.
+description: |-
+  Create an in-memory object for WebhookNotification.
+parameters:
+  cmdletParameters:
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IWebhookNotificationProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      a property bag of settings.
+      This value can be empty.
+      To construct, see NOTES section for PROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the service address to receive the notification.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutoscaleWebhookNotificationObject
+        [-Property <IWebhookNotificationProperties>]
+        [-ServiceUri <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.WebhookNotification" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create webhook nofitication object'
+  description: |-
+    ```powershell
+    New-AzAutoscaleWebhookNotificationObject -Property @{} -ServiceUri "http://myservice.com"
+    ```
+
+    Create webhook nofitication object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleWebhookNotificationObject.md
+  document type: cmdlet
+  external help file: Az.Autoscale.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleWebhookNotificationObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleWebhookNotificationObject.md
+  PlatyPS schema version: 2024-05-01

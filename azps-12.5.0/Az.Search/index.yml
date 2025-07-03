@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.Search
+name: Az.Search Module
+isPreview: false
+cmdletGroups:
+- title: Search
+  cmdlets:
+  - Az.Search.Get-AzSearchAdminKeyPair
+  - Az.Search.Get-AzSearchPrivateEndpointConnection
+  - Az.Search.Get-AzSearchPrivateLinkResource
+  - Az.Search.Get-AzSearchQueryKey
+  - Az.Search.Get-AzSearchService
+  - Az.Search.Get-AzSearchSharedPrivateLinkResource
+  - Az.Search.New-AzSearchAdminKey
+  - Az.Search.New-AzSearchQueryKey
+  - Az.Search.New-AzSearchService
+  - Az.Search.New-AzSearchSharedPrivateLinkResource
+  - Az.Search.Remove-AzSearchPrivateEndpointConnection
+  - Az.Search.Remove-AzSearchQueryKey
+  - Az.Search.Remove-AzSearchService
+  - Az.Search.Remove-AzSearchSharedPrivateLinkResource
+  - Az.Search.Set-AzSearchPrivateEndpointConnection
+  - Az.Search.Set-AzSearchService
+  - Az.Search.Set-AzSearchSharedPrivateLinkResource
+description: |-
+  This topic displays help topics for the Azure Cognitive Search Cmdlets.
+metadata:
+  Module Name: Az.Search
+  Module Guid: a2bb88dc-abd2-4275-9aae-bd98346f8c8a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.search
+  Help Version: 0.1.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Az.Search.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Az.Search.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

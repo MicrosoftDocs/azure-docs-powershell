@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlInstanceStartStopSchedule
+name: Get-AzSqlInstanceStartStopSchedule
+module: Az.Sql
+isPreview: false
+summary: |-
+  Get start/stop schedule for Azure SQL Managed Instance
+description: |-
+  Get start/stop schedule for Azure SQL Managed Instance
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceModel
+    type: <xref href="AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance model input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetInstanceScheduleByInstanceModelInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Managed Instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetInstanceScheduleInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceStartStopSchedule
+        [-ResourceGroupName] <String>
+        -InstanceName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetInstanceScheduleInputParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceStartStopSchedule
+        [-ResourceGroupName] <String>
+        -InstanceModel <AzureSqlManagedInstanceModel>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetInstanceScheduleByInstanceModelInputParameters
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceSchedule.Model.AzureSqlManagedInstanceScheduleModel" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceStartStopSchedule -InstanceName instance-name -ResourceGroupName rg-name
+    ```
+    ```output
+    Description TimeZoneId                   ScheduleList
+    ----------- ----------                   ------------
+                Central Europe Standard Time {Microsoft.Azure.Commands.Sql.ManagedInstanceSchedule.Model.ScheduleItem}
+    ```
+
+    Gets start/stop schedule for instance-name in rg-name resource group.
+links:
+- text: Remove-AzSqlInstanceStartStopSchedule
+  href: ./Remove-AzSqlInstanceStartStopSchedule.yml
+- text: New-AzSqlInstanceStartStopSchedule
+  href: ./New-AzSqlInstanceStartStopSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceStartStopSchedule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstancestartstopschedule
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceStartStopSchedule.md
+  PlatyPS schema version: 2024-05-01

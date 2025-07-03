@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LogicApp.Get-AzLogicAppRunHistory
+name: Get-AzLogicAppRunHistory
+module: Az.LogicApp
+isPreview: false
+summary: |-
+  Gets the run history of a logic app.
+description: |-
+  The **Get-AzLogicAppRunHistory** cmdlet gets the run history of a logic app.
+  This cmdlet returns a collection of **WorkflowRun** objects.
+  Specify the logic app and resource group.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FollowNextPageLink
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the cmdlet should follow next page links.
+    aliases:
+    - FL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumFollowNextPageLink
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how many times to follow next page links if FollowNextPageLink is used.
+    aliases:
+    - ML
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the logic app for which this cmdlet gets run history.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group that contains the logic app.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the run name of a logic app.
+      This cmdlet gets the workflow run that this cmdlet specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLogicAppRunHistory
+        -ResourceGroupName <String>
+        -Name <String>
+        [-RunName <String>]
+        [-FollowNextPageLink]
+        [-MaximumFollowNextPageLink <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.WorkflowRun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the run history of a logic app'
+  description: |-
+    ```powershell
+    Get-AzLogicAppRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03"
+    ```
+
+    ```output
+    CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    EndTime          : 1/13/2016 2:46:55 PM
+    Error            : {code, message}
+    Name             : 08587489104702792076
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:46:55 PM
+    Status           : Failed
+    TriggerName      :
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952540
+
+    CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    EndTime          : 1/13/2016 2:42:56 PM
+    Error            : {code, message}
+    Name             : 08587489107100664541
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:42:55 PM
+    Status           : Failed
+    TriggerName      : httpTrigger
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952120
+    ```
+
+    This command gets the run history of a logic app named LogicApp03.
+- title: 'Example 2: Get a logic app run'
+  description: |-
+    ```powershell
+    Get-AzLogicAppRunHistory -ResourceGroupName "Resourcegroup11" -Name "LogicApp03" -RunName "08587489104702792076"
+    ```
+
+    ```output
+    CorrelationId    : 00001111-aaaa-2222-bbbb-3333cccc4444
+    EndTime          : 1/13/2016 2:46:55 PM
+    Error            : {code, message}
+    Name             : 08587489104702792076
+    Outputs          : {}
+    StartTime        : 1/13/2016 2:46:55 PM
+    Status           : Failed
+    TriggerName      :
+    LogicAppName     : LogicApp03
+    LogicAppVersion  : 08587489107859952120
+    ```
+
+    This command gets a specific logic app run for the logic app named LogicApp03.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzLogicAppRunHistory -Name 'LogicApp03' -ResourceGroupName MyResourceGroup -FollowNextPageLink
+    ```
+
+    This command gets the entire run history of a logic app named LogicApp03 by following the NextPageLink.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzLogicAppRunHistory -Name 'LogicApp03' -ResourceGroupName MyResourceGroup -FollowNextPageLink -MaximumFollowNextPageLink 1
+    ```
+
+    This command gets the first two pages of run history of a logic app named LogicApp03 by following the NextPageLink and limiting the result size to two pages.
+    Each page contains thirty results.
+links:
+- text: Get-AzLogicAppRunAction
+  href: ./Get-AzLogicAppRunAction.yml
+- text: Start-AzLogicApp
+  href: ./Start-AzLogicApp.yml
+- text: Stop-AzLogicAppRun
+  href: ./Stop-AzLogicAppRun.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppRunHistory.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.logicapp/get-azlogicapprunhistory
+  Module Name: Az.LogicApp
+  ms.assetid: F271BCB1-6D43-48E5-BB51-00288F57BFFB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzLogicAppRunHistory.md
+  PlatyPS schema version: 2024-05-01

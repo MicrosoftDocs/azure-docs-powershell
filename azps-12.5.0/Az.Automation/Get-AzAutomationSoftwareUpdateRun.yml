@@ -1,0 +1,311 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationSoftwareUpdateRun
+name: Get-AzAutomationSoftwareUpdateRun
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets a list of azure automation software update runs.
+description: |-
+  The Get-AzAutomationSoftwareUpdateRun cmdlet returns a list of software update runs. Since a software update configuration has an associated schedule, it can be triggered multiple times. Each time a schedule is triggered will result in an update run created. Update run is an aggregate of the result of all machine runs. You can get runs for specific software update configuration by passing the SoftwareUpdateConfigurationName parameter. To get a specific runs, you need to pass the name parameter. You can also list runs with specific status, runs targeting specific operating system, or runs started after specific time by passing the appropriate parameter.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The automation account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the software update configuration run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperatingSystem
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.OperatingSystemType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The operating system of the run.
+    acceptedValues:
+    - Windows
+    - Linux
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySucName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySuc
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SoftwareUpdateConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The software update configuration triggered the run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySuc
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SoftwareUpdateConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the software update configuration triggered the run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySucName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum start time of the run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySucName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySuc
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateRunStatus" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Status of the run.
+    acceptedValues:
+    - NotStarted
+    - InProgress
+    - Succeeded
+    - Failed
+    - MaintenanceWindowExceeded
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAll
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySucName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySuc
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateRun
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-OperatingSystem <OperatingSystemType>]
+        [-Status <SoftwareUpdateRunStatus>]
+        [-StartTime <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateRun
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -Id <Guid>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateRun
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-SoftwareUpdateConfigurationName <String>]
+        [-OperatingSystem <OperatingSystemType>]
+        [-Status <SoftwareUpdateRunStatus>]
+        [-StartTime <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySucName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationSoftwareUpdateRun
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-SoftwareUpdateConfiguration <SoftwareUpdateConfiguration>]
+        [-OperatingSystem <OperatingSystemType>]
+        [-Status <SoftwareUpdateRunStatus>]
+        [-StartTime <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySuc
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateConfiguration" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.UpdateManagement.SoftwareUpdateRun" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    This example list all update runs triggered by a specific software update configuration.
+
+    ```powershell
+    Get-AzAutomationSoftwareUpdateRun -ResourceGroupName "mygroup" `
+                                                   -AutomationAccountName "myaccount" `
+                                                   -SoftwareUpdateConfigurationName "MyUpdateConfiguration"
+    ```
+
+    ```output
+    RunId                           : ec9ce57f-da18-44be-b33b-651a0f93cb52
+    SoftwareUpdateConfigurationName : MyUpdateConfiguration
+    ConfiguredDuration              : 02:00:00
+    OperatingSystem                 : Windows
+    StartTime                       : 5/22/2018 11:37:42 PM +00:00
+    EndTime                         : 5/22/2018 11:38:31 PM +00:00
+    ComputerCount                   : 2
+    FailedCount                     : 0
+    ResourceGroupName               : mygroup
+    AutomationAccountName           : myaccount
+    Name                            : ec9ce57f-da18-44be-b33b-651a0f93cb52
+    CreationTime                    : 5/22/2018 11:37:42 PM +00:00
+    LastModifiedTime                : 5/22/2018 11:38:54 PM +00:00
+    Description                     :
+
+    RunId                           : ac9396c7-a837-43d4-be97-fbfe46c80baa
+    SoftwareUpdateConfigurationName : MyUpdateConfiguration
+    ConfiguredDuration              : 02:00:00
+    OperatingSystem                 : Windows
+    StartTime                       : 5/22/2018 10:00:47 PM +00:00
+    EndTime                         : 5/22/2018 10:02:20 PM +00:00
+    ComputerCount                   : 2
+    FailedCount                     : 0
+    ResourceGroupName               : mygroup
+    AutomationAccountName           : myaccount
+    Name                            : ac9396c7-a837-43d4-be97-fbfe46c80baa
+    CreationTime                    : 5/22/2018 10:00:47 PM +00:00
+    LastModifiedTime                : 5/22/2018 10:02:58 PM +00:00
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSoftwareUpdateRun.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationsoftwareupdaterun
+  Module Name: Az.Automation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationSoftwareUpdateRun.md
+  PlatyPS schema version: 2024-05-01

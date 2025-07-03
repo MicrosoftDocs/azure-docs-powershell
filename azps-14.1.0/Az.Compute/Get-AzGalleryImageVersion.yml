@@ -1,0 +1,492 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzGalleryImageVersion
+name: Get-AzGalleryImageVersion
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list gallery image versions.
+description: |-
+  Get or list gallery image versions.
+parameters:
+  cmdletParameters:
+  - name: Community
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      List community galleries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListCommunityGalleryParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandReplicationStatus
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Show replication status.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryImageDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image definition.
+    aliases:
+    - GalleryImageName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SharedGalleryParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CommunityGalleryParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryPublicName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The public name of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommunityGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryUniqueName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique name of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CommunityGalleryParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image version.
+    aliases:
+    - GalleryImageVersionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SharedGalleryParameterSet
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CommunityGalleryParameterSet
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID for the gallery image version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies galleries shared to subscription or tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedGalleryParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageVersion
+        [-ResourceGroupName] <String>
+        [-GalleryName] <String>
+        [-GalleryImageDefinitionName] <String>
+        [[-Name] <String>]
+        [-ExpandReplicationStatus]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageVersion
+        [-GalleryImageDefinitionName] <String>
+        [[-Name] <String>]
+        -GalleryUniqueName <String>
+        -Location <String>
+        [-ExpandReplicationStatus]
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SharedGalleryParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageVersion
+        [-GalleryImageDefinitionName] <String>
+        [[-Name] <String>]
+        -GalleryPublicName <String>
+        -Location <String>
+        [-ExpandReplicationStatus]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommunityGalleryParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageVersion
+        [-ResourceId] <String>
+        [-ExpandReplicationStatus]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzGalleryImageVersion
+        [-ExpandReplicationStatus]
+        [-Location <String>]
+        [-Community]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListCommunityGalleryParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImageVersion" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzGalleryImageVersion -ResourceGroupName rg1 -GalleryName gallery1 -GalleryImageDefinitionName image1 -GalleryImageVersionName 1.0.0
+    ```
+
+    ```output
+    ResourceGroupName        : rg1
+    PublishingProfile        :
+      TargetRegions[0]       :
+        Name                 : South Central US
+        RegionalReplicaCount : 1
+      TargetRegions[1]       :
+        Name                 : East US 2
+        RegionalReplicaCount : 2
+      TargetRegions[2]       :
+        Name                 : Central US
+        RegionalReplicaCount : 1
+      Source                 :
+        ManagedImage         :
+          Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/images/test1
+      ReplicaCount           : 1
+      ExcludeFromLatest      : False
+      PublishedDate          : 11/14/2018 12:00:00 AM
+      EndOfLifeDate          : 2/18/2025 12:07:00 PM
+    ProvisioningState        : Succeeded
+    StorageProfile           :
+      OsDiskImage            :
+        SizeInGB             : 127
+        HostCaching          : ReadWrite
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/galleries/gallery1/images/image1/versions/1.0.0
+    Name                     : 1.0.0
+    Type                     : Microsoft.Compute/galleries/images/versions
+    Location                 : eastus2
+    Tags                     : {}
+    ```
+
+    Get the gallery image version.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzGalleryImageVersion -ResourceGroupName rg1 -GalleryName gallery1 -GalleryImageDefinitionName image1 -GalleryImageVersionName 1*
+    ```
+
+    ```output
+    ResourceGroupName        : rg1
+    PublishingProfile        :
+      TargetRegions[0]       :
+        Name                 : South Central US
+        RegionalReplicaCount : 1
+      TargetRegions[1]       :
+        Name                 : East US 2
+        RegionalReplicaCount : 2
+      TargetRegions[2]       :
+        Name                 : Central US
+        RegionalReplicaCount : 1
+      Source                 :
+        ManagedImage         :
+          Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/images/test1
+      ReplicaCount           : 1
+      ExcludeFromLatest      : False
+      PublishedDate          : 11/14/2018 12:00:00 AM
+      EndOfLifeDate          : 2/18/2025 12:07:00 PM
+    ProvisioningState        : Succeeded
+    StorageProfile           :
+      OsDiskImage            :
+        SizeInGB             : 127
+        HostCaching          : ReadWrite
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/galleries/gallery1/images/image1/versions/1.0.0
+    Name                     : 1.0.0
+    Type                     : Microsoft.Compute/galleries/images/versions
+    Location                 : eastus2
+    Tags                     : {}
+
+    ResourceGroupName        : rg1
+    PublishingProfile        :
+      TargetRegions[0]       :
+        Name                 : South Central US
+        RegionalReplicaCount : 1
+      TargetRegions[1]       :
+        Name                 : East US 2
+        RegionalReplicaCount : 2
+      TargetRegions[2]       :
+        Name                 : Central US
+        RegionalReplicaCount : 1
+      Source                 :
+        ManagedImage         :
+          Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/images/test1
+      ReplicaCount           : 1
+      ExcludeFromLatest      : False
+      PublishedDate          : 11/14/2018 12:00:00 AM
+      EndOfLifeDate          : 2/18/2025 12:07:00 PM
+    ProvisioningState        : Succeeded
+    StorageProfile           :
+      OsDiskImage            :
+        SizeInGB             : 127
+        HostCaching          : ReadWrite
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/galleries/gallery1/images/image1/versions/1.1.0
+    Name                     : 1.1.0
+    Type                     : Microsoft.Compute/galleries/images/versions
+    Location                 : eastus2
+    Tags                     : {}
+    ```
+
+    Get the gallery image versions that starts with "1".
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzGalleryImageVersion -ResourceGroupName rg1 -GalleryName gallery1 -GalleryImageDefinitionName image1
+    ```
+
+    ```output
+    ResourceGroupName        : rg1
+    PublishingProfile        :
+      TargetRegions[0]       :
+        Name                 : South Central US
+        RegionalReplicaCount : 1
+      TargetRegions[1]       :
+        Name                 : East US 2
+        RegionalReplicaCount : 2
+      TargetRegions[2]       :
+        Name                 : Central US
+        RegionalReplicaCount : 1
+      Source                 :
+        ManagedImage         :
+          Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/images/test1
+      ReplicaCount           : 1
+      ExcludeFromLatest      : False
+      PublishedDate          : 11/14/2018 12:00:00 AM
+      EndOfLifeDate          : 2/18/2025 12:07:00 PM
+    ProvisioningState        : Succeeded
+    StorageProfile           :
+      OsDiskImage            :
+        SizeInGB             : 127
+        HostCaching          : ReadWrite
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/galleries/gallery1/images/image1/versions/1.0.0
+    Name                     : 1.0.0
+    Type                     : Microsoft.Compute/galleries/images/versions
+    Location                 : eastus2
+    Tags                     : {}
+
+    ResourceGroupName        : rg1
+    PublishingProfile        :
+      TargetRegions[0]       :
+        Name                 : South Central US
+        RegionalReplicaCount : 1
+      TargetRegions[1]       :
+        Name                 : East US 2
+        RegionalReplicaCount : 2
+      TargetRegions[2]       :
+        Name                 : Central US
+        RegionalReplicaCount : 1
+      Source                 :
+        ManagedImage         :
+          Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/images/test1
+      ReplicaCount           : 1
+      ExcludeFromLatest      : False
+      PublishedDate          : 11/14/2018 12:00:00 AM
+      EndOfLifeDate          : 2/18/2025 12:07:00 PM
+    ProvisioningState        : Succeeded
+    StorageProfile           :
+      OsDiskImage            :
+        SizeInGB             : 127
+        HostCaching          : ReadWrite
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg1/
+    providers/Microsoft.Compute/galleries/gallery1/images/image1/versions/1.1.0
+    Name                     : 1.1.0
+    Type                     : Microsoft.Compute/galleries/images/versions
+    Location                 : eastus2
+    Tags                     : {}
+    ```
+
+    Get all gallery image versions.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGalleryImageVersion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azgalleryimageversion
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzGalleryImageVersion.md
+  PlatyPS schema version: 2024-05-01

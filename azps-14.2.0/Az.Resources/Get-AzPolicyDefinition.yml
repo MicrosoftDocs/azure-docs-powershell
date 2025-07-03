@@ -1,0 +1,390 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzPolicyDefinition
+name: Get-AzPolicyDefinition
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets policy set definitions.
+description: |-
+  The **Get-AzPolicyDefinition** cmdlet gets a collection of policy set definitions or a specific policy set definition identified by name or ID.
+parameters:
+  cmdletParameters:
+  - name: BackwardCompatible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return artifacts using legacy format placing policy-specific properties in a property bag object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Builtin
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return only built-in policy definitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Builtin
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Custom
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return only custom policy definitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Custom
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The full Id of the policy definition to get.
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Version
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ListVersion
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ListVersion
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return only custom policy definitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListVersion
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the management group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy definition to get.
+    aliases:
+    - PolicyDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ManagementGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Version
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ListVersion
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Static
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return only static policy definitions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Static
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy definition version in #.#.# format.
+    aliases:
+    - PolicyDefinitionVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Version
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        [-Name <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        -ManagementGroupName <String>
+        [-Name <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        -SubscriptionId <String>
+        [-Name <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        -Version <String>
+        [-Name <String>]
+        [-Id <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Version
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        [-Name <String>]
+        [-Id <String>]
+        [-ListVersion]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListVersion
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        -Id <String>
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        [-SubscriptionId <String>]
+        [-ManagementGroupName <String>]
+        [-Builtin]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Builtin
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        [-SubscriptionId <String>]
+        [-ManagementGroupName <String>]
+        [-Custom]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Custom
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPolicyDefinition
+        [-SubscriptionId <String>]
+        [-ManagementGroupName <String>]
+        [-Static]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Static
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all policy definitions'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition
+    ```
+
+    This command gets all the policy definitions.
+- title: 'Example 2: Get policy definition from current subscription by name'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition -Name 'VMPolicyDefinition'
+    ```
+
+    This command gets the policy definition named VMPolicyDefinition from the current default subscription.
+- title: 'Example 3: Get policy definition from management group by name'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition -Name 'VMPolicyDefinition' -ManagementGroupName 'Dept42'
+    ```
+
+    This command gets the policy definition named VMPolicyDefinition from the management group named Dept42.
+- title: 'Example 4: Get all built-in policy definitions from subscription'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition -SubscriptionId '3bf44b72-c631-427a-b8c8-53e2595398ca' -Builtin
+    ```
+
+    This command gets all built-in policy definitions from the subscription with ID 3bf44b72-c631-427a-b8c8-53e2595398ca.
+- title: 'Example 5: Get policy definitions from a given category'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition | Where-Object {$_.Properties.metadata.category -eq 'Tags'}
+    ```
+
+    This command gets all policy definitions in the category **Tags**.
+- title: 'Example 6: Get the display name, description, policy type, and metadata of all policy definitions formatted as a list'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition | Select-Object -Property DisplayName, Description, PolicyType, Metadata | Format-List
+    ```
+
+    This command is useful when you need to find the reader-friendly **DisplayName** property of an Azure
+    Policy definition.
+    You can parse the **Metadata** property to discover the policy definition's version number and category assignment.
+- title: 'Example 7: [Backcompat] Get the display name, description, policy type, and metadata of all policy definitions formatted as a list'
+  description: |-
+    ```powershell
+    Get-AzPolicyDefinition -BackwardCompatible | Select-Object -ExpandProperty properties | Select-Object -Property DisplayName, Description, PolicyType, Metadata | Format-List
+    ```
+
+    This command is useful when you need to find the reader-friendly **DisplayName** property of an Azure
+    Policy definition.
+    You can parse the **Metadata** property to discover the policy definition's version number and category assignment.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyDefinition.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azpolicydefinition
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzPolicyDefinition.md
+  PlatyPS schema version: 2024-05-01

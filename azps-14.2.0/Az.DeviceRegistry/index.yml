@@ -1,0 +1,28 @@
+### YamlMime:PowerShellModule1
+uid: Az.DeviceRegistry
+name: Az.DeviceRegistry Module
+isPreview: false
+cmdletGroups:
+- title: DeviceRegistry
+  cmdlets:
+  - Az.DeviceRegistry.Get-AzDeviceRegistryAsset
+  - Az.DeviceRegistry.Get-AzDeviceRegistryAssetEndpointProfile
+  - Az.DeviceRegistry.Get-AzDeviceRegistryBillingContainer
+  - Az.DeviceRegistry.New-AzDeviceRegistryAsset
+  - Az.DeviceRegistry.New-AzDeviceRegistryAssetEndpointProfile
+  - Az.DeviceRegistry.Remove-AzDeviceRegistryAsset
+  - Az.DeviceRegistry.Remove-AzDeviceRegistryAssetEndpointProfile
+  - Az.DeviceRegistry.Update-AzDeviceRegistryAsset
+  - Az.DeviceRegistry.Update-AzDeviceRegistryAssetEndpointProfile
+description: |-
+  Microsoft Azure PowerShell: DeviceRegistry cmdlets
+metadata:
+  Module Name: Az.DeviceRegistry
+  Module Guid: 68fbde94-8e7b-4002-8a2d-663cae2196cc
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.deviceregistry
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Az.DeviceRegistry.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceRegistry/DeviceRegistry/help/Az.DeviceRegistry.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

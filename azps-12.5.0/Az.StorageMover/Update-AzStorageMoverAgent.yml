@@ -1,0 +1,361 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageMover.Update-AzStorageMoverAgent
+name: Update-AzStorageMoverAgent
+module: Az.StorageMover
+isPreview: false
+summary: |-
+  Creates or updates an Agent resource.
+description: |-
+  Creates or updates an Agent resource.
+parameters:
+  cmdletParameters:
+  - name: Agent
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IAgentUpdateParameters" data-throw-if-not-resolved="False" />
+    description: |-
+      The Agent resource.
+      To construct, see NOTES section for AGENT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A description for the Agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Agent resource.
+    aliases:
+    - AgentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageMoverName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Storage Mover resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Update
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UploadLimitScheduleWeeklyRecurrence
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IUploadLimitWeeklyRecurrence" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The set of weekly repeating recurrences of the WAN-link upload limit schedule.
+      To construct, see NOTES section for UPLOADLIMITSCHEDULEWEEKLYRECURRENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzStorageMoverAgent
+        -Name <String>
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        [-SubscriptionId <String>]
+        [-Description <String>]
+        [-UploadLimitScheduleWeeklyRecurrence <IUploadLimitWeeklyRecurrence[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzStorageMoverAgent
+        -Name <String>
+        -ResourceGroupName <String>
+        -StorageMoverName <String>
+        -Agent <IAgentUpdateParameters>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Update
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzStorageMoverAgent
+        -InputObject <IStorageMoverIdentity>
+        [-Description <String>]
+        [-UploadLimitScheduleWeeklyRecurrence <IUploadLimitWeeklyRecurrence[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzStorageMoverAgent
+        -InputObject <IStorageMoverIdentity>
+        -Agent <IAgentUpdateParameters>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IAgentUpdateParameters" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.IStorageMoverIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.IAgent" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an agent'
+  description: |-
+    ```powershell
+    $recurrence = New-AzStorageMoverUploadLimitWeeklyRecurrenceObject -Day 'Monday','Tuesday','Friday' -LimitInMbps 100 -EndTimeHour 5 -StartTimeHour 1 -StartTimeMinute 30 -EndTimeMinute 0
+    Update-AzStorageMoverAgent -ResourceGroupName myresourcegroup -StorageMoverName mystoragemover -Name myagent -Description "Update description" -UploadLimitScheduleWeeklyRecurrence $recurrence
+    ```
+
+    ```output
+    AgentStatus                         : Online
+    ArcResourceId                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.HybridCompute/machines/myagent
+    ArcVMUuid                           : 00000000-0000-0000-0000-000000000000
+    Description                         : Update description
+    ErrorDetailCode                     :
+    ErrorDetailMessage                  :
+    Id                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.StorageMover/storageMovers/mystoragemover/agents/myagent
+    LastStatusUpdate                    : 6/12/2024 5:57:45 AM
+    LocalIPAddress                      : 000.000.000.00
+    MemoryInMb                          : 1470
+    Name                                : myagent
+    NumberOfCores                       : 8
+    ProvisioningState                   : Succeeded
+    SystemDataCreatedAt                 : 6/12/2024 5:47:26 AM
+    SystemDataCreatedBy                 : example@microsoft.com
+    SystemDataCreatedByType             : User
+    SystemDataLastModifiedAt            : 6/12/2024 5:57:54 AM
+    SystemDataLastModifiedBy            : example@microsoft.com
+    SystemDataLastModifiedByType        : User
+    TimeZone                            : UTC
+    Type                                : microsoft.storagemover/storagemovers/agents
+    UploadLimitScheduleWeeklyRecurrence : {{
+                                            "startTime": {
+                                              "hour": 1,
+                                              "minute": 30
+                                            },
+                                            "endTime": {
+                                              "hour": 5,
+                                              "minute": 0
+                                            },
+                                            "days": [ "Monday", "Tuesday", "Friday" ],
+                                            "limitInMbps": 100
+                                          }}
+    UptimeInSeconds                     : 3417
+    Version                             :
+    ```
+
+    This command updates the description and the upload limit weekly recurrence of an agent.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Update-AzStorageMoverAgent.md
+  document type: cmdlet
+  external help file: Az.StorageMover-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagemover/update-azstoragemoveragent
+  Module Name: Az.StorageMover
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Update-AzStorageMoverAgent.md
+  PlatyPS schema version: 2024-05-01

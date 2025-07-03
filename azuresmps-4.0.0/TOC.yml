@@ -1,0 +1,2977 @@
+items:
+- name: Cmdlet reference
+  items:
+  - name: Azure
+    items:
+    - name: Commands
+      uid: Azure
+    - name: Active Directory
+      items:
+      - name: Commands
+        href: Azure/index.yml#active-directory
+      - name: Get-AzureServiceADDomainExtension
+        uid: Azure.Get-AzureServiceADDomainExtension
+        no-loc:
+        - Get-AzureServiceADDomainExtension
+      - name: New-AzureServiceADDomainExtensionConfig
+        uid: Azure.New-AzureServiceADDomainExtensionConfig
+        no-loc:
+        - New-AzureServiceADDomainExtensionConfig
+      - name: Remove-AzureServiceADDomainExtension
+        uid: Azure.Remove-AzureServiceADDomainExtension
+        no-loc:
+        - Remove-AzureServiceADDomainExtension
+      - name: Set-AzureServiceADDomainExtension
+        uid: Azure.Set-AzureServiceADDomainExtension
+        no-loc:
+        - Set-AzureServiceADDomainExtension
+      no-loc:
+      - Active Directory
+    - name: Application Gateway
+      items:
+      - name: Commands
+        href: Azure/index.yml#application-gateway
+      - name: Add-AzureApplicationGatewaySslCertificate
+        uid: Azure.Add-AzureApplicationGatewaySslCertificate
+        no-loc:
+        - Add-AzureApplicationGatewaySslCertificate
+      - name: Get-AzureApplicationGateway
+        uid: Azure.Get-AzureApplicationGateway
+        no-loc:
+        - Get-AzureApplicationGateway
+      - name: Get-AzureApplicationGatewayConfig
+        uid: Azure.Get-AzureApplicationGatewayConfig
+        no-loc:
+        - Get-AzureApplicationGatewayConfig
+      - name: Get-AzureApplicationGatewaySslCertificate
+        uid: Azure.Get-AzureApplicationGatewaySslCertificate
+        no-loc:
+        - Get-AzureApplicationGatewaySslCertificate
+      - name: New-AzureApplicationGateway
+        uid: Azure.New-AzureApplicationGateway
+        no-loc:
+        - New-AzureApplicationGateway
+      - name: Remove-AzureApplicationGateway
+        uid: Azure.Remove-AzureApplicationGateway
+        no-loc:
+        - Remove-AzureApplicationGateway
+      - name: Remove-AzureApplicationGatewaySslCertificate
+        uid: Azure.Remove-AzureApplicationGatewaySslCertificate
+        no-loc:
+        - Remove-AzureApplicationGatewaySslCertificate
+      - name: Set-AzureApplicationGatewayConfig
+        uid: Azure.Set-AzureApplicationGatewayConfig
+        no-loc:
+        - Set-AzureApplicationGatewayConfig
+      - name: Start-AzureApplicationGateway
+        uid: Azure.Start-AzureApplicationGateway
+        no-loc:
+        - Start-AzureApplicationGateway
+      - name: Stop-AzureApplicationGateway
+        uid: Azure.Stop-AzureApplicationGateway
+        no-loc:
+        - Stop-AzureApplicationGateway
+      - name: Update-AzureApplicationGateway
+        uid: Azure.Update-AzureApplicationGateway
+        no-loc:
+        - Update-AzureApplicationGateway
+      no-loc:
+      - Application Gateway
+    - name: Automation
+      items:
+      - name: Commands
+        href: Azure/index.yml#automation
+      - name: Get-AzureAutomationAccount
+        uid: Azure.Get-AzureAutomationAccount
+        no-loc:
+        - Get-AzureAutomationAccount
+      - name: Get-AzureAutomationCertificate
+        uid: Azure.Get-AzureAutomationCertificate
+        no-loc:
+        - Get-AzureAutomationCertificate
+      - name: Get-AzureAutomationConnection
+        uid: Azure.Get-AzureAutomationConnection
+        no-loc:
+        - Get-AzureAutomationConnection
+      - name: Get-AzureAutomationCredential
+        uid: Azure.Get-AzureAutomationCredential
+        no-loc:
+        - Get-AzureAutomationCredential
+      - name: Get-AzureAutomationJob
+        uid: Azure.Get-AzureAutomationJob
+        no-loc:
+        - Get-AzureAutomationJob
+      - name: Get-AzureAutomationJobOutput
+        uid: Azure.Get-AzureAutomationJobOutput
+        no-loc:
+        - Get-AzureAutomationJobOutput
+      - name: Get-AzureAutomationModule
+        uid: Azure.Get-AzureAutomationModule
+        no-loc:
+        - Get-AzureAutomationModule
+      - name: Get-AzureAutomationRunbook
+        uid: Azure.Get-AzureAutomationRunbook
+        no-loc:
+        - Get-AzureAutomationRunbook
+      - name: Get-AzureAutomationRunbookDefinition
+        uid: Azure.Get-AzureAutomationRunbookDefinition
+        no-loc:
+        - Get-AzureAutomationRunbookDefinition
+      - name: Get-AzureAutomationSchedule
+        uid: Azure.Get-AzureAutomationSchedule
+        no-loc:
+        - Get-AzureAutomationSchedule
+      - name: Get-AzureAutomationScheduledRunbook
+        uid: Azure.Get-AzureAutomationScheduledRunbook
+        no-loc:
+        - Get-AzureAutomationScheduledRunbook
+      - name: Get-AzureAutomationVariable
+        uid: Azure.Get-AzureAutomationVariable
+        no-loc:
+        - Get-AzureAutomationVariable
+      - name: New-AzureAutomationAccount
+        uid: Azure.New-AzureAutomationAccount
+        no-loc:
+        - New-AzureAutomationAccount
+      - name: New-AzureAutomationCertificate
+        uid: Azure.New-AzureAutomationCertificate
+        no-loc:
+        - New-AzureAutomationCertificate
+      - name: New-AzureAutomationConnection
+        uid: Azure.New-AzureAutomationConnection
+        no-loc:
+        - New-AzureAutomationConnection
+      - name: New-AzureAutomationCredential
+        uid: Azure.New-AzureAutomationCredential
+        no-loc:
+        - New-AzureAutomationCredential
+      - name: New-AzureAutomationModule
+        uid: Azure.New-AzureAutomationModule
+        no-loc:
+        - New-AzureAutomationModule
+      - name: New-AzureAutomationRunbook
+        uid: Azure.New-AzureAutomationRunbook
+        no-loc:
+        - New-AzureAutomationRunbook
+      - name: New-AzureAutomationSchedule
+        uid: Azure.New-AzureAutomationSchedule
+        no-loc:
+        - New-AzureAutomationSchedule
+      - name: New-AzureAutomationVariable
+        uid: Azure.New-AzureAutomationVariable
+        no-loc:
+        - New-AzureAutomationVariable
+      - name: Publish-AzureAutomationRunbook
+        uid: Azure.Publish-AzureAutomationRunbook
+        no-loc:
+        - Publish-AzureAutomationRunbook
+      - name: Register-AzureAutomationScheduledRunbook
+        uid: Azure.Register-AzureAutomationScheduledRunbook
+        no-loc:
+        - Register-AzureAutomationScheduledRunbook
+      - name: Remove-AzureAutomationAccount
+        uid: Azure.Remove-AzureAutomationAccount
+        no-loc:
+        - Remove-AzureAutomationAccount
+      - name: Remove-AzureAutomationCertificate
+        uid: Azure.Remove-AzureAutomationCertificate
+        no-loc:
+        - Remove-AzureAutomationCertificate
+      - name: Remove-AzureAutomationConnection
+        uid: Azure.Remove-AzureAutomationConnection
+        no-loc:
+        - Remove-AzureAutomationConnection
+      - name: Remove-AzureAutomationConnectionType
+        uid: Azure.Remove-AzureAutomationConnectionType
+        no-loc:
+        - Remove-AzureAutomationConnectionType
+      - name: Remove-AzureAutomationCredential
+        uid: Azure.Remove-AzureAutomationCredential
+        no-loc:
+        - Remove-AzureAutomationCredential
+      - name: Remove-AzureAutomationModule
+        uid: Azure.Remove-AzureAutomationModule
+        no-loc:
+        - Remove-AzureAutomationModule
+      - name: Remove-AzureAutomationRunbook
+        uid: Azure.Remove-AzureAutomationRunbook
+        no-loc:
+        - Remove-AzureAutomationRunbook
+      - name: Remove-AzureAutomationSchedule
+        uid: Azure.Remove-AzureAutomationSchedule
+        no-loc:
+        - Remove-AzureAutomationSchedule
+      - name: Remove-AzureAutomationVariable
+        uid: Azure.Remove-AzureAutomationVariable
+        no-loc:
+        - Remove-AzureAutomationVariable
+      - name: Resume-AzureAutomationJob
+        uid: Azure.Resume-AzureAutomationJob
+        no-loc:
+        - Resume-AzureAutomationJob
+      - name: Set-AzureAutomationCertificate
+        uid: Azure.Set-AzureAutomationCertificate
+        no-loc:
+        - Set-AzureAutomationCertificate
+      - name: Set-AzureAutomationConnectionFieldValue
+        uid: Azure.Set-AzureAutomationConnectionFieldValue
+        no-loc:
+        - Set-AzureAutomationConnectionFieldValue
+      - name: Set-AzureAutomationCredential
+        uid: Azure.Set-AzureAutomationCredential
+        no-loc:
+        - Set-AzureAutomationCredential
+      - name: Set-AzureAutomationModule
+        uid: Azure.Set-AzureAutomationModule
+        no-loc:
+        - Set-AzureAutomationModule
+      - name: Set-AzureAutomationRunbook
+        uid: Azure.Set-AzureAutomationRunbook
+        no-loc:
+        - Set-AzureAutomationRunbook
+      - name: Set-AzureAutomationRunbookDefinition
+        uid: Azure.Set-AzureAutomationRunbookDefinition
+        no-loc:
+        - Set-AzureAutomationRunbookDefinition
+      - name: Set-AzureAutomationSchedule
+        uid: Azure.Set-AzureAutomationSchedule
+        no-loc:
+        - Set-AzureAutomationSchedule
+      - name: Set-AzureAutomationVariable
+        uid: Azure.Set-AzureAutomationVariable
+        no-loc:
+        - Set-AzureAutomationVariable
+      - name: Start-AzureAutomationRunbook
+        uid: Azure.Start-AzureAutomationRunbook
+        no-loc:
+        - Start-AzureAutomationRunbook
+      - name: Stop-AzureAutomationJob
+        uid: Azure.Stop-AzureAutomationJob
+        no-loc:
+        - Stop-AzureAutomationJob
+      - name: Suspend-AzureAutomationJob
+        uid: Azure.Suspend-AzureAutomationJob
+        no-loc:
+        - Suspend-AzureAutomationJob
+      - name: Unregister-AzureAutomationScheduledRunbook
+        uid: Azure.Unregister-AzureAutomationScheduledRunbook
+        no-loc:
+        - Unregister-AzureAutomationScheduledRunbook
+      no-loc:
+      - Automation
+    - name: Availability Sets
+      items:
+      - name: Commands
+        href: Azure/index.yml#availability-sets
+      - name: Remove-AzureAvailabilitySet
+        uid: Azure.Remove-AzureAvailabilitySet
+        no-loc:
+        - Remove-AzureAvailabilitySet
+      - name: Set-AzureAvailabilitySet
+        uid: Azure.Set-AzureAvailabilitySet
+        no-loc:
+        - Set-AzureAvailabilitySet
+      no-loc:
+      - Availability Sets
+    - name: Azure
+      items:
+      - name: Commands
+        href: Azure/index.yml#azure
+      - name: Add-AzureAccount
+        uid: Azure.Add-AzureAccount
+        no-loc:
+        - Add-AzureAccount
+      - name: Add-AzureCertificate
+        uid: Azure.Add-AzureCertificate
+        no-loc:
+        - Add-AzureCertificate
+      - name: Add-AzureEndpoint
+        uid: Azure.Add-AzureEndpoint
+        no-loc:
+        - Add-AzureEndpoint
+      - name: Add-AzureEnvironment
+        uid: Azure.Add-AzureEnvironment
+        no-loc:
+        - Add-AzureEnvironment
+      - name: Add-AzureProvisioningConfig
+        uid: Azure.Add-AzureProvisioningConfig
+        no-loc:
+        - Add-AzureProvisioningConfig
+      - name: Add-AzureRemoteAppUser
+        uid: Azure.Add-AzureRemoteAppUser
+        no-loc:
+        - Add-AzureRemoteAppUser
+      - name: Clear-AzureProfile
+        uid: Azure.Clear-AzureProfile
+        no-loc:
+        - Clear-AzureProfile
+      - name: Clear-AzureRemoteAppVmStaleAdObject
+        uid: Azure.Clear-AzureRemoteAppVmStaleAdObject
+        no-loc:
+        - Clear-AzureRemoteAppVmStaleAdObject
+      - name: Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+        uid: Azure.Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+        no-loc:
+        - Confirm-AzureStorSimpleLegacyVolumeContainerStatus
+      - name: Disable-AzureDataCollection
+        uid: Azure.Disable-AzureDataCollection
+        no-loc:
+        - Disable-AzureDataCollection
+      - name: Disable-AzureServiceProjectRemoteDesktop
+        uid: Azure.Disable-AzureServiceProjectRemoteDesktop
+        no-loc:
+        - Disable-AzureServiceProjectRemoteDesktop
+      - name: Disable-AzureWebsiteApplicationDiagnostic
+        uid: Azure.Disable-AzureWebsiteApplicationDiagnostic
+        no-loc:
+        - Disable-AzureWebsiteApplicationDiagnostic
+      - name: Disable-AzureWebsiteDebug
+        uid: Azure.Disable-AzureWebsiteDebug
+        no-loc:
+        - Disable-AzureWebsiteDebug
+      - name: Disconnect-AzureRemoteAppSession
+        uid: Azure.Disconnect-AzureRemoteAppSession
+        no-loc:
+        - Disconnect-AzureRemoteAppSession
+      - name: Enable-AzureDataCollection
+        uid: Azure.Enable-AzureDataCollection
+        no-loc:
+        - Enable-AzureDataCollection
+      - name: Enable-AzureServiceProjectRemoteDesktop
+        uid: Azure.Enable-AzureServiceProjectRemoteDesktop
+        no-loc:
+        - Enable-AzureServiceProjectRemoteDesktop
+      - name: Enable-AzureWebsiteApplicationDiagnostic
+        uid: Azure.Enable-AzureWebsiteApplicationDiagnostic
+        no-loc:
+        - Enable-AzureWebsiteApplicationDiagnostic
+      - name: Enable-AzureWebsiteDebug
+        uid: Azure.Enable-AzureWebsiteDebug
+        no-loc:
+        - Enable-AzureWebsiteDebug
+      - name: Get-AzureAccount
+        uid: Azure.Get-AzureAccount
+        no-loc:
+        - Get-AzureAccount
+      - name: Get-AzureAclConfig
+        uid: Azure.Get-AzureAclConfig
+        no-loc:
+        - Get-AzureAclConfig
+      - name: Get-AzureAffinityGroup
+        uid: Azure.Get-AzureAffinityGroup
+        no-loc:
+        - Get-AzureAffinityGroup
+      - name: Get-AzureCertificate
+        uid: Azure.Get-AzureCertificate
+        no-loc:
+        - Get-AzureCertificate
+      - name: Get-AzureDeployment
+        uid: Azure.Get-AzureDeployment
+        no-loc:
+        - Get-AzureDeployment
+      - name: Get-AzureDeploymentEvent
+        uid: Azure.Get-AzureDeploymentEvent
+        no-loc:
+        - Get-AzureDeploymentEvent
+      - name: Get-AzureEndpoint
+        uid: Azure.Get-AzureEndpoint
+        no-loc:
+        - Get-AzureEndpoint
+      - name: Get-AzureEnvironment
+        uid: Azure.Get-AzureEnvironment
+        no-loc:
+        - Get-AzureEnvironment
+      - name: Get-AzureLocation
+        uid: Azure.Get-AzureLocation
+        no-loc:
+        - Get-AzureLocation
+      - name: Get-AzureOSVersion
+        uid: Azure.Get-AzureOSVersion
+        no-loc:
+        - Get-AzureOSVersion
+      - name: Get-AzurePublishSettingsFile
+        uid: Azure.Get-AzurePublishSettingsFile
+        no-loc:
+        - Get-AzurePublishSettingsFile
+      - name: Get-AzureRemoteAppCollection
+        uid: Azure.Get-AzureRemoteAppCollection
+        no-loc:
+        - Get-AzureRemoteAppCollection
+      - name: Get-AzureRemoteAppCollectionUsageDetails
+        uid: Azure.Get-AzureRemoteAppCollectionUsageDetails
+        no-loc:
+        - Get-AzureRemoteAppCollectionUsageDetails
+      - name: Get-AzureRemoteAppCollectionUsageSummary
+        uid: Azure.Get-AzureRemoteAppCollectionUsageSummary
+        no-loc:
+        - Get-AzureRemoteAppCollectionUsageSummary
+      - name: Get-AzureRemoteAppLocation
+        uid: Azure.Get-AzureRemoteAppLocation
+        no-loc:
+        - Get-AzureRemoteAppLocation
+      - name: Get-AzureRemoteAppOperationResult
+        uid: Azure.Get-AzureRemoteAppOperationResult
+        no-loc:
+        - Get-AzureRemoteAppOperationResult
+      - name: Get-AzureRemoteAppPlan
+        uid: Azure.Get-AzureRemoteAppPlan
+        no-loc:
+        - Get-AzureRemoteAppPlan
+      - name: Get-AzureRemoteAppProgram
+        uid: Azure.Get-AzureRemoteAppProgram
+        no-loc:
+        - Get-AzureRemoteAppProgram
+      - name: Get-AzureRemoteAppSession
+        uid: Azure.Get-AzureRemoteAppSession
+        no-loc:
+        - Get-AzureRemoteAppSession
+      - name: Get-AzureRemoteAppStartMenuProgram
+        uid: Azure.Get-AzureRemoteAppStartMenuProgram
+        no-loc:
+        - Get-AzureRemoteAppStartMenuProgram
+      - name: Get-AzureRemoteAppUser
+        uid: Azure.Get-AzureRemoteAppUser
+        no-loc:
+        - Get-AzureRemoteAppUser
+      - name: Get-AzureRemoteAppVmStaleAdObject
+        uid: Azure.Get-AzureRemoteAppVmStaleAdObject
+        no-loc:
+        - Get-AzureRemoteAppVmStaleAdObject
+      - name: Get-AzureRemoteAppVNet
+        uid: Azure.Get-AzureRemoteAppVNet
+        no-loc:
+        - Get-AzureRemoteAppVNet
+      - name: Get-AzureRemoteAppWorkspace
+        uid: Azure.Get-AzureRemoteAppWorkspace
+        no-loc:
+        - Get-AzureRemoteAppWorkspace
+      - name: Get-AzureRemoteDesktopFile
+        uid: Azure.Get-AzureRemoteDesktopFile
+        no-loc:
+        - Get-AzureRemoteDesktopFile
+      - name: Get-AzureSBAuthorizationRule
+        uid: Azure.Get-AzureSBAuthorizationRule
+        no-loc:
+        - Get-AzureSBAuthorizationRule
+      - name: Get-AzureSBLocation
+        uid: Azure.Get-AzureSBLocation
+        no-loc:
+        - Get-AzureSBLocation
+      - name: Get-AzureSBNamespace
+        uid: Azure.Get-AzureSBNamespace
+        no-loc:
+        - Get-AzureSBNamespace
+      - name: Get-AzureService
+        uid: Azure.Get-AzureService
+        no-loc:
+        - Get-AzureService
+      - name: Get-AzureServiceAntimalwareConfig
+        uid: Azure.Get-AzureServiceAntimalwareConfig
+        no-loc:
+        - Get-AzureServiceAntimalwareConfig
+      - name: Get-AzureServiceAvailableExtension
+        uid: Azure.Get-AzureServiceAvailableExtension
+        no-loc:
+        - Get-AzureServiceAvailableExtension
+      - name: Get-AzureServiceDiagnosticsExtension
+        uid: Azure.Get-AzureServiceDiagnosticsExtension
+        no-loc:
+        - Get-AzureServiceDiagnosticsExtension
+      - name: Get-AzureServiceExtension
+        uid: Azure.Get-AzureServiceExtension
+        no-loc:
+        - Get-AzureServiceExtension
+      - name: Get-AzureServiceRemoteDesktopExtension
+        uid: Azure.Get-AzureServiceRemoteDesktopExtension
+        no-loc:
+        - Get-AzureServiceRemoteDesktopExtension
+      - name: Get-AzureStoreAddOn
+        uid: Azure.Get-AzureStoreAddOn
+        no-loc:
+        - Get-AzureStoreAddOn
+      - name: Get-AzureStorSimpleAccessControlRecord
+        uid: Azure.Get-AzureStorSimpleAccessControlRecord
+        no-loc:
+        - Get-AzureStorSimpleAccessControlRecord
+      - name: Get-AzureStorSimpleDevice
+        uid: Azure.Get-AzureStorSimpleDevice
+        no-loc:
+        - Get-AzureStorSimpleDevice
+      - name: Get-AzureStorSimpleDeviceConnectedInitiator
+        uid: Azure.Get-AzureStorSimpleDeviceConnectedInitiator
+        no-loc:
+        - Get-AzureStorSimpleDeviceConnectedInitiator
+      - name: Get-AzureStorSimpleDeviceVolume
+        uid: Azure.Get-AzureStorSimpleDeviceVolume
+        no-loc:
+        - Get-AzureStorSimpleDeviceVolume
+      - name: Get-AzureStorSimpleDeviceVolumeContainer
+        uid: Azure.Get-AzureStorSimpleDeviceVolumeContainer
+        no-loc:
+        - Get-AzureStorSimpleDeviceVolumeContainer
+      - name: Get-AzureStorSimpleFailoverVolumeContainers
+        uid: Azure.Get-AzureStorSimpleFailoverVolumeContainers
+        no-loc:
+        - Get-AzureStorSimpleFailoverVolumeContainers
+      - name: Get-AzureStorSimpleJob
+        uid: Azure.Get-AzureStorSimpleJob
+        no-loc:
+        - Get-AzureStorSimpleJob
+      - name: Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+        uid: Azure.Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+        no-loc:
+        - Get-AzureStorSimpleLegacyVolumeContainerConfirmStatus
+      - name: Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+        uid: Azure.Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+        no-loc:
+        - Get-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+      - name: Get-AzureStorSimpleLegacyVolumeContainerStatus
+        uid: Azure.Get-AzureStorSimpleLegacyVolumeContainerStatus
+        no-loc:
+        - Get-AzureStorSimpleLegacyVolumeContainerStatus
+      - name: Get-AzureStorSimpleTask
+        uid: Azure.Get-AzureStorSimpleTask
+        no-loc:
+        - Get-AzureStorSimpleTask
+      - name: Get-AzureSubnet
+        uid: Azure.Get-AzureSubnet
+        no-loc:
+        - Get-AzureSubnet
+      - name: Get-AzureVNetConfig
+        uid: Azure.Get-AzureVNetConfig
+        no-loc:
+        - Get-AzureVNetConfig
+      - name: Get-AzureVNetConnection
+        uid: Azure.Get-AzureVNetConnection
+        no-loc:
+        - Get-AzureVNetConnection
+      - name: Get-AzureVNetGateway
+        uid: Azure.Get-AzureVNetGateway
+        no-loc:
+        - Get-AzureVNetGateway
+      - name: Get-AzureVNetGatewayDiagnostics
+        uid: Azure.Get-AzureVNetGatewayDiagnostics
+        no-loc:
+        - Get-AzureVNetGatewayDiagnostics
+      - name: Get-AzureVNetGatewayKey
+        uid: Azure.Get-AzureVNetGatewayKey
+        no-loc:
+        - Get-AzureVNetGatewayKey
+      - name: Get-AzureVNetSite
+        uid: Azure.Get-AzureVNetSite
+        no-loc:
+        - Get-AzureVNetSite
+      - name: Get-AzureWebHostingPlan
+        uid: Azure.Get-AzureWebHostingPlan
+        no-loc:
+        - Get-AzureWebHostingPlan
+      - name: Get-AzureWebHostingPlanMetric
+        uid: Azure.Get-AzureWebHostingPlanMetric
+        no-loc:
+        - Get-AzureWebHostingPlanMetric
+      - name: Get-AzureWebsite
+        uid: Azure.Get-AzureWebsite
+        no-loc:
+        - Get-AzureWebsite
+      - name: Get-AzureWebsiteDeployment
+        uid: Azure.Get-AzureWebsiteDeployment
+        no-loc:
+        - Get-AzureWebsiteDeployment
+      - name: Get-AzureWebsiteJob
+        uid: Azure.Get-AzureWebsiteJob
+        no-loc:
+        - Get-AzureWebsiteJob
+      - name: Get-AzureWebsiteJobHistory
+        uid: Azure.Get-AzureWebsiteJobHistory
+        no-loc:
+        - Get-AzureWebsiteJobHistory
+      - name: Get-AzureWebsiteLocation
+        uid: Azure.Get-AzureWebsiteLocation
+        no-loc:
+        - Get-AzureWebsiteLocation
+      - name: Get-AzureWebsiteLog
+        uid: Azure.Get-AzureWebsiteLog
+        no-loc:
+        - Get-AzureWebsiteLog
+      - name: Get-AzureWebsiteMetric
+        uid: Azure.Get-AzureWebsiteMetric
+        no-loc:
+        - Get-AzureWebsiteMetric
+      - name: Get-AzureWinRMUri
+        uid: Azure.Get-AzureWinRMUri
+        no-loc:
+        - Get-AzureWinRMUri
+      - name: Get-WAPackCloudService
+        uid: Azure.Get-WAPackCloudService
+        no-loc:
+        - Get-WAPackCloudService
+      - name: Get-WAPackVNet
+        uid: Azure.Get-WAPackVNet
+        no-loc:
+        - Get-WAPackVNet
+      - name: Import-AzurePublishSettingsFile
+        uid: Azure.Import-AzurePublishSettingsFile
+        no-loc:
+        - Import-AzurePublishSettingsFile
+      - name: Import-AzureStorSimpleLegacyApplianceConfig
+        uid: Azure.Import-AzureStorSimpleLegacyApplianceConfig
+        no-loc:
+        - Import-AzureStorSimpleLegacyApplianceConfig
+      - name: Import-AzureStorSimpleLegacyVolumeContainer
+        uid: Azure.Import-AzureStorSimpleLegacyVolumeContainer
+        no-loc:
+        - Import-AzureStorSimpleLegacyVolumeContainer
+      - name: Invoke-AzureRemoteAppSessionLogoff
+        uid: Azure.Invoke-AzureRemoteAppSessionLogoff
+        no-loc:
+        - Invoke-AzureRemoteAppSessionLogoff
+      - name: Move-AzureDeployment
+        uid: Azure.Move-AzureDeployment
+        no-loc:
+        - Move-AzureDeployment
+      - name: Move-AzureService
+        uid: Azure.Move-AzureService
+        no-loc:
+        - Move-AzureService
+      - name: New-AzureAclConfig
+        uid: Azure.New-AzureAclConfig
+        no-loc:
+        - New-AzureAclConfig
+      - name: New-AzureAffinityGroup
+        uid: Azure.New-AzureAffinityGroup
+        no-loc:
+        - New-AzureAffinityGroup
+      - name: New-AzureCertificateSetting
+        uid: Azure.New-AzureCertificateSetting
+        no-loc:
+        - New-AzureCertificateSetting
+      - name: New-AzureDeployment
+        uid: Azure.New-AzureDeployment
+        no-loc:
+        - New-AzureDeployment
+      - name: New-AzureProfile
+        uid: Azure.New-AzureProfile
+        no-loc:
+        - New-AzureProfile
+      - name: New-AzureRemoteAppCollection
+        uid: Azure.New-AzureRemoteAppCollection
+        no-loc:
+        - New-AzureRemoteAppCollection
+      - name: New-AzureRemoteAppVNet
+        uid: Azure.New-AzureRemoteAppVNet
+        no-loc:
+        - New-AzureRemoteAppVNet
+      - name: New-AzureSBAuthorizationRule
+        uid: Azure.New-AzureSBAuthorizationRule
+        no-loc:
+        - New-AzureSBAuthorizationRule
+      - name: New-AzureSBNamespace
+        uid: Azure.New-AzureSBNamespace
+        no-loc:
+        - New-AzureSBNamespace
+      - name: New-AzureService
+        uid: Azure.New-AzureService
+        no-loc:
+        - New-AzureService
+      - name: New-AzureServiceDiagnosticsExtensionConfig
+        uid: Azure.New-AzureServiceDiagnosticsExtensionConfig
+        no-loc:
+        - New-AzureServiceDiagnosticsExtensionConfig
+      - name: New-AzureServiceExtensionConfig
+        uid: Azure.New-AzureServiceExtensionConfig
+        no-loc:
+        - New-AzureServiceExtensionConfig
+      - name: New-AzureServiceProject
+        uid: Azure.New-AzureServiceProject
+        no-loc:
+        - New-AzureServiceProject
+      - name: New-AzureServiceRemoteDesktopExtensionConfig
+        uid: Azure.New-AzureServiceRemoteDesktopExtensionConfig
+        no-loc:
+        - New-AzureServiceRemoteDesktopExtensionConfig
+      - name: New-AzureSSHKey
+        uid: Azure.New-AzureSSHKey
+        no-loc:
+        - New-AzureSSHKey
+      - name: New-AzureStoreAddOn
+        uid: Azure.New-AzureStoreAddOn
+        no-loc:
+        - New-AzureStoreAddOn
+      - name: New-AzureStorSimpleAccessControlRecord
+        uid: Azure.New-AzureStorSimpleAccessControlRecord
+        no-loc:
+        - New-AzureStorSimpleAccessControlRecord
+      - name: New-AzureStorSimpleDeviceVolume
+        uid: Azure.New-AzureStorSimpleDeviceVolume
+        no-loc:
+        - New-AzureStorSimpleDeviceVolume
+      - name: New-AzureStorSimpleDeviceVolumeContainer
+        uid: Azure.New-AzureStorSimpleDeviceVolumeContainer
+        no-loc:
+        - New-AzureStorSimpleDeviceVolumeContainer
+      - name: New-AzureStorSimpleVirtualDevice
+        uid: Azure.New-AzureStorSimpleVirtualDevice
+        no-loc:
+        - New-AzureStorSimpleVirtualDevice
+      - name: New-AzureVNetGateway
+        uid: Azure.New-AzureVNetGateway
+        no-loc:
+        - New-AzureVNetGateway
+      - name: New-AzureWebsite
+        uid: Azure.New-AzureWebsite
+        no-loc:
+        - New-AzureWebsite
+      - name: New-AzureWebsiteJob
+        uid: Azure.New-AzureWebsiteJob
+        no-loc:
+        - New-AzureWebsiteJob
+      - name: New-WAPackCloudService
+        uid: Azure.New-WAPackCloudService
+        no-loc:
+        - New-WAPackCloudService
+      - name: New-WAPackVNet
+        uid: Azure.New-WAPackVNet
+        no-loc:
+        - New-WAPackVNet
+      - name: Publish-AzureRemoteAppProgram
+        uid: Azure.Publish-AzureRemoteAppProgram
+        no-loc:
+        - Publish-AzureRemoteAppProgram
+      - name: Publish-AzureServiceProject
+        uid: Azure.Publish-AzureServiceProject
+        no-loc:
+        - Publish-AzureServiceProject
+      - name: Publish-AzureWebsiteProject
+        uid: Azure.Publish-AzureWebsiteProject
+        no-loc:
+        - Publish-AzureWebsiteProject
+      - name: Remove-AzureAccount
+        uid: Azure.Remove-AzureAccount
+        no-loc:
+        - Remove-AzureAccount
+      - name: Remove-AzureAclConfig
+        uid: Azure.Remove-AzureAclConfig
+        no-loc:
+        - Remove-AzureAclConfig
+      - name: Remove-AzureAffinityGroup
+        uid: Azure.Remove-AzureAffinityGroup
+        no-loc:
+        - Remove-AzureAffinityGroup
+      - name: Remove-AzureCertificate
+        uid: Azure.Remove-AzureCertificate
+        no-loc:
+        - Remove-AzureCertificate
+      - name: Remove-AzureDeployment
+        uid: Azure.Remove-AzureDeployment
+        no-loc:
+        - Remove-AzureDeployment
+      - name: Remove-AzureEndpoint
+        uid: Azure.Remove-AzureEndpoint
+        no-loc:
+        - Remove-AzureEndpoint
+      - name: Remove-AzureEnvironment
+        uid: Azure.Remove-AzureEnvironment
+        no-loc:
+        - Remove-AzureEnvironment
+      - name: Remove-AzureRemoteAppCollection
+        uid: Azure.Remove-AzureRemoteAppCollection
+        no-loc:
+        - Remove-AzureRemoteAppCollection
+      - name: Remove-AzureRemoteAppUser
+        uid: Azure.Remove-AzureRemoteAppUser
+        no-loc:
+        - Remove-AzureRemoteAppUser
+      - name: Remove-AzureRemoteAppVNet
+        uid: Azure.Remove-AzureRemoteAppVNet
+        no-loc:
+        - Remove-AzureRemoteAppVNet
+      - name: Remove-AzureSBAuthorizationRule
+        uid: Azure.Remove-AzureSBAuthorizationRule
+        no-loc:
+        - Remove-AzureSBAuthorizationRule
+      - name: Remove-AzureSBNamespace
+        uid: Azure.Remove-AzureSBNamespace
+        no-loc:
+        - Remove-AzureSBNamespace
+      - name: Remove-AzureService
+        uid: Azure.Remove-AzureService
+        no-loc:
+        - Remove-AzureService
+      - name: Remove-AzureServiceAntimalwareExtension
+        uid: Azure.Remove-AzureServiceAntimalwareExtension
+        no-loc:
+        - Remove-AzureServiceAntimalwareExtension
+      - name: Remove-AzureServiceDiagnosticsExtension
+        uid: Azure.Remove-AzureServiceDiagnosticsExtension
+        no-loc:
+        - Remove-AzureServiceDiagnosticsExtension
+      - name: Remove-AzureServiceExtension
+        uid: Azure.Remove-AzureServiceExtension
+        no-loc:
+        - Remove-AzureServiceExtension
+      - name: Remove-AzureServiceRemoteDesktopExtension
+        uid: Azure.Remove-AzureServiceRemoteDesktopExtension
+        no-loc:
+        - Remove-AzureServiceRemoteDesktopExtension
+      - name: Remove-AzureStoreAddOn
+        uid: Azure.Remove-AzureStoreAddOn
+        no-loc:
+        - Remove-AzureStoreAddOn
+      - name: Remove-AzureStorSimpleAccessControlRecord
+        uid: Azure.Remove-AzureStorSimpleAccessControlRecord
+        no-loc:
+        - Remove-AzureStorSimpleAccessControlRecord
+      - name: Remove-AzureStorSimpleDeviceVolume
+        uid: Azure.Remove-AzureStorSimpleDeviceVolume
+        no-loc:
+        - Remove-AzureStorSimpleDeviceVolume
+      - name: Remove-AzureStorSimpleDeviceVolumeContainer
+        uid: Azure.Remove-AzureStorSimpleDeviceVolumeContainer
+        no-loc:
+        - Remove-AzureStorSimpleDeviceVolumeContainer
+      - name: Remove-AzureVNetConfig
+        uid: Azure.Remove-AzureVNetConfig
+        no-loc:
+        - Remove-AzureVNetConfig
+      - name: Remove-AzureVNetGateway
+        uid: Azure.Remove-AzureVNetGateway
+        no-loc:
+        - Remove-AzureVNetGateway
+      - name: Remove-AzureVNetGatewayDefaultSite
+        uid: Azure.Remove-AzureVNetGatewayDefaultSite
+        no-loc:
+        - Remove-AzureVNetGatewayDefaultSite
+      - name: Remove-AzureWebsite
+        uid: Azure.Remove-AzureWebsite
+        no-loc:
+        - Remove-AzureWebsite
+      - name: Remove-AzureWebsiteJob
+        uid: Azure.Remove-AzureWebsiteJob
+        no-loc:
+        - Remove-AzureWebsiteJob
+      - name: Remove-WAPackCloudService
+        uid: Azure.Remove-WAPackCloudService
+        no-loc:
+        - Remove-WAPackCloudService
+      - name: Remove-WAPackVNet
+        uid: Azure.Remove-WAPackVNet
+        no-loc:
+        - Remove-WAPackVNet
+      - name: Reset-AzureVNetGateway
+        uid: Azure.Reset-AzureVNetGateway
+        no-loc:
+        - Reset-AzureVNetGateway
+      - name: Resize-AzureVNetGateway
+        uid: Azure.Resize-AzureVNetGateway
+        no-loc:
+        - Resize-AzureVNetGateway
+      - name: Restart-AzureWebsite
+        uid: Azure.Restart-AzureWebsite
+        no-loc:
+        - Restart-AzureWebsite
+      - name: Restore-AzureWebsiteDeployment
+        uid: Azure.Restore-AzureWebsiteDeployment
+        no-loc:
+        - Restore-AzureWebsiteDeployment
+      - name: Save-AzureServiceProjectPackage
+        uid: Azure.Save-AzureServiceProjectPackage
+        no-loc:
+        - Save-AzureServiceProjectPackage
+      - name: Save-AzureWebsiteLog
+        uid: Azure.Save-AzureWebsiteLog
+        no-loc:
+        - Save-AzureWebsiteLog
+      - name: Select-AzureProfile
+        uid: Azure.Select-AzureProfile
+        no-loc:
+        - Select-AzureProfile
+      - name: Send-AzureRemoteAppSessionMessage
+        uid: Azure.Send-AzureRemoteAppSessionMessage
+        no-loc:
+        - Send-AzureRemoteAppSessionMessage
+      - name: Set-AzureAclConfig
+        uid: Azure.Set-AzureAclConfig
+        no-loc:
+        - Set-AzureAclConfig
+      - name: Set-AzureAffinityGroup
+        uid: Azure.Set-AzureAffinityGroup
+        no-loc:
+        - Set-AzureAffinityGroup
+      - name: Set-AzureDeployment
+        uid: Azure.Set-AzureDeployment
+        no-loc:
+        - Set-AzureDeployment
+      - name: Set-AzureEndpoint
+        uid: Azure.Set-AzureEndpoint
+        no-loc:
+        - Set-AzureEndpoint
+      - name: Set-AzureEnvironment
+        uid: Azure.Set-AzureEnvironment
+        no-loc:
+        - Set-AzureEnvironment
+      - name: Set-AzureLoadBalancedEndpoint
+        uid: Azure.Set-AzureLoadBalancedEndpoint
+        no-loc:
+        - Set-AzureLoadBalancedEndpoint
+      - name: Set-AzureRemoteAppCollection
+        uid: Azure.Set-AzureRemoteAppCollection
+        no-loc:
+        - Set-AzureRemoteAppCollection
+      - name: Set-AzureRemoteAppVNet
+        uid: Azure.Set-AzureRemoteAppVNet
+        no-loc:
+        - Set-AzureRemoteAppVNet
+      - name: Set-AzureRemoteAppWorkspace
+        uid: Azure.Set-AzureRemoteAppWorkspace
+        no-loc:
+        - Set-AzureRemoteAppWorkspace
+      - name: Set-AzureSBAuthorizationRule
+        uid: Azure.Set-AzureSBAuthorizationRule
+        no-loc:
+        - Set-AzureSBAuthorizationRule
+      - name: Set-AzureService
+        uid: Azure.Set-AzureService
+        no-loc:
+        - Set-AzureService
+      - name: Set-AzureServiceAntimalwareExtension
+        uid: Azure.Set-AzureServiceAntimalwareExtension
+        no-loc:
+        - Set-AzureServiceAntimalwareExtension
+      - name: Set-AzureServiceDiagnosticsExtension
+        uid: Azure.Set-AzureServiceDiagnosticsExtension
+        no-loc:
+        - Set-AzureServiceDiagnosticsExtension
+      - name: Set-AzureServiceExtension
+        uid: Azure.Set-AzureServiceExtension
+        no-loc:
+        - Set-AzureServiceExtension
+      - name: Set-AzureServiceProject
+        uid: Azure.Set-AzureServiceProject
+        no-loc:
+        - Set-AzureServiceProject
+      - name: Set-AzureServiceRemoteDesktopExtension
+        uid: Azure.Set-AzureServiceRemoteDesktopExtension
+        no-loc:
+        - Set-AzureServiceRemoteDesktopExtension
+      - name: Set-AzureStoreAddOn
+        uid: Azure.Set-AzureStoreAddOn
+        no-loc:
+        - Set-AzureStoreAddOn
+      - name: Set-AzureStorSimpleAccessControlRecord
+        uid: Azure.Set-AzureStorSimpleAccessControlRecord
+        no-loc:
+        - Set-AzureStorSimpleAccessControlRecord
+      - name: Set-AzureStorSimpleDevice
+        uid: Azure.Set-AzureStorSimpleDevice
+        no-loc:
+        - Set-AzureStorSimpleDevice
+      - name: Set-AzureStorSimpleDeviceVolume
+        uid: Azure.Set-AzureStorSimpleDeviceVolume
+        no-loc:
+        - Set-AzureStorSimpleDeviceVolume
+      - name: Set-AzureStorSimpleVirtualDevice
+        uid: Azure.Set-AzureStorSimpleVirtualDevice
+        no-loc:
+        - Set-AzureStorSimpleVirtualDevice
+      - name: Set-AzureSubnet
+        uid: Azure.Set-AzureSubnet
+        no-loc:
+        - Set-AzureSubnet
+      - name: Set-AzureVNetConfig
+        uid: Azure.Set-AzureVNetConfig
+        no-loc:
+        - Set-AzureVNetConfig
+      - name: Set-AzureVNetGateway
+        uid: Azure.Set-AzureVNetGateway
+        no-loc:
+        - Set-AzureVNetGateway
+      - name: Set-AzureVNetGatewayDefaultSite
+        uid: Azure.Set-AzureVNetGatewayDefaultSite
+        no-loc:
+        - Set-AzureVNetGatewayDefaultSite
+      - name: Set-AzureVNetGatewayKey
+        uid: Azure.Set-AzureVNetGatewayKey
+        no-loc:
+        - Set-AzureVNetGatewayKey
+      - name: Set-AzureWalkUpgradeDomain
+        uid: Azure.Set-AzureWalkUpgradeDomain
+        no-loc:
+        - Set-AzureWalkUpgradeDomain
+      - name: Set-AzureWebsite
+        uid: Azure.Set-AzureWebsite
+        no-loc:
+        - Set-AzureWebsite
+      - name: Show-AzurePortal
+        uid: Azure.Show-AzurePortal
+        no-loc:
+        - Show-AzurePortal
+      - name: Show-AzureWebsite
+        uid: Azure.Show-AzureWebsite
+        no-loc:
+        - Show-AzureWebsite
+      - name: Start-AzureEmulator
+        uid: Azure.Start-AzureEmulator
+        no-loc:
+        - Start-AzureEmulator
+      - name: Start-AzureService
+        uid: Azure.Start-AzureService
+        no-loc:
+        - Start-AzureService
+      - name: Start-AzureVNetGatewayDiagnostics
+        uid: Azure.Start-AzureVNetGatewayDiagnostics
+        no-loc:
+        - Start-AzureVNetGatewayDiagnostics
+      - name: Start-AzureWebsite
+        uid: Azure.Start-AzureWebsite
+        no-loc:
+        - Start-AzureWebsite
+      - name: Start-AzureWebsiteJob
+        uid: Azure.Start-AzureWebsiteJob
+        no-loc:
+        - Start-AzureWebsiteJob
+      - name: Stop-AzureEmulator
+        uid: Azure.Stop-AzureEmulator
+        no-loc:
+        - Stop-AzureEmulator
+      - name: Stop-AzureService
+        uid: Azure.Stop-AzureService
+        no-loc:
+        - Stop-AzureService
+      - name: Stop-AzureVNetGatewayDiagnostics
+        uid: Azure.Stop-AzureVNetGatewayDiagnostics
+        no-loc:
+        - Stop-AzureVNetGatewayDiagnostics
+      - name: Stop-AzureWebsite
+        uid: Azure.Stop-AzureWebsite
+        no-loc:
+        - Stop-AzureWebsite
+      - name: Stop-AzureWebsiteJob
+        uid: Azure.Stop-AzureWebsiteJob
+        no-loc:
+        - Stop-AzureWebsiteJob
+      - name: Switch-AzureWebsiteSlot
+        uid: Azure.Switch-AzureWebsiteSlot
+        no-loc:
+        - Switch-AzureWebsiteSlot
+      - name: Test-AzureName
+        uid: Azure.Test-AzureName
+        no-loc:
+        - Test-AzureName
+      - name: Unpublish-AzureRemoteAppProgram
+        uid: Azure.Unpublish-AzureRemoteAppProgram
+        no-loc:
+        - Unpublish-AzureRemoteAppProgram
+      - name: Update-AzureRemoteAppCollection
+        uid: Azure.Update-AzureRemoteAppCollection
+        no-loc:
+        - Update-AzureRemoteAppCollection
+      - name: Update-AzureWebsiteRepository
+        uid: Azure.Update-AzureWebsiteRepository
+        no-loc:
+        - Update-AzureWebsiteRepository
+      no-loc:
+      - Azure
+    - name: Backup
+      items:
+      - name: Commands
+        href: Azure/index.yml#backup
+      - name: Get-AzureStorSimpleDeviceBackup
+        uid: Azure.Get-AzureStorSimpleDeviceBackup
+        no-loc:
+        - Get-AzureStorSimpleDeviceBackup
+      - name: Get-AzureStorSimpleDeviceBackupPolicy
+        uid: Azure.Get-AzureStorSimpleDeviceBackupPolicy
+        no-loc:
+        - Get-AzureStorSimpleDeviceBackupPolicy
+      - name: New-AzureStorSimpleDeviceBackupPolicy
+        uid: Azure.New-AzureStorSimpleDeviceBackupPolicy
+        no-loc:
+        - New-AzureStorSimpleDeviceBackupPolicy
+      - name: New-AzureStorSimpleDeviceBackupScheduleAddConfig
+        uid: Azure.New-AzureStorSimpleDeviceBackupScheduleAddConfig
+        no-loc:
+        - New-AzureStorSimpleDeviceBackupScheduleAddConfig
+      - name: New-AzureStorSimpleDeviceBackupScheduleUpdateConfig
+        uid: Azure.New-AzureStorSimpleDeviceBackupScheduleUpdateConfig
+        no-loc:
+        - New-AzureStorSimpleDeviceBackupScheduleUpdateConfig
+      - name: New-AzureVMSqlServerAutoBackupConfig
+        uid: Azure.New-AzureVMSqlServerAutoBackupConfig
+        no-loc:
+        - New-AzureVMSqlServerAutoBackupConfig
+      - name: Remove-AzureStorSimpleDeviceBackup
+        uid: Azure.Remove-AzureStorSimpleDeviceBackup
+        no-loc:
+        - Remove-AzureStorSimpleDeviceBackup
+      - name: Remove-AzureStorSimpleDeviceBackupPolicy
+        uid: Azure.Remove-AzureStorSimpleDeviceBackupPolicy
+        no-loc:
+        - Remove-AzureStorSimpleDeviceBackupPolicy
+      - name: Set-AzureStorSimpleDeviceBackupPolicy
+        uid: Azure.Set-AzureStorSimpleDeviceBackupPolicy
+        no-loc:
+        - Set-AzureStorSimpleDeviceBackupPolicy
+      no-loc:
+      - Backup
+    - name: DNS
+      items:
+      - name: Commands
+        href: Azure/index.yml#dns
+      - name: Add-AzureDns
+        uid: Azure.Add-AzureDns
+        no-loc:
+        - Add-AzureDns
+      - name: Get-AzureDns
+        uid: Azure.Get-AzureDns
+        no-loc:
+        - Get-AzureDns
+      - name: New-AzureDns
+        uid: Azure.New-AzureDns
+        no-loc:
+        - New-AzureDns
+      - name: Remove-AzureDns
+        uid: Azure.Remove-AzureDns
+        no-loc:
+        - Remove-AzureDns
+      - name: Set-AzureDns
+        uid: Azure.Set-AzureDns
+        no-loc:
+        - Set-AzureDns
+      no-loc:
+      - DNS
+    - name: HD Insights
+      items:
+      - name: Commands
+        href: Azure/index.yml#hd-insights
+      - name: Add-AzureHDInsightConfigValues
+        uid: Azure.Add-AzureHDInsightConfigValues
+        no-loc:
+        - Add-AzureHDInsightConfigValues
+      - name: Add-AzureHDInsightMetastore
+        uid: Azure.Add-AzureHDInsightMetastore
+        no-loc:
+        - Add-AzureHDInsightMetastore
+      - name: Add-AzureHDInsightScriptAction
+        uid: Azure.Add-AzureHDInsightScriptAction
+        no-loc:
+        - Add-AzureHDInsightScriptAction
+      - name: Add-AzureHDInsightStorage
+        uid: Azure.Add-AzureHDInsightStorage
+        no-loc:
+        - Add-AzureHDInsightStorage
+      - name: Get-AzureHDInsightCluster
+        uid: Azure.Get-AzureHDInsightCluster
+        no-loc:
+        - Get-AzureHDInsightCluster
+      - name: Get-AzureHDInsightJob
+        uid: Azure.Get-AzureHDInsightJob
+        no-loc:
+        - Get-AzureHDInsightJob
+      - name: Get-AzureHDInsightJobOutput
+        uid: Azure.Get-AzureHDInsightJobOutput
+        no-loc:
+        - Get-AzureHDInsightJobOutput
+      - name: Get-AzureHDInsightProperties
+        uid: Azure.Get-AzureHDInsightProperties
+        no-loc:
+        - Get-AzureHDInsightProperties
+      - name: Grant-AzureHDInsightHttpServicesAccess
+        uid: Azure.Grant-AzureHDInsightHttpServicesAccess
+        no-loc:
+        - Grant-AzureHDInsightHttpServicesAccess
+      - name: Grant-AzureHdinsightRdpAccess
+        uid: Azure.Grant-AzureHdinsightRdpAccess
+        no-loc:
+        - Grant-AzureHdinsightRdpAccess
+      - name: Invoke-AzureHDInsightHiveJob
+        uid: Azure.Invoke-AzureHDInsightHiveJob
+        no-loc:
+        - Invoke-AzureHDInsightHiveJob
+      - name: New-AzureHDInsightCluster
+        uid: Azure.New-AzureHDInsightCluster
+        no-loc:
+        - New-AzureHDInsightCluster
+      - name: New-AzureHDInsightClusterConfig
+        uid: Azure.New-AzureHDInsightClusterConfig
+        no-loc:
+        - New-AzureHDInsightClusterConfig
+      - name: New-AzureHDInsightHiveJobDefinition
+        uid: Azure.New-AzureHDInsightHiveJobDefinition
+        no-loc:
+        - New-AzureHDInsightHiveJobDefinition
+      - name: New-AzureHDInsightMapReduceJobDefinition
+        uid: Azure.New-AzureHDInsightMapReduceJobDefinition
+        no-loc:
+        - New-AzureHDInsightMapReduceJobDefinition
+      - name: New-AzureHDInsightPigJobDefinition
+        uid: Azure.New-AzureHDInsightPigJobDefinition
+        no-loc:
+        - New-AzureHDInsightPigJobDefinition
+      - name: New-AzureHDInsightSqoopJobDefinition
+        uid: Azure.New-AzureHDInsightSqoopJobDefinition
+        no-loc:
+        - New-AzureHDInsightSqoopJobDefinition
+      - name: New-AzureHDInsightStreamingMapReduceJobDefinition
+        uid: Azure.New-AzureHDInsightStreamingMapReduceJobDefinition
+        no-loc:
+        - New-AzureHDInsightStreamingMapReduceJobDefinition
+      - name: Remove-AzureHDInsightCluster
+        uid: Azure.Remove-AzureHDInsightCluster
+        no-loc:
+        - Remove-AzureHDInsightCluster
+      - name: Revoke-AzureHDInsightHttpServicesAccess
+        uid: Azure.Revoke-AzureHDInsightHttpServicesAccess
+        no-loc:
+        - Revoke-AzureHDInsightHttpServicesAccess
+      - name: Revoke-AzureHdinsightRdpAccess
+        uid: Azure.Revoke-AzureHdinsightRdpAccess
+        no-loc:
+        - Revoke-AzureHdinsightRdpAccess
+      - name: Set-AzureHDInsightClusterSize
+        uid: Azure.Set-AzureHDInsightClusterSize
+        no-loc:
+        - Set-AzureHDInsightClusterSize
+      - name: Set-AzureHDInsightDefaultStorage
+        uid: Azure.Set-AzureHDInsightDefaultStorage
+        no-loc:
+        - Set-AzureHDInsightDefaultStorage
+      - name: Start-AzureHDInsightJob
+        uid: Azure.Start-AzureHDInsightJob
+        no-loc:
+        - Start-AzureHDInsightJob
+      - name: Stop-AzureHDInsightJob
+        uid: Azure.Stop-AzureHDInsightJob
+        no-loc:
+        - Stop-AzureHDInsightJob
+      - name: Use-AzureHDInsightCluster
+        uid: Azure.Use-AzureHDInsightCluster
+        no-loc:
+        - Use-AzureHDInsightCluster
+      - name: Wait-AzureHDInsightJob
+        uid: Azure.Wait-AzureHDInsightJob
+        no-loc:
+        - Wait-AzureHDInsightJob
+      no-loc:
+      - HD Insights
+    - name: Key Vault
+      items:
+      - name: Commands
+        href: Azure/index.yml#key-vault
+      - name: New-AzureVMSqlServerKeyVaultCredentialConfig
+        uid: Azure.New-AzureVMSqlServerKeyVaultCredentialConfig
+        no-loc:
+        - New-AzureVMSqlServerKeyVaultCredentialConfig
+      no-loc:
+      - Key Vault
+    - name: Load Balancer
+      items:
+      - name: Commands
+        href: Azure/index.yml#load-balancer
+      - name: Add-AzureInternalLoadBalancer
+        uid: Azure.Add-AzureInternalLoadBalancer
+        no-loc:
+        - Add-AzureInternalLoadBalancer
+      - name: Get-AzureInternalLoadBalancer
+        uid: Azure.Get-AzureInternalLoadBalancer
+        no-loc:
+        - Get-AzureInternalLoadBalancer
+      - name: New-AzureInternalLoadBalancerConfig
+        uid: Azure.New-AzureInternalLoadBalancerConfig
+        no-loc:
+        - New-AzureInternalLoadBalancerConfig
+      - name: Remove-AzureInternalLoadBalancer
+        uid: Azure.Remove-AzureInternalLoadBalancer
+        no-loc:
+        - Remove-AzureInternalLoadBalancer
+      - name: Set-AzureInternalLoadBalancer
+        uid: Azure.Set-AzureInternalLoadBalancer
+        no-loc:
+        - Set-AzureInternalLoadBalancer
+      no-loc:
+      - Load Balancer
+    - name: Media Services
+      items:
+      - name: Commands
+        href: Azure/index.yml#media-services
+      - name: Get-AzureMediaServicesAccount
+        uid: Azure.Get-AzureMediaServicesAccount
+        no-loc:
+        - Get-AzureMediaServicesAccount
+      - name: New-AzureMediaServicesAccount
+        uid: Azure.New-AzureMediaServicesAccount
+        no-loc:
+        - New-AzureMediaServicesAccount
+      - name: New-AzureMediaServicesKey
+        uid: Azure.New-AzureMediaServicesKey
+        no-loc:
+        - New-AzureMediaServicesKey
+      - name: Remove-AzureMediaServicesAccount
+        uid: Azure.Remove-AzureMediaServicesAccount
+        no-loc:
+        - Remove-AzureMediaServicesAccount
+      no-loc:
+      - Media Services
+    - name: Networking
+      items:
+      - name: Commands
+        href: Azure/index.yml#networking
+      - name: Add-AzureNetworkInterfaceConfig
+        uid: Azure.Add-AzureNetworkInterfaceConfig
+        no-loc:
+        - Add-AzureNetworkInterfaceConfig
+      - name: Add-AzureVirtualIP
+        uid: Azure.Add-AzureVirtualIP
+        no-loc:
+        - Add-AzureVirtualIP
+      - name: Get-AzureIPForwarding
+        uid: Azure.Get-AzureIPForwarding
+        no-loc:
+        - Get-AzureIPForwarding
+      - name: Get-AzureLocalNetworkGateway
+        uid: Azure.Get-AzureLocalNetworkGateway
+        no-loc:
+        - Get-AzureLocalNetworkGateway
+      - name: Get-AzureNetworkInterfaceConfig
+        uid: Azure.Get-AzureNetworkInterfaceConfig
+        no-loc:
+        - Get-AzureNetworkInterfaceConfig
+      - name: Get-AzureNetworkSecurityGroup
+        uid: Azure.Get-AzureNetworkSecurityGroup
+        no-loc:
+        - Get-AzureNetworkSecurityGroup
+      - name: Get-AzureNetworkSecurityGroupAssociation
+        uid: Azure.Get-AzureNetworkSecurityGroupAssociation
+        no-loc:
+        - Get-AzureNetworkSecurityGroupAssociation
+      - name: Get-AzureNetworkSecurityGroupConfig
+        uid: Azure.Get-AzureNetworkSecurityGroupConfig
+        no-loc:
+        - Get-AzureNetworkSecurityGroupConfig
+      - name: Get-AzureNetworkSecurityGroupForSubnet
+        uid: Azure.Get-AzureNetworkSecurityGroupForSubnet
+        no-loc:
+        - Get-AzureNetworkSecurityGroupForSubnet
+      - name: Get-AzurePublicIP
+        uid: Azure.Get-AzurePublicIP
+        no-loc:
+        - Get-AzurePublicIP
+      - name: Get-AzureReservedIP
+        uid: Azure.Get-AzureReservedIP
+        no-loc:
+        - Get-AzureReservedIP
+      - name: Get-AzureSiteRecoveryNetwork
+        uid: Azure.Get-AzureSiteRecoveryNetwork
+        no-loc:
+        - Get-AzureSiteRecoveryNetwork
+      - name: Get-AzureSiteRecoveryNetworkMapping
+        uid: Azure.Get-AzureSiteRecoveryNetworkMapping
+        no-loc:
+        - Get-AzureSiteRecoveryNetworkMapping
+      - name: Get-AzureStaticVNetIP
+        uid: Azure.Get-AzureStaticVNetIP
+        no-loc:
+        - Get-AzureStaticVNetIP
+      - name: Get-AzureVirtualNetworkGateway
+        uid: Azure.Get-AzureVirtualNetworkGateway
+        no-loc:
+        - Get-AzureVirtualNetworkGateway
+      - name: Get-AzureVirtualNetworkGatewayConnection
+        uid: Azure.Get-AzureVirtualNetworkGatewayConnection
+        no-loc:
+        - Get-AzureVirtualNetworkGatewayConnection
+      - name: Get-AzureVirtualNetworkGatewayDiagnostics
+        uid: Azure.Get-AzureVirtualNetworkGatewayDiagnostics
+        no-loc:
+        - Get-AzureVirtualNetworkGatewayDiagnostics
+      - name: Get-AzureVirtualNetworkGatewayIPsecParameters
+        uid: Azure.Get-AzureVirtualNetworkGatewayIPsecParameters
+        no-loc:
+        - Get-AzureVirtualNetworkGatewayIPsecParameters
+      - name: Get-AzureVirtualNetworkGatewayKey
+        uid: Azure.Get-AzureVirtualNetworkGatewayKey
+        no-loc:
+        - Get-AzureVirtualNetworkGatewayKey
+      - name: Get-AzureVNetGatewayIPsecParameters
+        uid: Azure.Get-AzureVNetGatewayIPsecParameters
+        no-loc:
+        - Get-AzureVNetGatewayIPsecParameters
+      - name: Get-WAPackLogicalNetwork
+        uid: Azure.Get-WAPackLogicalNetwork
+        no-loc:
+        - Get-WAPackLogicalNetwork
+      - name: Get-WAPackStaticIPAddressPool
+        uid: Azure.Get-WAPackStaticIPAddressPool
+        no-loc:
+        - Get-WAPackStaticIPAddressPool
+      - name: Move-AzureNetworkSecurityGroup
+        uid: Azure.Move-AzureNetworkSecurityGroup
+        no-loc:
+        - Move-AzureNetworkSecurityGroup
+      - name: Move-AzureReservedIP
+        uid: Azure.Move-AzureReservedIP
+        no-loc:
+        - Move-AzureReservedIP
+      - name: Move-AzureVirtualNetwork
+        uid: Azure.Move-AzureVirtualNetwork
+        no-loc:
+        - Move-AzureVirtualNetwork
+      - name: New-AzureLocalNetworkGateway
+        uid: Azure.New-AzureLocalNetworkGateway
+        no-loc:
+        - New-AzureLocalNetworkGateway
+      - name: New-AzureNetworkSecurityGroup
+        uid: Azure.New-AzureNetworkSecurityGroup
+        no-loc:
+        - New-AzureNetworkSecurityGroup
+      - name: New-AzureReservedIP
+        uid: Azure.New-AzureReservedIP
+        no-loc:
+        - New-AzureReservedIP
+      - name: New-AzureSiteRecoveryNetworkMapping
+        uid: Azure.New-AzureSiteRecoveryNetworkMapping
+        no-loc:
+        - New-AzureSiteRecoveryNetworkMapping
+      - name: New-AzureStorSimpleNetworkConfig
+        uid: Azure.New-AzureStorSimpleNetworkConfig
+        no-loc:
+        - New-AzureStorSimpleNetworkConfig
+      - name: New-AzureVirtualNetworkGateway
+        uid: Azure.New-AzureVirtualNetworkGateway
+        no-loc:
+        - New-AzureVirtualNetworkGateway
+      - name: New-AzureVirtualNetworkGatewayConnection
+        uid: Azure.New-AzureVirtualNetworkGatewayConnection
+        no-loc:
+        - New-AzureVirtualNetworkGatewayConnection
+      - name: New-WAPackStaticIPAddressPool
+        uid: Azure.New-WAPackStaticIPAddressPool
+        no-loc:
+        - New-WAPackStaticIPAddressPool
+      - name: Remove-AzureLocalNetworkGateway
+        uid: Azure.Remove-AzureLocalNetworkGateway
+        no-loc:
+        - Remove-AzureLocalNetworkGateway
+      - name: Remove-AzureNetworkInterfaceConfig
+        uid: Azure.Remove-AzureNetworkInterfaceConfig
+        no-loc:
+        - Remove-AzureNetworkInterfaceConfig
+      - name: Remove-AzureNetworkSecurityGroup
+        uid: Azure.Remove-AzureNetworkSecurityGroup
+        no-loc:
+        - Remove-AzureNetworkSecurityGroup
+      - name: Remove-AzureNetworkSecurityGroupAssociation
+        uid: Azure.Remove-AzureNetworkSecurityGroupAssociation
+        no-loc:
+        - Remove-AzureNetworkSecurityGroupAssociation
+      - name: Remove-AzureNetworkSecurityGroupConfig
+        uid: Azure.Remove-AzureNetworkSecurityGroupConfig
+        no-loc:
+        - Remove-AzureNetworkSecurityGroupConfig
+      - name: Remove-AzureNetworkSecurityGroupFromSubnet
+        uid: Azure.Remove-AzureNetworkSecurityGroupFromSubnet
+        no-loc:
+        - Remove-AzureNetworkSecurityGroupFromSubnet
+      - name: Remove-AzureNetworkSecurityRule
+        uid: Azure.Remove-AzureNetworkSecurityRule
+        no-loc:
+        - Remove-AzureNetworkSecurityRule
+      - name: Remove-AzurePublicIP
+        uid: Azure.Remove-AzurePublicIP
+        no-loc:
+        - Remove-AzurePublicIP
+      - name: Remove-AzureReservedIP
+        uid: Azure.Remove-AzureReservedIP
+        no-loc:
+        - Remove-AzureReservedIP
+      - name: Remove-AzureReservedIPAssociation
+        uid: Azure.Remove-AzureReservedIPAssociation
+        no-loc:
+        - Remove-AzureReservedIPAssociation
+      - name: Remove-AzureSiteRecoveryNetworkMapping
+        uid: Azure.Remove-AzureSiteRecoveryNetworkMapping
+        no-loc:
+        - Remove-AzureSiteRecoveryNetworkMapping
+      - name: Remove-AzureStaticVNetIP
+        uid: Azure.Remove-AzureStaticVNetIP
+        no-loc:
+        - Remove-AzureStaticVNetIP
+      - name: Remove-AzureVirtualIP
+        uid: Azure.Remove-AzureVirtualIP
+        no-loc:
+        - Remove-AzureVirtualIP
+      - name: Remove-AzureVirtualNetworkGateway
+        uid: Azure.Remove-AzureVirtualNetworkGateway
+        no-loc:
+        - Remove-AzureVirtualNetworkGateway
+      - name: Remove-AzureVirtualNetworkGatewayConnection
+        uid: Azure.Remove-AzureVirtualNetworkGatewayConnection
+        no-loc:
+        - Remove-AzureVirtualNetworkGatewayConnection
+      - name: Remove-WAPackStaticIPAddressPool
+        uid: Azure.Remove-WAPackStaticIPAddressPool
+        no-loc:
+        - Remove-WAPackStaticIPAddressPool
+      - name: Reset-AzureLocalNetworkGateway
+        uid: Azure.Reset-AzureLocalNetworkGateway
+        no-loc:
+        - Reset-AzureLocalNetworkGateway
+      - name: Reset-AzureVirtualNetworkGateway
+        uid: Azure.Reset-AzureVirtualNetworkGateway
+        no-loc:
+        - Reset-AzureVirtualNetworkGateway
+      - name: Reset-AzureVirtualNetworkGatewayConnection
+        uid: Azure.Reset-AzureVirtualNetworkGatewayConnection
+        no-loc:
+        - Reset-AzureVirtualNetworkGatewayConnection
+      - name: Reset-AzureVirtualNetworkGatewayKey
+        uid: Azure.Reset-AzureVirtualNetworkGatewayKey
+        no-loc:
+        - Reset-AzureVirtualNetworkGatewayKey
+      - name: Resize-AzureVirtualNetworkGateway
+        uid: Azure.Resize-AzureVirtualNetworkGateway
+        no-loc:
+        - Resize-AzureVirtualNetworkGateway
+      - name: Set-AzureIPForwarding
+        uid: Azure.Set-AzureIPForwarding
+        no-loc:
+        - Set-AzureIPForwarding
+      - name: Set-AzureNetworkInterfaceConfig
+        uid: Azure.Set-AzureNetworkInterfaceConfig
+        no-loc:
+        - Set-AzureNetworkInterfaceConfig
+      - name: Set-AzureNetworkSecurityGroupAssociation
+        uid: Azure.Set-AzureNetworkSecurityGroupAssociation
+        no-loc:
+        - Set-AzureNetworkSecurityGroupAssociation
+      - name: Set-AzureNetworkSecurityGroupConfig
+        uid: Azure.Set-AzureNetworkSecurityGroupConfig
+        no-loc:
+        - Set-AzureNetworkSecurityGroupConfig
+      - name: Set-AzureNetworkSecurityGroupToSubnet
+        uid: Azure.Set-AzureNetworkSecurityGroupToSubnet
+        no-loc:
+        - Set-AzureNetworkSecurityGroupToSubnet
+      - name: Set-AzureNetworkSecurityRule
+        uid: Azure.Set-AzureNetworkSecurityRule
+        no-loc:
+        - Set-AzureNetworkSecurityRule
+      - name: Set-AzurePublicIP
+        uid: Azure.Set-AzurePublicIP
+        no-loc:
+        - Set-AzurePublicIP
+      - name: Set-AzureReservedIPAssociation
+        uid: Azure.Set-AzureReservedIPAssociation
+        no-loc:
+        - Set-AzureReservedIPAssociation
+      - name: Set-AzureStaticVNetIP
+        uid: Azure.Set-AzureStaticVNetIP
+        no-loc:
+        - Set-AzureStaticVNetIP
+      - name: Set-AzureVirtualNetworkGatewayIPsecParameters
+        uid: Azure.Set-AzureVirtualNetworkGatewayIPsecParameters
+        no-loc:
+        - Set-AzureVirtualNetworkGatewayIPsecParameters
+      - name: Set-AzureVirtualNetworkGatewayKey
+        uid: Azure.Set-AzureVirtualNetworkGatewayKey
+        no-loc:
+        - Set-AzureVirtualNetworkGatewayKey
+      - name: Set-AzureVNetGatewayIPsecParameters
+        uid: Azure.Set-AzureVNetGatewayIPsecParameters
+        no-loc:
+        - Set-AzureVNetGatewayIPsecParameters
+      - name: Start-AzureVirtualNetworkGatewayDiagnostics
+        uid: Azure.Start-AzureVirtualNetworkGatewayDiagnostics
+        no-loc:
+        - Start-AzureVirtualNetworkGatewayDiagnostics
+      - name: Stop-AzureVirtualNetworkGatewayDiagnostics
+        uid: Azure.Stop-AzureVirtualNetworkGatewayDiagnostics
+        no-loc:
+        - Stop-AzureVirtualNetworkGatewayDiagnostics
+      - name: Test-AzureStaticVNetIP
+        uid: Azure.Test-AzureStaticVNetIP
+        no-loc:
+        - Test-AzureStaticVNetIP
+      no-loc:
+      - Networking
+    - name: Recovery
+      items:
+      - name: Commands
+        href: Azure/index.yml#recovery
+      - name: Get-AzureSiteRecoveryJob
+        uid: Azure.Get-AzureSiteRecoveryJob
+        no-loc:
+        - Get-AzureSiteRecoveryJob
+      - name: Get-AzureSiteRecoveryProtectionContainer
+        uid: Azure.Get-AzureSiteRecoveryProtectionContainer
+        no-loc:
+        - Get-AzureSiteRecoveryProtectionContainer
+      - name: Get-AzureSiteRecoveryProtectionEntity
+        uid: Azure.Get-AzureSiteRecoveryProtectionEntity
+        no-loc:
+        - Get-AzureSiteRecoveryProtectionEntity
+      - name: Get-AzureSiteRecoveryRecoveryPlan
+        uid: Azure.Get-AzureSiteRecoveryRecoveryPlan
+        no-loc:
+        - Get-AzureSiteRecoveryRecoveryPlan
+      - name: Get-AzureSiteRecoveryRecoveryPlanFile
+        uid: Azure.Get-AzureSiteRecoveryRecoveryPlanFile
+        no-loc:
+        - Get-AzureSiteRecoveryRecoveryPlanFile
+      - name: Get-AzureSiteRecoveryServer
+        uid: Azure.Get-AzureSiteRecoveryServer
+        no-loc:
+        - Get-AzureSiteRecoveryServer
+      - name: Get-AzureSiteRecoverySite
+        uid: Azure.Get-AzureSiteRecoverySite
+        no-loc:
+        - Get-AzureSiteRecoverySite
+      - name: Get-AzureSiteRecoveryStorage
+        uid: Azure.Get-AzureSiteRecoveryStorage
+        no-loc:
+        - Get-AzureSiteRecoveryStorage
+      - name: Get-AzureSiteRecoveryStorageMapping
+        uid: Azure.Get-AzureSiteRecoveryStorageMapping
+        no-loc:
+        - Get-AzureSiteRecoveryStorageMapping
+      - name: Get-AzureSiteRecoveryVault
+        uid: Azure.Get-AzureSiteRecoveryVault
+        no-loc:
+        - Get-AzureSiteRecoveryVault
+      - name: Get-AzureSiteRecoveryVaultSettings
+        uid: Azure.Get-AzureSiteRecoveryVaultSettings
+        no-loc:
+        - Get-AzureSiteRecoveryVaultSettings
+      - name: Get-AzureSiteRecoveryVaultSettingsFile
+        uid: Azure.Get-AzureSiteRecoveryVaultSettingsFile
+        no-loc:
+        - Get-AzureSiteRecoveryVaultSettingsFile
+      - name: Get-AzureSiteRecoveryVM
+        uid: Azure.Get-AzureSiteRecoveryVM
+        no-loc:
+        - Get-AzureSiteRecoveryVM
+      - name: Import-AzureSiteRecoveryVaultSettingsFile
+        uid: Azure.Import-AzureSiteRecoveryVaultSettingsFile
+        no-loc:
+        - Import-AzureSiteRecoveryVaultSettingsFile
+      - name: New-AzureSiteRecoveryProtectionProfileObject
+        uid: Azure.New-AzureSiteRecoveryProtectionProfileObject
+        no-loc:
+        - New-AzureSiteRecoveryProtectionProfileObject
+      - name: New-AzureSiteRecoveryRecoveryPlan
+        uid: Azure.New-AzureSiteRecoveryRecoveryPlan
+        no-loc:
+        - New-AzureSiteRecoveryRecoveryPlan
+      - name: New-AzureSiteRecoverySite
+        uid: Azure.New-AzureSiteRecoverySite
+        no-loc:
+        - New-AzureSiteRecoverySite
+      - name: New-AzureSiteRecoveryStorageMapping
+        uid: Azure.New-AzureSiteRecoveryStorageMapping
+        no-loc:
+        - New-AzureSiteRecoveryStorageMapping
+      - name: New-AzureSiteRecoveryVault
+        uid: Azure.New-AzureSiteRecoveryVault
+        no-loc:
+        - New-AzureSiteRecoveryVault
+      - name: Remove-AzureSiteRecoveryRecoveryPlan
+        uid: Azure.Remove-AzureSiteRecoveryRecoveryPlan
+        no-loc:
+        - Remove-AzureSiteRecoveryRecoveryPlan
+      - name: Remove-AzureSiteRecoveryStorageMapping
+        uid: Azure.Remove-AzureSiteRecoveryStorageMapping
+        no-loc:
+        - Remove-AzureSiteRecoveryStorageMapping
+      - name: Restart-AzureSiteRecoveryJob
+        uid: Azure.Restart-AzureSiteRecoveryJob
+        no-loc:
+        - Restart-AzureSiteRecoveryJob
+      - name: Resume-AzureSiteRecoveryJob
+        uid: Azure.Resume-AzureSiteRecoveryJob
+        no-loc:
+        - Resume-AzureSiteRecoveryJob
+      - name: Set-AzureSiteRecoveryProtectionEntity
+        uid: Azure.Set-AzureSiteRecoveryProtectionEntity
+        no-loc:
+        - Set-AzureSiteRecoveryProtectionEntity
+      - name: Set-AzureSiteRecoveryVM
+        uid: Azure.Set-AzureSiteRecoveryVM
+        no-loc:
+        - Set-AzureSiteRecoveryVM
+      - name: Start-AzureSiteRecoveryCommitFailoverJob
+        uid: Azure.Start-AzureSiteRecoveryCommitFailoverJob
+        no-loc:
+        - Start-AzureSiteRecoveryCommitFailoverJob
+      - name: Start-AzureSiteRecoveryPlannedFailoverJob
+        uid: Azure.Start-AzureSiteRecoveryPlannedFailoverJob
+        no-loc:
+        - Start-AzureSiteRecoveryPlannedFailoverJob
+      - name: Start-AzureSiteRecoveryProtectionProfileAssociationJob
+        uid: Azure.Start-AzureSiteRecoveryProtectionProfileAssociationJob
+        no-loc:
+        - Start-AzureSiteRecoveryProtectionProfileAssociationJob
+      - name: Start-AzureSiteRecoveryProtectionProfileDissociationJob
+        uid: Azure.Start-AzureSiteRecoveryProtectionProfileDissociationJob
+        no-loc:
+        - Start-AzureSiteRecoveryProtectionProfileDissociationJob
+      - name: Start-AzureSiteRecoveryTestFailoverJob
+        uid: Azure.Start-AzureSiteRecoveryTestFailoverJob
+        no-loc:
+        - Start-AzureSiteRecoveryTestFailoverJob
+      - name: Start-AzureSiteRecoveryUnplannedFailoverJob
+        uid: Azure.Start-AzureSiteRecoveryUnplannedFailoverJob
+        no-loc:
+        - Start-AzureSiteRecoveryUnplannedFailoverJob
+      - name: Start-AzureSqlDatabaseRecovery
+        uid: Azure.Start-AzureSqlDatabaseRecovery
+        no-loc:
+        - Start-AzureSqlDatabaseRecovery
+      - name: Stop-AzureSiteRecoveryJob
+        uid: Azure.Stop-AzureSiteRecoveryJob
+        no-loc:
+        - Stop-AzureSiteRecoveryJob
+      - name: Update-AzureSiteRecoveryProtectionDirection
+        uid: Azure.Update-AzureSiteRecoveryProtectionDirection
+        no-loc:
+        - Update-AzureSiteRecoveryProtectionDirection
+      - name: Update-AzureSiteRecoveryProtectionEntity
+        uid: Azure.Update-AzureSiteRecoveryProtectionEntity
+        no-loc:
+        - Update-AzureSiteRecoveryProtectionEntity
+      - name: Update-AzureSiteRecoveryRecoveryPlan
+        uid: Azure.Update-AzureSiteRecoveryRecoveryPlan
+        no-loc:
+        - Update-AzureSiteRecoveryRecoveryPlan
+      no-loc:
+      - Recovery
+    - name: Resources
+      items:
+      - name: Commands
+        href: Azure/index.yml#resources
+      - name: Get-AzureStorSimpleResource
+        uid: Azure.Get-AzureStorSimpleResource
+        no-loc:
+        - Get-AzureStorSimpleResource
+      - name: Get-AzureStorSimpleResourceContext
+        uid: Azure.Get-AzureStorSimpleResourceContext
+        no-loc:
+        - Get-AzureStorSimpleResourceContext
+      no-loc:
+      - Resources
+    - name: Roles
+      items:
+      - name: Commands
+        href: Azure/index.yml#roles
+      - name: Add-AzureNodeWebRole
+        uid: Azure.Add-AzureNodeWebRole
+        no-loc:
+        - Add-AzureNodeWebRole
+      - name: Add-AzureNodeWorkerRole
+        uid: Azure.Add-AzureNodeWorkerRole
+        no-loc:
+        - Add-AzureNodeWorkerRole
+      - name: Add-AzurePHPWebRole
+        uid: Azure.Add-AzurePHPWebRole
+        no-loc:
+        - Add-AzurePHPWebRole
+      - name: Add-AzurePHPWorkerRole
+        uid: Azure.Add-AzurePHPWorkerRole
+        no-loc:
+        - Add-AzurePHPWorkerRole
+      - name: Add-AzureWebRole
+        uid: Azure.Add-AzureWebRole
+        no-loc:
+        - Add-AzureWebRole
+      - name: Add-AzureWorkerRole
+        uid: Azure.Add-AzureWorkerRole
+        no-loc:
+        - Add-AzureWorkerRole
+      - name: Get-AzureRole
+        uid: Azure.Get-AzureRole
+        no-loc:
+        - Get-AzureRole
+      - name: Get-AzureRoleSize
+        uid: Azure.Get-AzureRoleSize
+        no-loc:
+        - Get-AzureRoleSize
+      - name: Get-AzureServiceProjectRoleRuntime
+        uid: Azure.Get-AzureServiceProjectRoleRuntime
+        no-loc:
+        - Get-AzureServiceProjectRoleRuntime
+      - name: Get-WAPackCloudVMRoleSizeProfile
+        uid: Azure.Get-WAPackCloudVMRoleSizeProfile
+        no-loc:
+        - Get-WAPackCloudVMRoleSizeProfile
+      - name: Get-WAPackVMRole
+        uid: Azure.Get-WAPackVMRole
+        no-loc:
+        - Get-WAPackVMRole
+      - name: New-AzureRoleTemplate
+        uid: Azure.New-AzureRoleTemplate
+        no-loc:
+        - New-AzureRoleTemplate
+      - name: New-WAPackVMRole
+        uid: Azure.New-WAPackVMRole
+        no-loc:
+        - New-WAPackVMRole
+      - name: Remove-WAPackVMRole
+        uid: Azure.Remove-WAPackVMRole
+        no-loc:
+        - Remove-WAPackVMRole
+      - name: Reset-AzureRoleInstance
+        uid: Azure.Reset-AzureRoleInstance
+        no-loc:
+        - Reset-AzureRoleInstance
+      - name: Set-AzureRole
+        uid: Azure.Set-AzureRole
+        no-loc:
+        - Set-AzureRole
+      - name: Set-AzureServiceProjectRole
+        uid: Azure.Set-AzureServiceProjectRole
+        no-loc:
+        - Set-AzureServiceProjectRole
+      - name: Set-WAPackVMRole
+        uid: Azure.Set-WAPackVMRole
+        no-loc:
+        - Set-WAPackVMRole
+      no-loc:
+      - Roles
+    - name: Route
+      items:
+      - name: Commands
+        href: Azure/index.yml#route
+      - name: Get-AzureEffectiveRouteTable
+        uid: Azure.Get-AzureEffectiveRouteTable
+        no-loc:
+        - Get-AzureEffectiveRouteTable
+      - name: Get-AzureRouteTable
+        uid: Azure.Get-AzureRouteTable
+        no-loc:
+        - Get-AzureRouteTable
+      - name: Get-AzureSubnetRouteTable
+        uid: Azure.Get-AzureSubnetRouteTable
+        no-loc:
+        - Get-AzureSubnetRouteTable
+      - name: Move-AzureRouteTable
+        uid: Azure.Move-AzureRouteTable
+        no-loc:
+        - Move-AzureRouteTable
+      - name: New-AzureRouteTable
+        uid: Azure.New-AzureRouteTable
+        no-loc:
+        - New-AzureRouteTable
+      - name: Remove-AzureRoute
+        uid: Azure.Remove-AzureRoute
+        no-loc:
+        - Remove-AzureRoute
+      - name: Remove-AzureRouteTable
+        uid: Azure.Remove-AzureRouteTable
+        no-loc:
+        - Remove-AzureRouteTable
+      - name: Remove-AzureSubnetRouteTable
+        uid: Azure.Remove-AzureSubnetRouteTable
+        no-loc:
+        - Remove-AzureSubnetRouteTable
+      - name: Set-AzureRoute
+        uid: Azure.Set-AzureRoute
+        no-loc:
+        - Set-AzureRoute
+      - name: Set-AzureSubnetRouteTable
+        uid: Azure.Set-AzureSubnetRouteTable
+        no-loc:
+        - Set-AzureSubnetRouteTable
+      no-loc:
+      - Route
+    - name: Scheduler
+      items:
+      - name: Commands
+        href: Azure/index.yml#scheduler
+      - name: Get-AzureSchedulerJob
+        uid: Azure.Get-AzureSchedulerJob
+        no-loc:
+        - Get-AzureSchedulerJob
+      - name: Get-AzureSchedulerJobCollection
+        uid: Azure.Get-AzureSchedulerJobCollection
+        no-loc:
+        - Get-AzureSchedulerJobCollection
+      - name: Get-AzureSchedulerJobHistory
+        uid: Azure.Get-AzureSchedulerJobHistory
+        no-loc:
+        - Get-AzureSchedulerJobHistory
+      - name: Get-AzureSchedulerLocation
+        uid: Azure.Get-AzureSchedulerLocation
+        no-loc:
+        - Get-AzureSchedulerLocation
+      - name: New-AzureSchedulerHttpJob
+        uid: Azure.New-AzureSchedulerHttpJob
+        no-loc:
+        - New-AzureSchedulerHttpJob
+      - name: New-AzureSchedulerJobCollection
+        uid: Azure.New-AzureSchedulerJobCollection
+        no-loc:
+        - New-AzureSchedulerJobCollection
+      - name: New-AzureSchedulerStorageQueueJob
+        uid: Azure.New-AzureSchedulerStorageQueueJob
+        no-loc:
+        - New-AzureSchedulerStorageQueueJob
+      - name: Remove-AzureSchedulerJob
+        uid: Azure.Remove-AzureSchedulerJob
+        no-loc:
+        - Remove-AzureSchedulerJob
+      - name: Remove-AzureSchedulerJobCollection
+        uid: Azure.Remove-AzureSchedulerJobCollection
+        no-loc:
+        - Remove-AzureSchedulerJobCollection
+      - name: Set-AzureSchedulerHttpJob
+        uid: Azure.Set-AzureSchedulerHttpJob
+        no-loc:
+        - Set-AzureSchedulerHttpJob
+      - name: Set-AzureSchedulerJobCollection
+        uid: Azure.Set-AzureSchedulerJobCollection
+        no-loc:
+        - Set-AzureSchedulerJobCollection
+      - name: Set-AzureSchedulerStorageQueueJob
+        uid: Azure.Set-AzureSchedulerStorageQueueJob
+        no-loc:
+        - Set-AzureSchedulerStorageQueueJob
+      no-loc:
+      - Scheduler
+    - name: SQL
+      items:
+      - name: Commands
+        href: Azure/index.yml#sql
+      - name: Get-AzureSqlDatabase
+        uid: Azure.Get-AzureSqlDatabase
+        no-loc:
+        - Get-AzureSqlDatabase
+      - name: Get-AzureSqlDatabaseCopy
+        uid: Azure.Get-AzureSqlDatabaseCopy
+        no-loc:
+        - Get-AzureSqlDatabaseCopy
+      - name: Get-AzureSqlDatabaseImportExportStatus
+        uid: Azure.Get-AzureSqlDatabaseImportExportStatus
+        no-loc:
+        - Get-AzureSqlDatabaseImportExportStatus
+      - name: Get-AzureSqlDatabaseOperation
+        uid: Azure.Get-AzureSqlDatabaseOperation
+        no-loc:
+        - Get-AzureSqlDatabaseOperation
+      - name: Get-AzureSqlDatabaseServer
+        uid: Azure.Get-AzureSqlDatabaseServer
+        no-loc:
+        - Get-AzureSqlDatabaseServer
+      - name: Get-AzureSqlDatabaseServerFirewallRule
+        uid: Azure.Get-AzureSqlDatabaseServerFirewallRule
+        no-loc:
+        - Get-AzureSqlDatabaseServerFirewallRule
+      - name: Get-AzureSqlDatabaseServerQuota
+        uid: Azure.Get-AzureSqlDatabaseServerQuota
+        no-loc:
+        - Get-AzureSqlDatabaseServerQuota
+      - name: Get-AzureSqlDatabaseServiceObjective
+        uid: Azure.Get-AzureSqlDatabaseServiceObjective
+        no-loc:
+        - Get-AzureSqlDatabaseServiceObjective
+      - name: Get-AzureSqlDatabaseUsages
+        uid: Azure.Get-AzureSqlDatabaseUsages
+        no-loc:
+        - Get-AzureSqlDatabaseUsages
+      - name: Get-AzureSqlRecoverableDatabase
+        uid: Azure.Get-AzureSqlRecoverableDatabase
+        no-loc:
+        - Get-AzureSqlRecoverableDatabase
+      - name: Get-AzureVMSqlServerExtension
+        uid: Azure.Get-AzureVMSqlServerExtension
+        no-loc:
+        - Get-AzureVMSqlServerExtension
+      - name: New-AzureSqlDatabase
+        uid: Azure.New-AzureSqlDatabase
+        no-loc:
+        - New-AzureSqlDatabase
+      - name: New-AzureSqlDatabaseServer
+        uid: Azure.New-AzureSqlDatabaseServer
+        no-loc:
+        - New-AzureSqlDatabaseServer
+      - name: New-AzureSqlDatabaseServerContext
+        uid: Azure.New-AzureSqlDatabaseServerContext
+        no-loc:
+        - New-AzureSqlDatabaseServerContext
+      - name: New-AzureSqlDatabaseServerFirewallRule
+        uid: Azure.New-AzureSqlDatabaseServerFirewallRule
+        no-loc:
+        - New-AzureSqlDatabaseServerFirewallRule
+      - name: New-AzureVMSqlServerAutoPatchingConfig
+        uid: Azure.New-AzureVMSqlServerAutoPatchingConfig
+        no-loc:
+        - New-AzureVMSqlServerAutoPatchingConfig
+      - name: Remove-AzureSqlDatabase
+        uid: Azure.Remove-AzureSqlDatabase
+        no-loc:
+        - Remove-AzureSqlDatabase
+      - name: Remove-AzureSqlDatabaseServer
+        uid: Azure.Remove-AzureSqlDatabaseServer
+        no-loc:
+        - Remove-AzureSqlDatabaseServer
+      - name: Remove-AzureSqlDatabaseServerFirewallRule
+        uid: Azure.Remove-AzureSqlDatabaseServerFirewallRule
+        no-loc:
+        - Remove-AzureSqlDatabaseServerFirewallRule
+      - name: Remove-AzureVMSqlServerExtension
+        uid: Azure.Remove-AzureVMSqlServerExtension
+        no-loc:
+        - Remove-AzureVMSqlServerExtension
+      - name: Set-AzureSqlDatabase
+        uid: Azure.Set-AzureSqlDatabase
+        no-loc:
+        - Set-AzureSqlDatabase
+      - name: Set-AzureSqlDatabaseServer
+        uid: Azure.Set-AzureSqlDatabaseServer
+        no-loc:
+        - Set-AzureSqlDatabaseServer
+      - name: Set-AzureSqlDatabaseServerFirewallRule
+        uid: Azure.Set-AzureSqlDatabaseServerFirewallRule
+        no-loc:
+        - Set-AzureSqlDatabaseServerFirewallRule
+      - name: Set-AzureVMSqlServerExtension
+        uid: Azure.Set-AzureVMSqlServerExtension
+        no-loc:
+        - Set-AzureVMSqlServerExtension
+      - name: Start-AzureSqlDatabaseCopy
+        uid: Azure.Start-AzureSqlDatabaseCopy
+        no-loc:
+        - Start-AzureSqlDatabaseCopy
+      - name: Start-AzureSqlDatabaseExport
+        uid: Azure.Start-AzureSqlDatabaseExport
+        no-loc:
+        - Start-AzureSqlDatabaseExport
+      - name: Start-AzureSqlDatabaseImport
+        uid: Azure.Start-AzureSqlDatabaseImport
+        no-loc:
+        - Start-AzureSqlDatabaseImport
+      - name: Start-AzureSqlDatabaseRestore
+        uid: Azure.Start-AzureSqlDatabaseRestore
+        no-loc:
+        - Start-AzureSqlDatabaseRestore
+      - name: Stop-AzureSqlDatabaseCopy
+        uid: Azure.Stop-AzureSqlDatabaseCopy
+        no-loc:
+        - Stop-AzureSqlDatabaseCopy
+      no-loc:
+      - SQL
+    - name: Storage
+      items:
+      - name: Commands
+        href: Azure/index.yml#storage
+      - name: Get-AzureStorageAccount
+        uid: Azure.Get-AzureStorageAccount
+        no-loc:
+        - Get-AzureStorageAccount
+      - name: Get-AzureStorageKey
+        uid: Azure.Get-AzureStorageKey
+        no-loc:
+        - Get-AzureStorageKey
+      - name: Get-AzureStorSimpleStorageAccountCredential
+        uid: Azure.Get-AzureStorSimpleStorageAccountCredential
+        no-loc:
+        - Get-AzureStorSimpleStorageAccountCredential
+      - name: Move-AzureStorageAccount
+        uid: Azure.Move-AzureStorageAccount
+        no-loc:
+        - Move-AzureStorageAccount
+      - name: New-AzureStorageAccount
+        uid: Azure.New-AzureStorageAccount
+        no-loc:
+        - New-AzureStorageAccount
+      - name: New-AzureStorageKey
+        uid: Azure.New-AzureStorageKey
+        no-loc:
+        - New-AzureStorageKey
+      - name: New-AzureStorSimpleInlineStorageAccountCredential
+        uid: Azure.New-AzureStorSimpleInlineStorageAccountCredential
+        no-loc:
+        - New-AzureStorSimpleInlineStorageAccountCredential
+      - name: New-AzureStorSimpleStorageAccountCredential
+        uid: Azure.New-AzureStorSimpleStorageAccountCredential
+        no-loc:
+        - New-AzureStorSimpleStorageAccountCredential
+      - name: Remove-AzureStorageAccount
+        uid: Azure.Remove-AzureStorageAccount
+        no-loc:
+        - Remove-AzureStorageAccount
+      - name: Remove-AzureStorSimpleStorageAccountCredential
+        uid: Azure.Remove-AzureStorSimpleStorageAccountCredential
+        no-loc:
+        - Remove-AzureStorSimpleStorageAccountCredential
+      - name: Set-AzureStorageAccount
+        uid: Azure.Set-AzureStorageAccount
+        no-loc:
+        - Set-AzureStorageAccount
+      - name: Set-AzureStorSimpleStorageAccountCredential
+        uid: Azure.Set-AzureStorSimpleStorageAccountCredential
+        no-loc:
+        - Set-AzureStorSimpleStorageAccountCredential
+      no-loc:
+      - Storage
+    - name: StorSimple
+      items:
+      - name: Commands
+        href: Azure/index.yml#storsimple
+      - name: Select-AzureStorSimpleResource
+        uid: Azure.Select-AzureStorSimpleResource
+        no-loc:
+        - Select-AzureStorSimpleResource
+      - name: Start-AzureStorSimpleBackupCloneJob
+        uid: Azure.Start-AzureStorSimpleBackupCloneJob
+        no-loc:
+        - Start-AzureStorSimpleBackupCloneJob
+      - name: Start-AzureStorSimpleDeviceBackupJob
+        uid: Azure.Start-AzureStorSimpleDeviceBackupJob
+        no-loc:
+        - Start-AzureStorSimpleDeviceBackupJob
+      - name: Start-AzureStorSimpleDeviceBackupRestoreJob
+        uid: Azure.Start-AzureStorSimpleDeviceBackupRestoreJob
+        no-loc:
+        - Start-AzureStorSimpleDeviceBackupRestoreJob
+      - name: Start-AzureStorSimpleDeviceFailoverJob
+        uid: Azure.Start-AzureStorSimpleDeviceFailoverJob
+        no-loc:
+        - Start-AzureStorSimpleDeviceFailoverJob
+      - name: Start-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+        uid: Azure.Start-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+        no-loc:
+        - Start-AzureStorSimpleLegacyVolumeContainerMigrationPlan
+      - name: Stop-AzureStorSimpleJob
+        uid: Azure.Stop-AzureStorSimpleJob
+        no-loc:
+        - Stop-AzureStorSimpleJob
+      no-loc:
+      - StorSimple
+    - name: Subscriptions
+      items:
+      - name: Commands
+        href: Azure/index.yml#subscriptions
+      - name: Get-AzureSubscription
+        uid: Azure.Get-AzureSubscription
+        no-loc:
+        - Get-AzureSubscription
+      - name: Remove-AzureSubscription
+        uid: Azure.Remove-AzureSubscription
+        no-loc:
+        - Remove-AzureSubscription
+      - name: Select-AzureSubscription
+        uid: Azure.Select-AzureSubscription
+        no-loc:
+        - Select-AzureSubscription
+      - name: Set-AzureSubscription
+        uid: Azure.Set-AzureSubscription
+        no-loc:
+        - Set-AzureSubscription
+      no-loc:
+      - Subscriptions
+    - name: Traffic Manager
+      items:
+      - name: Commands
+        href: Azure/index.yml#traffic-manager
+      - name: Add-AzureTrafficManagerEndpoint
+        uid: Azure.Add-AzureTrafficManagerEndpoint
+        no-loc:
+        - Add-AzureTrafficManagerEndpoint
+      - name: Disable-AzureTrafficManagerProfile
+        uid: Azure.Disable-AzureTrafficManagerProfile
+        no-loc:
+        - Disable-AzureTrafficManagerProfile
+      - name: Enable-AzureTrafficManagerProfile
+        uid: Azure.Enable-AzureTrafficManagerProfile
+        no-loc:
+        - Enable-AzureTrafficManagerProfile
+      - name: Get-AzureTrafficManagerProfile
+        uid: Azure.Get-AzureTrafficManagerProfile
+        no-loc:
+        - Get-AzureTrafficManagerProfile
+      - name: New-AzureTrafficManagerProfile
+        uid: Azure.New-AzureTrafficManagerProfile
+        no-loc:
+        - New-AzureTrafficManagerProfile
+      - name: Remove-AzureTrafficManagerEndpoint
+        uid: Azure.Remove-AzureTrafficManagerEndpoint
+        no-loc:
+        - Remove-AzureTrafficManagerEndpoint
+      - name: Remove-AzureTrafficManagerProfile
+        uid: Azure.Remove-AzureTrafficManagerProfile
+        no-loc:
+        - Remove-AzureTrafficManagerProfile
+      - name: Set-AzureTrafficManagerEndpoint
+        uid: Azure.Set-AzureTrafficManagerEndpoint
+        no-loc:
+        - Set-AzureTrafficManagerEndpoint
+      - name: Set-AzureTrafficManagerProfile
+        uid: Azure.Set-AzureTrafficManagerProfile
+        no-loc:
+        - Set-AzureTrafficManagerProfile
+      - name: Test-AzureTrafficManagerDomainName
+        uid: Azure.Test-AzureTrafficManagerDomainName
+        no-loc:
+        - Test-AzureTrafficManagerDomainName
+      no-loc:
+      - Traffic Manager
+    - name: Virtual Machines
+      items:
+      - name: Commands
+        href: Azure/index.yml#virtual-machines
+      - name: Export-AzureVM
+        uid: Azure.Export-AzureVM
+        no-loc:
+        - Export-AzureVM
+      - name: Get-AzureRemoteAppVM
+        uid: Azure.Get-AzureRemoteAppVM
+        no-loc:
+        - Get-AzureRemoteAppVM
+      - name: Get-AzureVM
+        uid: Azure.Get-AzureVM
+        no-loc:
+        - Get-AzureVM
+      - name: Get-AzureVMAccessExtension
+        uid: Azure.Get-AzureVMAccessExtension
+        no-loc:
+        - Get-AzureVMAccessExtension
+      - name: Get-AzureVMAvailableExtension
+        uid: Azure.Get-AzureVMAvailableExtension
+        no-loc:
+        - Get-AzureVMAvailableExtension
+      - name: Get-AzureVMBGInfoExtension
+        uid: Azure.Get-AzureVMBGInfoExtension
+        no-loc:
+        - Get-AzureVMBGInfoExtension
+      - name: Get-AzureVMChefExtension
+        uid: Azure.Get-AzureVMChefExtension
+        no-loc:
+        - Get-AzureVMChefExtension
+      - name: Get-AzureVMCustomScriptExtension
+        uid: Azure.Get-AzureVMCustomScriptExtension
+        no-loc:
+        - Get-AzureVMCustomScriptExtension
+      - name: Get-AzureVMDiagnosticsExtension
+        uid: Azure.Get-AzureVMDiagnosticsExtension
+        no-loc:
+        - Get-AzureVMDiagnosticsExtension
+      - name: Get-AzureVMDscExtension
+        uid: Azure.Get-AzureVMDscExtension
+        no-loc:
+        - Get-AzureVMDscExtension
+      - name: Get-AzureVMDscExtensionStatus
+        uid: Azure.Get-AzureVMDscExtensionStatus
+        no-loc:
+        - Get-AzureVMDscExtensionStatus
+      - name: Get-AzureVMExtension
+        uid: Azure.Get-AzureVMExtension
+        no-loc:
+        - Get-AzureVMExtension
+      - name: Get-AzureVMMicrosoftAntimalwareExtension
+        uid: Azure.Get-AzureVMMicrosoftAntimalwareExtension
+        no-loc:
+        - Get-AzureVMMicrosoftAntimalwareExtension
+      - name: Get-AzureVMPuppetExtension
+        uid: Azure.Get-AzureVMPuppetExtension
+        no-loc:
+        - Get-AzureVMPuppetExtension
+      - name: Get-WAPackVM
+        uid: Azure.Get-WAPackVM
+        no-loc:
+        - Get-WAPackVM
+      - name: Get-WAPackVMSizeProfile
+        uid: Azure.Get-WAPackVMSizeProfile
+        no-loc:
+        - Get-WAPackVMSizeProfile
+      - name: Get-WAPackVMSubnet
+        uid: Azure.Get-WAPackVMSubnet
+        no-loc:
+        - Get-WAPackVMSubnet
+      - name: Get-WAPackVMTemplate
+        uid: Azure.Get-WAPackVMTemplate
+        no-loc:
+        - Get-WAPackVMTemplate
+      - name: Import-AzureVM
+        uid: Azure.Import-AzureVM
+        no-loc:
+        - Import-AzureVM
+      - name: New-AzureQuickVM
+        uid: Azure.New-AzureQuickVM
+        no-loc:
+        - New-AzureQuickVM
+      - name: New-AzureVM
+        uid: Azure.New-AzureVM
+        no-loc:
+        - New-AzureVM
+      - name: New-AzureVMConfig
+        uid: Azure.New-AzureVMConfig
+        no-loc:
+        - New-AzureVMConfig
+      - name: New-WAPackQuickVM
+        uid: Azure.New-WAPackQuickVM
+        no-loc:
+        - New-WAPackQuickVM
+      - name: New-WAPackVM
+        uid: Azure.New-WAPackVM
+        no-loc:
+        - New-WAPackVM
+      - name: New-WAPackVMSubnet
+        uid: Azure.New-WAPackVMSubnet
+        no-loc:
+        - New-WAPackVMSubnet
+      - name: Publish-AzureVMDscConfiguration
+        uid: Azure.Publish-AzureVMDscConfiguration
+        no-loc:
+        - Publish-AzureVMDscConfiguration
+      - name: Remove-AzureVM
+        uid: Azure.Remove-AzureVM
+        no-loc:
+        - Remove-AzureVM
+      - name: Remove-AzureVMAccessExtension
+        uid: Azure.Remove-AzureVMAccessExtension
+        no-loc:
+        - Remove-AzureVMAccessExtension
+      - name: Remove-AzureVMBGInfoExtension
+        uid: Azure.Remove-AzureVMBGInfoExtension
+        no-loc:
+        - Remove-AzureVMBGInfoExtension
+      - name: Remove-AzureVMChefExtension
+        uid: Azure.Remove-AzureVMChefExtension
+        no-loc:
+        - Remove-AzureVMChefExtension
+      - name: Remove-AzureVMCustomScriptExtension
+        uid: Azure.Remove-AzureVMCustomScriptExtension
+        no-loc:
+        - Remove-AzureVMCustomScriptExtension
+      - name: Remove-AzureVMDiagnosticsExtension
+        uid: Azure.Remove-AzureVMDiagnosticsExtension
+        no-loc:
+        - Remove-AzureVMDiagnosticsExtension
+      - name: Remove-AzureVMDscExtension
+        uid: Azure.Remove-AzureVMDscExtension
+        no-loc:
+        - Remove-AzureVMDscExtension
+      - name: Remove-AzureVMExtension
+        uid: Azure.Remove-AzureVMExtension
+        no-loc:
+        - Remove-AzureVMExtension
+      - name: Remove-AzureVMMicrosoftAntimalwareExtension
+        uid: Azure.Remove-AzureVMMicrosoftAntimalwareExtension
+        no-loc:
+        - Remove-AzureVMMicrosoftAntimalwareExtension
+      - name: Remove-AzureVMPuppetExtension
+        uid: Azure.Remove-AzureVMPuppetExtension
+        no-loc:
+        - Remove-AzureVMPuppetExtension
+      - name: Remove-WAPackVM
+        uid: Azure.Remove-WAPackVM
+        no-loc:
+        - Remove-WAPackVM
+      - name: Remove-WAPackVMSubnet
+        uid: Azure.Remove-WAPackVMSubnet
+        no-loc:
+        - Remove-WAPackVMSubnet
+      - name: Restart-AzureRemoteAppVM
+        uid: Azure.Restart-AzureRemoteAppVM
+        no-loc:
+        - Restart-AzureRemoteAppVM
+      - name: Restart-AzureVM
+        uid: Azure.Restart-AzureVM
+        no-loc:
+        - Restart-AzureVM
+      - name: Restart-WAPackVM
+        uid: Azure.Restart-WAPackVM
+        no-loc:
+        - Restart-WAPackVM
+      - name: Resume-WAPackVM
+        uid: Azure.Resume-WAPackVM
+        no-loc:
+        - Resume-WAPackVM
+      - name: Set-AzureVMAccessExtension
+        uid: Azure.Set-AzureVMAccessExtension
+        no-loc:
+        - Set-AzureVMAccessExtension
+      - name: Set-AzureVMBGInfoExtension
+        uid: Azure.Set-AzureVMBGInfoExtension
+        no-loc:
+        - Set-AzureVMBGInfoExtension
+      - name: Set-AzureVMBootDiagnostics
+        uid: Azure.Set-AzureVMBootDiagnostics
+        no-loc:
+        - Set-AzureVMBootDiagnostics
+      - name: Set-AzureVMChefExtension
+        uid: Azure.Set-AzureVMChefExtension
+        no-loc:
+        - Set-AzureVMChefExtension
+      - name: Set-AzureVMCustomScriptExtension
+        uid: Azure.Set-AzureVMCustomScriptExtension
+        no-loc:
+        - Set-AzureVMCustomScriptExtension
+      - name: Set-AzureVMDiagnosticsExtension
+        uid: Azure.Set-AzureVMDiagnosticsExtension
+        no-loc:
+        - Set-AzureVMDiagnosticsExtension
+      - name: Set-AzureVMDscExtension
+        uid: Azure.Set-AzureVMDscExtension
+        no-loc:
+        - Set-AzureVMDscExtension
+      - name: Set-AzureVMExtension
+        uid: Azure.Set-AzureVMExtension
+        no-loc:
+        - Set-AzureVMExtension
+      - name: Set-AzureVMMicrosoftAntimalwareExtension
+        uid: Azure.Set-AzureVMMicrosoftAntimalwareExtension
+        no-loc:
+        - Set-AzureVMMicrosoftAntimalwareExtension
+      - name: Set-AzureVMPuppetExtension
+        uid: Azure.Set-AzureVMPuppetExtension
+        no-loc:
+        - Set-AzureVMPuppetExtension
+      - name: Set-AzureVMSize
+        uid: Azure.Set-AzureVMSize
+        no-loc:
+        - Set-AzureVMSize
+      - name: Set-WAPackVM
+        uid: Azure.Set-WAPackVM
+        no-loc:
+        - Set-WAPackVM
+      - name: Start-AzureVM
+        uid: Azure.Start-AzureVM
+        no-loc:
+        - Start-AzureVM
+      - name: Start-WAPackVM
+        uid: Azure.Start-WAPackVM
+        no-loc:
+        - Start-WAPackVM
+      - name: Stop-AzureVM
+        uid: Azure.Stop-AzureVM
+        no-loc:
+        - Stop-AzureVM
+      - name: Stop-WAPackVM
+        uid: Azure.Stop-WAPackVM
+        no-loc:
+        - Stop-WAPackVM
+      - name: Suspend-WAPackVM
+        uid: Azure.Suspend-WAPackVM
+        no-loc:
+        - Suspend-WAPackVM
+      - name: Update-AzureVM
+        uid: Azure.Update-AzureVM
+        no-loc:
+        - Update-AzureVM
+      no-loc:
+      - Virtual Machines
+    - name: VM Disks
+      items:
+      - name: Commands
+        href: Azure/index.yml#vm-disks
+      - name: Add-AzureDataDisk
+        uid: Azure.Add-AzureDataDisk
+        no-loc:
+        - Add-AzureDataDisk
+      - name: Add-AzureDisk
+        uid: Azure.Add-AzureDisk
+        no-loc:
+        - Add-AzureDisk
+      - name: Copy-AzureRemoteAppUserDisk
+        uid: Azure.Copy-AzureRemoteAppUserDisk
+        no-loc:
+        - Copy-AzureRemoteAppUserDisk
+      - name: Export-AzureRemoteAppUserDisk
+        uid: Azure.Export-AzureRemoteAppUserDisk
+        no-loc:
+        - Export-AzureRemoteAppUserDisk
+      - name: Get-AzureDataDisk
+        uid: Azure.Get-AzureDataDisk
+        no-loc:
+        - Get-AzureDataDisk
+      - name: Get-AzureDisk
+        uid: Azure.Get-AzureDisk
+        no-loc:
+        - Get-AzureDisk
+      - name: Get-AzureOSDisk
+        uid: Azure.Get-AzureOSDisk
+        no-loc:
+        - Get-AzureOSDisk
+      - name: Get-AzureVMImageDiskConfigSet
+        uid: Azure.Get-AzureVMImageDiskConfigSet
+        no-loc:
+        - Get-AzureVMImageDiskConfigSet
+      - name: Get-WAPackVMOSDisk
+        uid: Azure.Get-WAPackVMOSDisk
+        no-loc:
+        - Get-WAPackVMOSDisk
+      - name: New-AzureVMImageDiskConfigSet
+        uid: Azure.New-AzureVMImageDiskConfigSet
+        no-loc:
+        - New-AzureVMImageDiskConfigSet
+      - name: Remove-AzureDataDisk
+        uid: Azure.Remove-AzureDataDisk
+        no-loc:
+        - Remove-AzureDataDisk
+      - name: Remove-AzureDisk
+        uid: Azure.Remove-AzureDisk
+        no-loc:
+        - Remove-AzureDisk
+      - name: Remove-AzureRemoteAppUserDisk
+        uid: Azure.Remove-AzureRemoteAppUserDisk
+        no-loc:
+        - Remove-AzureRemoteAppUserDisk
+      - name: Remove-AzureVMImageDataDiskConfig
+        uid: Azure.Remove-AzureVMImageDataDiskConfig
+        no-loc:
+        - Remove-AzureVMImageDataDiskConfig
+      - name: Remove-AzureVMImageOSDiskConfig
+        uid: Azure.Remove-AzureVMImageOSDiskConfig
+        no-loc:
+        - Remove-AzureVMImageOSDiskConfig
+      - name: Set-AzureDataDisk
+        uid: Azure.Set-AzureDataDisk
+        no-loc:
+        - Set-AzureDataDisk
+      - name: Set-AzureOSDisk
+        uid: Azure.Set-AzureOSDisk
+        no-loc:
+        - Set-AzureOSDisk
+      - name: Set-AzureVMImageDataDiskConfig
+        uid: Azure.Set-AzureVMImageDataDiskConfig
+        no-loc:
+        - Set-AzureVMImageDataDiskConfig
+      - name: Set-AzureVMImageOSDiskConfig
+        uid: Azure.Set-AzureVMImageOSDiskConfig
+        no-loc:
+        - Set-AzureVMImageOSDiskConfig
+      - name: Update-AzureDisk
+        uid: Azure.Update-AzureDisk
+        no-loc:
+        - Update-AzureDisk
+      no-loc:
+      - VM Disks
+    - name: VM Images
+      items:
+      - name: Commands
+        href: Azure/index.yml#vm-images
+      - name: Add-AzureVMImage
+        uid: Azure.Add-AzureVMImage
+        no-loc:
+        - Add-AzureVMImage
+      - name: Export-AzureRemoteAppTemplateImage
+        uid: Azure.Export-AzureRemoteAppTemplateImage
+        no-loc:
+        - Export-AzureRemoteAppTemplateImage
+      - name: Get-AzureRemoteAppTemplateImage
+        uid: Azure.Get-AzureRemoteAppTemplateImage
+        no-loc:
+        - Get-AzureRemoteAppTemplateImage
+      - name: Get-AzureVMImage
+        uid: Azure.Get-AzureVMImage
+        no-loc:
+        - Get-AzureVMImage
+      - name: New-AzureRemoteAppTemplateImage
+        uid: Azure.New-AzureRemoteAppTemplateImage
+        no-loc:
+        - New-AzureRemoteAppTemplateImage
+      - name: Remove-AzureRemoteAppTemplateImage
+        uid: Azure.Remove-AzureRemoteAppTemplateImage
+        no-loc:
+        - Remove-AzureRemoteAppTemplateImage
+      - name: Remove-AzureVMImage
+        uid: Azure.Remove-AzureVMImage
+        no-loc:
+        - Remove-AzureVMImage
+      - name: Rename-AzureRemoteAppTemplateImage
+        uid: Azure.Rename-AzureRemoteAppTemplateImage
+        no-loc:
+        - Rename-AzureRemoteAppTemplateImage
+      - name: Save-AzureVMImage
+        uid: Azure.Save-AzureVMImage
+        no-loc:
+        - Save-AzureVMImage
+      - name: Update-AzureVMImage
+        uid: Azure.Update-AzureVMImage
+        no-loc:
+        - Update-AzureVMImage
+      no-loc:
+      - VM Images
+    - name: VM VHDs
+      items:
+      - name: Commands
+        href: Azure/index.yml#vm-vhds
+      - name: Add-AzureVhd
+        uid: Azure.Add-AzureVhd
+        no-loc:
+        - Add-AzureVhd
+      - name: Save-AzureVhd
+        uid: Azure.Save-AzureVhd
+        no-loc:
+        - Save-AzureVhd
+      no-loc:
+      - VM VHDs
+    - name: VPN
+      items:
+      - name: Commands
+        href: Azure/index.yml#vpn
+      - name: Get-AzureRemoteAppVpnDevice
+        uid: Azure.Get-AzureRemoteAppVpnDevice
+        no-loc:
+        - Get-AzureRemoteAppVpnDevice
+      - name: Get-AzureRemoteAppVpnDeviceConfigScript
+        uid: Azure.Get-AzureRemoteAppVpnDeviceConfigScript
+        no-loc:
+        - Get-AzureRemoteAppVpnDeviceConfigScript
+      - name: Reset-AzureRemoteAppVpnSharedKey
+        uid: Azure.Reset-AzureRemoteAppVpnSharedKey
+        no-loc:
+        - Reset-AzureRemoteAppVpnSharedKey
+      no-loc:
+      - VPN
+    no-loc:
+    - Azure
+  - name: Azure.Storage
+    items:
+    - name: Commands
+      uid: Azure.Storage
+    - name: Policies
+      items:
+      - name: Commands
+        href: Azure.Storage/index.yml#policies
+      - name: Get-AzureStorageContainerStoredAccessPolicy
+        uid: Azure.Storage.Get-AzureStorageContainerStoredAccessPolicy
+        no-loc:
+        - Get-AzureStorageContainerStoredAccessPolicy
+      - name: Get-AzureStorageQueueStoredAccessPolicy
+        uid: Azure.Storage.Get-AzureStorageQueueStoredAccessPolicy
+        no-loc:
+        - Get-AzureStorageQueueStoredAccessPolicy
+      - name: Get-AzureStorageShareStoredAccessPolicy
+        uid: Azure.Storage.Get-AzureStorageShareStoredAccessPolicy
+        no-loc:
+        - Get-AzureStorageShareStoredAccessPolicy
+      - name: Get-AzureStorageTableStoredAccessPolicy
+        uid: Azure.Storage.Get-AzureStorageTableStoredAccessPolicy
+        no-loc:
+        - Get-AzureStorageTableStoredAccessPolicy
+      - name: New-AzureStorageContainerStoredAccessPolicy
+        uid: Azure.Storage.New-AzureStorageContainerStoredAccessPolicy
+        no-loc:
+        - New-AzureStorageContainerStoredAccessPolicy
+      - name: New-AzureStorageQueueStoredAccessPolicy
+        uid: Azure.Storage.New-AzureStorageQueueStoredAccessPolicy
+        no-loc:
+        - New-AzureStorageQueueStoredAccessPolicy
+      - name: New-AzureStorageShareStoredAccessPolicy
+        uid: Azure.Storage.New-AzureStorageShareStoredAccessPolicy
+        no-loc:
+        - New-AzureStorageShareStoredAccessPolicy
+      - name: New-AzureStorageTableStoredAccessPolicy
+        uid: Azure.Storage.New-AzureStorageTableStoredAccessPolicy
+        no-loc:
+        - New-AzureStorageTableStoredAccessPolicy
+      - name: Remove-AzureStorageContainerStoredAccessPolicy
+        uid: Azure.Storage.Remove-AzureStorageContainerStoredAccessPolicy
+        no-loc:
+        - Remove-AzureStorageContainerStoredAccessPolicy
+      - name: Remove-AzureStorageQueueStoredAccessPolicy
+        uid: Azure.Storage.Remove-AzureStorageQueueStoredAccessPolicy
+        no-loc:
+        - Remove-AzureStorageQueueStoredAccessPolicy
+      - name: Remove-AzureStorageShareStoredAccessPolicy
+        uid: Azure.Storage.Remove-AzureStorageShareStoredAccessPolicy
+        no-loc:
+        - Remove-AzureStorageShareStoredAccessPolicy
+      - name: Remove-AzureStorageTableStoredAccessPolicy
+        uid: Azure.Storage.Remove-AzureStorageTableStoredAccessPolicy
+        no-loc:
+        - Remove-AzureStorageTableStoredAccessPolicy
+      - name: Set-AzureStorageContainerStoredAccessPolicy
+        uid: Azure.Storage.Set-AzureStorageContainerStoredAccessPolicy
+        no-loc:
+        - Set-AzureStorageContainerStoredAccessPolicy
+      - name: Set-AzureStorageQueueStoredAccessPolicy
+        uid: Azure.Storage.Set-AzureStorageQueueStoredAccessPolicy
+        no-loc:
+        - Set-AzureStorageQueueStoredAccessPolicy
+      - name: Set-AzureStorageShareStoredAccessPolicy
+        uid: Azure.Storage.Set-AzureStorageShareStoredAccessPolicy
+        no-loc:
+        - Set-AzureStorageShareStoredAccessPolicy
+      - name: Set-AzureStorageTableStoredAccessPolicy
+        uid: Azure.Storage.Set-AzureStorageTableStoredAccessPolicy
+        no-loc:
+        - Set-AzureStorageTableStoredAccessPolicy
+      no-loc:
+      - Policies
+    - name: Storage
+      items:
+      - name: Commands
+        href: Azure.Storage/index.yml#storage
+      - name: Get-AzureStorageBlob
+        uid: Azure.Storage.Get-AzureStorageBlob
+        no-loc:
+        - Get-AzureStorageBlob
+      - name: Get-AzureStorageBlobContent
+        uid: Azure.Storage.Get-AzureStorageBlobContent
+        no-loc:
+        - Get-AzureStorageBlobContent
+      - name: Get-AzureStorageBlobCopyState
+        uid: Azure.Storage.Get-AzureStorageBlobCopyState
+        no-loc:
+        - Get-AzureStorageBlobCopyState
+      - name: Get-AzureStorageContainer
+        uid: Azure.Storage.Get-AzureStorageContainer
+        no-loc:
+        - Get-AzureStorageContainer
+      - name: Get-AzureStorageCORSRule
+        uid: Azure.Storage.Get-AzureStorageCORSRule
+        no-loc:
+        - Get-AzureStorageCORSRule
+      - name: Get-AzureStorageFile
+        uid: Azure.Storage.Get-AzureStorageFile
+        no-loc:
+        - Get-AzureStorageFile
+      - name: Get-AzureStorageFileContent
+        uid: Azure.Storage.Get-AzureStorageFileContent
+        no-loc:
+        - Get-AzureStorageFileContent
+      - name: Get-AzureStorageFileCopyState
+        uid: Azure.Storage.Get-AzureStorageFileCopyState
+        no-loc:
+        - Get-AzureStorageFileCopyState
+      - name: Get-AzureStorageQueue
+        uid: Azure.Storage.Get-AzureStorageQueue
+        no-loc:
+        - Get-AzureStorageQueue
+      - name: Get-AzureStorageServiceLoggingProperty
+        uid: Azure.Storage.Get-AzureStorageServiceLoggingProperty
+        no-loc:
+        - Get-AzureStorageServiceLoggingProperty
+      - name: Get-AzureStorageServiceMetricsProperty
+        uid: Azure.Storage.Get-AzureStorageServiceMetricsProperty
+        no-loc:
+        - Get-AzureStorageServiceMetricsProperty
+      - name: Get-AzureStorageShare
+        uid: Azure.Storage.Get-AzureStorageShare
+        no-loc:
+        - Get-AzureStorageShare
+      - name: Get-AzureStorageTable
+        uid: Azure.Storage.Get-AzureStorageTable
+        no-loc:
+        - Get-AzureStorageTable
+      - name: New-AzureStorageAccountSASToken
+        uid: Azure.Storage.New-AzureStorageAccountSASToken
+        no-loc:
+        - New-AzureStorageAccountSASToken
+      - name: New-AzureStorageBlobSASToken
+        uid: Azure.Storage.New-AzureStorageBlobSASToken
+        no-loc:
+        - New-AzureStorageBlobSASToken
+      - name: New-AzureStorageContainer
+        uid: Azure.Storage.New-AzureStorageContainer
+        no-loc:
+        - New-AzureStorageContainer
+      - name: New-AzureStorageContainerSASToken
+        uid: Azure.Storage.New-AzureStorageContainerSASToken
+        no-loc:
+        - New-AzureStorageContainerSASToken
+      - name: New-AzureStorageContext
+        uid: Azure.Storage.New-AzureStorageContext
+        no-loc:
+        - New-AzureStorageContext
+      - name: New-AzureStorageDirectory
+        uid: Azure.Storage.New-AzureStorageDirectory
+        no-loc:
+        - New-AzureStorageDirectory
+      - name: New-AzureStorageFileSASToken
+        uid: Azure.Storage.New-AzureStorageFileSASToken
+        no-loc:
+        - New-AzureStorageFileSASToken
+      - name: New-AzureStorageQueue
+        uid: Azure.Storage.New-AzureStorageQueue
+        no-loc:
+        - New-AzureStorageQueue
+      - name: New-AzureStorageQueueSASToken
+        uid: Azure.Storage.New-AzureStorageQueueSASToken
+        no-loc:
+        - New-AzureStorageQueueSASToken
+      - name: New-AzureStorageShare
+        uid: Azure.Storage.New-AzureStorageShare
+        no-loc:
+        - New-AzureStorageShare
+      - name: New-AzureStorageShareSASToken
+        uid: Azure.Storage.New-AzureStorageShareSASToken
+        no-loc:
+        - New-AzureStorageShareSASToken
+      - name: New-AzureStorageTable
+        uid: Azure.Storage.New-AzureStorageTable
+        no-loc:
+        - New-AzureStorageTable
+      - name: New-AzureStorageTableSASToken
+        uid: Azure.Storage.New-AzureStorageTableSASToken
+        no-loc:
+        - New-AzureStorageTableSASToken
+      - name: Remove-AzureStorageBlob
+        uid: Azure.Storage.Remove-AzureStorageBlob
+        no-loc:
+        - Remove-AzureStorageBlob
+      - name: Remove-AzureStorageContainer
+        uid: Azure.Storage.Remove-AzureStorageContainer
+        no-loc:
+        - Remove-AzureStorageContainer
+      - name: Remove-AzureStorageCORSRule
+        uid: Azure.Storage.Remove-AzureStorageCORSRule
+        no-loc:
+        - Remove-AzureStorageCORSRule
+      - name: Remove-AzureStorageDirectory
+        uid: Azure.Storage.Remove-AzureStorageDirectory
+        no-loc:
+        - Remove-AzureStorageDirectory
+      - name: Remove-AzureStorageFile
+        uid: Azure.Storage.Remove-AzureStorageFile
+        no-loc:
+        - Remove-AzureStorageFile
+      - name: Remove-AzureStorageQueue
+        uid: Azure.Storage.Remove-AzureStorageQueue
+        no-loc:
+        - Remove-AzureStorageQueue
+      - name: Remove-AzureStorageShare
+        uid: Azure.Storage.Remove-AzureStorageShare
+        no-loc:
+        - Remove-AzureStorageShare
+      - name: Remove-AzureStorageTable
+        uid: Azure.Storage.Remove-AzureStorageTable
+        no-loc:
+        - Remove-AzureStorageTable
+      - name: Set-AzureStorageBlobContent
+        uid: Azure.Storage.Set-AzureStorageBlobContent
+        no-loc:
+        - Set-AzureStorageBlobContent
+      - name: Set-AzureStorageContainerAcl
+        uid: Azure.Storage.Set-AzureStorageContainerAcl
+        no-loc:
+        - Set-AzureStorageContainerAcl
+      - name: Set-AzureStorageCORSRule
+        uid: Azure.Storage.Set-AzureStorageCORSRule
+        no-loc:
+        - Set-AzureStorageCORSRule
+      - name: Set-AzureStorageFileContent
+        uid: Azure.Storage.Set-AzureStorageFileContent
+        no-loc:
+        - Set-AzureStorageFileContent
+      - name: Set-AzureStorageServiceLoggingProperty
+        uid: Azure.Storage.Set-AzureStorageServiceLoggingProperty
+        no-loc:
+        - Set-AzureStorageServiceLoggingProperty
+      - name: Set-AzureStorageServiceMetricsProperty
+        uid: Azure.Storage.Set-AzureStorageServiceMetricsProperty
+        no-loc:
+        - Set-AzureStorageServiceMetricsProperty
+      - name: Set-AzureStorageShareQuota
+        uid: Azure.Storage.Set-AzureStorageShareQuota
+        no-loc:
+        - Set-AzureStorageShareQuota
+      - name: Start-AzureStorageBlobCopy
+        uid: Azure.Storage.Start-AzureStorageBlobCopy
+        no-loc:
+        - Start-AzureStorageBlobCopy
+      - name: Start-AzureStorageBlobIncrementalCopy
+        uid: Azure.Storage.Start-AzureStorageBlobIncrementalCopy
+        no-loc:
+        - Start-AzureStorageBlobIncrementalCopy
+      - name: Start-AzureStorageFileCopy
+        uid: Azure.Storage.Start-AzureStorageFileCopy
+        no-loc:
+        - Start-AzureStorageFileCopy
+      - name: Stop-AzureStorageBlobCopy
+        uid: Azure.Storage.Stop-AzureStorageBlobCopy
+        no-loc:
+        - Stop-AzureStorageBlobCopy
+      - name: Stop-AzureStorageFileCopy
+        uid: Azure.Storage.Stop-AzureStorageFileCopy
+        no-loc:
+        - Stop-AzureStorageFileCopy
+      no-loc:
+      - Storage
+    no-loc:
+    - Azure.Storage
+  - name: AzureRM.Profile
+    items:
+    - name: Commands
+      uid: AzureRM.Profile
+    - name: Profile
+      items:
+      - name: Commands
+        href: AzureRM.Profile/index.yml#profile
+      - name: Add-AzureRmAccount
+        uid: AzureRM.Profile.Add-AzureRmAccount
+        no-loc:
+        - Add-AzureRmAccount
+      - name: Add-AzureRmEnvironment
+        uid: AzureRM.Profile.Add-AzureRmEnvironment
+        no-loc:
+        - Add-AzureRmEnvironment
+      - name: Disable-AzureRmDataCollection
+        uid: AzureRM.Profile.Disable-AzureRmDataCollection
+        no-loc:
+        - Disable-AzureRmDataCollection
+      - name: Enable-AzureRmDataCollection
+        uid: AzureRM.Profile.Enable-AzureRmDataCollection
+        no-loc:
+        - Enable-AzureRmDataCollection
+      - name: Get-AzureRmContext
+        uid: AzureRM.Profile.Get-AzureRmContext
+        no-loc:
+        - Get-AzureRmContext
+      - name: Get-AzureRmEnvironment
+        uid: AzureRM.Profile.Get-AzureRmEnvironment
+        no-loc:
+        - Get-AzureRmEnvironment
+      - name: Get-AzureRmTenant
+        uid: AzureRM.Profile.Get-AzureRmTenant
+        no-loc:
+        - Get-AzureRmTenant
+      - name: Import-AzureRmContext
+        uid: AzureRM.Profile.Import-AzureRmContext
+        no-loc:
+        - Import-AzureRmContext
+      - name: Remove-AzureRmEnvironment
+        uid: AzureRM.Profile.Remove-AzureRmEnvironment
+        no-loc:
+        - Remove-AzureRmEnvironment
+      - name: Save-AzureRmContext
+        uid: AzureRM.Profile.Save-AzureRmContext
+        no-loc:
+        - Save-AzureRmContext
+      - name: Save-AzureRmProfile
+        uid: AzureRM.Profile.Save-AzureRmProfile
+        no-loc:
+        - Save-AzureRmProfile
+      - name: Select-AzureRmProfile
+        uid: AzureRM.Profile.Select-AzureRmProfile
+        no-loc:
+        - Select-AzureRmProfile
+      - name: Send-Feedback
+        uid: AzureRM.Profile.Send-Feedback
+        no-loc:
+        - Send-Feedback
+      - name: Set-AzureRmContext
+        uid: AzureRM.Profile.Set-AzureRmContext
+        no-loc:
+        - Set-AzureRmContext
+      - name: Set-AzureRmEnvironment
+        uid: AzureRM.Profile.Set-AzureRmEnvironment
+        no-loc:
+        - Set-AzureRmEnvironment
+      no-loc:
+      - Profile
+    - name: Subscriptions
+      items:
+      - name: Commands
+        href: AzureRM.Profile/index.yml#subscriptions
+      - name: Get-AzureRmSubscription
+        uid: AzureRM.Profile.Get-AzureRmSubscription
+        no-loc:
+        - Get-AzureRmSubscription
+      no-loc:
+      - Subscriptions
+    no-loc:
+    - AzureRM.Profile
+metadata:
+  universal_conceptual_toc: /powershell/azure/servicemanagement/toc.json

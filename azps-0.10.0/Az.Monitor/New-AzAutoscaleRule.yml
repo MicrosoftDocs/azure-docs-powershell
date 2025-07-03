@@ -1,0 +1,345 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzAutoscaleRule
+name: New-AzAutoscaleRule
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an Autoscale rule.
+description: |-
+  The **New-AzAutoscaleRule** cmdlet creates an Autoscale rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the metric.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the metric resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricStatistic
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.MetricStatisticType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the metric statistic.
+      The acceptable values for this parameter are:
+      - Average
+      - Min
+      - Max
+      - Sum
+    acceptedValues:
+    - Average
+    - Min
+    - Max
+    - Sum
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ComparisonOperationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operator.
+      The acceptable values for this parameter are:
+      - Equals
+      - NotEquals
+      - GreaterThan
+      - GreaterThanOrEqual
+      - LessThan
+      - LessThanOrEqual
+    acceptedValues:
+    - Equals
+    - NotEquals
+    - GreaterThan
+    - GreaterThanOrEqual
+    - LessThan
+    - LessThanOrEqual
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleActionCooldown
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Autoscale action cooldown time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleActionDirection
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleDirection" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scale action direction.
+      The acceptable values for this parameter are:
+      - None
+      - Increase
+      - Decrease
+    acceptedValues:
+    - None
+    - Increase
+    - Decrease
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleActionScaleType
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the scale type.
+      The acceptable values for this parameter are:
+      - ChangeSize
+      - ChangeCount
+      - PercentChangeCount
+      - ExactCount
+    acceptedValues:
+    - ChangeCount
+    - PercentChangeCount
+    - ExactCount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleActionValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Threshold
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the threshold of the metric value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeAggregationOperator
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time aggregation operator.
+      The acceptable values for this parameter are:
+      - Average
+      - Minimum
+      - Maximum
+      - Last
+      - Total, Count
+    acceptedValues:
+    - Average
+    - Minimum
+    - Maximum
+    - Total
+    - Count
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeGrain
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time grain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeWindow
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time window.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutoscaleRule
+        -MetricName <String>
+        -MetricResourceId <String>
+        -Operator <ComparisonOperationType>
+        -MetricStatistic <MetricStatisticType>
+        -Threshold <Double>
+        [-TimeAggregationOperator <TimeAggregationType>]
+        -TimeGrain <TimeSpan>
+        [-TimeWindow <TimeSpan>]
+        -ScaleActionCooldown <TimeSpan>
+        -ScaleActionDirection <ScaleDirection>
+        [-ScaleActionScaleType <ScaleType>]
+        -ScaleActionValue <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ComparisonOperationType" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.MetricStatisticType" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Double" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.TimeAggregationType" data-throw-if-not-resolved="False" />
+- name: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleDirection" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleType" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ScaleRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a rule'
+  description: |-
+    ```
+    PS C:\>$Rule = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
+    MetricTrigger                                               ScaleAction
+    -------------                                               -----------
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+    ```
+
+    This command creates a rule.
+- title: 'Example 2: Create two rules'
+  description: |-
+    ```
+    PS C:\>$Rule1 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:05:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "1"
+
+    PS C:\> $Rule2 = New-AzAutoscaleRule -MetricName "Requests" -MetricResourceId "/subscriptions/b93fb07a-6f93-30be-bf3e-4f0deca15f4f/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/mywebsite" -Operator GreaterThan -MetricStatistic Average -Threshold 10 -TimeGrain 00:01:00 -ScaleActionCooldown 00:10:00 -ScaleActionDirection Increase -ScaleActionScaleType ChangeCount -ScaleActionValue "2"
+    MetricTrigger                                               ScaleAction
+    -------------                                               -----------
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+    Microsoft.Azure.Management.Insights.Models.MetricTrigger    Microsoft.Azure.Management.Insights.Models.ScaleAction
+    ```
+
+    The first command creates a rule for the Requests metric, and then stores it in the $Rule1 variable.
+    The second command creates a second rule for the Requests metric, and then stores it in the $Rule2 variable.
+links:
+- text: Add-AzAutoscaleSetting
+  href: ./Add-AzAutoscaleSetting.yml
+- text: Get-AzAutoscaleHistory
+  href: ./Get-AzAutoscaleHistory.yml
+- text: Get-AzAutoscaleSetting
+  href: ./Get-AzAutoscaleSetting.yml
+- text: New-AzAutoscaleProfile
+  href: ./New-AzAutoscaleProfile.yml
+- text: Remove-AzAutoscaleSetting
+  href: ./Remove-AzAutoscaleSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAutoscaleRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azautoscalerule
+  Module Name: Az.Monitor
+  ms.assetid: 5E854358-CA9D-4336-BA6A-BF7B1FADAB50
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAutoscaleRule.md
+  PlatyPS schema version: 2024-05-01

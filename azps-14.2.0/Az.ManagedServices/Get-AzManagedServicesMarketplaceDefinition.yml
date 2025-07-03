@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedServices.Get-AzManagedServicesMarketplaceDefinition
+name: Get-AzManagedServicesMarketplaceDefinition
+module: Az.ManagedServices
+isPreview: false
+summary: |-
+  Get the marketplace registration definition for the marketplace identifier.
+description: |-
+  Get the marketplace registration definition for the marketplace identifier.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter query parameter to filter marketplace registration definitions by plan identifier, publisher, version etc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListWithScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListWithoutScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MarketplaceIdentifier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Marketplace identifier.
+      Expected formats: {publisher}.{product[-preview]}.{planName}.{version} or {publisher}.{product[-preview]}.{planName} or {publisher}.{product[-preview]} or {publisher}).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetWithoutScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope of the resource.
+    defaultValue: '"subscriptions/" + (Get-AzContext).Subscription.Id'
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListWithScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetWithScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tenant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter query parameter to filter marketplace registration definitions by plan identifier, publisher, version etc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithoutScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListWithoutScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesMarketplaceDefinition
+        [-Scope <String>]
+        [-Filter <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListWithScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesMarketplaceDefinition
+        -MarketplaceIdentifier <String>
+        [-Scope <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetWithScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesMarketplaceDefinition
+        -MarketplaceIdentifier <String>
+        [-Tenant]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetWithoutScope
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesMarketplaceDefinition
+        -InputObject <IManagedServicesIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzManagedServicesMarketplaceDefinition
+        [-Filter <String>]
+        [-Tenant]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListWithoutScope
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.IManagedServicesIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IMarketplaceRegistrationDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the Azure Lighthouse Marketplace registration definition offer details'
+  description: |-
+    ```powershell
+    Get-AzManagedServicesMarketplaceDefinition -MarketplaceIdentifier marketplace_test.managed_offer.managed_plan1.1.0.1 | Format-List Id, PlanProduct, PlanPublisher, PlanName, PlanVersion
+    ```
+
+    ```output
+    Id            : /providers/Microsoft.ManagedServices/marketplaceRegistrationDefinitions/marketplace_test.managed_offer.managed_plan1.1.0.1
+    PlanProduct   : managed_offer
+    PlanPublisher : marketplace_test
+    PlanName      : managed_plan1
+    PlanVersion   : 1.0.1
+    ```
+
+    Gets the Azure Lighthouse Marketplace registration definition offer details.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesMarketplaceDefinition.md
+  document type: cmdlet
+  external help file: Az.ManagedServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managedservices/get-azmanagedservicesmarketplacedefinition
+  Module Name: Az.ManagedServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Get-AzManagedServicesMarketplaceDefinition.md
+  PlatyPS schema version: 2024-05-01

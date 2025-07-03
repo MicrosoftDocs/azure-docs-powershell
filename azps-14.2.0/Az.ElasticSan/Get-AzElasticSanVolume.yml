@@ -1,0 +1,347 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ElasticSan.Get-AzElasticSanVolume
+name: Get-AzElasticSanVolume
+module: Az.ElasticSan
+isPreview: false
+summary: |-
+  Get either a list of all volumes from a volume group or get a single volume from a volume group.
+description: |-
+  Get either a list of all volumes from a volume group or get a single volume from a volume group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticSanInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityElasticSan
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticSanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ElasticSan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Volume.
+    aliases:
+    - VolumeName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityVolumegroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityElasticSan
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumegroupInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityVolumegroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VolumeGroup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityElasticSan
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSanVolume
+        -ElasticSanName <String>
+        -ResourceGroupName <String>
+        -VolumeGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSanVolume
+        -ElasticSanName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -VolumeGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSanVolume
+        -Name <String>
+        -VolumegroupInputObject <IElasticSanIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityVolumegroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSanVolume
+        -Name <String>
+        -VolumeGroupName <String>
+        -ElasticSanInputObject <IElasticSanIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityElasticSan
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSanVolume
+        -InputObject <IElasticSanIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all volumes in a volume group'
+  description: |-
+    ```powershell
+    Get-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -VolumeGroupName myvolumegroup
+    ```
+
+    ```output
+    CreationDataCreateSource       :
+    CreationDataSourceUri          :
+    Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume1
+    Name                           : myvolume1
+    SizeGiB                        : 120
+    StorageTargetIqn               : iqn.2022-09.net.windows.core.blob.ElasticSan.es-3ibot5m2r3y0:myvolume1
+    StorageTargetPortalHostname    : es-3ibot5m2r3y0.z1.blob.storage.azure.net
+    StorageTargetPortalPort        : 3260
+    StorageTargetProvisioningState : Succeeded
+    StorageTargetStatus            : Running
+    SystemDataCreatedAt            : 9/19/2022 2:39:28 AM
+    SystemDataCreatedBy            : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType        : Application
+    SystemDataLastModifiedAt       : 9/19/2022 2:39:28 AM
+    SystemDataLastModifiedBy       : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType   : Application
+    Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    Type                           : Microsoft.ElasticSan/ElasticSans
+    VolumeId                       : abababab-abab-abab-abab-abababababab
+
+    CreationDataCreateSource       :
+    CreationDataSourceUri          :
+    Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume2
+    Name                           : myvolume2
+    SizeGiB                        : 100
+    StorageTargetIqn               : iqn.2022-09.net.windows.core.blob.ElasticSan.es-3ibot5m2r3y0:myvolume2
+    StorageTargetPortalHostname    : es-3ibot5m2r3y0.z1.blob.storage.azure.net
+    StorageTargetPortalPort        : 3260
+    StorageTargetProvisioningState : Succeeded
+    StorageTargetStatus            : Running
+    SystemDataCreatedAt            : 9/19/2022 2:39:28 AM
+    SystemDataCreatedBy            : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType        : Application
+    SystemDataLastModifiedAt       : 9/19/2022 2:39:28 AM
+    SystemDataLastModifiedBy       : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType   : Application
+    Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    Type                           : Microsoft.ElasticSan/ElasticSans
+    VolumeId                       : cdcdcdcd-cdcd-cdcd-cdcd-cdcdcdcdcdcd
+    ```
+
+    This command gets all the volumes in a volume group.
+- title: 'Example 2: Get a specific volume'
+  description: |-
+    ```powershell
+    Get-AzElasticSanVolume -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -VolumeGroupName myvolumegroup -Name myvolume
+    ```
+
+    ```output
+    CreationDataCreateSource       :
+    CreationDataSourceUri          :
+    Id                             : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup/volumes/myvolume
+    Name                           : myvolume
+    SizeGiB                        : 100
+    StorageTargetIqn               : iqn.2022-09.net.windows.core.blob.ElasticSan.es-3ibot5m2r3y0:myvolume
+    StorageTargetPortalHostname    : es-3ibot5m2r3y0.z1.blob.storage.azure.net
+    StorageTargetPortalPort        : 3260
+    StorageTargetProvisioningState : Succeeded
+    StorageTargetStatus            : Running
+    SystemDataCreatedAt            : 9/19/2022 2:39:28 AM
+    SystemDataCreatedBy            : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType        : Application
+    SystemDataLastModifiedAt       : 9/19/2022 2:39:28 AM
+    SystemDataLastModifiedBy       : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType   : Application
+    Tag                            : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    Type                           : Microsoft.ElasticSan/ElasticSans
+    VolumeId                       : abababab-abab-abab-abab-abababababab
+    ```
+
+    This command gets a specific volume.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Get-AzElasticSanVolume.md
+  document type: cmdlet
+  external help file: Az.ElasticSan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.elasticsan/get-azelasticsanvolume
+  Module Name: Az.ElasticSan
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Get-AzElasticSanVolume.md
+  PlatyPS schema version: 2024-05-01

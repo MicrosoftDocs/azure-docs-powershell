@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceDataPathAssetReferenceObject
+name: New-AzMLWorkspaceDataPathAssetReferenceObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for DataPathAssetReference.
+description: |-
+  Create an in-memory object for DataPathAssetReference.
+parameters:
+  cmdletParameters:
+  - name: DatastoreId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource ID of the datastore where the asset is located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path of the file/directory in the datastore.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReferenceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ReferenceType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies the type of asset reference.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceDataPathAssetReferenceObject
+        -ReferenceType <ReferenceType>
+        [-DatastoreId <String>]
+        [-Path <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.DataPathAssetReference" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DataPathAssetReference'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceDataPathAssetReferenceObject -DatastoreId <String> -Path <String>
+    ```
+
+    This command creates an in-memory object for DataPathAssetReference.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataPathAssetReferenceObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceDataPathAssetReferenceObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceDataPathAssetReferenceObject.md
+  PlatyPS schema version: 2024-05-01

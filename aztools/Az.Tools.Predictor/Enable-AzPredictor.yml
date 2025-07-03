@@ -1,0 +1,75 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Tools.Predictor.Enable-AzPredictor
+name: Enable-AzPredictor
+module: Az.Tools.Predictor
+isPreview: false
+summary: |-
+  Cmdlet to enable Az Predictor and start receiving suggestions.
+description: |-
+  Use this cmdlet to enable Az Predictor and start receiving suggestions.
+parameters:
+  cmdletParameters:
+  - name: AllSession
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Az Predictor for the current and future PowerShell sessions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the user would like to receive output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-AzPredictor
+        [-AllSession]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: EXAMPLE 1
+  description: |-
+    ```powershell
+    Enable-AzPredictor
+    ```
+
+    Enable Az Predictor for the current session.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Tools.AzPredictor.dll-Help.xml
+  HelpUri: 
+  Module Name: Az.Tools.Predictor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/tools/Az.Tools.Predictor/help/Enable-AzPredictor.md
+  PlatyPS schema version: 2024-05-01

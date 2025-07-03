@@ -1,0 +1,231 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSubscription
+name: Get-AzureSubscription
+module: Azure
+isPreview: false
+summary: |-
+  Gets  Azure subscriptions in Azure account.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSubscription** cmdlet gets the subscriptions in your Azure account.
+  You can use this cmdlet to get information about the subscription and to pipe the subscription to other cmdlets.
+
+  **Get-AzureSubscription** requires access to your Azure accounts.
+  Before you run **Get-AzureSubscription**, you must run the **Add-AzureAccount** cmdlet or the cmdlets that download and install a publish settings file (**Get-AzurePublishSettingsFile**, **Import-AzurePublishSettingsFile**.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+notes: |-
+  * Get-AzureSubscription gets data from the subscription data file that the **Add-AzureAccount** and **Import-PublishSettingsFile** cmdlets create.
+parameters:
+  cmdletParameters:
+  - name: Current
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the current subscription, that is, the subscription designated as "current." By default, **Get-AzureSubscription** gets all subscriptions in your Azure accounts.
+      To designate a subscription as "current," use the **Current** parameter of the **Select-AzureSubscription** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Current
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Default
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the default subscription, that is, the subscription designated as "default." By default, **Get-AzureSubscription** gets all subscriptions in your Azure accounts.
+      To designate a subscription as "default," use the **Default** parameter of the **Select-AzureSubscription** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedDetails
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns quota information for the subscription, in addition to the standard settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the specified subscription.
+      Enter the subscription name.
+      The value is case-sensitive.
+      Wildcard characters are not supported.
+      By default, **Get-AzureSubscription** gets all subscriptions in your Azure accounts.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSubscription
+        [-SubscriptionName <String>]
+        [-ExtendedDetails]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSubscription
+        [-SubscriptionId <String>]
+        [-ExtendedDetails]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSubscription
+        [-Default]
+        [-ExtendedDetails]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSubscription
+        [-Current]
+        [-ExtendedDetails]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Current
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to the **SubscriptionName** property by name, but not by value.
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Common.WindowsAzureSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all subscriptions'
+  description: |-
+    ```
+    C:\PS>Get-AzureSubscription
+    ```
+
+    This command gets all subscriptions in the account.
+- title: 'Example 2: Get a subscription by name'
+  description: |-
+    ```
+    C:\PS>Get-AzureSubscription -SubscriptionName "MyProdSubscription"
+    ```
+
+    This command gets only the "MyProdSubscription" subscription.
+- title: 'Example 3: Get the default subscription'
+  description: |-
+    ```
+    C:\PS>(Get-AzureSubscription -Default).SubscriptionName
+    ```
+
+    This command gets only the name of the default subscription.
+    The command first gets the subscription and then uses the dot method to get the **SubscriptionName** property of the subscription.
+- title: 'Example 4: Get selected subscription properties'
+  description: |-
+    ```
+    C:\PS>Get-AzureSubscription -Current | Format-List -Property SubscriptionName, Certificate
+    ```
+
+    This command returns a list with the name and certificate of the current subscription.
+    It uses a **Get-AzureSubscription** command to get the current subscription.
+    Then it pipes the subscription to a **Format-List** command that displays the selected properties in a list.
+- title: 'Example 5: Use an alternate subscription data file'
+  description: |-
+    ```
+    C:\PS>Get-AzureSubscription -SubscriptionDataFile "C:\Temp\MySubscriptions.xml"
+    ```
+
+    This command gets subscriptions from  the C:\Temp\MySubscriptions.xml subscription data file.
+    Use the **SubscriptionDataFile** parameter if you specified an alternate subscription data file when you ran the **Add-AzureAccount** or **Import-PublishSettingsFile** cmdlets.
+links:
+- text: Add-AzureAccount
+  href: ./Add-AzureAccount.yml
+- text: Get-AzurePublishSettingsFile
+  href: ./Get-AzurePublishSettingsFile.yml
+- text: Import-AzurePublishSettingsFile
+  href: ./Import-AzurePublishSettingsFile.yml
+- text: Remove-AzureSubscription
+  href: ./Remove-AzureSubscription.yml
+- text: Set-AzureSubscription
+  href: ./Set-AzureSubscription.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 32BC6CE6-60EF-4A46-912B-8FE4FCCDF7CC
+  PlatyPS schema version: 2024-05-01

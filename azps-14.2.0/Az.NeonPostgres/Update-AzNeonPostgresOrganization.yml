@@ -1,0 +1,994 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NeonPostgres.Update-AzNeonPostgresOrganization
+name: Update-AzNeonPostgresOrganization
+module: Az.NeonPostgres
+isPreview: false
+summary: |-
+  update a OrganizationResource
+description: |-
+  update a OrganizationResource
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailBusinessPhone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Business phone number of the company
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailCompanyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Company name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailCountry
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Country name of the company
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailDomain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Domain of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailNumberOfEmployee
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of employees in the company
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompanyDetailOfficeAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Office address of the company
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NeonPostgres.Models.INeonPostgresIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Update operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MarketplaceDetailSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SaaS subscription id for the the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MarketplaceDetailSubscriptionStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Marketplace subscription status
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Neon Organizations resource
+    aliases:
+    - OrganizationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailOfferId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan Name for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailPublisherId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Term Id for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OfferDetailTermUnit
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Term Name for the marketplace offer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerOrganizationPropertyOrganizationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization Id in partner's system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartnerOrganizationPropertyOrganizationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Organization name in partner's system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NeonPostgres.Models.IProjectPropertiesUpdate" data-throw-if-not-resolved="False" />
+    description: |-
+      Neon Project Properties
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SingleSignOnPropertyAadDomain
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of AAD domains fetched from Microsoft Graph for user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SingleSignOnPropertyEnterpriseAppId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AAD enterprise application Id used to setup SSO
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SingleSignOnPropertySingleSignOnState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the Single Sign On for the organization
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SingleSignOnPropertySingleSignOnUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URL for SSO to be used by the partner to redirect the user to their system
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonString
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaJsonFilePath
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Email address of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailFirstName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      First name of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailLastName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Last name of the user
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailPhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's phone number
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserDetailUpn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's principal name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzNeonPostgresOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-CompanyDetailBusinessPhone <String>]
+        [-CompanyDetailCompanyName <String>]
+        [-CompanyDetailCountry <String>]
+        [-CompanyDetailDomain <String>]
+        [-CompanyDetailNumberOfEmployee <Int64>]
+        [-CompanyDetailOfficeAddress <String>]
+        [-MarketplaceDetailSubscriptionId <String>]
+        [-MarketplaceDetailSubscriptionStatus <String>]
+        [-OfferDetailOfferId <String>]
+        [-OfferDetailPlanId <String>]
+        [-OfferDetailPlanName <String>]
+        [-OfferDetailPublisherId <String>]
+        [-OfferDetailTermId <String>]
+        [-OfferDetailTermUnit <String>]
+        [-PartnerOrganizationPropertyOrganizationId <String>]
+        [-PartnerOrganizationPropertyOrganizationName <String>]
+        [-ProjectProperty <IProjectPropertiesUpdate>]
+        [-SingleSignOnPropertyAadDomain <String[]>]
+        [-SingleSignOnPropertyEnterpriseAppId <String>]
+        [-SingleSignOnPropertySingleSignOnState <String>]
+        [-SingleSignOnPropertySingleSignOnUrl <String>]
+        [-Tag <Hashtable>]
+        [-UserDetailEmailAddress <String>]
+        [-UserDetailFirstName <String>]
+        [-UserDetailLastName <String>]
+        [-UserDetailPhoneNumber <String>]
+        [-UserDetailUpn <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzNeonPostgresOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonString
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzNeonPostgresOrganization
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzNeonPostgresOrganization
+        -InputObject <INeonPostgresIdentity>
+        [-CompanyDetailBusinessPhone <String>]
+        [-CompanyDetailCompanyName <String>]
+        [-CompanyDetailCountry <String>]
+        [-CompanyDetailDomain <String>]
+        [-CompanyDetailNumberOfEmployee <Int64>]
+        [-CompanyDetailOfficeAddress <String>]
+        [-MarketplaceDetailSubscriptionId <String>]
+        [-MarketplaceDetailSubscriptionStatus <String>]
+        [-OfferDetailOfferId <String>]
+        [-OfferDetailPlanId <String>]
+        [-OfferDetailPlanName <String>]
+        [-OfferDetailPublisherId <String>]
+        [-OfferDetailTermId <String>]
+        [-OfferDetailTermUnit <String>]
+        [-PartnerOrganizationPropertyOrganizationId <String>]
+        [-PartnerOrganizationPropertyOrganizationName <String>]
+        [-ProjectProperty <IProjectPropertiesUpdate>]
+        [-SingleSignOnPropertyAadDomain <String[]>]
+        [-SingleSignOnPropertyEnterpriseAppId <String>]
+        [-SingleSignOnPropertySingleSignOnState <String>]
+        [-SingleSignOnPropertySingleSignOnUrl <String>]
+        [-Tag <Hashtable>]
+        [-UserDetailEmailAddress <String>]
+        [-UserDetailFirstName <String>]
+        [-UserDetailLastName <String>]
+        [-UserDetailPhoneNumber <String>]
+        [-UserDetailUpn <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NeonPostgres.Models.INeonPostgresIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NeonPostgres.Models.IOrganizationResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a Neon Resource'
+  description: |-
+    ```powershell
+    Update-AzNeonPostgresOrganization -Name "almasTestNeonPS8" -ResourceGroupName "NeonDemoRG" -SubscriptionId "5d9a6cc3-4e60-4b41-be79-d28f0a01074e" `
+    -CompanyDetailBusinessPhone "+1234567890" `
+    -CompanyDetailCompanyName "DemoCompany" `
+    -CompanyDetailCountry "USA" `
+    -CompanyDetailDomain "demo.com" `
+    -CompanyDetailNumberOfEmployee 500 `
+    -CompanyDetailOfficeAddress "1234 Azure Ave" `
+    -PartnerOrganizationPropertyOrganizationId "org12345" `
+    -PartnerOrganizationPropertyOrganizationName "PartnerOrg8" `
+    -SingleSignOnPropertyAadDomain @("partnerorg.com") `
+    -SingleSignOnPropertyEnterpriseAppId "app12345" `
+    -SingleSignOnPropertySingleSignOnState "Enable" `
+    -SingleSignOnPropertySingleSignOnUrl "https://sso.partnerorg.com" `
+    -Tag @{environment="production"} `
+    -UserDetailEmailAddress "khanalmas@microsoft.com" `
+    -UserDetailFirstName "Almas" `
+    -UserDetailLastName "Khan" `
+    -UserDetailPhoneNumber "+1234567890" `
+    -UserDetailUpn "khanalmas_microsoft.com#EXT#@qumulotesttenant2.onmicrosoft.com"
+    ```
+
+    ```output
+    CompanyDetailBusinessPhone                  : +1234567890
+    CompanyDetailCompanyName                    : DemoCompany
+    CompanyDetailCountry                        : USA
+    CompanyDetailDomain                         : demo.com
+    CompanyDetailNumberOfEmployee               : 500
+    CompanyDetailOfficeAddress                  : 1234 Azure Ave
+    Id                                          : /subscriptions/5d9a6cc3-4e60-4b41-be79-d28f0a01074e/resourceGroups/NeonDe
+                                                  moRG/providers/Neon.Postgres/organizations/almasTestNeonPS8
+    Location                                    : centraluseuap
+    MarketplaceDetailSubscriptionId             : 44e2e61d-8456-4c6a-dd0a-acc4edaa729b
+    MarketplaceDetailSubscriptionStatus         : Subscribed
+    Name                                        : almasTestNeonPS8
+    OfferDetailOfferId                          : neon_test
+    OfferDetailPlanId                           : neon_test_1
+    OfferDetailPlanName                         : Neon Serverless Postgres - Free (Test_Liftr)
+    OfferDetailPublisherId                      : neon1722366567200
+    OfferDetailTermId                           : gmz7xq9ge3py
+    OfferDetailTermUnit                         : P1M
+    PartnerOrganizationPropertyOrganizationId   : org-tiny-silence-85146383
+    PartnerOrganizationPropertyOrganizationName : PartnerOrg8
+    ProvisioningState                           : Succeeded
+    ResourceGroupName                           : NeonDemoRG
+    SingleSignOnPropertyAadDomain               : {partnerorg.com}
+    SingleSignOnPropertyEnterpriseAppId         : app12345
+    SingleSignOnPropertySingleSignOnState       : Enable
+    SingleSignOnPropertySingleSignOnUrl         : https://console.neon.tech/azure/sso/org-tiny-silence-85146383
+    SystemDataCreatedAt                         : 06-Nov-24 4:49:42 AM
+    SystemDataCreatedBy                         : khanalmas@microsoft.com
+    SystemDataCreatedByType                     : User
+    SystemDataLastModifiedAt                    : 06-Nov-24 4:53:15 AM
+    SystemDataLastModifiedBy                    : khanalmas@microsoft.com
+    SystemDataLastModifiedByType                : User
+    Tag                                         : {
+                                                    "environment": "production"
+                                                  }
+    Type                                        : neon.postgres/organizations
+    UserDetailEmailAddress                      : khanalmas@microsoft.com
+    UserDetailFirstName                         : Almas
+    UserDetailLastName                          : Khan
+    UserDetailPhoneNumber                       : +1234567890
+    UserDetailUpn                               : khanalmas_microsoft.com#EXT#@qumulotesttenant2.onmicrosoft.com
+    ```
+
+    This command will update a Neon Postgres organization resource
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Update-AzNeonPostgresOrganization.md
+  document type: cmdlet
+  external help file: Az.NeonPostgres-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.neonpostgres/update-azneonpostgresorganization
+  Module Name: Az.NeonPostgres
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Update-AzNeonPostgresOrganization.md
+  PlatyPS schema version: 2024-05-01

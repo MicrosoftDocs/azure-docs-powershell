@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.LambdaTest
+name: Az.LambdaTest Module
+isPreview: false
+cmdletGroups:
+- title: LambdaTest
+  cmdlets:
+  - Az.LambdaTest.Get-AzLambdaTestOrganization
+  - Az.LambdaTest.New-AzLambdaTestOrganization
+  - Az.LambdaTest.Remove-AzLambdaTestOrganization
+  - Az.LambdaTest.Update-AzLambdaTestOrganization
+description: |-
+  Microsoft Azure PowerShell: LambdaTest cmdlets
+metadata:
+  Module Name: Az.LambdaTest
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.lambdatest
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LambdaTest/LambdaTest/help/Az.LambdaTest.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LambdaTest/LambdaTest/help/Az.LambdaTest.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

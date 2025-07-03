@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Get-AzDataLakeStoreItem
+name: Get-AzDataLakeStoreItem
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Gets the details of a file or folder in Data Lake Store.
+description: |-
+  The **Get-AzDataLakeStoreItem** cmdlet gets the details of a file or folder in Data Lake Store.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store path from which to get details of an item, starting with the root directory (/).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeStoreItem
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get details of a file from the Data Lake Store'
+  description: |-
+    ```powershell
+    Get-AzDataLakeStoreItem -AccountName "ContosoADL" -Path "/MyFiles/Test.csv"
+    ```
+
+    This command gets the details of the file Test.csv from the Data Lake Store.
+links:
+- text: Export-AzDataLakeStoreItem
+  href: ./Export-AzDataLakeStoreItem.yml
+- text: Get-AzDataLakeStoreChildItem
+  href: ./Get-AzDataLakeStoreChildItem.yml
+- text: Import-AzDataLakeStoreItem
+  href: ./Import-AzDataLakeStoreItem.yml
+- text: Join-AzDataLakeStoreItem
+  href: ./Join-AzDataLakeStoreItem.yml
+- text: Move-AzDataLakeStoreItem
+  href: ./Move-AzDataLakeStoreItem.yml
+- text: New-AzDataLakeStoreItem
+  href: ./New-AzDataLakeStoreItem.yml
+- text: Remove-AzDataLakeStoreItem
+  href: ./Remove-AzDataLakeStoreItem.yml
+- text: Test-AzDataLakeStoreItem
+  href: ./Test-AzDataLakeStoreItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/get-azdatalakestoreitem
+  Module Name: Az.DataLakeStore
+  ms.assetid: ECA70C6C-E0B0-445D-BCAD-041625FAC632
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Get-AzDataLakeStoreItem.md
+  PlatyPS schema version: 2024-05-01

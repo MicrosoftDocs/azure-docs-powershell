@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Fabric.Get-AzFabricCapacity
+name: Get-AzFabricCapacity
+module: Az.Fabric
+isPreview: false
+summary: |-
+  Get a FabricCapacity
+description: |-
+  Get a FabricCapacity
+parameters:
+  cmdletParameters:
+  - name: CapacityName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Microsoft Fabric capacity.
+      It must be a minimum of 3 characters, and a maximum of 63.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fabric.Models.IFabricIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFabricCapacity
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzFabricCapacity
+        -CapacityName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFabricCapacity
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFabricCapacity
+        -InputObject <IFabricIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fabric.Models.IFabricIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fabric.Models.IFabricCapacity" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Capacities by Resource Group'
+  description: |-
+    ```powershell
+    Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    Location Name               SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    -------- ----               ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    West Central US  azsdktest                                                                                                                                                       testrg
+    West Central US  azsdktest2                                                                                                                                                      testrg
+    ```
+
+    The above command lists all Fabric capacities within the resource group 'testrg' in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'
+- title: 'Example 2: List Capacities by Subscription'
+  description: |-
+    ```powershell
+    Get-AzFabricCapacity -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    Location Name               SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    -------- ----               ------------------- ------------------- ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    West Central US  azsdktest                                                                                                                                                       testrg
+    West Central US  azsdktest2                                                                                                                                                      testrg
+    West Europe      azsdktest3                                                                                                                                                      testrg3
+    ```
+
+    The above command lists all Fabric capacities in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'.
+- title: 'Example 3: Get Capacity'
+  description: |-
+    ```powershell
+    Get-AzFabricCapacity -ResourceGroupName "testrg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e" -CapacityName "azsdktest"
+    ```
+
+    ```output
+    AdministrationMember         : {azsdktest@microsoft.com}
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/testrg/providers/Microsoft.Fabric/capacities/azsdktest
+    Location                     : West Central US
+    Name                         : azsdktest
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : testrg
+    SkuName                      : F2
+    SkuTier                      : Fabric
+    State                        : Active
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.Fabric/capacities
+    ```
+
+    The above command retrieves the Fabric capacity named 'azsdktest' within the resource group 'testrg' in the subscription 'aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e'.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fabric/Fabric/help/Get-AzFabricCapacity.md
+  document type: cmdlet
+  external help file: Az.Fabric-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.fabric/get-azfabriccapacity
+  Module Name: Az.Fabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fabric/Fabric/help/Get-AzFabricCapacity.md
+  PlatyPS schema version: 2024-05-01

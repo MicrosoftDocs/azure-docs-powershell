@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADGroup
+name: Get-AzADGroup
+module: Az.Resources
+isPreview: false
+summary: |-
+  Filters active directory groups.
+description: |-
+  Filters active directory groups.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayNameStartsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to find groups that begin with the provided string.
+    aliases:
+    - SearchString
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SearchStringParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of objects to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeTotalCount
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reports the number of objects in the data set. Currently, this parameter does nothing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Object id of the group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first N objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        [-ObjectId <Guid>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -DisplayNameStartsWith <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SearchStringParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -DisplayName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADGroup
+        -ObjectId <Guid>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - List all AD groups
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup
+    ```
+
+    Lists all AD groups in a tenant.
+- title: Example 2 - List all AD groups using paging
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -First 100
+    ```
+
+    Lists the first 100 AD groups in a tenant.
+- title: Example 3 - Get AD group by object id
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ```
+
+    Gets an AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
+- title: Example 4 - List groups by search string
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -SearchString Joe
+    ```
+
+    Lists all AD groups whose display name begins with 'Joe'.
+links:
+- text: Get-AzADUser
+  href: ./Get-AzADUser.yml
+- text: Get-AzADServicePrincipal
+  href: ./Get-AzADServicePrincipal.yml
+- text: Get-AzADGroupMember
+  href: ./Get-AzADGroupMember.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/get-Azadgroup
+  Module Name: Az.Resources
+  ms.assetid: 85DDA491-7A7D-4217-B0E3-72CDC3787889
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroup.md
+  PlatyPS schema version: 2024-05-01

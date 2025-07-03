@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceBus.New-AzServiceBusIPRuleConfig
+name: New-AzServiceBusIPRuleConfig
+module: Az.ServiceBus
+isPreview: false
+summary: |-
+  Constructs an INwRuleSetIPRules object that can be fed as input to Set-AzServiceBusNetworkRuleSet
+description: |-
+  Constructs an INwRuleSetIPRules object that can be fed as input to Set-AzServiceBusNetworkRuleSet
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP Filter Action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPMask
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP Mask
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzServiceBusIPRuleConfig
+        -IPMask <String>
+        [-Action <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ServiceBus.Models.INwRuleSetIPRules" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Constructs an INwRuleSetIPRules object'
+  description: |-
+    ```powershell
+    New-AzServiceBusIPRuleConfig -IPMask 3.3.3.3 -Action Allow
+    ```
+
+    ```output
+    Action IPMask
+    ------ ------
+    Allow  1.1.1.1
+    ```
+
+    Please refer examples for Set-AzServiceBusNetworkRuleSet to know more.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusIPRuleConfig.md
+  document type: cmdlet
+  external help file: Az.ServiceBus-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicebus/new-azservicebusipruleconfig
+  Module Name: Az.ServiceBus
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceBus/ServiceBus/help/New-AzServiceBusIPRuleConfig.md
+  PlatyPS schema version: 2024-05-01

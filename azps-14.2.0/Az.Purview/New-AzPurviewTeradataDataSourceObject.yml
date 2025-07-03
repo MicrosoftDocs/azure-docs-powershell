@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.New-AzPurviewTeradataDataSourceObject
+name: New-AzPurviewTeradataDataSourceObject
+module: Az.Purview
+isPreview: false
+summary: |-
+  Create an in-memory object for TeradataDataSource.
+description: |-
+  Create an in-memory object for TeradataDataSource.
+parameters:
+  cmdletParameters:
+  - name: CollectionReferenceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Host
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPurviewTeradataDataSourceObject
+        [-CollectionReferenceName <String>]
+        [-CollectionType <String>]
+        [-Host <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.TeradataDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Teradata data source object'
+  description: |-
+    ```powershell
+    New-AzPurviewTeradataDataSourceObject -CollectionReferenceName 'parv-brs-2' -CollectionType 'CollectionReference' -Host '12.13.14.12'
+    ```
+
+    ```output
+    CollectionLastModifiedAt :
+    CollectionReferenceName  : parv-brs-2
+    CollectionType           : CollectionReference
+    CreatedAt                :
+    Host                     : 12.13.14.12
+    Id                       :
+    Kind                     : Teradata
+    LastModifiedAt           :
+    Name                     :
+    Scan                     :
+    ```
+
+    Create Teradata data source object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewTeradataDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Purview/new-azpurviewteradatadatasourceobject
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/New-AzPurviewTeradataDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,108 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Billing.Get-AzEnrollmentAccount
+name: Get-AzEnrollmentAccount
+module: Az.Billing
+isPreview: false
+summary: |-
+  Get enrollment accounts.
+description: |-
+  The **Get-AzEnrollmentAccount** cmdlet gets enrollment accounts.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ObjectId of a specific enrollment account to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Single
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEnrollmentAccount
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzEnrollmentAccount
+        [-ObjectId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Single
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Billing.Models.PSBillingPeriod" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzEnrollmentAccount
+    ```
+
+    ```output
+    ObjectId                             PrincipalName
+    --------                             -------------
+    dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+    7ff524ac-a0de-4402-876f-934ccee3b601 carol@contoso.onmicrosoft.com
+    ```
+
+    Get all available enrollment accounts.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzEnrollmentAccount -ObjectId dbd8453d-071f-4fb4-8e01-c99f5b067649
+    ```
+
+    ```output
+    ObjectId                             PrincipalName
+    --------                             -------------
+    dbd8453d-071f-4fb4-8e01-c99f5b067649 jason@contoso.onmicrosoft.com
+    ```
+
+    Get the enrollment account with the specified object id.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzEnrollmentAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Billing.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billing/get-azenrollmentaccount
+  Module Name: Az.Billing
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzEnrollmentAccount.md
+  PlatyPS schema version: 2024-05-01

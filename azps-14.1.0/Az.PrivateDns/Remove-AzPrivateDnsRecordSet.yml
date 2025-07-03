@@ -1,0 +1,318 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PrivateDns.Remove-AzPrivateDnsRecordSet
+name: Remove-AzPrivateDnsRecordSet
+module: Az.PrivateDns
+isPreview: false
+summary: |-
+  Deletes a record set from a Private DNS zone.
+description: |-
+  The Remove-AzPrivateDnsRecordSet cmdlet deletes the specified record set from the specified zone. You cannot delete SOA records that are automatically created at the private zone apex. You can pass a RecordSet object to this cmdlet by using the pipeline operator or as a parameter or as a ResourceId. To identify a record set by name and type without using a RecordSet object, you must pass the zone as a PSPrivateDnsZone object to this cmdlet by using the pipeline operator or as a parameter, or alternatively you can specify the ZoneName and ResourceGroupName parameters. You can use the Confirm parameter and $ConfirmPreference Windows PowerShell variable to control whether the cmdlet prompts you for confirmation. When specifying the record set using a RecordSet object, the record set is not deleted if it has been changed in Azure Private DNS since the local RecordSet object was retrieved. This provides protection for concurrent changes. You can suppress this by using the Overwrite parameter, which deletes the record set regardless of concurrent changes.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the records in the record set (relative to the name of the zone and without a terminating dot).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Mixed
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overwrite
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not use the ETag field of the RecordSet parameter for optimistic concurrency checks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Used for passing the result (boolean) of the operation delete private zone further down the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordSet
+    type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+    description: |-
+      The record set in which to add the record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordType
+    type: <xref href="Microsoft.Azure.Management.PrivateDns.Models.RecordType" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of Private DNS records in the record set.
+    acceptedValues:
+    - A
+    - AAAA
+    - CNAME
+    - MX
+    - PTR
+    - SOA
+    - SRV
+    - TXT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Mixed
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group to which the zone belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Private DNS RecordSet ResourceID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+    description: |-
+      The PrivateDnsZone object representing the zone in which to create the record set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Mixed
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The zone in which the record set exists (without a terminating dot).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateDnsRecordSet
+        -ResourceGroupName <String>
+        -ZoneName <String>
+        -Name <String>
+        -RecordType <RecordType>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fields
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateDnsRecordSet
+        -Zone <PSPrivateDnsZone>
+        -Name <String>
+        -RecordType <RecordType>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Mixed
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateDnsRecordSet
+        -RecordSet <PSPrivateDnsRecordSet>
+        [-Overwrite]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzPrivateDnsRecordSet
+        -ResourceId <String>
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsZone" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.PrivateDns.Models.PSPrivateDnsRecordSet" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzPrivateDnsRecordSet -Name "www" -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+    Remove-AzPrivateDnsRecordSet -RecordSet $RecordSet
+    ```
+
+    The first command gets the specified record set, and then stores it in the $RecordSet variable.The second command removes the record set in $RecordSet.
+- title: 'Example 2: Remove a record set and suppress all confirmation'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzPrivateDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup"
+    Remove-AzPrivateDnsRecordSet -RecordSet $RecordSet -Confirm:$False -Overwrite
+
+    # Alternatively, the record set can be removed as follows.  In this case,
+    # because the record set is specified by name rather than by object, the
+    # Overwrite parameter is not applicable.
+
+    Remove-AzPrivateDnsRecordSet -Name "www" -ZoneName "myzone.com" -ResourceGroupName "MyResourceGroup" -Confirm:$False
+    ```
+
+    The first command gets the specified record set. The second command deletes the record set, even if it has changed in the meantime. Confirmation prompts are suppressed.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Remove-AzPrivateDnsRecordSet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PrivateDns.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.privatedns/remove-azprivatednsrecordset
+  Module Name: Az.PrivateDns
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PrivateDns/PrivateDns/help/Remove-AzPrivateDnsRecordSet.md
+  PlatyPS schema version: 2024-05-01

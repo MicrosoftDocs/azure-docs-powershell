@@ -1,0 +1,641 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerInstance.New-AzContainerInstanceObject
+name: New-AzContainerInstanceObject
+module: Az.ContainerInstance
+isPreview: false
+summary: |-
+  Create a in-memory object for Container
+description: |-
+  Create a in-memory object for Container
+parameters:
+  cmdletParameters:
+  - name: Command
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The commands to execute within the container instance in exec form.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigMapKeyValuePair
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IConfigMapKeyValuePairs" data-throw-if-not-resolved="False" />
+    description: |-
+      The key value pairs dictionary in the config map to set in the container instance.
+      To construct, see NOTES section for CONFIGMAPKEYVALUEPAIR properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnvironmentVariable
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IEnvironmentVariable" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The environment variables to set in the container instance.
+      To construct, see NOTES section for ENVIRONMENTVARIABLE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Image
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the image used to create the container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitCpu
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The CPU limit of this container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitMemoryInGb
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The memory limit in GB of this container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitsGpuCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The count of the GPU resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitsGpuSku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SKU of the GPU resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeExecCommand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The commands to execute within the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeFailureThreshold
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The failure threshold.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeHttpGetHttpHeader
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IHttpHeader" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The HTTP headers for liveness probe.
+      To construct, see NOTES section for LIVENESSPROBEHTTPGETHTTPHEADER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeHttpGetPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to probe.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeHttpGetPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The port number to probe.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeHttpGetScheme
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scheme.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeInitialDelaySecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The initial delay seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbePeriodSecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The period seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeSuccessThreshold
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The success threshold.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LivenessProbeTimeoutSecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The timeout seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user-provided name of the container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IContainerPort" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The exposed ports on the container instance.
+      To construct, see NOTES section for PORT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeExecCommand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The commands to execute within the container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeFailureThreshold
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The failure threshold.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeHttpGetHttpHeader
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IHttpHeader" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The HTTP headers for readiness probe.
+      To construct, see NOTES section for READINESSPROBEHTTPGETHTTPHEADER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeHttpGetPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to probe.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeHttpGetPort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The port number to probe.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeHttpGetScheme
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scheme.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeInitialDelaySecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The initial delay seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbePeriodSecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The period seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeSuccessThreshold
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The success threshold.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadinessProbeTimeoutSecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The timeout seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestCpu
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The CPU request of this container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestMemoryInGb
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The memory request in GB of this container instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestsGpuCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The count of the GPU resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestsGpuSku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SKU of the GPU resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VolumeMount
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.IVolumeMount" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The volume mounts available to the container instance.
+      To construct, see NOTES section for VOLUMEMOUNT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerInstanceObject
+        -Image <String>
+        -Name <String>
+        [-Command <String[]>]
+        [-ConfigMapKeyValuePair <IConfigMapKeyValuePairs>]
+        [-EnvironmentVariable <IEnvironmentVariable[]>]
+        [-LimitCpu <Double>]
+        [-LimitMemoryInGb <Double>]
+        [-LimitsGpuCount <Int32>]
+        [-LimitsGpuSku <String>]
+        [-LivenessProbeExecCommand <String[]>]
+        [-LivenessProbeFailureThreshold <Int32>]
+        [-LivenessProbeHttpGetHttpHeader <IHttpHeader[]>]
+        [-LivenessProbeHttpGetPath <String>]
+        [-LivenessProbeHttpGetPort <Int32>]
+        [-LivenessProbeHttpGetScheme <String>]
+        [-LivenessProbeInitialDelaySecond <Int32>]
+        [-LivenessProbePeriodSecond <Int32>]
+        [-LivenessProbeSuccessThreshold <Int32>]
+        [-LivenessProbeTimeoutSecond <Int32>]
+        [-Port <IContainerPort[]>]
+        [-ReadinessProbeExecCommand <String[]>]
+        [-ReadinessProbeFailureThreshold <Int32>]
+        [-ReadinessProbeHttpGetHttpHeader <IHttpHeader[]>]
+        [-ReadinessProbeHttpGetPath <String>]
+        [-ReadinessProbeHttpGetPort <Int32>]
+        [-ReadinessProbeHttpGetScheme <String>]
+        [-ReadinessProbeInitialDelaySecond <Int32>]
+        [-ReadinessProbePeriodSecond <Int32>]
+        [-ReadinessProbeSuccessThreshold <Int32>]
+        [-ReadinessProbeTimeoutSecond <Int32>]
+        [-RequestCpu <Double>]
+        [-RequestMemoryInGb <Double>]
+        [-RequestsGpuCount <Int32>]
+        [-RequestsGpuSku <String>]
+        [-VolumeMount <IVolumeMount[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.Container" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a container instance using image alpine with request cpu 1.0 and request memory 1.5Gb'
+  description: |-
+    ```powershell
+    New-AzContainerInstanceObject -Name "test-container" -Image alpine -RequestCpu 1 -RequestMemoryInGb 1.5
+    ```
+
+    ```output
+    Name
+    ----
+    test-container
+    ```
+
+    Create a container instance using image alpine with request cpu 1.0 and request memory 1.5Gb
+- title: 'Example 2: Create a container instance using image alpine with limit cpu 2.0 and limit memory 2.5Gb'
+  description: |-
+    ```powershell
+    New-AzContainerInstanceObject -Image alpine -Name "test-container" -LimitCpu 2 -LimitMemoryInGb 2.5
+    ```
+
+    ```output
+    Name
+    ----
+    test-container
+    ```
+
+    Create a container instance using image alpine with limit cpu 2.0 and limit memory 2.5Gb
+- title: 'Example 3: Create a container group with a container instance'
+  description: |-
+    ```powershell
+    $container = New-AzContainerInstanceObject -Name test-container -Image alpine
+    New-AzContainerGroup -ResourceGroupName testrg-rg -Name test-cg -Location eastus -Container $container
+    ```
+
+    ```output
+    Location Name    Zone ResourceGroupName
+    -------- ----    ---- -----------------
+    eastus   test-cg      test-rg
+    ```
+
+    Create a container group with a container instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceObject.md
+  document type: cmdlet
+  external help file: Az.ContainerInstance-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerInstanceObject
+  Module Name: Az.ContainerInstance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstanceObject.md
+  PlatyPS schema version: 2024-05-01

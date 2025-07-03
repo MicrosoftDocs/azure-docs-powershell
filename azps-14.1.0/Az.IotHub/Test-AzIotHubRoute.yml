@@ -1,0 +1,416 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotHub.Test-AzIotHubRoute
+name: Test-AzIotHubRoute
+module: Az.IotHub
+isPreview: false
+summary: |-
+  Test routes in IoT Hub
+description: |-
+  Test a specific route.
+parameters:
+  cmdletParameters:
+  - name: AppProperty
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      App properties of the route message
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Body
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Body of the route message
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub" data-throw-if-not-resolved="False" />
+    description: |-
+      IotHub Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectTestRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectTestAllRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Iot Hub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TestRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestAllRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource Group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TestRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestAllRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IotHub Resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdTestRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdTestAllRouteSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Route
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectTestRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdTestRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShowError
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Show detailed error, if exist
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectTestRouteSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestRouteSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdTestRouteSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Source
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSRoutingSource" data-throw-if-not-resolved="False" />
+    description: |-
+      Source of the route
+    acceptedValues:
+    - Invalid
+    - DeviceMessages
+    - TwinChangeEvents
+    - DeviceLifecycleEvents
+    - DeviceJobLifecycleEvents
+    - DigitalTwinChangeEvents
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectTestAllRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TestAllRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdTestAllRouteSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SystemProperty
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      System properties of the route message
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-InputObject] <PSIotHub>
+        [-RouteName] <String>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-ShowError]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectTestRouteSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-InputObject] <PSIotHub>
+        [-Source] <PSRoutingSource>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectTestAllRouteSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-RouteName] <String>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-ShowError]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TestRouteSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Source] <PSRoutingSource>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TestAllRouteSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-ResourceId] <String>
+        [-RouteName] <String>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-ShowError]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdTestRouteSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzIotHubRoute
+        [-ResourceId] <String>
+        [-Source] <PSRoutingSource>
+        [-Body <String>]
+        [-AppProperty <Hashtable>]
+        [-SystemProperty <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdTestAllRouteSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSTestRouteResult" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSRouteCompilationError" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSRouteProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Test-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -Source DeviceMessages
+    ```
+
+    ```output
+    RouteName DataSource     EndpointNames IsEnabled
+    --------- ----------     ------------- ---------
+    R1        DeviceMessages events        True
+    R5        DeviceMessages E1            True
+    ```
+
+    Test all route with source "DeviceMessages".
+- title: Example 2
+  description: |-
+    ```powershell
+    Test-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -RouteName R1
+    ```
+
+    ```output
+    Result : true
+    ```
+
+    Test a specific route.
+- title: Example 3
+  description: |-
+    ```powershell
+    Test-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -RouteName R1 -ShowError
+    ```
+
+    ```output
+    ErrorMessage  Severity LocationStartLine LocationStartColumn LocationEndLine LocationEndColumn
+    ------------  -------- ----------------- ------------------- --------------- -----------------
+    Syntax error. error    1                 29                  1               30
+    ```
+
+    Test a specific route and showing the reason of failure.
+- title: Example 4
+  description: |-
+    ```powershell
+    $ap = @{}
+    $ap.add("key0","value0")
+    $sp = @{}
+    $sp.add("key1", "value1")
+    Test-AzIotHubRoute -ResourceGroupName "myresourcegroup" -Name "myiothub" -RouteName R1 -AppProperty $ap -SystemProperty $sp
+    ```
+
+    ```output
+    Result : true
+    ```
+
+    Test a specific route with AppProperty and SystemProperty.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Test-AzIotHubRoute.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iothub/test-aziothubroute
+  Module Name: Az.IotHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Test-AzIotHubRoute.md
+  PlatyPS schema version: 2024-05-01

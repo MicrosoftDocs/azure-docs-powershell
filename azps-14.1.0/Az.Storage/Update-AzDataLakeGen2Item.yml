@@ -1,0 +1,401 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Update-AzDataLakeGen2Item
+name: Update-AzDataLakeGen2Item
+module: Az.Storage
+isPreview: false
+summary: |-
+  Update a file or directory on properties, metadata, permission, ACL, and owner.
+description: |-
+  The **Update-AzDataLakeGen2Item** cmdlet updates a file or directory on properties, metadata, permission, ACL, and owner.
+  This cmdlet only works if Hierarchical Namespace is enabled for the Storage account. This kind of account can be created by run "New-AzStorageAccount" cmdlet with "-EnableHierarchicalNamespace $true".
+parameters:
+  cmdletParameters:
+  - name: Acl
+    type: <xref href="Microsoft.WindowsAzure.Commands.Storage.Model.ResourceModel.PSPathAccessControlEntry" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Sets POSIX access control rights on files and directories.
+      Create this object with New-AzDataLakeGen2ItemAclObject.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSystem
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      FileSystem name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ReceiveManual
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Group
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the owning group of the blob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Datalake Gen2 Item Object to update
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ItemPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies metadata for the directory or file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Owner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the owner of the blob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path in the specified Filesystem that should be updated.
+      Can be a file or directory In the format 'directory/file.txt' or 'directory1/directory2/'.
+      Not specify this parameter will update the root directory of the Filesystem.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ReceiveManual
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets POSIX access permissions for the file owner, the file owning group, and others. Each class may be granted read, write, or execute permission. Symbolic (rwxrw-rw-) is supported.
+      The sticky bit is also supported and its represented either by the letter t or T in the final character-place depending on whether the execution bit for the others category is set or unset respectively,
+      absence of t or T indicates sticky bit not set.Invalid in conjunction with ACL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies properties for the directory or file.
+      The supported properties for file are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage, ContentMD5, ContentType.
+      The supported properties for directory are: CacheControl, ContentDisposition, ContentEncoding, ContentLanguage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzDataLakeGen2Item
+        [-FileSystem] <String>
+        [-Path <String>]
+        [-Permission <String>]
+        [-Owner <String>]
+        [-Group <String>]
+        [-Property <Hashtable>]
+        [-Metadata <Hashtable>]
+        [-Acl <PSPathAccessControlEntry[]>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ReceiveManual
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzDataLakeGen2Item
+        -InputObject <AzureDataLakeGen2Item>
+        [-Permission <String>]
+        [-Owner <String>]
+        [-Group <String>]
+        [-Property <Hashtable>]
+        [-Metadata <Hashtable>]
+        [-Acl <PSPathAccessControlEntry[]>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ItemPipeline
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an ACL object with 3 ACL entry, and update ACL to all items in a Filesystem recursively'
+  description: |-
+    ```powershell
+    $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -Permission rwx
+    $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType group -Permission rw- -InputObject $acl
+    $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType other -Permission "rwt" -InputObject $acl
+    Get-AzDataLakeGen2ChildItem -FileSystem "filesystem1" -Recurse | Update-AzDataLakeGen2Item -ACL $acl
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1                 True                         2020-03-13 13:07:34Z rwxrw-rwt    $superuser           $superuser
+    dir1/file1           False        1024            2020-03-23 09:29:18Z rwxrw-rwt    $superuser           $superuser
+    dir2                 True                         2020-03-23 09:28:36Z rwxrw-rwt    $superuser           $superuser
+    ```
+
+    This command first creates an ACL object with 3 acl entry (use -InputObject parameter to add acl entry to existing acl object), then get all items in a filesystem and update acl on the items.
+- title: 'Example 2: Update all properties on a file, and show them'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $file = Update-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/file1" `
+                     -Acl $acl `
+                     -Property @{"ContentType" = "image/jpeg"; "ContentMD5" = "i727sP7HigloQDsqadNLHw=="; "ContentEncoding" = "UDF8"; "CacheControl" = "READ"; "ContentDisposition" = "True"; "ContentLanguage" = "EN-US"} `
+                     -Metadata  @{"tag1" = "value1"; "tag2" = "value2" } `
+                     -Permission rw-rw-rwx `
+                     -Owner '$superuser' `
+                     -Group '$superuser'
+
+    $file
+
+       FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1/file1           False        1024            2020-03-23 09:57:33Z rwxrw-rw-    $superuser           $superuser
+
+    $file.ACL
+
+    DefaultScope AccessControlType EntityId Permissions
+    ------------ ----------------- -------- -----------
+    False        User                       rwx
+    False        Group                      rw-
+    False        Other                      rw-
+
+    $file.Permissions
+
+    Owner        : Execute, Write, Read
+    Group        : Write, Read
+    Other        : Write, Read
+    StickyBit    : False
+    ExtendedAcls : False
+
+    $file.Properties.Metadata
+
+    Key  Value
+    ---  -----
+    tag2 value2
+    tag1 value1
+
+    $file.Properties
+
+
+    LastModified          : 3/23/2020 9:57:33 AM +00:00
+    CreatedOn             : 3/23/2020 9:29:18 AM +00:00
+    Metadata              : {[tag2, value2], [tag1, value1]}
+    CopyCompletedOn       : 1/1/0001 12:00:00 AM +00:00
+    CopyStatusDescription :
+    CopyId                :
+    CopyProgress          :
+    CopySource            :
+    CopyStatus            : Pending
+    IsIncrementalCopy     : False
+    LeaseDuration         : Infinite
+    LeaseState            : Available
+    LeaseStatus           : Unlocked
+    ContentLength         : 1024
+    ContentType           : image/jpeg
+    ETag                  : "0x8D7CF109B9878CC"
+    ContentHash           : {139, 189, 187, 176...}
+    ContentEncoding       : UDF8
+    ContentDisposition    : True
+    ContentLanguage       : EN-US
+    CacheControl          : READ
+    AcceptRanges          : bytes
+    IsServerEncrypted     : True
+    EncryptionKeySha256   :
+    AccessTier            : Cool
+    ArchiveStatus         :
+    AccessTierChangedOn   : 1/1/0001 12:00:00 AM +00:00
+    ```
+
+    This command updates all properties on a file (ACL, permission,owner, group, metadata, property can be updated with any conbination), and show them in Powershell console.
+- title: 'Example 3: Add an ACL entry to a directory'
+  description: |-
+    ```powershell
+    ## Get the origin ACL
+    $acl = (Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path 'dir1/dir3/').ACL
+
+    # Update permission of a new ACL entry (if ACL entry with same AccessControlType/EntityId/DefaultScope not exist, will add a new ACL entry, else update permission of existing ACL entry)
+    $acl = Set-AzDataLakeGen2ItemAclObject -AccessControlType user -EntityId $id -Permission rw- -InputObject $acl
+
+    # set the new acl to the directory
+    Update-AzDataLakeGen2Item -FileSystem "filesystem1" -Path 'dir1/dir3/' -ACL $acl
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1/dir3            True                         2020-03-23 09:34:31Z rwxrw-rw-+   $superuser           $superuser
+    ```
+
+    This command gets ACL from a directory, updates/adds an ACL entry, and sets back to the directory.
+    If ACL entry with same AccessControlType/EntityId/DefaultScope not exist, will add a new ACL entry, else update permission of existing ACL entry.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2Item.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/update-azdatalakegen2item
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Update-AzDataLakeGen2Item.md
+  PlatyPS schema version: 2024-05-01

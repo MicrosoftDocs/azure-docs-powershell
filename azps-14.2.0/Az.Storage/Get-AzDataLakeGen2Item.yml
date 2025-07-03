@@ -1,0 +1,194 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzDataLakeGen2Item
+name: Get-AzDataLakeGen2Item
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets the details of a file or directory in a filesystem.
+description: |-
+  The **Get-AzDataLakeGen2Item** cmdlet gets the details of a file or directory in a Filesystem in an Azure storage account.
+  This cmdlet only works if Hierarchical Namespace is enabled for the Storage account. This kind of account can be created by run "New-AzStorageAccount" cmdlet with "-EnableHierarchicalNamespace $true".
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileSystem
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      FileSystem name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path in the specified Filesystem that should be retrieved.
+      Can be a file or directory In the format 'directory/file.txt' or 'directory1/directory2/'.
+      Not specify this parameter to get the root directory of the Filesystem.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeGen2Item
+        [-FileSystem] <String>
+        [-Path <String>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureDataLakeGen2Item" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a directory from a Filesystem, and show the details'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $dir1 = Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/"
+    $dir1
+
+       FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1                 True                         2020-03-23 09:15:56Z rwx---rwx    $superuser           $superuser
+
+    PS C:\WINDOWS\system32> $dir1.ACL
+
+    DefaultScope AccessControlType EntityId Permissions
+    ------------ ----------------- -------- -----------
+    False        User                       rwx
+    False        Group                      ---
+    False        Other                      rwx
+
+    PS C:\WINDOWS\system32> $dir1.Permissions
+
+    Owner        : Execute, Write, Read
+    Group        : None
+    Other        : Execute, Write, Read
+    StickyBit    : False
+    ExtendedAcls : False
+
+    PS C:\WINDOWS\system32> $dir1.Properties.Metadata
+
+    Key          Value
+    ---          -----
+    hdi_isfolder true
+    tag1         value1
+    tag2         value2
+
+    PS C:\WINDOWS\system32> $dir1.Properties
+
+    LastModified          : 3/23/2020 9:15:56 AM +00:00
+    CreatedOn             : 3/23/2020 9:15:56 AM +00:00
+    Metadata              : {[hdi_isfolder, true], [tag1, value1], [tag2, value2]}
+    CopyCompletedOn       : 1/1/0001 12:00:00 AM +00:00
+    CopyStatusDescription :
+    CopyId                :
+    CopyProgress          :
+    CopySource            :
+    CopyStatus            : Pending
+    IsIncrementalCopy     : False
+    LeaseDuration         : Infinite
+    LeaseState            : Available
+    LeaseStatus           : Unlocked
+    ContentLength         : 0
+    ContentType           : application/octet-stream
+    ETag                  : "0x8D7CF0ACBA35FA8"
+    ContentHash           :
+    ContentEncoding       : UDF12
+    ContentDisposition    :
+    ContentLanguage       :
+    CacheControl          : READ
+    AcceptRanges          : bytes
+    IsServerEncrypted     : True
+    EncryptionKeySha256   :
+    AccessTier            : Cool
+    ArchiveStatus         :
+    AccessTierChangedOn   : 1/1/0001 12:00:00 AM +00:00
+    ```
+
+    This command gets a directory from a Filesystem, and show the details.
+- title: 'Example 2: Get a file from a Filesystem'
+  description: |-
+    ```powershell
+    Get-AzDataLakeGen2Item -FileSystem "filesystem1" -Path "dir1/file1"
+    ```
+
+    ```output
+    FileSystem Name: filesystem1
+
+    Path                 IsDirectory  Length          LastModified         Permissions  Owner                Group
+    ----                 -----------  ------          ------------         -----------  -----                -----
+    dir1/file1           False        1024            2020-03-23 09:20:37Z rwx---rwx    $superuser           $superuser
+    ```
+
+    This command gets the details of a file from a Filesystem.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2Item.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azdatalakegen2item
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzDataLakeGen2Item.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.ImportExport
+name: Az.ImportExport Module
+isPreview: false
+cmdletGroups:
+- title: ImportExport
+  cmdlets:
+  - Az.ImportExport.Get-AzImportExport
+  - Az.ImportExport.Get-AzImportExportBitLockerKey
+  - Az.ImportExport.Get-AzImportExportLocation
+  - Az.ImportExport.New-AzImportExport
+  - Az.ImportExport.New-AzImportExportDriveListObject
+  - Az.ImportExport.Remove-AzImportExport
+  - Az.ImportExport.Update-AzImportExport
+description: |-
+  Microsoft Azure PowerShell: ImportExport cmdlets
+metadata:
+  Module Name: Az.ImportExport
+  Module Guid: 47cfc32b-a3bc-46e1-935e-11a63032bb86
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.importexport
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Az.ImportExport.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Az.ImportExport.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

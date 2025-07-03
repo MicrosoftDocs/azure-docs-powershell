@@ -1,0 +1,323 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzExpressRouteGateway
+name: Set-AzExpressRouteGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a Scalable ExpressRoute Gateway.
+description: |-
+  The **Set-AzExpressRouteGateway** cmdlet enables you to update the scale units for an existing ExpressRouteGateway or update the resource tags.
+parameters:
+  cmdletParameters:
+  - name: AllowNonVirtualWanTraffic
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Determines whether this gateway should accept traffic from other VNets
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRouteGateway that needs to be updated.
+    aliases:
+    - ExpressRouteGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByExpressRouteGatewayObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxScaleUnits
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of scale units for this ExpressRouteGateway. Valid range > 2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinScaleUnits
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum number of scale units for this ExpressRouteGateway. Valid range > 2
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - ExpressRouteGatewayName
+    - GatewayName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByExpressRouteGatewayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name of the ExpressRouteGateway to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByExpressRouteGatewayName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id of the ExpressRouteGateway that needs to be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByExpressRouteGatewayResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        [-MinScaleUnits <UInt32>]
+        [-MaxScaleUnits <UInt32>]
+        [-AllowNonVirtualWanTraffic <Boolean>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByExpressRouteGatewayName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteGateway
+        -InputObject <PSExpressRouteGateway>
+        [-MinScaleUnits <UInt32>]
+        [-MaxScaleUnits <UInt32>]
+        [-AllowNonVirtualWanTraffic <Boolean>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByExpressRouteGatewayObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzExpressRouteGateway
+        -ResourceId <String>
+        [-MinScaleUnits <UInt32>]
+        [-MaxScaleUnits <UInt32>]
+        [-AllowNonVirtualWanTraffic <Boolean>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByExpressRouteGatewayResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West US"
+    $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.0.1/24"
+    New-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testergw" -VirtualHubId $virtualHub.Id -MinScaleUnits 2
+    Set-AzExpressRouteGateway -ResourceGroupName "testRG" -Name "testergw" -MinScaleUnits 3
+    ```
+
+    ```output
+    ResourceGroupName   : testRG
+    Name                : testergw
+    Id                  : /subscriptions/{subscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/expressRouteGateways/testergw
+    Location            : West US
+    MinScaleUnits       : 3
+    Type                : Microsoft.Network/expressRouteGateways
+    ProvisioningState   : Succeeded
+    ```
+
+    The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure.
+    An ExpressRoute gateway will be created thereafter in the Virtual Hub with 2 scale units which will then be modified to 3 scale units.
+- title: 'Example 2: Configure this gateway to accept traffic from non Virtual Wan networks.'
+  description: |-
+    You may either retrieve the gateway, configure its AllowNonVirtualWanTraffic property and save the changes on the gateway or you may just use the switch on the Set-AzExpressRouteGateway cmdlet
+
+    ```powershell
+    # Option 1 - Retrieve the gateway object, configure it to allow traffic from VNets and persist those changes.
+    $gateway = Get-AzExpressRouteGateway -ResourceGroupName "resourceGroup001" -Name "gateway001"
+    $gateway.AllowNonVirtualWanTraffic = $true
+    $gateway = Set-AzExpressRouteGateway -InputObject $gateway
+
+    # Option 2 - Use the cmdlet switch
+    Set-AzExpressRouteGateway -ResourceGroupName "resourceGroup001" -Name "gateway001" -AllowNonVirtualWanTraffic $true
+    ```
+- title: 'Example 3: Configure this gateway to block traffic from non Virtual Wan networks.'
+  description: |-
+    You may either retrieve the gateway, configure its AllowNonVirtualWanTraffic property and save the changes on the gateway or you may just use the switch on the Set-AzExpressRouteGateway cmdlet
+
+    ```powershell
+    # Option 1 - Retrieve the gateway object, configure it to block traffic from VNets and persist those changes.
+    $gateway=Get-AzExpressRouteGateway -ResourceGroupName "resourceGroup001" -Name "gateway001"
+    $gateway.AllowNonVirtualWanTraffic = $false
+    $gateway = Set-AzExpressRouteGateway -InputObject $gateway
+
+    # Option 2 - Use the cmdlet switch
+    Set-AzExpressRouteGateway -ResourceGroupName "resourceGroup001" -Name "gateway001" -AllowNonVirtualWanTraffic $false
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzExpressRouteGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azexpressroutegateway
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzExpressRouteGateway.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,257 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AppConfiguration.Get-AzAppConfigurationKeyValue
+name: Get-AzAppConfigurationKeyValue
+module: Az.AppConfiguration
+isPreview: false
+summary: |-
+  Gets a list of key-values.
+description: |-
+  Gets a list of key-values.
+parameters:
+  cmdletParameters:
+  - name: AcceptDatetime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Requests the server to respond with the state of the resource at the specified time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: After
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Instructs the server to return elements that appear after the element referred to by the specified token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The endpoint of the App Configuration instance to send requests to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to perform an operation only if the targeted resource's etag matches the value provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfNoneMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to perform an operation only if the targeted resource's etag does not match the value provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The key to retrieve.
+      If is a wildcard expression, then the returned list will contain all keys that match the expression.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A filter used to match labels
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Used to select what fields are present in the returned resource(s).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SyncToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to guarantee real-time consistency between requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAppConfigurationKeyValue
+        -Endpoint <String>
+        [-Key <String>]
+        [-Label <String>]
+        [-Select <System.Collections.Generic.List`1[System.String]>]
+        [-AcceptDatetime <String>]
+        [-SyncToken <String>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAppConfigurationKeyValue
+        -Endpoint <String>
+        [-Key <String>]
+        [-Label <String>]
+        [-Select <System.Collections.Generic.List`1[System.String]>]
+        [-After <String>]
+        [-AcceptDatetime <String>]
+        [-SyncToken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppConfigurationdata.Models.IKeyValue" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all the key-values in an App Configuration store'
+  description: |-
+    ```powershell
+    Get-AzAppConfigurationKeyValue -Endpoint $endpoint
+    ```
+
+    ```output
+    ContentType Etag                                        Key      Label LastModified       Locked SyncToken Value
+    ----------- ----                                        ---      ----- ------------       ------ --------- -----
+                7VYSVQjjNgQ987zh8bjsXeDqgdAUkspRblp6Ceh-Zb0 keyName1 label 7/21/2023 02:22:45 False            value1
+                EAy26mDBHMBrUohZn-uJhNTTxoeKiMRin9h1OpfGpZc keyName2 label 7/21/2023 02:22:50 False            value2
+                6tRurLbnyEBDKT7ynXV4F3mZpfA2hf_5z58cK2LDsHY keyName3 label 7/21/2023 02:22:55 False            value3
+    ```
+
+    Get all the key-values in an App Configuration store
+- title: 'Example 2: List by key-values with wildcard'
+  description: |-
+    ```powershell
+    Get-AzAppConfigurationKeyValue -Endpoint $endpoint -Key "key*"
+    ```
+
+    ```output
+    ContentType Etag                                        Key      Label LastModified       Locked SyncToken Value
+    ----------- ----                                        ---      ----- ------------       ------ --------- -----
+                7VYSVQjjNgQ987zh8bjsXeDqgdAUkspRblp6Ceh-Zb0 keyName1 label 7/21/2023 02:22:45 False            value1
+                EAy26mDBHMBrUohZn-uJhNTTxoeKiMRin9h1OpfGpZc keyName2 label 7/21/2023 02:22:50 False            value2
+                6tRurLbnyEBDKT7ynXV4F3mZpfA2hf_5z58cK2LDsHY keyName3 label 7/21/2023 02:22:55 False            value3
+    ```
+
+    You can use wildcard to list key-values in an App Configuration store
+- title: 'Example 3: Get a key-value in an App Configuration store'
+  description: |-
+    ```powershell
+    Get-AzAppConfigurationKeyValue -Endpoint $endpoint -Key "keyName1"
+    ```
+
+    ```output
+    ContentType Etag                                        Key      Label LastModified       Locked SyncToken Value
+    ----------- ----                                        ---      ----- ------------       ------ --------- -----
+                7VYSVQjjNgQ987zh8bjsXeDqgdAUkspRblp6Ceh-Zb0 keyName1 label 7/21/2023 02:22:45 False            value1
+    ```
+
+    You can get a key-value in an App Configuration store with the key name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Get-AzAppConfigurationKeyValue.md
+  document type: cmdlet
+  external help file: Az.AppConfiguration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.appconfiguration/get-azappconfigurationkeyvalue
+  Module Name: Az.AppConfiguration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppConfiguration/AppConfiguration/help/Get-AzAppConfigurationKeyValue.md
+  PlatyPS schema version: 2024-05-01

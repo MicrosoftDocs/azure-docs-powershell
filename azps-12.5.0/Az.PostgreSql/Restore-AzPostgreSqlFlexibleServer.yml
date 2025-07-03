@@ -1,0 +1,289 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PostgreSql.Restore-AzPostgreSqlFlexibleServer
+name: Restore-AzPostgreSqlFlexibleServer
+module: Az.PostgreSql
+isPreview: false
+summary: |-
+  Restore a server from an existing backup
+description: |-
+  Restore a server from an existing backup
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server.
+    aliases:
+    - ServerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateDnsZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of an existing private dns zone.
+      You can use the
+              private dns zone from same resource group, different resource group, or
+              different subscription.
+      The suffix of dns zone has to be same as that of fully qualified domain of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource, You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestorePointInTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The point in time to restore from (ISO8601 format), e.g., 2017-04-26T02:10:00+08:00.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the source server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subnet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of an existing Subnet the private access server will created to.
+      Please note that the subnet will be delegated to Microsoft.DBforPostgreSQL/flexibleServers.
+      After delegation, this subnet cannot be used for any other type of Azure resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription ID that identifies an Azure subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Availability zone into which to provision the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-AzPostgreSqlFlexibleServer
+        -Name <String>
+        -ResourceGroupName <String>
+        -SourceServerName <String>
+        [-SubscriptionId <String>]
+        -RestorePointInTime <DateTime>
+        [-Zone <String>]
+        [-Subnet <String>]
+        [-PrivateDnsZone <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20210601.IServerAutoGenerated" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Restore PostgreSql server using PointInTime Restore'
+  description: |-
+    ```powershell
+    $restorePointInTime = (Get-Date).AddMinutes(-10)
+    Restore-AzPostgreSqlFlexibleServer -Name pg-restore -ResourceGroupName PowershellPostgreSqlTest -SourceServerName postgresql-test -RestorePointInTime $restorePointInTime
+    ```
+
+    ```output
+    Name           Location  SkuName         SkuTier        AdministratorLogin StorageSizeGb
+    ----           --------  -------         -------        ------------------ -------------
+    pg-restore     East US   Standard_D2s_v3 GeneralPurpose daeunyim           128
+    ```
+
+    These cmdlets restore PostgreSql server using PointInTime Restore.
+- title: 'Example 1: Restore PostgreSql server using PointInTime Restore with different network resource'
+  description: |-
+    ```powershell
+    $Subnet = '/subscriptions/00000000-0000-0000-0000-0000000000/resourceGroups/PowershellPostgreSqlTest/providers/Microsoft.Network/virtualNetworks/vnetname/subnets/subnetname'
+    $DnsZone = '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/postgresqltest/providers/Microsoft.Network/privateDnsZones/testserver.private.postgres.database.azure.com'
+    $restorePointInTime = (Get-Date).AddMinutes(-10)
+    Restore-AzPostgreSqlFlexibleServer -Name pg-restore -ResourceGroupName PowershellPostgreSqlTest -SourceServerName postgresql-test -RestorePointInTime $restorePointInTime -Subnet $subnet -PrivateDnsZone $DnsZone
+    ```
+
+    ```output
+    Name           Location  SkuName         SkuTier        AdministratorLogin StorageSizeGb
+    ----           --------  -------         -------        ------------------ -------------
+    pg-restore     East US   Standard_D2s_v3 GeneralPurpose daeunyim           128
+    ```
+
+    These cmdlets restore PostgreSql server using PointInTime Restore.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Restore-AzPostgreSqlFlexibleServer.md
+  document type: cmdlet
+  external help file: Az.PostgreSql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.postgresql/restore-azpostgresqlflexibleserver
+  Module Name: Az.PostgreSql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Restore-AzPostgreSqlFlexibleServer.md
+  PlatyPS schema version: 2024-05-01

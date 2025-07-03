@@ -1,0 +1,189 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BillingBenefits.Get-AzBillingBenefitsSavingsPlanList
+name: Get-AzBillingBenefitsSavingsPlanList
+module: Az.BillingBenefits
+isPreview: false
+summary: |-
+  List savings plans.
+description: |-
+  List savings plans.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to filter by reservation properties.
+      The filter supports 'eq', 'or', and 'and'.
+      It does not currently support 'ne', 'gt', 'le', 'ge', or 'not'.
+      Reservation properties include sku/name, properties/{appliedScopeType, archived, displayName, displayProvisioningState, effectiveDateTime, expiryDate, provisioningState, quantity, renew, reservedResourceType, term, userFriendlyAppliedScopeType, userFriendlyRenewState}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Orderby
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      May be used to sort order by reservation properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RefreshSummary
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      To indicate whether to refresh the roll up counts of the savings plans group by provisioning states
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SelectedState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The selected provisioning state
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skiptoken
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of savings plans to skip from the list before returning results
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Take
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      To number of savings plans to return
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsSavingsPlanList
+        [-Filter <String>]
+        [-Orderby <String>]
+        [-RefreshSummary <String>]
+        [-SelectedState <String>]
+        [-Skiptoken <Single>]
+        [-Take <Single>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.Api20221101.ISavingsPlanModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List savings plans.'
+  description: |-
+    ```powershell
+    Get-AzBillingBenefitsSavingsPlanList
+    ```
+
+    ```output
+    Name                                 Status    ExpiryDate             PurchaseDate           Term Scope           AppliedScopeDisplayName  ProductName          CommitmentAmount CommitmentCurrencyCode
+    ----                                 ------    ----------             ------------           ---- -----           -----------------------  -----------          ---------------- ------------------
+    Compute_SavingsPlan_11-30-2022_15-19 Succeeded 11/30/2023 11:22:53 PM 11/30/2022 11:19:31 PM P1Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    PSTesth1234                          Succeeded 11/30/2025 12:36:25 AM 11/30/2022 12:34:31 AM P3Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    PSTesth123                           Succeeded 11/29/2025 2:51:18 AM  11/29/2022 2:49:24 AM  P3Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    PSTesth12                            Succeeded 11/29/2025 2:48:30 AM  11/29/2022 2:46:45 AM  P3Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    PSTesth1                             Succeeded 11/29/2025 2:45:28 AM  11/29/2022 2:43:36 AM  P3Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    PSTesth                              Succeeded 11/29/2025 2:42:49 AM  11/29/2022 2:41:03 AM  P3Y  Shared                                   Compute_Savings_Plan 0.001            USD
+    ```
+
+    List savings plans.
+- title: 'Example 2: List savings plans with filtering condition.'
+  description: |-
+    ```powershell
+    Get-AzBillingBenefitsSavingsPlanList -Filter "properties/userFriendlyAppliedScopeType eq 'Shared'"
+    ```
+
+    ```output
+    Name                                 Status    ExpiryDate             PurchaseDate           Term Scope  AppliedScopeDisplayName ProductName          CommitmentAmount CommitmentCurrencyCode
+    ----                                 ------    ----------             ------------           ---- -----  ----------------------- -----------          ---------------- ------------------
+    Compute_SavingsPlan_11-30-2022_15-19 Succeeded 11/30/2023 11:22:53 PM 11/30/2022 11:19:31 PM P1Y  Shared                         Compute_Savings_Plan 0.001            USD
+    PSTesth1234                          Succeeded 11/30/2025 12:36:25 AM 11/30/2022 12:34:31 AM P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    PSTesth123                           Succeeded 11/29/2025 2:51:18 AM  11/29/2022 2:49:24 AM  P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    PSTesth12                            Succeeded 11/29/2025 2:48:30 AM  11/29/2022 2:46:45 AM  P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    PSTesth1                             Succeeded 11/29/2025 2:45:28 AM  11/29/2022 2:43:36 AM  P3Y  Shared                         Compute_Savings_Plan 0.001            USD
+    ```
+
+    List savings plans with filtering condition.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsSavingsPlanList.md
+  document type: cmdlet
+  external help file: Az.BillingBenefits-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billingbenefits/get-azbillingbenefitssavingsplanlist
+  Module Name: Az.BillingBenefits
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsSavingsPlanList.md
+  PlatyPS schema version: 2024-05-01

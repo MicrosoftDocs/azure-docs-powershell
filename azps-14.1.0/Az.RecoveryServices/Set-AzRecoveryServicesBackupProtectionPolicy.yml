@@ -1,0 +1,422 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Set-AzRecoveryServicesBackupProtectionPolicy
+name: Set-AzRecoveryServicesBackupProtectionPolicy
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Modifies a Backup protection policy.
+description: |-
+  The **Set-AzRecoveryServicesBackupProtectionPolicy** cmdlet modifies an existing Azure Backup protection policy.
+  You can modify the Backup schedule and retention policy components.
+  Any changes you make affect the backup and retention of the items associated with the policy.
+  Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
+parameters:
+  cmdletParameters:
+  - name: BackupSnapshotResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom resource group name to store the instant recovery points of managed virtual machines. This is optional
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupSnapshotResourceGroupSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom resource group name suffix to store the instant recovery points of managed virtual machines. This is optional
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FixForInconsistentItems
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Switch Parameter indicating whether or not to retry Policy Update for failed items.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FixPolicyParamSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MoveToArchiveTier
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether recovery points should be moved to archive storage by the policy or not. Allowed values are $true, $false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Backup protection policy that this cmdlet modifies.
+      To obtain a **BackupProtectionPolicy** object, use the Get-AzRecoveryServicesBackupProtectionPolicy cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RetentionPolicy
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.RetentionPolicyBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the base retention policy.
+      To obtain a **RetentionPolicy** object, use the Get-AzRecoveryServicesBackupRetentionPolicyObject cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SchedulePolicy
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.SchedulePolicyBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the base schedule policy object.
+      To obtain a **SchedulePolicy** object, use the Get-AzRecoveryServicesBackupSchedulePolicyObject object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureToken
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameter to authorize operations protected by cross tenant resource guard. Use command (Get-AzAccessToken -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx").Token to fetch authorization token for different tenant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotConsistencyType
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.SnapshotConsistencyType" data-throw-if-not-resolved="False" />
+    description: |-
+      Snapshot consistency type to be used for backup. If set to OnlyCrashConsistent, all associated items will have crash consistent snapshot. Possible values are OnlyCrashConsistent, Default
+    acceptedValues:
+    - Default
+    - OnlyCrashConsistent
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TierAfterDuration
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the duration after which recovery points should start moving to the archive tier, value can be in days or months. Applicable only when TieringMode is TierAllEligible
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TierAfterDurationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether the TierAfterDuration is in Days or Months
+    acceptedValues:
+    - Days
+    - Months
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TieringMode
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.TieringMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to move recommended or all eligible recovery points to archive
+    acceptedValues:
+    - TierRecommended
+    - TierAllEligible
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Token
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Auxiliary access token for authenticating critical operation to resource guard subscription
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ModifyPolicyParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of the Recovery Services Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzRecoveryServicesBackupProtectionPolicy
+        [-Policy] <PolicyBase>
+        [[-RetentionPolicy] <RetentionPolicyBase>]
+        [[-SchedulePolicy] <SchedulePolicyBase>]
+        [-MoveToArchiveTier <Boolean>]
+        [-TieringMode <TieringMode>]
+        [-TierAfterDuration <Int32>]
+        [-TierAfterDurationType <String>]
+        [-BackupSnapshotResourceGroup <String>]
+        [-BackupSnapshotResourceGroupSuffix <String>]
+        [-SnapshotConsistencyType <SnapshotConsistencyType>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-Token <String>]
+        [-SecureToken <SecureString>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ModifyPolicyParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzRecoveryServicesBackupProtectionPolicy
+        [-Policy] <PolicyBase>
+        [-FixForInconsistentItems]
+        [-BackupSnapshotResourceGroup <String>]
+        [-BackupSnapshotResourceGroupSuffix <String>]
+        [-SnapshotConsistencyType <SnapshotConsistencyType>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FixPolicyParamSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify a Backup protection policy'
+  description: |-
+    ```powershell
+    $SchPol = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType "AzureVM"
+    $SchPol.ScheduleRunTimes.Clear()
+    $Time = Get-Date
+    $Time1 = Get-Date -Year $Time.Year -Month $Time.Month -Day $Time.Day -Hour $Time.Hour -Minute 0 -Second 0 -Millisecond 0
+    $Time1 = $Time1.ToUniversalTime()
+    $SchPol.ScheduleRunTimes.Add($Time1)
+    $SchPol.ScheduleRunFrequency.Clear
+    $SchPol.ScheduleRunDays.Add("Monday")
+    $SchPol.ScheduleRunFrequency="Weekly"
+    $RetPol = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType "AzureVM"
+    $RetPol.IsDailyScheduleEnabled=$false
+    $RetPol.DailySchedule.DurationCountInDays = 0
+    $RetPol.IsWeeklyScheduleEnabled=$true
+    $RetPol.WeeklySchedule.DaysOfTheWeek.Add("Monday")
+    $RetPol.WeeklySchedule.DurationCountInWeeks = 365
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "azurefiles" -Name "azurefilesvault"
+    $Pol= Get-AzRecoveryServicesBackupProtectionPolicy -Name "TestPolicy" -VaultId $vault.ID
+    $Pol.SnapshotRetentionInDays=5
+    Set-AzRecoveryServicesBackupProtectionPolicy -Policy $Pol -SchedulePolicy $SchPol -RetentionPolicy $RetPol -BackupSnapshotResourceGroup "snapshotResourceGroupPrefix" -BackupSnapshotResourceGroupSuffix "snapshotResourceGroupSuffix"
+    ```
+
+    Here is the high-level description of the steps to be followed for modifying a protection policy:
+    1.	Get a base SchedulePolicyObject and base RetentionPolicyObject. Store them in some variable.
+    2.	Set the different parameters of schedule and retention policy object as per your requirement. For example- In the above sample script, we are trying to set a weekly protection policy. Hence, we changed the schedule frequency to "Weekly" and also updated the schedule run time. In the retention policy object, we updated the weekly retention duration and set the correct "weekly schedule enabled" flag. In case you want to set a Daily policy, set the "daily schedule enabled" flag to true and assign appropriate values for other object parameters.
+    3.	Get the backup protection policy that you want to modify and store it in a variable. In the above example, we retrieved the backup policy with the name "TestPolicy" that we wanted to modify.
+    4.	Modify the backup protection policy retrieved in step 3 using the modified schedule policy object and retention policy object. We use BackupSnapshotResourceGroup, BackupSnapshotResourceGroupSuffix parameter to update the snapshot resource group name for instant RPs.
+- title: 'Example 2: Modify Azure fileshare policy for multiple backups per day'
+  description: |-
+    ```powershell
+    $schedulePolicy = Get-AzRecoveryServicesBackupSchedulePolicyObject -WorkloadType AzureFiles -BackupManagementType AzureStorage -ScheduleRunFrequency Hourly
+    $retentionPolicy = Get-AzRecoveryServicesBackupRetentionPolicyObject -WorkloadType AzureFiles -BackupManagementType AzureStorage -ScheduleRunFrequency Hourly
+    $timeZone = Get-TimeZone
+    $schedulePolicy.ScheduleRunTimeZone = $timeZone.Id
+    $startTime = Get-Date -Date "2021-12-22T06:00:00.00+00:00"
+    $schedulePolicy.ScheduleWindowStartTime = $startTime.ToUniversalTime()
+    $schedulePolicy.ScheduleInterval = 6
+    $schedulePolicy.ScheduleWindowDuration = 14
+    $retentionPolicy.DailySchedule.DurationCountInDays = 6
+    $policy = Get-AzRecoveryServicesBackupProtectionPolicy -Name "TestPolicy" -VaultId $vault.ID
+    Set-AzRecoveryServicesBackupProtectionPolicy -Policy $policy -VaultId $vault.ID -SchedulePolicy $schedulePolicy -RetentionPolicy $retentionPolicy
+    ```
+
+    Here is the high-level description of the steps to be followed for modifying a fileshare policy for multiple backups per day:
+    1.	Get a base hourly SchedulePolicyObject and base hourly RetentionPolicyObject. Store them in some variable.
+    2.	Set the different parameters of schedule and retention policy object as per your requirement. For example- In the above sample script, we are trying to set the $timeZone in which we want to run the schedule we are setting the start time of the Hourly schedule, setting hourly interval (in hours), after which the backup will be retriggered on the same day, duration (in hours) for which the schedule will run. Next we are modifying the retention setting for daily recovery points.
+    3.	Get the backup protection policy that you want to modify and store it in a variable. In the above example, we retrieved the backup policy with the name "TestPolicy" that we wanted to modify.
+    4.	Modify the backup protection policy retrieved in step 3 using the modified schedule policy object and retention policy object.
+- title: 'Example 3: Modify AzureWorkload policy to enable Archive smart tiering'
+  description: |-
+    ```powershell
+    $pol = Set-AzRecoveryServicesBackupProtectionPolicy -VaultId $vault.ID -Policy $policy -MoveToArchiveTier $true -TieringMode TierAllEligible -TierAfterDuration 60 -TierAfterDurationType Days
+    ```
+
+    This command is used to modify policy to enable archive smart tiering for the policy $policy, we set -MoveToArchiveTier parameter to $true to enable tiering. We choose TieringMode to be TierAllEligible to move all eligible recovery points to archive after certain duration given by TierAfterDuration and TierAfterDurationType parameters. In order to move recommended recovery points to Archive for AzureVM use TieringMode TierRecommended.
+- title: 'Example 4: Disable smart tiering on an existing policy'
+  description: |-
+    ```powershell
+    $pol = Set-AzRecoveryServicesBackupProtectionPolicy -VaultId $vault.ID -Policy $policy -MoveToArchiveTier $false
+    ```
+
+    This command is used to disable archive smart tiering for the policy $policy, we set -MoveToArchiveTier parameter to $false. Please note that disabling archive smart tiering might have cost implications.
+links:
+- text: Get-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Get-AzRecoveryServicesBackupProtectionPolicy.yml
+- text: Get-AzRecoveryServicesBackupRetentionPolicyObject
+  href: ./Get-AzRecoveryServicesBackupRetentionPolicyObject.yml
+- text: New-AzRecoveryServicesBackupProtectionPolicy
+  href: ./New-AzRecoveryServicesBackupProtectionPolicy.yml
+- text: Remove-AzRecoveryServicesBackupProtectionPolicy
+  href: ./Remove-AzRecoveryServicesBackupProtectionPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProtectionPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupprotectionpolicy
+  Module Name: Az.RecoveryServices
+  ms.assetid: D614B509-82DD-42FB-B975-D72CD3355E3E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProtectionPolicy.md
+  PlatyPS schema version: 2024-05-01

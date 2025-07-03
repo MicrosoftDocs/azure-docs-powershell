@@ -1,0 +1,222 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CloudService.Update-AzCloudService
+name: Update-AzCloudService
+module: Az.CloudService
+isPreview: false
+summary: |-
+  Create or update a cloud service.
+  Please note some properties can be set only during cloud service creation.
+description: |-
+  Create or update a cloud service.
+  Please note some properties can be set only during cloud service creation.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.ICloudService" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the cloud service.
+      To construct, see NOTES section for PARAMETER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzCloudService
+        -InputObject <ICloudServiceIdentity>
+        -Parameter <ICloudService>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.ICloudService" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.ICloudServiceIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.ICloudService" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add RDP extension to existing cloud service'
+  description: |-
+    ```powershell
+    # Create RDP extension object
+    $rdpExtension = New-AzCloudServiceRemoteDesktopExtensionObject -Name "RDPExtension" -Credential $credential -Expiration $expiration -TypeHandlerVersion "1.2.1"
+    # Get existing cloud service
+    $cloudService = Get-AzCloudService -ResourceGroupName "ContosOrg" -CloudServiceName "ContosoCS"
+    # Add RDP extension to existing cloud service extension object
+    $cloudService.ExtensionProfile.Extension = $cloudService.ExtensionProfile.Extension + $rdpExtension
+    # Update cloud service
+    $cloudService | Update-AzCloudService
+    ```
+
+    Above set of commands adds a RDP extension to already existing cloud service named ContosoCS that belongs to the resource group named ContosOrg.
+- title: 'Example 2: Remove all extensions from cloud service'
+  description: |-
+    ```powershell
+    # Get existing cloud service
+    $cloudService = Get-AzCloudService -ResourceGroupName "ContosOrg" -CloudServiceName "ContosoCS"
+    # Set extension to empty list
+    $cloudService.ExtensionProfile.Extension = @()
+    # Update cloud service
+    $cloudService | Update-AzCloudService
+    ```
+
+    Above set of commands removes all extensions from existing cloud service named ContosoCS that belongs to the resource group named ContosOrg.
+- title: 'Example 3: Remove RDP extension from cloud service'
+  description: |-
+    ```powershell
+    # Get existing cloud service
+    $cloudService = Get-AzCloudService -ResourceGroupName "ContosOrg" -CloudServiceName "ContosoCS"
+    # Remove extension by name RDPExtension
+    $cloudService.ExtensionProfile.Extension = $cloudService.ExtensionProfile.Extension | Where-Object { $_.Name -ne "RDPExtension" }
+    # Update cloud service
+    $cloudService | Update-AzCloudService
+    ```
+
+    Above set of commands removes RDP extension from existing cloud service named ContosoCS that belongs to the resource group named ContosOrg.
+- title: 'Example 4: Scale-Out / Scale-In role instances'
+  description: |-
+    ```powershell
+    # Get existing cloud service
+    $cloudService = Get-AzCloudService -ResourceGroupName "ContosOrg" -CloudServiceName "ContosoCS"
+
+    # Scale-out all role instance count by 1
+    $cloudService.RoleProfile.Role | ForEach-Object {$_.SkuCapacity += 1}
+
+    # Scale-in ContosoFrontend role instance count by 1
+    $role = $cloudService.RoleProfile.Role | Where-Object {$_.Name -eq "ContosoFrontend"}
+    $role.SkuCapacity -= 1
+
+    # Update cloud service configuration as per the new role instance count
+    $cloudService.Configuration = $configuration
+
+    # Update cloud service
+    $cloudService | Update-AzCloudService
+    ```
+
+    Above set of commands shows how to scale-out and scale-in role instance count for cloud service named ContosoCS that belongs to the resource group named ContosOrg.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/Update-AzCloudService.md
+  document type: cmdlet
+  external help file: Az.CloudService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cloudservice/update-azcloudservice
+  Module Name: Az.CloudService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/Update-AzCloudService.md
+  PlatyPS schema version: 2024-05-01

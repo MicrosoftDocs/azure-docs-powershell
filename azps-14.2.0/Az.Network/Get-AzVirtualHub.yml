@@ -1,0 +1,163 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualHub
+name: Get-AzVirtualHub
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an Azure VirtualHub by Name and ResourceGroupName or lists all Virtual Hubs by ResourceGroupName/Subscription.
+description: |-
+  Gets an Azure VirtualHub by Name and ResourceGroupName or lists all Virtual Hubs by ResourceGroupName/Subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VirtualHubName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualHub
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListBySubscriptionId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualHub
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByResourceGroupName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
+    New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24"
+    Get-AzVirtualHub -ResourceGroupName "testRG" -Name "westushub"
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
+    AddressPrefix             : 10.0.1.0/24
+    RouteTable                :
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have the address space "10.0.1.0/24".
+
+    It then gets the virtual hub using its ResourceGroupName and ResourceName.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzVirtualHub -Name westushub*
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub1
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub1
+    AddressPrefix             : 10.0.1.0/24
+    RouteTable                :
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub2
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub2
+    AddressPrefix             : 10.0.1.0/24
+    RouteTable                :
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    This cmdlet gets the virtual hub using filtering.
+links:
+- text: New-AzVirtualHub
+  href: ./New-AzVirtualHub.yml
+- text: Remove-AzVirtualHub
+  href: ./Remove-AzVirtualHub.yml
+- text: Update-AzVirtualHub
+  href: ./Update-AzVirtualHub.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualHub.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualhub
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualHub.md
+  PlatyPS schema version: 2024-05-01

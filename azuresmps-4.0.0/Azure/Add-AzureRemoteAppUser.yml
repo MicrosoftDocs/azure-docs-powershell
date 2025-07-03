@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureRemoteAppUser
+name: Add-AzureRemoteAppUser
+module: Azure
+isPreview: false
+summary: |-
+  Adds a user to an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureRemoteAppUser** cmdlet adds a user to an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: Alias
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a published program alias.
+      You can use this parameter only in per-app publishing mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="PrincipalProviderType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a user type.
+      The acceptable values for this parameter are: OrgId or MicrosoftAccount.
+    acceptedValues:
+    - OrgId
+    - MicrosoftAccount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserUpn
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the User Principal Name (UPN) of a user, for example, PattiFuller@contoso.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureRemoteAppUser
+        [-CollectionName] <String>
+        [-Type] <PrincipalProviderType>
+        [-UserUpn] <String[]>
+        [-Alias <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Add a user using a Microsoft Account'
+  description: |-
+    ```
+    PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType MicrosoftAccount -UserUpn "PattiFuller@contoso.com"
+    ```
+
+    This command adds the Microsoft Account PattiFuller@contoso.com to the collection named Contoso.
+- title: 'Example 2: Add a user using a Microsoft Entra account'
+  description: |-
+    ```
+    PS C:\> Add-AzureRemoteAppUser -CollectionName "Contoso" -UserType OrgId -UserUpn "PattiFuller@contoso.com"
+    ```
+
+    This command adds the Microsoft Entra account PattiFuller@contoso.com to the collection named Contoso.
+links:
+- text: Get-AzureRemoteAppUser
+  href: ./Get-AzureRemoteAppUser.yml
+- text: Remove-AzureRemoteAppUser
+  href: ./Remove-AzureRemoteAppUser.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: A121B341-091D-42AD-B56A-3C75E25A1BF6
+  PlatyPS schema version: 2024-05-01

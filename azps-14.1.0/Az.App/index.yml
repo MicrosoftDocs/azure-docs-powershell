@@ -1,0 +1,118 @@
+### YamlMime:PowerShellModule1
+uid: Az.App
+name: Az.App Module
+isPreview: false
+cmdletGroups:
+- title: Container Apps
+  cmdlets:
+  - Az.App.Disable-AzContainerAppRevision
+  - Az.App.Enable-AzContainerAppRevision
+  - Az.App.Get-AzContainerApp
+  - Az.App.Get-AzContainerAppAuthConfig
+  - Az.App.Get-AzContainerAppAuthToken
+  - Az.App.Get-AzContainerAppAvailableWorkloadProfile
+  - Az.App.Get-AzContainerAppBillingMeter
+  - Az.App.Get-AzContainerAppConnectedEnv
+  - Az.App.Get-AzContainerAppConnectedEnvCert
+  - Az.App.Get-AzContainerAppConnectedEnvDapr
+  - Az.App.Get-AzContainerAppConnectedEnvDaprSecret
+  - Az.App.Get-AzContainerAppConnectedEnvStorage
+  - Az.App.Get-AzContainerAppCustomHostName
+  - Az.App.Get-AzContainerAppDiagnosticDetector
+  - Az.App.Get-AzContainerAppDiagnosticRevision
+  - Az.App.Get-AzContainerAppDiagnosticRoot
+  - Az.App.Get-AzContainerAppJob
+  - Az.App.Get-AzContainerAppJobExecution
+  - Az.App.Get-AzContainerAppJobSecret
+  - Az.App.Get-AzContainerAppManagedCert
+  - Az.App.Get-AzContainerAppManagedEnv
+  - Az.App.Get-AzContainerAppManagedEnvAuthToken
+  - Az.App.Get-AzContainerAppManagedEnvCert
+  - Az.App.Get-AzContainerAppManagedEnvDapr
+  - Az.App.Get-AzContainerAppManagedEnvDaprSecret
+  - Az.App.Get-AzContainerAppManagedEnvDiagnosticDetector
+  - Az.App.Get-AzContainerAppManagedEnvDiagnosticRoot
+  - Az.App.Get-AzContainerAppManagedEnvStorage
+  - Az.App.Get-AzContainerAppManagedEnvWorkloadProfileState
+  - Az.App.Get-AzContainerAppRevision
+  - Az.App.Get-AzContainerAppRevisionReplica
+  - Az.App.Get-AzContainerAppSecret
+  - Az.App.Get-AzContainerAppSourceControl
+  - Az.App.New-AzContainerApp
+  - Az.App.New-AzContainerAppAuthConfig
+  - Az.App.New-AzContainerAppConfigurationObject
+  - Az.App.New-AzContainerAppConnectedEnv
+  - Az.App.New-AzContainerAppConnectedEnvCert
+  - Az.App.New-AzContainerAppConnectedEnvDapr
+  - Az.App.New-AzContainerAppConnectedEnvStorage
+  - Az.App.New-AzContainerAppCustomDomainObject
+  - Az.App.New-AzContainerAppDaprMetadataObject
+  - Az.App.New-AzContainerAppEnvironmentVarObject
+  - Az.App.New-AzContainerAppIdentityProviderObject
+  - Az.App.New-AzContainerAppInitContainerTemplateObject
+  - Az.App.New-AzContainerAppIPSecurityRestrictionRuleObject
+  - Az.App.New-AzContainerAppJob
+  - Az.App.New-AzContainerAppJobExecutionContainerObject
+  - Az.App.New-AzContainerAppJobScaleRuleObject
+  - Az.App.New-AzContainerAppManagedCert
+  - Az.App.New-AzContainerAppManagedEnv
+  - Az.App.New-AzContainerAppManagedEnvCert
+  - Az.App.New-AzContainerAppManagedEnvDapr
+  - Az.App.New-AzContainerAppManagedEnvStorage
+  - Az.App.New-AzContainerAppProbeHeaderObject
+  - Az.App.New-AzContainerAppProbeObject
+  - Az.App.New-AzContainerAppRegistryCredentialObject
+  - Az.App.New-AzContainerAppScaleRuleAuthObject
+  - Az.App.New-AzContainerAppScaleRuleObject
+  - Az.App.New-AzContainerAppSecretObject
+  - Az.App.New-AzContainerAppSecretVolumeItemObject
+  - Az.App.New-AzContainerAppServiceBindObject
+  - Az.App.New-AzContainerAppSourceControl
+  - Az.App.New-AzContainerAppTemplateObject
+  - Az.App.New-AzContainerAppTrafficWeightObject
+  - Az.App.New-AzContainerAppVolumeMountObject
+  - Az.App.New-AzContainerAppVolumeObject
+  - Az.App.New-AzContainerAppWorkloadProfileObject
+  - Az.App.Remove-AzContainerApp
+  - Az.App.Remove-AzContainerAppAuthConfig
+  - Az.App.Remove-AzContainerAppConnectedEnv
+  - Az.App.Remove-AzContainerAppConnectedEnvCert
+  - Az.App.Remove-AzContainerAppConnectedEnvDapr
+  - Az.App.Remove-AzContainerAppConnectedEnvStorage
+  - Az.App.Remove-AzContainerAppJob
+  - Az.App.Remove-AzContainerAppManagedCert
+  - Az.App.Remove-AzContainerAppManagedEnv
+  - Az.App.Remove-AzContainerAppManagedEnvCert
+  - Az.App.Remove-AzContainerAppManagedEnvDapr
+  - Az.App.Remove-AzContainerAppManagedEnvStorage
+  - Az.App.Restart-AzContainerAppRevision
+  - Az.App.Start-AzContainerApp
+  - Az.App.Start-AzContainerAppJob
+  - Az.App.Stop-AzContainerApp
+  - Az.App.Stop-AzContainerAppJobExecution
+  - Az.App.Test-AzContainerAppConnectedEnvNameAvailability
+  - Az.App.Test-AzContainerAppNamespaceAvailability
+  - Az.App.Update-AzContainerApp
+  - Az.App.Update-AzContainerAppAuthConfig
+  - Az.App.Update-AzContainerAppConnectedEnvCert
+  - Az.App.Update-AzContainerAppConnectedEnvDapr
+  - Az.App.Update-AzContainerAppConnectedEnvStorage
+  - Az.App.Update-AzContainerAppJob
+  - Az.App.Update-AzContainerAppManagedCert
+  - Az.App.Update-AzContainerAppManagedEnv
+  - Az.App.Update-AzContainerAppManagedEnvCert
+  - Az.App.Update-AzContainerAppManagedEnvDapr
+  - Az.App.Update-AzContainerAppManagedEnvStorage
+  - Az.App.Update-AzContainerAppSourceControl
+description: |-
+  Microsoft Azure PowerShell: App cmdlets
+metadata:
+  Module Name: Az.App
+  Module Guid: d26b4cc7-1502-410b-9c3d-a553c0d2d624
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.app
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Az.App.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/Az.App.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppVpnDeviceConfigScript
+name: Get-AzureRemoteAppVpnDeviceConfigScript
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves the configuration script for an Azure RemoteApp VPN device.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppVpnDeviceConfigScript** cmdlet retrieves the configuration script for an Azure RemoteApp virtual private network (VPN) device.
+parameters:
+  cmdletParameters:
+  - name: OSFamily
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the operating system (OS) family that runs on the device platform.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Platform
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the device platform.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vendor
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the vendor of the VPN device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure RemoteApp virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppVpnDeviceConfigScript
+        [-VNetName] <String>
+        [-Vendor] <String>
+        [-Platform] <String>
+        [-OSFamily] <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a configuration script for a VPN device'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppVpnDeviceConfigScript -VNetName "ContosoVNet" -Vendor "Microsoft Corporation" -OSFamily "Windows Server 2012 R2"
+    ```
+
+    This command returns the script or configuration file used to configure the VPN device for the virtual network named ContosoVNet.
+    This script or configuration file should be run or loaded onto the VPN device in the typical manner for that device.
+    Consult the VPN device vendor for the unique requirements for each device.
+links:
+- text: Get-AzureRemoteAppVpnDevice
+  href: ./Get-AzureRemoteAppVpnDevice.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D0E8B2BD-D68F-477A-9D66-C27AB737960D
+  PlatyPS schema version: 2024-05-01

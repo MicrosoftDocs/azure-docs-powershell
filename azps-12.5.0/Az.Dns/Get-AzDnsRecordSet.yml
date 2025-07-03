@@ -1,0 +1,223 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Dns.Get-AzDnsRecordSet
+name: Get-AzDnsRecordSet
+module: Az.Dns
+isPreview: false
+summary: |-
+  Gets a DNS record set.
+description: |-
+  The **Get-AzDnsRecordSet** cmdlet gets the Domain Name System (DNS) record set with the specified name and type, in the specified zone.
+  If you do not specify the *Name* or *RecordType* parameters, this cmdlet returns all record sets of the specified type in the zone.
+  If you specify the *RecordType* parameter but not the *Name* parameter, this cmdlet returns all record sets of the specified record type.
+  You can use the pipeline operator to pass a **DnsZone** object to this cmdlet, or you can pass a **DnsZone** object as the *Zone* parameter, or alternatively you can specify the zone and resource group by name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the **RecordSet** to get.
+      If you do not specify the *Name* parameter, all record sets of the specified type are returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Dns.Models.RecordType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the type of DNS record that this cmdlet gets.
+      Valid values are:
+      - A
+      - AAAA
+      - CNAME
+      - MX
+      - NS
+      - PTR
+      - SOA
+      - SRV
+      - TXT
+      If you do not specify the *RecordType* parameter, you must also omit the *Name* parameter.
+      This cmdlet then returns all record sets in the zone (of all names and types).
+    acceptedValues:
+    - A
+    - Aaaa
+    - CAA
+    - Cname
+    - MX
+    - NS
+    - PTR
+    - SOA
+    - SRV
+    - TXT
+    - Tlsa
+    - DS
+    - Naptr
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group that contains the DNS zone.
+      The zone name must also be specified, using the *ZoneName* parameter.
+      Alternatively, you can specify the zone and resource group by passing in a **DnsZone** object using the *Zone* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="Microsoft.Azure.Commands.Dns.DnsZone" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS zone that contains the record set that this cmdlet gets.
+      Alternatively, you can specify the zone using the *ZoneName* and *ResourceGroupName* parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Object
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the DNS zone that contains the record set to get.
+      The resource group containing the zone must also be specified, using the *ResourceGroupName* parameter.
+      Alternatively, you can specify the zone and resource group by passing in a DNS Zone object using the *Zone* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Fields
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDnsRecordSet
+        -ZoneName <String>
+        -ResourceGroupName <String>
+        [-Name <String>]
+        [-RecordType <RecordType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Fields
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDnsRecordSet
+        -Zone <DnsZone>
+        [-Name <String>]
+        [-RecordType <RecordType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Object
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Dns.DnsZone" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Dns.DnsRecordSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get record sets with a specified name and type'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -Name "www" -RecordType A
+    ```
+
+    This command gets the record set of record type A named www in the specified resource group and zone, and then stores it in the $RecordSet variable.
+    Because the *Name* and *RecordType* parameters are specified, only one **RecordSet** object is returned.
+- title: 'Example 2: Get record sets of a specified type'
+  description: |-
+    ```powershell
+    $RecordSets = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com" -RecordType A
+    ```
+
+    This command gets an array of all record sets of record type A in the zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+- title: 'Example 3: Get all record sets in a zone'
+  description: |-
+    ```powershell
+    $RecordSets = Get-AzDnsRecordSet -ResourceGroupName "MyResourceGroup" -ZoneName "myzone.com"
+    ```
+
+    This command gets an array of all record sets in the zone named myzone.com in the resource group named MyResourceGroup, and then stores them in the $RecordSets variable.
+- title: 'Example 4: Get all record sets in a zone, using a DnsZone object'
+  description: |-
+    ```powershell
+    $Zone = Get-AzDnsZone -Name "myzone.com" -ResourceGroupName "MyResourceGroup"
+    $RecordSets = Get-AzDnsRecordSet -Zone $Zone
+    ```
+
+    This example is equivalent to Example 3 above.
+    This time, the zone is specified using a zone object.
+links:
+- text: New-AzDnsRecordSet
+  href: ./New-AzDnsRecordSet.yml
+- text: Remove-AzDnsRecordSet
+  href: ./Remove-AzDnsRecordSet.yml
+- text: Set-AzDnsRecordSet
+  href: ./Set-AzDnsRecordSet.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Get-AzDnsRecordSet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dns/get-azdnsrecordset
+  Module Name: Az.Dns
+  ms.assetid: 40179CF3-7896-4C45-BC18-4CB653B245B6
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Get-AzDnsRecordSet.md
+  PlatyPS schema version: 2024-05-01

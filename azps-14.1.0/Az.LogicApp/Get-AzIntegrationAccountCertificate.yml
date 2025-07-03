@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.LogicApp.Get-AzIntegrationAccountCertificate
+name: Get-AzIntegrationAccountCertificate
+module: Az.LogicApp
+isPreview: false
+summary: |-
+  Gets integration account certificates from a resource group.
+description: |-
+  The **Get-AzIntegrationAccountCertificate** cmdlet gets integration account certificates from a resource group.
+  Specify the integration account name, resource group name, and certificate name.
+  This module supports dynamic parameters.
+  To use a dynamic parameter, type it in the command.
+  To discover the names of dynamic parameters, type a hyphen (-) after the cmdlet name, and then press the Tab key repeatedly to cycle through the available parameters.
+  If you omit a required template parameter, the cmdlet prompts you for the value.
+parameters:
+  cmdletParameters:
+  - name: CertificateName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an integration account certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an integration account.
+    aliases:
+    - IntegrationAccountName
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIntegrationAccountCertificate
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-CertificateName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Logic.Models.IntegrationAccountCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an integration account certificate'
+  description: |-
+    ```powershell
+    Get-AzIntegrationAccountCertificate -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31" -CertificateName "IntegrationAccountCertificate01"
+    ```
+
+    ```output
+    Id                : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/certificates/IntegrationAccountCertificate01
+    Name              : IntegrationAccountCertificate01
+    Type              : Microsoft.Logic/integrationAccounts/certificates
+    CreatedTime       : 3/26/2016 6:59:07 PM
+    ChangedTime       : 3/26/2016 6:59:07 PM
+    KeyName           : TestKey
+    KeyVersion        : 1.0
+    KeyVaultId        : /subscriptions/<SubscriptionId/resourcegroups/ResourceGroup11/providers/microsoft.keyvault/vaults/<name>
+    KeyVaultName      : testkeyvault
+    KeyVaultName      : testkeyvault
+    PublicCertificate :
+    MetaData          :
+    ```
+
+    This command gets the integration account certificate named IntegrationAccountCertificate01.
+- title: 'Example 2: Get integration account certificates by integration account name'
+  description: |-
+    ```powershell
+    Get-AzIntegrationAccountCertificate -ResourceGroupName "ResourceGroup11" -Name "IntegrationAccount31"
+    ```
+
+    ```output
+    Id                : /subscriptions/<SubscriptionId>/resourceGroups/ResourceGroup11/providers/Microsoft.Logic/integrationAccounts/IntegrationAccount31/certificates/IntegrationAccountCertificate01
+    Name              : IntegrationAccountCertificate01
+    Type              : Microsoft.Logic/integrationAccounts/certificates
+    CreatedTime       : 3/26/2016 6:59:07 PM
+    ChangedTime       : 3/26/2016 6:59:07 PM
+    KeyName           : TestKey
+    KeyVersion        : 1.0
+    KeyVaultId        : /subscriptions/<SubscriptionId>/resourcegroups/ResourceGroup11/providers/microsoft.keyvault/vaults/<name>
+    KeyVaultName      : testkeyvault
+    KeyVaultName      : testkeyvault
+    PublicCertificate :
+    MetaData          :
+    ```
+
+    This command gets the integration account certificates for the  integration account named IntegrationAccount31.
+links:
+- text: New-AzIntegrationAccountCertificate
+  href: ./New-AzIntegrationAccountCertificate.yml
+- text: Remove-AzIntegrationAccountCertificate
+  href: ./Remove-AzIntegrationAccountCertificate.yml
+- text: Set-AzIntegrationAccountCertificate
+  href: ./Set-AzIntegrationAccountCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.LogicApp.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.logicapp/get-azintegrationaccountcertificate
+  Module Name: Az.LogicApp
+  ms.assetid: C0086E73-CCB1-4B75-B367-C79E17738122
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/LogicApp/LogicApp/help/Get-AzIntegrationAccountCertificate.md
+  PlatyPS schema version: 2024-05-01

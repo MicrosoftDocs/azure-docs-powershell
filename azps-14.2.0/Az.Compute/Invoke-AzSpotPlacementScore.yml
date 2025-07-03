@@ -1,0 +1,471 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Invoke-AzSpotPlacementScore
+name: Invoke-AzSpotPlacementScore
+module: Az.Compute
+isPreview: false
+summary: |-
+  Generates placement scores for Spot VM skus.
+description: |-
+  Generates placement scores for Spot VM skus.
+notes: |-
+  ALIASES
+
+  Invoke-AzSpotPlacementRecommender
+parameters:
+  cmdletParameters:
+  - name: AvailabilityZone
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines if the scope is zonal or regional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DesiredCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Desired instance count per region/zone based on the scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DesiredLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The desired regions
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DesiredSize
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.IResourceSize" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The desired resource SKUs.
+      To construct, see NOTES section for DESIREDSIZE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IComputeIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Post
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SpotPlacementScoresInput
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresInput" data-throw-if-not-resolved="False" />
+    description: |-
+      SpotPlacementScores API Input.
+      To construct, see NOTES section for SPOTPLACEMENTSCORESINPUT properties and create a hash table.
+    aliases:
+    - SpotPlacementRecommenderInput
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Post
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PostViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription credentials which uniquely identify Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PostExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Post
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzSpotPlacementScore
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-AvailabilityZone]
+        [-DesiredCount <Int32>]
+        [-DesiredLocation <String[]>]
+        [-DesiredSize <IResourceSize[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzSpotPlacementScore
+        -Location <String>
+        -SpotPlacementScoresInput <ISpotPlacementScoresInput>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Post
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzSpotPlacementScore
+        -InputObject <IComputeIdentity>
+        [-AvailabilityZone]
+        [-DesiredCount <Int32>]
+        [-DesiredLocation <String[]>]
+        [-DesiredSize <IResourceSize[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Invoke-AzSpotPlacementScore
+        -InputObject <IComputeIdentity>
+        -SpotPlacementScoresInput <ISpotPlacementScoresInput>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PostViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresInput" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.IComputeIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Compute.Models.Api20240601Preview.ISpotPlacementScoresResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Regionally scoped Spot Placement scores'
+  description: |-
+    ```powershell
+    $resourceSku1 = @{sku = "Standard_D2_v3"}
+    $resourceSku2 = @{sku = "Standard_D2_v2"}
+    $resourceSku3 = @{sku = "Standard_D4_v3"}
+    $desiredSizes = $resourceSku1,$resourceSku2,$resourceSku3
+    $desiredLocations = 'japaneast','southcentralus','centralus'
+
+    $response = Invoke-AzSpotPlacementScore -Location eastus -DesiredCount 1 -DesiredLocation $desiredLocations -DesiredSize $desiredSizes
+    $response.PlacementScore
+    ```
+
+    ```output
+    AvailabilityZone IsQuotaAvailable Region         Score                     Sku
+    ---------------- ---------------- ------         -----                     ---
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D2_v3
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D2_v2
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D4_v3
+                     True             southcentralus High                      Standard_D2_v3
+                     True             southcentralus High                      Standard_D2_v2
+                     True             southcentralus High                      Standard_D4_v3
+                     True             centralus      RestrictedSkuNotAvailable Standard_D2_v3
+                     True             centralus      RestrictedSkuNotAvailable Standard_D2_v2
+                     True             centralus      RestrictedSkuNotAvailable Standard_D4_v3
+    ```
+
+    Returns regionally scoped spot placement scores for the input.
+- title: 'Example 2: Zonally scoped Spot Placement Scores'
+  description: |-
+    ```powershell
+    $resourceSku1 = @{sku = "Standard_D2_v3"}
+    $resourceSku2 = @{sku = "Standard_D2_v2"}
+    $resourceSku3 = @{sku = "Standard_D4_v3"}
+    $desiredSizes = $resourceSku1,$resourceSku2,$resourceSku3
+    $desiredLocations = 'japaneast','southcentralus','centralus'
+
+    $response = Invoke-AzSpotPlacementScore -Location eastus -DesiredCount 1 -DesiredLocation $desiredLocations -DesiredSize $desiredSizes -AvailabilityZone
+    $response.PlacementScore
+    ```
+
+    ```output
+    AvailabilityZone IsQuotaAvailable Region         Score               Sku
+    ---------------- ---------------- ------         -----               ---
+    1                True             japaneast      High                Standard_D2_v3
+    2                True             japaneast      High                Standard_D2_v3
+    3                True             japaneast      High                Standard_D2_v3
+    1                True             japaneast      High                Standard_D2_v2
+    2                True             japaneast      High                Standard_D2_v2
+    3                True             japaneast      High                Standard_D2_v2
+    1                True             japaneast      High                Standard_D4_v3
+    2                True             japaneast      High                Standard_D4_v3
+    3                True             japaneast      High                Standard_D4_v3
+    1                True             southcentralus High                Standard_D2_v3
+    2                True             southcentralus High                Standard_D2_v3
+    3                True             southcentralus High                Standard_D2_v3
+    1                True             southcentralus High                Standard_D2_v2
+    2                True             southcentralus High                Standard_D2_v2
+    3                True             southcentralus High                Standard_D2_v2
+    1                True             southcentralus High                Standard_D4_v3
+    2                True             southcentralus High                Standard_D4_v3
+    3                True             southcentralus High                Standard_D4_v3
+    1                True             centralus      DataNotFoundOrStale Standard_D2_v3
+    2                True             centralus      High                Standard_D2_v3
+    3                True             centralus      High                Standard_D2_v3
+    1                True             centralus      DataNotFoundOrStale Standard_D2_v2
+    2                True             centralus      High                Standard_D2_v2
+    3                True             centralus      High                Standard_D2_v2
+    1                True             centralus      DataNotFoundOrStale Standard_D4_v3
+    2                True             centralus      High                Standard_D4_v3
+    3                True             centralus      High                Standard_D4_v3
+    ```
+
+    Returns zonally scoped spot placement scores for the input.
+- title: 'Example 3: Regionally scoped Spot Placement Scores using SpotPlacementScoresInput parameter as argument'
+  description: |-
+    ```powershell
+    $resourceSku1 = @{sku = "Standard_D2_v3"}
+    $resourceSku2 = @{sku = "Standard_D2_v2"}
+    $resourceSku3 = @{sku = "Standard_D4_v3"}
+    $desiredSizes = $resourceSku1,$resourceSku2,$resourceSku3
+    $desiredLocations = 'japaneast','southcentralus','centralus'
+    $desiredCount = 1
+
+    $spotPlacementScoresInput = @{desiredLocation = $desiredLocations; desiredSize = $desiredSizes; desiredCount = $desiredCount; availabilityZone = $false}
+
+    $response = Invoke-AzSpotPlacementScore -Location eastus -SpotPlacementScoresInput $spotPlacementScoresInput
+    $response.PlacementScore
+    ```
+
+    ```output
+    AvailabilityZone IsQuotaAvailable Region         Score                     Sku
+    ---------------- ---------------- ------         -----                     ---
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D2_v3
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D2_v2
+                     True             japaneast      RestrictedSkuNotAvailable Standard_D4_v3
+                     True             southcentralus High                      Standard_D2_v3
+                     True             southcentralus High                      Standard_D2_v2
+                     True             southcentralus High                      Standard_D4_v3
+                     True             centralus      RestrictedSkuNotAvailable Standard_D2_v3
+                     True             centralus      RestrictedSkuNotAvailable Standard_D2_v2
+                     True             centralus      RestrictedSkuNotAvailable Standard_D4_v3
+    ```
+
+    Returns regionally scoped spot placement scores for the input.
+- title: 'Example 4: Zonally scoped Spot Placement scores using SpotPlacementScoresInput parameter as argument'
+  description: |-
+    ```powershell
+    $resourceSku1 = @{sku = "Standard_D2_v3"}
+    $resourceSku2 = @{sku = "Standard_D2_v2"}
+    $resourceSku3 = @{sku = "Standard_D4_v3"}
+    $desiredSizes = $resourceSku1,$resourceSku2,$resourceSku3
+    $desiredLocations = 'japaneast','southcentralus','centralus'
+    $desiredCount = 1
+    $spotPlacementScoresInput = @{desiredLocation = $desiredLocations; desiredSize = $desiredSizes; desiredCount = $desiredCount; availabilityZone = $true}
+    $response = Invoke-AzSpotPlacementScore -Location eastus -SpotPlacementScoresInput $spotPlacementScoresInput
+    $response.PlacementScore
+    ```
+
+    ```output
+    AvailabilityZone IsQuotaAvailable Region         Score Sku
+    ---------------- ---------------- ------         ----- ---
+    1                True             japaneast      High  Standard_D2_v3
+    2                True             japaneast      High  Standard_D2_v3
+    3                True             japaneast      High  Standard_D2_v3
+    1                True             japaneast      High  Standard_D2_v2
+    2                True             japaneast      High  Standard_D2_v2
+    3                True             japaneast      High  Standard_D2_v2
+    1                True             japaneast      High  Standard_D4_v3
+    2                True             japaneast      High  Standard_D4_v3
+    3                True             japaneast      High  Standard_D4_v3
+    1                True             southcentralus High  Standard_D2_v3
+    2                True             southcentralus High  Standard_D2_v3
+    3                True             southcentralus High  Standard_D2_v3
+    1                True             southcentralus High  Standard_D2_v2
+    2                True             southcentralus High  Standard_D2_v2
+    3                True             southcentralus High  Standard_D2_v2
+    1                True             southcentralus High  Standard_D4_v3
+    2                True             southcentralus High  Standard_D4_v3
+    3                True             southcentralus High  Standard_D4_v3
+    1                True             centralus      High  Standard_D2_v3
+    2                True             centralus      High  Standard_D2_v3
+    3                True             centralus      High  Standard_D2_v3
+    1                True             centralus      High  Standard_D2_v2
+    2                True             centralus      High  Standard_D2_v2
+    3                True             centralus      High  Standard_D2_v2
+    1                True             centralus      High  Standard_D4_v3
+    2                True             centralus      High  Standard_D4_v3
+    3                True             centralus      High  Standard_D4_v3
+    ```
+
+    Returns zonally scoped spot placement scores for the input.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzSpotPlacementScore.md
+  document type: cmdlet
+  external help file: Az.Compute-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/invoke-azspotplacementscore
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Invoke-AzSpotPlacementScore.md
+  PlatyPS schema version: 2024-05-01

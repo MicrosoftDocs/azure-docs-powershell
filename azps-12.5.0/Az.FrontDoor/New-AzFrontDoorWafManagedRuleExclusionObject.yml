@@ -1,0 +1,124 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.New-AzFrontDoorWafManagedRuleExclusionObject
+name: New-AzFrontDoorWafManagedRuleExclusionObject
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Create managed rule exclusion object for WAF managed rule sets, groups, or rules.
+description: |-
+  Create managed rule exclusion object for WAF managed rule sets, groups, or rules.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Operator to use when matching the selector, EqualsAny means no selector (all match variables of the specified type)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Selector pattern to match using the operator (if the operator is not EqualsAny)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Variable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Match variable. Possible values are RequestHeaderNames, RequestCookieNames, QueryStringArgNames, RequestBodyPostArgNames.
+      For example, QueryStringArgNames is an exclusion of GET parameters matching the selector with the given operator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorWafManagedRuleExclusionObject
+        -Variable <String>
+        -Operator <String>
+        [-Selector <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSManagedRuleExclusion" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzFrontDoorWafManagedRuleExclusionObject -Variable QueryStringArgNames -Operator Equals -Selector "ParameterName"
+    ```
+
+    ```output
+    MatchVariable       SelectorMatchOperator Selector
+    -------------       --------------------- --------
+    QueryStringArgNames Equals                ParameterName
+    ```
+links:
+- text: New-AzFrontDoorWafManagedRuleOverrideObject
+  href: ./New-AzFrontDoorWafManagedRuleOverrideObject.yml
+- text: New-AzFrontDoorWafRuleGroupOverrideObject
+  href: ./New-AzFrontDoorWafRuleGroupOverrideObject.yml
+- text: New-AzFrontDoorWafManagedRuleObject
+  href: ./New-AzFrontDoorWafManagedRuleObject.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleExclusionObject.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/new-azfrontdoorwafmanagedruleexclusionobject
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/New-AzFrontDoorWafManagedRuleExclusionObject.md
+  PlatyPS schema version: 2024-05-01

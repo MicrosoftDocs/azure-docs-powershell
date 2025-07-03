@@ -1,0 +1,240 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzApplicationGatewayBackendSetting
+name: Set-AzApplicationGatewayBackendSetting
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates back-end TCP\TLS settings for an application gateway.
+description: |-
+  The Set-AzApplicationGatewayBackendSetting cmdlet updates the back-end TCP\TLS settings for an Azure application gateway.
+  Back-end settings are applied to all back-end servers in a pool.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The applicationGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets host header to be sent to the backend servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the backend settings
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PickHostNameFromBackendAddress
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag if host header should be picked from the host name of the backend server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Probe
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayProbe" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway Probe
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway Probe
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol
+    acceptedValues:
+    - TCP
+    - TLS
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Timeout
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Timeout.
+      Default value 30 seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrustedRootCertificate
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayTrustedRootCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Application gateway Trusted Root Certificates
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayBackendSetting
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -Port <Int32>
+        -Protocol <String>
+        [-Timeout <Int32>]
+        [-ProbeId <String>]
+        [-Probe <PSApplicationGatewayProbe>]
+        [-TrustedRootCertificate <PSApplicationGatewayTrustedRootCertificate[]>]
+        [-PickHostNameFromBackendAddress]
+        [-HostName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update the back-end TCP\TLS settings for an application gateway'
+  description: |-
+    ```powershell
+    $AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    $AppGw = Set-AzApplicationGatewayBackendSetting -ApplicationGateway $AppGw -Name "Setting02" -Port 88 -Protocol "Tcp"
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 that belongs to the resource group named ResourceGroup01 and stores it in the $AppGw variable.
+    The second command updates the Backend settings of the application gateway in the $AppGw variable to use port 88, the TCP protocol.
+links:
+- text: Add-AzApplicationGatewayBackendSetting
+  href: ./Add-AzApplicationGatewayBackendSetting.yml
+- text: Get-AzApplicationGatewayBackendSetting
+  href: ./Get-AzApplicationGatewayBackendSetting.yml
+- text: New-AzApplicationGatewayBackendSetting
+  href: ./New-AzApplicationGatewayBackendSetting.yml
+- text: Remove-AzApplicationGatewayBackendSetting
+  href: ./Remove-AzApplicationGatewayBackendSetting.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayBackendSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewaybackendsetting
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayBackendSetting.md
+  PlatyPS schema version: 2024-05-01

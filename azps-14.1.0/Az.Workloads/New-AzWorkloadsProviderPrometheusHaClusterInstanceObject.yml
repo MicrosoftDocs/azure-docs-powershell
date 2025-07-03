@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.New-AzWorkloadsProviderPrometheusHaClusterInstanceObject
+name: New-AzWorkloadsProviderPrometheusHaClusterInstanceObject
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Create an in-memory object for PrometheusHaClusterProviderInstanceProperties.
+description: |-
+  Create an in-memory object for PrometheusHaClusterProviderInstanceProperties.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the clusterName.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Hostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the target machine name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrometheusUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      URL of the Node Exporter endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the cluster sid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the blob URI to SSL certificate for the HA cluster exporter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Support.SslPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets certificate preference if secure communication is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWorkloadsProviderPrometheusHaClusterInstanceObject
+        [-ClusterName <String>]
+        [-Hostname <String>]
+        [-PrometheusUrl <String>]
+        [-Sid <String>]
+        [-SslCertificateUri <String>]
+        [-SslPreference <SslPreference>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.PrometheusHaClusterProviderInstanceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create High Availability Pacemaker cluster provider'
+  description: |-
+    ```powershell
+    New-AzWorkloadsProviderPrometheusHaClusterInstanceObject -ClusterName hacluster -Hostname h20dbvm0 -PrometheusUrl "http://10.0.92.5:964/metrics" -Sid X00 -SslPreference Disabled
+    ```
+
+    ```output
+    ProviderType        ClusterName Hostname PrometheusUrl                Sid SslCertificateUri SslPreference
+    ------------        ----------- -------- -------------                --- ----------------- -------------
+    PrometheusHaCluster hacluster   h20dbvm0 http://10.0.92.5:964/metrics X00                   Disabled
+    ```
+
+    Create High Availability Pacemaker cluster for an AMS instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderPrometheusHaClusterInstanceObject.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/new-azworkloadsproviderprometheushaclusterinstanceobject
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderPrometheusHaClusterInstanceObject.md
+  PlatyPS schema version: 2024-05-01

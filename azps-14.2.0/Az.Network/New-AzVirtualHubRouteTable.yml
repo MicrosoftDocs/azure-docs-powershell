@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVirtualHubRouteTable
+name: New-AzVirtualHubRouteTable
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates an Azure Virtual Hub Route Table object.
+description: |-
+  Creates an Azure Virtual Hub Route Table object.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Route
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHubRoute" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of virtual hub routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVirtualHubRouteTable
+        -Route <PSVirtualHubRoute[]>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHubRouteTable" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $route1 = New-AzVirtualHubRoute -AddressPrefix @("10.0.0.0/16", "11.0.0.0/16") -NextHopIpAddress "12.0.0.5"
+    $route2 = New-AzVirtualHubRoute -AddressPrefix @("13.0.0.0/16") -NextHopIpAddress "14.0.0.5"
+    $routeTable = New-AzVirtualHubRouteTable -Route @($route1, $route2)
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
+    New-AzVirtualHub -VirtualWanId $virtualWan.Id -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24" -RouteTable $routeTable
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
+    AddressPrefix             : 10.0.1.0/24
+    RouteTable                : Microsoft.Azure.Commands.Network.Models.PSVirtualHubRouteTable
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    The above will create a route table composed of multiple routes and attached to a new virtual hub.
+
+    This is an in-memory object that can be used to add a Route table to a new or an existing VirtualHub.
+links:
+- text: New-AzVirtualHubRoute
+  href: ./New-AzVirtualHubRoute.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHubRouteTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvirtualhubroutetable
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVirtualHubRouteTable.md
+  PlatyPS schema version: 2024-05-01

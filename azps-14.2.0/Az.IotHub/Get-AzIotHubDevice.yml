@@ -1,0 +1,195 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotHub.Get-AzIotHubDevice
+name: Get-AzIotHubDevice
+module: Az.IotHub
+isPreview: false
+summary: |-
+  Lists all devices or a particular device contained within an Azure IoT Hub.
+description: |-
+  Get the details of an Iot Hub device or list all devices in an Iot Hub.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Device Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub" data-throw-if-not-resolved="False" />
+    description: |-
+      IotHub object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IotHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Iot Hub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource Group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IotHub Resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIotHubDevice
+        [-ResourceGroupName] <String>
+        [-IotHubName] <String>
+        [-DeviceId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzIotHubDevice
+        [-InputObject] <PSIotHub>
+        [-DeviceId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzIotHubDevice
+        [-ResourceId] <String>
+        [-DeviceId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSIotHub" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSDevice" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Management.IotHub.Models.PSDevices" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzIotHubDevice -ResourceGroupName "myresourcegroup" -IotHubName "myiothub"
+    ```
+
+    ```output
+    Device Id Status   Connection State Authentication       Edge Enabled Last Activity Time
+    --------- ------   ---------------- --------------       ------------ ------------------
+    device1   Enabled  Disconnected     CertificateAuthority True         1/1/0001 12:00:00 AM
+    device2   Disabled Disconnected     Sas                  False        1/1/0001 12:00:00 AM
+    device3   Enabled  Disconnected     SelfSigned           False        1/1/0001 12:00:00 AM
+    ```
+
+    Show all devices in an Iot Hub.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzIotHubDevice -ResourceGroupName "myresourcegroup" -IotHubName "myiothub" -DeviceId "myDevice1"
+    ```
+
+    ```output
+    DeviceId                   : myDevice1
+    GenerationId               : 637148941292917073
+    ETag                       : "NzIyMDI4MTk3"
+    LastActivityTime           : 1/1/0001 12:00:00 AM
+    ConnectionState            : Disconnected
+    ConnectionStateUpdatedTime : 1/1/0001 12:00:00 AM
+    Status                     : Disabled
+    StatusReason               : Reason1
+    StatusUpdatedTime          : 1/17/2020 10:15:04 PM
+    CloudToDeviceMessageCount  : 0
+    Authentication             : Sas
+    EdgeEnabled                : False
+    DeviceScope                :
+    ```
+
+    Get the details of an IoT Hub device.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubDevice.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotHub.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iothub/get-aziothubdevice
+  Module Name: Az.IotHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotHub/IotHub/help/Get-AzIotHubDevice.md
+  PlatyPS schema version: 2024-05-01

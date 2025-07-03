@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureWebsiteLog
+name: Get-AzureWebsiteLog
+module: Azure
+isPreview: false
+summary: |-
+  Gets logs for the specified website.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  Gets log for the specified website.
+parameters:
+  cmdletParameters:
+  - name: ListPath
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to list the log paths.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListPath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Message
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a string which will be used to filter the log message.
+      Only logs which contains this string will be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Tail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path from which the log will be retrieved.
+      By default it is Root, which means include all the paths.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Tail
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the slot name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tail
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to stream the logs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Tail
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteLog
+        [-Path <String>]
+        [-Message <String>]
+        [-Tail]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Tail
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureWebsiteLog
+        [-ListPath]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListPath
+  isDefault: false
+examples:
+- title: 'Example 1: Start log streaming'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteLog -Tail
+    ```
+
+    This example starts log streaming for all application logs.
+- title: 'Example 2: Start log streaming for http logs'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteLog -Tail -Path http
+    ```
+
+    This example starts log streaming for http logs.
+- title: 'Example 3: Start log streaming for error logs'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteLog -Tail -Message Error
+    ```
+
+    This example starts log streaming and show error logs only.
+- title: 'Example 4: Display available logs'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebsiteLog -Name MyWebsite -ListPath
+    ```
+
+    This example lists all available log paths in the website.
+links:
+- text: Get-AzureWebsite
+  href: ./Get-AzureWebsite.yml
+- text: New-AzureWebsite
+  href: ./New-AzureWebsite.yml
+- text: Remove-AzureWebsite
+  href: ./Remove-AzureWebsite.yml
+- text: Start-AzureWebsite
+  href: ./Start-AzureWebsite.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BFB57100-93F6-4FD2-8ECA-7F54BEB0D6B0
+  PlatyPS schema version: 2024-05-01

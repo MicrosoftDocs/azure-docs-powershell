@@ -1,0 +1,297 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSiteRecoveryUnplannedFailoverJob
+name: Start-AzureSiteRecoveryUnplannedFailoverJob
+module: Azure
+isPreview: false
+summary: |-
+  Starts the unplanned failover for a Site Recovery protection entity or recovery plan.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSiteRecoveryUnplannedFailoverJob** cmdlet starts the unplanned failover of an Azure Site Recovery protection entity or recovery plan.
+  You can check whether the job succeeds by using the **Get-AzureSiteRecoveryJob** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Direction
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the direction of the failover.
+      The acceptable values for this parameter are:
+
+      - PrimaryToRecovery
+      - RecoveryToPrimary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PerformSourceSideActions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the action can perform source side actions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PerformSourceSiteOperations
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that source site operations can be performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPEObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryAction
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that  primary site actions are required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainerId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected container.
+      This cmdlet starts the job for a protected virtual machine that belongs to the container that this cmdlet specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntity
+    type: <xref href="ASRProtectionEntity" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Site Recovery protection entity object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionEntityId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected virtual machine for which to start the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPEId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryPlan
+    type: <xref href="ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a recovery plan object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RPId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a recovery plan for which to start the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForCompletion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryUnplannedFailoverJob
+        -RPId <String>
+        -Direction <String>
+        [-PrimaryAction <Boolean>]
+        [-PerformSourceSideActions]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryUnplannedFailoverJob
+        -ProtectionEntityId <String>
+        -ProtectionContainerId <String>
+        -Direction <String>
+        [-PerformSourceSiteOperations <Boolean>]
+        [-PerformSourceSideActions]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryUnplannedFailoverJob
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        [-PrimaryAction <Boolean>]
+        [-PerformSourceSideActions]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSiteRecoveryUnplannedFailoverJob
+        -ProtectionEntity <ASRProtectionEntity>
+        -Direction <String>
+        [-PerformSourceSiteOperations <Boolean>]
+        [-PerformSourceSideActions]
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPEObject
+  isDefault: false
+examples:
+- title: 'Example 1: Start an unplanned failover job'
+  description: |-
+    ```
+    PS C:\> $ProtectionContainer = Get-AzureSiteRecoveryProtectionContainer
+    PS C:\> $ProtectionEntity = Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $ProtectionContainer
+    PS C:\> Start-AzureSiteRecoveryUnplannedFailoverJob -ProtectionEntity $ProtectionEntity -Direction "PrimaryToRecovery"
+    ID               : c38eecdc-731c-405b-a61c-08db99aae2fe
+    ClientRequestId  : 32ace403-0916-4967-83a1-529176bd6e88-2014-49-06 15:49:24Z-P
+    State            : NotStarted
+    StateDescription : NotStarted
+    StartTime        :
+    EndTime          :
+    AllowedActions   : {}
+    Name             :
+    Tasks            : {}
+    Errors           : {}
+    ```
+
+    The first command gets a protected container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores it in the $ProtectionContainer variable.
+
+    The second command gets the protected entities that belong to the protected container stored in $ProtectionContainer by using the **Get-AzureSiteRecoveryProtectionEntity** cmdlet.
+    The command stores the results in the $ProtectionEntity variable.
+
+    The final command starts the failover for the protected entities stored in $ProtectionEntity and specifies the direction of the failover.
+links:
+- text: Get-AzureSiteRecoveryJob
+  href: ./Get-AzureSiteRecoveryJob.yml
+- text: Get-AzureSiteRecoveryProtectionContainer
+  href: ./Get-AzureSiteRecoveryProtectionContainer.yml
+- text: Get-AzureSiteRecoveryProtectionEntity
+  href: ./Get-AzureSiteRecoveryProtectionEntity.yml
+- text: Start-AzureSiteRecoveryTestFailoverJob
+  href: ./Start-AzureSiteRecoveryTestFailoverJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: AC73119B-BB76-425B-AA44-44502028ECC4
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzDiagnosticSettingSubscriptionLogSettingsObject
+name: New-AzDiagnosticSettingSubscriptionLogSettingsObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for SubscriptionLogSettings.
+description: |-
+  Create an in-memory object for SubscriptionLogSettings.
+parameters:
+  cmdletParameters:
+  - name: Category
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CategoryGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a Subscription Diagnostic Log category group for a resource type this setting is applied to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      a value indicating whether this log is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDiagnosticSettingSubscriptionLogSettingsObject
+        -Enabled <Boolean>
+        [-Category <String>]
+        [-CategoryGroup <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DiagnosticSetting.Models.Api20210501Preview.SubscriptionLogSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create subscription log setting object'
+  description: |-
+    ```powershell
+    New-AzDiagnosticSettingSubscriptionLogSettingsObject -Category Recommendation -Enabled $true
+    ```
+
+    Create subscription log setting object, to get supported categories for resource, please see `Get-AzEventCategory`
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingSubscriptionLogSettingsObject.md
+  document type: cmdlet
+  external help file: Az.DiagnosticSetting.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzDiagnosticSettingSubscriptionLogSettingsObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDiagnosticSettingSubscriptionLogSettingsObject.md
+  PlatyPS schema version: 2024-05-01

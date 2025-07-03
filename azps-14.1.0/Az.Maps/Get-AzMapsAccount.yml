@@ -1,0 +1,221 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Maps.Get-AzMapsAccount
+name: Get-AzMapsAccount
+module: Az.Maps
+isPreview: false
+summary: |-
+  Get a Maps Account.
+description: |-
+  Get a Maps Account.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Maps Account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMapsAccount
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMapsAccount
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMapsAccount
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMapsAccount
+        -InputObject <IMapsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Maps.Models.IMapsAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Maps Accounts under a subscription'
+  description: |-
+    ```powershell
+    Get-AzMapsAccount
+    ```
+
+    ```output
+    Location Name               Type                    Kind
+    -------- ----               ----                    ----
+    eastus   pwsh-mapsAccount01 Microsoft.Maps/accounts Gen1
+    ```
+
+    This command lists all Maps Accounts under a subscription.
+- title: 'Example 2: List all Maps Accounts under a resource group'
+  description: |-
+    ```powershell
+    Get-AzMapsAccount -ResourceGroupName azure-rg-test
+    ```
+
+    ```output
+    Location Name               Type                    Kind
+    -------- ----               ----                    ----
+    eastus   pwsh-mapsAccount01 Microsoft.Maps/accounts Gen1
+    ```
+
+    This command lists all Maps Accounts under a resource group.
+- title: 'Example 3: Get a Maps Account'
+  description: |-
+    ```powershell
+    Get-AzMapsAccount -ResourceGroupName azure-rg-test -Name pwsh-mapsAccount01
+    ```
+
+    ```output
+    Location Name               Type                    Kind
+    -------- ----               ----                    ----
+    eastus   pwsh-mapsAccount01 Microsoft.Maps/accounts Gen1
+    ```
+
+    This command gets a Maps Account.
+- title: 'Example 4: Get a Maps Account by pipeline'
+  description: |-
+    ```powershell
+    New-AzMapsAccount -ResourceGroupName azure-rg-test -Name pwsh-mapsAccount01 -SkuName S0 -Location eastus | Get-AzMapsAccount
+    ```
+
+    ```output
+    Location Name               Type                    Kind
+    -------- ----               ----                    ----
+    eastus   pwsh-mapsAccount01 Microsoft.Maps/accounts Gen1
+    ```
+
+    This command gets a Maps Account by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Get-AzMapsAccount.md
+  document type: cmdlet
+  external help file: Az.Maps-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.maps/get-azmapsaccount
+  Module Name: Az.Maps
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maps/Maps/help/Get-AzMapsAccount.md
+  PlatyPS schema version: 2024-05-01

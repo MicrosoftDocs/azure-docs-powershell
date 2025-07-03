@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quota.New-AzQuotaLimitObject
+name: New-AzQuotaLimitObject
+module: Az.Quota
+isPreview: false
+summary: |-
+  Create an in-memory object for LimitObject.
+description: |-
+  Create an in-memory object for LimitObject.
+parameters:
+  cmdletParameters:
+  - name: LimitType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The quota or usages limit types.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The quota/limit value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzQuotaLimitObject
+        -Value <Int32>
+        [-LimitType <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.LimitObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for LimitValue'
+  description: |-
+    ```powershell
+    New-AzQuotaLimitObject -Value 1003
+    ```
+
+    ```output
+    LimitObjectType LimitType Value
+    --------------- --------- -----
+    LimitValue                1003
+    ```
+
+    This command create an in-memory object for LimitValue as value of the parameter Limit in the New/Update-AzQuota cmdlet.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/New-AzQuotaLimitObject.md
+  document type: cmdlet
+  external help file: Az.Quota-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Quota/new-azquotalimitobject
+  Module Name: Az.Quota
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/New-AzQuotaLimitObject.md
+  PlatyPS schema version: 2024-05-01

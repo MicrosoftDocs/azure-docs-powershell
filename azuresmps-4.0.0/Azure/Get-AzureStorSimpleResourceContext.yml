@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleResourceContext
+name: Get-AzureStorSimpleResourceContext
+module: Azure
+isPreview: false
+summary: |-
+  Gets the current resource context.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleResourceContext** cmdlet gets the current resource context.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleResourceContext
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="StorSimpleResourceContext" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a **ResourceContext** object.
+examples:
+- title: 'Example 1: Get the current context'
+  description: |-
+    ```
+    PS C:\>Select-AzureStorSimpleResource -ResourceName "Contoso63-Tsqa"
+    PS C:\> Get-AzureStorSimpleResourceContext
+    ResourceId           ResourceName
+    ----------           ------------
+    1909806764156522689  Contoso63-Tsqa
+    ```
+
+    The first command sets the current context to be the resource named Contoso63-Tsqa by using the **Select-AzureStorSimpleResource** cmdlet.
+
+    The second command gets the current resource context.
+- title: 'Example 2: Attempt to get the current context'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleResourceContext
+    Get-AzureStorSimpleResourceContext : Resource Context is not set for your subscription. Please use
+    Select-AzureStorSimpleResource -ResourceName <<name>> to set
+    ```
+
+    This command gets the current context.
+    In this example, no context has been set.
+    The command returns a message that explains the problem.
+links:
+- text: Get-AzureStorSimpleResource
+  href: ./Get-AzureStorSimpleResource.yml
+- text: Select-AzureStorSimpleResource
+  href: ./Select-AzureStorSimpleResource.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 7CB42968-8F6F-4D84-9AE2-1000F280BF3C
+  PlatyPS schema version: 2024-05-01

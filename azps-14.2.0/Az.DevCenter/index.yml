@@ -1,0 +1,132 @@
+### YamlMime:PowerShellModule1
+uid: Az.DevCenter
+name: Az.DevCenter Module
+isPreview: false
+cmdletGroups:
+- title: DevCenter
+  cmdlets:
+  - Az.DevCenter.Connect-AzDevCenterAdminCatalog
+  - Az.DevCenter.Connect-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.Deploy-AzDevCenterUserEnvironment
+  - Az.DevCenter.Get-AzDevCenterAdminAttachedNetwork
+  - Az.DevCenter.Get-AzDevCenterAdminCatalog
+  - Az.DevCenter.Get-AzDevCenterAdminCatalogSyncErrorDetail
+  - Az.DevCenter.Get-AzDevCenterAdminCustomizationTask
+  - Az.DevCenter.Get-AzDevCenterAdminCustomizationTaskErrorDetail
+  - Az.DevCenter.Get-AzDevCenterAdminDevBoxDefinition
+  - Az.DevCenter.Get-AzDevCenterAdminDevCenter
+  - Az.DevCenter.Get-AzDevCenterAdminEnvironmentDefinition
+  - Az.DevCenter.Get-AzDevCenterAdminEnvironmentDefinitionErrorDetail
+  - Az.DevCenter.Get-AzDevCenterAdminEnvironmentType
+  - Az.DevCenter.Get-AzDevCenterAdminGallery
+  - Az.DevCenter.Get-AzDevCenterAdminImage
+  - Az.DevCenter.Get-AzDevCenterAdminImageVersion
+  - Az.DevCenter.Get-AzDevCenterAdminNetworkConnection
+  - Az.DevCenter.Get-AzDevCenterAdminNetworkConnectionHealthDetail
+  - Az.DevCenter.Get-AzDevCenterAdminNetworkConnectionOutboundNetworkDependencyEndpoint
+  - Az.DevCenter.Get-AzDevCenterAdminOperationStatus
+  - Az.DevCenter.Get-AzDevCenterAdminPlan
+  - Az.DevCenter.Get-AzDevCenterAdminPlanMember
+  - Az.DevCenter.Get-AzDevCenterAdminPool
+  - Az.DevCenter.Get-AzDevCenterAdminProject
+  - Az.DevCenter.Get-AzDevCenterAdminProjectAllowedEnvironmentType
+  - Az.DevCenter.Get-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.Get-AzDevCenterAdminProjectCatalogSyncErrorDetail
+  - Az.DevCenter.Get-AzDevCenterAdminProjectEnvironmentDefinition
+  - Az.DevCenter.Get-AzDevCenterAdminProjectEnvironmentDefinitionErrorDetail
+  - Az.DevCenter.Get-AzDevCenterAdminProjectEnvironmentType
+  - Az.DevCenter.Get-AzDevCenterAdminProjectInheritedSetting
+  - Az.DevCenter.Get-AzDevCenterAdminSchedule
+  - Az.DevCenter.Get-AzDevCenterAdminSku
+  - Az.DevCenter.Get-AzDevCenterAdminUsage
+  - Az.DevCenter.Get-AzDevCenterUserCatalog
+  - Az.DevCenter.Get-AzDevCenterUserDevBox
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxAction
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxCustomizationGroup
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxCustomizationTaskDefinition
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxCustomizationTaskLog
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxOperation
+  - Az.DevCenter.Get-AzDevCenterUserDevBoxRemoteConnection
+  - Az.DevCenter.Get-AzDevCenterUserEnvironment
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentAction
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentDefinition
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentLog
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentOperation
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentOutput
+  - Az.DevCenter.Get-AzDevCenterUserEnvironmentType
+  - Az.DevCenter.Get-AzDevCenterUserPool
+  - Az.DevCenter.Get-AzDevCenterUserProject
+  - Az.DevCenter.Get-AzDevCenterUserSchedule
+  - Az.DevCenter.Invoke-AzDevCenterAdminExecuteCheckNameAvailability
+  - Az.DevCenter.Invoke-AzDevCenterAdminExecuteCheckScopedNameAvailability
+  - Az.DevCenter.Invoke-AzDevCenterUserDelayDevBoxAction
+  - Az.DevCenter.Invoke-AzDevCenterUserDelayEnvironmentAction
+  - Az.DevCenter.New-AzDevCenterAdminAttachedNetwork
+  - Az.DevCenter.New-AzDevCenterAdminCatalog
+  - Az.DevCenter.New-AzDevCenterAdminDevBoxDefinition
+  - Az.DevCenter.New-AzDevCenterAdminDevCenter
+  - Az.DevCenter.New-AzDevCenterAdminEnvironmentType
+  - Az.DevCenter.New-AzDevCenterAdminGallery
+  - Az.DevCenter.New-AzDevCenterAdminNetworkConnection
+  - Az.DevCenter.New-AzDevCenterAdminPlan
+  - Az.DevCenter.New-AzDevCenterAdminPlanMember
+  - Az.DevCenter.New-AzDevCenterAdminPool
+  - Az.DevCenter.New-AzDevCenterAdminProject
+  - Az.DevCenter.New-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.New-AzDevCenterAdminProjectEnvironmentType
+  - Az.DevCenter.New-AzDevCenterAdminSchedule
+  - Az.DevCenter.New-AzDevCenterUserDevBox
+  - Az.DevCenter.New-AzDevCenterUserDevBoxCustomizationGroup
+  - Az.DevCenter.New-AzDevCenterUserEnvironment
+  - Az.DevCenter.Remove-AzDevCenterAdminAttachedNetwork
+  - Az.DevCenter.Remove-AzDevCenterAdminCatalog
+  - Az.DevCenter.Remove-AzDevCenterAdminDevBoxDefinition
+  - Az.DevCenter.Remove-AzDevCenterAdminDevCenter
+  - Az.DevCenter.Remove-AzDevCenterAdminEnvironmentType
+  - Az.DevCenter.Remove-AzDevCenterAdminGallery
+  - Az.DevCenter.Remove-AzDevCenterAdminNetworkConnection
+  - Az.DevCenter.Remove-AzDevCenterAdminPlan
+  - Az.DevCenter.Remove-AzDevCenterAdminPlanMember
+  - Az.DevCenter.Remove-AzDevCenterAdminPool
+  - Az.DevCenter.Remove-AzDevCenterAdminProject
+  - Az.DevCenter.Remove-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.Remove-AzDevCenterAdminProjectEnvironmentType
+  - Az.DevCenter.Remove-AzDevCenterAdminSchedule
+  - Az.DevCenter.Remove-AzDevCenterUserDevBox
+  - Az.DevCenter.Remove-AzDevCenterUserEnvironment
+  - Az.DevCenter.Repair-AzDevCenterUserDevBox
+  - Az.DevCenter.Restart-AzDevCenterUserDevBox
+  - Az.DevCenter.Skip-AzDevCenterUserDevBoxAction
+  - Az.DevCenter.Skip-AzDevCenterUserEnvironmentAction
+  - Az.DevCenter.Start-AzDevCenterAdminNetworkConnectionHealthCheck
+  - Az.DevCenter.Start-AzDevCenterAdminPoolHealthCheck
+  - Az.DevCenter.Start-AzDevCenterUserDevBox
+  - Az.DevCenter.Stop-AzDevCenterUserDevBox
+  - Az.DevCenter.Sync-AzDevCenterAdminCatalog
+  - Az.DevCenter.Sync-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.Test-AzDevCenterUserDevBoxCustomizationTaskAction
+  - Az.DevCenter.Update-AzDevCenterAdminCatalog
+  - Az.DevCenter.Update-AzDevCenterAdminDevBoxDefinition
+  - Az.DevCenter.Update-AzDevCenterAdminDevCenter
+  - Az.DevCenter.Update-AzDevCenterAdminEnvironmentType
+  - Az.DevCenter.Update-AzDevCenterAdminNetworkConnection
+  - Az.DevCenter.Update-AzDevCenterAdminPlan
+  - Az.DevCenter.Update-AzDevCenterAdminPlanMember
+  - Az.DevCenter.Update-AzDevCenterAdminPool
+  - Az.DevCenter.Update-AzDevCenterAdminProject
+  - Az.DevCenter.Update-AzDevCenterAdminProjectCatalog
+  - Az.DevCenter.Update-AzDevCenterAdminProjectEnvironmentType
+  - Az.DevCenter.Update-AzDevCenterAdminSchedule
+  - Az.DevCenter.Update-AzDevCenterUserEnvironment
+description: |-
+  Microsoft Azure PowerShell: DevCenter cmdlets
+metadata:
+  Module Name: Az.DevCenter
+  Module Guid: c8a627bd-456d-4231-b00b-e8ba3594e2d1
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.devcenter
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Az.DevCenter.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Az.DevCenter.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

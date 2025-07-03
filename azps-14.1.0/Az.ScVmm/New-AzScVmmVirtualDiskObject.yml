@@ -1,0 +1,237 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ScVmm.New-AzScVmmVirtualDiskObject
+name: New-AzScVmmVirtualDiskObject
+module: Az.ScVmm
+isPreview: false
+summary: |-
+  Create an in-memory object for VirtualDisk.
+description: |-
+  Create an in-memory object for VirtualDisk.
+parameters:
+  cmdletParameters:
+  - name: Bus
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk bus.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BusType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk bus type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreateDiffDisk
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets a value indicating diff disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskSizeGb
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk total size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Lun
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk lun.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the name of the disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageQoSPolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the QoS policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageQoSPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateDiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk id in the template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the disk vhd type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzScVmmVirtualDiskObject
+        [-Bus <Int32>]
+        [-BusType <String>]
+        [-CreateDiffDisk <String>]
+        [-DiskId <String>]
+        [-DiskSizeGb <Int32>]
+        [-Lun <Int32>]
+        [-Name <String>]
+        [-StorageQoSPolicyId <String>]
+        [-StorageQoSPolicyName <String>]
+        [-TemplateDiskId <String>]
+        [-VhdType <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ScVmm.Models.VirtualDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a VirtualDisk Object in memory'
+  description: |-
+    ```powershell
+    New-AzScVmmVirtualDiskObject -Name 'Disk-Obj-1' -lun 0 -bus 0 -VhdType 'Dynamic' -BusType 'SCSI' -StorageQoSPolicyName 'Qos-1'
+    ```
+
+    ```output
+    Bus                  : 0
+    BusType              : SCSI
+    CreateDiffDisk       :
+    DiskId               :
+    DiskSizeGb           :
+    DisplayName          :
+    Lun                  : 0
+    MaxDiskSizeGb        :
+    Name                 : Disk-Obj-1
+    StorageQoSPolicyId   :
+    StorageQoSPolicyName : Qos-1
+    TemplateDiskId       :
+    VhdFormatType        :
+    VhdType              : Dynamic
+    VolumeType           :
+    ```
+
+    Create a VirtualDisk Object in memory.
+    Used in `New-AzScVmmVM` for Disk value.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmVirtualDiskObject.md
+  document type: cmdlet
+  external help file: Az.ScVmm-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.ScVmm/new-azscvmmvirtualdiskobject
+  Module Name: Az.ScVmm
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/New-AzScVmmVirtualDiskObject.md
+  PlatyPS schema version: 2024-05-01

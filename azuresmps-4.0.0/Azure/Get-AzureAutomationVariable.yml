@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationVariable
+name: Get-AzureAutomationVariable
+module: Azure
+isPreview: false
+summary: |-
+  Gets an Automation variable.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationVariable** cmdlet gets one or more Microsoft Azure Automation variables.
+  By default, all variables are returned.
+  To get a specific variable, specify its name.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a variable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationVariable
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationVariable
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Variable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a variable'
+  description: |-
+    ```
+    PS C:\> $variable = Get-AzureAutomationVariable -AutomationAccountName
+    PS C:\> "Contoso17" -Name "MyVariable"
+    PS C:\> $value = $variable.value
+    ```
+
+    These commands get an Automation variable called MyVariable and assign its value to a variable called $value.
+links:
+- text: New-AzureAutomationVariable
+  href: ./New-AzureAutomationVariable.yml
+- text: Remove-AzureAutomationVariable
+  href: ./Remove-AzureAutomationVariable.yml
+- text: Set-AzureAutomationVariable
+  href: ./Set-AzureAutomationVariable.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CC6AF515-2F43-4E1B-BCBB-8DA23F3C6CBD
+  PlatyPS schema version: 2024-05-01

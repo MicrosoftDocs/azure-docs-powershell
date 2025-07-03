@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkManagerScope
+name: New-AzNetworkManagerScope
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a network manager scope.
+description: |-
+  The **New-AzNetworkManagerScope** cmdlet creates a network manager scope.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Management Group Lists in Network Manager Scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription Lists in Network Manager Scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManagerScope
+        [-ManagementGroup <String[]>]
+        [-Subscription <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerScopes" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $subgroup  = @("/subscriptions/00000000-0000-0000-0000-000000000000")
+    $mggroup  = @("/providers/Microsoft.Management/managementGroups/PowerShellTest")
+    New-AzNetworkManagerScope -Subscription $subgroup -ManagementGroup $mggroup
+    ```
+
+    ```output
+    ManagementGroups                                                  Subscriptions
+    ----------------                                                  -------------
+    {/providers/Microsoft.Management/managementGroups/PowerShellTest} {/subscriptions/00000000-0000-0000-0000-000000000000}
+    ```
+
+    Creates a network manager scope with management group and subscription.
+links:
+- text: New-AzNetworkManager
+  href: ./New-AzNetworkManager.yml
+- text: Get-AzNetworkManager
+  href: ./Get-AzNetworkManager.yml
+- text: Remove-AzNetworkManager
+  href: ./Remove-AzNetworkManager.yml
+- text: Set-AzNetworkManager
+  href: ./Set-AzNetworkManager.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScope.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanagerscope
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerScope.md
+  PlatyPS schema version: 2024-05-01

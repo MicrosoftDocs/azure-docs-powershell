@@ -1,0 +1,263 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Publish-AzureWebsiteProject
+name: Publish-AzureWebsiteProject
+module: Azure
+isPreview: false
+summary: |-
+  Publish a Visual Studio web project to a Microsoft Azure web site using WebDeploy.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  Publish a Visual Studio web project to a Microsoft Azure web site using WebDeploy.
+  It can either take a WebDeploy package and publish directly, or take a Visual Studio web project, build the project and publish.
+  It can also replace the connection strings in the Web.config during publish.
+parameters:
+  cmdletParameters:
+  - name: Configuration
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The configuration used to build the Visual Studio web application project.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProjectFile
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionString
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The connection strings to use for the deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DoNotDelete
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web site name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Package
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The WebDeploy package folder for zip file of the Visual Studio web application project to be published.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Package
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Visual Studio web application project to be published.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ProjectFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SetParametersFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Package
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipAppData
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web site slot name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tokens
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Package
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Publish-AzureWebsiteProject
+        -ProjectFile <String>
+        [-Configuration <String>]
+        [-ConnectionString <Hashtable>]
+        [-SkipAppData]
+        [-DoNotDelete]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ProjectFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Publish-AzureWebsiteProject
+        -Package <String>
+        [-ConnectionString <Hashtable>]
+        [-Tokens <String>]
+        [-SetParametersFile <String>]
+        [-SkipAppData]
+        [-DoNotDelete]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Package
+  isDefault: false
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Publish-AzureWebsiteProject -Name site1 -ProjectFile .\WebApplication1.csproj -Configuration Debug
+    ```
+
+    Build a Visual Studio web project with "Debug" configuration (meaning use Web.Debug.config) and publish to a Microsoft Azure Web Site using WebDeploy.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Publish-AzureWebsiteProject -Name site1 -Package .\WebApplication1.zip
+    ```
+
+    Publish a WebDeploy Package .zip file to a Microsoft Azure Web Site using WebDeploy.
+- title: Example 3
+  description: |-
+    ```
+    PS C:\> Publish-AzureWebsiteProject -Name site1 -Package .\WebApplication1
+    ```
+
+    Publish a WebDeploy Package folder to a Microsoft Azure Web Site using WebDeploy.
+- title: Example 4
+  description: |-
+    ```
+    PS C:\> Publish-AzureWebsiteProject -Name site1 -ProjectFile .\WebApplication1.csproj -ConnectionString @{ DefaultConnection = "my connection string" }
+    ```
+
+    Build a Visual Studio web project, overwrite the "DefaultConnection" connection string in Web.config and publish to a Microsoft Azure Web Site using WebDeploy.
+- title: Example 5
+  description: |-
+    ```
+    PS C:\> Publish-AzureWebsiteProject -Name site1 -ProjectFile .\WebApplication1.csproj -DefaultConnection "my connection string"
+    ```
+
+    Build a Visual Studio web project, overwrite the "DefaultConnection" connection string in Web.config and publish to a Microsoft Azure Web Site using WebDeploy.
+    Notice that -DefaultConnection is a dynamic parameter which gets added by parsing Web.config.
+links:
+- text: Get-AzureWebsite
+  href: ./Get-AzureWebsite.yml
+- text: New-AzureWebsite
+  href: ./New-AzureWebsite.yml
+- text: Remove-AzureWebsite
+  href: ./Remove-AzureWebsite.yml
+- text: Set-AzureWebsite
+  href: ./Set-AzureWebsite.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D866554F-78B0-4691-BA06-F625F9B0DFC8
+  PlatyPS schema version: 2024-05-01

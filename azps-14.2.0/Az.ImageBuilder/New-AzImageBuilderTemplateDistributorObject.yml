@@ -1,0 +1,326 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ImageBuilder.New-AzImageBuilderTemplateDistributorObject
+name: New-AzImageBuilderTemplateDistributorObject
+module: Az.ImageBuilder
+isPreview: false
+summary: |-
+  Create an in-memory object for ImageTemplateDistributor.
+description: |-
+  Create an in-memory object for ImageTemplateDistributor.
+parameters:
+  cmdletParameters:
+  - name: ArtifactTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.IImageTemplateDistributorArtifactTags" data-throw-if-not-resolved="False" />
+    description: |-
+      Tags that will be applied to the artifact once it has been created/updated by the distributor.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExcludeFromLatest
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag that indicates whether created image version should be excluded from latest.
+      Omit to use the default (false).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryImageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the Azure Compute Gallery image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the Managed Disk Image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedImageDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure location for the image, should match if image already exists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedImageDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedImageDistributor
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Distribute as a Managed Disk Image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedImageDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationRegion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      [Deprecated] A list of regions that the image will be replicated to.
+      This list can be specified only if targetRegions is not specified.
+      This field is deprecated - use targetRegions instead.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunOutputName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name to be used for the associated RunOutput.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedImageDistributor
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Distribute via Shared Image Gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Deprecated] Storage account type to be used to store the shared image.
+      Omit to use the default (Standard_LRS).
+      This field can be specified only if replicationRegions is specified.
+      This field is deprecated - use targetRegions instead.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetRegion
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ITargetRegion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The target regions where the distributed Image Version is going to be replicated to.
+      This object supersedes replicationRegions and can be specified only if replicationRegions is not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Azure Storage URI for the distributed VHD blob.
+      Omit to use the default (empty string) in which case VHD would be published to the storage account in the staging resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VhdDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Versioning
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.IDistributeVersioner" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes how to generate new x.y.z version number for distribution.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SharedImageDistributor
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VhdDistributor
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Distribute via VHD in a storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VhdDistributor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateDistributorObject
+        -RunOutputName <String>
+        [-ArtifactTag <IImageTemplateDistributorArtifactTags>]
+        [-VhdDistributor]
+        [-Uri <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VhdDistributor
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateDistributorObject
+        -RunOutputName <String>
+        -ImageId <String>
+        -Location <String>
+        [-ManagedImageDistributor]
+        [-ArtifactTag <IImageTemplateDistributorArtifactTags>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagedImageDistributor
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzImageBuilderTemplateDistributorObject
+        -RunOutputName <String>
+        -GalleryImageId <String>
+        [-ArtifactTag <IImageTemplateDistributorArtifactTags>]
+        [-SharedImageDistributor]
+        [-ExcludeFromLatest <Boolean>]
+        [-ReplicationRegion <String[]>]
+        [-StorageAccountType <String>]
+        [-TargetRegion <ITargetRegion[]>]
+        [-Versioning <IDistributeVersioner>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SharedImageDistributor
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplateManagedImageDistributor" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplateSharedImageDistributor" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImageBuilder.Models.ImageTemplateVhdDistributor" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a managed image distributor.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateDistributorObject -ManagedImageDistributor -ArtifactTag @{tag='azpstest'} -ImageId "/subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/images/azps-vm-image" -RunOutputName "runoutput-01" -Location eastus
+    ```
+
+    ```output
+    RunOutputName ImageId                                                                                                             Location
+    ------------- -------                                                                                                             --------
+    runoutput-01  /subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/images/azps-vm-image eastus
+    ```
+
+    This command creates a managed image distributor.
+- title: 'Example 2: Create a VHD distributor.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateDistributorObject -ArtifactTag @{tag='vhd'} -VhdDistributor -RunOutputName image-vhd
+    ```
+
+    ```output
+    RunOutputName Uri
+    ------------- ---
+    image-vhd
+    ```
+
+    This command creates a VHD distributor.
+- title: 'Example 3: Create a shared image distributor.'
+  description: |-
+    ```powershell
+    New-AzImageBuilderTemplateDistributorObject -SharedImageDistributor -ArtifactTag @{"test"="dis-share"} -GalleryImageId "/subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder/providers/Microsoft.Compute/galleries/azpsazurecomputergallery/images/azps-vm-image" -ReplicationRegion "eastus" -RunOutputName "runoutput-01"
+    ```
+
+    ```output
+    RunOutputName ExcludeFromLatest GalleryImageId                                                        ReplicationRegion StorageAccountType
+    ------------- ----------------- --------------                                                        ----------------- -------
+    runoutput-01                    /subscriptions/{subId}/resourceGroups/azps_test_group_imagebuilder... {eastus}
+    ```
+
+    This command creates a shared image distributor.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateDistributorObject.md
+  document type: cmdlet
+  external help file: Az.ImageBuilder-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ImageBuilder/new-azimagebuildertemplatedistributorobject
+  Module Name: Az.ImageBuilder
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImageBuilder/ImageBuilder/help/New-AzImageBuilderTemplateDistributorObject.md
+  PlatyPS schema version: 2024-05-01

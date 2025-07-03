@@ -1,0 +1,706 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzGalleryImageDefinition
+name: New-AzGalleryImageDefinition
+module: Az.Compute
+isPreview: false
+summary: |-
+  Create a gallery image definition.
+description: |-
+  Create a gallery image definition.
+  The gallery image definition will default to 'HyperVGeneration: V2' and 'SecurityType: TrustedLaunchSupported' if `-HyperVGeneration` and `-Feature @{Name: SecurityType}` is not set explicitly. Set SecurityType to 'None' to opt out of this defaulting (See Example 10).
+parameters:
+  cmdletParameters:
+  - name: Architecture
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CPU architecture supported by an OS disk. Possible values are "X64" and "Arm64".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the gallery image Definition resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisallowedDiskType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The disallowed disk types.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndOfLifeDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The end of life date of the gallery Image Definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Eula
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Eula agreement for the gallery Image Definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Feature
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.GalleryImageFeature" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of gallery image features.
+      For SecurityType, acceptable inputs are: None, TrustedlaunchSupported, Trustedlaunch, ConfidentialVM, ConfidentialVMSupported, TrustedLaunchAndConfidentialVmSupported
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HyperVGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The hypervisor generation of the Virtual Machine. Applicable to OS disks only. Allowed values are V1 and V2.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource location
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumMemory
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum of the recommended memory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaximumVCPU
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum of the recommended CPU core
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumMemory
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum of the recommended memory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumVCPU
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minimum of the recommended CPU core
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery image definition.
+    aliases:
+    - GalleryImageDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery Image Definition offer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsState
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.OperatingSystemStateTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      The state of OS
+    acceptedValues:
+    - Generalized
+    - Specialized
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsType
+    type: <xref href="Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of OS
+    acceptedValues:
+    - Windows
+    - Linux
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivacyStatementUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The privacy statement uri.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery Image Definition publisher.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PurchasePlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID for the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PurchasePlanProduct
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The product ID for the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PurchasePlanPublisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The publisher ID for the purchase plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReleaseNoteUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The release note uri.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the gallery Image Definition SKU.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzGalleryImageDefinition
+        [-ResourceGroupName] <String>
+        [-GalleryName] <String>
+        [-Name] <String>
+        [-AsJob]
+        [-Location] <String>
+        -Publisher <String>
+        -Offer <String>
+        -Sku <String>
+        -OsState <OperatingSystemStateTypes>
+        -OsType <OperatingSystemTypes>
+        [-Description <String>]
+        [-DisallowedDiskType <String[]>]
+        [-EndOfLifeDate <DateTime>]
+        [-Eula <String>]
+        [-HyperVGeneration <String>]
+        [-MinimumMemory <Int32>]
+        [-MinimumVCPU <Int32>]
+        [-MaximumMemory <Int32>]
+        [-MaximumVCPU <Int32>]
+        [-PrivacyStatementUri <String>]
+        [-PurchasePlanName <String>]
+        [-PurchasePlanProduct <String>]
+        [-PurchasePlanPublisher <String>]
+        [-ReleaseNoteUri <String>]
+        [-Tag <Hashtable>]
+        [-Feature <GalleryImageFeature[]>]
+        [-Architecture <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.OperatingSystemStateTypes" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.OperatingSystemTypes" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSGalleryImage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an image definition for specialized linux images'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $description = "My gallery"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Specialized" -OsType "Linux" -Description $description
+    ```
+
+    Creates a gallery image definition to contain image versions for specialized linux images. This will default the Gallery Image to HyperVGeneration V2 and Trusted Launch as `-HyperVGeneration` and `-Feature SecurityType` is not set explicitly.
+- title: 'Example 2: Create an image definition for generalized linux images'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $description = "My gallery"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -Description $description
+    ```
+
+    Creates a gallery image definition to contain image versions for generalized linux images.
+- title: 'Example 3: Create an image definition for specialized windows images'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $description = "My gallery"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Specialized" -OsType "Windows" -Description $description
+    ```
+
+    Creates a gallery image definition to contain image versions for specialized windows images.
+- title: 'Example 4: Create an image definition for generalized windows images and set features.'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $description = "My gallery"
+    $IsHibernateSupported = @{Name='IsHibernateSupported';Value='True'}
+    $IsAcceleratedNetworkSupported = @{Name='IsAcceleratedNetworkSupported';Value='False'}
+    $ConfidentialVMSupported = @{Name='SecurityType';Value='ConfidentialVMSupported'}
+    $features = @($IsHibernateSupported,$IsAcceleratedNetworkSupported, $ConfidentialVMSupported)
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Windows" -Description $description -Feature $features -HyperVGeneration "V2"
+    ```
+
+    Creates a gallery image definition to contain image versions for generalized windows images.
+- title: 'Example 5: Create an image definition with plan information'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $purchasePlanName = "myPlanName"
+    $purchasePlanProduct = "myPlanProduct"
+    $purchasePlanPublisher = "myPlanPublisher"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -PurchasePlanName $purchasePlanName -PurchasePlanProduct $purchasePlanProduct -PurchasePlanPublisher $purchasePlanPublisher
+    ```
+
+    Creates a gallery image definition for linux generalized images and define the plan name, product, and publisher. Only image versions that match the plan information can be added to this definition.
+- title: 'Example 6: Create an image definition and indicate end of life date'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $endOfLifeDate = "2024-08-02T00:00:00+00:00"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -EndOfLifeDate $endOfLifeDate
+    ```
+
+    This example has the end-of-life date for image definitions set to August 2, 2024 at mignight UTC. End-of-life dates can be specified for image definitions and image versions. Image definitions can still be used after the end-of-life dates.
+- title: 'Example 7: Create an image definition and recommend minimum and maximum CPU and memory (GB)'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $minMemory = 32
+    $maxMemory = 128
+    $minVCPU = 2
+    $maxVCPU = 8
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -MinimumMemory $minMemory -MaximumMemory $maxMemory -MinimumVCPU $minVCPU -MaximumVCPU $maxVCPU
+    ```
+
+    Creates a gallery image definition and recommends the minimum and maximum ranges for the CPU and memory that the image versions in this image definition support. Image versions can still be used to create virtual machines with memory and vCPU settings outside the recommended ranges.
+- title: 'Example 8: Create an image definition and indicate which OS disk types are not recommended for the image'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $disallowedDiskTypes = @("Standard_LRS")
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -DisallowedDiskType $disallowedDiskTypes
+    ```
+
+    Creates a gallery image definition and indicate which OS disk types may not be compatible with image versions within this image definition. Image versions can still be used to create virtual machines with an OS disk that is one of the disallowed disk types.
+- title: 'Example 9: Create an image definition and provide the EULA, privacy statement URI, and release notes URI'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+    $eula = "https://myeula"
+    $privacyStatementUri = "https://mystatement"
+    $releaseNoteUri = "https://myreleasenotes"
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -Eula $eula -PrivacyStatementUri $privacyStatementUri -ReleaseNoteUri $releaseNoteUri
+    ```
+
+    Creates a gallery image definition for linux generalized images and specify either the string or path to an EULA agreement, privacy statement, and release notes tied to all image versions in the image definition.
+- title: 'Example 10: Create a gallery image definition with Standard SecurityType feature'
+  description: |-
+    ```powershell
+    $rgName = "myResourceGroup"
+    $galleryName = "myGallery"
+    $galleryImageDefinitionName = "myImage"
+    $location = "eastus"
+    $publisherName = "GreatPublisher"
+    $offerName = "GreatOffer"
+    $skuName = "GreatSku"
+
+    $Feature1 = @{Name='SecurityType';Value='None'}
+    $Features = @($Feature1)
+
+    New-AzGalleryImageDefinition -ResourceGroupName $rgName -GalleryName $galleryName -Name $galleryImageDefinitionName -Location $location -Publisher $publisherName -Offer $offerName -Sku $skuName -OsState "Generalized" -OsType "Linux" -Feature $Features
+    ```
+
+    Create a gallery image definition with standard security type feature by providing 'None' as the value of the SecurityType feature.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzGalleryImageDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/new-azgalleryimagedefinition
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzGalleryImageDefinition.md
+  PlatyPS schema version: 2024-05-01

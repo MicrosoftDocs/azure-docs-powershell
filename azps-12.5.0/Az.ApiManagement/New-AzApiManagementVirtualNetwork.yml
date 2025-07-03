@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagementVirtualNetwork
+name: New-AzApiManagementVirtualNetwork
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Creates an instance of PsApiManagementVirtualNetwork.
+description: |-
+  The **New-AzApiManagementVirtualNetwork** cmdlet is a helper command to create an instance of **PsApiManagementVirtualNetwork**.
+  This command is used with **Set-AzApiManagement** and **New-AzApiManagement** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the subnet resource ID of the virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementVirtualNetwork
+        -SubnetResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a virtual network and Update an existing APIM service into the VNET'
+  description: |-
+    ```powershell
+    $virtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-a1e8-3726ab15d0e2/resourceGroups/Api-Default-WestUS/providers/Microsoft.Network/virtualNetworks/dfVirtualNetwork/subnets/backendSubnet"
+    $apim = Get-AzApiManagement -ResourceGroupName "ContosoGroup" -Name "ContosoApi"
+    $apim.VpnType = "External"
+    $apim.VirtualNetwork = $virtualNetwork
+    Set-AzApiManagement -InputObject $apim
+    ```
+
+    This example creates a virtual network and then calls the **Set-AzApiManagement** cmdlet.
+- title: 'Example 2: Create an API Management service for an external virtual network'
+  description: |-
+    ```powershell
+    $virtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-b1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
+    New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+    ```
+
+    This example creates a new APIM service into a Virtual Network in `External` mode
+links:
+- text: Set-AzApiManagement
+  href: ./Set-AzApiManagement.yml
+- text: New-AzApiManagement
+  href: ./New-AzApiManagement.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementvirtualnetwork
+  Module Name: Az.ApiManagement
+  ms.assetid: FB5E4ED2-8EF3-462F-A053-7EC82C767E8D
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementVirtualNetwork.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroup
+name: New-AzActionGroup
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an ActionGroup reference object in memory.
+description: |-
+  The **New-AzActionGroup** cmdlet creates an action group reference object in memory.
+parameters:
+  cmdletParameters:
+  - name: ActionGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id/name of the action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookProperty
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The webhook properties of the action group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroup
+        -ActionGroupId <String>
+        [-WebhookProperty <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.ActivityLogAlertActionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an action group reference object in memory'
+  description: |-
+    ```
+    PS C:\>$dict = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
+    PS C:\>$dict.Add('key1', 'value1')
+    PS C:\>$actionGrp1 = New-AzActionGroup -ActionGroupId 'actiongr1' -WebhookProperty $dict
+    ```
+links:
+- text: Set-AzActivityLogAlert
+  href: ./Set-AzActivityLogAlert.yml
+- text: Enable-AzActivityLogAlert
+  href: ./Enable-AzActivityLogAlert.yml
+- text: Disable-AzActivityLogAlert
+  href: ./Disable-AzActivityLogAlert.yml
+- text: Get-AzActivityLogAlert
+  href: ./Get-AzActivityLogAlert.yml
+- text: Remove-AzActivityLogAlert
+  href: ./Remove-AzActivityLogAlert.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActionGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azactiongroup
+  Module Name: Az.Monitor
+  ms.assetid: A4C605DD-9B2E-4EE9-BD1F-1352D605C33F
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzActionGroup.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,175 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureApplicationGateway
+name: New-AzureApplicationGateway
+module: Azure
+isPreview: false
+summary: |-
+  Creates an application gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureApplicationGateway** cmdlet creates an application gateway.
+parameters:
+  cmdletParameters:
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description that this cmdlet assigns to the application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewaySize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size that this cmdlet assigns to the application gateway.
+      Valid values are:
+
+      - Small
+      - Medium
+      - Large
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceCount
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of instances that this cmdlet assigns to the application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subnets
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies an array of subnets in which this cmdlet deploys the application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network in which this cmdlet deploys the application gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureApplicationGateway
+        -Name <String>
+        -VnetName <String>
+        -Subnets <System.Collections.Generic.List`1[System.String]>
+        [-InstanceCount <UInt32>]
+        [-GatewaySize <String>]
+        [-Description <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Management.ApplicationGateway.Models.ApplicationGatewayOperationResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an application gateway'
+  description: |-
+    ```
+    PS C:\> New-AzureApplicationGateway -Name "ApplicationGateway06" -VnetName "VirtualNetwork17" -Subnets @("Subnet01", "Subnet02", "Subnet03")
+    ```
+
+    This command creates an application gateway named ApplicationGateway06.
+    The command deploys the gateway in VirtualNetwork17 and in the specified subnets.
+links:
+- text: Get-AzureApplicationGateway
+  href: ./Get-AzureApplicationGateway.yml
+- text: Remove-AzureApplicationGateway
+  href: ./Remove-AzureApplicationGateway.yml
+- text: Start-AzureApplicationGateway
+  href: ./Start-AzureApplicationGateway.yml
+- text: Stop-AzureApplicationGateway
+  href: ./Stop-AzureApplicationGateway.yml
+- text: Update-AzureApplicationGateway
+  href: ./Update-AzureApplicationGateway.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BED3D3FE-D1E8-4857-A675-7B2670A129B2
+  PlatyPS schema version: 2024-05-01

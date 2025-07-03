@@ -1,0 +1,125 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksClusterConfigFileObject
+name: New-AzHdInsightOnAksClusterConfigFileObject
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Create an in-memory object for ClusterConfigFile.
+description: |-
+  Create an in-memory object for ClusterConfigFile.
+parameters:
+  cmdletParameters:
+  - name: Content
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Free form content of the entire configuration file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encoding
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This property indicates if the content is encoded and is case-insensitive.
+      Please set the value to base64 if the content is base64 encoded.
+      Set it to none or skip it if the content is plain text.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Configuration file name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of the config file if content is specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterConfigFileValues" data-throw-if-not-resolved="False" />
+    description: |-
+      List of key value pairs
+              where key represents a valid service configuration name and value represents the value of the config.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksClusterConfigFileObject
+        -FileName <String>
+        [-Content <String>]
+        [-Encoding <String>]
+        [-Path <String>]
+        [-Value <IClusterConfigFileValues>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ClusterConfigFile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create cluster config file'
+  description: |-
+    ```powershell
+    $coreSiteConfigFile=New-AzHdInsightOnAksClusterConfigFileObject -FileName "core-site.xml" -Value @{"fs.defaultFS"="abfs://testcontainer@$teststorage.dfs.core.windows.net"}
+    ```
+
+    This cmdlet create the config file "core-site.xml" and set the key "fs.defaultFS" with the value "abfs://testcontainer@$teststorage.dfs.core.windows.net" in this file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterConfigFileObject.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksclusterconfigfileobject
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksClusterConfigFileObject.md
+  PlatyPS schema version: 2024-05-01

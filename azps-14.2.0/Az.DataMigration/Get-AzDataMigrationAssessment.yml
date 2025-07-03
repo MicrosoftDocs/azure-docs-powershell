@@ -1,0 +1,153 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.Get-AzDataMigrationAssessment
+name: Get-AzDataMigrationAssessment
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Start assessment on SQL Server instance(s)
+description: |-
+  Start assessment on SQL Server instance(s)
+parameters:
+  cmdletParameters:
+  - name: ConfigFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of the ConfigFile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ConfigFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Sql Server Connection Strings
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFolder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Output folder to store assessment report
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overwrite
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable this parameter to overwrite the existing assessment report
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationAssessment
+        -ConnectionString <String[]>
+        [-OutputFolder <String>]
+        [-Overwrite]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommandLine
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationAssessment
+        -ConfigFilePath <String>
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ConfigFile
+  isDefault: false
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:  Run SQL Assessment on given SQL Server using connection string'
+  description: |-
+    ```powershell
+    Get-AzDataMigrationAssessment -ConnectionString "Data Source=LabServer.database.net;Initial Catalog=master;Integrated Security=False;User Id=User;Password=password" -OutputFolder "C:\AssessmentOutput" -Overwrite
+    ```
+
+    ```output
+    Starting SQL assessment...
+    Progress: 100%; Issues Found: 100; Objects Assessed: 500/500; Status: Completed; Total time: 00:01:50.000.
+
+    Finishing SQL assessment...
+    Assessment report saved to C:\Users\user\AppData\Local\Microsoft\SqlAssessment\SqlAssessmentReport.json.
+    Event and Error Logs Folder Path: C:\Users\user\AppData\Local\Microsoft\SqlAssessment\Logs
+    ```
+
+    This command runs SQL Assessment on given SQL Server using the connection string.
+- title: 'Example 2: Run SQL Assessment on given SQL Server using assessment config file'
+  description: |-
+    ```powershell
+    Get-AzDataMigrationAssessment -ConfigFilePath "C:\Users\user\document\config.json"
+    ```
+
+    ```output
+    Starting SQL assessment...
+    Progress: 100%; Issues Found: 100; Objects Assessed: 550/550; Status: Completed; Total time: 00:01:50.000.
+
+    Finishing SQL assessment...
+    Assessment report saved to C:\Users\user\AppData\Local\Microsoft\SqlAssessment\SqlAssessmentReport.json.
+    Event and Error Logs Folder Path: C:\Users\user\AppData\Local\Microsoft\SqlAssessment\Logs
+    ```
+
+    This command runs SQL Assessment on given SQL Server using assessment config file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationAssessment.md
+  document type: cmdlet
+  external help file: Az.DataMigration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/get-azdatamigrationassessment
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationAssessment.md
+  PlatyPS schema version: 2024-05-01

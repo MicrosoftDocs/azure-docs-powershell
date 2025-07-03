@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzNetworkManagerAddressPrefixItem
+name: New-AzNetworkManagerAddressPrefixItem
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a network manager address prefix item.
+description: |-
+  The **New-AzNetworkManagerAddressPrefixItem** cmdlet creates a network manager address prefix item.
+parameters:
+  cmdletParameters:
+  - name: AddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AddressPrefix
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddressPrefixType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AddressPrefix Type.
+    acceptedValues:
+    - IPPrefix
+    - ServiceTag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkManagerAddressPrefixItem
+        -AddressPrefix <String>
+        -AddressPrefixType <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerAddressPrefixItem" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzNetworkManagerAddressPrefixItem -AddressPrefix "Internet" -AddressPrefixType "ServiceTag"
+    ```
+
+    ```output
+    AddressPrefix AddressPrefixType
+    ------------- -----------------
+    Internet      ServiceTag
+    ```
+
+    Creates a network manager service tag address prefix item.
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzNetworkManagerAddressPrefixItem -AddressPrefix "10.0.0.1" -AddressPrefixType "IPPrefix"
+    ```
+
+    ```output
+    AddressPrefix AddressPrefixType
+    ------------- -----------------
+    10.0.0.1      IPPrefix
+    ```
+
+    Creates a network manager IP address prefix item.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerAddressPrefixItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-aznetworkmanageraddressprefixitem
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzNetworkManagerAddressPrefixItem.md
+  PlatyPS schema version: 2024-05-01

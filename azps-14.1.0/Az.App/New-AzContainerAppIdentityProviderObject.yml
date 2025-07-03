@@ -1,0 +1,714 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppIdentityProviderObject
+name: New-AzContainerAppIdentityProviderObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for IdentityProviders.
+description: |-
+  Create an in-memory object for IdentityProviders.
+parameters:
+  cmdletParameters:
+  - name: AllowedPrincipalGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of the allowed groups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllowedPrincipalIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of the allowed identities.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppleEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Apple provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppleLoginScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of the scopes that should be requested while authenticating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppleRegistrationClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of the app used for login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppleRegistrationClientSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the client secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryIsAutoProvisioned
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+              This is an internal flag primarily intended to support the Azure Management Portal.
+      Users should not
+              read or write to this property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryRegistrationClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of this relying party application, known as the client_id.
+              This setting is required for enabling OpenID Connection authentication with Azure Active Directory or
+              other 3rd party OpenID Connect providers.
+              More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryRegistrationClientSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the client secret of the relying party application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureActiveDirectoryValidationAllowedAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of audiences that can make successful authentication/authorization requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureStaticWebAppEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureStaticWebAppsRegistrationClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of the app used for login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomOpenIdConnectProvider
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IIdentityProvidersCustomOpenIdConnectProviders" data-throw-if-not-resolved="False" />
+    description: |-
+      The map of the name of the alias of each custom Open ID Connect provider to the
+              configuration settings of the custom Open ID Connect provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultAuthorizationPolicyAllowedApplication
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The configuration settings of the Azure Active Directory allowed applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FacebookEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Facebook provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FacebookGraphApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of the Facebook api to be used while logging in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FacebookLoginScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of the scopes that should be requested while authenticating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the GitHub provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubLoginScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of the scopes that should be requested while authenticating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubRegistrationClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of the app used for login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GitHubRegistrationClientSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the client secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GoogleEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Google provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GoogleLoginScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of the scopes that should be requested while authenticating.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GoogleRegistrationClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Client ID of the app used for login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GoogleRegistrationClientSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the client secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GoogleValidationAllowedAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The configuration settings of the allowed list of audiences from which to validate the JWT token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JwtClaimCheckAllowedClientApplication
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of the allowed client applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JwtClaimCheckAllowedGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of the allowed groups.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoginDisableWwwAuthenticate
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>true\</code\> if the www-authenticate provider should be omitted from the request; otherwise, \<code\>false\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoginParameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Login parameters to send to the OpenID Connect authorization endpoint when
+              a user logs in.
+      Each parameter must be in the form "key=value".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationAppId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The App ID of the app used for login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationAppSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the app secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationClientSecretCertificateIssuer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An alternative to the client secret thumbprint, that is the issuer of a certificate used for signing purposes.
+      This property acts as
+              a replacement for the Client Secret Certificate Thumbprint.
+      It is also optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationClientSecretCertificateSubjectAlternativeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An alternative to the client secret thumbprint, that is the subject alternative name of a certificate used for signing purposes.
+      This property acts as
+              a replacement for the Client Secret Certificate Thumbprint.
+      It is also optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationClientSecretCertificateThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes.
+      This property acts as
+              a replacement for the Client Secret.
+      It is also optional.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationConsumerKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The OAuth 1.0a consumer key of the Twitter application used for sign-in.
+              This setting is required for enabling Twitter Sign-In.
+              Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationConsumerSecretSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
+              application used for sign-in.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RegistrationOpenIdIssuer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
+              When using Azure Active Directory, this value is the URI of the directory tenant, e.g.
+      `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.
+              This URI is a case-sensitive identifier for the token issuer.
+              More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TwitterEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      \<code\>false\</code\> if the Twitter provider should not be enabled despite the set registration; otherwise, \<code\>true\</code\>.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppIdentityProviderObject
+        [-AllowedPrincipalGroup <String[]>]
+        [-AllowedPrincipalIdentity <String[]>]
+        [-AppleEnabled <Boolean>]
+        [-AppleLoginScope <String[]>]
+        [-AppleRegistrationClientId <String>]
+        [-AppleRegistrationClientSecretSettingName <String>]
+        [-AzureActiveDirectoryEnabled <Boolean>]
+        [-AzureActiveDirectoryIsAutoProvisioned <Boolean>]
+        [-AzureActiveDirectoryRegistrationClientId <String>]
+        [-AzureActiveDirectoryRegistrationClientSecretSettingName <String>]
+        [-AzureActiveDirectoryValidationAllowedAudience <String[]>]
+        [-AzureStaticWebAppEnabled <Boolean>]
+        [-AzureStaticWebAppsRegistrationClientId <String>]
+        [-CustomOpenIdConnectProvider <IIdentityProvidersCustomOpenIdConnectProviders>]
+        [-DefaultAuthorizationPolicyAllowedApplication <String[]>]
+        [-FacebookEnabled <Boolean>]
+        [-FacebookGraphApiVersion <String>]
+        [-FacebookLoginScope <String[]>]
+        [-GitHubEnabled <Boolean>]
+        [-GitHubLoginScope <String[]>]
+        [-GitHubRegistrationClientId <String>]
+        [-GitHubRegistrationClientSecretSettingName <String>]
+        [-GoogleEnabled <Boolean>]
+        [-GoogleLoginScope <String[]>]
+        [-GoogleRegistrationClientId <String>]
+        [-GoogleRegistrationClientSecretSettingName <String>]
+        [-GoogleValidationAllowedAudience <String[]>]
+        [-JwtClaimCheckAllowedClientApplication <String[]>]
+        [-JwtClaimCheckAllowedGroup <String[]>]
+        [-LoginDisableWwwAuthenticate <Boolean>]
+        [-LoginParameter <String[]>]
+        [-RegistrationAppId <String>]
+        [-RegistrationAppSecretSettingName <String>]
+        [-RegistrationClientSecretCertificateIssuer <String>]
+        [-RegistrationClientSecretCertificateSubjectAlternativeName <String>]
+        [-RegistrationClientSecretCertificateThumbprint <String>]
+        [-RegistrationConsumerKey <String>]
+        [-RegistrationConsumerSecretSettingName <String>]
+        [-RegistrationOpenIdIssuer <String>]
+        [-TwitterEnabled <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IdentityProviders" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an IdentityProviders object for AuthConfig.'
+  description: |-
+    ```powershell
+    New-AzContainerAppIdentityProviderObject -RegistrationAppId xxxxxx@xxx.com -RegistrationAppSecretSettingName redis-secret
+    ```
+
+    ```output
+    ...                              : ...
+    RegistrationAppId                : xxxxxx@xxx.com
+    RegistrationAppSecretSettingName : redis-secret
+    ...                              : ...
+    ```
+
+    Create an IdentityProviders object for AuthConfig.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppIdentityProviderObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappidentityproviderobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppIdentityProviderObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Enable-AzContextAutosave
+name: Enable-AzContextAutosave
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Azure contexts are PowerShell objects representing your active subscription to run commands against,
+  and the authentication information needed to connect to an Azure cloud. With Azure contexts, Azure
+  PowerShell doesn't need to reauthenticate your account each time you switch subscriptions. For more
+  information, see [Azure PowerShell context objects](https://learn.microsoft.com/powershell/azure/context-persistence).
+
+  This cmdlet allows the Azure context information to be saved and automatically loaded when you start
+  a PowerShell process. For example, when opening a new window.
+description: |-
+  Allows the Azure context information to be saved and automatically loaded when a PowerShell process
+  starts. The context is saved at the end of the execution of any cmdlet that affects the context. For
+  example, any profile cmdlet. If you're using user authentication, then tokens can be updated during
+  the course of running any cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, tenant, and subscription used for communication with Azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines the scope of context changes. For example, whether changes apply only to the current
+      process, or to all sessions started by this user. Changes made with the scope `CurrentUser` will
+      affect all PowerShell sessions started by the user. If a particular session needs to have different
+      settings, use the scope `Process`.
+    acceptedValues:
+    - Process
+    - CurrentUser
+    defaultValue: CurrentUser
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet isn't run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-AzContextAutosave
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.ContextAutosaveSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Enable autosaving credentials for the current user'
+  description: |-
+    Turn on credential autosave for the current user. Whenever a PowerShell window is opened, your
+    current context is remembered without logging in.
+
+    ```powershell
+    Enable-AzContextAutosave
+    ```
+- title: Example 2
+  description: |-
+    Allow the Azure credential, account, and subscription information, to be saved and automatically
+    loaded when you open a PowerShell window in this PowerShell session. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+
+
+    ```powershell
+    Enable-AzContextAutosave -Scope Process
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/enable-azcontextautosave
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Enable-AzContextAutosave.md
+  PlatyPS schema version: 2024-05-01

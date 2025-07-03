@@ -1,0 +1,309 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderCspmAwsOfferingObject
+name: New-AzSecurityDefenderCspmAwsOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderCspmAwsOffering.
+description: |-
+  Create an in-memory object for DefenderCspmAwsOffering.
+parameters:
+  cmdletParameters:
+  - name: CiemDiscoveryCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for CIEM discovery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CiemOidcAzureActiveDirectoryAppName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the azure active directory app name used of authenticating against AWS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CiemOidcCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for CIEM oidc connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationExclusionTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IDefenderCspmAwsOfferingVMScannersConfigurationExclusionTags" data-throw-if-not-resolved="False" />
+    description: |-
+      VM tags that indicates that VM should not be scanned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationScanningMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning mode for the VM scan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDspmCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDspmEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is databases DSPM protection enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSensitivityDiscoveryCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSensitivityDiscoveryEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender Data Sensitivity discovery enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container agentless discovery K8s enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container image assessment enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScannerEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender for Server VM scanning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderCspmAwsOfferingObject
+        [-CiemDiscoveryCloudRoleArn <String>]
+        [-CiemOidcAzureActiveDirectoryAppName <String>]
+        [-CiemOidcCloudRoleArn <String>]
+        [-ConfigurationCloudRoleArn <String>]
+        [-ConfigurationExclusionTag <IDefenderCspmAwsOfferingVMScannersConfigurationExclusionTags>]
+        [-ConfigurationScanningMode <String>]
+        [-DataSensitivityDiscoveryCloudRoleArn <String>]
+        [-DataSensitivityDiscoveryEnabled <Boolean>]
+        [-DatabaseDspmCloudRoleArn <String>]
+        [-DatabaseDspmEnabled <Boolean>]
+        [-MdcContainerAgentlessDiscoveryK8SCloudRoleArn <String>]
+        [-MdcContainerAgentlessDiscoveryK8SEnabled <Boolean>]
+        [-MdcContainerImageAssessmentCloudRoleArn <String>]
+        [-MdcContainerImageAssessmentEnabled <Boolean>]
+        [-VMScannerEnabled <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderCspmAwsOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderCspmAwsOffering object'
+  description: |-
+    ```powershell
+    $arnPrefix = "arn:aws:iam::123456789012:role"
+    New-AzSecurityDefenderCspmAwsOfferingObject `
+        -VMScannerEnabled $true -ConfigurationScanningMode Default -ConfigurationCloudRoleArn "$arnPrefix/DefenderForCloud-AgentlessScanner" -ConfigurationExclusionTag @{key="value"} `
+        -DataSensitivityDiscoveryEnabled $true -DataSensitivityDiscoveryCloudRoleArn "$arnPrefix/SensitiveDataDiscovery" `
+        -DatabaseDspmEnabled $true -DatabaseDspmCloudRoleArn "$arnPrefix/DefenderForCloud-DataSecurityPostureDB" `
+        -CiemDiscoveryCloudRoleArn "$arnPrefix/DefenderForCloud-Ciem" -CiemOidcAzureActiveDirectoryAppName "mciem-aws-oidc-connector" -CiemOidcCloudRoleArn "$arnPrefix/DefenderForCloud-OidcCiem" `
+        -MdcContainerImageAssessmentEnabled $true -MdcContainerImageAssessmentCloudRoleArn "$arnPrefix/MDCContainersImageAssessmentRole" `
+        -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SCloudRoleArn "$arnPrefix/MDCContainersAgentlessDiscoveryK8sRole"
+    ```
+
+    ```output
+    CiemDiscoveryCloudRoleArn                     : arn:aws:iam::123456789012:role/DefenderForCloud-Ciem
+    CiemOidcAzureActiveDirectoryAppName           : mciem-aws-oidc-connector
+    CiemOidcCloudRoleArn                          : arn:aws:iam::123456789012:role/DefenderForCloud-OidcCiem
+    ConfigurationCloudRoleArn                     : arn:aws:iam::123456789012:role/DefenderForCloud-AgentlessScanner
+    ConfigurationExclusionTag                     : {
+                                                      "key": "value"
+                                                    }
+    ConfigurationScanningMode                     : Default
+    DataSensitivityDiscoveryCloudRoleArn          : arn:aws:iam::123456789012:role/SensitiveDataDiscovery
+    DataSensitivityDiscoveryEnabled               : True
+    DatabaseDspmCloudRoleArn                      : arn:aws:iam::123456789012:role/DefenderForCloud-DataSecurityPostureDB
+    DatabaseDspmEnabled                           : True
+    Description                                   :
+    MdcContainerAgentlessDiscoveryK8SCloudRoleArn : arn:aws:iam::123456789012:role/MDCContainersAgentlessDiscoveryK8sRole
+    MdcContainerAgentlessDiscoveryK8SEnabled      : True
+    MdcContainerImageAssessmentCloudRoleArn       : arn:aws:iam::123456789012:role/MDCContainersImageAssessmentRole
+    MdcContainerImageAssessmentEnabled            : True
+    OfferingType                                  : DefenderCspmAws
+    VMScannerEnabled                              : True
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderCspmAwsOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefendercspmawsofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderCspmAwsOfferingObject.md
+  PlatyPS schema version: 2024-05-01

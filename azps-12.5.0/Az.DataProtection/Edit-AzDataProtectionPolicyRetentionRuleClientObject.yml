@@ -1,0 +1,178 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Edit-AzDataProtectionPolicyRetentionRuleClientObject
+name: Edit-AzDataProtectionPolicyRetentionRuleClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Adds or removes Retention Rule to existing Policy
+description: |-
+  Adds or removes Retention Rule to existing Policy
+parameters:
+  cmdletParameters:
+  - name: IsDefault
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if retention rule is default retention rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRetention
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LifeCycles
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.ISourceLifeCycle" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Life cycles associated with the retention rule.
+      To construct, see NOTES section for LIFECYCLES properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRetention
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.RetentionRuleName" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention Rule Name
+    acceptedValues:
+    - Default
+    - Daily
+    - Weekly
+    - Monthly
+    - Yearly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OverwriteLifeCycle
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies whether to modify an existing LifeCycle.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AddRetention
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IBackupPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup Policy Object
+      To construct, see NOTES section for POLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RemoveRule
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to remove the retention rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RemoveRetention
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Edit-AzDataProtectionPolicyRetentionRuleClientObject
+        -Policy <IBackupPolicy>
+        -Name <RetentionRuleName>
+        [-RemoveRule]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RemoveRetention
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Edit-AzDataProtectionPolicyRetentionRuleClientObject
+        -Policy <IBackupPolicy>
+        -Name <RetentionRuleName>
+        -IsDefault <Boolean>
+        -LifeCycles <ISourceLifeCycle[]>
+        [-OverwriteLifeCycle <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AddRetention
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IBackupPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add Weekly Retention Rule'
+  description: |-
+    ```powershell
+    $pol = Get-AzDataProtectionPolicyTemplate
+    $lifecycle = New-AzDataProtectionRetentionLifeCycleClientObject -SourceDataStore OperationalStore -SourceRetentionDurationType Weeks -SourceRetentionDurationCount 5
+    Edit-AzDataProtectionPolicyRetentionRuleClientObject -Policy $pol -Name Weekly -LifeCycles $lifecycle -IsDefault $false
+    ```
+
+    ```output
+    DatasourceType            ObjectType
+    --------------            ----------
+    {Microsoft.Compute/disks} BackupPolicy
+    ```
+
+    The first command gets the default policy template.
+    The second command creates a weekly lifecycle object.
+    The third command adds a weekly retention rule to the default policy.
+- title: 'Example 2: Remove Weekly Retention Rule'
+  description: |-
+    ```powershell
+    Edit-AzDataProtectionPolicyRetentionRuleClientObject -Policy $pol -Name Weekly -RemoveRule
+    ```
+
+    ```output
+    DatasourceType            ObjectType
+    --------------            ----------
+    {Microsoft.Compute/disks} BackupPolicy
+    ```
+
+    This command removes weekly retention rule if it exists in given backup policy.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Edit-AzDataProtectionPolicyRetentionRuleClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/edit-azdataprotectionpolicyretentionruleclientobject
+  Module Name: Az.Dataprotection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Edit-AzDataProtectionPolicyRetentionRuleClientObject.md
+  PlatyPS schema version: 2024-05-01

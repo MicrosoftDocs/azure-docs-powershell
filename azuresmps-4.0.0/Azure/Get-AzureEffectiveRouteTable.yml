@@ -1,0 +1,171 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureEffectiveRouteTable
+name: Get-AzureEffectiveRouteTable
+module: Azure
+isPreview: false
+summary: |-
+  Gets the route applied in a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureEffectiveRouteTable** cmdlet gets the route applied in a virtual machine.
+  This operation could take several seconds to finish.
+parameters:
+  cmdletParameters:
+  - name: NetworkInterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network adapter for which this cmdlet gets effective routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleInstanceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a PaaS role for which this cmdlet gets effective routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SlotGetEffectiveRouteTableParamSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a cloud service.
+      The PaaS role for which this cmdlet gets effective routes belongs to the service that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a PaaS slot.
+      The PaaS role for which this cmdlet gets effective routes has the slot that this parameter specifies.
+      Valid values are:
+
+      - Production
+      - Staging
+
+      The default value is Production.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SlotGetEffectiveRouteTableParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="PersistentVMRoleContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine object for which this cmdlet gets effective routes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IaaSGetEffectiveRouteTableParamSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureEffectiveRouteTable
+        -VM <PersistentVMRoleContext>
+        -ServiceName <String>
+        [-NetworkInterfaceName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IaaSGetEffectiveRouteTableParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureEffectiveRouteTable
+        -ServiceName <String>
+        -RoleInstanceName <String>
+        [-Slot <String>]
+        [-NetworkInterfaceName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SlotGetEffectiveRouteTableParamSet
+  isDefault: false
+outputs:
+- name: <xref href="System.Collections.Generic.IEnumerable<Microsoft.WindowsAzure.Management.Network.Models.EffectiveRouteTable, Microsoft.WindowsAzure.Management.Network>" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the effective route applied a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureEffectiveRouteTable
+    ```
+
+    This command gets a virtual machine named ContosoVM06 for the service named ContosoService, and passes that virtual machine object to the current cmdlet.
+    The current cmdlet gets the route applied to that virtual machine.
+links:
+- text: Get-AzureRouteTable
+  href: ./Get-AzureRouteTable.yml
+- text: New-AzureRouteTable
+  href: ./New-AzureRouteTable.yml
+- text: Remove-AzureRouteTable
+  href: ./Remove-AzureRouteTable.yml
+- text: Remove-AzureSubnetRouteTable
+  href: ./Remove-AzureSubnetRouteTable.yml
+- text: Set-AzureSubnetRouteTable
+  href: ./Set-AzureSubnetRouteTable.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 82CF6E71-FFE2-4B2C-8AAD-04C137AD5706
+  PlatyPS schema version: 2024-05-01

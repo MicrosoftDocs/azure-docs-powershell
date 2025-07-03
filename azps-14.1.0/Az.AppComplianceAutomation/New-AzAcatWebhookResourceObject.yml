@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AppComplianceAutomation.New-AzAcatWebhookResourceObject
+name: New-AzAcatWebhookResourceObject
+module: Az.AppComplianceAutomation
+isPreview: false
+summary: |-
+  Create an in-memory object for WebhookResource.
+description: |-
+  Create an in-memory object for WebhookResource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      content type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      whether to disable webhook
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSslVerification
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      whether to enable ssl verification
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Event
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      under which event notification should be sent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PayloadUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      webhook payload url
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      webhook secret token.
+      If not set, this field value is null; otherwise, please set a string value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TriggerMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      whether to send notification under any event.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAcatWebhookResourceObject
+        [-EnableSslVerification <String>]
+        [-Disable]
+        [-TriggerMode <String>]
+        [-Event <String[]>]
+        [-PayloadUrl <String>]
+        [-ContentType <String>]
+        [-Secret <SecureString>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AppComplianceAutomation.Models.IWebhookResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a WebhookResource object with default values.'
+  description: |-
+    ```powershell
+    $secret = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    New-AzAcatWebhookResourceObject -TriggerMode "all" -PayloadUrl "https://example.com" -Secret $secret
+    ```
+
+    ```output
+    Name SystemDataCreatedAt  SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    ---- -------------------  ------------------- ----------------------- ------------------------ ------------------------
+         1/1/0001 12:00:00 AM                                             1/1/0001 12:00:00 AM
+    ```
+
+    Create a WebhookResource object with default values.
+- title: 'Example 2: Create a WebhookResource object.'
+  description: |-
+    ```powershell
+    $secret = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    New-AzAcatWebhookResourceObject -EnableSslVerification "true"  -Disable -TriggerMode "all" -PayloadUrl "https://example.com" -ContentType "application/json" -Secret $secret
+    ```
+
+    ```output
+    Name SystemDataCreatedAt  SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy
+    ---- -------------------  ------------------- ----------------------- ------------------------ ------------------------
+         1/1/0001 12:00:00 AM                                             1/1/0001 12:00:00 AM
+    ```
+
+    Create a WebhookResource object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/New-AzAcatWebhookResourceObject.md
+  document type: cmdlet
+  external help file: Az.AppComplianceAutomation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.appComplianceAutomation/new-azacatwebhookresourceobject
+  Module Name: Az.AppComplianceAutomation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/New-AzAcatWebhookResourceObject.md
+  PlatyPS schema version: 2024-05-01

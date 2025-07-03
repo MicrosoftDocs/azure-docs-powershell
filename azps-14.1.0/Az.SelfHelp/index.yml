@@ -1,0 +1,37 @@
+### YamlMime:PowerShellModule1
+uid: Az.SelfHelp
+name: Az.SelfHelp Module
+isPreview: false
+cmdletGroups:
+- title: SelfHelp
+  cmdlets:
+  - Az.SelfHelp.Get-AzSelfHelpDiagnostic
+  - Az.SelfHelp.Get-AzSelfHelpDiscoverySolution
+  - Az.SelfHelp.Get-AzSelfHelpSimplifiedSolution
+  - Az.SelfHelp.Get-AzSelfHelpSolution
+  - Az.SelfHelp.Get-AzSelfHelpSolutionSelfHelp
+  - Az.SelfHelp.Get-AzSelfHelpTroubleshooter
+  - Az.SelfHelp.Invoke-AzSelfHelpCheckNameAvailability
+  - Az.SelfHelp.Invoke-AzSelfHelpContinueTroubleshooter
+  - Az.SelfHelp.Invoke-AzSelfHelpDiscoverySolutionNlpSubscriptionScope
+  - Az.SelfHelp.Invoke-AzSelfHelpDiscoverySolutionNlpTenantScope
+  - Az.SelfHelp.Invoke-AzSelfHelpWarmSolutionUp
+  - Az.SelfHelp.New-AzSelfHelpDiagnostic
+  - Az.SelfHelp.New-AzSelfHelpSimplifiedSolution
+  - Az.SelfHelp.New-AzSelfHelpSolution
+  - Az.SelfHelp.New-AzSelfHelpTroubleshooter
+  - Az.SelfHelp.Restart-AzSelfHelpTroubleshooter
+  - Az.SelfHelp.Stop-AzSelfHelpTroubleshooter
+  - Az.SelfHelp.Update-AzSelfHelpSolution
+description: |-
+  Microsoft Azure PowerShell: SelfHelp cmdlets
+metadata:
+  Module Name: Az.SelfHelp
+  Module Guid: 2705ffd2-39d8-491f-b0c6-14fca2dc3727
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.selfhelp
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Az.SelfHelp.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SelfHelp/SelfHelp/help/Az.SelfHelp.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

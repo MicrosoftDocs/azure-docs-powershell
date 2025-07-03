@@ -1,0 +1,86 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CognitiveServices.Get-AzCognitiveServicesModel
+name: Get-AzCognitiveServicesModel
+module: Az.CognitiveServices
+isPreview: false
+summary: |-
+  Get Models of Cognitive Services
+description: |-
+  Get Models of Cognitive Services
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Cognitive Services Account Location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCognitiveServicesModel
+        [-Location] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.CognitiveServices.Models.Model" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzCognitiveServicesModel -Location 'WestUS'
+    ```
+
+    ```output
+    Kind         : kind
+    SkuName      : sku
+    Model		 : model
+    ```
+
+    Get Models of Cognitive Services
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Get-AzCognitiveServicesModel.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CognitiveServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cognitiveservices/get-azcognitiveservicesmodel
+  Module Name: Az.CognitiveServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CognitiveServices/CognitiveServices/help/Get-AzCognitiveServicesModel.md
+  PlatyPS schema version: 2024-05-01

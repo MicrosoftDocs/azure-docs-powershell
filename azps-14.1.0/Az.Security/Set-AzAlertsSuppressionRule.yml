@@ -1,0 +1,267 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Set-AzAlertsSuppressionRule
+name: Set-AzAlertsSuppressionRule
+module: Az.Security
+isPreview: false
+summary: |-
+  Create or update an alerts suppression rule.
+description: |-
+  Create or update an alerts suppression rule.
+parameters:
+  cmdletParameters:
+  - name: AlertType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert type to suppress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RuleNameWithParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AllOf
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSIScopeElement" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Scope the suppression rule using specific entities.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Comment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Comment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpirationDateUtc
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Set an expiration data for the rule, expected to be in a UTC format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSAlertsSuppressionRule" data-throw-if-not-resolved="False" />
+    description: |-
+      Input Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert suppression rule name, needs to be unique per subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RuleNameWithParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Reason
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The reason for creating the suppression rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RuleNameWithParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSRuleState" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the rule, Enabled/Disabled
+    acceptedValues:
+    - Enabled
+    - Disabled
+    - Expired
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RuleNameWithParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SuppressionAlertsScope
+    type: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSSuppressionAlertsScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope the suppression rule using specific entities.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzAlertsSuppressionRule
+        -Name <String>
+        -AlertType <String>
+        -Reason <String>
+        -State <PSRuleState>
+        [-ExpirationDateUtc <DateTime>]
+        [-Comment <String>]
+        [-SuppressionAlertsScope <PSSuppressionAlertsScope>]
+        [-AllOf <PSIScopeElement[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RuleNameWithParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzAlertsSuppressionRule
+        -InputObject <PSAlertsSuppressionRule>
+        [-Name <String>]
+        [-AlertType <String>]
+        [-ExpirationDateUtc <DateTime>]
+        [-Reason <String>]
+        [-State <PSRuleState>]
+        [-Comment <String>]
+        [-SuppressionAlertsScope <PSSuppressionAlertsScope>]
+        [-AllOf <PSIScopeElement[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSAlertsSuppressionRule" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSAlertsSuppressionRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzAlertsSuppressionRule -Name "Example" -State Enabled -Comment "Example of a comment" -AlertType "AzureDNS_CurrencyMining" -Reason "Other" -AllOf @([Microsoft.Azure.Commands.Security.Models.AlertsSuppressionRules.PSScopeElementContains]::new("entities.account.name", "example")) -ExpirationDateUtc 2024-10-17T15:02:24.7511441Z
+    ```
+
+    The above example creates a new suppression rule with the name "Example" to suppress alerts of type (Digital currency mining activity)[https://learn.microsoft.com/en-us/azure/defender-for-cloud/alerts-reference] that contains "example" as part of their account name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzAlertsSuppressionRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/set-azalertssuppressionrule
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Set-AzAlertsSuppressionRule.md
+  PlatyPS schema version: 2024-05-01

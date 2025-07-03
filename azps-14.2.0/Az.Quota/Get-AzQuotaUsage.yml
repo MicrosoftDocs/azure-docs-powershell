@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quota.Get-AzQuotaUsage
+name: Get-AzQuotaUsage
+module: Az.Quota
+isPreview: false
+summary: |-
+  Get the current usage of a resource.
+description: |-
+  Get the current usage of a resource.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name for a given resource provider.
+      For example:
+      - SKU name for Microsoft.Compute
+      - SKU or TotalLowPriorityCores for Microsoft.MachineLearningServices
+       For Microsoft.Network PublicIPAddresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The target Azure resource URI.
+      For example, `/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/qms-test/providers/Microsoft.Batch/batchAccounts/testAccount/`.
+      This is the target Azure resource URI for the List GET operation.
+      If a `{resourceName}` is added after `/quotas`, then it's the target Azure resource URI in the GET operation for the specific resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzQuotaUsage
+        -Scope <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzQuotaUsage
+        -Scope <String>
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quota.Models.ICurrentUsagesBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List the currents usage of a resource'
+  description: |-
+    ```powershell
+    Get-AzQuotaUsage -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus"
+    ```
+
+    ```output
+    Name              NameLocalizedValue  UsageUsagesType UsageValue ETag
+    ----              ------------------  --------------- ---------- ----
+    VirtualNetworks   Virtual Networks    Individual      2
+    CustomIpPrefixes  Custom Ip Prefixes  Individual      0
+    PublicIpPrefixes  Public Ip Prefixes  Individual      0
+    PublicIPAddresses Public IP Addresses Individual      4
+    ......
+    ```
+
+    This command lists the currents usage of a resource
+- title: 'Example 2: Get the current usage of a resource'
+  description: |-
+    ```powershell
+    Get-AzQuotaUsage -Scope "subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.Network/locations/eastus" -Name "MinPublicIpInterNetworkPrefixLength"
+    ```
+
+    ```output
+    Name                                NameLocalizedValue        UsageUsagesType UsageValue ETag
+    ----                                ------------------        --------------- ---------- ----
+    MinPublicIpInterNetworkPrefixLength Public IPv4 Prefix Length Individual      0
+    ```
+
+    This command lists the currents usage of a resource.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuotaUsage.md
+  document type: cmdlet
+  external help file: Az.Quota-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.quota/get-azquotausage
+  Module Name: Az.Quota
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Get-AzQuotaUsage.md
+  PlatyPS schema version: 2024-05-01

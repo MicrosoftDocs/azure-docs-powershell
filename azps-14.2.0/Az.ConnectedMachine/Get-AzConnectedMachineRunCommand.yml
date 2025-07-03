@@ -1,0 +1,200 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedMachine.Get-AzConnectedMachineRunCommand
+name: Get-AzConnectedMachineRunCommand
+module: Az.ConnectedMachine
+isPreview: false
+summary: |-
+  The operation to get a run command.
+description: |-
+  The operation to get a run command.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The expand expression to apply on the operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the hybrid machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunCommandName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the run command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    aliases:
+    - Subscription
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedMachineRunCommand
+        -MachineName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedMachineRunCommand
+        -MachineName <String>
+        -ResourceGroupName <String>
+        -RunCommandName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.IMachineRunCommand" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get run command of a machine'
+  description: |-
+    ```powershell
+    Get-AzConnectedMachineRunCommand -ResourceGroupName "ytongtest" -MachineName "testmachine" -RunCommandName "myRunCommand2"
+    ```
+
+    ```output
+    AsyncExecution                    : False
+    ErrorBlobManagedIdentityClientId  :
+    ErrorBlobManagedIdentityObjectId  :
+    ErrorBlobUri                      :
+    Id                                : /subscriptions/********-****-****-****-**********/resourceGroups/ytong
+                                        test/providers/Microsoft.HybridCompute/machines/testmachine/runcommands/
+                                        myRunCommand2
+    InstanceViewEndTime               : 11/8/2024 7:43:31 PM
+    InstanceViewError                 :
+    InstanceViewExecutionMessage      : RunCommand script execution completed
+    InstanceViewExecutionState        : Succeeded
+    InstanceViewExitCode              : 0
+    InstanceViewOutput                : Hello World!
+    InstanceViewStartTime             : 11/8/2024 7:43:31 PM
+    InstanceViewStatuses              :
+    Location                          : eastus
+    Name                              : myRunCommand2
+    OutputBlobManagedIdentityClientId :
+    OutputBlobManagedIdentityObjectId :
+    OutputBlobUri                     :
+    Parameter                         :
+    ProtectedParameter                :
+    ProvisioningState                 : Succeeded
+    ResourceGroupName                 : ytongtest
+    RunAsPassword                     :
+    RunAsUser                         :
+    ScriptUriManagedIdentityClientId  :
+    ScriptUriManagedIdentityObjectId  :
+    SourceCommandId                   :
+    SourceScript                      : Write-Host Hello World!
+    SourceScriptUri                   :
+    SystemDataCreatedAt               :
+    SystemDataCreatedBy               :
+    SystemDataCreatedByType           :
+    SystemDataLastModifiedAt          :
+    SystemDataLastModifiedBy          :
+    SystemDataLastModifiedByType      :
+    Tags                              : {
+                                        }
+    TimeoutInSecond                   : 0
+    Type                              : Microsoft.HybridCompute/machines/runcommands
+    ```
+
+    Get run command of a machine
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Get-AzConnectedMachineRunCommand.md
+  document type: cmdlet
+  external help file: Az.ConnectedMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedmachine/get-azconnectedmachineruncommand
+  Module Name: Az.ConnectedMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Get-AzConnectedMachineRunCommand.md
+  PlatyPS schema version: 2024-05-01

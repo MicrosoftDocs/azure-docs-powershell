@@ -1,0 +1,180 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzHostGroup
+name: Get-AzHostGroup
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list hosts.
+description: |-
+  This cmdlet will get a host group.
+  This cmdlet also lists all host groups in a resource group if a host group name is not given.
+  This cmdlet also lists all host groups in a subscription if neither host group name nor resource group name is given.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceView
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Expand the returned object to also list the host's instance views.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the host group.
+    aliases:
+    - HostGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzHostGroup
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-InstanceView]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzHostGroup
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSHostGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzHostGroup -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName
+    ```
+
+    ```output
+    ResourceGroupName        : myrg01
+    PlatformFaultDomainCount : 2
+    Hosts                    : {/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01}
+    Zones                    : {1}
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01
+    Name                     : myhostgroup01
+    Location                 : eastus
+    Tags                     : {[key1, val1]}
+    ```
+
+    This command returns a host group.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzHostGroup -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    ResourceGroupName                   Name Location           Tags FDCount
+    -----------------                   ---- --------           ---- -------
+    myrg01                     myhostgroup01   eastus {[key1, val1]}       1
+    myrg01                     myhostgroup02   eastus {[key1, val1]}       2
+    ```
+
+    This command returns all host groups in the given resource group.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzHostGroup
+    ```
+
+    ```output
+    ResourceGroupName                   Name Location           Tags FDCount
+    -----------------                   ---- --------           ---- -------
+    myrg01                     myhostgroup01   eastus {[key1, val1]}       1
+    myrg01                     myhostgroup02   eastus {[key1, val1]}       2
+    myrg02                     myhostgroup03   eastus {[key1, val1]}       2
+    ```
+
+    This command returns all host groups in the subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHostGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azhostgroup
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHostGroup.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.Get-AzCosmosDBLocation
+name: Get-AzCosmosDBLocation
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  List Azure Cosmos DB locations and their properties.
+  Get Azure Cosmos DB location properties for a specific location.
+description: |-
+  List Azure Cosmos DB locations with their location properties. It includes Location Id, Name, Type, SupportsAvailabilityZone, IsResidencyRestricted, BackupStorageRedundancies, IsSubscriptionRegionAccessAllowedForRegular, IsSubscriptionRegionAccessAllowedForAz and Status.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      -Name of the Location in string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCosmosDBLocation
+        [-Location <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSLocationGetResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Azure Cosmos DB Account Location Properties for Given Location'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    Get-AzCosmosDBLocation -Location "Central US"
+
+    Id                                                                                                      Name       Type                           Properties
+    --                                                                                                      ----       ----                           ----------
+    subscriptionId/subscriptionId/providers/Microsoft.DocumentDB/locations/centralus/ Central US Microsoft.DocumentDB/locations Microsoft.Azure.Commands.CosmosDB.Models.PSLocationP...
+
+
+    Get-AzCosmosDBLocation -Location "Central US" | ConvertTo-Json
+    {
+        "Id":  "subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/centralus/",
+        "Name":  "Central US",
+        "Type":  "Microsoft.DocumentDB/locations",
+        "Properties":  {
+                           "SupportsAvailabilityZone":  true,
+                           "IsResidencyRestricted":  false,
+                           "BackupStorageRedundancies":  [
+                                                             "Geo",
+                                                             "Zone",
+                                                             "Local"
+                                                         ],
+                            "IsSubscriptionRegionAccessAllowedForRegular": true,
+                            "IsSubscriptionRegionAccessAllowedForAz": false,
+                            "Status": "Online"
+                       }
+    }
+    ```
+- title: 'Example 2: List Azure Cosmos DB Account Locations and their properties'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+    ```powershell
+    Get-AzCosmosDBLocation
+
+    Id                                                                                                               Name                 Type                           Properties
+    --                                                                                                               ----                 ----                           ----------
+    subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/brazilsoutheast/    Brazil Southeast     Microsoft.DocumentDB/locations Microsoft.Azure.Commands.CosmosDB...
+    subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/centralus/          Central US           Microsoft.DocumentDB/locations Microsoft.Azure.Commands.CosmosDB...
+    ....
+
+
+    Get-AzCosmosDBLocation | ConvertTo-Json
+    [
+        {
+            "Id":  "subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/brazilsoutheast/",
+            "Name":  "Brazil Southeast",
+            "Type":  "Microsoft.DocumentDB/locations",
+            "Properties":  {
+                               "SupportsAvailabilityZone":  true,
+                               "IsResidencyRestricted":  false,
+                               "BackupStorageRedundancies":  "Geo Local",
+                               "IsSubscriptionRegionAccessAllowedForRegular": true,
+                               "IsSubscriptionRegionAccessAllowedForAz": false,
+                               "Status": "Online"
+                           }
+        },
+        {
+            "Id":  "subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/centralus/",
+            "Name":  "Central US",
+            "Type":  "Microsoft.DocumentDB/locations",
+            "Properties":  {
+                               "SupportsAvailabilityZone":  true,
+                               "IsResidencyRestricted":  false,
+                               "BackupStorageRedundancies":  "Geo Zone Local",
+                               "IsSubscriptionRegionAccessAllowedForRegular": false,
+                               "IsSubscriptionRegionAccessAllowedForAz": true,
+                               "Status": "Online"
+                           }
+        },
+        {
+            "Id":  "subscriptionId/<subscriptionId>/providers/Microsoft.DocumentDB/locations/australiasoutheast/",
+            "Name":  "Australia Southeast",
+            "Type":  "Microsoft.DocumentDB/locations",
+            "Properties":  {
+                               "SupportsAvailabilityZone":  false,
+                               "IsResidencyRestricted":  false,
+                               "BackupStorageRedundancies":  "Geo Local",
+                               "IsSubscriptionRegionAccessAllowedForRegular": true,
+                               "IsSubscriptionRegionAccessAllowedForAz": true,
+                               "Status": "Online"
+                           }
+        }
+    ]
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBLocation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/get-azcosmosdblocation
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Get-AzCosmosDBLocation.md
+  PlatyPS schema version: 2024-05-01

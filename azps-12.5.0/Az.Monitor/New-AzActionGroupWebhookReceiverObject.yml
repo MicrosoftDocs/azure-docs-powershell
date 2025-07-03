@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActionGroupWebhookReceiverObject
+name: New-AzActionGroupWebhookReceiverObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for WebhookReceiver.
+description: |-
+  Create an in-memory object for WebhookReceiver.
+parameters:
+  cmdletParameters:
+  - name: IdentifierUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the identifier uri for aad auth.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the webhook receiver.
+      Names must be unique across all receivers within an action group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the webhook app object Id for aad auth.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI where webhooks should be sent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the tenant id for aad auth.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseAadAuth
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether or not use AAD authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseCommonAlertSchema
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to use common alert schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActionGroupWebhookReceiverObject
+        -Name <String>
+        -ServiceUri <String>
+        [-IdentifierUri <String>]
+        [-ObjectId <String>]
+        [-TenantId <String>]
+        [-UseAadAuth <Boolean>]
+        [-UseCommonAlertSchema <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActionGroup.Models.WebhookReceiver" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: create action group webhook receiver with aad auth'
+  description: |-
+    ```powershell
+    New-AzActionGroupWebhookReceiverObject -Name "sample webhook" -ServiceUri "http://www.example.com/webhook1" -IdentifierUri "http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a" -ObjectId "ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0" -TenantId aaaabbbb-0000-cccc-1111-dddd2222eeee -UseAadAuth $true -UseCommonAlertSchema $true
+    ```
+
+    ```output
+    IdentifierUri        : http://someidentifier/d7811ba3-7996-4a93-99b6-6b2f3f355f8a
+    Name                 : sample webhook
+    ObjectId             : ffffffff-eeee-dddd-cccc-bbbbbbbbbbb0
+    ServiceUri           : http://www.example.com/webhook1
+    TenantId             : aaaabbbb-0000-cccc-1111-dddd2222eeee
+    UseAadAuth           : True
+    UseCommonAlertSchema : True
+    ```
+
+    This command creates action group webhook receiver object.
+- title: 'Example 2: create minimum action group webhook receiver'
+  description: |-
+    ```powershell
+    New-AzActionGroupWebhookReceiverObject -Name "sample webhook" -ServiceUri "http://www.example.com/webhook2"
+    ```
+
+    ```output
+    IdentifierUri        :
+    Name                 : sample webhook
+    ObjectId             :
+    ServiceUri           : http://www.example.com/webhook2
+    TenantId             :
+    UseAadAuth           :
+    UseCommonAlertSchema :
+    ```
+
+    This command creates action group email receiver object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupWebhookReceiverObject.md
+  document type: cmdlet
+  external help file: Az.ActionGroup.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azactiongroupwebhookreceiverobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActionGroupWebhookReceiverObject.md
+  PlatyPS schema version: 2024-05-01

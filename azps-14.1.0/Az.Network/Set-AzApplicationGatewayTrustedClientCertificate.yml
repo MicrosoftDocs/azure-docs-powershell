@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzApplicationGatewayTrustedClientCertificate
+name: Set-AzApplicationGatewayTrustedClientCertificate
+module: Az.Network
+isPreview: false
+summary: |-
+  Modifies the trusted client CA certificate chain of an application gateway.
+description: |-
+  The **Set-AzApplicationGatewayTrustedClientCertificate** cmdlet modifies the trusted client CA certificate chain of an application gateway.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The applicationGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of the trusted client CA certificate chain file
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the trusted client CA certificate chain
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayTrustedClientCertificate
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -CertificateFile <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $gw = Get-AzApplicationGateway -Name $appgwName -ResourceGroupName $resgpName
+    $gw = Set-AzApplicationGatewayTrustedClientCertificate -ApplicationGateway $gw -Name $certName -CertificateFile ".\clientCAUpdated.cer"
+    $gw = Set-AzApplicationGateway -ApplicationGateway $gw
+    ```
+
+    Above example scenarios shows how to update an existing trusted client CA certificate chain object. The first command gets an application gateway and stores it in the $gw variable. The second command modifies the existing trusted client CA certificate chain object with a new CA certificate chain file. The third command updates the application gateway on Azure.
+links:
+- text: Add-AzApplicationGatewayTrustedClientCertificate
+  href: ./Add-AzApplicationGatewayTrustedClientCertificate.yml
+- text: New-AzApplicationGatewayTrustedClientCertificate
+  href: ./New-AzApplicationGatewayTrustedClientCertificate.yml
+- text: Get-AzApplicationGatewayTrustedClientCertificate
+  href: ./Get-AzApplicationGatewayTrustedClientCertificate.yml
+- text: Remove-AzApplicationGatewayTrustedClientCertificate
+  href: ./Remove-AzApplicationGatewayTrustedClientCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayTrustedClientCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azapplicationgatewaytrustedclientcertificate
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzApplicationGatewayTrustedClientCertificate.md
+  PlatyPS schema version: 2024-05-01

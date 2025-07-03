@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Set-AzRecoveryServicesBackupProperty
+name: Set-AzRecoveryServicesBackupProperty
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Sets the properties for backup management.
+description: |-
+  The **Set-AzRecoveryServicesBackupProperty** cmdlet sets backup storage properties for a Recovery Services vault.
+parameters:
+  cmdletParameters:
+  - name: BackupStorageRedundancy
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.RecoveryServices.AzureRmRecoveryServicesBackupStorageRedundancyType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the backup storage redundancy type.
+    acceptedValues:
+    - GeoRedundant
+    - ZoneRedundant
+    - LocallyRedundant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableCrossRegionRestore
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable CRR on a vault. Please make sure to set BackupStorageRedundancy to GeoRedundant before enabling CRR.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the vault.
+      The vault must be an **AzureRmRecoveryServicesVault** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzRecoveryServicesBackupProperty
+        -Vault <ARSVault>
+        [-BackupStorageRedundancy <AzureRmRecoveryServicesBackupStorageRedundancyType>]
+        [-EnableCrossRegionRestore]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set GeoRedundant storage for a vault'
+  description: |-
+    ```powershell
+    $Vault = Get-AzRecoveryServicesVault -Name "TestVault"
+    Set-AzRecoveryServicesBackupProperty -Vault $Vault01 -BackupStorageRedundancy GeoRedundant
+    ```
+
+    The first command gets the vault named TestVault, and then stores it in the $Vault variable.
+    The second command sets the backup storage redundancy for $Vault to GeoRedundant.
+- title: 'Example 2: Enable cross region restore for a vault'
+  description: |-
+    ```powershell
+    $Vault = Get-AzRecoveryServicesVault -Name "TestVault"
+    Set-AzRecoveryServicesBackupProperty -Vault $Vault01 -EnableCrossRegionRestore
+    ```
+
+    The first command gets the vault named TestVault, and then stores it in the $Vault01 variable.
+    The second command enables cross region restore for recovery services vault $Vault
+links:
+- text: Get-AzRecoveryServicesBackupProperty
+  href: ./Get-AzRecoveryServicesBackupProperty.yml
+- text: Get-AzRecoveryServicesVault
+  href: ./Get-AzRecoveryServicesVault.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProperty.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/set-azrecoveryservicesbackupproperty
+  Module Name: Az.RecoveryServices
+  ms.assetid: C635D723-0F03-4EF8-9435-24DBE0859899
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Set-AzRecoveryServicesBackupProperty.md
+  PlatyPS schema version: 2024-05-01

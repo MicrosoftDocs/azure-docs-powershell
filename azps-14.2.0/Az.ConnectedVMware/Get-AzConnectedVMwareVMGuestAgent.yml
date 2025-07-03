@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedVMware.Get-AzConnectedVMwareVMGuestAgent
+name: Get-AzConnectedVMwareVMGuestAgent
+module: Az.ConnectedVMware
+isPreview: false
+summary: |-
+  Implements GuestAgent GET method.
+description: |-
+  Implements GuestAgent GET method.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified Azure Resource manager identifier of the Hybrid Compute machine resource to be extended.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedVMwareVMGuestAgent
+        -MachineId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedVMware.Models.IGuestAgent" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get guest agent of a specific VM'
+  description: |-
+    ```powershell
+    Get-AzConnectedVMwareVMGuestAgent -MachineId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.HybridCompute/machines/test-machine"
+    ```
+
+    ```output
+    CredentialsPassword          :
+    CredentialsUsername          : abc
+    CustomResourceName           : d04a3534-2dfa-42c8-8959-83796a1bcac1
+    HttpProxyConfigHttpsProxy    :
+    Id                           : /subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/test-rg/providers/Microsoft.HybridCompute/machines/test-machine/providers/Microsoft.ConnectedVMwarevSphere/virtualMachineInstances/default/guestAgents/default
+    Name                         : default
+    PrivateLinkScopeResourceId   :
+    ProvisioningAction           : install
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : test-rg
+    Status                       : Enabled
+    Statuses                     : {{
+                                     "type": "Ready",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2023-10-06T14:47:02.1828535Z"
+                                   }, {
+                                     "type": "Idle",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2023-10-06T14:47:02.1828535Z"
+                                   }}
+    SystemDataCreatedAt          : 10/6/2023 2:45:33 PM
+    SystemDataCreatedBy          : xyz
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 10/6/2023 2:45:33 PM
+    SystemDataLastModifiedBy     : xyz
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.connectedvmwarevsphere/virtualmachineinstances/guestagents
+    Uuid                         : 6a37a700-e02c-476d-a19f-258761575c40
+    ```
+
+    This command gets a guest agent of a VM Instances of machine named `test-machine`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Get-AzConnectedVMwareVMGuestAgent.md
+  document type: cmdlet
+  external help file: Az.ConnectedVMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedvmware/get-azconnectedvmwarevmguestagent
+  Module Name: Az.ConnectedVMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Get-AzConnectedVMwareVMGuestAgent.md
+  PlatyPS schema version: 2024-05-01

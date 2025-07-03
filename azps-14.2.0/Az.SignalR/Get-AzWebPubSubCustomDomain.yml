@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.Get-AzWebPubSubCustomDomain
+name: Get-AzWebPubSubCustomDomain
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Get a custom domain.
+description: |-
+  Get a custom domain.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets subscription Id which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSubCustomDomain
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSubCustomDomain
+        -Name <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzWebPubSubCustomDomain
+        -InputObject <IWebPubSubIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.IWebPubSubIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.ICustomDomain" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all the custom domains of a Azure Web PubSub resource'
+  description: |-
+    ```powershell
+    Get-AzWebPubSubCustomDomain -ResourceGroupName rg -ResourceName wps
+    ```
+
+    ```output
+    Name     DomainName                                    ProvisioningState
+    ----     ----------                                    -----------------
+    mydomain wps.manual-test.dev.signalr.azure.com Succeeded
+    ```
+
+    We can see this Web PubSub resource only contains one custom domain.
+- title: 'Example 2: Get a custom domain by its name'
+  description: |-
+    ```powershell
+    Get-AzWebPubSubCustomDomain -ResourceGroupName rg -ResourceName wps -Name mydomain
+    ```
+
+    ```output
+    Name     DomainName                                    ProvisioningState
+    ----     ----------                                    -----------------
+    mydomain wps.manual-test.dev.signalr.azure.com Succeeded
+    ```
+- title: 'Example 2: Get a custom domain by its identity'
+  description: |-
+    ```powershell
+    $customDomain = Get-AzWebPubSubCustomDomain -ResourceGroupName rg -ResourceName wps -Name mydomain
+    $customDomain | Get-AzWebPubSubCustomDomain
+    ```
+
+    ```output
+    Name     DomainName                                    ProvisioningState
+    ----     ----------                                    -----------------
+    mydomain wps.manual-test.dev.signalr.azure.com Succeeded
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSubCustomDomain.md
+  document type: cmdlet
+  external help file: Az.SignalR-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/get-azwebpubsubcustomdomain
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Get-AzWebPubSubCustomDomain.md
+  PlatyPS schema version: 2024-05-01

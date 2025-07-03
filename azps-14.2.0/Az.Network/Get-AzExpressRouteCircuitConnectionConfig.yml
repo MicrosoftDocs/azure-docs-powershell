@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzExpressRouteCircuitConnectionConfig
+name: Get-AzExpressRouteCircuitConnectionConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an ExpressRoute circuit connection configuration associated with Private Peering of ExpressRouteCircuit.
+description: |-
+  The **Get-AzExpressRouteCircuitConnectionConfig** cmdlet retrieves the configuration of a circuit connection
+  associated with Private Peering for an ExpressRoute circuit.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuit
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRoute circuit object containing the circuit connection configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the circuit connection configuration to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzExpressRouteCircuitConnectionConfig
+        [[-Name] <String>]
+        [-ExpressRouteCircuit] <PSExpressRouteCircuit>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the circuit connection configuration for an ExpressRoute circuit'
+  description: |-
+    ```powershell
+    $circuit_init = Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg
+    Get-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName -ExpressRouteCircuit $circuit_init
+    ```
+- title: 'Example 2: Get circuit connection resource associated with an ExpressRoute Circuit using piping'
+  description: |-
+    ```powershell
+    Get-AzExpressRouteCircuit -Name $initiatingCircuitName -ResourceGroupName $rg|Get-AzExpressRouteCircuitConnectionConfig -Name $circuitConnectionName
+    ```
+links:
+- text: Get-AzExpressRouteCircuit
+  href: Get-AzExpressRouteCircuit.yml
+- text: Add-AzExpressRouteCircuitConnectionConfig
+  href: Add-AzExpressRouteCircuitConnectionConfig.yml
+- text: Remove-AzExpressRouteCircuitConnectionConfig
+  href: Remove-AzExpressRouteCircuitConnectionConfig.yml
+- text: Set-AzExpressRouteCircuitConnectionConfig
+  href: Set-AzExpressRouteCircuitConnectionConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitConnectionConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azexpressroutecircuitconnectionconfig
+  Module Name: Az.Network
+  ms.assetid: 59692f1f-9f1e-4a3c-8200-312c3806a9b7
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitConnectionConfig.md
+  PlatyPS schema version: 2024-05-01

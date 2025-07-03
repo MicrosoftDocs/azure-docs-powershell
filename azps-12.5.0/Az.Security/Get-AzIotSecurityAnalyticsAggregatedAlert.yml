@@ -1,0 +1,164 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzIotSecurityAnalyticsAggregatedAlert
+name: Get-AzIotSecurityAnalyticsAggregatedAlert
+module: Az.Security
+isPreview: false
+summary: |-
+  Get IoT security aggregated alert
+description: |-
+  The Get-AzIotSecurityAnalyticsAggregatedAlert cmdlet returns one or more aggregated alerts on devices of iot hub.
+  The name of the aggregated alerts is a combination of the alert type and the alert aggregated date, separated by '/'.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SolutionLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SolutionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Solution name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIotSecurityAnalyticsAggregatedAlert
+        -ResourceGroupName <String>
+        -SolutionName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SolutionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzIotSecurityAnalyticsAggregatedAlert
+        -ResourceGroupName <String>
+        -SolutionName <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SolutionLevelResource
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.IotSecuritySolutionAnalytics.PSIoTSecurityAggregatedAlert" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzIotSecurityAnalyticsAggregatedAlert -ResourceGroupName "MyResourceGroup" -SolutionName "MySolution" -Name "IoT_Bruteforce_Fail/2019-02-02"
+    ```
+
+    ```output
+    Id: "/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Security/iotSecuritySolutions/MySolution/analyticsModels/default/aggregatedAlerts/IoT_Bruteforce_Fail/2019-02-02"
+    Name: "IoT_Bruteforce_Fail/2019-02-02"
+    Type: "Microsoft.Security/IoTSecurityAggregatedAlert"
+    AlertType: "IoT_Bruteforce_Fail"
+    AlertDisplayName: "Failed Bruteforce"
+    AggregatedDateUtc: "2019-02-02"
+    VendorName: "Microsoft"
+    ReportedSeverity: "Low"
+    RemediationSteps: ""
+    Description: "Multiple unsuccsseful login attempts identified. A Bruteforce attack on the device failed."
+    Count: 50
+    EffectedResourceType: "IoT Device"
+    SystemSource: "Devices"
+    ActionTaken: "Detected"
+    LogAnalyticsQuery: "SecurityAlert | where tolower(ResourceId) == tolower('/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/IoT-Solution-DemoEnv/providers/Microsoft.Devices/IotHubs/rtogm-hub') and tolower(AlertName) == tolower('Custom Alert - number of device to cloud messages in MQTT protocol is not in the allowed range') | extend DeviceId=parse_json(ExtendedProperties)['DeviceId'] | project DeviceId, TimeGenerated, DisplayName, AlertSeverity, Description, RemediationSteps, ExtendedProperties"
+    TopDevicesList: [
+                    {
+                      DeviceId: "testDevice1"
+                      AlertsCount: 45
+                      LastOccurrence: "10:42"
+                    }
+                    {
+                      DeviceId: "testDevice2"
+                      AlertsCount: 30
+                      LastOccurrence: "15:42"
+                    }
+                  ]
+    ```
+
+    Get the aggregated alert "IoT_Bruteforce_Fail/2019-02-02" (the name combined from the alert type and its aggregated date) in solution "MySolution" and resource group "MyResourceGroup"
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzIotSecurityAnalyticsAggregatedAlert -ResourceGroupName "MyResourceGroup" -SolutionName "MySolution"
+    ```
+
+    ```output
+    Array of aggregated alert items as shown in example 1
+    ```
+
+    Get a list of all aggregated alerts in solution "MySolution" and resource group "MyResourceGroup"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzIotSecurityAnalyticsAggregatedAlert.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzIotSecurityAnalyticsAggregatedAlert
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzIotSecurityAnalyticsAggregatedAlert.md
+  PlatyPS schema version: 2024-05-01

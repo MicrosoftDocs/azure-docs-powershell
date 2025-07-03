@@ -1,0 +1,595 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzResourceGroupDeployment
+name: New-AzResourceGroupDeployment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Adds an Azure deployment to a resource group.
+description: |-
+  The **New-AzResourceGroupDeployment** cmdlet adds a deployment to an existing resource group.
+  This includes the resources that the deployment requires.
+  An Azure resource is a user-managed Azure entity, such as a database server, database, website, virtual machine, or Storage account.
+  An Azure resource group is a collection of Azure resources that are deployed as a unit, such as the website, database server, and databases that are required for a financial website.
+  A resource group deployment uses a template to add resources to a resource group and publishes them so that they are available in Azure.
+  To add resources to a resource group without using a template, use the New-AzResource cmdlet.
+  To add a resource group deployment, specify the name of an existing resource group and a resource group template.
+  A resource group template is a JSON string that represents a resource group for a complex cloud-based service, such as a web portal.
+  The template includes parameter placeholders for required resources and configurable property values, such as names and sizes.
+  You can find many templates in the Azure template gallery or you can create your own templates.
+  You can use the **Get-AzResourceGroupGalleryTemplate** cmdlet to find a template in the gallery.
+  To use a custom template to create a resource group, specify the *TemplateFile* parameter or *TemplateUri* parameter.
+  Each template has parameters for configurable properties.
+  To specify values for the template parameters, specify the *TemplateParameterFile* parameter or the *TemplateParameterObject* parameter.
+  Alternatively, you can use the template parameters that are dynamically added to the command when you specify a template.
+  To use dynamic parameters, type them at the command prompt, or type a minus sign (-) to indicate a parameter and use the Tab key to cycle through available parameters.
+  Template parameter values that you enter at the command prompt take precedence over values in a template parameter object or file.
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the API version that is supported by the resource Provider.
+      You can specify a different version than the default version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentDebugLogLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a debug log level.
+      The acceptable values for this parameter are:
+      - RequestContent
+      - ResponseContent
+      - All
+      - None
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="Microsoft.Azure.Management.ResourceManager.Models.DeploymentMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deployment mode. The acceptable values for this parameter are:
+      - Complete
+      - Incremental
+      In complete mode, Resource Manager deletes resources that exist in the resource group but are not
+      specified in the template. In incremental mode, Resource Manager leaves unchanged resources that
+      exist in the resource group but are not specified in the template.
+    defaultValue: Incremental
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group deployment to create.
+    aliases:
+    - DeploymentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to deploy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollBackDeploymentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Rollback to the successful deployment with the given name in the resource group, should not be used if -RollbackToLastDeployment is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RollbackToLastDeployment
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Rollback to the last successful deployment in the resource group, should not be present if -RollBackDeploymentName is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of a JSON template file.
+      This can be a custom template or a gallery template that is saved as a JSON file, such as one created by using the **Save-AzResourceGroupGalleryTemplate** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the full path of a JSON file that contains the names and values of the template parameters.
+      If a template has parameters, you must specify the parameter values with the *TemplateParameterFile* parameter or the *TemplateParameterObject* parameter.
+      Template parameters are dynamically added to the command when you specify a template.
+      To use the dynamic parameters, type a minus sign (-) to indicate a parameter name and then use the Tab key to cycle through the available parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterObject
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a hash table of template parameter names and values.
+      For help with hash tables in Windows PowerShell, type `Get-Help about_Hash_Tables`.
+      If a template has parameters, you must specify parameter values.
+      Template parameters are dynamically added to the command when you specify a template.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI of a template parameters file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateFileAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URI of a JSON template file.
+      This file can be a custom template or a gallery template that is saved as a JSON file, such as by using **Save-AzResourceGroupGalleryTemplate**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByTemplateUriAndParameterObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriAndParameterUri
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByTemplateUriWithNoParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileWithNoParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterObject <Hashtable>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterFile <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateFile <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateFileAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateParameterUri <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriAndParameterUri
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzResourceGroupDeployment
+        -ResourceGroupName <String>
+        -TemplateUri <String>
+        [-Name <String>]
+        [-Mode <DeploymentMode>]
+        [-DeploymentDebugLogLevel <String>]
+        [-RollbackToLastDeployment]
+        [-RollBackDeploymentName <String>]
+        [-Force]
+        [-AsJob]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByTemplateUriWithNoParameters
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Models.PSResourceGroupDeployment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Use a custom template and parameter file to create a deployment'
+  description: |-
+    ```
+    PS C:\>New-AzResourceGroupDeployment -ResourceGroupName "ContosoEngineering" -TemplateFile "D:\Azure\Templates\EngineeringSite.json" -TemplateParameterFile "D:\Azure\Templates\EngSiteParms.json"
+    ```
+
+    This command creates a new deployment by using a custom template and a template file on disk.
+    The command uses the *TemplateFile* parameter to specify the template and the *TemplateParameterFile* parameter to specify a file that contains parameters and parameter values.
+links:
+- text: Get-AzResourceGroupDeployment
+  href: ./Get-AzResourceGroupDeployment.yml
+- text: New-AzResource
+  href: ./New-AzResource.yml
+- text: New-AzResourceGroup
+  href: ./New-AzResourceGroup.yml
+- text: Remove-AzResourceGroupDeployment
+  href: ./Remove-AzResourceGroupDeployment.yml
+- text: Stop-AzResourceGroupDeployment
+  href: ./Stop-AzResourceGroupDeployment.yml
+- text: Test-AzResourceGroupDeployment
+  href: ./Test-AzResourceGroupDeployment.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzResourceGroupDeployment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azresourcegroupdeployment
+  Module Name: Az.Resources
+  ms.assetid: 6E2F0D5E-E683-46F3-B48B-55C4864F3308
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzResourceGroupDeployment.md
+  PlatyPS schema version: 2024-05-01

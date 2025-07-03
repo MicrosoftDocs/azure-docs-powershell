@@ -1,0 +1,982 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzDataCollectionRule
+name: New-AzDataCollectionRule
+module: Az.Monitor
+isPreview: false
+summary: |-
+  create a data collection rule.
+description: |-
+  create a data collection rule.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataCollectionEndpointId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the data collection endpoint that this rule can be used with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFlow
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IDataFlow" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The specification of data flows.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceDataImportEventHubConsumerGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Event Hub consumer group name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceDataImportEventHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the data source.
+      This name should be unique across all data sources (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceDataImportEventHubStream
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The stream to collect from EventHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceExtension
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IExtensionDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Azure VM extension data source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceIisLog
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IIisLogsDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of IIS logs source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceLogFile
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.ILogFilesDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Log files source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourcePerformanceCounter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IPerfCounterDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of performance counter data source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourcePlatformTelemetry
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IPlatformTelemetryDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of platform telemetry configurations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourcePrometheusForwarder
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IPrometheusForwarderDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Prometheus forwarder data source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceSyslog
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.ISyslogDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Syslog data source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceWindowsEventLog
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IWindowsEventLogDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Windows Event Log data source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSourceWindowsFirewallLog
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IWindowsFirewallLogsDataSource" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Windows Firewall logs source configurations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAzureMonitorMetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the destination.
+      This name should be unique across all destinations (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationEventHub
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IEventHubDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Event Hubs destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationEventHubsDirect
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IEventHubDirectDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Event Hubs Direct destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationLogAnalytic
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.ILogAnalyticsDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Log Analytics destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationMonitoringAccount
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IMonitoringAccountDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of monitoring account destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationStorageAccount
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IStorageBlobDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of storage accounts destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationStorageBlobsDirect
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IStorageBlobDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Storage Blob Direct destinations.
+      To be used only for sending data directly to store from the agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationStorageTablesDirect
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IStorageTableDestination" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Storage Table Direct destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The kind of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the data collection rule.
+      The name is case insensitive.
+    aliases:
+    - DataCollectionRuleName
+    - RuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StreamDeclaration
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Declaration of custom streams used in this rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of user assigned identities associated with the resource.
+      The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}.
+      The dictionary values can be empty objects ({}) in requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataCollectionRule
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        [-SubscriptionId <String>]
+        [-DataCollectionEndpointId <String>]
+        [-DataFlow <IDataFlow[]>]
+        [-DataSourceDataImportEventHubConsumerGroup <String>]
+        [-DataSourceDataImportEventHubName <String>]
+        [-DataSourceDataImportEventHubStream <String>]
+        [-DataSourceExtension <IExtensionDataSource[]>]
+        [-DataSourceIisLog <IIisLogsDataSource[]>]
+        [-DataSourceLogFile <ILogFilesDataSource[]>]
+        [-DataSourcePerformanceCounter <IPerfCounterDataSource[]>]
+        [-DataSourcePlatformTelemetry <IPlatformTelemetryDataSource[]>]
+        [-DataSourcePrometheusForwarder <IPrometheusForwarderDataSource[]>]
+        [-DataSourceSyslog <ISyslogDataSource[]>]
+        [-DataSourceWindowsEventLog <IWindowsEventLogDataSource[]>]
+        [-DataSourceWindowsFirewallLog <IWindowsFirewallLogsDataSource[]>]
+        [-Description <String>]
+        [-DestinationAzureMonitorMetricName <String>]
+        [-DestinationEventHub <IEventHubDestination[]>]
+        [-DestinationEventHubsDirect <IEventHubDirectDestination[]>]
+        [-DestinationLogAnalytic <ILogAnalyticsDestination[]>]
+        [-DestinationMonitoringAccount <IMonitoringAccountDestination[]>]
+        [-DestinationStorageAccount <IStorageBlobDestination[]>]
+        [-DestinationStorageBlobsDirect <IStorageBlobDestination[]>]
+        [-DestinationStorageTablesDirect <IStorageTableDestination[]>]
+        [-IdentityType <String>]
+        [-Kind <String>]
+        [-StreamDeclaration <Hashtable>]
+        [-Tag <Hashtable>]
+        [-UserAssignedIdentity <Hashtable>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDataCollectionRule
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzDataCollectionRule
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IDataCollectionRuleResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a data collection rule with json file'
+  description: |-
+    ```powershell
+    New-AzDataCollectionRule -Name myCollectionRule1 -ResourceGroupName AMCS-TEST -JsonFilePath .\test\jsonfile\ruleTest1.json
+    # Note: content of .\test\jsonfile\ruleTest1.json
+    # {
+    #     "location": "eastus",
+    #     "properties": {
+    #         "dataSources": {
+    #             "performanceCounters": [
+    #             {
+    #                 "streams": [
+    #                     "Microsoft-InsightsMetrics"
+    #                 ],
+    #                 "samplingFrequencyInSeconds": 60,
+    #                 "counterSpecifiers": [
+    #                     "\\Processor(_Total)\\% Processor Time"
+    #                 ],
+    #                 "name": "perfCounter01"
+    #             },
+    #             {
+    #                 "name": "cloudTeamCoreCounters",
+    #                 "streams": [
+    #                   "Microsoft-Perf"
+    #                 ],
+    #                 "samplingFrequencyInSeconds": 15,
+    #                 "counterSpecifiers": [
+    #                   "\\Processor(_Total)\\% Processor Time",
+    #                   "\\Memory\\Committed Bytes",
+    #                   "\\LogicalDisk(_Total)\\Free Megabytes",
+    #                   "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length"
+    #                 ]
+    #               }
+    #             ]
+    #         },
+    #         "destinations": {
+    #             "azureMonitorMetrics": {
+    #               "name": "azureMonitorMetrics-default"
+    #             }
+    #         },
+    #         "dataFlows": [
+    #             {
+    #                 "streams": [
+    #                     "Microsoft-InsightsMetrics"
+    #             ],
+    #                 "destinations": [
+    #                     "azureMonitorMetrics-default"
+    #             ]
+    #             }
+    #         ]
+    #     }
+    # }
+    ```
+
+    ```output
+    DataCollectionEndpointId                  :
+    DataFlow                                  : {{
+                                                  "streams": [ "Microsoft-InsightsMetrics" ],
+                                                  "destinations": [ "azureMonitorMetrics-default" ]
+                                                }}
+    DataSourceDataImportEventHubConsumerGroup :
+    DataSourceDataImportEventHubName          :
+    DataSourceDataImportEventHubStream        :
+    DataSourceExtension                       :
+    DataSourceIisLog                          :
+    DataSourceLogFile                         :
+    DataSourcePerformanceCounter              : {{
+                                                  "streams": [ "Microsoft-InsightsMetrics" ],
+                                                  "samplingFrequencyInSeconds": 60,
+                                                  "counterSpecifiers": [ "\\Processor(_Total)\\% Processor Time" ],
+                                                  "name": "perfCounter01"
+                                                }, {
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 15,
+                                                  "counterSpecifiers": [ "\\Processor(_Total)\\% Processor Time", "\\Memory\\Committed Bytes", "\\LogicalDisk(_Total)\\Free Megabytes",
+                                                "\\PhysicalDisk(_Total)\\Avg. Disk Queue Length" ],
+                                                  "name": "cloudTeamCoreCounters"
+                                                }}
+    DataSourcePlatformTelemetry               :
+    DataSourcePrometheusForwarder             :
+    DataSourceSyslog                          :
+    DataSourceWindowsEventLog                 :
+    DataSourceWindowsFirewallLog              :
+    Description                               :
+    DestinationAzureMonitorMetricName         : azureMonitorMetrics-default
+    DestinationEventHub                       :
+    DestinationEventHubsDirect                :
+    DestinationLogAnalytic                    :
+    DestinationMonitoringAccount              :
+    DestinationStorageAccount                 :
+    DestinationStorageBlobsDirect             :
+    DestinationStorageTablesDirect            :
+    Etag                                      : "bb02d25d-0000-0100-0000-65017aed0000"
+    Id                                        : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/AMCS-TEST/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule1
+    IdentityPrincipalId                       :
+    IdentityTenantId                          :
+    IdentityType                              :
+    IdentityUserAssignedIdentity              : {
+                                                }
+    ImmutableId                               : dcr-2eebbe7e7a974226b2ef938194ada574
+    Kind                                      :
+    Location                                  : eastus
+    MetadataProvisionedBy                     :
+    MetadataProvisionedByResourceId           :
+    Name                                      : myCollectionRule1
+    ProvisioningState                         : Succeeded
+    ResourceGroupName                         : AMCS-TEST
+    StreamDeclaration                         : {
+                                                }
+    SystemDataCreatedAt                       : 9/13/2023 9:03:39 AM
+    SystemDataCreatedBy                       : v-jiaji@microsoft.com
+    SystemDataCreatedByType                   : User
+    SystemDataLastModifiedAt                  : 9/13/2023 9:03:39 AM
+    SystemDataLastModifiedBy                  : v-jiaji@microsoft.com
+    SystemDataLastModifiedByType              : User
+    Tag                                       : {
+                                                }
+    Type                                      : Microsoft.Insights/dataCollectionRules
+    ```
+
+    This command creates a data collection rules for the current subscription.
+- title: 'Example 2: Create a data collection rule with objects'
+  description: |-
+    ```powershell
+    $dataflow = New-AzDataFlowObject -Stream Microsoft-InsightsMetrics -Destination azureMonitorMetrics-default
+    $windowsEvent = New-AzWindowsEventLogDataSourceObject -Name appTeam1AppEvents -Stream Microsoft-WindowsEvent -XPathQuery "System![System[(Level = 1 or Level = 2 or Level = 3)]]","Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]"
+    $performanceCounter1 = New-AzPerfCounterDataSourceObject -CounterSpecifier "\\Processor(_Total)\\% Processor Time","\\Memory\\Committed Bytes","\\LogicalDisk(_Total)\\Free Megabytes","\\PhysicalDisk(_Total)\\Avg. Disk Queue Length" -Name cloudTeamCoreCounters -SamplingFrequencyInSecond 15 -Stream Microsoft-Perf
+    $performanceCounter2 = New-AzPerfCounterDataSourceObject -CounterSpecifier "\\Process(_Total)\\Thread Count" -Name appTeamExtraCounters -SamplingFrequencyInSecond 30 -Stream Microsoft-Perf
+    New-AzDataCollectionRule -Name myCollectionRule1 -ResourceGroupName AMCS-TEST -Location eastus -DataFlow $dataflow -DataSourcePerformanceCounter $performanceCounter1,$performanceCounter2 -DataSourceWindowsEventLog $windowsEvent -DestinationAzureMonitorMetricName "azureMonitorMetrics-default"
+    ```
+
+    ```output
+    DataCollectionEndpointId                  :
+    DataFlow                                  : {{
+                                                  "streams": [ "Microsoft-InsightsMetrics" ],
+                                                  "destinations": [ "azureMonitorMetrics-default" ]
+                                                }}
+    DataSourceDataImportEventHubConsumerGroup :
+    DataSourceDataImportEventHubName          :
+    DataSourceDataImportEventHubStream        :
+    DataSourceExtension                       :
+    DataSourceIisLog                          :
+    DataSourceLogFile                         :
+    DataSourcePerformanceCounter              : {{
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 15,
+                                                  "counterSpecifiers": [ "\\\\Processor(_Total)\\\\% Processor Time", "\\\\Memory\\\\Committed Bytes",
+                                                "\\\\LogicalDisk(_Total)\\\\Free Megabytes", "\\\\PhysicalDisk(_Total)\\\\Avg. Disk Queue Length" ],
+                                                  "name": "cloudTeamCoreCounters"
+                                                }, {
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 30,
+                                                  "counterSpecifiers": [ "\\\\Process(_Total)\\\\Thread Count" ],
+                                                  "name": "appTeamExtraCounters"
+                                                }}
+    DataSourcePlatformTelemetry               :
+    DataSourcePrometheusForwarder             :
+    DataSourceSyslog                          :
+    DataSourceWindowsEventLog                 : {{
+                                                  "streams": [ "Microsoft-WindowsEvent" ],
+                                                  "xPathQueries": [ "System![System[(Level = 1 or Level = 2 or Level = 3)]]", "Application!*[System[(Level = 1 or Level = 2 or
+                                                Level = 3)]]" ],
+                                                  "name": "appTeam1AppEvents"
+                                                }}
+    DataSourceWindowsFirewallLog              :
+    Description                               :
+    DestinationAzureMonitorMetricName         : azureMonitorMetrics-default
+    DestinationEventHub                       :
+    DestinationEventHubsDirect                :
+    DestinationLogAnalytic                    :
+    DestinationMonitoringAccount              :
+    DestinationStorageAccount                 :
+    DestinationStorageBlobsDirect             :
+    DestinationStorageTablesDirect            :
+    Etag                                      : "d400a6a6-0000-0100-0000-650d5bf20000"
+    Id                                        : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/AMCS-TEST/providers/Microsoft.Insights/dataCollectionRules/my
+                                                CollectionRule1
+    IdentityPrincipalId                       :
+    IdentityTenantId                          :
+    IdentityType                              :
+    IdentityUserAssignedIdentity              : {
+                                                }
+    ImmutableId                               : dcr-9a6169afee634c13baa880dee8c5eb97
+    Kind                                      :
+    Location                                  : eastus
+    MetadataProvisionedBy                     :
+    MetadataProvisionedByResourceId           :
+    Name                                      : myCollectionRule1
+    ProvisioningState                         : Succeeded
+    ResourceGroupName                         : AMCS-TEST
+    StreamDeclaration                         : {
+                                                }
+    SystemDataCreatedAt                       : 9/22/2023 9:18:41 AM
+    SystemDataCreatedBy                       : v-jiaji@microsoft.com
+    SystemDataCreatedByType                   : User
+    SystemDataLastModifiedAt                  : 9/22/2023 9:18:41 AM
+    SystemDataLastModifiedBy                  : v-jiaji@microsoft.com
+    SystemDataLastModifiedByType              : User
+    Tag                                       : {
+                                                }
+    Type                                      : Microsoft.Insights/dataCollectionRules
+    ```
+
+    This command creates a data collection rules for the current subscription.
+- title: 'Example 3: Create a data collection rule with syslog'
+  description: |-
+    ```powershell
+    $dataflow2 = New-AzDataFlowObject -Stream Microsoft-Perf,Microsoft-Syslog -Destination centralWorkspace
+    $performanceCounter3 = New-AzPerfCounterDataSourceObject -CounterSpecifier "\\Processor(_Total)\\% Processor Time","\\Memory\\Committed Bytes","\\LogicalDisk(_Total)\\Free Megabytes","\\PhysicalDisk(_Total)\\Avg. Disk Queue Length" -Name cloudTeamCoreCounters -SamplingFrequencyInSecond 15 -Stream Microsoft-Perf
+    $performanceCounter4 = New-AzPerfCounterDataSourceObject -CounterSpecifier "\\Process(_Total)\\Thread Count" -Name appTeamExtraCounters -SamplingFrequencyInSecond 30 -Stream Microsoft-Perf
+    $windowsEvent1 = New-AzWindowsEventLogDataSourceObject -Name cloudSecurityTeamEvents -Stream Microsoft-WindowsEvent -XPathQuery "Security!*"
+    $windowsEvent2 = New-AzWindowsEventLogDataSourceObject -Name appTeam1AppEvents -Stream Microsoft-WindowsEvent -XPathQuery "System![System[(Level = 1 or Level = 2 or Level = 3)]]", "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]"
+    $logAnalytics = New-AzLogAnalyticsDestinationObject -Name centralWorkspace -WorkspaceResourceId /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/amcs-test/providers/microsoft.operationalinsights/workspaces/amcs-logtest-ws
+    $cronlog = New-AzSyslogDataSourceObject -FacilityName cron -LogLevel Debug,Critical,Emergency -Name cronSyslog -Stream Microsoft-Syslog
+    $syslog = New-AzSyslogDataSourceObject -FacilityName syslog -LogLevel Alert,Critical,Emergency -Name syslogBase -Stream Microsoft-Syslog
+    New-AzDataCollectionRule -Name myCollectionRule2 -ResourceGroupName AMCS-TEST -Location eastus -DataFlow $dataflow2 -DataSourcePerformanceCounter $performanceCounter3,$performanceCounter4 -DataSourceWindowsEventLog $windowsEvent1,$windowsEvent2 -DestinationLogAnalytic $logAnalytics -DataSourceSyslog $cronlog,$syslog
+    ```
+
+    ```output
+    DataCollectionEndpointId                  :
+    DataFlow                                  : {{
+                                                  "streams": [ "Microsoft-Perf", "Microsoft-Syslog" ],
+                                                  "destinations": [ "centralWorkspace" ]
+                                                }}
+    DataSourceDataImportEventHubConsumerGroup :
+    DataSourceDataImportEventHubName          :
+    DataSourceDataImportEventHubStream        :
+    DataSourceExtension                       :
+    DataSourceIisLog                          :
+    DataSourceLogFile                         :
+    DataSourcePerformanceCounter              : {{
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 15,
+                                                  "counterSpecifiers": [ "\\\\Processor(_Total)\\\\% Processor Time", "\\\\Memory\\\\Committed Bytes",
+                                                "\\\\LogicalDisk(_Total)\\\\Free Megabytes", "\\\\PhysicalDisk(_Total)\\\\Avg. Disk Queue Length" ],
+                                                  "name": "cloudTeamCoreCounters"
+                                                }, {
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 30,
+                                                  "counterSpecifiers": [ "\\\\Process(_Total)\\\\Thread Count" ],
+                                                  "name": "appTeamExtraCounters"
+                                                }}
+    DataSourcePlatformTelemetry               :
+    DataSourcePrometheusForwarder             :
+    DataSourceSyslog                          : {{
+                                                  "streams": [ "Microsoft-Syslog" ],
+                                                  "facilityNames": [ "cron" ],
+                                                  "logLevels": [ "Debug", "Critical", "Emergency" ],
+                                                  "name": "cronSyslog"
+                                                }, {
+                                                  "streams": [ "Microsoft-Syslog" ],
+                                                  "facilityNames": [ "syslog" ],
+                                                  "logLevels": [ "Alert", "Critical", "Emergency" ],
+                                                  "name": "syslogBase"
+                                                }}
+    DataSourceWindowsEventLog                 : {{
+                                                  "streams": [ "Microsoft-WindowsEvent" ],
+                                                  "xPathQueries": [ "Security!*" ],
+                                                  "name": "cloudSecurityTeamEvents"
+                                                }, {
+                                                  "streams": [ "Microsoft-WindowsEvent" ],
+                                                  "xPathQueries": [ "System![System[(Level = 1 or Level = 2 or Level = 3)]]", "Application!*[System[(Level = 1 or Level = 2 or
+                                                Level = 3)]]" ],
+                                                  "name": "appTeam1AppEvents"
+                                                }}
+    DataSourceWindowsFirewallLog              :
+    Description                               :
+    DestinationAzureMonitorMetricName         :
+    DestinationEventHub                       :
+    DestinationEventHubsDirect                :
+    DestinationLogAnalytic                    : {{
+                                                  "workspaceResourceId": "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/amcs-test/providers/microsoft.opera
+                                                tionalinsights/workspaces/amcs-logtest-ws",
+                                                  "workspaceId": "a7393094-14a9-4674-8cec-ca9eb7213f44",
+                                                  "name": "centralWorkspace"
+                                                }}
+    DestinationMonitoringAccount              :
+    DestinationStorageAccount                 :
+    DestinationStorageBlobsDirect             :
+    DestinationStorageTablesDirect            :
+    Etag                                      : "d50031d9-0000-0100-0000-650d6b1f0000"
+    Id                                        : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/AMCS-TEST/providers/Microsoft.Insights/dataCollectionRules/my
+                                                CollectionRule2
+    IdentityPrincipalId                       :
+    IdentityTenantId                          :
+    IdentityType                              :
+    IdentityUserAssignedIdentity              : {
+                                                }
+    ImmutableId                               : dcr-498912db79844083aef3aef50d8429ac
+    Kind                                      :
+    Location                                  : eastus
+    MetadataProvisionedBy                     :
+    MetadataProvisionedByResourceId           :
+    Name                                      : myCollectionRule2
+    ProvisioningState                         : Succeeded
+    ResourceGroupName                         : AMCS-TEST
+    StreamDeclaration                         : {
+                                                }
+    SystemDataCreatedAt                       : 9/22/2023 10:23:26 AM
+    SystemDataCreatedBy                       : v-jiaji@microsoft.com
+    SystemDataCreatedByType                   : User
+    SystemDataLastModifiedAt                  : 9/22/2023 10:23:26 AM
+    SystemDataLastModifiedBy                  : v-jiaji@microsoft.com
+    SystemDataLastModifiedByType              : User
+    Tag                                       : {
+                                                }
+    Type                                      : Microsoft.Insights/dataCollectionRules
+    ```
+
+    This command creates a data collection rules for the current subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDataCollectionRule.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/new-azdatacollectionrule
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzDataCollectionRule.md
+  PlatyPS schema version: 2024-05-01

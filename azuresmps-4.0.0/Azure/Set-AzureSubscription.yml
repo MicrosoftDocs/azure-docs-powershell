@@ -1,0 +1,300 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureSubscription
+name: Set-AzureSubscription
+module: Azure
+isPreview: false
+summary: |-
+  Changes an Azure subscription.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureSubscription** cmdlet establishes and changes the properties of an Azure subscription object.
+  You can use this cmdlet to work in an Azure subscription that is not your default subscription or to change your current storage account.
+  For information about current and default subscriptions, see the **Select-AzureSubscription** cmdlet.
+
+  This cmdlet operates on an Azure subscription object, not your actual Azure subscription.
+  To create and provision an Azure subscription, visit the [Azure Portal](https://azure.microsoft.com/) (https://azure.microsoft.com/).
+
+  This cmdlet changes the data in the subscription data file that you create when you use the **Add-AzureAccount** or **Import-AzurePublishSettingsFile** cmdlet to add an Azure account to Windows PowerShell.
+
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+parameters:
+  cmdletParameters:
+  - name: Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSubscriptionByIdParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateSubscriptionByNameParameterSetName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="AzureStorageContext" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CurrentStorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Environment
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure environment.
+
+      An Azure environment an independent deployment of Microsoft Azure, such as AzureCloud for global Azure and AzureChinaCloud for Azure operated by 21Vianet in China.
+      You can also create on-premises Azure environments by using Azure Pack and the WAPack cmdlets.
+      For more information, see [Azure Pack](/previous-versions/azure/windows-server-azure-pack/).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns $True if the command succeeds and $False if it fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceManagerEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for Azure Resource Manager data, including data about resource groups associated with the account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpoint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSubscriptionByIdParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AddSubscriptionParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateSubscriptionByNameParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: AddSubscriptionParameterSetName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureSubscription
+        -SubscriptionId <String>
+        [-Certificate <X509Certificate2>]
+        [-ServiceEndpoint <String>]
+        [-ResourceManagerEndpoint <String>]
+        [-CurrentStorageAccountName <String>]
+        [-Context <AzureStorageContext>]
+        [-Environment <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSubscriptionByIdParameterSetName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureSubscription
+        -SubscriptionName <String>
+        [-Certificate <X509Certificate2>]
+        [-ServiceEndpoint <String>]
+        [-ResourceManagerEndpoint <String>]
+        [-CurrentStorageAccountName <String>]
+        [-Context <AzureStorageContext>]
+        [-Environment <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateSubscriptionByNameParameterSetName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureSubscription
+        -SubscriptionName <String>
+        -SubscriptionId <String>
+        -Certificate <X509Certificate2>
+        [-ServiceEndpoint <String>]
+        [-ResourceManagerEndpoint <String>]
+        [-CurrentStorageAccountName <String>]
+        [-Context <AzureStorageContext>]
+        [-Environment <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AddSubscriptionParameterSetName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You can pipe input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="None or System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    When you use the *PassThru* parameter, this cmdlet returns a Boolean value.
+    By default, this cmdlet does not return any output.
+examples:
+- title: 'Example 1: Change an existing subscription1'
+  description: |-
+    ```
+    C:\PS> $thumbprint = <Thumbprint-2>
+    C:\PS> $differentCert = Get-Item cert:\\CurrentUser\My\$thumbprint
+    C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $differentCert
+    ```
+
+    This example changes the certificate for the subscription named ContosoEngineering.
+- title: 'Example 2: Change the service endpoint'
+  description: |-
+    ```
+    C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -ServiceEndpoint "https://management.core.contoso.com"
+    ```
+
+    This command adds or changes a custom service endpoint for the ContosoEngineering subscription.
+- title: 'Example 3: Clear property values'
+  description: |-
+    ```
+    C:\PS> Set-AzureSubscription -SubscriptionName ContosoEngineering -Certificate $null -ResourceManagerEndpoint $Null
+    ```
+
+    This command sets the values of the Certificate and ResourceManagerEndpoint properties to null ($Null).
+    This clears the values of those properties without changing other settings.
+- title: 'Example 4: Use an alternate subscription data file'
+  description: |-
+    ```
+    C:\PS> Set-AzureSubscription -SubscriptionName ContosoFinance -SubscriptionDataFile C:\Azure\SubscriptionData.xml -CurrentStorageAccount ContosoStorage01
+    ```
+
+    This command changes the current storage account of the ContosoFinance subscription to ContosoStorage01.
+    The command uses the **SubscriptionDataFile** parameter to change the data in the C:\Azure\SubscriptionData.xml subscription data file.
+    By default, **Set-AzureSubscription** uses the default subscription data file in your roaming user profile.
+links:
+- text: Add-AzureAccount
+  href: ./Add-AzureAccount.yml
+- text: Get-AzureSubscription
+  href: ./Get-AzureSubscription.yml
+- text: Import-AzurePublishSettingsFile
+  href: ./Import-AzurePublishSettingsFile.yml
+- text: Remove-AzureSubscription
+  href: ./Remove-AzureSubscription.yml
+- text: Select-AzureSubscription
+  href: ./Select-AzureSubscription.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6185C6BA-460E-4EEA-B1EF-CD67629AA75E
+  PlatyPS schema version: 2024-05-01

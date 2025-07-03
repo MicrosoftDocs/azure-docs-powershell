@@ -1,0 +1,338 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MarketplaceOrdering.Set-AzMarketplaceTerms
+name: Set-AzMarketplaceTerms
+module: Az.MarketplaceOrdering
+isPreview: false
+summary: |-
+  Accept or reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name).
+description: |-
+  Accept or reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name).
+parameters:
+  cmdletParameters:
+  - name: Accept
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If any version of the terms have been accepted, otherwise false.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAccept
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsAcceptViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plan identifier string of image being deployed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAccept
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsReject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Product
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Offer identifier string of image being deployed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAccept
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsReject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Publisher
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Publisher identifier string of image being deployed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAccept
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsReject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Reject
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Pass this to reject the legal terms.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsReject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsRejectViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription ID that identifies an Azure subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAccept
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsReject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Terms
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MarketplaceOrdering.Models.Api202101.IAgreementTerms" data-throw-if-not-resolved="False" />
+    description: |-
+      Terms properties for provided Publisher/Offer/Plan tuple
+      To construct, see NOTES section for PARAMETER properties and create a hash table.
+      To construct, see NOTES section for TERMS properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TermsAcceptViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: TermsRejectViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzMarketplaceTerms
+        -Product <String>
+        -Name <String>
+        -Publisher <String>
+        [-SubscriptionId <String>]
+        [-Accept]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TermsAccept
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzMarketplaceTerms
+        -Product <String>
+        -Name <String>
+        -Publisher <String>
+        [-SubscriptionId <String>]
+        [-Reject]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TermsReject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzMarketplaceTerms
+        -Terms <IAgreementTerms>
+        [-Accept]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TermsAcceptViaIdentity
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzMarketplaceTerms
+        -Terms <IAgreementTerms>
+        [-Reject]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TermsRejectViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MarketplaceOrdering.Models.Api202101.IAgreementTerms" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MarketplaceOrdering.Models.Api202101.IAgreementTerms" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Accept terms for a given publisher id(Publisher), offer id(Product) and plan id(Name)'
+  description: |-
+    ```powershell
+    Set-AzMarketplaceTerms  -Publisher "microsoft-ads" -Product "windows-data-science-vm" -Name "windows2016" -Accept
+    ```
+
+    ```output
+    Name        Product                 Publisher     Accepted Signature                                                                                               PrivacyPolicyLink
+    ----        -------                 ---------     -------- ---------                                                                                               -----------------
+    windows2016 windows-data-science-vm microsoft-ads True     523GN576A2S5OTTOGVFEZWYIWCUIQN2VE3I4WW3H2MER3ERJGDXZESHHQF5ZB2II2VUYXLRK6NE2A7EPF7GH6LWMQ6ECSYSPOD2SHFQ https://www.microsoft.com/EN-US/privacystatement/OnlineS
+    ```
+
+    This command accept terms for a given publisher id(Publisher), offer id(Product) and plan id(Name).
+- title: 'Example 2: Accept terms for a given publisher id(Publisher), offer id(Product) and plan id(Name) by pipeline'
+  description: |-
+    ```powershell
+    Get-AzMarketplaceTerms  -Publisher "microsoft-ads" -Product "windows-data-science-vm" -Name "windows2016" -OfferType 'virtualmachine' | Set-AzMarketplaceTerms -Accept
+    ```
+
+    ```output
+    Name        Product                 Publisher     Accepted Signature                                                                                               PrivacyPolicyLink
+    ----        -------                 ---------     -------- ---------                                                                                               -----------------
+    windows2016 windows-data-science-vm microsoft-ads True     523GN576A2S5OTTOGVFEZWYIWCUIQN2VE3I4WW3H2MER3ERJGDXZESHHQF5ZB2II2VUYXLRK6NE2A7EPF7GH6LWMQ6ECSYSPOD2SHFQ https://www.microsoft.com/EN-US/privacystatement/OnlineS
+    ```
+
+    This command accept terms for a given publisher id(Publisher), offer id(Product) and plan id(Name) by pipeline.
+- title: 'Example 3: Reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name)'
+  description: |-
+    ```powershell
+    Set-AzMarketplaceTerms  -Publisher "microsoft-ads" -Product "windows-data-science-vm" -Name "windows2016" -Reject
+    ```
+
+    ```output
+    Name        Product                 Publisher     Accepted Signature                                                                                               PrivacyPolicyLink
+    ----        -------                 ---------     -------- ---------                                                                                               -----------------
+    windows2016 windows-data-science-vm microsoft-ads False     523GN576A2S5OTTOGVFEZWYIWCUIQN2VE3I4WW3H2MER3ERJGDXZESHHQF5ZB2II2VUYXLRK6NE2A7EPF7GH6LWMQ6ECSYSPOD2SHFQ https://www.microsoft.com/EN-US/privacystatement/OnlineS
+    ```
+
+    This command reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name).
+- title: 'Example 4: Reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name) by pipeline'
+  description: |-
+    ```powershell
+    Get-AzMarketplaceTerms  -Publisher "microsoft-ads" -Product "windows-data-science-vm" -Name "windows2016" -OfferType 'virtualmachine' | Set-AzMarketplaceTerms -Reject
+    ```
+
+    ```output
+    Name        Product                 Publisher     Accepted Signature                                                                                               PrivacyPolicyLink
+    ----        -------                 ---------     -------- ---------                                                                                               -----------------
+    windows2016 windows-data-science-vm microsoft-ads False     523GN576A2S5OTTOGVFEZWYIWCUIQN2VE3I4WW3H2MER3ERJGDXZESHHQF5ZB2II2VUYXLRK6NE2A7EPF7GH6LWMQ6ECSYSPOD2SHFQ https://www.microsoft.com/EN-US/privacystatement/OnlineS
+    ```
+
+    This command reject terms for a given publisher id(Publisher), offer id(Product) and plan id(Name) by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/MarketplaceOrdering/help/Set-AzMarketplaceTerms.md
+  document type: cmdlet
+  external help file: Az.MarketplaceOrdering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.marketplaceordering/set-azmarketplaceterms
+  Module Name: Az.MarketplaceOrdering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MarketplaceOrdering/MarketplaceOrdering/help/Set-AzMarketplaceTerms.md
+  PlatyPS schema version: 2024-05-01

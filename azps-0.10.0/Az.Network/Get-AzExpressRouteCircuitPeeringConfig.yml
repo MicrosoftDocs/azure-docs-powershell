@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzExpressRouteCircuitPeeringConfig
+name: Get-AzExpressRouteCircuitPeeringConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets an ExpressRoute circuit peering configuration.
+description: |-
+  The **Get-AzExpressRouteCircuitPeeringConfig** cmdlet retrieves the configuration of a peering
+  relationship for an ExpressRoute circuit.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuit
+    type: <xref href="PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+    description: |-
+      The ExpressRoute circuit object containing the peering configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the peering configuration to be retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzExpressRouteCircuitPeeringConfig
+        [-Name <String>]
+        -ExpressRouteCircuit <PSExpressRouteCircuit>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSExpressRouteCircuit" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'ExpressRouteCircuit' accepts value of type 'PSExpressRouteCircuit' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPeering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the peering configuration for an ExpressRoute circuit'
+  description: |-
+    ```
+    $ckt = Get-AzExpressRouteCircuit -Name $CircuitName -ResourceGroupName $RG
+    Get-AzExpressRouteCircuitPeeringConfig -Name "AzurePrivatePeering" -ExpressRouteCircuit $ckt
+    ```
+links:
+- text: Add-AzExpressRouteCircuitPeeringConfig
+  href: Add-AzExpressRouteCircuitPeeringConfig.yml
+- text: New-AzExpressRouteCircuitPeeringConfig
+  href: New-AzExpressRouteCircuitPeeringConfig.yml
+- text: Remove-AzExpressRouteCircuitPeeringConfig
+  href: Remove-AzExpressRouteCircuitPeeringConfig.yml
+- text: Set-AzExpressRouteCircuit
+  href: Set-AzExpressRouteCircuit.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuitPeeringConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-azexpressroutecircuitpeeringconfig
+  Module Name: Az.Network
+  ms.assetid: 47C45467-F368-4993-937E-E7E975F400B5
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzExpressRouteCircuitPeeringConfig.md
+  PlatyPS schema version: 2024-05-01

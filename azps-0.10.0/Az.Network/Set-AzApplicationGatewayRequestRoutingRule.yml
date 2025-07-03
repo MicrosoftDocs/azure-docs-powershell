@@ -1,0 +1,294 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzApplicationGatewayRequestRoutingRule
+name: Set-AzApplicationGatewayRequestRoutingRule
+module: Az.Network
+isPreview: false
+summary: |-
+  Modifies a request routing rule for an application gateway.
+description: |-
+  The **Set-AzApplicationGatewayRequestRoutingRule** cmdlet modifies a request routing rule.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway object with which this cmdlet associates a request routing rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendAddressPool
+    type: <xref href="PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway back-end address pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendAddressPoolId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway back-end address pool ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendHttpSettings
+    type: <xref href="PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway backend HTTP settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackendHttpSettingsId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway back-end HTTP settings ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpListener
+    type: <xref href="PSApplicationGatewayHttpListener" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway HTTP listener.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpListenerId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway HTTP listener ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the request routing rule that this cmdlet modifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectConfiguration
+    type: <xref href="PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway RedirectConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RedirectConfigurationId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway RedirectConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuleType
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of request routing rule.
+    acceptedValues:
+    - Basic
+    - PathBasedRouting
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UrlPathMap
+    type: <xref href="PSApplicationGatewayUrlPathMap" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UrlPathMapId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayRequestRoutingRule
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -RuleType <String>
+        [-BackendHttpSettingsId <String>]
+        [-HttpListenerId <String>]
+        [-BackendAddressPoolId <String>]
+        [-UrlPathMapId <String>]
+        [-RedirectConfigurationId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzApplicationGatewayRequestRoutingRule
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -RuleType <String>
+        [-BackendHttpSettings <PSApplicationGatewayBackendHttpSettings>]
+        [-HttpListener <PSApplicationGatewayHttpListener>]
+        [-BackendAddressPool <PSApplicationGatewayBackendAddressPool>]
+        [-UrlPathMap <PSApplicationGatewayUrlPathMap>]
+        [-RedirectConfiguration <PSApplicationGatewayRedirectConfiguration>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a request routing rule'
+  description: |-
+    ```
+    PS C:\>$AppGw = Get-AzApplicationGateway -Name "ApplicationGateway01" -ResourceGroupName "ResourceGroup01"
+    PS C:\> $AppGw = Set-AzApplicationGatewayRequestRoutingRule -ApplicationGateway $AppGw -Name "Rule01" -RuleType Basic -BackendHttpSettings $Setting -HttpListener $Listener -BackendAddressPool $Pool
+    ```
+
+    The first command gets the application gateway named ApplicationGateway01 and stores it in the $AppGw variable.
+
+    The second command modifies the request routing rule for the application gateway to use back-end HTTP settings specified in the $Setting variable, an HTTP listener specified in the $Listener variable, and a back-end address pool specified in the $Pool variable.
+links:
+- text: Add-AzApplicationGatewayRequestRoutingRule
+  href: ./Add-AzApplicationGatewayRequestRoutingRule.yml
+- text: Get-AzApplicationGatewayRequestRoutingRule
+  href: ./Get-AzApplicationGatewayRequestRoutingRule.yml
+- text: New-AzApplicationGatewayRequestRoutingRule
+  href: ./New-AzApplicationGatewayRequestRoutingRule.yml
+- text: Remove-AzApplicationGatewayRequestRoutingRule
+  href: ./Remove-AzApplicationGatewayRequestRoutingRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzApplicationGatewayRequestRoutingRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azapplicationgatewayrequestroutingrule
+  Module Name: Az.Network
+  ms.assetid: 75A4826A-7A5F-4742-9DC4-DC728CED63D0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzApplicationGatewayRequestRoutingRule.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,288 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ImportExport.Get-AzImportExport
+name: Get-AzImportExport
+module: Az.ImportExport
+isPreview: false
+summary: |-
+  Gets information about an existing job.
+description: |-
+  Gets information about an existing job.
+parameters:
+  cmdletParameters:
+  - name: AcceptLanguage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the preferred language for the response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Can be used to restrict the results to certain conditions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the import/export job.
+    aliases:
+    - JobName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name uniquely identifies the resource group within the user subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The subscription ID for the Azure user.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      An integer value that specifies how many jobs at most should be returned.
+      The value cannot exceed 100.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzImportExport
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-Top <Int64>]
+        [-AcceptLanguage <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzImportExport
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-AcceptLanguage <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzImportExport
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Filter <String>]
+        [-Top <Int64>]
+        [-AcceptLanguage <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzImportExport
+        -InputObject <IImportExportIdentity>
+        [-AcceptLanguage <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.IImportExportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ImportExport.Models.Api202101.IJobResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get ImportExport job with default context'
+  description: |-
+    ```powershell
+    Get-AzImportExport
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet gets ImportExport job with default context.
+- title: 'Example 2: Get ImportExport job by resource group and job name'
+  description: |-
+    ```powershell
+    Get-AzImportExport -Name test-job -ResourceGroupName ImportTestRG
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet gets ImportExport job by resource group and job name.
+- title: 'Example 3: Lists all the ImportExport jobs in specified resource group'
+  description: |-
+    ```powershell
+    Get-AzImportExport -ResourceGroupName ImportTestRG
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet lists all the ImportExport jobs in specified resource group.
+- title: 'Example 4: Get ImportExport job by identity'
+  description: |-
+    ```powershell
+    $Id = "/subscriptions/<SubscriptionId>/resourceGroups/ImportTestRG/providers/Microsoft.ImportExport/jobs/test-job"
+    Get-AzImportExport -InputObject $Id
+    ```
+
+    ```output
+    Location Name     Type
+    -------- ----     ----
+    East US  test-job Microsoft.ImportExport/jobs
+    ```
+
+    This cmdlet lists gets ImportExport job by identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Get-AzImportExport.md
+  document type: cmdlet
+  external help file: Az.ImportExport-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.importexport/get-azimportexport
+  Module Name: Az.ImportExport
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ImportExport/ImportExport/help/Get-AzImportExport.md
+  PlatyPS schema version: 2024-05-01

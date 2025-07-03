@@ -1,0 +1,213 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Set-AzureStorageCORSRule
+name: Set-AzureStorageCORSRule
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Sets the CORS rules for a type of Storage service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureStorageCORSRule** cmdlet sets the Cross-Origin Resource Sharing (CORS) rules for a type of Azure Storage service.
+  The types of storage services for this cmdlet are Blob, Table, Queue, and File.
+  This cmdlet overwrites the existing rules.
+  To see the current rules, use the Get-AzureStorageCORSRule cmdlet.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure Storage context.
+      To obtain a context, use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CorsRules
+    type: <xref href="PSCorsRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of CORS rules.
+      You can retrieve the existing rules using the Get-AzureStorageCORSRule cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns a Boolean that reflects the success of the operation.
+      By default, this cmdlet does not return a value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceType
+    type: <xref href="StorageServiceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Storage service type for which this cmdlet assigns rules.
+      The acceptable values for this parameter are:
+
+      - Blob
+      - Table
+      - Queue
+      - File
+    acceptedValues:
+    - Blob
+    - Table
+    - Queue
+    - File
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureStorageCORSRule
+        [-ServiceType] <StorageServiceType>
+        -CorsRules <PSCorsRule[]>
+        [-PassThru]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Assign CORS rules to the blob service'
+  description: |-
+    ```
+    PS C:\>$CorsRules = (@{
+        AllowedHeaders=@("x-ms-blob-content-type","x-ms-blob-content-disposition");
+        AllowedOrigins=@("*");
+        MaxAgeInSeconds=30;
+        AllowedMethods=@("Get","Connect")},
+        @{
+        AllowedOrigins=@("http://www.fabrikam.com","http://www.contoso.com");
+        ExposedHeaders=@("x-ms-meta-data*","x-ms-meta-customheader");
+        AllowedHeaders=@("x-ms-meta-target*","x-ms-meta-customheader");
+        MaxAgeInSeconds=30;
+        AllowedMethods=@("Put")})
+    PS C:\> Set-AzureStorageCORSRule -ServiceType Blob -CorsRules $CorsRules
+    ```
+
+    The first command assigns an array of rules to the $CorsRules variable.
+    This command uses standard extends over several lines in this code block.
+
+    The second command assigns the rules in $CorsRules to the Blob service type.
+- title: 'Example 2: Change properties of a CORS rule for blob service'
+  description: |-
+    ```
+    PS C:\>$CorsRules = Get-AzureStorageCORSRule -ServiceType Blob
+    PS C:\> $CorsRules[0].AllowedHeaders = @("x-ms-blob-content-type", "x-ms-blob-content-disposition")
+    PS C:\> $CorsRules[0].AllowedMethods = @("Get", "Connect", "Merge")
+    PS C:\> Set-AzureStorageCORSRule -ServiceType Blob -CorsRules $CorsRules
+    ```
+
+    The first command gets the current CORS rules for the Blob type by using the **Get-AzureStorageCORSRule** cmdlet.
+    The command stores the rules in the $CorsRules array variable.
+
+    The second and third commands modify the first rule in $CorsRules.
+
+    The final command assigns the rules in $CorsRules to the Blob service type.
+    The revised rules overwrite the current CORS rules.
+links:
+- text: Get-AzureStorageCORSRule
+  href: ./Get-AzureStorageCORSRule.yml
+- text: New-AzureStorageContext
+  href: ./New-AzureStorageContext.yml
+- text: Remove-AzureStorageCORSRule
+  href: ./Remove-AzureStorageCORSRule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 288B7B56-B934-45AF-BF56-4EB0DD827522
+  PlatyPS schema version: 2024-05-01

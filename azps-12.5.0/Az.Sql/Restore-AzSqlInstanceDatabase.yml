@@ -1,0 +1,1215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Restore-AzSqlInstanceDatabase
+name: Restore-AzSqlInstanceDatabase
+module: Az.Sql
+isPreview: false
+summary: |-
+  Restores an Azure SQL Managed Instance database.
+description: |-
+  The **Restore-AzSqlInstanceDatabase** cmdlet restores an instance database from a geo-redundant backup, a point in time in a live database, or a long term retention backup.
+  The restored database is created as a new instance database.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletionDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The deletion date of deleted database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromGeoBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Restore from a geo backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GeoRestoreFromGeoBackupSetNameFromGeoBackupObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromLongTermRetentionBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Restore from a Long Term Retention backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LongTermRetentionBackupRestoreParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FromPointInTimeBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Restore from a point-in-time backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GeoBackupObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlRecoverableManagedDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The recoverable instance database object to restore
+    aliases:
+    - RecoverableInstanceDatabase
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GeoRestoreFromGeoBackupSetNameFromGeoBackupObjectParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseBaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The Instance Database object to restore
+    aliases:
+    - InstanceDatabase
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance name.
+    aliases:
+    - SourceInstanceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance database name to restore.
+    aliases:
+    - InstanceDatabaseName
+    - SourceInstanceDatabaseName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PointInTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The point in time to restore the database to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    aliases:
+    - SourceResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of Instance Database object to restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: LongTermRetentionBackupRestoreParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Source subscription id.
+    aliases:
+    - SourceSubscriptionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LongTermRetentionBackupRestoreParameter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetInstanceDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target instance database to restore to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetInstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target instance to restore to.
+      If not specified, the target instance is the same as the source instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromGeoBackupObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LongTermRetentionBackupRestoreParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target resource group to restore to.
+      If not specified, the target resource group is the same as the source resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromGeoBackupObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LongTermRetentionBackupRestoreParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target subscription id to restore to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        [-FromPointInTimeBackup]
+        [-SubscriptionId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeSameInstanceRestoreInstanceDatabaseFromInputParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-InputObject] <AzureSqlManagedDatabaseBaseModel>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceId] <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeSameInstanceRestoreInstanceDatabaseFromAzureResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromPointInTimeBackup]
+        [-SubscriptionId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossInstanceRestoreInstanceDatabaseFromInputParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-InputObject] <AzureSqlManagedDatabaseBaseModel>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureSqlManagedDatabaseModelInstanceDefinition
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceId] <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossInstanceRestoreInstanceDatabaseFromAzureResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        [-DeletionDate] <DateTime>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        [-FromPointInTimeBackup]
+        [-SubscriptionId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeDeletedDatabasesSameInstanceRestoreInstanceDatabaseFromInputParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        [-DeletionDate] <DateTime>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromPointInTimeBackup]
+        [-SubscriptionId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeDeletedDatabasesCrossInstanceRestoreInstanceDatabaseFromInputParameters
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        -SubscriptionId <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        -TargetSubscriptionId <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossSubscriptionRestoreFromNameAndResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-InputObject] <AzureSqlManagedDatabaseBaseModel>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        -TargetSubscriptionId <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossSubscriptionRestoreFromInputObjectParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceId] <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        -TargetSubscriptionId <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeCrossSubscriptionRestoreFromResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        [-DeletionDate] <DateTime>
+        -SubscriptionId <String>
+        -PointInTime <DateTime>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        -TargetSubscriptionId <String>
+        [-FromPointInTimeBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PointInTimeDeletedCrossSubscriptionRestoreFromNameAndResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-GeoBackupObject] <AzureSqlRecoverableManagedDatabaseModel>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromGeoBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GeoRestoreFromGeoBackupSetNameFromGeoBackupObjectParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceId] <String>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromGeoBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GeoRestoreFromGeoBackupSetNameFromResourceIdParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromGeoBackup]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GeoRestoreFromGeoBackupSetNameFromNameAndResourceGroupParameter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Restore-AzSqlInstanceDatabase
+        [-ResourceId] <String>
+        -TargetInstanceDatabaseName <String>
+        -TargetInstanceName <String>
+        -TargetResourceGroupName <String>
+        [-FromLongTermRetentionBackup]
+        [-SubscriptionId <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LongTermRetentionBackupRestoreParameter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseBaseModel" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlRecoverableManagedDatabaseModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Restore an instance database from a point in time'
+  description: |-
+    ```powershell
+    Restore-AzSqlInstanceDatabase -Name "Database01" -InstanceName "managedInstance1" -ResourceGroupName "ResourceGroup01" -PointInTime UTCDateTime -TargetInstanceDatabaseName "Database01_restored"
+    ```
+
+    The command restores the instance database Database01 from the specified point-in-time backup to the instance database named Database01_restored.
+- title: 'Example 2: Restore an instance database from a point in time to another instance on different resource group'
+  description: |-
+    ```powershell
+    Restore-AzSqlInstanceDatabase -Name "Database01" -InstanceName "managedInstance1" -ResourceGroupName "ResourceGroup01" -PointInTime UTCDateTime -TargetInstanceDatabaseName "Database01_restored" -TargetInstanceName "managedInstance1" -TargetResourceGroupName "ResourceGroup02"
+    ```
+
+    The command restores the instance database Database01 on instance managedInstance1 on resource group ResourceGroup01 from the specified point-in-time backup to the instance database named Database01_restored on instance managedInstance2 on resource group ResourceGroup02.
+- title: 'Example 3: Geo-Restore an instance database'
+  description: |-
+    ```powershell
+    $GeoBackup = Get-AzSqlInstanceDatabaseGeoBackup -ResourceGroupName "ResourceGroup01" -InstanceName "managedInstance1" -Name "Database01"
+    $GeoBackup | Restore-AzSqlInstanceDatabase -FromGeoBackup -TargetInstanceDatabaseName "Database01_restored" -TargetInstanceName "managedInstance2" -TargetResourceGroupName "ResourceGroup02"
+    ```
+
+    The first command gets the geo-redundant backup for the database named Database01, and then stores it in the $GeoBackup variable.
+    The second command restores the backup in $GeoBackup to the instance database named Database01_restored.
+- title: 'Example 4: Restore a deleted instance database from a point in time'
+  description: |-
+    ```powershell
+    $deletedDatabase = Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName "ResourceGroup01" -InstanceName "managedInstance1" -DatabaseName "DB1"
+    Restore-AzSqlInstanceDatabase -FromPointInTimeBackup -Name $deletedDatabase.Name -InstanceName $deletedDatabase.ManagedInstanceName -ResourceGroupName $deletedDatabase.ResourceGroupName -DeletionDate $deletedDatabase.DeletionDate -PointInTime UTCDateTime -TargetInstanceDatabaseName "Database01_restored"
+    ```
+
+    The first command gets the deleted instance databases named 'DB1' on Instance 'managedInstance1'.
+    The second command restores the fetched database, from the specified point-in-time backup to the instance database named Database01_restored.
+- title: 'Example 5: Restore a deleted instance database from a point in time'
+  description: |-
+    ```powershell
+    $deletedDatabase = Get-AzSqlDeletedInstanceDatabaseBackup -ResourceGroupName "ResourceGroup01" -InstanceName "managedInstance1" -DatabaseName "DB1"
+    Restore-AzSqlInstanceDatabase -FromPointInTimeBackup -InputObject $deletedDatabase[0] -PointInTime UTCDateTime -TargetInstanceDatabaseName "Database01_restored"
+    ```
+
+    The first command gets the deleted instance databases named 'DB1' on Instance 'managedInstance1'.
+    The second command restores the fetched database, from the specified point-in-time backup to the instance database named Database01_restored using input object.
+- title: 'Example 6: Restore a database from LTR backup.'
+  description: |-
+    ```powershell
+    Restore-AzSqlInstanceDatabase -FromLongTermRetentionBackup -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testResourceGroup/providers/Microsoft.Sql/locations/southeastasia/longTermRetentionManagedInstances/testInstance/longTermRetentionDatabases/test/longTermRetentionManagedInstanceBackups/b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2;132268250550000000" -TargetInstanceDatabaseName "restoreTarget" -TargetInstanceName "testInstance" -TargetResourceGroupName "testResourceGroup"
+    ```
+
+    ```output
+    Location                          : southeastasia
+    Tags                              :
+    Collation                         : SQL_Latin1_General_CP1_CI_AS
+    Status                            : Online
+    RestorePointInTime                :
+    DefaultSecondaryLocation          : northeurope
+    CatalogCollation                  :
+    CreateMode                        :
+    StorageContainerUri               :
+    StorageContainerSasToken          :
+    SourceDatabaseId                  :
+    FailoverGroupId                   :
+    RecoverableDatabaseId             :
+    RestorableDroppedDatabaseId       :
+    LongTermRetentionBackupResourceId :
+    ResourceGroupName                 : testResourceGroup
+    ManagedInstanceName               : testInstance
+    Name                              : restoreTarget
+    CreationDate                      : 3/4/2020 8:12:56 AM
+    EarliestRestorePoint              : 3/4/2020 8:14:29 AM
+    Id                                : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/testResourceGroup/providers/Microsoft.Sql/managedInstances/testInstance/databases/restoreTarget
+    ```
+
+    Restores LTR backup with the given resource ID (which can be found by running Get-AzSqlInstanceDatabaseLongTermRetentionBackup).
+- title: Example 7. Restore database from different subscription
+  description: |-
+    ```powershell
+    Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+    			-SubscriptionId "sourceSubscriptionID" `
+    			-ResourceGroupName "sourceRGName" `
+    			-InstanceName "sourceManagedInstanceName" `
+    			-Name "sourceDatabaseName" `
+    			-PointInTime $pointInTime `
+    			-TargetInstanceDatabaseName "targetDatabaseName" `
+    			-TargetInstanceName "targetManagedInstanceName" `
+    			-TargetResourceGroupName "targetResourceGroupName" `
+    			-TargetSubscriptionId "targetSubscriptionId"
+    ```
+    The command restores database backup from instance in one subscription to database `targetDatabaseName` on instance `targetManagedInstanceName` to different subscription `targetSubscriptionId`.
+- title: Example 8. Restore database from different subscription using source object and pipping
+  description: |-
+    ```powershell
+    Set-AzContext -SubscriptionId "sourceSubscriptionId"
+    $sourceDatabase = Get-AzSqlInstanceDatabase -Name "sourceDatabaseName" -InstanceName "sourceManagedInstanceName" -ResourceGroupName "sourceRGName"
+
+    Set-AzContext -SubscriptionId "targetSubscriptionId"
+    $sourceDatabase | Restore-AzSqlInstanceDatabase -FromPointInTimeBackup `
+    			-PointInTime $pointInTime `
+    			-TargetInstanceDatabaseName "targetDatabaseName" `
+    			-TargetInstanceName "targetManagedInstanceName" `
+    			-TargetResourceGroupName "targetResourceGroupName" `
+    			-TargetSubscriptionId "targetSubscriptionId"
+    ```
+    First command gets source managed database object and stores in variable sourceDatabase.
+    Second command executes restore from source to the given target database using point in time restore.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Restore-AzSqlInstanceDatabase.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/restore-azsqlinstancedatabase
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Restore-AzSqlInstanceDatabase.md
+  PlatyPS schema version: 2024-05-01

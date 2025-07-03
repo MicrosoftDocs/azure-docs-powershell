@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: Az.ArcResourceBridge
+name: Az.ArcResourceBridge Module
+isPreview: false
+cmdletGroups:
+- title: ArcResourceBridge
+  cmdlets:
+  - Az.ArcResourceBridge.Get-AzArcResourceBridge
+  - Az.ArcResourceBridge.Get-AzArcResourceBridgeApplianceCredential
+  - Az.ArcResourceBridge.Get-AzArcResourceBridgeCredential
+  - Az.ArcResourceBridge.Get-AzArcResourceBridgeTelemetryConfig
+  - Az.ArcResourceBridge.Get-AzArcResourceBridgeUpgradeGraph
+  - Az.ArcResourceBridge.New-AzArcResourceBridge
+  - Az.ArcResourceBridge.Remove-AzArcResourceBridge
+  - Az.ArcResourceBridge.Update-AzArcResourceBridge
+description: |-
+  Microsoft Azure PowerShell: ArcResourceBridge cmdlets
+metadata:
+  Module Name: Az.ArcResourceBridge
+  Module Guid: 329aa971-c12b-4d4b-abe5-3b638b0b5660
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.arcresourcebridge
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcResourceBridge/ArcResourceBridge/help/Az.ArcResourceBridge.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcResourceBridge/ArcResourceBridge/help/Az.ArcResourceBridge.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

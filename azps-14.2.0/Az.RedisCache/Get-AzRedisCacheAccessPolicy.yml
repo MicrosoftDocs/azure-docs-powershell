@@ -1,0 +1,174 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RedisCache.Get-AzRedisCacheAccessPolicy
+name: Get-AzRedisCacheAccessPolicy
+module: Az.RedisCache
+isPreview: false
+summary: |-
+  Get the detailed information about Access Policy(s) of the Redis Cache
+description: |-
+  If **AccessPolicyName** parameter provided, **Get-AzRedisCacheAccessPolicy** cmdlet gets details about the specified access policy. If only **Name** is specified this operation gets all access policies of the Redis Cache.
+parameters:
+  cmdletParameters:
+  - name: AccessPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Access Policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NormalParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: CacheObjectParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Redis Cache.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NormalParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of resource group in which cache exists.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NormalParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Id of Redis Cache Access Policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TopLevelResourceObject
+    type: <xref href="Microsoft.Azure.Commands.RedisCache.Models.RedisCacheAttributes" data-throw-if-not-resolved="False" />
+    description: |-
+      Object of type RedisCacheAttributes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CacheObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRedisCacheAccessPolicy
+        -Name <String>
+        [-ResourceGroupName <String>]
+        [-AccessPolicyName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NormalParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRedisCacheAccessPolicy
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRedisCacheAccessPolicy
+        -TopLevelResourceObject <RedisCacheAttributes>
+        [-AccessPolicyName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CacheObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSRedisAccessPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information of an access policy'
+  description: |-
+    ```powershell
+    Get-AzRedisCacheAccessPolicy -Name "testCache" -AccessPolicyName "testAccessPolicy"
+    ```
+
+    This command gets information on access policy named testAccessPolicy from Redis Cache named testCache
+- title: 'Example 2: Get information of all access policies'
+  description: |-
+    ```powershell
+    Get-AzRedisCacheAccessPolicy -Name "testCache"
+    ```
+
+    This command gets information on all access policies from Redis Cache named testCache.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCacheAccessPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.rediscache/get-azrediscacheaccesspolicy
+  Module Name: Az.RedisCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/Get-AzRedisCacheAccessPolicy.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,211 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultRandomNumber
+name: Get-AzKeyVaultRandomNumber
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Get the requested number of bytes containing random values from a managed HSM.
+description: |-
+  Get the requested number of bytes containing random values from a managed HSM.
+parameters:
+  cmdletParameters:
+  - name: AsBase64String
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, return random number as base-64 digit.
+      By default, this command retruns random number as byte array.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Count
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The requested number of random bytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM name. Cmdlet constructs the FQDN of a managed HSM based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByHsmName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByHsmInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      HSM resource id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByHsmResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRandomNumber
+        [-HsmName] <String>
+        -Count <Int32>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-AsBase64String]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByHsmName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRandomNumber
+        [-ResourceId] <String>
+        -Count <Int32>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-AsBase64String]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByHsmResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRandomNumber
+        [-InputObject] <PSManagedHsm>
+        -Count <Int32>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-AsBase64String]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByHsmInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSManagedHsm" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get requested number of random bytes by managed HSM name'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRandomNumber -HsmName testmhsm -Count 10
+    ```
+
+    ```output
+    158
+    171
+    96
+    142
+    109
+    28
+    1
+    85
+    178
+    201
+    ```
+
+    This command gets 10 random bytes from managed HSM "testmhsm"
+- title: 'Example 2: Get random number as base64 string by piping'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultManagedHsm -HsmName bezmhsm2022 | Get-AzKeyVaultRandomNumber -Count 10 -AsBase64String
+    ```
+
+    ```output
+    G1CsEqa9yUp/EA==
+    ```
+
+    This command gets 10 random bytes as base-64 string from managed HSM "testmhsm"
+- title: 'Example 3: Get random number by resource id'
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRandomNumber -ResourceId /subscriptions/0b1fxxxx-xxxx-xxxx-aec3-xxxx72f09590/resourceGroups/test-rg/providers/Microsoft.KeyVault/managedHSMs/testhsm -Count 10
+    ```
+
+    ```output
+    158
+    171
+    96
+    142
+    109
+    28
+    1
+    85
+    178
+    201
+    ```
+
+    This command gets 10 random bytes from managed HSM with specified resource id
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRandomNumber.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultrandomnumber
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRandomNumber.md
+  PlatyPS schema version: 2024-05-01

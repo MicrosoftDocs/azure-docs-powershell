@@ -1,0 +1,48 @@
+### YamlMime:PowerShellModule1
+uid: Az.StorageMover
+name: Az.StorageMover Module
+isPreview: false
+cmdletGroups:
+- title: Storage Mover
+  cmdlets:
+  - Az.StorageMover.Get-AzStorageMover
+  - Az.StorageMover.Get-AzStorageMoverAgent
+  - Az.StorageMover.Get-AzStorageMoverEndpoint
+  - Az.StorageMover.Get-AzStorageMoverJobDefinition
+  - Az.StorageMover.Get-AzStorageMoverJobRun
+  - Az.StorageMover.Get-AzStorageMoverProject
+  - Az.StorageMover.New-AzStorageMover
+  - Az.StorageMover.New-AzStorageMoverAzSmbFileShareEndpoint
+  - Az.StorageMover.New-AzStorageMoverAzStorageContainerEndpoint
+  - Az.StorageMover.New-AzStorageMoverJobDefinition
+  - Az.StorageMover.New-AzStorageMoverNfsEndpoint
+  - Az.StorageMover.New-AzStorageMoverProject
+  - Az.StorageMover.New-AzStorageMoverSmbEndpoint
+  - Az.StorageMover.New-AzStorageMoverUploadLimitWeeklyRecurrenceObject
+  - Az.StorageMover.Remove-AzStorageMover
+  - Az.StorageMover.Remove-AzStorageMoverEndpoint
+  - Az.StorageMover.Remove-AzStorageMoverJobDefinition
+  - Az.StorageMover.Remove-AzStorageMoverProject
+  - Az.StorageMover.Start-AzStorageMoverJobDefinition
+  - Az.StorageMover.Stop-AzStorageMoverJobDefinition
+  - Az.StorageMover.Unregister-AzStorageMoverAgent
+  - Az.StorageMover.Update-AzStorageMover
+  - Az.StorageMover.Update-AzStorageMoverAgent
+  - Az.StorageMover.Update-AzStorageMoverAzSmbFileShareEndpoint
+  - Az.StorageMover.Update-AzStorageMoverAzStorageContainerEndpoint
+  - Az.StorageMover.Update-AzStorageMoverJobDefinition
+  - Az.StorageMover.Update-AzStorageMoverNfsEndpoint
+  - Az.StorageMover.Update-AzStorageMoverProject
+  - Az.StorageMover.Update-AzStorageMoverSmbEndpoint
+description: |-
+  Microsoft Azure PowerShell: StorageMover cmdlets
+metadata:
+  Module Name: Az.StorageMover
+  Module Guid: d6053d97-1a9b-4fc6-9bd2-09c5b23b34db
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.storagemover
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Az.StorageMover.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/Az.StorageMover.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

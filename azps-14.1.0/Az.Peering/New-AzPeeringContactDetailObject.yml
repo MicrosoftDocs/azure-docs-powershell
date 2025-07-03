@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.New-AzPeeringContactDetailObject
+name: New-AzPeeringContactDetailObject
+module: Az.Peering
+isPreview: false
+summary: |-
+  Create an in-memory object for ContactDetail.
+description: |-
+  Create an in-memory object for ContactDetail.
+parameters:
+  cmdletParameters:
+  - name: Email
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The e-mail address of the contact.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Phone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The phone number of the contact.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The role of the contact.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPeeringContactDetailObject
+        [-Email <String>]
+        [-Phone <String>]
+        [-Role <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.ContactDetail" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Contact Detail object'
+  description: |-
+    ```powershell
+    New-AzPeeringContactDetailObject -Email "abc@xyz.com" -Phone 1234567890 -Role "Noc"
+    ```
+
+    ```output
+    Email       Phone      Role
+    -----       -----      ----
+    abc@xyz.com 1234567890 Noc
+    ```
+
+    Creates a ContactDetail object with the specified email phone and role stores it in memory
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringContactDetailObject.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Peering/new-azpeeringcontactdetailobject
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/New-AzPeeringContactDetailObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DiskPool.Get-AzDiskPool
+name: Get-AzDiskPool
+module: Az.DiskPool
+isPreview: false
+summary: |-
+  Get a Disk pool.
+description: |-
+  Get a Disk pool.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IDiskPoolIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Disk Pool.
+    aliases:
+    - DiskPoolName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDiskPool
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDiskPool
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDiskPool
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDiskPool
+        -InputObject <IDiskPoolIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.IDiskPoolIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DiskPool.Models.Api20210801.IDiskPool" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Disk Pools in a resource group'
+  description: |-
+    ```powershell
+    Get-AzDiskPool -ResourceGroupName 'storagepool-rg-test'
+    ```
+
+    ```output
+    Name             Location    Status    ProvisioningState AvailabilityZone
+    ----             --------    ------    ----------------- ----------------
+    disk-pool-1      eastus2euap Running   Succeeded         {3}
+    disk-pool-5      eastus2euap Running   Succeeded         {3}
+    ```
+
+    This command lists all Disk Pools in a resource group
+- title: 'Example 2: Get a Disk Pool'
+  description: |-
+    ```powershell
+    Get-AzDiskPool -ResourceGroupName 'storagepool-rg-test' -Name 'disk-pool-1'
+    ```
+
+    ```output
+    Name             Location    Status    ProvisioningState AvailabilityZone
+    ----             --------    ------    ----------------- ----------------
+    disk-pool-1      eastus2euap Running   Succeeded         {3}
+    ```
+
+    This command gets a Disk Pool.
+- title: 'Example 3: List all Disk Pools under a subscription'
+  description: |-
+    ```powershell
+    Get-AzDiskPool
+    ```
+
+    ```output
+    Name             Location    Status    ProvisioningState AvailabilityZone
+    ----             --------    ------    ----------------- ----------------
+    disk-pool-1      eastus2euap Running   Succeeded         {3}
+    disk-pool-5      eastus2euap Running   Succeeded         {3}
+    ```
+
+    This command lists all the Disk Pools in a subscription.
+- title: 'Example 4: Get a Disk Pool by object'
+  description: |-
+    ```powershell
+    New-AzDiskPool -Name 'disk-pool-1' -ResourceGroupName 'storagepool-rg-test' -Location 'westeurope' -SkuName 'Standard' -SkuTier 'Standard' -SubnetId '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/storagepool-rg-test/providers/Microsoft.Network/virtualNetworks/disk-pool-vnet/subnets/default' -AvailabilityZone "1" | Get-AzDiskPool
+    ```
+
+    ```output
+    Name             Location    Status    ProvisioningState AvailabilityZone
+    ----             --------    ------    ----------------- ----------------
+    disk-pool-1      eastus2euap Running   Succeeded         {3}
+    ```
+
+    This command gets a Disk Pool by object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Get-AzDiskPool.md
+  document type: cmdlet
+  external help file: Az.DiskPool-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.diskpool/get-azdiskpool
+  Module Name: Az.DiskPool
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DiskPool/DiskPool/help/Get-AzDiskPool.md
+  PlatyPS schema version: 2024-05-01

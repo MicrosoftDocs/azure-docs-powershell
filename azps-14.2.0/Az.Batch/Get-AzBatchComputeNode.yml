@@ -1,0 +1,352 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchComputeNode
+name: Get-AzBatchComputeNode
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets Batch compute nodes from a pool.
+description: |-
+  The **Get-AzBatchComputeNode** cmdlet gets Azure Batch compute nodes from a pool.
+  Specify either the *PoolID* or *Pool* parameter.
+  Specify the *Id* parameter to get a single compute node.
+  Specify the *Filter* parameter to get the compute nodes that match an Open Data Protocol (OData) filter.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData filter clause.
+      This cmdlet returns compute nodes that match the filter that this parameter specifies.
+      If you do not specify a filter, this cmdlet returns all compute nodes for the pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the compute node that this cmdlet gets from the pool.
+      You cannot specify wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum number of compute nodes to return.
+      If you specify a value of zero (0) or less, the cmdlet does not use an upper limit.
+      The default value is 1000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ParentObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pool
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the pool, as a **PSCloudPool** object, that contains the compute nodes.
+      To obtain a **PSCloudPool** object, use the Get-AzBatchPool cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ParentObject
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the pool that contains the compute nodes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ODataFilter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Select
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an OData select clause.
+      Specify a value for this parameter to get specific properties rather than all object properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchComputeNode
+        [-PoolId] <String>
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ODataFilter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchComputeNode
+        [-PoolId] <String>
+        [[-Id] <String>]
+        -BatchContext <BatchAccountContext>
+        [-Select <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBatchComputeNode
+        [[-Pool] <PSCloudPool>]
+        -BatchContext <BatchAccountContext>
+        [-Filter <String>]
+        [-MaxCount <Int32>]
+        [-Select <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ParentObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCloudPool" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSComputeNode" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a compute node by ID'
+  description: |-
+    ```powershell
+    Get-AzBatchComputeNode -PoolId "Pool06" -Id "tvm-2316545714_1-20150725t213220z" -BatchContext $Context
+    ```
+
+    ```output
+    Id                    : tvm-2316545714_1-20150725t213220z
+    Url                   : https://cmdletexample.westus.batch.azure.com/pools/MyPool/nodes/tvm-2316545714_1-20150725t213220z
+    State                 : Idle
+    StateTransitionTime   : 7/25/2015 9:36:53 PM
+    LastBootTime          : 7/25/2015 9:36:53 PM
+    AllocationTime        : 7/25/2015 9:32:20 PM
+    IPAddress             : 10.14.121.1
+    AffinityId            : TVM:tvm-2316545714_1-20150725t213220z
+    VirtualMachineSize    : standard_d1_v2
+    TotalTasksRun         : 1
+    StartTaskInformation  :
+    RecentTasks           : {}
+    StartTask             :
+    CertificateReferences :
+    Errors                :
+    ```
+
+    This command gets the compute node that has the ID tvm-2316545714_1-20150725t213220z from the pool that has the ID Pool06.
+    Use the Get-AzBatchAccountKey cmdlet to assign a context to the $Context variable.
+- title: 'Example 2: Get all idle compute nodes from a pool'
+  description: |-
+    ```powershell
+    Get-AzBatchComputeNode -PoolId "Pool06" -Filter "state eq 'idle'" -BatchContext $Context
+    ```
+
+    ```output
+    Id                    : tvm-2316545714_1-20150725t213220z
+    Url                   : https://cmdletexample.westus.batch.azure.com/pools/MyPool/nodes/tvm-2316545714_1-20150725t213220z
+    State                 : Idle
+    StateTransitionTime   : 7/25/2015 9:36:53 PM
+    LastBootTime          : 7/25/2015 9:36:53 PM
+    AllocationTime        : 7/25/2015 9:32:20 PM
+    IPAddress             : 10.14.121.1
+    AffinityId            : TVM:tvm-2316545714_1-20150725t213220z
+    VirtualMachineSize    : standard_d1_v2
+    TotalTasksRun         : 1
+    StartTaskInformation  :
+    RecentTasks           : {}
+    StartTask             :
+    CertificateReferences :
+    Errors                :
+
+    Id                    : tvm-2316545714_2-20150726t172920z
+    Url                   : https://cmdletexample.westus.batch.azure.com/pools/MyPool/nodes/tvm-2316545714_2-20150726t172920z
+    State                 : Idle
+    StateTransitionTime   : 7/26/2015 5:33:58 PM
+    LastBootTime          : 7/26/2015 5:33:58 PM
+    AllocationTime        : 7/26/2015 5:29:20 PM
+    IPAddress             : 10.14.121.38
+    AffinityId            : TVM:tvm-2316545714_2-20150726t172920z
+    VirtualMachineSize    : standard_d1_v2
+    TotalTasksRun         : 0
+    StartTaskInformation  :
+    RecentTasks           :
+    StartTask             :
+    CertificateReferences :
+    Errors                :
+    ```
+
+    This command gets all idle compute nodes that are contained in the pool that has the ID Pool06.
+    The command specifies the idle state by using the *Filter* parameter.
+- title: 'Example 3: Get all compute nodes in a specified pool'
+  description: |-
+    ```powershell
+    Get-AzBatchPool -Id "Pool07" -BatchContext $Context | Get-AzBatchComputeNode -BatchContext $Context
+    ```
+
+    ```output
+    Id                    : tvm-2316545714_1-20150725t213220z
+    Url                   : https://cmdletexample.westus.batch.azure.com/pools/MyPool/nodes/tvm-2316545714_1-20150725t213220z
+    State                 : Idle
+    StateTransitionTime   : 7/25/2015 9:36:53 PM
+    LastBootTime          : 7/25/2015 9:36:53 PM
+    AllocationTime        : 7/25/2015 9:32:20 PM
+    IPAddress             : 10.14.121.1
+    AffinityId            : TVM:tvm-2316545714_1-20150725t213220z
+    VirtualMachineSize    : standard_d1_v2
+    TotalTasksRun         : 1
+    StartTaskInformation  :
+    RecentTasks           : {}
+    StartTask             :
+    CertificateReferences :
+    Errors                :
+
+
+    Id                    : tvm-2316545714_2-20150726t172920z
+    Url                   : https://cmdletexample.westus.batch.azure.com/pools/MyPool/nodes/tvm-2316545714_2-20150726t172920z
+    State                 : Idle
+    StateTransitionTime   : 7/26/2015 5:33:58 PM
+    LastBootTime          : 7/26/2015 5:33:58 PM
+    AllocationTime        : 7/26/2015 5:29:20 PM
+
+    IPAddress             : 10.14.121.38
+    AffinityId            : TVM:tvm-2316545714_2-20150726t172920z
+    VirtualMachineSize    : standard_d1_v2
+    TotalTasksRun         : 0
+    StartTaskInformation  :
+    RecentTasks           :
+    StartTask             :
+    CertificateReferences :
+    Errors                :
+    ```
+
+    This command gets the pool that has the ID Pool07 by using the Get-AzBatchPool cmdlet.
+    The command passes that pool to the current cmdlet by using the pipeline operator.
+    That cmdlet gets all compute nodes from that pool.
+links:
+- text: Get-AzBatchComputeNode
+  href: ./Get-AzBatchComputeNode.yml
+- text: Get-AzBatchNodeFile
+  href: ./Get-AzBatchNodeFile.yml
+- text: Get-AzBatchNodeFileContent
+  href: ./Get-AzBatchNodeFileContent.yml
+- text: Get-AzBatchPool
+  href: ./Get-AzBatchPool.yml
+- text: Reset-AzBatchComputeNode
+  href: ./Reset-AzBatchComputeNode.yml
+- text: Restart-AzBatchComputeNode
+  href: ./Restart-AzBatchComputeNode.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNode.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchcomputenode
+  Module Name: Az.Batch
+  ms.assetid: 93614655-A8F2-4A67-887D-43D41AB91F82
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchComputeNode.md
+  PlatyPS schema version: 2024-05-01

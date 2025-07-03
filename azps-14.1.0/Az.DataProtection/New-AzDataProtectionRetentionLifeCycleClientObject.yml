@@ -1,0 +1,162 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.New-AzDataProtectionRetentionLifeCycleClientObject
+name: New-AzDataProtectionRetentionLifeCycleClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Creates new Lifecycle object
+description: |-
+  Creates new Lifecycle object
+parameters:
+  cmdletParameters:
+  - name: CopyOption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.CopyOption" data-throw-if-not-resolved="False" />
+    description: |-
+      CopyOption
+    acceptedValues:
+    - CustomCopyOption
+    - ImmediateCopyOption
+    - CopyOnExpiryOption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceDataStore
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DataStoreType" data-throw-if-not-resolved="False" />
+    description: |-
+      Source Datastore
+    acceptedValues:
+    - ArchiveStore
+    - OperationalStore
+    - VaultStore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceRetentionDurationCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention Duration Count
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceRetentionDurationType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DurationType" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention Duration Type
+    acceptedValues:
+    - Days
+    - Weeks
+    - Months
+    - Years
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDataStore
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DataStoreType" data-throw-if-not-resolved="False" />
+    description: |-
+      Target Datastore
+    acceptedValues:
+    - ArchiveStore
+    - OperationalStore
+    - VaultStore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionRetentionLifeCycleClientObject
+        -SourceDataStore <DataStoreType>
+        -SourceRetentionDurationType <DurationType>
+        -SourceRetentionDurationCount <Int32>
+        [-TargetDataStore <DataStoreType>]
+        [-CopyOption <CopyOption>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.ISourceLifeCycle" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a daily retention lifecycle'
+  description: |-
+    ```powershell
+    New-AzDataProtectionRetentionLifeCycleClientObject -SourceDataStore OperationalStore -SourceRetentionDurationType Days -SourceRetentionDurationCount 30
+    ```
+
+    ```output
+    DeleteAfterDuration        : P30D
+    DeleteAfterObjectType      : AbsoluteDeleteOption
+    SourceDataStoreObjectType  : DataStoreInfoBase
+    SourceDataStoreType        : OperationalStore
+    TargetDataStoreCopySetting :
+    ```
+
+    This command creates a lifecycle object which stores the backup data in operational store for 30 days.
+- title: 'Example 2: Create a weekly retention lifecycle.'
+  description: |-
+    ```powershell
+    New-AzDataProtectionRetentionLifeCycleClientObject -SourceDataStore OperationalStore -SourceRetentionDurationType Weeks -SourceRetentionDurationCount 20
+    ```
+
+    ```output
+    DeleteAfterDuration        : P20W
+    DeleteAfterObjectType      : AbsoluteDeleteOption
+    SourceDataStoreObjectType  : DataStoreInfoBase
+    SourceDataStoreType        : OperationalStore
+    TargetDataStoreCopySetting :
+    ```
+
+    This command creates a lifecycle object which stores the backup data in operational store for 20 weeks.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionRetentionLifeCycleClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionretentionlifecycleclientobject
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionRetentionLifeCycleClientObject.md
+  PlatyPS schema version: 2024-05-01

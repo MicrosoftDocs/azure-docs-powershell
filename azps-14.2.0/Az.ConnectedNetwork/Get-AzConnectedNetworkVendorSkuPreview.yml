@@ -1,0 +1,287 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedNetwork.Get-AzConnectedNetworkVendorSkuPreview
+name: Get-AzConnectedNetworkVendorSkuPreview
+module: Az.ConnectedNetwork
+isPreview: false
+summary: |-
+  Gets the preview information of a vendor sku.
+description: |-
+  Gets the preview information of a vendor sku.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreviewSubscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preview subscription ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityVendorSku
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityVendor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the vendor sku.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityVendor
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VendorInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityVendor
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VendorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the vendor.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VendorSkuInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityVendorSku
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendorSkuPreview
+        -SkuName <String>
+        -VendorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendorSkuPreview
+        -PreviewSubscription <String>
+        -VendorSkuInputObject <IConnectedNetworkIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityVendorSku
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendorSkuPreview
+        -PreviewSubscription <String>
+        -SkuName <String>
+        -VendorInputObject <IConnectedNetworkIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityVendor
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendorSkuPreview
+        -PreviewSubscription <String>
+        -SkuName <String>
+        -VendorName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedNetworkVendorSkuPreview
+        -InputObject <IConnectedNetworkIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IConnectedNetworkIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.IPreviewSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get-AzConnectedNetworkVendorSkuPreview using sku name, vendor name and preview subscription'
+  description: |-
+    ```powershell
+    Get-AzConnectedNetworkVendorSkuPreview -SkuName mySku -VendorName myVendor -PreviewSubscription xxxxx-22222-xxxxx-22222
+    ```
+
+    ```output
+    Id                           : /subscriptions/xxxxx-00000-xxxxx-00000/providers/Microsoft.HybridNetwork/vendors/myVendor/vendorSkus/mySku/previewSubscriptions/xxxxx-22222-xxxxx-22222
+    Name                         : xxxxx-22222-xxxxx-22222
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    SystemDataCreatedAt          : 11/24/2021 4:41:22 AM
+    SystemDataCreatedBy          : user@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/24/2021 4:41:22 AM
+    SystemDataLastModifiedBy     : user@microsoft.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.hybridnetwork/vendors/vendorskus/previewsubscriptions
+    ```
+
+    Getting the preview information of a vendor sku mySku with vendor myVendor for the specified subscription.
+- title: 'Example 2: Get-AzConnectedNetworkVendorSkuPreview via Identity'
+  description: |-
+    ```powershell
+    $skuPreview = @{ SkuName = "mySku";  VendorName = "myVendor"; PreviewSubscription = "xxxxx-22222-xxxxx-22222"; SubscriptionId = "xxxxx-00000-xxxxx-00000"}
+    Get-AzConnectedNetworkVendorSkuPreview -InputObject $skuPreview
+    ```
+
+    ```output
+    Id                           : /subscriptions/xxxxx-00000-xxxxx-00000/providers/Microsoft.HybridNetwork/vendors/myVendor/vendorSkus/mySku/previewSubscriptions/xxxxx-22222-xxxxx-22222
+    Name                         : xxxxx-22222-xxxxx-22222
+    ProvisioningState            : Succeeded
+    ResourceGroupName            :
+    SystemDataCreatedAt          : 11/24/2021 4:41:22 AM
+    SystemDataCreatedBy          : user@microsoft.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/24/2021 4:41:22 AM
+    SystemDataLastModifiedBy     : user@microsoft.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.hybridnetwork/vendors/vendorskus/previewsubscriptions
+    ```
+
+    Creating a identity with SkuName mySku, VendorName myVendor, preview subscription and subscription id.
+    Getting the preview information of this vendor sku using this identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Get-AzConnectedNetworkVendorSkuPreview.md
+  document type: cmdlet
+  external help file: Az.ConnectedNetwork-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectednetwork/get-azconnectednetworkvendorskupreview
+  Module Name: Az.ConnectedNetwork
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/Get-AzConnectedNetworkVendorSkuPreview.md
+  PlatyPS schema version: 2024-05-01

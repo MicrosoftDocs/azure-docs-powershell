@@ -1,0 +1,467 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceComputeInstanceObject
+name: New-AzMLWorkspaceComputeInstanceObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for ComputeInstance.
+description: |-
+  Create an in-memory object for ComputeInstance.
+parameters:
+  cmdletParameters:
+  - name: ApplicationSharingPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ApplicationSharingPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      Policy for sharing applications on this compute instance among users of parent workspace.
+      If Personal, only the creator can access applications on this compute instance.
+      When Shared, any workspace user can access applications on this instance depending on his/her assigned role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedUserObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's AAD Object Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignedUserTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User's AAD Tenant Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthorizationType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.ComputeInstanceAuthorizationType" data-throw-if-not-resolved="False" />
+    description: |-
+      The Compute Instance Authorization type.
+      Available values are personal (default).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreationScriptArgument
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional command line arguments passed to the script to run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreationScriptData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of scripts in the mounted volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreationScriptSource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage source of the script: inline, workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreationScriptTimeout
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional time period passed to timeout command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the Machine Learning compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Opt-out of local authentication and ensure customers can use only MSI and AAD exclusively for authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableNodePublicIP
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable node public IP address provisioning.
+      Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned.
+      false - Indicates that the compute nodes will have a private endpoint and no public IPs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastOperationName
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.OperationName" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the last operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastOperationStatus
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.OperationStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Operation status.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastOperationTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Time of the last operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastOperationTrigger
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.OperationTrigger" data-throw-if-not-resolved="False" />
+    description: |-
+      Trigger of operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the underlying compute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleComputeStartStop
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IComputeStartStopSchedule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of compute start stop schedules to be applied.
+      To construct, see NOTES section for SCHEDULECOMPUTESTARTSTOP properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshSettingAdminPublicKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SSH rsa public key file as a string.
+      Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshSettingSshPublicAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.SshPublicAccess" data-throw-if-not-resolved="False" />
+    description: |-
+      State of the public SSH port.
+      Possible values are: Disabled - Indicates that the public ssh port is closed on this instance.
+      Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartupScriptArgument
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional command line arguments passed to the script to run.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartupScriptData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of scripts in the mounted volume.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartupScriptSource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The storage source of the script: inline, workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartupScriptTimeout
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional time period passed to timeout command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionRuntime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Runtime of compute instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Machine Size.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceComputeInstanceObject
+        [-Description <String>]
+        [-DisableLocalAuth <Boolean>]
+        [-ResourceId <String>]
+        [-ApplicationSharingPolicy <ApplicationSharingPolicy>]
+        [-AssignedUserObjectId <String>]
+        [-AssignedUserTenantId <String>]
+        [-AuthorizationType <ComputeInstanceAuthorizationType>]
+        [-CreationScriptArgument <String>]
+        [-CreationScriptData <String>]
+        [-CreationScriptSource <String>]
+        [-CreationScriptTimeout <String>]
+        [-EnableNodePublicIP <Boolean>]
+        [-LastOperationName <OperationName>]
+        [-LastOperationStatus <OperationStatus>]
+        [-LastOperationTime <DateTime>]
+        [-LastOperationTrigger <OperationTrigger>]
+        [-ScheduleComputeStartStop <IComputeStartStopSchedule[]>]
+        [-SshSettingAdminPublicKey <String>]
+        [-SshSettingSshPublicAccess <SshPublicAccess>]
+        [-StartupScriptArgument <String>]
+        [-StartupScriptData <String>]
+        [-StartupScriptSource <String>]
+        [-StartupScriptTimeout <String>]
+        [-SubnetId <String>]
+        [-VMSize <String>]
+        [-VersionRuntime <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ComputeInstance" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ComputeInstance'
+  description: |-
+    ```powershell
+    New-AzMLWorkspaceComputeInstanceObject
+    ```
+
+    Create an in-memory object for ComputeInstance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceComputeInstanceObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceComputeInstanceObject.md
+  PlatyPS schema version: 2024-05-01

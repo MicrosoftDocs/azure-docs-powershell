@@ -1,0 +1,103 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.Get-AzStackHCIRemoteSupportSessionHistory
+name: Get-AzStackHCIRemoteSupportSessionHistory
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Gets Remote Support Session History Details.
+description: |-
+  Session history represents all remote accesses made by Microsoft Support for either Diagnostics or DiagnosticsRepair based on the Access Level granted.
+parameters:
+  cmdletParameters:
+  - name: FromDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Defaults to last 7 days.
+      Indicates date from where to start listing sessions from until now.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeSessionTranscript
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Defaults to false.
+      Indicates whether to include complete session transcript.
+      Transcript provides details on all operations performed during the session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SessionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Session Id to get details for a specific session.
+      If omitted then lists all sessions starting from date 'FromDate'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStackHCIRemoteSupportSessionHistory
+        [[-SessionId] <String>]
+        [-IncludeSessionTranscript]
+        [[-FromDate] <DateTime>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    Get-AzStackHCIRemoteSupportSessionHistory
+    ```
+
+    ```output
+    Microsoft.AzureStack.Deployment.RemoteSupport is loaded already ...
+    Listing Session History for last '7' days.
+    No remote support session exists.
+    ```
+
+    Gets Session Transcript for the particular session Id when access was made by Microsoft Support for either Diagnostics or DiagnosticsRepair based on the Access Level granted.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIRemoteSupportSessionHistory.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/get-azstackhciremotesupportsessionhistory
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Get-AzStackHCIRemoteSupportSessionHistory.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,297 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Stop-AzSqlInstanceOperation
+name: Stop-AzSqlInstanceOperation
+module: Az.Sql
+isPreview: false
+summary: |-
+  Stops a SQL managed instance's operations.
+description: |-
+  The Stop-AzSqlInstanceOperation cmdlet stops operation with provided operation name on a SQL managed instance.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceOperation.Model.AzureSqlManagedInstanceOperationModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The operation to cancel
+    aliases:
+    - SqlInstanceOperation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByInputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedInstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByNameAndManagedInstanceAndResourceGroupParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the operation.
+    aliases:
+    - OperationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByNameAndManagedInstanceAndResourceGroupParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByNameAndManagedInstanceAndResourceGroupParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of operation object to stop
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StopByResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceOperation
+        [-Name] <String>
+        [-ManagedInstanceName] <String>
+        [-ResourceGroupName] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByNameAndManagedInstanceAndResourceGroupParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceOperation
+        [-ResourceId] <String>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Stop-AzSqlInstanceOperation
+        [-InputObject] <AzureSqlManagedInstanceOperationModel>
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StopByInputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceOperation.Model.AzureSqlManagedInstanceOperationModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceOperation.Model.AzureSqlManagedInstanceOperationModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific operation'
+  description: |-
+    ```powershell
+    Stop-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698 -Name d0f5bef5-e2b1-4ef8-bb42-2e54073874f9
+    ```
+
+    ```output
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/d0f5bef5-e2b1-4ef8-bb42-2e54073874f9
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : d0f5bef5-e2b1-4ef8-bb42-2e54073874f9
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 0
+    StartTime               : 3/16/2020 12:49:53 PM
+    State                   : InProgress
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : True
+    ```
+
+    This command stops operation with name 'd0f5bef5-e2b1-4ef8-bb42-2e54073874f9' on a SQL managed instance.
+- title: 'Example 2: Using operation resource id'
+  description: |-
+    ```powershell
+    $managedInstanceOperation = Get-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698 -Name 4253bf58-34f1-4499-80c6-198d94c659f7
+    Get-AzSqlInstanceOperation -ResourceId $managedInstanceOperation.Id
+    ```
+
+    ```output
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/4253bf58-34f1-4499-80c6-198d94c659f7
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : 4253bf58-34f1-4499-80c6-198d94c659f7
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 0
+    StartTime               : 3/16/2020 12:47:32 PM
+    State                   : InProgress
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : True
+    ```
+
+    This command stops operation with resource id $managedInstanceOperation.Id.
+- title: 'Example 3: Using operation object'
+  description: |-
+    ```powershell
+    $managedInstanceOperation = Get-AzSqlInstanceOperation -ResourceGroupName ps3753 -ManagedInstanceName ps3698 -Name b15a2b78-c42c-4e00-bf87-7ef4737552dc
+    Stop-AzSqlInstanceOperation -InputObject $managedInstanceOperation
+    ```
+
+    ```output
+    Id                      : /subscriptions/a8c9a924-06c0-4bde-9788-e7b1370969e1/resourceGroups/ps3753/providers/Microsoft.Sql/managedInstances/ps3698/operations/b15a2b78-c42c-4e00-bf87-7ef4737552dc
+    ResourceGroupName       : ps3753
+    ManagedInstanceName     : ps3698
+    Name                    : b15a2b78-c42c-4e00-bf87-7ef4737552dc
+    Operation               : UpsertManagedServer
+    OperationFriendlyName   : UPDATE MANAGED SERVER
+    PercentComplete         : 0
+    StartTime               : 3/16/2020 12:44:57 PM
+    State                   : InProgress
+    ErrorCode               :
+    ErrorDescription        :
+    ErrorSeverity           :
+    IsUserError             :
+    EstimatedCompletionTime :
+    Description             :
+    IsCancellable           : True
+    ```
+
+    This command stops operation with object $managedInstanceOperation.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlInstanceOperation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/stop-azsqlinstanceoperation
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Stop-AzSqlInstanceOperation.md
+  PlatyPS schema version: 2024-05-01

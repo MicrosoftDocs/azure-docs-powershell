@@ -1,0 +1,244 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVHubRouteTable
+name: Get-AzVHubRouteTable
+module: Az.Network
+isPreview: false
+summary: |-
+  Retrieves  a hub route table resource associated with a VirtualHub.
+description: |-
+  Gets the specified hub route table that is associated with the specified virtual hub.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource name.
+    aliases:
+    - VirtualHubName
+    - ParentVirtualHubName
+    - ParentResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VirtualHubRouteTableName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ParentResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource id.
+    aliases:
+    - VirtualHubId
+    - ParentVirtualHubId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHub
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource.
+    aliases:
+    - ParentObject
+    - ParentVirtualHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVHubRouteTable
+        -ResourceGroupName <String>
+        -HubName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVHubRouteTable
+        -VirtualHub <PSVirtualHub>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVHubRouteTable
+        -ParentResourceId <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVHubRouteTable" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan" -Location "westcentralus" -VirtualWANType "Standard" -AllowVnetToVnetTraffic -AllowBranchToBranchTraffic
+    $virtualWan = Get-AzVirtualWan -ResourceGroupName "testRg" -Name "testWan"
+    New-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub" -Location "westcentralus" -AddressPrefix "10.0.0.0/16" -VirtualWan $virtualWan
+    $virtualHub = Get-AzVirtualHub -ResourceGroupName "testRg" -Name "testHub"
+    $fwIp = New-AzFirewallHubPublicIpAddress -Count 1
+    $hubIpAddresses = New-AzFirewallHubIpAddress -PublicIP $fwIp
+    New-AzFirewall -Name "testFirewall" -ResourceGroupName "testRg" -Location "westcentralus" -Sku AZFW_Hub -VirtualHubId $virtualHub.Id -HubIPAddress $hubIpAddresses
+    $firewall = Get-AzFirewall -Name "testFirewall" -ResourceGroupName "testRg"
+    $route1 = New-AzVHubRoute -Name "private-traffic" -Destination @("10.30.0.0/16", "10.40.0.0/16") -DestinationType "CIDR" -NextHop $firewall.Id -NextHopType "ResourceId"
+    New-AzVHubRouteTable -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRouteTable" -Route @($route1) -Label @("testLabel")
+    Get-AzVHubRouteTable -ResourceGroupName "testRg" -VirtualHubName "testHub" -Name "testRouteTable"
+    ```
+
+    ```output
+    Name                   : testRouteTable
+    Id                     : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/testRouteTable
+    ProvisioningState      : Succeeded
+    Labels                 : {testLabel}
+    Routes                 : [
+                               {
+                                 "Name": "private-traffic",
+                                 "DestinationType": "CIDR",
+                                 "Destinations": [
+                                   "10.30.0.0/16",
+                                   "10.40.0.0/16"
+                                 ],
+                                 "NextHopType": "ResourceId",
+                                 "NextHop": "/subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/azureFirewalls/testFirewall"
+                               }
+                             ]
+    AssociatedConnections  : []
+    PropagatingConnections : []
+    ```
+
+    This command gets the hub route table of the virtual hub.
+- title: Example 2
+  description: |-
+    ```powershell
+    $rgName = "testRg"
+    $virtualHubName = "testHub"
+    Get-AzVHubRouteTable -ResourceGroupName $rgName -VirtualHubName $virtualHubName
+    ```
+
+    ```output
+    Name                   : defaultRouteTable
+    Id                     : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/defaultRouteTable
+    ProvisioningState      : Succeeded
+    Labels                 : {testLabel}
+    Routes                 : []
+    AssociatedConnections  : []
+    PropagatingConnections : []
+
+
+    Name                   : noneRouteTable
+    Id                     : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/noneRouteTable
+    ProvisioningState      : Succeeded
+    Labels                 : {testLabel}
+    Routes                 : []
+    AssociatedConnections  : []
+    PropagatingConnections : []
+    ```
+
+    This command lists all the hub route tables in the specified VirtualHub.
+links:
+- text: New-AzVHubRoute
+  href: ./New-AzVHubRoute.yml
+- text: New-AzVHubRouteTable
+  href: ./New-AzVHubRouteTable.yml
+- text: Update-AzVHubRouteTable
+  href: ./Update-AzVHubRouteTable.yml
+- text: Remove-AzVHubRouteTable
+  href: ./Remove-AzVHubRouteTable.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVHubRouteTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvhubroutetable
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVHubRouteTable.md
+  PlatyPS schema version: 2024-05-01

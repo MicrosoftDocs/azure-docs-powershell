@@ -1,0 +1,537 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Submit-AzDataLakeAnalyticsJob
+name: Submit-AzDataLakeAnalyticsJob
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Submits a job.
+description: |-
+  The **Submit-AzDataLakeAnalyticsJob** cmdlet submits an Azure Data Lake Analytics job.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Data Lake Analytics account under which the job will be submitted.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AnalyticsUnits
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The analytics units to use for this job. Typically, more analytics units dedicated to a script results in faster script execution time.
+    aliases:
+    - DegreeOfParallelism
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompileMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of compilation to be done on this job.
+      Valid values:
+      - Semantic (Only performs semantic checks and necessary sanity checks)
+      - Full (Full compilation)
+      - SingleBox (Full compilation performed locally)
+    acceptedValues:
+    - Semantic
+    - Full
+    - SingleBox
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CompileOnly
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the submission should only build the job and not execute if set to true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The friendly name of the job to submit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      An ID that indicates the submission of this job is a part of a set of recurring jobs and also associated with a job pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional friendly name for the pipeline associated with this job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional uri that links to the originating service associated with this pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The priority of the job. If not specified, the priority is 1000. A lower number indicates a higher job priority.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      An ID that indicates the submission of this job is a part of a set of recurring jobs with the same recurrence ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndRecurrence
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithRecurrence
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional friendly name for the recurrence correlation between jobs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndRecurrence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithRecurrence
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An ID that identifies this specific run iteration of the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Runtime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optionally set the version of the runtime to use for the job. If left unset, the default runtime is used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Script
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Script to execute (written inline).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJob
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithRecurrence
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithPipeline
+      position: "2"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScriptParameter
+    type: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+    description: |-
+      The script parameters for this job, as a dictionary of parameter names (string) to values (any combination of byte, sbyte, int, uint (or uint32), long, ulong (or uint64), float, double, decimal, short (or int16), ushort (or uint16), char, string, DateTime, bool, Guid, or byte[]).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScriptPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to the script file to submit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubmitUSqlJobWithScriptPath
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithScriptPathAndRecurrence
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubmitUSqlJobWithScriptPathAndPipeline
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-ScriptPath] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJobWithScriptPath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-Script] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJob
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-ScriptPath] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        -RecurrenceId <Guid>
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-RecurrenceName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJobWithScriptPathAndRecurrence
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-Script] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        -RecurrenceId <Guid>
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-RecurrenceName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJobWithRecurrence
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-ScriptPath] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        -RecurrenceId <Guid>
+        -PipelineId <Guid>
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-RecurrenceName <String>]
+        [-PipelineName <String>]
+        [-PipelineUri <String>]
+        [-RunId <Guid>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJobWithScriptPathAndPipeline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Submit-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-Name] <String>
+        [-Script] <String>
+        [[-Runtime] <String>]
+        [[-CompileMode] <String>]
+        [[-AnalyticsUnits] <Int32>]
+        [[-Priority] <Int32>]
+        -RecurrenceId <Guid>
+        -PipelineId <Guid>
+        [-CompileOnly]
+        [-ScriptParameter <IDictionary>]
+        [-RecurrenceName <String>]
+        [-PipelineName <String>]
+        [-PipelineUri <String>]
+        [-RunId <Guid>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubmitUSqlJobWithPipeline
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.IDictionary" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Submit a job'
+  description: |-
+    ```powershell
+    Submit-AzDataLakeAnalyticsJob -Account "ContosoAdlAccount" -Name "New Job" -ScriptPath $LocalScriptPath -AnalyticsUnits 32
+    ```
+
+    This command submits a Data Lake Analytics job.
+- title: 'Example 2: Submit a job with script parameters'
+  description: |-
+    ```powershell
+    $parameters = [ordered]@{}
+    $parameters["Department"] = "Sales"
+    $parameters["NumRecords"] = 1000
+    $parameters["StartDateTime"] = (Get-Date).AddDays(-14)
+    Submit-AzDataLakeAnalyticsJob -Account "ContosoAdlAccount" -Name "New Job" -ScriptPath $LocalScriptPath -AnalyticsUnits 32 -ScriptParameter $parameters
+    ```
+
+    U-SQL script parameters are prepended above the main script contents, e.g.:
+    DECLARE @Department string = "Sales";
+    DECLARE @NumRecords int = 1000;
+    DECLARE @StartDateTime DateTime = new DateTime(2017, 12, 6, 0, 0, 0, 0);
+links:
+- text: Get-AzDataLakeAnalyticsJob
+  href: ./Get-AzDataLakeAnalyticsJob.yml
+- text: Stop-AzDataLakeAnalyticsJob
+  href: ./Stop-AzDataLakeAnalyticsJob.yml
+- text: Wait-AzDataLakeAnalyticsJob
+  href: ./Wait-AzDataLakeAnalyticsJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Submit-AzDataLakeAnalyticsJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/submit-azdatalakeanalyticsjob
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: 0DB9595A-6C8B-4F3F-A707-2DB41D7C7470
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Submit-AzDataLakeAnalyticsJob.md
+  PlatyPS schema version: 2024-05-01

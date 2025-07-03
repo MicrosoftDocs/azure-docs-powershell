@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MySql.Get-AzMySqlFlexibleServerLocationBasedCapability
+name: Get-AzMySqlFlexibleServerLocationBasedCapability
+module: Az.MySql
+isPreview: false
+summary: |-
+  Get the available SKU information for the location
+description: |-
+  Get the available SKU information for the location
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMySqlFlexibleServerLocationBasedCapability
+        -Location <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.Api20210501.ICapabilityProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get location capabilities by location name'
+  description: |-
+    ```powershell
+    Get-AzMySqlFlexibleServerLocationBasedCapability -Location westus2
+    ```
+
+    ```output
+    "Please refer to https://aka.ms/mysql-pricing for pricing details"
+
+    SKU               Memory Tier            vCore
+    ---               ------ ----            -----
+    Standard_B1s        1024 Burstable           1
+    Standard_B1ms       2048 Burstable           1
+    Standard_B2s        2048 Burstable           2
+    Standard_D2ds_v4    4096 GeneralPurpose      2
+    Standard_D4ds_v4    4096 GeneralPurpose      4
+    Standard_D8ds_v4    4096 GeneralPurpose      8
+    Standard_D16ds_v4   4096 GeneralPurpose     16
+    Standard_D32ds_v4   4096 GeneralPurpose     32
+    Standard_D48ds_v4   4096 GeneralPurpose     48
+    Standard_D64ds_v4   4096 GeneralPurpose     64
+    Standard_E2ds_v4    8192 MemoryOptimized     2
+    Standard_E4ds_v4    8192 MemoryOptimized     4
+    Standard_E8ds_v4    8192 MemoryOptimized     8
+    Standard_E16ds_v4   8192 MemoryOptimized    16
+    Standard_E32ds_v4   8192 MemoryOptimized    32
+    Standard_E48ds_v4   8192 MemoryOptimized    48
+    Standard_E64ds_v4   8192 MemoryOptimized    64
+    ```
+
+    This cmdlet shows basic sku information of the provided location.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Get-AzMySqlFlexibleServerLocationBasedCapability.md
+  document type: cmdlet
+  external help file: Az.MySql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.mysql/get-azmysqlflexibleserverlocationbasedcapability
+  Module Name: Az.MySql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Get-AzMySqlFlexibleServerLocationBasedCapability.md
+  PlatyPS schema version: 2024-05-01

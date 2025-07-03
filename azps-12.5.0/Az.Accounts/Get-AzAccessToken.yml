@@ -1,0 +1,156 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Get-AzAccessToken
+name: Get-AzAccessToken
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Get raw access token. When using -ResourceUrl, please make sure the value does match current Azure environment. You may refer to the value of `(Get-AzContext).Environment`.
+description: |-
+  Get access token
+parameters:
+  cmdletParameters:
+  - name: AsSecureString
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify to convert output token as a secure string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceTypeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional resource type name, supported values: AadGraph, AnalysisServices, AppConfiguration, Arm, Attestation, Batch, CommunicationEmail, DataLake, KeyVault, MSGraph, OperationalInsights, ResourceManager, Storage, Synapse. Default value is Arm if not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: KnownResourceTypeName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource url for that you're requesting token, e.g. 'https://graph.microsoft.com/'.
+    aliases:
+    - Resource
+    - ResourceUri
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceUrl
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Tenant Id. Use tenant id of default context if not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAccessToken
+        [-ResourceTypeName <String>]
+        [-TenantId <String>]
+        [-AsSecureString]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: KnownResourceTypeName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAccessToken
+        -ResourceUrl <String>
+        [-TenantId <String>]
+        [-AsSecureString]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceUrl
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAccessToken" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSSecureAccessToken" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get the access token for ARM endpoint
+  description: |-
+    ```powershell
+    Get-AzAccessToken
+    ```
+
+    Get access token of current account for ResourceManager endpoint
+- title: Example 2 Get the access token for Microsoft Graph endpoint
+  description: |-
+    ```powershell
+    Get-AzAccessToken -ResourceTypeName MSGraph
+    ```
+
+    Get access token of Microsoft Graph endpoint for current account
+- title: Example 3 Get the access token for Microsoft Graph endpoint
+  description: |-
+    ```powershell
+    Get-AzAccessToken -ResourceUrl "https://graph.microsoft.com/"
+    ```
+
+    Get access token of Microsoft Graph endpoint for current account
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzAccessToken.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/get-azaccesstoken
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Get-AzAccessToken.md
+  PlatyPS schema version: 2024-05-01

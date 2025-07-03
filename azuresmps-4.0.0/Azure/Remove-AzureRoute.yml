@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureRoute
+name: Remove-AzureRoute
+module: Azure
+isPreview: false
+summary: |-
+  Removes a route from a route table.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureRoute** cmdlet removes a route from a route table.
+parameters:
+  cmdletParameters:
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Forces the command to run without asking for user confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new route that this cmdlet removes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteTable
+    type: <xref href="IRouteTable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the route table from which this cmdlet removes a route.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureRoute
+        -RouteName <String>
+        [-Force]
+        -RouteTable <IRouteTable>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a route'
+  description: |-
+    ```
+    PS C:\> Get-AzureRouteTable -Name "ApplianceRouteTable" | Remove-AzureRoute -RouteName "InternetRoute"
+    Confirm
+    Are you sure you want to remove the Route "InternetRoute" from Route Table "ApplianceRouteTable"?
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): Y
+
+    Routes                        Name                          Location                      Label
+    ------                        ----                          --------                      -----
+    {approute}                    AppRT                         Central US                    Appliance Route Table
+    ```
+
+    This command gets a route table named ApplianceRouteTable.
+    The command passes that route table to the current cmdlet.
+    The current cmdlet removes a route named InternetRoute.
+links:
+- text: Set-AzureRoute
+  href: ./Set-AzureRoute.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5C8A79D1-32D4-4B30-AAC8-C6EF3B68017E
+  PlatyPS schema version: 2024-05-01

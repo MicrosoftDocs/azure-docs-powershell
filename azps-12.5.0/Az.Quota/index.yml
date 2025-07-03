@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.Quota
+name: Az.Quota Module
+isPreview: false
+cmdletGroups:
+- title: Quota
+  cmdlets:
+  - Az.Quota.Get-AzQuota
+  - Az.Quota.Get-AzQuotaOperation
+  - Az.Quota.Get-AzQuotaRequestStatus
+  - Az.Quota.Get-AzQuotaUsage
+  - Az.Quota.New-AzQuota
+  - Az.Quota.New-AzQuotaLimitObject
+  - Az.Quota.Update-AzQuota
+description: |-
+  Microsoft Azure PowerShell: Quota cmdlets
+metadata:
+  Module Name: Az.Quota
+  Module Guid: bd26548c-ac2c-4447-9d5d-2e4d8c622495
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.quota
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Az.Quota.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quota/Quota/help/Az.Quota.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

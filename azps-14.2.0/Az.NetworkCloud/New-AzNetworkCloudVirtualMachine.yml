@@ -1,0 +1,696 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudVirtualMachine
+name: New-AzNetworkCloudVirtualMachine
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create a new virtual machine or update the properties of the existing virtual machine.
+description: |-
+  Create a new virtual machine or update the properties of the existing virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AdminUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the administrator to which the ssh public keys will be added into the authorized keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootMethod
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineBootMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      Selects the boot method for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentAttachedNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the associated network attached to the virtual machine.It can be one of cloudServicesNetwork, l3Network, l2Network or trunkedNetwork resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentDefaultGateway
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.DefaultGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator of whether this is the default gateway.Only one of the attached networks (including the CloudServicesNetwork attachment) for a single machine may be specified as True.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentIPAllocationMethod
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineIPAllocationMethod" data-throw-if-not-resolved="False" />
+    description: |-
+      The IP allocation mechanism for the virtual machine.Dynamic and Static are only valid for l3Network which may also specify Disabled.Otherwise, Disabled is the only permitted value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentIpv4Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv4 address of the virtual machine.This field is used only if the attached network has IPAllocationType of IPV4 or DualStack.If IPAllocationMethod is:Static - this field must contain a user specified IPv4 address from within the subnet specified in the attached network.Dynamic - this field is read-only, but will be populated with an address from within the subnet specified in the attached network.Disabled - this field will be empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentIpv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The IPv6 address of the virtual machine.This field is used only if the attached network has IPAllocationType of IPV6 or DualStack.If IPAllocationMethod is:Static - this field must contain an IPv6 address range from within the range specified in the attached network.Dynamic - this field is read-only, but will be populated with an range from within the subnet specified in the attached network.Disabled - this field will be empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudServiceNetworkAttachmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The associated network's interface name.If specified, the network attachment name has a maximum length of 15 characters and must be unique to this virtual machine.If the user doesn't specify this value, the default interface name of the network resource will be used.For a CloudServicesNetwork resource, this name will be ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CpuCore
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of CPU cores in the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the extended location on which the resource will be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The extended location type, for example, CustomLocation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsolateEmulatorThread
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineIsolateEmulatorThread" data-throw-if-not-resolved="False" />
+    description: |-
+      Field Deprecated, the value will be ignored if provided.
+      The indicator of whether one of the specified CPU cores is isolated to run the emulator thread for this virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MemorySizeGb
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The memory size of the virtual machine.
+      Allocations are measured in gibibytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the virtual machine.
+    aliases:
+    - VirtualMachineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkAttachment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.INetworkAttachment" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of network attachments to the virtual machine.
+      To construct, see NOTES section for NETWORKATTACHMENT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Base64 encoded cloud-init network data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskCreateOption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.OSDiskCreateOption" data-throw-if-not-resolved="False" />
+    description: |-
+      The strategy for creating the OS disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskDeleteOption
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.OSDiskDeleteOption" data-throw-if-not-resolved="False" />
+    description: |-
+      The strategy for deleting the OS disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskSizeGb
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The size of the disk.
+      Required if the createOption is Ephemeral.
+      Allocations are measured in gibibytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PlacementHint
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.IVirtualMachinePlacementHint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The scheduling hints for the virtual machine.
+      To construct, see NOTES section for PLACEMENTHINT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPublicKey
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.ISshPublicKey" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ssh public keys.
+      Each key will be added to the virtual machine using the cloud-init ssh_authorized_keys mechanism for the adminUsername.
+      To construct, see NOTES section for SSHPUBLICKEY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageProfileVolumeAttachment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The resource IDs of volumes that are requested to be attached to the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Base64 encoded cloud-init user data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtioInterface
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineVirtioInterfaceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Field Deprecated, use virtualizationModel instead.
+      The type of the virtio interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMDeviceModel
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.VirtualMachineDeviceModelType" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the device model to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMImage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual machine image that is currently provisioned to the OS disk, using the full url and tag notation used to pull the image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMImageRepositoryCredentialsPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password or token used to access an image in the target repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMImageRepositoryCredentialsRegistryUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL of the authentication server used to validate the repository credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMImageRepositoryCredentialsUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The username used to access an image in the target repository.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudVirtualMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        -AdminUsername <String>
+        -CloudServiceNetworkAttachmentAttachedNetworkId <String>
+        -CloudServiceNetworkAttachmentIPAllocationMethod <VirtualMachineIPAllocationMethod>
+        -CpuCore <Int64>
+        -ExtendedLocationName <String>
+        -ExtendedLocationType <String>
+        -Location <String>
+        -MemorySizeGb <Int64>
+        -OSDiskSizeGb <Int64>
+        -VMImage <String>
+        [-BootMethod <VirtualMachineBootMethod>]
+        [-CloudServiceNetworkAttachmentDefaultGateway <DefaultGateway>]
+        [-CloudServiceNetworkAttachmentIpv4Address <String>]
+        [-CloudServiceNetworkAttachmentIpv6Address <String>]
+        [-CloudServiceNetworkAttachmentName <String>]
+        [-IsolateEmulatorThread <VirtualMachineIsolateEmulatorThread>]
+        [-NetworkAttachment <INetworkAttachment[]>]
+        [-NetworkData <String>]
+        [-OSDiskCreateOption <OSDiskCreateOption>]
+        [-OSDiskDeleteOption <OSDiskDeleteOption>]
+        [-PlacementHint <IVirtualMachinePlacementHint[]>]
+        [-SshPublicKey <ISshPublicKey[]>]
+        [-StorageProfileVolumeAttachment <String[]>]
+        [-Tag <Hashtable>]
+        [-UserData <String>]
+        [-VMDeviceModel <VirtualMachineDeviceModelType>]
+        [-VMImageRepositoryCredentialsPassword <SecureString>]
+        [-VMImageRepositoryCredentialsRegistryUrl <String>]
+        [-VMImageRepositoryCredentialsUsername <String>]
+        [-VirtioInterface <VirtualMachineVirtioInterfaceType>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.IVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create virtual machine'
+  description: |-
+    ```powershell
+    $networkAttachment = @{
+        AttachedNetworkId = "attachedNetworkID"
+        IpAllocationMethod = "Dynamic"
+    }
+    $hint = @{
+        HintType = "Affinity"
+        SchedulingExecution = "schedulingExecution"
+        Scope = "scope"
+        ResourceId = "resourceId"
+    }
+    $sshPublicKey = @{
+        KeyData = "ssh-rsa aaaKyfsdx= fakekey@vm"
+    }
+
+    $securePassword = ConvertTo-SecureString "password" -asplaintext -force
+
+    New-AzNetworkCloudVirtualMachine -Name vmName  -ResourceGroupName resourceGroup -AdminUsername adminUsername -CloudServiceNetworkAttachmentAttachedNetworkId csnAttachedNetworkId -CloudServiceNetworkAttachmentIPAllocationMethod ipAllocationMethod -CpuCore cpuCore -ExtendedLocationName extendedLocationName -ExtendedLocationType "Custom" -Location location -SubscriptionId subscriptionId -MemorySizeGb memorySizeGb -OSDiskSizeGb osDiskSizeGb -VMImage vmImage -BootMethod bootMethod -CloudServiceNetworkAttachmentDefaultGateway defaultGateway -CloudServiceNetworkAttachmentName csnAttachmentName -IsolateEmulatorThread isolateEmulatorThread -NetworkAttachment $networkAttachment -NetworkData networkData -OSDiskCreateOption osDiskCreationOption -OSDiskDeleteOption osDiskDeleteOption -PlacementHint $hint -SshPublicKey $sshPublicKey -Tag @{tags = "tags"} -UserData userData -VirtioInterface virtioInterface -VMDeviceModel vmDeviceModel -VMImageRepositoryCredentialsUsername registryUsername -VMImageRepositoryCredentialsPassword $securePassword -VMImageRepositoryCredentialsRegistryUrl registryUrl
+    ```
+
+    ```output
+    Location Name    SystemDataCreatedAt SystemDataCreatedBy    SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy             SystemDataL
+                                                                                                                                                      astModified
+                                                                                                                                                      ByType
+    -------- ----    ------------------- -------------------    ----------------------- ------------------------ ------------------------             -----------
+    eastus   default 7/07/2023 21:32:03 <user>                 User                    07/07/2023 21:32:41      <identity>                           Application
+    ```
+
+    This command creates a virtual machine.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudVirtualMachine.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.networkcloud/new-aznetworkcloudvirtualmachine
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudVirtualMachine.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,742 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureQuickVM
+name: New-AzureQuickVM
+module: Azure
+isPreview: false
+summary: |-
+  Configures and creates an Azure virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureQuickVM** cmdlet configures and creates an Azure virtual machine.
+  This cmdlet can deploy a virtual machine into an existing Azure service.
+  This cmdlet can alternatively create an Azure service that hosts the new virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AdminUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name of the Administrator account that this cmdlet creates on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AffinityGroup
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the affinity group for the virtual machine.
+      Specify this parameter or the *Location* parameter only if this cmdlet creates an Azure service for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AvailabilitySetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the availability set in which this cmdlet creates the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Certificates
+    type: <xref href="CertificateSettingList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a list of certificates that this cmdlet uses to create the service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomDataFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a data file for the virtual machine.
+      This cmdlet encodes the contents of the file as Base64.
+      The file must be less than 64 kilobytes long.
+
+      If the guest operating system is the Windows operating system, this cmdlet saves this data as a binary file that is named %SYSTEMDRIVE%\AzureData\CustomData.bin.
+
+      If the guest operating system is Linux, this cmdlet passes the data by using the ovf-env.xml file.
+      Installation copies that file to the /var/lib/waagent directory.
+      The agent also stores the Base64 encoded data in /var/lib/waagent/CustomData.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableGuestAgent
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables the infrastructure as a service (IaaS) provision guest agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableWinRMHttps
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables Windows Remote Management (WinRM) on HTTPS.
+      By default, WinRM is enabled over HTTPS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsSettings
+    type: <xref href="DnsServer" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of DNS server objects that defines the DNS settings for the new deployment.
+      To create a **DnsServer** object, use the **New-AzureDns** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableWinRMHttp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet enables WinRM over HTTP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostCaching
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the host caching mode for the operating system disk.
+      Valid values are:
+
+      - ReadOnly
+      - ReadWrite
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the disk image this cmdlet uses to create the operating system disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the size of the instance.
+      Valid values are:
+
+      - ExtraSmall
+      - Small
+      - Medium
+      - Large
+      - ExtraLarge
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - Basic_A0
+      - Basic_A1
+      - Basic_A2
+      - Basic_A3
+      - Basic_A4
+      - Standard_D1
+      - Standard_D2
+      - Standard_D3
+      - Standard_D4
+      - Standard_D11
+      - Standard_D12
+      - Standard_D13
+      - Standard_D14
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Linux
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a Linux based virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxUser
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name of the Linux administrative account that this cmdlet creates on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure datacenter that hosts the virtual machine.
+      If you specify this parameter, the cmdlet creates an Azure service in the specified location.
+      Specify this parameter or the *AffinityGroup* parameter only if this cmdlet creates an Azure service for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MediaLocation
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Storage location where this cmdlet creates the virtual machines disks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine that this cmdlet creates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoExportPrivateKey
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration does not upload the private key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWinRMEndpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet does not add a WinRM endpoint for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the administrative account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReservedIPName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the reserved IP name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReverseDnsFqdn
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified domain name for reverse DNS look up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a new or existing Azure service to which this cmdlet adds the new virtual machine.
+
+      If you specify a new service, this cmdlets creates it.
+      To create a new service, you must specify the *Location* or *AffinityGroup* parameter.
+
+      If you specify an existing service, do not specify *Location* or *AffinityGroup*.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSHKeyPairs
+    type: <xref href="SSHKeyPairList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies SSH key pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSHPublicKeys
+    type: <xref href="SSHPublicKeyList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies SSH public keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetNames
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of subnet for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual network for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForBoot
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet waits for the virtual machine to reach the state ReadyRole.
+      If the virtual machine reaches one of the following states, the cmdlet fails: FailedStartingVM, ProvisioningFailed, or ProvisioningTimeout.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Windows
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a Windows virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WinRMCertificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate that this cmdlet associates to a WinRM endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: X509Certificates
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of X509 certificates that are deployed to a hosted service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureQuickVM
+        -ServiceName <String>
+        -ImageName <String>
+        [-Windows]
+        [-Name <String>]
+        [-Password <String>]
+        [-ReverseDnsFqdn <String>]
+        [-Location <String>]
+        [-AffinityGroup <String>]
+        [-AdminUsername <String>]
+        [-Certificates <CertificateSettingList>]
+        [-WaitForBoot]
+        [-DisableWinRMHttps]
+        [-EnableWinRMHttp]
+        [-WinRMCertificate <X509Certificate2>]
+        [-X509Certificates <X509Certificate2[]>]
+        [-NoExportPrivateKey]
+        [-NoWinRMEndpoint]
+        [-VNetName <String>]
+        [-SubnetNames <String[]>]
+        [-DnsSettings <DnsServer[]>]
+        [-HostCaching <String>]
+        [-AvailabilitySetName <String>]
+        [-InstanceSize <String>]
+        [-MediaLocation <String>]
+        [-DisableGuestAgent]
+        [-CustomDataFile <String>]
+        [-ReservedIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Windows
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureQuickVM
+        -ServiceName <String>
+        -ImageName <String>
+        [-Linux]
+        [-Name <String>]
+        [-Password <String>]
+        [-ReverseDnsFqdn <String>]
+        [-Location <String>]
+        [-AffinityGroup <String>]
+        [-LinuxUser <String>]
+        [-WaitForBoot]
+        [-SSHPublicKeys <SSHPublicKeyList>]
+        [-SSHKeyPairs <SSHKeyPairList>]
+        [-VNetName <String>]
+        [-SubnetNames <String[]>]
+        [-DnsSettings <DnsServer[]>]
+        [-HostCaching <String>]
+        [-AvailabilitySetName <String>]
+        [-InstanceSize <String>]
+        [-MediaLocation <String>]
+        [-DisableGuestAgent]
+        [-CustomDataFile <String>]
+        [-ReservedIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Linux
+  isDefault: false
+examples:
+- title: 'Example 1: Create a virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureQuickVM -Windows -ServiceName "ContosoService17" -Name "VirtualMachine01" -ImageName "Image07" -Password "password" -AdminUsername "AdminMain" -WaitForBoot
+    ```
+
+    This command creates a virtual machine that runs the Windows operating system in an existing service.
+    The cmdlet bases the virtual machine on the specified image.
+    The command specifies the *WaitForBoot* parameter.
+    Therefore, the cmdlet waits for the virtual machine to start.
+- title: 'Example 2: Create a virtual machine by using certificates'
+  description: |-
+    ```
+    PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
+    PS C:\> New-AzureQuickVM -Windows -ServiceName "MySvc1" -name "MyWinVM1" -ImageName "Image07" -Password "password" -AdminUserName "AdminMain" -WinRMCertificate $certs[0] -X509Certificates $certs[1], $certs[2] -WaitForBoot
+    ```
+
+    The first command gets certificates from a store, and stores them in the $certs variable.
+
+    The second command creates a virtual machine that runs the Windows operating system in an existing service from an image.
+    By default, WinRM Https listener is enabled on the virtual machine.
+    The command specifies the *WaitForBoot* parameter.
+    Therefore, the cmdlet waits for the virtual machine to start.
+    The command uploads a WinRM Certificate and X509Certificates to the hosted service.
+- title: 'Example 3: Create a virtual machine that runs the Linux operating system'
+  description: |-
+    ```
+    PS C:\> New-AzureQuickVM -Linux -ServiceName "ContosoServiceLinux01" -Name "LinuxVirtualMachine01" -ImageName "LinuxImage01" -LinuxUser "RootMain" -Password "password" -Location "Central US"
+    ```
+
+    This command creates a virtual machine that runs the Linux operating system from an image.
+    This command creates a service to host the new virtual machine.
+    The command specifies a location for the service.
+- title: 'Example 4: Create a virtual machine and create a service to host the new virtual machine'
+  description: |-
+    ```
+    PS C:\> $Locations = Get-AzureLocation
+    PS C:\> $Images = Get-AzureVMImage
+    PS C:\> New-AzureQuickVM -Windows -InstanceSize "Large" -ServiceName "ContosoService03" -Name " VirtualMachine25" -ImageName $images[4].imagename -Password "password" -AdminUsername "AdminMain" -Location $Locations[0].name
+    ```
+
+    The first command gets locations by using the **Get-AzureLocation** cmdlet, and then stores them in the $Locations array variable.
+
+    The second command gets available images by using the **Get-AzureVMImage** cmdlet, and then stores them in the $Images array variable.
+
+    The final command creates a large virtual machine named VirtualMachine25.
+    The virtual machine runs the Windows operating system.
+    It is based on one of the images in $Images.
+    The command creates a service named ContosoService03 for the new virtual machine.
+    The service is in a location in $Locations.
+- title: 'Example 5: Create a virtual machine that has a reserved IP name'
+  description: |-
+    ```
+    PS C:\> $Locations = Get-AzureLocation
+    PS C:\> $Images = Get-AzureVMImage
+    PS C:\> New-AzureQuickVM -Windows -InstanceSize "Large" -ServiceName "ContosoService04" -Name "VirtualMachine27" -ImageName $Images[4].imagename -Password "password" -AdminUsername "AdminMain" -Location $Locations[0].name -ReservedIPName $ipName
+    ```
+
+    The first command gets locations, and then stores them in the $Locations array variable.
+
+    The second command gets available images, and then stores them in the $Images array variable.
+
+    The final command creates a virtual machine named VirtualMachine27 based on one of the images in $Images.
+    The command creates a service in a location in $Locations.
+    The virtual machine has a reserved IP name, previously stored in the $ipName variable.
+links:
+- text: Get-AzureLocation
+  href: ./Get-AzureLocation.yml
+- text: Get-AzureVMImage
+  href: ./Get-AzureVMImage.yml
+- text: New-AzureDns
+  href: ./New-AzureDns.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F94584BC-EC02-412D-B089-B98A6FF8F505
+  PlatyPS schema version: 2024-05-01

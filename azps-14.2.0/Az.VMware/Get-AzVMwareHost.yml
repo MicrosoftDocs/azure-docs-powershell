@@ -1,0 +1,298 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.VMware.Get-AzVMwareHost
+name: Get-AzVMwareHost
+module: Az.VMware
+isPreview: false
+summary: |-
+  Get a Host
+description: |-
+  Get a Host
+parameters:
+  cmdletParameters:
+  - name: ClusterInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IVMwareIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the cluster
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityPrivateCloud
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The host identifier.
+    aliases:
+    - HostId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityPrivateCloud
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCluster
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IVMwareIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateCloudInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IVMwareIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityPrivateCloud
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateCloudName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the private cloud
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVMwareHost
+        -ClusterName <String>
+        -PrivateCloudName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVMwareHost
+        -ClusterName <String>
+        -Id <String>
+        -PrivateCloudInputObject <IVMwareIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityPrivateCloud
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVMwareHost
+        -ClusterName <String>
+        -Id <String>
+        -PrivateCloudName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVMwareHost
+        -Id <String>
+        -ClusterInputObject <IVMwareIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCluster
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVMwareHost
+        -InputObject <IVMwareIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IVMwareIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.IHost" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all hosts in a cluster'
+  description: |-
+    ```powershell
+    Get-AzVMwareHost -ClusterName azps_test_cluster -PrivateCloudName azps_test_cloud -ResourceGroupName azps_test_group
+    ```
+
+    ```output
+    Name                                                       Type                                       SkuName ResourceGroupName Kind          Maintenance
+    ----                                                       ----                                       ------- ----------------- ------------- -----------
+    esx03-r52.1111111111111111111.westcentralus.prod.azure.com Microsoft.AVS/privateClouds/clusters/hosts av64    azps_test_group    General
+    esx03-r60.1111111111111111111.westcentralus.prod.azure.com Microsoft.AVS/privateClouds/clusters/hosts av64    azps_test_group    General      Replacement
+    esx03-r65.1111111111111111111.westcentralus.prod.azure.com Microsoft.AVS/privateClouds/clusters/hosts         azps_test_group    Specialized
+    ```
+
+    Lists all hosts in the specified cluster within the private cloud and resource group.
+- title: 'Example 2: Get a host by ID in a cluster'
+  description: |-
+    ```powershell
+    Get-AzVMwareHost -ClusterName azps_test_cluster -Id esx03-r52.1111111111111111111.westcentralus.prod.azure.com -PrivateCloudName azps_test_cloud -ResourceGroupName azps_test_group
+    ```
+
+    ```output
+    Name                                                       Type                                       ResourceGroupName SkuName Kind
+    ----                                                       ----                                       ----------------- ------- ----
+    esx03-r52.1111111111111111111.westcentralus.prod.azure.com Microsoft.AVS/privateClouds/clusters/hosts azps_test_group   av64    General
+    ```
+
+    Gets a specific host by its ID in the specified cluster, private cloud, and resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Get-AzVMwareHost.md
+  document type: cmdlet
+  external help file: Az.VMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.vmware/get-azvmwarehost
+  Module Name: Az.VMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/Get-AzVMwareHost.md
+  PlatyPS schema version: 2024-05-01

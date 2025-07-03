@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Add-AzApiManagementRegion
+name: Add-AzApiManagementRegion
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Adds new deployment regions to a PsApiManagement instance.
+description: |-
+  The **Add-AzApiManagementRegion** cmdlet adds new instance of type **PsApiManagementRegion** to the collection of **AdditionalRegions** of provided instance of type **Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement**.
+  This cmdlet does not deploy anything by itself but updates instance of **PsApiManagement** in-memory.
+  To update a deployment of an API Management pass the modified **PsApiManagement** Instance to Set-AzApiManagement.
+notes: |-
+  * The cmdlet writes updated **PsApiManagement** instance to pipeline.
+parameters:
+  cmdletParameters:
+  - name: ApiManagement
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **PsApiManagement** instance that this cmdlet adds additional deployment regions to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Capacity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the SKU capacity of the deployment region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableGateway
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Flag only meant to be used for Premium SKU ApiManagement Service and Non Internal VNET deployments. This is useful in case we want to take a gateway region out of rotation. This can also be used to standup a new region in Passive mode, test it and then make it Live later.
+       Default behavior is to make the region live immediately.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location of the new deployment region amongst the supported region for Api Management service.
+      To obtain valid locations, use the cmdlet
+      Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where {$_.ResourceTypes[0].ResourceTypeName -eq "service"} | Select-Object Locations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Standard SKU PublicIpAddress ResourceId for integration into stv2 Virtual Network Deployments
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the tier of the deployment region.
+      Valid values are:
+      - Developer
+      - Standard
+      - Premium
+    acceptedValues:
+    - Developer
+    - Standard
+    - Premium
+    - Basic
+    - Consumption
+    - Isolated
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual network configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of availability zones denoting where the api management service is deployed into.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzApiManagementRegion
+        -ApiManagement <PsApiManagement>
+        -Location <String>
+        [-Sku <PsApiManagementSku>]
+        [-Capacity <Int32>]
+        [-VirtualNetwork <PsApiManagementVirtualNetwork>]
+        [-Zone <String[]>]
+        [-DisableGateway <Boolean>]
+        [-PublicIpAddressId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add new deployment regions to a PsApiManagement instance'
+  description: |-
+    ```powershell
+    Add-AzApiManagementRegion -ApiManagement $ApiManagement -Location "East US" -Sku "Premium" -Capacity 2
+    ```
+
+    This command adds two premium SKU units and the region named East US to the **PsApiManagement** instance.
+- title: 'Example 2: Add new deployment regions to a PsApiManagement instance and then update deployment'
+  description: |-
+    ```powershell
+    $service = Get-AzApiManagement -ResourceGroupName "Contoso" -Name "ContosoApi"
+    $service = Add-AzApiManagementRegion -ApiManagement $service -Location $secondarylocation -VirtualNetwork $additionalRegionVirtualNetwork
+    $service = Set-AzApiManagement -InputObject $service -PassThru
+    ```
+
+    This command gets a **PsApiManagement** object, adds two premium SKU units for the region named East US, and then updates deployment.
+links:
+- text: Remove-AzApiManagementRegion
+  href: ./Remove-AzApiManagementRegion.yml
+- text: Update-AzApiManagementRegion
+  href: ./Update-AzApiManagementRegion.yml
+- text: Set-AzApiManagement
+  href: ./Set-AzApiManagement.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/add-azapimanagementregion
+  Module Name: Az.ApiManagement
+  ms.assetid: 9D4A68A8-0A39-4C9A-8EA6-391A5E7A0E25
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Add-AzApiManagementRegion.md
+  PlatyPS schema version: 2024-05-01

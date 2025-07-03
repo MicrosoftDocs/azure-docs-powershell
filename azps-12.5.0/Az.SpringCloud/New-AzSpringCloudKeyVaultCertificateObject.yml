@@ -1,0 +1,115 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.New-AzSpringCloudKeyVaultCertificateObject
+name: New-AzSpringCloudKeyVaultCertificateObject
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for KeyVaultCertificateProperties.
+description: |-
+  Create an in-memory object for KeyVaultCertificateProperties.
+notes: |-
+  ALIASES
+parameters:
+  cmdletParameters:
+  - name: ExcludePrivateKey
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      If set to true, it will not import private key from key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The certificate name of key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The vault uri of user key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The certificate version of key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSpringCloudKeyVaultCertificateObject
+        -Name <String>
+        -VaultUri <String>
+        [-Version <String>]
+        [-ExcludePrivateKey <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.KeyVaultCertificateProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for KeyVaultCertificateProperties'
+  description: |-
+    ```powershell
+    New-AzSpringCloudKeyVaultCertificateObject -VaultUri "keyvaluturi" -Name 'keycert'
+    ```
+
+    ```output
+    ActivateDate DnsName ExpirationDate IssuedDate Issuer SubjectName Thumbprint CertVersion ExcludePrivateKey KeyVaultCertName VaultUri
+    ------------ ------- -------------- ---------- ------ ----------- ---------- ----------- ----------------- ---------------- --------
+                                                                                                               keycert          keyvaluturi
+    ```
+
+    Create an in-memory object for KeyVaultCertificateProperties
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudKeyVaultCertificateObject.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudKeyVaultCertificateObject
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudKeyVaultCertificateObject.md
+  PlatyPS schema version: 2024-05-01

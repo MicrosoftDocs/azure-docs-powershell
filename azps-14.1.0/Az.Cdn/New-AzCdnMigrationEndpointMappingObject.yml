@@ -1,0 +1,75 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnMigrationEndpointMappingObject
+name: New-AzCdnMigrationEndpointMappingObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for MigrationEndpointMapping.
+description: |-
+  Create an in-memory object for MigrationEndpointMapping.
+parameters:
+  cmdletParameters:
+  - name: MigratedFrom
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the classic CDN profile endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MigratedTo
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the newly created migrated Azure Frontdoor Standard/Premium profile endpoint.
+      This name will replace the name of the classic CDN endpoint resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnMigrationEndpointMappingObject
+        [-MigratedFrom <String>]
+        [-MigratedTo <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.MigrationEndpointMapping" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Cdn Migration Endpoint Mapping Object'
+  description: |-
+    ```powershell
+    $map1 = New-AzCdnMigrationEndpointMappingObject -MigratedFrom maxtestendpointcli-test-profile1.azureedge.net -MigratedTo maxtestendpointcli-test-profile2
+    ```
+
+    Generate a map for endpoint to be migrated
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnMigrationEndpointMappingObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azcdnmigrationendpointmappingobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnMigrationEndpointMappingObject.md
+  PlatyPS schema version: 2024-05-01

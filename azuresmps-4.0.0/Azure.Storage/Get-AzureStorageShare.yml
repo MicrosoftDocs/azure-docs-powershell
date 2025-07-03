@@ -1,0 +1,179 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Get-AzureStorageShare
+name: Get-AzureStorageShare
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Gets a list of file shares.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorageShare** cmdlet gets a list of file shares for a storage account.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure Storage context.
+      To obtain a context, use the [New-AzureStorageContext](./New-AzureStorageContext.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet gets the file share that this parameter specifies, or nothing if you specify the name of a file share that does not exist.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Specific
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the prefix for file shares.
+      This cmdlet gets file shares that match the prefix that this parameter specifies, or no file shares if no file shares match the specified prefix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MatchingPrefix
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageShare
+        [[-Prefix] <String>]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MatchingPrefix
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageShare
+        [-Name] <String>
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Specific
+  isDefault: false
+examples:
+- title: 'Example 1: Get a file share'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageShare -Name "ContosoShare06"
+    ```
+
+    This command gets the file share named ContosoShare06.
+- title: 'Example 2: Get all file shares that begin with a string'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageShare -Prefix "Contoso"
+    ```
+
+    This command gets all file shares that have names that begin with Contoso.
+- title: 'Example 3: Get all file shares in a specified context'
+  description: |-
+    ```
+    PS C:\>$Context = New-AzureStorageContext -Local
+    PS C:\> Get-AzureStorageShare -Context $Context
+    ```
+
+    The first command uses the **New-AzureStorageContext** cmdlet to create a context by using the *Local* parameter, and then stores that context object in the $Context variable.
+
+    The second command gets the file shares for the context object stored in $Context.
+links:
+- text: New-AzureStorageShare
+  href: ./New-AzureStorageShare.yml
+- text: Remove-AzureStorageShare
+  href: ./Remove-AzureStorageShare.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: FD3A0013-4365-4E65-891C-5C50A9D5658C
+  PlatyPS schema version: 2024-05-01

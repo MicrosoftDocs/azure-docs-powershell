@@ -1,0 +1,210 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSchedulerJobHistory
+name: Get-AzureSchedulerJobHistory
+module: Azure
+isPreview: false
+summary: |-
+  Gets history for a scheduler job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-AzureSchedulerJobHistory** cmdlet gets the history for a scheduler job.
+parameters:
+  cmdletParameters:
+  - name: First
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the specified number of objects.
+      Enter the number of objects to get.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeTotalCount
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reports the total number of objects in the data set (an integer) followed by the selected objects.
+      If the cmdlet cannot determine the total count, it displays "Unknown total count."
+      The integer has an Accuracy property that indicates the reliability of the total count value.
+      The value of Accuracy ranges from 0.0 to 1.0 where 0.0 means that the cmdlet could not count the objects, 1.0 means that the count is exact, and a value between 0.0 and 1.0 indicates an increasingly reliable estimate.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a scheduler job collection.
+      This cmdlet gets the history for a job that belongs to the collection that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a scheduler job for which to get the history.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobStatus
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status of scheduler job for which to get the history.
+      The acceptable values for this parameter are:
+
+      - Completed
+      - Failed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the specified number of objects and then gets the remaining objects.
+      Enter the number of objects to skip.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSchedulerJobHistory
+        -Location <String>
+        -JobCollectionName <String>
+        -JobName <String>
+        [-JobStatus <String>]
+        [-Profile <AzureSMProfile>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get history for a job by using its name'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job01"
+    ```
+
+    This command gets the history of the job named Job01.
+    That job belongs to the job collection named JobCollection01 in the specified location.
+- title: 'Example 2: Get history for a failed job by using its name'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobHistory -Location "North Central US" -JobCollectionName "JobCollection01" -JobName "Job12" -JobStatus "Failed"
+    ```
+
+    This command gets the history of the job named Job12 that has a status of Failed.
+    That job belongs to the job collection named JobCollection01 in the specified location.
+links:
+- text: Get-AzureSchedulerJob
+  href: ./Get-AzureSchedulerJob.yml
+- text: Get-AzureSchedulerJobCollection
+  href: ./Get-AzureSchedulerJobCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 2BF5BDF8-3743-46FC-8E04-1A4EA920A2AF
+  PlatyPS schema version: 2024-05-01

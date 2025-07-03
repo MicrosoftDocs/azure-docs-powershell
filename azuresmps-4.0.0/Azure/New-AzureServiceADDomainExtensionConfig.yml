@@ -1,0 +1,531 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureServiceADDomainExtensionConfig
+name: New-AzureServiceADDomainExtensionConfig
+module: Azure
+isPreview: false
+summary: |-
+  Generates the configuration for the AD domain extension for cloud services.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureServiceADDomainExtensionConfig** cmdlet generates the configuration for the Active Directory (AD) domain extension for cloud services.
+parameters:
+  cmdletParameters:
+  - name: CertificateThumbprint
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate thumbprint to use to encrypt the private configuration.
+      This certificate has to already exist in the certificate store.
+      If you do not specify a certificate, this cmdlet creates a certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptionsAndThumbprint
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOptionAndThumbprint
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WorkGroupNameThumbprint
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials to use to join the AD domain.
+      Credentials include a user name and password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the AD domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptions
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOption
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingEnumOptionsAndThumbprint
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOptionAndThumbprint
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtensionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JoinOption
+    type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the join option enumeration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingJoinOption
+      position: "7"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOptionAndThumbprint
+      position: "7"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Options
+    type: <xref href="JoinOptions" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the unsigned integer join option.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptions
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingEnumOptionsAndThumbprint
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OUPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the organization unit (OU) path for AD domain join operation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptions
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOption
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingEnumOptionsAndThumbprint
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOptionAndThumbprint
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Restart
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to restart the computer if the join operation succeeds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an optional array of roles to specify the remote desktop configuration for the AD domain configuration.
+      If you do not specify this parameter, the AD domain configuration is applied as the default configuration for all roles.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThumbprintAlgorithm
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a thumbprint hashing algorithm that is used with the thumbprint to identify the certificate.
+      This parameter is optional and the default is sha1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UnjoinDomainCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials (user name and password) to unjoin the AD domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptions
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOption
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingEnumOptionsAndThumbprint
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOptionAndThumbprint
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the extension version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkgroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the workgroup name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WorkGroupName
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WorkGroupNameThumbprint
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: X509Certificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an X.509 certificate that is automatically uploaded to the cloud service and used for encrypting the extension private configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JoinDomainUsingEnumOptions
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: JoinDomainUsingJoinOption
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: WorkGroupName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [[-X509Certificate] <X509Certificate2>]
+        [[-ThumbprintAlgorithm] <String>]
+        [-DomainName] <String>
+        [[-Credential] <PSCredential>]
+        [[-UnjoinDomainCredential] <PSCredential>]
+        [[-Options] <JoinOptions>]
+        [[-OUPath] <String>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: JoinDomainUsingEnumOptions
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [[-X509Certificate] <X509Certificate2>]
+        [[-ThumbprintAlgorithm] <String>]
+        [-DomainName] <String>
+        [[-Credential] <PSCredential>]
+        [[-UnjoinDomainCredential] <PSCredential>]
+        [-JoinOption] <UInt32>
+        [[-OUPath] <String>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: JoinDomainUsingJoinOption
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [[-X509Certificate] <X509Certificate2>]
+        [[-ThumbprintAlgorithm] <String>]
+        [-WorkgroupName] <String>
+        [[-Credential] <PSCredential>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WorkGroupName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [-CertificateThumbprint] <String>
+        [[-ThumbprintAlgorithm] <String>]
+        [-DomainName] <String>
+        [[-Credential] <PSCredential>]
+        [[-UnjoinDomainCredential] <PSCredential>]
+        [[-Options] <JoinOptions>]
+        [[-OUPath] <String>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: JoinDomainUsingEnumOptionsAndThumbprint
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [-CertificateThumbprint] <String>
+        [[-ThumbprintAlgorithm] <String>]
+        [-DomainName] <String>
+        [[-Credential] <PSCredential>]
+        [[-UnjoinDomainCredential] <PSCredential>]
+        [-JoinOption] <UInt32>
+        [[-OUPath] <String>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: JoinDomainUsingJoinOptionAndThumbprint
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureServiceADDomainExtensionConfig
+        [[-Role] <String[]>]
+        [-CertificateThumbprint] <String>
+        [[-ThumbprintAlgorithm] <String>]
+        [-WorkgroupName] <String>
+        [[-Credential] <PSCredential>]
+        [[-Version] <String>]
+        [[-ExtensionId] <String>]
+        [-Restart]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WorkGroupNameThumbprint
+  isDefault: false
+examples:
+- title: 'Example 1: Specify an AD domain configuration'
+  description: |-
+    ```
+    PS C:\> $ExtensionCfg = New-AzureServiceADDomainExtensionConfig -Role WorkerRole1 -DomainName $Domain -Credential $Cred -JoinOption 35;
+
+    PS C:\> New-AzureDeployment -ServiceName $CloudSvc -Slot "Production" -Package $Pkg -Configuration $Config -ExtensionConfiguration $ExtensionCfg;
+    ```
+
+    This command generates a configuration for the AD domain extension.
+links:
+- text: Get-AzureServiceADDomainExtension
+  href: ./Get-AzureServiceADDomainExtension.yml
+- text: Set-AzureServiceADDomainExtension
+  href: ./Set-AzureServiceADDomainExtension.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DFD4BA63-A7DE-49DD-878C-68062EF17873
+  PlatyPS schema version: 2024-05-01

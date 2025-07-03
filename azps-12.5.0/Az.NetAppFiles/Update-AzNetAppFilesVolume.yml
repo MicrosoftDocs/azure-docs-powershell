@@ -1,0 +1,654 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetAppFiles.Update-AzNetAppFilesVolume
+name: Update-AzNetAppFilesVolume
+module: Az.NetAppFiles
+isPreview: false
+summary: |-
+  Updates an Azure NetApp Files (ANF) volume according to the optional modifiers provided.
+description: |-
+  The **Update-AzNetAppFilesVolume** cmdlet updates an ANF volume.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Backup
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeBackupProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the backup object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolAccess
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Cool Access(tiering) is enabled for the volume (default false).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolAccessRetrievalPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CoolAccessRetrievalPolicy determines the data retrieval behavior from the cool tier to standard storage based on the read pattern for cool access enabled volumes. The possible values for this field are:
+       Default - Data will be pulled from cool tier to standard storage on random reads. This policy is the default.
+       OnRead - All client-driven data read is pulled from cool tier to standard storage on both sequential and random reads.
+       Never - No client-driven data is pulled from cool tier to standard storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CoolnessPeriod
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the number of days after which data that is not accessed by clients will be tiered (minimum 7, maximum 63).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultGroupQuotaInKiB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default group quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultUserQuotaInKiB
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Default user quota for volume in KiBs. If isDefaultQuotaEnabled is set, the minimum value of 4 KiBs applies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExportPolicy
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolumeExportPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable array which represents the export policy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume" data-throw-if-not-resolved="False" />
+    description: |-
+      The volume object to update
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsDefaultQuotaEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if default quota is enabled for the volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF volume
+    aliases:
+    - VolumeName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ANF pool
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolObject
+    type: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesPool" data-throw-if-not-resolved="False" />
+    description: |-
+      The pool object containing the volume to update
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtocolType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A hashtable array which represents the protocol types. You need to create Active Directory connections before creating an SMB/CIFS volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group of the ANF account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the ANF volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service level of the ANF volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbAccessBasedEnumeration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables access based enumeration share property for SMB Shares. Only applicable for SMB/DualProtocol volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbNonBrowsable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables non browsable property for SMB Shares. Only applicable for SMB/DualProtocol volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotDirectoryVisible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled (true) the volume will contain a read-only .snapshot directory which provides access to each of the volume's snapshots (default to true)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotPolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Snapshot Policy ResourceId used to apply a snapshot policy to the volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThroughputMibps
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Double" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Maximum throughput in Mibps that can be achieved by this volume
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UnixPermission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsageThreshold
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int64" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The maximum storage quota allowed for a file system in bytes
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzNetAppFilesVolume
+        -ResourceGroupName <String>
+        -Location <String>
+        -AccountName <String>
+        -PoolName <String>
+        -Name <String>
+        [-UsageThreshold <Int64>]
+        [-ServiceLevel <String>]
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ThroughputMibps <Double>]
+        [-SnapshotPolicyId <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-Tag <Hashtable>]
+        [-UnixPermission <String>]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-SnapshotDirectoryVisible]
+        [-SmbAccessBasedEnumeration <String>]
+        [-ProtocolType <String[]>]
+        [-SmbNonBrowsable <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzNetAppFilesVolume
+        -Name <String>
+        -PoolObject <PSNetAppFilesPool>
+        [-UsageThreshold <Int64>]
+        [-ServiceLevel <String>]
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ThroughputMibps <Double>]
+        [-SnapshotPolicyId <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-Tag <Hashtable>]
+        [-UnixPermission <String>]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-SnapshotDirectoryVisible]
+        [-SmbAccessBasedEnumeration <String>]
+        [-ProtocolType <String[]>]
+        [-SmbNonBrowsable <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzNetAppFilesVolume
+        -ResourceId <String>
+        [-UsageThreshold <Int64>]
+        [-ServiceLevel <String>]
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ThroughputMibps <Double>]
+        [-SnapshotPolicyId <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-Tag <Hashtable>]
+        [-UnixPermission <String>]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-SnapshotDirectoryVisible]
+        [-SmbAccessBasedEnumeration <String>]
+        [-ProtocolType <String[]>]
+        [-SmbNonBrowsable <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzNetAppFilesVolume
+        -InputObject <PSNetAppFilesVolume>
+        [-UsageThreshold <Int64>]
+        [-ServiceLevel <String>]
+        [-ExportPolicy <PSNetAppFilesVolumeExportPolicy>]
+        [-Backup <PSNetAppFilesVolumeBackupProperties>]
+        [-ThroughputMibps <Double>]
+        [-SnapshotPolicyId <String>]
+        [-IsDefaultQuotaEnabled]
+        [-DefaultUserQuotaInKiB <Int64>]
+        [-DefaultGroupQuotaInKiB <Int64>]
+        [-Tag <Hashtable>]
+        [-UnixPermission <String>]
+        [-CoolAccess]
+        [-CoolnessPeriod <Int32>]
+        [-CoolAccessRetrievalPolicy <String>]
+        [-SnapshotDirectoryVisible]
+        [-SmbAccessBasedEnumeration <String>]
+        [-ProtocolType <String[]>]
+        [-SmbNonBrowsable <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesPool" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.NetAppFiles.Models.PSNetAppFilesVolume" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an ANF volume'
+  description: |-
+    ```powershell
+    Update-AzNetAppFilesVolume -ResourceGroupName "MyRG" -Location "westus2" -AccountName "MyAnfAccount" -PoolName "MyAnfPool" -Name "MyAnfVolume" -UsageThreshold Size
+    ```
+
+    ```output
+    Location          : westus2
+    Id                : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.NetApp/netAppAccounts/MyAnfAccount/capacityPools/MyAnfPool/volumes/MyAnfVolume
+    Name              : MyAnfAccount/MyAnfPool/MyAnfVolume
+    Type              : Microsoft.NetApp/netAppAccounts/capacityPools/volumes
+    Tags              :
+    FileSystemId      : 3e2773a7-2a72-d003-0637-1a8b1fa3eaaf
+    CreationToken     : MyAnfVolume
+    ServiceLevel      : Premium
+    UsageThreshold    : 2199023255552
+    ProvisioningState : Succeeded
+    SubnetId          : /subscriptions/subsId/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/MyRG-vnet/subnets/default
+    ```
+
+    This command updates the ANF volume "MyAnfVolume" with the new UsageThreshold size.
+links:
+- text: New-AzNetAppFilesVolume
+  href: ./New-AzNetAppFilesVolume.yml
+- text: Get-AzNetAppFilesVolume
+  href: ./Get-AzNetAppFilesVolume.yml
+- text: Remove-AzNetAppFilesVolume
+  href: ./Remove-AzNetAppFilesVolume.yml
+- text: Restore-AzNetAppFilesVolume
+  href: ./Restore-AzNetAppFilesVolume.yml
+- text: Set-AzNetAppFilesVolumePool
+  href: ./Set-AzNetAppFilesVolumePool.yml
+- text: Get-AzNetAppFilesVolumeBackupStatus
+  href: ./Get-AzNetAppFilesVolumeBackupStatus.yml
+- text: Get-AzNetAppFilesVolumeRestoreStatus
+  href: ./Get-AzNetAppFilesVolumeRestoreStatus.yml
+- text: Approve-AzNetAppFilesReplication
+  href: ./Approve-AzNetAppFilesReplication.yml
+- text: Initialize-AzNetAppFilesReplication
+  href: ./Initialize-AzNetAppFilesReplication.yml
+- text: Resume-AzNetAppFilesReplication
+  href: ./Resume-AzNetAppFilesReplication.yml
+- text: Remove-AzNetAppFilesReplication
+  href: ./Remove-AzNetAppFilesReplication.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Update-AzNetAppFilesVolume.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.NetAppFiles.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.netappfiles/update-aznetappfilesvolume
+  Module Name: Az.NetAppFiles
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Update-AzNetAppFilesVolume.md
+  PlatyPS schema version: 2024-05-01

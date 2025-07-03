@@ -1,0 +1,1300 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Set-AzKeyVaultManagedStorageSasDefinition
+name: Set-AzKeyVaultManagedStorageSasDefinition
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Sets a Shared Access Signature (SAS) definition with Key Vault for a given Key Vault managed Azure Storage Account.
+description: |-
+  Sets a Shared Access Signature (SAS) definition with a given Key Vault managed Azure Storage
+  Account. This also sets a secret which can be used to get the SAS token per this SAS definition.
+  SAS token is generated using these parameters and the active key of the Key Vault managed Azure
+  Storage Account.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key Vault managed storage account name. Cmdlet constructs the FQDN of a managed storage account
+      name from vault name, currently selected environment and manged storage account name.
+    aliases:
+    - StorageAccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage service version to use to execute the request made using the account SAS URI.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Blob
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blob Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Container
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Container Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disables the use of sas definition for generation of sas token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndPartitionKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      End Partition Key
+    aliases:
+    - endpk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndRowKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      End Row Key
+    aliases:
+    - endrk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddressOrRange
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      IP, or IP range ACL (access control list) of the request that would be accepted by Azure Storage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage sas definition name. Cmdlet constructs the FQDN of a storage sas definition from vault
+      name, currently selected environment, storage account name and sas definition name.
+    aliases:
+    - SasDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Sas definition parameters that will be used to create the sas token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RawSas
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to the cloud file to generate sas token against.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Permission. Values include 'Query','Add','Update','Process'
+    acceptedValues:
+    - Add
+    - Create
+    - Delete
+    - List
+    - Process
+    - Read
+    - Query
+    - Update
+    - Write
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Policy Identifier
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceQueueSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Protocol can be used in the request with the SAS token.
+    acceptedValues:
+    - HttpsOnly
+    - HttpsOrHttp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Queue
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Queue Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceQueueSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Resource types that this SAS token applies to. Values include 'Service','Container','Object'
+    acceptedValues:
+    - Service
+    - Container
+    - Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Service
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Service types that this SAS token applies to. Values include 'Blob','File','Queue','Table'
+    acceptedValues:
+    - Blob
+    - File
+    - Queue
+    - Table
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Share
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Share Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedAccessHeader
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the query parameters to override response headers.
+    acceptedValues:
+    - CacheControl
+    - ContentDisposition
+    - ContentEncoding
+    - ContentLanguage
+    - ContentType
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartPartitionKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Start Partition Key
+    aliases:
+    - startpk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartRowKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Start Row Key
+    aliases:
+    - startrk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Table
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Table Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetStorageVersion
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the signed storage service version to use to authenticate requests made with the SAS token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceBlobSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceContainerSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceFileSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceShareSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceQueueSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: StoredPolicyServiceTableSas
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ValidityPeriod
+    type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Validity period that will get used to set the expiry time of sas token from the time it gets generated
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AdhocAccountSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceBlobSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceContainerSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceFileSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceShareSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceQueueSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AdhocServiceTableSas
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+      Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        [-Parameter] <Hashtable>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RawSas
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Service <String[]>
+        -ResourceType <String[]>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        [-ApiVersion <String>]
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocAccountSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Blob <String>
+        -Container <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceBlobSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Container <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceContainerSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Share <String>
+        -Path <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceFileSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Share <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceShareSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Queue <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceQueueSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -ValidityPeriod <TimeSpan>
+        -Permission <String[]>
+        -Table <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-StartPartitionKey <String>]
+        [-StartRowKey <String>]
+        [-EndPartitionKey <String>]
+        [-EndRowKey <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AdhocServiceTableSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Blob <String>
+        -Container <String>
+        -Policy <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceBlobSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Container <String>
+        -Policy <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceContainerSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Policy <String>
+        -Share <String>
+        -Path <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceFileSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Policy <String>
+        -Share <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-SharedAccessHeader <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceShareSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Policy <String>
+        -Queue <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceQueueSas
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultManagedStorageSasDefinition
+        [-VaultName] <String>
+        [-AccountName] <String>
+        [-Name] <String>
+        -Policy <String>
+        -Table <String>
+        [-Disable]
+        [-Tag <Hashtable>]
+        [-TargetStorageVersion <String>]
+        [-Protocol <String>]
+        [-IPAddressOrRange <String>]
+        [-StartPartitionKey <String>]
+        [-StartRowKey <String>]
+        [-EndPartitionKey <String>]
+        [-EndRowKey <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: StoredPolicyServiceTableSas
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.ManagedStorageSasDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1 : Set an ad hoc service Blob sas definition'
+  description: |-
+    ```
+    PS C:\> Set-AzKeyVaultManagedStorageSasDefinition -Blob 'blob1' -Container 'container1' -VaultName 'vault1' -AccountName 'account1' -Name 'sas1' -ValidityPeriod ([System.Timespan]::FromDays(30)) -Permission Read,Add -SharedAccessHeader CacheControl,ContentDisposition -Protocol HttpsOnly -IPAddressOrRange '168.1.5.60-168.1.5.70'
+    ```
+
+    Sets an ad hoc service blob sas definition 'sas1' with key vault managed storage account 'account1' in vault 'vault1'.
+- title: 'Example 2 : Set an ad hoc account sas definition'
+  description: |-
+    ```
+    PS C:\> Set-AzKeyVaultManagedStorageSasDefinition -Service Blob,File -ResourceType Container,Service -VaultName 'vault1' -AccountName 'account1' -Name 'sas1' -Protocol HttpsOrHttp -IPAddressOrRange '168.1.5.60' -ValidityPeriod ([System.Timespan]::FromDays(30)) -Permission Read,Add
+    ```
+
+    Sets an ad hoc blob sas definition 'sas1' with key vault managed storage account 'account1' in vault 'vault1'.
+- title: 'Example 3 : Set a sas definition using a hashtable'
+  description: |-
+    ```
+    PS C:\> $parameters = @{"sasType"="blob";"signedVersion"="2016-05-31";"signedProtocols"="https";"signedIp"="168.1.5.60-168.1.5.70";"validityPeriod"="P30D";"signedPermissions"="ra";"blobName"="blob1";"containerName"="container1";"rscd"="";"rscc"=""}
+    PS C:\> Set-AzKeyVaultManagedStorageSasDefinition -VaultName vault1 -AccountName account1 -Name sas1 -Parameter $parameters
+    ```
+
+    Sets an ad hoc blob sas definition 'sas1' with key vault managed storage account 'account1' in
+    vault 'vault1' using a hashtable.
+links:
+- text: Azureâ€‹RM.â€‹Keyâ€‹Vault
+  href: /powershell/module/Az.keyvault/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultManagedStorageSasDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/set-AzKeyvaultmanagedstoragesasdefinition
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Set-AzKeyVaultManagedStorageSasDefinition.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,282 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Disconnect-AzAccount
+name: Disconnect-AzAccount
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Disconnects a connected Azure account and removes all credentials and contexts associated with that account.
+description: |-
+  The Disconnect-AzAccount cmdlet disconnects a connected Azure account and removes all credentials and contexts (subscription and tenant information) associated with that account.
+  After executing this cmdlet, you will need to login again using Connect-AzAccount.
+parameters:
+  cmdletParameters:
+  - name: ApplicationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ServicePrincipal id (globally unique id)
+    aliases:
+    - SPN
+    - ServicePrincipal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureContext
+    type: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContextObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContextName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the context to log out of
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContextName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, tenant and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureRmAccount" data-throw-if-not-resolved="False" />
+    description: |-
+      The account object to remove
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccountObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+    acceptedValues:
+    - Process
+    - CurrentUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant id (globally unique id)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipal
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Username
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User name of the form 'user@contoso.org'
+    aliases:
+    - Id
+    - UserId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not executed.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disconnect-AzAccount
+        [-ContextName <String>]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContextName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Disconnect-AzAccount
+        [-Username] <String>
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disconnect-AzAccount
+        -ApplicationId <String>
+        -TenantId <String>
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServicePrincipal
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disconnect-AzAccount
+        [-InputObject] <PSAzureRmAccount>
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccountObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disconnect-AzAccount
+        [-AzureContext] <PSAzureContext>
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContextObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureRmAccount" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureRmAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Logout of the current account'
+  description: |-
+    ```powershell
+    Disconnect-AzAccount
+    ```
+
+    Logs out of the Azure account associated with the current context.
+- title: 'Example 2: Logout of the account associated with a particular context'
+  description: |-
+    ```powershell
+    Get-AzContext "Work" | Disconnect-AzAccount -Scope CurrentUser
+    ```
+
+    Logs out the account associated with the given context (named 'Work'). Because this uses the 'CurrentUser' scope, all credentials and contexts will be permanently deleted.
+- title: 'Example 3: Log out a particular user'
+  description: |-
+    ```powershell
+    Disconnect-AzAccount -Username 'user1@contoso.org'
+    ```
+
+    Logs out the 'user1@contoso.org' user - all credentials and all contexts associated with this user will be removed.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Disconnect-AzAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/disconnect-azaccount
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Disconnect-AzAccount.md
+  PlatyPS schema version: 2024-05-01

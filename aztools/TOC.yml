@@ -1,0 +1,79 @@
+items:
+- name: Cmdlet reference
+  items:
+  - name: Az.Tools.Installer
+    items:
+    - name: Commands
+      uid: Az.Tools.Installer
+    - name: Install-AzModule
+      uid: Az.Tools.Installer.Install-AzModule
+      no-loc:
+      - Install-AzModule
+    - name: Uninstall-AzModule
+      uid: Az.Tools.Installer.Uninstall-AzModule
+      no-loc:
+      - Uninstall-AzModule
+    - name: Update-AzModule
+      uid: Az.Tools.Installer.Update-AzModule
+      no-loc:
+      - Update-AzModule
+    no-loc:
+    - Az.Tools.Installer
+  - name: Az.Tools.Migration
+    items:
+    - name: Commands
+      uid: Az.Tools.Migration
+    - name: Disable-AzUpgradeDataCollection
+      uid: Az.Tools.Migration.Disable-AzUpgradeDataCollection
+      no-loc:
+      - Disable-AzUpgradeDataCollection
+    - name: Enable-AzUpgradeDataCollection
+      uid: Az.Tools.Migration.Enable-AzUpgradeDataCollection
+      no-loc:
+      - Enable-AzUpgradeDataCollection
+    - name: Find-AzUpgradeCommandReference
+      uid: Az.Tools.Migration.Find-AzUpgradeCommandReference
+      no-loc:
+      - Find-AzUpgradeCommandReference
+    - name: Get-AzUpgradeAliasSpec
+      uid: Az.Tools.Migration.Get-AzUpgradeAliasSpec
+      no-loc:
+      - Get-AzUpgradeAliasSpec
+    - name: Get-AzUpgradeCmdletSpec
+      uid: Az.Tools.Migration.Get-AzUpgradeCmdletSpec
+      no-loc:
+      - Get-AzUpgradeCmdletSpec
+    - name: Invoke-AzUpgradeModulePlan
+      uid: Az.Tools.Migration.Invoke-AzUpgradeModulePlan
+      no-loc:
+      - Invoke-AzUpgradeModulePlan
+    - name: New-AzUpgradeModulePlan
+      uid: Az.Tools.Migration.New-AzUpgradeModulePlan
+      no-loc:
+      - New-AzUpgradeModulePlan
+    no-loc:
+    - Az.Tools.Migration
+  - name: Az.Tools.Predictor
+    items:
+    - name: Commands
+      uid: Az.Tools.Predictor
+    - name: Disable-AzPredictor
+      uid: Az.Tools.Predictor.Disable-AzPredictor
+      no-loc:
+      - Disable-AzPredictor
+    - name: Enable-AzPredictor
+      uid: Az.Tools.Predictor.Enable-AzPredictor
+      no-loc:
+      - Enable-AzPredictor
+    - name: Open-AzPredictorSurvey
+      uid: Az.Tools.Predictor.Open-AzPredictorSurvey
+      no-loc:
+      - Open-AzPredictorSurvey
+    - name: Send-AzPredictorRating
+      uid: Az.Tools.Predictor.Send-AzPredictorRating
+      no-loc:
+      - Send-AzPredictorRating
+    no-loc:
+    - Az.Tools.Predictor
+metadata:
+  universal_conceptual_toc: /powershell/azure/toc.json

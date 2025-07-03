@@ -1,0 +1,441 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Move-AzureService
+name: Move-AzureService
+module: Azure
+isPreview: false
+summary: |-
+  Migrates a cloud service to the Azure Resource Manager stack.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Move-AzureService** cmdlet migrates a cloud service and a deployment inside that service to a resource group in the Azure Resource Manager stack.
+parameters:
+  cmdletParameters:
+  - name: Abort
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet cancels the service migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AbortMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Commit
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet starts the service migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommitMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreateNewVirtualNetwork
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet creates a virtual network in the Azure Resource Manager stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareNewMigrationParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateNewMigrationParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeploymentName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the cloud service deployment that this cmdlet migrates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prepare
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet prepares the cloud service for migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareNewMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: PrepareExistingMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name  of the cloud service that this cmdlet migrates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Subnet inside the virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareExistingMigrationParameterSet
+      position: "6"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExistingMigrationParameterSet
+      position: "6"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseExistingVirtualNetwork
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet migrates the cloud service to an existing virtual network in the Azure Resource Manager stack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareExistingMigrationParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExistingMigrationParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Validate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies that this cmdlet validates the cloud service for migration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateNewMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExistingMigrationParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareExistingMigrationParameterSet
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExistingMigrationParameterSet
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group of an existing virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PrepareExistingMigrationParameterSet
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExistingMigrationParameterSet
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-Abort]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AbortMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-Commit]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommitMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-Prepare]
+        [-CreateNewVirtualNetwork]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PrepareNewMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-VirtualNetworkResourceGroupName] <String>
+        [-VirtualNetworkName] <String>
+        [-SubnetName] <String>
+        [-Prepare]
+        [-UseExistingVirtualNetwork]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PrepareExistingMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-Validate]
+        [-CreateNewVirtualNetwork]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateNewMigrationParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Move-AzureService
+        [-ServiceName] <String>
+        [-DeploymentName] <String>
+        [-VirtualNetworkResourceGroupName] <String>
+        [-VirtualNetworkName] <String>
+        [-SubnetName] <String>
+        [-Validate]
+        [-UseExistingVirtualNetwork]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateExistingMigrationParameterSet
+  isDefault: false
+examples:
+- title: 'Example 1: Prepare service migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Prepare -ServiceName "ContosoService" -DeploymentName "ContosoVM" -CreateNewVirtualNetwork
+    ```
+
+    This command prepares the service named ContosoService for migration to the Azure Resource Manager stack.
+    The migration includes the deployment named ContosoVM.
+- title: 'Example 2: Start service migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Commit -ServiceName "ContosoService" -DeploymentName "ContosoVM"
+    ```
+
+    This command starts migration of the service named ContosoService to the Azure Resource Manager stack.
+    The migration includes the deployment named ContosoVM.
+- title: 'Example 3: Cancel service migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Abort -ServiceName "ContosoService" -DeploymentName "ContosoVM"
+    ```
+
+    This command cancels migration of the service named ContosoService to the Azure Resource Manager stack.
+- title: 'Example 4: Prepare service migration to an existing virtual network'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Prepare -ServiceName "ContosoService" -DeploymentName "ContosoVM" -UseExistingVirtualNetwork -VirtualNetworkResourceGroupName "VnetRG" -VirtualNetworkName "ContosoVNET" -SubnetName "ContosoSubnet"
+    ```
+
+    This command prepares the service named ContosoService for migration to the Azure Resource Manager stack.
+    The migration includes the deployment named ContosoVM.
+    The migration uses a virtual network that was previously created.
+- title: 'Example 5: Validate service migration'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Validate -ServiceName "ContosoService" -DeploymentName "ContosoVM" -CreateNewVirtualNetwork
+    ```
+
+    This command validates migration for the service named ContosoService to the Azure Resource Manager stack.
+    The migration includes the deployment named ContosoVM.
+- title: 'Example 6: Validate service migration to an existing virtual network'
+  description: |-
+    ```
+    PS C:\> Move-AzureService -Validate -ServiceName "contosoService" -DeploymentName "contosoVM" -UseExistingVirtualNetwork -VirtualNetworkResourceGroupName "vnetRG" -VirtualNetworkName "contosoVNET" -SubnetName "contosoSubnet"
+    ```
+
+    This command validates migration for the service named ContosoService to the Azure Resource Manager stack.
+    The migration includes the deployment named ContosoVM.
+    The migration uses a virtual network that was previously created.
+links:
+- text: Move-AzureNetworkSecurityGroup
+  href: ./Move-AzureNetworkSecurityGroup.yml
+- text: Move-AzureReservedIP
+  href: ./Move-AzureReservedIP.yml
+- text: Move-AzureRouteTable
+  href: ./Move-AzureRouteTable.yml
+- text: Move-AzureStorageAccount
+  href: ./Move-AzureStorageAccount.yml
+- text: Move-AzureVirtualNetwork
+  href: ./Move-AzureVirtualNetwork.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F8418A93-8E6B-4A1C-B319-7CACE95AB600
+  PlatyPS schema version: 2024-05-01

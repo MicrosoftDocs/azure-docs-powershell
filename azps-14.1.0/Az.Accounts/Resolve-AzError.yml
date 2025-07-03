@@ -1,0 +1,242 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Resolve-AzError
+name: Resolve-AzError
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Display detailed information about PowerShell errors, with extended details for Azure PowerShell errors.
+description: |-
+  Resolves and displays detailed information about errors in the current PowerShell session, including where the error
+  occurred in script, stack trace, and all inner and aggregate exceptions. For Azure PowerShell errors provides
+  additional detail in debugging service issues, including complete detail about the request and server response
+  that caused the error.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, tenant and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Error
+    type: <xref href="System.Management.Automation.ErrorRecord" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      One or more error records to resolve.  If no parameters are specified, all errors in the session are resolved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AnyErrorParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Last
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Resolve only the last error that occurred in the session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LastErrorParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Resolve-AzError
+        [[-Error] <ErrorRecord[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AnyErrorParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Resolve-AzError
+        [-Last]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LastErrorParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Management.Automation.ErrorRecord" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Errors.AzureErrorRecord" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Profile.Errors.AzureExceptionRecord" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Profile.Errors.AzureRestExceptionRecord" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Resolve the Last Error'
+  description: |-
+    ```powershell
+    Resolve-AzError -Last
+    ```
+
+    ```Output
+    HistoryId: 3
+
+
+    Message        : Run Connect-AzAccount to login.
+    StackTrace     :    at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.get_DefaultContext() in AzureRmCmdlet.cs:line 85
+                        at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.LogCmdletStartInvocationInfo() in AzureRmCmdlet.cs:line 269
+                        at Microsoft.WindowsAzure.Commands.Utilities.Common.AzurePSCmdlet.BeginProcessing() inAzurePSCmdlet.cs:line 299
+                        at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.BeginProcessing() in AzureRmCmdlet.cs:line 320
+                        at Microsoft.Azure.Commands.Profile.GetAzureRMSubscriptionCommand.BeginProcessing() in GetAzureRMSubscription.cs:line 49
+                        at System.Management.Automation.Cmdlet.DoBeginProcessing()
+                        at System.Management.Automation.CommandProcessorBase.DoBegin()
+    Exception      : System.Management.Automation.PSInvalidOperationException
+    InvocationInfo : {Get-AzSubscription}
+    Line           : Get-AzSubscription
+    Position       : At line:1 char:1
+                     + Get-AzSubscription
+                     + ~~~~~~~~~~~~~~~~~~~~~~~
+    HistoryId      : 3
+    ```
+
+    Get details of the last error.
+- title: 'Example 2: Resolve all Errors in the Session'
+  description: |-
+    ```powershell
+    Resolve-AzError
+    ```
+
+    ```Output
+    HistoryId: 8
+
+
+    RequestId      : b61309e8-09c9-4f0d-ba56-08a6b28c731d
+    Message        : Resource group 'contoso' could not be found.
+    ServerMessage  : ResourceGroupNotFound: Resource group 'contoso' could not be found.
+                     (System.Collections.Generic.List`1[Microsoft.Rest.Azure.CloudError])
+    ServerResponse : {NotFound}
+    RequestMessage : {GET https://management.azure.com/subscriptions/00977cdb-163f-435f-9c32-39ec8ae61f4d/resourceGroups/co
+                     ntoso/providers/Microsoft.Storage/storageAccounts/contoso?api-version=2016-12-01}
+    InvocationInfo : {Get-AzStorageAccount}
+    Line           : Get-AzStorageAccount -ResourceGroupName contoso -Name contoso
+    Position       : At line:1 char:1
+                     + Get-AzStorageAccount -ResourceGroupName contoso -Name contoso
+                     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    StackTrace     :    at Microsoft.Azure.Management.Storage.StorageAccountsOperations.<GetPropertiesWithHttpMessagesAsync
+                     >d__8.MoveNext()
+                     --- End of stack trace from previous location where exception was thrown ---
+                        at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+                        at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                        at Microsoft.Azure.Management.Storage.StorageAccountsOperationsExtensions.<GetPropertiesAsync>d__7.
+                     MoveNext()
+                     --- End of stack trace from previous location where exception was thrown ---
+                        at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+                        at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                        at Microsoft.Azure.Management.Storage.StorageAccountsOperationsExtensions.GetProperties(IStorageAcc
+                     ountsOperations operations, String resourceGroupName, String accountName)
+                        at Microsoft.Azure.Commands.Management.Storage.GetAzureStorageAccountCommand.ExecuteCmdlet() in C:\
+                     zd\azure-powershell\src\ResourceManager\Storage\Commands.Management.Storage\StorageAccount\GetAzureSto
+                     rageAccount.cs:line 70
+                        at Microsoft.WindowsAzure.Commands.Utilities.Common.AzurePSCmdlet.ProcessRecord() in
+                     C:\zd\azure-powershell\src\Common\Commands.Common\AzurePSCmdlet.cs:line 642
+    HistoryId      : 8
+
+
+       HistoryId: 5
+
+
+    Message        : Run Connect-AzAccount to login.
+    StackTrace     :    at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.get_DefaultContext() in C:\zd\azur
+                     e-powershell\src\ResourceManager\Common\Commands.ResourceManager.Common\AzureRmCmdlet.cs:line 85
+                        at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.LogCmdletStartInvocationInfo() in
+                     C:\zd\azure-powershell\src\ResourceManager\Common\Commands.ResourceManager.Common\AzureRmCmdlet.cs:lin
+                     e 269
+                        at Microsoft.WindowsAzure.Commands.Utilities.Common.AzurePSCmdlet.BeginProcessing() in
+                     C:\zd\azure-powershell\src\Common\Commands.Common\AzurePSCmdlet.cs:line 299
+                        at Microsoft.Azure.Commands.ResourceManager.Common.AzureRMCmdlet.BeginProcessing() in C:\zd\azure-p
+                     owershell\src\ResourceManager\Common\Commands.ResourceManager.Common\AzureRmCmdlet.cs:line 320
+                        at Microsoft.Azure.Commands.Profile.GetAzureRMSubscriptionCommand.BeginProcessing() in C:\zd\azure-
+                     powershell\src\ResourceManager\Profile\Commands.Profile\Subscription\GetAzureRMSubscription.cs:line 49
+                        at System.Management.Automation.Cmdlet.DoBeginProcessing()
+                        at System.Management.Automation.CommandProcessorBase.DoBegin()
+    Exception      : System.Management.Automation.PSInvalidOperationException
+    InvocationInfo : {Get-AzSubscription}
+    Line           : Get-AzSubscription
+    Position       : At line:1 char:1
+                     + Get-AzSubscription
+                     + ~~~~~~~~~~~~~~~~~~~~~~~
+    HistoryId      : 5
+    ```
+
+    Get details of all errors that have occurred in the current session.
+- title: 'Example 3: Resolve a Specific Error'
+  description: |-
+    ```powershell
+    Resolve-AzError $Error[0]
+    ```
+
+    ```Output
+    HistoryId: 8
+
+
+    RequestId      : b61309e8-09c9-4f0d-ba56-08a6b28c731d
+    Message        : Resource group 'contoso' could not be found.
+    ServerMessage  : ResourceGroupNotFound: Resource group 'contoso' could not be found.
+                     (System.Collections.Generic.List`1[Microsoft.Rest.Azure.CloudError])
+    ServerResponse : {NotFound}
+    RequestMessage : {GET https://management.azure.com/subscriptions/00977cdb-163f-435f-9c32-39ec8ae61f4d/resourceGroups/co
+                     ntoso/providers/Microsoft.Storage/storageAccounts/contoso?api-version=2016-12-01}
+    InvocationInfo : {Get-AzStorageAccount}
+    Line           : Get-AzStorageAccount -ResourceGroupName contoso -Name contoso
+    Position       : At line:1 char:1
+                     + Get-AzStorageAccount -ResourceGroupName contoso -Name contoso
+                     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    StackTrace     :    at Microsoft.Azure.Management.Storage.StorageAccountsOperations.<GetPropertiesWithHttpMessagesAsync
+                     >d__8.MoveNext()
+                     --- End of stack trace from previous location where exception was thrown ---
+                        at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+                        at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                        at Microsoft.Azure.Management.Storage.StorageAccountsOperationsExtensions.<GetPropertiesAsync>d__7.
+                     MoveNext()
+                     --- End of stack trace from previous location where exception was thrown ---
+                        at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+                        at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+                        at Microsoft.Azure.Management.Storage.StorageAccountsOperationsExtensions.GetProperties(IStorageAcc
+                     ountsOperations operations, String resourceGroupName, String accountName)
+                        at Microsoft.Azure.Commands.Management.Storage.GetAzureStorageAccountCommand.ExecuteCmdlet() in C:\
+                     zd\azure-powershell\src\ResourceManager\Storage\Commands.Management.Storage\StorageAccount\GetAzureSto
+                     rageAccount.cs:line 70
+                        at Microsoft.WindowsAzure.Commands.Utilities.Common.AzurePSCmdlet.ProcessRecord() in
+                     C:\zd\azure-powershell\src\Common\Commands.Common\AzurePSCmdlet.cs:line 642
+    HistoryId      : 8
+    ```
+
+    Get details of the specified error.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Resolve-AzError.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/resolve-azerror
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Resolve-AzError.md
+  PlatyPS schema version: 2024-05-01

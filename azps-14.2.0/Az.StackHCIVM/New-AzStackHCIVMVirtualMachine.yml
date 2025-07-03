@@ -1,0 +1,923 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCIVM.New-AzStackHCIVMVirtualMachine
+name: New-AzStackHCIVMVirtualMachine
+module: Az.StackHCIVM
+isPreview: false
+summary: |-
+  The operation to create or update a virtual machine.
+  Please note some properties can be set only during virtual machine creation.
+description: |-
+  The operation to create or update a virtual machine.
+  Please note some properties can be set only during virtual machine creation.
+parameters:
+  cmdletParameters:
+  - name: AdminPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AdminPassword - admin password
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AdminUsername - admin username
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ComputerName - name of the computer
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomLocationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the extended location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataDiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Data Disks - List of data disks to be attached to the virtual machine in id format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataDiskName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Data Disks - List of data disks to be attached to the virtual machine in name format .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataDiskResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Data Disks - Resource Group of Data Disks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisablePasswordAuthentication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      DisablePasswordAuthentication - whether password authentication should be disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicMemoryMaximumMemoryInMb
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum Dynamic Memory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicMemoryMinimumMemoryInMb
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimum Dynamic Memory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DynamicMemoryTargetBuffer
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the amount of extra memory that should be reserved for a virtual machine at runtime, as a percentage of the total memory that the virtual machine is thought to need.
+      This only applies to virtual systems with dynamic memory enabled.
+      This property can be in the range of 5 to 2000.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutomaticUpdate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Whether to EnableAutomaticUpdates on the machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableTpm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to indicate whether or not to enable TPM
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identity type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the image to create the VM with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByImageId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the image to create the VM with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByImageName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group of the image to create the VM from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByImageName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The geo-location where the resource lives
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the virtual machine
+    aliases:
+    - VirtualMachineName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      NetworkInterfaces - list of network interfaces to be attached to the virtual machine in ARM Id format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      NetworkInterfaces - list of network interfaces to be attached to the virtual machine in name format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkInterfaces - Resource Group of Network Interfaces.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of the OS disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOsDiskId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the OS disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOsDiskName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group of the OS disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByOsDiskName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OsType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      OsType - string specifying whether the OS is Linux or Windows
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisionVMAgent
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Used to indicate whether Arc for Servers agent onboarding should be triggered during the virtual machine creation process.
+      VM Agent is provisioned by default.
+      Please pass -ProvisionVMAgent:$false to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisionVMConfigAgent
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether virtual machine configuration agent should be provisioned on the virtual machine.
+      When this property is not specified, default behavior is to set it to true.
+      VM Config Agent is provisioned by default.
+      Please pass -ProvisionVMConfigAgent:$false to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureBootEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether secure boot should be enabled on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPublicKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      PublicKeys - The list of SSH public keys used to authenticate with VMs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id of the storage container that hosts the VM configuration file
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the storage container that hosts the VM configuration file
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StoragePathResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Container resource group.
+      The resource group of the virtual machine will be used if this value is not provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      TimeZone for the virtual machine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmMemoryInMB
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      RAM in MB for the virtual machine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmProcessor
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of processors for the virtual machine
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VmSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Size of the VM.
+      Can be a Predefined size or Custom.
+      Possible Predefined Sizes include - Custom,Standard_A2_v2,Standard_A4_v2,Standard_D16s_v3,Standard_D2s_v3,Standard_D32s_v3,Standard_D4s_v3,Standard_D8s_v3,Standard_DS13_v2,Standard_DS2_v2,Standard_DS3_v2,Standard_DS4_v2,Standard_DS5_v2,Standard_K8S2_v1,Standard_K8S3_v1,Standard_K8S4_v1,Standard_K8S5_v1,Standard_K8S_v1,Standard_NK12,Standard_NK6,Standard_NV12, StandardNv6
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMVirtualMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OsType <String>
+        -ImageId <String>
+        [-SubscriptionId <String>]
+        [-DynamicMemoryMaximumMemoryInMb <Int64>]
+        [-DynamicMemoryMinimumMemoryInMb <Int64>]
+        [-DynamicMemoryTargetBuffer <Int32>]
+        [-VmMemoryInMB <Int64>]
+        [-VmProcessor <Int32>]
+        [-VmSize <String>]
+        [-IdentityType <String>]
+        [-DisablePasswordAuthentication]
+        [-ProvisionVMAgent]
+        [-ProvisionVMConfigAgent]
+        [-NicId <String[]>]
+        [-NicName <String[]>]
+        [-NicResourceGroup <String>]
+        [-DataDiskId <String[]>]
+        [-DataDiskName <String[]>]
+        [-DataDiskResourceGroup <String>]
+        [-AdminPassword <String>]
+        [-AdminUsername <String>]
+        [-ComputerName <String>]
+        [-EnableTpm]
+        [-SshPublicKey <String[]>]
+        [-StoragePathId <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-SecureBootEnabled]
+        [-EnableAutomaticUpdate]
+        [-TimeZone <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByImageId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMVirtualMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OsType <String>
+        -ImageName <String>
+        [-SubscriptionId <String>]
+        [-DynamicMemoryMaximumMemoryInMb <Int64>]
+        [-DynamicMemoryMinimumMemoryInMb <Int64>]
+        [-DynamicMemoryTargetBuffer <Int32>]
+        [-VmMemoryInMB <Int64>]
+        [-VmProcessor <Int32>]
+        [-VmSize <String>]
+        [-IdentityType <String>]
+        [-DisablePasswordAuthentication]
+        [-ProvisionVMAgent]
+        [-ProvisionVMConfigAgent]
+        [-NicId <String[]>]
+        [-NicName <String[]>]
+        [-NicResourceGroup <String>]
+        [-DataDiskId <String[]>]
+        [-DataDiskName <String[]>]
+        [-DataDiskResourceGroup <String>]
+        [-AdminPassword <String>]
+        [-AdminUsername <String>]
+        [-ComputerName <String>]
+        [-EnableTpm]
+        [-SshPublicKey <String[]>]
+        [-StoragePathId <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-SecureBootEnabled]
+        [-EnableAutomaticUpdate]
+        [-TimeZone <String>]
+        [-ImageResourceGroup <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByImageName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMVirtualMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OsType <String>
+        -OSDiskId <String>
+        [-SubscriptionId <String>]
+        [-DynamicMemoryMaximumMemoryInMb <Int64>]
+        [-DynamicMemoryMinimumMemoryInMb <Int64>]
+        [-DynamicMemoryTargetBuffer <Int32>]
+        [-VmMemoryInMB <Int64>]
+        [-VmProcessor <Int32>]
+        [-VmSize <String>]
+        [-IdentityType <String>]
+        [-DisablePasswordAuthentication]
+        [-ProvisionVMAgent]
+        [-ProvisionVMConfigAgent]
+        [-NicId <String[]>]
+        [-NicName <String[]>]
+        [-NicResourceGroup <String>]
+        [-DataDiskId <String[]>]
+        [-DataDiskName <String[]>]
+        [-DataDiskResourceGroup <String>]
+        [-AdminPassword <String>]
+        [-AdminUsername <String>]
+        [-ComputerName <String>]
+        [-EnableTpm]
+        [-SshPublicKey <String[]>]
+        [-StoragePathId <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-SecureBootEnabled]
+        [-EnableAutomaticUpdate]
+        [-TimeZone <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOsDiskId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzStackHCIVMVirtualMachine
+        -Name <String>
+        -ResourceGroupName <String>
+        -Location <String>
+        -CustomLocationId <String>
+        -OsType <String>
+        -OSDiskName <String>
+        [-SubscriptionId <String>]
+        [-DynamicMemoryMaximumMemoryInMb <Int64>]
+        [-DynamicMemoryMinimumMemoryInMb <Int64>]
+        [-DynamicMemoryTargetBuffer <Int32>]
+        [-VmMemoryInMB <Int64>]
+        [-VmProcessor <Int32>]
+        [-VmSize <String>]
+        [-IdentityType <String>]
+        [-DisablePasswordAuthentication]
+        [-ProvisionVMAgent]
+        [-ProvisionVMConfigAgent]
+        [-NicId <String[]>]
+        [-NicName <String[]>]
+        [-NicResourceGroup <String>]
+        [-DataDiskId <String[]>]
+        [-DataDiskName <String[]>]
+        [-DataDiskResourceGroup <String>]
+        [-AdminPassword <String>]
+        [-AdminUsername <String>]
+        [-ComputerName <String>]
+        [-EnableTpm]
+        [-SshPublicKey <String[]>]
+        [-StoragePathId <String>]
+        [-StoragePathName <String>]
+        [-StoragePathResourceGroup <String>]
+        [-SecureBootEnabled]
+        [-EnableAutomaticUpdate]
+        [-TimeZone <String>]
+        [-OSDiskResourceGroup <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByOsDiskName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StackHCIVM.Models.IVirtualMachineInstance" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Virtual Machine with an Image.'
+  description: |-
+    ```powershell
+    New-AzStackHCIVMVirtualMachine -Name "testVm" -OsType "Linux"  -ImageName "testImage" -VmSize "Standard_K8S_v1"  -AdminUsername "localadmin" -ComputerName "testVm"  -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}"  -Location "eastus"
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testVm          test-rg
+    ```
+
+    This command creates a virtual machine from a gallery image.
+- title: 'Example 2: Create a Virtual Machine with a Disk.'
+  description: |-
+    ```powershell
+    New-AzStackHCIVMVirtualMachine -Name "testVm" -OsType "Linux" -OsDiskName "testOsDisk10" -VmSize "Standard_K8S_v1"  -AdminUsername "localadmin" -ComputerName "testVm" -ResourceGroupName "test-rg" -CustomLocationId "/subscriptions/{subscriptionID}/resourcegroups/{resourceGroupName}/providers/microsoft.extendedlocation/customlocations/{customLocationName}" -Location "eastus"
+    ```
+
+    ```output
+    Name            ResourceGroupName
+    ----            -----------------
+    testVm          test-rg
+    ```
+
+    This command creates a virtual machine from a disk.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/New-AzStackHCIVMVirtualMachine.md
+  document type: cmdlet
+  external help file: Az.StackHCIVM-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhcivm/new-azstackhcivmvirtualmachine
+  Module Name: Az.StackHCIVM
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCIVM/StackHCIVM/help/New-AzStackHCIVMVirtualMachine.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,908 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlDatabase
+name: New-AzSqlDatabase
+module: Az.Sql
+isPreview: false
+summary: |-
+  Creates a database or an elastic database.
+description: |-
+  The **New-AzSqlDatabase** cmdlet creates an Azure SQL database.
+  You can also create an elastic database by setting the *ElasticPoolName* parameter to an existing elastic pool.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssignIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate and assign a Microsoft Entra identity for this database for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPauseDelayInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The auto pause delay in minutes for database(serverless only), -1 to opt out
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupStorageRedundancy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Backup storage redundancy used to store backups for the SQL Database. Options are: Local, Zone and Geo.
+    acceptedValues:
+    - Local
+    - Zone
+    - Geo
+    - GeoZone
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CatalogCollation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL database catalog collation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the SQL database collation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeGeneration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute generation to assign.
+    aliases:
+    - Family
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeModel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The compute model for Azure Sql database. Serverless or Provisioned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the database.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition to assign to the database. The acceptable values for this parameter are:
+      - None
+      - Basic
+      - Standard
+      - Premium
+      - DataWarehouse
+      - Free
+      - Stretch
+      - GeneralPurpose
+      - BusinessCritical
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the elastic pool in which to put the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableLedger
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Creates a ledger database, in which the integrity of all data is protected by the ledger feature. All tables in the ledger database must be ledger tables. Note: the value of this property cannot be changed after the database has been created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionProtector
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The encryption protector key for SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionProtectorAutoRotation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The AKV Key Auto Rotation status
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FederatedClientId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The federated client id for the SQL Database. It is used for cross tenant CMK scenario.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip confirmation message for performing the action
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FreeLimitExhaustionBehavior
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Exhaustion behavior of free limit database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HighAvailabilityReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of readonly secondary replicas associated with the database to which readonly application intent connections may be routed. This property is only settable for Hyperscale edition databases.
+    aliases:
+    - ReadReplicaCount
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of AKV keys for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The license type for the Azure Sql database. Possible values are:
+      - BasePrice - Azure Hybrid Benefit (AHB) discounted pricing for existing SQL Server license owners is applied. Database price will be discounted for existing SQL Server license owners.
+      - LicenseIncluded - Azure Hybrid Benefit (AHB) discount pricing for existing SQL Server license owners is not applied. Database price will include a new SQL Server license costs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Maintenance configuration id for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxSizeBytes
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size of the database in bytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumCapacity
+    type: <xref href="System.Double" data-throw-if-not-resolved="False" />
+    description: |-
+      The Minimal capacity that database will always have allocated, if not paused.
+      For serverless Azure Sql databases only.
+    aliases:
+    - MinVCore
+    - MinCapacity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredEnclaveType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The preferred enclave type for the Azure Sql database. Possible values are Default and VBS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadScale
+    type: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.DatabaseReadScale" data-throw-if-not-resolved="False" />
+    description: |-
+      If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica. This property is only settable for Premium and Business Critical databases.
+    acceptedValues:
+    - Disabled
+    - Enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestedServiceObjectiveName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service objective to assign to the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DtuBasedDatabase
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to which the server is assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SampleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the sample schema to apply when creating this database.
+    acceptedValues:
+    - AdventureWorksLT
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
+    acceptedValues:
+    - Named
+    - Geo
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that hosts the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tags
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a dictionary of Key-value pairs in the form of a hash table that this cmdlet associates
+      with the new database. For example:
+      @{key0="value0";key1=$null;key2="value2"}
+    aliases:
+    - Tag
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseFreeLimit
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use free limit on this database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of user assigned identity for the SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VCore
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The Vcore number for the Azure Sql database
+    aliases:
+    - Capacity
+    - MaxVCore
+    - MaxCapacity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VcoreBasedDatabase
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ZoneRedundant
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The zone redundancy to associate with the Azure Sql Database
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlDatabase
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        -DatabaseName <String>
+        [-CollationName <String>]
+        [-CatalogCollation <String>]
+        [-MaxSizeBytes <Int64>]
+        [-Edition <String>]
+        [-RequestedServiceObjectiveName <String>]
+        [-ElasticPoolName <String>]
+        [-ReadScale <DatabaseReadScale>]
+        [-Tags <Hashtable>]
+        [-SampleName <String>]
+        [-ZoneRedundant]
+        [-AsJob]
+        [-Force]
+        [-LicenseType <String>]
+        [-AutoPauseDelayInMinutes <Int32>]
+        [-MinimumCapacity <Double>]
+        [-HighAvailabilityReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-SecondaryType <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-EnableLedger]
+        [-PreferredEnclaveType <String>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-UseFreeLimit]
+        [-FreeLimitExhaustionBehavior <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DtuBasedDatabase
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzSqlDatabase
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        -DatabaseName <String>
+        -Edition <String>
+        -VCore <Int32>
+        -ComputeGeneration <String>
+        [-CollationName <String>]
+        [-CatalogCollation <String>]
+        [-MaxSizeBytes <Int64>]
+        [-ReadScale <DatabaseReadScale>]
+        [-Tags <Hashtable>]
+        [-SampleName <String>]
+        [-ZoneRedundant]
+        [-AsJob]
+        [-Force]
+        [-LicenseType <String>]
+        [-ComputeModel <String>]
+        [-AutoPauseDelayInMinutes <Int32>]
+        [-MinimumCapacity <Double>]
+        [-HighAvailabilityReplicaCount <Int32>]
+        [-BackupStorageRedundancy <String>]
+        [-SecondaryType <String>]
+        [-MaintenanceConfigurationId <String>]
+        [-EnableLedger]
+        [-PreferredEnclaveType <String>]
+        [-AssignIdentity]
+        [-EncryptionProtector <String>]
+        [-UserAssignedIdentityId <String[]>]
+        [-KeyList <String[]>]
+        [-FederatedClientId <Guid>]
+        [-EncryptionProtectorAutoRotation]
+        [-UseFreeLimit]
+        [-FreeLimitExhaustionBehavior <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VcoreBasedDatabase
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Database.Model.AzureSqlDatabaseModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a database on a specified server'
+  description: |-
+    ```powershell
+    New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01"
+    ```
+
+    ```output
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : a1e6bd1a-735a-4d48-8b98-afead5ef1218
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 7/3/2015 7:33:37 AM
+    CurrentServiceObjectiveId     : f1173c43-91bd-4aaa-973c-54e79e15235b
+    CurrentServiceObjectiveName   : S0
+    RequestedServiceObjectiveId   : f1173c43-91bd-4aaa-973c-54e79e15235b
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    LicenseType                   :
+    Tags                          :
+    EnableLedger                  : False
+    ```
+
+    This command creates a database named Database01 on server Server01.
+- title: 'Example 2: Create an elastic database on a specified server'
+  description: |-
+    ```powershell
+    New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database02" -ElasticPoolName "ElasticPool01"
+    ```
+
+    ```output
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database02
+    Location                      : Central US
+    DatabaseId                    : 7bd9d561-42a7-484e-bf05-62ddef8015ab
+    Edition                       : Standard
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 8/26/2015 10:04:29 PM
+    CurrentServiceObjectiveId     : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    CurrentServiceObjectiveName   : ElasticPool
+    RequestedServiceObjectiveId   : d1737d22-a8ea-4de7-9bd0-33395d2a7419
+    RequestedServiceObjectiveName :
+    ElasticPoolName               : ElasticPool01
+    EarliestRestoreDate           :
+    LicenseType                   :
+    Tags                          :
+    EnableLedger                  : False
+    ```
+
+    This command creates a database named Database02 in the elastic pool named ElasticPool01 on server Server01.
+- title: 'Example 3: Create an Vcore database on a specified server'
+  description: |-
+    ```powershell
+    New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database03" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen4"
+    ```
+
+    ```output
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database03
+    Location                      : Central US
+    DatabaseId                    : 34d9d561-42a7-484e-bf05-62ddef8000ab
+    Edition                       : GeneralPurpose
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 8/26/2015 10:04:29 PM
+    CurrentServiceObjectiveName   : GP_Gen4_2
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    LicenseType                   : LicenseIncluded
+    Tags                          :
+    EnableLedger                  : False
+    ```
+
+    This command creates a Vcore database named Database03 on server Server01.
+- title: 'Example 4: Create an Serverless database on the specified server'
+  description: |-
+    ```powershell
+    New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database04" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen5" -ComputeModel Serverless
+    ```
+
+    ```output
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database04
+    Location                      : Central US
+    DatabaseId                    : ef5a9698-012c-4def-8d94-7f6bfb7b4f04
+    Edition                       : GeneralPurpose
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 34359738368
+    Status                        : Online
+    CreationDate                  : 4/12/2019 11:20:29 PM
+    CurrentServiceObjectiveName   : GP_S_Gen5_2
+    RequestedServiceObjectiveName : GP_S_Gen5_2
+    ElasticPoolName               :
+    EarliestRestoreDate           : 4/12/2019 11:50:29 PM
+    Tags                          :
+    CreateMode                    :
+    ReadScale                     : Disabled
+    ZoneRedundant                 : False
+    Capacity                      : 2
+    Family                        : Gen5
+    SkuName                       : GP_S_Gen5
+    LicenseType                   : LicenseIncluded
+    AutoPauseDelayInMinutes       : 360
+    EnableLedger                  : False
+    MinimumCapacity          : 0.5
+    ```
+
+    This command creates a Serverless database named Database04 on server Server01.
+- title: 'Example 5: Create a database configured with preferred enclave type as VBS'
+  description: |-
+    ```powershell
+    New-AzSqlDatabase -ResourceGroupName "ResourceGroup01" -DatabaseName "Database01" -ServerName "Server01" -Edition "GeneralPurpose" -Vcore 2 -ComputeGeneration "Gen5" -PreferredEnclaveType "VBS"
+    ```
+
+    ```output
+    ResourceGroupName             : ResourceGroup01
+    ServerName                    : Server01
+    DatabaseName                  : Database01
+    Location                      : Central US
+    DatabaseId                    : 34d9d561-42a7-484e-bf05-62ddef8000ab
+    Edition                       : GeneralPurpose
+    CollationName                 : SQL_Latin1_General_CP1_CI_AS
+    CatalogCollation              :
+    MaxSizeBytes                  : 268435456000
+    Status                        : Online
+    CreationDate                  : 8/26/2015 10:04:29 PM
+    CurrentServiceObjectiveName   : GP_Gen5_2
+    RequestedServiceObjectiveName :
+    ElasticPoolName               :
+    EarliestRestoreDate           :
+    LicenseType                   : LicenseIncluded
+    Tags                          :
+    EnableLedger                  : False
+    PreferredEnclaveType          : VBS
+    ```
+
+    This command creates a database configured with VBS enclave
+links:
+- text: Get-AzSqlDatabase
+  href: ./Get-AzSqlDatabase.yml
+- text: New-AzSqlElasticPool
+  href: ./New-AzSqlElasticPool.yml
+- text: New-AzSqlServer
+  href: ./New-AzSqlServer.yml
+- text: Remove-AzSqlDatabase
+  href: ./Remove-AzSqlDatabase.yml
+- text: Resume-AzSqlDatabase
+  href: ./Resume-AzSqlDatabase.yml
+- text: Set-AzSqlDatabase
+  href: ./Set-AzSqlDatabase.yml
+- text: Suspend-AzSqlDatabase
+  href: ./Suspend-AzSqlDatabase.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabase.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqldatabase
+  Module Name: Az.Sql
+  ms.assetid: D2DB7821-A7D2-4017-8522-78793DDE040E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlDatabase.md
+  PlatyPS schema version: 2024-05-01

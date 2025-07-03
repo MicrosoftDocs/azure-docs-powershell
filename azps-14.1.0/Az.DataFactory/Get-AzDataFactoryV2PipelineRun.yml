@@ -1,0 +1,269 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Get-AzDataFactoryV2PipelineRun
+name: Get-AzDataFactoryV2PipelineRun
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Gets information about pipeline runs.
+description: |-
+  The **Get-AzDataFactoryV2PipelineRun** command returns information about runs for the specified pipeline. If PipelineRunId is specified, it shows details for the run with that ID. If the PipelineRunId is not specified, then it shows information about all runs for the pipelines that happened between the values of LastUpdatedAfter and LastUpdatedBefore.
+parameters:
+  cmdletParameters:
+  - name: DataFactory
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObjectByRunId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryObjectByPipeline
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryNameByRunId
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameByPipeline
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastUpdatedAfter
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or after which the pipeline run was updated in ISO8601 format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObjectByPipeline
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameByPipeline
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastUpdatedBefore
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The time at or before which the pipeline run was updated in ISO8601 format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObjectByPipeline
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameByPipeline
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The pipeline name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObjectByPipeline
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameByPipeline
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineRunId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Run ID of the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryNameByRunId
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryObjectByRunId
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryNameByRunId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameByPipeline
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2PipelineRun
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-PipelineRunId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryNameByRunId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2PipelineRun
+        [-DataFactory] <PSDataFactory>
+        [-PipelineRunId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObjectByRunId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2PipelineRun
+        [-DataFactory] <PSDataFactory>
+        [-LastUpdatedAfter] <DateTime>
+        [-LastUpdatedBefore] <DateTime>
+        [[-PipelineName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObjectByPipeline
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryV2PipelineRun
+        [-ResourceGroupName] <String>
+        [-DataFactoryName] <String>
+        [-LastUpdatedAfter] <DateTime>
+        [-LastUpdatedBefore] <DateTime>
+        [[-PipelineName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryNameByPipeline
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSPipelineRun" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information for a pipeline run'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryV2PipelineRun -ResourceGroupName "ADF" -DataFactoryName "WikiADF" -PipelineRunId "61eb095a-fe23-4591-8a97-fade6c65ca72"
+    ```
+
+    ```output
+    ResourceGroupName : ADF
+        DataFactoryName   : WikiADF
+        RunId             : 61eb095a-fe23-4591-8a97-fade6c65ca72
+        PipelineName      : DPWikisample
+        LastUpdated       : 9/14/2017 12:21:02 AM
+        Parameters        : {[url, http://adfsamplewebapi.azurewebsites.net/api/execute/sample]}
+        RunStart          : 9/14/2017 12:20:54 AM
+        RunEnd            : 9/14/2017 12:21:02 AM
+        DurationInMs      : 8246
+        Status            : Succeeded
+        Message           :
+    ```
+
+    This command gets details about the pipeline run with ID "61eb095a-fe23-4591-8a97-fade6c65ca72".
+links:
+- text: Invoke-AzDataFactoryV2Pipeline
+  href: Invoke-AzDataFactoryV2Pipeline.yml
+- text: Get-AzDataFactoryV2ActivityRun
+  href: Get-AzDataFactoryV2ActivityRun.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2PipelineRun.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryv2pipelinerun
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryV2PipelineRun.md
+  PlatyPS schema version: 2024-05-01

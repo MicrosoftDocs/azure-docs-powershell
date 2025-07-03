@@ -1,0 +1,241 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVault
+name: Get-AzKeyVault
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Gets key vaults.
+description: |-
+  The **Get-AzKeyVault** cmdlet gets information about the key vaults in a subscription. You can
+  view all key vaults instances in a subscription, or filter your results by a resource group or a
+  particular key vault.
+
+  Note that although specifying the resource group is optional for this cmdlet when you get a single
+  key vault, you should do so for better performance.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InRemovedState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to show the previously deleted vaults in the output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDeletedVault
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListAllDeletedVaultsInSubscription
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the deleted vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDeletedVault
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group associated with the key vault or key vaults being queried.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetVaultByName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table. For example:
+
+      @{key0="value0";key1=$null;key2="value2"}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListAllVaultsInSubscription
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the key vault.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetVaultByName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByDeletedVault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVault
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetVaultByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVault
+        [-VaultName] <String>
+        [-Location] <String>
+        [-InRemovedState]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDeletedVault
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVault
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListVaultsByResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVault
+        [-InRemovedState]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListAllDeletedVaultsInSubscription
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVault
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListAllVaultsInSubscription
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSVault" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedVault" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all key vaults in your current subscription'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVault
+    ```
+
+    This command gets all the key vaults in your current subscription.
+- title: 'Example 2: Get a specific key vault'
+  description: |-
+    ```
+    PS C:\>$MyVault = Get-AzKeyVault -VaultName 'Contoso03Vault'
+    ```
+
+    This command gets the key vault named Contoso03Vault in your current subscription, and then stores
+    it in the $MyVault variable. You can inspect the properties of $MyVault to get details about the
+    key vault.
+- title: 'Example 3: Get key vaults in a resource group'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVault -ResourceGroupName 'ContosoPayRollResourceGroup'
+    ```
+
+    This command gets all the key vaults in the resource group named ContosoPayRollResourceGroup.
+- title: 'Example 4: Get all deleted key vaults in your current subscription'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVault -InRemovedState
+    ```
+
+    This command gets all the deleted key vaults in your current subscription.
+- title: 'Example 5: Get a deleted key vault'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVault -VaultName 'Contoso03Vault'  -Location 'eastus2' -InRemovedState
+    ```
+
+    This command gets the deleted key vault information named Contoso03Vault in your current
+    subscription and in eastus2 region.
+links:
+- text: New-AzKeyVault
+  href: ./New-AzKeyVault.yml
+- text: Remove-AzKeyVault
+  href: ./Remove-AzKeyVault.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVault.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/get-Azkeyvault
+  Module Name: Az.KeyVault
+  ms.assetid: A7C287C4-E9FD-407A-91BD-EFA17C33FC8B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVault.md
+  PlatyPS schema version: 2024-05-01

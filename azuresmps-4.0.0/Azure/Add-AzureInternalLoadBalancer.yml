@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureInternalLoadBalancer
+name: Add-AzureInternalLoadBalancer
+module: Azure
+isPreview: false
+summary: |-
+  Adds an internal load balancer to an Azure service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureInternalLoadBalancer** cmdlet adds an internal load balancer configuration to an Azure service.
+  For a virtual network, you can specify a subnet or the IP address of the internal load balancer.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalLoadBalancerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the internal load balancer that this cmdlet adds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service to which this cmdlet adds an internal load balancer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StaticVNetIPAddress
+    type: <xref href="IPAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network IP address for an internal load balancer that this cmdlet adds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubnetNameAndIP
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the subnet for an internal load balancer that this cmdlet adds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubnetNameOnly
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubnetNameAndIP
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureInternalLoadBalancer
+        [-InternalLoadBalancerName] <String>
+        [-ServiceName] <String>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServiceAndSlot
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzureInternalLoadBalancer
+        [-InternalLoadBalancerName] <String>
+        [-ServiceName] <String>
+        [-SubnetName] <String>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubnetNameOnly
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzureInternalLoadBalancer
+        [-InternalLoadBalancerName] <String>
+        [-ServiceName] <String>
+        [-SubnetName] <String>
+        [-StaticVNetIPAddress] <IPAddress>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubnetNameAndIP
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Common.ManagementOperationContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an internal load balancer'
+  description: |-
+    ```
+    PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB"
+    ```
+
+    This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.
+- title: 'Example 2: Add an internal load balancer for a specified subnet'
+  description: |-
+    ```
+    PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet"
+    ```
+
+    This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.
+    The command specifies the subnet named FrontEndSubnet.
+- title: 'Example 3: Add an internal load balancer for a specified subnet and address'
+  description: |-
+    ```
+    PS C:\> Add-AzureInternalLoadBalancer -ServiceName "ContosoWebsite01" -InternalLoadBalancerName "ContosoILB" -SubnetName "FrontEndSubnet" -StaticVNetIPAddress 192.168.4.7
+    ```
+
+    This command adds an internal load balancer named ContosoILB to the service named ContosoWebsite01.
+    The command specifies the subnet named FrontEndSubnet and the static address of the virtual network.
+links:
+- text: Get-AzureInternalLoadBalancer
+  href: ./Get-AzureInternalLoadBalancer.yml
+- text: New-AzureInternalLoadBalancerConfig
+  href: ./New-AzureInternalLoadBalancerConfig.yml
+- text: Remove-AzureInternalLoadBalancer
+  href: ./Remove-AzureInternalLoadBalancer.yml
+- text: Set-AzureInternalLoadBalancer
+  href: ./Set-AzureInternalLoadBalancer.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 4A0442F9-F420-4A26-9127-4C875090CC12
+  PlatyPS schema version: 2024-05-01

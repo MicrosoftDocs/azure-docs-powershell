@@ -1,0 +1,270 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlInstanceActiveDirectoryAdministrator
+name: Set-AzSqlInstanceActiveDirectoryAdministrator
+module: Az.Sql
+isPreview: false
+summary: |-
+  Provisions a Microsoft Entra administrator for SQL Managed Instance.
+description: |-
+  The **Set-AzSqlInstanceActiveDirectoryAdministrator** cmdlet provisions a Microsoft Entra administrator for AzureSQL Managed Instance in the current subscription.
+  You can provision only one administrator at a time.
+  The following members of Microsoft Entra ID can be provisioned as a SQL Managed Instance administrator:
+  - Native members of Microsoft Entra ID
+  - Federated members of Microsoft Entra ID
+  - Microsoft Entra groups created as security groups
+  Imported members from other Azure ADs are not supported as administrators.
+  Microsoft accounts, such as those in the Outlook.com, Hotmail.com, or Live.com domains, are not supported as administrators.
+  Other guest accounts, such as those in the Gmail.com or Yahoo.com domains, are not supported as administrators.
+  We recommend that you provision a dedicated Microsoft Entra group as an administrator.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the display name of the user or group for whom to grant permissions.
+      This display name must exist in the active directory associated with the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The managed instance object to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseInputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL Managed Instance name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseResourceGroupAndInstanceNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the user or group in Microsoft Entra ID for which to grant permissions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UseResourceGroupAndInstanceNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of instance to use
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceActiveDirectoryAdministrator
+        [-DisplayName] <String>
+        [-ObjectId] <Guid>
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UseResourceGroupAndInstanceNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceActiveDirectoryAdministrator
+        [-DisplayName] <String>
+        [-ObjectId] <Guid>
+        -InputObject <AzureSqlManagedInstanceModel>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UseInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSqlInstanceActiveDirectoryAdministrator
+        [-DisplayName] <String>
+        [-ObjectId] <Guid>
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.InstanceActiveDirectoryAdministrator.Model.AzureSqlInstanceActiveDirectoryAdministratorModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Provision an administrator group for a managed instance associated with resource group'
+  description: |-
+    ```powershell
+    Set-AzSqlInstanceActiveDirectoryAdministrator -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -DisplayName "DBAs" -ObjectId "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb"
+    ```
+
+    ```output
+    ResourceGroupName InstanceName      DisplayName ObjectId
+    ----------------- ----------------- ----------- --------
+    ResourceGroup01   ManagedInstance01 DBAs        aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+    ```
+
+    This command provisions a Microsoft Entra administrator group named DBAs for the managed instance named ManagedInstance01.
+    This server is associated with resource group ResourceGroup01.
+- title: 'Example 2: Provision an administrator user using managed instance object'
+  description: |-
+    ```powershell
+    Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
+    ```
+
+    ```output
+    ResourceGroupName InstanceName      DisplayName ObjectId
+    ----------------- ----------------- ----------- --------
+    Resourcegroup01   ManagedInstance01 David Chew  bbbbbbbb-1111-2222-3333-cccccccccccc
+    ```
+
+    This command provisions a Microsoft Entra user as an administrator from the managed instance object.
+- title: 'Example 3: Provision an administrator using managed instance resource identifier'
+  description: |-
+    ```powershell
+    Get-AzSqlInstance -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01" | Set-AzSqlInstanceActiveDirectoryAdministrator -DisplayName "David Chew" -ObjectId "bbbbbbbb-1111-2222-3333-cccccccccccc"
+    ```
+
+    ```output
+    ResourceGroupName InstanceName      DisplayName ObjectId
+    ----------------- ----------------- ----------- --------
+    Resourcegroup01   ManagedInstance01 David Chew  bbbbbbbb-1111-2222-3333-cccccccccccc
+    ```
+
+    This command provisions a Microsoft Entra user as an administrator using managed instance resource identifier.
+links:
+- text: Get-AzSqlInstanceActiveDirectoryAdministrator
+  href: ./Get-AzSqlInstanceActiveDirectoryAdministrator.yml
+- text: Remove-AzSqlInstanceActiveDirectoryAdministrator
+  href: ./Remove-AzSqlInstanceActiveDirectoryAdministrator.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlinstanceactivedirectoryadministrator
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlInstanceActiveDirectoryAdministrator.md
+  PlatyPS schema version: 2024-05-01

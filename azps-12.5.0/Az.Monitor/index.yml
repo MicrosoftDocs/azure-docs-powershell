@@ -1,0 +1,134 @@
+### YamlMime:PowerShellModule1
+uid: Az.Monitor
+name: Az.Monitor Module
+isPreview: false
+cmdletGroups:
+- title: Monitor
+  cmdlets:
+  - Az.Monitor.Add-AzLogProfile
+  - Az.Monitor.Add-AzMetricAlertRule
+  - Az.Monitor.Add-AzMetricAlertRuleV2
+  - Az.Monitor.Add-AzWebtestAlertRule
+  - Az.Monitor.Enable-AzActionGroupReceiver
+  - Az.Monitor.Get-AzActionGroup
+  - Az.Monitor.Get-AzActivityLog
+  - Az.Monitor.Get-AzActivityLogAlert
+  - Az.Monitor.Get-AzAlertHistory
+  - Az.Monitor.Get-AzAlertRule
+  - Az.Monitor.Get-AzAutoscaleHistory
+  - Az.Monitor.Get-AzAutoscalePredictiveMetric
+  - Az.Monitor.Get-AzAutoscaleSetting
+  - Az.Monitor.Get-AzDataCollectionEndpoint
+  - Az.Monitor.Get-AzDataCollectionRule
+  - Az.Monitor.Get-AzDataCollectionRuleAssociation
+  - Az.Monitor.Get-AzDiagnosticSetting
+  - Az.Monitor.Get-AzDiagnosticSettingCategory
+  - Az.Monitor.Get-AzEventCategory
+  - Az.Monitor.Get-AzInsightsPrivateLinkScope
+  - Az.Monitor.Get-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.Get-AzLogProfile
+  - Az.Monitor.Get-AzMetric
+  - Az.Monitor.Get-AzMetricAlertRuleV2
+  - Az.Monitor.Get-AzMetricDefinition
+  - Az.Monitor.Get-AzMetricsBatch
+  - Az.Monitor.Get-AzMonitorWorkspace
+  - Az.Monitor.Get-AzPipelineGroup
+  - Az.Monitor.Get-AzScheduledQueryRule
+  - Az.Monitor.Get-AzSubscriptionDiagnosticSetting
+  - Az.Monitor.New-AzActionGroup
+  - Az.Monitor.New-AzActionGroupArmRoleReceiverObject
+  - Az.Monitor.New-AzActionGroupAutomationRunbookReceiverObject
+  - Az.Monitor.New-AzActionGroupAzureAppPushReceiverObject
+  - Az.Monitor.New-AzActionGroupAzureFunctionReceiverObject
+  - Az.Monitor.New-AzActionGroupEmailReceiverObject
+  - Az.Monitor.New-AzActionGroupEventHubReceiverObject
+  - Az.Monitor.New-AzActionGroupItsmReceiverObject
+  - Az.Monitor.New-AzActionGroupLogicAppReceiverObject
+  - Az.Monitor.New-AzActionGroupSmsReceiverObject
+  - Az.Monitor.New-AzActionGroupVoiceReceiverObject
+  - Az.Monitor.New-AzActionGroupWebhookReceiverObject
+  - Az.Monitor.New-AzActivityLogAlert
+  - Az.Monitor.New-AzActivityLogAlertActionGroupObject
+  - Az.Monitor.New-AzActivityLogAlertAlertRuleAnyOfOrLeafConditionObject
+  - Az.Monitor.New-AzActivityLogAlertAlertRuleLeafConditionObject
+  - Az.Monitor.New-AzAlertRuleEmail
+  - Az.Monitor.New-AzAlertRuleWebhook
+  - Az.Monitor.New-AzAutoscaleNotificationObject
+  - Az.Monitor.New-AzAutoscaleProfileObject
+  - Az.Monitor.New-AzAutoscaleScaleRuleMetricDimensionObject
+  - Az.Monitor.New-AzAutoscaleScaleRuleObject
+  - Az.Monitor.New-AzAutoscaleSetting
+  - Az.Monitor.New-AzAutoscaleWebhookNotificationObject
+  - Az.Monitor.New-AzDataCollectionEndpoint
+  - Az.Monitor.New-AzDataCollectionRule
+  - Az.Monitor.New-AzDataCollectionRuleAssociation
+  - Az.Monitor.New-AzDataFlowObject
+  - Az.Monitor.New-AzDiagnosticSetting
+  - Az.Monitor.New-AzDiagnosticSettingLogSettingsObject
+  - Az.Monitor.New-AzDiagnosticSettingMetricSettingsObject
+  - Az.Monitor.New-AzDiagnosticSettingSubscriptionLogSettingsObject
+  - Az.Monitor.New-AzEventHubDestinationObject
+  - Az.Monitor.New-AzEventHubDirectDestinationObject
+  - Az.Monitor.New-AzExtensionDataSourceObject
+  - Az.Monitor.New-AzIisLogsDataSourceObject
+  - Az.Monitor.New-AzInsightsPrivateLinkScope
+  - Az.Monitor.New-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.New-AzLogAnalyticsDestinationObject
+  - Az.Monitor.New-AzLogFilesDataSourceObject
+  - Az.Monitor.New-AzMetricAlertRuleV2Criteria
+  - Az.Monitor.New-AzMetricAlertRuleV2DimensionSelection
+  - Az.Monitor.New-AzMetricFilter
+  - Az.Monitor.New-AzMonitoringAccountDestinationObject
+  - Az.Monitor.New-AzMonitorWorkspace
+  - Az.Monitor.New-AzPerfCounterDataSourceObject
+  - Az.Monitor.New-AzPipelineGroup
+  - Az.Monitor.New-AzPlatformTelemetryDataSourceObject
+  - Az.Monitor.New-AzPrometheusForwarderDataSourceObject
+  - Az.Monitor.New-AzScheduledQueryRule
+  - Az.Monitor.New-AzScheduledQueryRuleConditionObject
+  - Az.Monitor.New-AzScheduledQueryRuleDimensionObject
+  - Az.Monitor.New-AzStorageBlobDestinationObject
+  - Az.Monitor.New-AzStorageTableDestinationObject
+  - Az.Monitor.New-AzSubscriptionDiagnosticSetting
+  - Az.Monitor.New-AzSyslogDataSourceObject
+  - Az.Monitor.New-AzWindowsEventLogDataSourceObject
+  - Az.Monitor.New-AzWindowsFirewallLogsDataSourceObject
+  - Az.Monitor.Remove-AzActionGroup
+  - Az.Monitor.Remove-AzActivityLogAlert
+  - Az.Monitor.Remove-AzAlertRule
+  - Az.Monitor.Remove-AzAutoscaleSetting
+  - Az.Monitor.Remove-AzDataCollectionEndpoint
+  - Az.Monitor.Remove-AzDataCollectionRule
+  - Az.Monitor.Remove-AzDataCollectionRuleAssociation
+  - Az.Monitor.Remove-AzDiagnosticSetting
+  - Az.Monitor.Remove-AzInsightsPrivateLinkScope
+  - Az.Monitor.Remove-AzInsightsPrivateLinkScopedResource
+  - Az.Monitor.Remove-AzLogProfile
+  - Az.Monitor.Remove-AzMetricAlertRuleV2
+  - Az.Monitor.Remove-AzMonitorWorkspace
+  - Az.Monitor.Remove-AzPipelineGroup
+  - Az.Monitor.Remove-AzScheduledQueryRule
+  - Az.Monitor.Remove-AzSubscriptionDiagnosticSetting
+  - Az.Monitor.Test-AzActionGroup
+  - Az.Monitor.Update-AzActionGroup
+  - Az.Monitor.Update-AzActivityLogAlert
+  - Az.Monitor.Update-AzAutoscaleSetting
+  - Az.Monitor.Update-AzDataCollectionEndpoint
+  - Az.Monitor.Update-AzDataCollectionRule
+  - Az.Monitor.Update-AzDataCollectionRuleAssociation
+  - Az.Monitor.Update-AzInsightsPrivateLinkScope
+  - Az.Monitor.Update-AzMonitorWorkspace
+  - Az.Monitor.Update-AzPipelineGroup
+  - Az.Monitor.Update-AzScheduledQueryRule
+description: |-
+  This topic displays help topics for the Azure Insights Cmdlets.
+metadata:
+  Module Name: Az.Monitor
+  Module Guid: 698c387c-bd6b-41c6-82ce-721f1ef39548
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.monitor
+  Help Version: 4.0.4.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Az.Monitor.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Az.Monitor.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

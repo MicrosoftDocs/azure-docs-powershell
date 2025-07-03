@@ -1,0 +1,103 @@
+### YamlMime:PowerShellModule1
+uid: Az.NetAppFiles
+name: Az.NetAppFiles Module
+isPreview: false
+cmdletGroups:
+- title: NetApp Files
+  cmdlets:
+  - Az.NetAppFiles.Approve-AzNetAppFilesReplication
+  - Az.NetAppFiles.Get-AzNetAppFilesAccount
+  - Az.NetAppFiles.Get-AzNetAppFilesActiveDirectory
+  - Az.NetAppFiles.Get-AzNetAppFilesBackup
+  - Az.NetAppFiles.Get-AzNetAppFilesBackupPolicy
+  - Az.NetAppFiles.Get-AzNetAppFilesBackupVault
+  - Az.NetAppFiles.Get-AzNetAppFilesFilePathAvailability
+  - Az.NetAppFiles.Get-AzNetAppFilesNameAvailability
+  - Az.NetAppFiles.Get-AzNetAppFilesNetworkSiblingSet
+  - Az.NetAppFiles.Get-AzNetAppFilesPool
+  - Az.NetAppFiles.Get-AzNetAppFilesQuotaAvailability
+  - Az.NetAppFiles.Get-AzNetAppFilesQuotaLimit
+  - Az.NetAppFiles.Get-AzNetAppFilesRegionInfo
+  - Az.NetAppFiles.Get-AzNetAppFilesReplicationStatus
+  - Az.NetAppFiles.Get-AzNetAppFilesSnapshot
+  - Az.NetAppFiles.Get-AzNetAppFilesSnapshotPolicy
+  - Az.NetAppFiles.Get-AzNetAppFilesSnapshotPolicyVolumeList
+  - Az.NetAppFiles.Get-AzNetAppFilesSubvolume
+  - Az.NetAppFiles.Get-AzNetAppFilesSubvolumeMetadata
+  - Az.NetAppFiles.Get-AzNetAppFilesVolume
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeBackupStatus
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeGroup
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeGroupIdListForLDAPUser
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeQuotaRule
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeReplication
+  - Az.NetAppFiles.Get-AzNetAppFilesVolumeRestoreStatus
+  - Az.NetAppFiles.Initialize-AzNetAppFilesReplication
+  - Az.NetAppFiles.New-AzNetAppFilesAccount
+  - Az.NetAppFiles.New-AzNetAppFilesActiveDirectory
+  - Az.NetAppFiles.New-AzNetAppFilesBackup
+  - Az.NetAppFiles.New-AzNetAppFilesBackupPolicy
+  - Az.NetAppFiles.New-AzNetAppFilesBackupVault
+  - Az.NetAppFiles.New-AzNetAppFilesExportPolicyObject
+  - Az.NetAppFiles.New-AzNetAppFilesExportPolicyRuleObject
+  - Az.NetAppFiles.New-AzNetAppFilesPool
+  - Az.NetAppFiles.New-AzNetAppFilesSnapshot
+  - Az.NetAppFiles.New-AzNetAppFilesSnapshotPolicy
+  - Az.NetAppFiles.New-AzNetAppFilesSubvolume
+  - Az.NetAppFiles.New-AzNetAppFilesVolume
+  - Az.NetAppFiles.New-AzNetAppFilesVolumeGroup
+  - Az.NetAppFiles.New-AzNetAppFilesVolumeQuotaRule
+  - Az.NetAppFiles.Remove-AzNetAppFilesAccount
+  - Az.NetAppFiles.Remove-AzNetAppFilesActiveDirectory
+  - Az.NetAppFiles.Remove-AzNetAppFilesBackup
+  - Az.NetAppFiles.Remove-AzNetAppFilesBackupPolicy
+  - Az.NetAppFiles.Remove-AzNetAppFilesBackupVault
+  - Az.NetAppFiles.Remove-AzNetAppFilesPool
+  - Az.NetAppFiles.Remove-AzNetAppFilesReplication
+  - Az.NetAppFiles.Remove-AzNetAppFilesSnapshot
+  - Az.NetAppFiles.Remove-AzNetAppFilesSnapshotPolicy
+  - Az.NetAppFiles.Remove-AzNetAppFilesSubvolume
+  - Az.NetAppFiles.Remove-AzNetAppFilesVolume
+  - Az.NetAppFiles.Remove-AzNetAppFilesVolumeGroup
+  - Az.NetAppFiles.Remove-AzNetAppFilesVolumeQuotaRule
+  - Az.NetAppFiles.Reset-AzNetAppFilesVolumeCifsPassword
+  - Az.NetAppFiles.Restore-AzNetAppFilesBackupFile
+  - Az.NetAppFiles.Restore-AzNetAppFilesReplication
+  - Az.NetAppFiles.Restore-AzNetAppFilesSnapshotFile
+  - Az.NetAppFiles.Restore-AzNetAppFilesVolume
+  - Az.NetAppFiles.Resume-AzNetAppFilesReplication
+  - Az.NetAppFiles.Set-AzNetAppFilesAccount
+  - Az.NetAppFiles.Set-AzNetAppFilesBackupPolicy
+  - Az.NetAppFiles.Set-AzNetAppFilesBackupVault
+  - Az.NetAppFiles.Set-AzNetAppFilesPool
+  - Az.NetAppFiles.Set-AzNetAppFilesSnapshotPolicy
+  - Az.NetAppFiles.Set-AzNetAppFilesVolumePool
+  - Az.NetAppFiles.Start-AzNetAppFilesAuthorizeExternalReplication
+  - Az.NetAppFiles.Start-AzNetAppFilesFinalizeExternalReplication
+  - Az.NetAppFiles.Start-AzNetAppFilesPeerExternalCluster
+  - Az.NetAppFiles.Start-AzNetAppFilesPerformExternalReplication
+  - Az.NetAppFiles.Suspend-AzNetAppFilesReplication
+  - Az.NetAppFiles.Unlock-AzNetAppFilesVolumeFileLock
+  - Az.NetAppFiles.Update-AzNetAppFilesAccount
+  - Az.NetAppFiles.Update-AzNetAppFilesAccountCredential
+  - Az.NetAppFiles.Update-AzNetAppFilesActiveDirectory
+  - Az.NetAppFiles.Update-AzNetAppFilesBackup
+  - Az.NetAppFiles.Update-AzNetAppFilesBackupPolicy
+  - Az.NetAppFiles.Update-AzNetAppFilesBackupVault
+  - Az.NetAppFiles.Update-AzNetAppFilesNetworkSiblingSet
+  - Az.NetAppFiles.Update-AzNetAppFilesPool
+  - Az.NetAppFiles.Update-AzNetAppFilesSnapshotPolicy
+  - Az.NetAppFiles.Update-AzNetAppFilesSubvolume
+  - Az.NetAppFiles.Update-AzNetAppFilesVolume
+  - Az.NetAppFiles.Update-AzNetAppFilesVolumeQuotaRule
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for Azure NetApp Files in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.NetAppFiles namespace.
+metadata:
+  Module Name: Az.NetAppFiles
+  Module Guid: e20e99dc-6df9-479b-8504-2960f0088f00
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.netappfiles
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Az.NetAppFiles.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetAppFiles/NetAppFiles/help/Az.NetAppFiles.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

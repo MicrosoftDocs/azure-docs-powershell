@@ -1,0 +1,398 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DeviceProvisioningServices.Update-AzIoTDeviceProvisioningService
+name: Update-AzIoTDeviceProvisioningService
+module: Az.DeviceProvisioningServices
+isPreview: false
+summary: |-
+  Update an Azure IoT Hub device provisioning service.
+description: |-
+  For an introduction to Azure IoT Hub Device Provisioning Service, see https://learn.microsoft.com/azure/iot-dps/about-iot-dps.
+parameters:
+  cmdletParameters:
+  - name: AllocationPolicy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Allocation policy
+    acceptedValues:
+    - Hashed
+    - GeoLatency
+    - Static
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectCreateUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdCreateUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceCreateUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectCreateUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the IoT Device Provisioning Service
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceCreateUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Reset
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reset IoT Device Provisioning Service Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceUpdateSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectUpdateSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdUpdateSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource Group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceCreateUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdCreateUpdateSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Tag collection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdUpdateSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Tag] <Hashtable>
+        [-Reset]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceUpdateSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-InputObject] <PSProvisioningServiceDescription>
+        [-Tag] <Hashtable>
+        [-Reset]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectUpdateSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-InputObject] <PSProvisioningServiceDescription>
+        [-AllocationPolicy] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectCreateUpdateSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-ResourceId] <String>
+        [-Tag] <Hashtable>
+        [-Reset]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdUpdateSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-ResourceId] <String>
+        [-AllocationPolicy] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdCreateUpdateSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzIoTDeviceProvisioningService
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-AllocationPolicy] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceCreateUpdateSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Update-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" -AllocationPolicy "GeoLatency"
+    ```
+
+    ```output
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: GeoLatency
+    Tags						: {}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAT52k=
+    ```
+
+    Update Allocation Policy to "GeoLatency" of an Azure IoT Hub device provisioning service "myiotdps".
+- title: Example 2
+  description: |-
+    ```powershell
+    $tag = @{}
+    $tag.Add("key1","Value1")
+    Update-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" -Tag $tag
+    ```
+
+    ```output
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: Hashed
+    Tags						: {['key1','Value1']}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAPoOk=
+    ```
+
+    Add tags to an Azure IoT Hub device provisioning service "myiotdps".
+- title: Example 3
+  description: |-
+    ```powershell
+    $tag = @{}
+    $tag.Add("key1","Value1")
+    Get-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" | Update-AzIoTDeviceProvisioningService -Tag $tag -Reset
+    ```
+
+    ```output
+    ResourceGroupName			: myresourcegroup
+    Name						: myiotdps
+    Type						: Microsoft.Devices/provisioningServices
+    ServiceOperationsHostName	: myiotdps.azure-devices-provisioning.net
+    IotHubs						: 0
+    State						: Active
+    AllocationPolicy			: Hashed
+    Tags						: {['key1','Value1']}
+    SkuName						: S1
+    SkuTier						: Standard
+    Etag						: AAAAAAAS1dY=
+    ```
+
+    Delete Tag and add new tags to an Azure IoT Hub device provisioning service "myiotdps" using pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Update-AzIoTDeviceProvisioningService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.deviceprovisioningservices/update-aziotdeviceprovisioningservice
+  Module Name: Az.DeviceProvisioningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Update-AzIoTDeviceProvisioningService.md
+  PlatyPS schema version: 2024-05-01

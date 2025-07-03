@@ -1,0 +1,299 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.Deploy-AzSpringCloudApp
+name: Deploy-AzSpringCloudApp
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Deploy the build file to an existing deployment.
+description: |-
+  Deploy the build file to an existing deployment.
+parameters:
+  cmdletParameters:
+  - name: AgentPoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of agent pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeployAppForEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BuilderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of builder to build the source code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeployAppForEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path of the file need to be deployed.
+      The file supports Jar, NetcoreZip and Source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the App resource.
+    aliases:
+    - AppName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Service resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets subscription ID which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Deploy-AzSpringCloudApp
+        -Name <String>
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -FilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeployAppForStandard
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Deploy-AzSpringCloudApp
+        -Name <String>
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -FilePath <String>
+        -BuilderId <String>
+        -AgentPoolId <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeployAppForEnterprise
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.IAppResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Deploy the build file to an standard spring app'
+  description: |-
+    ```powershell
+    $jarObj = New-AzSpringCloudAppDeploymentJarUploadedObject -RuntimeVersion "Java_8"
+    New-AzSpringCloudAppDeployment -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-va4fsz -AppName account -Name green -Source $jarObj
+    Get-AzSpringCloudApp -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-va4fsz -Name account | Update-AzSpringCloudAppActiveDeployment -DeploymentName 'green'
+    Deploy-AzSpringCloudApp -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-va4fsz -Name account -FilePath "C:\Users\v-diya\Downloads\hellospring\target\hellospring-0.0.1-SNAPSHOT.jar"
+    ```
+
+    ```output
+    [1/3] Requesting for upload URL
+    [2/3] Uploading package to blob
+    [3/3] Updating deployment in app demo (this operation can take a while to complete)
+
+    Name  SystemDataCreatedAt  SystemDataCreatedBy  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----  -------------------  -------------------  ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    green 6/24/2022 6:50:58 AM v-test@microsoft.com User                    7/19/2022 7:06:08 AM     v-test@microsoft.com     User                         spring-rg-test
+    ```
+
+    This command deploy the build file to an standard spring app.
+- title: 'Example 2: Deploy the build file to an enterprise spring app'
+  description: |-
+    ```powershell
+    $source = New-AzSpringCloudAppDeploymentBuildResultObject
+    New-AzSpringCloudAppDeployment -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-f7lz2n -AppName account -Name green -Source $source
+    Get-AzSpringCloudApp -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-f7lz2n -Name account | Update-AzSpringCloudAppActiveDeployment -DeploymentName 'green'
+    $builder = Get-AzSpringCloudBuildServiceBuilder -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-f7lz2n -Name default
+    $agentPool = Get-AzSpringCloudBuildServiceAgentPool -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-f7lz2n
+    Deploy-AzSpringCloudApp -ResourceGroupName springcloud-rg-0zquav -ServiceName spring-f7lz2n -Name account -AgentPoolId $agentPool.Id -BuilderId $builder.Id -FilePath "C:\Users\v-diya\Downloads\hellospring\target\hellospring-0.0.1-SNAPSHOT.jar"
+    ```
+
+    ```output
+    [1/3] Requesting for upload URL
+    [2/3] Uploading package to blob
+    [3/3] Updating deployment in app demo (this operation can take a while to complete)
+
+    Name  SystemDataCreatedAt  SystemDataCreatedBy  SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ResourceGroupName
+    ----  -------------------  -------------------  ----------------------- ------------------------ ------------------------ ---------------------------- -----------------
+    green 6/24/2022 6:50:58 AM v-test@microsoft.com User                    7/19/2022 7:06:08 AM     v-test@microsoft.com     User                         spring-rg-test
+    ```
+
+    This command deploy the build file to an enterprise spring app.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Deploy-AzSpringCloudApp.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.SpringCloud/deploy-azSpringCloudapp
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Deploy-AzSpringCloudApp.md
+  PlatyPS schema version: 2024-05-01

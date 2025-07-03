@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MySql.Get-AzMySqlReplica
+name: Get-AzMySqlReplica
+module: Az.MySql
+isPreview: false
+summary: |-
+  List all the replicas for a given server.
+description: |-
+  List all the replicas for a given server.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMySqlReplica
+        -ResourceGroupName <String>
+        -ServerName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get MySql server replica by resource group and server name'
+  description: |-
+    ```powershell
+    Get-AzMySqlReplica -ResourceGroupName PowershellMySqlTest -ServerName mysql-test
+    ```
+
+    ```output
+    Name               Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----               -------- ------------------ ------- ----------------------- -------   -------        --------------
+    mysql-test-replica eastus   mysql_test         5.7     10240                   GP_Gen5_4 GeneralPurpose Disabled
+    ```
+
+    This cmdlet gets MySql server replica by resource group and server name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Get-AzMySqlReplica.md
+  document type: cmdlet
+  external help file: Az.MySql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.mysql/get-azmysqlreplica
+  Module Name: Az.MySql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Get-AzMySqlReplica.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,220 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PostgreSql.Get-AzPostgreSqlFlexibleServerDatabase
+name: Get-AzPostgreSqlFlexibleServerDatabase
+module: Az.PostgreSql
+isPreview: false
+summary: |-
+  Gets information about a database.
+description: |-
+  Gets information about a database.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.IPostgreSqlIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the database.
+    aliases:
+    - DatabaseName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFlexibleServerDatabase
+        -ResourceGroupName <String>
+        -ServerName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFlexibleServerDatabase
+        -Name <String>
+        -ResourceGroupName <String>
+        -ServerName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFlexibleServerDatabase
+        -InputObject <IPostgreSqlIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.IPostgreSqlIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20210601.IDatabaseAutoGenerated" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get databases of a PostgreSql server'
+  description: |-
+    ```powershell
+    Get-AzPostgreSqlFlexibleServerDatabase -ResourceGroupName PowershellPostgreSqlTest -ServerName postgresql-test
+    ```
+
+    ```output
+    Name              Charset Collation
+    ----              ------- ---------
+    azure_maintenance UTF8    en_US.utf8
+    postgres          UTF8    en_US.utf8
+    azure_sys         UTF8    en_US.utf8
+    flexibleserverdb  UTF8    en_US.utf8
+    ```
+
+    Get databases of a flexible server
+- title: 'Example 2: Get a database of a PostgreSql server'
+  description: |-
+    ```powershell
+    Get-AzPostgreSqlFlexibleServerDatabase -ResourceGroupName PowershellPostgreSqlTest -ServerName postgresql-test -Name flexibleserverdb
+    ```
+
+    ```output
+    Name             Charset Collation
+    ----             ------- ---------
+    flexibleserverdb UTF8    en_US.utf8
+    ```
+
+    Get a database of a flexible server by name
+- title: 'Example 3: Get a database of a PostgreSql server'
+  description: |-
+    ```powershell
+    Get-AzPostgreSqlFlexibleServerDatabase -InputObject /subscriptions/0000000000-0000-0000-0000-000000000000/resourceGroups/PowershellPostgreSqlTest/providers/Microsoft.DBforPostgreSQL/flexibleServers/postgresql-test/databases/flexibleserverdb
+    ```
+
+    ```output
+    Name             Charset Collation
+    ----             ------- ---------
+    flexibleserverdb UTF8    en_US.utf8
+    ```
+
+    Get a database of a flexible server by resource Id
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Get-AzPostgreSqlFlexibleServerDatabase.md
+  document type: cmdlet
+  external help file: Az.PostgreSql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlflexibleserverdatabase
+  Module Name: Az.PostgreSql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Get-AzPostgreSqlFlexibleServerDatabase.md
+  PlatyPS schema version: 2024-05-01

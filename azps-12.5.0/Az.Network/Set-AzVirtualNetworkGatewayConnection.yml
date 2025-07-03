@@ -1,0 +1,565 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzVirtualNetworkGatewayConnection
+name: Set-AzVirtualNetworkGatewayConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Configures a virtual network gateway connection.
+description: |-
+  The **Set-AzVirtualNetworkGatewayConnection** cmdlet configures a virtual network gateway connection.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Network Gateway Connection Mode.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DpdTimeoutInSeconds
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Dead Peer Detection Timeout of the connection in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EgressNatRule
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSResourceId" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of egress  NAT rules that are associated with this Connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableBgp
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether to use a BGP session over a S2S VPN tunnel
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayCustomBgpIpAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSGatewayCustomBgpIpConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The GatewayCustomBgpIpAddress of Virtual network gateway used in this connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IngressNatRule
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSResourceId" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of ingress NAT rules that are associated with this Connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpsecPolicies
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of IPSec policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateResourceWithTags
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficSelectorPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of traffic selector policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseLocalAzureIpAddress
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether to use PrivateIP for a S2S connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsePolicyBasedTrafficSelectors
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Whether to use policy-based traffic selectors for a S2S connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkGatewayConnection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+    description: |-
+      The VirtualNetworkGatewayConnection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGatewayConnection
+        -VirtualNetworkGatewayConnection <PSVirtualNetworkGatewayConnection>
+        [-EnableBgp <Boolean>]
+        [-DpdTimeoutInSeconds <Int32>]
+        [-ConnectionMode <String>]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-UseLocalAzureIpAddress <Boolean>]
+        [-IpsecPolicies <PSIpsecPolicy[]>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-IngressNatRule <PSResourceId[]>]
+        [-EgressNatRule <PSResourceId[]>]
+        [-GatewayCustomBgpIpAddress <PSGatewayCustomBgpIpConfiguration[]>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzVirtualNetworkGatewayConnection
+        -VirtualNetworkGatewayConnection <PSVirtualNetworkGatewayConnection>
+        -Tag <Hashtable>
+        [-EnableBgp <Boolean>]
+        [-DpdTimeoutInSeconds <Int32>]
+        [-ConnectionMode <String>]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-UseLocalAzureIpAddress <Boolean>]
+        [-IpsecPolicies <PSIpsecPolicy[]>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-IngressNatRule <PSResourceId[]>]
+        [-EgressNatRule <PSResourceId[]>]
+        [-GatewayCustomBgpIpAddress <PSGatewayCustomBgpIpConfiguration[]>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateResourceWithTags
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSGatewayCustomBgpIpConfiguration" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetworkGatewayConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    $conn = Get-AzVirtualNetworkGatewayConnection -Name 1 -ResourceGroupName myRG
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to overwrite resource '1'
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+    Name                    : 1
+    ResourceGroupName       : myRG
+    Location                : westus
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Mi
+                              crosoft.Network/connections/1
+    Etag                    : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid            : 00000000-0000-0000-0000-000000000000
+    ProvisioningState       : Succeeded
+    Tags                    :
+    AuthorizationKey        :
+    VirtualNetworkGateway1  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                              icrosoft.Network/virtualNetworkGateways/myGateway"
+    VirtualNetworkGateway2  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/S2SVnetConn/providers/Mic
+                              rosoft.Network/virtualNetworkGateways/S2SConnGW"
+    LocalNetworkGateway2    :
+    Peer                    :
+    RoutingWeight           : 0
+    SharedKey               :
+    ConnectionStatus        : Connected
+    EgressBytesTransferred  : 91334484
+    IngressBytesTransferred : 100386089
+    TunnelConnectionStatus  : []
+    ```
+- title: 'Example 2: Add/Update tags to an existing VirtualNetworkGatewayConnection'
+  description: |-
+    ```powershell
+    $conn = Get-AzVirtualNetworkGatewayConnection -Name 1 -ResourceGroupName myRG
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn -Tag @{ testtagKey="SomeTagKey"; testtagValue="SomeKeyValue" }
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to overwrite resource '1'
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+    Name                    : 1
+    ResourceGroupName       : myRG
+    Location                : westus
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Mi
+                              crosoft.Network/connections/1
+    Etag                    : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid            : 00000000-0000-0000-0000-000000000000
+    ProvisioningState       : Succeeded
+    Tags                    :
+                              Name          Value
+                              ============  ============
+                              testtagValue  SomeKeyValue
+                              testtagKey    SomeTagKey
+    AuthorizationKey        :
+    VirtualNetworkGateway1  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                              icrosoft.Network/virtualNetworkGateways/myGateway"
+    VirtualNetworkGateway2  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/S2SVnetConn/providers/Mic
+                              rosoft.Network/virtualNetworkGateways/S2SConnGW"
+    LocalNetworkGateway2    :
+    Peer                    :
+    RoutingWeight           : 0
+    SharedKey               :
+    ConnectionStatus        : Connected
+    EgressBytesTransferred  : 91334484
+    IngressBytesTransferred : 100386089
+    TunnelConnectionStatus  : []
+    ```
+- title: 'Example 3: Add/Remove natRules to an existing VirtualNetworkGatewayConnection'
+  description: |-
+    ```powershell
+    $conn = Get-AzVirtualNetworkGatewayConnection -Name 1 -ResourceGroupName myRG
+    $egressNatrule = Get-AzVirtualNetworkGatewayNatRule -ResourceGroupName myRG -Name "natRule1" -ParentResourceName "gw1"
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn -IngressNatRule @() -EgressNatRule $egressNatrule
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to overwrite resource '1'
+    [Y] Yes  [N] No  [S] Suspend  [?] Help (default is "Y"): y
+
+
+    Name                    : 1
+    ResourceGroupName       : myRG
+    Location                : westus
+    Id                      : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Mi
+                              crosoft.Network/connections/1
+    Etag                    : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid            : 00000000-0000-0000-0000-000000000000
+    ProvisioningState       : Succeeded
+    Tags                    :
+                              Name          Value
+                              ============  ============
+                              testtagValue  SomeKeyValue
+                              testtagKey    SomeTagKey
+    AuthorizationKey        :
+    VirtualNetworkGateway1  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                              icrosoft.Network/virtualNetworkGateways/myGateway"
+    VirtualNetworkGateway2  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/S2SVnetConn/providers/Mic
+                              rosoft.Network/virtualNetworkGateways/S2SConnGW"
+    LocalNetworkGateway2    :
+    Peer                    :
+    RoutingWeight           : 0
+    SharedKey               :
+    ConnectionStatus        : Connected
+    EgressBytesTransferred  : 91334484
+    IngressBytesTransferred : 100386089
+    TunnelConnectionStatus  : []
+    IngressNatRules         : []
+    EgressNatRules          : [
+                                {
+                                  "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Network/virtualNetworkGateways/gw1/natRules/natRule1"
+                                }
+                              ]
+    ```
+
+    The first command gets a virtual network gateway connection named 1 that belongs to resource group myRG and stores it to the variable named $conn.
+    The second command gets the virtual network gateway natRule named natRule1 and stores it to the variable named $egressNatrule.
+    The third command sets virtual network gateway connection with removed all IngressNatRules and add egressNatrule into EgressNatRules.
+- title: 'Example 3: Add/Remove GatewayCustomBgpIpAddress to an existing VirtualNetworkGatewayConnection'
+  description: |-
+    ```powershell
+    $address1 = New-AzGatewayCustomBgpIpConfigurationObject -IpConfigurationId "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw/ipConfigurations/default" -CustomBgpIpAddress "169.254.21.1"
+    $address2 = New-AzGatewayCustomBgpIpConfigurationObject -IpConfigurationId "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw/ipConfigurations/ActiveActive" -CustomBgpIpAddress "169.254.21.3"
+    $conn = Get-AzVirtualNetworkGatewayConnection -ResourceGroupName PS_testing -ResourceName Conn
+
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn -GatewayCustomBgpIpAddress $address1,$address2
+    ```
+
+    ```output
+    Name                        : Conn
+    ResourceGroupName           : PS_testing
+    Location                    : eastus
+    Id                          : /subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/connections/Conn
+    Etag                        : W/"e867e7bb-fa2e-436e-8822-70c556ec0f03"
+    ResourceGuid                : 9c33f4f7-b09c-4080-932e-a44405a8c252
+    ProvisioningState           : Succeeded
+    Tags                        :
+    AuthorizationKey            :
+    VirtualNetworkGateway1      : "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw"
+    VirtualNetworkGateway2      :
+    LocalNetworkGateway2        : "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/localNetworkGateways/testLng"
+    Peer                        :
+    RoutingWeight               : 3
+    SharedKey                   : abc
+    ExpressRouteGatewayBypass   : False
+    EnablePrivateLinkFastPath   : False
+    ConnectionStatus            : Unknown
+    EgressBytesTransferred      : 0
+    IngressBytesTransferred     : 0
+    TunnelConnectionStatus      : []
+    IngressNatRules             : []
+    EgressNatRules              : []
+    GatewayCustomBgpIpAddresses : [
+                                    {
+                                      "IpconfigurationId":
+                                  "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw/ipConfigurations/default",
+                                      "CustomBgpIpAddress": "169.254.21.1"
+                                    },
+                                    {
+                                      "IpconfigurationId":
+                                  "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw/ipConfigurations/ActiveActive",
+                                      "CustomBgpIpAddress": "169.254.21.3"
+                                    }
+                                  ]
+    ```
+
+    This will create new AzGatewayCustomBgpIpConfigurationObjects and update gateway connection with these GatewayCustomBgpIpAddress.
+- title: 'Example 4: Remove GatewayCustomBgpIpAddress to an existing VirtualNetworkGatewayConnection'
+  description: |-
+    ```powershell
+    $conn = Get-AzVirtualNetworkGatewayConnection -ResourceGroupName PS_testing -ResourceName Conn
+    Set-AzVirtualNetworkGatewayConnection -VirtualNetworkGatewayConnection $conn -GatewayCustomBgpIpAddress @()
+    ```
+
+    ```output
+    Name                      : Conn
+    ResourceGroupName         : PS_testing
+    Location                  : eastus
+    Id                        : /subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/connections/Conn
+    Etag                      : W/"863d9b89-a030-42ba-9f71-58d5bc3336a9"
+    ResourceGuid              : 9c33f4f7-b09c-4080-932e-a44405a8c252
+    ProvisioningState         : Succeeded
+    Tags                      :
+    AuthorizationKey          :
+    VirtualNetworkGateway1    : "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/virtualNetworkGateways/testGw"
+    VirtualNetworkGateway2    :
+    LocalNetworkGateway2      : "/subscriptions/83704d68-d560-4c67-b1c7-12404db89dc3/resourceGroups/PS_testing/providers/Microsoft.Network/localNetworkGateways/testLng"
+    Peer                      :
+    RoutingWeight             : 3
+    SharedKey                 : abc
+    ExpressRouteGatewayBypass : False
+    EnablePrivateLinkFastPath : False
+    ConnectionStatus          : NotConnected
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    TunnelConnectionStatus    : []
+    IngressNatRules           : []
+    EgressNatRules            : []
+    GatewayCustomBgpIpAddresses : []
+    ```
+
+    This will update gateway connection with removing these GatewayCustomBgpIpAddress.
+links:
+- text: Get-AzVirtualNetworkGatewayConnection
+  href: ./Get-AzVirtualNetworkGatewayConnection.yml
+- text: New-AzVirtualNetworkGatewayConnection
+  href: ./New-AzVirtualNetworkGatewayConnection.yml
+- text: Remove-AzVirtualNetworkGatewayConnection
+  href: ./Remove-AzVirtualNetworkGatewayConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkGatewayConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/set-azvirtualnetworkgatewayconnection
+  Module Name: Az.Network
+  ms.assetid: D7065B04-1A01-4BB4-A519-1DA9002CDE02
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Set-AzVirtualNetworkGatewayConnection.md
+  PlatyPS schema version: 2024-05-01

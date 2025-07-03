@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.New-AzHdInsightOnAksManagedIdentityObject
+name: New-AzHdInsightOnAksManagedIdentityObject
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Create an in-memory object for ManagedIdentitySpec.
+description: |-
+  Create an in-memory object for ManagedIdentitySpec.
+parameters:
+  cmdletParameters:
+  - name: ClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ClientId of the managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ObjectId of the managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ResourceId of the managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzHdInsightOnAksManagedIdentityObject
+        -ClientId <String>
+        -ObjectId <String>
+        -ResourceId <String>
+        -Type <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.ManagedIdentitySpec" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Managed Identity object'
+  description: |-
+    ```powershell
+    New-AzHdInsightOnAksManagedIdentityObject -ClientId 00000000-0000-0000-0000-000000000000 -ObjectId 00000000-0000-0000-0000-000000000000 -ResourceId /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi -Type cluster
+    ```
+
+    ```output
+    ClientId                             ObjectId                             ResourceId                                                                                                                              Type
+    --------                             --------                             ----------                                                                                                                              ----
+    00000000-0000-0000-0000-000000000000 00000000-0000-0000-0000-000000000000 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Group/providers/Microsoft.ManagedIdentity/userAssignedIdentities/msi cluster
+    ```
+
+    Create a Managed Identity object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksManagedIdentityObject.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.HdInsightOnAks/new-azhdinsightonaksmanagedidentityobject
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/New-AzHdInsightOnAksManagedIdentityObject.md
+  PlatyPS schema version: 2024-05-01

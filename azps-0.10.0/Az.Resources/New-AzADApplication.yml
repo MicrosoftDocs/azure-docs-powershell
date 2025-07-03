@@ -1,0 +1,386 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzADApplication
+name: New-AzADApplication
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates a new Microsoft Entra application.
+description: |-
+  Creates a new Microsoft Entra application.
+notes: |-
+  Keywords: azure, Az, arm, resource, management, manager, resource, group, template, deployment
+parameters:
+  cmdletParameters:
+  - name: AvailableToOtherTenants
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      The value specifying whether the application is a single tenant or a multi-tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the "asymmetric" credential type.
+      It represents the base 64 encoded certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithKeyPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Display name of the new application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective end date of the credential usage.
+      The default end date value is one year from today.
+      For an "asymmetric" type credential, this must be set to on or before the date that the X509 certificate is valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithPasswordPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ApplicationWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HomePage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URL to the application homepage.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentifierUris
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The URIs that identify the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyCredentials
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of certificate credentials associated with the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithKeyCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password to be associated with the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithPasswordPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordCredentials
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of password credentials associated with the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithPasswordCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplyUrls
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The application reply urls.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective start date of the credential usage.
+      The default start date value is today.
+      For an "asymmetric" type credential, this must be set to on or after the date that the X509 certificate is valid from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationWithPasswordPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ApplicationWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzADApplication
+        -DisplayName <String>
+        -IdentifierUris <String[]>
+        [-HomePage <String>]
+        [-ReplyUrls <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithoutCredentialParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzADApplication
+        -DisplayName <String>
+        -IdentifierUris <String[]>
+        -Password <SecureString>
+        [-HomePage <String>]
+        [-ReplyUrls <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithPasswordPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADApplication
+        -DisplayName <String>
+        -IdentifierUris <String[]>
+        -PasswordCredentials <PSADPasswordCredential[]>
+        [-HomePage <String>]
+        [-ReplyUrls <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithPasswordCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADApplication
+        -DisplayName <String>
+        -IdentifierUris <String[]>
+        -CertValue <String>
+        [-HomePage <String>]
+        [-ReplyUrls <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithKeyPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADApplication
+        -DisplayName <String>
+        -IdentifierUris <String[]>
+        -KeyCredentials <PSADKeyCredential[]>
+        [-HomePage <String>]
+        [-ReplyUrls <String[]>]
+        [-AvailableToOtherTenants <Boolean>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationWithKeyCredentialParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADPasswordCredential" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADApplication" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Create new Microsoft Entra application.
+  description: |-
+    ```
+    PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http://NewApplication"
+    ```
+
+    Creates a new Microsoft Entra application without any credentials.
+- title: Example 2 - Create new Microsoft Entra application with password.
+  description: |-
+    ```
+    PS C:\> $SecureStringPassword = ConvertTo-SecureString -String "password" -AsPlainText -Force
+    PS C:\> New-AzADApplication -DisplayName "NewApplication" -HomePage "http://www.microsoft.com" -IdentifierUris "http:
+    //NewApplication" -Password $SecureStringPassword
+    ```
+
+    Creates a new Microsoft Entra application and associates password credentials with it.
+links:
+- text: Remove-AzADApplication
+  href: ./Remove-AzADApplication.yml
+- text: Get-AzADApplication
+  href: ./Get-AzADApplication.yml
+- text: New-AzADServicePrincipal
+  href: ./New-AzADServicePrincipal.yml
+- text: Get-AzADAppCredential
+  href: ./Get-AzADAppCredential.yml
+- text: New-AzADAppCredential
+  href: ./New-AzADAppCredential.yml
+- text: Remove-AzADAppCredential
+  href: ./Remove-AzADAppCredential.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADApplication.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azadapplication
+  Module Name: Az.Resources
+  ms.assetid: F58FD77E-2946-44B1-B410-6E983FC20E21
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzADApplication.md
+  PlatyPS schema version: 2024-05-01

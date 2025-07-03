@@ -1,0 +1,137 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabaseServerQuota
+name: Get-AzureSqlDatabaseServerQuota
+module: Azure
+isPreview: false
+summary: |-
+  Gets quota information for an Azure SQL Database server.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabaseServerQuota** cmdlet gets the quota information for a specified instance of Azure SQL Database Server.
+  Specify a connection context or the server name.
+  If you do not specify a quota name, this cmdlet gets all the quota information for the server.
+notes: |-
+  * Authentication: This cmdlet can use either SQL Server authentication or certificate-based authentication. For examples of setting up authentication, see the New-AzureSqlDatabaseServerContext cmdlet.
+parameters:
+  cmdletParameters:
+  - name: ConnectionContext
+    type: <xref href="IServerDataServiceContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server.
+    aliases:
+    - Context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByConnectionContext
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QuotaName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the quota value that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseServerQuota
+        -ConnectionContext <IServerDataServiceContext>
+        [-QuotaName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByConnectionContext
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseServerQuota
+        -ServerName <String>
+        [-QuotaName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServerName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.Server.ServerQuota" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information for a specific quota'
+  description: |-
+    ```
+    PS C:\> $QuotaPremium = GetAzureSqlDatabaseServerQuota $Context -QuotaName "Premium_Databases"
+    ```
+
+    This command gets the quota named Premium_Databases from the Azure SQL Database server specified by the connection stored in the $Context variable.
+- title: 'Example 2: Get information for all quotas'
+  description: |-
+    ```
+    PS C:\> $QuotaList = GetAzureSqlDatabaseServerQuota $Context
+    ```
+
+    This command gets all quota values from the server specified by the connection $Context.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: New-AzureSqlDatabaseServerContext
+  href: ./New-AzureSqlDatabaseServerContext.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6723557D-8052-4BFA-872C-384B1423B3AE
+  PlatyPS schema version: 2024-05-01

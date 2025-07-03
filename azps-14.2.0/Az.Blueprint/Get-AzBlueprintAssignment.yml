@@ -1,0 +1,189 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Blueprint.Get-AzBlueprintAssignment
+name: Get-AzBlueprintAssignment
+module: Az.Blueprint
+isPreview: false
+summary: |-
+  Get one or more blueprint assignments.
+description: |-
+  Get one or more blueprint assignments. Blueprint assignments exist at the subscription scope.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the management group where the Blueprint assignment is saved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByManagementGroupAndName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ManagementGroupScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Blueprint assignment name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BySubscriptionAndName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByManagementGroupAndName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id the blueprint assignment is deployed to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionScope
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: BySubscriptionAndName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBlueprintAssignment
+        [-SubscriptionId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBlueprintAssignment
+        -Name <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BySubscriptionAndName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBlueprintAssignment
+        -Name <String>
+        -ManagementGroupId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByManagementGroupAndName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzBlueprintAssignment
+        -ManagementGroupId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupScope
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000"
+    ```
+
+    ```output
+    Name              : Assignment-PS-BlueprintDefinition
+    Id                : /subscriptions/00000000-1111-0000-1111-000000000000/providers/Microsoft.Blueprint/blueprintAssignments/Assignment-PS-BlueprintDefinition
+    Scope             : /subscriptions/00000000-1111-0000-1111-000000000000
+    LastModified      : 2019-01-08
+    LockMode          : AllResourcesReadOnly
+    ProvisioningState : Succeeded
+    Parameters        : {applytaganditsdefaultvalue_tagName, applytaganditsdefaultvalue_tagValue}
+    ResourceGroups    : ResourceGroup
+    ```
+
+    Get the blueprint assignments within the specified subscription.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzBlueprintAssignment -SubscriptionId "00000000-1111-0000-1111-000000000000" -Name "myAssignmentName"
+    ```
+
+    Get the blueprint assignment with the given name within the specified subscription.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzBlueprintAssignment -ManagementGroupId "myManagementGroup"
+    ```
+
+    Get the blueprint assignments within the specified management group.
+- title: Example 4
+  description: |-
+    ```powershell
+    Get-AzBlueprintAssignment -ManagementGroupId "myManagementGroup" -Name "myAssignmentName"
+    ```
+
+    Get the blueprint assignment with the given name within the specified management group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Get-AzBlueprintAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.blueprint/get-azblueprintassignment
+  Module Name: Az.Blueprint
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Get-AzBlueprintAssignment.md
+  PlatyPS schema version: 2024-05-01

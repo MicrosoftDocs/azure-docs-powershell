@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Orbital.New-AzOrbitalSpacecraftLinkObject
+name: New-AzOrbitalSpacecraftLinkObject
+module: Az.Orbital
+isPreview: false
+summary: |-
+  Create an in-memory object for SpacecraftLink.
+description: |-
+  Create an in-memory object for SpacecraftLink.
+parameters:
+  cmdletParameters:
+  - name: BandwidthMHz
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Bandwidth in MHz.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CenterFrequencyMHz
+    type: <xref href="System.Single" data-throw-if-not-resolved="False" />
+    description: |-
+      Center Frequency in MHz.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Direction (Uplink or Downlink).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Link name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Polarization
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Polarization.
+      e.g.
+      (RHCP, LHCP).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzOrbitalSpacecraftLinkObject
+        -BandwidthMHz <Single>
+        -CenterFrequencyMHz <Single>
+        -Direction <String>
+        -Name <String>
+        -Polarization <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.SpacecraftLink" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a SpacecraftLink object for OrbitalSpacecraft.'
+  description: |-
+    ```powershell
+    New-AzOrbitalSpacecraftLinkObject -BandwidthMHz 50 -CenterFrequencyMHz 50 -Direction 'Uplink' -Name spacecraftlink -Polarization 'LHCP'
+    ```
+
+    ```output
+    BandwidthMHz CenterFrequencyMHz Direction Name           Polarization
+    ------------ ------------------ --------- ----           ------------
+    50           50                 Uplink    spacecraftlink LHCP
+    ```
+
+    Create a SpacecraftLink object for OrbitalSpacecraft.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/New-AzOrbitalSpacecraftLinkObject.md
+  document type: cmdlet
+  external help file: Az.Orbital-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Orbital/new-azorbitalspacecraftlinkobject
+  Module Name: Az.Orbital
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/New-AzOrbitalSpacecraftLinkObject.md
+  PlatyPS schema version: 2024-05-01

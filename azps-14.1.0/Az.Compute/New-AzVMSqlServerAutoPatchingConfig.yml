@@ -1,0 +1,167 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.New-AzVMSqlServerAutoPatchingConfig
+name: New-AzVMSqlServerAutoPatchingConfig
+module: Az.Compute
+isPreview: false
+summary: |-
+  Creates a configuration object for automatic patching on a virtual machine.
+description: |-
+  The **New-AzVMSqlServerAutoPatchingConfig** cmdlet creates a configuration object for automatic patching on a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: DayOfWeek
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the day of the week when updates should be installed.
+      The acceptable values for this parameter are:
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      - Everyday
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Everyday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that automated patching for the virtual machine is enabled.
+      If you enable automated patching the cmdlet puts Windows Update into interactive mode.
+      If you disable automated patching, Windows Update settings do not change.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceWindowDuration
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration, in minutes, of the maintenance window.
+      Automated patching avoids performing an action that can affect a virtual machine availability outside that window.
+      Specify a multiple of 30 minutes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceWindowStartingHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the hour of the day when maintenance window starts.
+      This time defines when updates start to install.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PatchCategory
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether important updates should be included.
+    acceptedValues:
+    - Important
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVMSqlServerAutoPatchingConfig
+        [-Enable]
+        [-DayOfWeek <String>]
+        [-MaintenanceWindowStartingHour <Int32>]
+        [-MaintenanceWindowDuration <Int32>]
+        [-PatchCategory <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.AutoPatchingSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a configuration object to configure automatic patching'
+  description: |-
+    ```powershell
+    $AutoPatchingConfig = New-AzVMSqlServerAutoPatchingConfig -Enable -DayOfWeek "Thursday" -MaintenanceWindowStartingHour 11 -MaintenanceWindowDuration 120 -PatchCategory "Important"
+    ```
+
+    ```output
+    Enable                        : True
+    DayOfWeek                     : Thursday
+    MaintenanceWindowStartingHour : 11
+    MaintenanceWindowDuration     : 120
+    PatchCategory                 : Important
+    ```
+
+    This command creates configuration object for patching.
+    The command specifies the day of the week and defines the maintenance window.
+    This configuration enables patching that uses these values.
+    The command stores the result in the $AutoBackupConfig variable.
+    You can specify this configuration item for other cmdlets, such as the Set-AzVMSqlServerExtension cmdlet.
+links:
+- text: New-AzVMSqlServerAutoBackupConfig
+  href: ./New-AzVMSqlServerAutoBackupConfig.yml
+- text: Set-AzVMSqlServerExtension
+  href: ./Set-AzVMSqlServerExtension.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/new-azvmsqlserverautopatchingconfig
+  Module Name: Az.Compute
+  ms.assetid: 7016BAA9-C25D-404E-9F75-2BE49FBF91A8
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/New-AzVMSqlServerAutoPatchingConfig.md
+  PlatyPS schema version: 2024-05-01

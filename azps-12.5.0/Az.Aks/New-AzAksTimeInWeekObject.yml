@@ -1,0 +1,84 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Aks.New-AzAksTimeInWeekObject
+name: New-AzAksTimeInWeekObject
+module: Az.Aks
+isPreview: false
+summary: |-
+  Create an in-memory object for TimeInWeek.
+description: |-
+  Create an in-memory object for TimeInWeek.
+parameters:
+  cmdletParameters:
+  - name: Day
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Support.WeekDay" data-throw-if-not-resolved="False" />
+    description: |-
+      The day of the week.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HourSlot
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Each integer hour represents a time range beginning at 0m after the hour ending at the next hour (non-inclusive).
+      0 corresponds to 00:00 UTC, 23 corresponds to 23:00 UTC.
+      Specifying [0, 1] means the 00:00 - 02:00 UTC time range.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAksTimeInWeekObject
+        [-Day <WeekDay>]
+        [-HourSlot <Int32[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Aks.Models.Api20230201.TimeInWeek" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for time in a week'
+  description: |-
+    ```powershell
+    New-AzAksTimeInWeekObject -Day 'Sunday' -HourSlot 1,2
+    ```
+
+    ```output
+    Day    HourSlot
+    ---    --------
+    Sunday {1, 2}
+    ```
+
+    *New-AzAksTimeInWeekObject* creates an in-memory object of type *TimeInWeek*.
+    This object represents time in a week.
+    and will be used for parameter *TimeInWeek* in cmdlet *New-AzAksMaintenanceConfiguration*.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/New-AzAksTimeInWeekObject.md
+  document type: cmdlet
+  external help file: Az.Aks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Aks/new-AzAksTimeInWeekObject
+  Module Name: Az.Aks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/New-AzAksTimeInWeekObject.md
+  PlatyPS schema version: 2024-05-01

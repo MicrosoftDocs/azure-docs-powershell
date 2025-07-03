@@ -1,0 +1,458 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Update-AzVirtualHub
+name: Update-AzVirtualHub
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a virtual hub.
+description: |-
+  The **Update-AzVirtualHub** cmdlet updates a virtual hub.
+parameters:
+  cmdletParameters:
+  - name: AddressPrefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The address space string for this virtual hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubRoutingPreference
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Hub Routing Preference to route traffic
+    acceptedValues:
+    - ExpressRoute
+    - VpnGateway
+    - ASPath
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubVnetConnection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSHubVirtualNetworkConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The hub virtual network connections associated with this Virtual Hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The Virtual hub object to be modified.
+    aliases:
+    - VirtualHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VirtualHubName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredRoutingGateway
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred Routing Gateway to Route On-Prem traffic from VNET (Deprecated, please use HubRoutingPreference)
+    acceptedValues:
+    - ExpressRoute
+    - VpnGateway
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the Virtual hub to be modified.
+    aliases:
+    - VirtualHubId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteTable
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHubRouteTable" data-throw-if-not-resolved="False" />
+    description: |-
+      The route table associated with this Virtual Hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sku of the Virtual Hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualRouterAsn
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The ASN of this virtual hub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualRouterAutoScaleConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualRouterAutoScaleConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Autoscale configuration for the hub router
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzVirtualHub
+        -ResourceGroupName <String>
+        -Name <String>
+        [-AddressPrefix <String>]
+        [-HubVnetConnection <PSHubVirtualNetworkConnection[]>]
+        [-RouteTable <PSVirtualHubRouteTable>]
+        [-Tag <Hashtable>]
+        [-Sku <String>]
+        [-PreferredRoutingGateway <String>]
+        [-HubRoutingPreference <String>]
+        [-VirtualRouterAsn <UInt32>]
+        [-VirtualRouterAutoScaleConfiguration <PSVirtualRouterAutoScaleConfiguration>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzVirtualHub
+        -ResourceId <String>
+        [-AddressPrefix <String>]
+        [-HubVnetConnection <PSHubVirtualNetworkConnection[]>]
+        [-RouteTable <PSVirtualHubRouteTable>]
+        [-Tag <Hashtable>]
+        [-Sku <String>]
+        [-PreferredRoutingGateway <String>]
+        [-HubRoutingPreference <String>]
+        [-VirtualRouterAsn <UInt32>]
+        [-VirtualRouterAutoScaleConfiguration <PSVirtualRouterAutoScaleConfiguration>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVirtualHub
+        -InputObject <PSVirtualHub>
+        [-AddressPrefix <String>]
+        [-HubVnetConnection <PSHubVirtualNetworkConnection[]>]
+        [-RouteTable <PSVirtualHubRouteTable>]
+        [-Tag <Hashtable>]
+        [-Sku <String>]
+        [-PreferredRoutingGateway <String>]
+        [-HubRoutingPreference <String>]
+        [-VirtualRouterAsn <UInt32>]
+        [-VirtualRouterAutoScaleConfiguration <PSVirtualRouterAutoScaleConfiguration>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
+    $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24"
+    Update-AzVirtualHub -InputObject $virtualHub -AddressPrefix "10.0.2.0/24"
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
+    AddressPrefix             : 10.0.2.0/24
+    RouteTable                :
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Sku                  : Standard
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have the address space "10.0.1.0/24".
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
+    New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24"
+    $route1 = New-AzVirtualHubRoute -AddressPrefix @("10.0.0.0/16", "11.0.0.0/16") -NextHopIpAddress "12.0.0.5"
+    $route2 = New-AzVirtualHubRoute -AddressPrefix @("13.0.0.0/16") -NextHopIpAddress "14.0.0.5"
+    $routeTable = New-AzVirtualHubRouteTable -Route @($route1, $route2)
+    Update-AzVirtualHub -ResourceGroupName "testRG" -Name "westushub" -RouteTable $routeTable
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
+    AddressPrefix             : 192.168.2.0/24
+    RouteTable                : Microsoft.Azure.Commands.Network.Models.PSVirtualHubRouteTable
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Sku                  : Standard
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have the address space "10.0.1.0/24".
+    This example is similar to Example 1, but also attaches a route table to the virtual hub.
+- title: Example 3
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US"
+    New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.1.0/24"
+    Update-AzVirtualHub -ResourceGroupName "testRG" -Name "westushub" -HubRoutingPreference "VpnGateway"
+    ```
+
+    ```output
+    VirtualWan                : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    ResourceGroupName         : testRG
+    Name                      : westushub
+    Id                        : /subscriptions/{subscriptionId}resourceGroups/testRG/providers/Microsoft.Network/virtualHubs/westushub
+    AddressPrefix             : 10.0.1.0/24
+    RouteTable                :
+    Location                  : West US
+    Sku                  : Standard
+    HubRoutingPreference      : VpnGateway
+    VirtualNetworkConnections : {}
+    Location                  : West US
+    Type                      : Microsoft.Network/virtualHubs
+    ProvisioningState         : Succeeded
+    ```
+
+    The above will create a resource group "testRG", a Virtual WAN and a Virtual Hub in West US in that resource group in Azure. The virtual hub will have preferred routing gateway as ExpressRoute initially and will then be updated to VpnGateway.
+links:
+- text: Get-AzVirtualHub
+  href: ./Get-AzVirtualHub.yml
+- text: New-AzVirtualHub
+  href: ./New-AzVirtualHub.yml
+- text: Remove-AzVirtualHub
+  href: ./Remove-AzVirtualHub.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/update-azvirtualhub
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVirtualHub.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,125 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BotService.Initialize-AzBotServicePrepareDeploy
+name: Initialize-AzBotServicePrepareDeploy
+module: Az.BotService
+isPreview: false
+summary: |-
+  Returns a BotService specified by the parameters.
+description: |-
+  Returns a BotService specified by the parameters.
+parameters:
+  cmdletParameters:
+  - name: CodeDir
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The path to prepare a resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Language
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The language could be C#, JavaScript or TypeScript.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjFileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The project file name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Initialize-AzBotServicePrepareDeploy
+        [-CodeDir <String>]
+        [-ProjFileName <String>]
+        [-Language <String>]
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BotService.Models.Api20220615Preview.IBot" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Initialize the Project FileFolder'
+  description: |-
+    ```powershell
+    Initialize-AzBotServicePrepareDeploy -CodeDir D:\zips\MyEchoBot -ProjFileName MyEchoBot.csproj
+    ```
+
+    Initialize Prepares a resource for use, and sets it to a default state
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Initialize-AzBotServicePrepareDeploy.md
+  document type: cmdlet
+  external help file: Az.BotService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.botservice/initialize-azbotservicepreparedeploy
+  Module Name: Az.BotService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Initialize-AzBotServicePrepareDeploy.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderForDatabasesAwsOfferingObject
+name: New-AzSecurityDefenderForDatabasesAwsOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderForDatabasesAwsOffering.
+description: |-
+  Create an in-memory object for DefenderForDatabasesAwsOffering.
+parameters:
+  cmdletParameters:
+  - name: ArcAutoProvisioningCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ArcAutoProvisioningEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is arc auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationPrivateLinkScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional Arc private link scope resource id to link the Arc agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationProxy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional http proxy endpoint to use for the Arc agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDspmCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDspmEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is databases data security posture management (DSPM) protection enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RdCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RdEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is RDS protection enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderForDatabasesAwsOfferingObject
+        [-ArcAutoProvisioningCloudRoleArn <String>]
+        [-ArcAutoProvisioningEnabled <Boolean>]
+        [-ConfigurationPrivateLinkScope <String>]
+        [-ConfigurationProxy <String>]
+        [-DatabaseDspmCloudRoleArn <String>]
+        [-DatabaseDspmEnabled <Boolean>]
+        [-RdCloudRoleArn <String>]
+        [-RdEnabled <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderForDatabasesAwsOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderForDatabasesAwsOffering object'
+  description: |-
+    ```powershell
+    $arnPrefix = "arn:aws:iam::123456789012:role"
+    New-AzSecurityDefenderForDatabasesAwsOfferingObject `
+        -ArcAutoProvisioningEnabled $true -ArcAutoProvisioningCloudRoleArn "$arnPrefix/DefenderForCloud-ArcAutoProvisioning" `
+        -DatabaseDspmEnabled $true -DatabaseDspmCloudRoleArn "$arnPrefix/DefenderForCloud-DataSecurityPostureDB"
+    ```
+
+    ```output
+    ArcAutoProvisioningCloudRoleArn : arn:aws:iam::123456789012:role/DefenderForCloud-ArcAutoProvisioning
+    ArcAutoProvisioningEnabled      : True
+    ConfigurationPrivateLinkScope   :
+    ConfigurationProxy              :
+    DatabaseDspmCloudRoleArn        : arn:aws:iam::123456789012:role/DefenderForCloud-DataSecurityPostureDB
+    DatabaseDspmEnabled             : True
+    Description                     :
+    OfferingType                    : DefenderForDatabasesAws
+    RdCloudRoleArn                  :
+    RdEnabled                       :
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForDatabasesAwsOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefenderfordatabasesawsofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForDatabasesAwsOfferingObject.md
+  PlatyPS schema version: 2024-05-01

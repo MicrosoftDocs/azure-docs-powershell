@@ -1,0 +1,243 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkFunction.Get-AzNetworkFunctionCollectorPolicy
+name: Get-AzNetworkFunctionCollectorPolicy
+module: Az.NetworkFunction
+isPreview: false
+summary: |-
+  Gets the collector policy in a specified Traffic Collector
+description: |-
+  Gets the collector policy in a specified Traffic Collector
+parameters:
+  cmdletParameters:
+  - name: AzureTrafficCollectorInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkFunction.Models.INetworkFunctionIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityAzureTrafficCollector
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureTrafficCollectorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Traffic Collector name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkFunction.Models.INetworkFunctionIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Collector Policy Name
+    aliases:
+    - CollectorPolicyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityAzureTrafficCollector
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFunctionCollectorPolicy
+        -AzureTrafficCollectorName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFunctionCollectorPolicy
+        -AzureTrafficCollectorName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFunctionCollectorPolicy
+        -Name <String>
+        -AzureTrafficCollectorInputObject <INetworkFunctionIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityAzureTrafficCollector
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFunctionCollectorPolicy
+        -InputObject <INetworkFunctionIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkFunction.Models.INetworkFunctionIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkFunction.Models.ICollectorPolicy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get list of collector policies by atc name and resource group'
+  description: |-
+    ```powershell
+    Get-AzNetworkFunctionCollectorPolicy -AzureTrafficCollectorName test -resourcegroupname test | Format-List
+    ```
+
+    ```output
+    Name              : cp1
+    Etag              : cf0336a2-7454-4aa4-add9-1de3e2291143
+    Id                : /subscriptions/subid/resourceGroups/test/providers/Microsoft.NetworkFunction/azureTrafficCollectors/test/collectorPolicies/cp1
+    Type              : Microsoft.NetworkFunction/azureTrafficCollectors/collectorPolicies
+    Properties        : {
+                        "ingestionPolicy": {
+                            "ingestionType": "IPFIX",
+                            "ingestionSources": [
+                                {
+                                "resourceId": "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/expressRouteCircuits/circuitName",
+                                "sourceType": "Resource"
+                                }
+                            ]
+                            },
+                            "emissionPolicies": [
+                            {
+                                "emissionType": "IPFIX",
+                                "emissionDestinations": [
+                                {
+                                    "destinationType": "AzureMonitor"
+                                }
+                                ]
+                            }
+                            ],
+                            "provisioningState": "Succeeded"
+                        }
+    ```
+
+    This cmdlet gets list of traffic collector policies by atc name and resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Get-AzNetworkFunctionCollectorPolicy.md
+  document type: cmdlet
+  external help file: Az.NetworkFunction-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.networkfunction/get-aznetworkfunctioncollectorpolicy
+  Module Name: Az.NetworkFunction
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Get-AzNetworkFunctionCollectorPolicy.md
+  PlatyPS schema version: 2024-05-01

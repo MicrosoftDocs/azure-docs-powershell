@@ -1,0 +1,285 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleJob
+name: Get-AzureStorSimpleJob
+module: Azure
+isPreview: false
+summary: |-
+  Gets StorSimple jobs.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleJob** cmdlet gets Azure StorSimple jobs.
+  Specify an instance ID to get a specific job.
+  Specify other parameters to limit the jobs that this cmdlet gets.
+
+  This cmdlet returns a maximum of 200 jobs.
+  If more than 200 jobs exist, get the remaining jobs by using the *First* and *Skip* parameters.
+  If you specify a value of 100 for *Skip* and 50 for *First*, this cmdlet does not return the first 100 results.
+  It returns the next 50 results after the 100 that it skips.
+parameters:
+  cmdletParameters:
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a StorSimple device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets only the specified number of objects.
+      Enter the number of objects to get.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: From
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start date and time for the jobs that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the specified number of objects and then gets the remaining objects.
+      Enter the number of objects to skip.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the status.
+      The acceptable values for this parameter are:
+
+      - Running
+      - Completed
+      - Cancelled
+      - Failed
+      - Canceling
+      - CompletedWithErrors
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: To
+    type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end date and time for the jobs that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job type.
+      The acceptable values for this parameter are:
+
+      - Backup
+      - ManualBackup
+      - Restore
+      - CloneWorkflow
+      - DeviceRestore
+      - Update
+      - SupportPackage
+      - VirtualApplianceProvisioning
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleJob
+        [-DeviceName <String>]
+        [-InstanceId <String>]
+        [-Status <String>]
+        [-Type <String>]
+        [-From <DateTime>]
+        [-To <DateTime>]
+        [-Skip <Int32>]
+        [-First <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    You cannot pipe input to this cmdlet.
+outputs:
+- name: <xref href="IList" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a list of job details objects, or, if you specify the *InstanceID* parameter, it returns a single job detail object.
+examples:
+- title: 'Example 1: Get a job by using an ID'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleJob -InstanceId "574f47e0-44e9-495c-b8a5-0203c57ebf6d"
+    BackupPolicy             :
+    BackupTimeStamp          : 1/1/0001 12:00:00 AM
+    BackupType               : CloudSnapshot
+    DataStats                : Microsoft.WindowsAzure.Management.StorSimple.Models.DataStatistics
+    Device                   : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    Entity                   : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    ErrorDetails             : {}
+    HideProgressDetails      : False
+    InstanceId               : 574f47e0-44e9-495c-b8a5-0203c57ebf6d
+    IsInstantRestoreComplete : False
+    IsJobCancellable         : True
+    JobDetails               : Microsoft.WindowsAzure.Management.StorSimple.Models.JobStatusInfo
+    Name                     : 26447caf-59bb-41c9-a028-3224d296c7dc
+    Progress                 : 100
+    SourceDevice             : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    SourceEntity             : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    SourceVolume             : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    Status                   : Completed
+    TimeStats                : Microsoft.WindowsAzure.Management.StorSimple.Models.TimeStatistics
+    Type                     : Backup
+    Volume                   : Microsoft.WindowsAzure.Management.StorSimple.Models.CisBaseObject
+    ```
+
+    This command gets information for the job that has the specified ID.
+- title: 'Example 2: Get jobs by using a device name'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleJob -DeviceName "8600-Bravo 001" -First 2
+    InstanceId                           Type                         Status                                          DeviceName                                      StartTime                                       Progress
+    ----------                           ----                         ------                                          ----------                                      ---------                                       --------
+    1997c33f-bfcc-4d08-9aba-28068340a1f9 Backup                       Running                                         8600-Bravo 001                                  4/15/2015 1:30:02 PM                            92
+    85074062-ef6a-408a-b6c9-2a0904bb99ca Backup                       Completed                                       8600-Bravo 001                                  4/15/2015 1:30:02 PM                            100
+    ```
+
+    This command gets information for the jobs for the device named 8600-Bravo 001.
+    The command gets the first two jobs for the device.
+- title: 'Example 3: Get completed jobs'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleJob -Status "Completed" -Skip 10 -First 2
+    ```
+
+    This command gets completed jobs.
+    The command gets only the first two jobs after it skips the first ten jobs.
+- title: 'Example 4: Get manual backup jobs'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleJob -Type "ManualBackup"
+    ```
+
+    This command gets jobs of the manual backup type.
+- title: 'Example 5: Get jobs between specified times'
+  description: |-
+    ```
+    PS C:\>$StartTime = Get-Date -Year 2015 -Month 3 -Day 10
+    PS C:\> $EndTime = Get-Date -Year 2015 -Month 3 -Day 11 -Hour 12 -Minute 15
+    PS C:\>Get-AzureStorSimpleJob -DeviceName "Device07" -From $StartTime -To $EndTime
+    ```
+
+    The first two commands create **DateTime** objects by using the Get-Date cmdlet.
+    The commands store the new times in the $StartTime and $EndTime variables.
+    For more information, type `Get-Help Get-Date`.
+
+    The final command gets jobs for the device named Device07 between the times stored in $StartTime and $EndTime.
+links:
+- text: Stop-AzureStorSimpleJob
+  href: ./Stop-AzureStorSimpleJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 2001E040-5551-40C3-81D2-9A8334DE02BF
+  PlatyPS schema version: 2024-05-01

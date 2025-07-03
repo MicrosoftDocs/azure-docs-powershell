@@ -1,0 +1,420 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.Update-AzSupportTicketsNoSubscription
+name: Update-AzSupportTicketsNoSubscription
+module: Az.Support
+isPreview: false
+summary: |-
+  This API allows you to update the severity level, ticket status, and your contact information in the support ticket.\<br/\>\<br/\>Note: The severity levels cannot be changed if a support ticket is actively being worked upon by an Azure support engineer.
+  In such a case, contact your support engineer to request severity update by adding a new communication using the Communications API.
+description: |-
+  This API allows you to update the severity level, ticket status, and your contact information in the support ticket.\<br/\>\<br/\>Note: The severity levels cannot be changed if a support ticket is actively being worked upon by an Azure support engineer.
+  In such a case, contact your support engineer to request severity update by adding a new communication using the Communications API.
+parameters:
+  cmdletParameters:
+  - name: AdvancedDiagnosticConsent
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Advanced diagnostic consent to be updated on the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailAdditionalEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Email addresses listed will be copied on any correspondence about the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailCountry
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Country of the user.
+      This is the ISO 3166-1 alpha-3 code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailFirstName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      First name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailLastName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Last name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number.
+      This is required if preferred contact method is phone.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredContactMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred contact method.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredSupportLanguage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred language of support from Azure.
+      Support languages vary based on the severity you choose for your support ticket.
+      Learn more at [Azure Severity and responsiveness](https://azure.microsoft.com/support/plans/response/).
+      Use the standard language-country code.
+      Valid values are 'en-us' for English, 'zh-hans' for Chinese, 'es-es' for Spanish, 'fr-fr' for French, 'ja-jp' for Japanese, 'ko-kr' for Korean, 'ru-ru' for Russian, 'pt-br' for Portuguese, 'it-it' for Italian, 'zh-tw' for Chinese and 'de-de' for German.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Time zone of the user.
+      This is the name of the time zone from [Microsoft Time Zone Index Values](https://support.microsoft.com/help/973627/microsoft-time-zone-index-values).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPrimaryEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary email address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryConsent
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISecondaryConsent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      This property indicates secondary consents for the support ticket
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Severity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Severity level.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Status to be updated on the ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support ticket name.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSupportTicketsNoSubscription
+        -SupportTicketName <String>
+        [-AdvancedDiagnosticConsent <String>]
+        [-ContactDetailAdditionalEmailAddress <String[]>]
+        [-ContactDetailCountry <String>]
+        [-ContactDetailFirstName <String>]
+        [-ContactDetailLastName <String>]
+        [-ContactDetailPhoneNumber <String>]
+        [-ContactDetailPreferredContactMethod <String>]
+        [-ContactDetailPreferredSupportLanguage <String>]
+        [-ContactDetailPreferredTimeZone <String>]
+        [-ContactDetailPrimaryEmailAddress <String>]
+        [-SecondaryConsent <ISecondaryConsent[]>]
+        [-Severity <String>]
+        [-Status <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzSupportTicketsNoSubscription
+        -InputObject <ISupportIdentity>
+        [-AdvancedDiagnosticConsent <String>]
+        [-ContactDetailAdditionalEmailAddress <String[]>]
+        [-ContactDetailCountry <String>]
+        [-ContactDetailFirstName <String>]
+        [-ContactDetailLastName <String>]
+        [-ContactDetailPhoneNumber <String>]
+        [-ContactDetailPreferredContactMethod <String>]
+        [-ContactDetailPreferredSupportLanguage <String>]
+        [-ContactDetailPreferredTimeZone <String>]
+        [-ContactDetailPrimaryEmailAddress <String>]
+        [-SecondaryConsent <ISecondaryConsent[]>]
+        [-Severity <String>]
+        [-Status <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportTicketDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a support ticket at no subscription level'
+  description: |-
+    ```powershell
+    Update-AzSupportTicketsNoSubscription -Name test12345 -AdvancedDiagnosticConsent Yes
+    ```
+
+    ```output
+    AdvancedDiagnosticConsent                  : Yes
+    ContactDetailAdditionalEmailAddress        :
+    ContactDetailCountry                       : USA
+    ContactDetailFirstName                     : test
+    ContactDetailLastName                      : test
+    ContactDetailPhoneNumber                   :
+    ContactDetailPreferredContactMethod        : Email
+    ContactDetailPreferredSupportLanguage      : en-US
+    ContactDetailPreferredTimeZone             : Pacific Standard Time
+    ContactDetailPrimaryEmailAddress           : test@test.com
+    CreatedDate                                : 3/7/2024 5:35:55 PM
+    Description                                : test ticket - please ignore and close
+    EnrollmentId                               :
+    FileWorkspaceName                          : 2403070040010395
+    Id                                         : /providers/Microsoft.Support/supportTickets/test12345
+    ModifiedDate                               : 3/7/2024 6:12:56 PM
+    Name                                       : test12345
+    ProblemClassificationDisplayName           : Add or update VAT, tax id, PO number or profile information
+    ProblemClassificationId                    : /providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc/problemClassifications/3ec1a070-f242-9ecf-5a7c-e1a88ce029ef
+    ProblemScopingQuestion                     :
+    ProblemStartTime                           :
+    QuotaTicketDetailQuotaChangeRequest        :
+    QuotaTicketDetailQuotaChangeRequestSubType :
+    QuotaTicketDetailQuotaChangeRequestVersion :
+    Require24X7Response                        : False
+    ResourceGroupName                          :
+    SecondaryConsent                           :
+    ServiceDisplayName                         : Billing
+    ServiceId                                  : /providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc
+    ServiceLevelAgreementExpirationTime        : 3/8/2024 1:35:55 AM
+    ServiceLevelAgreementSlaMinute             : 480
+    ServiceLevelAgreementStartTime             : 3/7/2024 5:35:55 PM
+    Severity                                   : Minimal
+    Status                                     : Open
+    SupportEngineerEmailAddress                : test@microsoft.com
+    SupportPlanDisplayName                     : Basic support
+    SupportPlanId                              : U291cmNlOkZyZWUsRnJlZUlkOjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwOSw=
+    SupportPlanType                            : Basic
+    SupportTicketId                            : 2403070040010395
+    TechnicalTicketDetailResourceId            :
+    Title                                      : test ticket - please ignore and close
+    Type                                       : Microsoft.Support/supportTickets
+    ```
+
+    Update a tenant-level support ticket
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Update-AzSupportTicketsNoSubscription.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/update-azsupportticketsnosubscription
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Update-AzSupportTicketsNoSubscription.md
+  PlatyPS schema version: 2024-05-01

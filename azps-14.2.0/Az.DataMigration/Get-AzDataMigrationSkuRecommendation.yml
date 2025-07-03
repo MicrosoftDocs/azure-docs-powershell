@@ -1,0 +1,350 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.Get-AzDataMigrationSkuRecommendation
+name: Get-AzDataMigrationSkuRecommendation
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Gives SKU recommendations for Azure SQL offerings
+description: |-
+  Gives SKU recommendations for Azure SQL offerings
+parameters:
+  cmdletParameters:
+  - name: ConfigFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of the ConfigFile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ConfigFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseAllowList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Space separated list of names of databases to be allowed for SKU recommendation consideration while excluding all others.
+      Only set one of the following or neither: databaseAllowList, databaseDenyList.
+      How to pass - "Database1 Database2" (Default: null)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseDenyList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Space separated list of names of databases to not be considered for SKU recommendation.
+      Only set one of the following or neither: databaseAllowList, databaseDenyList.
+      How to pass - "Database1 Database2" (Default: null)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayResult
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Whether or not to print the SKU recommendation results to the console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticStrategy
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Whether or not to use the elastic strategy for SKU recommendations based on resource usage profiling.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      UTC end time of performance data points to consider during aggregation, in YYYY-MM-DD HH:MM format.
+      Only used for baseline (non-elastic) strategy.
+      (Default: all data points collected will be considered)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFolder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Folder which data and result reports will be written to/read from.
+      The value here must be the same as the one used in PerfDataCollection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Overwrite
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Whether or not to overwrite any existing SKU recommendation reports.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalingFactor
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Scaling (comfort) factor used during SKU recommendation.
+      For example, if it is determined that there is a 4 vCore CPU requirement with a scaling factor of 150%, then the true CPU requirement will be 6 vCores.
+      (Default: 100)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      UTC start time of performance data points to consider during aggregation, in YYYY-MM-DD HH:MM format.
+      Only used for baseline (non-elastic) strategy.
+      (Default: all data points collected will be considered)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetPercentile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Percentile of data points to be used during aggregation of the performance data.
+      Only used for baseline (non-elastic) strategy.
+      (Default: 95)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetPlatform
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Target platform for SKU recommendation: either AzureSqlDatabase, AzureSqlManagedInstance, AzureSqlVirtualMachine, or Any.
+      If Any is selected, then SKU recommendations for all three target platforms will be evaluated, and the best fit will be returned.
+      (Default: Any)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSqlInstance
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Name of the SQL instance that SKU recommendation will be targeting.
+      (Default: outputFolder will be scanned for files created by the PerfDataCollection action, and recommendations will be provided for every instance found)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationSkuRecommendation
+        [-OutputFolder <String>]
+        [-TargetPlatform <String>]
+        [-TargetSqlInstance <String>]
+        [-TargetPercentile <String>]
+        [-ScalingFactor <String>]
+        [-StartTime <String>]
+        [-EndTime <String>]
+        [-Overwrite]
+        [-DisplayResult]
+        [-ElasticStrategy]
+        [-DatabaseAllowList <String>]
+        [-DatabaseDenyList <String>]
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommandLine
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationSkuRecommendation
+        -ConfigFilePath <String>
+        [-PassThru]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ConfigFile
+  isDefault: false
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Run SKU Recommendation on given SQL Server using connection string'
+  description: |-
+    ```powershell
+    Get-AzDataMigrationSkuRecommendation -DisplayResult
+    ```
+
+    ```output
+    Starting SKU recommendation...
+
+    Performing aggregation for instance AALAB03-2K8...
+    Aggregation complete. Calculating SKU recommendations...
+    Instance name: AALAB03-2K8
+    SKU recommendation: Azure SQL Managed Instance:
+    Compute: Gen5 - GeneralPurpose - 4 cores
+    Storage: 64 GB
+    Recommendation reasons:
+            According to the performance data collected, we estimate that your SQL server instance has a requirement for 0.16 vCores of CPU. For greater flexibility, based on your scaling factor of 100.00%, we are making a recommendation based on 0.16 vCores. Based on all the other factors, including memory, storage, and IO, this is the smallest compute sizing that will satisfy all of your needs.
+            This SQL Server instance requires 0.44 GB of memory, which is within this SKU's limit of 20.40 GB.
+            This SQL Server instance requires 32.37 GB of storage for data files. We recommend provisioning 64 GB of storage, which is the closest valid amount that can be provisioned that meets your requirement.
+            This SQL Server instance requires 0.00 MB/second of combined read/write IO throughput. This is a relatively idle instance, so IO latency is not considered.
+            Assuming the database uses the Full Recovery Model, this SQL Server instance requires 1 IOPS for data and log files.
+            This is the most cost-efficient offering among all the performance eligible SKUs.
+
+
+    Finishing SKU recommendations...
+    Event and Error Logs Folder Path: C:\Users\vmanhas\AppData\Local\Microsoft\SqlAssessment\Logs
+    ```
+
+    This command runs Run SKU Recommendation on given SQL Server using the connection string.
+- title: 'Example 2: Run Run SKU Recommendation on given SQL Server using assessment config file'
+  description: |-
+    ```powershell
+    Get-AzDataMigrationSkuRecommendation -ConfigFilePath "C:\Users\user\document\config.json"
+    ```
+
+    ```output
+    Starting SKU recommendation...
+
+    Performing aggregation for instance AALAB03-2K8...
+    Aggregation complete. Calculating SKU recommendations...
+    Instance name: AALAB03-2K8
+    SKU recommendation: Azure SQL Managed Instance:
+    Compute: Gen5 - GeneralPurpose - 4 cores
+    Storage: 64 GB
+    Recommendation reasons:
+            According to the performance data collected, we estimate that your SQL server instance has a requirement for 0.16 vCores of CPU. For greater flexibility, based on your scaling factor of 100.00%, we are making a recommendation based on 0.16 vCores. Based on all the other factors, including memory, storage, and IO, this is the smallest compute sizing that will satisfy all of your needs.
+            This SQL Server instance requires 0.44 GB of memory, which is within this SKU's limit of 20.40 GB.
+            This SQL Server instance requires 32.37 GB of storage for data files. We recommend provisioning 64 GB of storage, which is the closest valid amount that can be provisioned that meets your requirement.
+            This SQL Server instance requires 0.00 MB/second of combined read/write IO throughput. This is a relatively idle instance, so IO latency is not considered.
+            Assuming the database uses the Full Recovery Model, this SQL Server instance requires 1 IOPS for data and log files.
+            This is the most cost-efficient offering among all the performance eligible SKUs.
+
+
+    Finishing SKU recommendations...
+    Event and Error Logs Folder Path: C:\Users\vmanhas\AppData\Local\Microsoft\SqlAssessment\Logs
+    ```
+
+    This command runs Run SKU Recommendation on given SQL Server using the config file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationSkuRecommendation.md
+  document type: cmdlet
+  external help file: Az.DataMigration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/get-azdatamigrationskurecommendation
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationSkuRecommendation.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Update-AzureSiteRecoveryRecoveryPlan
+name: Update-AzureSiteRecoveryRecoveryPlan
+module: Azure
+isPreview: false
+summary: |-
+  Updates a recovery plan in Site Recovery.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Update-AzureSiteRecoveryRecoveryPlan** cmdlet updates a recovery plan in Azure Site Recovery and then publishes it.
+parameters:
+  cmdletParameters:
+  - name: File
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery plan file of the recovery plan that this cmdlet updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WaitForCompletion
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the cmdlet waits for the operation to complete before it returns control to the Windows PowerShell console.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzureSiteRecoveryRecoveryPlan
+        -File <String>
+        [-WaitForCompletion]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Update a recovery plan'
+  description: |-
+    ```
+    PS C:\> Update-AzureSiteRecoveryRecoveryPlan -File "C:\Users\Contoso\Desktop\RecoveryPlan.xml"
+    ```
+
+    This command updates the specified recovery plan, and then publishes it.
+links:
+- text: Get-AzureSiteRecoveryRecoveryPlan
+  href: ./Get-AzureSiteRecoveryRecoveryPlan.yml
+- text: New-AzureSiteRecoveryRecoveryPlan
+  href: ./New-AzureSiteRecoveryRecoveryPlan.yml
+- text: Remove-AzureSiteRecoveryRecoveryPlan
+  href: ./Remove-AzureSiteRecoveryRecoveryPlan.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5625ED47-BD85-4BF5-9044-2012E5A67BA4
+  PlatyPS schema version: 2024-05-01

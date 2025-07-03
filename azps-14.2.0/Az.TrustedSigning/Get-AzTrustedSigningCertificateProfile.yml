@@ -1,0 +1,233 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TrustedSigning.Get-AzTrustedSigningCertificateProfile
+name: Get-AzTrustedSigningCertificateProfile
+module: Az.TrustedSigning
+isPreview: false
+summary: |-
+  Get details of a certificate profile.
+description: |-
+  Get details of a certificate profile.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Trusted Signing account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CodeSigningAccountInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.Models.ITrustedSigningIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCodeSigningAccount
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.Models.ITrustedSigningIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate profile name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCodeSigningAccount
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateProfile
+        -AccountName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateProfile
+        -AccountName <String>
+        -ProfileName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateProfile
+        -ProfileName <String>
+        -CodeSigningAccountInputObject <ITrustedSigningIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCodeSigningAccount
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTrustedSigningCertificateProfile
+        -InputObject <ITrustedSigningIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.Models.ITrustedSigningIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.Models.ICertificateProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Trusted Signing Certificate Profile'
+  description: |-
+    ```powershell
+    Get-AzTrustedSigningCertificateProfile -AccountName test -ResourceGroupName rg-test -ProfileName test
+    ```
+
+    ```output
+    City    CommonName              Country EnhancedKeyUsage                                               Id                                                                                                                                                                 IdentityValidationId                 IncludeCity IncludeCountry IncludePostalCode IncludeState IncludeStreetAddress Name    Organization OrganizationUnit PostalCode ProfileType     ProvisioningState ResourceGroupName RetryAfter State      Status StreetAddress SystemDataCreatedAt   SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy             SystemDataLastModifiedByType Type                                                          Certificate
+    ----    ----------              ------- ----------------                                               --                                                                                                                                                                 --------------------                 ----------- -------------- ----------------- ------------ -------------------- ----    ------------ ---------------- ---------- -----------     ----------------- ----------------- ---------- -----      ------ ------------- -------------------   ------------------- ----------------------- ------------------------ ------------------------             ---------------------------- ----                                                          -----------
+    Barstow Contoso News(TEST ONLY) US      1.3.6.1.4.1.311.97.1.2.100309390.866961637.294916062.541502583 /subscriptions/66dc869d-771b-4f60-84c1-4964b5f4f5f2/resourceGroups/rg-test/providers/Microsoft.CodeSigning/codeSigningAccounts/test/certificateProfiles/test       18f2c413-51a1-4990-a0b6-83e19b7c5991                                                                                janielm Contoso News                  92312      PublicTrustTest Succeeded         rg-test                      California Active 5th street    1/24/2025 10:01:04 PM test@example.com    User                    2/3/2025 9:18:57 PM      81af9eaf-3a7b-43eb-bc59-c504bfe12240 Application                  microsoft.codesigning/codesigningaccounts/certificateprofiles {{ "serialNumber": "55000A50AE054B71AB92557ACF0000000A50AE","subjectName": "CN=Contoso News(TEST ONLY), O=Contoso News, L=Barstow, S=California, C=US","thumbprint": "9D808D63D1C8B79A152C92C455303D2DC861A910","createdDate": "1/24/2025 9:51:14 PM","expiryDate": "1/31/2025 9:51:14 PM","status": "Active"}}
+    ```
+
+    This command gets a trusted signing certificate profile
+- title: 'Example 2: List Trusted Signing Certificate Profiles'
+  description: |-
+    ```powershell
+    Get-AzTrustedSigningCertificateProfile -AccountName test -ResourceGroupName rg-test
+    ```
+
+    ```output
+    City    CommonName              Country EnhancedKeyUsage                                               Id                                                                                                                                                                 IdentityValidationId                 IncludeCity IncludeCountry IncludePostalCode IncludeState IncludeStreetAddress Name    Organization OrganizationUnit PostalCode ProfileType     ProvisioningState ResourceGroupName RetryAfter State      Status StreetAddress SystemDataCreatedAt   SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy             SystemDataLastModifiedByType Type                                                          Certificate
+    ----    ----------              ------- ----------------                                               --                                                                                                                                                                 --------------------                 ----------- -------------- ----------------- ------------ -------------------- ----    ------------ ---------------- ---------- -----------     ----------------- ----------------- ---------- -----      ------ ------------- -------------------   ------------------- ----------------------- ------------------------ ------------------------             ---------------------------- ----                                                          -----------
+    Barstow Contoso News(TEST ONLY) US      1.3.6.1.4.1.311.97.1.2.100309390.866961637.294916062.541502583 /subscriptions/66dc869d-771b-4f60-84c1-4964b5f4f5f2/resourceGroups/rg-test/providers/Microsoft.CodeSigning/codeSigningAccounts/test/certificateProfiles/test       18f2c413-51a1-4990-a0b6-83e19b7c5991                                                                                janielm Contoso News                  92312      PublicTrustTest Succeeded         rg-test                      California Active 5th street    1/24/2025 10:01:04 PM test@example.com    User                    2/3/2025 9:18:57 PM      81af9eaf-3a7b-43eb-bc59-c504bfe12240 Application                  microsoft.codesigning/codesigningaccounts/certificateprofiles {{ "serialNumber": "55000A50AE054B71AB92557ACF0000000A50AE","subjectName": "CN=Contoso News(TEST ONLY), O=Contoso News, L=Barstow, S=California, C=US","thumbprint": "9D808D63D1C8B79A152C92C455303D2DC861A910","createdDate": "1/24/2025 9:51:14 PM","expiryDate": "1/31/2025 9:51:14 PM","status": "Active"}}
+    ```
+
+    This command lists trusted signing certificate profiles
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Get-AzTrustedSigningCertificateProfile.md
+  document type: cmdlet
+  external help file: Az.TrustedSigning-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.trustedsigning/get-aztrustedsigningcertificateprofile
+  Module Name: Az.TrustedSigning
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Get-AzTrustedSigningCertificateProfile.md
+  PlatyPS schema version: 2024-05-01

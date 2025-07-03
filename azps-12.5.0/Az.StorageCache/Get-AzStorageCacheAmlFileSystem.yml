@@ -1,0 +1,211 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageCache.Get-AzStorageCacheAmlFileSystem
+name: Get-AzStorageCacheAmlFileSystem
+module: Az.StorageCache
+isPreview: false
+summary: |-
+  Returns an AML file system.
+description: |-
+  Returns an AML file system.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IStorageCacheIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name for the AML file system.
+      Allows alphanumerics, underscores, and hyphens.
+      Start and end with alphanumeric.
+    aliases:
+    - AmlFilesystemName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageCacheAmlFileSystem
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageCacheAmlFileSystem
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageCacheAmlFileSystem
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageCacheAmlFileSystem
+        -InputObject <IStorageCacheIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.IStorageCacheIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.Api20230501.IAmlFilesystem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List AML file system by Subscription.'
+  description: |-
+    ```powershell
+    Get-AzStorageCacheAmlFileSystem
+    ```
+
+    ```output
+    Name          Location ResourceGroupName         HealthState SkuName
+    ----          -------- -----------------         ----------- -------
+    azps-cache-fs eastus   azps_test_gp_storagecache Available   AMLFS-Durable-Premium-250
+    ```
+
+    List AML file system by Subscription.
+- title: 'Example 2: Gets AML file system by ResourceGroup.'
+  description: |-
+    ```powershell
+    Get-AzStorageCacheAmlFileSystem -ResourceGroupName azps_test_gp_storagecache
+    ```
+
+    ```output
+    Name          Location ResourceGroupName         HealthState SkuName
+    ----          -------- -----------------         ----------- -------
+    azps-cache-fs eastus   azps_test_gp_storagecache Available   AMLFS-Durable-Premium-250
+    ```
+
+    Gets AML file system by ResourceGroup.
+- title: 'Example 3: Get AML file system by Name.'
+  description: |-
+    ```powershell
+    Get-AzStorageCacheAmlFileSystem -ResourceGroupName azps_test_gp_storagecache -Name azps-cache-fs
+    ```
+
+    ```output
+    Name          Location ResourceGroupName         HealthState SkuName
+    ----          -------- -----------------         ----------- -------
+    azps-cache-fs eastus   azps_test_gp_storagecache Available   AMLFS-Durable-Premium-250
+    ```
+
+    Get AML file system by Name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Get-AzStorageCacheAmlFileSystem.md
+  document type: cmdlet
+  external help file: Az.StorageCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storagecache/get-azstoragecacheamlfilesystem
+  Module Name: Az.StorageCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Get-AzStorageCacheAmlFileSystem.md
+  PlatyPS schema version: 2024-05-01

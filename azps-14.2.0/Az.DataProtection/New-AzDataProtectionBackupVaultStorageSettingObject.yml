@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.New-AzDataProtectionBackupVaultStorageSettingObject
+name: New-AzDataProtectionBackupVaultStorageSettingObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Get Backup Vault storage setting object
+description: |-
+  Get Backup Vault storage setting object
+parameters:
+  cmdletParameters:
+  - name: DataStoreType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DataStoreType" data-throw-if-not-resolved="False" />
+    description: |-
+      DataStore Type of the vault
+    acceptedValues:
+    - ArchiveStore
+    - OperationalStore
+    - VaultStore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.StorageSettingType" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage Type of the vault
+    acceptedValues:
+    - GeoRedundant
+    - LocallyRedundant
+    - ZoneRedundant
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionBackupVaultStorageSettingObject
+        -Type <StorageSettingType>
+        -DataStoreType <DataStoreType>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a new vault storage setting object'
+  description: |-
+    ```powershell
+    New-AzDataProtectionBackupVaultStorageSettingObject -Type GeoRedundant -DataStoreType VaultStore
+    ```
+
+    ```output
+    DatastoreType Type
+    ------------- ----
+    VaultStore    GeoRedundant
+    ```
+
+    This command creates a new vault storage setting object which is used to create a backup vault.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionBackupVaultStorageSettingObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionbackupvaultstoragesettingobject
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionBackupVaultStorageSettingObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,610 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Set-AzTemplateSpec
+name: Set-AzTemplateSpec
+module: Az.Resources
+isPreview: false
+summary: |-
+  Modifies a Template Spec.
+description: |-
+  Modifies a Template Spec. If the Template Spec with the specified name and/or specific version does not already exist, it will be
+  created.
+
+  When modifying a Template Spec version's ARM Template content, the content can either come from a raw
+  JSON string (using **UpdateVersionByNameFromJsonParameterSet** parameter set) or from a specified JSON/Bicep file
+  (using **UpdateVersionByNameFromJsonFileParameterSet** parameter set).
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByIdParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateByNameParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByIdParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateByNameParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the template spec.
+      Only required if the template spec does not already exist.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified resource Id of the template spec.
+      Example: /subscriptions/{subId}/resourceGroups/{rgName}/providers/Microsoft.Resources/templateSpecs/{templateSpecName}
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateByIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Hashtable of tags for the template spec and/or version
+    aliases:
+    - Tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The file path to the local Azure Resource Manager template JSON/Bicep file.
+    aliases:
+    - InputFile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateJson
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Resource Manager template JSON.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UIFormDefinitionFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UIForm for the templatespec resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UIFormDefinitionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      UIForm for the templatespec resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of the template spec.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VersionDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateVersionByIdFromJsonFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByIdFromJsonParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonFileParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateVersionByNameFromJsonParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromJsonStringParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceId] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceId] <String>
+        [-Version] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        -TemplateFile <String>
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-VersionDescription <String>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateVersionByIdFromJsonFileParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceId] <String>
+        [-Version] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        -TemplateJson <String>
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-VersionDescription <String>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateVersionByIdFromJsonParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateByNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Version] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        -TemplateFile <String>
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-VersionDescription <String>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateVersionByNameFromJsonFileParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzTemplateSpec
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Version] <String>
+        [[-Description] <String>]
+        [[-DisplayName] <String>]
+        -TemplateJson <String>
+        [-Location <String>]
+        [-Tag <Hashtable>]
+        [-VersionDescription <String>]
+        [-UIFormDefinitionFile <String>]
+        [-UIFormDefinitionString <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateVersionByNameFromJsonParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.SdkModels.PSTemplateSpec" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $templateJson = @"
+    {
+        "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {},
+        "resources": []
+    }
+    "@
+    Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec' -Version 'v1.0' -Location 'West US' -TemplateJson $templateJson
+    ```
+
+    Modifies version "v1.0" of a Template Spec named "myTemplateSpec". The specified version
+    will have $templateJson as the version's ARM Template content. If the root Template Spec and/or version
+    do not already exist they will be created.
+
+
+    **Notes:**
+
+    * The ARM Template in the example is a no-op as it contains no actual resources.
+    * Location is only required when the Template Spec does not already exist
+- title: Example 2
+  description: |-
+    ```powershell
+    Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec' -Version 'v2.0' -Location 'West US' -TemplateFile 'myTemplateContent.json'
+    ```
+
+    Modifies version "v2.0" of a Template Spec named "myTemplateSpec". The specified version
+    will have the content from the local file "myTemplateContent.json" as the version's ARM Template content. If the
+    root Template Spec and/or version do not already exist they will be created.
+
+    **Note:** Location is only required when the Template Spec does not already exist
+- title: Example 3
+  description: |-
+    ```powershell
+    Set-AzTemplateSpec -ResourceGroupName 'myRG' -Name 'myTemplateSpec'  -Location 'West US' -Description 'My updated Template Spec'
+    ```
+
+    Modifies the description of the Template Spec named "myTemplateSpec" in resource group "myRG". If the
+    Template Spec does not already exist it will be created.
+
+    **Note:** Location is only required when the Template Spec does not already exist
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzTemplateSpec.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/set-aztemplatespec
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Set-AzTemplateSpec.md
+  PlatyPS schema version: 2024-05-01

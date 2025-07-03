@@ -1,0 +1,816 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzDenyAssignment
+name: Get-AzDenyAssignment
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists Azure RBAC deny assignments at the specified scope.
+  By default it lists all deny assignments in the selected Azure subscription.
+  Use respective parameters to list deny assignments to a specific user, or to list deny assignments on a specific resource group or resource.
+
+  The cmdlet may call below Microsoft Graph API according to input parameters:
+
+  - GET /directoryObjects/{id}
+  - POST /directoryObjects/getByIds
+description: |-
+  Use the Get-AzDenyAssignment command to list all deny assignments that are effective on a scope.
+  Without any parameters, this command returns all the deny assignments made under the subscription.
+  This list can  be filtered using filtering parameters for principal, deny assignment name and scope.
+  To specify a user, use SignInName or Microsoft Entra ObjectId parameters.
+  To specify a security group, use Microsoft Entra ObjectId parameter.
+  And to specify a Microsoft Entra application, use ServicePrincipalName or ObjectId parameters.
+  The scope at which access is being denied may be specified.
+  It defaults to the selected subscription.
+  The scope of the deny assignment can be specified using one of the following parameter combinations
+          a.
+  Scope - This is the fully qualified scope starting with /subscriptions/\<subscriptionId\>.
+  This will filter deny assignments that are effective at that particular scope i.e.
+  all deny assignments at that scope and above.
+          b.
+  ResourceGroupName - Name of any resource group under the subscription.
+  This will filter assignments effective at the specified resource group i.e.
+  all deny assignments at that scope and above.
+          c.
+  ResourceName, ResourceType, ResourceGroupName and (optionally) ParentResource - Identifies a particular resource under the subscription and will filter deny assignments effective at that resource scope.
+  To determine what access is denied for a particular user in the subscription, use the ExpandPrincipalGroups switch.
+  This will list all deny assignments assigned to the user, and to the groups that the user is member of.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, resource, group, template, deployment
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DenyAssignmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the deny assignment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DenyAssignmentNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpandPrincipalGroups
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, returns deny assignments directly assigned to the user and to the groups of which the user is a member (transitively).
+      Supported only for a user principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: SignInNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Deny assignment fully qualified ID or GUID. When Id is provided as a GUID, will take current subscription as default scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DenyAssignmentIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The Microsoft Entra ObjectId of the User, Group or Service Principal.
+      Filters all deny assignments that are made to the specified principal.
+    aliases:
+    - PrincipalId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentResource
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource in the hierarchy of the resource specified using ResourceName parameter.
+      Must be used in conjunction with ResourceGroupName, ResourceType, and ResourceName parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+      Lists deny assignments that are effective at the specified resource group.
+      When used in conjunction with ResourceName, ResourceType, and ParentResource parameters, the command lists deny assignments effective at resources within the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceGroupParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+      For e.g.
+      storageaccountprod.
+      Must be used in conjunction with ResourceGroupName, ResourceType, and (optionally)ParentResource parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource type.
+      For e.g.
+      Microsoft.Network/virtualNetworks.
+      Must be used in conjunction with ResourceGroupName, ResourceName, and (optionally)ParentResource parameters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceWithObjectIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Scope of the role assignment.
+      In the format of relative URI.
+      For e.g.
+      /subscriptions/9004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/TestRG.
+      It must start with "/subscriptions/{id}".
+      The command filters all deny assignments that are effective at that scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EmptyParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DenyAssignmentIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: DenyAssignmentNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ServicePrincipalName of the service principal.
+      Filters all deny assignments that are made to the specified Microsoft Entra application.
+    aliases:
+    - SPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SPNParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The email address or the user principal name of the user.
+      Filters all deny assignments that are made to the specified user.
+    aliases:
+    - Email
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ScopeWithSignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SignInNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EmptyParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ObjectId <Guid>
+        [-ExpandPrincipalGroups]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ObjectId <Guid>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ObjectId <Guid>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        [-ParentResource <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ObjectId <Guid>
+        -Scope <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithObjectIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -SignInName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -SignInName <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        [-ParentResource <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -SignInName <String>
+        -Scope <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithSignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -SignInName <String>
+        [-ExpandPrincipalGroups]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SignInNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ServicePrincipalName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupWithSPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ServicePrincipalName <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        [-ParentResource <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceWithSPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ServicePrincipalName <String>
+        -Scope <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeWithSPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ServicePrincipalName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SPNParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        -ResourceType <String>
+        [-ParentResource <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -Scope <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScopeParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -Id <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DenyAssignmentIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDenyAssignment
+        -DenyAssignmentName <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DenyAssignmentNameParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.Authorization.PSDenyAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    List all deny assignments in the subscription
+
+    ```powershell
+    Get-AzDenyAssignment
+    ```
+
+    ```output
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/denyAssignments/22704996-fbd0-4ab1-8625-722d897825d2
+    DenyAssignmentName      : Test deny assignment 1
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  All Principals
+                              ObjectType:   SystemDefined
+                              ObjectId:     00000000-0000-0000-0000-000000000000
+                              }
+    ExcludePrincipals       : {
+                              DisplayName:  testuser
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              }
+    IsSystemProtected       : True
+
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG/providers/Microsoft.Authorization/denyAssignments/43af7d0c-0bf8-407f-96c0-96a29d076431
+    DenyAssignmentName      : Test deny assignment 2
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  testuser
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              ,
+                              DisplayName:  PowershellTestingApp
+                              ObjectType:   ServicePrincipal
+                              ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+    ```
+- title: Example 2
+  description: |-
+    Gets all deny assignments made to user john.doe@contoso.com at the scope testRG and above.
+
+    ```powershell
+    Get-AzDenyAssignment -ResourceGroupName testRG -SignInName john.doe@contoso.com
+    ```
+
+    ```output
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/providers/Microsoft.Authorization/denyAssignments/22704996-fbd0-4ab1-8625-722d897825d2
+    DenyAssignmentName      : Test deny assignment 1
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  john.doe
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG/providers/Microsoft.Authorization/denyAssignments/43af7d0c-0bf8-407f-96c0-96a29d076431
+    DenyAssignmentName      : Test deny assignment
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  john.doe
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              ,
+                              DisplayName:  PowershellTestingApp
+                              ObjectType:   ServicePrincipal
+                              ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+    ```
+- title: Example 3
+  description: |-
+    Gets all deny assignments of the specified service principal
+
+    ```powershell
+    Get-AzDenyAssignment -ServicePrincipalName 'http://testapp1.com'
+    ```
+
+    ```output
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG/providers/Microsoft.Authorization/denyAssignments/43af7d0c-0bf8-407f-96c0-96a29d076431
+    DenyAssignmentName      : Test deny assignment 1
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  TestApp
+                              ObjectType:   ServicePrincipal
+                              ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/testRG/providers/Microsoft.Web/sites/site1/providers/Microsoft.Authorization/denyAssignments/94e3d9da-3700-4113-aab4-15f6c173d794
+    DenyAssignmentName      : Test deny assignment 2
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/testRG/providers/Microsoft.Web/sites/site1
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  testuser
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              ,
+                              DisplayName:  TestApp
+                              ObjectType:   ServicePrincipal
+                              ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+    ```
+- title: Example 4
+  description: |-
+    Gets deny assignments at the 'site1' website scope.
+
+    ```powershell
+    Get-AzDenyAssignment -Scope '/subscriptions/96231a05-34ce-4eb4-aa6a-70759cbb5e83/resourcegroups/testRG/providers/Microsoft.Web/sites/site1'
+    ```
+
+    ```output
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG/providers/Microsoft.Authorization/denyAssignments/43af7d0c-0bf8-407f-96c0-96a29d076431
+    DenyAssignmentName      : Test deny assignment 1
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourcegroups/testRG
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  testuser
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+
+    Id                      : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/testRG/providers/Microsoft.Web/sites/site1/providers/Microsoft.Authorization/denyAssignments/594e3d9da-3700-4113-aab4-15f6c173d794
+    DenyAssignmentName      : Test deny assignment 2
+    Description             : Test deny assignment for PS cmdlets
+    Actions                 : {foo/*}
+    NotActions              : {foo/*/read}
+    DataActions             : {foo/*}
+    NotDataActions          : {}
+    Scope                   : /subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f/resourceGroups/testRG/providers/Microsoft.Web/sites/site1
+    DoNotApplyToChildScopes : False
+    Principals              : {
+                              DisplayName:  testuser
+                              ObjectType:   User
+                              ObjectId:     f8d526a0-54eb-4941-ae69-ebf4a334d0f0
+                              ,
+                              DisplayName:  TestApp
+                              ObjectType:   ServicePrincipal
+                              ObjectId:     f2dc21ac-702a-4bde-a4ce-146edf751d81
+                              }
+    ExcludePrincipals       : {}
+    IsSystemProtected       : True
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDenyAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azdenyassignment
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDenyAssignment.md
+  PlatyPS schema version: 2024-05-01

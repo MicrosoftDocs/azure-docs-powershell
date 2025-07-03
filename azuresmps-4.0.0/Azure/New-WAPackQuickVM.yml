@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackQuickVM
+name: New-WAPackQuickVM
+module: Azure
+isPreview: false
+summary: |-
+  Creates a virtual machine based on a template.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-WAPackQuickVM** cmdlet creates a virtual machine based on a template.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Template
+    type: <xref href="VMTemplate" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a template.
+      The cmdlet creates a virtual machine based on the template that you specify.
+      To obtain a template object, use the **Get-WAPackVMTemplate** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMCredential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credential for the local Administrator account.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+      For more information, type `Get-Help Get-Credential`.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackQuickVM
+        -Name <String>
+        -Template <VMTemplate>
+        -VMCredential <PSCredential>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a virtual machine based on a template'
+  description: |-
+    ```
+    PS C:\> $Credentials = Get-Credential
+    PS C:\> $TemplateId = Get-WAPackVMTemplate -Id 00001111-aaaa-2222-bbbb-3333cccc4444
+    PS C:\> New-WAPackQuickVM -Name "VirtualMachine023" -Template $TemplateId -VMCredential $Credentials
+    ```
+
+    The first command creates a **PSCredential** object, and then stores it in the $Credentials variable.
+    The cmdlet prompts you for an account and password.
+    For more information, type `Get-Help Get-Credential`.
+
+    The second command gets a template by using the **Get-WAPackVMTemplate** cmdlet.
+    The command specifies the ID of a template.
+    The command stores the template object in the $TemplateID variable.
+
+    The final command creates a virtual machine named VirtualMachine023.
+    The command bases the virtual machine on the template stored in $TemplateId.
+links:
+- text: New-WAPackVM
+  href: ./New-WAPackVM.yml
+- text: Get-WAPackVMTemplate
+  href: ./Get-WAPackVMTemplate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 53BD6ED4-EA66-448B-8B18-F078C0738AF5
+  PlatyPS schema version: 2024-05-01

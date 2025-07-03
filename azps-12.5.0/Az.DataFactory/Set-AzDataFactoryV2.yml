@@ -1,0 +1,1009 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Set-AzDataFactoryV2
+name: Set-AzDataFactoryV2
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Creates a data factory.
+description: |-
+  The **Set-AzDataFactoryV2** cmdlet creates a data factory with the specified resource group name and location.
+  Perform these operations in the following order:
+          -- Create a data factory.
+          -- Create linked services.
+          -- Create datasets.
+          -- Create a pipeline.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, data, factories
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The account name for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollaborationBranch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The collaboration branch for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisablePublish
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disable manual publish operation in ADF studio to favor automated publish.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the key in Azure Key Vault to use as Customer Managed Key for encryption.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionKeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of the key used for CMK. If not provided, latest version will be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionUserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User assigned identity to use to authenticate to customer's key vault. If not provided Managed Service Identity will be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionVaultBaseUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The url of the Azure Key Vault used for encryption with CMK.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Runs the cmdlet without prompting for confirmation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GlobalParameterDefinition
+    type: <xref href="System.Collections.Generic.IDictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The dictionary containing the global parameters of the data factory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The host name for GitHub repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Identity type that will be associated with your DataFactory. Options are 'SystemAssigned', 'UserAssigned' or 'SystemAssigned,UserAssigned'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LastCommitId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The last commit id for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoGitConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory is created in this region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceId
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data factory name.
+    aliases:
+    - DataFactoryName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The project name Azure DevOps for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not public network access is allowed for the data factory. Options are 'Enabled' or 'Disabled'
+    defaultValue: Enabled
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RepositoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The repository name for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure resource ID of V2 data factory.
+    aliases:
+    - Id
+    - DataFactoryId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RootFolder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The root folder for repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The tags of the data factory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceId
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByResourceIdFactoryRepoGitConfig
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoGitConfig
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The tenant id for Azure DevOps repo configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByFactoryNameFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectFactoryRepoVstsConfig
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.Collections.Generic.IDictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.Object" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The dictionary containing the user assigned identities of the data factory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what happens if the cmdlet runs, but doesn't run the cmdlet.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceId] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceId] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        -AccountName <String>
+        -RepositoryName <String>
+        -CollaborationBranch <String>
+        -RootFolder <String>
+        -ProjectName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-TenantId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdFactoryRepoVstsConfig
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceId] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        -AccountName <String>
+        -RepositoryName <String>
+        -CollaborationBranch <String>
+        -RootFolder <String>
+        -HostName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdFactoryRepoGitConfig
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        -AccountName <String>
+        -RepositoryName <String>
+        -CollaborationBranch <String>
+        -RootFolder <String>
+        -HostName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryNameFactoryRepoGitConfig
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Location] <String>
+        [[-Tag] <Hashtable>]
+        -AccountName <String>
+        -RepositoryName <String>
+        -CollaborationBranch <String>
+        -RootFolder <String>
+        -ProjectName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-TenantId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryNameFactoryRepoVstsConfig
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        -InputObject <PSDataFactory>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        -InputObject <PSDataFactory>
+        -ProjectName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-AccountName <String>]
+        [-RepositoryName <String>]
+        [-CollaborationBranch <String>]
+        [-RootFolder <String>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-TenantId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectFactoryRepoVstsConfig
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzDataFactoryV2
+        [[-Location] <String>]
+        [[-Tag] <Hashtable>]
+        -InputObject <PSDataFactory>
+        -HostName <String>
+        [-IdentityType <String>]
+        [-PublicNetworkAccess <String>]
+        [-UserAssignedIdentity <System.Collections.Generic.IDictionary`2[System.String,System.Object]>]
+        [-EncryptionVaultBaseUrl <String>]
+        [-EncryptionKeyName <String>]
+        [-EncryptionKeyVersion <String>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-Force]
+        [-GlobalParameterDefinition <System.Collections.Generic.IDictionary`2[System.String,Microsoft.Azure.Management.DataFactory.Models.GlobalParameterSpecification]>]
+        [-AccountName <String>]
+        [-RepositoryName <String>]
+        [-CollaborationBranch <String>]
+        [-RootFolder <String>]
+        [-LastCommitId <String>]
+        [-DisablePublish]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectFactoryRepoGitConfig
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactoryV2.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a data factory'
+  description: |-
+    ```powershell
+    Set-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF" -Location "WestUS"
+    ```
+
+    ```output
+    DataFactoryName   : WikiADF
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataFactory/factories/wikiadf
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
+        ProvisioningState : Succeeded
+        RepoConfiguration :
+    ```
+- title: 'Example 2: Create a data factory with repo configuration details using an existing factory object.'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF" | Set-AzDataFactoryV2 -AccountName msdata -RepositoryName ADFRepo -CollaborationBranch master -RootFolder / -ProjectName "Azure Data Factory"
+    ```
+
+    ```output
+    DataFactoryName   : WikiADF
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataFactory/factories/wikiadf
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
+        ProvisioningState : Succeeded
+        RepoConfiguration : Microsoft.Azure.Management.DataFactory.Models.FactoryVSTSConfiguration
+    ```
+
+    This command creates a data factory named WikiADF in the resource group named ADF in the EastUS location with Azure DevOps source control configuration.
+- title: 'Example 3: Create a data factory with GitHub repo configuration details using a new factory object.'
+  description: |-
+    ```powershell
+    Set-AzDataFactoryV2 -ResourceGroupName "ADF" -Name "WikiADF" -Location 'EastUS' -HostName 'https://github.com' -AccountName msdata -RepositoryName ADFRepo -CollaborationBranch master -RootFolder /
+    ```
+
+    ```output
+    DataFactoryName   : WikiADF
+        DataFactoryId     : /subscriptions/3e8e61b5-9a7d-4952-bfae-545ab997b9ea/resourceGroups/adf/providers/Microsoft.DataFactory/factories/wikiadf
+        ResourceGroupName : ADF
+        Location          : EastUS
+        Tags              : {}
+        Identity          : Microsoft.Azure.Management.DataFactory.Models.FactoryIdentity
+        ProvisioningState : Succeeded
+        RepoConfiguration : Microsoft.Azure.Management.DataFactory.Models.FactoryGitHubConfiguration
+    ```
+
+    This command creates a data factory named WikiADF in the resource group named ADF in the EastUS location with GitHub source control configuration..
+links:
+- text: Get-AzDataFactoryV2
+  href: Get-AzDataFactoryV2.yml
+- text: Remove-AzDataFactoryV2
+  href: Remove-AzDataFactoryV2.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Set-AzDataFactoryV2.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV2.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/set-azdatafactoryv2
+  Module Name: Az.DataFactory
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Set-AzDataFactoryV2.md
+  PlatyPS schema version: 2024-05-01

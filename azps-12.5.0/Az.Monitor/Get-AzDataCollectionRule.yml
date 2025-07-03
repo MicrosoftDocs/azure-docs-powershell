@@ -1,0 +1,276 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzDataCollectionRule
+name: Get-AzDataCollectionRule
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Returns the specified data collection rule.
+description: |-
+  Returns the specified data collection rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IDataCollectionRuleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the data collection rule.
+      The name is case insensitive.
+    aliases:
+    - DataCollectionRuleName
+    - RuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataCollectionRule
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataCollectionRule
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataCollectionRule
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataCollectionRule
+        -InputObject <IDataCollectionRuleIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IDataCollectionRuleIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.IDataCollectionRuleResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get data collection rules by subscription ID'
+  description: |-
+    ```powershell
+    Get-AzDataCollectionRule
+    ```
+
+    ```output
+    Etag                                   Kind Location Name              ResourceGroupName
+    ----                                   ---- -------- ----              -----------------
+    "d500e99c-0000-0100-0000-650d68320000"      eastus   myCollectionRule1 AMCS-TEST
+    "d50031d9-0000-0100-0000-650d6b1f0000"      eastus   myCollectionRule2 AMCS-TEST
+    ```
+
+    This command gets list of data collection rules by specified subscription.
+- title: 'Example 2: List by resource group'
+  description: |-
+    ```powershell
+    Get-AzDataCollectionRule -ResourceGroupName AMCS-TEST
+    ```
+
+    ```output
+    Etag                                   Kind Location Name              ResourceGroupName
+    ----                                   ---- -------- ----              -----------------
+    "d500e99c-0000-0100-0000-650d68320000"      eastus   myCollectionRule1 AMCS-TEST
+    "d50031d9-0000-0100-0000-650d6b1f0000"      eastus   myCollectionRule2 AMCS-TEST
+    ```
+
+    This command gets list of data collection rules by specified resource group.
+- title: 'Example 3: Get specific rule with specified resource group'
+  description: |-
+    ```powershell
+    Get-AzDataCollectionRule -ResourceGroupName AMCS-TEST -Name myCollectionRule1
+    ```
+
+    ```output
+    DataCollectionEndpointId                  :
+    DataFlow                                  : {{
+                                                  "streams": [ "Microsoft-InsightsMetrics" ],
+                                                  "destinations": [ "azureMonitorMetrics-default" ]
+                                                }}
+    DataSourceDataImportEventHubConsumerGroup :
+    DataSourceDataImportEventHubName          :
+    DataSourceDataImportEventHubStream        :
+    DataSourceExtension                       :
+    DataSourceIisLog                          :
+    DataSourceLogFile                         :
+    DataSourcePerformanceCounter              : {{
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 15,
+                                                  "counterSpecifiers": [ "\\\\Processor(_Total)\\\\% Processor Time", "\\\\Memory\\\\Committed Bytes", "\\\\LogicalDisk(_Total)\\\\Free
+                                                Megabytes", "\\\\PhysicalDisk(_Total)\\\\Avg. Disk Queue Length" ],
+                                                  "name": "cloudTeamCoreCounters"
+                                                }, {
+                                                  "streams": [ "Microsoft-Perf" ],
+                                                  "samplingFrequencyInSeconds": 30,
+                                                  "counterSpecifiers": [ "\\\\Process(_Total)\\\\Thread Count" ],
+                                                  "name": "appTeamExtraCounters"
+                                                }}
+    DataSourcePlatformTelemetry               :
+    DataSourcePrometheusForwarder             :
+    DataSourceSyslog                          :
+    DataSourceWindowsEventLog                 : {{
+                                                  "streams": [ "Microsoft-WindowsEvent" ],
+                                                  "xPathQueries": [ "System![System[(Level = 1 or Level = 2 or Level = 3)]]", "Application!*[System[(Level = 1 or Level = 2 or Level = 3)]]" ],
+                                                  "name": "appTeam1AppEvents"
+                                                }}
+    DataSourceWindowsFirewallLog              :
+    Description                               :
+    DestinationAzureMonitorMetricName         : azureMonitorMetrics-default
+    DestinationEventHub                       :
+    DestinationEventHubsDirect                :
+    DestinationLogAnalytic                    :
+    DestinationMonitoringAccount              :
+    DestinationStorageAccount                 :
+    DestinationStorageBlobsDirect             :
+    DestinationStorageTablesDirect            :
+    Etag                                      : "d500e99c-0000-0100-0000-650d68320000"
+    Id                                        : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/AMCS-TEST/providers/Microsoft.Insights/dataCollectionRules/myCollectionRule1
+    IdentityPrincipalId                       :
+    IdentityTenantId                          :
+    IdentityType                              :
+    IdentityUserAssignedIdentity              : {
+                                                }
+    ImmutableId                               : dcr-9a6169afee634c13baa880dee8c5eb97
+    Kind                                      :
+    Location                                  : eastus
+    MetadataProvisionedBy                     :
+    MetadataProvisionedByResourceId           :
+    Name                                      : myCollectionRule1
+    ProvisioningState                         : Succeeded
+    ResourceGroupName                         : AMCS-TEST
+    StreamDeclaration                         : {
+                                                }
+    SystemDataCreatedAt                       : 9/22/2023 9:18:41 AM
+    SystemDataCreatedBy                       : v-jiaji@microsoft.com
+    SystemDataCreatedByType                   : User
+    SystemDataLastModifiedAt                  : 9/22/2023 10:10:57 AM
+    SystemDataLastModifiedBy                  : v-jiaji@microsoft.com
+    SystemDataLastModifiedByType              : User
+    Tag                                       : {
+                                                }
+    Type                                      : Microsoft.Insights/dataCollectionRules
+    ```
+
+    This command gets specific data collection rule with specified resource group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzDataCollectionRule.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azdatacollectionrule
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzDataCollectionRule.md
+  PlatyPS schema version: 2024-05-01

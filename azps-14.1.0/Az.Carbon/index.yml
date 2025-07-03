@@ -1,0 +1,26 @@
+### YamlMime:PowerShellModule1
+uid: Az.Carbon
+name: Az.Carbon Module
+isPreview: false
+cmdletGroups:
+- title: Carbon
+  cmdlets:
+  - Az.Carbon.Get-AzCarbonEmissionDataAvailableDateRange
+  - Az.Carbon.Get-AzCarbonEmissionReport
+  - Az.Carbon.New-AzCarbonItemDetailsQueryFilterObject
+  - Az.Carbon.New-AzCarbonMonthlySummaryReportQueryFilterObject
+  - Az.Carbon.New-AzCarbonOverallSummaryReportQueryFilterObject
+  - Az.Carbon.New-AzCarbonTopItemsMonthlySummaryReportQueryFilterObject
+  - Az.Carbon.New-AzCarbonTopItemsSummaryReportQueryFilterObject
+description: |-
+  Microsoft Azure PowerShell: Carbon cmdlets
+metadata:
+  Module Name: Az.Carbon
+  Module Guid: accceef6-8113-453a-a31c-4f2ce57893d6
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.carbon
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Carbon/Carbon/help/Az.Carbon.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Carbon/Carbon/help/Az.Carbon.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

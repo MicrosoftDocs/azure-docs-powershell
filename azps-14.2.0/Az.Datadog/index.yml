@@ -1,0 +1,39 @@
+### YamlMime:PowerShellModule1
+uid: Az.Datadog
+name: Az.Datadog Module
+isPreview: false
+cmdletGroups:
+- title: Datadog
+  cmdlets:
+  - Az.Datadog.Get-AzDatadogMarketplaceAgreement
+  - Az.Datadog.Get-AzDatadogMonitor
+  - Az.Datadog.Get-AzDatadogMonitorApiKey
+  - Az.Datadog.Get-AzDatadogMonitorDefaultKey
+  - Az.Datadog.Get-AzDatadogMonitorHost
+  - Az.Datadog.Get-AzDatadogMonitorLinkedResource
+  - Az.Datadog.Get-AzDatadogMonitorMonitoredResource
+  - Az.Datadog.Get-AzDatadogSingleSignOnConfiguration
+  - Az.Datadog.Get-AzDatadogTagRule
+  - Az.Datadog.New-AzDatadogFilteringTagObject
+  - Az.Datadog.New-AzDatadogMarketplaceAgreement
+  - Az.Datadog.New-AzDatadogMonitor
+  - Az.Datadog.New-AzDatadogSingleSignOnConfiguration
+  - Az.Datadog.New-AzDatadogTagRule
+  - Az.Datadog.Remove-AzDatadogMonitor
+  - Az.Datadog.Set-AzDatadogMonitorDefaultKey
+  - Az.Datadog.Update-AzDatadogMonitor
+  - Az.Datadog.Update-AzDatadogMonitorSetPasswordLink
+  - Az.Datadog.Update-AzDatadogSingleSignOnConfiguration
+  - Az.Datadog.Update-AzDatadogTagRule
+description: |-
+  Microsoft Azure PowerShell: Datadog cmdlets
+metadata:
+  Module Name: Az.Datadog
+  Module Guid: 41d5c7d4-9068-4baf-9995-db228e7600b3
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.datadog
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/Az.Datadog.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Datadog/Datadog/help/Az.Datadog.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

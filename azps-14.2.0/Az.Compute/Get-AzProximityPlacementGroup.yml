@@ -1,0 +1,181 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzProximityPlacementGroup
+name: Get-AzProximityPlacementGroup
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list Proximity Placement Group resource(s).
+description: |-
+  This cmdlet will get or list Proximity Placement Group resource(s).
+parameters:
+  cmdletParameters:
+  - name: ColocationStatus
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows the colocation status of a resource in the proximity placement group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the proximity placement group.
+    aliases:
+    - ProximityPlacementGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id for the proximity placement group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzProximityPlacementGroup
+        [[-ResourceGroupName] <String>]
+        [[-Name] <String>]
+        [-ColocationStatus]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzProximityPlacementGroup
+        [-ResourceId] <String>
+        [-ColocationStatus]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSProximityPlacementGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzProximityPlacementGroup -ResourceGroupName $resourceGroupName -Name $proximityPlacementGroupName
+    ```
+
+    ```output
+    ResourceGroupName           : rg0
+    ProximityPlacementGroupType : Standard
+    VirtualMachines             : {}
+    VirtualMachineScaleSets     : {}
+    AvailabilitySets            : {}
+    Id                          : /subscriptions/5393f919-a68a-43d0-9063-4b2bda6bffdf/resourceGroups/rg0/providers/Microsoft.Compute/proximityPlacementGroups/ppg0
+    Name                        : ppg0
+    Type                        : Microsoft.Compute/proximityPlacementGroups
+    Location                    : westcentralus
+    Tags                        : {[key1, val1]}
+    ```
+
+    This command gets the proximity placement group
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzProximityPlacementGroup -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    ResourceGroupName            Name      Location     Type
+    -----------------            ----      --------     ----
+    rg0                          ppg0 westcentralus Standard
+    rg0                          ppg1 westcentralus Standard
+    ```
+
+    This command list all proximity placement groups under the given resource group.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzProximityPlacementGroup
+    ```
+
+    ```output
+    ResourceGroupName            Name      Location     Type
+    -----------------            ----      --------     ----
+    rg0                          ppg0 westcentralus Standard
+    rg0                          ppg1 westcentralus Standard
+    rg1                          ppg2     centralus Standard
+    ```
+
+    This command list all proximity placement groups under the subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzProximityPlacementGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azproximityplacementgroup
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzProximityPlacementGroup.md
+  PlatyPS schema version: 2024-05-01

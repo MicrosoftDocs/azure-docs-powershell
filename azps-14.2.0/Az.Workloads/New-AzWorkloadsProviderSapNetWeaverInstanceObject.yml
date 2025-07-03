@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.New-AzWorkloadsProviderSapNetWeaverInstanceObject
+name: New-AzWorkloadsProviderSapNetWeaverInstanceObject
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Create an in-memory object for SapNetWeaverProviderInstanceProperties.
+description: |-
+  Create an in-memory object for SapNetWeaverProviderInstanceProperties.
+parameters:
+  cmdletParameters:
+  - name: SapClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP Client ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapHostFileEntry
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets the list of HostFile Entries.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapHostname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the target virtual machine IP Address/FQDN.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapInstanceNr
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the instance number of SAP NetWeaver.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the SAP password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapPasswordUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the key vault URI to secret with the SAP password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapPortNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP HTTP port number.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapSid
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP System Identifier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SapUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the SAP user name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslCertificateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets the blob URI to SSL certificate for the SAP system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Support.SslPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets certificate preference if secure communication is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWorkloadsProviderSapNetWeaverInstanceObject
+        [-SapClientId <String>]
+        [-SapHostFileEntry <String[]>]
+        [-SapHostname <String>]
+        [-SapInstanceNr <String>]
+        [-SapPassword <String>]
+        [-SapPasswordUri <String>]
+        [-SapPortNumber <String>]
+        [-SapSid <String>]
+        [-SapUsername <String>]
+        [-SslCertificateUri <String>]
+        [-SslPreference <SslPreference>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.SapNetWeaverProviderInstanceProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create SAP Netweaver Provider'
+  description: |-
+    ```powershell
+    New-AzWorkloadsProviderSapNetWeaverInstanceObject -SapClientId 000 -SapHostFileEntry '["10.0.82.4 l13appvm0.ams.azure.com l13appvm0","10.0.82.5 l13ascsvm.ams.azure.com l13ascsvm"]' -SapHostname 10.0.82.4 -SapInstanceNr 00 -SapPassword $password -SapSid L13 -SapUsername AMSUSER -SslPreference Disabled
+    ```
+
+    ```output
+    ProviderType SapClientId SapHostFileEntry                                                                                SapHostname
+    ------------ ----------- ----------------                                                                                -----------
+    SapNetWeaver 000         {["10.0.82.4 l13appvm0.ams.azure.com l13appvm0","10.0.82.5 l13ascsvm.ams.azure.com l13ascsvm"]} 10.0.82.4
+    ```
+
+    Create SAP Netweaver Provider for an AMS instance
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderSapNetWeaverInstanceObject.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/new-azworkloadsprovidersapnetweaverinstanceobject
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/New-AzWorkloadsProviderSapNetWeaverInstanceObject.md
+  PlatyPS schema version: 2024-05-01

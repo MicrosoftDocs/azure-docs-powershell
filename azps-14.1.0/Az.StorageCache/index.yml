@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: Az.StorageCache
+name: Az.StorageCache Module
+isPreview: false
+cmdletGroups:
+- title: StorageCache
+  cmdlets:
+  - Az.StorageCache.Get-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Get-AzStorageCacheAmlFileSystemSubnetRequiredSize
+  - Az.StorageCache.Invoke-AzStorageCacheAmlFileSystemArchive
+  - Az.StorageCache.New-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Remove-AzStorageCacheAmlFileSystem
+  - Az.StorageCache.Stop-AzStorageCacheAmlFilesystemArchive
+  - Az.StorageCache.Test-AzStorageCacheAmlFileSystemSubnet
+  - Az.StorageCache.Update-AzStorageCacheAmlFileSystem
+description: |-
+  Microsoft Azure PowerShell: StorageCache cmdlets
+metadata:
+  Module Name: Az.StorageCache
+  Module Guid: 113964d9-7d75-4a3d-ac1c-0014ed44358b
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.storagecache
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/Az.StorageCache.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

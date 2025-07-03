@@ -1,0 +1,178 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.New-AzSqlInstanceScheduleItem
+name: New-AzSqlInstanceScheduleItem
+module: Az.Sql
+isPreview: false
+summary: |-
+  Helper command for creating ScheduleItem object that is uses for New-AzSqlInstanceStartStopSchedule cmdlet
+description: |-
+  Creates ScheduleItem object used for creating start/stop schedule on Azure SQL Managed Instance.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleList
+    type: <xref href="ScheduleItem" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Existing schedule items to append new one on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDay
+    type: <xref href="DayOfWeek" data-throw-if-not-resolved="False" />
+    description: |-
+      Start day for schedule
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Start time for schedule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StopDay
+    type: <xref href="DayOfWeek" data-throw-if-not-resolved="False" />
+    description: |-
+      Stop day for schedule
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StopTime
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Stop time for schedule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSqlInstanceScheduleItem
+        -StartDay <DayOfWeek>
+        -StartTime <String>
+        -StopDay <DayOfWeek>
+        -StopTime <String>
+        [-ScheduleList <ScheduleItem[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceSchedule.Model.ScheduleItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceSchedule.Model.ScheduleItem" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $sc = New-AzSqlInstanceScheduleItem -StartDay Monday -StopDay Friday -StartTime "09:00" -StopTime "17:00"
+    ```
+
+    Creates one schedule item thats starts on Monday at 9 AM and stops on Friday at 5 PM.
+- title: Example 2
+  description: |-
+    ```powershell
+    $mi = Get-AzSqlInstanceStartStopSchedule -InstanceName instance-name -ResourceGroupName rg-name
+
+    $existingSchedule = $mi.ScheduleList
+
+    $newSchedule = New-AzSqlInstanceScheduleItem -StartDay Monday -StopDay Friday -StartTime "09:00" -StopTime "17:00" -ScheduleList $existingSchedule
+    ```
+
+    Appends one more schedule item thats starts on Monday at 9 AM and stops on Friday at 5 PM on the existing schedule of the instance-name Azure SQL Managed Instance.
+links:
+- text: Get-AzSqlInstanceStartStopSchedule
+  href: ./Get-AzSqlInstanceStartStopSchedule.yml
+- text: New-AzSqlInstanceStartStopSchedule
+  href: ./New-AzSqlInstanceStartStopSchedule.yml
+- text: Remove-AzSqlInstanceStartStopSchedule
+  href: ./Remove-AzSqlInstanceStartStopSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceScheduleItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/new-azsqlinstancescheduleitem
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/New-AzSqlInstanceScheduleItem.md
+  PlatyPS schema version: 2024-05-01

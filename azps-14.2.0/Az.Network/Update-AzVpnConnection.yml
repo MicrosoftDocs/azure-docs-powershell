@@ -1,0 +1,543 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Update-AzVpnConnection
+name: Update-AzVpnConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Updates a VPN connection.
+description: |-
+  The **Update-AzVpnConnection** cmdlet updates a VPN connection.
+  VPN connection creates an IPsec connection that connects a VPN gateway to a remote customer branch represented in Azure as a VPN site.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConnectionBandwidthInMbps
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The bandwidth that needs to be handled by this connection in Mbps.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableBgp
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Enable BGP for this connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableInternetSecurity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Enable internet security for this connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+    description: |-
+      The VpnConnection object to update.
+    aliases:
+    - VpnConnection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnConnectionObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IpSecPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy" data-throw-if-not-resolved="False" />
+    description: |-
+      The bandwidth that needs to be handled by this connection in Mbps.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VpnConnectionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnConnectionName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParentResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource name.
+    aliases:
+    - ParentVpnGatewayName
+    - VpnGatewayName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnConnectionName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnConnectionName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the VpnConnection object to delete.
+    aliases:
+    - VpnConnectionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnConnectionResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Routing configuration for this connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SharedKey
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The shared key required to set this connection up.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficSelectorPolicy
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSTrafficSelectorPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of Traffic Selector policies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseLocalAzureIpAddress
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Use local azure ip address as source address while initiating connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsePolicyBasedTrafficSelectors
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Use policy based traffic selectors for this connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnLinkConnectionMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The connection mode for all VpnSiteLinkConnections in this VpnConnection
+    defaultValue: Default
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnSiteLinkConnection
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnSiteLinkConnection" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of VpnSiteLinkConnections that this VpnConnection needs to have.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzVpnConnection
+        -ResourceGroupName <String>
+        -ParentResourceName <String>
+        -Name <String>
+        [-SharedKey <SecureString>]
+        [-ConnectionBandwidthInMbps <UInt32>]
+        [-IpSecPolicy <PSIpsecPolicy>]
+        [-EnableBgp <Boolean>]
+        [-UseLocalAzureIpAddress <Boolean>]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-VpnSiteLinkConnection <PSVpnSiteLinkConnection[]>]
+        [-EnableInternetSecurity <Boolean>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-VpnLinkConnectionMode <String>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnConnectionName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzVpnConnection
+        -ResourceId <String>
+        [-SharedKey <SecureString>]
+        [-ConnectionBandwidthInMbps <UInt32>]
+        [-IpSecPolicy <PSIpsecPolicy>]
+        [-EnableBgp <Boolean>]
+        [-UseLocalAzureIpAddress <Boolean>]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-VpnSiteLinkConnection <PSVpnSiteLinkConnection[]>]
+        [-EnableInternetSecurity <Boolean>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-VpnLinkConnectionMode <String>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnConnectionResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzVpnConnection
+        -InputObject <PSVpnConnection>
+        [-SharedKey <SecureString>]
+        [-ConnectionBandwidthInMbps <UInt32>]
+        [-IpSecPolicy <PSIpsecPolicy>]
+        [-EnableBgp <Boolean>]
+        [-UseLocalAzureIpAddress <Boolean>]
+        [-UsePolicyBasedTrafficSelectors <Boolean>]
+        [-VpnSiteLinkConnection <PSVpnSiteLinkConnection[]>]
+        [-EnableInternetSecurity <Boolean>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-VpnLinkConnectionMode <String>]
+        [-TrafficSelectorPolicy <PSTrafficSelectorPolicy[]>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnConnectionObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West US"
+    $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.0.1/24"
+    New-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -VirtualHubId $virtualHub.Id -VpnGatewayScaleUnit 2
+    $vpnGateway = Get-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw"
+    $vpnSiteAddressSpaces = New-Object string[] 2
+    $vpnSiteAddressSpaces[0] = "192.168.2.0/24"
+    $vpnSiteAddressSpaces[1] = "192.168.3.0/24"
+    $vpnSite = New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US" -VirtualWan $virtualWan -IpAddress "1.2.3.4" -AddressSpace $vpnSiteAddressSpaces -DeviceModel "SomeDevice" -DeviceVendor "SomeDeviceVendor" -LinkSpeedInMbps "10"
+    $vpnConnection = New-AzVpnConnection -ResourceGroupName $vpnGateway.ResourceGroupName -ParentResourceName $vpnGateway.Name -Name "testConnection" -VpnSite $vpnSite
+    $ipsecPolicy = New-AzIpsecPolicy -SALifeTimeSeconds 1000 -SADataSizeKilobytes 2000 -IpsecEncryption "GCMAES256" -IpsecIntegrity "GCMAES256" -IkeEncryption "AES256" -IkeIntegrity "SHA256" -DhGroup "DHGroup14" -PfsGroup "PFS2048"
+    Update-AzVpnConnection -InputObject $vpnConnection -IpSecPolicy $ipsecPolicy
+    ```
+
+    ```output
+    RemoteVpnSite             : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    SharedKey                 :
+    VpnConnectionProtocolType : IKEv2
+    ConnectionStatus          :
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    IpsecPolicies             : {Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy}
+    ConnectionBandwidth       : 20
+    EnableBgp                 : False
+    UseLocalAzureIpAddress    : False
+    ProvisioningState         : testConnection
+    Name                      : ps9709
+    Etag                      : W/"4580a2e2-2fab-4cff-88eb-92013a76b5a8"
+    Id                        : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/vpnGateways/testvpngw/vpnConnections/testConnection
+    RoutingConfiguration      : {
+                                    "AssociatedRouteTable": {
+                                        "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                    }
+                                    "PropagatedRouteTables": {
+                                        "Labels": [],
+                                        "Ids": [
+                                        {
+                                        "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                        }
+                                    ]
+                                    },
+                                    "VnetRoutes": {
+                                        "StaticRoutes": []
+                                    }
+                                }
+    ```
+
+    The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure.
+    A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
+
+    Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.
+
+    The connection is then updated to have a new IpSecPolicy by using the Set-AzVpnConnection command.
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    $virtualWan = New-AzVirtualWan -ResourceGroupName testRG -Name myVirtualWAN -Location "West US"
+    $virtualHub = New-AzVirtualHub -VirtualWan $virtualWan -ResourceGroupName "testRG" -Name "westushub" -AddressPrefix "10.0.0.1/24"
+    New-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw" -VirtualHubId $virtualHub.Id -VpnGatewayScaleUnit 2
+    $vpnGateway = Get-AzVpnGateway -ResourceGroupName "testRG" -Name "testvpngw"
+    $vpnSiteAddressSpaces = New-Object string[] 2
+    $vpnSiteAddressSpaces[0] = "192.168.2.0/24"
+    $vpnSiteAddressSpaces[1] = "192.168.3.0/24"
+    $vpnSite = New-AzVpnSite -ResourceGroupName "testRG" -Name "testVpnSite" -Location "West US" -VirtualWan $virtualWan -IpAddress "1.2.3.4" -AddressSpace $vpnSiteAddressSpaces -DeviceModel "SomeDevice" -DeviceVendor "SomeDeviceVendor" -LinkSpeedInMbps "10"
+    $vpnConnection = New-AzVpnConnection -ResourceGroupName $vpnGateway.ResourceGroupName -ParentResourceName $vpnGateway.Name -Name "testConnection" -VpnSite $vpnSite
+    $Secure_String_Pwd = Read-Host -AsSecureString
+    Update-AzVpnConnection -InputObject $vpnConnection -SharedKey $Secure_String_Pwd
+    ```
+
+    ```output
+    RemoteVpnSite             : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    SharedKey                 :
+    VpnConnectionProtocolType : IKEv2
+    ConnectionStatus          :
+    EgressBytesTransferred    : 0
+    IngressBytesTransferred   : 0
+    IpsecPolicies             : {Microsoft.Azure.Commands.Network.Models.PSIpsecPolicy}
+    ConnectionBandwidth       : 20
+    EnableBgp                 : False
+    UseLocalAzureIpAddress    : False
+    ProvisioningState         : testConnection
+    Name                      : ps9709
+    Etag                      : W/"4580a2e2-2fab-4cff-88eb-92013a76b5a8"
+    Id                        : /subscriptions/{subscriptionId}/resourceGroups/ps9361/providers/Microsoft.Network/vpnGateways/testvpngw/vpnConnections/testConnection
+    RoutingConfiguration      : {
+                                    "AssociatedRouteTable": {
+                                        "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                    }
+                                    "PropagatedRouteTables": {
+                                        "Labels": [],
+                                        "Ids": [
+                                        {
+                                        "Id": "/subscriptions/{subscriptionId}/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/westushub/hubRouteTables/defaultRouteTable"
+                                        }
+                                    ]
+                                    },
+                                    "VnetRoutes": {
+                                        "StaticRoutes": []
+                                    }
+                                }
+    ```
+
+    The above will create a resource group, Virtual WAN, Virtual Network, Virtual Hub and a VpnSite in West US in "testRG" resource group in Azure.
+    A VPN gateway will be created thereafter in the Virtual Hub with 2 scale units.
+
+    Once the gateway has been created, it is connected to the VpnSite using the New-AzVpnConnection command.
+
+    The connection is then updated to have a new shared key using the secure string construct.
+links:
+- text: Get-AzVpnConnection
+  href: ./Get-AzVpnConnection.yml
+- text: New-AzVpnConnection
+  href: ./New-AzVpnConnection.yml
+- text: Remove-AzVpnConnection
+  href: ./Remove-AzVpnConnection.yml
+- text: New-AzRoutingConfiguration
+  href: ./New-AzRoutingConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/update-azvpnconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzVpnConnection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,323 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Set-AzDataProtectionMSIPermission
+name: Set-AzDataProtectionMSIPermission
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Grants required permissions to the backup vault and other resources for configure backup and restore scenarios
+description: |-
+  Grants required permissions to the backup vault and other resources for configure backup and restore scenarios
+parameters:
+  cmdletParameters:
+  - name: BackupInstance
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IBackupInstanceResource" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup instance request object which will be used to configure backup
+      To construct, see NOTES section for BACKUPINSTANCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForBackup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatasourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DatasourceTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Datasource Type
+    acceptedValues:
+    - AzureDisk
+    - AzureBlob
+    - AzureDatabaseForPostgreSQL
+    - AzureKubernetesService
+    - AzureDatabaseForPGFlexServer
+    - AzureDatabaseForMySQL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForRestore
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the keyvault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForBackup
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionsScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope at which the permissions need to be granted
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RestoreRequest
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IAzureBackupRestoreRequest" data-throw-if-not-resolved="False" />
+    description: |-
+      Restore request object which will be used for restore
+      To construct, see NOTES section for RESTOREREQUEST properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForRestore
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SnapshotResourceGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Snapshot Resource Group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForRestore
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountARMId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Target storage account ARM Id.
+      Use this parameter for DatasourceType AzureDatabaseForMySQL, AzureDatabaseForPGFlexServer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForRestore
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id of the backup vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetPermissionsForRestore
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the backup vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group of the backup vault
+    aliases:
+    - ResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataProtectionMSIPermission
+        -VaultResourceGroup <String>
+        -VaultName <String>
+        -PermissionsScope <String>
+        -BackupInstance <IBackupInstanceResource>
+        [-KeyVaultId <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetPermissionsForBackup
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDataProtectionMSIPermission
+        -VaultResourceGroup <String>
+        -VaultName <String>
+        -PermissionsScope <String>
+        -RestoreRequest <IAzureBackupRestoreRequest>
+        [-SubscriptionId <String>]
+        [-DatasourceType <DatasourceTypes>]
+        [-SnapshotResourceGroupId <String>]
+        [-StorageAccountARMId <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetPermissionsForRestore
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Grant Permissions for Azure Disks'
+  description: |-
+    ```powershell
+    Set-AzDataProtectionMSIPermission -BackupInstance $instance -VaultResourceGroup "VaultRG" -VaultName "Vaultname" -PermissionsScope "ResourceGroup"
+    ```
+
+    ```output
+    Assigning Disk Backup Reader permission to the backup vault
+    Assigned Disk Backup Reader permission to the backup vault
+    Assigning Disk Snapshot Contributor permission to the backup vault
+    Assigned Disk Snapshot Contributor permission to the backup vault
+    Waiting for 60 seconds for roles to propagate
+    ```
+
+    The above command is used to assign permissions to the backup vault "Vaultname" under resource group "VaultRG" at the "Resource Group" scope of the disk.
+- title: 'Example 2: Grant Permissions for Azure Blobs'
+  description: |-
+    ```powershell
+    Set-AzDataProtectionMSIPermission -BackupInstance $instance -VaultResourceGroup "VaultRG" -VaultName "Vaultname" -PermissionsScope "Subscription"
+    ```
+
+    ```output
+    Assigning Storage Account Backup Contributor permission to the backup vault
+    Assigned Storage Account Backup Contributor permission to the backup vault
+    Waiting for 60 seconds for roles to propagate
+    ```
+
+    The above command is used to assign permissions to the backup vault "Vaultname" under resource group "VaultRG" at the "Subscription" scope of the blob.
+- title: 'Example 3: Grant Permissions for Azure Database For PostgreSQL'
+  description: |-
+    ```powershell
+    Set-AzDataProtectionMSIPermission -KeyVaultId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/Sqlrg/providers/Microsoft.KeyVault/vaults/testkeyvault"  -BackupInstance $instance -VaultResourceGroup "VaultRG" -VaultName "Vaultname" -PermissionsScope "Resource"
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to perform this action?
+    Performing the operation "
+                                1.'Allow All Azure services' under network connectivity in the Postgres Server
+                                2.'Allow Trusted Azure services' under network connectivity in the Key vault" on target "KeyVault: oss-pstest-keyvault and PostgreSQLServer: oss-pstest-server".
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A
+    Assigning Reader permission to the backup vault
+    Assigned Reader permission to the backup vault
+    Waiting for 60 seconds for roles to propagate
+    ```
+
+    The above command is used to assign permissions to the backup vault "Vaultname" under resource group "VaultRG" at the "Resource" scope of the Azure Database For PostgreSQL.
+    It takes an additional KeyVaultId parameter to assign the necessary permissions to the backup vault on the keyvault.
+- title: 'Example 4: Grant missing permissions to configure backup for AzureKubernetesService'
+  description: |-
+    ```powershell
+    Set-AzDataProtectionMSIPermission -BackupInstance $backupInstance -VaultResourceGroup "resourceGroupName" -VaultName "vaultName" -PermissionsScope "ResourceGroup"
+    ```
+
+    ```output
+    Confirm
+    Are you sure you want to perform this action?
+    Performing the operation "Allow Contributor permission over snapshot resource group" on target
+    "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourceGroupName/providers/Microsoft.ContainerService/managedClusters/aks-cluster".
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y
+    Assigned Contributor permission to DataSource with Id /subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourceGroupName/providers/Microsoft.ContainerService/managedClusters/aks-cluster over snapshot resource group with Id /subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/snapshotResourceGroup
+    Assigned Reader permission to the backup vault over snapshot resource group with Id /subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/snapshotResourceGroup
+    Required permission Reader is already assigned to backup vault over DataSource with Id /subscriptions/xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourceGroupName/providers/Microsoft.ContainerService/managedClusters/aks-cluster
+    Waiting for 60 seconds for roles to propagate
+    ```
+
+    The above command is used to assign permissions to the backup vault "VaultName" under resource group "resourceGroupName" at the "ResourceGroup" scope.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Set-AzDataProtectionMSIPermission.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/set-azdataprotectionmsipermission
+  Module Name: Az.Dataprotection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Set-AzDataProtectionMSIPermission.md
+  PlatyPS schema version: 2024-05-01

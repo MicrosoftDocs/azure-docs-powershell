@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudIpAddressPoolObject
+name: New-AzNetworkCloudIpAddressPoolObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for IpAddressPool.
+description: |-
+  Create an in-memory object for IpAddressPool.
+parameters:
+  cmdletParameters:
+  - name: Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of IP address ranges.
+      Each range can be a either a subnet in CIDR format or an explicit start-end range of IP addresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoAssign
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.BfdEnabled" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator to determine if automatic allocation from the pool should occur.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name used to identify this IP address pool for association with a BGP advertisement.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OnlyUseHostIP
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Support.BfdEnabled" data-throw-if-not-resolved="False" />
+    description: |-
+      The indicator to prevent the use of IP addresses ending with .0 and .255 for this pool.
+      Enabling this option will only use IP addresses between .1 and .254 inclusive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudIpAddressPoolObject
+        -Address <String[]>
+        -Name <String>
+        [-AutoAssign <BfdEnabled>]
+        [-OnlyUseHostIP <BfdEnabled>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.IPAddressPool" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for IpAddressPool.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudIpAddressPoolObject -Address @("198.51.102.0/24") -Name "pool1" -AutoAssign True -OnlyUseHostIP True
+    ```
+
+    ```output
+    Address           AutoAssign Name  OnlyUseHostIP
+    -------           ---------- ----  -------------
+    {198.51.102.0/24} True       pool1 True
+    ```
+
+    Create an in-memory object for IpAddressPool.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudIpAddressPoolObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudIpAddressPoolObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudIpAddressPoolObject.md
+  PlatyPS schema version: 2024-05-01

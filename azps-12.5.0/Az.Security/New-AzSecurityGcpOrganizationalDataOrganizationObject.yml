@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityGcpOrganizationalDataOrganizationObject
+name: New-AzSecurityGcpOrganizationalDataOrganizationObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for GcpOrganizationalDataOrganization.
+description: |-
+  Create an in-memory object for GcpOrganizationalDataOrganization.
+parameters:
+  cmdletParameters:
+  - name: ExcludedProjectNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      If the multi cloud account is of membership type organization, list of accounts excluded from offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address which represents the organization level permissions container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GCP workload identity provider id which represents the permissions required to auto provision security connectors.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityGcpOrganizationalDataOrganizationObject
+        [-ExcludedProjectNumber <String[]>]
+        [-ServiceAccountEmailAddress <String>]
+        [-WorkloadIdentityProviderId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.GcpOrganizationalDataOrganization" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new GcpOrganizationalDataOrganization object'
+  description: |-
+    ```powershell
+    New-AzSecurityGcpOrganizationalDataOrganizationObject -WorkloadIdentityProviderId "provider" -ServiceAccountEmailAddress "my@email.com" -ExcludedProjectNumber @(1,2)
+    ```
+
+    ```output
+    ExcludedProjectNumber      : {1, 2}
+    OrganizationMembershipType : Organization
+    OrganizationName           :
+    ServiceAccountEmailAddress : my@email.com
+    WorkloadIdentityProviderId : provider
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGcpOrganizationalDataOrganizationObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritygcporganizationaldataorganizationobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityGcpOrganizationalDataOrganizationObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,36 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Open-AzSurveyLink
+name: Open-AzSurveyLink
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Open survey link in default browser.
+description: |-
+  Open survey link in default browser.
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Open-AzSurveyLink
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Open-AzSurveyLink
+    ```
+
+    ```Output
+    Opening the default browser to https://aka.ms/azpssurvey?Q_CHL=INTERCEPT
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Open-AzSurveyLink.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/open-azsurveylink
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Open-AzSurveyLink.md
+  PlatyPS schema version: 2024-05-01

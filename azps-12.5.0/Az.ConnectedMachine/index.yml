@@ -1,0 +1,44 @@
+### YamlMime:PowerShellModule1
+uid: Az.ConnectedMachine
+name: Az.ConnectedMachine Module
+isPreview: false
+cmdletGroups:
+- title: Connected Machine
+  cmdlets:
+  - Az.ConnectedMachine.Connect-AzConnectedMachine
+  - Az.ConnectedMachine.Get-AzConnectedExtensionMetadata
+  - Az.ConnectedMachine.Get-AzConnectedLicense
+  - Az.ConnectedMachine.Get-AzConnectedMachine
+  - Az.ConnectedMachine.Get-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Get-AzConnectedNetworkSecurityPerimeterConfiguration
+  - Az.ConnectedMachine.Get-AzConnectedPrivateLinkScope
+  - Az.ConnectedMachine.Install-AzConnectedMachinePatch
+  - Az.ConnectedMachine.Invoke-AzConnectedAssessMachinePatch
+  - Az.ConnectedMachine.Invoke-AzConnectedReconcileNetworkSecurityPerimeterConfiguration
+  - Az.ConnectedMachine.New-AzConnectedLicense
+  - Az.ConnectedMachine.New-AzConnectedLicenseDetail
+  - Az.ConnectedMachine.New-AzConnectedMachineExtension
+  - Az.ConnectedMachine.New-AzConnectedPrivateLinkScope
+  - Az.ConnectedMachine.Remove-AzConnectedLicense
+  - Az.ConnectedMachine.Remove-AzConnectedMachine
+  - Az.ConnectedMachine.Remove-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Remove-AzConnectedPrivateLinkScope
+  - Az.ConnectedMachine.Set-AzConnectedLicense
+  - Az.ConnectedMachine.Set-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Set-AzConnectedPrivateLinkScope
+  - Az.ConnectedMachine.Update-AzConnectedExtension
+  - Az.ConnectedMachine.Update-AzConnectedMachine
+  - Az.ConnectedMachine.Update-AzConnectedMachineExtension
+  - Az.ConnectedMachine.Update-AzConnectedPrivateLinkScopeTag
+description: |-
+  Microsoft Azure PowerShell: ConnectedMachine cmdlets
+metadata:
+  Module Name: Az.ConnectedMachine
+  Module Guid: 259a0542-8329-4b9e-8f72-dab0efc583e9
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.connectedmachine
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Az.ConnectedMachine.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Az.ConnectedMachine.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

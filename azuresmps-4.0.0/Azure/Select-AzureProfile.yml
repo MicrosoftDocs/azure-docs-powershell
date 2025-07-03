@@ -1,0 +1,70 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Select-AzureProfile
+name: Select-AzureProfile
+module: Azure
+isPreview: false
+summary: |-
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+parameters:
+  cmdletParameters:
+  - name: Default
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultProfile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NewProfile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Select-AzureProfile
+        -Profile <AzureSMProfile>
+        [<CommonParameters>]
+    ```
+  parameterSetName: NewProfile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Select-AzureProfile
+        [-Default]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultProfile
+  isDefault: false
+examples:
+- title: '1:'
+  description: |-
+    ```
+    PS C:\>
+    ```
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 65BACD95-53A0-44FD-A232-732CA174B1CE
+  PlatyPS schema version: 2024-05-01

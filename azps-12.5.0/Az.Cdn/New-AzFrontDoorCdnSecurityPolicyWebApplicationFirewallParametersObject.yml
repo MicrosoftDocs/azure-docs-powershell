@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject
+name: New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for SecurityPolicyWebApplicationFirewallParameters.
+description: |-
+  Create an in-memory object for SecurityPolicyWebApplicationFirewallParameters.
+parameters:
+  cmdletParameters:
+  - name: Association
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.ISecurityPolicyWebApplicationFirewallAssociation" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Waf associations.
+      To construct, see NOTES section for ASSOCIATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WafPolicyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject
+
+        [-Association <ISecurityPolicyWebApplicationFirewallAssociation[]>]
+        [-WafPolicyId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.SecurityPolicyWebApplicationFirewallParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureFrontDoor SecurityPolicyWebApplicationFirewallAssociation'
+  description: |-
+    ```powershell
+    $endpoint = Get-AzFrontDoorCdnEndpoint -ResourceGroupName testps-rg-da16jm -ProfileName fdp-v542q6 -EndpointName end001
+    $association = New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallAssociationObject -PatternsToMatch @("/*") -Domain @(@{"Id"=$($endpoint.Id)})
+    New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject  -Association  $association `
+                -WafPolicyId $wafPolicyId
+    ```
+
+    ```output
+    Association
+    -----------
+    {{...
+    ```
+
+    Create an in-memory object for AzureFrontDoor SecurityPolicyWebApplicationFirewallAssociation
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Cdn/new-azfrontdoorcdnsecuritypolicywebapplicationfirewallparametersobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnSecurityPolicyWebApplicationFirewallParametersObject.md
+  PlatyPS schema version: 2024-05-01

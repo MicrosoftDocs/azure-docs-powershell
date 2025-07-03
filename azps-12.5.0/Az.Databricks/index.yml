@@ -1,0 +1,33 @@
+### YamlMime:PowerShellModule1
+uid: Az.Databricks
+name: Az.Databricks Module
+isPreview: false
+cmdletGroups:
+- title: Databricks
+  cmdlets:
+  - Az.Databricks.Get-AzDatabricksAccessConnector
+  - Az.Databricks.Get-AzDatabricksOutboundNetworkDependenciesEndpoint
+  - Az.Databricks.Get-AzDatabricksVNetPeering
+  - Az.Databricks.Get-AzDatabricksWorkspace
+  - Az.Databricks.New-AzDatabricksAccessConnector
+  - Az.Databricks.New-AzDatabricksVNetPeering
+  - Az.Databricks.New-AzDatabricksWorkspace
+  - Az.Databricks.New-AzDatabricksWorkspaceProviderAuthorizationObject
+  - Az.Databricks.Remove-AzDatabricksAccessConnector
+  - Az.Databricks.Remove-AzDatabricksVNetPeering
+  - Az.Databricks.Remove-AzDatabricksWorkspace
+  - Az.Databricks.Update-AzDatabricksAccessConnector
+  - Az.Databricks.Update-AzDatabricksVNetPeering
+  - Az.Databricks.Update-AzDatabricksWorkspace
+description: |-
+  Microsoft Azure PowerShell: Databricks cmdlets
+metadata:
+  Module Name: Az.Databricks
+  Module Guid: fd603f36-03d8-47f4-9f7c-c13a78761936
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.databricks
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/Databricks/help/Az.Databricks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Databricks/Databricks/help/Az.Databricks.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,667 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Migrate.New-AzMigrateServerReplication
+name: New-AzMigrateServerReplication
+module: Az.Migrate
+isPreview: false
+summary: |-
+  Starts replication for the specified server.
+description: |-
+  The New-AzMigrateServerReplication cmdlet starts the replication for a particular discovered server in the Azure Migrate project.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskEncryptionSetID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the disk encyption set to be used.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIdDefaultUser
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectDefaultUser
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtEnableMigrationInputTargetDiskTags" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tag to be used for disk creation.
+      To construct, see NOTES section for DISKTAG properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskToInclude
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtDiskInput" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the disks on the source server to be included for replication.
+      To construct, see NOTES section for DISKTOINCLUDE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIdPowerUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectPowerUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of disks to be used for the Azure VM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIdDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202001.IVMwareMachine" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the discovered server to be migrated.
+      The server object can be retrieved using the Get-AzMigrateServer cmdlet.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObjectDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectPowerUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if Azure Hybrid benefit is applicable for the source server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxLicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if Azure Hybrid benefit is applicable for the source linux server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the machine ID of the discovered server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIdDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIdPowerUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NicTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtEnableMigrationInputTargetNicTags" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tag to be used for NIC creation.
+      To construct, see NOTES section for NICTAG properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OSDiskID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Operating System disk for the source server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIdDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByInputObjectDefaultUser
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PerformAutoResync
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if replication be auto-repaired in case change tracking is lost for the source server under replication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlServerLicenseType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if Azure Hybrid benefit for SQL Server is applicable for the server to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tag to be used for Resource creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetAvailabilitySet
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Availability Set to be used for VM creationSpecifies the Availability Set to be used for VM creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetAvailabilityZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Availability Zone to be used for VM creation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetBootDiagnosticsStorageAccount
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account to be used for boot diagnostics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Virtual Network id within the destination Azure subscription to which the server needs to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetResourceGroupId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Resource Group id within the destination Azure subscription to which the server needs to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSubnetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Subnet name within the destination Virtual Network to which the server needs to be migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVMName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure VM to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetVMSize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the SKU of the Azure VM to be created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Virtual Network id within the destination Azure subscription to which the server needs to be test migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TestSubnetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Subnet name within the destination Virtual Network to which the server needs to be test migrated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IVMwareCbtEnableMigrationInputTargetVmtags" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the tag to be used for VM creation.
+      To construct, see NOTES section for VMTAG properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMWarerunasaccountID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Account id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMigrateServerReplication
+        -LicenseType <String>
+        -TargetResourceGroupId <String>
+        -TargetNetworkId <String>
+        -TargetSubnetName <String>
+        -TargetVMName <String>
+        -MachineId <String>
+        -DiskType <String>
+        -OSDiskID <String>
+        [-SqlServerLicenseType <String>]
+        [-LinuxLicenseType <String>]
+        [-TestNetworkId <String>]
+        [-TestSubnetName <String>]
+        [-VMWarerunasaccountID <String>]
+        [-TargetVMSize <String>]
+        [-PerformAutoResync <String>]
+        [-TargetAvailabilitySet <String>]
+        [-TargetAvailabilityZone <String>]
+        [-VMTag <IVMwareCbtEnableMigrationInputTargetVmtags>]
+        [-NicTag <IVMwareCbtEnableMigrationInputTargetNicTags>]
+        [-DiskTag <IVMwareCbtEnableMigrationInputTargetDiskTags>]
+        [-Tag <Hashtable>]
+        [-TargetBootDiagnosticsStorageAccount <String>]
+        [-DiskEncryptionSetID <String>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIdDefaultUser
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzMigrateServerReplication
+        -LicenseType <String>
+        -TargetResourceGroupId <String>
+        -TargetNetworkId <String>
+        -TargetSubnetName <String>
+        -TargetVMName <String>
+        -MachineId <String>
+        -DiskToInclude <IVMwareCbtDiskInput[]>
+        [-SqlServerLicenseType <String>]
+        [-LinuxLicenseType <String>]
+        [-TestNetworkId <String>]
+        [-TestSubnetName <String>]
+        [-VMWarerunasaccountID <String>]
+        [-TargetVMSize <String>]
+        [-PerformAutoResync <String>]
+        [-TargetAvailabilitySet <String>]
+        [-TargetAvailabilityZone <String>]
+        [-VMTag <IVMwareCbtEnableMigrationInputTargetVmtags>]
+        [-NicTag <IVMwareCbtEnableMigrationInputTargetNicTags>]
+        [-DiskTag <IVMwareCbtEnableMigrationInputTargetDiskTags>]
+        [-Tag <Hashtable>]
+        [-TargetBootDiagnosticsStorageAccount <String>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIdPowerUser
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMigrateServerReplication
+        -LicenseType <String>
+        -TargetResourceGroupId <String>
+        -TargetNetworkId <String>
+        -TargetSubnetName <String>
+        -TargetVMName <String>
+        -DiskType <String>
+        -OSDiskID <String>
+        -InputObject <IVMwareMachine>
+        [-SqlServerLicenseType <String>]
+        [-LinuxLicenseType <String>]
+        [-TestNetworkId <String>]
+        [-TestSubnetName <String>]
+        [-VMWarerunasaccountID <String>]
+        [-TargetVMSize <String>]
+        [-PerformAutoResync <String>]
+        [-TargetAvailabilitySet <String>]
+        [-TargetAvailabilityZone <String>]
+        [-VMTag <IVMwareCbtEnableMigrationInputTargetVmtags>]
+        [-NicTag <IVMwareCbtEnableMigrationInputTargetNicTags>]
+        [-DiskTag <IVMwareCbtEnableMigrationInputTargetDiskTags>]
+        [-Tag <Hashtable>]
+        [-TargetBootDiagnosticsStorageAccount <String>]
+        [-DiskEncryptionSetID <String>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectDefaultUser
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzMigrateServerReplication
+        -LicenseType <String>
+        -TargetResourceGroupId <String>
+        -TargetNetworkId <String>
+        -TargetSubnetName <String>
+        -TargetVMName <String>
+        -DiskToInclude <IVMwareCbtDiskInput[]>
+        -InputObject <IVMwareMachine>
+        [-SqlServerLicenseType <String>]
+        [-LinuxLicenseType <String>]
+        [-TestNetworkId <String>]
+        [-TestSubnetName <String>]
+        [-VMWarerunasaccountID <String>]
+        [-TargetVMSize <String>]
+        [-PerformAutoResync <String>]
+        [-TargetAvailabilitySet <String>]
+        [-TargetAvailabilityZone <String>]
+        [-VMTag <IVMwareCbtEnableMigrationInputTargetVmtags>]
+        [-NicTag <IVMwareCbtEnableMigrationInputTargetNicTags>]
+        [-DiskTag <IVMwareCbtEnableMigrationInputTargetDiskTags>]
+        [-Tag <Hashtable>]
+        [-TargetBootDiagnosticsStorageAccount <String>]
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObjectPowerUser
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api202401.IJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: When there is only OS disk'
+  description: |-
+    ```powershell
+    New-AzMigrateServerReplication -MachineId "/subscriptions/xxx-xxx-xxx4/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.OffAzure/VMwareSites/AzMigratePWSHTc8d1site/machines/bcdr-vcenter-fareast-corp-micro-cfcc5a24-a40e-56b9-a6af-e206c9ca4f93_50063baa-9806-d6d6-7e09-c0ae87309b4f" -LicenseType NoLicenseType -TargetResourceGroupId "/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG" -TargetNetworkId  "/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG/providers/Microsoft.Network/virtualNetworks/AzMigrateTargetNetwork" -TargetSubnetName default -TargetVMName "prsadhu-TestVM" -DiskType "Standard_LRS" -OSDiskID "6000C299-343d-7bcd-c05e-a94bd63316dd"
+    ```
+
+    ```output
+    ActivityId                       : 68af14b4-46ae-48d1-b3e9-cdcffb9e8a93 ActivityId: 74d1a396-1d37-4264-8a5b-b727aaef0171
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          : 9/16/20 11:57:33 AM
+    Error                            : {}
+    FriendlyName                     : Enable
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b
+    Location                         :
+    Name                             : 997e2a92-5afe-49c7-a81a-89660aec9b7b
+    ScenarioName                     : Enable
+    StartTime                        : 9/16/20 11:57:32 AM
+    State                            : Succeeded
+    StateDescription                 : Completed
+    TargetInstanceType               : ProtectionProfile
+    TargetObjectId                   : 42752b89-5fad-52fd-bf93-679fbdb6fed9
+    TargetObjectName                 : migrateAzMigratePWSHTc8d1sitepolicy
+    Task                             : {CloudPairingPrerequisitesCheck, CloudPairingPrepareSite}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    This is for the scenario, when there is only one single disk that has to be protected.
+- title: 'Example 2: When there are multiple disks'
+  description: |-
+    ```powershell
+    $OSDisk = New-AzMigrateDiskMapping -DiskID '6000C299-343d-7bcd-c05e-a94bd63316dd' -DiskType 'Standard_LRS' -IsOSDisk 'true'
+    $DataDisk = New-AzMigrateDiskMapping -DiskID '7000C299-343d-7bcd-c05e-a94bd63316dd' -DiskType 'Standard_LRS' -IsOSDisk 'false'
+    $DisksToInclude = @()
+    $DisksToInclude += $OSDisk
+    $DisksToInclude += $DataDisk
+    New-AzMigrateServerReplication -MachineId "/subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.OffAzure/VMwareSites/AzMigratePWSHTc8d1site/machines/bcdr-vcenter-fareast-corp-micro-cfcc5a24-a40e-56b9-a6af-e206c9ca4f93_50063baa-9806-d6d6-7e09-c0ae87309b4f" -LicenseType NoLicenseType -TargetResourceGroupId "/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG" -TargetNetworkId  "/subscriptions/xxx-xxx-xxx/resourceGroups/AzMigratePWSHtargetRG/providers/Microsoft.Network/virtualNetworks/AzMigrateTargetNetwork" -TargetSubnetName default -TargetVMName "prsadhu-TestVM" -DiskToInclude $DisksToInclude -PerformAutoResync true
+    ```
+
+    ```output
+    ActivityId                       : 68af14b4-46ae-48d1-b3e9-cdcffb9e8a93 ActivityId: 74d1a396-1d37-4264-8a5b-b727aaef0171
+    AllowedAction                    : {}
+    CustomDetailAffectedObjectDetail : Microsoft.Azure.PowerShell.Cmdlets.Migrate.Models.Api20180110.JobDetailsAffectedObjectDetails
+    CustomDetailInstanceType         : AsrJobDetails
+    EndTime                          : 9/16/20 11:57:33 AM
+    Error                            : {}
+    FriendlyName                     : Enable
+    Id                               : /Subscriptions/xxx-xxx-xxx/resourceGroups/azmigratepwshtestasr13072020/providers/Microsoft.Recover
+                                       yServices/vaults/AzMigrateTestProjectPWSH02aarsvault/replicationJobs/997e2a92-5afe-49c7-a81a-89660aec9b7b
+    Location                         :
+    Name                             : 997e2a92-5afe-49c7-a81a-89660aec9b7b
+    ScenarioName                     : Enable
+    StartTime                        : 9/16/20 11:57:32 AM
+    State                            : Succeeded
+    StateDescription                 : Completed
+    TargetInstanceType               : ProtectionProfile
+    TargetObjectId                   : 42752b89-5fad-52fd-bf93-679fbdb6fed9
+    TargetObjectName                 : migrateAzMigratePWSHTc8d1sitepolicy
+    Task                             : {CloudPairingPrerequisitesCheck, CloudPairingPrepareSite}
+    Type                             : Microsoft.RecoveryServices/vaults/replicationJobs
+    ```
+
+    This is for the scenario, when there are multiple disks that has to be protected.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateServerReplication.md
+  document type: cmdlet
+  external help file: Az.Migrate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.migrate/new-azmigrateserverreplication
+  Module Name: Az.Migrate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Migrate/Migrate/help/New-AzMigrateServerReplication.md
+  PlatyPS schema version: 2024-05-01

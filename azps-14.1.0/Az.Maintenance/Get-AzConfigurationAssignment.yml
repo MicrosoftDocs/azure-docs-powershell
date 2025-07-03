@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Maintenance.Get-AzConfigurationAssignment
+name: Get-AzConfigurationAssignment
+module: Az.Maintenance
+isPreview: false
+summary: |-
+  List configurationAssignments for resource.
+description: |-
+  List configurationAssignments for resource.
+parameters:
+  cmdletParameters:
+  - name: ConfigurationAssignmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The configuration assignment name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProviderName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource provider Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceParentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceParentType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConfigurationAssignment
+        [[-ResourceGroupName] <String>]
+        [[-ProviderName] <String>]
+        [-ResourceParentType <String>]
+        [-ResourceParentName <String>]
+        [[-ResourceType] <String>]
+        [[-ResourceName] <String>]
+        [-ConfigurationAssignmentName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Maintenance.Models.PSConfigurationAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzConfigurationAssignment -ResourceGroupName smdtestwestus2 -ResourceParentType hostGroups -ResourceParentName smddhgwestus2 -ResourceType hosts -ResourceName smddhwestus2 -ProviderName Microsoft.Compute
+    ```
+
+    ```output
+    MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/ps1/providers/Microsoft.Maintenance/maintenanceConfigurations/ps2
+    Id                         :
+    /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/smdtestwestus2/providers/Microsoft.Compute/hostGroups/smddhgwestus2/hosts/smddhwestus2/providers/Microsoft.Maintenance/configurationAssignments/ps2
+    Name                       : ps2
+    Type                       : Microsoft.Maintenance/configurationAssignments
+    ```
+
+    List configurationAssignments for dedicated host.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzConfigurationAssignment -ResourceGroupName 'rgtestwestus2' -ProviderName Microsoft.Compute -ResourceType virtualmachines -ResourceName 'LAPTOP-ABCDEFG'
+    ```
+
+    ```output
+    MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
+    ResourceId                 : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/rgtestwestus2/providers/microsoft.hybridcompute/machines/laptop-abcdefg
+    Id                         : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa747/resourcegroups/rgtestwestus2/providers/Microsoft.HybridCompute/machines/LAPTOP-ABCDEFG/providers/Microsoft.Maintenance/configurationAssignments/pphsfbx2qur7k-azpolicy
+    Name                       : pphsfbx2qur7k-azpolicy
+    Type                       : Microsoft.Maintenance/configurationAssignments
+    ```
+
+    List configurationAssignments for Azure VMs in Guest scope.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzConfigurationAssignment -ResourceGroupName 'ArcMachines' -ProviderName Microsoft.HybridCompute -ResourceType machines -ResourceName 'LAPTOP-IVMI31G2'
+    ```
+
+    ```output
+    MaintenanceConfigurationId : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/maintenanceconfigurations/providers/microsoft.maintenance/maintenanceconfigurations/dynamicfiltertag
+    ResourceId                 : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa74/resourcegroups/arcmachines/providers/microsoft.hybridcompute/machines/laptop-ivmi31g2
+    Id                         : /subscriptions/42c974dd-2c03-4f1b-96ad-b07f050aaa747/resourcegroups/arcmachines/providers/Microsoft.HybridCompute/machines/LAPTOP-IVMI31G2/providers/Microsoft.Maintenance/configurationAssignments/pphsfbx2qur7k-azpolicy
+    Name                       : pphsfbx2qur7k-azpolicy
+    Type                       : Microsoft.Maintenance/configurationAssignments
+    ```
+
+    List configurationAssignments for Arc VMs in Guest scope.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/Get-AzConfigurationAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Maintenance.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.maintenance/get-azconfigurationassignment
+  Module Name: Az.Maintenance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Maintenance/Maintenance/help/Get-AzConfigurationAssignment.md
+  PlatyPS schema version: 2024-05-01

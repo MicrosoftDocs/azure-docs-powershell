@@ -1,0 +1,20 @@
+### YamlMime:PowerShellModule1
+uid: Az.ChangeAnalysis
+name: Az.ChangeAnalysis Module
+isPreview: false
+cmdletGroups:
+- title: ChangeAnalysis
+  cmdlets:
+  - Az.ChangeAnalysis.Get-AzChangeAnalysis
+description: |-
+  Microsoft Azure PowerShell: ChangeAnalysis cmdlets
+metadata:
+  Module Name: Az.ChangeAnalysis
+  Module Guid: 435d96dc-827b-4220-a093-565c12c95e4a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.changeanalysis
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/ChangeAnalysis/help/Az.ChangeAnalysis.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ChangeAnalysis/ChangeAnalysis/help/Az.ChangeAnalysis.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

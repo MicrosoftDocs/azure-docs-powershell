@@ -1,0 +1,674 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Dns.Add-AzDnsRecordConfig
+name: Add-AzDnsRecordConfig
+module: Az.Dns
+isPreview: false
+summary: |-
+  Adds a DNS record to a local record set object.
+description: |-
+  The **Add-AzDnsRecordConfig** cmdlet adds a Domain Name System (DNS) record to a **RecordSet** object.
+  The **RecordSet** object is an offline object, and changes to it do not change the DNS responses until after you run the Set-AzDnsRecordSet cmdlet to persist the change to the Microsoft Azure DNS service.
+  SOA records are created when a DNS zone is created, and are removed when the DNS zone is deleted.
+  You cannot add or remove SOA records, but you can edit them.
+  You can pass the **RecordSet** object to this cmdlet as a parameter or by using the pipeline operator.
+parameters:
+  cmdletParameters:
+  - name: Algorithm
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The algorithm field of the DS record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CaaFlags
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+    description: |-
+      The flags for the CAA record to add. Must be a number between 0 and 255.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Caa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CaaTag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The tag field of the CAA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Caa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CaaValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value field for the CAA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Caa
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateAssociationData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The certificate association data field of the TLSA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Cname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain name for a canonical name (CNAME) record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CNAME
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Digest
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The digest field of the DS record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DigestType
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The digest type field of the DS record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Exchange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the mail exchange server name for a mail exchange (MX) record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MX
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv4Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an IPv4 address for an A record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: A
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an IPv6 address for an AAAA record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AAAA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyTag
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The key tag field of the DS record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MatchingType
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The matching type field of the TLSA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Nsdname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name server name for a name server (NS) record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: NS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Port
+    type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port for a service (SRV) record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Preference
+    type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the preference for an MX record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MX
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority for an SRV record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ptrdname
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target domain name of a pointer resource (PTR) record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PTR
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecordSet
+    type: <xref href="Microsoft.Azure.Commands.Dns.DnsRecordSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **RecordSet** object to edit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Selector
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The selector field of the TLSA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Target
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the target for an SRV record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Usage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The usage field of the TLSA record to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TLSA
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the value for a TXT record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TXT
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Weight
+    type: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the weight for an SRV record.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SRV
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Ipv4Address <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: A
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Ipv6Address <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AAAA
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Nsdname <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Exchange <String>
+        -Preference <UInt16>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MX
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Ptrdname <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PTR
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Value <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TXT
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Priority <UInt16>
+        -Target <String>
+        -Port <UInt16>
+        -Weight <UInt16>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SRV
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Cname <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CNAME
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -CaaFlags <Byte>
+        -CaaTag <String>
+        -CaaValue <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Caa
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -KeyTag <Int32>
+        -Algorithm <Int32>
+        -DigestType <Int32>
+        -Digest <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzDnsRecordConfig
+        -RecordSet <DnsRecordSet>
+        -Usage <Int32>
+        -Selector <Int32>
+        -MatchingType <Int32>
+        -CertificateAssociationData <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TLSA
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Dns.DnsRecordSet" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.UInt16" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Dns.DnsRecordSet" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an A record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name www -RecordType A -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Ipv4Address 1.2.3.4
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # You can also pipe the above sequence:
+
+    Get-AzDnsRecordSet -Name www -RecordType A -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Ipv4Address 1.2.3.4 | Set-AzDnsRecordSet
+    ```
+
+    This example adds an A record to an existing record set.
+- title: 'Example 2: Add an AAAA record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name www -RecordType AAAA -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Ipv6Address 2001:DB80:4009:1803::1005
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # You can also pipe the above sequence:
+
+    Get-AzDnsRecordSet -Name www -RecordType AAAA -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Ipv6Address 2001:DB80:4009:1803::1005 | Set-AzDnsRecordSet
+    ```
+
+    This example adds an AAAA record to an existing record set.
+- title: 'Example 3: Add a CNAME record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name www -RecordType CNAME -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Cname contoso.com
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # You can also pipe the above sequence:
+
+    Get-AzDnsRecordSet -Name www -RecordType CNAME -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Cname contoso.com | Set-AzDnsRecordSet
+    ```
+
+    This example adds a CNAME record to an existing record set.
+    Because a CNAME record set can contain at most one record, it must initially be an empty record set, or existing records must be removed using Remove-AzDnsRecordConfig.
+- title: 'Example 4: Add an MX record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name "@" -RecordType MX -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -Exchange mail.microsoft.com -Preference 5 -RecordSet $RecordSet
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # You can also pipe the above sequence:
+
+    Get-AzDnsRecordSet -Name "@" -RecordType MX -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Exchange mail.microsoft.com -Preference 5 | Set-AzDnsRecordSet
+    ```
+
+    This example adds an MX record to an existing record set.
+    The record name "@" indicates a record set at the zone apex.
+- title: 'Example 5: Add an NS record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name abc -RecordType NS -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -Nsdname ns1.myzone.com -RecordSet $RecordSet
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # You can also pipe the above sequence:
+
+    Get-AzDnsRecordSet -Name abc -RecordType NS -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Nsdname ns1.myzone.com | Set-AzDnsRecordSet
+    ```
+
+    This example adds an NS record to an existing record set.
+- title: 'Example 6: Add a PTR record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name 4 -RecordType PTR -ResourceGroupName MyResourceGroup -ZoneName 3.2.1.in-addr.arpa
+    Add-AzDnsRecordConfig -Ptrdname www.contoso.com -RecordSet $RecordSet
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # The above sequence can also be piped:
+
+    Get-AzDnsRecordSet -Name 4 -RecordType PTR -ResourceGroupName MyResourceGroup -ZoneName 3.2.1.in-addr.arpa | Add-AzDnsRecordConfig -Ptrdname www.contoso.com | Set-AzDnsRecordSet
+    ```
+
+    This example adds a PTR record to an existing record set.
+- title: 'Example 7: Add an SRV record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name _sip._tcp -RecordType SRV -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Priority 0 -Weight 5 -Port 8080 -Target target.example.com
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # The above sequence can also be piped:
+
+    Get-AzDnsRecordSet -Name _sip._tcp -RecordType SRV -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Priority 0 -Weight 5 -Port 8080 -Target target.example.com  | Set-AzDnsRecordSet
+    ```
+
+    This example adds an SRV record to an existing record set.
+- title: 'Example 8: Add a TXT record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name text -RecordType TXT -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Value "This is a TXT Record"
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # The above sequence can also be piped:
+
+    Get-AzDnsRecordSet -Name text -RecordType TXT -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Value "This is a TXT Record" | Set-AzDnsRecordSet
+    ```
+
+    This example adds a TXT record to an existing record set.
+- title: 'Example 9: Add a DS record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name www -RecordType DS -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -KeyTag 12345 -Algorithm 3 -DigestType 1 -Digest "49FD46E6C4B45C55D4AC"
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # The above sequence can also be piped:
+
+    Get-AzDnsRecordSet -Name www -RecordType DS -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -KeyTag 12345 -Algorithm 3 -DigestType 1 -Digest "49FD46E6C4B45C55D4AC" | Set-AzDnsRecordSet
+    ```
+- title: 'Example 10: Add a TLSA record to a record set'
+  description: |-
+    ```powershell
+    $RecordSet = Get-AzDnsRecordSet -Name _443._tcp.www -RecordType TLSA -ResourceGroupName MyResourceGroup -ZoneName myzone.com
+    Add-AzDnsRecordConfig -RecordSet $RecordSet -Usage 3 -Selector 1 -MatchingType 1 -CertificateAssociationData "49FD46E6C4B45C55D4AC"
+    Set-AzDnsRecordSet -RecordSet $RecordSet
+
+    # The above sequence can also be piped:
+
+    Get-AzDnsRecordSet -Name _443._tcp.www -RecordType TLSA -ResourceGroupName MyResourceGroup -ZoneName myzone.com | Add-AzDnsRecordConfig -Usage 3 -Selector 1 -MatchingType 1 -CertificateAssociationData "49FD46E6C4B45C55D4AC" | Set-AzDnsRecordSet
+    ```
+links:
+- text: Get-AzDnsRecordSet
+  href: ./Get-AzDnsRecordSet.yml
+- text: Remove-AzDnsRecordConfig
+  href: ./Remove-AzDnsRecordConfig.yml
+- text: Set-AzDnsRecordSet
+  href: ./Set-AzDnsRecordSet.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Add-AzDnsRecordConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Dns.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dns/add-azdnsrecordconfig
+  Module Name: Az.Dns
+  ms.assetid: CD119EBE-E1A4-4E9D-B3BA-FDAF89BF0DDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Dns/Dns/help/Add-AzDnsRecordConfig.md
+  PlatyPS schema version: 2024-05-01

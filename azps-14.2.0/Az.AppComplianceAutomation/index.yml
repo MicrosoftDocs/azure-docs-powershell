@@ -1,0 +1,32 @@
+### YamlMime:PowerShellModule1
+uid: Az.AppComplianceAutomation
+name: Az.AppComplianceAutomation Module
+isPreview: false
+cmdletGroups:
+- title: AppComplianceAutomation
+  cmdlets:
+  - Az.AppComplianceAutomation.Get-AzAcatControlAssessment
+  - Az.AppComplianceAutomation.Get-AzAcatReport
+  - Az.AppComplianceAutomation.Get-AzAcatWebhook
+  - Az.AppComplianceAutomation.Invoke-AzAcatDownloadReport
+  - Az.AppComplianceAutomation.New-AzAcatReport
+  - Az.AppComplianceAutomation.New-AzAcatReportResourceObject
+  - Az.AppComplianceAutomation.New-AzAcatWebhook
+  - Az.AppComplianceAutomation.New-AzAcatWebhookResourceObject
+  - Az.AppComplianceAutomation.Remove-AzAcatReport
+  - Az.AppComplianceAutomation.Remove-AzAcatWebhook
+  - Az.AppComplianceAutomation.Start-AzAcatQuickEvaluation
+  - Az.AppComplianceAutomation.Update-AzAcatReport
+  - Az.AppComplianceAutomation.Update-AzAcatWebhook
+description: |-
+  Microsoft Azure PowerShell: AppComplianceAutomation cmdlets
+metadata:
+  Module Name: Az.AppComplianceAutomation
+  Module Guid: b57c637f-0987-47a7-964c-0e67e6032e0b
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.appcomplianceautomation
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/Az.AppComplianceAutomation.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AppComplianceAutomation/AppComplianceAutomation/help/Az.AppComplianceAutomation.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

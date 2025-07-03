@@ -1,0 +1,190 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DeviceProvisioningServices.Get-AzIoTDeviceProvisioningServiceCertificate
+name: Get-AzIoTDeviceProvisioningServiceCertificate
+module: Az.DeviceProvisioningServices
+isPreview: false
+summary: |-
+  Lists all certificates or a particular certificate contained within an Azure IoT Hub Device Provisioning Service.
+description: |-
+  For a detailed explanation of CA certificates in Azure IoT Hub Device Provisioning Service, see https://learn.microsoft.com/azure/iot-dps/how-to-verify-certificates.
+parameters:
+  cmdletParameters:
+  - name: CertificateName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Certificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DpsObject
+    type: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the IoT Device Provisioning Service
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource Group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      IoT Device Provisioning Service Resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIoTDeviceProvisioningServiceCertificate
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-CertificateName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzIoTDeviceProvisioningServiceCertificate
+        [-DpsObject] <PSProvisioningServiceDescription>
+        [-CertificateName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzIoTDeviceProvisioningServiceCertificate
+        [-ResourceId] <String>
+        [-CertificateName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSProvisioningServiceDescription" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.DeviceProvisioningServices.Models.PSCertificateResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzIoTDeviceProvisioningServiceCertificate -ResourceGroupName "myresourcegroup" -Name "myiotdps" -CertificateName "mycertificate"
+    ```
+
+    ```output
+    Id					: /subscriptions/377cxxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Devices/provisioningServices/myiotdps/certificates/mycertificate
+    ResourceGroupName	: myresourcegroup
+    Name				: myiotdps
+    CertificateName		: mycertificate
+    Subject				: CN=mycertificate
+    Thumbprint			: 38303FC7371EC78DDE3E18D712C8414EE50969C7
+    Status				: Unverified
+    Expiry				: 1/01/2027 16:01
+    Created				: 1/01/2017 16:01
+    Etag				: AAAAAAFpGcA=
+    ```
+
+    Show details about "mycertificate" in an Azure IoT Hub device provisioning service.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzIoTDeviceProvisioningService -ResourceGroupName "myresourcegroup" -Name "myiotdps" | Get-AzIoTDeviceProvisioningServiceCertificate
+    ```
+
+    ```output
+    ResourceGroupName	Name		CertificateName Status     Expiry
+    -----------------	----        ---------------	------     ------
+    myresourcegroup		myiotdps	mycert1         Unverified 12/04/2027 13:12
+    myresourcegroup     myiotdps	mycert2         Unverified 12/04/2027 13:12
+    ```
+
+    List all certificates in "myiotdps" using pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Get-AzIoTDeviceProvisioningServiceCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DeviceProvisioningServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.deviceprovisioningservices/get-aziotdeviceprovisioningservicecertificate
+  Module Name: Az.DeviceProvisioningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceProvisioningServices/DeviceProvisioningServices/help/Get-AzIoTDeviceProvisioningServiceCertificate.md
+  PlatyPS schema version: 2024-05-01

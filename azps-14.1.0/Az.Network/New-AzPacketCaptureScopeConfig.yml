@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzPacketCaptureScopeConfig
+name: New-AzPacketCaptureScopeConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a new packet capture scope object.
+description: |-
+  The New-AzPacketCaptureScopeConfig cmdlet creates a new packet capture scope object.
+  This object is used to either include or exclude the provided VMSS Instances for running Packet Captures.
+  The New-AzPacketCaptureScopeConfig cmdlet can accept multiple VMSS Instances Names enable/disable composable capture sessions.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Exclude
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Machines to be Excluded in Scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Include
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Machines to be Included in Scope
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPacketCaptureScopeConfig
+        [-Include <String[]>]
+        [-Exclude <String[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSPacketCaptureMachineScope" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Packet Capture with multiple VMSS Instances in Include Scope'
+  description: |-
+    ```powershell
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+    $instance1 = $vmssInstance1.Name
+    $instance2 = $vmssInstance2.Name
+    $scope = New-AzPacketCaptureScopeConfig -Include $instance1, $instance2
+
+    New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Scope $scope -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSecond 60
+    ```
+
+    In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Include Scope and a time limit. Once the session is complete, it will be saved to the specified storage account.
+    Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.
+- title: 'Example 2: Create a Packet Capture with multiple VMSS Instances in Exclude Scope'
+  description: |-
+    ```powershell
+    $nw = Get-AzResource | Where {$_.ResourceType -eq "Microsoft.Network/networkWatchers" -and $_.Location -eq "WestCentralUS" }
+    $networkWatcher = Get-AzNetworkWatcher -Name $nw.Name -ResourceGroupName $nw.ResourceGroupName
+
+    $storageAccount = Get-AzStorageAccount -ResourceGroupName contosoResourceGroup -Name contosostorage123
+
+    $instance1 = $vmssInstance1.Name
+    $instance2 = $vmssInstance2.Name
+    $scope = New-AzPacketCaptureScopeConfig -Exclude $instance1, $instance2
+
+    New-AzNetworkWatcherPacketCaptureV2 -NetworkWatcher $networkWatcher -TargetId $vmss.Id -TargetType "azurevmss" -Scope $scope -PacketCaptureName "PacketCaptureTest" -StorageAccountId $storageAccount.id -TimeLimitInSecond 60
+    ```
+
+    In this example we create a packet capture named "PacketCaptureTest" with multiple VMSS Instances in Exclude Scope - meaning that apart from these provided Instance, Packet Capture would be working on all other instances and a time limit. Once the session is complete, it will be saved to the specified storage account.
+    Note: The Azure Network Watcher extension must be installed on the target virtual machine to create packet captures.
+links:
+- text: New-AzNetworkWatcher
+  href: ./New-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcher
+  href: ./Get-AzNetworkWatcher.yml
+- text: Remove-AzNetworkWatcher
+  href: ./Remove-AzNetworkWatcher.yml
+- text: Get-AzNetworkWatcherNextHop
+  href: ./Get-AzNetworkWatcherNextHop.yml
+- text: Get-AzNetworkWatcherSecurityGroupView
+  href: ./Get-AzNetworkWatcherSecurityGroupView.yml
+- text: Get-AzNetworkWatcherTopology
+  href: ./Get-AzNetworkWatcherTopology.yml
+- text: Start-AzNetworkWatcherResourceTroubleshooting
+  href: ./Start-AzNetworkWatcherResourceTroubleshooting.yml
+- text: New-AzNetworkWatcherPacketCapture
+  href: ./New-AzNetworkWatcherPacketCapture.yml
+- text: New-AzPacketCaptureFilterConfig
+  href: ./New-AzPacketCaptureFilterConfig.yml
+- text: Get-AzNetworkWatcherPacketCapture
+  href: ./Get-AzNetworkWatcherPacketCapture.yml
+- text: Remove-AzNetworkWatcherPacketCapture
+  href: ./Remove-AzNetworkWatcherPacketCapture.yml
+- text: Stop-AzNetworkWatcherPacketCapture
+  href: ./Stop-AzNetworkWatcherPacketCapture.yml
+- text: New-AzNetworkWatcherProtocolConfiguration
+  href: ./New-AzNetworkWatcherProtocolConfiguration.yml
+- text: Test-AzNetworkWatcherIPFlow
+  href: ./Test-AzNetworkWatcherIPFlow.yml
+- text: Test-AzNetworkWatcherConnectivity
+  href: ./Test-AzNetworkWatcherConnectivity.yml
+- text: Stop-AzNetworkWatcherConnectionMonitor
+  href: ./Stop-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConnectionMonitor
+  href: ./Set-AzNetworkWatcherConnectionMonitor.yml
+- text: Set-AzNetworkWatcherConfigFlowLog
+  href: ./Set-AzNetworkWatcherConfigFlowLog.yml
+- text: Remove-AzNetworkWatcherConnectionMonitor
+  href: ./Remove-AzNetworkWatcherConnectionMonitor.yml
+- text: New-AzNetworkWatcherConnectionMonitor
+  href: ./New-AzNetworkWatcherConnectionMonitor.yml
+- text: Get-AzNetworkWatcherTroubleshootingResult
+  href: ./Get-AzNetworkWatcherTroubleshootingResult.yml
+- text: Get-AzNetworkWatcherReachabilityReport
+  href: ./Get-AzNetworkWatcherReachabilityReport.yml
+- text: Get-AzNetworkWatcherReachabilityProvidersList
+  href: ./Get-AzNetworkWatcherReachabilityProvidersList.yml
+- text: Get-AzNetworkWatcherFlowLogStatus
+  href: ./Get-AzNetworkWatcherFlowLogStatus.yml
+- text: Get-AzNetworkWatcherConnectionMonitor
+  href: ./Get-AzNetworkWatcherConnectionMonitor.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPacketCaptureScopeConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azpacketcapturescopeconfig
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzPacketCaptureScopeConfig.md
+  PlatyPS schema version: 2024-05-01

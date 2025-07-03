@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.Get-AzPurviewClassificationRule
+name: Get-AzPurviewClassificationRule
+module: Az.Purview
+isPreview: false
+summary: |-
+  Get a classification rule
+description: |-
+  Get a classification rule
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning endpoint of your purview account.
+      Example: https://{accountName}.purview.azure.com
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    aliases:
+    - ClassificationRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPurviewClassificationRule
+        -Endpoint <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPurviewClassificationRule
+        -Endpoint <String>
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IClassificationRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get custom classification rule by name'
+  description: |-
+    ```powershell
+    Get-AzPurviewClassificationRule -Endpoint https://parv-brs-2.purview.azure.com/ -Name ClassificationRule1
+    ```
+
+    ```output
+    ClassificationAction   : Keep
+    ClassificationName     : ClassificationName1
+    ColumnPattern          : {{
+                               "kind": "Regex",
+                               "pattern": "column1"
+                             }}
+    CreatedAt              : 1/27/2022 4:36:25 AM
+    DataPattern            : {{
+                               "kind": "Regex",
+                               "pattern": "^\\d{5}$"
+                             }}
+    Description            : This is a description
+    Id                     : classificationrules/ClassificationRule1
+    Kind                   : Custom
+    LastModifiedAt         : 1/27/2022 4:36:25 AM
+    MinimumPercentageMatch : 60
+    Name                   : ClassificationRule1
+    RuleStatus             : Enabled
+    Version                : 1
+    ```
+
+    Get classification rule named Classification1
+- title: 'Example 2: Get all custom classification rules'
+  description: |-
+    ```powershell
+    Get-AzPurviewClassificationRule -Endpoint https://parv-brs-2.purview.azure.com/
+    ```
+
+    ```output
+    ClassificationAction   : Keep
+    ClassificationName     : ClassificationName1
+    ColumnPattern          : {{
+                               "kind": "Regex",
+                               "pattern": "column1"
+                             }}
+    CreatedAt              : 1/27/2022 4:36:25 AM
+    DataPattern            : {{
+                               "kind": "Regex",
+                               "pattern": "^\\d{5}$"
+                             }}
+    Description            : This is a description
+    Id                     : classificationrules/ClassificationRule1
+    Kind                   : Custom
+    LastModifiedAt         : 1/27/2022 4:36:25 AM
+    MinimumPercentageMatch : 60
+    Name                   : ClassificationRule1
+    RuleStatus             : Enabled
+    Version                : 1
+
+    ClassificationAction   : Keep
+    ClassificationName     : ClassificationName2
+    ColumnPattern          : {{
+                               "kind": "Regex",
+                               "pattern": "column2"
+                             }}
+    CreatedAt              : 1/27/2022 4:37:09 AM
+    DataPattern            : {{
+                               "kind": "Regex",
+                               "pattern": "^\\d{6}$"
+                             }}
+    Description            : This is description
+    Id                     : classificationrules/ClassificationRule2
+    Kind                   : Custom
+    LastModifiedAt         : 1/27/2022 4:37:09 AM
+    MinimumPercentageMatch : 60
+    Name                   : ClassificationRule2
+    RuleStatus             : Enabled
+    Version                : 1
+    ```
+
+    Get all custom classification rules
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewClassificationRule.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.purview/get-azpurviewclassificationrule
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewClassificationRule.md
+  PlatyPS schema version: 2024-05-01

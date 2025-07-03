@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.Automanage
+name: Az.Automanage Module
+isPreview: false
+cmdletGroups:
+- title: Automanage
+  cmdlets:
+  - Az.Automanage.Get-AzAutomanageBestPractice
+  - Az.Automanage.Get-AzAutomanageConfigProfile
+  - Az.Automanage.Get-AzAutomanageConfigProfileAssignment
+  - Az.Automanage.Get-AzAutomanageConfigProfileHciAssignment
+  - Az.Automanage.Get-AzAutomanageConfigProfileHcrpAssignment
+  - Az.Automanage.Get-AzAutomanageHciReport
+  - Az.Automanage.Get-AzAutomanageHcrpReport
+  - Az.Automanage.Get-AzAutomanageReport
+  - Az.Automanage.New-AzAutomanageConfigProfile
+  - Az.Automanage.New-AzAutomanageConfigProfileAssignment
+  - Az.Automanage.New-AzAutomanageConfigProfileHciAssignment
+  - Az.Automanage.New-AzAutomanageConfigProfileHcrpAssignment
+  - Az.Automanage.Remove-AzAutomanageConfigProfile
+  - Az.Automanage.Remove-AzAutomanageConfigProfileAssignment
+  - Az.Automanage.Remove-AzAutomanageConfigProfileHciAssignment
+  - Az.Automanage.Remove-AzAutomanageConfigProfileHcrpAssignment
+  - Az.Automanage.Update-AzAutomanageConfigProfile
+description: |-
+  Microsoft Azure PowerShell: Automanage cmdlets
+metadata:
+  Module Name: Az.Automanage
+  Module Guid: b573b797-567a-4f0d-8ba3-6a447bed6278
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.automanage
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automanage/Automanage/help/Az.Automanage.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automanage/Automanage/help/Az.Automanage.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

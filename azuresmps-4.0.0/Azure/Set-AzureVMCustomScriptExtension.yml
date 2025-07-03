@@ -1,0 +1,404 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureVMCustomScriptExtension
+name: Set-AzureVMCustomScriptExtension
+module: Azure
+isPreview: false
+summary: |-
+  Sets information for an Azure virtual machine custom script extension.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureVMCustomScriptExtension** cmdlet sets information for an Azure virtual machine custom script extension.
+parameters:
+  cmdletParameters:
+  - name: Argument
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a string that supplies an argument that this cmdlet runs on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SetCustomScriptExtensionByUriLinks
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the container name within the storage account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Disable
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables the extension state.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableCustomScriptExtension
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileName
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a string array that contains the names of the blob files in the specified container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileUri
+    type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a string array that contains the URLs of the blob files.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByUriLinks
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceUpdate
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet re-apply a configuration to an extension when the configuration has not been updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReferenceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the reference name for the extension.
+
+      This parameter is a user-defined string that can be used to refer to an extension.
+      It is specified when the extension is added to the virtual machine for the first time.
+      For subsequent updates, you need to specify the previously used reference name while updating the extension.
+      The *ReferenceName* assigned to an extension is returned using the **Get-AzureVM** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Run
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the command this cmdlet runs by the extension on the virtual machine.
+      Only "powershell.exe" is supported.
+    aliases:
+    - RunFile
+    - Command
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountKey
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage account name in the current subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEndpointSuffix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage service endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetCustomScriptExtensionByContainerAndFileNames
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uninstall
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet uninstalls the custom script extension from the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UninstalleCustomScriptExtension
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the custom script extension.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the persistent virtual machine object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureVMCustomScriptExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        [-ContainerName] <String>
+        [-FileName] <String[]>
+        [[-StorageAccountName] <String>]
+        [[-StorageEndpointSuffix] <String>]
+        [[-StorageAccountKey] <String>]
+        [[-Run] <String>]
+        [[-Argument] <String>]
+        -VM <IPersistentVM>
+        [-ForceUpdate]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetCustomScriptExtensionByContainerAndFileNames
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureVMCustomScriptExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        -VM <IPersistentVM>
+        [-Disable]
+        [-ForceUpdate]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableCustomScriptExtension
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureVMCustomScriptExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        -VM <IPersistentVM>
+        [-Uninstall]
+        [-ForceUpdate]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UninstalleCustomScriptExtension
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureVMCustomScriptExtension
+        [[-ReferenceName] <String>]
+        [[-Version] <String>]
+        [[-FileUri] <String[]>]
+        [-Run] <String>
+        [[-Argument] <String>]
+        -VM <IPersistentVM>
+        [-ForceUpdate]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetCustomScriptExtensionByUriLinks
+  isDefault: false
+examples:
+- title: 'Example 1: Set information for a virtual machine custom script extension'
+  description: |-
+    ```
+    PS C:\> $VM = Set-AzureVMCustomScriptExtension -VM $VM -ContainerName "Container01" -FileName "script1.ps1","script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
+    PS C:\> New-AzureVM -Location "West US" -ServiceName $SVC -VM $VM;
+    ```
+
+    This command sets information for a virtual machine custom script extension.
+- title: 'Example 2: Set information for a virtual machine custom script extension using a file path'
+  description: |-
+    ```
+    PS C:\> Set-AzureVMCustomScriptExtension -VM $VM -FileUri "http://www.blob.core.contoso.net/bar/script1.ps1","http://www.blob.core.contoso.net/baz/script2.ps1" -Run "script1.ps1" -Argument "arg1 arg2";
+    PS C:\> Update-AzureVM -ServiceName $SVC -Name $Name -VM VM;
+    ```
+
+    This command sets information for a virtual machine custom script extension using multiple file URLs.
+links:
+- text: Get-AzureVMCustomScriptExtension
+  href: ./Get-AzureVMCustomScriptExtension.yml
+- text: Remove-AzureVMCustomScriptExtension
+  href: ./Remove-AzureVMCustomScriptExtension.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6A8F07D1-AC20-4950-9019-BDFB4FD3CF69
+  PlatyPS schema version: 2024-05-01

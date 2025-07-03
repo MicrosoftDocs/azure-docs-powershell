@@ -1,0 +1,382 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzPolicyDefinition
+name: New-AzPolicyDefinition
+module: Az.Resources
+isPreview: false
+summary: |-
+  Creates a policy definition.
+description: |-
+  The **New-AzPolicyDefinition** cmdlet creates a policy definition that includes a policy rule in JavaScript Object Notation (JSON) format.
+parameters:
+  cmdletParameters:
+  - name: ApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the resource provider API to use.
+      If you do not specify a version, this cmdlet uses the latest available version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for the policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a display name for the policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="System.Management.Automation.ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+      The acceptable values for this parameter are:
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the management group of the new policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The metadata for policy definition. This can either be a path to a file name containing the metadata, or the metadata as string
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ResourceManager.Cmdlets.Entities.Policy.PolicyDefinitionMode" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The mode of the policy definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parameters declaration for policy definition. This can either be a path to a file name containing the parameters declaration, or the parameters declaration as string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a policy rule for the policy definition.
+      You can specify the path of a .json file or a string that contains the policy in JSON format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Pre
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet considers pre-release API versions when it automatically determines which version to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The subscription ID of the new policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPolicyDefinition
+        -Name <String>
+        -Policy <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <PolicyDefinitionMode>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzPolicyDefinition
+        -Name <String>
+        -Policy <String>
+        -ManagementGroupName <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <PolicyDefinitionMode>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzPolicyDefinition
+        -Name <String>
+        -Policy <String>
+        -SubscriptionId <Guid>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <PolicyDefinitionMode>]
+        [-ApiVersion <String>]
+        [-Pre]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionIdParameterSet
+  isDefault: false
+examples:
+- title: 'Example 1: Create a policy definition by using a policy file'
+  description: |-
+    ```
+    {
+       "if": {
+          "field": "location",
+          "notIn": ["eastus", "westus", "centralus"]
+       },
+       "then": {
+          "effect": "audit"
+       }
+    }
+    ```
+
+    ```
+    PS C:\> New-AzPolicyDefinition -Name 'LocationDefinition' -Policy C:\LocationPolicy.json
+    ```
+
+    This command creates a policy definition named LocationDefinition that contains the policy rule specified in C:\LocationPolicy.json. Example content for the LocationPolicy.json file is provided above.
+- title: 'Example 2: Create a parameterized policy definition using inline parameters'
+  description: |-
+    ```
+    {
+       "if": {
+          "field": "location",
+          "notIn": "[parameters('listOfAllowedLocations')]"
+       },
+       "then": {
+          "effect": "audit"
+       }
+    }
+    ```
+
+    ```
+    PS C:\> New-AzPolicyDefinition -Name 'LocationDefinition' -Policy C:\LocationPolicy.json -Parameter '{ "listOfAllowedLocations": { "type": "array" } }'
+    ```
+
+    This command creates a policy definition named LocationDefinition that contains the policy rule specified in C:\LocationPolicy.json. The parameter definition for the policy rule is provided inline.
+- title: 'Example 3: Create a policy definition inline in a management group'
+  description: |-
+    ```
+    PS C:\> New-AzPolicyDefinition -Name 'VMPolicyDefinition' -ManagementGroupName Dept42 -DisplayName 'Virtual Machine policy definition' -Policy '{"if":{"source":"action","equals":"Microsoft.Compute/virtualMachines/write"},"then":{"effect":"deny"}}'
+    ```
+
+    This command creates a policy definition named VMPolicyDefinition in management group Dept42.
+    The command specifies the policy as a string in valid JSON format.
+- title: 'Example 4: Create a policy definition inline with metadata'
+  description: |-
+    ```
+    PS C:\> New-AzPolicyDefinition -Name 'VMPolicyDefinition' -Metadata '{"Category":"Virtual Machine"}' -Policy '{"if":{"source":"action","equals":"Microsoft.Compute/virtualMachines/write"},"then":{"effect":"deny"}}'
+
+
+    Name               : VMPolicyDefinition
+    ResourceId         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
+    ResourceName       : VMPolicyDefinition
+    ResourceType       : Microsoft.Authorization/policyDefinitions
+    SubscriptionId     : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    Properties         : @{displayName=VMPolicyDefinition; policyType=Custom; mode=All; metadata=; policyRule=}
+    PolicyDefinitionId : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/providers/Microsoft.Authorization/policyDefinitions/VMPolicyDefinition
+    ```
+
+    This command creates a policy definition named VMPolicyDefinition with metadata indicating its category is "Virtual Machine".
+    The command specifies the policy as a string in valid JSON format.
+links:
+- text: Get-AzPolicyDefinition
+  href: ./Get-AzPolicyDefinition.yml
+- text: Remove-AzPolicyDefinition
+  href: ./Remove-AzPolicyDefinition.yml
+- text: Set-AzPolicyDefinition
+  href: ./Set-AzPolicyDefinition.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzPolicyDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ResourceManager.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/new-Azpolicydefinition
+  Module Name: Az.Resources
+  ms.assetid: 31F2AF24-488D-4CAF-A9C8-C8DAE76E031F
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/New-AzPolicyDefinition.md
+  PlatyPS schema version: 2024-05-01

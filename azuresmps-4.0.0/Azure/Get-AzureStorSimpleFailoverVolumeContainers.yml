@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleFailoverVolumeContainers
+name: Get-AzureStorSimpleFailoverVolumeContainers
+module: Azure
+isPreview: false
+summary: |-
+  Gets the volume container groups for device failover.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleFailoverVolumeContainers** cmdlet gets the volume container groups for device failover.
+  Pass a single **VolumeContainer** group or an array of **VolumeContainer** groups to the **Start-AzureStorSimpleDeviceFailover** cmdlet.
+  Only groups that have a value of $True for the **IsDCGroupEligibleForDR** property are eligible for failover.
+parameters:
+  cmdletParameters:
+  - name: DeviceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the StorSimple device on which to run the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device on which to run the cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleFailoverVolumeContainers
+        -DeviceId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleFailoverVolumeContainers
+        -DeviceName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyByName
+  isDefault: false
+outputs:
+- name: <xref href="IList" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns a list of **VolumeContainer** groups.
+examples:
+- title: 'Example 1: Get failover volume containers'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleFailoverVolumeContainers -DeviceName "ChewD_App7"
+
+    DCGroup                    IneligibilityMessage          IsDCGroupEligibleForDR
+    -------                    --------------------          ----------------------
+    {VolumeContainer1889078...                                                 True
+    {VC_01}                    No cloud snapshot found                        False
+    {VolumeContainer7306959}   No cloud snapshot found                        False
+    {VolumeContainer407850151} No cloud snapshot found                        False
+    ```
+
+    This command gets failover volume containers.
+    Only the DCGroups that have a value of $True for the **IsDCGroupEligibleForDR** property can be used for device failover.
+links:
+- text: Start-AzureStorSimpleDeviceFailoverJob
+  href: ./Start-AzureStorSimpleDeviceFailoverJob.yml
+- text: Get-AzureStorSimpleDeviceVolumeContainer
+  href: ./Get-AzureStorSimpleDeviceVolumeContainer.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: BABBA19E-5833-452C-9E36-811EAE7C20F9
+  PlatyPS schema version: 2024-05-01

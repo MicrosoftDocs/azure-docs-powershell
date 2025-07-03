@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVirtualWan
+name: Get-AzVirtualWan
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
+description: |-
+  Gets a Virtual WAN or all Virtual WANs in a resource group or subscription.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByResourceGroupName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWan
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListBySubscriptionId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVirtualWan
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByResourceGroupName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualWan" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzResourceGroup -Location "West US" -Name "testRG"
+    New-AzVirtualWan -ResourceGroupName "testRG" -Name "myVirtualWAN" -Location "West US" -AllowBranchToBranchTraffic
+    Get-AzVirtualWan -Name "myVirtualWAN" -ResourceGroupName "testRG"
+    ```
+
+    ```output
+    Name                       : myVirtualWAN
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/myVirtualWAN
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+    ```
+
+    This command gets the Virtual WAN named myVirtualWAN in the resource group testRG.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzVirtualWan -Name test*
+    ```
+
+    ```output
+    Name                       : test1
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/test1
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+
+    Name                       : test2
+    Id                         : /subscriptions/{SubscriptionId}/resourceGroups/testRG/providers/Microsoft.Network/virtualWans/test2
+    AllowVnetToVnetTraffic     : False
+    AllowBranchToBranchTraffic : True
+    Location                   : West US
+    Type                       : Microsoft.Network/virtualWans
+    ProvisioningState          : Succeeded
+    ```
+
+    This command gets all Virtual WANs starting with "test".
+links:
+- text: New-AzVirtualWan
+  href: ./New-AzVirtualWan.yml
+- text: Remove-AzVirtualWan
+  href: ./Remove-AzVirtualWan.yml
+- text: Update-AzVirtualWan
+  href: ./Update-AzVirtualWan.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWan.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvirtualwan
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVirtualWan.md
+  PlatyPS schema version: 2024-05-01

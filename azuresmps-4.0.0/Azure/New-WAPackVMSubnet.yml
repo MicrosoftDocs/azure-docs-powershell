@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-WAPackVMSubnet
+name: New-WAPackVMSubnet
+module: Azure
+isPreview: false
+summary: |-
+  Creates a virtual machine subnet.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-WAPackVMSubnet** cmdlet creates a virtual machine subnet.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subnet
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a subnet for the virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNet
+    type: <xref href="VMNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a VNet associated with the virtual machine subnet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-WAPackVMSubnet
+        -VNet <VMNetwork>
+        -Name <String>
+        -Subnet <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a virtual machine subnet'
+  description: |-
+    ```
+    PS C:\> $VNet = Get-WAPackVNet -Name "ContosoVNet01"
+    PS C:\> New-WAPackVMSubnet -VNet $VNet -Name "ContosoVMSubnet01" -Subnet "192.168.1.0/24"
+    ```
+
+    The first command first retrieves the virtual machine network to which we want to add a new virtual machine subnet.
+    This virtual machine network is named ContosoVNet01.
+
+    The second command creates a virtual machine subnet using the previously retrieve virtual machine network, a name ContosoVMSubnet01 and a subnet 192.168.1.0/24.
+links:
+- text: Get-WAPackVMSubnet
+  href: ./Get-WAPackVMSubnet.yml
+- text: Get-WAPackVNet
+  href: ./Get-WAPackVNet.yml
+- text: Remove-WAPackVMSubnet
+  href: ./Remove-WAPackVMSubnet.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 83D18A17-94A4-4FB8-9DA6-F652D5BB84C7
+  PlatyPS schema version: 2024-05-01

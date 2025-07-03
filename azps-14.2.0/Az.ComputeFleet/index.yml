@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.ComputeFleet
+name: Az.ComputeFleet Module
+isPreview: false
+cmdletGroups:
+- title: ComputeFleet
+  cmdlets:
+  - Az.ComputeFleet.Get-AzComputeFleet
+  - Az.ComputeFleet.Get-AzComputeFleetVMSS
+  - Az.ComputeFleet.New-AzComputeFleet
+  - Az.ComputeFleet.Remove-AzComputeFleet
+  - Az.ComputeFleet.Update-AzComputeFleet
+description: |-
+  Microsoft Azure PowerShell: ComputeFleet cmdlets
+metadata:
+  Module Name: Az.ComputeFleet
+  Module Guid: 8128d9a0-977d-4a7f-aaee-b9c94a33bcf5
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.computefleet
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeFleet/ComputeFleet/help/Az.ComputeFleet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ComputeFleet/ComputeFleet/help/Az.ComputeFleet.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

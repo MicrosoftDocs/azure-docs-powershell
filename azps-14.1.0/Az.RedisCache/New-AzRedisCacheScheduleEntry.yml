@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RedisCache.New-AzRedisCacheScheduleEntry
+name: New-AzRedisCacheScheduleEntry
+module: Az.RedisCache
+isPreview: false
+summary: |-
+  Creates a schedule entry.
+description: |-
+  The **New-AzRedisCacheScheduleEntry** cmdlet creates a **PSScheduleEntry** object.
+  Azure Redis Cache patch schedule cmdlets, such as the New-AzRedisCachePatchSchedule cmdlet, require schedule entry objects.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, redis, cache, web, webapp, website
+parameters:
+  cmdletParameters:
+  - name: DayOfWeek
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the day of the week for the schedule entry.
+      The acceptable values for this parameter are:
+      - Everyday
+      - Weekend
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
+      - Sunday
+    acceptedValues:
+    - Everyday
+    - Weekend
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    - Sunday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaintenanceWindow
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.TimeSpan" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the amount of time window allowed for updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartHourUtc
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an hour of the day when the schedule starts.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRedisCacheScheduleEntry
+        -DayOfWeek <String>
+        -StartHourUtc <Int32>
+        [-MaintenanceWindow <TimeSpan>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RedisCache.Models.PSScheduleEntry" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a schedule entry for weekends'
+  description: |-
+    ```powershell
+    New-AzRedisCacheScheduleEntry -DayOfWeek "Weekend" -StartHourUtc 2 -MaintenanceWindow "06:00:00"
+    ```
+
+    This command creates a **PSScheduleEntry** object that represents a weekend schedule that has the specified start time and window.
+links:
+- text: Get-AzRedisCachePatchSchedule
+  href: ./Get-AzRedisCachePatchSchedule.yml
+- text: New-AzRedisCachePatchSchedule
+  href: ./New-AzRedisCachePatchSchedule.yml
+- text: Remove-AzRedisCachePatchSchedule
+  href: ./Remove-AzRedisCachePatchSchedule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RedisCache.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.rediscache/new-azrediscachescheduleentry
+  Module Name: Az.RedisCache
+  ms.assetid: ACB53C23-99E0-4A0A-A44E-0D3FDB12450B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisCache/RedisCache/help/New-AzRedisCacheScheduleEntry.md
+  PlatyPS schema version: 2024-05-01

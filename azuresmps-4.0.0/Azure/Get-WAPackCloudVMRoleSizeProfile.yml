@@ -1,0 +1,92 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-WAPackCloudVMRoleSizeProfile
+name: Get-WAPackCloudVMRoleSizeProfile
+module: Azure
+isPreview: false
+summary: |-
+  Gets Cloud VM Role Size profile objects.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-WAPackCloudVMRoleSizeProfile** cmdlet gets Cloud VM Role size profile objects for virtual machines.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a Cloud VM Role size profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FromName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-WAPackCloudVMRoleSizeProfile
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Empty
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-WAPackCloudVMRoleSizeProfile
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FromName
+  isDefault: false
+examples:
+- title: 'Example 1: Get a Cloud VM Role size profile by using a name'
+  description: |-
+    ```
+    PS C:\> Get-WAPackCloudVMRoleSizeProfile -Name "Small"
+    ```
+
+    This command gets the size profile named Small.
+- title: 'Example 2: Get all Cloud VM Role size profiles'
+  description: |-
+    ```
+    PS C:\> Get-WAPackCloudVMRoleSizeProfile
+    ```
+
+    This command gets all the size profiles.
+links:
+- text: Get-WAPackVM
+  href: ./Get-WAPackVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 453AEA42-E29C-4FF2-9210-0DD88B77DC07
+  PlatyPS schema version: 2024-05-01

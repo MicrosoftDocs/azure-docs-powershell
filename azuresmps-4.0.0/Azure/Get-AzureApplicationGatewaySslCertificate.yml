@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureApplicationGatewaySslCertificate
+name: Get-AzureApplicationGatewaySslCertificate
+module: Azure
+isPreview: false
+summary: |-
+  Gets Application Gateway certificates.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureApplicationGatewaySslCertificate** cmdlet gets Secure Sockets Layer (SSL) certificates for an Azure Application Gateway.
+parameters:
+  cmdletParameters:
+  - name: CertificateName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an SSL certificate.
+      This cmdlet gets the certificate that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Application Gateway from which this cmdlet gets an SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureApplicationGatewaySslCertificate
+        -Name <String>
+        [-CertificateName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Networking.ApplicationGatewayObjectModel.ApplicationGatewayCertificate, List<Microsoft.Azure.Networking.ApplicationGatewayObjectModel.ApplicationGatewayCertificate>" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an SSL certificate'
+  description: |-
+    ```
+    PS C:\> Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08" -CertificateName "SslCertificate13"
+    ```
+
+    This command gets an SSL certificate named SslCertificate13 on the Application Gateway named ApplicationGateway08.
+- title: 'Example 2: Get all SSL certificates'
+  description: |-
+    ```
+    PS C:\> Get-AzureApplicationGatewaySslCertificate -Name "ApplicationGateway08"
+    ```
+
+    This command gets all the SSL certificates on the Application Gateway named ApplicationGateway08.
+links:
+- text: Add-AzureApplicationGatewaySslCertificate
+  href: ./Add-AzureApplicationGatewaySslCertificate.yml
+- text: Remove-AzureApplicationGatewaySslCertificate
+  href: ./Remove-AzureApplicationGatewaySslCertificate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D2CE5D4B-8F1F-41FF-9E65-8956FEDD35AE
+  PlatyPS schema version: 2024-05-01

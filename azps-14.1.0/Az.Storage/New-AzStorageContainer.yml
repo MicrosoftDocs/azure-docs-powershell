@@ -1,0 +1,271 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageContainer
+name: New-AzStorageContainer
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates an Azure storage container.
+description: |-
+  The **New-AzStorageContainer** cmdlet creates an Azure storage container.
+parameters:
+  cmdletParameters:
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    aliases:
+    - ClientTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a context for the new container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultEncryptionScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default the container to use specified encryption scope for all writes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new container.
+    aliases:
+    - N
+    - Container
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Storage.Blob.BlobContainerPublicAccessType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the level of public access to this container.
+      By default, the container and any blobs in it can be accessed only by the owner of the storage account.
+      To grant anonymous users read permissions to a container and its blobs, you can set the container permissions to enable public access.
+      Anonymous users can read blobs in a publicly available container without authenticating the request.
+      The acceptable values for this parameter are:
+      - Container.
+      Provides full read access to a container and its blobs.
+      Clients can enumerate blobs in the container through anonymous request, but cannot enumerate containers in the storage account.
+      - Blob.
+      Provides read access to blob data throughout a container through anonymous request, but does not provide access to container data.
+      Clients cannot enumerate blobs in the container by using anonymous request.
+      - Off.
+      Which restricts access to only the storage account owner.
+    acceptedValues:
+    - Off
+    - Container
+    - Blob
+    - Unknown
+    aliases:
+    - PublicAccess
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreventEncryptionScopeOverride
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Block override of encryption scope from the container default.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EncryptionScope
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the service side time-out interval, in seconds, for a request.
+      If the specified interval elapses before the service processes the request, the storage service returns an error.
+    aliases:
+    - ServerTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageContainer
+        [-Name] <String>
+        [[-Permission] <BlobContainerPublicAccessType>]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContainerName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzStorageContainer
+        [-Name] <String>
+        [[-Permission] <BlobContainerPublicAccessType>]
+        -DefaultEncryptionScope <String>
+        -PreventEncryptionScopeOverride <Boolean>
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EncryptionScope
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageContainer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Azure storage container'
+  description: |-
+    ```powershell
+    New-AzStorageContainer -Name "ContainerName" -Permission Off
+    ```
+
+    This command creates a storage container.
+- title: 'Example 2: Create multiple Azure storage containers'
+  description: |-
+    ```powershell
+    "container1 container2 container3".split() | New-AzStorageContainer -Permission Container
+    ```
+
+    This example creates multiple storage containers.
+    It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.
+- title: 'Example 3: Create an Azure storage container with Encryption Scope'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $container = New-AzStorageContainer  -Name "mycontainer" -DefaultEncryptionScope "myencryptscope" -PreventEncryptionScopeOverride $true
+
+    $container.BlobContainerProperties.DefaultEncryptionScope
+    myencryptscope
+
+    $container.BlobContainerProperties.PreventEncryptionScopeOverride
+    True
+    ```
+
+    This command creates a storage container, with default Encryption Scope as myencryptscope, and prevert blob upload with different Encryption Scope to this container.
+links:
+- text: Get-AzStorageContainer
+  href: ./Get-AzStorageContainer.yml
+- text: Remove-AzStorageContainer
+  href: ./Remove-AzStorageContainer.yml
+- text: Set-AzStorageContainerAcl
+  href: ./Set-AzStorageContainerAcl.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageContainer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragecontainer
+  Module Name: Az.Storage
+  ms.assetid: 2B12BC19-EF8F-43F5-AF04-C570FEEA1AE6
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageContainer.md
+  PlatyPS schema version: 2024-05-01

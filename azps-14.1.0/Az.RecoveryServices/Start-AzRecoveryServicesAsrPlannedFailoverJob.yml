@@ -1,0 +1,335 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Start-AzRecoveryServicesAsrPlannedFailoverJob
+name: Start-AzRecoveryServicesAsrPlannedFailoverJob
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Starts a planned failover operation.
+description: |-
+  The **Start-AzRecoveryServicesAsrPlannedFailoverJob** cmdlet starts a planned failover for an Azure Site Recovery replication protected item or recovery plan.
+  You can check whether the job succeeds by using the Get-AzRecoveryServicesAsrJob cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CreateVmIfNotFound
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Create the virtual machine if not found while failing back to the primary region (used in alternate location recovery.) The acceptable values for this parameter are:
+
+      - Yes
+      - No
+    acceptedValues:
+    - Yes
+    - No
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataEncryptionPrimaryCertFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary certificate file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataEncryptionSecondaryCertFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the secondary certificate file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the direction of the failover.
+      The acceptable values for this parameter are:
+
+      - PrimaryToRecovery
+      - RecoveryToPrimary
+    acceptedValues:
+    - PrimaryToRecovery
+    - RecoveryToPrimary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MultiVmSyncPoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to enable multi VM sync points for failover of multi VM sync enabled VMs (Applicable only for VMware to Azure replication scenario).
+    acceptedValues:
+    - Enable
+    - Disable
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Optimize
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies what to optimize for.
+      This parameter applies when failover is done from an Azure site to an on-premise site which requires substantial data synchronization.
+      Valid values are:
+
+      - ForDowntime
+      - ForSynchronization
+
+      When **ForDowntime** is specified, this indicates that data is synchronized before failover to minimize downtime.
+      Synchronization is performed without shutting down the virtual machine.
+      After synchronization is complete, the job is suspended.
+      Resume the job to do an additional synchronization operation that shuts down the virtual machine.
+
+      When **ForSynchronization** is specified, this indicates that data is synchronized during failover only so data synchronization is minimized.
+      With this setting enabled, the virtual machine is shut down immediately.
+      Synchronization starts after shutdown to complete the failover operation.
+    acceptedValues:
+    - ForDownTime
+    - ForSynchronization
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryPlan
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ASR Recovery plan object corresponding to the recovery plan to be failed over.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryTag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery tag: RecoveryTagApplicationConsistent, RecoveryTagCrashConsistent (Applicable only for VMware to Azure replication scenario).
+    acceptedValues:
+    - RecoveryTagApplicationConsistent
+    - RecoveryTagCrashConsistent
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPIObjectWithRecoveryTag
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationProtectedItem
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ASR replication protected item object corresponding to the replication protected item to be failed over.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPIObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByRPIObjectWithRecoveryTag
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicesProvider
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryServicesProvider" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifies the host to on which to create the virtual machine while failing over to an alternate location by specifying the ASR services provider object corresponding to the ASR services provider running on the host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRPIObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzRecoveryServicesAsrPlannedFailoverJob
+        -ReplicationProtectedItem <ASRReplicationProtectedItem>
+        -Direction <String>
+        [-Optimize <String>]
+        [-CreateVmIfNotFound <String>]
+        [-ServicesProvider <ASRRecoveryServicesProvider>]
+        [-DataEncryptionPrimaryCertFile <String>]
+        [-DataEncryptionSecondaryCertFile <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPIObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Start-AzRecoveryServicesAsrPlannedFailoverJob
+        -RecoveryPlan <ASRRecoveryPlan>
+        -Direction <String>
+        [-Optimize <String>]
+        [-CreateVmIfNotFound <String>]
+        [-DataEncryptionPrimaryCertFile <String>]
+        [-DataEncryptionSecondaryCertFile <String>]
+        [-MultiVmSyncPoint <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzRecoveryServicesAsrPlannedFailoverJob
+        -ReplicationProtectedItem <ASRReplicationProtectedItem>
+        -Direction <String>
+        -RecoveryTag <String>
+        [-Optimize <String>]
+        [-CreateVmIfNotFound <String>]
+        [-DataEncryptionPrimaryCertFile <String>]
+        [-DataEncryptionSecondaryCertFile <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRPIObjectWithRecoveryTag
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRRecoveryPlan" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRReplicationProtectedItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRJob" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $currentJob = Start-AzRecoveryServicesAsrPlannedFailoverJob -RecoveryPlan $RP -Direction PrimaryToRecovery
+    ```
+
+    Starts the planned failover for the specified ASR recovery plan and returns the ASR job used to track the operation.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/start-azrecoveryservicesasrplannedfailoverjob
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Start-AzRecoveryServicesAsrPlannedFailoverJob.md
+  PlatyPS schema version: 2024-05-01

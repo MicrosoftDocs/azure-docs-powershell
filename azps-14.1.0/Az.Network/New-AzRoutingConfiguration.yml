@@ -1,0 +1,229 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzRoutingConfiguration
+name: New-AzRoutingConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a RoutingConfiguration object.
+description: |-
+  Creates a RoutingConfiguration object.
+parameters:
+  cmdletParameters:
+  - name: AssociatedRouteTable
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The hub route table associated with this routing configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of resource ids of all the hub route tables to advertise the routes to for the PropagatedRouteTables property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InboundRouteMap
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The inbound route maps of this routing configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of labels for the PropagatedRouteTables property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutboundRouteMap
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The outbound route maps of this routing configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StaticRoute
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSStaticRoute" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of routes that control routing from VirtualHub into a virtual network connection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetLocalRouteOverrideCriteria
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Should we bypass NVA for destinations in spoke vnet? 'Contains' for no, 'Equal' for yes. Default is 'Contains'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzRoutingConfiguration
+        -AssociatedRouteTable <String>
+        -Label <String[]>
+        -Id <String[]>
+        [-StaticRoute <PSStaticRoute[]>]
+        [-VnetLocalRouteOverrideCriteria <String>]
+        [-InboundRouteMap <String>]
+        [-OutboundRouteMap <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSStaticRoute" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $rgName = "testRg"
+    $virtualHubName = "testHub"
+    $inboundRouteMap = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/routeMaps/testRouteMap"
+    $rt1 = Get-AzVHubRouteTable -ResourceGroupName $rgName -VirtualHubName $virtualHubName -Name "defaultRouteTable"
+    $rt2 = Get-AzVHubRouteTable -ResourceGroupName $rgName -VirtualHubName $virtualHubName -Name "noneRouteTable"
+    $route1 = New-AzStaticRoute -Name "route1" -AddressPrefix @("10.20.0.0/16", "10.30.0.0/16")-NextHopIpAddress "10.90.0.5"
+    New-AzRoutingConfiguration -AssociatedRouteTable $rt1.Id -Label @("testLabel") -Id @($rt2.Id) -StaticRoute @($route1) -InboundRouteMap $inboundRouteMap
+    ```
+
+    ```output
+    AssociatedRouteTable  : "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/defaultRouteTable"
+    PropagatedRouteTables : {
+                              "Labels": [
+                                "testLabel"
+                              ],
+                              "Ids": [
+                                {
+                                  "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubRouteTables/noneRouteTable"
+                                }
+                              ],
+                              "InboundRouteMap": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/routeMaps/testRouteMap"
+                            }
+    VnetRoutes            : {
+                              "StaticRoutes": [
+                                {
+                                  "Name": "route1",
+                                  "AddressPrefixes": [
+                                    "10.20.0.0/16",
+                                    "10.30.0.0/16"
+                                  ],
+                                  "NextHopIpAddress": "10.90.0.5"
+                                }
+                              ]
+                            }
+    ```
+
+    The above command will create a RoutingConfiguration object which can then be added to a connection resource. Static routes are only allowed with a HubVirtualNetworkConnection object.
+links:
+- text: New-AzStaticRoute
+  href: ./New-AzStaticRoute.yml
+- text: New-AzExpressRouteConnection
+  href: ./New-AzExpressRouteConnection.yml
+- text: Set-AzExpressRouteConnection
+  href: ./Set-AzExpressRouteConnection.yml
+- text: New-AzVirtualHubVnetConnection
+  href: ./New-AzVpnConnection.yml
+- text: Update-AzVirtualHubVnetConnection
+  href: ./Update-AzVpnConnection.yml
+- text: New-AzP2sVpnGateway
+  href: ./New-AzP2sVpnGateway.yml
+- text: Update-AzP2sVpnGateway
+  href: ./Update-AzP2sVpnGateway.yml
+- text: New-AzVpnConnection
+  href: ./New-AzVpnConnection.yml
+- text: Update-AzVpnConnection
+  href: ./Update-AzVpnConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRoutingConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azroutingconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzRoutingConfiguration.md
+  PlatyPS schema version: 2024-05-01

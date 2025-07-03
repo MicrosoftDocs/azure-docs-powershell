@@ -1,0 +1,287 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Update-AzNetworkVirtualApplianceConnection
+name: Update-AzNetworkVirtualApplianceConnection
+module: Az.Network
+isPreview: false
+summary: |-
+  Update or Change a Network Virtual Appliance Connection resource.
+description: |-
+  The Update-AzNetworkVirtualApplianceConnection modifies a Network Virtual Appliance Connection resource.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Do not ask for confirmation if you want to overwrite a resource
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - NetworkVirtualApplianceConnectionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The routing configuration for this nva connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualAppliance
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualAppliance" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent Network Virtual Appliance object for this connection.
+    aliases:
+    - ParentNva
+    - NetworkVirtualAppliance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualApplianceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent Network Virtual Appliance name.
+    aliases:
+    - ParentNvaName
+    - NetworkVirtualApplianceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualApplianceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the parent Network Virtual Appliance for this connection.
+    aliases:
+    - ParentNvaId
+    - NetworkVirtualApplianceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzNetworkVirtualApplianceConnection
+        -ResourceGroupName <String>
+        -VirtualApplianceName <String>
+        -Name <String>
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzNetworkVirtualApplianceConnection
+        -VirtualAppliance <PSNetworkVirtualAppliance>
+        -Name <String>
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzNetworkVirtualApplianceConnection
+        -VirtualApplianceResourceId <String>
+        -Name <String>
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualAppliance" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkVirtualApplianceConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $rt1 = Get-AzVHubRouteTable -ResourceGroupName testrg -VirtualHubName vhub1 -Name "noneRouteTable"
+    $routingconfig = New-AzRoutingConfiguration -AssociatedRouteTable $rt1.Id -Label @("none") -Id @($rt1.Id)
+    Update-AzNetworkVirtualApplianceConnection -ResourceGroupName testrg -VirtualApplianceName nva -Name defaultConnection -RoutingConfiguration $routingconfig
+    ```
+
+    ```output
+    Name                   : defaultConnection
+    ProvisioningState      : Succeeded
+    EnableInternetSecurity : False
+    BgpPeerAddress         : {10.2.112.5, 10.2.112.6}
+    Asn                    : 64512
+    TunnelIdentifier       : 0
+    RoutingConfiguration   : {
+                               "AssociatedRouteTable": {
+                                 "Id": "/subscriptions/{subscriptionId}/resourceGroups/testrg/providers/Microsoft.Network/virtualHubs
+                             /vhub1/hubRouteTables/noneRouteTable"
+                               },
+                               "PropagatedRouteTables": {
+                                 "Labels": [
+                                   "none"
+                                 ],
+                                 "Ids": [
+                                   {
+                                     "Id": "/subscriptions/{subscriptionId}/resourceGroups/testrg/providers/Microsoft.Network/virtualHubs
+                             /vhub1/hubRouteTables/noneRouteTable"
+                                   }
+                                 ]
+                               },
+                               "InboundRouteMap": {},
+                               "OutboundRouteMap": {}
+                             }
+    ```
+links:
+- text: New-AzRoutingConfiguration
+  href: ./New-AzRoutingConfiguration.yml
+- text: Get-AzNetworkVirtualAppliance
+  href: ./Get-AzNetworkVirtualAppliance.yml
+- text: Get-AzNetworkVirtualApplianceConnection
+  href: ./Get-AzNetworkVirtualApplianceConnection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzNetworkVirtualApplianceConnection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/update-aznetworkvirtualapplianceconnection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Update-AzNetworkVirtualApplianceConnection.md
+  PlatyPS schema version: 2024-05-01

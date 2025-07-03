@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSchedulerJobCollection
+name: Get-AzureSchedulerJobCollection
+module: Azure
+isPreview: false
+summary: |-
+  Gets scheduler job collections.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-AzureSchedulerJobCollection** cmdlet gets one or more scheduler job collections.
+parameters:
+  cmdletParameters:
+  - name: JobCollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the scheduler job collection to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the location that hosts the cloud service.
+      Valid values are:
+
+      - Anywhere Asia
+      - Anywhere Europe
+      - Anywhere US
+      - East Asia
+      - East US
+      - North Central US
+      - North Europe
+      - South Central US
+      - Southeast Asia
+      - West Europe
+      - West US
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSchedulerJobCollection
+        [-Location <String>]
+        [-JobCollectionName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get all collections'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobCollection
+    ```
+
+    This command gets all scheduler job collections across all locations in the current subscription.
+- title: 'Example 2: Get all collections for a location'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US"
+    ```
+
+    This command gets all scheduler job collections in the location named North Central US.
+- title: 'Example 3: Get a collection by using a name'
+  description: |-
+    ```
+    PS C:\> Get-AzureSchedulerJobCollection -Location "North Central US" -JobCollectionName "JobCollection01"
+    ```
+
+    This command gets the scheduler job collection named JobCollection01.
+links:
+- text: New-AzureSchedulerJobCollection
+  href: ./New-AzureSchedulerJobCollection.yml
+- text: Remove-AzureSchedulerJobCollection
+  href: ./Remove-AzureSchedulerJobCollection.yml
+- text: Set-AzureSchedulerJobCollection
+  href: ./Set-AzureSchedulerJobCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 89B28B7C-CA61-4CAB-A4DD-69363AB48A65
+  PlatyPS schema version: 2024-05-01

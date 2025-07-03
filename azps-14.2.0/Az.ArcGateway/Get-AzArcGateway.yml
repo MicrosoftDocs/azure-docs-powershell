@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ArcGateway.Get-AzArcGateway
+name: Get-AzArcGateway
+module: Az.ArcGateway
+isPreview: false
+summary: |-
+  Retrieves information about the view of a gateway.
+description: |-
+  Retrieves information about the view of a gateway.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ArcGateway.Models.IArcGatewayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Gateway.
+    aliases:
+    - GatewayName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzArcGateway
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzArcGateway
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzArcGateway
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzArcGateway
+        -InputObject <IArcGatewayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ArcGateway.Models.IArcGatewayIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ArcGateway.Models.IGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of gateway under a subscription'
+  description: |-
+    ```powershell
+    Get-AzArcGateway -SubscriptionId "00000000-0000-0000-0000-000000000000"
+    ```
+
+    ```output
+    Location      Name                SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDat
+                                                                                                      aLastModi
+                                                                                                      fiedAt
+    --------      ----                ------------------- ------------------- ----------------------- ---------
+    eastus2euap   adrielk_gateway
+    centraluseuap dakirby_gatewayTest
+    eastus        MyArcgateway2
+    eastus        myArcGateway
+    centralus     hcrp_synthetics_gw
+    ```
+
+    Get a list of gateway under a subscription
+- title: 'Example 2: Get a list of gateway under a resource group'
+  description: |-
+    ```powershell
+    Get-AzArcGateway -Name "myArcGateway" -ResourceGroupName "ytongtest"
+    ```
+
+    ```output
+    AllowedFeature               : {*}
+    Endpoint                     : 00000000-0000-0000-0000-000000000000.gw.arc.azure.com
+    GatewayId                    : 00000000-0000-0000-0000-000000000000
+    GatewayType                  : Public
+    Id                           : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/ytongtest
+                                   /providers/Microsoft.HybridCompute/gateways/myArcGateway
+    Location                     : eastus
+    Name                         : myArcGateway
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : ytongtest
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.HybridCompute/gateways
+    ```
+
+    Get a list of gateway under a resource group
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcGateway/ArcGateway/help/Get-AzArcGateway.md
+  document type: cmdlet
+  external help file: Az.ArcGateway-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.arcgateway/get-azarcgateway
+  Module Name: Az.ArcGateway
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ArcGateway/ArcGateway/help/Get-AzArcGateway.md
+  PlatyPS schema version: 2024-05-01

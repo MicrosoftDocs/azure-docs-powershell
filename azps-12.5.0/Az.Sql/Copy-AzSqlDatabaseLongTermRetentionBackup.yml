@@ -1,0 +1,374 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Copy-AzSqlDatabaseLongTermRetentionBackup
+name: Copy-AzSqlDatabaseLongTermRetentionBackup
+module: Az.Sql
+isPreview: false
+summary: |-
+  Copies a long term retention backup to a target database.
+description: |-
+  Copies a long term retention backup to a target database.  Target database may be in different cluster than backup source.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupDefault
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database the backup is from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupDefault
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseLongTermRetentionBackupModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The Database Long Term Retention Backup object to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupByInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The location of the backups' source server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupDefault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupDefault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource ID of the Database Long Term Retention Backup to remove.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Server the backup is under.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CopyBackupDefault
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetDatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the target subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetServerFullyQualifiedDomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified domain name of the target server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the target server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the target subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Copy-AzSqlDatabaseLongTermRetentionBackup
+        [-Location] <String>
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-BackupName] <String>
+        -TargetDatabaseName <String>
+        -TargetSubscriptionId <String>
+        -TargetResourceGroupName <String>
+        [-ResourceGroupName <String>]
+        [-TargetServerFullyQualifiedDomainName <String>]
+        [-TargetServerName <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CopyBackupDefault
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Copy-AzSqlDatabaseLongTermRetentionBackup
+        [-ResourceId] <String>
+        -TargetDatabaseName <String>
+        -TargetSubscriptionId <String>
+        -TargetResourceGroupName <String>
+        [-TargetServerFullyQualifiedDomainName <String>]
+        [-TargetServerName <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CopyBackupByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Copy-AzSqlDatabaseLongTermRetentionBackup
+        [-InputObject] <AzureSqlDatabaseLongTermRetentionBackupModel>
+        -TargetDatabaseName <String>
+        -TargetSubscriptionId <String>
+        -TargetResourceGroupName <String>
+        [-TargetServerFullyQualifiedDomainName <String>]
+        [-TargetServerName <String>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CopyBackupByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseLongTermRetentionBackupModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Backup.Model.AzureSqlDatabaseLongTermRetentionBackupModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Copy a long term retention backup to another server within the same environment.'
+  description: |-
+    ```powershell
+    Copy-AzSqlDatabaseLongTermRetentionBackup -Location southeastasia -ServerName test-server -DatabaseName test-database -BackupName 'e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000' -ResourceGroupName testrg -TargetDatabaseName ltr1 -TargetServerName ayang-eas -TargetSubscriptionId '01c4ec88-e179-44f7-9eb0-e9719a5087ab' -TargetResourceGroupName testrg
+    ```
+
+    ```output
+    SourceResourceGroupName              : test-rg
+    SourceLocation                       : southeastasia
+    SourceServerName                     : test-server
+    SourceDatabaseName                   : test-database
+    SourceBackupName                     : e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    SourceBackupResourceId               : /subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/test-rg/providers/Microsoft.Sql/locations/SoutheastAsia/longTermRetentionServers/test-server/longTermRetentionDatabases/test-database/longTermRetentionBackups/e5c20f43-494c-4925-89d1-58e0f4569fb3;132579992320000000
+    SourceBackupStorageRedundancy        : Geo
+    TargetSubscriptionId                 : 01c4ec88-e179-44f7-9eb0-e9719a5087ab
+    TargetResourceGroupName              : test-rg
+    TargetLocation                       : East Asia
+    TargetServerName                     : ayang-eas
+    TargetServerFullyQualifiedDomainName :
+    TargetServerResourceId               : /subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/test-rg/providers/Microsoft.Sql/servers/ayang-eas
+    TargetDatabaseName                   : ltr1
+    TargetBackupName                     : 70554a1f-ae6e-479e-99b1-50ea320654eb;132579992320000000
+    TargetBackupResourceId               : /subscriptions/01c4ec88-e179-44f7-9eb0-e9719a5087ab/resourceGroups/test-rg/providers/Microsoft.Sql/locations/East Asia/longTermRetentionServers/ayang-eas/longTermRetentionDatabases/ltr1/longTermRetentionBackups/70554a1f-ae6e-479e-99b1-50ea320654eb;132579992320000000
+    ```
+
+    This copies a long term retention backup from a source database in Southeast Asia to a target database in East Asia.
+links:
+- text: Get-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Get-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Update-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Update-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Remove-AzSqlDatabaseLongTermRetentionBackup
+  href: ./Remove-AzSqlDatabaseLongTermRetentionBackup.yml
+- text: Get-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Get-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: Set-AzSqlDatabaseBackupLongTermRetentionPolicy
+  href: ./Set-AzSqlDatabaseBackupLongTermRetentionPolicy.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Copy-AzSqlDatabaseLongTermRetentionBackup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/copy-azsqldatabaselongtermretentionbackup
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Copy-AzSqlDatabaseLongTermRetentionBackup.md
+  PlatyPS schema version: 2024-05-01

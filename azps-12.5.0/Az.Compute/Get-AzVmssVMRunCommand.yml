@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzVmssVMRunCommand
+name: Get-AzVmssVMRunCommand
+module: Az.Compute
+isPreview: false
+summary: |-
+  The operation to get the VMSS VM run command.
+description: |-
+  The operation to get the VMSS VM run command.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The expand expression to apply on the operation. For instance view, pass in "InstanceView".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance ID of the virtual machine for from the VM scale set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group for the run command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: RunCommandName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the run command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScaleSetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the virtual machine scale set of the run command.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVmssVMRunCommand
+        -ResourceGroupName <String>
+        -VMScaleSetName <String>
+        -InstanceId <String>
+        [-RunCommandName <String>]
+        [-Expand <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Compute.Models.PSVirtualMachineRunCommand" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Run Command for VMSS VM instance'
+  description: |-
+    ```powershell
+    Get-AzVmssVMRunCommand  -ResourceGroupName MyRG0 -VMScaleSetName MyVMSS -InstanceId 0 -RunCommandName MyRunCommand
+    ```
+
+    Get a Run Command for VM without Instance View.
+- title: 'Example 2: Get a Run Command for VMSS VM instance with Instance View'
+  description: |-
+    ```powershell
+    $x = Get-AzVmssVMRunCommand  -ResourceGroupName MyRG0 -VMScaleSetName MyVMSS -InstanceId 0 -RunCommandName MyRunCommand -Expand InstanceView
+    $x.InstanceView
+    ```
+
+    ```output
+    ExecutionState   : Succeeded
+    ExecutionMessage :
+    ExitCode         : 0
+    Output           :     Directory: C:\
+
+
+                       Mode                 LastWriteTime         Length Name
+                       ----                 -------------         ------ ----
+                       -a----        10/27/2022   9:10 PM              0 HelloWorld2022-10-27T21.10.54.9266231+00.00.txt
+
+
+    Error            :
+    StartTime        : 10/27/2022 9:10:52 PM
+    EndTime          : 10/27/2022 9:10:55 PM
+    Statuses         :
+    ```
+
+    Get a Run Command for VM with Instance View. Instance View contains execution state of run command (Succeeded, Failed, etc.), exit code, standard output and standard error generated by executing the script using Run Command. A non-zero ExitCode indicates an unsuccessful execution.
+- title: 'Example 3: Get all Run Commands for a VMSS VM instance'
+  description: |-
+    ```powershell
+    Get-AzVmssVMRunCommand -ResourceGroupName MyRG -VMScaleSetName MyVMSS -InstanceId 1
+    ```
+
+    Get list of all Run Commands for a VM.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVmssVMRunCommand.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azvmssvmruncommand
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzVmssVMRunCommand.md
+  PlatyPS schema version: 2024-05-01

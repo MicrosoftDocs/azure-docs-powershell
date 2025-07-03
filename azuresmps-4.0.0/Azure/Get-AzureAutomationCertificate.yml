@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureAutomationCertificate
+name: Get-AzureAutomationCertificate
+module: Azure
+isPreview: false
+summary: |-
+  Gets an Azure Automation certificate.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  [!INCLUDE [aa-deprecation](../include/aa-deprecation.yml)]
+
+  The **Get-AzureAutomationCertificate** cmdlet gets one or more Microsoft Azure Automation certificates.
+  By default, all certificates are returned.
+  To get a specific certificate, specify its name.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the automation account with the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a certificate to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByCertificateName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationCertificate
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureAutomationCertificate
+        -Name <String>
+        -AutomationAccountName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByCertificateName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.CertificateInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all certificates'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationCertificate -AutomationAccountName "Contoso17"
+    ```
+
+    This command gets all certificates in the Azure Automation account named Contoso17.
+- title: 'Example 2: Get a certificate'
+  description: |-
+    ```
+    PS C:\> Get-AzureAutomationCertificate -AutomationAccountName "Contoso17" -Name "MyUserCertificate"
+    ```
+
+    This command gets the certificate named MyUserCertificate.
+links:
+- text: New-AzureAutomationCertificate
+  href: ./New-AzureAutomationCertificate.yml
+- text: Remove-AzureAutomationCertificate
+  href: ./Remove-AzureAutomationCertificate.yml
+- text: Set-AzureAutomationCertificate
+  href: ./Set-AzureAutomationCertificate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Automation.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: FED10AA9-DD3A-4034-B78E-F9E55290B353
+  PlatyPS schema version: 2024-05-01

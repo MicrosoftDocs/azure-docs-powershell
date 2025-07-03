@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.Get-AzAutomationScheduledRunbook
+name: Get-AzAutomationScheduledRunbook
+module: Az.Automation
+isPreview: false
+summary: |-
+  Gets Automation runbooks and associated schedules.
+description: |-
+  The **Get-AzAutomationScheduledRunbook** cmdlet gets one or more Azure Automation runbooks and associated schedules.
+  By default, this cmdlet gets all scheduled runbooks.
+  Specify the name of a runbook or a schedule or both to see specific runbook schedules.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Automation account for the runbook on which this cmdlet operates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobScheduleId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the ID of a scheduled job that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByJobScheduleId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group for scheduled runbooks that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunbookName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a runbook for which this cmdlet gets scheduled runbooks.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByRunbookNameAndScheduleName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a schedule for which this cmdlet gets scheduled runbooks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByRunbookNameAndScheduleName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByScheduleName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationScheduledRunbook
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAll
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationScheduledRunbook
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -JobScheduleId <Guid>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByJobScheduleId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationScheduledRunbook
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -RunbookName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationScheduledRunbook
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -RunbookName <String>
+        -ScheduleName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByRunbookNameAndScheduleName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzAutomationScheduledRunbook
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        -ScheduleName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByScheduleName
+  isDefault: false
+inputs:
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.JobSchedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all scheduled runbooks'
+  description: |-
+    ```powershell
+    Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    This command gets all scheduled runbooks in the Azure Automation account named Contoso17.
+- title: 'Example 2: Get all schedules associated with a runbook'
+  description: |-
+    ```powershell
+    Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -RunbookName "Runbk01"
+    ```
+
+    This command gets all scheduled runbooks for the runbook Runbk01 in the Azure Automation account named Contoso17.
+- title: 'Example 3: Get all runbooks associated with a schedule'
+  description: |-
+    ```powershell
+    Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -ScheduleName "Schedule01"
+    ```
+
+    This command gets all scheduled runbooks for the schedule Schedule01 in the Azure Automation account named Contoso17.
+- title: 'Example 4: Get Parameters given to a particular Scheduled Runbook'
+  description: |-
+    ```powershell
+    Get-AzAutomationScheduledRunbook -AutomationAccountName "Contoso17" -ResourceGroupName "ResourceGroup01" -JobScheduleId "2b1d7738-093d-4ff7-b87b-e4b2321319e5"
+    ```
+
+    This is currently not supported for jobs created with complex parameters (for example - array) through Azure portal.
+links:
+- text: Register-AzAutomationScheduledRunbook
+  href: ./Register-AzAutomationScheduledRunbook.yml
+- text: Unregister-AzAutomationScheduledRunbook
+  href: ./Unregister-AzAutomationScheduledRunbook.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationScheduledRunbook.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/get-azautomationscheduledrunbook
+  Module Name: Az.Automation
+  ms.assetid: EE854F8A-4B6B-4831-992A-6EC318BEE234
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/Get-AzAutomationScheduledRunbook.md
+  PlatyPS schema version: 2024-05-01

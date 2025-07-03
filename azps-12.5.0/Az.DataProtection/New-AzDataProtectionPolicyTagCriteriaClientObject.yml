@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.New-AzDataProtectionPolicyTagCriteriaClientObject
+name: New-AzDataProtectionPolicyTagCriteriaClientObject
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Creates a new criteria object
+description: |-
+  Creates a new criteria object
+parameters:
+  cmdletParameters:
+  - name: AbsoluteCriteria
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.AbsoluteTagCriteria" data-throw-if-not-resolved="False" />
+    description: |-
+      Absolute criteria
+    acceptedValues:
+    - AllBackup
+    - FirstOfDay
+    - FirstOfMonth
+    - FirstOfWeek
+    - FirstOfYear
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AbsoluteCriteria
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfMonth
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Days of the month.
+      Allowed values are 1 to 28 and Last
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: MonthlyCriteria
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfWeek
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.DaysOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Days of the week
+    acceptedValues:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ScheduleCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonthsOfYear
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.MonthsOfYear" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Months of the year.
+    acceptedValues:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ScheduleCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MonthlyCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleTimes
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Schedule times.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ScheduleCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: MonthlyCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WeeksOfMonth
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Support.WeeksOfMonth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Weeks of the month.
+    acceptedValues:
+    - First
+    - Second
+    - Third
+    - Fourth
+    - Last
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ScheduleCriteria
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionPolicyTagCriteriaClientObject
+        [-DaysOfWeek <DaysOfWeek[]>]
+        [-WeeksOfMonth <WeeksOfMonth[]>]
+        [-MonthsOfYear <MonthsOfYear[]>]
+        [-ScheduleTimes <DateTime[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ScheduleCriteria
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionPolicyTagCriteriaClientObject
+        -AbsoluteCriteria <AbsoluteTagCriteria>
+        [<CommonParameters>]
+    ```
+  parameterSetName: AbsoluteCriteria
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzDataProtectionPolicyTagCriteriaClientObject
+        -DaysOfMonth <String[]>
+        [-MonthsOfYear <MonthsOfYear[]>]
+        [-ScheduleTimes <DateTime[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: MonthlyCriteria
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api20240401.IScheduleBasedBackupCriteria" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a tag with absolute criteria'
+  description: |-
+    ```powershell
+    New-AzDataProtectionPolicyTagCriteriaClientObject -AbsoluteCriteria FirstOfDay
+    ```
+
+    ```output
+    ObjectType                  AbsoluteCriterion DaysOfTheWeek MonthsOfYear ScheduleTime WeeksOfTheMonth
+    ----------                  ----------------- ------------- ------------ ------------ ---------------
+    ScheduleBasedBackupCriteria {FirstOfDay}
+    ```
+
+    This command creates a criteria object with absolute criteria.
+- title: 'Example 2: create a tag with weekly criteria'
+  description: |-
+    ```powershell
+    New-AzDataProtectionPolicyTagCriteriaClientObject -DaysOfWeek @("Sunday", "Monday")
+    ```
+
+    ```output
+    ObjectType                  AbsoluteCriterion DaysOfTheWeek    MonthsOfYear ScheduleTime WeeksOfTheMonth
+    ----------                  ----------------- -------------    ------------ ------------ ---------------
+    ScheduleBasedBackupCriteria                   {Sunday, Monday}
+    ```
+
+    This command creates a criteria object with weekly criteria
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionPolicyTagCriteriaClientObject.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/new-azdataprotectionpolicytagcriteriaclientobject
+  Module Name: Az.Dataprotection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/New-AzDataProtectionPolicyTagCriteriaClientObject.md
+  PlatyPS schema version: 2024-05-01

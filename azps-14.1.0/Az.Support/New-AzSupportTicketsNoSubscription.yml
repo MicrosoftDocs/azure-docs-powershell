@@ -1,0 +1,643 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.New-AzSupportTicketsNoSubscription
+name: New-AzSupportTicketsNoSubscription
+module: Az.Support
+isPreview: false
+summary: |-
+  Create a new support ticket for Billing, and Subscription Management issues.
+  Learn the [prerequisites](https://aka.ms/supportAPI) required to create a support ticket.\<br/\>\<br/\>Always call the Services and ProblemClassifications API to get the most recent set of services and problem categories required for support ticket creation.\<br/\>\<br/\>Adding attachments is not currently supported via the API.
+  To add a file to an existing support ticket, visit the [Manage support ticket](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/managesupportrequest) page in the Azure portal, select the support ticket, and use the file upload control to add a new file.\<br/\>\<br/\>Providing consent to share diagnostic information with Azure support is currently not supported via the API.
+  The Azure support engineer working on your ticket will reach out to you for consent if your issue requires gathering diagnostic information from your Azure resources.\<br/\>\<br/\>
+description: |-
+  Create a new support ticket for Billing, and Subscription Management issues.
+  Learn the [prerequisites](https://aka.ms/supportAPI) required to create a support ticket.\<br/\>\<br/\>Always call the Services and ProblemClassifications API to get the most recent set of services and problem categories required for support ticket creation.\<br/\>\<br/\>Adding attachments is not currently supported via the API.
+  To add a file to an existing support ticket, visit the [Manage support ticket](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/managesupportrequest) page in the Azure portal, select the support ticket, and use the file upload control to add a new file.\<br/\>\<br/\>Providing consent to share diagnostic information with Azure support is currently not supported via the API.
+  The Azure support engineer working on your ticket will reach out to you for consent if your issue requires gathering diagnostic information from your Azure resources.\<br/\>\<br/\>
+parameters:
+  cmdletParameters:
+  - name: AdvancedDiagnosticConsent
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Advanced diagnostic consent to be updated on the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailAdditionalEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Additional email addresses listed will be copied on any correspondence about the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailCountry
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Country of the user.
+      This is the ISO 3166-1 alpha-3 code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailFirstName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      First name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailLastName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Last name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPhoneNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number.
+      This is required if preferred contact method is phone.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredContactMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred contact method.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredSupportLanguage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Preferred language of support from Azure.
+      Support languages vary based on the severity you choose for your support ticket.
+      Learn more at [Azure Severity and responsiveness](https://azure.microsoft.com/support/plans/response).
+      Use the standard language-country code.
+      Valid values are 'en-us' for English, 'zh-hans' for Chinese, 'es-es' for Spanish, 'fr-fr' for French, 'ja-jp' for Japanese, 'ko-kr' for Korean, 'ru-ru' for Russian, 'pt-br' for Portuguese, 'it-it' for Italian, 'zh-tw' for Chinese and 'de-de' for German.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPreferredTimeZone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Time zone of the user.
+      This is the name of the time zone from [Microsoft Time Zone Index Values](https://support.microsoft.com/help/973627/microsoft-time-zone-index-values).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContactDetailPrimaryEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary email address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Detailed description of the question or issue.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnrollmentId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enrollment Id associated with the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileWorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      File workspace name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProblemClassificationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Each Azure service has its own set of issue categories, also known as problem classification.
+      This parameter is the unique Id for the type of problem you are experiencing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProblemScopingQuestion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Problem scoping questions associated with the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProblemStartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Time in UTC (ISO 8601 format) when the problem started.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QuotaTicketDetailQuotaChangeRequest
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.IQuotaChangeRequest" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      This property is required for providing the region and new quota limits.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QuotaTicketDetailQuotaChangeRequestSubType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Required for certain quota types when there is a sub type, such as Batch, for which you are requesting a quota increase.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QuotaTicketDetailQuotaChangeRequestVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Quota change request version.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Require24X7Response
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates if this requires a 24x7 response from Azure.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecondaryConsent
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISecondaryConsent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      This property indicates secondary consents for the support ticket
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the resource Id of the Azure service resource associated with the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Severity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A value that indicates the urgency of the case, which in turn determines the response time according to the service level agreement of the technical support plan you have with Azure.
+      Note: 'Highest critical impact', also known as the 'Emergency - Severe impact' level in the Azure portal is reserved only for our Premium customers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportPlanId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support plan id associated with the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      System generated support ticket Id that is unique.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support ticket name.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TechnicalTicketDetailResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This is the resource Id of the Azure service resource (For example: A virtual machine resource or an HDInsight resource) for which the support ticket is created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Title
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Title of the support ticket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSupportTicketsNoSubscription
+        -SupportTicketName <String>
+        -AdvancedDiagnosticConsent <String>
+        -ContactDetailCountry <String>
+        -ContactDetailFirstName <String>
+        -ContactDetailLastName <String>
+        -ContactDetailPreferredContactMethod <String>
+        -ContactDetailPreferredSupportLanguage <String>
+        -ContactDetailPreferredTimeZone <String>
+        -ContactDetailPrimaryEmailAddress <String>
+        -Description <String>
+        -ProblemClassificationId <String>
+        -ServiceId <String>
+        -Severity <String>
+        -Title <String>
+        [-ContactDetailAdditionalEmailAddress <String[]>]
+        [-ContactDetailPhoneNumber <String>]
+        [-EnrollmentId <String>]
+        [-FileWorkspaceName <String>]
+        [-ProblemScopingQuestion <String>]
+        [-ProblemStartTime <DateTime>]
+        [-QuotaTicketDetailQuotaChangeRequest <IQuotaChangeRequest[]>]
+        [-QuotaTicketDetailQuotaChangeRequestSubType <String>]
+        [-QuotaTicketDetailQuotaChangeRequestVersion <String>]
+        [-Require24X7Response]
+        [-SecondaryConsent <ISecondaryConsent[]>]
+        [-SupportPlanId <String>]
+        [-SupportTicketId <String>]
+        [-TechnicalTicketDetailResourceId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportTicketDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates support ticket at tenant level'
+  description: |-
+    ```powershell
+    New-AzSupportTicketsNoSubscription -SupportTicketName "test12345678" -AdvancedDiagnosticConsent "no" -ContactDetailPrimaryEmailAddress "test@test.com" -ContactDetailFirstName "test" -ContactDetailLastName "test" -ContactDetailPreferredContactMethod "email" -ContactDetailPreferredTimeZone "Pacific Standard Time" -ContactDetailPreferredSupportLanguage "en-US" -ContactDetailCountry "usa" -Description "test ticket - please ignore and close" -Severity "minimal" -Title "test ticket - please ignore and close" -ServiceId "/providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc" -ProblemClassificationId "/providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc/problemClassifications/3ec1a070-f242-9ecf-5a7c-e1a88ce029ef"
+    ```
+
+    ```output
+    AdvancedDiagnosticConsent                  : No
+    ContactDetailAdditionalEmailAddress        :
+    ContactDetailCountry                       : USA
+    ContactDetailFirstName                     : test
+    ContactDetailLastName                      : test
+    ContactDetailPhoneNumber                   :
+    ContactDetailPreferredContactMethod        : Email
+    ContactDetailPreferredSupportLanguage      : en-US
+    ContactDetailPreferredTimeZone             : Pacific Standard Time
+    ContactDetailPrimaryEmailAddress           : test@test.com
+    CreatedDate                                : 2/22/2024 6:51:11 AM
+    Description                                : test ticket - please ignore and close
+    EnrollmentId                               :
+    FileWorkspaceName                          : 2402220010002592
+    Id                                         : /providers/Microsoft.Support/supportTickets/test12345678
+    ModifiedDate                               : 2/22/2024 6:51:28 AM
+    Name                                       : test12345678
+    ProblemClassificationDisplayName           : Add or update VAT, tax id, PO number or profile information
+    ProblemClassificationId                    : /providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc
+                                                 /problemClassifications/3ec1a070-f242-9ecf-5a7c-e1a88ce029ef
+    ProblemScopingQuestion                     :
+    ProblemStartTime                           :
+    QuotaTicketDetailQuotaChangeRequest        :
+    QuotaTicketDetailQuotaChangeRequestSubType :
+    QuotaTicketDetailQuotaChangeRequestVersion :
+    Require24X7Response                        : False
+    ResourceGroupName                          :
+    SecondaryConsent                           :
+    ServiceDisplayName                         : Billing
+    ServiceId                                  : /providers/Microsoft.Support/services/517f2da6-78fd-0498-4e22-ad26996b1dfc
+    ServiceLevelAgreementExpirationTime        : 2/22/2024 10:00:00 PM
+    ServiceLevelAgreementSlaMinute             : 480
+    ServiceLevelAgreementStartTime             : 2/22/2024 6:51:11 AM
+    Severity                                   : Minimal
+    Status                                     : Open
+    SupportEngineerEmailAddress                :
+    SupportPlanDisplayName                     : Basic support
+    SupportPlanId                              : U291cmNlOkZyZWUsRnJlZUlkOjAwMDAwMDAwLTAwMDAtMDAwMC0wMDAwLTAwMDAwMDAwMDAwOS
+                                                 w=
+    SupportPlanType                            : Basic
+    SupportTicketId                            : 2402220010002592
+    TechnicalTicketDetailResourceId            :
+    Title                                      : test ticket - please ignore and close
+    Type                                       : Microsoft.Support/supportTickets
+    ```
+
+    Creates a new support ticket for Billing, and Subscription Management issues
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportTicketsNoSubscription.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/new-azsupportticketsnosubscription
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/New-AzSupportTicketsNoSubscription.md
+  PlatyPS schema version: 2024-05-01

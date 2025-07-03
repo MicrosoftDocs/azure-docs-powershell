@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.New-AzDataMigrationLoginsMigration
+name: New-AzDataMigrationLoginsMigration
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Migrate logins from the source Sql Servers to the target Azure Sql Servers.
+description: |-
+  Migrate logins from the source Sql Servers to the target Azure Sql Servers.
+parameters:
+  cmdletParameters:
+  - name: AADDomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Required if Windows logins are included in the list of logins to be migrated.
+      (Default: empty string).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of the ConfigFile
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ConfigFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CSVFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Location of CSV file of logins.
+      Use only one parameter between this and listOfLogin.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ListOfLogin
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Optional.
+      List of logins in string format.
+      If large number of logins need to be migrated, use CSV file option.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OutputFolder
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Default: %LocalAppData%/Microsoft/SqlLoginMigrations) Folder where logs will be written.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceSqlConnectionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Required.
+      Connection string(s) for the source SQL instance(s), using the formal connection string format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TargetSqlConnectionString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Required.
+      Connection string(s) for the target SQL instance(s), using the formal connection string format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CommandLine
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataMigrationLoginsMigration
+        -ConfigFilePath <String>
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ConfigFile
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzDataMigrationLoginsMigration
+        -SourceSqlConnectionString <String[]>
+        -TargetSqlConnectionString <String>
+        [-CSVFilePath <String>]
+        [-ListOfLogin <String[]>]
+        [-OutputFolder <String>]
+        [-AADDomainName <String>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CommandLine
+  isDefault: false
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Run Migrate logins from the source Sql Servers to the target Azure Sql Servers using Parameters'
+  description: |-
+    ```powershell
+    New-AzDataMigrationLoginsMigration -SourceSqlConnectionString "data source=servername;user id=userid;password=;initial catalog=master;TrustServerCertificate=True" -TargetSqlConnectionString "data source=servername;user id=userid;password=;initial catalog=master;TrustServerCertificate=True" -CSVFilePath "C:\CSVFile" -ListOfLogin "loginname1" "loginname2" -OutputFolder "C:\OutputFolder" -AADDomainName "AADDomainName"
+    ```
+
+    ```output
+    Starting Logins migration...
+    Starting server roles migration...
+    Starting user-login mappings...
+    Starting server role mappings...
+    Restoring permissions for logins...
+    Restoring permissions for server roles...
+    Login migration process complete.
+    ```
+
+    This command runs Run SKU Recommendation on given SQL Server using the connection string.
+- title: 'Example 2: Run Migrate logins from the source Sql Servers to the target Azure Sql Servers using config file'
+  description: |-
+    ```powershell
+    New-AzDataMigrationLoginsMigration -ConfigFilePath "C:\Users\user\document\config.json"
+    ```
+
+    ```output
+    Starting Logins migration...
+    Starting server roles migration...
+    Starting user-login mappings...
+    Starting server role mappings...
+    Restoring permissions for logins...
+    Restoring permissions for server roles...
+    Login migration process complete.
+    ```
+
+    This command runs Run Migrate logins from the source Sql Servers to the target Azure Sql Servers using config file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationLoginsMigration.md
+  document type: cmdlet
+  external help file: Az.DataMigration-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/new-azdatamigrationloginsmigration
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/New-AzDataMigrationLoginsMigration.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,27 @@
+### YamlMime:PowerShellModule1
+uid: Az.FluidRelay
+name: Az.FluidRelay Module
+isPreview: false
+cmdletGroups:
+- title: Fluid Relay
+  cmdlets:
+  - Az.FluidRelay.Get-AzFluidRelayContainer
+  - Az.FluidRelay.Get-AzFluidRelayServer
+  - Az.FluidRelay.Get-AzFluidRelayServerKey
+  - Az.FluidRelay.New-AzFluidRelayServer
+  - Az.FluidRelay.New-AzFluidRelayServerKey
+  - Az.FluidRelay.Remove-AzFluidRelayContainer
+  - Az.FluidRelay.Remove-AzFluidRelayServer
+  - Az.FluidRelay.Update-AzFluidRelayServer
+description: |-
+  Microsoft Azure PowerShell: FluidRelay cmdlets
+metadata:
+  Module Name: Az.FluidRelay
+  Module Guid: 5b50d9cb-6a6c-43c3-9cbf-24c0c7233926
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.fluidrelay
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/FluidRelay/help/Az.FluidRelay.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/FluidRelay/help/Az.FluidRelay.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

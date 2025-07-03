@@ -1,0 +1,401 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Get-AzureStorageFileContent
+name: Get-AzureStorageFileContent
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Downloads the contents of a file.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorageFileContent** cmdlet downloads the contents of a file, and then saves it to a destination that you specify.
+  This cmdlet does not return the contents of the file.
+parameters:
+  cmdletParameters:
+  - name: CheckMd5
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the destination path.
+      This cmdlet downloads the file contents to the location that this parameter specifies.
+
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Directory
+    type: <xref href="CloudFileDirectory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a folder as a **CloudFileDirectory** object.
+      This cmdlet gets content for a file in the folder that this parameter specifies.
+      To obtain a directory, use the New-AzureStorageDirectory cmdlet.
+      You can also use the Get-AzureStorageFile cmdlet to obtain a directory.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: File
+    type: <xref href="CloudFile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a file as a **CloudFile** object.
+      This cmdlet gets the file that this parameter specifies.
+      To obtain a **CloudFile** object, use the Get-AzureStorageFile cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a file.
+      This cmdlet gets the contents the file that this parameter specifies.
+      If the file does not exist, this cmdlet returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Share
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Directory
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      If you specify the path of a file that does not exist, this cmdlet creates that file, and saves the contents in the new file.
+      If you specify a path of a file that already exists and you specify the *Force* parameter, the cmdlet overwrites the file.
+      If you specify a path of an existing file and you do not specify *Force*, the cmdlet prompts you before it continues.
+
+      If you specify the path of a folder, this cmdlet attempts to create a file that has the name of the Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Share
+    type: <xref href="CloudFileShare" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **CloudFileShare** object.
+      This cmdlet downloads the contents of the file in the share this parameter specifies.
+      To obtain a **CloudFileShare** object, use the Get-AzureStorageShare cmdlet.
+      This object contains the storage context.
+      If you specify this parameter, do not specify the *Context* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet downloads the contents of the file in the share this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageFileContent
+        [-ShareName] <String>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageFileContent
+        [-Share] <CloudFileShare>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Share
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageFileContent
+        [-Directory] <CloudFileDirectory>
+        [-Path] <String>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Directory
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageFileContent
+        [-File] <CloudFile>
+        [[-Destination] <String>]
+        [-CheckMd5]
+        [-PassThru]
+        [-Force]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: false
+examples:
+- title: 'Example 1: Download a file from a folder'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageFileContent -ShareName "ContosoShare06" -Path "ContosoWorkingFolder/CurrentDataFile"
+    ```
+
+    This command downloads a file that is named CurrentDataFile in the folder ContosoWorkingFolder from the file share ContosoShare06 to current folder.
+links:
+- text: Get-AzureStorageFile
+  href: ./Get-AzureStorageFile.yml
+- text: Set-AzureStorageFileContent
+  href: ./Set-AzureStorageFileContent.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 6420CBE1-BF9D-493D-BCA8-E8C6688FAF3B
+  PlatyPS schema version: 2024-05-01

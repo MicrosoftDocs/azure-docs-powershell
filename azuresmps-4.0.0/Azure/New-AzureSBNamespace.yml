@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSBNamespace
+name: New-AzureSBNamespace
+module: Azure
+isPreview: false
+summary: |-
+  Creates a namespace.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **New-AzureSBNamespace** cmdlet creates a service namespace for use with Service Bus in Azure.
+
+  [!INCLUDE [sb-deprecation.md](../include/sb-deprecation.yml)]
+parameters:
+  cmdletParameters:
+  - name: CreateACSNamespace
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to create an associated ACS namespace in addition to the service namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a region for the new namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new namespace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NamespaceType
+    type: <xref href="NamespaceType" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify a whether to use the namespace for Messaging or Notification Hubs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSBNamespace
+        -Name <String>
+        [-Location <String>]
+        [-CreateACSNamespace <Boolean>]
+        -NamespaceType <NamespaceType>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a service namespace'
+  description: |-
+    ```
+    PS C:\> New-AzureSBNamespace -Name myNameSpace -Location East US
+    PS C:\> New-AzureSBNamespace myNameSpace 'East US'
+    ```
+
+    The examples create a service namespace for use with Service Bus in Azure.
+    Both examples include the required parameter values, but only the first includes the parameter names.
+    The second example can be used because both parameters are positional and their values are given in the required order.
+links:
+- text: Remove-AzureSBNamespace
+  href: ./Remove-AzureSBNamespace.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0C806C0A-C199-4AF4-AE2A-11A2467A0873
+  PlatyPS schema version: 2024-05-01

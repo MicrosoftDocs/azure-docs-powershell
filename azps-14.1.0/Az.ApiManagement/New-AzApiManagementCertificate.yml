@@ -1,0 +1,205 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagementCertificate
+name: New-AzApiManagementCertificate
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Creates an API Management certificate to be used during Authentication with Backend.
+description: |-
+  The **New-AzApiManagementCertificate** cmdlet creates an Azure API Management certificate.
+parameters:
+  cmdletParameters:
+  - name: CertificateId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the certificate to create.
+      If you do not specify this parameter, an ID is generated for you.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PsApiManagementContext** object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVault
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementKeyVaultEntity" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyVault used to fetch certificate data.This parameter is required if -PfxFilePath not specified.
+      See New-AzApiManagementKeyVaultObject for details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PfxBytes
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of bytes of the certificate file in .pfx format.
+      This parameter is required if you do not specify the *PfxFilePath* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Raw
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PfxFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the certificate file in .pfx format to create and upload.
+      This parameter is required if you do not specify the *PfxBytes* parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LoadFromFile
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PfxPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password for the certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementCertificate
+        -Context <PsApiManagementContext>
+        [-CertificateId <String>]
+        [-PfxFilePath <String>]
+        [-PfxPassword <String>]
+        [-KeyVault <PsApiManagementKeyVaultEntity>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LoadFromFile
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzApiManagementCertificate
+        -Context <PsApiManagementContext>
+        [-CertificateId <String>]
+        [-PfxBytes <Byte[]>]
+        [-PfxPassword <String>]
+        [-KeyVault <PsApiManagementKeyVaultEntity>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Raw
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create and upload a certificate'
+  description: |-
+    ```powershell
+    $ApiMgmtContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    New-AzApiManagementCertificate -Context $ApiMgmtContext -PfxFilePath "C:\contoso\certificates\apimanagement.pfx" -PfxPassword "1111"
+    ```
+
+    This command uploads a certificate to Api Management. This certificate can be used for mutual authentication with backend using policies.
+- title: Example 2
+  description: |-
+    Creates an API Management certificate to be used during Authentication with Backend. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    New-AzApiManagementCertificate -CertificateId '0123456789' -Context <PsApiManagementContext> -PfxFilePath 'C:\contoso\certificates\apimanagement.pfx' -PfxPassword '1111'
+    ```
+- title: 'Example 3 : Create a keyVault Certificate'
+  description: |-
+    ```powershell
+    $secretIdentifier = 'https://contoso.vault.azure.net/secrets/xxxx'
+    $keyvault = New-AzApiManagementKeyVaultObject -SecretIdentifier $secretIdentifier
+    $keyVaultcert = New-AzApiManagementCertificate -Context $context -CertificateId $kvcertId -KeyVault $keyvault
+    ```
+
+    The first command creates a keyvault.
+    The second command creates a certificate using secret from this keyvault.
+links:
+- text: Get-AzApiManagementCertificate
+  href: ./Get-AzApiManagementCertificate.yml
+- text: Remove-AzApiManagementCertificate
+  href: ./Remove-AzApiManagementCertificate.yml
+- text: Set-AzApiManagementCertificate
+  href: ./Set-AzApiManagementCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagementcertificate
+  Module Name: Az.ApiManagement
+  ms.assetid: 5CBEDFF8-C441-44CC-B011-5F5AAFA2E5C6
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagementCertificate.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,590 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzP2sVpnGateway
+name: New-AzP2sVpnGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Create a new P2SVpnGateway under VirtualHub for point to site connectivity.
+description: |-
+  The New-AzP2sVpnGateway cmdlet enables you to create a new P2SVpnGateway under VirtualHub for Point to site connectivity from Point to site clients to Azure VirtualWan.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomDnsServer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Custom Dns Servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableInternetSecurityFlag
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to disable internet security feature on this P2SVpnGateway P2SConnectionConfiguration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableInternetSecurityFlag
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable internet security flag for this P2SVpnGateway connections
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableRoutingPreferenceInternetFlag
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag to enable Routing Preference Internet on this P2SVpnGateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - P2SVpnGatewayName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: P2SConnectionConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SConnectionConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of P2SConnectionConfigurations that this P2SVpnGateway needs to have.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoutingConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRoutingConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Routing configuration for this connection
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHub
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+    description: |-
+      The VirtualHub this P2SVpnGateway needs to be associated with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubObjectByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id of the VirtualHub this P2SVpnGateway needs to be associated with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubResourceIdByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Id of the VirtualHub this P2SVpnGateway needs to be associated with.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubNameByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnClientAddressPool
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      P2S VpnClient AddressPool for this P2SVpnGateway P2SConnectionConfiguration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnGatewayScaleUnit
+    type: <xref href="System.UInt32" data-throw-if-not-resolved="False" />
+    description: |-
+      The scale unit for this P2SVpnGateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnServerConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The VpnServerConfiguration to be attached to this P2SVpnGateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByVpnServerConfigurationObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByVpnServerConfigurationObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByVpnServerConfigurationObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnServerConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The id of Vpn server configuration object this P2SVpnGateway will be attached to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVirtualHubNameByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubObjectByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByVirtualHubResourceIdByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHubName <String>
+        [-VpnServerConfiguration <PSVpnServerConfiguration>]
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubNameByVpnServerConfigurationObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHubName <String>
+        -VpnServerConfigurationId <String>
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubNameByVpnServerConfigurationResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHub <PSVirtualHub>
+        [-VpnServerConfiguration <PSVpnServerConfiguration>]
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObjectByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHub <PSVirtualHub>
+        -VpnServerConfigurationId <String>
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubObjectByVpnServerConfigurationResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHubId <String>
+        [-VpnServerConfiguration <PSVpnServerConfiguration>]
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceIdByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzP2sVpnGateway
+        -ResourceGroupName <String>
+        -Name <String>
+        -VpnGatewayScaleUnit <UInt32>
+        -VirtualHubId <String>
+        -VpnServerConfigurationId <String>
+        [-VpnClientAddressPool <String[]>]
+        [-CustomDnsServer <String[]>]
+        [-RoutingConfiguration <PSRoutingConfiguration>]
+        [-EnableInternetSecurityFlag]
+        [-DisableInternetSecurityFlag]
+        [-EnableRoutingPreferenceInternetFlag]
+        [-P2SConnectionConfiguration <PSP2SConnectionConfiguration[]>]
+        [-Tag <Hashtable>]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVirtualHubResourceIdByVpnServerConfigurationResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualHub" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSP2SVpnGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $virtualHub = Get-AzVirtualHub -ResourceGroupName P2SCortexGATesting -Name WestUsVirtualHub
+    $vpnServerConfig1 = Get-AzVpnServerConfiguration -ResourceGroupName P2SCortexGATesting -Name WestUsConfig
+    $vpnClientAddressSpaces = New-Object string[] 1
+    $vpnClientAddressSpaces[0] = "192.168.2.0/24"
+    $createdP2SVpnGateway = New-AzP2sVpnGateway -ResourceGroupName P2SCortexGATesting -Name 683482ade8564515aed4b8448c9757ea-westus-gw -VirtualHub $virtualHub -VpnGatewayScaleUnit 1 -VpnClientAddressPool $vpnClientAddressSpaces -VpnServerConfiguration $vpnServerConfig1 -EnableInternetSecurityFlag -EnableRoutingPreferenceInternetFlag
+    ```
+
+    ```output
+    ResourceGroupName              : P2SCortexGATesting
+    Name                           : 683482ade8564515aed4b8448c9757ea-westus-gw
+    Id                             : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482ade8564515a
+                                     ed4b8448c9757ea-westus-gw
+    Location                       : westus
+    VpnGatewayScaleUnit            : 1
+    VirtualHub                     : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub
+    VpnServerConfiguration         : /subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/vpnServerConfigurations/WestUsConfig
+    VpnServerConfigurationLocation :
+    VpnClientConnectionHealth      : null
+    Type                           : Microsoft.Network/p2sVpnGateways
+    ProvisioningState              : Succeeded
+    P2SConnectionConfigurations    : [
+                                       {
+                                         "ProvisioningState": "Succeeded",
+                                         "VpnClientAddressPool": {
+                                           "AddressPrefixes": [
+                                             "192.168.2.0/24"
+                                           ]
+                                         },
+                                         "EnableInternetSecurity": True,
+                                         "RoutingConfiguration": {
+                                           "AssociatedRouteTable": {
+                                             "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub/hubRouteTables/defaultRouteTable"
+                                           }
+                                           "PropagatedRouteTables": {
+                                             "Labels": [],
+                                             "Ids": [
+                                               {
+                                                "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/virtualHubs/WestUsVirtualHub/hubRouteTables/defaultRouteTable"
+                                               }
+                                            ]
+                                           },
+                                           "VnetRoutes": {
+                                             "StaticRoutes": []
+                                           }
+                                         },
+                                         "Name": "P2SConnectionConfigDefault",
+                                         "Etag": "W/\"4b96e6a2-b4d8-46b3-9210-76d40f359bef\"",
+                                         "Id": "/subscriptions/b1f1deed-af60-4bab-9223-65d340462e24/resourceGroups/P2SCortexGATesting/providers/Microsoft.Network/p2sVpnGateways/683482
+                                     ade8564515aed4b8448c9757ea-westus-gw/p2sConnectionConfigurations/P2SConnectionConfigDefault"
+                                       }
+                                     ]
+    ```
+
+    The New-AzP2sVpnGateway cmdlet enables you to create a new P2SVpnGateway under VirtualHub for Point to site connectivity.
+links:
+- text: New-AzRoutingConfiguration
+  href: New-AzRoutingConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzP2sVpnGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azp2svpngateway
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzP2sVpnGateway.md
+  PlatyPS schema version: 2024-05-01

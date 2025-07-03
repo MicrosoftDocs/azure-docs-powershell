@@ -1,0 +1,130 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzApplicationGatewayRewriteRuleActionSet
+name: New-AzApplicationGatewayRewriteRuleActionSet
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a rewrite rule action set for an application gateway.
+description: |-
+  **The New-AzApplicationGatewayRewriteRuleActionSet** cmdlet creates a rewrite rule action set for an Azure application gateway.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RequestHeaderConfiguration
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHeaderConfiguration" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of request header configurations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponseHeaderConfiguration
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHeaderConfiguration" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of response header configurations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UrlConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayUrlConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Url Configuration for action set
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApplicationGatewayRewriteRuleActionSet
+
+        [-RequestHeaderConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHeaderConfiguration]>]
+        [-ResponseHeaderConfiguration <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayHeaderConfiguration]>]
+        [-UrlConfiguration <PSApplicationGatewayUrlConfiguration>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleActionSet" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $action = New-AzApplicationGatewayRewriteRuleActionSet -ResponseHeaderConfiguration $hc -UrlConfiguration $urlConfiguration
+    ```
+
+    This command creates a rewrite rule action set and stores the result in the variable named $action.
+links:
+- text: Add-AzApplicationGatewayRewriteRuleSet
+  href: ./Add-AzApplicationGatewayRewriteRuleSet.yml
+- text: Get-AzApplicationGatewayRewriteRuleSet
+  href: ./Get-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRuleSet
+  href: ./New-AzApplicationGatewayRewriteRuleSet.yml
+- text: Remove-AzApplicationGatewayRewriteRuleSet
+  href: ./Remove-AzApplicationGatewayRewriteRuleSet.yml
+- text: Set-AzApplicationGatewayRewriteRuleSet
+  href: ./Set-AzApplicationGatewayRewriteRuleSet.yml
+- text: New-AzApplicationGatewayRewriteRule
+  href: ./New-AzApplicationGatewayRewriteRule.yml
+- text: New-AzApplicationGatewayRewriteRuleHeaderConfiguration
+  href: ./New-AzApplicationGatewayRewriteRuleHeaderConfiguration.yml
+- text: New-AzApplicationGatewayRewriteRuleUrlConfiguration
+  href: ./New-AzApplicationGatewayRewriteRuleUrlConfiguration.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayRewriteRuleActionSet.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azapplicationgatewayrewriteruleactionset
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzApplicationGatewayRewriteRuleActionSet.md
+  PlatyPS schema version: 2024-05-01

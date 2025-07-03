@@ -1,0 +1,62 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityCspmMonitorAwsOfferingObject
+name: New-AzSecurityCspmMonitorAwsOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for CspmMonitorAwsOffering.
+description: |-
+  Create an in-memory object for CspmMonitorAwsOffering.
+parameters:
+  cmdletParameters:
+  - name: NativeCloudConnectionCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityCspmMonitorAwsOfferingObject
+        [-NativeCloudConnectionCloudRoleArn <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.CspmMonitorAwsOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new CspmMonitorAwsOffering object'
+  description: |-
+    ```powershell
+    New-AzSecurityCspmMonitorAwsOfferingObject -NativeCloudConnectionCloudRoleArn "arn:aws:iam::123456789012:role/CspmMonitorAws"
+    ```
+
+    ```output
+    Description NativeCloudConnectionCloudRoleArn             OfferingType
+    ----------- ---------------------------------             ------------
+                arn:aws:iam::123456789012:role/CspmMonitorAws CspmMonitorAws
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorAwsOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritycspmmonitorawsofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityCspmMonitorAwsOfferingObject.md
+  PlatyPS schema version: 2024-05-01

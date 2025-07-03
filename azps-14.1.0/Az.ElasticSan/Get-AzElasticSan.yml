@@ -1,0 +1,316 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ElasticSan.Get-AzElasticSan
+name: Get-AzElasticSan
+module: Az.ElasticSan
+isPreview: false
+summary: |-
+  Get either a list of Elastic SANs from a subscription or a resource group, or get a single Elastic SAN.
+description: |-
+  Get either a list of Elastic SANs from a subscription or a resource group, or get a single Elastic SAN.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ElasticSan.
+    aliases:
+    - ElasticSanName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSan
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSan
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSan
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzElasticSan
+        -InputObject <IElasticSanIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSan" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Elastic SANs in a subscription'
+  description: |-
+    ```powershell
+    Get-AzElasticSan
+    ```
+
+    ```output
+    AvailabilityZone             :
+    BaseSizeTiB                  : 1
+    ExtendedCapacitySizeTiB      : 6
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup
+                                   /providers/Microsoft.ElasticSan/elasticSans/myelasticsan1
+    Location                     : eastus
+    Name                         : myelasticsan1
+    ProvisioningState            : Succeeded
+    SkuName                      : Premium_LRS
+    SkuTier                      :
+    SystemDataCreatedAt          : 9/19/2022 9:50:25 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 9/19/2022 9:50:25 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    TotalIops                    : 5000
+    TotalMBps                    : 80
+    TotalSizeTiB                 : 7
+    TotalVolumeSizeGiB           : 0
+    Type                         : Microsoft.ElasticSan/ElasticSans
+    VolumeGroupCount             : 0
+
+    AvailabilityZone             :
+    BaseSizeTiB                  : 1
+    ExtendedCapacitySizeTiB      : 6
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micr
+                                   osoft.ElasticSan/elasticSans/myelasticsan2
+    Location                     : eastus
+    Name                         : myelasticsan2
+    ProvisioningState            : Succeeded
+    SkuName                      : Premium_LRS
+    SkuTier                      :
+    SystemDataCreatedAt          : 8/18/2022 8:42:21 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 8/18/2022 8:42:21 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    TotalIops                    : 5000
+    TotalMBps                    : 80
+    TotalSizeTiB                 : 7
+    TotalVolumeSizeGiB           : 100
+    Type                         : Microsoft.ElasticSan/ElasticSans
+    VolumeGroupCount             : 7
+    ```
+
+    This command gets all the Elastic SANs in a subscription.
+- title: 'Example 2: Get all Elastic Sans in a resource group'
+  description: |-
+    ```powershell
+    Get-AzElasticSan -ResourceGroupName myresourcegroup
+    ```
+
+    ```output
+    AvailabilityZone             :
+    BaseSizeTiB                  : 1
+    ExtendedCapacitySizeTiB      : 6
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup
+                                   /providers/Microsoft.ElasticSan/elasticSans/myelasticsan1
+    Location                     : eastus
+    Name                         : myelasticsan1
+    ProvisioningState            : Succeeded
+    SkuName                      : Premium_LRS
+    SkuTier                      :
+    SystemDataCreatedAt          : 9/19/2022 9:50:25 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 9/19/2022 9:50:25 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    TotalIops                    : 5000
+    TotalMBps                    : 80
+    TotalSizeTiB                 : 7
+    TotalVolumeSizeGiB           : 0
+    Type                         : Microsoft.ElasticSan/ElasticSans
+    VolumeGroupCount             : 0
+
+    AvailabilityZone             :
+    BaseSizeTiB                  : 1
+    ExtendedCapacitySizeTiB      : 6
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micr
+                                   osoft.ElasticSan/elasticSans/myelasticsan2
+    Location                     : eastus
+    Name                         : myelasticsan2
+    ProvisioningState            : Succeeded
+    SkuName                      : Premium_LRS
+    SkuTier                      :
+    SystemDataCreatedAt          : 8/18/2022 8:42:21 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 8/18/2022 8:42:21 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    TotalIops                    : 5000
+    TotalMBps                    : 80
+    TotalSizeTiB                 : 7
+    TotalVolumeSizeGiB           : 100
+    Type                         : Microsoft.ElasticSan/ElasticSans
+    VolumeGroupCount             : 7
+    ```
+
+    This command gets all Elastic SANs in a resource group.
+- title: 'Example 3: Get a specific Elastic SAN'
+  description: |-
+    ```powershell
+    Get-AzElasticSan -ResourceGroupName myresourcegroup -Name myelasticsan
+    ```
+
+    ```output
+    AvailabilityZone             :
+    BaseSizeTiB                  : 1
+    ExtendedCapacitySizeTiB      : 6
+    Id                           : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Micr
+                                   osoft.ElasticSan/elasticSans/myelasticsan
+    Location                     : eastus
+    Name                         : myelasticsan
+    ProvisioningState            : Succeeded
+    SkuName                      : Premium_LRS
+    SkuTier                      :
+    SystemDataCreatedAt          : 8/18/2022 8:42:21 AM
+    SystemDataCreatedBy          : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType      : Application
+    SystemDataLastModifiedAt     : 8/18/2022 8:42:21 AM
+    SystemDataLastModifiedBy     : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType : Application
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.Api20211120Preview.ResourceTags
+    TotalIops                    : 5000
+    TotalMBps                    : 80
+    TotalSizeTiB                 : 7
+    TotalVolumeSizeGiB           : 100
+    Type                         : Microsoft.ElasticSan/ElasticSans
+    VolumeGroupCount             : 7
+    ```
+
+    This command gets a specific Elastic SAN.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Get-AzElasticSan.md
+  document type: cmdlet
+  external help file: Az.ElasticSan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.elasticsan/get-azelasticsan
+  Module Name: Az.ElasticSan
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/Get-AzElasticSan.md
+  PlatyPS schema version: 2024-05-01

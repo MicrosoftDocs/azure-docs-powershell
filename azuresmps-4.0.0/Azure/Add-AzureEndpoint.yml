@@ -1,0 +1,553 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureEndpoint
+name: Add-AzureEndpoint
+module: Azure
+isPreview: false
+summary: |-
+  Adds an endpoint to a virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureEndpoint** cmdlet adds an endpoint to an Azure virtual machine object.
+parameters:
+  cmdletParameters:
+  - name: ACL
+    type: <xref href="NetworkAclObject" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an access control list (ACL) configuration object for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProbe
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet uses the default probe setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBDefaultProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectServerReturn
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether this cmdlet enables direct server return.
+      Specify $True to enable, or $False to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdleTimeoutInMinutes
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the TCP idle time-out period, in minutes, for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InternalLoadBalancerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the internal load balancer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LBSetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the load balancer set for the endpoint.
+    aliases:
+    - LoadBalancedEndpointSetName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBNoProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LBDefaultProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: LBCustomProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancerDistribution
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the load balancer distribution algorithm.
+      Valid values are:
+
+      - sourceIP.
+      A two tuple affinity: Source IP, Destination IP
+      - sourceIPProtocol.
+      A three tuple affinity: Source IP, Destination IP, Protocol
+      - none.
+      A five tuple affinity: Source IP, Source Port, Destination IP, Destination Port, Protocol
+
+      The default value is none.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the local, private, port that this endpoint uses.
+      Applications within the virtual machine listen on this port for service input requests for this endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoProbe
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet uses the no probe setting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBNoProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbeIntervalInSeconds
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the probe polling interval, in seconds, for the endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBCustomProbe
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the relative path to the HTTP probe.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBCustomProbe
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbePort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port that the endpoint uses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBCustomProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbeProtocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port protocol.
+      Valid values are:
+
+      - tcp
+      - http
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBCustomProbe
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProbeTimeoutInSeconds
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the probe polling time-out period in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: LBCustomProbe
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol of the endpoint.
+      Valid values are:
+
+      - tcp
+      - udp
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the public port that the endpoint uses.
+      If you do not specify a value, Azure assigns an available port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualIPName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual IP address that Azure associates to the endpoint.
+      Your service can have multiple virtual IPs.
+      To create virtual IPs, use the **Add-AzureVirtualIP** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine to which the endpoint belongs.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureEndpoint
+        [-Name] <String>
+        [-Protocol] <String>
+        [-LocalPort] <Int32>
+        -VM <IPersistentVM>
+        [-PublicPort <Int32>]
+        [-DirectServerReturn <Boolean>]
+        [-ACL <NetworkAclObject>]
+        [-InternalLoadBalancerName <String>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadBalancerDistribution <String>]
+        [-VirtualIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NoLB
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzureEndpoint
+        [-Name] <String>
+        [-Protocol] <String>
+        [-LocalPort] <Int32>
+        -LBSetName <String>
+        -VM <IPersistentVM>
+        [-PublicPort <Int32>]
+        [-DirectServerReturn <Boolean>]
+        [-ACL <NetworkAclObject>]
+        [-NoProbe]
+        [-InternalLoadBalancerName <String>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadBalancerDistribution <String>]
+        [-VirtualIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LBNoProbe
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzureEndpoint
+        [-Name] <String>
+        [-Protocol] <String>
+        [-LocalPort] <Int32>
+        -LBSetName <String>
+        -VM <IPersistentVM>
+        [-PublicPort <Int32>]
+        [-DirectServerReturn <Boolean>]
+        [-ACL <NetworkAclObject>]
+        [-DefaultProbe]
+        [-InternalLoadBalancerName <String>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadBalancerDistribution <String>]
+        [-VirtualIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LBDefaultProbe
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzureEndpoint
+        [-Name] <String>
+        [-Protocol] <String>
+        [-LocalPort] <Int32>
+        -LBSetName <String>
+        -ProbePort <Int32>
+        -ProbeProtocol <String>
+        -VM <IPersistentVM>
+        [-PublicPort <Int32>]
+        [-DirectServerReturn <Boolean>]
+        [-ACL <NetworkAclObject>]
+        [-ProbePath <String>]
+        [-ProbeIntervalInSeconds <Int32>]
+        [-ProbeTimeoutInSeconds <Int32>]
+        [-InternalLoadBalancerName <String>]
+        [-IdleTimeoutInMinutes <Int32>]
+        [-LoadBalancerDistribution <String>]
+        [-VirtualIPName <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: LBCustomProbe
+  isDefault: false
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an endpoint'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine01" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 | Update-AzureVM
+    ```
+
+    This command retrieves the configuration of a virtual machine named VirtualMachine01 by using the **Get-AzureVM** cmdlet.
+    The command passes it to the current cmdlet by using the pipeline operator.
+    This cmdlet adds an endpoint named HttpIn.
+    The endpoint has a public port 80 and local port 8080.
+    The command passes the virtual machine object to the **Update-AzureVM** cmdlet, which implements your changes.
+- title: 'Example 2: Add an endpoint that belongs to a load balanced group'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "LoadBalancedService" -Name "VirtualMachine12" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -PublicPort 80 -LocalPort 8080 -LBSetName "WebFarm" -ProbePort 80 -ProbeProtocol "http" -ProbePath '/' | Update-AzureVM
+    ```
+
+    This command retrieves the configuration of a virtual machine named VirtualMachine07.
+    The current cmdlet adds an endpoint named HttpIn.
+    The endpoint has a public port 80 and local port 8080.
+    The endpoint belongs to the shared load balanced group named WebFarm.
+    An HTTP probe on port 80 with a path of '/' monitors the availability of the endpoint.
+    The command implements your changes.
+- title: 'Example 3: Associate a virtual IP to an endpoint'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "VirtualMachine25" | Add-AzureEndpoint -Name "HttpIn" -Protocol "tcp" -LocalPort 8080 -PublicPort 80 -VirtualIPName "ContosoVip11" | Update-AzureVM
+    ```
+
+    This command retrieves the configuration of a virtual machine named VirtualMachine25.
+    The current cmdlet adds an endpoint named HttpIn.
+    The endpoint has a public port 80 and local port 8080.
+    This command associates a virtual IP to the endpoint.
+    The command implements your changes.
+links:
+- text: Add-AzureVirtualIP
+  href: ./Add-AzureVirtualIP.yml
+- text: Get-AzureEndpoint
+  href: ./Get-AzureEndpoint.yml
+- text: Get-AzureVM
+  href: ./Get-AzureVM.yml
+- text: Remove-AzureEndpoint
+  href: ./Remove-AzureEndpoint.yml
+- text: Set-AzureEndpoint
+  href: ./Set-AzureEndpoint.yml
+- text: Update-AzureVM
+  href: ./Update-AzureVM.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D767F017-6545-4BC6-927E-E7A99A08D5D2
+  PlatyPS schema version: 2024-05-01

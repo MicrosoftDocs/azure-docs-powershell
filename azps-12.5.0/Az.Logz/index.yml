@@ -1,0 +1,45 @@
+### YamlMime:PowerShellModule1
+uid: Az.Logz
+name: Az.Logz Module
+isPreview: false
+cmdletGroups:
+- title: Logz
+  cmdlets:
+  - Az.Logz.Get-AzLogzMonitor
+  - Az.Logz.Get-AzLogzMonitoredResource
+  - Az.Logz.Get-AzLogzMonitorSSOConfiguration
+  - Az.Logz.Get-AzLogzMonitorTagRule
+  - Az.Logz.Get-AzLogzMonitorUserRole
+  - Az.Logz.Get-AzLogzMonitorVMHost
+  - Az.Logz.Get-AzLogzSubAccount
+  - Az.Logz.Get-AzLogzSubAccountTagRule
+  - Az.Logz.Get-AzLogzSubAccountVMHost
+  - Az.Logz.Invoke-AzLogzHostMonitor
+  - Az.Logz.Invoke-AzLogzHostSubAccount
+  - Az.Logz.New-AzLogzFilteringTagObject
+  - Az.Logz.New-AzLogzMonitor
+  - Az.Logz.New-AzLogzMonitorSSOConfiguration
+  - Az.Logz.New-AzLogzMonitorTagRule
+  - Az.Logz.New-AzLogzSubAccount
+  - Az.Logz.New-AzLogzSubAccountTagRule
+  - Az.Logz.New-AzLogzVMResourcesObject
+  - Az.Logz.Remove-AzLogzMonitor
+  - Az.Logz.Remove-AzLogzMonitorTagRule
+  - Az.Logz.Remove-AzLogzSubAccount
+  - Az.Logz.Remove-AzLogzSubAccountTagRule
+  - Az.Logz.Update-AzLogzMonitor
+  - Az.Logz.Update-AzLogzMonitorVMHost
+  - Az.Logz.Update-AzLogzSubAccount
+  - Az.Logz.Update-AzLogzSubAccountVMHost
+description: |-
+  Microsoft Azure PowerShell: Logz cmdlets
+metadata:
+  Module Name: Az.Logz
+  Module Guid: 66d504a5-3bf8-4570-92f4-620ec297b16a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.logz
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/Logz/help/Az.Logz.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Logz/Logz/help/Az.Logz.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

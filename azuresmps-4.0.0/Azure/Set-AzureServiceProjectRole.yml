@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureServiceProjectRole
+name: Set-AzureServiceProjectRole
+module: Azure
+isPreview: false
+summary: |-
+  Sets the number of instances or the runtime version of a role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Set-AzureServiceProjectRole** cmdlet sets the number of role instances for the specified role.
+parameters:
+  cmdletParameters:
+  - name: Instances
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the number of role instances for the specified web or worker role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Instances
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the web or worker role to be changed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Runtime
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the runtime to add to the specified role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Runtime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the version of the runtime to add to the role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Runtime
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSize
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine size of the role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: VMSize
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureServiceProjectRole
+        -Instances <Int32>
+        [-RoleName <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Instances
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureServiceProjectRole
+        -Runtime <String>
+        -Version <String>
+        [-RoleName <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Runtime
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureServiceProjectRole
+        -VMSize <String>
+        [-RoleName <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: VMSize
+  isDefault: false
+inputs:
+- name: <span>undefined</span>
+  description: |-
+    Specifies the size of the virtual machine.
+examples:
+- title: 'Example 1: Set instances for a web role'
+  description: |-
+    ```
+    PS C:\> Set-AzureServiceProjectRole "MyWebRole" 2
+    ```
+
+    Sets the number of instances for the web role named MyWebRole1 to 2.
+- title: 'Example 2: Set instances for a worker role'
+  description: |-
+    ```
+    PS C:\> Set-AzureServiceProjectRole "MyWorkerRole1" 2
+    ```
+
+    Sets the role instance count for the worker role named WorkerRole1 to 2.
+- title: 'Example 3: Set the runtime version for a role service'
+  description: |-
+    ```
+    PS C:\> Set-AzureServiceProjectRole "MyRole1" node 0.6.20
+    ```
+
+    Sets the node.exe runtime version for role MyRole1 to 0.6.20.
+links:
+- text: Set-AzureServiceProject
+  href: ./Set-AzureServiceProject.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5D093C10-F8B6-4F4A-ABD7-CC4D7AB7AFFA
+  PlatyPS schema version: 2024-05-01

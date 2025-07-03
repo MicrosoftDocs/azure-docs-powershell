@@ -1,0 +1,81 @@
+### YamlMime:PowerShellModule1
+uid: Az.ManagedNetworkFabric
+name: Az.ManagedNetworkFabric Module
+isPreview: false
+cmdletGroups:
+- title: Managed Network Fabric
+  cmdlets:
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabric
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricAcl
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricController
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricDevice
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricExternalNetwork
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricInterface
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricInternalNetwork
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricInternetGateway
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricInternetGatewayRule
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricIPCommunity
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricIPExtendedCommunity
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricIPPrefix
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricL2Domain
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricL3Domain
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricNeighborGroup
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricNni
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricNpb
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricRack
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricRoutePolicy
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricTap
+  - Az.ManagedNetworkFabric.Get-AzNetworkFabricTapRule
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricDeprovision
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricInterfaceUpdateAdminState
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricL2DomainUpdateAdminState
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricL3DomainUpdateAdminState
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricProvision
+  - Az.ManagedNetworkFabric.Invoke-AzNetworkFabricTapUpdateAdminState
+  - Az.ManagedNetworkFabric.New-AzNetworkFabric
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricAcl
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricController
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricExternalNetwork
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricInternalNetwork
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricInternetGatewayRule
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricIPCommunity
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricIPExtendedCommunity
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricIPPrefix
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricL2Domain
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricL3Domain
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricNeighborGroup
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricNni
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricRoutePolicy
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricTap
+  - Az.ManagedNetworkFabric.New-AzNetworkFabricTapRule
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabric
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricAcl
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricController
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricExternalNetwork
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricInternalNetwork
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricInternetGatewayRule
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricIPCommunity
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricIPExtendedCommunity
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricIPPrefix
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricL2Domain
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricL3Domain
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricNeighborGroup
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricNni
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricRoutePolicy
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricTap
+  - Az.ManagedNetworkFabric.Remove-AzNetworkFabricTapRule
+  - Az.ManagedNetworkFabric.Update-AzNetworkFabricDevice
+  - Az.ManagedNetworkFabric.Update-AzNetworkFabricInternetGateway
+  - Az.ManagedNetworkFabric.Update-AzNetworkFabricNeighborGroup
+description: |-
+  Microsoft Azure PowerShell: ManagedNetworkFabric cmdlets
+metadata:
+  Module Name: Az.ManagedNetworkFabric
+  Module Guid: 95e96bd7-4548-4973-a345-3f982b13f681
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.managednetworkfabric
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Az.ManagedNetworkFabric.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Az.ManagedNetworkFabric.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

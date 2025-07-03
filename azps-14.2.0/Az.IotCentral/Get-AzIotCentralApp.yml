@@ -1,0 +1,224 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IotCentral.Get-AzIotCentralApp
+name: Get-AzIotCentralApp
+module: Az.IotCentral
+isPreview: false
+summary: |-
+  Gets properties for either one or several IoT Central Applications.
+description: |-
+  Gets the metadata for either a specific IoT Central Application, or all the applications in a Resource Group or Subscription, depending on Parameter Set.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Iot Central Application Resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InteractiveIotCentralParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource Group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListIotCentralAppsParameterSet
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Iot Central Application Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzIotCentralApp
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListIotCentralAppsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzIotCentralApp
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InteractiveIotCentralParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzIotCentralApp
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralApp" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 Get Specific IoT Central Application.
+  description: |-
+    ```powershell
+    Get-AzIotCentralApp -ResourceGroupName "MyResourceGroupName" -Name "MyAppResourceName"
+    ```
+
+    ```output
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName
+    Name              : MyAppResourceName
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : {[key, val]}
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name
+    Subdomain         : MyAppSubdomain
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+    Identity          : Microsoft.Azure.Management.IotCentral.Models.SystemAssignedServiceIdentity
+    ```
+
+    Gets the metadata for the specified IoT Central Application.
+- title: Example 2 Get IoT Central Applications in Subscription.
+  description: |-
+    ```powershell
+    Get-AzIotCentralApp
+    ```
+
+    ```output
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName
+    Name              : MyAppResourceName
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : {[key, val]}
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name
+    Subdomain         : MyAppSubdomain
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+    Identity          : Microsoft.Azure.Management.IotCentral.Models.SystemAssignedServiceIdentity
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName2/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName2
+    Name              : MyAppResourceName2
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : {[key, val]}
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name 2
+    Subdomain         : MyAppSubdomain2
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName2
+    Identity          : Microsoft.Azure.Management.IotCentral.Models.SystemAssignedServiceIdentity
+    ```
+
+    Gets the metadata for all the IoT Central Applications in the current Subscription.
+- title: Example 3 Get IoT Central Applications in Resource Group.
+  description: |-
+    ```powershell
+    Get-AzIotCentralApp -ResourceGroupName "MyResourceGroupName"
+    ```
+
+    ```output
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName
+    Name              : MyAppResourceName
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : {[key, val]}
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name
+    Subdomain         : MyAppSubdomain
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+    Identity          : Microsoft.Azure.Management.IotCentral.Models.SystemAssignedServiceIdentity
+
+    ResourceId        : /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroupName/providers/Microsoft
+                        .IoTCentral/IoTApps/MyAppResourceName2
+    Name              : MyAppResourceName2
+    Type              : Microsoft.IoTCentral/IoTApps
+    Location          : westus
+    Tag               : {[key, val]}
+    Sku               : Microsoft.Azure.Commands.IotCentral.Models.PSIotCentralAppSkuInfo
+    ApplicationId     : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    DisplayName       : My Custom Display Name 2
+    Subdomain         : MyAppSubdomain2
+    Template          : iotc-default@1.0.0
+    SubscriptionId    : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ResourceGroupName : MyResourceGroupName
+    Identity          : Microsoft.Azure.Management.IotCentral.Models.SystemAssignedServiceIdentity
+    ```
+
+    Gets the metadata for all IoT Central Applications in the provided Resource Group.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Get-AzIotCentralApp.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.IotCentral.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iotcentral/get-aziotcentralapp
+  Module Name: Az.IotCentral
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IotCentral/IotCentral/help/Get-AzIotCentralApp.md
+  PlatyPS schema version: 2024-05-01

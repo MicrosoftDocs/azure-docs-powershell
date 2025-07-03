@@ -1,0 +1,150 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventGrid.New-AzEventGridEventSubscriptionFilterObject
+name: New-AzEventGridEventSubscriptionFilterObject
+module: Az.EventGrid
+isPreview: false
+summary: |-
+  Create an in-memory object for EventSubscriptionFilter.
+description: |-
+  Create an in-memory object for EventSubscriptionFilter.
+parameters:
+  cmdletParameters:
+  - name: AdvancedFilter
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.IAdvancedFilter" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      An array of advanced filters that are used for filtering event subscriptions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAdvancedFilteringOnArray
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Allows advanced filters to be evaluated against an array of values instead of expecting a singular value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludedEventType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of applicable event types that need to be part of the event subscription.
+      If it is desired to subscribe to all default event types, set the IncludedEventTypes to null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsSubjectCaseSensitive
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies if the SubjectBeginsWith and SubjectEndsWith properties of the filter
+              should be compared in a case sensitive manner.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubjectBeginsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional string to filter events for an event subscription based on a resource path prefix.
+              The format of this depends on the publisher of the events.
+              Wildcard characters are not supported in this path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubjectEndsWith
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An optional string to filter events for an event subscription based on a resource path suffix.
+              Wildcard characters are not supported in this path.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventGridEventSubscriptionFilterObject
+        [-AdvancedFilter <IAdvancedFilter[]>]
+        [-EnableAdvancedFilteringOnArray <Boolean>]
+        [-IncludedEventType <String[]>]
+        [-IsSubjectCaseSensitive <Boolean>]
+        [-SubjectBeginsWith <String>]
+        [-SubjectEndsWith <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventGrid.Models.EventSubscriptionFilter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for EventSubscriptionFilter.'
+  description: |-
+    ```powershell
+    $adviceObj = New-AzEventGridBoolEqualsAdvancedFilterObject -Key "testKey" -Value:$true
+    New-AzEventGridEventSubscriptionFilterObject -AdvancedFilter $adviceObj -EnableAdvancedFilteringOnArray:$true -IncludedEventType "test" -IsSubjectCaseSensitive:$true -SubjectBeginsWith "startTest" -SubjectEndsWith "endTest"
+    ```
+
+    ```output
+    EnableAdvancedFilteringOnArray IsSubjectCaseSensitive SubjectBeginsWith SubjectEndsWith
+    ------------------------------ ---------------------- ----------------- ---------------
+    True                           True                   startTest         endTest
+    ```
+
+    Create an in-memory object for EventSubscriptionFilter.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridEventSubscriptionFilterObject.md
+  document type: cmdlet
+  external help file: Az.EventGrid-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventGrid/new-azeventgrideventsubscriptionfilterobject
+  Module Name: Az.EventGrid
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventGrid/EventGrid/help/New-AzEventGridEventSubscriptionFilterObject.md
+  PlatyPS schema version: 2024-05-01

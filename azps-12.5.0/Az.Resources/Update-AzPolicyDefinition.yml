@@ -1,0 +1,410 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzPolicyDefinition
+name: Update-AzPolicyDefinition
+module: Az.Resources
+isPreview: false
+summary: |-
+  This operation updates an existing policy definition in the given subscription or management group with the given name.
+description: |-
+  This operation updates an existing policy definition in the given subscription or management group with the given name.
+notes: |-
+  ALIASES
+
+  Set-AzPolicyDefinition
+parameters:
+  cmdletParameters:
+  - name: BackwardCompatible
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Causes cmdlet to return artifacts using legacy format placing policy-specific properties in a property bag object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy definition description.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource Id of the policy definition to update.
+    aliases:
+    - ResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyDefinition" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the management group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagementGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy definition metadata.
+      Metadata is an open ended object and is typically a collection of key value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy definition mode.
+      Some examples are All, Indexed, Microsoft.KeyVault.Data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the policy definition to update.
+    aliases:
+    - PolicyDefinitionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ManagementGroupName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Parameter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parameter definitions for parameters used in the policy rule.
+      The keys are the parameter names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzPolicyDefinition
+        -Name <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Policy <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzPolicyDefinition
+        -Name <String>
+        -SubscriptionId <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Policy <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SubscriptionId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzPolicyDefinition
+        -Name <String>
+        -ManagementGroupName <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Policy <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagementGroupName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzPolicyDefinition
+        -Id <String>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Policy <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzPolicyDefinition
+        -InputObject <IPolicyDefinition>
+        [-DisplayName <String>]
+        [-Description <String>]
+        [-Policy <String>]
+        [-Metadata <String>]
+        [-Parameter <String>]
+        [-Mode <String>]
+        [-BackwardCompatible]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyDefinition" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Policy.Models.IPolicyDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update the description of a policy definition'
+  description: |-
+    ```powershell
+    $PolicyDefinition = Get-AzPolicyDefinition -Name 'VMPolicyDefinition'
+    Update-AzPolicyDefinition -Id $PolicyDefinition.ResourceId -Description 'Updated policy to not allow virtual machine creation'
+    ```
+
+    The first command gets a policy definition named VMPolicyDefinition by using the Get-AzPolicyDefinition cmdlet.
+    The command stores that object in the $PolicyDefinition variable.
+    The second command updates the description of the policy definition identified by the **ResourceId** property of $PolicyDefinition.
+- title: 'Example 2: Update the mode of a policy definition'
+  description: |-
+    ```powershell
+    Update-AzPolicyDefinition -Name 'VMPolicyDefinition' -Mode 'All'
+    ```
+
+    This command updates the policy definition named VMPolicyDefinition by using the Update-AzPolicyDefinition cmdlet to
+    set its mode property to 'All'.
+- title: 'Example 3: Update the metadata of a policy definition'
+  description: |-
+    ```powershell
+    Update-AzPolicyDefinition -Name 'VMPolicyDefinition' -Metadata '{"category":"Virtual Machine"}'
+    ```
+
+    This command updates the metadata of a policy definition named VMPolicyDefinition to indicate its category is "Virtual Machine".
+- title: 'Example 3: [Backcompat] Update the mode of a policy definition'
+  description: |-
+    ```powershell
+    Set-AzPolicyDefinition -Name 'VMPolicyDefinition' -Mode 'All'
+    ```
+
+    This command updates the policy definition named VMPolicyDefinition by using the Set-AzPolicyDefinition alias of the Update-AzPolicyDefinition cmdlet to set its mode property to 'All'.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzPolicyDefinition.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/update-azpolicydefinition
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzPolicyDefinition.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzSecurityConnector
+name: Get-AzSecurityConnector
+module: Az.Security
+isPreview: false
+summary: |-
+  Retrieves details of a specific security connector
+description: |-
+  Retrieves details of a specific security connector
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The security connector name.
+    aliases:
+    - SecurityConnectorName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group within the user's subscription.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure subscription ID
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnector
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnector
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnector
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSecurityConnector
+        -InputObject <ISecurityIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.ISecurityConnector" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Security Connector resource by name'
+  description: |-
+    ```powershell
+    Get-AzSecurityConnector -ResourceGroupName "dfdtest-sdk" -Name "dfdsdktests-azdo-01"
+    ```
+
+    ```output
+    EnvironmentData                 : {
+                                        "environmentType": "AzureDevOpsScope"
+                                      }
+    EnvironmentName                 : AzureDevOps
+    Etag                            :
+    HierarchyIdentifier             : 4a8eb7f1-f533-48c5-b102-9b09e90906b7
+    HierarchyIdentifierTrialEndDate :
+    Id                              : /subscriptions/487bb485-b5b0-471e-9c0d-10717612f869/resourcegroups/dfdtest-sdk/providers/Microsoft.Security/securityConnectors/dfdsdktests-azdo-01
+    Kind                            :
+    Location                        : centralus
+    Name                            : dfdsdktests-azdo-01
+    Offering                        : {{
+                                        "offeringType": "CspmMonitorAzureDevOps"
+                                      }}
+    ResourceGroupName               : dfdtest-sdk
+    SystemDataCreatedAt             : 12/7/2023 6:38:36 AM
+    SystemDataCreatedBy             : c3d82ccb-fee1-430c-949e-6c0a217c00a8
+    SystemDataCreatedByType         : Application
+    SystemDataLastModifiedAt        : 2/14/2024 2:11:46 AM
+    SystemDataLastModifiedBy        : c3d82ccb-fee1-430c-949e-6c0a217c00a8
+    SystemDataLastModifiedByType    : Application
+    Tag                             : {}
+    Type                            : Microsoft.Security/securityconnectors
+    ```
+- title: 'Example 2: List Security Connectors by subscription'
+  description: |-
+    ```powershell
+    Get-AzSecurityConnector
+    ```
+
+    ```output
+    Name                ResourceGroupName        EnvironmentName Location  HierarchyIdentifier
+    ----                -----------------        --------------- --------  -------------------
+    dfdsdktests-azdo-01 dfdtest-sdk              AzureDevOps     centralus 4a8eb7f1-f533-48c5-b102-9b09e90906b7
+    dfdsdktests-gl-01   dfdtest-sdk              GitLab          centralus 7a1f4efe-f8c6-48e7-b7ef-1b45994ed602
+    dfdsdktests-gh-01   dfdtest-sdk              Github          centralus bc12ba4d-b89c-486e-85e1-d803e7d80525
+    aws-sdktest01       securityconnectors-tests AWS             CentralUS 891376984375
+    gcp-sdktest01       securityconnectors-tests GCP             CentralUS 843025268399
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityConnector.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/get-azsecurityconnector
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzSecurityConnector.md
+  PlatyPS schema version: 2024-05-01

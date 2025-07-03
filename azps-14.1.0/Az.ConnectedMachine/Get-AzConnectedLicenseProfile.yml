@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedMachine.Get-AzConnectedLicenseProfile
+name: Get-AzConnectedLicenseProfile
+module: Az.ConnectedMachine
+isPreview: false
+summary: |-
+  Retrieves information about the view of a license profile.
+description: |-
+  Retrieves information about the view of a license profile.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the hybrid machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedLicenseProfile
+        -MachineName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedMachine.Models.ILicenseProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get ESU license profile for a machine'
+  description: |-
+    ```powershell
+    Get-AzConnectedLicenseProfile -MachineName WIN-IAH3TLSP7A8 -ResourceGroupName PayGo_cmdlet
+    ```
+
+    ```output
+    AdditionalInfo                       :
+    Code                                 :
+    Detail                               :
+    EsuProfileAssignedLicense            :
+    EsuProfileAssignedLicenseImmutableId :
+    EsuProfileEsuEligibility             : Ineligible
+    EsuProfileEsuKey                     : {}
+    EsuProfileEsuKeyState                : Inactive
+    EsuProfileServerType                 : Datacenter
+    Id                                   : /subscriptions/b24cc8ee-df4f-48ac-94cf-46edf36b0fae/resourceGroups/PayGo_c
+                                           mdlet/providers/Microsoft.HybridCompute/machines/WIN-IAH3TLSP7A8/licensePr
+                                           ofiles/default
+    Location                             : eastus
+    Message                              :
+    Name                                 : default
+    ProductProfileBillingEndDate         :
+    ProductProfileBillingStartDate       : 11/15/2024 1:53:34 AM
+    ProductProfileDisenrollmentDate      :
+    ProductProfileEnrollmentDate         : 11/8/2024 1:53:34 AM
+    ProductProfileProductFeature         : {{
+                                             "name": "WindowsServerAzureArcMgmt",
+                                             "subscriptionStatus": "Enabled",
+                                             "enrollmentDate": "2024-11-08T01:58:37.6099656Z",
+                                             "billingStartDate": "2024-11-08T01:58:37.6096833Z"
+                                           }, {
+                                             "name": "Hotpatch",
+                                             "subscriptionStatus": "Enabled",
+                                             "enrollmentDate": "2024-11-08T01:58:37.6095044Z",
+                                             "billingStartDate": "2025-02-01T00:00:00.0000000"
+                                           }}
+    ProductProfileProductType            : WindowsServer
+    ProductProfileSubscriptionStatus     : Enabled
+    ProvisioningState                    : Succeeded
+    ResourceGroupName                    : PayGo_cmdlet
+    SoftwareAssuranceCustomer            :
+    SystemDataCreatedAt                  :
+    SystemDataCreatedBy                  :
+    SystemDataCreatedByType              :
+    SystemDataLastModifiedAt             :
+    SystemDataLastModifiedBy             :
+    SystemDataLastModifiedByType         :
+    Tags                                 : {
+                                           }
+    Target                               :
+    Type                                 : Microsoft.HybridCompute/machines/licenseProfiles
+    ```
+
+    Get ESU license profile for a machine
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Get-AzConnectedLicenseProfile.md
+  document type: cmdlet
+  external help file: Az.ConnectedMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedmachine/get-azconnectedlicenseprofile
+  Module Name: Az.ConnectedMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedMachine/ConnectedMachine/help/Get-AzConnectedLicenseProfile.md
+  PlatyPS schema version: 2024-05-01

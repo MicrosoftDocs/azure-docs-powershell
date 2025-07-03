@@ -1,0 +1,24 @@
+### YamlMime:PowerShellModule1
+uid: Az.Tools.Migration
+name: Az.Tools.Migration Module
+isPreview: false
+cmdletGroups:
+- title: Az.Tools.Migration Cmdlets
+  cmdlets:
+  - Az.Tools.Migration.Disable-AzUpgradeDataCollection
+  - Az.Tools.Migration.Enable-AzUpgradeDataCollection
+  - Az.Tools.Migration.Find-AzUpgradeCommandReference
+  - Az.Tools.Migration.Get-AzUpgradeAliasSpec
+  - Az.Tools.Migration.Get-AzUpgradeCmdletSpec
+  - Az.Tools.Migration.Invoke-AzUpgradeModulePlan
+  - Az.Tools.Migration.New-AzUpgradeModulePlan
+description: |-
+  Commands to help migrate from **AzureRM** to **Az** PowerShell modules.
+metadata:
+  Module Name: Az.Tools.Migration
+  Module Guid: cb471070-37cc-4484-9665-adf1502b4e3a
+  Help Version: 1.0.0.0
+  Locale: en-US
+  original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/Az.Tools.Migration.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

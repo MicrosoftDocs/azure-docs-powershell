@@ -1,0 +1,127 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearning.Get-AzMlWebServiceKey
+name: Get-AzMlWebServiceKey
+module: Az.MachineLearning
+isPreview: false
+summary: |-
+  Retrieves the web service's keys.
+description: |-
+  Gets the access keys for the Azure Machine Learning web service's runtime APIs.
+notes: |-
+  Keywords: azure, azurerm, arm, resource, management, manager, machine, machine learning, azureml
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MlWebService
+    type: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the web service for which the access keys are retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInstance
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the web service for which the access keys are retrieved.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group for the web service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameAndResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMlWebServiceKey
+        -ResourceGroupName <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByNameAndResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMlWebServiceKey
+        -MlWebService <WebService>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByInstance
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebServiceKeys" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Get the keys for a web service specified by resource group and name
+  description: |-
+    ```powershell
+    Get-AzMlWebServiceKey -ResourceGroupName "myresourcegroup" -Name "mywebservicename"
+    ```
+- title: Example 2 - Get keys for web service instance
+  description: |-
+    ```powershell
+    Get-AzMlWebServiceKey -MlWebService $mlService
+    ```
+
+    $mlService is an object of type Microsoft.Azure.Management.MachineLearning.WebServices.Models.WebService.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlWebServiceKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.MachineLearning.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.machinelearning/get-azmlwebservicekey
+  Module Name: Az.MachineLearning
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearning/MachineLearning/help/Get-AzMlWebServiceKey.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,44 @@
+### YamlMime:PowerShellModule1
+uid: Az.HealthcareApis
+name: Az.HealthcareApis Module
+isPreview: false
+cmdletGroups:
+- title: HealthcareApis Service
+  cmdlets:
+  - Az.HealthcareApis.Get-AzHealthcareApisService
+  - Az.HealthcareApis.Get-AzHealthcareApisWorkspace
+  - Az.HealthcareApis.Get-AzHealthcareDicomService
+  - Az.HealthcareApis.Get-AzHealthcareFhirDestination
+  - Az.HealthcareApis.Get-AzHealthcareFhirService
+  - Az.HealthcareApis.Get-AzHealthcareIotConnector
+  - Az.HealthcareApis.Get-AzHealthcareIotConnectorFhirDestination
+  - Az.HealthcareApis.New-AzHealthcareApisService
+  - Az.HealthcareApis.New-AzHealthcareApisWorkspace
+  - Az.HealthcareApis.New-AzHealthcareDicomService
+  - Az.HealthcareApis.New-AzHealthcareFhirService
+  - Az.HealthcareApis.New-AzHealthcareIotConnector
+  - Az.HealthcareApis.New-AzHealthcareIotConnectorFhirDestination
+  - Az.HealthcareApis.Remove-AzHealthcareApisService
+  - Az.HealthcareApis.Remove-AzHealthcareApisWorkspace
+  - Az.HealthcareApis.Remove-AzHealthcareDicomService
+  - Az.HealthcareApis.Remove-AzHealthcareFhirService
+  - Az.HealthcareApis.Remove-AzHealthcareIotConnector
+  - Az.HealthcareApis.Remove-AzHealthcareIotConnectorFhirDestination
+  - Az.HealthcareApis.Test-AzHealthcareServiceNameAvailability
+  - Az.HealthcareApis.Update-AzHealthcareApisService
+  - Az.HealthcareApis.Update-AzHealthcareApisWorkspace
+  - Az.HealthcareApis.Update-AzHealthcareDicomService
+  - Az.HealthcareApis.Update-AzHealthcareFhirService
+  - Az.HealthcareApis.Update-AzHealthcareIotConnector
+description: |-
+  Microsoft Azure PowerShell: HealthcareApis cmdlets
+metadata:
+  Module Name: Az.HealthcareApis
+  Module Guid: de3f478d-0227-4782-85cf-62fb649b685a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.healthcareapis
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthcareApis/HealthcareApis/help/Az.HealthcareApis.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HealthcareApis/HealthcareApis/help/Az.HealthcareApis.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

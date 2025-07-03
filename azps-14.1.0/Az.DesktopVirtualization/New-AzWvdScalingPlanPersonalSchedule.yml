@@ -1,0 +1,743 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.New-AzWvdScalingPlanPersonalSchedule
+name: New-AzWvdScalingPlanPersonalSchedule
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  create a ScalingPlanPersonalSchedule.
+description: |-
+  create a ScalingPlanPersonalSchedule.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DaysOfWeek
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Set of days of the week on which this schedule is active.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakActionOnDisconnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a user disconnect during the off-peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakActionOnLogoff
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a logoff during the off-peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakMinutesToWaitOnDisconnect
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user disconnects during the off-peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakMinutesToWaitOnLogoff
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user logs off during the off-peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OffPeakStartVMOnConnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The desired configuration of Start VM On Connect for the hostpool during the off-peak phase.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakActionOnDisconnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a user disconnect during the peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakActionOnLogoff
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a logoff during the peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakMinutesToWaitOnDisconnect
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user disconnects during the peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakMinutesToWaitOnLogoff
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user logs off during the peak period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeakStartVMOnConnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The desired configuration of Start VM On Connect for the hostpool during the peak phase.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownActionOnDisconnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a user disconnect during the ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownActionOnLogoff
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a logoff during the ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownMinutesToWaitOnDisconnect
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user disconnects during the ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownMinutesToWaitOnLogoff
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user logs off during the ramp down period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampDownStartVMOnConnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The desired configuration of Start VM On Connect for the hostpool during the ramp down phase.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpActionOnDisconnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a user disconnect during the ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpActionOnLogoff
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Action to be taken after a logoff during the ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpAutoStartHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The desired startup behavior during the ramp up period for personal vms in the hostpool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpMinutesToWaitOnDisconnect
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user disconnects during the ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpMinutesToWaitOnLogoff
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The time in minutes to wait before performing the desired session handling action when a user logs off during the ramp up period.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpStartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpStartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RampUpStartVMOnConnect
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The desired configuration of Start VM On Connect for the hostpool during the ramp up phase.
+      If this is disabled, session hosts must be turned on using rampUpAutoStartHosts or by turning them on manually.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalingPlanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the scaling plan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScalingPlanScheduleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ScalingPlanSchedule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWvdScalingPlanPersonalSchedule
+        -ResourceGroupName <String>
+        -ScalingPlanName <String>
+        -ScalingPlanScheduleName <String>
+        [-SubscriptionId <String>]
+        [-DaysOfWeek <String[]>]
+        [-OffPeakActionOnDisconnect <String>]
+        [-OffPeakActionOnLogoff <String>]
+        [-OffPeakMinutesToWaitOnDisconnect <Int32>]
+        [-OffPeakMinutesToWaitOnLogoff <Int32>]
+        [-OffPeakStartTimeHour <Int32>]
+        [-OffPeakStartTimeMinute <Int32>]
+        [-OffPeakStartVMOnConnect <String>]
+        [-PeakActionOnDisconnect <String>]
+        [-PeakActionOnLogoff <String>]
+        [-PeakMinutesToWaitOnDisconnect <Int32>]
+        [-PeakMinutesToWaitOnLogoff <Int32>]
+        [-PeakStartTimeHour <Int32>]
+        [-PeakStartTimeMinute <Int32>]
+        [-PeakStartVMOnConnect <String>]
+        [-RampDownActionOnDisconnect <String>]
+        [-RampDownActionOnLogoff <String>]
+        [-RampDownMinutesToWaitOnDisconnect <Int32>]
+        [-RampDownMinutesToWaitOnLogoff <Int32>]
+        [-RampDownStartTimeHour <Int32>]
+        [-RampDownStartTimeMinute <Int32>]
+        [-RampDownStartVMOnConnect <String>]
+        [-RampUpActionOnDisconnect <String>]
+        [-RampUpActionOnLogoff <String>]
+        [-RampUpAutoStartHost <String>]
+        [-RampUpMinutesToWaitOnDisconnect <Int32>]
+        [-RampUpMinutesToWaitOnLogoff <Int32>]
+        [-RampUpStartTimeHour <Int32>]
+        [-RampUpStartTimeMinute <Int32>]
+        [-RampUpStartVMOnConnect <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzWvdScalingPlanPersonalSchedule
+        -ResourceGroupName <String>
+        -ScalingPlanName <String>
+        -ScalingPlanScheduleName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzWvdScalingPlanPersonalSchedule
+        -ResourceGroupName <String>
+        -ScalingPlanName <String>
+        -ScalingPlanScheduleName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.IScalingPlanPersonalSchedule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Scaling Plan Personal Schedule'
+  description: |-
+    ```powershell
+    New-AzWvdScalingPlanPersonalSchedule -ResourceGroupName rgName `
+                                            -ScalingPlanName spName `
+                                            -ScalingPlanScheduleName scheduleName `
+                                            -DaysOfWeek @('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday') `
+                                            -RampUpStartTimeHour 6 `
+                                            -RampUpStartTimeMinute 30 `
+                                            -RampUpAutoStartHost "None" `
+                                            -RampUpStartVMOnConnect Enable `
+                                            -RampUpActionOnDisconnect None `
+                                            -RampUpMinutesToWaitOnDisconnect 10 `
+                                            -RampUpActionOnLogoff None `
+                                            -RampUpMinutesToWaitOnLogoff 10 `
+                                            -peakStartTimeHour 8 `
+                                            -PeakStartTimeMinute 30 `
+                                            -PeakStartVMOnConnect Enable `
+                                            -PeakActionOnDisconnect None `
+                                            -PeakMinutesToWaitOnDisconnect 10 `
+                                            -PeakMinutesToWaitOnLogoff 10 `
+                                            -RampDownStartTimeHour 16 `
+                                            -RampDownStartTimeMinute 0 `
+                                            -RampDownStartVMOnConnect Enable `
+                                            -RampDownActionOnDisconnect None `
+                                            -RampDownMinutesToWaitOnDisconnect 10 `
+                                            -RampDownMinutesToWaitOnLogoff 10 `
+                                            -RampDownActionOnLogoff None `
+                                            -OffPeakStartTimeHour 22 `
+                                            -OffPeakStartTimeMinute 45 `
+                                            -OffPeakStartVMOnConnect Enable `
+                                            -OffPeakActionOnDisconnect None `
+                                            -OffPeakMinutesToWaitOnDisconnect 10 `
+                                            -OffPeakActionOnLogoff Deallocate `
+                                            -OffPeakMinutesToWaitOnLogoff 10
+    ```
+
+    ```output
+    Name
+    ----
+    scalingplan1/PersonalSchedule1
+    ```
+
+    Add a Scaling Plan Personal Schedule to an existing Scaling Plan.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/New-AzWvdScalingPlanPersonalSchedule.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/new-azwvdscalingplanpersonalschedule
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/New-AzWvdScalingPlanPersonalSchedule.md
+  PlatyPS schema version: 2024-05-01

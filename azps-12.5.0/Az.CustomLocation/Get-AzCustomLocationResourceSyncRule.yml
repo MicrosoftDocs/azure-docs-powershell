@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CustomLocation.Get-AzCustomLocationResourceSyncRule
+name: Get-AzCustomLocationResourceSyncRule
+module: Az.CustomLocation
+isPreview: false
+summary: |-
+  Gets the details of the resourceSyncRule with a specified resource group, subscription id Custom Location resource name and Resource Sync Rule name.
+description: |-
+  Gets the details of the resourceSyncRule with a specified resource group, subscription id Custom Location resource name and Resource Sync Rule name.
+parameters:
+  cmdletParameters:
+  - name: CustomlocationInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CustomLocation.Models.ICustomLocationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityCustomlocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomLocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Custom Locations name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CustomLocation.Models.ICustomLocationIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Sync Rule name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityCustomlocation
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzCustomLocationResourceSyncRule
+        -CustomLocationName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzCustomLocationResourceSyncRule
+        -CustomLocationName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCustomLocationResourceSyncRule
+        -Name <String>
+        -CustomlocationInputObject <ICustomLocationIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityCustomlocation
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzCustomLocationResourceSyncRule
+        -InputObject <ICustomLocationIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CustomLocation.Models.ICustomLocationIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CustomLocation.Models.IResourceSyncRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Resource Sync Rule by Custom Location name.'
+  description: |-
+    ```powershell
+    Get-AzCustomLocationResourceSyncRule -ResourceGroupName azps_test_cluster -CustomLocationName azps-customlocation
+    ```
+
+    ```output
+    Location Name                  ResourceGroupName
+    -------- ----                  -----------------
+    eastus   azps-resourcesyncrule azps_test_cluster
+    ```
+
+    List Resource Sync Rule by Custom Location name.
+- title: 'Example 2: Get the detail of the resourceSyncRule with a specified resource group, subscription id Custom Location resource name and Resource Sync Rule name.'
+  description: |-
+    ```powershell
+    Get-AzCustomLocationResourceSyncRule -ResourceGroupName azps_test_cluster -CustomLocationName azps-customlocation -Name azps-resourcesyncrule
+    ```
+
+    ```output
+    Location Name                  ResourceGroupName
+    -------- ----                  -----------------
+    eastus   azps-resourcesyncrule azps_test_cluster
+    ```
+
+    Get the detail of the resourceSyncRule with a specified resource group, subscription id Custom Location resource name and Resource Sync Rule name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Get-AzCustomLocationResourceSyncRule.md
+  document type: cmdlet
+  external help file: Az.CustomLocation-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.customlocation/get-azcustomlocationresourcesyncrule
+  Module Name: Az.CustomLocation
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CustomLocation/CustomLocation/help/Get-AzCustomLocationResourceSyncRule.md
+  PlatyPS schema version: 2024-05-01

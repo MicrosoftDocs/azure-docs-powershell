@@ -1,0 +1,30 @@
+### YamlMime:PowerShellModule1
+uid: Az.CostManagement
+name: Az.CostManagement Module
+isPreview: false
+cmdletGroups:
+- title: Cost Management
+  cmdlets:
+  - Az.CostManagement.Get-AzCostManagementExport
+  - Az.CostManagement.Get-AzCostManagementExportExecutionHistory
+  - Az.CostManagement.Invoke-AzCostManagementExecuteExport
+  - Az.CostManagement.Invoke-AzCostManagementQuery
+  - Az.CostManagement.Invoke-AzCostManagementReservationDetailReport
+  - Az.CostManagement.New-AzCostManagementDetailReport
+  - Az.CostManagement.New-AzCostManagementExport
+  - Az.CostManagement.New-AzCostManagementQueryComparisonExpressionObject
+  - Az.CostManagement.New-AzCostManagementQueryFilterObject
+  - Az.CostManagement.Remove-AzCostManagementExport
+  - Az.CostManagement.Update-AzCostManagementExport
+description: |-
+  Microsoft Azure PowerShell: Cost cmdlets
+metadata:
+  Module Name: Az.CostManagement
+  Module Guid: 4cd9af10-559e-4fb9-8dcd-d3e8eb9e03b7
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.costmanagement
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Az.CostManagement.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/Az.CostManagement.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

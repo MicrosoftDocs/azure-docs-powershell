@@ -1,0 +1,113 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedNetwork.New-AzConnectedNetworkInterfaceObject
+name: New-AzConnectedNetworkInterfaceObject
+module: Az.ConnectedNetwork
+isPreview: false
+summary: |-
+  Create a in-memory object for NetworkInterface
+description: |-
+  Create a in-memory object for NetworkInterface
+parameters:
+  cmdletParameters:
+  - name: IPConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.INetworkInterfaceIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of IP configurations of the network interface.
+      To construct, see NOTES section for IPCONFIGURATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MacAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The MAC address of the network interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the network interface.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMSwitchType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Support.VMSwitchType" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the VM switch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzConnectedNetworkInterfaceObject
+        [-IPConfiguration <INetworkInterfaceIPConfiguration[]>]
+        [-MacAddress <String>]
+        [-Name <String>]
+        [-VMSwitchType <VMSwitchType>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedNetwork.Models.Api20210501.NetworkInterface" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a in-memory object for NetworkInterface'
+  description: |-
+    ```powershell
+    New-AzConnectedNetworkInterfaceObject -IPConfiguration $ipconf1 -Name "mrmmanagementnic1" -VMSwitchType "Management"
+    ```
+
+    ```output
+    MacAddress Name              VMSwitchType
+    ---------- ----              ------------
+               mrmmanagementnic1 Management
+    ```
+
+    Create a in-memory object for NetworkInterface
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkInterfaceObject.md
+  document type: cmdlet
+  external help file: Az.ConnectedNetwork-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ConnectedNetwork/new-AzConnectedNetworkInterfaceObject
+  Module Name: Az.ConnectedNetwork
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedNetwork/ConnectedNetwork/help/New-AzConnectedNetworkInterfaceObject.md
+  PlatyPS schema version: 2024-05-01

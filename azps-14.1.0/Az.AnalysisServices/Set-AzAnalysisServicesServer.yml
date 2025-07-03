@@ -1,0 +1,364 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AnalysisServices.Set-AzAnalysisServicesServer
+name: Set-AzAnalysisServicesServer
+module: Az.AnalysisServices
+isPreview: false
+summary: |-
+  Modifies  an instance of Analysis Services server
+description: |-
+  The Set-AzAnalysisServicesServer cmdlet modifies an instance of Analysis Services server
+notes: |-
+  Alias: Set-AzAs
+parameters:
+  cmdletParameters:
+  - name: Administrator
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A string representing a comma separated list of users or groups to be set as administrators on the server.
+      The users or groups need to be specified UPN format e.g.
+      user@contoso.com or groups@contoso.com
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupBlobContainerUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The blob container Uri for backup the Analysis Services server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts user to confirm whether to perform the operation
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultConnectionMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Default connection mode of an Analysis service server
+    acceptedValues:
+    - All
+    - Readonly
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableBackup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      The switch to disable backup blob container.
+      To re-enable the backup blob container, please provide the backup blob container Uri as -BackupBlobContainerUri.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisableBackup
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisassociateGateway
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disassociate Gateway resource from an Analysis server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisassociateGateway
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallConfig
+    type: <xref href="Microsoft.Azure.Commands.AnalysisServices.Models.PsAzureAnalysisServicesFirewallConfig" data-throw-if-not-resolved="False" />
+    description: |-
+      Firewall config of an Analysis server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GatewayResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gateway resource Id to associate to an Analysis server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Analysis Services server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Will return the deleted server details if the operation completes successfully
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReadonlyReplicaCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Read only replica count of an Analysis service server
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Azure resource group to which the server belongs
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Sku for the server.
+      The supported values are 'S0', 'S1', 'S2', 'S4', 'S8', 'S9', 'S8v2', 'S9v2' for the Standard tier; 'B1', 'B2' for the Basic tier and 'D1' for Development tier.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Key-value pairs in the form of a hash table set as tags on the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes the actions the current operation will perform without actually performing them
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzAnalysisServicesServer
+        [-Name] <String>
+        [[-ResourceGroupName] <String>]
+        [[-Sku] <String>]
+        [[-Tag] <Hashtable>]
+        [[-Administrator] <String>]
+        [[-BackupBlobContainerUri] <String>]
+        [-PassThru]
+        [-ReadonlyReplicaCount <Int32>]
+        [-DefaultConnectionMode <String>]
+        [-FirewallConfig <PsAzureAnalysisServicesFirewallConfig>]
+        [-GatewayResourceId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzAnalysisServicesServer
+        [-Name] <String>
+        [[-ResourceGroupName] <String>]
+        [[-Sku] <String>]
+        [[-Tag] <Hashtable>]
+        [[-Administrator] <String>]
+        [-PassThru]
+        [-DisableBackup]
+        [-ReadonlyReplicaCount <Int32>]
+        [-DefaultConnectionMode <String>]
+        [-FirewallConfig <PsAzureAnalysisServicesFirewallConfig>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisableBackup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzAnalysisServicesServer
+        [-Name] <String>
+        [[-ResourceGroupName] <String>]
+        [[-Sku] <String>]
+        [[-Tag] <Hashtable>]
+        [[-Administrator] <String>]
+        [-PassThru]
+        [-ReadonlyReplicaCount <Int32>]
+        [-DefaultConnectionMode <String>]
+        [-FirewallConfig <PsAzureAnalysisServicesFirewallConfig>]
+        [-DisassociateGateway]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisassociateGateway
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.AnalysisServices.Models.PsAzureAnalysisServicesFirewallConfig" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.AnalysisServices.Models.AzureAnalysisServicesServer" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzAnalysisServicesServer -Name "testserver" -ResourceGroupName "testgroup" -Tag @{key1 = "value1"; key2 ="value2"} -Administrator "testuser1@contoso.com"
+    ```
+
+    Modifies the server named testserver in resourcegroup testgroup to set the tags as key1:value1 and key2:value2 and administrator to testuser1@contoso.com
+links:
+- text: Get-AzAnalysisServicesServer
+  href: ./Get-AzAnalysisServicesServer.yml
+- text: Remove-AzAnalysisServicesServer
+  href: ./Remove-AzAnalysisServicesServer.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/Set-AzAnalysisServicesServer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.AnalysisServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.analysisservices/set-azanalysisservicesserver
+  Module Name: Az.AnalysisServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AnalysisServices/AnalysisServices/help/Set-AzAnalysisServicesServer.md
+  PlatyPS schema version: 2024-05-01

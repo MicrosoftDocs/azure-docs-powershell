@@ -1,0 +1,392 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzMetric
+name: Get-AzMetric
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets the metric values of a resource.
+description: |-
+  The **Get-AzMetric** cmdlet gets the metric values for a specified resource.
+notes: |-
+  More information about the supported metrics may be found at:
+  https://learn.microsoft.com/azure/azure-monitor/platform/metrics-supported
+parameters:
+  cmdletParameters:
+  - name: AggregationType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Monitor.Models.AggregationType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The aggregation type of the query
+    acceptedValues:
+    - None
+    - Average
+    - Count
+    - Minimum
+    - Maximum
+    - Total
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithFullParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DetailedOutput
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet displays detailed output.
+      By default, output is summarized.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Dimension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The metric dimensions to query metrics for
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end time of the query in local time.
+      The default is the current time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricFilter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the metric dimension filter to query metrics for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of metrics.
+    aliases:
+    - MetricNames
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithDefaultParameters
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the metric namespace to query metrics for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithFullParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderBy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the aggregation to use for sorting results and the direction of the sort (Example: sum asc).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithFullParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID of the metric.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.Monitor.Models.ResultType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the result type to be returned (metadata or data).
+    acceptedValues:
+    - Data
+    - Metadata
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithFullParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start time of the query in local time.
+      The default is the current local time minus one hour.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeGrain
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time grain of the metric as a **TimeSpan** object in the format hh:mm:ss.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum number of records to retrieve (default:10), to be specified with $filter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetWithFullParameters
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMetric
+        [-ResourceId] <String>
+        [[-MetricName] <String[]>]
+        [-TimeGrain <TimeSpan>]
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-MetricFilter <String>]
+        [-Dimension <String[]>]
+        [-DetailedOutput]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetWithDefaultParameters
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMetric
+        [-ResourceId] <String>
+        [-MetricName] <String[]>
+        [-TimeGrain <TimeSpan>]
+        [-AggregationType <AggregationType>]
+        [-StartTime <DateTime>]
+        [-EndTime <DateTime>]
+        [-Top <Int32>]
+        [-OrderBy <String>]
+        [-MetricNamespace <String>]
+        [-ResultType <ResultType>]
+        [-MetricFilter <String>]
+        [-Dimension <String[]>]
+        [-DetailedOutput]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetWithFullParameters
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetric" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a metric with summarized output'
+  description: |-
+    ```powershell
+    Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00
+    ```
+
+    ```output
+    Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+    Name       :
+                    LocalizedValue : Requests
+                    Value          : Requests
+
+    Type       : Microsoft.Insights/metrics
+    Unit       : Count
+    Data       : {Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue,
+                 Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue…}
+    Timeseries : {Microsoft.Azure.Management.Monitor.Models.TimeSeriesElement}
+    ```
+
+    This command gets the metric values for website3 with a time grain of 1 minute.
+- title: 'Example 2: Get a metric with detailed output'
+  description: |-
+    ```powershell
+    Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -TimeGrain 00:01:00 -DetailedOutput
+    ```
+
+    ```output
+    Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+    Name       : Microsoft.Azure.Management.Monitor.Models.LocalizableString
+
+    Type       : Microsoft.Insights/metrics
+    Unit       : Count
+    Data       : {Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue,
+                 Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue…}
+    Timeseries : {Microsoft.Azure.Management.Monitor.Models.TimeSeriesElement}
+    ```
+
+    This command gets the metric values for website3 with a time grain of 1 minute.
+    The output is detailed.
+- title: 'Example 3: Get a specified metric'
+  description: |-
+    ```powershell
+    Get-AzMetric -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3" -MetricName "Requests" -TimeGrain 00:01:00
+    ```
+
+    ```output
+    Id         : /subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website3/providers/Microsoft.Insights/metrics/Requests
+    Name       :
+                    LocalizedValue : Requests
+                    Value          : Requests
+
+    Type       : Microsoft.Insights/metrics
+    Unit       : Count
+    Data       : {Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue,
+                 Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue, Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricValue…}
+    Timeseries : {Microsoft.Azure.Management.Monitor.Models.TimeSeriesElement}
+    ```
+
+    This command gets detailed output for the Requests metric.
+- title: 'Example 4: Get summarized output for a specified metric with specified dimension filter'
+  description: |-
+    ```powershell
+    $dimFilter = "$(New-AzMetricFilter -Dimension City -Operator eq -Value "Seattle","Toronto") and $(New-AzMetricFilter -Dimension AuthenticationType -Operator eq -Value User)"
+
+    Get-AzMetric -ResourceId <ResourceId> -MetricName availabilityResults/availabilityPercentage -TimeGrain 00:05:00 -MetricFilter $dimFilter -StartTime 2024-07-02T00:00:00Z -EndTime 2024-07-02T00:10:00Z -AggregationType Average
+    ```
+
+    ```output
+    Id         : [ResourceId]/providers/Microsoft.Insights/metrics/availabilityResults/availabilityPercentage
+    Name       :
+                    LocalizedValue : Availability
+                    Value          : availabilityResults/availabilityPercentage
+
+    Type       : Microsoft.Insights/metrics
+    Unit       : Percent
+    Data       :
+    Timeseries : {}
+    ```
+
+    This command gets summarized output for the PageViews metric with specified dimension filter and aggregation type.
+links:
+- text: Get-AzMetricDefinition
+  href: ./Get-AzMetricDefinition.yml
+- text: New-AzMetricFilter
+  href: ./New-AzMetricFilter.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetric.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azmetric
+  Module Name: Az.Monitor
+  ms.assetid: EAFB9C98-000C-4EAC-A32D-6B0F1939AA2F
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzMetric.md
+  PlatyPS schema version: 2024-05-01

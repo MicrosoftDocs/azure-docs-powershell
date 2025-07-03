@@ -1,0 +1,351 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DevCenter.Test-AzDevCenterUserDevBoxCustomizationTaskAction
+name: Test-AzDevCenterUserDevBoxCustomizationTaskAction
+module: Az.DevCenter
+isPreview: false
+summary: |-
+  Validates a list of customization tasks.
+description: |-
+  Validates a list of customization tasks.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevCenterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter upon which to execute operations.
+    aliases:
+    - DevCenter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateViaIdentityExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter-specific URI to operate on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateViaIdentityExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The DevCenter Project upon which to execute operations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ValidateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ValidateExpandedByDevCenter
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Task
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.Api20240501Preview.ICustomizationTask" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Tasks to apply.
+      To construct, see NOTES section for TASK properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction
+        -Endpoint <String>
+        -ProjectName <String>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction
+        -Endpoint <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateViaIdentityExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction
+        -DevCenterName <String>
+        -InputObject <IDevCenterdataIdentity>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateViaIdentityExpandedByDevCenter
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction
+        -DevCenterName <String>
+        -ProjectName <String>
+        [-Task <ICustomizationTask[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ValidateExpandedByDevCenter
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DevCenterdata.Models.IDevCenterdataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Validate customization tasks by endpoint'
+  description: |-
+    ```powershell
+    $task = @{
+        Name = "catalogName/choco"
+        DisplayName = "choco"
+        Parameter = @{
+            PackageName = "vscode"
+            PackageVersion = "1.0.0"
+        }
+        RunAs = "System"
+        TimeoutInSecond = 120
+    }
+    $tasks = @($task)
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -ProjectName DevProject -Task $tasks
+    ```
+
+    This command validates the task "choco" by the endpoint.
+- title: 'Example 2: Validate customization tasks by dev center'
+  description: |-
+    ```powershell
+    $task = @{
+        Name = "catalogName/choco"
+        DisplayName = "choco"
+        Parameter = @{
+            PackageName = "vscode"
+            PackageVersion = "1.0.0"
+        }
+        RunAs = "User"
+        TimeoutInSecond = 120
+    }
+    $tasks = @($task)
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction -DevCenterName Contoso -ProjectName DevProject -Task $tasks
+    ```
+
+    This command validates the task "choco" by the dev center.
+- title: 'Example 3: Validate customization tasks by endpoint and InputObject'
+  description: |-
+    ```powershell
+    $task = @{
+        Name = "catalogName/choco"
+        DisplayName = "choco"
+        Parameter = @{
+            PackageName = "vscode"
+            PackageVersion = "1.0.0"
+        }
+        RunAs = "System"
+        TimeoutInSecond = 120
+    }
+    $tasks = @($task)
+    $taskInput = @{"ProjectName" = "DevProject" }
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction -Endpoint "https://8a40af38-3b4c-4672-a6a4-5e964b1870ed-contosodevcenter.centralus.devcenter.azure.com/" -InputObject $taskInput -Task $tasks
+    ```
+
+    This command validates the task "choco" by the endpoint and InputObject.
+- title: 'Example 4: Validate customization tasks by dev center and InputObject'
+  description: |-
+    ```powershell
+    $task = @{
+        Name = "catalogName/choco"
+        DisplayName = "choco"
+        Parameter = @{
+            PackageName = "vscode"
+            PackageVersion = "1.0.0"
+        }
+        RunAs = "System"
+        TimeoutInSecond = 120
+    }
+    $tasks = @($task)
+    $taskInput = @{"ProjectName" = "DevProject" }
+    Test-AzDevCenterUserDevBoxCustomizationTaskAction -DevCenterName Contoso -InputObject $taskInput -Task $tasks
+    ```
+
+    This command validates the task "choco" by the dev center and InputObject.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Test-AzDevCenterUserDevBoxCustomizationTaskAction.md
+  document type: cmdlet
+  external help file: Az.DevCenter-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.devcenter/test-azdevcenteruserdevboxcustomizationtaskaction
+  Module Name: Az.DevCenter
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DevCenter/DevCenter/help/Test-AzDevCenterUserDevBoxCustomizationTaskAction.md
+  PlatyPS schema version: 2024-05-01

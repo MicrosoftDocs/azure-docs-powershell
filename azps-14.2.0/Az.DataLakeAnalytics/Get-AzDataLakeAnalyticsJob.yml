@@ -1,0 +1,339 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsJob
+name: Get-AzDataLakeAnalyticsJob
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Gets a Data Lake Analytics job.
+description: |-
+  The **Get-AzDataLakeAnalyticsJob** cmdlet gets an Azure Data Lake Analytics job.
+  If you do not specify a job, this cmdlet gets all jobs.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a Data Lake Analytics account.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Include
+    type: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies options that indicate the type of additional information to retrieve about the job.
+      The acceptable values for this parameter are:
+      - None
+      - DebugInfo
+      - Statistics
+      - All
+    acceptedValues:
+    - None
+    - All
+    - DebugInfo
+    - Statistics
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetBySpecificJobInformation
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetBySpecificJobInformation
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name to use to filter the job list results.
+      The acceptable values for this parameter are:
+      - None
+      - DebugInfo
+      - Statistics
+      - All
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional ID that indicates only jobs part of the specified pipeline should be returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecurrenceId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional ID that indicates only jobs part of the specified recurrence should be returned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Result
+    type: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a result filter for the job results.
+      The acceptable values for this parameter are:
+      - None
+      - Cancelled
+      - Failed
+      - Succeeded
+    acceptedValues:
+    - None
+    - Succeeded
+    - Cancelled
+    - Failed
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: State
+    type: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobState" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a state filter for the job results.
+      The acceptable values for this parameter are:
+      - Accepted
+      - New
+      - Compiling
+      - Scheduling
+      - Queued
+      - Starting
+      - Paused
+      - Running
+      - Ended
+    acceptedValues:
+    - Accepted
+    - Compiling
+    - Ended
+    - New
+    - Queued
+    - Running
+    - Scheduling
+    - Starting
+    - Paused
+    - WaitingForCapacity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedAfter
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a date filter.
+      Use this parameter to filter the job list result to jobs submitted after the specified date.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubmittedBefore
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a date filter.
+      Use this parameter to filter the job list result to jobs submitted before the specified date.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Submitter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the email address of a user.
+      Use this parameter to filter the job list results to jobs submitted by a specified user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      An optional value which indicates the number of jobs to return. Default value is 500
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetAllInResourceGroupAndAccount
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [[-Name] <String>]
+        [[-Submitter] <String>]
+        [[-SubmittedAfter] <DateTimeOffset>]
+        [[-SubmittedBefore] <DateTimeOffset>]
+        [[-State] <JobState[]>]
+        [[-Result] <JobResult[]>]
+        [-Top <Int32>]
+        [-PipelineId <Guid>]
+        [-RecurrenceId <Guid>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllInResourceGroupAndAccount
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsJob
+        [-Account] <String>
+        [-JobId] <Guid>
+        [[-Include] <ExtendedJobData>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetBySpecificJobInformation
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.DataLakeAnalyticsEnums+ExtendedJobData" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobState" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobResult" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.JobInformation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specified job'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJob -Account "contosoadla" -JobId $JobID01
+    ```
+
+    This command gets the job with the specified ID.
+- title: 'Example 2: Get jobs submitted in the past week'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsJob -Account "contosoadla" -SubmittedAfter (Get-Date).AddDays(-7)
+    ```
+
+    This command gets jobs submitted in the past week.
+links:
+- text: Stop-AzDataLakeAnalyticsJob
+  href: ./Stop-AzDataLakeAnalyticsJob.yml
+- text: Submit-AzDataLakeAnalyticsJob
+  href: ./Submit-AzDataLakeAnalyticsJob.yml
+- text: Wait-AzDataLakeAnalyticsJob
+  href: ./Wait-AzDataLakeAnalyticsJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsjob
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: A0293D80-5935-4D2C-AF11-2837FEC95760
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsJob.md
+  PlatyPS schema version: 2024-05-01

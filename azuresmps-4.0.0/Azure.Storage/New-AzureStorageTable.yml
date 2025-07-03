@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.New-AzureStorageTable
+name: New-AzureStorageTable
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Creates a storage table.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorageTable** cmdlet creates a storage table associated with the storage account in Azure.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage context.
+      To create it, you can use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the new table.
+    aliases:
+    - N
+    - Table
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorageTable
+        [-Name] <String>
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create an azure storage table'
+  description: |-
+    ```
+    PS C:\>New-AzureStorageTable -Name "tableabc"
+    ```
+
+    This command creates a storage table with a name of tableabc.
+- title: 'Example 2: Create multiple azure storage tables'
+  description: |-
+    ```
+    PS C:\>"table1 table2 table3".split() | New-AzureStorageTable
+    ```
+
+    This command creates multiple tables.
+    It uses the **Split** method of the .NET **String** class and then passes the names on the pipeline.
+links:
+- text: Get-AzureStorageTable
+  href: ./Get-AzureStorageTable.yml
+- text: Remove-AzureStorageTable
+  href: ./Remove-AzureStorageTable.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 3B4F32F3-51ED-4851-B38F-172658186C96
+  PlatyPS schema version: 2024-05-01

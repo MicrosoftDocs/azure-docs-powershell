@@ -1,0 +1,49 @@
+### YamlMime:PowerShellModule1
+uid: Az.Sphere
+name: Az.Sphere Module
+isPreview: false
+cmdletGroups:
+- title: Sphere
+  cmdlets:
+  - Az.Sphere.Get-AzSphereCatalog
+  - Az.Sphere.Get-AzSphereCatalogDevice
+  - Az.Sphere.Get-AzSphereCatalogDeviceGroup
+  - Az.Sphere.Get-AzSphereCatalogDeviceInsight
+  - Az.Sphere.Get-AzSphereCertificate
+  - Az.Sphere.Get-AzSphereCertificateCertChain
+  - Az.Sphere.Get-AzSphereCertificateProof
+  - Az.Sphere.Get-AzSphereDeployment
+  - Az.Sphere.Get-AzSphereDevice
+  - Az.Sphere.Get-AzSphereDeviceGroup
+  - Az.Sphere.Get-AzSphereImage
+  - Az.Sphere.Get-AzSphereProduct
+  - Az.Sphere.Invoke-AzSphereCountCatalogDevice
+  - Az.Sphere.Invoke-AzSphereCountDeviceGroupDevice
+  - Az.Sphere.Invoke-AzSphereCountProductDevice
+  - Az.Sphere.New-AzSphereCatalog
+  - Az.Sphere.New-AzSphereDeployment
+  - Az.Sphere.New-AzSphereDevice
+  - Az.Sphere.New-AzSphereDeviceCapabilityImage
+  - Az.Sphere.New-AzSphereDeviceGroup
+  - Az.Sphere.New-AzSphereImage
+  - Az.Sphere.New-AzSphereProduct
+  - Az.Sphere.New-AzSphereProductDefaultDeviceGroup
+  - Az.Sphere.Remove-AzSphereCatalog
+  - Az.Sphere.Remove-AzSphereDeviceGroup
+  - Az.Sphere.Remove-AzSphereProduct
+  - Az.Sphere.Update-AzSphereCatalog
+  - Az.Sphere.Update-AzSphereDevice
+  - Az.Sphere.Update-AzSphereDeviceGroup
+  - Az.Sphere.Update-AzSphereProduct
+description: |-
+  Microsoft Azure PowerShell: Sphere cmdlets
+metadata:
+  Module Name: Az.Sphere
+  Module Guid: 4855dcb5-d1a4-45e3-b4b2-49d37925ed0b
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.sphere
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Az.Sphere.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sphere/Sphere/help/Az.Sphere.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

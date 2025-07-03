@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkInterfaceIpConfig
+name: Get-AzNetworkInterfaceIpConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a network interface IP configuration for a network interface.
+description: |-
+  The **Get-AzNetworkInterfaceIPConfig** cmdlet gets a network interface IP configuration from an Azure network interface.
+notes: |-
+  * Keywords: azure, azurerm, arm, resource, management, manager, network, networking
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network IP configuration that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkInterface
+    type: <xref href="PSNetworkInterface" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **NetworkInterface** object that contains the network IP configuration that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkInterfaceIpConfig
+        [-Name <String>]
+        -NetworkInterface <PSNetworkInterface>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSNetworkInterface" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'NetworkInterface' accepts value of type 'PSNetworkInterface' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkInterfaceIPConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: '1: Get an IP configuration of a network interface'
+  description: |-
+    ```
+    $nic1 = Get-AzNetworkInterface -Name mynic -ResourceGroupName $myrg
+    Get-AzNetworkInterfaceIpConfig -Name ipconfig1 -NetworkInterface $nic1
+    ```
+
+    The first command gets an existing network interface called mynic and stores it in the variable $nic1. The second
+        command gets the IP configuration called ipconfig1 of this network interface.
+links:
+- text: Add-AzNetworkInterfaceIpConfig
+  href: ./Add-AzNetworkInterfaceIpConfig.yml
+- text: New-AzNetworkInterfaceIpConfig
+  href: ./New-AzNetworkInterfaceIpConfig.yml
+- text: Remove-AzNetworkInterfaceIpConfig
+  href: ./Remove-AzNetworkInterfaceIpConfig.yml
+- text: Set-AzNetworkInterfaceIpConfig
+  href: ./Set-AzNetworkInterfaceIpConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkInterfaceIpConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/get-aznetworkinterfaceipconfig
+  Module Name: Az.Network
+  ms.assetid: 1B39809C-90DA-4ECB-B949-D4A9A54ED982
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Get-AzNetworkInterfaceIpConfig.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureDns
+name: New-AzureDns
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Azure DNS settings object.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureDns** cmdlet creates an Azure DNS settings object.
+  You can use a DNS settings object when you create a virtual machine by using the **New-AzureVM** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPAddress
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the IP address of the DNS server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a friendly name for the DNS server.
+      This name is not necessarily a fully qualified domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureDns
+        [-Name] <String>
+        [-IPAddress] <String>
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create a DNS settings object'
+  description: |-
+    ```
+    PS C:\> $Dns = New-AzureDns -Name "Dns01" -IPAddress "10.1.2.4"
+    ```
+
+    This command creates an Azure DNS settings object.
+    The DNS server has the specified address and the friendly name Dns01.
+    The command stores the object in the $Dns variable for use by the **New-AzureVM** cmdlet.
+links:
+- text: Add-AzureDns
+  href: ./Add-AzureDns.yml
+- text: Get-AzureDns
+  href: ./Get-AzureDns.yml
+- text: New-AzureVM
+  href: ./New-AzureVM.yml
+- text: Remove-AzureDns
+  href: ./Remove-AzureDns.yml
+- text: Set-AzureDns
+  href: ./Set-AzureDns.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 1085388B-0855-4E29-9043-3FE2C638F58D
+  PlatyPS schema version: 2024-05-01

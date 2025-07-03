@@ -1,0 +1,21 @@
+### YamlMime:PowerShellModule1
+uid: Az.BareMetal
+name: Az.BareMetal Module
+isPreview: false
+cmdletGroups:
+- title: BareMetal
+  cmdlets:
+  - Az.BareMetal.Get-AzBareMetal
+  - Az.BareMetal.Update-AzBareMetal
+description: |-
+  Microsoft Azure PowerShell: BareMetal cmdlets
+metadata:
+  Module Name: Az.BareMetal
+  Module Guid: 4b038ccd-b128-4b3d-be04-8a9921c69093
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.baremetal
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BareMetal/BareMetal/help/Az.BareMetal.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BareMetal/BareMetal/help/Az.BareMetal.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

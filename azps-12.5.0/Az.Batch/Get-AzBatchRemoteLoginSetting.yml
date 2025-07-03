@@ -1,0 +1,179 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.Get-AzBatchRemoteLoginSetting
+name: Get-AzBatchRemoteLoginSetting
+module: Az.Batch
+isPreview: false
+summary: |-
+  Gets remote logon settings for a compute node.
+description: |-
+  The **Get-AzBatchRemoteLoginSetting** cmdlet gets remote logon settings for a compute node in a virtual machines infrastructure-based pool.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      To obtain a **BatchAccountContext** that contains access keys for your subscription, use the Get-AzBatchAccountKey cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeNode
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSComputeNode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a compute node, as a **PSComputeNode** object, for which this cmdlet gets remote logon settings.
+      To obtain a compute node object, use the Get-AzBatchComputeNode cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputeNodeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the compute node for which to get the remote logon settings.
+      for which this cmdlet gets remote logon settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the pool that contains the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Id
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBatchRemoteLoginSetting
+        [-PoolId] <String>
+        [-ComputeNodeId] <String>
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Id
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBatchRemoteLoginSetting
+        [[-ComputeNode] <PSComputeNode>]
+        -BatchContext <BatchAccountContext>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSComputeNode" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Batch.Models.PSRemoteLoginSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get remote logon settings for all nodes in a pool'
+  description: |-
+    ```powershell
+    $Context = Get-AzBatchAccountKey -AccountName "ContosoBatchAccount"
+    Get-AzBatchComputeNode -PoolId "ContosoPool" -BatchContext $Context | Get-AzBatchRemoteLoginSetting -BatchContext $Context
+    ```
+
+    ```output
+    IPAddress       Port
+    ---------       ----
+    10.214.75.221   50002
+    10.214.75.221   50001
+    10.214.75.221   50000
+    ```
+
+    The first command gets a batch account context that contains access keys for your subscription by using **Get-AzBatchAccountKey**.
+    The command stores the context in the $Context variable to use in the next command.
+    The second command gets each compute node in the pool that has the ID ContosoPool by using **Get-AzBatchComputeNode**.
+    The command passes each computer node to the current cmdlet by using the pipeline operator.
+    The command gets the remote logon settings for each compute node.
+- title: 'Example 2: Get remote logon settings for a node'
+  description: |-
+    ```powershell
+    $Context = Get-AzBatchAccountKey -AccountName "ContosoBatchAccount"
+    Get-AzBatchRemoteLoginSetting -PoolId "ContosoPool" -ComputeNodeId "tvm-1900272697_1-20150330t205553z" -BatchContext $Context
+    ```
+
+    ```output
+    IPAddress       Port
+    ---------       ----
+    10.214.75.221   50000
+    ```
+
+    The first command gets a batch account context that contains access keys for your subscription, and then stores it in the $Context variable.
+    The second command gets the remote logon settings for the compute node that has the specified ID in the pool that has the ID ContosoPool.
+links:
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Get-AzBatchComputeNode
+  href: ./Get-AzBatchComputeNode.yml
+- text: Get-AzBatchRemoteDesktopProtocolFile
+  href: ./Get-AzBatchRemoteDesktopProtocolFile.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchRemoteLoginSetting.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/get-azbatchremoteloginsetting
+  Module Name: Az.Batch
+  ms.assetid: 07811B64-6A77-452C-B148-DE8C13E73DEF
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/Get-AzBatchRemoteLoginSetting.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Set-AzDataLakeStoreItemExpiry
+name: Set-AzDataLakeStoreItemExpiry
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Sets or removes the expire time for a file in an Azure Data Lake Store account.
+description: |-
+  The **Set-AzDataLakeStoreItemExpiry** cmdlet sets or removes the expire time for a file in an Azure Data Lake Store account.
+notes: |-
+  Alias: Set-AdlStoreItemExpiry
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store account name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expiration
+    type: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+    description: |-
+      The absolute expiration time for the specified file.
+      If no value or set to MaxValue, the file will never expire.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetAbsoluteNeverExpireExpiry
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Store path of the file item for which to set or remove expiry.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RelativeFileExpiryOption
+    type: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+PathRelativeExpiryOptions" data-throw-if-not-resolved="False" />
+    description: |-
+      Relative expiry options. RelativeToNow or RelativeToCreationDate are current options
+    acceptedValues:
+    - RelativeToNow
+    - RelativeToCreationDate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetRelativeExpiry
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RelativeTime
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The relative time in milliseconds with respect to now or creation time
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetRelativeExpiry
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeStoreItemExpiry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [[-Expiration] <DateTimeOffset>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetAbsoluteNeverExpireExpiry
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeStoreItemExpiry
+        [-Account] <String>
+        [-Path] <DataLakeStorePathInstance>
+        [-RelativeFileExpiryOption] <PathRelativeExpiryOptions>
+        [[-RelativeTime] <Int64>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetRelativeExpiry
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStorePathInstance" data-throw-if-not-resolved="False" />
+- name: <xref href="System.DateTimeOffset" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreEnums+PathRelativeExpiryOptions" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.DataLakeStoreItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the expiration time for a file'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt -Expiration ([DateTimeOffset]::Now.AddHours(2))
+    ```
+
+    Sets expiration on the file myfile.txt in account ContosoADL to be two hours from now.
+    This will cause the file to expire (be marked for delete) in two hours.
+- title: 'Example 2: Remove the expiration on a file'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreItemExpiry -AccountName "ContosoADL" -Path /myfile.txt
+    ```
+
+    Removes any expiration that was previously set on file 'myfile.txt' in account 'ContosoADL'.
+    This means the file will not automatically expire (be marked for delete) and will need to be manually deleted or set to expire again.
+- title: 'Example 3: Set expiration time for a file relative to now'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreItemExpiry -Account "ContosoADL" -Path /myfile.txt -RelativeFileExpiryOption RelativeToNow -RelativeTime 240000
+    Set-AzDataLakeStoreItemExpiry -Account "ContosoADL" -Path /myfile.txt -RelativeFileExpiryOption RelativeToCreationDate -RelativeTime 240000
+    ```
+
+    The first command sets the expiration time of the file /myfile.txt 240 seconds relative to current time at server.
+    The second command sets the expiration time of the file /myfile.txt 240 seconds relative to creation time at server.
+links:
+- text: Get-AzDataLakeStoreItem
+  href: ./Get-AzDataLakeStoreItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemExpiry.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/set-azdatalakestoreitemexpiry
+  Module Name: Az.DataLakeStore
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreItemExpiry.md
+  PlatyPS schema version: 2024-05-01

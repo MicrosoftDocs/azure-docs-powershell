@@ -1,0 +1,480 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlInstanceLink
+name: Get-AzSqlInstanceLink
+module: Az.Sql
+isPreview: false
+summary: |-
+  Returns information about link feature for Azure SQL Managed Instance.
+description: |-
+  The **Get-AzSqlInstanceLink** cmdlet returns information about one or more instance of Managed Instance links. Specify the name of a link to see information for that link only.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the managed instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed instance resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInstanceResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Managed Instance link name.
+    aliases:
+    - LinkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByParentObjectParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByInstanceResourceIdParameterSet
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The instance link resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceLink
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceLink
+        [[-Name] <String>]
+        [-InstanceObject] <AzureSqlManagedInstanceModel>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceLink
+        [[-Name] <String>]
+        [-InstanceResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByInstanceResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceLink
+        [-ResourceId] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstanceHybridLink.Model.AzureSqlManagedInstanceLinkModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information about an active link on Azure SQL Managed Instance'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Link01"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about the instance link named "Link01" on instance "Instance01" and resource group "ResourceGroup01".
+- title: 'Example 2: Get information about all active links on Azure SQL Managed Instance'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceLink -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01"
+    ```
+
+    ```Output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link02
+    Name                             : Link02
+    DistributedAvailabilityGroupName : Link02
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database02}
+    InstanceAvailabilityGroupName    : AG_Database02_MI
+    PartnerAvailabilityGroupName     : AG_Database02
+    PartnerEndpoint                  : TCP://SERVER02:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about all active instance links on instance "ManagedInstance01" and resource group "ResourceGroup01".
+- title: 'Example 3: Get all instance links on Azure SQL Managed Instance using Instance object'
+  description: |-
+    ```powershell
+    $instance = Get-AzSqlInstance -Name "ManagedInstance01" -ResourceGroupName "ResourceGroup01"
+    Get-AzSqlInstanceLink -InstanceObject $instance
+    ```
+
+    ```Output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link02
+    Name                             : Link02
+    DistributedAvailabilityGroupName : Link02
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database02}
+    InstanceAvailabilityGroupName    : AG_Database02_MI
+    PartnerAvailabilityGroupName     : AG_Database02
+    PartnerEndpoint                  : TCP://SERVER02:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information on all active instance links on the instance "ManagedInstance01".
+- title: 'Example 4: Get all instance links on Azure SQL Managed Instance using resource identifier'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceLink -InstanceResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01"
+    ```
+
+    ```Output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link02
+    Name                             : Link02
+    DistributedAvailabilityGroupName : Link02
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database02}
+    InstanceAvailabilityGroupName    : AG_Database02_MI
+    PartnerAvailabilityGroupName     : AG_Database02
+    PartnerEndpoint                  : TCP://SERVER02:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about all instance links for the instance "ManagedInstance01".
+- title: 'Example 5: Get an instance link using its resource identifier'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceLink -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/resourcegroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about the instance link named "Link01".
+- title: 'Example 6: Get all instance links for a Managed Instance by piping an instance object'
+  description: |-
+    ```powershell
+    Get-AzSqlInstance -Name "ManagedInstance01" -ResourceGroupName "ResourceGroup01" | Get-AzSqlInstanceLink
+    ```
+
+    ```Output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link02
+    Name                             : Link02
+    DistributedAvailabilityGroupName : Link02
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database02}
+    InstanceAvailabilityGroupName    : AG_Database02_MI
+    PartnerAvailabilityGroupName     : AG_Database02
+    PartnerEndpoint                  : TCP://SERVER02:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about all instance links within the instance "ManagedInstance01".
+- title: 'Example 7: Get a specific instance link for an instance by piping an instance object and specifying the link name'
+  description: |-
+    ```powershell
+    Get-AzSqlInstance -Name "ManagedInstance01" -ResourceGroupName "ResourceGroup01" | Get-AzSqlInstanceLink -Name "Link01"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about the instance link named "Link01: within the instance "Instance01".
+- title: 'Example 8: Get information about instance link using positional parameters'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceLink "ResourceGroup01" "ManagedInstance01" "Link01"
+    ```
+
+    ```output
+    ResourceGroupName                : ResourceGroup01
+    InstanceName                     : ManagedInstance01
+    Type                             : Microsoft.Sql/managedInstances/distributedAvailabilityGroups
+    Id                               : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/distributedAvailabilityGroups/Link01
+    Name                             : Link01
+    DistributedAvailabilityGroupName : Link01
+    DistributedAvailabilityGroupId   : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    Databases                        : {Database01}
+    InstanceAvailabilityGroupName    : AG_Database01_MI
+    PartnerAvailabilityGroupName     : AG_Database01
+    PartnerEndpoint                  : TCP://SERVER01:5022
+    InstanceLinkRole                 : Secondary
+    PartnerLinkRole                  : Primary
+    ReplicationMode                  : Async
+    FailoverMode                     : Manual
+    SeedingMode                      : Automatic
+    ```
+
+    This command gets information about the instance link named "Link01" on instance "Instance01" and resource group "ResourceGroup01".
+links:
+- text: New-AzSqlInstanceLink
+  href: ./New-AzSqlInstanceLink.yml
+- text: Update-AzSqlInstanceLink
+  href: ./Update-AzSqlInstanceLink.yml
+- text: Remove-AzSqlInstanceLink
+  href: ./Remove-AzSqlInstanceLink.yml
+- text: Start-AzSqlInstanceLinkFailover
+  href: ./Start-AzSqlInstanceLinkFailover.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceLink.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlinstancelink
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceLink.md
+  PlatyPS schema version: 2024-05-01

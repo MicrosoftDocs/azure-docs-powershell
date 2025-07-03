@@ -1,0 +1,133 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Communication.Get-AzEmailServicedataEmailSendResult
+name: Get-AzEmailServicedataEmailSendResult
+module: Az.Communication
+isPreview: false
+summary: |-
+  Gets the status of the email send operation.
+description: |-
+  Gets the status of the email send operation.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The communication resource, for example `https://my-resource.communication.azure.com`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailServicedataIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the long running operation (GUID) returned from a previous call to send email
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServicedataEmailSendResult
+        -Endpoint <String>
+        -OperationId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzEmailServicedataEmailSendResult
+        -Endpoint <String>
+        -InputObject <IEmailServicedataIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailServicedataIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EmailServicedata.Models.IEmailSendResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets the status and operation id of the email send operation.'
+  description: |-
+    ```powershell
+    Get-AzEmailServicedataEmailSendResult -Endpoint "https://contoso.unitedstates.communication.azure.com" -OperationId 1111c0de-899f-5cce-acb5-3ec493af3800
+    ```
+
+    ```output
+    AdditionalInfo    :
+    Code              :
+    Detail            :
+    Id                : 1111c0de-899f-5cce-acb5-3ec493af3800
+    Message           :
+    ResourceGroupName :
+    RetryAfter        :
+    Status            : Succeeded
+    Target            :
+    ```
+
+    Returns a status and operation id of the email send operation.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzEmailServicedataEmailSendResult.md
+  document type: cmdlet
+  external help file: Az.Communication-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.communication/get-azemailservicedataemailsendresult
+  Module Name: Az.Communication
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Communication/Communication/help/Get-AzEmailServicedataEmailSendResult.md
+  PlatyPS schema version: 2024-05-01

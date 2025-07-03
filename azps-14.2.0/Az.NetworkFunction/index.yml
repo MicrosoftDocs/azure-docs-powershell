@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.NetworkFunction
+name: Az.NetworkFunction Module
+isPreview: false
+cmdletGroups:
+- title: NetworkFunction
+  cmdlets:
+  - Az.NetworkFunction.Get-AzNetworkFunctionCollectorPolicy
+  - Az.NetworkFunction.Get-AzNetworkFunctionTrafficCollector
+  - Az.NetworkFunction.New-AzNetworkFunctionCollectorPolicy
+  - Az.NetworkFunction.New-AzNetworkFunctionTrafficCollector
+  - Az.NetworkFunction.Remove-AzNetworkFunctionCollectorPolicy
+  - Az.NetworkFunction.Remove-AzNetworkFunctionTrafficCollector
+  - Az.NetworkFunction.Update-AzNetworkFunctionCollectorPolicy
+  - Az.NetworkFunction.Update-AzNetworkFunctionCollectorPolicyTag
+  - Az.NetworkFunction.Update-AzNetworkFunctionTrafficCollector
+  - Az.NetworkFunction.Update-AzNetworkFunctionTrafficCollectorTag
+description: |-
+  Microsoft Azure PowerShell: NetworkFunction cmdlets
+metadata:
+  Module Name: Az.NetworkFunction
+  Module Guid: 1d339b1c-5a86-4fbd-9a2e-d0497c39b397
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.networkfunction
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Az.NetworkFunction.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkFunction/NetworkFunction/help/Az.NetworkFunction.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

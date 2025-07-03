@@ -1,0 +1,236 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultKey
+name: Get-AzKeyVaultKey
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Gets Key Vault keys.
+description: |-
+  The **Get-AzKeyVaultKey** cmdlet gets Azure Key Vault keys.
+  This cmdlet gets a specific **Microsoft.Azure.Commands.KeyVault.Models.KeyBundle** or a list of all **KeyBundle** objects in a key vault or by version.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeVersions
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets all versions of a key.
+      The current version of a key is the first one on the list.
+      If you specify this parameter you must also specify the *Name* and *VaultName* parameters.
+
+      If you do not specify the *IncludeVersions* parameter, this cmdlet gets the current version of the key with the specified *Name*.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyVersions
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InRemovedState
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether to show the previously deleted keys in the output
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByDeletedKey
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the key bundle to get.
+    aliases:
+    - KeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByKeyVersions
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the key vault from which this cmdlet gets keys.
+      This cmdlet constructs the fully qualified domain name (FQDN) of a key vault based on the name that this parameter specifies and your selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Version
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the key version.
+      This cmdlet constructs the FQDN of a key based on the key vault name, your currently selected environment, the key name, and the key version.
+    aliases:
+    - KeyVersion
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByKeyName
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultKey
+        [-VaultName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVaultName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultKey
+        [-VaultName] <String>
+        [-Name] <String>
+        [[-Version] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeyName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultKey
+        [-VaultName] <String>
+        [-Name] <String>
+        [-IncludeVersions]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByKeyVersions
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultKey
+        [-VaultName] <String>
+        [[-Name] <String>]
+        [-InRemovedState]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDeletedKey
+  isDefault: false
+inputs:
+- name: <xref href="String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="List<Microsoft.Azure.Commands.KeyVault.Models.KeyIdentityItem>, Microsoft.Azure.Commands.KeyVault.Models.KeyBundle, List<Microsoft.Azure.Commands.KeyVault.Models.DeletedKeyIdentityItem>, Microsoft.Azure.Commands.KeyVault.Models.DeletedKeyBundle" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all the keys in a key vault'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso'
+    ```
+
+    This command gets all the keys in the key vault named Contoso.
+- title: 'Example 2: Get the current version of a key'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx'
+    ```
+
+    This command gets the current version of the key named ITPfx in the key vault named Contoso.
+- title: 'Example 3: Get all versions of a key'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -IncludeVersions
+    ```
+
+    This command gets all versions the key named ITPfx in the key vaultnamed Contoso.
+- title: 'Example 4: Get a specific version of a key'
+  description: |-
+    ```
+    PS C:\>$Key = Get-AzKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -Version '5A12A276385949DB8B5F82AFEE85CAED'
+    ```
+
+    This command gets a specific version of the key named ITPfx in the key vault named Contoso.
+    After running this command, you can inspect various properties of the key by navigating the $Key object.
+- title: 'Example 5: Get all the keys that have been deleted but not purged for this key vault.'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso' -InRemovedState
+    ```
+
+    This command gets all the keys that have been previously deleted, but not purged, in the key vault named Contoso.
+- title: 'Example 6: Gets the key ITPfx that has been deleted but not purged for this key vault.'
+  description: |-
+    ```
+    PS C:\>Get-AzKeyVaultKey -VaultName 'Contoso' -KeyName 'ITPfx' -InRemovedState
+    ```
+
+    This command gets the key ITPfx that has been previously deleted, but not purged, in the key vault named Contoso.
+    This command will return metadata such as the deletion date, and the scheduled purging date of this deleted key.
+links:
+- text: Add-AzKeyVaultKey
+  href: ./Add-AzKeyVaultKey.yml
+- text: Remove-AzKeyVaultKey
+  href: ./Remove-AzKeyVaultKey.yml
+- text: Undo-AzKeyVaultKeyRemoval
+  href: ./Undo-AzKeyVaultKeyRemoval.yml
+- text: Set-AzKeyVaultKeyAttribute
+  href: ./Set-AzKeyVaultKeyAttribute.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/Az.keyvault/get-AzKeyvaultkey
+  Module Name: Az.KeyVault
+  ms.assetid: 2BE34AE1-06FA-4F66-8FDB-CED22C2E0978
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/KeyVault/KeyVault/help/Get-AzKeyVaultKey.md
+  PlatyPS schema version: 2024-05-01

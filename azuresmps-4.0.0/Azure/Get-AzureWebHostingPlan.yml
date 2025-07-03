@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureWebHostingPlan
+name: Get-AzureWebHostingPlan
+module: Azure
+isPreview: false
+summary: |-
+  Gets Azure web hosting plans in the current subscription.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Get-AzureWebHostingPlan** cmdlet gets the Azure web hosting plans in the current subscription.
+
+  By default, **Get-AzureWebHostingPlan** gets all Azure hosting plans in the current subscription and returns an object that provides basic information about the plans.
+  When you use the *WebSpace* and *Name* parameters, **Get-AzureWebHostingPlan** returns a specific hosting plan object.
+
+  To find the current subscription, use the *Current* parameter of the **Get-AzureSubscription** cmdlet.
+  To change the current subscription, use the **Select-AzureSubscription** cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a plan in the subscription.
+      By default, this cmdlet gets all plans in the current subscription.
+      This parameter does not support wildcard characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebSpaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a webspace in the subscription.
+      By default, this cmdlet gets all websites in the specified webspace.
+      This parameter does not support wildcard characters.
+    aliases:
+    - WebSpace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureWebHostingPlan
+        [-WebSpaceName <String>]
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <span>undefined</span>
+  description: |-
+    You can pass input to this cmdlet by property name, but not by value.
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Websites.Services.WebEntities.WebHostingPlan" data-throw-if-not-resolved="False" />
+  description: |-
+    By default, **Get-AzureWebHostingPlan** returns an array of **WebHostingPlan** objects.
+examples:
+- title: 'Example 1: Get all web hosting plans in a subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebHostingPlan
+
+    Name : Default1
+    SKU : Basic
+    WorkerSize : Small
+    NumberOfWorkers : 1
+    CurrentWorkerSize : Small
+    CurrentNumberOfWorkers : 1
+    Status : Ready
+    WebSpace : eastuswebspace
+    Name : Default0
+    SKU : Free
+    WorkerSize : Small
+    NumberOfWorkers : 0
+    CurrentWorkerSize : Small
+    CurrentNumberOfWorkers : 0
+    Status : Ready
+    ```
+
+    This command gets all Azure web hosting plans in the current subscription.
+- title: 'Example 2: Get a specific web hosting plan in a subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzureWebHostingPlan -WebSpaceName "westeuropewebspace" -Name "Default0"
+
+    Name : Default0
+    SKU : Free
+    WorkerSize : Small
+    NumberOfWorkers : 0
+    CurrentWorkerSize : Small
+    CurrentNumberOfWorkers : 0
+    Status : Ready
+    WebSpace : westeuropewebspace
+    ```
+
+    This command gets the web hosting plan named Default0 in the webspace named westeuropewebspace in the current subscription.
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 3B3F1870-348D-4303-9520-FD81D4650F5F
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureStorSimpleDeviceConnectedInitiator
+name: Get-AzureStorSimpleDeviceConnectedInitiator
+module: Azure
+isPreview: false
+summary: |-
+  Gets the iSCSI connections available for a StorSimple device.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorSimpleDeviceConnectedInitiator** cmdlet gets a list of the iSCSI connections available for a StorSimple device.
+  The iSCSI connection objects that this cmdlet returns contain the following properties:
+
+  - **AcrInstanceId**
+  - **AcrName**
+  - **AllowedVolumeNames**
+  - **InitiatorAddress**
+  - **Interfaces**
+  - **Iqn**
+  - **IscsiConnectionId**
+
+  This cmdlet gets connection object only if iSCSI connections are turned on for the device.
+  By default, connections are turned off.
+parameters:
+  cmdletParameters:
+  - name: DeviceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance ID of the StorSimple device from which to get iSCSI initiators.
+    aliases:
+    - ID
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeviceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the StorSimple device from which to get iSCSI initiators.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdentifyByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleDeviceConnectedInitiator
+        -DeviceId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyById
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureStorSimpleDeviceConnectedInitiator
+        -DeviceName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdentifyByName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="List" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet returns an iSCSI connection object that contains the following properties:
+
+    - **AcrInstanceId**
+    - **AcrName**
+    - **AllowedVolumeNames**
+    - **InitiatorAddress**
+    - **Interfaces**
+    - **Iqn**
+    - **IscsiConnectionId**
+examples:
+- title: 'Example 1: Get all connections for a device'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorSimpleDeviceConnectedInitiator -DeviceName "Contoso63-AppVm"
+    VERBOSE: ClientRequestId: bec615b9-79ab-4671-88b0-287adeb6bf68_PS
+    VERBOSE: ClientRequestId: ef976c58-2660-41c8-aa15-c84e70c9d01c_PS
+    VERBOSE: ClientRequestId: 9b306b96-8e76-47ed-beda-d3bd2fb2bb82_PS
+    VERBOSE: ClientRequestId: 0f4fc743-0b60-45da-a45a-27f4b0f32bd2_PS
+
+    AcrInstanceId      : 55f24643-ab3a-4098-ade2-aa2b1a3ab18c
+    AcrName            : Contoso63-AppVm
+    AllowedVolumeNames : {Policyvolume1_Default}
+    InitiatorAddress   :
+    Interfaces         : {Data0}
+    Iqn                : iqn10
+    IscsiConnectionId  : cfc144cb-00f1-44b1-9655-80b431f2161b
+
+    VERBOSE: 1 Iscsi Connection found!
+    ```
+
+    This command gets all iSCSI connections for the device named Contoso63-AppVm.
+    This command returns connections only if connections are turned on for the device.
+links:
+- text: Get-AzureStorSimpleAccessControlRecord
+  href: ./Get-AzureStorSimpleAccessControlRecord.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.StorSimple.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 9436E1AB-870F-4717-ABE0-55A90C07F7E4
+  PlatyPS schema version: 2024-05-01

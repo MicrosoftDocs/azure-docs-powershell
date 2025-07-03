@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Add-AzApplicationGatewayUrlPathMapConfig
+name: Add-AzApplicationGatewayUrlPathMapConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Adds an array of URL path mappings to a backend server pool.
+description: |-
+  The **Add-AzApplicationGatewayUrlPathMapConfig** cmdlet adds an array of URL path mappings to a back end server pool.
+parameters:
+  cmdletParameters:
+  - name: ApplicationGateway
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the application gateway to which this cmdlet adds a URL path map configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultBackendAddressPool
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendAddressPool" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default backend address pool to route in case none of the rules specified in the *pathRules* parameter match.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultBackendAddressPoolId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default backend address pool ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultBackendHttpSettings
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayBackendHttpSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default backend HTTP settings to use in case none of the rules specified in the *pathRules* parameter match.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultBackendHttpSettingsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default backend HTTP settings ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultRedirectConfiguration
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRedirectConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway default RedirectConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RedirectSetByResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultRedirectConfigurationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway default RedirectConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RedirectSetByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultRewriteRuleSet
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayRewriteRuleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Application gateway default rewrite rule set
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RedirectSetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultRewriteRuleSetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the application gateway default rewrite rule set
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: BackendSetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: RedirectSetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL path map name that this cmdlet adds to the backend server pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PathRules
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGatewayPathRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a list of path rules.
+      The path rules are order sensitive, they are applied in order they are specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayUrlPathMapConfig
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -PathRules <PSApplicationGatewayPathRule[]>
+        -DefaultBackendAddressPool <PSApplicationGatewayBackendAddressPool>
+        -DefaultBackendHttpSettings <PSApplicationGatewayBackendHttpSettings>
+        [-DefaultRewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BackendSetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayUrlPathMapConfig
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -PathRules <PSApplicationGatewayPathRule[]>
+        -DefaultBackendAddressPoolId <String>
+        -DefaultBackendHttpSettingsId <String>
+        [-DefaultRewriteRuleSetId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: BackendSetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayUrlPathMapConfig
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -PathRules <PSApplicationGatewayPathRule[]>
+        -DefaultRedirectConfiguration <PSApplicationGatewayRedirectConfiguration>
+        [-DefaultRewriteRuleSet <PSApplicationGatewayRewriteRuleSet>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RedirectSetByResource
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzApplicationGatewayUrlPathMapConfig
+        -ApplicationGateway <PSApplicationGateway>
+        -Name <String>
+        -PathRules <PSApplicationGatewayPathRule[]>
+        -DefaultRedirectConfigurationId <String>
+        [-DefaultRewriteRuleSetId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RedirectSetByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add an URL path mapping to an application gateway.'
+  description: |-
+    ```powershell
+    $appgw = Get-AzApplicationGateway -ResourceGroupName "rg" -Name "appGwName"
+    $pool = Get-AzApplicationGatewayBackendAddressPool -ApplicationGateway $appgw -Name "pool01"
+    $poolSettings = Get-AzApplicationGatewayBackendHttpSetting -ApplicationGateway $appgw -Name "poolSettings01"
+    $pathRule = New-AzApplicationGatewayPathRuleConfig -Name "rule01" -Paths "/path" -BackendAddressPool $pool -BackendHttpSettings $poolSettings
+    $appgw = Add-AzApplicationGatewayUrlPathMapConfig -ApplicationGateway $appgw -Name "url01" -PathRules $pathRule -DefaultBackendAddressPool $pool -DefaultBackendHttpSettings $poolSettings
+    $appgw = Set-AzApplicationGateway -ApplicationGateway $appgw
+    ```
+
+    The first command gets an application gateway named appGwName and stores it in $appgw variable.
+    The second command gets backend address pool and stores it in $pool variable.
+    The third command gets backend http settings and stores it in $poolSettings variable.
+    The fourth command create new path rule configuration named rule01 and stores it in $pathRule variable.
+    The fifth command adds url path mapping configuration named url01 to the application gateway.
+    The sixth command updates the application gateway.
+links:
+- text: Get-AzApplicationGatewayUrlPathMapConfig
+  href: ./Get-AzApplicationGatewayUrlPathMapConfig.yml
+- text: New-AzApplicationGatewayUrlPathMapConfig
+  href: ./New-AzApplicationGatewayUrlPathMapConfig.yml
+- text: Remove-AzApplicationGatewayUrlPathMapConfig
+  href: ./Remove-AzApplicationGatewayUrlPathMapConfig.yml
+- text: Set-AzApplicationGatewayUrlPathMapConfig
+  href: ./Set-AzApplicationGatewayUrlPathMapConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzApplicationGatewayUrlPathMapConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/add-azapplicationgatewayurlpathmapconfig
+  Module Name: Az.Network
+  ms.assetid: 9D9D079C-5557-40DC-8CFB-1DCD446D9109
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Add-AzApplicationGatewayUrlPathMapConfig.md
+  PlatyPS schema version: 2024-05-01

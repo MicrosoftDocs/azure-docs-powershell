@@ -1,0 +1,46 @@
+### YamlMime:PowerShellModule1
+uid: Az.Support
+name: Az.Support Module
+isPreview: false
+cmdletGroups:
+- title: Support
+  cmdlets:
+  - Az.Support.Get-AzSupportChatTranscript
+  - Az.Support.Get-AzSupportChatTranscriptsNoSubscription
+  - Az.Support.Get-AzSupportCommunication
+  - Az.Support.Get-AzSupportCommunicationsNoSubscription
+  - Az.Support.Get-AzSupportFile
+  - Az.Support.Get-AzSupportFilesNoSubscription
+  - Az.Support.Get-AzSupportFileWorkspace
+  - Az.Support.Get-AzSupportFileWorkspacesNoSubscription
+  - Az.Support.Get-AzSupportOperation
+  - Az.Support.Get-AzSupportProblemClassification
+  - Az.Support.Get-AzSupportService
+  - Az.Support.Get-AzSupportTicket
+  - Az.Support.Get-AzSupportTicketsNoSubscription
+  - Az.Support.New-AzSupportCommunication
+  - Az.Support.New-AzSupportCommunicationsNoSubscription
+  - Az.Support.New-AzSupportFileAndUpload
+  - Az.Support.New-AzSupportFileAndUploadNoSubscription
+  - Az.Support.New-AzSupportFileWorkspace
+  - Az.Support.New-AzSupportFileWorkspacesNoSubscription
+  - Az.Support.New-AzSupportTicket
+  - Az.Support.New-AzSupportTicketsNoSubscription
+  - Az.Support.Test-AzSupportCommunicationNameAvailability
+  - Az.Support.Test-AzSupportCommunicationsNoSubscriptionNameAvailability
+  - Az.Support.Test-AzSupportTicketNameAvailability
+  - Az.Support.Test-AzSupportTicketsNoSubscriptionNameAvailability
+  - Az.Support.Update-AzSupportTicket
+  - Az.Support.Update-AzSupportTicketsNoSubscription
+description: |-
+  The topics in this section document the Azure PowerShell cmdlets for creating and managing Azure support tickets in the Azure Resource Manager (ARM) framework. The cmdlets exist in the Microsoft.Azure.Commands.Support namespace
+metadata:
+  Module Name: Az.Support
+  Module Guid: 22d73af7-38c2-4bf6-b56f-4dc9db05d97a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.support
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Az.Support.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Az.Support.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

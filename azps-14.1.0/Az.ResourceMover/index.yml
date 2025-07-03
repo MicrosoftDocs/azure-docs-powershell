@@ -1,0 +1,33 @@
+### YamlMime:PowerShellModule1
+uid: Az.ResourceMover
+name: Az.ResourceMover Module
+isPreview: false
+cmdletGroups:
+- title: Resource Mover
+  cmdlets:
+  - Az.ResourceMover.Add-AzResourceMoverMoveResource
+  - Az.ResourceMover.Get-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Get-AzResourceMoverMoveResource
+  - Az.ResourceMover.Get-AzResourceMoverRequiredForResources
+  - Az.ResourceMover.Get-AzResourceMoverUnresolvedDependency
+  - Az.ResourceMover.Invoke-AzResourceMoverBulkRemove
+  - Az.ResourceMover.Invoke-AzResourceMoverCommit
+  - Az.ResourceMover.Invoke-AzResourceMoverDiscard
+  - Az.ResourceMover.Invoke-AzResourceMoverInitiateMove
+  - Az.ResourceMover.Invoke-AzResourceMoverPrepare
+  - Az.ResourceMover.New-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Remove-AzResourceMoverMoveCollection
+  - Az.ResourceMover.Remove-AzResourceMoverMoveResource
+  - Az.ResourceMover.Resolve-AzResourceMoverMoveCollectionDependency
+description: |-
+  Microsoft Azure PowerShell: ResourceMover cmdlets
+metadata:
+  Module Name: Az.ResourceMover
+  Module Guid: 97d87543-8eef-4574-a70d-7317ec4abe54
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.resourcemover
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/ResourceMover/help/Az.ResourceMover.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ResourceMover/ResourceMover/help/Az.ResourceMover.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

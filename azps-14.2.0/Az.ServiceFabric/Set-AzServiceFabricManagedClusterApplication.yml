@@ -1,0 +1,651 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ServiceFabric.Set-AzServiceFabricManagedClusterApplication
+name: Set-AzServiceFabricManagedClusterApplication
+module: Az.ServiceFabric
+isPreview: false
+summary: |-
+  Update a service fabric managed application. This allows to update the application parameters and/or upgrade the application type version which will trigger an application upgrade or other configuration only updates. Only supports ARM deployed applications.
+description: |-
+  This cmdlet can be used to update application parameters and upgrade the application type version along with other configuration only updates. Updating the parameter will only change the model in ARM side, only when a new type version is used, the command will trigger an application upgrade. The type version specified should already be created in the cluster using **New-AzServiceFabricManagedClusterApplicationTypeVersion**.
+parameters:
+  cmdletParameters:
+  - name: ApplicationParameter
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the application parameters as key/value pairs.
+      These parameters must exist in the application manifest.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationTypeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the application type version
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background and return a Job to track progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroup
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConsiderWarningAsError
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to treat a warning health event as an error event during health evaluation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultServiceTypeMaxPercentUnhealthyPartitionsPerService
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum percent of unhealthy partitions per service allowed by the health policy for the default service type to use for the monitored upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultServiceTypeMaxPercentUnhealthyReplicasPerPartition
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum percent of unhealthy replicas per service allowed by the health policy for the default service type to use for the monitored upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultServiceTypeUnhealthyServicesMaxPercent
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum percent of unhealthy services allowed by the health policy for the default service type to use for the monitored upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FailureAction
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.FailureAction" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action to take if the monitored upgrade fails.
+      The acceptable values for this parameter are Rollback or Manual.
+    acceptedValues:
+    - Rollback
+    - Manual
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Continue without prompts
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ForceRestart
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the service host restarts even if the upgrade is a configuration-only change.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthCheckRetryTimeoutSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration, in seconds, after which Service Fabric retries the health check if the previous health check fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthCheckStableDurationSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration, in seconds, that Service Fabric waits in order to verify that the application is stable before moving to the next upgrade domain or completing the upgrade.
+      This wait duration prevents undetected changes of health right after the health check is performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HealthCheckWaitDurationSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration, in seconds, that Service Fabric waits before it performs the initial health check after it finishes the upgrade on the upgrade domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      The managed application resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceCloseDelayDurationSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the duration in seconds, to wait before a stateless instance is closed, to allow the active requests to drain gracefully.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the application
+    aliases:
+    - ApplicationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroup
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecreateApplication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines whether the application should be recreated on update.
+      If value=true, the rest of the upgrade policy parameters are not allowed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceGroup
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Arm ResourceId of the managed application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceTypeHealthPolicyMap
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the map of the health policy to use for different service types as a hash table in the following format: @ {"ServiceTypeName" : "MaxPercentUnhealthyPartitionsPerService,MaxPercentUnhealthyReplicasPerPartition,MaxPercentUnhealthyServices"}.
+      For example: @{ "ServiceTypeName01" = "5,10,5"; "ServiceTypeName02" = "5,5,5" }
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the tags as key/value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UnhealthyDeployedApplicationsMaxPercent
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum percentage of the application instances deployed on the nodes in the cluster that have a health state of error before the application health state for the cluster is error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeDomainTimeoutSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum time, in seconds, that Service Fabric takes to upgrade a single upgrade domain.
+      After this period, the upgrade fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeMode
+    type: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.ApplicationUpgradeMode" data-throw-if-not-resolved="False" />
+    description: |-
+      The mode used to monitor health during a rolling upgrade.
+      The values are Monitored, and UnmonitoredAuto.
+    acceptedValues:
+    - Monitored
+    - UnmonitoredAuto
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeReplicaSetCheckTimeoutSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum time that Service Fabric waits for a service to reconfigure into a safe state, if not already in a safe state, before Service Fabric proceeds with the upgrade.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UpgradeTimeoutSec
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum time, in seconds, that Service Fabric takes for the entire upgrade.
+      After this period, the upgrade fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzServiceFabricManagedClusterApplication
+        [-ResourceGroupName] <String>
+        [-ClusterName] <String>
+        [-Name] <String>
+        [[-ApplicationTypeVersion] <String>]
+        [-ApplicationParameter <Hashtable>]
+        [-ForceRestart]
+        [-RecreateApplication]
+        [-UpgradeReplicaSetCheckTimeoutSec <Int32>]
+        [-InstanceCloseDelayDurationSec <Int32>]
+        [-UpgradeMode <ApplicationUpgradeMode>]
+        [-FailureAction <FailureAction>]
+        [-HealthCheckRetryTimeoutSec <Int32>]
+        [-HealthCheckWaitDurationSec <Int32>]
+        [-HealthCheckStableDurationSec <Int32>]
+        [-UpgradeDomainTimeoutSec <Int32>]
+        [-UpgradeTimeoutSec <Int32>]
+        [-ConsiderWarningAsError]
+        [-DefaultServiceTypeMaxPercentUnhealthyPartitionsPerService <Int32>]
+        [-DefaultServiceTypeMaxPercentUnhealthyReplicasPerPartition <Int32>]
+        [-DefaultServiceTypeUnhealthyServicesMaxPercent <Int32>]
+        [-UnhealthyDeployedApplicationsMaxPercent <Int32>]
+        [-ServiceTypeHealthPolicyMap <Hashtable>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceGroup
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzServiceFabricManagedClusterApplication
+        [[-ApplicationTypeVersion] <String>]
+        -ResourceId <String>
+        [-ApplicationParameter <Hashtable>]
+        [-ForceRestart]
+        [-RecreateApplication]
+        [-UpgradeReplicaSetCheckTimeoutSec <Int32>]
+        [-InstanceCloseDelayDurationSec <Int32>]
+        [-UpgradeMode <ApplicationUpgradeMode>]
+        [-FailureAction <FailureAction>]
+        [-HealthCheckRetryTimeoutSec <Int32>]
+        [-HealthCheckWaitDurationSec <Int32>]
+        [-HealthCheckStableDurationSec <Int32>]
+        [-UpgradeDomainTimeoutSec <Int32>]
+        [-UpgradeTimeoutSec <Int32>]
+        [-ConsiderWarningAsError]
+        [-DefaultServiceTypeMaxPercentUnhealthyPartitionsPerService <Int32>]
+        [-DefaultServiceTypeMaxPercentUnhealthyReplicasPerPartition <Int32>]
+        [-DefaultServiceTypeUnhealthyServicesMaxPercent <Int32>]
+        [-UnhealthyDeployedApplicationsMaxPercent <Int32>]
+        [-ServiceTypeHealthPolicyMap <Hashtable>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzServiceFabricManagedClusterApplication
+        [[-ApplicationTypeVersion] <String>]
+        -InputObject <PSManagedApplication>
+        [-ApplicationParameter <Hashtable>]
+        [-ForceRestart]
+        [-RecreateApplication]
+        [-UpgradeReplicaSetCheckTimeoutSec <Int32>]
+        [-InstanceCloseDelayDurationSec <Int32>]
+        [-UpgradeMode <ApplicationUpgradeMode>]
+        [-FailureAction <FailureAction>]
+        [-HealthCheckRetryTimeoutSec <Int32>]
+        [-HealthCheckWaitDurationSec <Int32>]
+        [-HealthCheckStableDurationSec <Int32>]
+        [-UpgradeDomainTimeoutSec <Int32>]
+        [-UpgradeTimeoutSec <Int32>]
+        [-ConsiderWarningAsError]
+        [-DefaultServiceTypeMaxPercentUnhealthyPartitionsPerService <Int32>]
+        [-DefaultServiceTypeMaxPercentUnhealthyReplicasPerPartition <Int32>]
+        [-DefaultServiceTypeUnhealthyServicesMaxPercent <Int32>]
+        [-UnhealthyDeployedApplicationsMaxPercent <Int32>]
+        [-ServiceTypeHealthPolicyMap <Hashtable>]
+        [-Tag <Hashtable>]
+        [-Force]
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedApplication" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ServiceFabric.Models.PSManagedApplication" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $resourceGroupName = "testRG"
+    $clusterName = "testCluster"
+    $appName = "testApp"
+    $version = "v2"
+    $packageUrl = "https://sftestapp.blob.core.windows.net/sftestapp/testAppType_v2.sfpkg"
+    New-AzServiceFabricManagedClusterApplicationTypeVersion -ResourceGroupName $resourceGroupName -ClusterName $clusterName -Name $appName -Version $version -PackageUrl $packageUrl -Verbose
+    Set-AzServiceFabricManagedClusterApplication -ResourceGroupName $resourceGroupName -ClusterName $clusterName -ApplicationTypeVersion $version -Name $appName -ApplicationParameter @{key0="value0";key1=$null;key2="value2"} -Tag @{tag0="updated"}
+    ```
+
+    This example will start an managed application upgrade to update the type version to "v2" which was created with **New-AzServiceFabricManagedClusterApplicationTypeVersion**. The application parameters used should be defined in the application manifest.
+- title: Example 2
+  description: |-
+    ```powershell
+    $resourceGroupName = "testRG"
+    $clusterName = "testCluster"
+    $appName = "testApp"
+    Set-AzServiceFabricManagedClusterApplication -ResourceGroupName $resourceGroupName -ClusterName $clusterName -Name $appName -FailureAction Rollback -ForceRestart:$false -Verbose
+    ```
+
+    This example will updates the FailureAction and sets ForceRestart to false.
+- title: Example 3
+  description: |-
+    ```powershell
+    $resourceGroupName = "testRG"
+    $clusterName = "testCluster"
+    $appName = "testApp"
+    $version = "v2"
+    $packageUrl = "https://sftestapp.blob.core.windows.net/sftestapp/testAppType_v2.sfpkg"
+    New-AzServiceFabricManagedClusterApplicationTypeVersion -ResourceGroupName $resourceGroupName -ClusterName $clusterName -Name $appName -Version $version -PackageUrl $packageUrl -Verbose
+    Set-AzServiceFabricManagedClusterApplication -ResourceGroupName $resourceGroupName -ClusterName $clusterName -ApplicationTypeVersion $version -Name $appName -ApplicationParameter @{key0="value0";key1=$null;key2="value2"} -HealthCheckStableDurationSec 0 -HealthCheckWaitDurationSec 0 -HealthCheckRetryTimeoutSec 0 -UpgradeDomainTimeoutSec 5000 -UpgradeTimeoutSec 7000 -FailureAction Rollback -UpgradeReplicaSetCheckTimeoutSec 300 -ForceRestart
+    ```
+
+    This example will start an application upgrade to update the type version to "v2" and also sets some upgrade policy parameters that will take effect from the current upgrade.
+- title: Example 4
+  description: |-
+    ```powershell
+    Set-AzServiceFabricManagedClusterApplication -ResourceGroupName $resourceGroupName -ClusterName $clusterName -Name $appName -ApplicationParameter @{key0="value0";key1=$null;key2="value2"}
+    ```
+
+    This example updates the application parameters but these changes will only take effect until the next version upgrade to the application.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Set-AzServiceFabricManagedClusterApplication.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ServiceFabric.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.servicefabric/set-azservicefabricmanagedclusterapplication
+  Module Name: Az.ServiceFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceFabric/ServiceFabric/help/Set-AzServiceFabricManagedClusterApplication.md
+  PlatyPS schema version: 2024-05-01

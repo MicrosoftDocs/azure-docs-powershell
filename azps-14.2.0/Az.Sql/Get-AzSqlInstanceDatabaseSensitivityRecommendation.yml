@@ -1,0 +1,210 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlInstanceDatabaseSensitivityRecommendation
+name: Get-AzSqlInstanceDatabaseSensitivityRecommendation
+module: Az.Sql
+isPreview: false
+summary: |-
+  Gets the recommended information types and sensitivity labels of columns in the Azure SQL Managed Instance database.
+description: |-
+  The Get-AzSqlInstanceDatabaseSensitivityRecommendation cmdlet returns the recommended information types and sensitivity labels of columns in the Azure SQL Managed Instance database.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Managed Instance database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure SQL Managed Instance database object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure SQL Managed Instance name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DatabaseParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceDatabaseSensitivityRecommendation
+        -DatabaseObject <AzureSqlManagedDatabaseModel>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DatabaseObjectParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSqlInstanceDatabaseSensitivityRecommendation
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-DatabaseName] <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DatabaseParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedDatabase.Model.AzureSqlManagedDatabaseModel" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataClassification.Model.ManagedDatabaseSensitivityClassificationModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get recommended information types and sensitivity labels of an Azure SQL Managed Instance database.'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceDatabaseSensitivityRecommendation -ResourceGroupName resourceGroup -InstanceName managedInstance -DatabaseName database
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    InstanceName      : managedInstance
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+- title: 'Example 2: Get recommended information types and sensitivity labels of an Azure SQL Managed Instance database using Piping.'
+  description: |-
+    ```powershell
+    Get-AzSqlInstanceDatabase -ResourceGroupName resourceGroup -InstanceName managedInstance -Name database | Get-AzSqlInstanceDatabaseSensitivityRecommendation
+    ```
+
+    ```output
+    ResourceGroupName : resourceGroup
+    InstanceName      : managedInstance
+    DatabaseName      : database
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+links:
+- text: Learn more about Azure SQL Database data discovery and classification
+  href: https://learn.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceDatabaseSensitivityRecommendation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/Get-AzSqlInstanceDatabaseSensitivityRecommendation
+  Module Name: Az.Sql
+  ms.assetid: 14814BF3-51AF-4E51-A8A6-661825BD88D1
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlInstanceDatabaseSensitivityRecommendation.md
+  PlatyPS schema version: 2024-05-01

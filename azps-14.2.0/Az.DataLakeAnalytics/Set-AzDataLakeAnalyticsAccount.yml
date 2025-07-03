@@ -1,0 +1,249 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Set-AzDataLakeAnalyticsAccount
+name: Set-AzDataLakeAnalyticsAccount
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Modifies a Data Lake Analytics account.
+description: |-
+  The **Set-AzDataLakeAnalyticsAccount** cmdlet modifies an Azure Data Lake Analytics account.
+parameters:
+  cmdletParameters:
+  - name: AllowAzureIpState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.FirewallAllowAzureIpsState" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optionally allow/block Azure originating IPs through the firewall.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.FirewallState" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optionally enable/disable existing firewall rules.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxAnalyticsUnits
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The optional maximum supported analytics units to update the account with.
+    aliases:
+    - MaxDegreeOfParallelism
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxJobCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The optional maximum supported jobs running under the account at the same time to set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Analytics account name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: QueryStoreRetention
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The optional number of days that job metadata is retained to set in the account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group name of the Data Lake Analytics account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A string,string dictionary of tags associated with this account that should replace the current set of tags
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tier
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Analytics.Models.TierType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The desired commitment tier for this account to use.
+    acceptedValues:
+    - Consumption
+    - Commitment100AUHours
+    - Commitment500AUHours
+    - Commitment1000AUHours
+    - Commitment5000AUHours
+    - Commitment10000AUHours
+    - Commitment50000AUHours
+    - Commitment100000AUHours
+    - Commitment500000AUHours
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeAnalyticsAccount
+        [-Name] <String>
+        [[-Tag] <Hashtable>]
+        [[-ResourceGroupName] <String>]
+        [-MaxAnalyticsUnits <Int32>]
+        [-MaxJobCount <Int32>]
+        [-QueryStoreRetention <Int32>]
+        [-Tier <TierType>]
+        [-FirewallState <FirewallState>]
+        [-AllowAzureIpState <FirewallAllowAzureIpsState>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSDataLakeAnalyticsAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify the data source of an account'
+  description: |-
+    ```powershell
+    Set-AzDataLakeAnalyticsAccount -Name "ContosoAdlAcct" -Tag @{"stage"="production"}
+    ```
+
+    This command changes the default data source and the Tags property of the account.
+- title: Example 2
+  description: |-
+    Modifies a Data Lake Analytics account. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    Set-AzDataLakeAnalyticsAccount -AllowAzureIpState Enabled -FirewallState Enabled -Name 'ContosoAdlAcct' -ResourceGroupName myresourcegroup
+    ```
+links:
+- text: Get-AzDataLakeAnalyticsAccount
+  href: ./Get-AzDataLakeAnalyticsAccount.yml
+- text: New-AzDataLakeAnalyticsAccount
+  href: ./New-AzDataLakeAnalyticsAccount.yml
+- text: Remove-AzDataLakeAnalyticsAccount
+  href: ./Remove-AzDataLakeAnalyticsAccount.yml
+- text: Test-AzDataLakeAnalyticsAccount
+  href: ./Test-AzDataLakeAnalyticsAccount.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Set-AzDataLakeAnalyticsAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/set-azdatalakeanalyticsaccount
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: 8B10E476-F283-4BDC-BFAD-A33F8EC38341
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Set-AzDataLakeAnalyticsAccount.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,132 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject
+name: New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for AfdDomainHttpsParameters.
+description: |-
+  Create an in-memory object for AfdDomainHttpsParameters.
+parameters:
+  cmdletParameters:
+  - name: CertificateType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines the source of the SSL certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CipherSuiteSetType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      cipher suite set type that will be used for Https.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomizedCipherSuiteSet
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.IAfdDomainHttpsCustomizedCipherSuiteSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Customized cipher suites object that will be used for Https when cipherSuiteSetType is Customized.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimumTlsVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      TLS protocol version that will be used for Https when cipherSuiteSetType is Customized.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.IResourceReference" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource reference to the secret.
+      ie.
+      subs/rg/profile/secret.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject
+        -CertificateType <String>
+        [-CipherSuiteSetType <String>]
+        [-CustomizedCipherSuiteSet <IAfdDomainHttpsCustomizedCipherSuiteSet>]
+        [-MinimumTlsVersion <String>]
+        [-Secret <IResourceReference>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.AfdDomainHttpsParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AFDDomainHttpsParameters'
+  description: |-
+    ```powershell
+    $secret =  Get-AzFrontDoorCdnSecret -ResourceGroupName testps-rg-da16jm -ProfileName fdp-v542q6 -Name secret001
+    $secretResoure = New-AzFrontDoorCdnResourceReferenceObject -Id $secret.Id
+    New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject -CertificateType "CustomerCertificate" -MinimumTlsVersion "TLS12" -Secret $secretResoure
+    ```
+
+    ```output
+    CertificateType     MinimumTlsVersion
+    ---------------     -----------------
+    CustomerCertificate TLS12
+    ```
+
+    Create an in-memory object for AFDDomainHttpsParameters
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdncustomdomaintlssettingparametersobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnCustomDomainTlsSettingParametersObject.md
+  PlatyPS schema version: 2024-05-01

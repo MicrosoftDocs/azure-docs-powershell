@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Az.Orbital
+name: Az.Orbital Module
+isPreview: false
+cmdletGroups:
+- title: Orbital
+  cmdlets:
+  - Az.Orbital.Get-AzOrbitalAvailableGroundStation
+  - Az.Orbital.Get-AzOrbitalAvailableSpacecraftContact
+  - Az.Orbital.Get-AzOrbitalContactProfile
+  - Az.Orbital.Get-AzOrbitalSpacecraft
+  - Az.Orbital.Get-AzOrbitalSpacecraftContact
+  - Az.Orbital.New-AzOrbitalContactProfile
+  - Az.Orbital.New-AzOrbitalContactProfileLinkChannelObject
+  - Az.Orbital.New-AzOrbitalContactProfileLinkObject
+  - Az.Orbital.New-AzOrbitalSpacecraft
+  - Az.Orbital.New-AzOrbitalSpacecraftContact
+  - Az.Orbital.New-AzOrbitalSpacecraftLinkObject
+  - Az.Orbital.Remove-AzOrbitalContactProfile
+  - Az.Orbital.Remove-AzOrbitalSpacecraft
+  - Az.Orbital.Remove-AzOrbitalSpacecraftContact
+  - Az.Orbital.Update-AzOrbitalContactProfile
+  - Az.Orbital.Update-AzOrbitalSpacecraft
+description: |-
+  Microsoft Azure PowerShell: Orbital cmdlets
+metadata:
+  Module Name: Az.Orbital
+  Module Guid: 4fb1d4af-9f8d-4a19-9f17-d8186bf02cfb
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.orbital
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Az.Orbital.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Az.Orbital.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

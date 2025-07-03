@@ -1,0 +1,99 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzDataBoundaryScope
+name: Get-AzDataBoundaryScope
+module: Az.Resources
+isPreview: false
+summary: |-
+  Get data boundary at specified scope
+description: |-
+  Get data boundary at specified scope
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope at which the operation is performed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataBoundaryScope
+        -Scope <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBoundary.Models.IDataBoundaryDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Subscription Scoped Data Boundary'
+  description: |-
+    ```powershell
+    $scope = "/subscriptions/11111111-1111-1111-1111-111111111111"
+    Get-AzDataBoundaryScope -Scope $scope
+    ```
+
+    ```output
+    Name                                    Id                                                                                      Properties
+    --------                                ----                                                                                    ------------
+    00000000-0000-0000-0000-000000000000    /providers/Microsoft.Resources/dataBoundaries/00000000-0000-0000-0000-000000000000      dataBoundary: EU, provisioningState: Created
+    ```
+
+    Gets the dataBoundary at the subscription scope.
+- title: 'Example 2: Get Resource Group Scoped Data Boundary'
+  description: |-
+    ```powershell
+    $scope =  "/subscriptions/11111111-1111-1111-1111-111111111111/resourcegroups/my-resource-group"
+    Get-AzDataBoundaryScope -Scope $scope
+    ```
+
+    ```output
+    Name                                    Id                                                                                      Properties
+    --------                                ----                                                                                    ------------
+    00000000-0000-0000-0000-000000000000    /providers/Microsoft.Resources/dataBoundaries/00000000-0000-0000-0000-000000000000      dataBoundary: EU, provisioningState: Created
+    ```
+
+    Gets the dataBoundary at the resource group scope.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDataBoundaryScope.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azdataboundaryscope
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzDataBoundaryScope.md
+  PlatyPS schema version: 2024-05-01

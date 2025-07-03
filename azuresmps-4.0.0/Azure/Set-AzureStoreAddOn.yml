@@ -1,0 +1,139 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureStoreAddOn
+name: Set-AzureStoreAddOn
+module: Azure
+isPreview: false
+summary: |-
+  Updates an existing add-on instance.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  This topic describes the cmdlet in the 0.8.10 version of the Microsoft Azure PowerShell module.
+  To get the version of the module you're using, in the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  This cmdlet updates an existing add-on instance from the current subscription.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the add-on instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified, the cmdlet returns true if the command succeeds and false if it fails.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Plan
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PromotionCode
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the promotional code.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureStoreAddOn
+        -Name <String>
+        -Plan <String>
+        [-PromotionCode <String>]
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> Set-AzureStoreAddOn MyAddOn NewPlanId
+    ```
+
+    This example updates an add-on with a new plan ID.
+- title: Example 2
+  description: |-
+    ```
+    PS C:\> Set-AzureStoreAddOn MyAddOn NewPlanId MyPromoCode
+    ```
+
+    This example updates an add-on with a new plan ID and promotional code.
+links:
+- text: Get-AzureStoreAddOn
+  href: ./Get-AzureStoreAddOn.yml
+- text: New-AzureStoreAddOn
+  href: ./New-AzureStoreAddOn.yml
+- text: Remove-AzureStoreAddOn
+  href: ./Remove-AzureStoreAddOn.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F5EC8E00-E504-436A-96FF-4E886579AEA4
+  PlatyPS schema version: 2024-05-01

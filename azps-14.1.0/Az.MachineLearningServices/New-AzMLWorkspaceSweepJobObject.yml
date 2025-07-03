@@ -1,0 +1,600 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MachineLearningServices.New-AzMLWorkspaceSweepJobObject
+name: New-AzMLWorkspaceSweepJobObject
+module: Az.MachineLearningServices
+isPreview: false
+summary: |-
+  Create an in-memory object for SweepJob.
+description: |-
+  Create an in-memory object for SweepJob.
+parameters:
+  cmdletParameters:
+  - name: ComputeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource ID of the compute resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The asset description text.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Display name of job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DistributionType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.DistributionType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies the type of distribution framework.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EarlyTerminationDelayEvaluation
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of intervals by which to delay the first evaluation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EarlyTerminationEvaluationInterval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Interval (number of runs) between policy evaluations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EarlyTerminationPolicyType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.EarlyTerminationPolicyType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Name of policy configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExperimentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the experiment the job belongs to.
+      If not set, the job is placed in the "Default" experiment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.IdentityConfigurationType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Specifies the type of identity framework.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IsArchived
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is the asset archived?.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobInput
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ISweepJobInputs" data-throw-if-not-resolved="False" />
+    description: |-
+      Mapping of input data bindings used in the job.
+      To construct, see NOTES section for JOBINPUT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobOutput
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ISweepJobOutputs" data-throw-if-not-resolved="False" />
+    description: |-
+      Mapping of output data bindings used in the job.
+      To construct, see NOTES section for JOBOUTPUT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitMaxConcurrentTrial
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Sweep Job max concurrent trials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitMaxTotalTrial
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Sweep Job max total trials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitTimeout
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The max run duration in ISO 8601 format, after which the job will be cancelled.
+      Only supports duration with precision as low as Seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitTrialTimeout
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Sweep Job Trial timeout value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectiveGoal
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.Goal" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Defines supported metric goals for hyperparameter tuning.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectivePrimaryMetric
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] Name of the metric to optimize.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Property
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      The asset property dictionary.
+      To construct, see NOTES section for PROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceInstanceCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional number of instances or nodes used by the compute target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceInstanceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional type of VM used as supported by the compute target.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceConfigurationProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Additional properties bag.
+      To construct, see NOTES section for RESOURCEPROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SamplingAlgorithmType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Support.SamplingAlgorithmType" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The algorithm used for generating hyperparameter values, along with configuration properties.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SearchSpace
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.IAny" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] A dictionary containing each parameter and its distribution.
+      The dictionary key is the name of the parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Url for endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port for endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IJobServiceProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      Additional properties to set on the endpoint.
+      To construct, see NOTES section for SERVICEPROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Endpoint type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.IResourceBaseTags" data-throw-if-not-resolved="False" />
+    description: |-
+      Tag dictionary.
+      Tags can be added, removed, and updated.
+      To construct, see NOTES section for TAG properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrialCodeId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource ID of the code asset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrialCommand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The command to execute on startup of the job.
+      eg.
+      "python train.py".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrialEnvironmentId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      [Required] The ARM resource ID of the Environment specification for the job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrialEnvironmentVariable
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.ITrialComponentEnvironmentVariables" data-throw-if-not-resolved="False" />
+    description: |-
+      Environment variables included in the job.
+      To construct, see NOTES section for TRIALENVIRONMENTVARIABLE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzMLWorkspaceSweepJobObject
+        -ObjectiveGoal <Goal>
+        -ObjectivePrimaryMetric <String>
+        -SamplingAlgorithmType <SamplingAlgorithmType>
+        -SearchSpace <IAny>
+        -TrialCommand <String>
+        -TrialEnvironmentId <String>
+        [-DistributionType <DistributionType>]
+        [-EarlyTerminationDelayEvaluation <Int32>]
+        [-EarlyTerminationEvaluationInterval <Int32>]
+        [-EarlyTerminationPolicyType <EarlyTerminationPolicyType>]
+        [-JobInput <ISweepJobInputs>]
+        [-LimitMaxConcurrentTrial <Int32>]
+        [-LimitMaxTotalTrial <Int32>]
+        [-LimitTimeout <TimeSpan>]
+        [-LimitTrialTimeout <TimeSpan>]
+        [-JobOutput <ISweepJobOutputs>]
+        [-ResourceInstanceCount <Int32>]
+        [-ResourceInstanceType <String>]
+        [-ResourceProperty <IResourceConfigurationProperties>]
+        [-TrialCodeId <String>]
+        [-TrialEnvironmentVariable <ITrialComponentEnvironmentVariables>]
+        [-ComputeId <String>]
+        [-DisplayName <String>]
+        [-ExperimentName <String>]
+        [-IdentityType <IdentityConfigurationType>]
+        [-IsArchived <Boolean>]
+        [-ServiceEndpoint <String>]
+        [-ServicePort <Int32>]
+        [-ServiceProperty <IJobServiceProperties>]
+        [-ServiceType <String>]
+        [-Description <String>]
+        [-Property <IResourceBaseProperties>]
+        [-Tag <IResourceBaseTags>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MachineLearningServices.Models.Api20240401.SweepJob" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for SweepJob'
+  description: |-
+    ```powershell
+    # You can use following commands to create job input or job output as value pass to JobInput or JobOutput parameter of the New-AzMLWorkspaceSweepJobObject
+
+    # New-AzMLWorkspaceCustomModelJobInputObject
+    # New-AzMLWorkspaceCustomModelJobOutputObject
+    # New-AzMLWorkspaceLiteralJobInputObject
+    # New-AzMLWorkspaceMLFlowModelJobInputObject
+    # New-AzMLWorkspaceMLFlowModelJobOutputObject
+    # New-AzMLWorkspaceMLTableJobInputObject
+    # New-AzMLWorkspaceMLTableJobOutputObject
+    # New-AzMLWorkspaceSharedPrivateLinkResourceObject
+    # New-AzMLWorkspaceTritonModelJobInputObject
+    # New-AzMLWorkspaceTritonModelJobOutputObject
+    # New-AzMLWorkspaceUriFileJobInputObject
+    # New-AzMLWorkspaceUriFileJobOutputObject
+    # New-AzMLWorkspaceUriFolderJobInputObject
+    # New-AzMLWorkspaceUriFolderJobOutputObject
+
+    New-AzMLWorkspaceSweepJobObject
+    ```
+
+    Create an in-memory object for SweepJob
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceSweepJobObject.md
+  document type: cmdlet
+  external help file: Az.MachineLearningServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.MachineLearningServices/new-AzMLWorkspaceSweepJobObject
+  Module Name: Az.MachineLearningServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/New-AzMLWorkspaceSweepJobObject.md
+  PlatyPS schema version: 2024-05-01

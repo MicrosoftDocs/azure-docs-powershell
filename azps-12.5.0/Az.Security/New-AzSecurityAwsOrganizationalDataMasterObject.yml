@@ -1,0 +1,78 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityAwsOrganizationalDataMasterObject
+name: New-AzSecurityAwsOrganizationalDataMasterObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for AwsOrganizationalDataMaster.
+description: |-
+  Create an in-memory object for AwsOrganizationalDataMaster.
+parameters:
+  cmdletParameters:
+  - name: ExcludedAccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      If the multi cloud account is of membership type organization, list of accounts excluded from offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StacksetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityAwsOrganizationalDataMasterObject
+        [-ExcludedAccountId <String[]>]
+        [-StacksetName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.AwsOrganizationalDataMaster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new AwsOrganizationalDataMaster object'
+  description: |-
+    ```powershell
+    New-AzSecurityAwsOrganizationalDataMasterObject -StacksetName "myAwsStackSet" -ExcludedAccountId "123456789012"
+    ```
+
+    ```output
+    ExcludedAccountId OrganizationMembershipType StacksetName
+    ----------------- -------------------------- ------------
+    {123456789012}    Organization               myAwsStackSet
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAwsOrganizationalDataMasterObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecurityawsorganizationaldatamasterobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAwsOrganizationalDataMasterObject.md
+  PlatyPS schema version: 2024-05-01

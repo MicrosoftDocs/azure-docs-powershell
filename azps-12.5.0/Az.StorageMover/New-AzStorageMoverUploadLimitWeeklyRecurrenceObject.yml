@@ -1,0 +1,157 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageMover.New-AzStorageMoverUploadLimitWeeklyRecurrenceObject
+name: New-AzStorageMoverUploadLimitWeeklyRecurrenceObject
+module: Az.StorageMover
+isPreview: false
+summary: |-
+  Create an in-memory object for UploadLimitWeeklyRecurrence.
+description: |-
+  Create an in-memory object for UploadLimitWeeklyRecurrence.
+parameters:
+  cmdletParameters:
+  - name: Day
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Support.DayOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The set of days of week for the schedule recurrence.
+      A day must not be specified more than once in a recurrence.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour element of the time.
+      Allowed values range from 0 (start of the selected day) to 24 (end of the selected day).
+      Hour value 24 cannot be combined with any other minute value but 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute element of the time.
+      Allowed values are 0 and 30.
+      If not specified, its value defaults to 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LimitInMbps
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The WAN-link upload bandwidth (maximum data transfer rate) in megabits per second.
+      Value of 0 indicates no throughput is allowed and any running migration job is effectively paused for the duration of this recurrence.
+      Only data plane operations are governed by this limit.
+      Control plane operations ensure seamless functionality.
+      The agent may exceed this limit with control messages, if necessary.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTimeHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The hour element of the time.
+      Allowed values range from 0 (start of the selected day) to 24 (end of the selected day).
+      Hour value 24 cannot be combined with any other minute value but 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartTimeMinute
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The minute element of the time.
+      Allowed values are 0 and 30.
+      If not specified, its value defaults to 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageMoverUploadLimitWeeklyRecurrenceObject
+        -Day <DayOfWeek[]>
+        -LimitInMbps <Int32>
+        -EndTimeHour <Int32>
+        -StartTimeHour <Int32>
+        [-EndTimeMinute <Int32>]
+        [-StartTimeMinute <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageMover.Models.Api20240701.UploadLimitWeeklyRecurrence" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an upload limit weekly recurrence object'
+  description: |-
+    ```powershell
+    New-AzStorageMoverUploadLimitWeeklyRecurrenceObject -Day 'Monday','Tuesday','Friday' -LimitInMbps 100 -EndTimeHour 5 -StartTimeHour 1 -StartTimeMinute 30 -EndTimeMinute 0
+    ```
+
+    ```output
+    Day                       EndTimeHour EndTimeMinute LimitInMbps StartTimeHour StartTimeMinute
+    ---                       ----------- ------------- ----------- ------------- ---------------
+    {Monday, Tuesday, Friday} 5           0             100         1             30
+    ```
+
+    This command creates an upload limit weekly recurrence object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/New-AzStorageMoverUploadLimitWeeklyRecurrenceObject.md
+  document type: cmdlet
+  external help file: Az.StorageMover-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageMover/new-AzStorageMoverUploadLimitWeeklyRecurrenceObject
+  Module Name: Az.StorageMover
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageMover/StorageMover/help/New-AzStorageMoverUploadLimitWeeklyRecurrenceObject.md
+  PlatyPS schema version: 2024-05-01

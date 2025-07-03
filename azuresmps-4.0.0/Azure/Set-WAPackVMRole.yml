@@ -1,0 +1,122 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-WAPackVMRole
+name: Set-WAPackVMRole
+module: Azure
+isPreview: false
+summary: |-
+  Changes the instance count property of a virtual machine role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  These topics are deprecated and will be removed in the future.
+  This topic describes the cmdlet in the 0.8.1 version of the Microsoft Azure PowerShell module.
+  To find out the version of the module you're using, from the Azure PowerShell console, type `(Get-Module -Name Azure).Version`.
+
+  The **Set-WAPackVMRole** cmdlet changes the instance count property of a virtual machine role.
+parameters:
+  cmdletParameters:
+  - name: InstanceCount
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the instance count for a virtual machine role.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMRole
+    type: <xref href="VMRole" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual machine role.
+      To obtain a virtual machine role, use the **Get-WAPackVMRole** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-WAPackVMRole
+        -VMRole <VMRole>
+        -InstanceCount <Int32>
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Specify the instance count for a virtual machine role'
+  description: |-
+    ```
+    PS C:\> $VMRole = Get-WAPackVMRole -Name "ContosoVMRole01"
+    PS C:\> Set-WAPackVMRole -VMRole $VMRole -InstanceCount 3
+    ```
+
+    The first command gets the virtual machine role named ContosoVMRole01 by using the **Get-WAPackVMRole** cmdlet, and then stores that object in the $VMRole variable.
+
+    The second and final command sets the new instance count of the virtual machine role stored in $VMRole to 3.
+links:
+- text: Get-WAPackVMRole
+  href: ./Get-WAPackVMRole.yml
+- text: New-WAPackVMRole
+  href: ./New-WAPackVMRole.yml
+- text: Remove-WAPackVMRole
+  href: ./Remove-WAPackVMRole.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 69FBF1E7-E69A-42B5-AC17-C7CF8CAB3C9D
+  PlatyPS schema version: 2024-05-01

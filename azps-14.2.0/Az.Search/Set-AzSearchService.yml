@@ -1,0 +1,360 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Search.Set-AzSearchService
+name: Set-AzSearchService
+module: Az.Search
+isPreview: false
+summary: |-
+  Update an Azure Cognitive Search service.
+description: |-
+  The **Set-AzSearchService** cmdlet modifies an Azure Cognitive Search service.
+parameters:
+  cmdletParameters:
+  - name: AadAuthFailureMode
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Management.Search.Models.PSAadAuthFailureMode" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      (Optional) What status code to return when failing AAD authentication, if both api key and AAD authentication are allowed for the Azure Cognitive Search service
+    acceptedValues:
+    - Http403
+    - Http401WithBearerChallenge
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AuthOption
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Management.Search.Models.PSAuthOptionName" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      (Optional) Whether to only allow API key authentication or both API key authentication and AAD authentication for the Azure Cognitive Search service
+    acceptedValues:
+    - ApiKeyOnly
+    - AadOrApiKey
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableLocalAuth
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      (Optional) Disable API key authentication for the Azure Cognitive Search service (true/false/null)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Management.Search.Models.PSIdentityType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      (Optional) Azure Cognitive Search Service Identity (None/SystemAssigned)
+    acceptedValues:
+    - None
+    - SystemAssigned
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSSearchService" data-throw-if-not-resolved="False" />
+    description: |-
+      Search Service Input Object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IPRuleList
+    type: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSIpRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      (Optional) Azure Cognitive Search Service IP rules
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search Service name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PartitionCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Search Service partition count.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Management.Search.Models.PSPublicNetworkAccess" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      (Optional) Azure Cognitive Search Service public network access (Enabled/Disabled)
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicaCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Search Service replica count.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Search Service Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSearchService
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-PartitionCount <Int32>]
+        [-ReplicaCount <Int32>]
+        [-PublicNetworkAccess <PSPublicNetworkAccess>]
+        [-IdentityType <PSIdentityType>]
+        [-IPRuleList <PSIpRule[]>]
+        [-DisableLocalAuth <Boolean>]
+        [-AuthOption <PSAuthOptionName>]
+        [-AadAuthFailureMode <PSAadAuthFailureMode>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSearchService
+        [-InputObject] <PSSearchService>
+        [-PartitionCount <Int32>]
+        [-ReplicaCount <Int32>]
+        [-PublicNetworkAccess <PSPublicNetworkAccess>]
+        [-IdentityType <PSIdentityType>]
+        [-IPRuleList <PSIpRule[]>]
+        [-DisableLocalAuth <Boolean>]
+        [-AuthOption <PSAuthOptionName>]
+        [-AadAuthFailureMode <PSAadAuthFailureMode>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSearchService
+        [-ResourceId] <String>
+        [-PartitionCount <Int32>]
+        [-ReplicaCount <Int32>]
+        [-PublicNetworkAccess <PSPublicNetworkAccess>]
+        [-IdentityType <PSIdentityType>]
+        [-IPRuleList <PSIpRule[]>]
+        [-DisableLocalAuth <Boolean>]
+        [-AuthOption <PSAuthOptionName>]
+        [-AadAuthFailureMode <PSAadAuthFailureMode>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSSearchService" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Search.Models.PSSearchService" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Set-AzSearchService -ResourceGroupName "TestAzureSearchPsGroup" -Name "pstestazuresearch01" -PartitionCount 2 -ReplicaCount 2
+    ```
+
+    ```output
+    ResourceGroupName : TestAzureSearchPsGroup
+    Name              : pstestazuresearch01
+    Id                : /subscriptions/f9b96b36-1f5e-4021-8959-51527e26e6d3/resourceGroups/TestAzureSearchPsGroup/providers/Microsoft.Search/searchServices/pstestazuresearch01
+    Location          : West US
+    Sku               : Standard
+    ReplicaCount      : 2
+    PartitionCount    : 2
+    HostingMode       : Default
+    Tags              :
+    ```
+
+    The example changes partition count and replica count of the Azure Cognitive Search service to 2.
+links:
+- text: New-AzSearchService
+  href: ./New-AzSearchService.yml
+- text: Get-AzSearchService
+  href: ./Get-AzSearchService.yml
+- text: Remove-AzSearchService
+  href: ./Remove-AzSearchService.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Set-AzSearchService.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Search.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.search/set-azsearchservice
+  Module Name: Az.Search
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Search/Search/help/Set-AzSearchService.md
+  PlatyPS schema version: 2024-05-01

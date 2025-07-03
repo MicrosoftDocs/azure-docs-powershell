@@ -1,0 +1,128 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DesktopVirtualization.Get-AzWvdRegistrationInfo
+name: Get-AzWvdRegistrationInfo
+module: Az.DesktopVirtualization
+isPreview: false
+summary: |-
+  Get the Windows virtual desktop registration info.
+description: |-
+  Get the Windows virtual desktop registration info.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host Pool Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWvdRegistrationInfo
+        -ResourceGroupName <String>
+        -HostPoolName <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DesktopVirtualization.Models.RegistrationInfo" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Existing Registration Info from Hostpool'
+  description: |-
+    ```powershell
+    Get-AzWvdRegistrationInfo -ResourceGroupName rgName -HostPoolName hpName
+    ```
+
+    ```output
+    ExpirationTime        RegistrationTokenOperation Token
+    --------------        -------------------------- -----
+    5/10/2023 12:00:00 PM None                       <base64 encoded string>
+    ```
+
+    Retrieves Registration Info for the chosen hostpool.
+- title: 'Example 2: Get Empty Registration Info from HostPool'
+  description: |-
+    ```powershell
+    Get-AzWvdRegistrationInfo -ResourceGroupName rgName -HostPoolname hpName
+    ```
+
+    ```output
+    ExpirationTime RegistrationTokenOperation Token
+    -------------- -------------------------- -----
+                   None
+    ```
+
+    Returns an empty Registration Info for the chosen Hostpool if the Hostpool doesn't have any Registration Info.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Get-AzWvdRegistrationInfo.md
+  document type: cmdlet
+  external help file: Az.DesktopVirtualization-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.desktopvirtualization/get-azwvdregistrationinfo
+  Module Name: Az.DesktopVirtualization
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DesktopVirtualization/DesktopVirtualization/help/Get-AzWvdRegistrationInfo.md
+  PlatyPS schema version: 2024-05-01

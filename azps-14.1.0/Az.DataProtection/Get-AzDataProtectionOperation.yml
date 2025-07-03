@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Get-AzDataProtectionOperation
+name: Get-AzDataProtectionOperation
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Returns the list of available operations.
+description: |-
+  Returns the list of available operations.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataProtectionOperation
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataProtection.Models.Api202501.IClientDiscoveryValueForSingleApi" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the list of of available operations'
+  description: |-
+    ```powershell
+    Get-AzDataProtectionOperation
+    ```
+
+    ```output
+    IsDataAction Name                                                                                                Origin
+    ------------ ----                                                                                                ------
+                 Microsoft.DataProtection/locations/getBackupStatus/action                                           user
+                 Microsoft.DataProtection/backupVaults/backupInstances/write                                         user
+                 Microsoft.DataProtection/backupVaults/backupInstances/delete                                        user
+                 Microsoft.DataProtection/backupVaults/backupInstances/read                                          user
+                 Microsoft.DataProtection/backupVaults/backupInstances/read                                          user
+                 Microsoft.DataProtection/backupVaults/backupInstances/backup/action                                 user
+                 Microsoft.DataProtection/backupVaults/backupInstances/sync/action                                   user
+                 Microsoft.DataProtection/backupVaults/backupInstances/operationResults/read                         user
+                 Microsoft.DataProtection/backupVaults/backupInstances/stopProtection/action                         user
+                 Microsoft.DataProtection/backupVaults/backupInstances/suspendBackups/action                         user
+                 Microsoft.DataProtection/backupVaults/backupInstances/resumeProtection/action                       user
+                 Microsoft.DataProtection/backupVaults/backupInstances/resumeBackups/action                          user
+                 Microsoft.DataProtection/backupVaults/backupInstances/validateRestore/action                        user
+                 Microsoft.DataProtection/backupVaults/backupInstances/restore/action                                user
+                 Microsoft.DataProtection/backupVaults/backupPolicies/write                                          user
+                 Microsoft.DataProtection/backupVaults/backupPolicies/delete                                         user
+                 Microsoft.DataProtection/backupVaults/backupPolicies/read                                           user
+                 Microsoft.DataProtection/backupVaults/backupPolicies/read                                           user
+                 Microsoft.DataProtection/backupVaults/backupResourceGuardProxies/read                               user
+                 Microsoft.DataProtection/backupVaults/backupResourceGuardProxies/read                               user
+                 Microsoft.DataProtection/backupVaults/backupResourceGuardProxies/write                              user
+                 Microsoft.DataProtection/backupVaults/backupResourceGuardProxies/delete                             user
+                 Microsoft.DataProtection/backupVaults/backupResourceGuardProxies/unlockDelete/action                user
+                 Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints/read                           user
+                 Microsoft.DataProtection/backupVaults/backupInstances/recoveryPoints/read                           user
+                 Microsoft.DataProtection/backupVaults/backupInstances/findRestorableTimeRanges/action               user
+                 Microsoft.DataProtection/backupVaults/write                                                         user
+                 Microsoft.DataProtection/backupVaults/read                                                          user
+                 Microsoft.DataProtection/backupVaults/delete                                                        user
+                 Microsoft.DataProtection/backupVaults/operationResults/read                                         user
+                 Microsoft.DataProtection/locations/checkNameAvailability/action                                     user
+                 Microsoft.DataProtection/backupVaults/read                                                          user
+                 Microsoft.DataProtection/backupVaults/read                                                          user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/write                user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/read                 user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/delete               user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/read                 user
+                 Microsoft.DataProtection/subscriptions/providers/resourceGuards/read                                user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/write                user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/{operationName}/read user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/resourceGuards/{operationName}/read user
+                 Microsoft.DataProtection/subscriptions/providers/locations/checkFeatureSupport/action               user
+                 Microsoft.DataProtection/locations/operationStatus/read                                             user
+                 Microsoft.DataProtection/backupVaults/operationStatus/read                                          user
+                 Microsoft.DataProtection/subscriptions/resourceGroups/providers/operationStatus/read                user
+                 Microsoft.DataProtection/locations/operationResults/read                                            user
+                 Microsoft.DataProtection/backupVaults/validateForBackup/action                                      user
+                 Microsoft.DataProtection/backupVaults/backupJobs/read                                               user
+                 Microsoft.RecoveryServices/Vaults/backupJobs/read                                                   user
+                 Microsoft.DataProtection/register/action                                                            user
+                 Microsoft.DataProtection/unregister/action                                                          user
+                 Microsoft.DataProtection/operations/read                                                            user
+    ```
+
+    The above command gets the list of available operations.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Get-AzDataProtectionOperation.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/get-azdataprotectionoperation
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Get-AzDataProtectionOperation.md
+  PlatyPS schema version: 2024-05-01

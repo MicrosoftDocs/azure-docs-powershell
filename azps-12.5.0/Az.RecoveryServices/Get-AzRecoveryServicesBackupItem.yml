@@ -1,0 +1,358 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Get-AzRecoveryServicesBackupItem
+name: Get-AzRecoveryServicesBackupItem
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Gets the items from a container in Backup.
+description: |-
+  The **Get-AzRecoveryServicesBackupItem** cmdlet gets the list of protected items in a container and the protection status of the items.
+  A container that is registered to an Azure Recovery Services vault can have one or more items that can be protected.
+  For Azure virtual machines, there can be only one backup item in the virtual machine container.
+  Set the vault context by using the -VaultId parameter.
+parameters:
+  cmdletParameters:
+  - name: BackupManagementType
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.BackupManagementType" data-throw-if-not-resolved="False" />
+    description: |-
+      The class of resources being protected. The acceptable values for this parameter are:
+
+      - AzureVM
+      - MAB
+      - AzureStorage
+      - AzureWorkload
+    acceptedValues:
+    - AzureVM
+    - MAB
+    - AzureStorage
+    - AzureWorkload
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetItemsForVault
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Container
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a container object from which this cmdlet gets backup items.
+      To obtain an **AzureRmRecoveryServicesBackupContainer**, use the **Get-AzRecoveryServicesBackupContainer** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetItemsForContainer
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeleteState
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemDeleteState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the deletestate of the item
+      The acceptable values for this parameter are:
+
+      - ToBeDeleted
+      - NotDeleted
+    acceptedValues:
+    - ToBeDeleted
+    - NotDeleted
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      FriendlyName of the backed up item
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of backup item. For file share, specify the unique ID of protected file share.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Policy
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.PolicyBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Protection policy object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetItemsForPolicy
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionState
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionState" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state of protection.
+      The acceptable values for this parameter are:
+
+      - IRPending.
+      Initial synchronization has not started and there is no recovery point yet.
+      - Protected.
+      Protection is ongoing.
+      - ProtectionError.
+      There is a protection error.
+      - ProtectionStopped.
+      Protection is disabled.
+    acceptedValues:
+    - IRPending
+    - ProtectionError
+    - Protected
+    - ProtectionStopped
+    - BackupsSuspended
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionStatus
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemProtectionStatus" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the overall protection status of an item in the container.
+      The acceptable values for this parameter are:
+
+      - Healthy
+      - Unhealthy
+    acceptedValues:
+    - Healthy
+    - Unhealthy
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseSecondaryRegion
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Filters from Secondary Region for Cross Region Restore
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of the Recovery Services Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkloadType
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.WorkloadType" data-throw-if-not-resolved="False" />
+    description: |-
+      Workload type of the resource. The acceptable values for this parameter are:
+
+      - AzureVM
+      - AzureFiles
+      - MSSQL
+      - FileFolder
+      - SAPHanaDatabase
+    acceptedValues:
+    - AzureVM
+    - AzureFiles
+    - MSSQL
+    - FileFolder
+    - SAPHanaDatabase
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetItemsForContainer
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetItemsForVault
+      position: "5"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesBackupItem
+        [-Container] <ContainerBase>
+        [[-Name] <String>]
+        [[-ProtectionStatus] <ItemProtectionStatus>]
+        [[-ProtectionState] <ItemProtectionState>]
+        [-WorkloadType] <WorkloadType>
+        [[-DeleteState] <ItemDeleteState>]
+        [-FriendlyName <String>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-UseSecondaryRegion]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetItemsForContainer
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesBackupItem
+        [-BackupManagementType] <BackupManagementType>
+        [[-Name] <String>]
+        [[-ProtectionStatus] <ItemProtectionStatus>]
+        [[-ProtectionState] <ItemProtectionState>]
+        [-WorkloadType] <WorkloadType>
+        [[-DeleteState] <ItemDeleteState>]
+        [-FriendlyName <String>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-UseSecondaryRegion]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetItemsForVault
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesBackupItem
+        [-Policy] <PolicyBase>
+        [[-Name] <String>]
+        [[-ProtectionStatus] <ItemProtectionStatus>]
+        [[-ProtectionState] <ItemProtectionState>]
+        [[-DeleteState] <ItemDeleteState>]
+        [-FriendlyName <String>]
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-UseSecondaryRegion]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetItemsForPolicy
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ContainerBase" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.ItemBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an item from a Backup container'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+    $Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureVM -FriendlyName "V2VM" -VaultId $vault.ID
+    $BackupItem = Get-AzRecoveryServicesBackupItem -Container $Container -WorkloadType AzureVM -VaultId $vault.ID
+    ```
+
+    The first command gets the container of type AzureVM, and then stores it in the $Container variable.
+    The second command gets the Backup item named V2VM in $Container, and then stores it in the $BackupItem variable.
+- title: 'Example 2: Get an Azure File Share Item from FriendlyName'
+  description: |-
+    ```powershell
+    $vault = Get-AzRecoveryServicesVault -ResourceGroupName "resourceGroup" -Name "vaultName"
+    $Container = Get-AzRecoveryServicesBackupContainer -ContainerType AzureStorage -FriendlyName "StorageAccount1" -VaultId $vault.ID
+    $BackupItem = Get-AzRecoveryServicesBackupItem -Container $Container -WorkloadType AzureFiles -VaultId $vault.ID -FriendlyName "FileShareName"
+    ```
+
+    The first command gets the container of type AzureStorage, and then stores it in the $Container variable.
+    The second command gets the Backup item whose friendlyName matches the value passed in FriendlyName Parameter, and then stores it in the $BackupItem variable.
+    Using FriendlyName parameter can result in returning more than one Azure File Share. In such cases, execute the cmdlet by passing value for -Name parameter as the Name property returned in the result set of $BackupItem.
+links:
+- text: Backup-AzRecoveryServicesBackupItem
+  href: ./Backup-AzRecoveryServicesBackupItem.yml
+- text: Disable-AzRecoveryServicesBackupProtection
+  href: ./Disable-AzRecoveryServicesBackupProtection.yml
+- text: Get-AzRecoveryServicesBackupRecoveryPoint
+  href: ./Get-AzRecoveryServicesBackupRecoveryPoint.yml
+- text: Restore-AzRecoveryServicesBackupItem
+  href: ./Restore-AzRecoveryServicesBackupItem.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesbackupitem
+  Module Name: Az.RecoveryServices
+  ms.assetid: DEB3D7B5-D974-472B-B8B4-9A19CA6AECCC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesBackupItem.md
+  PlatyPS schema version: 2024-05-01

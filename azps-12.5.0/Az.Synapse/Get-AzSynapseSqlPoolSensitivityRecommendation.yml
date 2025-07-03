@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Synapse.Get-AzSynapseSqlPoolSensitivityRecommendation
+name: Get-AzSynapseSqlPoolSensitivityRecommendation
+module: Az.Synapse
+isPreview: false
+summary: |-
+  Gets the recommended information types and sensitivity labels of columns in the SQL pool.
+description: |-
+  The Get-AzSynapseSqlPoolSensitivityRecommendation cmdlet returns the recommended information types and sensitivity labels of columns in the SQL pool.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SqlPoolParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse SQL pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SqlPoolParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlPoolObject
+    type: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseSqlPool" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL pool input object, usually passed through the pipeline.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SqlPoolObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Synapse workspace.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SqlPoolParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseSqlPoolSensitivityRecommendation
+        -SqlPoolObject <PSSynapseSqlPool>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SqlPoolObjectParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSynapseSqlPoolSensitivityRecommendation
+        [-ResourceGroupName] <String>
+        [-WorkspaceName] <String>
+        [-SqlPoolName] <String>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SqlPoolParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.PSSynapseSqlPool" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Synapse.Models.DataClassification.SqlPoolSensitivityClassificationModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get recommended information types and sensitivity labels of an Azure Synapse SQL pool.'
+  description: |-
+    ```powershell
+    Get-AzSynapseSqlPoolSensitivityRecommendation -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -SqlPoolName ContosoSqlPool
+    ```
+
+    ```output
+    ResourceGroupName : ContosoResourceGroup
+    WorkspaceName        : ContosoWorkspace
+    SqlPoolName      : ContosoSqlPool
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+- title: 'Example 2: Get recommended information types and sensitivity labels of an Azure Synapse SQL pool using Piping.'
+  description: |-
+    ```powershell
+    Get-AzSynapseSqlPool -ResourceGroupName ContosoResourceGroup -WorkspaceName ContosoWorkspace -Name ContosoSqlPool | Get-AzSynapseSqlPoolSensitivityRecommendation
+    ```
+
+    ```output
+    ResourceGroupName : ContosoResourceGroup
+    WorkspaceName        : ContosoWorkspace
+    SqlPoolName      : ContosoSqlPool
+    SensitivityLabels : {{
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailBody,
+                            InformationType: Contact Info
+                        }, {
+                            SchemaName: dbo,
+                            TableName: Report,
+                            ColumnName: ReportEmailSubject,
+                            SensitivityLabel: Confidential,
+                            Rank: Medium
+                        }, {
+                            SchemaName: dbo,
+                            TableName: EMailLog,
+                            ColumnName: BounceEmailSubject,
+                            SensitivityLabel: Confidential,
+                            InformationType: Contact Info,
+                            Rank: Medium
+                        }}
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseSqlPoolSensitivityRecommendation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Synapse.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.synapse/get-azsynapsesqlpoolsensitivityrecommendation
+  Module Name: Az.Synapse
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Synapse/Synapse/help/Get-AzSynapseSqlPoolSensitivityRecommendation.md
+  PlatyPS schema version: 2024-05-01

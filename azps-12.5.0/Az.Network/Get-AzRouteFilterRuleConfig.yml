@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzRouteFilterRuleConfig
+name: Get-AzRouteFilterRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a route filter rule in a route filter.
+description: |-
+  The **Get-AzRouteFilterRuleConfig** cmdlet gets a route filter rule or a list of route filter rules in a route filter.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the route filter rule
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RouteFilter
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilter" data-throw-if-not-resolved="False" />
+    description: |-
+      The RouteFilter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRouteFilterRuleConfig
+        [-Name <String>]
+        -RouteFilter <PSRouteFilter>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSRouteFilterRule" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $rf = Get-AzRouteFilter -Name "MyRouteFilter" -ResourceGroupName "MyResourceGroup"
+    Get-AzRouteFilterRuleConfig -RouteFilter $rf -Name "Rule01"
+    Get-AzRouteFilterRuleConfig -RouteFilter $rf
+    ```
+
+    The first command gets the route filter named MyRouteFilter, and then stores it in the variable $rf.
+    The second command gets the route filter rule named Rule01 associated with that route filter.
+    The third command gets a list of route filter rules associated with that route filter.
+links:
+- text: Add-AzRouteFilterRuleConfig
+  href: ./Add-AzRouteFilterRuleConfig.yml
+- text: New-AzRouteFilterRuleConfig
+  href: ./New-AzRouteFilterRuleConfig.yml
+- text: Remove-AzRouteFilterRuleConfig
+  href: ./Remove-AzRouteFilterRuleConfig.yml
+- text: Set-AzRouteFilterRuleConfig
+  href: ./Set-AzRouteFilterRuleConfig.yml
+- text: Get-AzRouteFilter
+  href: ./Get-AzRouteFilter.yml
+- text: New-AzRouteFilter
+  href: ./New-AzRouteFilter.yml
+- text: Remove-AzRouteFilter
+  href: ./Remove-AzRouteFilter.yml
+- text: Set-AzRouteFilter
+  href: ./Set-AzRouteFilter.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteFilterRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azroutefilterruleconfig
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzRouteFilterRuleConfig.md
+  PlatyPS schema version: 2024-05-01

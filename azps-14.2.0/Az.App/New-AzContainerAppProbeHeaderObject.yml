@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppProbeHeaderObject
+name: New-AzContainerAppProbeHeaderObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for ContainerAppProbeHttpGetHttpHeadersItem.
+description: |-
+  Create an in-memory object for ContainerAppProbeHttpGetHttpHeadersItem.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The header field name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Value
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The header field value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppProbeHeaderObject
+        -Name <String>
+        -Value <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ContainerAppProbeHttpGetHttpHeadersItem" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a ContainerAppProbeHttpGetHttpHeadersItem object for ContainerApp.'
+  description: |-
+    ```powershell
+    New-AzContainerAppProbeHeaderObject -Name Custom-Header -Value Awesome
+    ```
+
+    ```output
+    Name          Value
+    ----          -----
+    Custom-Header Awesome
+    ```
+
+    Create a ContainerAppProbeHttpGetHttpHeadersItem object for ContainerApp.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppProbeHeaderObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappprobeheaderobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppProbeHeaderObject.md
+  PlatyPS schema version: 2024-05-01

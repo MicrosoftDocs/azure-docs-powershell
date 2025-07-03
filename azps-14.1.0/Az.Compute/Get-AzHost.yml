@@ -1,0 +1,264 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzHost
+name: Get-AzHost
+module: Az.Compute
+isPreview: false
+summary: |-
+  Get or list hosts.
+description: |-
+  This cmdlet will get a host in a host group.
+  This cmdlet also lists all hosts in a host group if a host name is not given.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HostGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the host group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceView
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets only the instance view of the host.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the host.
+    aliases:
+    - HostName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DefaultParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameter
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzHost
+        [-ResourceGroupName] <String>
+        [-HostGroupName] <String>
+        [[-Name] <String>]
+        [-InstanceView]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DefaultParameter
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzHost
+        [-ResourceId] <String>
+        [-InstanceView]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameter
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Automation.Models.PSHost" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName -Name $hostName
+    ```
+
+    ```output
+    ResourceGroupName    : myrg01
+    PlatformFaultDomain  : 1
+    AutoReplaceOnFailure : True
+    HostId               : 00000000-0000-0000-0000-000000000000
+    VirtualMachines[0]   :
+      Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm01
+    VirtualMachines[1]   :
+      Id                 : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/virtualMachines/myvm02
+    ProvisioningTime     : 7/27/2019 3:22:59 AM
+    ProvisioningState    : Succeeded
+    Sku                  :
+      Name               : ESv3-Type1
+    Id                   : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
+    Name                 : myhost01
+    Location             : eastus
+    Tags                 : {"key1":"val2"}
+    ```
+
+    This command returns a host.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName -Name $hostName -InstanceView
+    ```
+
+    ```output
+    ResourceGroupName      : myrg01
+    PlatformFaultDomain    : 0
+    AutoReplaceOnFailure   : True
+    HostId                 : 00000000-0000-0000-0000-000000000000
+    ProvisioningTime       : 8/19/2019 9:13:19 PM
+    ProvisioningState      : Succeeded
+    InstanceView           :
+      AssetId              : 00000000-0000-0000-0000-000000000000
+      AvailableCapacity    :
+        AllocatableVMs[0]  :
+          VmSize           : Standard_E2s_v3
+          Count            : 28
+        AllocatableVMs[1]  :
+          VmSize           : Standard_E4-2s_v3
+          Count            : 14
+        AllocatableVMs[2]  :
+          VmSize           : Standard_E4s_v3
+          Count            : 14
+      Statuses[0]          :
+        Code               : ProvisioningState/succeeded
+        Level              : Info
+        DisplayStatus      : Provisioning succeeded
+        Time               : 8/19/2019 9:13:19 PM
+      Statuses[1]          :
+        Code               : HealthState/available
+        Level              : Info
+        DisplayStatus      : Host available
+    Sku                    :
+      Name                 : ESv3-Type1
+    Id                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myrg01/providers/Microsoft.Compute/hostGroups/myhostgroup01/hosts/myhost01
+    Name                   : crptestps2264host
+    Location               : eastus
+    Tags                   : {"key1":"val2"}
+    ```
+
+    This command returns the instance view of a host.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzHost -ResourceGroupName $resourceGroupName -HostGroupName $hostGroupName
+    ```
+
+    ```output
+    ResourceGroupName       Name Location           Tags        Sku FD
+    -----------------       ---- --------           ----        --- --
+    myrg01              myhost01   eastus {[key1, val2]} ESv3-Type1  0
+    myrg01              myhost02   eastus {[key1, val2]} ESv3-Type1  1
+    ```
+
+    This command returns all hosts in the given host group.
+- title: 'Example 4: This command retuns a Host for provided -ResourceId.'
+  description: |-
+    ```powershell
+    $rgname = "rgname"
+    $loc = "eastus"
+    $hostGroupName = $rgname + "HostGroup"
+    $hostName = $rgname + "Host"
+    $Sku = "ESv3-Type1"
+    # Create Hostgroup and Hostgroupname
+    New-AzHostGroup -ResourceGroupName $rgname -Name $hostGroupName -Location $loc -PlatformFaultDomain 1 -Zone "2"
+    New-AzHost -ResourceGroupName $rgname -HostGroupName $hostGroupName -Name $hostName -Location $loc -Sku $Sku
+
+    # Fetch Host using -ResouceId
+    $dedicatedHost = Get-AzHost -ResourceGroupName $rgname -HostGroupName $hostGroupName -Name $hostName
+    $host = Get-AzHost -ResourceId $dedicatedHost.Id
+    ```
+
+    ```output
+    ResourceGroupName    : rgname
+    PlatformFaultDomain  : 0
+    AutoReplaceOnFailure : True
+    HostId               : 0730655b-051d-4559-a83a-5d579d15fec2
+    ProvisioningTime     : 10/14/2022 7:28:47 AM
+    ProvisioningState    : Succeeded
+    Sku                  :
+      Name               : ESv3-Type1
+    Id                   : /subscriptions/e37510d7-33b6-4676-886f-ee75bcc01871/resourceGroups/rgname/providers/Microsoft.Compute/hostGroups/rgnameHostGroup/hosts/rgnameHost
+    Name                 : rgnameHost
+    Type                 : Microsoft.Compute/hostGroups/hosts
+    Location             : eastus
+    Tags                 : {}
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHost.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.compute/get-azhost
+  Module Name: Az.Compute
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Compute/Compute/help/Get-AzHost.md
+  PlatyPS schema version: 2024-05-01

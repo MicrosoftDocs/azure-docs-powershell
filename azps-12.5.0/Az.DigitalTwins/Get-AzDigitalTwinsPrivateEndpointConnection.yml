@@ -1,0 +1,203 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DigitalTwins.Get-AzDigitalTwinsPrivateEndpointConnection
+name: Get-AzDigitalTwinsPrivateEndpointConnection
+module: Az.DigitalTwins
+isPreview: false
+summary: |-
+  Get private endpoint connection properties for the given private endpoint.
+description: |-
+  Get private endpoint connection properties for the given private endpoint.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IDigitalTwinsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the private endpoint connection.
+    aliases:
+    - PrivateEndpointConnectionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the DigitalTwinsInstance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the DigitalTwinsInstance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The subscription identifier.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDigitalTwinsPrivateEndpointConnection
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDigitalTwinsPrivateEndpointConnection
+        -Name <String>
+        -ResourceGroupName <String>
+        -ResourceName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDigitalTwinsPrivateEndpointConnection
+        -InputObject <IDigitalTwinsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.IDigitalTwinsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DigitalTwins.Models.Api20220531.IPrivateEndpointConnection" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List private endpoint connection properties for the digital twins instance.'
+  description: |-
+    ```powershell
+    Get-AzDigitalTwinsPrivateEndpointConnection -ResourceGroupName azps_test_group -ResourceName azps-digitaltwins-instance
+    ```
+
+    ```output
+    Name                                 GroupId PrivateLinkServiceConnectionStateStatus ResourceGroupName
+    ----                                 ------- --------------------------------------- -----------------
+    11c903a5-7b8a-4b86-812d-03f007dca6df {API}   Approved                                azps_test_group
+    ```
+
+    List private endpoint connection properties for the digital twins instance.
+- title: 'Example 2: Get private endpoint connection properties for the given private endpoint.'
+  description: |-
+    ```powershell
+    Get-AzDigitalTwinsPrivateEndpointConnection -ResourceGroupName azps_test_group -ResourceName azps-digitaltwins-instance -Name "11c903a5-7b8a-4b86-812d-03f007dca6df"
+    ```
+
+    ```output
+    Name                                 GroupId PrivateLinkServiceConnectionStateStatus ResourceGroupName
+    ----                                 ------- --------------------------------------- -----------------
+    11c903a5-7b8a-4b86-812d-03f007dca6df {API}   Approved                                azps_test_group
+    ```
+
+    Get private endpoint connection properties for the given private endpoint.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/DigitalTwins/help/Get-AzDigitalTwinsPrivateEndpointConnection.md
+  document type: cmdlet
+  external help file: Az.DigitalTwins-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.digitaltwins/get-azdigitaltwinsprivateendpointconnection
+  Module Name: Az.DigitalTwins
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DigitalTwins/DigitalTwins/help/Get-AzDigitalTwinsPrivateEndpointConnection.md
+  PlatyPS schema version: 2024-05-01

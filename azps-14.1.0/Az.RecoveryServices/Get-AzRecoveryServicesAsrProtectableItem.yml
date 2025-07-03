@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Get-AzRecoveryServicesAsrProtectableItem
+name: Get-AzRecoveryServicesAsrProtectableItem
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Get the protectable items in an ASR protection container.
+description: |-
+  The **Get-AzRecoveryServicesAsrProtectableItem** cmdlet gets the protectable items in an Azure Site Recovery Protection Container.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FriendlyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the friendly name of the ASR protectable item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithFriendlyName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectWithSiteIdAndFriendlyName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the ASR protectable item.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainer
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Site Recovery Protection Container object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VMware site Id where the protectable item was discovered (Applicable only for VMware to Azure replication scenario).
+      Use site Id from fabric specific details in the ASR fabric to specify one.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithSiteIdAndFriendlyName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectWithSiteId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrProtectableItem
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrProtectableItem
+        -Name <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrProtectableItem
+        -FriendlyName <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithFriendlyName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrProtectableItem
+        -FriendlyName <String>
+        -SiteId <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithSiteIdAndFriendlyName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesAsrProtectableItem
+        -SiteId <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithSiteId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectionContainer" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRProtectableItem" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $ProtectableItems = Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $Container
+    ```
+
+    Gets all the protectable items in specified ASR protection container.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $pc -FriendlyName $piFriendlyName
+    ```
+
+    ```output
+    Disks                         : {}
+    FabricObjectId                :
+    FabricSpecificVMDetails       : Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVMWareSpecificVMDetails
+    FriendlyName                  : V2A-W2K12-400
+    ID                            : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationFabrics/d011a5abf48190235963ee3a88ad188ee6bca8a4c6cd0c8d7ce5d439aa77ffd9/replicationProt
+                                    ectionContainers/cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078/replicationProtectableItems/22d47502-7df0-11e7-9373-0050568f2e8f
+    Name                          : 22d47502-7df0-11e7-9373-0050568f2e8f
+    OS                            : WINDOWS
+    OSDiskId                      :
+    OSDiskName                    :
+    ProtectionContainerId         : cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078
+    ProtectionReadinessErrors     :
+    ProtectionStatus              : Unprotected
+    ReplicationProtectedItemId    :
+    SupportedReplicationProviders : {InMage, InMageAzureV2}
+    ```
+
+    Get the protectable items in specified ASR protection container and with given friendly name.
+- title: Example 3
+  description: |-
+    ```powershell
+    Get-AzRecoveryServicesAsrProtectableItem -ProtectionContainer $pc -Name $piName
+    ```
+
+    ```output
+    Disks                         : {}
+    FabricObjectId                :
+    FabricSpecificVMDetails       : Microsoft.Azure.Commands.RecoveryServices.SiteRecovery.ASRVMWareSpecificVMDetails
+    FriendlyName                  : V2A-W2K12-400
+    ID                            : /Subscriptions/xxxxxxxxxxxx/resourceGroups/canaryexproute/providers/Microsoft.RecoveryServices/vaults/IbizaV2ATest/replicationFabrics/d011a5abf48190235963ee3a88ad188ee6bca8a4c6cd0c8d7ce5d439aa77ffd9/replicationProt
+                                    ectionContainers/cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078/replicationProtectableItems/22d47502-7df0-11e7-9373-0050568f2e8f
+    Name                          : 22d47502-7df0-11e7-9373-0050568f2e8f
+    OS                            : WINDOWS
+    OSDiskId                      :
+    OSDiskName                    :
+    ProtectionContainerId         : cloud_5dc96260-9f00-42e4-aca7-24ad27fc2078
+    ProtectionReadinessErrors     :
+    ProtectionStatus              : Unprotected
+    ReplicationProtectedItemId    :
+    SupportedReplicationProviders : {InMage, InMageAzureV2}
+    ```
+
+    Gets all the protectable items in specified ASR protection container.
+links:
+- text: Azure Recovery Services cmdlets
+  href: /powershell/module/az.recoveryservices
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.SiteRecovery.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesasrprotectableitem
+  Module Name: Az.RecoveryServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesAsrProtectableItem.md
+  PlatyPS schema version: 2024-05-01

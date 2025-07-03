@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzAutoscalePredictiveMetric
+name: Get-AzAutoscalePredictiveMetric
+module: Az.Monitor
+isPreview: false
+summary: |-
+  get predictive autoscale metric future data
+description: |-
+  get predictive autoscale metric future data
+parameters:
+  cmdletParameters:
+  - name: Aggregation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The list of aggregation types (comma separated) to retrieve.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoscaleSettingName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The autoscale setting name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IAutoscaleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Interval
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The interval (i.e.
+      timegrain) of the query.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The names of the metrics (comma separated) to retrieve.
+      Special case: If a metricname itself has a comma in it then use %2 to indicate it.
+      Eg: 'Metric,Name1' should be **'Metric%2Name1'**
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Metric namespace to query metric definitions for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Timespan
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The timespan of the query.
+      It is a string with the following format 'startDateTime_ISO/endDateTime_ISO'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzAutoscalePredictiveMetric
+        -InputObject <IAutoscaleIdentity>
+        -Aggregation <String>
+        -Interval <TimeSpan>
+        -MetricName <String>
+        -MetricNamespace <String>
+        -Timespan <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzAutoscalePredictiveMetric
+        -AutoscaleSettingName <String>
+        -ResourceGroupName <String>
+        -Aggregation <String>
+        -Interval <TimeSpan>
+        -MetricName <String>
+        -MetricNamespace <String>
+        -Timespan <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.IAutoscaleIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IPredictiveResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get predictive metric for autoscale setting'
+  description: |-
+    ```powershell
+    Get-AzAutoscalePredictiveMetric -AutoscaleSettingName test-autoscalesetting -ResourceGroupName test-group -Timespan "2021-10-14T22:00:00.000Z/2021-10-16T22:00:00.000Z" -Aggregation "Total" -Interval ([System.TimeSpan]::New(0,60,0)) -MetricName "PercentageCPU" -MetricNamespace "Microsoft.Compute/virtualMachineScaleSets"
+    ```
+
+    Get predictive metric for autoscale setting
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAutoscalePredictiveMetric.md
+  document type: cmdlet
+  external help file: Az.Autoscale.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitor/get-azautoscalepredictivemetric
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/Get-AzAutoscalePredictiveMetric.md
+  PlatyPS schema version: 2024-05-01

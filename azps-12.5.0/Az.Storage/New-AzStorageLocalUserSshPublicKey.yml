@@ -1,0 +1,122 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.New-AzStorageLocalUserSshPublicKey
+name: New-AzStorageLocalUserSshPublicKey
+module: Az.Storage
+isPreview: false
+summary: |-
+  Creates a SSH public key object, which can be used in Set-AzStorageLocalUser.
+description: |-
+  The **New-AzStorageLocalUserSshPublicKey** cmdlet creates a SSH public key object, which can be used in Set-AzStorageLocalUser.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description of the key.
+      It is used to store the function/usage of the key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Key
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify ssh public key, the key data is base64 encoded.
+      The format should be: '\<keyType\> \<keyData\>', e.g.
+      ssh-rsa AAAABBBB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageLocalUserSshPublicKey
+        -Key <String>
+        [-Description <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Management.Storage.Models.PSSshPublicKey" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create SSH public key objects, then create or update local user with the SSH public key objects.'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```
+    $sshkey1 = New-AzStorageLocalUserSshPublicKey -Key "ssh-rsa keykeykeykeykey=" -Description "sshpulickey name1"
+
+    $sshkey2 = New-AzStorageLocalUserSshPublicKey -Key "ssh-rsa keykeykeykeykew=" -Description "sshpulickey name2"
+
+    $localuser = Set-AzStorageLocalUser -ResourceGroupName "myresourcegroup" -AccountName "mystorageaccount" -UserName testuser1 -HomeDirectory "/" -SshAuthorizedKey $sshkey1,$sshkey2
+
+    $localuser
+
+       ResourceGroupName: myresourcegroup, StorageAccountName: mystorageaccount
+
+    Name      Sid                                          HomeDirectory HasSharedKey HasSshKey HasSshPassword PermissionScopes SshAuthorizedKeys
+    ----      ---                                          ------------- ------------ --------- -------------- ---------------- -----------------
+    testuser1 S-1-2-0-0000000000-000000000-0000000000-0000 /                                                                    [ssh-rsa keykeykeykeykey=,...]
+
+    $localuser.SshAuthorizedKeys
+
+    Description       Key
+    -----------       ---
+    sshpulickey name1 ssh-rsa keykeykeykeykey=
+    sshpulickey name2 ssh-rsa keykeykeykeykew=
+    ```
+
+    This first 2 commands create 2 SSH public key objects.
+    The following commands create or update a local user with the SSH public key objects, then show the updated local user properties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserSshPublicKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.Management.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/new-azstoragelocalusersshpublickey
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/New-AzStorageLocalUserSshPublicKey.md
+  PlatyPS schema version: 2024-05-01

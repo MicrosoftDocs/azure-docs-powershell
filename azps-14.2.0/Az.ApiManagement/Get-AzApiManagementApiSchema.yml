@@ -1,0 +1,177 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementApiSchema
+name: Get-AzApiManagementApiSchema
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Get the details of the API Schema
+description: |-
+  The **Get-AzApiManagementApiSchema** cmdlet gets the details of the API Schema
+parameters:
+  cmdletParameters:
+  - name: ApiId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      API identifier to look for.
+      If specified will try to get the API by the Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContextParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance of PsApiManagementContext.
+      This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContextParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Arm Resource Identifier of a Api Schema. If specified will try to find api schema by the identifier. This parameter is required.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SchemaId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier of the Schema.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ContextParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementApiSchema
+        -Context <PsApiManagementContext>
+        -ApiId <String>
+        [-SchemaId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ContextParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementApiSchema
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementApiSchema" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the details of all the Api Schema of an Api'
+  description: |-
+    ```powershell
+    $context = New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ApiManagement/service/sdktestapim4163
+    Get-AzApiManagementApiSchema -Context $context -ApiId wsdlapitest
+    ```
+
+    ```output
+    SchemaId           : 2a03e1b4-1826-4e59-b372-4711f575db28
+    Api Id             : wsdlapitest
+    Schema ContentType : xsdschema
+    Schema Document    : <s:schema elementFormDefault="qualified"....
+
+    SchemaId           : b6e5497d-f65a-4851-9f5b-b5684cdae688
+    Api Id             : wsdlapitest
+    Schema ContentType : xsdschema
+    Schema Document    : <?xml version=""1.0"" encoding=""UTF-8""....
+    ```
+
+    This command gets all the API schemas associated with an Api `swagger-petstore-extensive` for particular ApiManagement Context.
+- title: 'Example 2: Get the specific schema associated with an Api'
+  description: |-
+    ```powershell
+    $context = New-AzApiManagementContext -ResourceId /subscriptions/subid/resourceGroups/resourceGroupName/providers/Microsoft.ApiManagement/service/sdktestapim4163
+    Get-AzApiManagementApiSchema -Context $context -ApiId swagger-petstore-extensive -SchemaId 5cc9cf67e6ed3b1154e638bd
+    ```
+
+    ```output
+    SchemaId           : 5cc9cf67e6ed3b1154e638bd
+    Api Id             : swagger-petstore-extensive
+    Schema ContentType : swaggerdefinition
+    Schema Document    : {
+                           "definitions": {
+                             "pet": {
+                            ....
+    ```
+
+    This command gets the API schema `5cc9cf67e6ed3b1154e638bd` associated with an Api `swagger-petstore-extensive` for particular ApiManagement Context.
+links:
+- text: New-AzApiManagementApiSchema
+  href: ./New-AzApiManagementApiSchema.yml
+- text: Remove-AzApiManagementApiSchema
+  href: ./Remove-AzApiManagementApiSchema.yml
+- text: Set-AzApiManagementApiSchema
+  href: ./Set-AzApiManagementApiSchema.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiSchema.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementapischema
+  Module Name: Az.ApiManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementApiSchema.md
+  PlatyPS schema version: 2024-05-01

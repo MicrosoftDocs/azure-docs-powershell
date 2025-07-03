@@ -1,0 +1,77 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActivityLogAlertActionGroupObject
+name: New-AzActivityLogAlertActionGroupObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for ActionGroup.
+description: |-
+  Create an in-memory object for ActionGroup.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource ID of the Action Group.
+      This cannot be null or empty.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WebhookProperty
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActivityLogAlert.Models.Api20201001.IActionGroupWebhookProperties" data-throw-if-not-resolved="False" />
+    description: |-
+      the dictionary of custom properties to include with the post operation.
+      These data are appended to the webhook payload.
+      To construct, see NOTES section for WEBHOOKPROPERTY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActivityLogAlertActionGroupObject
+        -Id <String>
+        [-WebhookProperty <IActionGroupWebhookProperties>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActivityLogAlert.Models.Api20201001.ActionGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create action group object'
+  description: |-
+    ```powershell
+    New-AzActivityLogAlertActionGroupObject -Id $ActionGroupResourceId -WebhookProperty @{"sampleWebhookProperty"="SamplePropertyValue"}
+    ```
+
+    Create action group object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertActionGroupObject.md
+  document type: cmdlet
+  external help file: Az.ActivityLogAlert.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzActivityLogAlertActionGroupObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertActionGroupObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,946 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Add-AzEnvironment
+name: Add-AzEnvironment
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Adds endpoints and metadata for an instance of Azure Resource Manager.
+description: |-
+  The Add-AzEnvironment cmdlet adds endpoints and metadata to enable Azure Resource Manager cmdlets to connect with a new instance of Azure Resource Manager.
+  The built-in environments AzureCloud and AzureChinaCloud target existing public instances of Azure Resource Manager.
+parameters:
+  cmdletParameters:
+  - name: ActiveDirectoryEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the base authority for Azure Active Directory authentication.
+    aliases:
+    - AdEndpointUrl
+    - ActiveDirectory
+    - ActiveDirectoryAuthority
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectoryServiceEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the audience for tokens that authenticate requests to Azure Resource Manager or Service Management (RDFE) endpoints.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdTenant
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the default Active Directory tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "17"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ARMEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Azure Resource Manager endpoint
+    aliases:
+    - ArmUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ARMEndpoint
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoDiscover
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Discovers environments via default or configured endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Discovery
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAnalysisServicesEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier of the Azure Analysis Services resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAnalysisServicesEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The endpoint to use when communicating with the Azure Log Analytics API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAttestationServiceEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier of the Azure Attestation service that is the recipient of the requested token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureAttestationServiceEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dns suffix of Azure Attestation service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dns Suffix of Azure Data Lake Analytics job and catalog services
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "15"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureDataLakeStoreFileSystemEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dns Suffix of Azure Data Lake Store FileSystem. Example: `azuredatalake.net`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "14"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureKeyVaultDnsSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dns suffix of Azure Key Vault service. Example is `vault-int.azure-int.net`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureKeyVaultServiceEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier of Azure Key Vault data service that is the recipient of the requested token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "11"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "11"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureOperationalInsightsEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The endpoint to use when communicating with the Azure Log Analytics API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "22"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "22"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureOperationalInsightsEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The audience for tokens authenticating with the Azure Log Analytics API.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "21"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "21"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureSynapseAnalyticsEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier of the Azure Synapse Analytics that is the recipient of the requested token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureSynapseAnalyticsEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Dns suffix of Azure Synapse Analytics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BatchEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier of the Azure Batch service that is the recipient of the requested token
+    aliases:
+    - BatchResourceId
+    - BatchAudience
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "20"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "20"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerRegistryEndpointSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Suffix of Azure Container Registry.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The audience for tokens authenticating with the AD Data Lake services Endpoint.
+    aliases:
+    - DataLakeEndpointResourceId
+    - DataLakeResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "19"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "19"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, tenant and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAdfsAuthentication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that Active Directory Federation Services (ADFS) on-premise authentication is allowed.
+    aliases:
+    - OnPremise
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "16"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GalleryEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for the Azure Resource Manager gallery of deployment templates.
+      The parameter is to set the value to `GalleryUrl` of `PSAzureEnvironment`. As `GalleryUrl` is removed from ArmMetadata, Azure PowerShell will no longer provide for the value and so it is not recommended to set `GalleryEndpoint` anymore.
+    aliases:
+    - Gallery
+    - GalleryUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GraphAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The audience for tokens authenticating with the AD Graph Endpoint.
+    aliases:
+    - GraphEndpointResourceId
+    - GraphResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "18"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GraphEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL for Graph (Active Directory metadata) requests.
+    aliases:
+    - Graph
+    - GraphUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagementPortalUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL for the Management Portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftGraphEndpointResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier of Microsoft Graph
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MicrosoftGraphUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Microsoft Graph Url
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the environment to add.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublishSettingsFileUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL from which .publishsettings files can be downloaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceManagerEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL for Azure Resource Manager requests.
+    aliases:
+    - ResourceManager
+    - ResourceManagerUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+    acceptedValues:
+    - Process
+    - CurrentUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for Service Management (RDFE) requests.
+    aliases:
+    - ServiceManagement
+    - ServiceManagementUrl
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlDatabaseDnsSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain-name suffix for Azure SQL Database servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "13"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageEndpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the endpoint for storage (blob, table, queue, and file) access.
+    aliases:
+    - StorageEndpointSuffix
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ARMEndpoint
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerDnsSuffix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the domain-name suffix for Azure Traffic Manager services.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Name
+      position: "12"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Uri
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies URI of the internet resource to fetch environments.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Discovery
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzEnvironment
+        [-Name] <String>
+        [[-PublishSettingsFileUrl] <String>]
+        [[-ServiceEndpoint] <String>]
+        [[-ManagementPortalUrl] <String>]
+        [[-StorageEndpoint] <String>]
+        [[-ActiveDirectoryEndpoint] <String>]
+        [[-ResourceManagerEndpoint] <String>]
+        [[-GalleryEndpoint] <String>]
+        [[-ActiveDirectoryServiceEndpointResourceId] <String>]
+        [[-GraphEndpoint] <String>]
+        [[-AzureKeyVaultDnsSuffix] <String>]
+        [[-AzureKeyVaultServiceEndpointResourceId] <String>]
+        [[-TrafficManagerDnsSuffix] <String>]
+        [[-SqlDatabaseDnsSuffix] <String>]
+        [[-AzureDataLakeStoreFileSystemEndpointSuffix] <String>]
+        [[-AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix] <String>]
+        [[-AdTenant] <String>]
+        [[-GraphAudience] <String>]
+        [[-DataLakeAudience] <String>]
+        [[-BatchEndpointResourceId] <String>]
+        [[-AzureOperationalInsightsEndpointResourceId] <String>]
+        [[-AzureOperationalInsightsEndpoint] <String>]
+        [-EnableAdfsAuthentication]
+        [-AzureAnalysisServicesEndpointSuffix <String>]
+        [-AzureAnalysisServicesEndpointResourceId <String>]
+        [-AzureAttestationServiceEndpointSuffix <String>]
+        [-AzureAttestationServiceEndpointResourceId <String>]
+        [-AzureSynapseAnalyticsEndpointSuffix <String>]
+        [-ContainerRegistryEndpointSuffix <String>]
+        [-AzureSynapseAnalyticsEndpointResourceId <String>]
+        [-MicrosoftGraphEndpointResourceId <String>]
+        [-MicrosoftGraphUrl <String>]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Name
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzEnvironment
+        [-Name] <String>
+        [[-StorageEndpoint] <String>]
+        [-ARMEndpoint] <String>
+        [[-AzureKeyVaultDnsSuffix] <String>]
+        [[-AzureKeyVaultServiceEndpointResourceId] <String>]
+        [[-DataLakeAudience] <String>]
+        [[-BatchEndpointResourceId] <String>]
+        [[-AzureOperationalInsightsEndpointResourceId] <String>]
+        [[-AzureOperationalInsightsEndpoint] <String>]
+        [-AzureAnalysisServicesEndpointSuffix <String>]
+        [-AzureAnalysisServicesEndpointResourceId <String>]
+        [-AzureAttestationServiceEndpointSuffix <String>]
+        [-AzureAttestationServiceEndpointResourceId <String>]
+        [-AzureSynapseAnalyticsEndpointSuffix <String>]
+        [-ContainerRegistryEndpointSuffix <String>]
+        [-AzureSynapseAnalyticsEndpointResourceId <String>]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ARMEndpoint
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzEnvironment
+        [-AutoDiscover]
+        [-Uri <Uri>]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Discovery
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.PSAzureEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creating and modifying a new environment'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```powershell
+    Add-AzEnvironment -Name TestEnvironment `
+            -ActiveDirectoryEndpoint TestADEndpoint `
+            -ActiveDirectoryServiceEndpointResourceId TestADApplicationId `
+            -ResourceManagerEndpoint TestRMEndpoint `
+            -GalleryEndpoint TestGalleryEndpoint `
+            -GraphEndpoint TestGraphEndpoint
+
+    Name            Resource Manager Url ActiveDirectory Authority
+    ----            -------------------- -------------------------
+    TestEnvironment TestRMEndpoint       TestADEndpoint/
+
+    Set-AzEnvironment -Name TestEnvironment `
+            -ActiveDirectoryEndpoint NewTestADEndpoint `
+            -GraphEndpoint NewTestGraphEndpoint | Format-List
+
+    Name                                              : TestEnvironment
+    EnableAdfsAuthentication                          : False
+    OnPremise                                         : False
+    ActiveDirectoryServiceEndpointResourceId          : TestADApplicationId
+    AdTenant                                          :
+    GalleryUrl                                        : TestGalleryEndpoint
+    ManagementPortalUrl                               :
+    ServiceManagementUrl                              :
+    PublishSettingsFileUrl                            :
+    ResourceManagerUrl                                : TestRMEndpoint
+    SqlDatabaseDnsSuffix                              :
+    StorageEndpointSuffix                             :
+    ActiveDirectoryAuthority                          : NewTestADEndpoint
+    GraphUrl                                          : NewTestGraphEndpoint
+    GraphEndpointResourceId                           :
+    TrafficManagerDnsSuffix                           :
+    AzureKeyVaultDnsSuffix                            :
+    DataLakeEndpointResourceId                        :
+    AzureDataLakeStoreFileSystemEndpointSuffix        :
+    AzureDataLakeAnalyticsCatalogAndJobEndpointSuffix :
+    AzureKeyVaultServiceEndpointResourceId            :
+    AzureOperationalInsightsEndpointResourceId        :
+    AzureOperationalInsightsEndpoint                  :
+    AzureAnalysisServicesEndpointSuffix               :
+    AzureAttestationServiceEndpointSuffix             :
+    AzureAttestationServiceEndpointResourceId         :
+    AzureSynapseAnalyticsEndpointSuffix               :
+    AzureSynapseAnalyticsEndpointResourceId           :
+    VersionProfiles                                   : {}
+    ExtendedProperties                                : {}
+    BatchEndpointResourceId                           :
+    ```
+
+    In this example we are creating a new Azure environment with sample endpoints using Add-AzEnvironment, and then we are changing the value of the ActiveDirectoryEndpoint and GraphEndpoint attributes of the created environment using the cmdlet Set-AzEnvironment.
+- title: 'Example 2: Discovering a new environment via Uri'
+  description: |-
+    ```powershell
+    <#
+    Uri https://configuredmetadata.net returns an array of environment metadata. The following example contains a payload for the AzureCloud default environment.
+
+    [
+      {
+        "portal": "https://portal.azure.com",
+        "authentication": {
+          "loginEndpoint": "https://login.microsoftonline.com/",
+          "audiences": [
+            "https://management.core.windows.net/"
+          ],
+          "tenant": "common",
+          "identityProvider": "AAD"
+        },
+        "media": "https://rest.media.azure.net",
+        "graphAudience": "https://graph.windows.net/",
+        "graph": "https://graph.windows.net/",
+        "name": "AzureCloud",
+        "suffixes": {
+          "azureDataLakeStoreFileSystem": "azuredatalakestore.net",
+          "acrLoginServer": "azurecr.io",
+          "sqlServerHostname": ".database.windows.net",
+          "azureDataLakeAnalyticsCatalogAndJob": "azuredatalakeanalytics.net",
+          "keyVaultDns": "vault.azure.net",
+          "storage": "core.windows.net",
+          "azureFrontDoorEndpointSuffix": "azurefd.net"
+        },
+        "batch": "https://batch.core.windows.net/",
+        "resourceManager": "https://management.azure.com/",
+        "vmImageAliasDoc": "https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/quickstart-templates/aliases.json",
+        "activeDirectoryDataLake": "https://datalake.azure.net/",
+        "sqlManagement": "https://management.core.windows.net:8443/",
+        "gallery": "https://gallery.azure.com/"
+      },
+    ……
+    ]
+    #>
+
+    Add-AzEnvironment -AutoDiscover -Uri https://configuredmetadata.net
+    ```
+
+    ```Output
+    Name            Resource Manager Url ActiveDirectory Authority
+    ----            -------------------- -------------------------
+    TestEnvironment TestRMEndpoint       TestADEndpoint/
+    ```
+
+    In this example, we are discovering a new Azure environment from the `https://configuredmetadata.net` Uri.
+links:
+- text: Get-AzEnvironment
+  href: ./Get-AzEnvironment.yml
+- text: Remove-AzEnvironment
+  href: ./Remove-AzEnvironment.yml
+- text: Set-AzEnvironment
+  href: ./Set-AzEnvironment.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Add-AzEnvironment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.accounts/add-azenvironment
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Accounts/Accounts/help/Add-AzEnvironment.md
+  PlatyPS schema version: 2024-05-01

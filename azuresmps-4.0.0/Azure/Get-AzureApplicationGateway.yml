@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureApplicationGateway
+name: Get-AzureApplicationGateway
+module: Azure
+isPreview: false
+summary: |-
+  Gets an Application Gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureApplicationGateway** cmdlet gets an existing Azure Application Gateway.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Application Gateway that this cmdlet gets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureApplicationGateway
+        [-Name <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Networking.ApplicationGatewayObjectModel.ApplicationGateway, IEnumerable<Microsoft.Azure.Networking.ApplicationGatewayObjectModel.ApplicationGateway>" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get an Application Gateway'
+  description: |-
+    ```
+    PS C:\> Get-AzureApplicationGateway -Name "ApplicationGateway06"
+    ```
+
+    This command gets the Application Gateway named ApplicationGateway06.
+- title: 'Example 2: Get all Application Gateways'
+  description: |-
+    ```
+    PS C:\> Get-AzureApplicationGateway
+    ```
+
+    This command gets all the Application Gateways under your subscription.
+links:
+- text: New-AzureApplicationGateway
+  href: ./New-AzureApplicationGateway.yml
+- text: Remove-AzureApplicationGateway
+  href: ./Remove-AzureApplicationGateway.yml
+- text: Start-AzureApplicationGateway
+  href: ./Start-AzureApplicationGateway.yml
+- text: Stop-AzureApplicationGateway
+  href: ./Stop-AzureApplicationGateway.yml
+- text: Update-AzureApplicationGateway
+  href: ./Update-AzureApplicationGateway.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0AED21E8-A638-4019-9B23-447472E56C7A
+  PlatyPS schema version: 2024-05-01

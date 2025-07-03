@@ -1,0 +1,144 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Quantum.New-AzQuantumProviderObject
+name: New-AzQuantumProviderObject
+module: Az.Quantum
+isPreview: false
+summary: |-
+  Create an in-memory object for Provider.
+description: |-
+  Create an in-memory object for Provider.
+parameters:
+  cmdletParameters:
+  - name: ApplicationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The provider's marketplace application display name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Id
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Unique id of this provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A Uri identifying the specific instance of this provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProvisioningState
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quantum.Support.Status" data-throw-if-not-resolved="False" />
+    description: |-
+      Provisioning status field.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceUsageId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Id to track resource usage for the provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sku associated with pricing information for this provider.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzQuantumProviderObject
+        [-ApplicationName <String>]
+        [-Id <String>]
+        [-InstanceUri <String>]
+        [-ProvisioningState <Status>]
+        [-ResourceUsageId <String>]
+        [-Sku <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Quantum.Models.Api20220110Preview.Provider" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for Provider.'
+  description: |-
+    ```powershell
+    New-AzQuantumProviderObject -Id "ionq" -Sku "pay-as-you-go-cred"
+    ```
+
+    ```output
+    Sku
+    ---
+    pay-as-you-go-cred
+    ```
+
+    Create an in-memory object for Provider.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/New-AzQuantumProviderObject.md
+  document type: cmdlet
+  external help file: Az.Quantum-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Quantum/new-AzQuantumProviderObject
+  Module Name: Az.Quantum
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Quantum/Quantum/help/New-AzQuantumProviderObject.md
+  PlatyPS schema version: 2024-05-01

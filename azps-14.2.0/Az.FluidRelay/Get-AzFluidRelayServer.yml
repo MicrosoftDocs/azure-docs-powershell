@@ -1,0 +1,238 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FluidRelay.Get-AzFluidRelayServer
+name: Get-AzFluidRelayServer
+module: Az.FluidRelay
+isPreview: false
+summary: |-
+  Get a Fluid Relay server.
+description: |-
+  Get a Fluid Relay server.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Fluid Relay server resource name.
+    aliases:
+    - FluidRelayServerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group containing the resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityResourceGroup
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The subscription id (GUID) for this resource.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFluidRelayServer
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzFluidRelayServer
+        -Name <String>
+        -ResourceGroupInputObject <IFluidRelayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityResourceGroup
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFluidRelayServer
+        -Name <String>
+        -ResourceGroup <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFluidRelayServer
+        -ResourceGroup <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFluidRelayServer
+        -InputObject <IFluidRelayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.FluidRelay.Models.IFluidRelayServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Fluid Relay server.'
+  description: |-
+    ```powershell
+    Get-AzFluidRelayServer
+    ```
+
+    ```output
+    Location Name            ResourceGroupName
+    -------- ----            -----------------
+    westus2  azps-fluidrelay azpstest-gp
+    ```
+
+    List Fluid Relay server.
+- title: 'Example 2: List Fluid Relay server by ResourceGroup.'
+  description: |-
+    ```powershell
+    Get-AzFluidRelayServer -ResourceGroup azpstest-gp
+    ```
+
+    ```output
+    Location Name            ResourceGroupName
+    -------- ----            -----------------
+    westus2  azps-fluidrelay azpstest-gp
+    ```
+
+    List Fluid Relay server.
+- title: 'Example 3: Get a Fluid Relay server by ResourceGroup.'
+  description: |-
+    ```powershell
+    Get-AzFluidRelayServer -Name azps-fluidrelay -ResourceGroup azpstest-gp
+    ```
+
+    ```output
+    Location Name            ResourceGroupName
+    -------- ----            -----------------
+    westus2  azps-fluidrelay azpstest-gp
+    ```
+
+    Get a Fluid Relay server.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/FluidRelay/help/Get-AzFluidRelayServer.md
+  document type: cmdlet
+  external help file: Az.FluidRelay-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.fluidrelay/get-azfluidrelayserver
+  Module Name: Az.FluidRelay
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FluidRelay/FluidRelay/help/Get-AzFluidRelayServer.md
+  PlatyPS schema version: 2024-05-01

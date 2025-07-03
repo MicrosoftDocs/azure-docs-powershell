@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.Get-AzDeviceSecurityGroup
+name: Get-AzDeviceSecurityGroup
+module: Az.Security
+isPreview: false
+summary: |-
+  Get device security group (IoT Hub security)
+description: |-
+  The Get-AzDeviceSecurityGroup cmdlet returns a device security group defined in iot security solution
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HubResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ID of the security resource that you want to invoke the command on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdLevelResource
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceSecurityGroup
+        -HubResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdScope
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceSecurityGroup
+        -HubResourceId <String>
+        -Name <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdLevelResource
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Security.Models.DeviceSecurityGroups.PSDeviceSecurityGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDeviceSecurityGroup -HubResourceId "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub" -Name "MySecurityGroup"
+    ```
+
+    ```output
+    Id: "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub/providers/Microsoft.Security/deviceSecurityGroups/MySecurityGroup"
+    Name: "MySecurityGroup"
+    Type: "Microsoft.Security/deviceSecurityGroups"
+    ThresholdRules: []
+    TimeWindowRules: [
+    			{
+                  RuleType: "ActiveConnectionsNotInAllowedRange"
+                  DisplayName: "Number of active connections is not in allowed range"
+                  Description: "Get an alert when the number of active connections of a device in the time window is not in the allowed range"
+                  IsEnabled: false
+                  MinThreshold: 0
+                  MaxThreshold: 0
+                  TimeWindowSize: "PT15M"
+                }
+                {
+                  RuleType: "AmqpC2DMessagesNotInAllowedRange"
+                  DisplayName: "Number of cloud to device messages (AMQP protocol) is not in allowed range"
+                  Description: "Get an alert when the number of cloud to device messages (AMQP protocol) in the time window is not in the allowed range"
+                  IsEnabled: false
+                  MinThreshold: 0
+                  MaxThreshold: 0
+                  TimeWindowSize: "PT15M"
+                }]
+    AllowlistRules: [
+    			{
+                  RuleType": "ConnectionToIpNotAllowed",
+                  DisplayName: "Outbound connection to an ip that isn't allowed"
+                  Description: "Get an alert when an outbound connection is created between your device and an ip that isn't allowed"
+                  IsEnabled: false
+                  ValueType: "IpCidr"
+                  AllowlistValues: []
+                },
+                {
+                  RuleType: "LocalUserNotAllowed"
+                  DisplayName: "Login by a local user that isn't allowed"
+                  Description: "Get an alert when a local user that isn't allowed logins to the device"
+                  IsEnabled: false
+                  ValueType: "String"
+                  AllowlistValues: []
+                }]
+    DenylistRules: []
+    ```
+
+    Get device security group "MySecurityGroup" in IoT Hub with reasource Id "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub"
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzDeviceSecurityGroup -HubResourceId "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub"
+    ```
+
+    ```output
+    Array of security group items like the item returned in example 1
+    ```
+
+    Get list of device security group in IoT Hub with reasource Id "/subscriptions/XXXXXXXX-XXXX-XXXXX-XXXX-XXXXXXXXXXXX/resourceGroups/MyResourceGroup/providers/Microsoft.Devices/IotHubs/MyHub"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzDeviceSecurityGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Security.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.security/Get-AzDeviceSecurityGroup
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/Get-AzDeviceSecurityGroup.md
+  PlatyPS schema version: 2024-05-01

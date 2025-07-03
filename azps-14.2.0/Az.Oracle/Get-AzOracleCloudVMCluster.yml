@@ -1,0 +1,219 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Oracle.Get-AzOracleCloudVMCluster
+name: Get-AzOracleCloudVMCluster
+module: Az.Oracle
+isPreview: false
+summary: |-
+  Get a CloudVmCluster
+description: |-
+  Get a CloudVmCluster
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      CloudVmCluster name
+    aliases:
+    - Cloudvmclustername
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzOracleCloudVMCluster
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzOracleCloudVMCluster
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOracleCloudVMCluster
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOracleCloudVMCluster
+        -InputObject <IOracleIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.IOracleIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Oracle.Models.ICloudVMCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of the Cloud VM Cluster resources'
+  description: |-
+    ```powershell
+    Get-AzOracleCloudVMCluster
+    ```
+
+    ```output
+    ...
+    Name                                           : OFake_PowerShellTestVmCluster
+    NodeCount                                      : 2
+    NsgCidr                                        :
+    NsgUrl                                         : https://cloud.oracle.com/networking/vcns/ocid1.vcn.oc1.iad.amaaaaaanirvylqaltsnipqfdbwlimfznzto7vjto23cqahcu3k3g673z7ma/network-security-group
+                                                     s/ocid1.networksecuritygroup.oc1.iad.aaaaaaaas45h3bfix5lxcyvi4x5wxlrrt62r4pa5we63r6drzcgdwktdobba?region=us-ashburn-1
+    OciUrl                                         : https://cloud.oracle.com/dbaas/cloudVmClusters/ocid1.cloudvmcluster.oc1.iad.anuwcljrnirvylqanh37nglmlhotsnvzwivsfnomoa6lc7t6l5gwwocoovcq?regio
+                                                     n=us-ashburn-1&tenant=orpsandbox3&compartmentId=ocid1.compartment.oc1..aaaaaaaazcet2jt2uowjtgxsae5uositfy2thngqgokwdifyzmyygdpckeua
+    Ocid                                           : ocid1.cloudvmcluster.oc1.iad.anuwcljrnirvylqanh37nglmlhotsnvzwivsfnomoa6lc7t6l5gwwocoovcq
+    OcpuCount                                      : 4
+    ProvisioningState                              : Succeeded
+    ResourceGroupName                              : PowerShellTestRg
+    ScanDnsName                                    : host-wq5t6-scan.ocidelegated.ocipstestvnet.oraclevcn.com
+    ScanDnsRecordId                                :
+    ScanIPId                                       : {}
+    ScanListenerPortTcp                            : 1521
+    ScanListenerPortTcpSsl                         : 2484
+    Shape                                          : Exadata.X9M
+    SshPublicKey                                   : {ssh-rsa xxx}
+    StorageSizeInGb                                : 196608
+    SubnetId                                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PowerShellTestRg/providers/Microsoft.Network/virtualNetworks/PSTestVnet/sub
+                                                     nets/delegated
+    SubnetOcid                                     : ocid1.subnet.oc1.iad.aaaaaaaatodiqebvhyea45s6nyip4d7u7zizkc6soxbmsymuo2vu4zxosxaq
+    SystemDataCreatedAt                            : 04/07/2024 15:52:12
+    SystemDataCreatedBy                            : example@oracle.com
+    SystemDataCreatedByType                        : User
+    SystemDataLastModifiedAt                       : 06/07/2024 09:04:17
+    SystemDataLastModifiedBy                       : 857ad006-4380-4712-ba4c-22f7c64d84e7
+    SystemDataLastModifiedByType                   : Application
+    SystemVersion                                  :
+    Tag                                            : {
+                                                     }
+    TimeCreated                                    : 04/07/2024 16:09:39
+    TimeZone                                       : UTC
+    Type                                           : oracle.database/cloudvmclusters
+    VipId                                          :
+    VnetId                                         : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/PowerShellTestRg/providers/Microsoft.Network/virtualNetworks/PSTestVnet
+    ZoneId                                         : ocid1.dns-zone.oc1.iad.aaaaaaaah4rwrfuscditbdg7yjutywp3xpwyuqmcj2bymvb4dn47xoxmvenq
+    ```
+
+    Get a Cloud VM Cluster resource by name and resource group name.
+    For more information, execute `Get-Help Get-AzOracleCloudVMCluster`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Get-AzOracleCloudVMCluster.md
+  document type: cmdlet
+  external help file: Az.Oracle-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.oracle/get-azoraclecloudvmcluster
+  Module Name: Az.Oracle
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Get-AzOracleCloudVMCluster.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Get-AzVM
+name: Get-AzVM
+module: Az.Compute
+isPreview: false
+summary: |-
+  Gets the properties of a virtual machine.
+description: |-
+  The **Get-AzVM** cmdlet gets the model view and instance view of an Azure virtual machine.
+  The model view is the user specified properties of the virtual machine.
+  The instance view is the instance level status of the virtual machine.
+  Specify the *Status* parameter to get only the instance view of a virtual machine.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayHint
+    type: <xref href="DisplayHintType" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines how the virtual machine object is displayed.
+
+      Valid values are:
+
+      -- Compact: displays only top level properties
+    acceptedValues:
+    - Compact
+    - Expand
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetVirtualMachineInResourceGroupParamSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the virtual machine to get.
+    aliases:
+    - ResourceName
+    - VMName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetVirtualMachineInResourceGroupParamSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NextLink
+    type: <xref href="Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the next link.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListNextLinkVirtualMachinesParamSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListVirtualMachineInResourceGroupParamSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetVirtualMachineInResourceGroupParamSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Status
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet gets only the instance view of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVM
+        [-Status]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListAllVirtualMachinesParamSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVM
+        [-ResourceGroupName] <String>
+        [-Status]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListVirtualMachineInResourceGroupParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVM
+        [-ResourceGroupName] <String>
+        [-Name] <String>
+        [-Status]
+        [-DisplayHint <DisplayHintType>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetVirtualMachineInResourceGroupParamSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVM
+        [-NextLink] <Uri>
+        [-Status]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListNextLinkVirtualMachinesParamSet
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet does not accept any input.
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachine" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Compute.Models.PSVirtualMachineInstanceView" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get model and instance view properties'
+  description: |-
+    ```
+    PS C:\> Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07"
+    ```
+
+    This command gets the model view and instance view properties of the virtual machine named VirtualMachine07.
+- title: 'Example 2: Get instance view properties'
+  description: |-
+    ```
+    PS C:\> Get-AzVM -ResourceGroupName "ResourceGroup11" -Name "VirtualMachine07" -Status
+    ```
+
+    This command gets properties of the virtual machine named VirtualMachine07.
+    This command specifies the *Status* parameter.
+    Therefore, the command gets only the instance view properties.
+- title: 'Example 3: Get properties for all virtual machines in a resource group'
+  description: |-
+    ```
+    PS C:\> Get-AzVM -ResourceGroupName "ResourceGroup11"
+    ```
+
+    This command gets properties for all the virtual machines in the resource group named ResourceGroup11.
+- title: 'Example 4: Get all virtual machines in your subscription'
+  description: |-
+    ```
+    PS C:\> Get-AzVM
+    ```
+
+    This command gets all the virtual machines in your subscription.
+links:
+- text: New-AzVM
+  href: ./New-AzVM.yml
+- text: Remove-AzVM
+  href: ./Remove-AzVM.yml
+- text: Restart-AzVM
+  href: ./Restart-AzVM.yml
+- text: Start-AzVM
+  href: ./Start-AzVM.yml
+- text: Stop-AzVM
+  href: ./Stop-AzVM.yml
+- text: Update-AzVM
+  href: ./Update-AzVM.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVM.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/get-azvm
+  Module Name: Az.Compute
+  ms.assetid: 6250EC11-79CF-428B-A72F-9BD72C1751F0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Get-AzVM.md
+  PlatyPS schema version: 2024-05-01

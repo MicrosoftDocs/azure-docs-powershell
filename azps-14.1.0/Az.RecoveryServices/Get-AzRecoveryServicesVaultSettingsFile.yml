@@ -1,0 +1,227 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Get-AzRecoveryServicesVaultSettingsFile
+name: Get-AzRecoveryServicesVaultSettingsFile
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Gets the Azure Site Recovery vault settings file.
+description: |-
+  The **Get-AzRecoveryServicesVaultSettingsFile** cmdlet gets the settings file for an Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Backup
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the vault credentials file is applicable to Azure Backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForBackupVaultTypeWithCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Certificate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      {{Fill Certificate Description}}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path to the Azure Site Recovery vault settings file.
+      You can download this file from the Azure Site Recovery vault portal and store it locally.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteFriendlyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the site friendly name.
+      Use this parameter if you are downloading the vault credentials for a Hyper-V site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForSiteWithCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteIdentifier
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the site identifier.
+      Use this parameter if you are downloading the vault credentials for a Hyper-V site.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForSiteWithCertificate
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SiteRecovery
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates the vault credentials file is applicable to Azure Site Recovery.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForSiteWithCertificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByDefaultWithCertificate
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure Site Recovery vault object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesVaultSettingsFile
+        [-Vault] <ARSVault>
+        [[-Path] <String>]
+        -SiteIdentifier <String>
+        -SiteFriendlyName <String>
+        [-Certificate <String>]
+        [-SiteRecovery]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ForSiteWithCertificate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesVaultSettingsFile
+        [-Vault] <ARSVault>
+        [[-Path] <String>]
+        [-Certificate <String>]
+        [-SiteRecovery]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByDefaultWithCertificate
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRecoveryServicesVaultSettingsFile
+        [-Vault] <ARSVault>
+        [[-Path] <String>]
+        [-Certificate <String>]
+        [-Backup]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ForBackupVaultTypeWithCertificate
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.ARSVault" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.VaultSettingsFilePath" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Register a Windows Server or DPM machine for Azure Backup'
+  description: |-
+    ```powershell
+    $Vault01 = Get-AzRecoveryServicesVault -Name "TestVault"
+    $CredsPath = "C:\Downloads"
+    $Credsfilename = Get-AzRecoveryServicesVaultSettingsFile -Backup -Vault $Vault01 -Path $CredsPath
+    ```
+
+    The first command gets the vault named TestVault, and then stores it in the $Vault01 variable.
+    The second command sets the $CredsPath variable to C:\Downloads.
+    The last command gets the vault credentials file for $Vault01 using the credentials in $CredsPath for Azure Backup.
+- title: Example 2
+  description: |-
+    ```powershell
+    $Credsfilename = Get-AzRecoveryServicesVaultSettingsFile -SiteRecovery -Vault $Vault01
+    ```
+
+    The command gets the vault credentials file for $Vault01 of vault type siteRecovery.
+links:
+- text: Get-AzRecoveryServicesVault
+  href: ./Get-AzRecoveryServicesVault.yml
+- text: New-AzRecoveryServicesVault
+  href: ./New-AzRecoveryServicesVault.yml
+- text: Remove-AzRecoveryServicesVault
+  href: ./Remove-AzRecoveryServicesVault.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVaultSettingsFile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/get-azrecoveryservicesvaultsettingsfile
+  Module Name: Az.RecoveryServices
+  ms.assetid: 56074606-28A6-4F91-A56C-4C8A9A31543F
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Get-AzRecoveryServicesVaultSettingsFile.md
+  PlatyPS schema version: 2024-05-01

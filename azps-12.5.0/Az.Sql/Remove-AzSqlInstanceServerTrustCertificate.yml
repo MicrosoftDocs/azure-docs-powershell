@@ -1,0 +1,336 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Remove-AzSqlInstanceServerTrustCertificate
+name: Remove-AzSqlInstanceServerTrustCertificate
+module: Az.Sql
+isPreview: false
+summary: |-
+  Removes a server trust certificate.
+description: |-
+  **Remove-AzSqlInstanceServerTrustCertificate** cmdlet removes a server trust certificate from Azure SQL Managed Instance
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ServerTrustCertificate.Model.AzureSqlInstanceServerTrustCertificateModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByInputObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Azure SQL Managed Instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceObject
+    type: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+    description: |-
+      Instance input object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByParentObjectParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the certificate.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DeleteByParentObjectParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Defines whether to return the removed Server Trust Certificate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DeleteByResourceIdParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzSqlInstanceServerTrustCertificate
+        [-ResourceGroupName] <String>
+        [-InstanceName] <String>
+        [-Name] <String>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeleteByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Remove-AzSqlInstanceServerTrustCertificate
+        [-Name] <String>
+        [-InstanceObject] <AzureSqlManagedInstanceModel>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeleteByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSqlInstanceServerTrustCertificate
+        [-InputObject] <AzureSqlInstanceServerTrustCertificateModel>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeleteByInputObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Remove-AzSqlInstanceServerTrustCertificate
+        [-ResourceId] <String>
+        [-AsJob]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DeleteByResourceIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ManagedInstance.Model.AzureSqlManagedInstanceModel" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Sql.ServerTrustCertificate.Model.AzureSqlInstanceServerTrustCertificateModel" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.ServerTrustCertificate.Model.AzureSqlInstanceServerTrustCertificateModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove a server trust certificate'
+  description: |-
+    ```powershell
+    Remove-AzSqlInstanceServerTrustCertificate -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Certificate01"
+    ```
+
+    This command removes the server trust certificate "Certificate01" from managed instance "ManagedInstance01" and resource group "ResourceGroup1"
+- title: 'Example 2: Remove a server trust certificate by its resource identifier'
+  description: |-
+    ```powershell
+    Remove-AzSqlInstanceServerTrustCertificate -ResourceId "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/serverTrustCertificates/Certificate01"
+    ```
+
+    This command removes the server trust certificate with specified resource ID.
+- title: 'Example 3: Remove a server trust certificate by its PowerShell object'
+  description: |-
+    ```powershell
+    $serverTrustCertificate = Get-AzSqlInstanceServerTrustCertificate -ResourceGroupName "ResourceGroup01" -InstanceName "ManagedInstance01" -Name "Certificate01"
+    Remove-AzSqlInstanceServerTrustCertificate -InputObject $serverTrustCertificate
+    ```
+
+    This command removes the server trust certificate specified by certificate object.
+- title: 'Example 4: Remove a server trust certificate by its parent instance object'
+  description: |-
+    ```powershell
+    $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
+    Remove-AzSqlInstanceServerTrustCertificate -InstanceObject $instance -Name "Certificate01"
+    ```
+
+    This command removes the server trust certificate "Certificate01" from the managed instance specified by the instance object.
+- title: 'Example 5: Remove a server trust certificate using positional parameters'
+  description: |-
+    ```powershell
+    Remove-AzSqlInstanceServerTrustCertificate "ResourceGroup01" "ManagedInstance01" "Certificate01"
+    ```
+
+    This command removes the server trust certificate "Certificate01" from the managed instance "ManagedInstance01" using positional parameters.
+- title: 'Example 6: Remove all server trust certificate from its parent instance'
+  description: |-
+    ```powershell
+    $instance = Get-AzSqlInstance -ResourceGroupName "ResourceGroup01" -Name "ManagedInstance01"
+    $instance | Get-AzSqlInstanceServerTrustCertificate | Remove-AzSqlInstanceServerTrustCertificate
+    ```
+
+    This command removes all server trust certificates from instance "ManagedInstance01".
+- title: 'Example 7: Remove a server trust certificate and outputs the deleted certificate object'
+  description: |-
+    ```powershell
+    Remove-AzSqlInstanceServerTrustCertificate "ResourceGroup01" "ManagedInstance01" "Certificate01" -PassThru
+    ```
+
+    ```output
+    ResourceGroupName : ResourceGroup01
+    InstanceName      : ManagedInstance01
+    Id                : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/ResourceGroup01/providers/Microsoft.Sql/managedInstances/ManagedInstance01/serverTrustCertificates/Certificate01
+    Type              : Microsoft.Sql/managedInstances/serverTrustCertificates
+    Name              : Certificate01
+    Thumbprint        : 0x7D989DF34BD0FD0D2F9F6B3B6A7096856F5AB004
+    PublicKey         : 0x1C8E3F85BCD8A2C1D082CE42D7A1E8112651A906B15F5F244134142C53B050FCBF2571965C522EBB86B4F1B790F3AD31E689950EE909B87C25A1BB51DA328BEEB1BB0FD44AB3CB774B8CC9F72B486476DEB8B1C95210B84C4A0F18310CD83F299CAF0D567EBCE2DD008581622D72499F8EC9A686BA526916E7F78DCA90BA0ADD8C2E5F601017D374E2FBD0818458BFC11C8268BC21383613323153163C0F33E09D03586A3BBFDA3628F0358FBADE41602BD05C4E47CDB67A9914F35B315B7844C2F2D1352034B56D6B155D38415B816247779E7A0EB3431765D9A48F4649E647CCD2EA8F38E8B5D415833BA8337BA00FED2F00D9066B9CAEF7BAA8C553F7B8787BCEF63AC98E05372981520BD5A598356590736B547F3B300F1D710EC3003D398AEB94589E196C42C5F6A1873D6138D9F666A2D6F24DAFB12FBD6B0124B2CFFAD51EF67032832900A9E113625BE4C4FB012923BB9886B52B733A5F8BFF04122A2474828F2EE5FC66154D9EBA92A21F0BFD6E8AAEE7DCC45BB3883A410E603C9D98A5BB913853D1B7543E694FF74F8CA9174BE152A96530803DD03C15BC258E77925877BCAF748CA85230ABBF90789F4856200166D110D369FB03B6593339CCE498CDA69016289056F4638E761B9904129DB36B6B4CD17D49567C27FF11059C0569ABF48C438CB6128F2B2F245BDB066B6BF1155BCA11E9D6B0BD8A1607F2F5BB42AF7498D1B8410AA1E5E3E23A3CA6FB933D3894C8D1A2162E735CFCB7BEDFB3318DAE32AE9E24900B9B0F472ABD563550C9E696836889123F0ED2E7A9A4B90C2C617C8ADCF088CE2A7EC8AB97A80C00F3296241C7B320118A1182E327919007930417004A301249EAACF139D611D9C30DAFDF8672F5347C488250F46D45E7D7E9BF3BE99ECD1C60A046FC80EB1DC473FD2E1A7672235F8A834338A4810E32CB24C9C24D09234995A3D038D70379B900E6C9217EF19062775B050CF7CA52D3D72E294E2315AA544247B436D46AD08D55957B9688C576E35760B527B7F7EB71E6209301C59B6643C921F2FB182D237E81DC6205BF6740C8EDC48C65DAB0546C1098C2DCBF0E3B31A47868A721942022E0B5DBFFFBBC4767699C7F0ABD6DEBE7D5FB91
+    ```
+
+    This command removes all instance links from the managed instance "ManagedInstance01" and outputs the deleted instance link object.
+links:
+- text: Get-AzSqlInstanceServerTrustCertificate
+  href: ./Get-AzSqlInstanceServerTrustCertificate.yml
+- text: New-AzSqlInstanceServerTrustCertificate
+  href: ./New-AzSqlInstanceServerTrustCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceServerTrustCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/remove-azsqlinstanceservertrustcertificate
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Remove-AzSqlInstanceServerTrustCertificate.md
+  PlatyPS schema version: 2024-05-01

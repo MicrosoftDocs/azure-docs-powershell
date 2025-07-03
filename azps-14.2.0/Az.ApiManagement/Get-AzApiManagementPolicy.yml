@@ -1,0 +1,362 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.Get-AzApiManagementPolicy
+name: Get-AzApiManagementPolicy
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Gets the specified scope policy.
+description: |-
+  The **Get-AzApiManagementPolicy** cmdlet gets the specified scope policy.
+parameters:
+  cmdletParameters:
+  - name: ApiId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of the existing API.
+      If you specify this parameter the cmdlet returns the API-scope policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetApiLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetOperationLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApiRevision
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifier of API Revision. This parameter is optional. If not specified, the policy will be retrieved from the currently active api revision.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetApiLevel
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetOperationLevel
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an instance of **PsApiManagementContext**.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      ps_force
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Format
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the format of the API management policy.
+      The default value for this parameter is "xml".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OperationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of the existing API operation.
+      If you specify this parameter with *ApiId* the cmdlet returns operation-scope policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetOperationLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProductId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the identifier of an existing product.
+      If you specify this parameter the cmdlet returns the product-scope policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetProductLevel
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SaveAs
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the file path to save the result to.
+      If you do not specify this parameter the result is pipelined as a sting.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementPolicy
+        -Context <PsApiManagementContext>
+        [-Format <String>]
+        [-SaveAs <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetTenantLevel
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementPolicy
+        -Context <PsApiManagementContext>
+        -ProductId <String>
+        [-Format <String>]
+        [-SaveAs <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetProductLevel
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementPolicy
+        -Context <PsApiManagementContext>
+        -ApiId <String>
+        [-Format <String>]
+        [-SaveAs <String>]
+        [-ApiRevision <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetApiLevel
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzApiManagementPolicy
+        -Context <PsApiManagementContext>
+        -ApiId <String>
+        -OperationId <String>
+        [-Format <String>]
+        [-SaveAs <String>]
+        [-ApiRevision <String>]
+        [-Force]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetOperationLevel
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.ServiceManagement.Models.PsApiManagementContext" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the tenant level policy'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementPolicy -Context $apimContext -SaveAs "C:\contoso\policies\tenantpolicy.xml"
+    ```
+
+    This command gets tenant level policy and saves it to a file named tenantpolicy.xml.
+- title: 'Example 2: Get the product-scope policy'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementPolicy -Context $apimContext -ProductId "0123456789"
+    ```
+
+    This command gets product-scope policy
+- title: 'Example 3: Get the API-scope policy'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210"
+    ```
+
+    This command gets API-scope policy.
+- title: 'Example 4: Get the operation-scope policy'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementPolicy -Context $apimContext -ApiId "9876543210" -OperationId "777"
+    ```
+
+    This command gets the operation-scope policy.
+- title: 'Example 5: Get the Tenant scope policy in RawXml format'
+  description: |-
+    ```powershell
+    $apimContext = New-AzApiManagementContext -ResourceGroupName "Api-Default-WestUS" -ServiceName "contoso"
+    Get-AzApiManagementPolicy -Context $apimContext -Format rawxml
+    ```
+
+    ```output
+    <policies>
+            <inbound>
+                    <set-header name="correlationid" exists-action="skip">
+                            <value>@{
+                    var guidBinary = new byte[16];
+                    Array.Copy(Guid.NewGuid().ToByteArray(), 0, guidBinary, 0, 10);
+                    long time = DateTime.Now.Ticks;
+                    byte[] bytes = new byte[6];
+                    unchecked
+                    {
+                           bytes[5] = (byte)(time >> 40);
+                           bytes[4] = (byte)(time >> 32);
+                           bytes[3] = (byte)(time >> 24);
+                           bytes[2] = (byte)(time >> 16);
+                           bytes[1] = (byte)(time >> 8);
+                           bytes[0] = (byte)(time);
+                    }
+                    Array.Copy(bytes, 0, guidBinary, 10, 6);
+                    return new Guid(guidBinary).ToString();
+                }
+                </value>
+                    </set-header>
+            </inbound>
+            <backend>
+                    <forward-request />
+            </backend>
+            <outbound />
+            <on-error />
+    </policies>
+    ```
+
+    This command gets the tenant-scope policy in Non-Xml escaped format.
+links:
+- text: Remove-AzApiManagementPolicy
+  href: ./Remove-AzApiManagementPolicy.yml
+- text: Set-AzApiManagementPolicy
+  href: ./Set-AzApiManagementPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.ServiceManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/get-azapimanagementpolicy
+  Module Name: Az.ApiManagement
+  ms.assetid: 7BCEB0EF-1A09-4CED-9F34-CE3AB03181A7
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/Get-AzApiManagementPolicy.md
+  PlatyPS schema version: 2024-05-01

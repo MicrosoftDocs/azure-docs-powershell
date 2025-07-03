@@ -1,0 +1,311 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzADServicePrincipal
+name: Update-AzADServicePrincipal
+module: Az.Resources
+isPreview: false
+summary: |-
+  Updates an existing Microsoft Entra service principal.
+description: |-
+  Updates an existing Microsoft Entra service principal.
+  To update the credentials associated with this service principal, please use New-AzADSpCredential cmdlet.
+  To update the properties associated with the underlying application, please use Update-AzADApplication cmdlet.
+parameters:
+  cmdletParameters:
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The application id of the service principal to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SpApplicationIdWithDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SpObjectIdWithDisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: SPNWithDisplayNameParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Homepage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The homepage for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentifierUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The identifier URI(s) for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal" data-throw-if-not-resolved="False" />
+    description: |-
+      The object representing the service principal to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectWithDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyCredential
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.Models.KeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The key credential(s) for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The object id of the service principal to update.
+    aliases:
+    - ServicePrincipalObjectId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SpObjectIdWithDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordCredential
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.Models.PasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The password credential(s) for the service principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SPN of the service principal to update.
+    aliases:
+    - SPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SPNWithDisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzADServicePrincipal
+        -ObjectId <Guid>
+        [-DisplayName <String>]
+        [-Homepage <String>]
+        [-IdentifierUri <String[]>]
+        [-KeyCredential <KeyCredential[]>]
+        [-PasswordCredential <PasswordCredential[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SpObjectIdWithDisplayNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzADServicePrincipal
+        -ApplicationId <Guid>
+        [-Homepage <String>]
+        [-IdentifierUri <String[]>]
+        [-KeyCredential <KeyCredential[]>]
+        [-PasswordCredential <PasswordCredential[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SpApplicationIdWithDisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADServicePrincipal
+        -ServicePrincipalName <String>
+        [-DisplayName <String>]
+        [-Homepage <String>]
+        [-IdentifierUri <String[]>]
+        [-KeyCredential <KeyCredential[]>]
+        [-PasswordCredential <PasswordCredential[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SPNWithDisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzADServicePrincipal
+        -InputObject <PSADServicePrincipal>
+        [-DisplayName <String>]
+        [-Homepage <String>]
+        [-IdentifierUri <String[]>]
+        [-KeyCredential <KeyCredential[]>]
+        [-PasswordCredential <PasswordCredential[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectWithDisplayNameParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameters: InputObject (ByValue)
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADServicePrincipal" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - Update the display name of a service principal
+  description: |-
+    ```
+    PS C:\> Update-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb -DisplayName MyNewDisplayName
+    ```
+
+    Updates the display name of the service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' to be 'MyNewDisplayName'.
+- title: Example 2 - Update the display name of a service principal using piping
+  description: |-
+    ```
+    PS C:\> Get-AzADServicePrincipal -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Update-AzADServicePrincipal -DisplayName MyNewDisplayName
+    ```
+
+    Gets the service principal with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes that to the Update-AzADServicePrincipal cmdlet to update the display name of the service principal to "MyNewDisplayName".
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADServicePrincipal.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/update-Azadserviceprincipal
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Update-AzADServicePrincipal.md
+  PlatyPS schema version: 2024-05-01

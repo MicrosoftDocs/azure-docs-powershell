@@ -1,0 +1,148 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureSiteRecoveryNetworkMapping
+name: New-AzureSiteRecoveryNetworkMapping
+module: Azure
+isPreview: false
+summary: |-
+  Creates a mapping between virtual networks.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureSiteRecoveryNetworkMapping** cmdlet creates a mapping between two virtual networks and returns an Azure Site Recovery job to track it.
+parameters:
+  cmdletParameters:
+  - name: AzureSubscriptionId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of your Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureVMNetworkId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure virtual network ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToAzure
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrimaryNetwork
+    type: <xref href="ASRNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the primary network object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RecoveryNetwork
+    type: <xref href="ASRNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the recovery network object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EnterpriseToEnterprise
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureSiteRecoveryNetworkMapping
+        -PrimaryNetwork <ASRNetwork>
+        -RecoveryNetwork <ASRNetwork>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToEnterprise
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzureSiteRecoveryNetworkMapping
+        -PrimaryNetwork <ASRNetwork>
+        -AzureSubscriptionId <String>
+        -AzureVMNetworkId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EnterpriseToAzure
+  isDefault: false
+examples:
+- title: 'Example 1: Create a mapping between a network and a recovery network'
+  description: |-
+    ```
+    PS C:\> $Servers = Get-AzureSiteRecoveryServer
+    PS C:\> $Networks = Get-AzureSiteRecoveryNetwork -Server $Servers[0]
+    PS C:\> New-AzureSiteRecoveryNetworkMapping -PrimaryNetwork $Networks[0] -RecoveryNetwork $Networks[1]
+    ```
+
+    The first command cmdlet gets servers for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryServer** cmdlet.
+    The command stores the Site Recovery servers in the $Servers array variable.
+
+    The second command gets the site recovery network for the first server in the $Servers array by using the **Get-AzureSiteRecoveryNetwork** cmdlet.
+    The command stores the networks in the $Networks variable.
+
+    The final command creates a mapping between the primary network and the recovery network.
+    The command specifies the primary network as the first element of $Networks.
+    The command specifies the recovery network as the second element of $Networks.
+links:
+- text: Get-AzureSiteRecoveryNetworkMapping
+  href: ./Get-AzureSiteRecoveryNetworkMapping.yml
+- text: Get-AzureSiteRecoveryServer
+  href: ./Get-AzureSiteRecoveryServer.yml
+- text: Remove-AzureSiteRecoveryNetworkMapping
+  href: ./Remove-AzureSiteRecoveryNetworkMapping.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6802F2E9-5925-4E92-AEB8-827B5A303617
+  PlatyPS schema version: 2024-05-01

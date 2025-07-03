@@ -1,0 +1,55 @@
+### YamlMime:PowerShellModule1
+uid: Az.Aks
+name: Az.Aks Module
+isPreview: false
+cmdletGroups:
+- title: Kubernetes Service
+  cmdlets:
+  - Az.Aks.Disable-AzAksAddOn
+  - Az.Aks.Enable-AzAksAddOn
+  - Az.Aks.Get-AzAksCluster
+  - Az.Aks.Get-AzAksMaintenanceConfiguration
+  - Az.Aks.Get-AzAksManagedClusterCommandResult
+  - Az.Aks.Get-AzAksManagedClusterOSOption
+  - Az.Aks.Get-AzAksManagedClusterOutboundNetworkDependencyEndpoint
+  - Az.Aks.Get-AzAksNodePool
+  - Az.Aks.Get-AzAksNodePoolUpgradeProfile
+  - Az.Aks.Get-AzAksSnapshot
+  - Az.Aks.Get-AzAksUpgradeProfile
+  - Az.Aks.Get-AzAksVersion
+  - Az.Aks.Import-AzAksCredential
+  - Az.Aks.Install-AzAksCliTool
+  - Az.Aks.Invoke-AzAksAbortAgentPoolLatestOperation
+  - Az.Aks.Invoke-AzAksAbortManagedClusterLatestOperation
+  - Az.Aks.Invoke-AzAksRotateManagedClusterServiceAccountSigningKey
+  - Az.Aks.Invoke-AzAksRunCommand
+  - Az.Aks.New-AzAksCluster
+  - Az.Aks.New-AzAksMaintenanceConfiguration
+  - Az.Aks.New-AzAksNodePool
+  - Az.Aks.New-AzAksSnapshot
+  - Az.Aks.New-AzAksTimeInWeekObject
+  - Az.Aks.New-AzAksTimeSpanObject
+  - Az.Aks.Remove-AzAksCluster
+  - Az.Aks.Remove-AzAksMaintenanceConfiguration
+  - Az.Aks.Remove-AzAksNodePool
+  - Az.Aks.Remove-AzAksSnapshot
+  - Az.Aks.Set-AzAksCluster
+  - Az.Aks.Set-AzAksClusterCredential
+  - Az.Aks.Start-AzAksCluster
+  - Az.Aks.Start-AzAksDashboard
+  - Az.Aks.Start-AzAksManagedClusterCommand
+  - Az.Aks.Stop-AzAksCluster
+  - Az.Aks.Stop-AzAksDashboard
+  - Az.Aks.Update-AzAksNodePool
+description: |-
+  Commands to interact with Azure managed Kubernetes clusters.
+metadata:
+  Module Name: Az.Aks
+  Module Guid: a97e0c3e-e389-46a6-b73d-2b9bd6909bdb
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.aks
+  Help Version: 0.0.1.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Az.Aks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Aks/Aks/help/Az.Aks.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

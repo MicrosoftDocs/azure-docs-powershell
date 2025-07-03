@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzManagementGroupSubscription
+name: Get-AzManagementGroupSubscription
+module: Az.Resources
+isPreview: false
+summary: |-
+  Gets the details of Subscription(s) under a Management Group.
+description: |-
+  The **Get-AzManagementGroupSubscription** cmdlet gets the subscription info under a Management Group. Providing the **SubscriptionId** and **GroupName** will give only the Subscription details for that subscription. Providing only the **GroupName** will list the details for all Subscriptions under the Management Group.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Management Group Id
+    aliases:
+    - GroupId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Return `true` on successful execution
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id of the subscription associated with the management
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzManagementGroupSubscription
+        [-GroupName] <String>
+        [[-SubscriptionId] <String>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Resources.Models.ManagementGroups.PSManagementGroupSubscription" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Subscription Details under a Management Group'
+  description: |-
+    ```powershell
+    Get-AzManagementGroupSubscription -GroupName "TestGroup" -SubscriptionId 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+    ```
+
+    ```output
+    Name              : 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+    Type              : Microsoft.Management/managementGroups/subscriptions
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+    TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName       : Visual Studio Enterprise Subscription
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
+    State             : Active
+    ```
+- title: 'Example 2: Get all Subscription Details under a Management Group'
+  description: |-
+    ```powershell
+    Get-AzManagementGroupSubscription -GroupName "TestGroup"
+    ```
+
+    ```output
+    Name              : 5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+    Type              : Microsoft.Management/managementGroups/subscriptions
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/5602fbd9-fb0d-4fbb-98b3-10c8ea20b6de
+    TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName       : Visual Studio Enterprise Subscription
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
+    State             : Active
+
+    Name              : 2120692d-35c3-44c8-81f5-631fa7351726
+    Type              : Microsoft.Management/managementGroups/subscriptions
+    Id                : /providers/Microsoft.Management/managementGroups/TestGroup/subscriptions/2120692d-35c3-44c8-81f5-631fa7351726
+    TenantId          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    DisplayName       : Test Subscription
+    ParentId          : /providers/Microsoft.Management/managementGroups/TestGroup
+    State             : Active
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupSubscription.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/get-azmanagementgroupsubscription
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Get-AzManagementGroupSubscription.md
+  PlatyPS schema version: 2024-05-01

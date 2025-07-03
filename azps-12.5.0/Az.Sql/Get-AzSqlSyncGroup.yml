@@ -1,0 +1,228 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Get-AzSqlSyncGroup
+name: Get-AzSqlSyncGroup
+module: Az.Sql
+isPreview: false
+summary: |-
+  Returns information about Azure SQL Database Sync Groups.
+description: |-
+  The **Get-AzSqlSyncGroup** cmdlet returns information about one or more Azure SQL Database Sync Groups.
+  Specify the name of a sync group to see information for only that sync group.
+parameters:
+  cmdletParameters:
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The sync group name.
+    aliases:
+    - SyncGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure SQL Server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSqlSyncGroup
+        [[-Name] <String>]
+        [-ServerName] <String>
+        [-DatabaseName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.DataSync.Model.AzureSqlSyncGroupModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all instances of Azure SQL Sync Group assigned to an Azure SQL Database'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncGroup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" | Format-List
+    ```
+
+    ```output
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    IntervalInSeconds           : 100
+    ConflictResolutionPolicy:   : HubWin
+    HubDatabaseUserName         : myAccount
+    HubDatabasePassword         :
+    SyncState                   : NotReady
+    LastSyncTime                : 1/1/0001 12:00:00 AM
+    Schema                      :
+
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup02
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    IntervalInSeconds           : 100
+    ConflictResolutionPolicy:   : HubWin
+    HubDatabaseUserName         : myAccount
+    HubDatabasePassword         :
+    SyncState                   : NotReady
+    LastSyncTime                : 1/1/0001 12:00:00 AM
+    Schema                      :
+    ```
+
+    This command gets information about all the Azure SQL Database Sync Groups assigned to an Azure SQL Database.
+- title: 'Example 2: Get information about an Azure SQL Database Sync Group'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncGroup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -Name "SyncGroup01" | Format-List
+    ```
+
+    ```output
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup02
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    IntervalInSeconds           : 100
+    ConflictResolutionPolicy:   : HubWin
+    HubDatabaseUserName         : myAccount
+    HubDatabasePassword         :
+    SyncState                   : NotReady
+    LastSyncTime                : 1/1/0001 12:00:00 AM
+    Schema                      :
+    ```
+
+    This command gets information about the Azure SQL Database Sync Group with name "SyncGroup01"
+- title: 'Example 3: Get all instances of Azure SQL Sync Group assigned to an Azure SQL Database using filtering'
+  description: |-
+    ```powershell
+    Get-AzSqlSyncGroup -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -DatabaseName "Database01" -Name "SyncGroup*" | Format-List
+    ```
+
+    ```output
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup01}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup01
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    IntervalInSeconds           : 100
+    ConflictResolutionPolicy:   : HubWin
+    HubDatabaseUserName         : myAccount
+    HubDatabasePassword         :
+    SyncState                   : NotReady
+    LastSyncTime                : 1/1/0001 12:00:00 AM
+    Schema                      :
+
+    ResourceId                  : /subscriptions/{subscriptionId}/resourceGroups/{ResourceGroup01}/servers/{Server01}/databases/{Database01}/syncGroups/{SyncGroup02}
+    ResourceGroupName           : ResourceGroup01
+    ServerName                  : Server01
+    DatabaseName                : Database01
+    SyncGroupName               : SyncGroup02
+    SyncDatabaseId              : subscriptions/{subscriptionId}/resourceGroups/{syncDatabaseResourceGroup01}/servers/{syncDatabaseServer01}/databases/{syncDatabaseName01}
+    IntervalInSeconds           : 100
+    ConflictResolutionPolicy:   : HubWin
+    HubDatabaseUserName         : myAccount
+    HubDatabasePassword         :
+    SyncState                   : NotReady
+    LastSyncTime                : 1/1/0001 12:00:00 AM
+    Schema                      :
+    ```
+
+    This command gets information about all the Azure SQL Database Sync Groups assigned to an Azure SQL Database that start with "SyncGroup".
+links:
+- text: New-AzSqlSyncGroup
+  href: ./New-AzSqlSyncGroup.yml
+- text: Update-AzSqlSyncGroup
+  href: ./Update-AzSqlSyncGroup.yml
+- text: Remove-AzSqlSyncGroup
+  href: ./Remove-AzSqlSyncGroup.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/get-azsqlsyncgroup
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Get-AzSqlSyncGroup.md
+  PlatyPS schema version: 2024-05-01

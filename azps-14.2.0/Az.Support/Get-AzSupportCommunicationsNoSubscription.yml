@@ -1,0 +1,231 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Support.Get-AzSupportCommunicationsNoSubscription
+name: Get-AzSupportCommunicationsNoSubscription
+module: Az.Support
+isPreview: false
+summary: |-
+  Returns communication details for a support ticket.
+description: |-
+  Returns communication details for a support ticket.
+parameters:
+  cmdletParameters:
+  - name: CommunicationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Communication name.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySupportTicket
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The filter to apply on the operation.
+      You can filter by communicationType and createdDate properties.
+      CommunicationType supports Equals ('eq') operator and createdDate supports Greater Than ('gt') and Greater Than or Equals ('ge') operators.
+      You may combine the CommunicationType and CreatedDate filters by Logical And ('and') operator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentitySupportTicket
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SupportTicketName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Support ticket name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of values to return in the collection.
+      Default is 10 and max is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSupportCommunicationsNoSubscription
+        -SupportTicketName <String>
+        [-Filter <String>]
+        [-Top <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSupportCommunicationsNoSubscription
+        -CommunicationName <String>
+        -SupportTicketInputObject <ISupportIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentitySupportTicket
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSupportCommunicationsNoSubscription
+        -CommunicationName <String>
+        -SupportTicketName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzSupportCommunicationsNoSubscription
+        -InputObject <ISupportIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ISupportIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Support.Models.ICommunicationDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all communications under a no subscription support ticket'
+  description: |-
+    ```powershell
+    Get-AzSupportCommunicationsNoSubscription -SupportTicketName test1234
+    ```
+
+    ```output
+    Name               Sender            Subject                                              CreatedDate
+    ----               ------            -------                                              -----------
+    testCommunication1 sender@sender.com this is a test subject - TrackingID#2403070040015890 3/11/2024 3:46:43 PM
+    testCommunication2 sender@sender.com this is a test subject - TrackingID#2403070040015890 3/11/2024 3:46:43 PM
+    ```
+
+    List all communications under a no subscription support ticket
+- title: 'Example 2: Get a communication under a no subscription support ticket'
+  description: |-
+    ```powershell
+    Get-AzSupportCommunicationsNoSubscription -SupportTicketName test1234 -Name testCommunication1
+    ```
+
+    ```output
+    Body                   : <pre>this is a test body</pre>
+    CommunicationDirection : Inbound
+    CommunicationType      : Web
+    CreatedDate            : 3/7/2024 11:53:33 PM
+    Id                     : /providers/Microsoft.Support/supportTickets/test1234/communications/testCommunication1
+    Name                   : testCommunication
+    ResourceGroupName      :
+    Sender                 : sender@sender.com
+    Subject                : this is a test subject - TrackingID#2403070040015890
+    Type                   : Microsoft.Support/communications
+    ```
+
+    Get a communication under a no subscription support ticket
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportCommunicationsNoSubscription.md
+  document type: cmdlet
+  external help file: Az.Support-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.support/get-azsupportcommunicationsnosubscription
+  Module Name: Az.Support
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Support/Support/help/Get-AzSupportCommunicationsNoSubscription.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,109 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzAutoscaleNotificationObject
+name: New-AzAutoscaleNotificationObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for AutoscaleNotification.
+description: |-
+  Create an in-memory object for AutoscaleNotification.
+parameters:
+  cmdletParameters:
+  - name: EmailCustomEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      the custom e-mails list.
+      This value can be null or empty, in which case this attribute will be ignored.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailSendToSubscriptionAdministrator
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      a value indicating whether to send email to subscription administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailSendToSubscriptionCoAdministrator
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      a value indicating whether to send email to subscription co-administrators.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Webhook
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.IWebhookNotification" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      the collection of webhook notifications.
+      To construct, see NOTES section for WEBHOOK properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutoscaleNotificationObject
+        [-EmailCustomEmail <String[]>]
+        [-EmailSendToSubscriptionAdministrator <Boolean>]
+        [-EmailSendToSubscriptionCoAdministrator <Boolean>]
+        [-Webhook <IWebhookNotification[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.Autoscale.Models.Api20221001.AutoscaleNotification" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create web hook notification object'
+  description: |-
+    ```powershell
+    $webhook1=New-AzAutoscaleWebhookNotificationObject -Property @{} -ServiceUri "http://myservice.com"
+    New-AzAutoscaleNotificationObject -EmailCustomEmail "gu@ms.com" -EmailSendToSubscriptionAdministrator $true -EmailSendToSubscriptionCoAdministrator $true -Webhook $webhook1
+    ```
+
+    Create web hook notification object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleNotificationObject.md
+  document type: cmdlet
+  external help file: Az.Autoscale.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzAutoscaleNotificationObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzAutoscaleNotificationObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureTrafficManagerProfile
+name: Set-AzureTrafficManagerProfile
+module: Azure
+isPreview: false
+summary: |-
+  Updates the properties of a Traffic Manager profile.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureTrafficManagerProfile** cmdlet updates the properties of a Microsoft Azure Traffic Manager profile.
+
+  For profiles for which you have set the *LoadBalancingMethod* value to "Failover", you can determine the failover order of the endpoints you have added to your profile with the Add-AzureTrafficManagerEndpoint cmdlet.
+  For more information, see Example 3 below.
+parameters:
+  cmdletParameters:
+  - name: LoadBalancingMethod
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the load balancing method to use to distribute the connection.
+      Valid values are:
+
+      - Performance
+      - Failover
+      - RoundRobin
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorPort
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the port used to monitor endpoint health.
+      Valid values are integer values greater than 0 and less than or equal to 65,535.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorProtocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol to use to monitor endpoint health.
+      Valid values are:
+
+      - Http
+      - Https
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorRelativePath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path relative to the endpoint domain name to probe for health state.
+      The path must meet the following restrictions:
+
+      - The path must be from 1 through 1000 characters.
+      - It must start with a forward slash, /.
+      - It must contain no XML elements, \<\>.
+      - It must contain no double slashes, //.
+      - It must contain no invalid HTML escape characters.
+      For example, %XY.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Traffic Manager profile to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficManagerProfile
+    type: <xref href="IProfileWithDefinition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Traffic Manager profile object you use to set the profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ttl
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the DNS Time-to-Live (TTL) that informs the Local DNS resolvers how long to cache DNS entries.
+      Valid values are an integer from 30 through 999,999.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureTrafficManagerProfile
+        [-Name <String>]
+        [-LoadBalancingMethod <String>]
+        [-MonitorPort <Int32>]
+        [-MonitorProtocol <String>]
+        [-MonitorRelativePath <String>]
+        [-Ttl <Int32>]
+        -TrafficManagerProfile <IProfileWithDefinition>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.TrafficManager.Models.IProfileWithDefinition" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates a Traffic Manager profile object.
+examples:
+- title: 'Example 1: Set the TTL for a Traffic Manager profile'
+  description: |-
+    ```
+    PS C:\>Set-AzureTrafficManagerProfile -TrafficManagerProfile $MyTrafficManagerProfile -Ttl 60
+    ```
+
+    This command sets the TTL to 60 seconds for the Traffic Manager profile object MyTrafficManagerProfile.
+- title: 'Example 2: Set several values for a profile'
+  description: |-
+    ```
+    PS C:\>Get-AzureTrafficManagerProfile -Name "MyProfile" | Set-AzureTrafficManagerProfile -LoadBalancingMethod "RoundRobin" -Ttl 30 -MonitorProtocol "Http" -MonitorPort 80 -MonitorRelativePath "/"
+    ```
+
+    This command gets a Traffic Manager profile named MyProfile by using the **Get-AzureTrafficManagerProfile** cmdlet.
+    The profile uses the RoundRobin load balancing method, a TTL of 30 seconds,  the monitor protocol HTTP, the monitor port, and the relative path for a Traffic Manager profile.
+- title: 'Example 3: Reorder endpoints to desired failover order'
+  description: |-
+    ```
+    PS C:\>$Profile = Get-AzureTrafficManagerProfile -Name "MyProfile"
+    PS C:\> $Profile.Endpoints[0],$Profile.Endpoints[1] = $Profile.Endpoints[1],$Profile.Endpoints[0]
+    PS C:\> $Profile = Set-AzureTrafficManagerProfile
+    ```
+
+    This example reorders the endpoints added to MyProfile to the desired failover order.
+
+    The first command gets the Traffic Manager profile object named MyProfile and stores the object in the $Profile variable.
+
+    The second command re-orders the endpoints from  the endpoints array to the order in which failover should occur.
+
+    The last command updates the Traffic Manager profile stored in $Profile with the new endpoint order.
+links:
+- text: Disable-AzureTrafficManagerProfile
+  href: ./Disable-AzureTrafficManagerProfile.yml
+- text: Enable-AzureTrafficManagerProfile
+  href: ./Enable-AzureTrafficManagerProfile.yml
+- text: Get-AzureTrafficManagerProfile
+  href: ./Get-AzureTrafficManagerProfile.yml
+- text: New-AzureTrafficManagerProfile
+  href: ./New-AzureTrafficManagerProfile.yml
+- text: Remove-AzureTrafficManagerProfile
+  href: ./Remove-AzureTrafficManagerProfile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 700AC44E-4FD5-4516-80F3-B8C9E4DF6ABC
+  PlatyPS schema version: 2024-05-01

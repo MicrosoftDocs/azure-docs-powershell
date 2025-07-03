@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KubernetesRuntime.Get-AzKubernetesRuntimeService
+name: Get-AzKubernetesRuntimeService
+module: Az.KubernetesRuntime
+isPreview: false
+summary: |-
+  Get a ServiceResource
+description: |-
+  Get a ServiceResource
+parameters:
+  cmdletParameters:
+  - name: ArcConnectedClusterId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified Azure Resource manager identifier of the resource.
+    aliases:
+    - ResourceUri
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.IKubernetesRuntimeIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the the service
+    aliases:
+    - ServiceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKubernetesRuntimeService
+        -ArcConnectedClusterId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKubernetesRuntimeService
+        -ArcConnectedClusterId <String>
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzKubernetesRuntimeService
+        -InputObject <IKubernetesRuntimeIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.IKubernetesRuntimeIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.IServiceResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all Kubernetes Runtime service objects in a cluster'
+  description: |-
+    ```powershell
+    Get-AzKubernetesRuntimeService -ArcConnectedClusterId /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/example/providers/Microsoft.Kubernetes/connectedClusters/cluster1
+    ```
+
+    ```output
+    Id                           : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/example/providers/Microsoft.Kubernetes/connectedClusters/cluster1/providers/Microsoft.KubernetesRuntime/services/storageclass
+    Name                         : storageclass
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : example
+    RpObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    SystemDataCreatedAt          : 3/1/2024 0:00:00 AM
+    SystemDataCreatedBy          : user@user.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 3/1/2024 0:00:00 AM
+    SystemDataLastModifiedBy     : user@user.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.kubernetesruntime/services
+    ```
+
+    Get all Kubernetes Runtime service objects for the connected cluster.
+- title: 'Example 2: Get a Kubernetes Runtime service object for a connected cluster.'
+  description: |-
+    ```powershell
+    Get-AzKubernetesRuntimeService -ArcConnectedClusterId /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/example/providers/Microsoft.Kubernetes/connectedClusters/cluster1 -Name storageclass
+    ```
+
+    ```output
+    Id                           : /subscriptions/00001111-aaaa-2222-bbbb-3333cccc4444/resourceGroups/example/providers/Microsoft.Kubernetes/connectedClusters/cluster1/providers/Microsoft.KubernetesRuntime/services/storageclass
+    Name                         : storageclass
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : example
+    RpObjectId                   : 00001111-aaaa-2222-bbbb-3333cccc4444
+    SystemDataCreatedAt          : 3/1/2024 0:00:00 AM
+    SystemDataCreatedBy          : user@user.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 3/1/2024 0:00:00 AM
+    SystemDataLastModifiedBy     : user@user.com
+    SystemDataLastModifiedByType : User
+    Type                         : microsoft.kubernetesruntime/services
+    ```
+
+    Get a Kubernetes Runtime service object for a connected cluster.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/Get-AzKubernetesRuntimeService.md
+  document type: cmdlet
+  external help file: Az.KubernetesRuntime-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.kubernetesruntime/get-azkubernetesruntimeservice
+  Module Name: Az.KubernetesRuntime
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/Get-AzKubernetesRuntimeService.md
+  PlatyPS schema version: 2024-05-01

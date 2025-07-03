@@ -1,0 +1,231 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AlertsManagement.New-AzPrometheusRuleObject
+name: New-AzPrometheusRuleObject
+module: Az.AlertsManagement
+isPreview: false
+summary: |-
+  Create an in-memory object for PrometheusRule.
+description: |-
+  Create an in-memory object for PrometheusRule.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.IPrometheusRuleGroupAction" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
+      To construct, see NOTES section for ACTION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Alert
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert rule name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Annotation
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.IPrometheusRuleAnnotations" data-throw-if-not-resolved="False" />
+    description: |-
+      The annotations clause specifies a set of informational labels that can be used to store longer additional information such as alert descriptions or runbook links.
+      The annotation values can be templated.
+      To construct, see NOTES section for ANNOTATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Enabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable/disable rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expression
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The PromQL expression to evaluate.
+      https://prometheus.io/docs/prometheus/latest/querying/basics/.
+      Evaluated periodically as given by 'interval', and the result recorded as a new set of time series with the metric name as given by 'record'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: For
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The amount of time alert must be active before firing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Label
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.IPrometheusRuleLabels" data-throw-if-not-resolved="False" />
+    description: |-
+      Labels to add or overwrite before storing the result.
+      To construct, see NOTES section for LABEL properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Record
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Recorded metrics name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResolveConfigurationAutoResolved
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable alert auto-resolution.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResolveConfigurationTimeToResolve
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      Alert auto-resolution timeout.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Severity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The severity of the alerts fired by the rule.
+      Must be between 0 and 4.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPrometheusRuleObject
+        -Expression <String>
+        [-Action <IPrometheusRuleGroupAction[]>]
+        [-Alert <String>]
+        [-Annotation <IPrometheusRuleAnnotations>]
+        [-Enabled <Boolean>]
+        [-For <TimeSpan>]
+        [-Label <IPrometheusRuleLabels>]
+        [-Record <String>]
+        [-ResolveConfigurationAutoResolved <Boolean>]
+        [-ResolveConfigurationTimeToResolve <TimeSpan>]
+        [-Severity <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PrometheusRuleGroups.Models.Api20230301.PrometheusRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:  Create an in-memory object for PrometheusRule.'
+  description: |-
+    ```powershell
+    New-AzPrometheusRuleObject -Record "job_type:billing_jobs_duration_seconds:99p5m" -Expression 'histogram_quantile(0.99, sum(rate(jobs_duration_seconds_bucket{service="billing-processing"}[5m])) by (job_type))'
+    ```
+
+    ```output
+    Alert Enabled Expression
+    ----- ------- ----------
+                  histogram_quantile(0.99, sum(rate(jobs_duration_seconds_bucket{service="billing-processing"}[5m])) by (job_type))'
+    ```
+
+    Create an in-memory object for PrometheusRule.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleObject.md
+  document type: cmdlet
+  external help file: Az.PrometheusRuleGroups.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.AlertsManagement/new-AzPrometheusRuleObject
+  Module Name: Az.AlertsManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AlertsManagement/AlertsManagement/help/New-AzPrometheusRuleObject.md
+  PlatyPS schema version: 2024-05-01

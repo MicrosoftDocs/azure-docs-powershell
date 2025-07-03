@@ -1,0 +1,236 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.Get-AzMetricDefinition
+name: Get-AzMetricDefinition
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Gets metric definitions.
+description: |-
+  The **Get-AzMetricDefinition** cmdlet gets metric definitions.
+notes: |-
+  More information about the supported metrics may be found at:
+  https://learn.microsoft.com/en-us/azure/azure-monitor/platform/metrics-supported
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DetailedOutput
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation included detailed output.
+      If you do not specify this parameter, the output is summarized.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of names of metrics.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetricNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the metric namespace to query metric definitions for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMetricDefinition
+        [-ResourceId] <String>
+        [-MetricName <String[]>]
+        [-MetricNamespace <String>]
+        [-DetailedOutput]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Insights.OutputClasses.PSMetricDefinition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get metric definitions for a resource'
+  description: |-
+    ```
+    PS C:\>Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2"
+    Name                   : CpuTime
+    Dimensions             : {}
+    MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability,
+                             Microsoft.Azure.Insights.Models.MetricAvailability,
+                             Microsoft.Azure.Insights.Models.MetricAvailability}
+    PrimaryAggregationType : Total
+    Properties             : {}
+    ResourceUri            :
+    Unit                   : Seconds
+    Name                   : Requests
+    Dimensions             : {}
+    MetricAvailabilities   : {Microsoft.Azure.Insights.Models.MetricAvailability,
+                             Microsoft.Azure.Insights.Models.MetricAvailability,
+                             Microsoft.Azure.Insights.Models.MetricAvailability}
+    PrimaryAggregationType : Total
+    Properties             : {}
+    ResourceUri            :
+    Unit                   : Count
+    ```
+
+    This command gets the metrics definitions for the specified resource.
+- title: 'Example 2: Get metric definitions with detailed output'
+  description: |-
+    ```
+    PS C:\>Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput
+    Dimensions             :
+    MetricAvailabilities   :
+                                 Location  :
+                                 Retention : 2.00:00:00
+                                 Values    : 00:01:00
+                                 Location  :
+                                 Retention : 30.00:00:00
+                                 Values    : 01:00:00
+                                 Location  :
+                                 Retention : 90.00:00:00
+                                 Values    : 1.00:00:00
+    Name                   : CpuTime
+    Properties             :
+    PrimaryAggregationType : Total
+    ResourceUri            :
+    Unit                   : Seconds
+    Dimensions             :
+    MetricAvailabilities   :
+                                 Location  :
+                                 Retention : 2.00:00:00
+                                 Values    : 00:01:00
+                                 Location  :
+                                 Retention : 30.00:00:00
+                                 Values    : 01:00:00
+                                 Location  :
+                                 Retention : 90.00:00:00
+                                 Values    : 1.00:00:00
+    Name                   : Requests
+    Properties             :
+    PrimaryAggregationType : Total
+    ResourceUri            :
+    Unit                   : Count
+    ```
+
+    This command gets the metric definitions for website2.
+    The output is detailed.
+- title: 'Example 3: Get metric definitions by name'
+  description: |-
+    ```
+    PS C:\>Get-AzMetricDefinition -ResourceId "/subscriptions/a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1/resourceGroups/Default-Web-EastUS/providers/microsoft.web/sites/website2" -DetailedOutput -MetricName "BytesSent,CpuTime"
+    MetricAvailabilities   :
+                                 Location  :
+                                 Retention : 2.00:00:00
+                                 Values    : 00:01:00
+                                 Location  :
+                                 Retention : 30.00:00:00
+                                 Values    : 01:00:00
+                                 Location  :
+                                 Retention : 90.00:00:00
+                                 Values    : 1.00:00:00
+    Name                   : CpuTime
+    Properties             :
+    PrimaryAggregationType : Total
+    ResourceUri            :
+    Unit                   : Seconds
+    Dimensions             :
+    MetricAvailabilities   :
+                                 Location  :
+                                 Retention : 2.00:00:00
+                                 Values    : 00:01:00
+                                 Location  :
+                                 Retention : 30.00:00:00
+                                 Values    : 01:00:00
+                                 Location  :
+                                 Retention : 90.00:00:00
+                                 Values    : 1.00:00:00
+    Name                   : BytesSent
+    Properties             :
+    PrimaryAggregationType : Total
+    ResourceUri            :
+    Unit                   : Bytes
+    ```
+
+    This command gets definitions for the BytesSent and CpuTime metrics.
+    The output is detailed.
+links:
+- text: Get-AzMetric
+  href: ./Get-AzMetric.yml
+- text: New-AzMetricFilter
+  href: ./New-AzMetricFilter.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzMetricDefinition.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/get-azmetricdefinition
+  Module Name: Az.Monitor
+  ms.assetid: 7915A7AC-5A47-4868-B846-2896BCEBFAB2
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/Get-AzMetricDefinition.md
+  PlatyPS schema version: 2024-05-01

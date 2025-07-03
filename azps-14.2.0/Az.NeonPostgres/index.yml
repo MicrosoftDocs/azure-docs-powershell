@@ -1,0 +1,36 @@
+### YamlMime:PowerShellModule1
+uid: Az.NeonPostgres
+name: Az.NeonPostgres Module
+isPreview: false
+cmdletGroups:
+- title: NeonPostgres
+  cmdlets:
+  - Az.NeonPostgres.Get-AzNeonPostgresBranch
+  - Az.NeonPostgres.Get-AzNeonPostgresCompute
+  - Az.NeonPostgres.Get-AzNeonPostgresEndpoint
+  - Az.NeonPostgres.Get-AzNeonPostgresNeonDatabase
+  - Az.NeonPostgres.Get-AzNeonPostgresNeonRole
+  - Az.NeonPostgres.Get-AzNeonPostgresOrganization
+  - Az.NeonPostgres.Get-AzNeonPostgresProject
+  - Az.NeonPostgres.Get-AzNeonPostgresProjectConnectionUri
+  - Az.NeonPostgres.New-AzNeonPostgresBranch
+  - Az.NeonPostgres.New-AzNeonPostgresOrganization
+  - Az.NeonPostgres.New-AzNeonPostgresProject
+  - Az.NeonPostgres.Remove-AzNeonPostgresBranch
+  - Az.NeonPostgres.Remove-AzNeonPostgresOrganization
+  - Az.NeonPostgres.Remove-AzNeonPostgresProject
+  - Az.NeonPostgres.Update-AzNeonPostgresBranch
+  - Az.NeonPostgres.Update-AzNeonPostgresOrganization
+  - Az.NeonPostgres.Update-AzNeonPostgresProject
+description: |-
+  Microsoft Azure PowerShell: NeonPostgres cmdlets Manage Neon Postgres databases and related resources within Azure.
+metadata:
+  Module Name: Az.NeonPostgres
+  Module Guid: 0121408b-f2e9-4f4c-9809-26c1d1aaec32
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.neonpostgres
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Az.NeonPostgres.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NeonPostgres/NeonPostgres/help/Az.NeonPostgres.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,160 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Billing.Get-AzConsumptionBudget
+name: Get-AzConsumptionBudget
+module: Az.Billing
+isPreview: false
+summary: |-
+  Get a list of budgets in either a subscription or a resource group.
+description: |-
+  The Get-AzConsumptionBudget cmdlet gets a list of budgets in either a subscription or a resource group.
+notes: |-
+  - Currently, PowerShell SDK for Consumption is only available to Enterprise Agreement customers.
+  - PowerShell SDK for Consumption is using an older version of Budgets API and few backwards non-compatible items like listing Budgets with filters will not work as expected.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group of a budget.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConsumptionBudget
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Consumption.Models.PSBudget" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of budgets at subscription level'
+  description: |-
+    ```powershell
+    Get-AzConsumptionBudget
+    ```
+
+    ```output
+    Amount:  60
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
+    Name:  PSBudget
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+- title: 'Example 2: Get a list of budgets at resource group level'
+  description: |-
+    ```powershell
+    Get-AzConsumptionBudget -ResourceGroupName RGBudgets
+    ```
+
+    ```output
+    Amount:  60
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG
+    Name:  PSBudgetRG
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+- title: 'Example 3: Get a budget with the budget name at subscription level'
+  description: |-
+    ```powershell
+    Get-AzConsumptionBudget -Name PSBudget
+    ```
+
+    ```output
+    Amount:  60
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/providers/Microsoft.Consumption/budgets/PSBudget
+    Name:  PSBudget
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+- title: 'Example 4: Get a budget with the budget name at resource group level'
+  description: |-
+    ```powershell
+    Get-AzConsumptionBudget -ResourceGroupName RGBudgets -Name PSBudgetRG
+    ```
+
+    ```output
+    Amount:  60
+    Category:  Cost
+    CurrentSpend:  null
+    Id:  subscriptions/1caaa5a3-2b66-438e-8ab4-bce37d518c5d/resourceGroups/RGBudgets/providers/Microsoft.Consumption/budgets/PSBudgetRG
+    Name:  PSBudgetRG
+    TimeGrain:  Monthly
+    TimePeriod:  EndDate:  11/1/2018 12:00:00 AM
+                 StartDate:  6/1/2018 12:00:00 AM
+    Type:  Microsoft.Consumption/budgets
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionBudget.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Consumption.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billing/get-azconsumptionbudget
+  Module Name: Az.Billing
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Billing/Billing/help/Get-AzConsumptionBudget.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,79 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CloudService.New-AzCloudServiceLoadBalancerConfigurationObject
+name: New-AzCloudServiceLoadBalancerConfigurationObject
+module: Az.CloudService
+isPreview: false
+summary: |-
+  Create a in-memory object for LoadBalancerConfiguration
+description: |-
+  Create a in-memory object for LoadBalancerConfiguration
+parameters:
+  cmdletParameters:
+  - name: FrontendIPConfiguration
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.ILoadBalancerFrontendIPConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      FrontendIPConfiguration.
+      To construct, see NOTES section for FRONTENDIPCONFIGURATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of LoadBalancerConfiguration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCloudServiceLoadBalancerConfigurationObject
+
+        [-FrontendIPConfiguration <ILoadBalancerFrontendIPConfiguration[]>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CloudService.Models.Api20220904.LoadBalancerConfiguration" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create load balancer configuration object'
+  description: |-
+    ```powershell
+    $publicIP = Get-AzPublicIpAddress -ResourceGroupName 'ContosoOrg' -Name 'ContosoPublicIP'
+    $feIpConfig = New-AzCloudServiceLoadBalancerFrontendIPConfigurationObject -Name 'ContosoFe' -PublicIPAddressId $publicIP.Id
+    $loadBalancerConfig = New-AzCloudServiceLoadBalancerConfigurationObject -Name 'ContosoLB' -FrontendIPConfiguration $feIpConfig
+    ```
+
+    This command creates load balancer configuration object which is used for creating or updating a cloud service.
+    For more details see New-AzCloudService.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceLoadBalancerConfigurationObject.md
+  document type: cmdlet
+  external help file: Az.CloudService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cloudservice/new-azcloudserviceloadbalancerconfigurationobject
+  Module Name: Az.CloudService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CloudService/CloudService/help/New-AzCloudServiceLoadBalancerConfigurationObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,157 @@
+### YamlMime:PowerShellModule1
+uid: Az.MachineLearningServices
+name: Az.MachineLearningServices Module
+isPreview: false
+cmdletGroups:
+- title: Machine Learning
+  cmdlets:
+  - Az.MachineLearningServices.Get-AzMLServiceQuota
+  - Az.MachineLearningServices.Get-AzMLServiceUsage
+  - Az.MachineLearningServices.Get-AzMLServiceVMSize
+  - Az.MachineLearningServices.Get-AzMLWorkspace
+  - Az.MachineLearningServices.Get-AzMLWorkspaceBatchDeployment
+  - Az.MachineLearningServices.Get-AzMLWorkspaceBatchEndpoint
+  - Az.MachineLearningServices.Get-AzMLWorkspaceCodeVersion
+  - Az.MachineLearningServices.Get-AzMLWorkspaceComponentContainer
+  - Az.MachineLearningServices.Get-AzMLWorkspaceComponentVersion
+  - Az.MachineLearningServices.Get-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Get-AzMLWorkspaceComputeKey
+  - Az.MachineLearningServices.Get-AzMLWorkspaceComputeNode
+  - Az.MachineLearningServices.Get-AzMLWorkspaceConnection
+  - Az.MachineLearningServices.Get-AzMLWorkspaceDataContainer
+  - Az.MachineLearningServices.Get-AzMLWorkspaceDatastore
+  - Az.MachineLearningServices.Get-AzMLWorkspaceDatastoreSecret
+  - Az.MachineLearningServices.Get-AzMLWorkspaceDataVersion
+  - Az.MachineLearningServices.Get-AzMLWorkspaceEnvironmentContainer
+  - Az.MachineLearningServices.Get-AzMLWorkspaceEnvironmentVersion
+  - Az.MachineLearningServices.Get-AzMLWorkspaceFeature
+  - Az.MachineLearningServices.Get-AzMLWorkspaceJob
+  - Az.MachineLearningServices.Get-AzMLWorkspaceKey
+  - Az.MachineLearningServices.Get-AzMLWorkspaceModelContainer
+  - Az.MachineLearningServices.Get-AzMLWorkspaceModelVersion
+  - Az.MachineLearningServices.Get-AzMLWorkspaceNotebookAccessToken
+  - Az.MachineLearningServices.Get-AzMLWorkspaceNotebookKey
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineDeployment
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineDeploymentLog
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineDeploymentSku
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineEndpoint
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineEndpointKey
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOnlineEndpointToken
+  - Az.MachineLearningServices.Get-AzMLWorkspaceOutboundNetworkDependencyEndpoint
+  - Az.MachineLearningServices.Get-AzMLWorkspaceStorageAccountKey
+  - Az.MachineLearningServices.Invoke-AzMLWorkspaceDiagnose
+  - Az.MachineLearningServices.Invoke-AzMLWorkspaceNotebook
+  - Az.MachineLearningServices.New-AzMLWorkspace
+  - Az.MachineLearningServices.New-AzMLWorkspaceAadAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceAccessKeyAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceAccountKeyAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceAksObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceAmlComputeObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceApiKeyAuthWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceBatchDeployment
+  - Az.MachineLearningServices.New-AzMLWorkspaceBatchEndpoint
+  - Az.MachineLearningServices.New-AzMLWorkspaceCodeVersion
+  - Az.MachineLearningServices.New-AzMLWorkspaceCommandJobObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceComponentContainer
+  - Az.MachineLearningServices.New-AzMLWorkspaceComponentVersion
+  - Az.MachineLearningServices.New-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.New-AzMLWorkspaceComputeInstanceObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceComputeStartStopScheduleObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceConnection
+  - Az.MachineLearningServices.New-AzMLWorkspaceCustomKeysWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceCustomModelJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceCustomModelJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatabricksObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDataContainer
+  - Az.MachineLearningServices.New-AzMLWorkspaceDataFactoryObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDataLakeAnalyticsObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDataPathAssetReferenceObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastore
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreBlobObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreCredentialObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreDataLakeGen1Object
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreDataLakeGen2Object
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreFileObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreKeyCredentialObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreNoneCredentialObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreSasCredentialObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDatastoreServicePrincipalCredentialObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceDataVersion
+  - Az.MachineLearningServices.New-AzMLWorkspaceEnvironmentVersion
+  - Az.MachineLearningServices.New-AzMLWorkspaceHDInsightObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceIdAssetReferenceObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceJob
+  - Az.MachineLearningServices.New-AzMLWorkspaceJobServiceObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceKubernetesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceLiteralJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceManagedIdentityAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceMLFlowModelJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceMLFlowModelJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceMLTableJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceMLTableJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceModelContainer
+  - Az.MachineLearningServices.New-AzMLWorkspaceModelVersion
+  - Az.MachineLearningServices.New-AzMLWorkspaceNoneAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceOAuth2AuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceOnlineDeployment
+  - Az.MachineLearningServices.New-AzMLWorkspaceOnlineEndpoint
+  - Az.MachineLearningServices.New-AzMLWorkspaceOnlineEndpointKey
+  - Az.MachineLearningServices.New-AzMLWorkspaceOutputPathAssetReferenceObject
+  - Az.MachineLearningServices.New-AzMLWorkspacePatAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspacePipelineJobObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceQuotaPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceSasAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceServicePrincipalAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceSharedPrivateLinkResourceObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceSweepJobObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceSynapseSparkObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceTritonModelJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceTritonModelJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceUriFileJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceUriFileJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceUriFolderJobInputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceUriFolderJobOutputObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceUsernamePasswordAuthTypeWorkspaceConnectionPropertiesObject
+  - Az.MachineLearningServices.New-AzMLWorkspaceVirtualMachineObject
+  - Az.MachineLearningServices.Remove-AzMLWorkspace
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceBatchDeployment
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceBatchEndpoint
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceCodeVersion
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceComponentContainer
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceComponentVersion
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceConnection
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceDataContainer
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceDatastore
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceDataVersion
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceEnvironmentContainer
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceEnvironmentVersion
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceJob
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceModelContainer
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceModelVersion
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceOnlineDeployment
+  - Az.MachineLearningServices.Remove-AzMLWorkspaceOnlineEndpoint
+  - Az.MachineLearningServices.Restart-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Start-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Stop-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Stop-AzMLWorkspaceJob
+  - Az.MachineLearningServices.Sync-AzMLWorkspaceKey
+  - Az.MachineLearningServices.Update-AzMLServiceQuota
+  - Az.MachineLearningServices.Update-AzMLWorkspace
+  - Az.MachineLearningServices.Update-AzMLWorkspaceBatchDeployment
+  - Az.MachineLearningServices.Update-AzMLWorkspaceBatchEndpoint
+  - Az.MachineLearningServices.Update-AzMLWorkspaceCompute
+  - Az.MachineLearningServices.Update-AzMLWorkspaceOnlineDeployment
+  - Az.MachineLearningServices.Update-AzMLWorkspaceOnlineEndpoint
+description: |-
+  Microsoft Azure PowerShell: MachineLearningServices cmdlets
+metadata:
+  Module Name: Az.MachineLearningServices
+  Module Guid: 56293047-9014-4c88-96b7-98b69c3b687d
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.machinelearningservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Az.MachineLearningServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MachineLearningServices/MachineLearningServices/help/Az.MachineLearningServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

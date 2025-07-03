@@ -1,0 +1,50 @@
+### YamlMime:PowerShellModule1
+uid: Az.StreamAnalytics
+name: Az.StreamAnalytics Module
+isPreview: false
+cmdletGroups:
+- title: Stream Analytics
+  cmdlets:
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsCluster
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsClusterStreamingJob
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsDefaultFunctionDefinition
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsQuota
+  - Az.StreamAnalytics.Get-AzStreamAnalyticsTransformation
+  - Az.StreamAnalytics.New-AzStreamAnalyticsCluster
+  - Az.StreamAnalytics.New-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.New-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.New-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.New-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.New-AzStreamAnalyticsTransformation
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsCluster
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Remove-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Start-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Stop-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Test-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsCluster
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsFunction
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsInput
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsJob
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsOutput
+  - Az.StreamAnalytics.Update-AzStreamAnalyticsTransformation
+description: |-
+  Microsoft Azure PowerShell: StreamAnalytics cmdlets
+metadata:
+  Module Name: Az.StreamAnalytics
+  Module Guid: f3678192-db41-439b-99e7-6fda95f6c601
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.streamanalytics
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/StreamAnalytics/help/Az.StreamAnalytics.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StreamAnalytics/StreamAnalytics/help/Az.StreamAnalytics.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

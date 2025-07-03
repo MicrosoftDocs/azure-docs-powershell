@@ -1,0 +1,265 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerSecurityUserRuleCollection
+name: Get-AzNetworkManagerSecurityUserRuleCollection
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a security user rule collection in a network manager.
+description: |-
+  The **Get-AzNetworkManagerSecurityUserRuleCollection** cmdlet gets a security user rule collection in a network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      NetworkManager SecurityUserCollection Id
+    aliases:
+    - SecurityUserCollectionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecurityUserConfigurationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager security user configuration name.
+    aliases:
+    - ConfigName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRuleCollection
+        -SecurityUserConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByList
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRuleCollection
+        -Name <String>
+        -SecurityUserConfigurationName <String>
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerSecurityUserRuleCollection
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerSecurityUserRuleCollection" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserRuleCollection  -Name "TestRC" -SecurityUserConfigurationName "TestSecConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name              : TestRC
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC
+    Type              : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesToGroups   : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+    ```
+
+    Gets a rule collection with a security user configuration.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerSecurityUserRuleCollection  -SecurityUserConfigurationName "TestSecConfig" -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG"
+    ```
+
+    ```output
+    Name              : TestRC
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC
+    Type              : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesToGroups   : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+
+                        Name              : TestRC2
+    Description       : Sample rule Collection Description
+    Id                : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/securityUserConfigurations/TestSecConfig/ruleCollections/TestRC2
+    Type              : Microsoft.Network/networkManagers/securityUserConfigurations/ruleCollections
+    Etag              : "00000000-0000-0000-0000-000000000000"
+    ProvisioningState : Succeeded
+    AppliesToGroups   : [
+                          {
+                            "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testng"
+                          }
+                        ]
+    SystemData        : {
+                          "CreatedBy": "00000000-0000-0000-0000-000000000000",
+                          "CreatedByType": "Application",
+                          "CreatedAt": "2021-10-18T04:06:01",
+                          "LastModifiedBy": "00000000-0000-0000-0000-000000000000",
+                          "LastModifiedByType": "Application",
+                          "LastModifiedAt": "2021-10-18T04:06:03"
+                        }
+    ```
+
+    Gets all rule collections within a security user configuration.
+links:
+- text: New-AzNetworkManagerSecurityUserRuleCollection
+  href: ./New-AzNetworkManagerSecurityUserRuleCollection.yml
+- text: Remove-AzNetworkManagerSecurityUserRuleCollection
+  href: ./Remove-AzNetworkManagerSecurityUserRuleCollection.yml
+- text: Set-AzNetworkManagerSecurityUserRuleCollection
+  href: ./Set-AzNetworkManagerSecurityUserRuleCollection.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserRuleCollection.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagersecurityuserrulecollection
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerSecurityUserRuleCollection.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,159 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzLocalNetworkGateway
+name: Get-AzLocalNetworkGateway
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets a Local Network Gateway
+description: |-
+  The Local Network Gateway is the object representing your VPN device On-Premises.
+  The **Get-AzLocalNetworkGateway** cmdlet returns the object representing your on-prem gateway based on Name and Resource Group Name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    aliases:
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzLocalNetworkGateway
+        [-Name <String>]
+        -ResourceGroupName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLocalNetworkGateway" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Local Network Gateway'
+  description: |-
+    ```powershell
+    Get-AzLocalNetworkGateway -Name myLocalGW1 -ResourceGroupName myRG
+    ```
+
+    ```output
+    Name                     : myLocalGW1
+    ResourceGroupName        : myRG
+    Location                 : eastus
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                               icrosoft.Network/localNetworkGateways/myLocalGW1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    GatewayIpAddress         : x.x.x.x
+    LocalNetworkAddressSpace : {
+                                 "AddressPrefixes": []
+                               }
+    BgpSettings              : null
+    ```
+
+    Returns the object of the Local Network Gateway with the name "myLocalGW1" within the resource group "myRG"
+- title: 'Example 2: Get Local Network Gateways using filtering'
+  description: |-
+    ```powershell
+    Get-AzLocalNetworkGateway -Name myLocalGW* -ResourceGroupName myRG
+    ```
+
+    ```output
+    Name                     : myLocalGW1
+    ResourceGroupName        : myRG
+    Location                 : eastus
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                               icrosoft.Network/localNetworkGateways/myLocalGW1
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    GatewayIpAddress         : x.x.x.x
+    LocalNetworkAddressSpace : {
+                                 "AddressPrefixes": []
+                               }
+    BgpSettings              : null
+
+    Name                     : myLocalGW2
+    ResourceGroupName        : myRG
+    Location                 : eastus
+    Id                       : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/M
+                               icrosoft.Network/localNetworkGateways/myLocalGW2
+    Etag                     : W/"00000000-0000-0000-0000-000000000000"
+    ResourceGuid             : 00000000-0000-0000-0000-000000000000
+    ProvisioningState        : Succeeded
+    Tags                     :
+    GatewayIpAddress         : x.x.x.x
+    LocalNetworkAddressSpace : {
+                                 "AddressPrefixes": []
+                               }
+    BgpSettings              : null
+    ```
+
+    Returns the object of the Local Network Gateway with name starting with "myLocalGW" within the resource group "myRG"
+links:
+- text: New-AzLocalNetworkGateway
+  href: ./New-AzLocalNetworkGateway.yml
+- text: Remove-AzLocalNetworkGateway
+  href: ./Remove-AzLocalNetworkGateway.yml
+- text: Set-AzLocalNetworkGateway
+  href: ./Set-AzLocalNetworkGateway.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLocalNetworkGateway.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azlocalnetworkgateway
+  Module Name: Az.Network
+  ms.assetid: F8756DA1-7BB9-4CD5-9D81-E11FF7A26125
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzLocalNetworkGateway.md
+  PlatyPS schema version: 2024-05-01

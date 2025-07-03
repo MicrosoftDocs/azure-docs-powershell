@@ -1,0 +1,161 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.Get-AzPurviewScanResultScanHistory
+name: Get-AzPurviewScanResultScanHistory
+module: Az.Purview
+isPreview: false
+summary: |-
+  Lists the scan history of a scan
+description: |-
+  Lists the scan history of a scan
+parameters:
+  cmdletParameters:
+  - name: DataSourceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning endpoint of your purview account.
+      Example: https://{accountName}.purview.azure.com
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPurviewScanResultScanHistory
+        -Endpoint <String>
+        -DataSourceName <String>
+        -ScanName <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.IScanResult" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all scan runs within a scan instance of a data source'
+  description: |-
+    ```powershell
+    Get-AzPurviewScanResultScanHistory -Endpoint 'https://parv-brs-2.purview.azure.com/' -DataSourceName 'DataScanTestData-Parv' -ScanName 'Scan1ForDemo' | Format-List
+    ```
+
+    ```output
+    AssetsClassified            : 62
+    AssetsDiscovered            : 97
+    Code                        :
+    DataSourceType              : AzureStorage
+    Detail                      :
+    DiagnosticExceptionCountMap : {
+                                  }
+    DiagnosticNotification      : {}
+    EndTime                     : 2/15/2022 2:42:22 PM
+    ErrorMessage                :
+    Id                          : 758a0499-b45e-40e3-9c06-408e2f3ac050
+    Message                     :
+    ParentId                    :
+    PipelineStartTime           : 2/15/2022 2:36:21 PM
+    QueuedTime                  : 2/15/2022 2:34:06 PM
+    ResourceId                  : /subscriptions/xxxxxxxx-ffc5-465d-b5dd-xxxxxxxx/resourceGroups/datascan-dev-tests/providers/Microsoft.Storage/storageAccounts/datascan
+    RunType                     : Manual
+    ScanLevelType               : Full
+    ScanRulesetType             : System
+    ScanRulesetVersion          : 4
+    StartTime                   : 2/15/2022 2:34:06 PM
+    Status                      : Succeeded
+    Target                      :
+
+    AssetsClassified            : 62
+    AssetsDiscovered            : 97
+    Code                        :
+    DataSourceType              : AzureStorage
+    Detail                      :
+    DiagnosticExceptionCountMap : {
+                                  }
+    DiagnosticNotification      : {}
+    EndTime                     : 2/13/2022 3:23:53 PM
+    ErrorMessage                :
+    Id                          : a81d7a0f-149b-4c57-80ae-0f4640ee5a29
+    Message                     :
+    ParentId                    :
+    PipelineStartTime           : 2/13/2022 3:17:02 PM
+    QueuedTime                  : 2/13/2022 3:16:34 PM
+    ResourceId                  : /subscriptions/xxxxxxxx-ffc5-465d-b5dd-xxxxxxxx/resourceGroups/datascan-dev-tests/providers/Microsoft.Storage/storageAccounts/datascan
+    RunType                     : Manual
+    ScanLevelType               : Full
+    ScanRulesetType             : System
+    ScanRulesetVersion          : 4
+    StartTime                   : 2/13/2022 3:16:34 PM
+    Status                      : Succeeded
+    Target                      :
+    ```
+
+    List all scan runs within a scan instance of a data source
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewScanResultScanHistory.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.purview/get-azpurviewscanresultscanhistory
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewScanResultScanHistory.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Get-AzADGroupMember
+name: Get-AzADGroupMember
+module: Az.Resources
+isPreview: false
+summary: |-
+  Lists members of an AD group in the current tenant.
+description: |-
+  Lists members of an AD group in the current tenant.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: First
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum number of objects to return.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupDisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupObject
+    type: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      The group object that you are listing members from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GroupObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GroupObjectId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      Object Id of the group.
+    aliases:
+    - Id
+    - ObjectId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ObjectIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IncludeTotalCount
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Reports the number of objects in the data set. Currently, this parameter does nothing.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skip
+    type: <xref href="System.UInt64" data-throw-if-not-resolved="False" />
+    description: |-
+      Ignores the first N objects and then gets the remaining objects.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzADGroupMember
+        [-GroupObjectId <Guid>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ObjectIdParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzADGroupMember
+        -GroupDisplayName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzADGroupMember
+        -GroupObject <PSADGroup>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IncludeTotalCount]
+        [-Skip <UInt64>]
+        [-First <UInt64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GroupObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameters: GroupObject (ByValue)
+outputs:
+- name: <xref href="Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADObject" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1 - List members by AD group object id
+  description: |-
+    ```
+    PS C:\> Get-AzADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444
+    ```
+
+    Lists members of the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
+- title: Example 2 - List members by AD group object id using paging
+  description: |-
+    ```
+    PS C:\> Get-AzADGroupMember -GroupObjectId 00001111-aaaa-2222-bbbb-3333cccc4444 -First 100
+    ```
+
+    Lists the first 100 members of the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb'.
+- title: Example 3 - List members by piping
+  description: |-
+    ```
+    PS C:\> Get-AzADGroup -ObjectId aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb | Get-AzADGroupMember
+    ```
+
+    Gets the AD group with object id 'aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb' and pipes it to the Get-AzADGroupMember cmdlet to list all members in that group.
+links:
+- text: Get-AzADUser
+  href: ./Get-AzADUser.yml
+- text: Get-AzADServicePrincipal
+  href: ./Get-AzADServicePrincipal.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroupMember.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Resources.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.resources/get-Azadgroupmember
+  Module Name: Az.Resources
+  ms.assetid: 52C5CD8B-2489-4FE6-9F33-B3350531CD8E
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Resources/Resources/help/Get-AzADGroupMember.md
+  PlatyPS schema version: 2024-05-01

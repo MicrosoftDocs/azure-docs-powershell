@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject
+name: New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for LoadBalancingSettingsParameters.
+description: |-
+  Create an in-memory object for LoadBalancingSettingsParameters.
+parameters:
+  cmdletParameters:
+  - name: AdditionalLatencyInMillisecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The additional latency in milliseconds for probes to fall into the lowest latency bucket.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SampleSize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of samples to consider for load balancing decisions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SuccessfulSamplesRequired
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The number of samples within the sample period that must succeed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject
+        [-AdditionalLatencyInMillisecond <Int32>]
+        [-SampleSize <Int32>]
+        [-SuccessfulSamplesRequired <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.LoadBalancingSettingsParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureFrontDoor origin group `LoadBalancingSetting` object'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject -AdditionalLatencyInMillisecond 200  -SampleSize 5 -SuccessfulSamplesRequired 4
+    ```
+
+    ```output
+    AdditionalLatencyInMillisecond SampleSize SuccessfulSamplesRequired
+    ------------------------------ ---------- -------------------------
+    200                            5          4
+    ```
+
+    Create an in-memory object for AzureFrontDoor origin group `LoadBalancingSetting` object
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-azfrontdoorcdnorigingrouploadbalancingsettingobject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnOriginGroupLoadBalancingSettingObject.md
+  PlatyPS schema version: 2024-05-01

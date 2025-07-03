@@ -1,0 +1,217 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSiteRecoveryProtectionEntity
+name: Get-AzureSiteRecoveryProtectionEntity
+module: Azure
+isPreview: false
+summary: |-
+  Gets protectable or protected entities in a Site Recovery vault.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSiteRecoveryProtectionEntity** cmdlet gets the protectable or protected entities, such as virtual machines, in the current Azure Site Recovery vault.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protection entity to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIDsWithId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a protection entity to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIDsWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainer
+    type: <xref href="ASRProtectionContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a protection container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtectionContainerId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of a protected container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByIDsWithId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIDsWithName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByIDs
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -ProtectionContainer <ASRProtectionContainer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -Id <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -Id <String>
+        -ProtectionContainerId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIDsWithId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -Name <String>
+        -ProtectionContainer <ASRProtectionContainer>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectWithName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -Name <String>
+        -ProtectionContainerId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIDsWithName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSiteRecoveryProtectionEntity
+        -ProtectionContainerId <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByIDs
+  isDefault: false
+examples:
+- title: 'Example 1: Display a protected virtual machine in a container'
+  description: |-
+    ```
+    PS C:\> $Container = Get-AzureSiteRecoveryProtectionContainer
+    PS C:\> Get-AzureSiteRecoveryProtectionEntity -ProtectionContainer $Container
+    ID                           : 43aaab46-1cb0-4c39-8077-9a091c3b05ce
+    ServerId                     : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c
+    ProtectionContainerId        : 4a94c4a9-c856-4577-afbd-367fe9b3ce9c_1c513d45-645d-4ed0-b9ae-e7b869a1f7fc
+    Name                         : testvm
+    Type                         : VirtualMachine
+    FabricObjectId               : 00001111-aaaa-2222-bbbb-3333cccc4444
+    Protected                    : False
+    CanCommit                    : False
+    CanFailover                  : False
+    CanReverseReplicate          : False
+    ActiveLocation               : Primary
+    ProtectionStateDescription   : Enabling protection
+    ReplicationHealth            :
+    TestFailoverStateDescription : Nonev
+    ReplicationProvider          : HyperVReplica
+    ```
+
+    The first command gets a protected container by using the **Get-AzureSiteRecoveryProtectionContainer** cmdlet, and then stores that object in the $Container variable.
+
+    The second command gets the protected virtual machine that belongs to the container in $Container, and then displays it.
+links:
+- text: Get-AzureSiteRecoveryProtectionContainer
+  href: ./Get-AzureSiteRecoveryProtectionContainer.yml
+- text: Set-AzureSiteRecoveryProtectionEntity
+  href: ./Set-AzureSiteRecoveryProtectionEntity.yml
+- text: Update-AzureSiteRecoveryProtectionEntity
+  href: ./Update-AzureSiteRecoveryProtectionEntity.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: CB1A36E9-75BE-43CF-9092-9713DFEB96F8
+  PlatyPS schema version: 2024-05-01

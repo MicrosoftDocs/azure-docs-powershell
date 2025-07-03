@@ -1,0 +1,680 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.AksArc.Update-AzAksArcCluster
+name: Update-AzAksArcCluster
+module: Az.AksArc
+isPreview: false
+summary: |-
+  Update the provisioned cluster instance
+description: |-
+  Update the provisioned cluster instance
+parameters:
+  cmdletParameters:
+  - name: AdminGroupObjectID
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileBalanceSimilarNodeGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Valid values are 'true' and 'false'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileExpander
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If not specified, the default is 'random'.
+      See [expanders](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-are-expanders) for more information.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileMaxEmptyBulkDelete
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileMaxGracefulTerminationSec
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is 600.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileMaxNodeProvisionTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '15m'.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileMaxTotalUnreadyPercentage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is 45.
+      The maximum is 100 and the minimum is 0.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileNewPodScaleUpDelay
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      For scenarios like burst/batch scale where you don't want CA to act before the kubernetes scheduler could schedule all the pods, you can tell CA to ignore unscheduled pods before they're a certain age.
+      The default is '0s'.
+      Values must be an integer followed by a unit ('s' for seconds, 'm' for minutes, 'h' for hours, etc).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileOkTotalUnreadyCount
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This must be an integer.
+      The default is 3.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownDelayAfterAdd
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '10m'.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownDelayAfterDelete
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is the scan-interval.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownDelayAfterFailure
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '3m'.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownUnneededTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '10m'.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownUnreadyTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '20m'.
+      Values must be an integer followed by an 'm'.
+      No unit of time other than minutes (m) is supported.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScaleDownUtilizationThreshold
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '0.5'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileScanInterval
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is '10'.
+      Values must be an integer number of seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileSkipNodesWithLocalStorage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoScalerProfileSkipNodesWithSystemPod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The default is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Kubernetes cluster on which get is called.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ControlPlaneCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of control plane nodes.
+      The default value is 1, and the count should be an odd number
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutoScaling
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable autoscalar.
+      The default value is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoScaling
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAzureHybridBenefit
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether Azure Hybrid Benefit is opted in.
+      Default value is false
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MaxCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Max nodes in autoscalar
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoScaling
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Min nodes in autoscalar
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AutoScaling
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NfCsiDriverEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable NFS CSI Driver.
+      The default value is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SmbCsiDriverEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether to enable SMB CSI Driver.
+      The default value is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzAksArcCluster
+        -ClusterName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AdminGroupObjectID <String[]>]
+        [-EnableAzureHybridBenefit]
+        [-ControlPlaneCount <Int32>]
+        [-NfCsiDriverEnabled]
+        [-SmbCsiDriverEnabled]
+        [-AutoScalerProfileBalanceSimilarNodeGroup <String>]
+        [-AutoScalerProfileExpander <String>]
+        [-AutoScalerProfileMaxEmptyBulkDelete <String>]
+        [-AutoScalerProfileMaxGracefulTerminationSec <String>]
+        [-AutoScalerProfileMaxNodeProvisionTime <String>]
+        [-AutoScalerProfileMaxTotalUnreadyPercentage <String>]
+        [-AutoScalerProfileNewPodScaleUpDelay <String>]
+        [-AutoScalerProfileOkTotalUnreadyCount <String>]
+        [-AutoScalerProfileScaleDownDelayAfterAdd <String>]
+        [-AutoScalerProfileScaleDownDelayAfterDelete <String>]
+        [-AutoScalerProfileScaleDownDelayAfterFailure <String>]
+        [-AutoScalerProfileScaleDownUnneededTime <String>]
+        [-AutoScalerProfileScaleDownUnreadyTime <String>]
+        [-AutoScalerProfileScaleDownUtilizationThreshold <String>]
+        [-AutoScalerProfileScanInterval <String>]
+        [-AutoScalerProfileSkipNodesWithLocalStorage <String>]
+        [-AutoScalerProfileSkipNodesWithSystemPod <String>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzAksArcCluster
+        -ClusterName <String>
+        -ResourceGroupName <String>
+        -MinCount <Int32>
+        -MaxCount <Int32>
+        [-SubscriptionId <String>]
+        [-AdminGroupObjectID <String[]>]
+        [-EnableAzureHybridBenefit]
+        [-ControlPlaneCount <Int32>]
+        [-NfCsiDriverEnabled]
+        [-SmbCsiDriverEnabled]
+        [-AutoScalerProfileBalanceSimilarNodeGroup <String>]
+        [-AutoScalerProfileExpander <String>]
+        [-AutoScalerProfileMaxEmptyBulkDelete <String>]
+        [-AutoScalerProfileMaxGracefulTerminationSec <String>]
+        [-AutoScalerProfileMaxNodeProvisionTime <String>]
+        [-AutoScalerProfileMaxTotalUnreadyPercentage <String>]
+        [-AutoScalerProfileNewPodScaleUpDelay <String>]
+        [-AutoScalerProfileOkTotalUnreadyCount <String>]
+        [-AutoScalerProfileScaleDownDelayAfterAdd <String>]
+        [-AutoScalerProfileScaleDownDelayAfterDelete <String>]
+        [-AutoScalerProfileScaleDownDelayAfterFailure <String>]
+        [-AutoScalerProfileScaleDownUnneededTime <String>]
+        [-AutoScalerProfileScaleDownUnreadyTime <String>]
+        [-AutoScalerProfileScaleDownUtilizationThreshold <String>]
+        [-AutoScalerProfileScanInterval <String>]
+        [-AutoScalerProfileSkipNodesWithLocalStorage <String>]
+        [-AutoScalerProfileSkipNodesWithSystemPod <String>]
+        [-EnableAutoScaling]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AutoScaling
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.AksArc.Models.IProvisionedCluster" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Scale up control plane count'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -ControlPlaneCount 3
+    ```
+
+    Increase control plane count to 3 nodes.
+- title: 'Example 2: Enable autoscaling'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -EnableAutoScaling -MinCount 1 -MaxCount 5
+    ```
+
+    Enable autoscaling in provisioned cluster.
+- title: 'Example 3: Enable NfCsiDriver'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -NfCsiDriverEnabled
+    ```
+
+    Enable NfCsi driver in provisioned cluster.
+- title: 'Example 4: Enable SmbCsiDriver'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -SmbCsiDriverEnabled
+    ```
+
+    Enable SmbCsi driver in provisioned cluster.
+- title: 'Example 5: Enable azure hybrid benefit'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -EnableAzureHybridBenefit
+    ```
+
+    Enable Azure Hybrid User Benefits feature for a provisioned cluster.
+- title: 'Example 6: Disable azure hybrid benefit'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -EnableAzureHybridBenefit:$false
+    ```
+
+    Disable Azure Hybrid User Benefits feature for a provisioned cluster.
+- title: 'Example 7: Disable autoscaling'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -EnableAutoScaling:$false
+    ```
+
+    Disable autoscaling in provisioned cluster.
+- title: 'Example 8: Disable NfCsiDriver'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -NfCsiDriverEnabled:$false
+    ```
+
+    Disable NfCsi driver in provisioned cluster.
+- title: 'Example 9: Disable SmbCsiDriver'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -SmbCsiDriverEnabled:$false
+    ```
+
+    Disable SmbCsi driver in provisioned cluster.
+- title: 'Example 10: Update aad admin GUIDS'
+  description: |-
+    ```powershell
+    Update-AzAksArcCluster -ClusterName azps_test_cluster -ResourceGroupName azps_test_group -AdminGroupObjectID @("00001111-aaaa-2222-bbbb-3333cccc4444", "1b28ff4f-f7c5-4aaa-aa79-ba8b775ab443")
+    ```
+
+    Update aad admin GUIDS.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AksArc/AksArc/help/Update-AzAksArcCluster.md
+  document type: cmdlet
+  external help file: Az.AksArc-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.aksarc/update-azaksarccluster
+  Module Name: Az.AksArc
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/AksArc/AksArc/help/Update-AzAksArcCluster.md
+  PlatyPS schema version: 2024-05-01

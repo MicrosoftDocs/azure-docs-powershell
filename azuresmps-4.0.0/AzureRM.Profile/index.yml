@@ -1,0 +1,39 @@
+### YamlMime:PowerShellModule1
+uid: AzureRM.Profile
+name: AzureRM.Profile Module
+isPreview: false
+cmdletGroups:
+- title: Profile
+  cmdlets:
+  - AzureRM.Profile.Add-AzureRmAccount
+  - AzureRM.Profile.Add-AzureRmEnvironment
+  - AzureRM.Profile.Disable-AzureRmDataCollection
+  - AzureRM.Profile.Enable-AzureRmDataCollection
+  - AzureRM.Profile.Get-AzureRmContext
+  - AzureRM.Profile.Get-AzureRmEnvironment
+  - AzureRM.Profile.Get-AzureRmTenant
+  - AzureRM.Profile.Import-AzureRmContext
+  - AzureRM.Profile.Remove-AzureRmEnvironment
+  - AzureRM.Profile.Save-AzureRmContext
+  - AzureRM.Profile.Save-AzureRmProfile
+  - AzureRM.Profile.Select-AzureRmProfile
+  - AzureRM.Profile.Send-Feedback
+  - AzureRM.Profile.Set-AzureRmContext
+  - AzureRM.Profile.Set-AzureRmEnvironment
+- title: Subscriptions
+  cmdlets:
+  - AzureRM.Profile.Get-AzureRmSubscription
+description: |-
+  {{Manually Enter Description Here}}
+metadata:
+  Module Name: AzureRM.Profile
+  Module Guid: 342714fc-4009-4863-8afb-a9067e3db04b
+  HelpInfoUri:
+    ? Please enter FwLink manually: 
+    : 
+  Help Version:
+    ? Please enter version of help manually (X.X.X.X) format: 
+    : 
+  Locale: en-US
+  PlatyPS schema version: 2024-05-01
+  document type: module

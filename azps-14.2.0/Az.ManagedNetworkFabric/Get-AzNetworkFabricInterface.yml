@@ -1,0 +1,246 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedNetworkFabric.Get-AzNetworkFabricInterface
+name: Get-AzNetworkFabricInterface
+module: Az.ManagedNetworkFabric
+isPreview: false
+summary: |-
+  Get the Network Interface resource details.
+description: |-
+  Get the Network Interface resource details.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Network Interface.
+    aliases:
+    - NetworkInterfaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityNetworkDevice
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkDeviceInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityNetworkDevice
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkDeviceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Network Device.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricInterface
+        -NetworkDeviceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricInterface
+        -Name <String>
+        -NetworkDeviceInputObject <IManagedNetworkFabricIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityNetworkDevice
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricInterface
+        -Name <String>
+        -NetworkDeviceName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricInterface
+        -InputObject <IManagedNetworkFabricIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.INetworkInterface" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Network Interfaces'
+  description: |-
+    ```powershell
+    Get-AzNetworkFabricInterface -NetworkDeviceName $deviceName -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    Name        SystemDataCreatedAt SystemDataCreatedBy       SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy           SystemDataLastModifiedByType ResourceGroupName
+    ----        ------------------- -------------------       ----------------------- ------------------------ ------------------------           ---------------------------- -----
+    Ethernet1   09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet2   09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet9   09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet10  09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet11  09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet12  09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet17  09/22/2023 06:53:47 <identity>                Application             09/22/2023 06:53:47      <identity>                         Application                  nfa-…
+    Ethernet47  09/22/2023 06:53:48 <identity>                Application             09/22/2023 06:53:48      <identity>                         Application                  nfa-…
+    Ethernet48  09/22/2023 06:53:48 <identity>                Application             09/22/2023 06:53:48      <identity>                         Application                  nfa-…
+    Ethernet49  09/22/2023 06:53:48 <identity>                Application             09/22/2023 06:53:48      <identity>                         Application                  nfa-…
+    Ethernet50  09/22/2023 06:53:48 <identity>                Application             09/22/2023 06:53:48      <identity>                         Application                  nfa-…
+    Management1 09/22/2023 06:53:48 <identity>                Application             09/22/2023 06:53:48      <identity>                         Application                  nfa-…
+    ```
+
+    This command gets details of the given Network Interfaces.
+- title: 'Example 2: Get Network Interface'
+  description: |-
+    ```powershell
+    Get-AzNetworkFabricInterface -Name $name -NetworkDeviceName $deviceName -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    AdministrativeState Annotation ConnectedTo Id
+    ------------------- ---------- ----------- --
+    Enabled                        AR-CE1-MA1  /subscriptions/<identity>/resourceGroups/nfa-tool-ts-powershell-rg092123/providers/Microsoft.ManagedNetworkFabric/netwo…
+    ```
+
+    This command gets details of the given Network Interface.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Get-AzNetworkFabricInterface.md
+  document type: cmdlet
+  external help file: Az.ManagedNetworkFabric-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managednetworkfabric/get-aznetworkfabricinterface
+  Module Name: Az.ManagedNetworkFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Get-AzNetworkFabricInterface.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,135 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BotService.Export-AzBotServiceApp
+name: Export-AzBotServiceApp
+module: Az.BotService
+isPreview: false
+summary: |-
+  Returns a BotService specified by the parameters.
+description: |-
+  Returns a BotService specified by the parameters.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Bot resource.
+    aliases:
+    - BotName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Bot resource group in the user subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SavePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Export-AzBotServiceApp
+        [-ResourceGroupName <String>]
+        [-Name <String>]
+        [-SavePath <String>]
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BotService.Models.IBot" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Download the BotService App folder'
+  description: |-
+    ```powershell
+    Export-AzBotServiceApp -ResourceGroupName youriBotTest -name youriechobottest
+    ```
+
+    ```output
+    Parameter $SavePath not provided, defaulting to current working directory.
+
+        Directory: D:\powershell\BotService\azure-powershell\src\BotService
+
+    Mode                   LastWriteTime          Length Name
+    ----                   -------------          ------ ----
+    d----          2020/12/15    1:45 PM                 youriechobottest
+    ```
+
+    Download the BotService App folder
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Export-AzBotServiceApp.md
+  document type: cmdlet
+  external help file: Az.BotService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.botservice/export-azbotserviceapp
+  Module Name: Az.BotService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BotService/BotService/help/Export-AzBotServiceApp.md
+  PlatyPS schema version: 2024-05-01

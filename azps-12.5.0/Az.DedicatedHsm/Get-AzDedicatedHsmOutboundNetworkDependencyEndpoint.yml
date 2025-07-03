@@ -1,0 +1,114 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DedicatedHsm.Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint
+name: Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint
+module: Az.DedicatedHsm
+isPreview: false
+summary: |-
+  Gets a list of egress endpoints (network endpoints of all outbound dependencies) in the specified dedicated hsm resource.
+  The operation returns properties of each egress endpoint.
+description: |-
+  Gets a list of egress endpoints (network endpoints of all outbound dependencies) in the specified dedicated hsm resource.
+  The operation returns properties of each egress endpoint.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the dedicated HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Resource Group to which the dedicated hsm belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials which uniquely identify Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DedicatedHsm.Models.Api20211130.IOutboundEnvironmentEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Gets a list of egress endpoints (network endpoints of all outbound dependencies) in the specified dedicated hsm resource.'
+  description: |-
+    ```powershell
+    Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint -Name dedicatedHsmName01 -ResourceGroupName resourceGroup
+    ```
+
+    This command gets a list of egress endpoints (network endpoints of all outbound dependencies) in the specified dedicated hsm resource.
+    The operation returns properties of each egress endpoint.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint.md
+  document type: cmdlet
+  external help file: Az.DedicatedHsm-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dedicatedhsm/get-azdedicatedhsmoutboundnetworkdependencyendpoint
+  Module Name: Az.DedicatedHsm
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DedicatedHsm/DedicatedHsm/help/Get-AzDedicatedHsmOutboundNetworkDependencyEndpoint.md
+  PlatyPS schema version: 2024-05-01

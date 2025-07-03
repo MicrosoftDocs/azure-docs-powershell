@@ -1,0 +1,478 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Blueprint.Set-AzBlueprintArtifact
+name: Set-AzBlueprintArtifact
+module: Az.Blueprint
+isPreview: false
+summary: |-
+  Update an artifact in a blueprint definition.
+description: |-
+  Update an artifact. There are two ways to update an artifact: either through an artifact JSON as an input file or through providing inline parameters for the artifact.
+  While the JSON method doesn't require type of the artifact to be provided inline parameter method requires user to provide the type of the artifact through -Type parameter.
+parameters:
+  cmdletParameters:
+  - name: ArtifactFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the artifact file in JSON format on disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateArtifactByInputFile
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Blueprint
+    type: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSBlueprintBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Blueprint object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DependsOn
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      List of the names of artifacts that needs to be created before current artifact is created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Description of the artifact.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the artifact
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Definition Id of the policy definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinitionParameter
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Hashtable of parameters to pass to the policy definition artifact.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group the artifact is going to be under.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      List of role definition
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionPrincipalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of role definition principal ids.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the ARM template file on disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TemplateParameterFile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Location of the ARM template parameter file on disk.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSArtifactKind" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of the artifact.
+      There are 3 types supported: RoleAssignmentArtifact, PolicyAssignmentArtifact, TemplateArtifact.
+    acceptedValues:
+    - RoleAssignmentArtifact
+    - PolicyAssignmentArtifact
+    - TemplateArtifact
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateTemplateArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdateRoleAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: UpdatePolicyAssignmentArtifact
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzBlueprintArtifact
+        -Name <String>
+        -Type <PSArtifactKind>
+        -Blueprint <PSBlueprintBase>
+        -TemplateParameterFile <String>
+        -TemplateFile <String>
+        [-Description <String>]
+        [-DependsOn <System.Collections.Generic.List`1[System.String]>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateTemplateArtifact
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzBlueprintArtifact
+        -Name <String>
+        -Blueprint <PSBlueprintBase>
+        -ArtifactFile <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateArtifactByInputFile
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzBlueprintArtifact
+        -Name <String>
+        -Type <PSArtifactKind>
+        -Blueprint <PSBlueprintBase>
+        -RoleDefinitionId <String>
+        -RoleDefinitionPrincipalId <String[]>
+        [-Description <String>]
+        [-DependsOn <System.Collections.Generic.List`1[System.String]>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateRoleAssignmentArtifact
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzBlueprintArtifact
+        -Name <String>
+        -Type <PSArtifactKind>
+        -Blueprint <PSBlueprintBase>
+        -PolicyDefinitionId <String>
+        -PolicyDefinitionParameter <Hashtable>
+        [-Description <String>]
+        [-DependsOn <System.Collections.Generic.List`1[System.String]>]
+        [-ResourceGroupName <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdatePolicyAssignmentArtifact
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSArtifactKind" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Blueprint.Models.PSBlueprintBase" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Blueprint.Models.Artifact" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $bp = Get-AzBlueprint -Name SimpleBlueprint
+    Set-AzBlueprintArtifact -Name PolicyStorage -Blueprint $bp -ArtifactFile C:\PolicyAssignmentStorageTag.json
+    ```
+
+    ```output
+    DisplayName        :
+    Description        : Apply storage tag and the parameter also used by the template to resource groups
+    DependsOn          :
+    PolicyDefinitionId : /providers/Microsoft.Authorization/policyDefinitions/49c88fc8-6fd1-46fd-a676-f12d1d3a4c71
+    Parameters         : {[tagName, Microsoft.Azure.Commands.Blueprint.Models.PSParameterValue], [tagValue, Microsoft.Azure.Commands.Blueprint.Models.PSParameterValue]}
+    ResourceGroup      :
+    Id                 : /subscriptions/{subscriptionId}/providers/Microsoft.Blueprint/blueprints/AppNetwork/artifacts/PolicyAssignmentStorageTag
+    Type               : Microsoft.Blueprint/blueprints/artifacts
+    Name               : PolicyAssignmentStorageTag
+    ```
+
+    Update an artifact through an artifact JSON file.
+- title: Example 2
+  description: |-
+    ```powershell
+    $bp = Get-AzBlueprint -Name SimpleBlueprint
+    Set-AzBlueprintArtifact -Type PolicyAssignmentArtifact -Name "ApplyTag-RG" -Blueprint $bp -PolicyDefinitionId "/providers/Microsoft.Authorization/policyDefinitions/49c88fc8-6fd1-46fd-a676-f12d1d3a4c71" -PolicyDefinitionParameter @{tagName="[parameters('tagName')]"; tagValue="[parameters('tagValue')]"} -ResourceGroupName storageRG
+    ```
+
+    ```output
+    DisplayName        : ApplyTag-RG
+    Description        :
+    DependsOn          :
+    PolicyDefinitionId : /providers/Microsoft.Authorization/policyDefinitions/49c88fc8-6fd1-46fd-a676-f12d1d3a4c71
+    Parameters         : {[tagValue, Microsoft.Azure.Commands.Blueprint.Models.PSParameterValue], [tagName,
+                         Microsoft.Azure.Commands.Blueprint.Models.PSParameterValue]}
+    ResourceGroup      : storageRG
+    Id                 : /subscriptions/28cbf98f-381d-4425-9ac4-cf342dab9753/providers/Microsoft.Blueprint/blueprints/AppNetwork/
+                         artifacts/ApplyTag-RG
+    Type               : Microsoft.Blueprint/blueprints/artifacts
+    Name               : ApplyTag-RG
+    ```
+
+    Update an artifact through inline parameters.
+- title: Example 3
+  description: |-
+    ```powershell
+    $bp = Get-AzBlueprint -Name SimpleBlueprint
+    Set-AzBlueprintArtifact -Type TemplateArtifact -Name storage-account -Blueprint $bp -TemplateFile C:\StorageAccountArmTemplate.json -ResourceGroupName "storageRG" -TemplateParameterFile C:\Workspace\BlueprintTemplates\RestTemplatesSomeInline\StorageAccountParameters.json
+    ```
+
+    ```output
+    DisplayName   : storage-account
+    Description   :
+    DependsOn     :
+    Template      : {$schema, contentVersion, parameters, variables...}
+    Parameters    : {}
+    ResourceGroup : storageRG
+    Id            : /subscriptions/{subscriptionId}/providers/Microsoft.Blueprint/blueprints/AppNetwork/artifacts/storage-account
+    Type          : Microsoft.Blueprint/blueprints/artifacts
+    Name          : storage-account
+    ```
+
+    Update an artifact through an ARM template file.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Set-AzBlueprintArtifact.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Blueprint.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.blueprint/set-azblueprintartifact
+  Module Name: Az.Blueprint
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Blueprint/Blueprint/help/Set-AzBlueprintArtifact.md
+  PlatyPS schema version: 2024-05-01

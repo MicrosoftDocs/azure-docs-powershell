@@ -1,0 +1,169 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeAnalytics.Get-AzDataLakeAnalyticsDataSource
+name: Get-AzDataLakeAnalyticsDataSource
+module: Az.DataLakeAnalytics
+isPreview: false
+summary: |-
+  Gets a Data Lake Analytics data source.
+description: |-
+  The **Get-AzDataLakeAnalyticsDataSource** cmdlet gets an Azure Data Lake Analytics data source.
+parameters:
+  cmdletParameters:
+  - name: Account
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Data Lake Analytics account that this cmdlet gets data sources.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Blob
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure Blob Storage data source.
+    aliases:
+    - AzureBlob
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetBlobStorageAccount
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStore
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Data Lake Store account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetDataLakeStoreAccount
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource group name that contains the data source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsDataSource
+        [-Account] <String>
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetAllDataSources
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsDataSource
+        [-Account] <String>
+        [-DataLakeStore] <String>
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetDataLakeStoreAccount
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataLakeAnalyticsDataSource
+        [-Account] <String>
+        [-Blob] <String>
+        [[-ResourceGroupName] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetBlobStorageAccount
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSStorageAccountInfo" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.PSDataLakeStoreAccountInfo" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.DataLakeAnalytics.Models.AdlDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a data source from an account'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsDataSource -AccountName "ContosoAdlA" -DataLakeStore "ContosoAdls"
+    ```
+
+    This command gets a Data Lake Store data source named ContosoAdls from a Data Lake Analytics account.
+- title: 'Example 2: Get the list of Data Lake Store accounts in a Data Lake Analytics account'
+  description: |-
+    ```powershell
+    Get-AzDataLakeAnalyticsDataSource -AccountName "ContosoAdlA"
+    ```
+
+    This command gets all Data Lake Store accounts from a Data Lake Analytics account.
+links:
+- text: Add-AzDataLakeAnalyticsDataSource
+  href: ./Add-AzDataLakeAnalyticsDataSource.yml
+- text: Remove-AzDataLakeAnalyticsDataSource
+  href: ./Remove-AzDataLakeAnalyticsDataSource.yml
+- text: Set-AzDataLakeAnalyticsDataSource
+  href: ./Set-AzDataLakeAnalyticsDataSource.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsDataSource.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeAnalytics.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakeanalytics/get-azdatalakeanalyticsdatasource
+  Module Name: Az.DataLakeAnalytics
+  ms.assetid: 0377C4E9-C1DC-49BA-BBC4-5598C83234F8
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeAnalytics/DataLakeAnalytics/help/Get-AzDataLakeAnalyticsDataSource.md
+  PlatyPS schema version: 2024-05-01

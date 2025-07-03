@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureCertificate
+name: Add-AzureCertificate
+module: Azure
+isPreview: false
+summary: |-
+  Uploads a certificate to an Azure cloud service.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+
+  [!INCLUDE [rdfe-deprecation-banner](../../includes/rdfe-deprecation-banner.md)]
+description: |-
+  The **Add-AzureCertificate** cmdlet uploads a certificate for an Azure service.
+parameters:
+  cmdletParameters:
+  - name: CertToDeploy
+    type: <xref href="Object" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate to deploy.
+      You can specify the full path of a certificate file, such as a file that has a *.cer or *.
+      pfx file name extension, or an X.509 Certificate object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the certificate password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure service to which this cmdlet adds a certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureCertificate
+        [-ServiceName] <String>
+        [-CertToDeploy] <Object>
+        [-Password <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="ManagementOperationContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Upload a certificate and password'
+  description: |-
+    ```
+    PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy ContosoCertificate.pfx -Password "password"
+    ```
+
+    This command uploads the certificate file ContosoCertificate.pfx to a cloud service.
+    The command specifies the password for the certificate.
+- title: 'Example 2: Upload a certificate file'
+  description: |-
+    ```
+    PS C:\> Add-AzureCertificate -serviceName "MyService" -CertToDeploy ContosoCertificate.cer
+    ```
+
+    This command uploads the certificate file ContosoCertificate.cer to a cloud service.
+    The command specifies the password for the certificate.
+- title: 'Example 3: Upload a certificate object'
+  description: |-
+    ```
+    PS C:\> $Certificate = Get-Item cert:\PATTIFULLER\MY\1D6E34B526723E06C235BE8E5457784BF12C9F39
+    PS C:\> Add-AzureCertificate -ServiceName "ContosoService" -CertToDeploy $Certificate
+    ```
+
+    The first command gets a certificate from the MY store of a user by using the Windows PowerShell core **Get-Item** cmdlet.
+    The command stores the certificate in the $Certificate variable.
+
+    The second command uploads the certificate in $certificate to a cloud service.
+links:
+- text: Get-AzureCertificate
+  href: ./Get-AzureCertificate.yml
+- text: New-AzureCertificateSetting
+  href: ./New-AzureCertificateSetting.yml
+- text: Remove-AzureCertificate
+  href: ./Remove-AzureCertificate.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 9A6D5C40-2532-4FD1-A74F-16725CAD8EDD
+  PlatyPS schema version: 2024-05-01

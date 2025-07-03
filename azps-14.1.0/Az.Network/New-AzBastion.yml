@@ -1,0 +1,863 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzBastion
+name: New-AzBastion
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a bastion resource.
+description: |-
+  Creates a bastion resource.This will need a Public Ip Address and a VirtualNetwork. There must be a subnet with name AzureBastionSubnet in this VirtualNetwork.The Pubic Ip Address must be created with Sku Standard.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableCopyPaste
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Copy and Paste
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableIpConnect
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      IP Connect
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableKerberos
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Kerberos
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableSessionRecording
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Session Recording
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableShareableLink
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Shareable Link
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableTunneling
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Native Client
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The bastion resource name.
+    aliases:
+    - ResourceName
+    - BastionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddress
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSPublicIpAddress" data-throw-if-not-resolved="False" />
+    description: |-
+      The public IP address object for bastion.
+    aliases:
+    - PublicIpAddressObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The public Ip address Azure resource Id for bastion.
+    aliases:
+    - PublicIpAddressResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressIdByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The public Ip address resource name for bastion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressRgName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The public Ip address resource group name for bastion.
+    aliases:
+    - PublicIpAddressResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name where you need to create bastion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScaleUnit
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The Scale Units for BastionHost
+    defaultValue: "2"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Bastion Sku Tier
+    acceptedValues:
+    - Basic
+    - Standard
+    - Premium
+    defaultValue: Basic
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      A hashtable which represents resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.Network.Models.PSVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network object for bastion.
+    aliases:
+    - VirtualNetworkObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetwork
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network Azure resource Id for bastion.
+    aliases:
+    - VirtualNetworkResourceId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network resource name for bastion.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkRgName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The virtual network resource group name for bastion.
+    aliases:
+    - VirtualNetworkResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByPublicIpAddressByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressIdByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddress <PSPublicIpAddress>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressByVirtualNetwork
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddress <PSPublicIpAddress>
+        -VirtualNetworkRgName <String>
+        -VirtualNetworkName <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressByVirtualNetworkRGNameByVirtualNetworkName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddress <PSPublicIpAddress>
+        -VirtualNetworkId <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressByVirtualNetworkId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressId <String>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressIdByVirtualNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressId <String>
+        -VirtualNetworkRgName <String>
+        -VirtualNetworkName <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressIdByVirtualNetworkRGNameByVirtualNetworkName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressId <String>
+        -VirtualNetworkId <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressIdByVirtualNetworkId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressRgName <String>
+        -PublicIpAddressName <String>
+        -VirtualNetwork <PSVirtualNetwork>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetwork
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressRgName <String>
+        -PublicIpAddressName <String>
+        -VirtualNetworkRgName <String>
+        -VirtualNetworkName <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkRGNameByVirtualNetworkName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzBastion
+        -ResourceGroupName <String>
+        -Name <String>
+        -PublicIpAddressRgName <String>
+        -PublicIpAddressName <String>
+        -VirtualNetworkId <String>
+        [-Sku <String>]
+        [-ScaleUnit <Int32>]
+        [-EnableKerberos <Boolean>]
+        [-DisableCopyPaste <Boolean>]
+        [-EnableTunneling <Boolean>]
+        [-EnableIpConnect <Boolean>]
+        [-EnableShareableLink <Boolean>]
+        [-EnableSessionRecording <Boolean>]
+        [-AsJob]
+        [-Tag <Hashtable>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByPublicIpAddressRgNameByPublicIpAddressNameByVirtualNetworkId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSBastion" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $subnetName = "AzureBastionSubnet"
+    $subnet = New-AzVirtualNetworkSubnetConfig -Name $subnetName -AddressPrefix 10.0.0.0/24
+    $vnet = New-AzVirtualNetwork -Name "TestVnet" -ResourceGroupName "BastionPowershellTest" -Location "westeurope" -AddressPrefix 10.0.0.0/16 -Subnet $subnet
+    $publicip = New-AzPublicIpAddress -ResourceGroupName "BastionPowershellTest" -Name "Test-Ip" -location "westeurope" -AllocationMethod Dynamic -Sku Standard
+    $bastion = New-AzBastion -ResourceGroupName "BastionPowershellTest" -Name "test-Bastion2" -PublicIpAddress $publicip -VirtualNetwork $vnet
+    ```
+
+    ```output
+    IpConfigurations     : {IpConf}
+    DnsName              : bst-a9ca868f-ddab-4a50-9f45-a443ea8a0187.bastion.azure.com
+    ProvisioningState    : Succeeded
+    IpConfigurationsText : [
+                             {
+                               "Subnet": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/virtualNetworks/TestVnet/subnets/AzureBastionSubnet"
+                               },
+                               "PublicIpAddress": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/publicIPAddresses/Test-Ip"
+                               },
+                               "ProvisioningState": "Succeeded",
+                               "PrivateIpAllocationMethod": "Dynamic",
+                               "Name": "IpConf",
+                               "Etag": "W/\"ed810ccd-b3f6-4e22-891e-b0ed0a26d6dd\"",
+                               "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/test-Bastion2/bastionHostIpConfigurations/IpConf"
+                             }
+                           ]
+    ResourceGroupName    : BastionPowershellTest
+    Location             : westeurope
+    ResourceGuid         :
+    Type                 : Microsoft.Network/bastionHosts
+    Tag                  :
+    TagsTable            :
+    Name                 : test-Bastion2
+    Etag                 : W/"ed810ccd-b3f6-4e22-891e-b0ed0a26d6dd"
+    Id                   : /subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/test-Bastion2
+    Sku                  : {
+                             "Name": "Basic"
+                           }
+    Scale Units          : 2
+    ```
+
+    This example creates a bastion attached to virtual network "vnet" in the same resource group as the bastion.
+    There must be a subnet with name AzureBastionSubnet in this vnet.
+    The Ip Address must be created with Sku Standard.
+- title: Example 2
+  description: |-
+    ```powershell
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName "BastionPowershellTest" -Name "testVnet2"
+    Add-AzVirtualNetworkSubnetConfig -Name "AzureBastionSubnet" -VirtualNetwork $vnet -AddressPrefix "10.0.0.0/24"
+    $vnet| Set-AzVirtualNetwork
+    New-AzBastion -ResourceGroupName "BastionPowershellTest" -Name "testBastion2" -PublicIpAddressRgName "BastionPowershellTest" -PublicIpAddressName "testIp2" -VirtualNetworkRgName "BastionPowershellTest" -VirtualNetworkName "testVnet2"
+    ```
+
+    ```output
+    IpConfigurations     : {IpConf}
+    DnsName              : bst-53757658-c4fd-4908-b1a7-0849e555d489.bastion.azure.com
+    ProvisioningState    : Succeeded
+    IpConfigurationsText : [
+                             {
+                               "Name": "IpConf",
+                               "Etag": "W/\"7460e5f6-ad41-438b-a595-a63346ed8f16\"",
+                               "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2/bastionHostIpConfigurations/IpConf",
+                               "Subnet": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/virtualNetworks/testVnet2/subnets/AzureBastionSubnet"
+                               },
+                               "PublicIpAddress": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/publicIPAddresses/testIp2"
+                               },
+                               "ProvisioningState": "Succeeded",
+                               "PrivateIpAllocationMethod": "Dynamic"
+                             }
+                           ]
+    ResourceGroupName    : BastionPowershellTest
+    Location             : westeurope
+    ResourceGuid         :
+    Type                 : Microsoft.Network/bastionHosts
+    Tag                  :
+    TagsTable            :
+    Name                 : testBastion2
+    Etag                 : W/"7460e5f6-ad41-438b-a595-a63346ed8f16"
+    Id                   : /subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2
+    Sku                  : {
+                             "Name": "Basic"
+                           }
+    Scale Units          : 2
+    ```
+- title: Example 3
+  description: |-
+    ```powershell
+    $vnet = Get-AzVirtualNetwork -ResourceGroupName "BastionPowershellTest" -Name "testVnet2"
+    Add-AzVirtualNetworkSubnetConfig -Name "AzureBastionSubnet" -VirtualNetwork $vnet -AddressPrefix "10.0.0.0/24"
+    $vnet| Set-AzVirtualNetwork
+    New-AzBastion -ResourceGroupName "BastionPowershellTest" -Name "testBastion2" -PublicIpAddressRgName "BastionPowershellTest" -PublicIpAddressName "testIp2" -VirtualNetworkRgName "BastionPowershellTest" -VirtualNetworkName "testVnet2" -Sku "Standard" -ScaleUnit 3
+    ```
+
+    ```output
+    IpConfigurations     : {IpConf}
+    DnsName              : bst-53757658-c4fd-4908-b1a7-0849e555d489.bastion.azure.com
+    ProvisioningState    : Succeeded
+    IpConfigurationsText : [
+                             {
+                               "Name": "IpConf",
+                               "Etag": "W/\"7460e5f6-ad41-438b-a595-a63346ed8f16\"",
+                               "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2/bastionHostIpConfigurations/IpConf",
+                               "Subnet": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/virtualNetworks/testVnet2/subnets/AzureBastionSubnet"
+                               },
+                               "PublicIpAddress": {
+                                 "Id": "/subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/publicIPAddresses/testIp2"
+                               },
+                               "ProvisioningState": "Succeeded",
+                               "PrivateIpAllocationMethod": "Dynamic"
+                             }
+                           ]
+    ResourceGroupName    : BastionPowershellTest
+    Location             : westeurope
+    ResourceGuid         :
+    Type                 : Microsoft.Network/bastionHosts
+    Tag                  :
+    TagsTable            :
+    Name                 : testBastion2
+    Etag                 : W/"7460e5f6-ad41-438b-a595-a63346ed8f16"
+    Id                   : /subscriptions/359a08a9-ff1b-463c-92d7-6df8d946f25c/resourceGroups/BastionPowershellTest/providers/Microsoft.Network/bastionHosts/testBastion2
+    Sku                  : {
+                             "Name": "Standard"
+                           }
+    Scale Units          : 3
+    ```
+
+    This example creates a BastionHost resource with Standard Sku and 3 Scale Units.
+links:
+- text: Get-AzBastion
+  href: ./Get-AzBastion.yml
+- text: Remove-AzBastion
+  href: ./Remove-AzBastion.yml
+- text: Set-AzBastion
+  href: ./Set-AzBastion.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzBastion.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azbastion
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzBastion.md
+  PlatyPS schema version: 2024-05-01

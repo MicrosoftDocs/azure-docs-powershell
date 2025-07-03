@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.New-AzureRemoteAppCollection
+name: New-AzureRemoteAppCollection
+module: Azure
+isPreview: false
+summary: |-
+  Creates an Azure RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureRemoteAppCollection** cmdlet creates an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials of a service account that has permission to join the Azure RemoteApp servers to your domain.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomRdpProperty
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies custom Remote Desktop Protocol (RDP) properties which can be used to configure drive redirection and other settings.
+      See [RDP Settings for Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)  `(https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)` for details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a short description for the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DnsServers
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a comma-separated list of IPv4 addresses of the DNS servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Active Directory Domain Services domain to which to join the RD Session Host servers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp template image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure region of the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrganizationalUnit
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the organizational unit (OU) to which to join the RD Session Host servers, for example, OU=MyOu,DC=MyDomain,DC=ParentDomain,DC=com.
+      Attributes such as OU and DC must be in uppercase.
+      The OU cannot be changed after the collection has been created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Plan
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan for the Azure RemoteApp collection, which may define the usage limits.
+      Use **Get-AzureRemoteAppPlan** to see the plans available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceType
+    type: <xref href="CollectionMode" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the resource type of the collection.
+      The acceptable values for this parameter are: App or Desktop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the subnet in the virtual network to use to create the Azure RemoteApp collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: "7"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure RemoteApp virtual network.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureVNet
+      position: "4"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        [-ImageName] <String>
+        [-Plan] <String>
+        [[-Location] <String>]
+        [-Description <String>]
+        [-CustomRdpProperty <String>]
+        [-ResourceType <CollectionMode>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AllParameterSets
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        [-ImageName] <String>
+        [-Plan] <String>
+        [[-Location] <String>]
+        [-VNetName] <String>
+        [-SubnetName] <String>
+        [[-Domain] <String>]
+        [[-Credential] <PSCredential>]
+        [-DnsServers <String>]
+        [-OrganizationalUnit <String>]
+        [-Description <String>]
+        [-CustomRdpProperty <String>]
+        [-ResourceType <CollectionMode>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureVNet
+  isDefault: false
+examples:
+- title: 'Example 1: Create a collection'
+  description: |-
+    ```
+    PS C:\> New-AzureRemoteAppCollection -CollectionName "Contoso" -ImageName "Windows Server 2012 R2" -Plan Standard -Location "West US" -Description CloudOnly
+    ```
+
+    This command creates an Azure RemoteApp collection.
+- title: 'Example 2: Create a collection using credentials'
+  description: |-
+    ```
+    PS C:\> $cred = Get-Credential corp.contoso.com\admin
+    PS C:\> New-AzureRemoteAppCollection -CollectionName "ContosoHybrid" -ImageName "Windows Server 2012 R2" -Plan Standard -VNetName azureVNet -Domain Contoso.com -Credential $cred -Description Hybrid
+    ```
+
+    This command creates an Azure RemoteApp collection using a credential from the **Get-Credential** cmdlet.
+links:
+- text: Get-AzureRemoteAppCollection
+  href: ./Get-AzureRemoteAppCollection.yml
+- text: Get-AzureRemoteAppPlan
+  href: ./Get-AzureRemoteAppPlan.yml
+- text: Remove-AzureRemoteAppCollection
+  href: ./Remove-AzureRemoteAppCollection.yml
+- text: Set-AzureRemoteAppCollection
+  href: ./Set-AzureRemoteAppCollection.yml
+- text: Update-AzureRemoteAppCollection
+  href: ./Update-AzureRemoteAppCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 2021B6BC-7B59-4A88-B1DF-598203F58901
+  PlatyPS schema version: 2024-05-01

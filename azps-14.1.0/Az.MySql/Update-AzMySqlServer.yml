@@ -1,0 +1,461 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MySql.Update-AzMySqlServer
+name: Update-AzMySqlServer
+module: Az.MySql
+isPreview: false
+summary: |-
+  Updates an existing server.
+  The request body can contain one to many of the properties present in the normal server definition.
+  Use Update-AzMySqlConfiguration instead if you want update server parameters such as wait_timeout or net_retry_count.
+description: |-
+  Updates an existing server.
+  The request body can contain one to many of the properties present in the normal server definition.
+  Use Update-AzMySqlConfiguration instead if you want update server parameters such as wait_timeout or net_retry_count.
+parameters:
+  cmdletParameters:
+  - name: AdministratorLoginPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password of the administrator login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BackupRetentionDay
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup retention days for the server.
+      Day count is between 7 and 35.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter.
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimalTlsVersion
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Support.MinimalTlsVersionEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Set the minimal TLS version for connections to server when SSL is enabled.
+      Default is TLSEnforcementDisabled.accepted values: TLS1_0, TLS1_1, TLS1_2, TLSEnforcementDisabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server.
+    aliases:
+    - ServerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Support.PublicNetworkAccessEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not public network access is allowed for this server.
+      Value is optional but if passed in, must be 'Enabled' or 'Disabled'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplicationRole
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The replication role of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the sku, typically, tier + family + cores, e.g.
+      B_Gen4_1, GP_Gen5_8.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuCapacity
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The scale up/out capacity, representing server's compute units.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuFamily
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The family of hardware.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkuTier
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Support.SkuTier" data-throw-if-not-resolved="False" />
+    description: |-
+      The tier of the particular SKU, e.g.
+      Basic.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslEnforcement
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Support.SslEnforcementEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable ssl enforcement or not when connect to server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAutogrow
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Support.StorageAutogrow" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable Storage Auto Grow.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageInMb
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Max storage allowed for a server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The subscription ID that identifies an Azure subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Application-specific metadata in the form of key-value pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzMySqlServer
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-AdministratorLoginPassword <SecureString>]
+        [-ReplicationRole <String>]
+        [-SkuCapacity <Int32>]
+        [-SkuFamily <String>]
+        [-Sku <String>]
+        [-SkuTier <SkuTier>]
+        [-SslEnforcement <SslEnforcementEnum>]
+        [-MinimalTlsVersion <MinimalTlsVersionEnum>]
+        [-BackupRetentionDay <Int32>]
+        [-StorageAutogrow <StorageAutogrow>]
+        [-StorageInMb <Int32>]
+        [-Tag <Hashtable>]
+        [-PublicNetworkAccess <PublicNetworkAccessEnum>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzMySqlServer
+        -InputObject <IMySqlIdentity>
+        [-AdministratorLoginPassword <SecureString>]
+        [-ReplicationRole <String>]
+        [-SkuCapacity <Int32>]
+        [-SkuFamily <String>]
+        [-Sku <String>]
+        [-SkuTier <SkuTier>]
+        [-SslEnforcement <SslEnforcementEnum>]
+        [-MinimalTlsVersion <MinimalTlsVersionEnum>]
+        [-BackupRetentionDay <Int32>]
+        [-StorageAutogrow <StorageAutogrow>]
+        [-StorageInMb <Int32>]
+        [-Tag <Hashtable>]
+        [-PublicNetworkAccess <PublicNetworkAccessEnum>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.IMySqlIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MySql.Models.Api20171201.IServer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update MySql server by resource group and server name'
+  description: |-
+    ```powershell
+    Update-AzMySqlServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test -SslEnforcement Disabled
+    ```
+
+    ```output
+    Name          Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----          -------- ------------------ ------- ----------------------- -------   -------        --------------
+    mysql-test    eastus   mysql_test         5.7     5120                    GP_Gen5_4 GeneralPurpose Disabled
+    ```
+
+    This cmdlet updates MySql server by resource group and server name.
+- title: 'Example 2: Update MySql server by identity.'
+  description: |-
+    ```powershell
+    Get-AzMySqlServer -ResourceGroupName PowershellMySqlTest -ServerName mysql-test | Update-AzMySqlServer -BackupRetentionDay 23 -StorageInMb 10240
+    ```
+
+    ```output
+    Name          Location AdministratorLogin Version StorageProfileStorageMb SkuName   SkuTier        SslEnforcement
+    ----          -------- ------------------ ------- ----------------------- -------   -------        --------------
+    mysql-test    eastus   mysql_test         5.7     10240                   GP_Gen5_4 GeneralPurpose Disabled
+    ```
+
+    This cmdlet updates MySql server by identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Update-AzMySqlServer.md
+  document type: cmdlet
+  external help file: Az.MySql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.mysql/update-azmysqlserver
+  Module Name: Az.MySql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Update-AzMySqlServer.md
+  PlatyPS schema version: 2024-05-01

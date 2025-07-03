@@ -1,0 +1,677 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ApiManagement.New-AzApiManagement
+name: New-AzApiManagement
+module: Az.ApiManagement
+isPreview: false
+summary: |-
+  Creates an API Management deployment.
+description: |-
+  The **New-AzApiManagement** cmdlet creates an API Management deployment in Azure API Management.
+parameters:
+  cmdletParameters:
+  - name: AdditionalRegions
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Additional deployment regions of Azure API Management.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the originating email address for all notifications that the API Management system sends.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Capacity
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the SKU capacity of the Azure API Management service.
+      The default is one (1).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomHostnameConfiguration
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCustomHostNameConfiguration" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Custom hostname configurations. Default value is $null. Passing $null will set the default hostname.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableGateway
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Boolean" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Flag only meant to be used for Premium SKU ApiManagement Service and Non Internal VNET deployments. This is useful in case we want to take a gateway region out of rotation. This can also be used to standup a new region in Passive mode, test it and then make it Live later.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableClientCertificate
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Flag only meant to be used for Consumption SKU ApiManagement Service. This enforces a client certificate to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the policy on the gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Location
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the location to create the Api Management service.
+      To obtain valid locations, use the cmdlet
+      Get-AzResourceProvider -ProviderNamespace "Microsoft.ApiManagement" | where {$_.ResourceTypes[0].ResourceTypeName -eq "service"} | Select-Object Locations
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MinimalControlPlaneApiVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Minimal Control Plane Apis version  to allow for managing the API Management service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the API Management deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Organization
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an organization.
+      API Management uses this address in the developer portal in email notifications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIpAddressId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Standard SKU PublicIpAddress ResourceId for integration into stv2 Virtual Network Deployments
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicNetworkAccess
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not public endpoint access is allowed for this service.Possible values include: 'Enabled', 'Disabled'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the of resource group under which this cmdlet creates an API Management deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSku" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The tier of the Azure API Management service.
+      Valid values are Developer, Basic, Standard, Premium and Consumption.
+      The default value is Developer.
+    acceptedValues:
+    - Developer
+    - Basic
+    - Standard
+    - Premium
+    - Consumption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SslSetting
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting" data-throw-if-not-resolved="False" />
+    description: |-
+      The Ssl Setting of the ApiManagement Service. Default value is $null
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SystemAssignedIdentity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Generate and assign an Azure Active Directory Identity for this server for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SystemCertificateConfiguration
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSystemCertificate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Certificates issued by Internal CA to be installed on the service. Default value is $null.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String,System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Tags dictionary.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Assign User Identities to this server for use with key management services like Azure KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetwork
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Network Configuration of master Azure API Management deployment region.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VpnType
+    type: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVpnType" data-throw-if-not-resolved="False" />
+    description: |-
+      Virtual Network Type of the ApiManagement Deployment. Valid Values are
+
+      - "None" (Default Value. ApiManagement is not part of any Virtual Network")
+      - "External" (ApiManagement Deployment is setup inside a Virtual Network having an Internet Facing Endpoint)
+      - "Internal" (ApiManagement Deployment is setup inside a Virtual Network having an Intranet Facing Endpoint)
+    acceptedValues:
+    - None
+    - External
+    - Internal
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Zone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      A list of availability zones denoting where the api management service is deployed into.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzApiManagement
+        -ResourceGroupName <String>
+        -Name <String>
+        -Location <String>
+        -Organization <String>
+        -AdminEmail <String>
+        [-Sku <string>]
+        [-Capacity <Int32>]
+        [-VpnType <PsApiManagementVpnType>]
+        [-VirtualNetwork <PsApiManagementVirtualNetwork>]
+        [-Tag <System.Collections.Generic.Dictionary`2[System.String,System.String]>]
+        [-AdditionalRegions <PsApiManagementRegion[]>]
+        [-CustomHostnameConfiguration <PsApiManagementCustomHostNameConfiguration[]>]
+        [-SystemCertificateConfiguration <PsApiManagementSystemCertificate[]>]
+        [-SslSetting <PsApiManagementSslSetting>]
+        [-SystemAssignedIdentity]
+        [-UserAssignedIdentity <String[]>]
+        [-EnableClientCertificate]
+        [-Zone <String[]>]
+        [-DisableGateway <Boolean>]
+        [-MinimalControlPlaneApiVersion <String>]
+        [-PublicNetworkAccess <String>]
+        [-PublicIpAddressId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Generic.Dictionary`2" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementRegion" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementCustomHostNameConfiguration" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSystemCertificate" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagement" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a Developer tier API Management service'
+  description: |-
+    ```powershell
+    New-AzApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi2" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com"
+    ```
+
+    ```output
+    PublicIPAddresses                     : {104.43.240.65}
+    PrivateIPAddresses                    :
+    Id                                    : /subscriptions/a200340d-6b82-494d-9dbf-687ba6e33f9e/resourceGroups/ContosoGroup02/providers/Microsoft.ApiManagement/service/ContosoApi2
+    Name                                  : ContosoApi2
+    Location                              : Central US
+    Sku                                   : Developer
+    Capacity                              : 1
+    CreatedTimeUtc                        : 2/24/2020 10:34:12 PM
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://contosoapi2.azure-api.net
+    RuntimeRegionalUrl                    : https://contosoapi2-centralus-01.regional.azure-api.net
+    PortalUrl                             : https://contosoapi2.portal.azure-api.net
+    DeveloperPortalUrl                    : https://contosoapi2.developer.azure-api.net
+    ManagementApiUrl                      : https://contosoapi2.management.azure-api.net
+    ScmUrl                                : https://contosoapi2.scm.azure-api.net
+    PublisherEmail                        : admin@contoso.com
+    OrganizationName                      : Contoso
+    NotificationSenderEmail               : apimgmt-noreply@mail.windowsazure.com
+    VirtualNetwork                        :
+    VpnType                               : None
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {contosoapi2.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              :
+    EnableClientCertificate               :
+    ResourceGroupName                     : ContosoGroup02
+    ```
+
+    This command creates a Developer tier API Management service.
+    The command specifies the organization and the administrator address.
+    The command does not specify the *SKU* parameter.
+    Therefore, the cmdlet uses the default value of Developer.
+- title: 'Example 2: Create a Standard tier service that has three units'
+  description: |-
+    ```powershell
+    New-AzApiManagement -ResourceGroupName "ContosoGroup02" -Name "ContosoApi" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Standard -Capacity 3
+    ```
+
+    This command creates a Standard tier API Management service that has three units.
+- title: 'Example 3: Create a Consumption tier service'
+  description: |-
+    ```powershell
+    New-AzApiManagement -ResourceGroupName Api-Default-North-Europe -Name consumptionskuservice -Location 'West Europe' -Sku Consumption -Organization microsoft -AdminEmail contoso@contoso.com -SystemAssignedIdentity -EnableClientCertificate
+    ```
+
+    ```output
+    PublicIPAddresses                     :
+    PrivateIPAddresses                    :
+    Id                                    : /subscriptions/subid/resourceGroups/Api-Default-North-Europe/providers/Microsoft.ApiManagement/service/consumptionskuservice
+    Name                                  : consumptionskuservice
+    Location                              : West Europe
+    Sku                                   : Consumption
+    Capacity                              : 0
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://consumptionskuservice.azure-api.net
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {consumptionskuservice.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementServiceIdentity
+    EnableClientCertificate               : True
+    ResourceGroupName                     : Api-Default-North-Europe
+    ```
+
+    This command creates a consumption tier API Management service with Client Certificate enabled in west Europe.
+- title: 'Example 4: Create an API Management service and Enable TLS 1.0 protocol'
+  description: |-
+    ```powershell
+    $enableTls=@{"Tls10" = "True"}
+    $sslSetting = New-AzApiManagementSslSetting -FrontendProtocol $enableTls -BackendProtocol $enableTls
+    New-AzApiManagement -ResourceGroupName Api-Default-CentralUS -Name "testtlspowershell" -Sku Standard -Location "CentralUS" -Organization "Microsoft" -AdminEmail "bar@contoso.com" -SslSetting $sslSetting
+    ```
+
+    ```output
+    PublicIPAddresses                     : {23.99.140.18}
+    PrivateIPAddresses                    :
+    Id                                    : /subscriptions/subid/resourceGroups/Api-Default-CentralUS/providers/Microsoft.ApiManagement/service/testtlspowershell
+    Name                                  : testtlspowershell
+    Location                              : Central US
+    Sku                                   : Standard
+    Capacity                              : 1
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://testtlspowershell.azure-api.net
+    RuntimeRegionalUrl                    : https://testtlspowershell-centralus-01.regional.azure-api.net
+    PortalUrl                             : https://testtlspowershell.portal.azure-api.net
+    ManagementApiUrl                      : https://testtlspowershell.management.azure-api.net
+    ScmUrl                                : https://testtlspowershell.scm.azure-api.net
+    PublisherEmail                        : bar@contoso.com
+    OrganizationName                      : Microsoft
+    NotificationSenderEmail               : apimgmt-noreply@mail.windowsazure.com
+    VirtualNetwork                        :
+    VpnType                               : None
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {testtlspowershell.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              :
+    EnableClientCertificate               :
+    ResourceGroupName                     : Api-Default-CentralUS
+    ```
+
+    This command creates a Standard SKU Api Management service and Enable TLS 1.0 on Frontend client to ApiManagement Gateway and Backend client between ApiManagement Gateway and Backend.
+- title: 'Example 5: Create an API Management service in Availability Zones'
+  description: |-
+    ```powershell
+    New-AzApiManagement -ResourceGroupName "contoso-rg" -Name "apim-test-pshell-azs" -Location "Central US" -Organization "Contoso" -AdminEmail "admin@contoso.com" -Sku Premium -Capacity 3 -Zone @("1","2","3")
+    ```
+
+    ```output
+    PublicIPAddresses                     : {52.238.252.170}
+    PrivateIPAddresses                    :
+    Id                                    : /subscriptions/aa7def4e-6bcd-4b28-b8d5-7613a618e753/resourceGroups/contoso-rg/providers/Microsoft.ApiManagement/service/apim-test-pshell-azs
+    Name                                  : apim-test-pshell-azs
+    Location                              : Central US
+    Sku                                   : Premium
+    Capacity                              : 3
+    CreatedTimeUtc                        : 7/30/2021 7:47:12 PM
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://apim-test-pshell-azs.azure-api.net
+    RuntimeRegionalUrl                    : https://apim-test-pshell-azs-centralus-01.regional.azure-api.net
+    PortalUrl                             : https://apim-test-pshell-azs.portal.azure-api.net
+    DeveloperPortalUrl                    : https://apim-test-pshell-azs.developer.azure-api.net
+    ManagementApiUrl                      : https://apim-test-pshell-azs.management.azure-api.net
+    ScmUrl                                : https://apim-test-pshell-azs.scm.azure-api.net
+    PublisherEmail                        : admin@contoso.com
+    OrganizationName                      : Contoso
+    NotificationSenderEmail               : apimgmt-noreply@mail.windowsazure.com
+    VirtualNetwork                        :
+    VpnType                               : None
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {apim-test-pshell-azs.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              :
+    EnableClientCertificate               :
+    Zone                                  : {1, 2, 3}
+    DisableGateway                        : False
+    MinimalControlPlaneApiVersion         :
+    ResourceGroupName                     : contoso-rg
+    ```
+
+    This command creates a Premium SKU Api Management service in Zones
+- title: 'Example 6: Create an API Management service in Internal Mode into Virtual Network with Stv2'
+  description: |-
+    ```powershell
+    $virtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId "/subscriptions/4f5285a3-9fd7-40ad-91b1-d8fc3823983d/resourceGroups/contosogroup/providers/Microsoft.Network/virtualNetworks/apimvnet/subnets/ps"
+    $publicIpAddressId = "/subscriptions/4f5285a3-9fd7-40ad-91b1-d8fc3823983d/resourceGroups/contosogroup/providers/Microsoft.Network/publicIPAddresses/apim-external-vnet-ipv4"
+    New-AzApiManagement -ResourceGroupName "contosogroup" -Location "West US2" -Name "pstestinternalvnet2" -Organization "Contoso" -AdminEmail "admin@contoso.com" -VirtualNetwork $virtualNetwork -VpnType "Internal" -Sku "Premium" -PublicIpAddressId $publicIpAddressId
+    ```
+
+    ```output
+    PublicIPAddresses                     : {20.99.249.73}
+    PrivateIPAddresses                    : {10.0.2.4}
+    Id                                    : /subscriptions/4f5285a3-9fd7-40ad-91b1-d8fc3823983d/resourceGroups/contosogroup/providers/Microsoft.ApiManagement/service/pstestinternalvnet2
+    Name                                  : pstestinternalvnet2
+    Location                              : West US 2
+    Sku                                   : Premium
+    Capacity                              : 1
+    CreatedTimeUtc                        : 3/24/2022 11:09:57 PM
+    ProvisioningState                     : Succeeded
+    RuntimeUrl                            : https://pstestinternalvnet2.azure-api.net
+    RuntimeRegionalUrl                    : https://pstestinternalvnet2-westus2-01.regional.azure-api.net
+    PortalUrl                             : https://pstestinternalvnet2.portal.azure-api.net
+    DeveloperPortalUrl                    : https://pstestinternalvnet2.developer.azure-api.net
+    ManagementApiUrl                      : https://pstestinternalvnet2.management.azure-api.net
+    ScmUrl                                : https://pstestinternalvnet2.scm.azure-api.net
+    PublisherEmail                        : admin@contoso.com
+    OrganizationName                      : Contoso
+    NotificationSenderEmail               : apimgmt-noreply@mail.windowsazure.com
+    VirtualNetwork                        : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementVirtualNetwork
+    VpnType                               : Internal
+    PortalCustomHostnameConfiguration     :
+    ProxyCustomHostnameConfiguration      : {pstestinternalvnet2.azure-api.net}
+    ManagementCustomHostnameConfiguration :
+    ScmCustomHostnameConfiguration        :
+    DeveloperPortalHostnameConfiguration  :
+    SystemCertificates                    :
+    Tags                                  : {}
+    AdditionalRegions                     : {}
+    SslSetting                            : Microsoft.Azure.Commands.ApiManagement.Models.PsApiManagementSslSetting
+    Identity                              :
+    EnableClientCertificate               :
+    Zone                                  :
+    DisableGateway                        :
+    MinimalControlPlaneApiVersion         :
+    PublicIpAddressId                     : /subscriptions/4f5285a3-9fd7-40ad-91b1-d8fc3823983d/resourceGroups/contosogroup/providers/Microsoft.Network/publicIPAddresses/apim-external-vnet-ipv4
+    PlatformVersion                       : stv2
+    PublicNetworkAccess                   : Enabled
+    PrivateEndpointConnections            :
+    ResourceGroupName                     : contosogroup
+    ```
+
+    The cmdlet deploys the API Management service into Virtual Network using stv2 platform version.
+- title: 'Example 7: Create an API Management service for an external virtual network for Stv1'
+  description: |-
+    ```powershell
+    $virtualNetwork = New-AzApiManagementVirtualNetwork -SubnetResourceId "/subscriptions/a8ff56dc-3bc7-4174-b1e8-3726ab15d0e2/resourceGroups/ContosoGroup/providers/Microsoft.Network/virtualNetworks/westUsVirtualNetwork/subnets/backendSubnet"
+    New-AzApiManagement -ResourceGroupName "ContosoGroup" -Location "West US" -Name "ContosoApi" -Organization Contoso -AdminEmail admin@contoso.com -VirtualNetwork $virtualNetwork -VpnType "External" -Sku "Premium"
+    ```
+
+    This command creates a Premium-tier API Management service in an Azure virtual network subnet having an external-facing gateway endpoint with a master region in the West US in stv1 model
+links:
+- text: Backup-AzApiManagement
+  href: ./Backup-AzApiManagement.yml
+- text: Get-AzApiManagement
+  href: ./Get-AzApiManagement.yml
+- text: Set-AzApiManagement
+  href: ./Set-AzApiManagement.yml
+- text: Remove-AzApiManagement
+  href: ./Remove-AzApiManagement.yml
+- text: Restore-AzApiManagement
+  href: ./Restore-AzApiManagement.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagement.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.ApiManagement.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.apimanagement/new-azapimanagement
+  Module Name: Az.ApiManagement
+  ms.assetid: 164C5205-01BA-47BB-B780-D0B9AE614A4B
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ApiManagement/ApiManagement/help/New-AzApiManagement.md
+  PlatyPS schema version: 2024-05-01

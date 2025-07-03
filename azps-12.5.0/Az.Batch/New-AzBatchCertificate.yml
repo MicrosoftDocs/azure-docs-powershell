@@ -1,0 +1,181 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Batch.New-AzBatchCertificate
+name: New-AzBatchCertificate
+module: Az.Batch
+isPreview: false
+summary: |-
+  Adds a certificate to the specified Batch account.
+description: |-
+  The **New-AzBatchCertificate** cmdlet adds a certificate to the specified Azure Batch account.
+parameters:
+  cmdletParameters:
+  - name: BatchContext
+    type: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **BatchAccountContext** instance that this cmdlet uses to interact with the Batch service.
+      If you use the Get-AzBatchAccount cmdlet to get your BatchAccountContext, then Microsoft Entra authentication will be used when interacting with the Batch service. To use shared key authentication instead, use the Get-AzBatchAccountKey cmdlet to get a BatchAccountContext object with its access keys populated. When using shared key authentication, the primary access key is used by default. To change the key to use, set the BatchAccountContext.KeyInUse property.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the certificate file.
+      The certificate file must be in either .cer or .pfx format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: File
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="Microsoft.Azure.Commands.Batch.Models.PSCertificateKind" data-throw-if-not-resolved="False" />
+    description: |-
+      The kind of certificate to create. If this is not specified, it is assumed that all certificates without a password are CER and all certificates with password are PFX.
+    acceptedValues:
+    - Cer
+    - Pfx
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password to access the certificate private key.
+      You must specify this parameter if you specify a certificate in .pfx format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RawData
+    type: <xref href="System.Byte" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the raw certificate data in either .cer or .pfx format.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RawData
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzBatchCertificate
+        [-FilePath] <String>
+        -BatchContext <BatchAccountContext>
+        [-Password <SecureString>]
+        [-Kind <PSCertificateKind>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: File
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzBatchCertificate
+        [-RawData] <Byte[]>
+        -BatchContext <BatchAccountContext>
+        [-Password <SecureString>]
+        [-Kind <PSCertificateKind>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RawData
+  isDefault: false
+inputs:
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Batch.BatchAccountContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a certificate from a file'
+  description: |-
+    ```powershell
+    New-AzBatchCertificate -FilePath "E:\Certificates\MyCert.cer" -BatchContext $Context
+    ```
+
+    This command adds a certificate to the specified Batch account by using the file E:\Certificates\MyCert.cer.
+- title: 'Example 2: Add a certificate from raw data'
+  description: |-
+    ```powershell
+    $RawData = [System.IO.File]::ReadAllBytes("E:\Certificates\MyCert.pfx")
+    New-AzBatchCertificate -RawData $RawData -Password <Password> -BatchContext $Context
+    ```
+
+    The first command reads the data from the file named MyCert.pfx into the $RawData variable.
+    The second command adds a certificate to the specified Batch account using the raw data stored in $RawData.
+links:
+- text: Get-AzBatchCertificate
+  href: ./Get-AzBatchCertificate.yml
+- text: Get-AzBatchAccountKey
+  href: ./Get-AzBatchAccountKey.yml
+- text: Remove-AzBatchCertificate
+  href: ./Remove-AzBatchCertificate.yml
+- text: Azure Batch Cmdlets
+  href: /powershell/module/Az.Batch/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchCertificate.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Batch.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.batch/new-azbatchcertificate
+  Module Name: Az.Batch
+  ms.assetid: B423C1A1-1988-4721-81E7-3B7EC163B03A
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Batch/Batch/help/New-AzBatchCertificate.md
+  PlatyPS schema version: 2024-05-01

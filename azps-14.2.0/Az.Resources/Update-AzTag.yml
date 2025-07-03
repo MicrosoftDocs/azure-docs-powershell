@@ -1,0 +1,214 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.Update-AzTag
+name: Update-AzTag
+module: Az.Resources
+isPreview: false
+summary: |-
+  Selectively updates the set of tags on a resource or subscription.
+description: |-
+  The **Update-AzTag** cmdlet with a **ResourceId** selectively updates the set of tags on a resource or subscription.
+  This operation allows replacing, merging or selectively deleting tags on the specified resource or subscription. The specified entity can have a maximum of 50 tags at the end of the operation. The 'replace' option replaces the entire set of existing tags with a new set. The 'merge' option allows adding tags with new names and updating the values of tags with existing names. The 'delete' option allows selectively deleting tags based on given names or name/value pairs.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Operation
+    type: <xref href="Microsoft.Azure.Commands.Tags.Model.TagPatchOperation" data-throw-if-not-resolved="False" />
+    description: |-
+      The update operation. Options are Merge, Replace and Delete.
+    acceptedValues:
+    - Merge
+    - Replace
+    - Delete
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource identifier for the tagged entity. A resource, a resource group or a subscription may be tagged.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      The set of tags to use for update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzTag
+        [-ResourceId] <String>
+        [-Tag] <Hashtable>
+        [-Operation] <TagPatchOperation>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Tags.Model.TagPatchOperation" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Tags.Model.PSTagResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Selectively updates the set of tags on a subscription with "Merge" Operation'
+  description: |-
+    ```powershell
+    $mergedTags = @{"key1"="value1"; "key3"="value3";}
+    Update-AzTag -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -Tag $mergedTags -Operation Merge
+    ```
+
+    ```output
+    Id         : {Id}
+    Name       : {Name}
+    Type       : {Type}
+    Properties :
+                 Name     Value
+                 =======  =========
+                 key1     value1
+                 key2     value2
+                 key3     value3
+    ```
+
+    This command Merges the set of tags on the subscription with "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".
+- title: 'Example 2: Selectively updates the set of tags on a subscription with "Replace" Operation'
+  description: |-
+    ```powershell
+    $replacedTags = @{"key1"="value1"; "key3"="value3";}
+    Update-AzTag -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -Tag $replacedTags -Operation Replace
+    ```
+
+    ```output
+    Id         : {Id}
+    Name       : {Name}
+    Type       : {Type}
+    Properties :
+                 Name     Value
+                 =======  =========
+                 key1     value1
+                 key3     value3
+    ```
+
+    This command Replaces the set of tags on the subscription with "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".
+- title: 'Example 3: Selectively updates the set of tags on a subscription with "Delete" Operation'
+  description: |-
+    ```powershell
+    $deletedTags = @{"key1"="value1"}
+    Update-AzTag -ResourceId /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -Tag $deletedTags -Operation Delete
+    ```
+
+    ```output
+    Id         : {Id}
+    Name       : {Name}
+    Type       : {Type}
+    Properties :
+                 Name     Value
+                 =======  =========
+                 key3     value3
+    ```
+
+    This command Deletes the set of tags on the subscription with "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".
+links:
+- text: Get-AzTag
+  href: ./Get-AzTag.yml
+- text: New-AzTag
+  href: ./New-AzTag.yml
+- text: Remove-AzTag
+  href: ./Remove-AzTag.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzTag.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Tags.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/update-aztag
+  Module Name: Az.Resources
+  ms.assetid: 07c6e327-05f4-4279-a5fb-d4e860c897d4
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/Update-AzTag.md
+  PlatyPS schema version: 2024-05-01

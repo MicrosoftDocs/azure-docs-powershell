@@ -1,0 +1,418 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataFactory.Get-AzDataFactoryActivityWindow
+name: Get-AzDataFactoryActivityWindow
+module: Az.DataFactory
+isPreview: false
+summary: |-
+  Gets information about activity windows associated with a data factory.
+description: |-
+  The **Get-AzDataFactoryActivityWindow** cmdlet gets information about the activity windows associated with a data factory.
+parameters:
+  cmdletParameters:
+  - name: ActivityName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the activity.
+      This cmdlet gets activity windows for the activity that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactory
+    type: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **PSDataFactory** object returned by a cmdlet.
+      This cmdlet gets activity windows that belong to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataFactoryName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the data factory.
+      This cmdlet gets activity windows that belong to the data factory that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatasetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the dataset.
+      This cmdlet gets activity windows that belong to the dataset that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Filter
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the activity window expressed by using Azure Search filter grammar.
+      For information about the grammar, see OData Expression Syntax for Azure Searchhttps://msdn.microsoft.com/en-us/library/azure/dn798921.aspx (https://msdn.microsoft.com/en-us/library/azure/dn798921.aspx) in MSDN.
+      The activity windows list is filtered by the search string that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: OrderBy
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies to order the response by one of the activity window list parameters.
+      This is a list of comma separated properties.
+      For example: WindowStart, PercentComplete.
+      By default, the order is ascending order (ASC).
+      Specify DESC if you want to order the list in descending order.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PipelineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the pipeline.
+      This cmdlet gets activity windows that belong to the pipeline that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group.
+      This cmdlet gets activity windows that belong to the resource group that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFactoryName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunEnd
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the end time of the activity window run.
+      This cmdlet gets activity windows whose run times fall between *RunStart* and *RunEnd* times.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RunStart
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the start time of the activity window run.
+      This cmdlet gets activity windows whose run times fall between *RunStart* and *RunEnd* times.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Top
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum number of activity windows that this cmdlet returns.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowEnd
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the end time of activity window.
+      This cmdlet gets activity windows whose times fall between *WindowStart* and *WindowEnd* times.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowStart
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the start time of activity window.
+      This cmdlet gets activity windows whose times fall between *WindowStart* and *WindowEnd* times.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the state of the activity window.
+      The acceptable values for this parameter are:
+      - None
+      - Waiting
+      - InProgress
+      - Ready
+      - Failed
+      - Skipped
+      This cmdlet gets activity windows that are in the state that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowSubstate
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the substate of the activity window.
+      The acceptable values for this parameter are:
+      - Canceled
+      - timedOut
+      - Validating
+      This cmdlet gets activity windows that are in the substate that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryActivityWindow
+        [-DataFactoryName] <String>
+        [[-DatasetName] <String>]
+        [[-PipelineName] <String>]
+        [[-ActivityName] <String>]
+        [-ResourceGroupName] <String>
+        [-WindowState <String>]
+        [-WindowSubstate <String>]
+        [-Filter <String>]
+        [-OrderBy <String>]
+        [-WindowStart <DateTime>]
+        [-WindowEnd <DateTime>]
+        [-RunStart <DateTime>]
+        [-RunEnd <DateTime>]
+        [-Top <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataFactoryActivityWindow
+        [-DataFactory] <PSDataFactory>
+        [[-DatasetName] <String>]
+        [[-PipelineName] <String>]
+        [[-ActivityName] <String>]
+        [-WindowState <String>]
+        [-WindowSubstate <String>]
+        [-Filter <String>]
+        [-OrderBy <String>]
+        [-WindowStart <DateTime>]
+        [-WindowEnd <DateTime>]
+        [-RunStart <DateTime>]
+        [-RunEnd <DateTime>]
+        [-Top <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFactoryObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSDataFactory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataFactories.Models.PSActivityWindow" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get activity windows associated with a data factory'
+  description: |-
+    ```powershell
+    Get-AzDataFactoryActivityWindow -DataFactoryName "WikiADF" -ResourceGroupName "ADF" -Top 3
+    ```
+
+    ```output
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    PipelineName      : DP_WikipediaSamplePipeline
+    ActivityName      : BlobToSqlCopyActivity
+    ActivityType      : Copy
+    LinkedServiceName :
+    WindowState       : Waiting
+    WindowSubstate    : ConcurrencyLimit
+    Duration          : 00:00:00
+    InputDatasets     : {DA_CuratedWikiData}
+    OutputDatasets    : {DA_WikiAggregatedData}
+    PercentComplete   : 0
+    RunAttempts       : 1
+    RunStart          : 8/17/2016 10:05:51 PM
+    RunEnd            : 8/17/2016 10:05:51 PM
+    WindowStart       : 8/17/2016 6:00:00 AM
+    WindowEnd         : 8/17/2016 7:00:00 AM
+
+
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    PipelineName      : DP_WikipediaSamplePipeline
+    ActivityName      : BlobToSqlCopyActivity
+    ActivityType      : Copy
+    LinkedServiceName :
+    WindowState       : Waiting
+    WindowSubstate    : ConcurrencyLimit
+    Duration          : 00:00:00
+    InputDatasets     : {DA_CuratedWikiData}
+    OutputDatasets    : {DA_WikiAggregatedData}
+    PercentComplete   : 0
+    RunAttempts       : 1
+    RunStart          : 8/17/2016 10:05:51 PM
+    RunEnd            : 8/17/2016 10:05:51 PM
+    WindowStart       : 8/16/2016 10:00:00 PM
+    WindowEnd         : 8/16/2016 11:00:00 PM
+
+
+    ResourceGroupName : ADF
+    DataFactoryName   : WikiADF
+    PipelineName      : DP_WikipediaSamplePipeline
+    ActivityName      : WikiHiveActivity
+    ActivityType      : HDInsightHive
+    LinkedServiceName : HDILinkedService
+    WindowState       : Ready
+    WindowSubstate    :
+    Duration          : 00:03:37.8020000
+    InputDatasets     : {DA_WikipediaClickEvents}
+    OutputDatasets    : {DA_CuratedWikiData}
+    PercentComplete   : 100
+    RunAttempts       : 1
+    RunStart          : 8/17/2016 11:09:23 PM
+    RunEnd            : 8/17/2016 11:13:01 PM
+    WindowStart       : 8/17/2016 3:00:00 AM
+    WindowEnd         : 8/17/2016 4:00:00 AM
+    ```
+
+    This command gets information about all activity window associated with the data factory named WikiADF.
+links:
+- text: Azure Data Factories Cmdlets
+  href: index.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryActivityWindow.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataFactoryV1.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datafactory/get-azdatafactoryactivitywindow
+  Module Name: Az.DataFactory
+  ms.assetid: F8C67F7B-64C5-45E4-A0BF-32212BEBE885
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataFactory/DataFactory/help/Get-AzDataFactoryActivityWindow.md
+  PlatyPS schema version: 2024-05-01

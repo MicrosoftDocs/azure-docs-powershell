@@ -1,0 +1,35 @@
+### YamlMime:PowerShellModule1
+uid: Az.FirmwareAnalysis
+name: Az.FirmwareAnalysis Module
+isPreview: false
+cmdletGroups:
+- title: FirmwareAnalysis
+  cmdlets:
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisBinaryHardening
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisCryptoCertificate
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisCryptoKey
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisCve
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisFirmware
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisPasswordHash
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisSbomComponent
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisSummary
+  - Az.FirmwareAnalysis.Get-AzFirmwareAnalysisWorkspace
+  - Az.FirmwareAnalysis.New-AzFirmwareAnalysisFirmware
+  - Az.FirmwareAnalysis.New-AzFirmwareAnalysisWorkspace
+  - Az.FirmwareAnalysis.New-AzFirmwareAnalysisWorkspaceUploadUrl
+  - Az.FirmwareAnalysis.Remove-AzFirmwareAnalysisFirmware
+  - Az.FirmwareAnalysis.Remove-AzFirmwareAnalysisWorkspace
+  - Az.FirmwareAnalysis.Update-AzFirmwareAnalysisFirmware
+  - Az.FirmwareAnalysis.Update-AzFirmwareAnalysisWorkspace
+description: |-
+  Microsoft Azure PowerShell: FirmwareAnalysis cmdlets
+metadata:
+  Module Name: Az.FirmwareAnalysis
+  Module Guid: e097ff3f-acb2-48da-86fe-937d86006ea5
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.firmwareanalysis
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FirmwareAnalysis/FirmwareAnalysis/help/Az.FirmwareAnalysis.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FirmwareAnalysis/FirmwareAnalysis/help/Az.FirmwareAnalysis.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

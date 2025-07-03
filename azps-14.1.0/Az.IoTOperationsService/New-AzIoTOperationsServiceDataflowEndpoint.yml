@@ -1,0 +1,862 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.IoTOperationsService.New-AzIoTOperationsServiceDataflowEndpoint
+name: New-AzIoTOperationsServiceDataflowEndpoint
+module: Az.IoTOperationsService
+isPreview: false
+summary: |-
+  create a DataflowEndpointResource
+description: |-
+  create a DataflowEndpointResource
+parameters:
+  cmdletParameters:
+  - name: AccessTokenSettingSecretRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Token secret name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingDatabase
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host of the Azure Data Explorer in the form of \<cluster\>.\<region\>.kusto.windows.net .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsAuthenticationMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mode of Authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Audience of the service to authenticate against.
+      Optional; defaults to the audience for Service host configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client ID for the user-assigned managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier (application ID URI) of the resource, affixed with the .default suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsBatchingLatencySecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Batching latency in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataExplorerSettingsBatchingMaxMessage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of messages in a batch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host of the Azure Data Lake in the form of \<account\>.blob.core.windows.net .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsAuthenticationMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mode of Authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Audience of the service to authenticate against.
+      Optional; defaults to the audience for Service host configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client ID for the user-assigned managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier (application ID URI) of the resource, affixed with the .default suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsBatchingLatencySecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Batching latency in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataLakeStorageSettingsBatchingMaxMessage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of messages in a batch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndpointType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Endpoint Type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExtendedLocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the extended location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingHost
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host of the Microsoft Fabric in the form of https://\<host\>.fabric.microsoft.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingOneLakePathType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of location of the data in the workspace.
+      Can be either tables or files.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsAuthenticationMethod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mode of Authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Audience of the service to authenticate against.
+      Optional; defaults to the audience for Service host configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client ID for the user-assigned managed identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsScope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier (application ID URI) of the resource, affixed with the .default suffix.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Tenant ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsBatchingLatencySecond
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Batching latency in seconds.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FabricOneLakeSettingsBatchingMaxMessage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Maximum number of messages in a batch.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InstanceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of instance.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KafkaSetting
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowEndpointKafka" data-throw-if-not-resolved="False" />
+    description: |-
+      Kafka endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocalStorageSettingPersistentVolumeClaimRef
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Persistent volume claim name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MqttSetting
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowEndpointMqtt" data-throw-if-not-resolved="False" />
+    description: |-
+      Broker endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of Instance dataflowEndpoint resource
+    aliases:
+    - DataflowEndpointName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NameLakehouseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Lakehouse name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NameWorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Workspace name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzIoTOperationsServiceDataflowEndpoint
+        -InstanceName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -ExtendedLocationName <String>
+        [-SubscriptionId <String>]
+        [-AccessTokenSettingSecretRef <String>]
+        [-DataExplorerSettingDatabase <String>]
+        [-DataExplorerSettingHost <String>]
+        [-DataExplorerSettingsAuthenticationMethod <String>]
+        [-DataExplorerSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience <String>]
+        [-DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId <String>]
+        [-DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsScope <String>]
+        [-DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId <String>]
+        [-DataExplorerSettingsBatchingLatencySecond <Int32>]
+        [-DataExplorerSettingsBatchingMaxMessage <Int32>]
+        [-DataLakeStorageSettingHost <String>]
+        [-DataLakeStorageSettingsAuthenticationMethod <String>]
+        [-DataLakeStorageSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience <String>]
+        [-DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId <String>]
+        [-DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsScope <String>]
+        [-DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId <String>]
+        [-DataLakeStorageSettingsBatchingLatencySecond <Int32>]
+        [-DataLakeStorageSettingsBatchingMaxMessage <Int32>]
+        [-EndpointType <String>]
+        [-FabricOneLakeSettingHost <String>]
+        [-FabricOneLakeSettingOneLakePathType <String>]
+        [-FabricOneLakeSettingsAuthenticationMethod <String>]
+        [-FabricOneLakeSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience <String>]
+        [-FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId <String>]
+        [-FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsScope <String>]
+        [-FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId <String>]
+        [-FabricOneLakeSettingsBatchingLatencySecond <Int32>]
+        [-FabricOneLakeSettingsBatchingMaxMessage <Int32>]
+        [-KafkaSetting <IDataflowEndpointKafka>]
+        [-LocalStorageSettingPersistentVolumeClaimRef <String>]
+        [-MqttSetting <IDataflowEndpointMqtt>]
+        [-NameLakehouseName <String>]
+        [-NameWorkspaceName <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzIoTOperationsServiceDataflowEndpoint
+        -InstanceName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonFilePath <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzIoTOperationsServiceDataflowEndpoint
+        -InstanceName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        -JsonString <String>
+        [-SubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.IoTOperationsService.Models.IDataflowEndpointResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a dataflow endpoint'
+  description: |-
+    ```powershell
+    New-AzIoTOperationsServiceDataflowEndpoint  -InstanceName  "aio-instance-name"   -Name "local-storage-endpoint"  -ResourceGroupName "aio-validation-116116143"  -ExtendedLocationName "/subscriptions/d4ccd08b-0809-446d-a8b7-7af8a90109cd/resourceGroups/aio-validation-116116143/providers/Microsoft.ExtendedLocation/customLocations/location-116116143"   -EndpointType "LocalStorage"  -LocalStorageSettingPersistentVolumeClaimRef "myPersistentVolumeClaim"
+    ```
+
+    ```output
+    AccessTokenSettingSecretRef                                                        :
+    DataExplorerSettingDatabase                                                        :
+    DataExplorerSettingHost                                                            :
+    DataExplorerSettingsAuthenticationMethod                                           :
+    DataExplorerSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience    :
+    DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId      :
+    DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsScope         :
+    DataExplorerSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId      :
+    DataExplorerSettingsBatchingLatencySecond                                          :
+    DataExplorerSettingsBatchingMaxMessage                                             :
+    DataLakeStorageSettingHost                                                         :
+    DataLakeStorageSettingsAuthenticationMethod                                        :
+    DataLakeStorageSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience :
+    DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId   :
+    DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsScope      :
+    DataLakeStorageSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId   :
+    DataLakeStorageSettingsBatchingLatencySecond                                       :
+    DataLakeStorageSettingsBatchingMaxMessage                                          :
+    EndpointType                                                                       : LocalStorage
+    ExtendedLocationName                                                               :  "/subscriptions/d4ccd08b-0809-446d-a8b7-7af8a90109cd/resourceGroups/aio-validation-116116143/providers/Microsoft.ExtendedLocation/customLocations/location-116116143"
+    ExtendedLocationType                                                               : CustomLocation
+    FabricOneLakeSettingHost                                                           :
+    FabricOneLakeSettingOneLakePathType                                                :
+    FabricOneLakeSettingsAuthenticationMethod                                          :
+    FabricOneLakeSettingsAuthenticationSystemAssignedManagedIdentitySettingsAudience   :
+    FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsClientId     :
+    FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsScope        :
+    FabricOneLakeSettingsAuthenticationUserAssignedManagedIdentitySettingsTenantId     :
+    FabricOneLakeSettingsBatchingLatencySecond                                         :
+    FabricOneLakeSettingsBatchingMaxMessage                                            :
+    Id                                                                                 : /subscriptions/d4ccd08b-0809-446d-a8b7-7af8a90109cd/resourceGroups/aio-validation-116116143/providers/Microsoft.IoTOperations/instances/aio-instance-name/dataflowEndpoints/local-storage-endpoint
+    KafkaSetting                                                                       : {
+                                                                                         }
+    LocalStorageSettingPersistentVolumeClaimRef                                        : myPersistentVolumeClaim
+    MqttSetting                                                                        : {
+                                                                                         }
+    Name                                                                               : local-storage-endpoint
+    NameLakehouseName                                                                  :
+    NameWorkspaceName                                                                  :
+    ProvisioningState                                                                  : Succeeded
+    ResourceGroupName                                                                  : aio-validation-116116143
+    SystemDataCreatedAt                                                                : 3/5/2025 10:28:13 PM
+    SystemDataCreatedBy                                                                : henrymorales@microsoft.com
+    SystemDataCreatedByType                                                            : User
+    SystemDataLastModifiedAt                                                           : 3/5/2025 10:29:15 PM
+    SystemDataLastModifiedBy                                                           : 319f651f-7ddb-4fc6-9857-7aef9250bd05
+    SystemDataLastModifiedByType                                                       : Application
+    Type                                                                               : microsoft.iotoperations/instances/dataflowendpoints
+    ```
+
+    Creates a dataflow endpoint
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/New-AzIoTOperationsServiceDataflowEndpoint.md
+  document type: cmdlet
+  external help file: Az.IoTOperationsService-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.iotoperationsservice/new-aziotoperationsservicedataflowendpoint
+  Module Name: Az.IoTOperationsService
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/New-AzIoTOperationsServiceDataflowEndpoint.md
+  PlatyPS schema version: 2024-05-01

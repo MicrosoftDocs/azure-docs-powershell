@@ -1,0 +1,247 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataLakeStore.Set-AzDataLakeStoreAccount
+name: Set-AzDataLakeStoreAccount
+module: Az.DataLakeStore
+isPreview: false
+summary: |-
+  Modifies a Data Lake Store account.
+description: |-
+  The **Set-AzDataLakeStoreAccount** cmdlet modifies a Data Lake Store account.
+parameters:
+  cmdletParameters:
+  - name: AllowAzureIpState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.FirewallAllowAzureIpsState" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optionally allow/block Azure originating IPs through the firewall.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of an AzureActive Directory group.
+      This group is the default group for files and folders that you create.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.FirewallState" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optionally enable or disable existing firewall rules.
+    acceptedValues:
+    - Enabled
+    - Disabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If the encryption type is User assigned, the user can rotate their key version with this parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a Data Lake Store account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group that contains the Data Lake Store account to modify.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies tags as key-value pairs.
+      You can use tags to identify a Data Lake Store account from other Azure resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tier
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.TierType" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The desired commitment tier for this account to use.
+    acceptedValues:
+    - Consumption
+    - Commitment1TB
+    - Commitment10TB
+    - Commitment100TB
+    - Commitment500TB
+    - Commitment1PB
+    - Commitment5PB
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrustedIdProviderState
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Management.DataLake.Store.Models.TrustedIdProviderState" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Optionally enable or disable the existing trusted ID providers.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzDataLakeStoreAccount
+        [-Name] <String>
+        [[-DefaultGroup] <String>]
+        [[-Tag] <Hashtable>]
+        [[-TrustedIdProviderState] <TrustedIdProviderState>]
+        [[-FirewallState] <FirewallState>]
+        [[-ResourceGroupName] <String>]
+        [-Tier <TierType>]
+        [-AllowAzureIpState <FirewallAllowAzureIpsState>]
+        [-KeyVersion <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataLakeStore.Models.PSDataLakeStoreAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Add a tag to an account'
+  description: |-
+    ```powershell
+    Set-AzDataLakeStoreAccount -Name "ContosoADL" -Tag @{"stage"="production"}
+    ```
+
+    This command adds the specified tag to the Data Lake Store account named ContosoADL.
+- title: Example 2
+  description: |-
+    Modifies a Data Lake Store account. (autogenerated)
+
+    <!-- Aladdin Generated Example -->
+    ```powershell
+    Set-AzDataLakeStoreAccount -FirewallState Enabled -Name 'ContosoADL'
+    ```
+links:
+- text: Get-AzDataLakeStoreAccount
+  href: ./Get-AzDataLakeStoreAccount.yml
+- text: New-AzDataLakeStoreAccount
+  href: ./New-AzDataLakeStoreAccount.yml
+- text: Remove-AzDataLakeStoreAccount
+  href: ./Remove-AzDataLakeStoreAccount.yml
+- text: Test-AzDataLakeStoreAccount
+  href: ./Test-AzDataLakeStoreAccount.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataLakeStore.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datalakestore/set-azdatalakestoreaccount
+  Module Name: Az.DataLakeStore
+  ms.assetid: 0EB5C25C-D0A1-4444-AEA2-C963D5069CFC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataLakeStore/DataLakeStore/help/Set-AzDataLakeStoreAccount.md
+  PlatyPS schema version: 2024-05-01

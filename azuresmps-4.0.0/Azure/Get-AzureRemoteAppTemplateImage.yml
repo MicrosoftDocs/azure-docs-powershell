@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureRemoteAppTemplateImage
+name: Get-AzureRemoteAppTemplateImage
+module: Azure
+isPreview: false
+summary: |-
+  Retrieves information about Azure RemoteApp template images.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureRemoteAppTemplateImage** cmdlet retrieves information about Azure RemoteApp template images in Microsoft Azure.
+  This cmdlet returns an object containing information about a specified template image.
+  If no template image is specified, it retrieves information about all the template images in the current subscription.
+parameters:
+  cmdletParameters:
+  - name: ImageName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of an Azure RemoteApp template image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureRemoteAppTemplateImage
+        [[-ImageName] <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get a list of all template images'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppTemplateImage
+    ```
+
+    This command returns the list of all template images.
+- title: 'Example 2: Retrieve information about a specified template image'
+  description: |-
+    ```
+    PS C:\> Get-AzureRemoteAppTemplateImage -ImageName "ContosoApps"
+    ```
+
+    This command retrieves information about the template image named ContosoApps.
+links:
+- text: Get-AzureRemoteAppCollection
+  href: ./Get-AzureRemoteAppCollection.yml
+- text: Get-AzureRemoteAppStartMenuProgram
+  href: ./Get-AzureRemoteAppStartMenuProgram.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: DAEA68EF-8153-4E03-B539-B720EA14776C
+  PlatyPS schema version: 2024-05-01

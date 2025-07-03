@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzFrontDoorCdnRuleRequestMethodConditionObject
+name: New-AzFrontDoorCdnRuleRequestMethodConditionObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for DeliveryRuleRequestMethodCondition.
+description: |-
+  Create an in-memory object for DeliveryRuleRequestMethodCondition.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.MatchVariable" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the condition for the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterMatchValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The match value for the condition of the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterNegateCondition
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Describes if this is negate condition or not.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterTransform
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.Transform" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of transforms.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFrontDoorCdnRuleRequestMethodConditionObject
+        -Name <MatchVariable>
+        [-ParameterMatchValue <String[]>]
+        [-ParameterNegateCondition <Boolean>]
+        [-ParameterTransform <Transform[]>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.DeliveryRuleRequestMethodCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for DeliveryRuleRequestMethodCondition'
+  description: |-
+    ```powershell
+    New-AzFrontDoorCdnRuleRequestMethodConditionObject -Name RequestMethod -ParameterMatchValue GET
+    ```
+
+    ```output
+    Name
+    ----
+    RequestMethod
+    ```
+
+    Create an in-memory object for DeliveryRuleRequestMethodCondition
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestMethodConditionObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.Cdn/new-AzFrontDoorCdnRuleRequestMethodConditionObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzFrontDoorCdnRuleRequestMethodConditionObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,131 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureInternalLoadBalancer
+name: Remove-AzureInternalLoadBalancer
+module: Azure
+isPreview: false
+summary: |-
+  Removes an internal load balancer configuration.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureInternalLoadBalancer** cmdlet removes the internal load balancer configuration from an Azure service.
+  If any endpoint currently refers to the internal load balancer, this cmdlet cannot remove the configuration.
+parameters:
+  cmdletParameters:
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the service from which this cmdlet removes an internal load balancer.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureInternalLoadBalancer
+        [-ServiceName] <String>
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Utilities.Common.ManagementOperationContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Remove an internal load balancer configuration'
+  description: |-
+    ```
+    PS C:\> Remove-AzureInternalLoadBalancer -ServiceName "ContosoService"
+    ```
+
+    This command removes the internal load balancer configuration for the service named ContosoService.
+links:
+- text: Add-AzureInternalLoadBalancer
+  href: ./Add-AzureInternalLoadBalancer.yml
+- text: Get-AzureInternalLoadBalancer
+  href: ./Get-AzureInternalLoadBalancer.yml
+- text: New-AzureInternalLoadBalancerConfig
+  href: ./New-AzureInternalLoadBalancerConfig.yml
+- text: Set-AzureInternalLoadBalancer
+  href: ./Set-AzureInternalLoadBalancer.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 3F939FE9-5D42-4EA1-90DC-E6D60158CADE
+  PlatyPS schema version: 2024-05-01

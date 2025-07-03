@@ -1,0 +1,433 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataMigration.Get-AzDataMigrationTask
+name: Get-AzDataMigrationTask
+module: Az.DataMigration
+isPreview: false
+summary: |-
+  Retrieves the PSProjectTask object associated with an Azure Database Migration Service (classic) migration task.
+description: |-
+  The Get-AzDataMigrationTask cmdlet retrieves the properties associated with an Azure Database Migration Service (classic) migration task.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Expand output
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponent
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.DataMigration.Models.PSProject" data-throw-if-not-resolved="False" />
+    description: |-
+      PSProject Object.
+    aliases:
+    - Project
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByInputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the task.
+    aliases:
+    - TaskName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByInputObjectResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByResourceIdResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponentResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProjectName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the project.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponentResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponentResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Project Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByResourceId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResultType
+    type: <xref href="Microsoft.Azure.Commands.DataMigration.Models.ResultTypeEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      Expand output of given result type.
+    acceptedValues:
+    - MigrationLevelOutput
+    - DatabaseLevelOutput
+    - TableLevelOutput
+    - MigrationValidationOutput
+    - MigrationValidationDatabaseLevelOutput
+    - LoginLevelOutput
+    - AgentJobLevelOutput
+    - Command
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByInputObjectResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByResourceIdResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponentResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database Migration Service Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponent
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetByComponentResultType
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TaskType
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.DataMigration.Models.TaskTypeEnum" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Filter by TaskType.
+    acceptedValues:
+    - MigrateSqlServerSqlDb
+    - ConnectToSourceSqlServer
+    - ConnectToTargetSqlDb
+    - GetUserTablesSql
+    - ConnectToTargetSqlDbMi
+    - MigrateSqlServerSqlDbMi
+    - ValidateSqlServerSqlDbMi
+    - MigrateSqlServerSqlDbSync
+    - ConnectToSourceSqlServerSync
+    - ConnectToTargetSqlSync
+    - GetUserTablesSqlSync
+    - ValidateSqlServerSqlDbSync
+    - ConnectToSourceMongoDb
+    - ConnectToTargetMongoDb
+    - MigrateMongoDb
+    - ValidateMongoDbMigration
+    - ConnectToTargetSqlDbMiSync
+    - ValidateSqlServerSqlDbMiSync
+    - MigrateSqlServerSqlDbMiSync
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListByComponent
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByInputObject
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ListByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -ProjectName <String>
+        [-TaskType <TaskTypeEnum>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByComponent
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-InputObject] <PSProject>
+        [-TaskType <TaskTypeEnum>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-InputObject] <PSProject>
+        -Name <String>
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByInputObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-InputObject] <PSProject>
+        -Name <String>
+        -ResultType <ResultTypeEnum>
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByInputObjectResultType
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-ResourceId] <String>
+        [-TaskType <TaskTypeEnum>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-ResourceId] <String>
+        -Name <String>
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        [-ResourceId] <String>
+        -Name <String>
+        -ResultType <ResultTypeEnum>
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByResourceIdResultType
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -ProjectName <String>
+        [-Name <String>]
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByComponent
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDataMigrationTask
+        -ResourceGroupName <String>
+        -ServiceName <String>
+        -ProjectName <String>
+        -Name <String>
+        -ResultType <ResultTypeEnum>
+        [-Expand]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByComponentResultType
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.PSProject" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.DataMigration.Models.PSProjectTask" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzDataMigrationTask -TaskName myTestTask -ServiceName myTestService -ProjectName MyTestProject -ResourceGroupName MyResourceGroup -Expand
+    ```
+
+    The above example illustrates the use of Get-AzDataMigrationTask cmdlet to retrieve the properties associated with an Azure Database Migration Service (classic) migration task based on task name passed in as input parameter
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzDataMigrationTask -Project $myProject
+    ```
+
+    The above example illustrates the use of Get-AzDataMigrationTask cmdlet to retrieve all of the migration tasks associated with PSProject object passed in as input parameter
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationTask.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.DataMigration.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.datamigration/Get-AzDataMigrationTask
+  Module Name: Az.DataMigration
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataMigration/DataMigration/help/Get-AzDataMigrationTask.md
+  PlatyPS schema version: 2024-05-01

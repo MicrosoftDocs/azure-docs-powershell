@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnDeliveryRuleCacheExpirationActionObject
+name: New-AzCdnDeliveryRuleCacheExpirationActionObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for DeliveryRuleCacheExpirationAction.
+description: |-
+  Create an in-memory object for DeliveryRuleCacheExpirationAction.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.DeliveryRuleAction" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the action for the delivery rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterCacheBehavior
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.CacheBehavior" data-throw-if-not-resolved="False" />
+    description: |-
+      Caching behavior for the requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ParameterCacheDuration
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The duration for which the content needs to be cached.
+      Allowed format is [d.]hh:mm:ss.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnDeliveryRuleCacheExpirationActionObject
+        -ParameterCacheBehavior <CacheBehavior>
+        -Name <DeliveryRuleAction>
+        [-ParameterCacheDuration <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.DeliveryRuleCacheExpirationAction" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for AzureCDN DeliveryRuleCacheExpirationAction'
+  description: |-
+    ```powershell
+    New-AzCdnDeliveryRuleCacheExpirationActionObject -Name CacheExpiration -ParameterCacheBehavior SetIfMissing -ParameterCacheDuration 0.01:30:00
+    ```
+
+    ```output
+    Name
+    ----
+    CacheExpiration
+    ```
+
+    Create an in-memory object for AzureCDN DeliveryRuleCacheExpirationAction
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnDeliveryRuleCacheExpirationActionObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-AzCdnDeliveryRuleCacheExpirationActionObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnDeliveryRuleCacheExpirationActionObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,701 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Connect-AzAccount
+name: Connect-AzAccount
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Connect to Azure with an authenticated account for use with Azure Resource Manager cmdlet requests.
+description: |-
+  The Connect-AzAccount cmdlet connects to Azure with an authenticated account for use with Azure Resource Manager cmdlet requests.
+  You can use this authenticated account only with Azure Resource Manager cmdlets.
+  To add an authenticated account for use with Service Management cmdlets, use the Add-AzAccount or the Import-AzPublishSettingsFile cmdlet.
+  If no context is found for the current user, this command will populate the user's context list with a context for each of their (first 25) subscriptions. The list of contexts created for the user can be found by running "Get-AzContext -ListAvailable". To skip this context population, you can run this command with the "-SkipContextPopulation" switch parameter.
+  After executing this cmdlet, you can disconnect from an Azure account using Disconnect-AzAccount.
+parameters:
+  cmdletParameters:
+  - name: AccessToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an access token.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AccountId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Account Id for access token in AccessToken parameter set.
+      Account Id for managed service in ManagedService parameter set. Can be a managed service resource Id, or the associated client id. To use the SystemAssigned identity, leave this field blank.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipalCertificateWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertificateThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate Hash (Thumbprint)
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipalCertificateWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContextName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the default context from this login.  You will be able to select this context by this name after login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="System.Management.Automation.PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a PSCredential object.
+      For more information about the PSCredential object, type Get-Help Get-Credential.
+      The PSCredential object provides the user ID and password for organizational ID credentials, or the application ID and secret for service principal credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipalWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UserWithCredential
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Environment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Environment containing the account to log into
+    aliases:
+    - EnvironmentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Overwrite the existing context with the same name, if any.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: GraphAccessToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AccessToken for Graph Service
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Identity
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Login using managed service identity in the current environment.
+    aliases:
+    - MSI
+    - ManagedService
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedServiceLogin
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultAccessToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      AccessToken for KeyVault Service
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedServiceHostName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Host name for managed service login
+    defaultValue: localhost
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedServiceLogin
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedServicePort
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Port number for managed service login
+    defaultValue: "50342"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedServiceLogin
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedServiceSecret
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Secret, used for some kinds of managed service login.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ManagedServiceLogin
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="Microsoft.Azure.Commands.Profile.Common.ContextModificationScope" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines the scope of context changes, for example, whether changes apply only to the current process, or to all sessions started by this user.
+    acceptedValues:
+    - Process
+    - CurrentUser
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipal
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this account authenticates by providing service principal credentials.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ServicePrincipalWithSubscriptionId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipContextPopulation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skips context population if no contexts are found.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SkipValidation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Skip validation for access token
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Name or ID
+    aliases:
+    - SubscriptionName
+    - SubscriptionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tenant
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional tenant name or ID
+    aliases:
+    - Domain
+    - TenantId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UserWithCredential
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: AccessTokenWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ManagedServiceLogin
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UseDeviceAuthentication
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Use device code authentication instead of a browser control
+    aliases:
+    - DeviceCode
+    - DeviceAuth
+    - Device
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UserWithSubscriptionId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        [-Environment <String>]
+        [-Tenant <String>]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipContextPopulation]
+        [-UseDeviceAuthentication]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserWithSubscriptionId
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        -Credential <PSCredential>
+        -Tenant <String>
+        [-Environment <String>]
+        [-ServicePrincipal]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipContextPopulation]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServicePrincipalWithSubscriptionId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        -Credential <PSCredential>
+        [-Environment <String>]
+        [-Tenant <String>]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipContextPopulation]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UserWithCredential
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        -CertificateThumbprint <String>
+        -ApplicationId <String>
+        -Tenant <String>
+        [-Environment <String>]
+        [-ServicePrincipal]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipContextPopulation]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ServicePrincipalCertificateWithSubscriptionId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        -AccessToken <String>
+        -AccountId <String>
+        [-Environment <String>]
+        [-Tenant <String>]
+        [-GraphAccessToken <String>]
+        [-KeyVaultAccessToken <String>]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipValidation]
+        [-SkipContextPopulation]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AccessTokenWithSubscriptionId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Connect-AzAccount
+        [-Environment <String>]
+        [-Tenant <String>]
+        [-AccountId <String>]
+        [-Identity]
+        [-ManagedServicePort <Int32>]
+        [-ManagedServiceHostName <String>]
+        [-ManagedServiceSecret <SecureString>]
+        [-Subscription <String>]
+        [-ContextName <String>]
+        [-SkipContextPopulation]
+        [-Force]
+        [-Scope <ContextModificationScope>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ManagedServiceLogin
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Use an interactive login to connect to an Azure account'
+  description: |-
+    ```powershell
+    PS C:\> Connect-AzAccount
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    azureuser@contoso.com  Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects to an Azure account.
+    To run Azure Resource Manager cmdlets with this account, you must provide Microsoft account or organizational ID credentials at the prompt.
+    If multi-factor authentication is enabled for your credentials, you must log in using the interactive option or use service principal authentication.
+- title: 'Example 2: (Windows PowerShell 5.1 only) Connect to an Azure account using organizational ID credentials'
+  description: |-
+    ```powershell
+    PS C:\> $Credential = Get-Credential
+    PS C:\> Connect-AzAccount -Credential $Credential
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    azureuser@contoso.com  Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This scenario works only in Windows PowerShell 5.1. The first command will prompt for user credentials (username and password), and then stores them in the $Credential variable.
+    The second command connects to an Azure account using the credentials stored in $Credential.
+    This account authenticates with Azure Resource Manager using organizational ID credentials.
+    You cannot use multi-factor authentication or Microsoft account credentials to run Azure Resource Manager cmdlets with this account.
+- title: 'Example 3: Connect to an Azure service principal account'
+  description: |-
+    ```powershell
+    PS C:\> $Credential = Get-Credential
+    PS C:\> Connect-AzAccount -Credential $Credential -Tenant "xxxx-xxxx-xxxx-xxxx" -ServicePrincipal
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    xxxx-xxxx-xxxx-xxxx    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    The first command gets the service principal credentials (application id and service principal secret), and then stores them in the $Credential variable.
+    The second command connect to Azure using the service principal credentials stored in $Credential for the specified Tenant.
+    The ServicePrincipal switch parameter indicates that the account authenticates as a service principal.
+- title: 'Example 4: Use an interactive login to connect to an account for a specific tenant and subscription'
+  description: |-
+    ```powershell
+    PS C:\> Connect-AzAccount -Tenant "xxxx-xxxx-xxxx-xxxx" -SubscriptionId "yyyy-yyyy-yyyy-yyyy"
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    azureuser@contoso.com  Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects to an Azure account and configured AzureRM PowerShell to run cmdlets for the specified tenant and subscription by default.
+- title: 'Example 5: Add an Account Using Managed Service Identity Login'
+  description: |-
+    ```powershell
+    PS C:\> Connect-AzAccount -Identity
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    MSI@50342              Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects using the managed service identity of the host environment (for example, if executed on a
+    VirtualMachine with an assigned Managed Service Identity, this will allow the code to login using that assigned identity)
+- title: 'Example 6: Add an Account Using Managed Service Identity Login and ClientId'
+  description: |-
+    ```powershell
+    PS C:\> $identity = Get-AzUserAssignedIdentity -ResourceGroupName "myResourceGroup" -Name "myUserAssignedIdentity"
+    PS C:\> Get-AzVM -ResourceGroupName contoso -Name testvm | Update-AzVM -IdentityType UserAssigned -IdentityId $identity.Id
+    PS C:\> Connect-AzAccount -Identity -AccountId $identity.ClientId # Run on the "testvm" virtual machine
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects using the managed service identity of "myUserAssignedIdentity" by adding the User Assigned Identity to the Virtual Machine, then connecting using the ClientId of the User Assigned Identity.
+    More information about configuring Managed Identities can be found here: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
+- title: 'Example 7: Add an Account Using Managed Service Identity Login and ClientId'
+  description: |-
+    ```powershell
+    PS C:\> $identity = Get-AzUserAssignedIdentity -ResourceGroupName "myResourceGroup" -Name "myUserAssignedIdentity"
+    PS C:\> Get-AzVM -ResourceGroupName contoso -Name testvm | Update-AzVM -IdentityType UserAssigned -IdentityId $identity.Id
+    PS C:\> Connect-AzAccount -Identity -AccountId $identity.Id # Run on the "testvm" virtual machine
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    yyyy-yyyy-yyyy-yyyy    Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects using the managed service identity of "myUserAssignedIdentity" by adding the User Assigned Identity to the Virtual Machine, then connecting using the Id of the User Assigned Identity.
+    More information about configuring Managed Identities can be found here: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/qs-configure-powershell-windows-vm.
+- title: 'Example 8: Add an account using certificates'
+  description: |-
+    ```powershell
+    # For more information on creating a self-signed certificate
+    # and giving it proper permissions, please see the following:
+    # https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-authenticate-service-principal-powershell
+    PS C:\> $Thumbprint = "0SZTNJ34TCCMUJ5MJZGR8XQD3S0RVHJBA33Z8ZXV"
+    PS C:\> $TenantId = "aaaabbbb-0000-cccc-1111-dddd2222eeee"
+    PS C:\> $ApplicationId = "00001111-aaaa-2222-bbbb-3333cccc4444"
+    PS C:\> Connect-AzAccount -CertificateThumbprint $Thumbprint -ApplicationId $ApplicationId -Tenant $TenantId -ServicePrincipal
+
+    Account             SubscriptionName TenantId            Environment
+    -------             ---------------- --------            -----------
+    xxxx-xxxx-xxxx-xxxx Subscription1    xxxx-xxxx-xxxx-xxxx AzureCloud
+
+    Account          : 00001111-aaaa-2222-bbbb-3333cccc4444
+    SubscriptionName : MyTestSubscription
+    SubscriptionId   : aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    TenantId         : aaaabbbb-0000-cccc-1111-dddd2222eeee
+    Environment      : AzureCloud
+    ```
+
+    This command connects to an Azure account using certificate-based service principal authentication. The service principal used for authentication should have been created with the given certificate.
+- title: 'Example 9: Add an account using AccessToken authentication'
+  description: |-
+    ```powershell
+    PS C:\> $url = "https://login.windows.net/<TenantId>/oauth2/token"
+    PS C:\> $body = "grant_type=refresh_token&refresh_token=<refreshtoken>" # Refresh token obtained from ~/.azure/TokenCache.dat
+    PS C:\> $response = Invoke-RestMethod $url -Method POST -Body $body
+    PS C:\> $AccessToken = $response.access_token
+    PS C:\> $body1 = $body + "&resource=https%3A%2F%2Fvault.azure.net"
+    PS C:\> $response = Invoke-RestMethod $url -Method POST -Body $body1
+    PS C:\> $body2 = $body + "&resource=https%3A%2F%2Fgraph.windows.net"
+    PS C:\> $GraphAccessToken = $response.access_token
+    PS C:\> Connect-AzAccount -AccountId "azureuser@contoso.com" -AccessToken $AccessToken -KeyVaultAccessToken $KeyVaultAccessToken -GraphAccessToken $GraphAccessToken -Tenant "xxxx-xxxx-xxxx-xxxx" -SubscriptionId "yyyy-yyyy-yyyy-yyyy"
+
+    Account                SubscriptionName TenantId                Environment
+    -------                ---------------- --------                -----------
+    azureuser@contoso.com  Subscription1    xxxx-xxxx-xxxx-xxxx     AzureCloud
+    ```
+
+    This command connects to an Azure account specified in "AccountId" using the AccessToken and KeyVaultAccessToken provided.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Connect-AzAccount.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Connect-AzAccount.md
+  PlatyPS schema version: 2024-05-01

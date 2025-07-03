@@ -1,0 +1,276 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Unlock-AzDataProtectionResourceGuardOperation
+name: Unlock-AzDataProtectionResourceGuardOperation
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Unlocks the critical operation which is protected by the resource guard
+description: |-
+  Unlocks the critical operation which is protected by the resource guard
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Group name of the backup vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGuardOperationRequest
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of critical operations which are protected by the resourceGuard and need to be unlocked.
+      Supported values are DeleteBackupInstance, DisableMUA
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceToBeDeleted
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Id of the resource that need to be unlocked for performing critical operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SecureToken
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameter to authorize operations protected by cross tenant resource guard.
+      Use command (Get-AzAccessToken -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx -AsSecureString").Token to fetch authorization token for different tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id of the backup vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Token
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Parameter deprecate.
+      Please use SecureToken instead.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the backup vault
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Unlock-AzDataProtectionResourceGuardOperation
+        -ResourceGroupName <String>
+        -VaultName <String>
+        [-SubscriptionId <String>]
+        [-ResourceGuardOperationRequest <String[]>]
+        [-ResourceToBeDeleted <String>]
+        [-Token <String>]
+        [-SecureToken <SecureString>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Unlock critical operation protected by resource guard - delete backup instance'
+  description: |-
+    ```powershell
+    $proxy = Get-AzDataProtectionResourceGuardMapping -ResourceGroupName $resourceGroupName -VaultName $vaultName -SubscriptionId $subscriptionId
+    $operationRequests = $proxy.ResourceGuardOperationDetail.DefaultResourceRequest
+    $resourceGuardOperationRequest = $operationRequests | Where-Object { $_ -match "deleteBackupInstanceRequests" }
+
+    $token = (Get-AzAccessToken -AsSecureString -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx").Token
+    $instances = Get-AzDataProtectionBackupInstance -SubscriptionId $subscriptionId -ResourceGroupName $resourceGroupName -VaultName $vaultName
+
+    $unlock = Unlock-AzDataProtectionResourceGuardOperation -ResourceGroupName $resourceGroupName -SubscriptionId $subscriptionId -VaultName $vault.Name -ResourceGuardOperationRequest $resourceGuardOperationRequest -ResourceToBeDeleted $instances[0].Id -SecureToken $token
+    $unlock | fl
+
+    Remove-AzDataProtectionBackupInstance -SubscriptionId $subscriptionId -ResourceGroupName $resourceGroupName -VaultName $vaultName  -Name $instances[0].Name
+    ```
+
+    ```output
+    2023-08-28T14:29:17.3982762Z
+    ```
+
+    Ensure you have a contributor access over resource guard before doing unlock.
+
+    Fetch and pass the cross tenant authorization token in case the resource guard is present in a different tenant.
+
+    The first command fetches the resource guard mapping between backup vault and the resource guard.
+    The second command fetches the operation requests corresponding to all critical operations protected by resource guard.
+    The third command fetch the operation request corresponding to the operation we want to unlock.
+    The fourth command fetches the access token corresponding to resource guard tenant.
+    The fifth command fetches the backup instance we want to stop protection.
+    The sixth command unlocks the delete backup operation which is protected by the resource guard.
+    Ensure to have contributor access over resource guard before unlock.
+    Finally, we remove the backup instance for which we want to disable protection.
+- title: 'Example 2: Unlock delete backup instance operation with short hand'
+  description: |-
+    ```powershell
+    $token = (Get-AzAccessToken -AsSecureString -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx").Token
+    $instances = Get-AzDataProtectionBackupInstance -SubscriptionId $subscriptionId -ResourceGroupName $resourceGroupName -VaultName $vaultName
+
+    $unlock = Unlock-AzDataProtectionResourceGuardOperation -ResourceGroupName $resourceGroupName -SubscriptionId $subscriptionId -VaultName $vault.Name -ResourceGuardOperationRequest DeleteBackupInstance -ResourceToBeDeleted $instances[0].Id -SecureToken $token
+    $unlock | fl
+
+    Remove-AzDataProtectionBackupInstance -SubscriptionId $subscriptionId -ResourceGroupName $resourceGroupName -VaultName $vaultName  -Name $instances[0].Name
+    ```
+
+    ```output
+    2023-08-28T14:29:17.3982762Z
+    ```
+
+    This example is faster way (short hand) for Example 1.
+    In this example we show that by just passing the DeleteBackupInstance to ResourceGuardOperationRequest we can perform unlock.
+    we pass the instance ARM Id as the resource to be deleted.
+    Pass access token in case of cross tenant resource guard.
+- title: 'Example 3: Unlock disable MUA operation with short hand'
+  description: |-
+    ```powershell
+    $token = (Get-AzAccessToken -AsSecureString -TenantId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx").Token
+    $proxy = Get-AzDataProtectionResourceGuardMapping -ResourceGroupName $resourceGroupName -VaultName $vaultName -SubscriptionId $subscriptionId
+
+    $unlock = Unlock-AzDataProtectionResourceGuardOperation -ResourceGroupName $resourceGroupName -SubscriptionId $subscriptionId -VaultName $vault.Name -ResourceGuardOperationRequest DisableMUA -ResourceToBeDeleted $proxy.Id -SecureToken $token
+    $unlock | fl
+
+    Remove-AzDataProtectionResourceGuardMapping -ResourceGroupName $resourceGroupName -SubscriptionId $subscriptionId -VaultName $vaultName
+    ```
+
+    ```output
+    2023-08-28T14:29:17.3982762Z
+    ```
+
+    This example is faster way (short hand) for Example 1.
+    In this example we show that by just passing the DisableMUA to ResourceGuardOperationRequest we can perform unlock.
+    we pass the resource guard mapping ARM Id as the resource to be deleted, this will disable MUA on the backup vault.
+    Pass access token in case of cross tenant resource guard.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Unlock-AzDataProtectionResourceGuardOperation.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/unlock-azdataprotectionresourceguardoperation
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Unlock-AzDataProtectionResourceGuardOperation.md
+  PlatyPS schema version: 2024-05-01

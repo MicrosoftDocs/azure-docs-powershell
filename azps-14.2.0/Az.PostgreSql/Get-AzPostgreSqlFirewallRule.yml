@@ -1,0 +1,218 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PostgreSql.Get-AzPostgreSqlFirewallRule
+name: Get-AzPostgreSqlFirewallRule
+module: Az.PostgreSql
+isPreview: false
+summary: |-
+  Gets information about a server firewall rule.
+description: |-
+  Gets information about a server firewall rule.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.IPostgreSqlIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server firewall rule.
+    aliases:
+    - FirewallRuleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFirewallRule
+        -ResourceGroupName <String>
+        -ServerName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFirewallRule
+        -Name <String>
+        -ResourceGroupName <String>
+        -ServerName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzPostgreSqlFirewallRule
+        -InputObject <IPostgreSqlIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.IPostgreSqlIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PostgreSql.Models.Api20171201.IFirewallRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Lists all the Firewall Rules in specified PostgreSql server'
+  description: |-
+    ```powershell
+    Get-AzPostgreSqlFirewallRule -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer
+    ```
+
+    ```output
+    Name StartIPAddress EndIPAddress
+    ---- -------------- ------------
+    rule 0.0.0.0        0.0.0.1
+    ```
+
+    This cmdlet lists all the Firewall Rule in specified PostgreSql server.
+- title: 'Example 2: Get Firewall Rule by name'
+  description: |-
+    ```powershell
+    Get-AzPostgreSqlFirewallRule -Name rule -ResourceGroupName PostgreSqlTestRG -ServerName PostgreSqlTestServer
+    ```
+
+    ```output
+    Name StartIPAddress EndIPAddress
+    ---- -------------- ------------
+    rule 0.0.0.0        0.0.0.1
+    ```
+
+    This cmdlet gets Firewall Rule by name.
+- title: 'Example 3: Get Firewall Rule by identity'
+  description: |-
+    ```powershell
+    $ID = "/subscriptions/<SubscriptionId>/resourceGroups/PostgreSqlTestRG/providers/Microsoft.DBforPostgreSQL/servers/PostgreSqlTestServer/firewallRules/rule"
+    Get-AzPostgreSqlFirewallRule -InputObject $ID
+    ```
+
+    ```output
+    Name StartIPAddress EndIPAddress
+    ---- -------------- ------------
+    rule 0.0.0.0        0.0.0.1
+    ```
+
+    This cmdlet gets Firewall Rule by identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Get-AzPostgreSqlFirewallRule.md
+  document type: cmdlet
+  external help file: Az.PostgreSql-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.postgresql/get-azpostgresqlfirewallrule
+  Module Name: Az.PostgreSql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Get-AzPostgreSqlFirewallRule.md
+  PlatyPS schema version: 2024-05-01

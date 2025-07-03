@@ -1,0 +1,244 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ConnectedVMware.Get-AzConnectedVMwareVNet
+name: Get-AzConnectedVMwareVNet
+module: Az.ConnectedVMware
+isPreview: false
+summary: |-
+  Implements virtual network GET method.
+description: |-
+  Implements virtual network GET method.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedVMware.Models.IConnectedVMwareIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the virtual network resource.
+    aliases:
+    - VirtualNetworkName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Resource Group Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedVMwareVNet
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedVMwareVNet
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedVMwareVNet
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzConnectedVMwareVNet
+        -InputObject <IConnectedVMwareIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedVMware.Models.IConnectedVMwareIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ConnectedVMware.Models.IVirtualNetwork" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Virtual Networks in current subscription'
+  description: |-
+    ```powershell
+    Get-AzConnectedVMwareVNet -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    Kind   Location      Name                                                          ResourceGroupName
+    ----   --------      ----                                                          -----------------
+           eastus        test-vnet1                                                    test-rg1
+           eastus        test-vnet2                                                    test-rg2
+           eastus        test-vnet3                                                    test-rg3
+           eastus        test-vnet4                                                    test-rg4
+           eastus        test-vnet5                                                    test-rg5
+           eastus        test-vnet6                                                    test-rg6
+           eastus        test-vnet7                                                    test-rg7
+           eastus        test-vnet8                                                    test-rg8
+    ```
+
+    This command lists Virtual Networks in current subscription.
+- title: 'Example 2: List Virtual Networks in a resource group'
+  description: |-
+    ```powershell
+    Get-AzConnectedVMwareVNet -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    Kind   Location Name         ResourceGroupName
+    ----   -------- ----         -----------------
+           eastus   test-vnet1   test-rg
+           eastus   test-vnet2   test-rg
+    ```
+
+    This command lists Virtual Networks in a resource group named `test-rg`.
+- title: 'Example 3: Get a specific Virtual Network'
+  description: |-
+    ```powershell
+    Get-AzConnectedVMwareVNet -Name "test-vnet" -ResourceGroupName "test-rg" -SubscriptionId "aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e"
+    ```
+
+    ```output
+    CustomResourceName           : a8feca6f-9d35-411d-a594-33fd28043966
+    ExtendedLocationName         : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourcegroups/test-rg/providers/microsoft.extendedlocation/customlocations/test-cl
+    ExtendedLocationType         : CustomLocation
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VirtualNetworks/VM-Network
+    InventoryItemId              : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc/InventoryItems/network-563661
+    Kind                         :
+    Location                     : australiaeast
+    MoName                       : VM Network
+    MoRefId                      : network-563661
+    Name                         : VM-Network
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : test-rg
+    Statuses                     : {{
+                                     "type": "Ready",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2022-06-30T07:00:45.0455281Z"
+                                   }, {
+                                     "type": "Idle",
+                                     "status": "True",
+                                     "lastUpdatedAt": "2022-06-30T07:00:45.0455281Z"
+                                   }}
+    SystemDataCreatedAt          : 6/30/2022 7:00:07 AM
+    SystemDataCreatedBy          : xyz
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 6/30/2022 7:00:07 AM
+    SystemDataLastModifiedBy     : xyz
+    SystemDataLastModifiedByType : User
+    Tag                          : {
+                                   }
+    Type                         : microsoft.connectedvmwarevsphere/virtualnetworks
+    Uuid                         : a8feca6f-9d35-411d-a594-33fd28043966
+    VCenterId                    : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/test-vc
+    ```
+
+    This command gets a Virtual Network named `test-vnet` in a resource group named `test-rg`.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Get-AzConnectedVMwareVNet.md
+  document type: cmdlet
+  external help file: Az.ConnectedVMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.connectedvmware/get-azconnectedvmwarevnet
+  Module Name: Az.ConnectedVMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedVMware/ConnectedVMware/help/Get-AzConnectedVMwareVNet.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,279 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.Set-AzSignalRUpstream
+name: Set-AzSignalRUpstream
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Set the upstream settings of a SignalR service.
+description: |-
+  Set the upstream settings of a SignalR service.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the cmdlet in background job.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Clear
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Clear all the upstream settings.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.SignalR.Models.PSSignalRResource" data-throw-if-not-resolved="False" />
+    description: |-
+      The SignalR resource object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SignalR service name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+      The default one will be used if not specified.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceGroupParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SignalR service resource ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Template
+    type: <xref href="Microsoft.Azure.Commands.SignalR.Models.PSUpstreamTemplate" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Template item(s) for upstream settings.
+      Required key: UrlTemplate.
+      Optional keys: HubPattern, EventPattern, CategoryPattern.
+      Example using splatting syntax to pass templates parameter: @{UrlTemplate='http://host-connections1.com', HubPattern= 'chat';EventPattern='broadcast' },@{UrlTemplate='http://host-connections2.com'}
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSignalRUpstream
+        [-Name] <String>
+        [-ResourceGroupName <String>]
+        [-AsJob]
+        [-Template <PSUpstreamTemplate[]>]
+        [-Clear]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceGroupParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzSignalRUpstream
+        -ResourceId <String>
+        [-AsJob]
+        [-Template <PSUpstreamTemplate[]>]
+        [-Clear]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzSignalRUpstream
+        -InputObject <PSSignalRResource>
+        [-AsJob]
+        [-Template <PSUpstreamTemplate[]>]
+        [-Clear]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.SignalR.Models.PSSignalRResource" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.SignalR.Models.PSServerlessUpstreamSettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set two ordered upstream templates'
+  description: |-
+    ```powershell
+    Set-AzSignalRUpstream -name pssignalr -ResourceGroupName test_resource_group -Template @{UrlTemplate='http://host-connections1.com'; HubPattern='chat';EventPattern='broadcast' }, @{UrlTemplate='http://host-connections2.com'}
+    ```
+
+    ```output
+    Templates
+    ---------
+    {Microsoft.Azure.Commands.SignalR.Models.PSUpstreamTemplate, Microsoft.Azure.Commands.SignalR.Models.PSUpstreamTemplat…
+    ```
+
+    The following JSON represents the actual templates set.
+
+     `
+    {
+        "hubPattern": "chat",
+        "eventPattern": "broadcast",
+        "categoryPattern": "*",
+        "urlTemplate": "http://host-connections1.com"
+    },
+    {
+        "hubPattern": "*",
+        "eventPattern": "*",
+        "categoryPattern": "*",
+        "urlTemplate": "http://host-connections2.com"
+    }
+    `
+- title: 'Example 2: Clear all the upstream settings'
+  description: |-
+    ```powershell
+    Set-AzSignalRUpstream -name pssignalr -ResourceGroupName test_resource_group -Clear
+    ```
+
+    ```output
+    Templates
+    ---------
+    {}
+    ```
+links:
+- text: How to use splatting to pass parameters to commands in PowerShell
+  href: https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Set-AzSignalRUpstream.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.SignalR.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/set-azsignalrupstream
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/Set-AzSignalRUpstream.md
+  PlatyPS schema version: 2024-05-01

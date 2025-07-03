@@ -1,0 +1,59 @@
+### YamlMime:PowerShellModule1
+uid: Az.IoTOperationsService
+name: Az.IoTOperationsService Module
+isPreview: false
+cmdletGroups:
+- title: IoTOperationsService
+  cmdlets:
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceBroker
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceBrokerAuthentication
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceBrokerAuthorization
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceBrokerListener
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceDataflow
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceDataflowEndpoint
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceDataflowProfile
+  - Az.IoTOperationsService.Get-AzIoTOperationsServiceInstance
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceBroker
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceBrokerAuthentication
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceBrokerAuthorization
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceBrokerListener
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceDataflow
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceDataflowEndpoint
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceDataflowProfile
+  - Az.IoTOperationsService.New-AzIoTOperationsServiceInstance
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceBroker
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceBrokerAuthentication
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceBrokerAuthorization
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceBrokerListener
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceDataflow
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceDataflowEndpoint
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceDataflowProfile
+  - Az.IoTOperationsService.Remove-AzIoTOperationsServiceInstance
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceBroker
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceBrokerAuthentication
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceBrokerAuthorization
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceBrokerListener
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceDataflow
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceDataflowEndpoint
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceDataflowProfile
+  - Az.IoTOperationsService.Set-AzIoTOperationsServiceInstance
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceBroker
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceBrokerAuthentication
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceBrokerAuthorization
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceBrokerListener
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceDataflow
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceDataflowEndpoint
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceDataflowProfile
+  - Az.IoTOperationsService.Update-AzIoTOperationsServiceInstance
+description: |-
+  Microsoft Azure PowerShell: IoTOperationsService cmdlets
+metadata:
+  Module Name: Az.IoTOperationsService
+  Module Guid: c42b5ed7-0bb4-4124-a90b-4e7754da4b45
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.iotoperationsservice
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Az.IoTOperationsService.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/IoTOperationsService/IoTOperationsService/help/Az.IoTOperationsService.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

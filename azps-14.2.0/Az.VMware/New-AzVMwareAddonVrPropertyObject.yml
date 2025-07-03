@@ -1,0 +1,64 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.VMware.New-AzVMwareAddonVrPropertyObject
+name: New-AzVMwareAddonVrPropertyObject
+module: Az.VMware
+isPreview: false
+summary: |-
+  Create an in-memory object for AddonVrProperties.
+description: |-
+  Create an in-memory object for AddonVrProperties.
+parameters:
+  cmdletParameters:
+  - name: VrsCount
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The vSphere Replication Server (VRS) count.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVMwareAddonVrPropertyObject
+        -VrsCount <Int32>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.VMware.Models.AddonVrProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a local VR object for the Addon Property parameter'
+  description: |-
+    ```powershell
+    New-AzVMwareAddonVrPropertyObject -VrsCount 2
+    ```
+
+    ```output
+    AddonType ProvisioningState VrsCount
+    --------- ----------------- --------
+    VR                                 2
+    ```
+
+    Create a local VR object for the Addon Property parameter
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareAddonVrPropertyObject.md
+  document type: cmdlet
+  external help file: Az.VMware-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.VMware/new-azvmwareaddonvrpropertyobject
+  Module Name: Az.VMware
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/VMware/VMware/help/New-AzVMwareAddonVrPropertyObject.md
+  PlatyPS schema version: 2024-05-01

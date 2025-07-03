@@ -1,0 +1,58 @@
+### YamlMime:PowerShellModule1
+uid: Az.PostgreSql
+name: Az.PostgreSql Module
+isPreview: false
+cmdletGroups:
+- title: Database for PostgreSQL
+  cmdlets:
+  - Az.PostgreSql.Get-AzPostgreSqlConfiguration
+  - Az.PostgreSql.Get-AzPostgreSqlConnectionString
+  - Az.PostgreSql.Get-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServerConfiguration
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServerConnectionString
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServerDatabase
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServerFirewallRule
+  - Az.PostgreSql.Get-AzPostgreSqlFlexibleServerLocationBasedCapability
+  - Az.PostgreSql.Get-AzPostgreSqlReplica
+  - Az.PostgreSql.Get-AzPostgreSqlServer
+  - Az.PostgreSql.Get-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.New-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.New-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.New-AzPostgreSqlFlexibleServerDatabase
+  - Az.PostgreSql.New-AzPostgreSqlFlexibleServerFirewallRule
+  - Az.PostgreSql.New-AzPostgreSqlReplica
+  - Az.PostgreSql.New-AzPostgreSqlServer
+  - Az.PostgreSql.New-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.Remove-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Remove-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Remove-AzPostgreSqlFlexibleServerDatabase
+  - Az.PostgreSql.Remove-AzPostgreSqlFlexibleServerFirewallRule
+  - Az.PostgreSql.Remove-AzPostgreSqlServer
+  - Az.PostgreSql.Remove-AzPostgreSqlVirtualNetworkRule
+  - Az.PostgreSql.Restart-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Restart-AzPostgreSqlServer
+  - Az.PostgreSql.Restore-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Restore-AzPostgreSqlServer
+  - Az.PostgreSql.Start-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Stop-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Test-AzPostgreSqlFlexibleServerConnect
+  - Az.PostgreSql.Update-AzPostgreSqlConfiguration
+  - Az.PostgreSql.Update-AzPostgreSqlFirewallRule
+  - Az.PostgreSql.Update-AzPostgreSqlFlexibleServer
+  - Az.PostgreSql.Update-AzPostgreSqlFlexibleServerConfiguration
+  - Az.PostgreSql.Update-AzPostgreSqlFlexibleServerFirewallRule
+  - Az.PostgreSql.Update-AzPostgreSqlServer
+  - Az.PostgreSql.Update-AzPostgreSqlVirtualNetworkRule
+description: |-
+  Microsoft Azure PowerShell: PostgreSql cmdlets
+metadata:
+  Module Name: Az.PostgreSql
+  Module Guid: b09b1b72-75a0-43a4-a342-b69a27eb64b5
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.postgresql
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Az.PostgreSql.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PostgreSql/PostgreSql/help/Az.PostgreSql.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

@@ -1,0 +1,308 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderCspmGcpOfferingObject
+name: New-AzSecurityDefenderCspmGcpOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderCspmGcpOffering.
+description: |-
+  Create an in-memory object for DefenderCspmGcpOffering.
+parameters:
+  cmdletParameters:
+  - name: CiemDiscoveryAzureActiveDirectoryAppName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      the azure active directory app name used of authenticating against GCP workload identity federation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CiemDiscoveryServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for CIEM discovery offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CiemDiscoveryWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GCP workload identity provider id for CIEM discovery offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationExclusionTag
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IDefenderCspmGcpOfferingVMScannersConfigurationExclusionTags" data-throw-if-not-resolved="False" />
+    description: |-
+      VM tags that indicates that VM should not be scanned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConfigurationScanningMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning mode for the VM scan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSensitivityDiscoveryEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender Data Sensitivity discovery enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSensitivityDiscoveryServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataSensitivityDiscoveryWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container agentless discovery enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container image assessment enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VMScannerEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender for Server VM scanning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderCspmGcpOfferingObject
+        [-CiemDiscoveryAzureActiveDirectoryAppName <String>]
+        [-CiemDiscoveryServiceAccountEmailAddress <String>]
+        [-CiemDiscoveryWorkloadIdentityProviderId <String>]
+        [-ConfigurationExclusionTag <IDefenderCspmGcpOfferingVMScannersConfigurationExclusionTags>]
+        [-ConfigurationScanningMode <String>]
+        [-DataSensitivityDiscoveryEnabled <Boolean>]
+        [-DataSensitivityDiscoveryServiceAccountEmailAddress <String>]
+        [-DataSensitivityDiscoveryWorkloadIdentityProviderId <String>]
+        [-MdcContainerAgentlessDiscoveryK8SEnabled <Boolean>]
+        [-MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress <String>]
+        [-MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId <String>]
+        [-MdcContainerImageAssessmentEnabled <Boolean>]
+        [-MdcContainerImageAssessmentServiceAccountEmailAddress <String>]
+        [-MdcContainerImageAssessmentWorkloadIdentityProviderId <String>]
+        [-VMScannerEnabled <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderCspmGcpOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderCspmGcpOffering object'
+  description: |-
+    ```powershell
+    $emailSuffix = "myproject.iam.gserviceaccount.com"
+    New-AzSecurityDefenderCspmGcpOfferingObject `
+        -VMScannerEnabled $true -ConfigurationScanningMode Default -ConfigurationExclusionTag @{key="value"} `
+        -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress "mdc-containers-k8s-operator@$emailSuffix" -MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId "containers" `
+        -MdcContainerImageAssessmentEnabled $true -MdcContainerImageAssessmentServiceAccountEmailAddress "mdc-containers-artifact-assess@$emailSuffix" -MdcContainerImageAssessmentWorkloadIdentityProviderId "containers" `
+        -DataSensitivityDiscoveryEnabled $true -DataSensitivityDiscoveryServiceAccountEmailAddress "mdc-data-sec-posture-storage@$emailSuffix" -DataSensitivityDiscoveryWorkloadIdentityProviderId "data-security-posture-storage" `
+        -CiemDiscoveryServiceAccountEmailAddress "microsoft-defender-ciem@$emailSuffix" -CiemDiscoveryAzureActiveDirectoryAppName "mciem-gcp-oidc-app" -CiemDiscoveryWorkloadIdentityProviderId "ciem-discovery"
+    ```
+
+    ```output
+    CiemDiscoveryAzureActiveDirectoryAppName                    : mciem-gcp-oidc-app
+    CiemDiscoveryServiceAccountEmailAddress                     : microsoft-defender-ciem@myproject.iam.gserviceaccount.com
+    CiemDiscoveryWorkloadIdentityProviderId                     : ciem-discovery
+    ConfigurationExclusionTag                                   : {
+                                                                    "key": "value"
+                                                                  }
+    ConfigurationScanningMode                                   : Default
+    DataSensitivityDiscoveryEnabled                             : True
+    DataSensitivityDiscoveryServiceAccountEmailAddress          : mdc-data-sec-posture-storage@myproject.iam.gserviceaccount.com
+    DataSensitivityDiscoveryWorkloadIdentityProviderId          : data-security-posture-storage
+    Description                                                 :
+    MdcContainerAgentlessDiscoveryK8SEnabled                    : True
+    MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress : mdc-containers-k8s-operator@myproject.iam.gserviceaccount.com
+    MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId : containers
+    MdcContainerImageAssessmentEnabled                          : True
+    MdcContainerImageAssessmentServiceAccountEmailAddress       : mdc-containers-artifact-assess@myproject.iam.gserviceaccount.com
+    MdcContainerImageAssessmentWorkloadIdentityProviderId       : containers
+    OfferingType                                                : DefenderCspmGcp
+    VMScannerEnabled                                            : True
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderCspmGcpOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefendercspmgcpofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderCspmGcpOfferingObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,179 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerActiveConnectivityConfiguration
+name: Get-AzNetworkManagerActiveConnectivityConfiguration
+module: Az.Network
+isPreview: false
+summary: |-
+  Lists NetworkManager Active Connectivity Configurations in network manager.
+description: |-
+  The **Get-AzNetworkManagerActiveConnectivityConfiguration** cmdlet lists NetworkManager Active Connectivity Configurations in network manager .
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: Region
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of regions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: SkipToken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SkipToken.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerActiveConnectivityConfiguration
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        [-Region <String[]>]
+        [-SkipToken <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSNetworkManagerActiveConnectivityConfigurationListResult" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $regions = @("centraluseuap")
+    Get-AzNetworkManagerActiveConnectivityConfiguration -NetworkManagerName "TestNMName" -ResourceGroupName "TestRG" -Region $regions -SkipToken "FakeSkipToken"
+    ```
+
+    ```output
+    Value     : [
+                  {
+                    "Region": "centraluseuap",
+                    "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/connectivityConfigurations/TestConn",
+                    "DisplayName": "Sample Config Name",
+                    "Description": "",
+                    "ConnectivityTopology": "HubAndSpoke",
+                    "Hubs": [
+                      {
+                        "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/provide
+                rs/Microsoft.Network/virtualNetworks/hub",
+                        "ResourceType": "Microsoft.Network/virtualNetworks"
+                      }
+                    ],
+                    "IsGlobal": "False",
+                    "AppliesToGroups": [
+                      {
+                        "NetworkGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/pro
+                viders/Microsoft.Network/networkManagers/TestNMName/networkGroups/testNG",
+                        "UseHubGateway": "False",
+                        "IsGlobal": "True",
+                        "GroupConnectivity": "None"
+                      }
+                    ],
+                    "ProvisioningState": "Succeeded",
+                    "DeleteExistingPeering": "True",
+                    "ConfigurationGroups": [
+                      {
+                        "Id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/networkManagers/TestNMName/networkGroups/testNG",
+                        "DisplayName": "DISplayName",
+                        "Description": "SampleDESCRIption",
+                        "GroupMembers": [
+                          {
+                            "ResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/TestRG/providers/Microsoft.Network/virtualNetworks/testvnet"
+                          }
+                        ],
+                        "ConditionalMembership": "",
+                        "ProvisioningState": "Succeeded"
+                      }
+                    ]
+                  }
+                ]
+    SkipToken :
+    ```
+
+    Lists NetworkManager Active Connectivity Configurations in network manager for region centraluseuap.
+links:
+- text: Get-AzNetworkManagerActiveSecurityAdminRule
+  href: ./Get-AzNetworkManagerActiveSecurityAdminRule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveConnectivityConfiguration.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanageractiveconnectivityconfiguration
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerActiveConnectivityConfiguration.md
+  PlatyPS schema version: 2024-05-01

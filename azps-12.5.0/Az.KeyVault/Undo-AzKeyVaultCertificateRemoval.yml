@@ -1,0 +1,205 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Undo-AzKeyVaultCertificateRemoval
+name: Undo-AzKeyVaultCertificateRemoval
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Recovers a deleted certificate in a key vault into an active state.
+description: |-
+  The **Undo-AzKeyVaultCertificateRemoval** cmdlet will recover a previously deleted certificate.
+  The recovered certificate will be active and can be used for all operations.
+  Caller needs to have 'recover' permission in order to perform this operation.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Deleted Certificate object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Certificate name.
+      Cmdlet constructs the FQDN of a certificate from vault name, currently selected environment and certificate name.
+    aliases:
+    - CertificateName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Vault name.
+      Cmdlet constructs the FQDN of a vault based on the name and currently selected environment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Default
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultCertificateRemoval
+        [-VaultName] <String>
+        [-Name] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Undo-AzKeyVaultCertificateRemoval
+        [-InputObject] <PSDeletedKeyVaultCertificateIdentityItem>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObject
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSDeletedKeyVaultCertificateIdentityItem" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultCertificate" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Undo-AzKeyVaultCertificateRemoval -VaultName 'MyKeyVault' -Name 'MyCertificate'
+    ```
+
+    ```output
+    Certificate   : [Subject]
+                      CN=contoso.com
+
+                    [Issuer]
+                      CN=contoso.com
+
+                    [Serial Number]
+                      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+                    [Not Before]
+                      5/24/2018 10:58:13 AM
+
+                    [Not After]
+                      11/24/2018 10:08:13 AM
+
+                    [Thumbprint]
+                      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+    KeyId         : https://mykeyvault.vault.azure.net:443/keys/mycertificate/7fe415d5518240c1a6fce89986b8d334
+    SecretId      : https://mykeyvault.vault.azure.net:443/secrets/mycertificate/7fe415d5518240c1a6fce89986b8d334
+    Thumbprint    : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    RecoveryLevel : Recoverable+Purgeable
+    Enabled       : True
+    Expires       : 11/24/2018 6:08:13 PM
+    NotBefore     : 5/24/2018 5:58:13 PM
+    Created       : 5/24/2018 6:08:13 PM
+    Updated       : 5/24/2018 6:08:13 PM
+    Tags          :
+    VaultName     : MyKeyVault
+    Name          : MyCertificate
+    Version       : 7fe415d5518240c1a6fce89986b8d334
+    Id            : https://mykeyvault.vault.azure.net:443/certificates/mycertificate/7fe415d5518240c1a6fce89986b8d334
+    ```
+
+    This command will recover the certificate 'MyCertificate' that was previously deleted, into an active and usable state.
+links:
+- text: Remove-AzKeyVaultCertificate
+  href: ./Remove-AzKeyVaultCertificate.yml
+- text: Get-AzKeyVaultCertificate
+  href: ./Get-AzKeyVaultCertificate.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultCertificateRemoval.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/undo-azkeyvaultcertificateremoval
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Undo-AzKeyVaultCertificateRemoval.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,186 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterLibrary
+name: Get-AzHdInsightOnAksClusterLibrary
+module: Az.HdInsightOnAks
+isPreview: false
+summary: |-
+  Get all libraries of HDInsight on AKS cluster.
+description: |-
+  Get all libraries of HDInsight on AKS cluster.
+parameters:
+  cmdletParameters:
+  - name: Category
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The system query option to filter libraries returned in the response.
+      Allowed value is 'custom' or 'predefined'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the HDInsight cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClusterPoolName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the cluster pool.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzHdInsightOnAksClusterLibrary
+        -ClusterName <String>
+        -ClusterPoolName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        -Category <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.HdInsightOnAks.Models.IClusterLibrary" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all custom libraries on the cluster.'
+  description: |-
+    ```powershell
+    $clusterResourceGroupName = "Group"
+    $clusterpoolName = "ps-test-pool"
+    $clusterName = "flinkcluster"
+    Get-AzHdInsightOnAksClusterLibrary -ResourceGroupName $clusterResourceGroupName -ClusterName $clusterName -ClusterPoolName $clusterpoolName -Category custom
+    ```
+
+    ```output
+    Id                           :
+    Message                      :
+    Name                         :
+    PropertiesType               : pypi
+    Property                     : {
+                                     "type": "pypi",
+                                     "remarks": "",
+                                     "status": "INSTALLING",
+                                     "name": "pandas"
+                                   }
+    Remark                       :
+    Status                       : INSTALLING
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Timestamp                    :
+    Type                         :
+    ```
+
+    List all custom libraries on the cluster.
+- title: 'Example 2: List all predefined libraries on the cluster.'
+  description: |-
+    ```powershell
+    $clusterResourceGroupName = "Group"
+    $clusterpoolName = "ps-test-pool"
+    $clusterName = "flinkcluster"
+    Get-AzHdInsightOnAksClusterLibrary -ResourceGroupName $clusterResourceGroupName -ClusterName $clusterName -ClusterPoolName $clusterpoolName -Category preddfine
+    ```
+
+    ```output
+    Name SystemDataCreatedAt SystemDataCreatedBy SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType
+    ---- ------------------- ------------------- ----------------------- ------------------------ ------------------------ ----------------------------
+    ```
+
+    List all predefined libraries on the cluster.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/Get-AzHdInsightOnAksClusterLibrary.md
+  document type: cmdlet
+  external help file: Az.HdInsightOnAks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.hdinsightonaks/get-azhdinsightonaksclusterlibrary
+  Module Name: Az.HdInsightOnAks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/Get-AzHdInsightOnAksClusterLibrary.md
+  PlatyPS schema version: 2024-05-01

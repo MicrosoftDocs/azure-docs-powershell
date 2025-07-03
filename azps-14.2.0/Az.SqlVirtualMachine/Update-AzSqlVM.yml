@@ -1,0 +1,1049 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SqlVirtualMachine.Update-AzSqlVM
+name: Update-AzSqlVM
+module: Az.SqlVirtualMachine
+isPreview: false
+summary: |-
+  Updates a SQL virtual machine.
+description: |-
+  Updates a SQL virtual machine.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssessmentSettingEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable SQL best practices Assessment feature on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AssessmentSettingRunImmediately
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run SQL best practices Assessment immediately on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingBackupScheduleType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.BackupScheduleType" data-throw-if-not-resolved="False" />
+    description: |-
+      Backup schedule type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingBackupSystemDb
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Include or exclude system databases from auto backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingDaysOfWeek
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.AutoBackupDaysOfWeek" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Days of the week for the backups when FullBackupFrequency is set to Weekly.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable autobackup on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingEnableEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable encryption for backup on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingFullBackupFrequency
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.FullBackupFrequencyType" data-throw-if-not-resolved="False" />
+    description: |-
+      Frequency of full backups.
+      In both cases, full backups begin during the next scheduled time window.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingFullBackupStartTime
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Start time of a given day during which full backups can take place.
+      0-23 hours.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingFullBackupWindowHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Duration of the time window of a given day during which full backups can take place.
+      1-23 hours.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingLogBackupFrequency
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Frequency of log backups.
+      5-60 minutes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Password for encryption on backup.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingRetentionPeriod
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Retention period of backup: 1-90 days.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingStorageAccessKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account key where backup will be taken to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingStorageAccountUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account url where backup will be taken to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoBackupSettingStorageContainerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage container name where backup will be taken to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPatchingSettingDayOfWeek
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.DayOfWeek" data-throw-if-not-resolved="False" />
+    description: |-
+      Day of week to apply the patch on.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPatchingSettingEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable autopatching on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPatchingSettingMaintenanceWindowDuration
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Duration of patching.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AutoPatchingSettingMaintenanceWindowStartingHour
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Hour of the day when patching is initiated.
+      Local VM time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableAutomaticUpgrade
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable automatic upgrade of Sql IaaS extension Agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Models.ISqlVirtualMachineIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LicenseType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.SqlServerLicenseType" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL Server license type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ManagedIdentityClientId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The client Id of the Managed Identity to query Microsoft Graph API.
+      An empty string must be used for the system assigned Managed Identity
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the SQL virtual machine.
+    aliases:
+    - SqlVirtualMachineName
+    - SqlVMName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Offer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL image offer.
+      Examples include SQL2016-WS2016, SQL2017-WS2016.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the resource group that contains the resource.
+      You can obtain this value from the Azure Resource Manager API or the portal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleDayOfWeek
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.AssessmentDayOfWeek" data-throw-if-not-resolved="False" />
+    description: |-
+      Day of the week to run assessment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleEnable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable or disable assessment schedule on SQL virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleMonthlyOccurrence
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Occurrence of the DayOfWeek day within a month to schedule assessment.
+      Takes values: 1,2,3,4 and -1.
+      Use -1 for last DayOfWeek day of the month
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleStartTime
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Time of the day in HH:mm format.
+      Eg.
+      17:30
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScheduleWeeklyInterval
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Number of weeks to schedule between 2 assessment runs.
+      Takes value from 1-6
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Sku
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.SqlImageSku" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL Server edition type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlManagementType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Support.SqlManagementMode" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL Server Management type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlVirtualMachineGroupResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription ID that identifies an Azure subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.Collections.Hashtable" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource tags.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM Resource id of underlying virtual machine created from SQL marketplace image.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WsfcDomainCredentialsClusterBootstrapAccountPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster bootstrap account password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WsfcDomainCredentialsClusterOperatorAccountPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      Cluster operator account password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WsfcDomainCredentialsSqlServiceAccountPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      SQL service account password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WsfcStaticIP
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzSqlVM
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-LicenseType <SqlServerLicenseType>]
+        [-Offer <String>]
+        [-Sku <SqlImageSku>]
+        [-SqlManagementType <SqlManagementMode>]
+        [-Tag <Hashtable>]
+        [-AutoBackupSettingBackupScheduleType <BackupScheduleType>]
+        [-AutoBackupSettingBackupSystemDb]
+        [-AutoBackupSettingDaysOfWeek <AutoBackupDaysOfWeek[]>]
+        [-AutoBackupSettingEnable]
+        [-AutoBackupSettingEnableEncryption]
+        [-AutoBackupSettingFullBackupFrequency <FullBackupFrequencyType>]
+        [-AutoBackupSettingFullBackupStartTime <Int32>]
+        [-AutoBackupSettingFullBackupWindowHour <Int32>]
+        [-AutoBackupSettingLogBackupFrequency <Int32>]
+        [-AutoBackupSettingPassword <SecureString>]
+        [-AutoBackupSettingRetentionPeriod <Int32>]
+        [-AutoBackupSettingStorageAccessKey <String>]
+        [-AutoBackupSettingStorageAccountUrl <String>]
+        [-AutoBackupSettingStorageContainerName <String>]
+        [-AutoPatchingSettingDayOfWeek <DayOfWeek>]
+        [-AutoPatchingSettingEnable]
+        [-AutoPatchingSettingMaintenanceWindowDuration <Int32>]
+        [-AutoPatchingSettingMaintenanceWindowStartingHour <Int32>]
+        [-AssessmentSettingEnable]
+        [-AssessmentSettingRunImmediately]
+        [-ScheduleDayOfWeek <AssessmentDayOfWeek>]
+        [-ScheduleEnable]
+        [-ScheduleMonthlyOccurrence <Int32>]
+        [-ScheduleStartTime <String>]
+        [-ScheduleWeeklyInterval <Int32>]
+        [-SqlVirtualMachineGroupResourceId <String>]
+        [-VirtualMachineResourceId <String>]
+        [-WsfcDomainCredentialsClusterBootstrapAccountPassword <SecureString>]
+        [-WsfcDomainCredentialsClusterOperatorAccountPassword <SecureString>]
+        [-WsfcDomainCredentialsSqlServiceAccountPassword <SecureString>]
+        [-WsfcStaticIP <String>]
+        [-EnableAutomaticUpgrade]
+        [-ManagedIdentityClientId <String>]
+        [-IdentityType <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzSqlVM
+        -InputObject <ISqlVirtualMachineIdentity>
+        [-LicenseType <SqlServerLicenseType>]
+        [-Offer <String>]
+        [-Sku <SqlImageSku>]
+        [-SqlManagementType <SqlManagementMode>]
+        [-Tag <Hashtable>]
+        [-AutoBackupSettingBackupScheduleType <BackupScheduleType>]
+        [-AutoBackupSettingBackupSystemDb]
+        [-AutoBackupSettingDaysOfWeek <AutoBackupDaysOfWeek[]>]
+        [-AutoBackupSettingEnable]
+        [-AutoBackupSettingEnableEncryption]
+        [-AutoBackupSettingFullBackupFrequency <FullBackupFrequencyType>]
+        [-AutoBackupSettingFullBackupStartTime <Int32>]
+        [-AutoBackupSettingFullBackupWindowHour <Int32>]
+        [-AutoBackupSettingLogBackupFrequency <Int32>]
+        [-AutoBackupSettingPassword <SecureString>]
+        [-AutoBackupSettingRetentionPeriod <Int32>]
+        [-AutoBackupSettingStorageAccessKey <String>]
+        [-AutoBackupSettingStorageAccountUrl <String>]
+        [-AutoBackupSettingStorageContainerName <String>]
+        [-AutoPatchingSettingDayOfWeek <DayOfWeek>]
+        [-AutoPatchingSettingEnable]
+        [-AutoPatchingSettingMaintenanceWindowDuration <Int32>]
+        [-AutoPatchingSettingMaintenanceWindowStartingHour <Int32>]
+        [-AssessmentSettingEnable]
+        [-AssessmentSettingRunImmediately]
+        [-ScheduleDayOfWeek <AssessmentDayOfWeek>]
+        [-ScheduleEnable]
+        [-ScheduleMonthlyOccurrence <Int32>]
+        [-ScheduleStartTime <String>]
+        [-ScheduleWeeklyInterval <Int32>]
+        [-SqlVirtualMachineGroupResourceId <String>]
+        [-VirtualMachineResourceId <String>]
+        [-WsfcDomainCredentialsClusterBootstrapAccountPassword <SecureString>]
+        [-WsfcDomainCredentialsClusterOperatorAccountPassword <SecureString>]
+        [-WsfcDomainCredentialsSqlServiceAccountPassword <SecureString>]
+        [-WsfcStaticIP <String>]
+        [-EnableAutomaticUpgrade]
+        [-ManagedIdentityClientId <String>]
+        [-IdentityType <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Models.ISqlVirtualMachineIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SqlVirtualMachine.Models.Api20220801Preview.ISqlVirtualMachine" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -LicenseType 'AHUB' -Tag @{'newkey'='newvalue'}
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine with AHUB billing and add a tag.
+- title: Example 2
+  description: |-
+    ```powershell
+    $sqlVM = Get-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1'
+    $sqlVM | Update-AzSqlVM -Sku 'Standard' -LicenseType 'AHUB'
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine's sku and license type via identity.
+- title: Example 3
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -AutoBackupSettingEnable `
+    -AutoBackupSettingBackupScheduleType manual -AutoBackupSettingFullBackupFrequency Weekly -AutoBackupSettingFullBackupStartTime 5 `
+    -AutoBackupSettingFullBackupWindowHour 2 -AutoBackupSettingStorageAccessKey 'keyvalue' -AutoBackupSettingStorageAccountUrl `
+    'https://storagename.blob.core.windows.net/' -AutoBackupSettingRetentionPeriod 10 -AutoBackupSettingLogBackupFrequency 60 `
+    -AutoBackupSettingStorageContainerName 'storagecontainername'
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to enable auto backup.
+- title: Example 4
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -AutoBackupSettingEnable:$false
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to disable auto backup.
+- title: Example 5
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' `
+    -AutoPatchingSettingDayOfWeek Thursday `
+    -AutoPatchingSettingMaintenanceWindowDuration 120 -AutoPatchingSettingMaintenanceWindowStartingHour 3 -AutoPatchingSettingEnable
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to enable auto patching.
+- title: Example 6
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -AutoPatchingSettingEnable:$false
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to disable auto patching.
+- title: Example 7
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -AssessmentSettingEnable
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to enable assessment.
+- title: Example 8
+  description: |-
+    ```powershell
+    $securepwd = ConvertTo-SecureString -String "****" -AsPlainText -Force
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' `
+    -SqlVirtualMachineGroupResourceId '<group resource id>' `
+    -WsfcDomainCredentialsClusterBootstrapAccountPassword $securepwd `
+    -WsfcDomainCredentialsClusterOperatorAccountPassword $securepwd `
+    -WsfcDomainCredentialsSqlServiceAccountPassword $securepwd
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to add it to a SQL VM group.
+- title: Example 9
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -SqlVirtualMachineGroupResourceId ''
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to remove it from a SQL VM group.
+- title: Example 10
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1'  -Tag @{'newkey'='newvalue'} -AsJob
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine's tag as a background job.
+- title: Example 11
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -IdentityType 'SystemAssigned'
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to enable Microsoft Entra authentication using "System-assigned managed identity"
+- title: Example 12
+  description: |-
+    ```powershell
+    Update-AzSqlVM -ResourceGroupName 'ResourceGroup01' -Name 'sqlvm1' -IdentityType 'UserAssigned' -ManagedIdentityClientId '00001111-aaaa-2222-bbbb-3333cccc4444'
+    ```
+
+    ```output
+    Location	Name		ResourceGroupName
+    --------	----		-----------------
+    eastus		sqlvm1		ResourceGroup01
+    ```
+
+    Update a SQL virtual machine to enable Microsoft Entra authentication using "User-assigned managed identity"
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Update-AzSqlVM.md
+  document type: cmdlet
+  external help file: Az.SqlVirtualMachine-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sqlvirtualmachine/update-azsqlvm
+  Module Name: Az.SqlVirtualMachine
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SqlVirtualMachine/SqlVirtualMachine/help/Update-AzSqlVM.md
+  PlatyPS schema version: 2024-05-01

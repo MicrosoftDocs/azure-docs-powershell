@@ -1,0 +1,233 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Start-AzureSqlDatabaseImport
+name: Start-AzureSqlDatabaseImport
+module: Azure
+isPreview: false
+summary: |-
+  Starts an import operation from blob storage to an Azure SQL Database.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Start-AzureSqlDatabaseImport** cmdlet starts an import operation from Azure Blob storage to an Azure SQL Database.
+  If the database does not exist, this cmdlet creates it by using the size and edition values that you specify.
+  The operation requires a database server connection context.
+  Use the Get-AzureSqlDatabaseImportExportStatus cmdlet to get the status of the import operation.
+parameters:
+  cmdletParameters:
+  - name: BlobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure Blob storage from which this cmdlet imports the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseMaxSize
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the maximum size, in gigabytes, for the database.
+      If the database does not exist, this cmdlet creates it based on this maximum size.
+      The acceptable values differ based on edition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the database.
+      If the database does not exist, this cmdlet creates it, and assigns the name that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Edition
+    type: <xref href="DatabaseEdition" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the edition of the database.
+      If the database does not exist, this cmdlet creates it as this edition.
+      Valid values are:
+
+      - None
+      - Web
+      - Business
+      - Basic
+      - Standard
+      - Premium
+
+      The default is Web.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlConnectionContext
+    type: <xref href="ISqlServerConnectionInformation" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the connection context of a server that contains the database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContainer
+    type: <xref href="AzureStorageContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage container that contains the Blob from which this cmdlet imports a database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByContainerObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContainerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Blob storage container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByContainerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageContext
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the context of the Blob storage container.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByContainerName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseImport
+        -SqlConnectionContext <ISqlServerConnectionInformation>
+        -StorageContainer <AzureStorageContainer>
+        -DatabaseName <String>
+        -BlobName <String>
+        [-Edition <DatabaseEdition>]
+        [-DatabaseMaxSize <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByContainerObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Start-AzureSqlDatabaseImport
+        -SqlConnectionContext <ISqlServerConnectionInformation>
+        -StorageContext <IStorageContext>
+        -StorageContainerName <String>
+        -DatabaseName <String>
+        -BlobName <String>
+        [-Edition <DatabaseEdition>]
+        [-DatabaseMaxSize <Int32>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByContainerName
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Services.ImportExportRequest" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import a database'
+  description: |-
+    ```
+    PS C:\>$Credential = Get-Credential
+    PS C:\> $SqlContext = New-AzureSqlDatabaseServerContext -ServerName $ServerName -Credentials $Credential
+    PS C:\> $StorageContext = New-AzureStorageContext -StorageAccountName $StorageName -StorageAccountKey $StorageKey
+    PS C:\> $Container = Get-AzureStorageContainer -Name $ContainerName -Context $StorageContext
+    PS C:\> $ImportRequest = Start-AzureSqlDatabaseImport -SqlConnectionContext $SqlContext -StorageContainer $Container -DatabaseName $DatabaseName -BlobName $BlobName
+    ```
+
+    This example initiates an import process from the Blob storage in the $BlobName variable into the Azure SQL Database named DatabaseName.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: Import Database
+  href: https://msdn.microsoft.com/en-us/library/azure/dn781284.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: Get-AzureSqlDatabaseImportExportStatus
+  href: ./Get-AzureSqlDatabaseImportExportStatus.yml
+- text: Start-AzureSqlDatabaseExport
+  href: ./Start-AzureSqlDatabaseExport.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5EE936CA-DD9A-4BC6-B835-E22AE633B46D
+  PlatyPS schema version: 2024-05-01

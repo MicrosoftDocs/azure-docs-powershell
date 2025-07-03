@@ -1,0 +1,54 @@
+### YamlMime:PowerShellModule1
+uid: Az.PaloAltoNetworks
+name: Az.PaloAltoNetworks Module
+isPreview: false
+cmdletGroups:
+- title: PaloAltoNetworks
+  cmdlets:
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksCertificateObjectLocalRulestack
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksFirewall
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksFirewallLogProfile
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksFirewallStatus
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksFqdnListLocalRulestack
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRule
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRulestack
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRulestackAppId
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRulestackChangeLog
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRulestackFirewall
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksLocalRulestackSupportInfo
+  - Az.PaloAltoNetworks.Get-AzPaloAltoNetworksPrefixListLocalRulestack
+  - Az.PaloAltoNetworks.Invoke-AzPaloAltoNetworksCommitLocalRulestack
+  - Az.PaloAltoNetworks.Invoke-AzPaloAltoNetworksRevertLocalRulestack
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksCertificateObjectLocalRulestack
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksFirewall
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksFqdnListLocalRulestack
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksFrontendSettingObject
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksIPAddressObject
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksLocalRule
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksLocalRulestack
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksPrefixListLocalRulestack
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksProfileObject
+  - Az.PaloAltoNetworks.New-AzPaloAltoNetworksTagInfoObject
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksCertificateObjectLocalRulestack
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksFirewall
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksFqdnListLocalRulestack
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksLocalRule
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksLocalRulestack
+  - Az.PaloAltoNetworks.Remove-AzPaloAltoNetworksPrefixListLocalRulestack
+  - Az.PaloAltoNetworks.Reset-AzPaloAltoNetworksLocalRuleCounter
+  - Az.PaloAltoNetworks.Save-AzPaloAltoNetworksFirewallLogProfile
+  - Az.PaloAltoNetworks.Update-AzPaloAltoNetworksFirewall
+  - Az.PaloAltoNetworks.Update-AzPaloAltoNetworksLocalRuleCounter
+  - Az.PaloAltoNetworks.Update-AzPaloAltoNetworksLocalRulestack
+description: |-
+  Microsoft Azure PowerShell: PaloAltoNetworks cmdlets
+metadata:
+  Module Name: Az.PaloAltoNetworks
+  Module Guid: 787ef00f-9345-469d-9156-0654cdc69286
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.paloaltonetworks
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Az.PaloAltoNetworks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Az.PaloAltoNetworks.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

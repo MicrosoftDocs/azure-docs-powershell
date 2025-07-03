@@ -1,0 +1,1149 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PaloAltoNetworks.Save-AzPaloAltoNetworksFirewallLogProfile
+name: Save-AzPaloAltoNetworksFirewallLogProfile
+module: Az.PaloAltoNetworks
+isPreview: false
+summary: |-
+  Log Profile for Firewall
+description: |-
+  Log Profile for Firewall
+parameters:
+  cmdletParameters:
+  - name: ApplicationInsightId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource id for Application Insights
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationInsightKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Application Insights key
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationEventHubConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of EventHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationEventHubConfigurationsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationEventHubConfigurationsNameSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationEventHubConfigurationsPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub policy name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationEventHubConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationMonitorConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of MonitorLog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationMonitorConfigurationsPrimaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationMonitorConfigurationsSecondaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationMonitorConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationMonitorConfigurationsWorkspace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      MonitorLog workspace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationStorageConfigurationsAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationStorageConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of storage account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommonDestinationStorageConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationEventHubConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of EventHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationEventHubConfigurationsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationEventHubConfigurationsNameSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationEventHubConfigurationsPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub policy name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationEventHubConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationMonitorConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of MonitorLog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationMonitorConfigurationsPrimaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationMonitorConfigurationsSecondaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationMonitorConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationMonitorConfigurationsWorkspace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      MonitorLog workspace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationStorageConfigurationsAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationStorageConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of storage account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DecryptLogDestinationStorageConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FirewallName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Firewall resource name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SaveExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.IPaloAltoNetworksIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SaveViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogOption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Log option SAME/INDIVIDUAL
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      One of possible log type
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns true when the command succeeds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SaveExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SaveExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationEventHubConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of EventHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationEventHubConfigurationsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationEventHubConfigurationsNameSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationEventHubConfigurationsPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub policy name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationEventHubConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationMonitorConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of MonitorLog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationMonitorConfigurationsPrimaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationMonitorConfigurationsSecondaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationMonitorConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationMonitorConfigurationsWorkspace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      MonitorLog workspace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationStorageConfigurationsAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationStorageConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of storage account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ThreatLogDestinationStorageConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationEventHubConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of EventHub
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationEventHubConfigurationsName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationEventHubConfigurationsNameSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub namespace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationEventHubConfigurationsPolicyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      EventHub policy name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationEventHubConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationMonitorConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of MonitorLog
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationMonitorConfigurationsPrimaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationMonitorConfigurationsSecondaryKey
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary Key value for Monitor
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationMonitorConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationMonitorConfigurationsWorkspace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      MonitorLog workspace
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationStorageConfigurationsAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Storage account name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationStorageConfigurationsId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID of storage account
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrafficLogDestinationStorageConfigurationsSubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Save-AzPaloAltoNetworksFirewallLogProfile
+        -FirewallName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-ApplicationInsightId <String>]
+        [-ApplicationInsightKey <String>]
+        [-CommonDestinationEventHubConfigurationsId <String>]
+        [-CommonDestinationEventHubConfigurationsName <String>]
+        [-CommonDestinationEventHubConfigurationsNameSpace <String>]
+        [-CommonDestinationEventHubConfigurationsPolicyName <String>]
+        [-CommonDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-CommonDestinationMonitorConfigurationsId <String>]
+        [-CommonDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-CommonDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-CommonDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-CommonDestinationMonitorConfigurationsWorkspace <String>]
+        [-CommonDestinationStorageConfigurationsAccountName <String>]
+        [-CommonDestinationStorageConfigurationsId <String>]
+        [-CommonDestinationStorageConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationEventHubConfigurationsId <String>]
+        [-DecryptLogDestinationEventHubConfigurationsName <String>]
+        [-DecryptLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-DecryptLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-DecryptLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-DecryptLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-DecryptLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-DecryptLogDestinationStorageConfigurationsAccountName <String>]
+        [-DecryptLogDestinationStorageConfigurationsId <String>]
+        [-DecryptLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-LogOption <String>]
+        [-LogType <String>]
+        [-ThreatLogDestinationEventHubConfigurationsId <String>]
+        [-ThreatLogDestinationEventHubConfigurationsName <String>]
+        [-ThreatLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-ThreatLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-ThreatLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-ThreatLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-ThreatLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-ThreatLogDestinationStorageConfigurationsAccountName <String>]
+        [-ThreatLogDestinationStorageConfigurationsId <String>]
+        [-ThreatLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationEventHubConfigurationsId <String>]
+        [-TrafficLogDestinationEventHubConfigurationsName <String>]
+        [-TrafficLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-TrafficLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-TrafficLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-TrafficLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-TrafficLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-TrafficLogDestinationStorageConfigurationsAccountName <String>]
+        [-TrafficLogDestinationStorageConfigurationsId <String>]
+        [-TrafficLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SaveExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Save-AzPaloAltoNetworksFirewallLogProfile
+        -InputObject <IPaloAltoNetworksIdentity>
+        [-ApplicationInsightId <String>]
+        [-ApplicationInsightKey <String>]
+        [-CommonDestinationEventHubConfigurationsId <String>]
+        [-CommonDestinationEventHubConfigurationsName <String>]
+        [-CommonDestinationEventHubConfigurationsNameSpace <String>]
+        [-CommonDestinationEventHubConfigurationsPolicyName <String>]
+        [-CommonDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-CommonDestinationMonitorConfigurationsId <String>]
+        [-CommonDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-CommonDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-CommonDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-CommonDestinationMonitorConfigurationsWorkspace <String>]
+        [-CommonDestinationStorageConfigurationsAccountName <String>]
+        [-CommonDestinationStorageConfigurationsId <String>]
+        [-CommonDestinationStorageConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationEventHubConfigurationsId <String>]
+        [-DecryptLogDestinationEventHubConfigurationsName <String>]
+        [-DecryptLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-DecryptLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-DecryptLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-DecryptLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-DecryptLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-DecryptLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-DecryptLogDestinationStorageConfigurationsAccountName <String>]
+        [-DecryptLogDestinationStorageConfigurationsId <String>]
+        [-DecryptLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-LogOption <String>]
+        [-LogType <String>]
+        [-ThreatLogDestinationEventHubConfigurationsId <String>]
+        [-ThreatLogDestinationEventHubConfigurationsName <String>]
+        [-ThreatLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-ThreatLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-ThreatLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-ThreatLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-ThreatLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-ThreatLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-ThreatLogDestinationStorageConfigurationsAccountName <String>]
+        [-ThreatLogDestinationStorageConfigurationsId <String>]
+        [-ThreatLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationEventHubConfigurationsId <String>]
+        [-TrafficLogDestinationEventHubConfigurationsName <String>]
+        [-TrafficLogDestinationEventHubConfigurationsNameSpace <String>]
+        [-TrafficLogDestinationEventHubConfigurationsPolicyName <String>]
+        [-TrafficLogDestinationEventHubConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsPrimaryKey <String>]
+        [-TrafficLogDestinationMonitorConfigurationsSecondaryKey <String>]
+        [-TrafficLogDestinationMonitorConfigurationsSubscriptionId <String>]
+        [-TrafficLogDestinationMonitorConfigurationsWorkspace <String>]
+        [-TrafficLogDestinationStorageConfigurationsAccountName <String>]
+        [-TrafficLogDestinationStorageConfigurationsId <String>]
+        [-TrafficLogDestinationStorageConfigurationsSubscriptionId <String>]
+        [-DefaultProfile <PSObject>]
+        [-PassThru]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SaveViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.IPaloAltoNetworksIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Log Profile for Firewall.'
+  description: |-
+    ```powershell
+    Save-AzPaloAltoNetworksFirewallLogProfile -FirewallName azps-firewall -ResourceGroupName azps_test_group_pan -LogType TRAFFIC -LogOption SAME_DESTINATION -CommonDestinationMonitorConfigurationsId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/sudh_fire_test/providers/Microsoft.OperationalInsights/workspaces/testAnalyticsX -CommonDestinationMonitorConfigurationsPrimaryKey 7******Q== -CommonDestinationMonitorConfigurationsSecondaryKey 7******w== -CommonDestinationMonitorConfigurationsSubscriptionId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -CommonDestinationMonitorConfigurationsWorkspace XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX -PassThru
+    ```
+
+    ```output
+    True
+    ```
+
+    Log Profile for Firewall.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Save-AzPaloAltoNetworksFirewallLogProfile.md
+  document type: cmdlet
+  external help file: Az.PaloAltoNetworks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.paloaltonetworks/save-azpaloaltonetworksfirewalllogprofile
+  Module Name: Az.PaloAltoNetworks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/Save-AzPaloAltoNetworksFirewallLogProfile.md
+  PlatyPS schema version: 2024-05-01

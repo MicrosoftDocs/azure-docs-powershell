@@ -1,0 +1,290 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderForContainersAwsOfferingObject
+name: New-AzSecurityDefenderForContainersAwsOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderForContainersAwsOffering.
+description: |-
+  Create an in-memory object for DefenderForContainersAwsOffering.
+parameters:
+  cmdletParameters:
+  - name: AutoProvisioning
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is audit logs pipeline auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CloudWatchToKinesiCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS used by CloudWatch to transfer data into Kinesis.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerVulnerabilityAssessmentCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContainerVulnerabilityAssessmentTaskCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableContainerVulnerabilityAssessment
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable container vulnerability assessment feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KinesiToS3CloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS used by Kinesis to transfer data into S3.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KubeAuditRetentionTime
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The retention time in days of kube audit logs set on the CloudWatch log group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KubernetesScubaReaderCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature used for reading data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KubernetesServiceCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature used for provisioning resources.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container agentless discovery K8s enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentCloudRoleArn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The cloud role ARN in AWS for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container image assessment enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScubaExternalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The externalId used by the data reader to prevent the confused deputy attack.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderForContainersAwsOfferingObject
+        [-AutoProvisioning <Boolean>]
+        [-CloudWatchToKinesiCloudRoleArn <String>]
+        [-ContainerVulnerabilityAssessmentCloudRoleArn <String>]
+        [-ContainerVulnerabilityAssessmentTaskCloudRoleArn <String>]
+        [-EnableContainerVulnerabilityAssessment <Boolean>]
+        [-KinesiToS3CloudRoleArn <String>]
+        [-KubeAuditRetentionTime <Int64>]
+        [-KubernetesScubaReaderCloudRoleArn <String>]
+        [-KubernetesServiceCloudRoleArn <String>]
+        [-MdcContainerAgentlessDiscoveryK8SCloudRoleArn <String>]
+        [-MdcContainerAgentlessDiscoveryK8SEnabled <Boolean>]
+        [-MdcContainerImageAssessmentCloudRoleArn <String>]
+        [-MdcContainerImageAssessmentEnabled <Boolean>]
+        [-ScubaExternalId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderForContainersAwsOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderForContainersAwsOffering object'
+  description: |-
+    ```powershell
+    $arnPrefix = "arn:aws:iam::123456789012:role"
+    New-AzSecurityDefenderForContainersAwsOfferingObject `
+        -AutoProvisioning $true -KubernetesServiceCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s" -KubernetesScubaReaderCloudRoleArn "$arnPrefix/DefenderForCloud-DataCollection" `
+        -KinesiToS3CloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-kinesis-to-s3" -CloudWatchToKinesiCloudRoleArn "$arnPrefix/DefenderForCloud-Containers-K8s-cloudwatch-to-kinesis" `
+        -KubeAuditRetentionTime 30 -ScubaExternalId "a47ae0a2-7bf7-482a-897a-7a139d30736c" `
+        -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SCloudRoleArn "$arnPrefix/MDCContainersAgentlessDiscoveryK8sRole" `
+        -MdcContainerImageAssessmentEnabled $true -MdcContainerImageAssessmentCloudRoleArn "$arnPrefix/MDCContainersImageAssessmentRole" `
+        -EnableContainerVulnerabilityAssessment $false
+    ```
+
+    ```output
+    AutoProvisioning                                 : True
+    CloudWatchToKinesiCloudRoleArn                   : arn:aws:iam::123456789012:role/DefenderForCloud-Containers-K8s-cloudwatch-to-kinesis
+    ContainerVulnerabilityAssessmentCloudRoleArn     :
+    ContainerVulnerabilityAssessmentTaskCloudRoleArn :
+    Description                                      :
+    EnableContainerVulnerabilityAssessment           : False
+    KinesiToS3CloudRoleArn                           : arn:aws:iam::123456789012:role/DefenderForCloud-Containers-K8s-kinesis-to-s3
+    KubeAuditRetentionTime                           : 30
+    KuberneteScubaReaderCloudRoleArn                 : arn:aws:iam::123456789012:role/DefenderForCloud-DataCollection
+    KuberneteServiceCloudRoleArn                     : arn:aws:iam::123456789012:role/DefenderForCloud-Containers-K8s
+    MdcContainerAgentlessDiscoveryK8SCloudRoleArn    : arn:aws:iam::123456789012:role/MDCContainersAgentlessDiscoveryK8sRole
+    MdcContainerAgentlessDiscoveryK8SEnabled         : True
+    MdcContainerImageAssessmentCloudRoleArn          : arn:aws:iam::123456789012:role/MDCContainersImageAssessmentRole
+    MdcContainerImageAssessmentEnabled               : True
+    OfferingType                                     : DefenderForContainersAws
+    ScubaExternalId                                  : a47ae0a2-7bf7-482a-897a-7a139d30736c
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForContainersAwsOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefenderforcontainersawsofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForContainersAwsOfferingObject.md
+  PlatyPS schema version: 2024-05-01

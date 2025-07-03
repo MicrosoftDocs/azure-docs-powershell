@@ -1,0 +1,41 @@
+### YamlMime:PowerShellModule1
+uid: Az.Chaos
+name: Az.Chaos Module
+isPreview: false
+cmdletGroups:
+- title: Chaos
+  cmdlets:
+  - Az.Chaos.Get-AzChaosCapability
+  - Az.Chaos.Get-AzChaosCapabilityType
+  - Az.Chaos.Get-AzChaosExecutionExperimentDetail
+  - Az.Chaos.Get-AzChaosExperiment
+  - Az.Chaos.Get-AzChaosExperimentExecution
+  - Az.Chaos.Get-AzChaosTarget
+  - Az.Chaos.Get-AzChaosTargetType
+  - Az.Chaos.New-AzChaosActionObject
+  - Az.Chaos.New-AzChaosBranchObject
+  - Az.Chaos.New-AzChaosCapability
+  - Az.Chaos.New-AzChaosExperiment
+  - Az.Chaos.New-AzChaosSelectorObject
+  - Az.Chaos.New-AzChaosStepObject
+  - Az.Chaos.New-AzChaosTarget
+  - Az.Chaos.Remove-AzChaosCapability
+  - Az.Chaos.Remove-AzChaosExperiment
+  - Az.Chaos.Remove-AzChaosTarget
+  - Az.Chaos.Start-AzChaosExperiment
+  - Az.Chaos.Stop-AzChaosExperiment
+  - Az.Chaos.Update-AzChaosCapability
+  - Az.Chaos.Update-AzChaosExperiment
+  - Az.Chaos.Update-AzChaosTarget
+description: |-
+  Microsoft Azure PowerShell: Chaos cmdlets
+metadata:
+  Module Name: Az.Chaos
+  Module Guid: ca01a43f-b9c7-4e71-a41d-a185e2355c98
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.chaos
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Az.Chaos.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Chaos/Chaos/help/Az.Chaos.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

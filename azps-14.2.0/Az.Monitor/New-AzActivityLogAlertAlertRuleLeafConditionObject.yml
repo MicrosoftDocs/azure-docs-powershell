@@ -1,0 +1,91 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzActivityLogAlertAlertRuleLeafConditionObject
+name: New-AzActivityLogAlertAlertRuleLeafConditionObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for AlertRuleLeafCondition.
+description: |-
+  Create an in-memory object for AlertRuleLeafCondition.
+parameters:
+  cmdletParameters:
+  - name: ContainsAny
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Equal
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Field
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Activity Log event's field that this condition will examine.
+              The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzActivityLogAlertAlertRuleLeafConditionObject
+        [-ContainsAny <String[]>]
+        [-Equal <String>]
+        [-Field <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.ActivityLogAlert.Models.Api20201001.AlertRuleLeafCondition" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create Alert rule leaf condition'
+  description: |-
+    ```powershell
+    New-AzActivityLogAlertAlertRuleLeafConditionObject -Field properties.incidentType -Equal Maintenance
+    ```
+
+    Create Alert rule leaf condition
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertAlertRuleLeafConditionObject.md
+  document type: cmdlet
+  external help file: Az.ActivityLogAlert.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-AzActivityLogAlertAlertRuleLeafConditionObject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzActivityLogAlertAlertRuleLeafConditionObject.md
+  PlatyPS schema version: 2024-05-01

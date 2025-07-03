@@ -1,0 +1,235 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureNetworkSecurityGroupAssociation
+name: Get-AzureNetworkSecurityGroupAssociation
+module: Azure
+isPreview: false
+summary: |-
+  Gets a network security group for a virtual machine, network adapter, or PaaS role.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureNetworkSecurityGroupAssociation** cmdlet gets the network security group for a virtual machine, network adapter, or platform as a service (PaaS) role.
+parameters:
+  cmdletParameters:
+  - name: Detailed
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns details of the network security group that is associated to the virtual machine.
+      These details include location and rules.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkInterfaceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network adapter for which this cmdlet gets the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForIaaSRole
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetNetworkSecurityGroupAssociationForPaaSRole
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a PaaS role for which this cmdlet gets the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForPaaSRole
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServiceName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a cloud service.
+      The PaaS role belongs to the service that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForIaaSRole
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: GetNetworkSecurityGroupAssociationForPaaSRole
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a PaaS slot.
+      The PaaS role for which this cmdlet gets the network security group has the slot that this parameter specifies.
+      Valid values are:
+
+      - Production
+      - Staging
+
+      The default value is Production.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForPaaSRole
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a subnet for which this cmdlet gets the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForSubnet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualNetworkName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a virtual network that contains the subnet for which this cmdlet gets the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForSubnet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="PersistentVMRoleContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual machine to which this cmdlet applies the network security group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetNetworkSecurityGroupAssociationForIaaSRole
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureNetworkSecurityGroupAssociation
+        -VirtualNetworkName <String>
+        -SubnetName <String>
+        [-Detailed]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetNetworkSecurityGroupAssociationForSubnet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureNetworkSecurityGroupAssociation
+        -VM <PersistentVMRoleContext>
+        -ServiceName <String>
+        [-NetworkInterfaceName <String>]
+        [-Detailed]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetNetworkSecurityGroupAssociationForIaaSRole
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureNetworkSecurityGroupAssociation
+        -RoleName <String>
+        -ServiceName <String>
+        [-Slot <String>]
+        [-NetworkInterfaceName <String>]
+        [-Detailed]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetNetworkSecurityGroupAssociationForPaaSRole
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.ServiceManagement.Network.NetworkSecurityGroup.Model.INetworkSecurityGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get the network security group for a virtual machine'
+  description: |-
+    ```
+    PS C:\> Get-AzureVM -ServiceName "ContosoService" -Name "ContosoVM06" | Get-AzureNetworkSecurityGroupAssociation
+    ```
+
+    This command gets a virtual machine named ContosoVM06 for the service named ContosoService, and passes that virtual machine object to the current cmdlet.
+    The current cmdlet gets the network security group associated to that virtual machine.
+links:
+- text: Remove-AzureNetworkSecurityGroupAssociation
+  href: ./Remove-AzureNetworkSecurityGroupAssociation.yml
+- text: Set-AzureNetworkSecurityGroupAssociation
+  href: ./Set-AzureNetworkSecurityGroupAssociation.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 6AF7D392-8C8B-4695-95D0-E927093F654A
+  PlatyPS schema version: 2024-05-01

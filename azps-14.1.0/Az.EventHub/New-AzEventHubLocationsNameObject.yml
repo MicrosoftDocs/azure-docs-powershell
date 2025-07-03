@@ -1,0 +1,93 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.EventHub.New-AzEventHubLocationsNameObject
+name: New-AzEventHubLocationsNameObject
+module: Az.EventHub
+isPreview: false
+summary: |-
+  Create an in-memory object for NamespaceReplicaLocation.
+description: |-
+  Create an in-memory object for NamespaceReplicaLocation.
+parameters:
+  cmdletParameters:
+  - name: ClusterArmId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional property that denotes the ARM ID of the Cluster.
+      This is required, if a namespace replica should be placed in a Dedicated Event Hub Cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LocationName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure regions where a replica of the namespace is maintained.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      GeoDR Role Types.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzEventHubLocationsNameObject
+        [-ClusterArmId <String>]
+        [-LocationName <String>]
+        [-RoleType <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.EventHub.Models.NamespaceReplicaLocation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Construct an in-memory NamespaceReplicaLocation object'
+  description: |-
+    ```powershell
+    New-AzEventHubLocationsNameObject -LocationName mylocation -RoleType Secondary -ClusterArmId clusterid
+    ```
+
+    Creates an in-memory object of type `INamespaceReplicaLocation`.
+    An array of `INamespaceReplicaLocation` can be fed as
+    input to `GeoDataReplicationLocation` parameter of New-AzEventHubNamespace and Set-AzEventHubNamespace.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubLocationsNameObject.md
+  document type: cmdlet
+  external help file: 
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.EventHub/new-azeventhublocationsnameobject
+  Module Name: Az.EventHub
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/EventHub/EventHub/help/New-AzEventHubLocationsNameObject.md
+  PlatyPS schema version: 2024-05-01

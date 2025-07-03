@@ -1,0 +1,251 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzVHubRoute
+name: New-AzVHubRoute
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates a VHubRoute object which can be passed as parameter to the New-AzVHubRouteTable command.
+description: |-
+  Creates a VHubRoute object.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of Destinations.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The route name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NextHop
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The next hop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NextHopType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Next Hop type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzVHubRoute
+        -Destination <String[]>
+        -DestinationType <String>
+        -NextHop <String>
+        -Name <String>
+        -NextHopType <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVHubRoute" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $rgName = "testRg"
+    $firewallName = "testFirewall"
+    $firewall = Get-AzFirewall -Name $firewallName -ResourceGroupName $rgName
+    New-AzVHubRoute -Name "private-traffic" -Destination @("10.30.0.0/16", "10.40.0.0/16") -DestinationType "CIDR" -NextHop $firewall.Id -NextHopType "ResourceId"
+    ```
+
+    ```output
+    Name            : private-traffic
+    DestinationType : CIDR
+    Destinations    : {10.30.0.0/16, 10.40.0.0/16}
+    NextHopType     : ResourceId
+    NextHop         : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/azureFirewalls/testFirewall
+    ```
+
+    The above command will create a VHubRoute object with nextHop as the specified Firewall which can then be added to a VHubRouteTable resource.
+- title: Example 2
+  description: |-
+    ```powershell
+    $rgName = "testRg"
+    $hubName = "testHub"
+    $hubVnetConnName = "testHubVnetConn"
+    $hubVnetConnection = Get-AzVirtualHubVnetConnection -Name $hubVnetConnName -ParentResourceName $hubName -ResourceGroupName $rgName
+    New-AzVHubRoute -Name "nva-traffic" -Destination @("10.20.0.0/16", "10.50.0.0/16") -DestinationType "CIDR" -NextHop $hubVnetConnection.Id -NextHopType "ResourceId"
+    ```
+
+    ```output
+    Name            : private-traffic
+    DestinationType : CIDR
+    Destinations    : {10.30.0.0/16, 10.40.0.0/16}
+    NextHopType     : ResourceId
+    NextHop         : /subscriptions/testSub/resourceGroups/testRg/providers/Microsoft.Network/virtualHubs/testHub/hubVirtualNetworkConnections/testHubVnetConn
+    ```
+
+    The above command will create a VHubRoute object with nextHop as the specified hubVnetConnection which can then be added to a VHubRouteTable resource.
+- title: Example 3
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```powershell
+    $hub = Get-AzVirtualHub -ResourceGroupName "rgname" -Name "virtual-hub-name"
+    $hubVnetConn = Get-AzVirtualHubVnetConnection -ParentObject $hub -Name "connection-name"
+    $hubVnetConn
+
+    Name                   : conn_2
+    Id                     : /subscriptions/{subscriptionID}/resourceGroups/{rgname}/providers/Microsoft.Network/virtualHubs/{virtual-hub-name}/hubVirtualNetworkConnections/conn_2
+    RemoteVirtualNetwork   : /subscriptions/{subscriptionID}/resourceGroups/{rgname}/providers/Microsoft.Network/virtualNetworks/rVnet_2
+    EnableInternetSecurity : True
+    ProvisioningState      : Succeeded
+    RoutingConfiguration   : {
+                               "AssociatedRouteTable": {
+                                 "Id": "/subscriptions/{subscriptionID}/resourceGroups/{rgname}/providers/Microsoft.Network/virtualHubs/{virtual-hub-name}/hubRouteTables/defaultRouteTable"
+                               },
+                               "PropagatedRouteTables": {
+                                 "Labels": [
+                                   "default"
+                                 ],
+                                 "Ids": [
+                                   {
+                                     "Id":
+                             "/subscriptions/{subscriptionID}/resourceGroups/{rgname}/providers/Microsoft.Network/virtualHubs/{virtual-hub-name}/hubRouteTables/defaultRouteTable"
+                                   }
+                                 ]
+                               },
+                               "VnetRoutes": {
+                                 "StaticRoutes": []
+                               }
+                             }
+
+    $staticRoute1 = New-AzStaticRoute -Name "static_route1" -AddressPrefix @("10.2.1.0/24", "10.2.3.0/24") -NextHopIpAddress "10.2.0.5"
+    $routingConfig = $hubVnetConn.RoutingConfiguration
+    $routingConfig.VnetRoutes.StaticRoutes = @($staticRoute1)
+    $routingConfig
+    AssociatedRouteTable  : Microsoft.Azure.Commands.Network.Models.PSResourceId
+    PropagatedRouteTables : {
+                              "Labels": [
+                                "default"
+                              ],
+                              "Ids": [
+                                {
+                                  "Id":
+                            "/subscriptions/{subscriptionID}/resourceGroups/{rgname}/providers/Microsoft.Network/virtualHubs/rTestHub1/hubRouteTables/defaultRouteTable"
+                                }
+                              ]
+                            }
+    VnetRoutes            : {
+                              "StaticRoutes": [
+                                {
+                                  "Name": "static_route1",
+                                  "AddressPrefixes": [
+                                    "10.2.1.0/24",
+                                    "10.2.3.0/24"
+                                  ],
+                                  "NextHopIpAddress": "10.2.0.5"
+                                }
+                              ]
+                            }
+
+    Update-AzVirtualHubVnetConnection -InputObject $hubVnetConn -RoutingConfiguration $routingConfig
+    ```
+
+    The above commands will get the RoutingConfiguration of an already existing AzVHubRoute and then add a static route on the connection. Alternatively, if you hope to create a new connection with the static route within it, please see Example 1 [here.](New-AzRoutingConfiguration.yml)
+links:
+- text: Get-AzVHubRouteTable
+  href: ./Get-AzVHubRouteTable.yml
+- text: New-AzVHubRouteTable
+  href: ./New-AzVHubRouteTable.yml
+- text: Remove-AzVHubRouteTable
+  href: ./Remove-AzVHubRouteTable.yml
+- text: Update-AzVHubRouteTable
+  href: ./Update-AzVHubRouteTable.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVHubRoute.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azvhubroute
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzVHubRoute.md
+  PlatyPS schema version: 2024-05-01

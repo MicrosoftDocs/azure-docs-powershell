@@ -1,0 +1,66 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Fleet.New-AzFleetUpdateGroupObject
+name: New-AzFleetUpdateGroupObject
+module: Az.Fleet
+isPreview: false
+summary: |-
+  Create an in-memory object for UpdateGroup.
+description: |-
+  Create an in-memory object for UpdateGroup.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the group.
+              It must match a group name of an existing fleet member.
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFleetUpdateGroupObject
+        -Name <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.UpdateGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a fleet update group'
+  description: |-
+    ```powershell
+    New-AzFleetUpdateGroupObject -Name 'Group-a'
+    ```
+
+    ```output
+    Name
+    ----
+    Group-a
+    ```
+
+    This command create a fleet update group object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/New-AzFleetUpdateGroupObject.md
+  document type: cmdlet
+  external help file: Az.Fleet-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Fleet/new-azfleetupdategroupobject
+  Module Name: Az.Fleet
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/New-AzFleetUpdateGroupObject.md
+  PlatyPS schema version: 2024-05-01

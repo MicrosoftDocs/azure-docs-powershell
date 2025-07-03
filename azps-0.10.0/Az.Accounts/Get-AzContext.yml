@@ -1,0 +1,143 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Accounts.Get-AzContext
+name: Get-AzContext
+module: Az.Accounts
+isPreview: false
+summary: |-
+  Gets the metadata used to authenticate Azure Resource Manager requests.
+description: |-
+  The Get-AzContext cmdlet gets the current metadata used to authenticate Azure Resource Manager requests.
+  This cmdlet gets the Active Directory account, Active Directory tenant, Azure subscription, and the targeted Azure environment.
+  Azure Resource Manager cmdlets use these settings by default when making Azure Resource Manager requests.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ListAvailable
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      List all available contexts in the current session.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListAllContexts
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the context
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetSingleContext
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RefreshContextFromTokenCache
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Refresh contexts from token cache
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ListAllContexts
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzContext
+        [[-Name] <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetSingleContext
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzContext
+        [-ListAvailable]
+        [-RefreshContextFromTokenCache]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ListAllContexts
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Profile.Models.Core.PSAzureContext" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Getting the current context'
+  description: |-
+    ```
+    PS C:\> Connect-AzAccount
+    PS C:\> Get-AzContext
+
+    Name                                     Account             SubscriptionName    Environment         TenantId
+    ----                                     -------             ----------------    -----------         --------
+    Subscription1 (xxxxxxxx-xxxx-xxxx-xxx... test@outlook.com    Subscription1       AzureCloud          xxxxxxxx-x...
+    ```
+
+    In this example we are logging into our account with an Azure subscription using Connect-AzAccount, and then we are getting the context of the current session by calling Get-AzContext.
+- title: 'Example 2: Listing all available contexts'
+  description: |-
+    ```
+    PS C:\> Get-AzContext -ListAvailable
+
+    Name                                     Account             SubscriptionName    Environment         TenantId
+    ----                                     -------             ----------------    -----------         --------
+    Subscription1 (xxxxxxxx-xxxx-xxxx-xxx... test@outlook.com    Subscription1       AzureCloud          xxxxxxxx-x...
+    Subscription2 (xxxxxxxx-xxxx-xxxx-xxx... test@outlook.com    Subscription2       AzureCloud          xxxxxxxx-x...
+    Subscription3 (xxxxxxxx-xxxx-xxxx-xxx... test@outlook.com    Subscription3       AzureCloud          xxxxxxxx-x...
+    ```
+
+    In this example, all currently available contexts are displayed.  The user may select one of these contexts using Select-AzContext.
+links:
+- text: Set-AzContext
+  href: ./Set-AzContext.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Get-AzContext.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Accounts.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.accounts/get-azcontext
+  Module Name: Az.Accounts
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Accounts/Accounts/help/Get-AzContext.md
+  PlatyPS schema version: 2024-05-01

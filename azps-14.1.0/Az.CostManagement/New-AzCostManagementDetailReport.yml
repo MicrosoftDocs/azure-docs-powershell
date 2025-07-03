@@ -1,0 +1,314 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CostManagement.New-AzCostManagementDetailReport
+name: New-AzCostManagementDetailReport
+module: Az.CostManagement
+isPreview: false
+summary: |-
+  This API is the replacement for all previously release Usage Details APIs.
+  Request to generate a cost details report for the provided date range, billing period (Only enterprise customers) or Invoice Id asynchronously at a certain scope.
+  The initial call to request a report will return a 202 with a 'Location' and 'Retry-After' header.
+  The 'Location' header will provide the endpoint to poll to get the result of the report generation.
+  The 'Retry-After' provides the duration to wait before polling for the generated report.
+  A call to poll the report operation will provide a 202 response with a 'Location' header if the operation is still in progress.
+  Once the report generation operation completes, the polling endpoint will provide a 200 response along with details on the report blob(s) that are available for download.
+  The details on the file(s) available for download will be available in the polling response body.
+description: |-
+  This API is the replacement for all previously release Usage Details APIs.
+  Request to generate a cost details report for the provided date range, billing period (Only enterprise customers) or Invoice Id asynchronously at a certain scope.
+  The initial call to request a report will return a 202 with a 'Location' and 'Retry-After' header.
+  The 'Location' header will provide the endpoint to poll to get the result of the report generation.
+  The 'Retry-After' provides the duration to wait before polling for the generated report.
+  A call to poll the report operation will provide a 202 response with a 'Location' header if the operation is still in progress.
+  Once the report generation operation completes, the polling endpoint will provide a 200 response along with details on the report blob(s) that are available for download.
+  The details on the file(s) available for download will be available in the polling response body.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BillingPeriod
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter can be used only by Enterprise Agreement customers.
+      Use the YearMonth(e.g.
+      202008) format.
+      This parameter cannot be used alongside either the invoiceId or timePeriod parameters.
+      If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InvoiceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      This parameter can only be used by Microsoft Customer Agreement customers.
+      Additionally, it can only be used at the Billing Profile or Customer scope.
+      This parameter cannot be used alongside either the billingPeriod or timePeriod parameters.
+      If a timePeriod, invoiceId or billingPeriod parameter is not provided in the request body the API will return the current month's cost.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path of Json file supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonFilePath
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JsonString
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Json string supplied to the Create operation
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaJsonString
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metric
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of the detailed report.
+      By default ActualCost is provided
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope associated with usage details operations.
+      This includes '/subscriptions/{subscriptionId}/' for subscription scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, '/providers/Microsoft.Billing/departments/{departmentId}' for Department scope, '/providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope.
+      Also, Modern Commerce Account scopes are '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for billingAccount scope, '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for billingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/invoiceSections/{invoiceSectionId}' for invoiceSection scope, and 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/customers/{customerId}' specific for partners.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimePeriodEnd
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The end date to pull data to.
+      example format 2020-03-15
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimePeriodStart
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The start date to pull data from.
+      example format 2020-03-15
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCostManagementDetailReport
+        -Scope <String>
+        [-BillingPeriod <String>]
+        [-InvoiceId <String>]
+        [-Metric <String>]
+        [-TimePeriodEnd <String>]
+        [-TimePeriodStart <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzCostManagementDetailReport
+        -Scope <String>
+        -JsonFilePath <String>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonFilePath
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzCostManagementDetailReport
+        -Scope <String>
+        -JsonString <String>
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaJsonString
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.CostManagement.Models.ICostDetailsOperationResults" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Request to generate a cost details report for the provided date range, billing period (Only enterprise customers) or Invoice Id asynchronously at a certain scope'
+  description: |-
+    ```powershell
+    New-AzCostManagementDetailReport -Scope "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f" -Metric 'ActualCost' -TimePeriodStart "2022-10-01" -TimePeriodEnd "2022-10-20"
+    ```
+
+    This command requests to generate a cost details report for the provided date range, billing period (Only enterprise customers) or Invoice Id asynchronously at a certain scope.
+links:
+- text: https://docs.microsoft.com/en-us/rest/api/costmanagement/
+  href: https://docs.microsoft.com/en-us/rest/api/costmanagement/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementDetailReport.md
+  document type: cmdlet
+  external help file: Az.CostManagement-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.costmanagement/new-azcostmanagementdetailreport
+  Module Name: Az.CostManagement
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CostManagement/CostManagement/help/New-AzCostManagementDetailReport.md
+  PlatyPS schema version: 2024-05-01

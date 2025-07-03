@@ -1,0 +1,195 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureRemoteAppCollection
+name: Set-AzureRemoteAppCollection
+module: Azure
+isPreview: false
+summary: |-
+  Sets the properties of a RemoteApp collection.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureRemoteAppCollection** cmdlet sets the properties of an Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: AclLevel
+    type: <xref href="CollectionAclLevel" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the access control list (ACL) level for the collection.
+      The acceptable values for this parameter are: Collection and Application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AclLevelOnly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Credential
+    type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the credentials of a service account that has permission to join the Azure RemoteApp servers to your domain.
+      To obtain a **PSCredential** object, use the **Get-Credential** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DomainJoined
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomRdpProperty
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies custom Remote Desktop Protocol (RDP) properties which can be used to configure drive redirection and other settings.
+      See [RDP Settings for Remote Desktop Services in Windows Server](https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)  `(https://technet.microsoft.com/library/ff393699(v=ws.10).aspx)` for details.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: RdpPropertyOnly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a short description for the collection.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DescriptionOnly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Plan
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the plan for the Azure RemoteApp collection, which defines the usage limits.
+      Use **Get-AzureRemoteAppPlan** to see the plans available.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: PlanOnly
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        -Description <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DescriptionOnly
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        -Plan <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: PlanOnly
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        -Credential <PSCredential>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DomainJoined
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        -CustomRdpProperty <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: RdpPropertyOnly
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzureRemoteAppCollection
+        [-CollectionName] <String>
+        -AclLevel <CollectionAclLevel>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AclLevelOnly
+  isDefault: false
+links:
+- text: Get-AzureRemoteAppCollection
+  href: ./Get-AzureRemoteAppCollection.yml
+- text: New-AzureRemoteAppCollection
+  href: ./New-AzureRemoteAppCollection.yml
+- text: Update-AzureRemoteAppCollection
+  href: ./Update-AzureRemoteAppCollection.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 14B4050D-3597-4760-A152-82617B88078D
+  PlatyPS schema version: 2024-05-01

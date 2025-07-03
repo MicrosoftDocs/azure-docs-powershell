@@ -1,0 +1,88 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.New-AzWebPubSubEventNameFilterObject
+name: New-AzWebPubSubEventNameFilterObject
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Create an in-memory object for EventNameFilter.
+description: |-
+  Create an in-memory object for EventNameFilter.
+parameters:
+  cmdletParameters:
+  - name: SystemEvent
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets or sets a list of system events.
+      Supported events: "connected" and "disconnected".
+      Blocking event "connect" is not supported because it requires a response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserEventPattern
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets a matching pattern for event names.
+              There are 3 kinds of patterns supported:
+                  1.
+      "*", it matches any event name
+                  2.
+      Combine multiple events with ",", for example "event1,event2", it matches events "event1" and "event2"
+                  3.
+      A single event name, for example, "event1", it matches "event1".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWebPubSubEventNameFilterObject
+        [-SystemEvent <String[]>]
+        [-UserEventPattern <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.EventNameFilter" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an event name filter object'
+  description: |-
+    ```powershell
+    $filter = New-AzWebPubSubEventNameFilterObject -SystemEvent connected,disconnected -UserEventPattern *
+    $filter
+    ```
+
+    ```output
+    SystemEvent               UserEventPattern
+    -----------               ----------------
+    {connected, disconnected} *
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubEventNameFilterObject.md
+  document type: cmdlet
+  external help file: Az.SignalR-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/new-azwebpubsubeventnamefilterobject
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubEventNameFilterObject.md
+  PlatyPS schema version: 2024-05-01

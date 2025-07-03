@@ -1,0 +1,158 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Publish-AzureRemoteAppProgram
+name: Publish-AzureRemoteAppProgram
+module: Azure
+isPreview: false
+summary: |-
+  Publishes an Azure RemoteApp program.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Publish-AzureRemoteAppProgram** cmdlet publishes an Azure RemoteApp program, which makes it available to users of the Azure RemoteApp collection.
+parameters:
+  cmdletParameters:
+  - name: CollectionName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Azure RemoteApp collection.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CommandLine
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies command-line arguments for the program that this cmdlet publishes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user-friendly display name of the Azure RemoteApp program.
+      Users see this as the name of the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FileVirtualPath
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the program within the template image of the program.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: App Path
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartMenuAppId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a GUID that this cmdlet uses to add the program to the Start Menu.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: App Id
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Publish-AzureRemoteAppProgram
+        [-CollectionName] <String>
+        [-StartMenuAppId] <String>
+        [-CommandLine <String>]
+        [-DisplayName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: App Id
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Publish-AzureRemoteAppProgram
+        [-CollectionName] <String>
+        [-FileVirtualPath] <String>
+        [-CommandLine <String>]
+        [-DisplayName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: App Path
+  isDefault: false
+examples:
+- title: 'Example 1: Publish a program in a collection'
+  description: |-
+    ```
+    PS C:\> Publish-AzureRemoteAppProgram -CollectionName "ContosoApps" -StartMenuAppId "00001111-aaaa-2222-bbbb-3333cccc4444" -DisplayName "Finance App"
+    ```
+
+    This command publishes the program in the ContosoApps collection with the specified *StartMenuAppId* to add the program to the Start Menu.
+    The published app will have a display name of "Finance App".
+links:
+- text: Get-AzureRemoteAppProgram
+  href: ./Get-AzureRemoteAppProgram.yml
+- text: Unpublish-AzureRemoteAppProgram
+  href: ./Unpublish-AzureRemoteAppProgram.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.RemoteApp.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: F101382E-B015-4913-B4A0-8827EC423319
+  PlatyPS schema version: 2024-05-01

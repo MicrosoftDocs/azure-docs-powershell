@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.New-AzureStorageQueue
+name: New-AzureStorageQueue
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Creates a storage queue.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **New-AzureStorageQueue** cmdlet creates a storage queue in Azure.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context.
+      You can create it by using the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name for the queue.
+    aliases:
+    - N
+    - Queue
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzureStorageQueue
+        [-Name] <String>
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Create an Azure storage queue'
+  description: |-
+    ```
+    PS C:\>New-AzureStorageQueue -Name "queueabc"
+    ```
+
+    This example creates a storage queue named queueabc.
+- title: 'Example 2: Create multiple azure storage queues'
+  description: |-
+    ```
+    PS C:\>"queue1 queue2 queue3".split() | New-AzureStorageQueue
+    ```
+
+    This example creates multiple storage queues.
+    It uses the Split method of the .NET String class and then passes the names on the pipeline.
+links:
+- text: Get-AzureStorageQueue
+  href: ./Get-AzureStorageQueue.yml
+- text: Remove-AzureStorageQueue
+  href: ./Remove-AzureStorageQueue.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: E9500392-6BE1-46EC-9AF5-9234281025E6
+  PlatyPS schema version: 2024-05-01

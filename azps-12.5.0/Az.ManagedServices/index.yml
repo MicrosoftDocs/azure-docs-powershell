@@ -1,0 +1,29 @@
+### YamlMime:PowerShellModule1
+uid: Az.ManagedServices
+name: Az.ManagedServices Module
+isPreview: false
+cmdletGroups:
+- title: Managed Services
+  cmdlets:
+  - Az.ManagedServices.Get-AzManagedServicesAssignment
+  - Az.ManagedServices.Get-AzManagedServicesDefinition
+  - Az.ManagedServices.Get-AzManagedServicesMarketplaceDefinition
+  - Az.ManagedServices.New-AzManagedServicesAssignment
+  - Az.ManagedServices.New-AzManagedServicesAuthorizationObject
+  - Az.ManagedServices.New-AzManagedServicesDefinition
+  - Az.ManagedServices.New-AzManagedServicesEligibleApproverObject
+  - Az.ManagedServices.New-AzManagedServicesEligibleAuthorizationObject
+  - Az.ManagedServices.Remove-AzManagedServicesAssignment
+  - Az.ManagedServices.Remove-AzManagedServicesDefinition
+description: |-
+  Microsoft Azure PowerShell: ManagedServices cmdlets
+metadata:
+  Module Name: Az.ManagedServices
+  Module Guid: f3c1cabd-ba4d-4158-b4f3-9e037b7a2d62
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.managedservices
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Az.ManagedServices.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/Az.ManagedServices.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

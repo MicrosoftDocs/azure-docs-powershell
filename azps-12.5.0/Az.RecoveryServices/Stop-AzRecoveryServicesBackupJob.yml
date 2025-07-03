@@ -1,0 +1,173 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RecoveryServices.Stop-AzRecoveryServicesBackupJob
+name: Stop-AzRecoveryServicesBackupJob
+module: Az.RecoveryServices
+isPreview: false
+summary: |-
+  Cancels a running job.
+description: |-
+  The **Stop-AzRecoveryServicesBackupJob** cmdlet cancels an existing Azure Backup job.
+  Use this cmdlet to stop a job that takes too long and blocks other activities.
+  You can cancel only Backup and Restore job types.
+  Set the vault context by using the Set-AzRecoveryServicesVaultContext cmdlet before you use the current cmdlet.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Job
+    type: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a job that this cmdlet cancels.
+      To obtain a **BackupJob** object, use the Get-AzRecoveryServicesBackupJob cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: JobFilterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JobId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job to cancel.
+      The ID is the InstanceId property of a **BackupJob** object.
+      To obtain an **BackupJob** object, use Get-AzRecoveryServicesBackupJob.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: IdFilterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      ARM ID of the Recovery Services Vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzRecoveryServicesBackupJob
+        [-Job] <JobBase>
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: JobFilterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzRecoveryServicesBackupJob
+        [-JobId] <String>
+        [-VaultId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: IdFilterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.RecoveryServices.Backup.Cmdlets.Models.JobBase" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Stop a backup job'
+  description: |-
+    ```powershell
+    $Job = Get-AzRecoveryServicesBackupJob -Operation Backup
+    Stop-AzRecoveryServicesBackupJob -JobID $Job.InstanceId
+    ```
+
+    The first command gets a backup job, and then stores the job in the $Job variable.
+    The last command stops the job by specifying the Instance ID of the backup job in $Job.
+links:
+- text: Get-AzRecoveryServicesBackupJob
+  href: ./Get-AzRecoveryServicesBackupJob.yml
+- text: Wait-AzRecoveryServicesBackupJob
+  href: ./Wait-AzRecoveryServicesBackupJob.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Stop-AzRecoveryServicesBackupJob.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.RecoveryServices.Backup.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.recoveryservices/stop-azrecoveryservicesbackupjob
+  Module Name: Az.RecoveryServices
+  ms.assetid: A8FDC5A3-F309-49B3-B417-8E0A1535BAF4
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RecoveryServices/RecoveryServices/help/Stop-AzRecoveryServicesBackupJob.md
+  PlatyPS schema version: 2024-05-01

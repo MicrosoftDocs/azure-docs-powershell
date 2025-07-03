@@ -1,0 +1,380 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StorageCache.New-AzStorageCacheDirectorySettingObject
+name: New-AzStorageCacheDirectorySettingObject
+module: Az.StorageCache
+isPreview: false
+summary: |-
+  Create an in-memory object for CacheDirectorySettings.
+description: |-
+  Create an in-memory object for CacheDirectorySettings.
+parameters:
+  cmdletParameters:
+  - name: ActiveDirectoryCacheNetBiosName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server.
+      Length must 1-15 characters from the class [-0-9a-zA-Z].
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectoryDomainName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified domain name of the Active Directory domain controller.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectoryDomainNetBiosName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Active Directory domain's NetBIOS name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectoryPrimaryDnsIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Primary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ActiveDirectorySecondaryDnsIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Secondary DNS IP address used to resolve the Active Directory domain controller's fully qualified domain name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CredentialsBindDn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Bind Distinguished Name identity to be used in the secure LDAP connection.
+      This value is stored encrypted and not returned on response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CredentialsBindPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Bind password to be used in the secure LDAP connection.
+      This value is stored encrypted and not returned on response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CredentialsPassword
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Plain text password of the Active Directory domain administrator.
+      This value is stored encrypted and not returned on response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CredentialsUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Username of the Active Directory domain administrator.
+      This value is stored encrypted and not returned on response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadAutoDownloadCertificate
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines if the certificate should be automatically downloaded.
+      This applies to 'caCertificateURI' only if 'requireValidCertificate' is true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadCaCertificateUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI of the CA certificate to validate the LDAP secure connection.
+      This field must be populated when 'requireValidCertificate' is set to true.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadEncryptLdapConnection
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not the LDAP connection should be encrypted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadExtendedGroup
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Whether or not Extended Groups is enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadGroupFileUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI of the file containing group information (in /etc/group file format).
+      This field must be populated when 'usernameSource' is set to 'File'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadLdapBaseDn
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The base distinguished name for the LDAP domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadLdapServer
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified domain name or IP address of the LDAP server to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadRequireValidCertificate
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Determines if the certificates must be validated by a certificate authority.
+      When true, caCertificateURI must be provided.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadUserFileUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The URI of the file containing user information (in /etc/passwd file format).
+      This field must be populated when 'usernameSource' is set to 'File'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UsernameDownloadUsernameSource
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Support.UsernameSource" data-throw-if-not-resolved="False" />
+    description: |-
+      This setting determines how the cache gets username and group names for clients.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzStorageCacheDirectorySettingObject
+        [-ActiveDirectoryCacheNetBiosName <String>]
+        [-ActiveDirectoryDomainName <String>]
+        [-ActiveDirectoryDomainNetBiosName <String>]
+        [-ActiveDirectoryPrimaryDnsIPAddress <String>]
+        [-ActiveDirectorySecondaryDnsIPAddress <String>]
+        [-CredentialsBindDn <String>]
+        [-CredentialsBindPassword <String>]
+        [-CredentialsPassword <String>]
+        [-CredentialsUsername <String>]
+        [-UsernameDownloadAutoDownloadCertificate <Boolean>]
+        [-UsernameDownloadCaCertificateUri <String>]
+        [-UsernameDownloadEncryptLdapConnection <Boolean>]
+        [-UsernameDownloadExtendedGroup <Boolean>]
+        [-UsernameDownloadGroupFileUri <String>]
+        [-UsernameDownloadLdapBaseDn <String>]
+        [-UsernameDownloadLdapServer <String>]
+        [-UsernameDownloadRequireValidCertificate <Boolean>]
+        [-UsernameDownloadUserFileUri <String>]
+        [-UsernameDownloadUsernameSource <UsernameSource>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.StorageCache.Models.Api20230501.CacheDirectorySettings" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for CacheDirectorySettings.'
+  description: |-
+    ```powershell
+    New-AzStorageCacheDirectorySettingObject -ActiveDirectoryCacheNetBiosName "contosoSmb" -ActiveDirectoryDomainName "contosoAd.contoso.local" -ActiveDirectoryDomainNetBiosName "contosoAd" -ActiveDirectoryPrimaryDnsIPAddress "192.0.2.10" -ActiveDirectorySecondaryDnsIPAddress "192.0.2.11" -CredentialsBindDn "cn=ldapadmin,dc=contosoad,dc=contoso,dc=local" -CredentialsBindPassword "<bindPassword>" -CredentialsPassword "<password>" -CredentialsUsername "contosoAdmin" -UsernameDownloadCaCertificateUri "http://contoso.net/cacert.pem" -UsernameDownloadAutoDownloadCertificate:$False -UsernameDownloadEncryptLdapConnection:$False -UsernameDownloadExtendedGroup:$False -UsernameDownloadGroupFileUri "http://contoso.net/group.file" -UsernameDownloadLdapBaseDn "dc=contosoad,dc=contoso,dc=local" -UsernameDownloadLdapServer "192.0.2.12" -UsernameDownloadRequireValidCertificate:$False -UsernameDownloadUsernameSource 'LDAP' -UsernameDownloadUserFileUri "http://contoso.net/passwd.file"
+    ```
+
+    ```output
+    ActiveDirectoryCacheNetBiosName         : contosoSmb
+    ActiveDirectoryDomainJoined             :
+    ActiveDirectoryDomainName               : contosoAd.contoso.local
+    ActiveDirectoryDomainNetBiosName        : contosoAd
+    ActiveDirectoryPrimaryDnsIPAddress      : 192.0.2.10
+    ActiveDirectorySecondaryDnsIPAddress    : 192.0.2.11
+    CredentialsBindDn                       : cn=ldapadmin,dc=contosoad,dc=contoso,dc=local
+    CredentialsBindPassword                 : <bindPassword>
+    CredentialsPassword                     : <password>
+    CredentialsUsername                     : consotoAdmin
+    UsernameDownloadAutoDownloadCertificate : False
+    UsernameDownloadCaCertificateUri        : http://contoso.net/cacert.pem
+    UsernameDownloadEncryptLdapConnection   : False
+    UsernameDownloadExtendedGroup           : False
+    UsernameDownloadGroupFileUri            : http://contoso.net/group.file
+    UsernameDownloadLdapBaseDn              : dc=contosoad,dc=contoso,dc=local
+    UsernameDownloadLdapServer              : 192.0.2.12
+    UsernameDownloadRequireValidCertificate : False
+    UsernameDownloadUserFileUri             : http://contoso.net/passwd.file
+    UsernameDownloadUsernameDownloaded      :
+    UsernameDownloadUsernameSource          : LDAP
+    ```
+
+    Create an in-memory object for CacheDirectorySettings.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCacheDirectorySettingObject.md
+  document type: cmdlet
+  external help file: Az.StorageCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.StorageCache/new-AzStorageCacheDirectorySettingObject
+  Module Name: Az.StorageCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StorageCache/StorageCache/help/New-AzStorageCacheDirectorySettingObject.md
+  PlatyPS schema version: 2024-05-01

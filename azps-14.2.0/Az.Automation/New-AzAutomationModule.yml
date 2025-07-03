@@ -1,0 +1,170 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Automation.New-AzAutomationModule
+name: New-AzAutomationModule
+module: Az.Automation
+isPreview: false
+summary: |-
+  Imports a module into Automation.
+description: |-
+  The **New-AzAutomationModule** cmdlet imports a module into Azure Automation.
+  This command accepts a compressed file that has a .zip file name extension.
+  The file contains a folder that includes a file that is one of the following types:
+  - Windows PowerShell module, which has a .psm1 or .dll file name extension
+  - Windows PowerShell module manifest, which has a .psd1 file name extension
+  The name of the .zip file, the name of the folder, and the name of the file in the folder must be the same.
+  Specify the .zip file as a URL that the Automation service can access.
+  If you import a Windows PowerShell module into Automation by using this cmdlet or the Set-AzAutomationModule cmdlet, the operation is asynchronous.
+  The command finishes whether the import succeeds or fails.
+  To check whether it succeeded, run the following command:
+  `PS C:\\\> $ModuleInstance = Get-AzAutomationModule -Name `ModuleName
+  Check the **ProvisioningState** property for a value of Succeeded.
+parameters:
+  cmdletParameters:
+  - name: AutomationAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Automation account for which this cmdlet imports a module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentLinkUri
+    type: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+    description: |-
+      The url to a module zip package
+    aliases:
+    - ContentLink
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the module that this cmdlet imports.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group for which this cmdlet imports a module.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RuntimeVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Runtime Environment of module
+    acceptedValues:
+    - "5.1"
+    - "7.2"
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutomationModule
+        [-Name] <String>
+        [-ContentLinkUri] <Uri>
+        [-RuntimeVersion <String>]
+        [-ResourceGroupName] <String>
+        [-AutomationAccountName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Automation.Model.Module" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Import a module'
+  description: |-
+    ```powershell
+    New-AzAutomationModule -AutomationAccountName "Contoso17" -Name "ContosoModule" -ContentLink "http://contosostorage.blob.core.windows.net/modules/ContosoModule.zip" -ResourceGroupName "ResourceGroup01"
+    ```
+
+    This command imports a module named ContosoModule into the Automation account named Contoso17.
+    The module is stored in an Azure blob in a storage account named contosostorage and a container named modules.
+links:
+- text: Get-AzAutomationModule
+  href: ./Get-AzAutomationModule.yml
+- text: Remove-AzAutomationModule
+  href: ./Remove-AzAutomationModule.yml
+- text: Set-AzAutomationModule
+  href: ./Set-AzAutomationModule.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationModule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Automation.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.automation/new-azautomationmodule
+  Module Name: Az.Automation
+  ms.assetid: 2DC97415-D59A-428E-8FFE-56B17B320DAF
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Automation/Automation/help/New-AzAutomationModule.md
+  PlatyPS schema version: 2024-05-01

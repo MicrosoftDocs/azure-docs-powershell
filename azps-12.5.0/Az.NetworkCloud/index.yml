@@ -1,0 +1,116 @@
+### YamlMime:PowerShellModule1
+uid: Az.NetworkCloud
+name: Az.NetworkCloud Module
+isPreview: false
+cmdletGroups:
+- title: NetworkCloud
+  cmdlets:
+  - Az.NetworkCloud.Deploy-AzNetworkCloudCluster
+  - Az.NetworkCloud.Disable-AzNetworkCloudStorageApplianceRemoteVendorManagement
+  - Az.NetworkCloud.Enable-AzNetworkCloudStorageApplianceRemoteVendorManagement
+  - Az.NetworkCloud.Get-AzNetworkCloudAgentPool
+  - Az.NetworkCloud.Get-AzNetworkCloudBareMetalMachine
+  - Az.NetworkCloud.Get-AzNetworkCloudBareMetalMachineKeySet
+  - Az.NetworkCloud.Get-AzNetworkCloudBmcKeySet
+  - Az.NetworkCloud.Get-AzNetworkCloudCluster
+  - Az.NetworkCloud.Get-AzNetworkCloudClusterManager
+  - Az.NetworkCloud.Get-AzNetworkCloudConsole
+  - Az.NetworkCloud.Get-AzNetworkCloudKubernetesCluster
+  - Az.NetworkCloud.Get-AzNetworkCloudL2Network
+  - Az.NetworkCloud.Get-AzNetworkCloudL3Network
+  - Az.NetworkCloud.Get-AzNetworkCloudMetricsConfiguration
+  - Az.NetworkCloud.Get-AzNetworkCloudRack
+  - Az.NetworkCloud.Get-AzNetworkCloudRackSku
+  - Az.NetworkCloud.Get-AzNetworkCloudServicesNetwork
+  - Az.NetworkCloud.Get-AzNetworkCloudStorageAppliance
+  - Az.NetworkCloud.Get-AzNetworkCloudTrunkedNetwork
+  - Az.NetworkCloud.Get-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Get-AzNetworkCloudVolume
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineCordon
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineDataExtract
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineReimage
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineReplace
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineRunCommand
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineRunReadCommand
+  - Az.NetworkCloud.Invoke-AzNetworkCloudBareMetalMachineUncordon
+  - Az.NetworkCloud.Invoke-AzNetworkCloudClusterVersionUpdate
+  - Az.NetworkCloud.Invoke-AzNetworkCloudVirtualMachineReimage
+  - Az.NetworkCloud.New-AzNetworkCloudAgentPool
+  - Az.NetworkCloud.New-AzNetworkCloudBareMetalMachineConfigurationDataObject
+  - Az.NetworkCloud.New-AzNetworkCloudBareMetalMachineKeySet
+  - Az.NetworkCloud.New-AzNetworkCloudBgpAdvertisementObject
+  - Az.NetworkCloud.New-AzNetworkCloudBgpServiceLoadBalancerConfigurationObject
+  - Az.NetworkCloud.New-AzNetworkCloudBmcKeySet
+  - Az.NetworkCloud.New-AzNetworkCloudCluster
+  - Az.NetworkCloud.New-AzNetworkCloudClusterManager
+  - Az.NetworkCloud.New-AzNetworkCloudConsole
+  - Az.NetworkCloud.New-AzNetworkCloudControlPlaneNodeConfigurationObject
+  - Az.NetworkCloud.New-AzNetworkCloudEgressEndpointObject
+  - Az.NetworkCloud.New-AzNetworkCloudEndpointDependencyObject
+  - Az.NetworkCloud.New-AzNetworkCloudInitialAgentPoolConfigurationObject
+  - Az.NetworkCloud.New-AzNetworkCloudIpAddressPoolObject
+  - Az.NetworkCloud.New-AzNetworkCloudKeySetUserObject
+  - Az.NetworkCloud.New-AzNetworkCloudKubernetesCluster
+  - Az.NetworkCloud.New-AzNetworkCloudL2Network
+  - Az.NetworkCloud.New-AzNetworkCloudL3Network
+  - Az.NetworkCloud.New-AzNetworkCloudL3NetworkAttachmentConfigurationObject
+  - Az.NetworkCloud.New-AzNetworkCloudMetricsConfiguration
+  - Az.NetworkCloud.New-AzNetworkCloudNetworkAttachmentObject
+  - Az.NetworkCloud.New-AzNetworkCloudRackDefinitionObject
+  - Az.NetworkCloud.New-AzNetworkCloudServiceLoadBalancerBgpPeerObject
+  - Az.NetworkCloud.New-AzNetworkCloudServicesNetwork
+  - Az.NetworkCloud.New-AzNetworkCloudStorageApplianceConfigurationDataObject
+  - Az.NetworkCloud.New-AzNetworkCloudTrunkedNetwork
+  - Az.NetworkCloud.New-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.New-AzNetworkCloudVirtualMachinePlacementHintObject
+  - Az.NetworkCloud.New-AzNetworkCloudVolume
+  - Az.NetworkCloud.Remove-AzNetworkCloudAgentPool
+  - Az.NetworkCloud.Remove-AzNetworkCloudBareMetalMachineKeySet
+  - Az.NetworkCloud.Remove-AzNetworkCloudBmcKeySet
+  - Az.NetworkCloud.Remove-AzNetworkCloudCluster
+  - Az.NetworkCloud.Remove-AzNetworkCloudClusterManager
+  - Az.NetworkCloud.Remove-AzNetworkCloudConsole
+  - Az.NetworkCloud.Remove-AzNetworkCloudKubernetesCluster
+  - Az.NetworkCloud.Remove-AzNetworkCloudL2Network
+  - Az.NetworkCloud.Remove-AzNetworkCloudL3Network
+  - Az.NetworkCloud.Remove-AzNetworkCloudMetricsConfiguration
+  - Az.NetworkCloud.Remove-AzNetworkCloudServicesNetwork
+  - Az.NetworkCloud.Remove-AzNetworkCloudTrunkedNetwork
+  - Az.NetworkCloud.Remove-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Remove-AzNetworkCloudVolume
+  - Az.NetworkCloud.Restart-AzNetworkCloudBareMetalMachine
+  - Az.NetworkCloud.Restart-AzNetworkCloudKubernetesClusterNode
+  - Az.NetworkCloud.Restart-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Start-AzNetworkCloudBareMetalMachine
+  - Az.NetworkCloud.Start-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Stop-AzNetworkCloudBareMetalMachine
+  - Az.NetworkCloud.Stop-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Update-AzNetworkCloudAgentPool
+  - Az.NetworkCloud.Update-AzNetworkCloudBareMetalMachine
+  - Az.NetworkCloud.Update-AzNetworkCloudBareMetalMachineKeySet
+  - Az.NetworkCloud.Update-AzNetworkCloudBmcKeySet
+  - Az.NetworkCloud.Update-AzNetworkCloudCluster
+  - Az.NetworkCloud.Update-AzNetworkCloudClusterManager
+  - Az.NetworkCloud.Update-AzNetworkCloudConsole
+  - Az.NetworkCloud.Update-AzNetworkCloudKubernetesCluster
+  - Az.NetworkCloud.Update-AzNetworkCloudL2Network
+  - Az.NetworkCloud.Update-AzNetworkCloudL3Network
+  - Az.NetworkCloud.Update-AzNetworkCloudMetricsConfiguration
+  - Az.NetworkCloud.Update-AzNetworkCloudRack
+  - Az.NetworkCloud.Update-AzNetworkCloudServicesNetwork
+  - Az.NetworkCloud.Update-AzNetworkCloudStorageAppliance
+  - Az.NetworkCloud.Update-AzNetworkCloudTrunkedNetwork
+  - Az.NetworkCloud.Update-AzNetworkCloudVirtualMachine
+  - Az.NetworkCloud.Update-AzNetworkCloudVolume
+description: |-
+  Microsoft Azure PowerShell: NetworkCloud cmdlets
+metadata:
+  Module Name: Az.NetworkCloud
+  Module Guid: c1da95ce-b8cb-46c5-bb1c-80e3132dbb72
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.networkcloud
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/Az.NetworkCloud.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/Az.NetworkCloud.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

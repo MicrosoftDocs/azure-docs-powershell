@@ -1,0 +1,253 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Fleet.Get-AzFleetUpdateStrategy
+name: Get-AzFleetUpdateStrategy
+module: Az.Fleet
+isPreview: false
+summary: |-
+  Get a FleetUpdateStrategy
+description: |-
+  Get a FleetUpdateStrategy
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentityFleet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Fleet resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the UpdateStrategy resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentityFleet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzFleetUpdateStrategy
+        -FleetName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzFleetUpdateStrategy
+        -FleetName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFleetUpdateStrategy
+        -Name <String>
+        -FleetInputObject <IFleetIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentityFleet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzFleetUpdateStrategy
+        -InputObject <IFleetIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetUpdateStrategy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a list of fleet update strategy with specified fleet'
+  description: |-
+    ```powershell
+    Get-AzFleetUpdateStrategy -FleetName testfleet01 -ResourceGroupName K8sFleet-Test
+    ```
+
+    ```output
+    Name       SystemDataCreatedAt   SystemDataCreatedBy   SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy SystemDataLastModifiedByType ETag                                   ResourceG
+                                                                                                                                                                                                         roupName
+    ----       -------------------   -------------------   ----------------------- ------------------------ ------------------------ ---------------------------- ----                                   ---------
+    strategy1  11/17/2023 9:08:49 AM user1@example.com     User                    11/17/2023 9:08:49 AM    user1@example.com        User                         "fd057996-0000-0100-0000-65572da20000" K8sFleet…
+    strategy2  11/20/2023 9:36:32 AM user1@example.com     User                    11/20/2023 9:36:32 AM    user1@example.com        User                         "88066ba5-0000-0100-0000-655b28a00000" K8sFleet…
+    strategy3  11/20/2023 9:40:21 AM user1@example.com     User                    11/20/2023 9:40:21 AM    user1@example.com        User                         "88067ac6-0000-0100-0000-655b29860000" K8sFleet…
+    ```
+
+    This command get a list of fleet update strategy.
+- title: 'Example 2: Get a fleet update strategy with specified name'
+  description: |-
+    ```powershell
+    Get-AzFleetUpdateStrategy -FleetName testfleet01 -ResourceGroupName K8sFleet-Test -Name strategy1
+    ```
+
+    ```output
+    ETag                         : "fd057996-0000-0100-0000-65572da20000"
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/K8sFleet-Test/providers/Microsoft.ContainerService/fleets/testfleet01/updateStrategies/strategy1
+    Name                         : strategy1
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : K8sFleet-Test
+    StrategyStage                : {{
+                                     "name": "stag1",
+                                     "groups": [
+                                       {
+                                         "name": "group-a"
+                                       }
+                                     ],
+                                     "afterStageWaitInSeconds": 3600
+                                   }}
+    SystemDataCreatedAt          : 11/17/2023 9:08:49 AM
+    SystemDataCreatedBy          : user1@example.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/17/2023 9:08:49 AM
+    SystemDataLastModifiedBy     : user1@example.com
+    SystemDataLastModifiedByType : User
+    Type                         : Microsoft.ContainerService/fleets/updateStrategies
+    ```
+
+    This command gets specific a fleet update strategy with specified update strategy name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Get-AzFleetUpdateStrategy.md
+  document type: cmdlet
+  external help file: Az.Fleet-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.fleet/get-azfleetupdatestrategy
+  Module Name: Az.Fleet
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Get-AzFleetUpdateStrategy.md
+  PlatyPS schema version: 2024-05-01

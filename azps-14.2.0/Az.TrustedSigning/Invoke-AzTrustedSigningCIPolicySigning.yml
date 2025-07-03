@@ -1,0 +1,226 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TrustedSigning.Invoke-AzTrustedSigningCIPolicySigning
+name: Invoke-AzTrustedSigningCIPolicySigning
+module: Az.TrustedSigning
+isPreview: false
+summary: |-
+  Invoke CI Policy signing to Azure.TrustedSigning
+description: |-
+  The **Invoke-AzTrustedSigningCIPolicySigning** cmdlet signs the CI Policy bin file.
+  Use this cmdlet to sign a CI Policy bin file.
+  There are two sets of parameters. One set uses AccountName, ProfileName, and EndpointUrl.
+  Another set uses MetadataFilePath.
+  Path is the original unsigned CI Policy file path.
+  Destination is the signing CI Policy file path, which includes file name.
+  TimeStamperUrl is optional, but it's strongly recommended to do TimeStamping along with Signing.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning AccountName used to sign CI policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Destination
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the signed CI policy file path. The signed CI policy file extension is .bin.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndpointUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning Endpoint used to sign CI policy. It's an Url, format is `https://xxx.trustedsigning.azure.net`
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MetadataFilePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning Metadata file path used to sign CI policy. It's a file path, and the metadata content is below. File content example:
+      {
+        "Endpoint": "https://xxx.trustedsigning.azure.net/",
+        "TrustedSigningAccountName": "acstest",
+        "CertificateProfileName": "acstestCert1"
+      }
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByMetadataFileParameterSet
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the original unsigned CI policy file path. The CI policy file extension is .bin, not xml.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProfileName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning ProfileName used to sign CI policy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByAccountProfileNameParameterSet
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeStamperUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies Azure TrustedSigning TimeStamper Url used to sign CI policy. The format is Url, recommended timestamper is http://timestamp.acs.microsoft.com.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Invoke-AzTrustedSigningCIPolicySigning
+        [-AccountName] <String>
+        [-ProfileName] <String>
+        [-EndpointUrl] <String>
+        [-Path] <String>
+        -Destination <String>
+        [-TimeStamperUrl <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByAccountProfileNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Invoke-AzTrustedSigningCIPolicySigning
+        [-MetadataFilePath] <String>
+        [-Path] <String>
+        -Destination <String>
+        [-TimeStamperUrl <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByMetadataFileParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Azure TrustedSigning AccountName" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Profile Name" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Signing EndpointUrl" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning UnSigned CI Policy File Path" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure TrustedSigning Signed CI Policy File Path Destination" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Signed CI Policy file" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Sign a CI Policy .bin file by account and profile name'
+  description: |-
+    ```powershell
+    Invoke-AzTrustedSigningCIPolicySigning -AccountName 'contoso' -ProfileName 'contososigning' -EndpointUrl 'https://wus.trustedsigning.azure.net' -Path 'c:\cisigning\contosocipolicy.bin' -Destination 'c:\cisigning\signed_contosocipolicy.bin' -TimeStamperUrl 'http://timestamp.acs.microsoft.com'
+    ```
+
+    ```output
+    CI Policy is successfully signed. c:\cisigning\signed_contosocipolicy.bin
+    ```
+
+    This command signs a CI policy by account and profile, it also timestamps the signature using the timestamp url provided.
+- title: 'Example 2: Sign a CI Policy .bin file by metadata file configuration'
+  description: |-
+    ```powershell
+    Invoke-AzTrustedSigningCIPolicySigning  -MetadataFilePath 'c:\cisigning\metadata_input.json' -Path 'c:\cisigning\contosocipolicy.bin' -Destination 'c:\cisigning\signed_contosocipolicy.bin' -TimeStamperUrl 'http://timestamp.acs.microsoft.com'
+    ```
+
+    ```output
+    CI Policy is successfully signed. c:\cisigning\signed_contosocipolicy.bin
+    ```
+
+    This command signs a CI policy by the metadata configuration, it also timestamps the signature using the timestamp url provided.
+links:
+- text: Get-AzTrustedSigningCustomerEku
+  href: ./Get-AzTrustedSigningCustomerEku.yml
+- text: Get-AzTrustedSigningCertificateroot
+  href: ./Get-AzTrustedSigningCertificateroot.yml
+- text: Get-AzTrustedSigningCertificateChain
+  href: ./Get-AzTrustedSigningCertificateChain.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Invoke-AzTrustedSigningCIPolicySigning.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.TrustedSigning.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.trustedsigning/invoke-aztrustedsigningcipolicysigning
+  Module Name: Az.TrustedSigning
+  ms.assetid: 846F781C-73A3-4BBE-ABD9-897371109FBE
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TrustedSigning/TrustedSigning/help/Invoke-AzTrustedSigningCIPolicySigning.md
+  PlatyPS schema version: 2024-05-01

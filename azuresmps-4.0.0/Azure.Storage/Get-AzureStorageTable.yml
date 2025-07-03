@@ -1,0 +1,123 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Storage.Get-AzureStorageTable
+name: Get-AzureStorageTable
+module: Azure.Storage
+isPreview: false
+summary: |-
+  Lists the storage tables.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureStorageTable** cmdlet lists the storage tables associated with the storage account in Azure.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the storage context.
+      To create it, you can use the New-AzureStorageContext cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the table name.
+      If the table name is empty, the cmdlet lists all the tables.
+      Otherwise, it lists all tables that match the specified name or the regular name pattern.
+    aliases:
+    - N
+    - Table
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TableName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a prefix used in the name of the table or tables you want to get.
+      You can use this to find all tables that start with the same string, such as table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: TablePrefix
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageTable
+        [[-Name] <String>]
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TableName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzureStorageTable
+        -Prefix <String>
+        [-Context <IStorageContext>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: TablePrefix
+  isDefault: false
+examples:
+- title: 'Example 1: List all Azure Storage tables'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageTable
+    ```
+
+    This command gets all storage tables for a Storage account.
+- title: 'Example 2: List Azure Storage tables using a wildcard character'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageTable -Name table*
+    ```
+
+    This command uses a wildcard character to get storage tables whose name starts with table.
+- title: 'Example 3: List Azure Storage tables using table name prefix'
+  description: |-
+    ```
+    PS C:\>Get-AzureStorageTable -Prefix "table"
+    ```
+
+    This command uses the *Prefix* parameter to get storage tables whose name starts with table.
+links:
+- text: New-AzureStorageTable
+  href: ./New-AzureStorageTable.yml
+- text: Remove-AzureStorageTable
+  href: ./Remove-AzureStorageTable.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.Storage.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure.Storage
+  ms.assetid: 4631D36F-926A-4279-AA4D-5F694C18081E
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,90 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Nginx.New-AzNginxPrivateIPAddressObject
+name: New-AzNginxPrivateIPAddressObject
+module: Az.Nginx
+isPreview: false
+summary: |-
+  Create an in-memory object for NginxPrivateIPAddress.
+description: |-
+  Create an in-memory object for NginxPrivateIPAddress.
+parameters:
+  cmdletParameters:
+  - name: PrivateIPAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateIPAllocationMethod
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Nginx.Support.NginxPrivateIPAllocationMethod" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubnetId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNginxPrivateIPAddressObject
+        [-PrivateIPAddress <String>]
+        [-PrivateIPAllocationMethod <NginxPrivateIPAllocationMethod>]
+        [-SubnetId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Nginx.Models.Api202401Preview.NginxPrivateIPAddress" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for NginxPrivateIPAddress'
+  description: |-
+    ```powershell
+    New-AzNginxPrivateIPAddressObject -PrivateIPAddress 10.0.0.0 -PrivateIPAllocationMethod Static -SubnetId /subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/nginx-test-rg/providers/Microsoft.Network/virtualNetworks/nginx-test-vnet/subnets/default
+    ```
+
+    ```output
+    PrivateIPAddress PrivateIPAllocationMethod SubnetId
+    ---------------- ------------------------- --------
+    10.0.0.0         Static                    /subscriptions/xxxxxxxxxx-xxxx-xxxxx-xxxxxxxxxxxx/resourceGroups/nginx-test-rg/providers/Microsoft.Network/virtualNetworks/nginx-test-vnet/subnets/default
+    ```
+
+    Create an in-memory object for NginxPrivateIPAddress.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/Nginx/help/New-AzNginxPrivateIPAddressObject.md
+  document type: cmdlet
+  external help file: Az.Nginx-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Nginx/new-AzNginxPrivateIPAddressObject
+  Module Name: Az.Nginx
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Nginx/Nginx/help/New-AzNginxPrivateIPAddressObject.md
+  PlatyPS schema version: 2024-05-01

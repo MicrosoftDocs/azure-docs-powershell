@@ -1,0 +1,254 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Get-AzKeyVaultRoleAssignment
+name: Get-AzKeyVaultRoleAssignment
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Get or list role assignments of a managed HSM. Use respective parameters to list assignments to a specific user or a role definition.
+description: |-
+  Use the `Get-AzKeyVaultRoleAssignment` command to list all role assignments that are effective on a scope.
+  Without any parameters, this command returns all the role assignments made under the managed HSM.
+  This list can be filtered using filtering parameters for principal, role and scope.
+  The subject of the assignment must be specified.
+  To specify a user, use SignInName or Microsoft Entra ObjectId parameters.
+  To specify a security group, use Microsoft Entra ObjectId parameter.
+  And to specify a Microsoft Entra application, use ApplicationId or ObjectId parameters.
+  The role that is being assigned must be specified using the RoleDefinitionName or RoleDefinitionId parameter.
+  The scope at which access is being granted may be specified. It defaults to "/".
+
+  The cmdlet may call below Microsoft Graph API according to input parameters:
+
+  - GET /directoryObjects/{id}
+  - GET /users/{id}
+  - GET /servicePrincipals/{id}
+  - GET /groups/{id}
+parameters:
+  cmdletParameters:
+  - name: ApplicationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The app SPN.
+    aliases:
+    - SPN
+    - ServicePrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HsmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the HSM.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user or group object id.
+    aliases:
+    - Id
+    - PrincipalId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleAssignmentName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the role assignment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Role Id the principal is assigned to.
+    aliases:
+    - RoleId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the RBAC role to assign the principal with.
+    aliases:
+    - RoleName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope at which the role assignment or definition applies to, e.g., '/' or '/keys' or '/keys/{keyName}'.
+      '/' is used when omitted.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SignInName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user SignInName.
+    aliases:
+    - Email
+    - UserPrincipalName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRoleAssignment
+        [-HsmName] <String>
+        [-Scope <String>]
+        [-RoleDefinitionName <String>]
+        [-RoleDefinitionId <String>]
+        [-ObjectId <String>]
+        [-SignInName <String>]
+        [-ApplicationId <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzKeyVaultRoleAssignment
+        [-HsmName] <String>
+        -RoleAssignmentName <String>
+        [-Scope <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetByName
+  isDefault: false
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultRoleAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRoleAssignment -HsmName myHsm
+    ```
+
+    ```output
+    RoleDefinitionName         DisplayName                      ObjectType Scope
+    ------------------         -----------                      ---------- -----
+    Managed HSM Administrator  User 1 (user1@microsoft.com)     User       /
+    Managed HSM Crypto Auditor User 2 (user2@microsoft.com)     User       /keys
+    Managed HSM Backup         User 2 (user2@microsoft.com)     User       /
+    Managed HSM Administrator  User 2 (user2@microsoft.com)     User       /
+    ```
+
+    This example lists all role assignments of "myHsm" on all the scope.
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzKeyVaultRoleAssignment -HsmName myHsm -SignInName user1@microsoft.com -Scope "/keys"
+    ```
+
+    ```output
+    RoleDefinitionName         DisplayName                      ObjectType Scope
+    ------------------         -----------                      ---------- -----
+    Managed HSM Crypto Auditor User 1 (user1@microsoft.com)     User       /keys
+    Managed HSM Backup         User 1 (user1@microsoft.com)     User       /keys
+    ```
+
+    This example lists all role assignments of "myHsm" on "/keys" scope and filters the result by user sign-in name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRoleAssignment.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/get-azkeyvaultroleassignment
+  Module Name: Az.KeyVault
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Get-AzKeyVaultRoleAssignment.md
+  PlatyPS schema version: 2024-05-01

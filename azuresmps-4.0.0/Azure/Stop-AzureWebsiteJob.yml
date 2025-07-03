@@ -1,0 +1,131 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Stop-AzureWebsiteJob
+name: Stop-AzureWebsiteJob
+module: Azure
+isPreview: false
+summary: |-
+  Stops a web job for a website.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Stop-AzureWebsiteJob** cmdlet stops a web job for a website.
+parameters:
+  cmdletParameters:
+  - name: JobName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The web job name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns a boolean value indicating that the job stopped successfully.
+      By default, this cmdlet does not return any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Slot
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot name of the Azure website.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzureWebsiteJob
+        -JobName <String>
+        [-PassThru]
+        [-Name <String>]
+        [-Slot <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Stop a web job for a website'
+  description: |-
+    ```
+    PS C:\> Stop-AzureWebsiteJob -Name MyWebsite -JobName MyWebJob
+    ```
+
+    Stops a web job called MyWebJob for MyWebSite.
+links:
+- text: Stop-AzureWebsite
+  href: ./Stop-AzureWebsite.yml
+- text: Get-AzureWebsiteJob
+  href: ./Get-AzureWebsiteJob.yml
+- text: New-AzureWebsiteJob
+  href: ./New-AzureWebsiteJob.yml
+- text: Remove-AzureWebsiteJob
+  href: ./Remove-AzureWebsiteJob.yml
+- text: Start-AzureWebsiteJob
+  href: ./Start-AzureWebsiteJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 7D39F4C9-F37A-4BBE-BF02-1F036A9FC5E8
+  PlatyPS schema version: 2024-05-01

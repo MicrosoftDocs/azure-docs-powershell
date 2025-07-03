@@ -1,0 +1,57 @@
+### YamlMime:PowerShellModule1
+uid: Az.HdInsightOnAks
+name: Az.HdInsightOnAks Module
+isPreview: false
+cmdletGroups:
+- title: HdInsightOnAks
+  cmdlets:
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksAvailableClusterPoolVersion
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksAvailableClusterVersion
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksCluster
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterAvailableUpgrade
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterInstanceView
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterJob
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterLibrary
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterPool
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterPoolAvailableUpgrade
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterPoolUpgradeHistory
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterServiceConfig
+  - Az.HdInsightOnAks.Get-AzHdInsightOnAksClusterUpgradeHistory
+  - Az.HdInsightOnAks.Invoke-AzHdInsightOnAksClusterManualRollback
+  - Az.HdInsightOnAks.Invoke-AzHdInsightOnAksClusterPoolUpgrade
+  - Az.HdInsightOnAks.Invoke-AzHdInsightOnAksClusterUpgrade
+  - Az.HdInsightOnAks.Invoke-AzHdInsightOnAksManageClusterLibrary
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksCluster
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterConfigFileObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterHotfixUpgradeObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterMavenLibraryObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterPool
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterPoolAksPatchVersionUpgradeObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterPyPiLibraryObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterServiceConfigObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksClusterServiceConfigsProfileObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksFlinkJobObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksManagedIdentityObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksNodeProfileObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksSecretReferenceObject
+  - Az.HdInsightOnAks.New-AzHdInsightOnAksTrinoHiveCatalogObject
+  - Az.HdInsightOnAks.Remove-AzHdInsightOnAksCluster
+  - Az.HdInsightOnAks.Remove-AzHdInsightOnAksClusterPool
+  - Az.HdInsightOnAks.Resize-AzHdInsightOnAksCluster
+  - Az.HdInsightOnAks.Set-AzHdInsightOnAksClusterPool
+  - Az.HdInsightOnAks.Start-AzHdInsightOnAksClusterJob
+  - Az.HdInsightOnAks.Test-AzHdInsightOnAksLocationNameAvailability
+  - Az.HdInsightOnAks.Update-AzHdInsightOnAksCluster
+  - Az.HdInsightOnAks.Update-AzHdInsightOnAksClusterPoolTag
+description: |-
+  Microsoft Azure PowerShell: HdInsightOnAks cmdlets
+metadata:
+  Module Name: Az.HdInsightOnAks
+  Module Guid: 5d9ea51e-3614-409d-b09a-9188a642e11c
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.hdinsightonaks
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/Az.HdInsightOnAks.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/HdInsightOnAks/HdInsightOnAks/help/Az.HdInsightOnAks.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

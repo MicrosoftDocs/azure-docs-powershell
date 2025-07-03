@@ -1,0 +1,145 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataBox.New-AzDataBoxContactDetailsObject
+name: New-AzDataBoxContactDetailsObject
+module: Az.DataBox
+isPreview: false
+summary: |-
+  Create an in-memory object for ContactDetails.
+description: |-
+  Create an in-memory object for ContactDetails.
+parameters:
+  cmdletParameters:
+  - name: ContactName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Contact name of the person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailList
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of Email-ids to be notified about job progress.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Mobile
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Mobile number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationPreference
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.INotificationPreference" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Notification preference for a job stage.
+      To construct, see NOTES section for NOTIFICATIONPREFERENCE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Phone
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PhoneExtension
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Phone extension number of the contact person.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzDataBoxContactDetailsObject
+        -ContactName <String>
+        -EmailList <String[]>
+        -Phone <String>
+        [-Mobile <String>]
+        [-NotificationPreference <INotificationPreference[]>]
+        [-PhoneExtension <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DataBox.Models.Api20250201.ContactDetails" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a in-memory object for ContactDetails'
+  description: |-
+    ```powershell
+    New-AzDataBoxContactDetailsObject -ContactName "random" -EmailList @("emailId") -Phone "1234567891"
+    ```
+
+    ```output
+    ContactName EmailList            Mobile Phone      PhoneExtension
+    ----------- ---------            ------ -----      --------------
+    random      {emailId}        1234567891
+    ```
+
+    Create a in-memory object for ContactDetails
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxContactDetailsObject.md
+  document type: cmdlet
+  external help file: Az.DataBox-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.DataBox/new-AzDataBoxContactDetailsObject
+  Module Name: Az.DataBox
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataBox/DataBox/help/New-AzDataBoxContactDetailsObject.md
+  PlatyPS schema version: 2024-05-01

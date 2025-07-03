@@ -1,0 +1,117 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Disable-AzureTrafficManagerProfile
+name: Disable-AzureTrafficManagerProfile
+module: Azure
+isPreview: false
+summary: |-
+  Disables a Traffic Manager profile.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Disable-AzureTrafficManagerProfile** cmdlet disables a Microsoft Azure Traffic Manager profile.
+  You can use the *PassThru* parameter to display whether the operation succeeds.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the Traffic Manager profile to disable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns $True if the operation succeeded; otherwise, $False.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzureTrafficManagerProfile
+        -Name <String>
+        [-PassThru]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+  description: |-
+    This cmdlet generates $True or $False.
+    If the operation is successful and if you specify the *PassThru* parameter, this cmdlet returns a value of $True.
+examples:
+- title: 'Example 1: Disable a Traffic Manager profile and display the results'
+  description: |-
+    ```
+    PS C:\>Disable-AzureTrafficManagerProfile -Name "MyProfile" -PassThru
+    True
+    ```
+
+    This command disables the Traffic Manager profile named MyProfile.
+    The command specifies the *PassThru* parameter to display whether the command succeeded.
+- title: 'Example 2: Disable a Traffic Manager profile and display no results'
+  description: |-
+    ```
+    PS C:\>Disable-AzureTrafficManagerProfile -Name "MyProfile"
+    ```
+
+    This command disables the Traffic Manager profile named MyProfile but does not display whether the command succeeded.
+links:
+- text: Enable-AzureTrafficManagerProfile
+  href: ./Enable-AzureTrafficManagerProfile.yml
+- text: Get-AzureTrafficManagerProfile
+  href: ./Get-AzureTrafficManagerProfile.yml
+- text: New-AzureTrafficManagerProfile
+  href: ./New-AzureTrafficManagerProfile.yml
+- text: Remove-AzureTrafficManagerProfile
+  href: ./Remove-AzureTrafficManagerProfile.yml
+- text: Set-AzureTrafficManagerProfile
+  href: ./Set-AzureTrafficManagerProfile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.TrafficManager.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: ECE9C2A6-7DA2-4477-B877-9970FBE26D7C
+  PlatyPS schema version: 2024-05-01

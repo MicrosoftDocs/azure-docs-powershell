@@ -1,0 +1,402 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PaloAltoNetworks.New-AzPaloAltoNetworksProfileObject
+name: New-AzPaloAltoNetworksProfileObject
+module: Az.PaloAltoNetworks
+isPreview: false
+summary: |-
+  Create an in-memory object for NetworkProfile.
+description: |-
+  Create an in-memory object for NetworkProfile.
+parameters:
+  cmdletParameters:
+  - name: EgressNatIP
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.IIPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Egress nat IP to use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableEgressNat
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable egress NAT, enabled by default.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      vnet or vwan, cannot be updated.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicIP
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.IIPAddress" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of IPs associated with the Firewall.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TrustedRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Non-RFC 1918 address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VHubAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VHubResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationIPOfTrustSubnetForUdrAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationIPOfTrustSubnetForUdrResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationTrustSubnetAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationTrustSubnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationUnTrustSubnetAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetConfigurationUnTrustSubnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationIPOfTrustSubnetForUdrAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address value.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationIPOfTrustSubnetForUdrResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationNetworkVirtualApplianceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Network Virtual Appliance resource ID .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationTrustSubnetAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationTrustSubnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationUnTrustSubnetAddressSpace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Address Space.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VwanConfigurationUnTrustSubnetResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzPaloAltoNetworksProfileObject
+        -EnableEgressNat <String>
+        -NetworkType <String>
+        -PublicIP <IIPAddress[]>
+        [-EgressNatIP <IIPAddress[]>]
+        [-TrustedRange <String[]>]
+        [-VHubAddressSpace <String>]
+        [-VHubResourceId <String>]
+        [-VnetAddressSpace <String>]
+        [-VnetConfigurationIPOfTrustSubnetForUdrAddress <String>]
+        [-VnetConfigurationIPOfTrustSubnetForUdrResourceId <String>]
+        [-VnetConfigurationTrustSubnetAddressSpace <String>]
+        [-VnetConfigurationTrustSubnetResourceId <String>]
+        [-VnetConfigurationUnTrustSubnetAddressSpace <String>]
+        [-VnetConfigurationUnTrustSubnetResourceId <String>]
+        [-VnetResourceId <String>]
+        [-VwanConfigurationIPOfTrustSubnetForUdrAddress <String>]
+        [-VwanConfigurationIPOfTrustSubnetForUdrResourceId <String>]
+        [-VwanConfigurationNetworkVirtualApplianceId <String>]
+        [-VwanConfigurationTrustSubnetAddressSpace <String>]
+        [-VwanConfigurationTrustSubnetResourceId <String>]
+        [-VwanConfigurationUnTrustSubnetAddressSpace <String>]
+        [-VwanConfigurationUnTrustSubnetResourceId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.PaloAltoNetworks.Models.NetworkProfile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for NetworkProfile.'
+  description: |-
+    ```powershell
+    $publicIP = New-AzPaloAltoNetworksIPAddressObject -ResourceId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/azps_test_group_pan/providers/Microsoft.Network/publicIPAddresses/azps-network-publicipaddresses
+
+    New-AzPaloAltoNetworksProfileObject -EnableEgressNat DISABLED -PublicIP $publicIP -NetworkType VNET -VnetConfigurationIPOfTrustSubnetForUdrAddress 10.1.1.0/24 -VnetConfigurationTrustSubnetResourceId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/azps_test_group_pan/providers/Microsoft.Network/virtualNetworks/azps-network/subnets/default -VnetConfigurationUnTrustSubnetResourceId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/azps_test_group_pan/providers/Microsoft.Network/virtualNetworks/azps-network/subnets/default2 -VnetResourceId /subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/azps_test_group_pan/providers/Microsoft.Network/virtualNetworks/azps-network
+    ```
+
+    ```output
+    EnableEgressNat NetworkType
+    --------------- -----------
+    DISABLED        VNET
+    ```
+
+    Create an in-memory object for NetworkProfile.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksProfileObject.md
+  document type: cmdlet
+  external help file: Az.PaloAltoNetworks-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.PaloAltoNetworks/new-azpaloaltonetworksprofileobject
+  Module Name: Az.PaloAltoNetworks
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PaloAltoNetworks/PaloAltoNetworks/help/New-AzPaloAltoNetworksProfileObject.md
+  PlatyPS schema version: 2024-05-01

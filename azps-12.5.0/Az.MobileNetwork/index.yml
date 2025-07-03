@@ -1,0 +1,76 @@
+### YamlMime:PowerShellModule1
+uid: Az.MobileNetwork
+name: Az.MobileNetwork Module
+isPreview: false
+cmdletGroups:
+- title: MobileNetwork
+  cmdlets:
+  - Az.MobileNetwork.Deploy-AzMobileNetworkReinstallPacketCoreControlPlane
+  - Az.MobileNetwork.Deploy-AzMobileNetworkRollbackPacketCoreControlPlane
+  - Az.MobileNetwork.Get-AzMobileNetwork
+  - Az.MobileNetwork.Get-AzMobileNetworkAttachedDataNetwork
+  - Az.MobileNetwork.Get-AzMobileNetworkDataNetwork
+  - Az.MobileNetwork.Get-AzMobileNetworkPacketCoreControlPlane
+  - Az.MobileNetwork.Get-AzMobileNetworkPacketCoreControlPlaneVersion
+  - Az.MobileNetwork.Get-AzMobileNetworkPacketCoreDataPlane
+  - Az.MobileNetwork.Get-AzMobileNetworkService
+  - Az.MobileNetwork.Get-AzMobileNetworkSim
+  - Az.MobileNetwork.Get-AzMobileNetworkSimGroup
+  - Az.MobileNetwork.Get-AzMobileNetworkSimPolicy
+  - Az.MobileNetwork.Get-AzMobileNetworkSite
+  - Az.MobileNetwork.Get-AzMobileNetworkSlice
+  - Az.MobileNetwork.New-AzMobileNetwork
+  - Az.MobileNetwork.New-AzMobileNetworkAttachedDataNetwork
+  - Az.MobileNetwork.New-AzMobileNetworkDataNetwork
+  - Az.MobileNetwork.New-AzMobileNetworkDataNetworkConfigurationObject
+  - Az.MobileNetwork.New-AzMobileNetworkPacketCoreControlPlane
+  - Az.MobileNetwork.New-AzMobileNetworkPacketCoreDataPlane
+  - Az.MobileNetwork.New-AzMobileNetworkPccRuleConfigurationObject
+  - Az.MobileNetwork.New-AzMobileNetworkService
+  - Az.MobileNetwork.New-AzMobileNetworkServiceDataFlowTemplateObject
+  - Az.MobileNetwork.New-AzMobileNetworkServiceResourceIdObject
+  - Az.MobileNetwork.New-AzMobileNetworkSim
+  - Az.MobileNetwork.New-AzMobileNetworkSimGroup
+  - Az.MobileNetwork.New-AzMobileNetworkSimPolicy
+  - Az.MobileNetwork.New-AzMobileNetworkSimStaticIPPropertiesObject
+  - Az.MobileNetwork.New-AzMobileNetworkSite
+  - Az.MobileNetwork.New-AzMobileNetworkSiteResourceIdObject
+  - Az.MobileNetwork.New-AzMobileNetworkSlice
+  - Az.MobileNetwork.New-AzMobileNetworkSliceConfigurationObject
+  - Az.MobileNetwork.Remove-AzMobileNetwork
+  - Az.MobileNetwork.Remove-AzMobileNetworkAttachedDataNetwork
+  - Az.MobileNetwork.Remove-AzMobileNetworkBulkSimDelete
+  - Az.MobileNetwork.Remove-AzMobileNetworkDataNetwork
+  - Az.MobileNetwork.Remove-AzMobileNetworkPacketCoreControlPlane
+  - Az.MobileNetwork.Remove-AzMobileNetworkPacketCoreDataPlane
+  - Az.MobileNetwork.Remove-AzMobileNetworkService
+  - Az.MobileNetwork.Remove-AzMobileNetworkSim
+  - Az.MobileNetwork.Remove-AzMobileNetworkSimGroup
+  - Az.MobileNetwork.Remove-AzMobileNetworkSimPolicy
+  - Az.MobileNetwork.Remove-AzMobileNetworkSite
+  - Az.MobileNetwork.Remove-AzMobileNetworkSlice
+  - Az.MobileNetwork.Trace-AzMobileNetworkCollectPacketCoreControlPlaneDiagnosticPackage
+  - Az.MobileNetwork.Update-AzMobileNetwork
+  - Az.MobileNetwork.Update-AzMobileNetworkAttachedDataNetwork
+  - Az.MobileNetwork.Update-AzMobileNetworkBulkSimUpload
+  - Az.MobileNetwork.Update-AzMobileNetworkBulkSimUploadEncrypted
+  - Az.MobileNetwork.Update-AzMobileNetworkDataNetwork
+  - Az.MobileNetwork.Update-AzMobileNetworkPacketCoreControlPlane
+  - Az.MobileNetwork.Update-AzMobileNetworkPacketCoreDataPlane
+  - Az.MobileNetwork.Update-AzMobileNetworkService
+  - Az.MobileNetwork.Update-AzMobileNetworkSimGroup
+  - Az.MobileNetwork.Update-AzMobileNetworkSimPolicy
+  - Az.MobileNetwork.Update-AzMobileNetworkSite
+  - Az.MobileNetwork.Update-AzMobileNetworkSlice
+description: |-
+  Microsoft Azure PowerShell: MobileNetwork cmdlets
+metadata:
+  Module Name: Az.MobileNetwork
+  Module Guid: 11f61d2d-3318-4e19-8917-0f0bd2cc78c7
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.mobilenetwork
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/Az.MobileNetwork.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MobileNetwork/MobileNetwork/help/Az.MobileNetwork.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

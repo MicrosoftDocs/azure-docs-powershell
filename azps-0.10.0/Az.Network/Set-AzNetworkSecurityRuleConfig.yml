@@ -1,0 +1,386 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzNetworkSecurityRuleConfig
+name: Set-AzNetworkSecurityRuleConfig
+module: Az.Network
+isPreview: false
+summary: |-
+  Sets the goal state for a network security rule configuration.
+description: |-
+  The **Set-AzNetworkSecurityRuleConfig** cmdlet sets the goal state for an Azure network security rule configuration.
+parameters:
+  cmdletParameters:
+  - name: Access
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether network traffic is allowed or denied.
+      The acceptable values for this parameter are: Allow and Deny.
+    acceptedValues:
+    - Allow
+    - Deny
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a description for a rule configuration.
+      The maximum size is 140 characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAddressPrefix
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a destination address prefix.
+      The acceptable values for this parameter are:
+
+      - A Classless Interdomain Routing (CIDR) address
+      - A destination IP address range
+      - A wildcard character (*) to match any IP address
+
+      You can use tags such as VirtualNetwork, AzureLoadBalancer, and Internet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationApplicationSecurityGroup
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The application security group set as destination for the rule. It cannot be used with 'DestinationAddressPrefix' parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationApplicationSecurityGroupId
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The application security group set as destination for the rule. It cannot be used with 'DestinationAddressPrefix' parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPortRange
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a destination port or range.
+      The acceptable values for this parameter are:
+
+      - An integer
+      - A range of integers between 0 and 65535
+      - A wildcard character (*) to match any port
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Direction
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether a rule is evaluated for incoming or outgoing traffic.
+      The acceptable values for this parameter are: Inbound and Outbound.
+    acceptedValues:
+    - Inbound
+    - Outbound
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the network security rule configuration that this cmdlet sets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroup
+    type: <xref href="PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the **NetworkSecurityGroup** object that contains the network security rule configuration to set.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority of a rule configuration.
+      The acceptable values for this parameter are:An integer between 100 and 4096.
+
+      The priority number must be unique for each rule in the collection.
+      The lower the priority number, the higher the priority of the rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network protocol that a rule configuration applies to.
+      The acceptable values for this parameter are:
+
+       --Tcp
+      - Udp
+      - A wildcard character (*) to match both
+    acceptedValues:
+    - Tcp
+    - Udp
+    - '*'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceAddressPrefix
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies a source address prefix.
+      The acceptable values for this parameter are:
+
+      - A CIDR
+      - A source IP range
+      - A wildcard character (*) to match any IP address
+
+      You can also use tags such as VirtualNetwork, AzureLoadBalancer and Internet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceApplicationSecurityGroup
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The application security group set as source for the rule. It cannot be used with 'SourceAddressPrefix' parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResource
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceApplicationSecurityGroupId
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The application security group set as source for the rule. It cannot be used with 'SourceAddressPrefix' parameter.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SetByResourceId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePortRange
+    type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the source port or range.
+      The acceptable values for this parameter are:
+
+      - An integer
+      - A range of integers between 0 and 65535
+      - A wildcard character (*) to match any port
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkSecurityRuleConfig
+        -Name <String>
+        -NetworkSecurityGroup <PSNetworkSecurityGroup>
+        [-Description <String>]
+        [-Protocol <String>]
+        [-SourcePortRange <System.Collections.Generic.List`1[System.String]>]
+        [-DestinationPortRange <System.Collections.Generic.List`1[System.String]>]
+        [-SourceAddressPrefix <System.Collections.Generic.List`1[System.String]>]
+        [-DestinationAddressPrefix <System.Collections.Generic.List`1[System.String]>]
+        [-SourceApplicationSecurityGroup <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]>]
+        [-DestinationApplicationSecurityGroup <System.Collections.Generic.List`1[Microsoft.Azure.Commands.Network.Models.PSApplicationSecurityGroup]>]
+        [-Access <String>]
+        [-Priority <Int32>]
+        [-Direction <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResource
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzNetworkSecurityRuleConfig
+        -Name <String>
+        -NetworkSecurityGroup <PSNetworkSecurityGroup>
+        [-Description <String>]
+        [-Protocol <String>]
+        [-SourcePortRange <System.Collections.Generic.List`1[System.String]>]
+        [-DestinationPortRange <System.Collections.Generic.List`1[System.String]>]
+        [-SourceAddressPrefix <System.Collections.Generic.List`1[System.String]>]
+        [-DestinationAddressPrefix <System.Collections.Generic.List`1[System.String]>]
+        [-SourceApplicationSecurityGroupId <System.Collections.Generic.List`1[System.String]>]
+        [-DestinationApplicationSecurityGroupId <System.Collections.Generic.List`1[System.String]>]
+        [-Access <String>]
+        [-Priority <Int32>]
+        [-Direction <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SetByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'NetworkSecurityGroup' accepts value of type 'PSNetworkSecurityGroup' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSNetworkSecurityGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Change the access configuration in a network security rule'
+  description: |-
+    ```
+    PS C:\>$nsg = Get-AzNetworkSecurityGroup -Name "NSG-FrontEnd" -ResourceGroupName "TestRG"
+    PS C:\> $nsg | Get-AzNetworkSecurityRuleConfig -Name "rdp-rule"
+    PS C:\> Set-AzNetworkSecurityRuleConfig -Name "rdp-rule" -NetworkSecurityGroup $nsg -Access "Deny"
+    ```
+
+    The first command gets the network security group named NSG-FrontEnd, and then stores it in the variable $nsg.
+
+    The second command uses the pipeline operator to pass the security group in $nsg to Get-AzNetworkSecurityRuleConfig, which gets the security rule configuration named rdp-rule.
+
+    The third command changes the access configuration of rdp-rule to Deny.
+links:
+- text: Add-AzNetworkSecurityRuleConfig
+  href: ./Add-AzNetworkSecurityRuleConfig.yml
+- text: Get-AzNetworkSecurityRuleConfig
+  href: ./Get-AzNetworkSecurityRuleConfig.yml
+- text: New-AzNetworkSecurityRuleConfig
+  href: ./New-AzNetworkSecurityRuleConfig.yml
+- text: Remove-AzNetworkSecurityRuleConfig
+  href: ./Remove-AzNetworkSecurityRuleConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-aznetworksecurityruleconfig
+  Module Name: Az.Network
+  ms.assetid: 7EFFFF43-501E-4955-A4EE-2C09B8863B30
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzNetworkSecurityRuleConfig.md
+  PlatyPS schema version: 2024-05-01

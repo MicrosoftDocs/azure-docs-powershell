@@ -1,0 +1,96 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudKeySetUserObject
+name: New-AzNetworkCloudKeySetUserObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for KeySetUser.
+description: |-
+  Create an in-memory object for KeySetUser.
+parameters:
+  cmdletParameters:
+  - name: AzureUserName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user name that will be used for access.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The free-form description for this user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SshPublicKeyData
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The SSH public key data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudKeySetUserObject
+        -AzureUserName <String>
+        -SshPublicKeyData <String>
+        [-Description <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20230701.KeySetUser" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for KeySetUser.'
+  description: |-
+    ```powershell
+    New-AzNetworkCloudKeySetUserObject -AzureUserName azureUserName -SshPublicKeyData "ssh-rsa-key" -Description "userDescription"
+    ```
+
+    ```output
+    AzureUserName Description
+    ------------- -----------
+    azureUserName userDescription
+    ```
+
+    Create an in-memory object for KeySetUser.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudKeySetUserObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudKeySetUserObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudKeySetUserObject.md
+  PlatyPS schema version: 2024-05-01

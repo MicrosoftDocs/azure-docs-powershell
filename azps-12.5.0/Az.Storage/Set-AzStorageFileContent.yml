@@ -1,0 +1,465 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Set-AzStorageFileContent
+name: Set-AzStorageFileContent
+module: Az.Storage
+isPreview: false
+summary: |-
+  Uploads the contents of a file.
+description: |-
+  The **Set-AzStorageFileContent** cmdlet uploads the contents of a file to a file on a specified share.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClientTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the client-side time-out interval, in seconds, for one service request.
+      If the previous call fails in the specified interval, this cmdlet retries the request.
+      If this cmdlet does not receive a successful response before the interval elapses, this cmdlet returns an error.
+    aliases:
+    - ClientTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ConcurrentTaskCount
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the maximum concurrent network calls.
+      You can use this parameter to limit the concurrency to throttle local CPU and bandwidth usage by specifying the maximum number of concurrent network calls.
+      The specified value is an absolute count and is not multiplied by the core count.
+      This parameter can help reduce network connection problems in low bandwidth environments, such as 100 kilobits per second.
+      The default value is 10.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an Azure storage context.
+      To obtain a storage context, use the [New-AzStorageContext](./New-AzStorageContext.yml) cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Directory
+    type: <xref href="Microsoft.Azure.Storage.File.CloudFileDirectory" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a folder as a **CloudFileDirectory** object.
+      This cmdlet uploads the file to the folder that this parameter specifies.
+      To obtain a directory, use the New-AzStorageDirectory cmdlet.
+      You can also use the Get-AzStorageFile cmdlet to obtain a directory.
+    aliases:
+    - CloudFileDirectory
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisAllowTrailingDot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disallow trailing dot (.) to suffix directory and file names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet overwrites an existing Azure storage file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet returns the **AzureStorageFile** object that it creates or uploads.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Path
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of a file or folder.
+      This cmdlet uploads contents to the file that this parameter specifies, or to a file in the folder that this parameter specifies.
+      If you specify a folder, this cmdlet creates a file that has the same name as the source file.
+      If you specify a path of a file that does not exist, this cmdlet creates that file and saves the contents to that file.
+      If you specify a file that already exists, and you specify the _Force_ parameter, this cmdlet overwrites the contents of the file.
+      If you specify a file that already exists and you do not specify _Force_, this cmdlet makes no change, and returns an error.
+      If you specify a path of a folder that does not exist, this cmdlet makes no change, and returns an error.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreserveSMBAttribute
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Keep the source File SMB properties (File Attributes, File Creation Time, File Last Write Time) in destination File. This parameter is only available on Windows.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerTimeoutPerRequest
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Int32" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      Specifies the length of the time-out period for the server part of a request.
+    aliases:
+    - ServerTimeoutPerRequestInSeconds
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Share
+    type: <xref href="Microsoft.Azure.Storage.File.CloudFileShare" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **CloudFileShare** object.
+      This cmdlet uploads to a file in the file share this parameter specifies.
+      To obtain a **CloudFileShare** object, use the Get-AzStorageShare cmdlet.
+      This object contains the storage context.
+      If you specify this parameter, do not specify the *Context* parameter.
+    aliases:
+    - CloudFileShare
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareClient object indicated the share where the file would be uploaded to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Share
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareDirectoryClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareDirectoryClient" data-throw-if-not-resolved="False" />
+    description: |-
+      CloudFileDirectory object indicated the cloud directory where the file would be uploaded.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Directory
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the file share.
+      This cmdlet uploads to a file in the file share this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Source
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the source file that this cmdlet uploads.
+      If you specify a file that does not exist, this cmdlet returns an error.
+    aliases:
+    - FullName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzStorageFileContent
+        [-ShareName] <String>
+        [-Source] <String>
+        [[-Path] <String>]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-DisAllowTrailingDot]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzStorageFileContent
+        [-Share] <CloudFileShare>
+        [-Source] <String>
+        [[-Path] <String>]
+        [-ShareClient <ShareClient>]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Share
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzStorageFileContent
+        [-Directory] <CloudFileDirectory>
+        [-Source] <String>
+        [[-Path] <String>]
+        [-ShareDirectoryClient <ShareDirectoryClient>]
+        [-PassThru]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-ServerTimeoutPerRequest <Int32>]
+        [-ClientTimeoutPerRequest <Int32>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-ConcurrentTaskCount <Int32>]
+        [-WhatIf]
+        [-Confirm]
+        [-PreserveSMBAttribute]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Directory
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Storage.File.CloudFileShare" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Storage.File.CloudFileDirectory" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageFile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Upload a file in the current folder'
+  description: |-
+    ```powershell
+    Set-AzStorageFileContent -ShareName "ContosoShare06" -Source "DataFile37" -Path "ContosoWorkingFolder/CurrentDataFile"
+    ```
+
+    This command uploads a file that is named DataFile37 in the current folder as a file that is named CurrentDataFile in the folder named ContosoWorkingFolder.
+- title: 'Example 2: Upload all the files in the current folder'
+  description: |-
+    ```powershell
+    $CurrentFolder = (Get-Item .).FullName
+    $Container = Get-AzStorageShare -Name "ContosoShare06"
+    Get-ChildItem -Recurse | Where-Object { $_.GetType().Name -eq "FileInfo"} | ForEach-Object {
+        $path=$_.FullName.Substring($Currentfolder.Length+1).Replace("\","/")
+        Set-AzStorageFileContent -Share $Container -Source $_.FullName -Path $path -Force
+    }
+    ```
+
+    This example uses several common Windows PowerShell cmdlets and the current cmdlet to upload all files from the current folder to the root folder of container ContosoShare06.
+    The first command gets the name of the current folder and stores it in the $CurrentFolder variable.
+    The second command uses the **Get-AzStorageShare** cmdlet to get the file share named ContosoShare06, and then stores it in the $Container variable.
+    The final command gets the contents of the current folder and passes each one to the Where-Object cmdlet by using the pipeline operator.
+    That cmdlet filters out objects that are not files, and then passes the files to the ForEach-Object cmdlet.
+    That cmdlet runs a script block for each file that creates the appropriate path for it and then uses the current cmdlet to upload the file.
+    The result has the same name and same relative position with regard to the other files that this example uploads.
+    For more information about script blocks, type `Get-Help about_Script_Blocks`.
+- title: 'Example 3: Upload a local file to an Azure file, and preserve the local File SMB properties (File Attributes, File Creation Time, File Last Write Time) in the Azure file.'
+  description: |-
+    ```powershell
+    Set-AzStorageFileContent -Source $localFilePath -ShareName sample -Path "dir1/file1" -PreserveSMBAttribute
+    ```
+
+    This example uploads a local file to an Azure file, and preserves the local File SMB properties (File Attributes, File Creation Time, File Last Write Time) in the Azure file.
+links:
+- text: Remove-AzStorageDirectory
+  href: ./Remove-AzStorageDirectory.yml
+- text: New-AzStorageDirectory
+  href: ./New-AzStorageDirectory.yml
+- text: Get-AzStorageFileContent
+  href: ./Get-AzStorageFileContent.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageFileContent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/set-azstoragefilecontent
+  Module Name: Az.Storage
+  ms.assetid: FA98E64B-D589-4653-9ACC-86573FAF4550
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Set-AzStorageFileContent.md
+  PlatyPS schema version: 2024-05-01

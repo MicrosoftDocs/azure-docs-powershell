@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SignalR.New-AzWebPubSubEventHubEndpointObject
+name: New-AzWebPubSubEventHubEndpointObject
+module: Az.SignalR
+isPreview: false
+summary: |-
+  Create an in-memory object for EventHubEndpoint.
+description: |-
+  Create an in-memory object for EventHubEndpoint.
+parameters:
+  cmdletParameters:
+  - name: EventHubName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Event Hub.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FullyQualifiedNamespace
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The fully qualified namespace name of the Event Hub resource.
+      For example, "example.servicebus.windows.net".
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWebPubSubEventHubEndpointObject
+        -EventHubName <String>
+        -FullyQualifiedNamespace <String>
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.WebPubSub.Models.Api20220801Preview.EventHubEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Event Hubs endpoint object'
+  description: |-
+    ```powershell
+    $eventHub = New-AzWebPubSubEventHubEndpointObject -EventHubName hub1 -FullyQualifiedNamespace example.servicebus.windows.net
+    $eventHub
+    ```
+
+    ```output
+    EventHubName FullyQualifiedNamespace
+    ------------ -----------------------
+    hub1         example.servicebus.windows.net
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubEventHubEndpointObject.md
+  document type: cmdlet
+  external help file: Az.SignalR-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.signalr/new-azwebpubsubeventhubendpointobject
+  Module Name: Az.SignalR
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SignalR/SignalR/help/New-AzWebPubSubEventHubEndpointObject.md
+  PlatyPS schema version: 2024-05-01

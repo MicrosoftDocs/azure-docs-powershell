@@ -1,0 +1,125 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.Get-AzPeeringLocation
+name: Get-AzPeeringLocation
+module: Az.Peering
+isPreview: false
+summary: |-
+  Lists all of the available peering locations for the specified kind of peering.
+description: |-
+  Lists all of the available peering locations for the specified kind of peering.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DirectPeeringType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The type of direct peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Kind
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The kind of the peering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringLocation
+        [-SubscriptionId <String[]>]
+        -Kind <String>
+        [-DirectPeeringType <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.IPeeringLocation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all direct peering locations'
+  description: |-
+    ```powershell
+    Get-AzPeeringLocation -Kind Direct
+    ```
+
+    ```output
+    Get-AzPeeringLocation -Kind Direct
+
+    Name             Country AzureRegion         Kind
+    ----             ------- -----------         ----
+    Amsterdam        NL      West Europe         Direct
+    Ashburn          US      East US             Direct
+    Athens           GR      France Central      Direct
+    Atlanta          US      East US 2           Direct
+    Auckland         NZ      Australia East      Direct
+    Barcelona        ES      France Central      Direct
+    Berlin           DE      West Europe         Direct
+    ...
+    ```
+
+    Gets all peering locations for direct peers
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringLocation.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringlocation
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringLocation.md
+  PlatyPS schema version: 2024-05-01

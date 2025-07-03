@@ -1,0 +1,147 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzExpressRouteCircuitARPTable
+name: Get-AzExpressRouteCircuitARPTable
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets the ARP table from an ExpressRoute circuit.
+description: |-
+  The **Get-AzExpressRouteCircuitARPTable** cmdlet retrieves the ARP table from both interfaces
+  of an ExpressRoute circuit. The ARP table provides a mapping of the IPv4 address to MAC address for
+  a particular peering. You can use the ARP table to validate layer 2 configuration and connectivity.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DevicePath
+    type: <xref href="Microsoft.Azure.Commands.Network.DevicePathEnum" data-throw-if-not-resolved="False" />
+    description: |-
+      The acceptable values for this parameter are: `Primary` or `Secondary`
+    acceptedValues:
+    - Primary
+    - Secondary
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpressRouteCircuitName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ExpressRoute circuit being examined.
+    aliases:
+    - Name
+    - ResourceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The acceptable values for this parameter are: `AzurePrivatePeering`, `AzurePublicPeering`, and
+      `MicrosoftPeering`
+    acceptedValues:
+    - AzurePrivatePeering
+    - AzurePublicPeering
+    - MicrosoftPeering
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group containing the ExpressRoute circuit.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzExpressRouteCircuitARPTable
+        -ResourceGroupName <String>
+        -ExpressRouteCircuitName <String>
+        -PeeringType <String>
+        -DevicePath <DevicePathEnum>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSExpressRouteCircuitArpTable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Display the ARP table for an ExpressRoute peer'
+  description: |-
+    ```powershell
+    Get-AzExpressRouteCircuitARPTable -ResourceGroupName $RG -ExpressRouteCircuitName $CircuitName -PeeringType MicrosoftPeering -DevicePath Primary
+    ```
+links:
+- text: Get-AzExpressRouteCircuitRouteTable
+  href: Get-AzExpressRouteCircuitRouteTable.yml
+- text: Get-AzExpressRouteCircuitRouteTableSummary
+  href: Get-AzExpressRouteCircuitRouteTableSummary.yml
+- text: Get-AzExpressRouteCircuitStat
+  href: ./Get-AzExpressRouteCircuitStat.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azexpressroutecircuitarptable
+  Module Name: Az.Network
+  ms.assetid: F0370845-13D9-4FB5-B30E-826A22EBC5E0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzExpressRouteCircuitARPTable.md
+  PlatyPS schema version: 2024-05-01

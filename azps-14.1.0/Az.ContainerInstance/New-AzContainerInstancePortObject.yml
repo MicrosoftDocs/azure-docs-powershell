@@ -1,0 +1,80 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ContainerInstance.New-AzContainerInstancePortObject
+name: New-AzContainerInstancePortObject
+module: Az.ContainerInstance
+isPreview: false
+summary: |-
+  Create a in-memory object for ContainerPort
+description: |-
+  Create a in-memory object for ContainerPort
+parameters:
+  cmdletParameters:
+  - name: Port
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The port number exposed within the container group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The protocol associated with the port.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerInstancePortObject
+        -Port <Int32>
+        [-Protocol <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ContainerInstance.Models.Api20240501Preview.ContainerPort" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Specify port 8000 exposed on a container instance with TCP protocol'
+  description: |-
+    ```powershell
+    New-AzContainerInstancePortObject -Port 8000 -Protocol TCP
+    ```
+
+    ```output
+    Port Protocol
+    ----- --------
+    8000  TCP
+    ```
+
+    This command specifies port 8000 exposed on the container instance with TCP protocol.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstancePortObject.md
+  document type: cmdlet
+  external help file: Az.ContainerInstance-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ContainerInstance/new-AzContainerInstancePortObject
+  Module Name: Az.ContainerInstance
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ContainerInstance/ContainerInstance/help/New-AzContainerInstancePortObject.md
+  PlatyPS schema version: 2024-05-01

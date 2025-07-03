@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSBAuthorizationRule
+name: Get-AzureSBAuthorizationRule
+module: Azure
+isPreview: false
+summary: |-
+  Gets Service bus authorization rules.
+
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  Gets Service bus authorization rules.
+
+  [!INCLUDE [sb-deprecation.md](../include/sb-deprecation.yml)]
+parameters:
+  cmdletParameters:
+  - name: EntityName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The entity name to apply rule at.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EntitySAS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EntityType
+    type: <xref href="ServiceBusEntityType" data-throw-if-not-resolved="False" />
+    description: |-
+      The entity type (Queue, Topic, Relay, NotificationHub).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: EntitySAS
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique authorization rule name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Namespace
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name to apply the authorization rule.
+      If no EntityName provided the rule will be on the namespace level.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="AccessRights" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The authorization permissions to filter (Send, Manage, Listen).
+      This uses exact match.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSBAuthorizationRule
+        -Namespace <String>
+        -EntityName <String>
+        -EntityType <ServiceBusEntityType>
+        [-Name <String>]
+        [-Permission <AccessRights[]>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: EntitySAS
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzureSBAuthorizationRule
+        -Namespace <String>
+        [-Name <String>]
+        [-Permission <AccessRights[]>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: NamespaceSAS
+  isDefault: false
+examples:
+- title: 'Example 1: Get authorization rule at namespace level'
+  description: |-
+    ```
+    PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace
+    ```
+
+    Gets all available authorization rules at MyNamespace.
+- title: 'Example 2: Get authorization rule for a Queue'
+  description: |-
+    ```
+    PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace -EntityName MyEntity -EntityType Queue
+    ```
+
+    Gets all available authorization rules a MyEntity Queue on MyNamespace.
+- title: 'Example 3: Get authorization rule by name'
+  description: |-
+    ```
+    PS C:\> Get-AzureSBAuthorizationRule -Name MyRule -Namespace MyNamespace
+    ```
+
+    Gets an authorization rule called MyRule on MyNamespace level.
+- title: 'Example 4: Get authorization rule by permission'
+  description: |-
+    ```
+    PS C:\> Get-AzureSBAuthorizationRule -Namespace MyNamespace -Permission $("Send")
+    ```
+
+    Gets all authorization rules that have send permission on namespace level.
+links:
+- text: New-AzureSBAuthorizationRule
+  href: ./New-AzureSBAuthorizationRule.yml
+- text: Remove-AzureSBAuthorizationRule
+  href: ./Remove-AzureSBAuthorizationRule.yml
+- text: Set-AzureSBAuthorizationRule
+  href: ./Set-AzureSBAuthorizationRule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: D7B2CDFF-D9A2-48C7-B331-132A6A6843CA
+  PlatyPS schema version: 2024-05-01

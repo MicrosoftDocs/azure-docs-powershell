@@ -1,0 +1,1137 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Resources.New-AzADServicePrincipal
+name: New-AzADServicePrincipal
+module: Az.Resources
+isPreview: false
+summary: |-
+  Adds new entity to servicePrincipals
+description: |-
+  Adds new entity to servicePrincipals
+parameters:
+  cmdletParameters:
+  - name: AccountEnabled
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      true if the service principal account is enabled; otherwise, false.
+      Supports $filter (eq, ne, NOT, in).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AddIn
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAddIn" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Defines custom behavior that a consuming service can use to call an app in specific contexts.
+      For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality.
+      This will let services like Microsoft 365 call the application in the context of a document the user is working on.
+      To construct, see NOTES section for ADDIN properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AlternativeName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities.
+      Supports $filter (eq, NOT, ge, le, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppDescription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The description exposed by the associated application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationId
+    type: <xref href="System.Guid" data-throw-if-not-resolved="False" />
+    description: |-
+      The unique identifier for the associated application (its appId property).
+    aliases:
+    - AppId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationIdParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ApplicationObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+    description: |-
+      The application object, could be used as pipeline input.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ApplicationObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppOwnerOrganizationId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Contains the tenant id where the application is registered.
+      This is applicable only to service principals backed by applications.Supports $filter (eq, ne, NOT, ge, le).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRole
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRole" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The roles exposed by the application which this service principal represents.
+      For more information see the appRoles property definition on the application entity.
+      Not nullable.
+      To construct, see NOTES section for APPROLE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRoleAssignedTo
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRoleAssignment" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      App role assignments for this app or service, granted to users, groups, and other service principals.Supports $expand.
+      To construct, see NOTES section for APPROLEASSIGNEDTO properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRoleAssignment
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphAppRoleAssignment" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      App role assignment for another app or service, granted to this service principal.
+      Supports $expand.
+      To construct, see NOTES section for APPROLEASSIGNMENT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AppRoleAssignmentRequired
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens.
+      The default value is false.
+      Not nullable.
+      Supports $filter (eq, ne, NOT).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CertValue
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The value of the 'asymmetric' credential type.
+      It represents the base 64 encoded certificate.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameWithKeyPlainParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ClaimsMappingPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphClaimsMappingPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The claimsMappingPolicies assigned to this service principal.
+      Supports $expand.
+      To construct, see NOTES section for CLAIMSMAPPINGPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DelegatedPermissionClassification
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphDelegatedPermissionClassification" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The permission classifications for delegated permissions exposed by the app that this service principal represents.
+      Supports $expand.
+      To construct, see NOTES section for DELEGATEDPERMISSIONCLASSIFICATION properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DeletedDateTime
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Description
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Free text field to provide an internal end-user facing description of the service principal.
+      End-user portals such MyApps will display the application description in this field.
+      The maximum allowed size is 1024 characters.
+      Supports $filter (eq, ne, NOT, ge, le, startsWith) and $search.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisabledByMicrosoftStatus
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies whether Microsoft has disabled the registered application.
+      Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).
+      Supports $filter (eq, ne, NOT).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name for the service principal.
+      Supports $filter (eq, ne, NOT, ge, le, in, startsWith), $search, and $orderBy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective end date of the credential usage.
+      The default end date value is one year from today.
+      For an 'asymmetric' type credential, this must be set to on or before the date that the X509 certificate is valid.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphEndpoint" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Endpoints available for discovery.
+      Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
+      To construct, see NOTES section for ENDPOINT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Homepage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Home page or landing page of the application.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HomeRealmDiscoveryPolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphHomeRealmDiscoveryPolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The homeRealmDiscoveryPolicies assigned to this service principal.
+      Supports $expand.
+      To construct, see NOTES section for HOMEREALMDISCOVERYPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Info
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphInformationalUrl" data-throw-if-not-resolved="False" />
+    description: |-
+      informationalUrl
+      To construct, see NOTES section for INFO properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyCredential
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphKeyCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      key credentials associated with the service principal.
+    aliases:
+    - KeyCredentials
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameWithKeyCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoginUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL where the service provider redirects the user to Azure AD to authenticate.
+      Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps.
+      When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on.
+      The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LogoutUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the URL that will be used by Microsoft's authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Note
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Free text field to capture information about the service principal, typically used for operational purposes.
+      Maximum allowed size is 1024 characters.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NotificationEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date.
+      This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Oauth2PermissionScope
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphPermissionScope" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The delegated permissions exposed by the application.
+      For more information see the oauth2PermissionScopes property on the application entity's api property.
+      Not nullable.
+      To construct, see NOTES section for OAUTH2PERMISSIONSCOPE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PasswordCredential
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphPasswordCredential" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Password credentials associated with the service principal.
+    aliases:
+    - PasswordCredentials
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DisplayNameWithPasswordCredentialParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredSingleSignOnMode
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the single sign-on mode configured for this application.
+      Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps.
+      The supported values are password, saml, notSupported, and oidc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PreferredTokenSigningKeyThumbprint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Reserved for internal use only.
+      Do not write or otherwise rely on this property.
+      May be removed in future versions.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ReplyUrl
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application.
+      Not nullable.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Role
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The role that the service principal has over the scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SamlSingleSignOnSetting
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphSamlSingleSignOnSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      samlSingleSignOnSettings
+      To construct, see NOTES section for SAMLSINGLESIGNONSETTING properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scope that the service principal has permissions for.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Contains the list of identifiersUris, copied over from the associated application.
+      Additional values can be added to hybrid applications.
+      These values can be used to identify the permissions exposed by this app within Azure AD.
+      For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the 'aud' claim.The any operator is required for filter expressions on multi-valued properties.
+      Not nullable.
+      Supports $filter (eq, NOT, ge, le, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Identifies if the service principal represents an application or a managed identity.
+      This is set by Azure AD internally.
+      For a service principal that represents an application this is set as Application.
+      For a service principal that represent a managed identity this is set as ManagedIdentity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartDate
+    type: <xref href="System.DateTime" data-throw-if-not-resolved="False" />
+    description: |-
+      The effective start date of the credential usage.
+      The default start date value is today.
+      For an 'asymmetric' type credential, this must be set to on or after the date that the X509 certificate is valid from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: SimpleParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DisplayNameWithKeyPlainParameterSet
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Tag
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Custom strings that can be used to categorize and identify the service principal.
+      Not nullable.
+      Supports $filter (eq, NOT, ge, le, startsWith).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenEncryptionKeyId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the keyId of a public key from the keyCredentials collection.
+      When configured, Azure AD issues tokens for this application encrypted using the key specified by this property.
+      The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenIssuancePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphTokenIssuancePolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The tokenIssuancePolicies assigned to this service principal.
+      Supports $expand.
+      To construct, see NOTES section for TOKENISSUANCEPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TokenLifetimePolicy
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphTokenLifetimePolicy" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The tokenLifetimePolicies assigned to this service principal.
+      Supports $expand.
+      To construct, see NOTES section for TOKENLIFETIMEPOLICY properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TransitiveMemberOf
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphDirectoryObject" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      .
+      To construct, see NOTES section for TRANSITIVEMEMBEROF properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        [-DisplayName <String>]
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: SimpleParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -PasswordCredential <IMicrosoftGraphPasswordCredential[]>
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithPasswordCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -KeyCredential <IMicrosoftGraphKeyCredential[]>
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithKeyCredentialParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -DisplayName <String>
+        -CertValue <String>
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-StartDate <DateTime>]
+        [-EndDate <DateTime>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DisplayNameWithKeyPlainParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        -ApplicationObject <IMicrosoftGraphApplication>
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzADServicePrincipal
+        [-Role <String>]
+        [-Scope <String>]
+        [-Homepage <String>]
+        [-ReplyUrl <String[]>]
+        [-AccountEnabled]
+        [-AddIn <IMicrosoftGraphAddIn[]>]
+        [-AlternativeName <String[]>]
+        [-AppDescription <String>]
+        [-AppOwnerOrganizationId <String>]
+        [-AppRole <IMicrosoftGraphAppRole[]>]
+        [-AppRoleAssignedTo <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignment <IMicrosoftGraphAppRoleAssignment[]>]
+        [-AppRoleAssignmentRequired]
+        [-ClaimsMappingPolicy <IMicrosoftGraphClaimsMappingPolicy[]>]
+        [-DelegatedPermissionClassification <IMicrosoftGraphDelegatedPermissionClassification[]>]
+        [-DeletedDateTime <DateTime>]
+        [-Description <String>]
+        [-DisabledByMicrosoftStatus <String>]
+        [-Endpoint <IMicrosoftGraphEndpoint[]>]
+        [-HomeRealmDiscoveryPolicy <IMicrosoftGraphHomeRealmDiscoveryPolicy[]>]
+        [-Info <IMicrosoftGraphInformationalUrl>]
+        [-LoginUrl <String>]
+        [-LogoutUrl <String>]
+        [-Note <String>]
+        [-NotificationEmailAddress <String[]>]
+        [-Oauth2PermissionScope <IMicrosoftGraphPermissionScope[]>]
+        [-PreferredSingleSignOnMode <String>]
+        [-PreferredTokenSigningKeyThumbprint <String>]
+        [-SamlSingleSignOnSetting <IMicrosoftGraphSamlSingleSignOnSettings>]
+        [-ServicePrincipalName <String[]>]
+        [-ServicePrincipalType <String>]
+        [-Tag <String[]>]
+        [-TokenEncryptionKeyId <String>]
+        [-TokenIssuancePolicy <IMicrosoftGraphTokenIssuancePolicy[]>]
+        [-TokenLifetimePolicy <IMicrosoftGraphTokenLifetimePolicy[]>]
+        [-TransitiveMemberOf <IMicrosoftGraphDirectoryObject[]>]
+        [-ApplicationId <Guid>]
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ApplicationIdParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphApplication" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Resources.MSGraph.Models.ApiV10.IMicrosoftGraphServicePrincipal" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create service principal without application or display name'
+  description: |-
+    ```powershell
+    New-AzADServicePrincipal
+    ```
+
+    Create application with display name "azure-powershell-MM-dd-yyyy-HH-mm-ss" and new service principal associate with it
+- title: 'Example 2: Create service principal with existing application'
+  description: |-
+    ```powershell
+    New-AzADServicePrincipal -ApplicationId $appid
+    ```
+
+    Create service principal with existing application
+- title: 'Example 3: Create application with display name and associated new service principal with it'
+  description: |-
+    ```powershell
+    New-AzADServicePrincipal -DisplayName $name
+    ```
+
+    Create application with display name and associated new service pincipal with it
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzADServicePrincipal.md
+  document type: cmdlet
+  external help file: Az.Resources-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.resources/new-azadserviceprincipal
+  Module Name: Az.Resources
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Resources/Resources/help/New-AzADServicePrincipal.md
+  PlatyPS schema version: 2024-05-01

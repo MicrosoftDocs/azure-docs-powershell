@@ -1,0 +1,485 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.PolicyInsights.Set-AzPolicyAttestation
+name: Set-AzPolicyAttestation
+module: Az.PolicyInsights
+isPreview: false
+summary: |-
+  Modifies a policy attestation.
+description: |-
+  The **Set-AzPolicyAttestation** cmdlet modifies a policy attestation. Specify an attestation by Id or by Name and scope, or via piping.
+
+  >**Note:**
+  >An existing policy attestation's `policyAssignmentId` or `policyDefinitionReferenceId` cannot be modified.
+parameters:
+  cmdletParameters:
+  - name: AssessmentDate
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The time the evidence of an attestation was assessed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Comment
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Comments describing why this attestation was created.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComplianceState
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Compliance State of the resource.
+      E.g.
+      'Compliant', 'NonCompliant', 'Unknown'
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Evidence
+    type: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestationEvidence" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The evidence supporting the compliance state set in this attestation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpiresOn
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.DateTime" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      The time the compliance state set in the attestation should expire.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation" data-throw-if-not-resolved="False" />
+    description: |-
+      The Attestation object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByInputObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Metadata
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Additional metadata for the attestation.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Owner
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The person responsible for setting the state of the resource.
+      This value is typically a Microsoft Entra object ID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyAssignmentId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Policy assignment ID.
+      E.g.
+      '/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policyAssignments/{assignmentName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyDefinitionReferenceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The policy definition reference ID of the individual definition.
+      Required when the policy assignment assigns a policy set definition.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource ID.
+    aliases:
+    - Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Scope
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scope of the resource.
+      E.g.
+      '/subscriptions/{subscriptionId}/resourceGroups/{rgName}'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzPolicyAttestation
+        -Name <String>
+        [-Scope <String>]
+        [-ResourceGroupName <String>]
+        [-PolicyAssignmentId <String>]
+        [-ComplianceState <String>]
+        [-PolicyDefinitionReferenceId <String>]
+        [-ExpiresOn <DateTime>]
+        [-Owner <String>]
+        [-Comment <String>]
+        [-Evidence <PSAttestationEvidence[]>]
+        [-AssessmentDate <DateTime>]
+        [-Metadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzPolicyAttestation
+        -ResourceId <String>
+        [-PolicyAssignmentId <String>]
+        [-ComplianceState <String>]
+        [-PolicyDefinitionReferenceId <String>]
+        [-ExpiresOn <DateTime>]
+        [-Owner <String>]
+        [-Comment <String>]
+        [-Evidence <PSAttestationEvidence[]>]
+        [-AssessmentDate <DateTime>]
+        [-Metadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzPolicyAttestation
+        -InputObject <PSAttestation>
+        [-PolicyAssignmentId <String>]
+        [-ComplianceState <String>]
+        [-PolicyDefinitionReferenceId <String>]
+        [-ExpiresOn <DateTime>]
+        [-Owner <String>]
+        [-Comment <String>]
+        [-Evidence <PSAttestationEvidence[]>]
+        [-AssessmentDate <DateTime>]
+        [-Metadata <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByInputObject
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestationEvidence" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.PolicyInsights.Models.Attestations.PSAttestation" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update an attestation by name'
+  description: |-
+    ```powershell
+    Set-AzContext -Subscription "d1acb22b-c876-44f7-b08e-3fcf9f6767f4"
+    # Update the existing attestation by resource name at subscription scope (default)
+    $comment = "Setting the state to non compliant"
+    $attestationName = "attestation-subscription"
+    $policyAssignmentId = "/subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/providers/Microsoft.Authorization/policyAssignments/PSAttestationSubAssignment"
+    Set-AzPolicyAttestation -PolicyAssignmentId $policyAssignmentId -Name $attestationName -ComplianceState "NonCompliant" -Comment $comment
+    ```
+
+    ```output
+    Id                          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/providers/microsoft.policyinsights/attestations/
+                                  attestation-subscription
+    Name                        : attestation-subscription
+    Type                        : Microsoft.PolicyInsights/attestations
+    PolicyAssignmentId          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/providers/microsoft.authorization/policyassignme
+                                  nts/psattestationsubassignment
+    PolicyDefinitionReferenceId :
+    ComplianceState             : NonCompliant
+    ExpiresOn                   :
+    Owner                       :
+    Comment                     : Setting the state to non compliant
+    Evidence                    :
+    ProvisioningState           : Succeeded
+    LastComplianceStateChangeAt : 1/27/2023 4:00:04 PM
+    AssessmentDate              :
+    Metadata                    :
+    SystemData                  :
+    ```
+
+    The command here sets the compliance state and adds a comment to an existing attestation with name 'attestation-subscription' in the subscription with id 'd1acb22b-c876-44f7-b08e-3fcf9f6767f4'
+- title: 'Example 2: Update an attestation by ResourceId'
+  description: |-
+    ```powershell
+    # Get an attestation
+    $rgName = "ps-attestation-test-rg"
+    $attestationName = "attestation-RG"
+    $attestation = Get-AzPolicyAttestation -ResourceGroupName $rgName -Name $attestationName
+
+    # Update the existing attestation by resource ID at RG
+    $expiresOn = [System.DateTime]::UtcNow.AddYears(1)
+    Set-AzPolicyAttestation -Id $attestation.Id -ExpiresOn $expiresOn
+    ```
+
+    ```output
+    Id                          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/resourcegroups/ps-attestation-test-rg/providers/
+                                  microsoft.policyinsights/attestations/attestation-rg
+    Name                        : attestation-rg
+    Type                        : Microsoft.PolicyInsights/attestations
+    PolicyAssignmentId          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/providers/microsoft.authorization/policyassignme
+                                  nts/psattestationrgassignment
+    PolicyDefinitionReferenceId :
+    ComplianceState             :
+    ExpiresOn                   : 1/27/2024 4:04:24 PM
+    Owner                       :
+    Comment                     :
+    Evidence                    :
+    ProvisioningState           : Succeeded
+    LastComplianceStateChangeAt : 1/27/2023 4:04:11 PM
+    AssessmentDate              :
+    Metadata                    :
+    SystemData                  :
+    ```
+
+    The first command gets an existing attestation at the resource group 'ps-attestation-test-rg' with the name 'attestation-RG'.
+
+    The final command updates the expiry time of the policy attestation by the **ResourceId** property of the existing attestation.
+- title: 'Example 3: Update an attestation by input object'
+  description: |-
+    ```powershell
+    # Get an attestation
+    $attestationName = "attestation-resource"
+    $scope = "/subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/resourceGroups/ps-attestation-test-rg/providers/Microsoft.Network/networkSecurityGroups/pstests0"
+    $attestation = Get-AzPolicyAttestation -Name $attestationName -Scope $scope
+
+    # Update attestation by input object
+    $newOwner = "Test Owner 2"
+    $attestation | Set-AzPolicyAttestation -Owner $newOwner
+    ```
+
+    ```output
+    Id                          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/resourcegroups/ps-attestation-test-rg/providers/
+                                  microsoft.network/networksecuritygroups/pstests0/providers/microsoft.policyinsights/attestations/att
+                                  estation-resource
+    Name                        : attestation-resource
+    Type                        : Microsoft.PolicyInsights/attestations
+    PolicyAssignmentId          : /subscriptions/d1acb22b-c876-44f7-b08e-3fcf9f6767f4/providers/microsoft.authorization/policyassignme
+                                  nts/psattestationresourceassignment
+    PolicyDefinitionReferenceId :
+    ComplianceState             : NonCompliant
+    ExpiresOn                   :
+    Owner                       : Test Owner 2
+    Comment                     :
+    Evidence                    :
+    ProvisioningState           : Succeeded
+    LastComplianceStateChangeAt : 1/27/2023 2:38:17 AM
+    AssessmentDate              :
+    Metadata                    :
+    SystemData                  :
+    ```
+
+    The first command gets an existing attestation with name 'attestation-resource' for the given resource using its resource id as the scope
+
+    The final command updates the owner of the policy attestation by using piping.
+links:
+- text: New-AzPolicyAttestation
+  href: ./New-AzPolicyAttestation.yml
+- text: Remove-AzPolicyAttestation
+  href: ./Remove-AzPolicyAttestation.yml
+- text: Get-AzPolicyAttestation
+  href: ./Get-AzPolicyAttestation.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Set-AzPolicyAttestation.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.PolicyInsights.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.policyinsights/set-azpolicyattestation
+  Module Name: Az.PolicyInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/PolicyInsights/PolicyInsights/help/Set-AzPolicyAttestation.md
+  PlatyPS schema version: 2024-05-01

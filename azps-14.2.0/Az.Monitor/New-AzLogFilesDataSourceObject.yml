@@ -1,0 +1,116 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzLogFilesDataSourceObject
+name: New-AzLogFilesDataSourceObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for LogFilesDataSource.
+description: |-
+  Create an in-memory object for LogFilesDataSource.
+parameters:
+  cmdletParameters:
+  - name: FilePattern
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      File Patterns where the log files are located.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the data source.
+              This name should be unique across all data sources (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SettingTextRecordStartTimestampFormat
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      One of the supported timestamp formats.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stream
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      List of streams that this data source will be sent to.
+              A stream indicates what schema will be used for this data source.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzLogFilesDataSourceObject
+        -FilePattern <String[]>
+        -Stream <String[]>
+        [-Name <String>]
+        [-SettingTextRecordStartTimestampFormat <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.LogFilesDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a custom text log data source object'
+  description: |-
+    ```powershell
+    New-AzLogFilesDataSourceObject -FilePattern "C:\\JavaLogs\\*.log" -Stream "Custom-TabularData-ABC" -Name myTabularLogDataSource -SettingTextRecordStartTimestampFormat "yyyy-MM-ddTHH:mm:ssK"
+    ```
+
+    ```output
+    FilePattern                           : {C:\\JavaLogs\\*.log}
+    Format                                : text
+    Name                                  : myTabularLogDataSource
+    SettingTextRecordStartTimestampFormat : yyyy-MM-ddTHH:mm:ssK
+    Stream                                : {Custom-TabularData-ABC}
+    ```
+
+    This command creates a custom text log data source object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzLogFilesDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azlogfilesdatasourceobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzLogFilesDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,165 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedServices.New-AzManagedServicesEligibleAuthorizationObject
+name: New-AzManagedServicesEligibleAuthorizationObject
+module: Az.ManagedServices
+isPreview: false
+summary: |-
+  Create a in-memory object for EligibleAuthorization
+description: |-
+  Create a in-memory object for EligibleAuthorization
+parameters:
+  cmdletParameters:
+  - name: JustInTimeAccessPolicyManagedByTenantApprover
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.IEligibleApprover" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of managedByTenant approvers for the eligible authorization.
+      To construct, see NOTES section for JUSTINTIMEACCESSPOLICYMANAGEDBYTENANTAPPROVER properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JustInTimeAccessPolicyMaximumActivationDuration
+    type: <xref href="System.TimeSpan" data-throw-if-not-resolved="False" />
+    description: |-
+      The maximum access duration in ISO 8601 format for just-in-time access requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JustInTimeAccessPolicyMultiFactorAuthProvider
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Support.MultiFactorAuthProvider" data-throw-if-not-resolved="False" />
+    description: |-
+      The multi-factor authorization provider to be used for just-in-time access requests.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrincipalId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier of the Azure Active Directory principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrincipalIdDisplayName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The display name of the Azure Active Directory principal.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RoleDefinitionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identifier of the Azure built-in role that defines the permissions that the Azure Active Directory principal will have on the projected scope.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzManagedServicesEligibleAuthorizationObject
+        -PrincipalId <String>
+        -RoleDefinitionId <String>
+        [-JustInTimeAccessPolicyManagedByTenantApprover <IEligibleApprover[]>]
+        [-JustInTimeAccessPolicyMaximumActivationDuration <TimeSpan>]
+        [-JustInTimeAccessPolicyMultiFactorAuthProvider <MultiFactorAuthProvider>]
+        [-PrincipalIdDisplayName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedServices.Models.Api20200201Preview.EligibleAuthorization" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Creates new Azure Lighthouse eligible authorization object to use with Registration definition'
+  description: |-
+    ```powershell
+    New-AzManagedServicesEligibleAuthorizationObject -PrincipalId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -PrincipalIdDisplayName "Test user" -RoleDefinitionId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    ```
+
+    ```output
+    PrincipalId                          PrincipalIdDisplayName RoleDefinitionId
+    -----------                          ---------------------- ----------------
+    xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Test user              xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    ```
+
+    Creates new Azure Lighthouse eligible authorization object to use with Registration definition.
+- title: 'Example 2: Create new Azure Lighthouse eligible authorization with JustInTime settings'
+  description: |-
+    ```powershell
+    $approver = New-AzManagedServicesEligibleApproverObject -PrincipalId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -PrincipalIdDisplayName "Approver group"
+
+    $eligibleAuth = New-AzManagedServicesEligibleAuthorizationObject -PrincipalId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -PrincipalIdDisplayName "Test user" -RoleDefinitionId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -JustInTimeAccessPolicyManagedByTenantApprover $approver -JustInTimeAccessPolicyMultiFactorAuthProvider Azure -JustInTimeAccessPolicyMaximumActivationDuration 0:30
+
+    $eligibleAuth | Format-List -Property PrinciPalId, PrincipalIdDisplayName, RoleDefinitionId, JustInTimeAccessPolicyManagedByTenantApprover, JustInTimeAccessPolicyMultiFactorAuthProvider, JustInTimeAccessPolicyMaximumActivationDuration
+    ```
+
+    ```output
+    PrincipalId                                     : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    PrincipalIdDisplayName                          : Test user
+    RoleDefinitionId                                : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    JustInTimeAccessPolicyManagedByTenantApprover   : {Approver group}
+    JustInTimeAccessPolicyMultiFactorAuthProvider   : Azure
+    JustInTimeAccessPolicyMaximumActivationDuration : 00:30:00
+    ```
+
+    Creates new Azure Lighthouse eligible authorization object with JustInTime (JIT) settings.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesEligibleAuthorizationObject.md
+  document type: cmdlet
+  external help file: Az.ManagedServices-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.ManagedServices/new-AzManagedServicesEligibleAuthorizationObject
+  Module Name: Az.ManagedServices
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedServices/ManagedServices/help/New-AzManagedServicesEligibleAuthorizationObject.md
+  PlatyPS schema version: 2024-05-01

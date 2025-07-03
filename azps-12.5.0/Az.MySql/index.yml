@@ -1,0 +1,63 @@
+### YamlMime:PowerShellModule1
+uid: Az.MySql
+name: Az.MySql Module
+isPreview: false
+cmdletGroups:
+- title: Database for MySQL
+  cmdlets:
+  - Az.MySql.Get-AzMySqlConfiguration
+  - Az.MySql.Get-AzMySqlConnectionString
+  - Az.MySql.Get-AzMySqlFirewallRule
+  - Az.MySql.Get-AzMySqlFlexibleServer
+  - Az.MySql.Get-AzMySqlFlexibleServerAdvancedThreatProtectionSetting
+  - Az.MySql.Get-AzMySqlFlexibleServerConfiguration
+  - Az.MySql.Get-AzMySqlFlexibleServerConnectionString
+  - Az.MySql.Get-AzMySqlFlexibleServerDatabase
+  - Az.MySql.Get-AzMySqlFlexibleServerFirewallRule
+  - Az.MySql.Get-AzMySqlFlexibleServerLocationBasedCapability
+  - Az.MySql.Get-AzMySqlFlexibleServerReplica
+  - Az.MySql.Get-AzMySqlReplica
+  - Az.MySql.Get-AzMySqlServer
+  - Az.MySql.Get-AzMySqlVirtualNetworkRule
+  - Az.MySql.New-AzMySqlFirewallRule
+  - Az.MySql.New-AzMySqlFlexibleServer
+  - Az.MySql.New-AzMySqlFlexibleServerDatabase
+  - Az.MySql.New-AzMySqlFlexibleServerFirewallRule
+  - Az.MySql.New-AzMySqlFlexibleServerReplica
+  - Az.MySql.New-AzMySqlReplica
+  - Az.MySql.New-AzMySqlServer
+  - Az.MySql.New-AzMySqlVirtualNetworkRule
+  - Az.MySql.Remove-AzMySqlFirewallRule
+  - Az.MySql.Remove-AzMySqlFlexibleServer
+  - Az.MySql.Remove-AzMySqlFlexibleServerDatabase
+  - Az.MySql.Remove-AzMySqlFlexibleServerFirewallRule
+  - Az.MySql.Remove-AzMySqlServer
+  - Az.MySql.Remove-AzMySqlVirtualNetworkRule
+  - Az.MySql.Restart-AzMySqlFlexibleServer
+  - Az.MySql.Restart-AzMySqlServer
+  - Az.MySql.Restore-AzMySqlFlexibleServer
+  - Az.MySql.Restore-AzMySqlServer
+  - Az.MySql.Start-AzMySqlFlexibleServer
+  - Az.MySql.Stop-AzMySqlFlexibleServer
+  - Az.MySql.Test-AzMySqlFlexibleServerConnect
+  - Az.MySql.Update-AzMySqlConfiguration
+  - Az.MySql.Update-AzMySqlFirewallRule
+  - Az.MySql.Update-AzMySqlFlexibleServer
+  - Az.MySql.Update-AzMySqlFlexibleServerAdvancedThreatProtectionSetting
+  - Az.MySql.Update-AzMySqlFlexibleServerConfiguration
+  - Az.MySql.Update-AzMySqlFlexibleServerFirewallRule
+  - Az.MySql.Update-AzMySqlServer
+  - Az.MySql.Update-AzMySqlServerConfigurationsList
+  - Az.MySql.Update-AzMySqlVirtualNetworkRule
+description: |-
+  Microsoft Azure PowerShell: MySql cmdlets
+metadata:
+  Module Name: Az.MySql
+  Module Guid: 0b8ac9f4-b926-4ac8-b73f-937a0d218521
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.mysql
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Az.MySql.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MySql/MySql/help/Az.MySql.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

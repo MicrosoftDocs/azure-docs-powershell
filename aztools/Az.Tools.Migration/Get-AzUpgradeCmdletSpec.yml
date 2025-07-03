@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Tools.Migration.Get-AzUpgradeCmdletSpec
+name: Get-AzUpgradeCmdletSpec
+module: Az.Tools.Migration
+isPreview: false
+summary: |-
+  Returns a dictionary containing cmdlet specification objects for the specified module.
+description: |-
+  Returns a dictionary containing cmdlet specification objects for the specified module.
+parameters:
+  cmdletParameters:
+  - name: Az
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Import command definitions from Az modules.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Az
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureRM
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Import command definitions from **AzureRM** modules.
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AzureRM
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ModuleVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specify the version of the module to load command definitions from.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Az
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzUpgradeCmdletSpec
+        [-AzureRM]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AzureRM
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzUpgradeCmdletSpec
+        -ModuleVersion <String>
+        [-Az]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Az
+  isDefault: false
+examples:
+- title: EXAMPLE 1
+  description: |-
+    Returns the dictionary containing cmdlet specification objects for **AzureRM** 6.13.1.
+
+    ```powershell
+    Get-AzUpgradeCmdletSpec -AzureRM
+    ```
+- title: EXAMPLE 2
+  description: |-
+    Returns the dictionary containing cmdlet specification objects for latest Az major version.
+
+    ```powershell
+    Get-AzUpgradeCmdletSpec -Az -ModuleVersion latest
+    ```
+metadata:
+  document type: cmdlet
+  external help file: Az.Tools.Migration-help.xml
+  HelpUri: 
+  Module Name: az.tools.migration
+  original_content_git_url: https://github.com/Azure/azure-powershell-migration/blob/main/powershell-module/help/Get-AzUpgradeCmdletSpec.md
+  PlatyPS schema version: 2024-05-01

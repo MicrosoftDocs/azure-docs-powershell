@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.BillingBenefits.Get-AzBillingBenefitsReservationOrderAlias
+name: Get-AzBillingBenefitsReservationOrderAlias
+module: Az.BillingBenefits
+isPreview: false
+summary: |-
+  Get a reservation order alias.
+description: |-
+  Get a reservation order alias.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the reservation order alias
+    aliases:
+    - ReservationOrderAliasName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsReservationOrderAlias
+        -Name <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzBillingBenefitsReservationOrderAlias
+        -InputObject <IBillingBenefitsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IBillingBenefitsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.BillingBenefits.Models.IReservationOrderAliasResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a reservation order alias.'
+  description: |-
+    ```powershell
+    Get-AzBillingBenefitsReservationOrderAlias -Name "PSRITest2"
+    ```
+
+    ```output
+    Name      DisplayName SkuName       Location Term BillingPlan ReservedResourceType ReservationOrderId
+    ----      ----------- -------       -------- ---- ----------- -------------------- ------------------
+    PSRITest2 PSRITest2   Standard_B1ls westus   P1Y  P1M         VirtualMachines      /providers/Microsoft.Capacity/reservationOrders/8d5aacd0-f098-4202-8d4d-1e7cb8a3ac…
+    ```
+
+    Get a reservation order alias.
+- title: 'Example 2: Get a reservation order alias via identity.'
+  description: |-
+    ```powershell
+    $identity = @{
+                            ReservationOrderAliasName = "PSRITest2"
+    }
+
+    $response = Get-AzBillingBenefitsReservationOrderAlias -InputObject $identity
+    ```
+
+    ```output
+    Name      DisplayName SkuName       Location Term BillingPlan ReservedResourceType ReservationOrderId
+    ----      ----------- -------       -------- ---- ----------- -------------------- ------------------
+    PSRITest2 PSRITest2   Standard_B1ls westus   P1Y  P1M         VirtualMachines      /providers/Microsoft.Capacity/reservationOrders/8d5aacd0-f098-4202-8d4d-1e7cb8a3ac…
+    ```
+
+    Get a reservation order alias via identity.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsReservationOrderAlias.md
+  document type: cmdlet
+  external help file: Az.BillingBenefits-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.billingbenefits/get-azbillingbenefitsreservationorderalias
+  Module Name: Az.BillingBenefits
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/BillingBenefits/BillingBenefits/help/Get-AzBillingBenefitsReservationOrderAlias.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,111 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Subscription.Get-AzSubscriptionAcceptOwnershipStatus
+name: Get-AzSubscriptionAcceptOwnershipStatus
+module: Az.Subscription
+isPreview: false
+summary: |-
+  Accept subscription ownership status.
+description: |-
+  Accept subscription ownership status.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.ISubscriptionIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Subscription Id.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: AcceptExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzSubscriptionAcceptOwnershipStatus
+        -SubscriptionId <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AcceptExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzSubscriptionAcceptOwnershipStatus
+        -InputObject <ISubscriptionIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: AcceptViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.ISubscriptionIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Subscription.Models.IAcceptOwnershipStatusResponse" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Accept subscription ownership status.'
+  description: |-
+    ```powershell
+    Get-AzSubscriptionAcceptOwnershipStatus -SubscriptionId XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ```
+
+    ```output
+    AcceptOwnershipState BillingOwner      ProvisioningState SubscriptionId                       SubscriptionTenantId
+    -------------------- ------------      ----------------- --------------                       --------------------
+    Completed            xxxxxxxx@xxxx.com Pending           XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    ```
+
+    Accept subscription ownership status.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Get-AzSubscriptionAcceptOwnershipStatus.md
+  document type: cmdlet
+  external help file: Az.Subscription-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.subscription/get-azsubscriptionacceptownershipstatus
+  Module Name: Az.Subscription
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Subscription/Subscription/help/Get-AzSubscriptionAcceptOwnershipStatus.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,230 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Set-AzureNetworkSecurityRule
+name: Set-AzureNetworkSecurityRule
+module: Azure
+isPreview: false
+summary: |-
+  Adds or modifies a network security rule in a network security group.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Set-AzureNetworkSecurityRule** cmdlet adds or modifies an Azure network security rule in a network security group.
+parameters:
+  cmdletParameters:
+  - name: Action
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the action for a network security rule.
+      Valid values are: Allow and Deny.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Classless Interdomain Routing (CIDR) address of the destination IP range for the network security rule.
+      An asterisk (*) specifies any IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPortRange
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a destination port range for the network security rule.
+      Valid values consist of integers from 0 to 65535.
+      You can specify an individual value, or specify a range in the format LowerNumber-HigherNumber.
+      A hyphen separates the two values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name for the network security rule that this cmdlet adds or modifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkSecurityGroup
+    type: <xref href="INetworkSecurityGroup" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the network security group that this cmdlet modifies.
+      To obtain an **INetworkSecurityGroup** object, use the Get-AzureNetworkSecurityGroup cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Priority
+    type: <xref href="Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the priority for the network security rule.
+      Valid values are: integers from 100 to 4096.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Protocol
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the protocol for the network security rule.
+      Valid values are:
+
+      - TCP
+      - UDP
+      - *
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourceAddressPrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the CIDR address of the source IP range for the network security rule.
+      An asterisk (*) specifies any IP address.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePortRange
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a source port range for the network security rule.
+      Valid values consist of integers from 0 to 65535.
+      You can specify an individual value, or specify a range in the format LowerNumber-HigherNumber.
+      A hyphen separates the two values.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Type
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the type of connection for the network security rule.
+      Valid values are: Inbound and Outbound.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzureNetworkSecurityRule
+        -Name <String>
+        -Type <String>
+        -Priority <Int32>
+        -Action <String>
+        -SourceAddressPrefix <String>
+        -SourcePortRange <String>
+        -DestinationAddressPrefix <String>
+        -DestinationPortRange <String>
+        -Protocol <String>
+        -NetworkSecurityGroup <INetworkSecurityGroup>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+links:
+- text: Remove-AzureNetworkSecurityRule
+  href: ./Remove-AzureNetworkSecurityRule.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 125B6865-0022-4F88-BB0F-DDDDB2EDFF00
+  PlatyPS schema version: 2024-05-01

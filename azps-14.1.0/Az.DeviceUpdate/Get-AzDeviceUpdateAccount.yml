@@ -1,0 +1,207 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DeviceUpdate.Get-AzDeviceUpdateAccount
+name: Get-AzDeviceUpdateAccount
+module: Az.DeviceUpdate
+isPreview: false
+summary: |-
+  Returns account details for the given account name.
+description: |-
+  Returns account details for the given account name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceUpdate.Models.IDeviceUpdateIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Account name.
+    aliases:
+    - AccountName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceUpdateAccount
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceUpdateAccount
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceUpdateAccount
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzDeviceUpdateAccount
+        -InputObject <IDeviceUpdateIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceUpdate.Models.IDeviceUpdateIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.DeviceUpdate.Models.IAccount" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Returns account details for the SubscriptionId.'
+  description: |-
+    ```powershell
+    Get-AzDeviceUpdateAccount
+    ```
+
+    ```output
+    Name             Location Sku      ResourceGroupName
+    ----             -------- ---      -----------------
+    azpstest-account eastus   Standard azpstest_gp
+    ```
+
+    Returns account details for the SubscriptionId.
+- title: 'Example 2: Returns account details for the given account name.'
+  description: |-
+    ```powershell
+    Get-AzDeviceUpdateAccount -Name azpstest-account -ResourceGroupName azpstest_gp
+    ```
+
+    ```output
+    Name             Location Sku      ResourceGroupName
+    ----             -------- ---      -----------------
+    azpstest-account eastus   Standard azpstest_gp
+    ```
+
+    Returns account details for the given account name.
+- title: 'Example 3: Returns account details for the Resource Group Name.'
+  description: |-
+    ```powershell
+    Get-AzDeviceUpdateAccount -ResourceGroupName azpstest_gp
+    ```
+
+    ```output
+    Name             Location Sku      ResourceGroupName
+    ----             -------- ---      -----------------
+    azpstest-account eastus   Standard azpstest_gp
+    ```
+
+    Returns account details for the Resource Group Name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/DeviceUpdate/help/Get-AzDeviceUpdateAccount.md
+  document type: cmdlet
+  external help file: Az.DeviceUpdate-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.deviceupdate/get-azdeviceupdateaccount
+  Module Name: Az.DeviceUpdate
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DeviceUpdate/DeviceUpdate/help/Get-AzDeviceUpdateAccount.md
+  PlatyPS schema version: 2024-05-01

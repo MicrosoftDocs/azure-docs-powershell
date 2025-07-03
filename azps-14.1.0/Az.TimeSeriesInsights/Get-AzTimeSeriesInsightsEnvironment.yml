@@ -1,0 +1,307 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.TimeSeriesInsights.Get-AzTimeSeriesInsightsEnvironment
+name: Get-AzTimeSeriesInsightsEnvironment
+module: Az.TimeSeriesInsights
+isPreview: false
+summary: |-
+  Gets the environment with the specified name in the specified subscription and resource group.
+description: |-
+  Gets the environment with the specified name in the specified subscription and resource group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Expand
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Setting $expand=status will include the status of the internal services of the environment in the Time Series Insights service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: GetViaIdentity
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Time Series Insights environment associated with the specified resource group.
+    aliases:
+    - EnvironmentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of an Azure Resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Azure Subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsEnvironment
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsEnvironment
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsEnvironment
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzTimeSeriesInsightsEnvironment
+        -InputObject <ITimeSeriesInsightsIdentity>
+        [-Expand <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.ITimeSeriesInsightsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20200515.IEnvironmentResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a time series insights environment'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup -Name tsitest001
+    ```
+
+    ```output
+    DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
+    DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
+    DataRetentionTime            : 1.01:25:00
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest
+                                   001
+    IngressState                 :
+    Kind                         : Gen1
+    Location                     : eastus
+    Name                         : tsitest001
+    PartitionKeyProperty         :
+    PropertyUsageState           :
+    Sku                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                  : 2
+    SkuName                      : S1
+    StateDetailCode              :
+    StateDetailCurrentCount      :
+    StateDetailMaxCount          :
+    StateDetailMessage           :
+    StorageLimitExceededBehavior : PurgeOldData
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    Type                         : Microsoft.TimeSeriesInsights/Environments
+    ```
+
+    This command gets a time series insights environment.
+- title: 'Example 2: List all time series insights environments'
+  description: |-
+    ```powershell
+    Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName testgroup
+    ```
+
+    ```output
+    DataAccessFqdn                      : 3de1d1e1-4f9b-4bc6-aad3-a835597dcd86.env.timeseries.azure.com
+    DataAccessId                        : 3de1d1e1-4f9b-4bc6-aad3-a835597dcd86
+    Id                                  : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/
+                                          tsill
+    IngressState                        :
+    Kind                                : Gen2
+    Location                            : EastUs
+    Name                                : tsill
+    PropertyUsageState                  :
+    Sku                                 : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                         : 1
+    SkuName                             : L1
+    StateDetailCode                     :
+    StateDetailCurrentCount             :
+    StateDetailMaxCount                 :
+    StateDetailMessage                  :
+    StorageConfigurationAccountName     : cdolauli
+    Tag                                 : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    TimeSeriesIdProperty                : {ccc}
+    Type                                : Microsoft.TimeSeriesInsights/Environments
+    WarmStoreConfigurationDataRetention : 00:00:00
+
+    DataAccessFqdn               : b6d113a4-0865-405f-b09e-ad4355b5d046.env.timeseries.azure.com
+    DataAccessId                 : b6d113a4-0865-405f-b09e-ad4355b5d046
+    DataRetentionTime            : 1.01:25:00
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/testgroup/providers/Microsoft.TimeSeriesInsights/environments/tsitest
+                                   001
+    IngressState                 :
+    Kind                         : Gen1
+    Location                     : eastus
+    Name                         : tsitest001
+    PartitionKeyProperty         :
+    PropertyUsageState           :
+    Sku                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                  : 2
+    SkuName                      : S1
+    StateDetailCode              :
+    StateDetailCurrentCount      :
+    StateDetailMaxCount          :
+    StateDetailMessage           :
+    StorageLimitExceededBehavior : PurgeOldData
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    Type                         : Microsoft.TimeSeriesInsights/Environments
+    ```
+
+    This command lists all time series insights environments in a resource group.
+- title: 'Example 3: Get a time series insights environment by object'
+  description: |-
+    ```powershell
+    $env = Get-AzTimeSeriesInsightsEnvironment -ResourceGroupName tsi-test-i01k5l -Name tsi-envv8u56x
+    Get-AzTimeSeriesInsightsEnvironment -InputObject $env
+    ```
+
+    ```output
+    DataAccessFqdn               : d76a61f2-8a30-41a5-9587-f241eb9b48d9.env.timeseries.azure.com
+    DataAccessId                 : d76a61f2-8a30-41a5-9587-f241eb9b48d9
+    DataRetentionTime            : 1.01:25:00
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/tsi-test-i01k5l/providers/Microsoft.TimeSeriesInsights/environments/tsi-envv8u56x
+    IngressState                 :
+    Kind                         : Gen1
+    Location                     : eastus2
+    Name                         : tsi-envv8u56x
+    PartitionKeyProperty         :
+    PropertyUsageState           :
+    Sku                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.Sku
+    SkuCapacity                  : 1
+    SkuName                      : S1
+    StateDetailCode              :
+    StateDetailCurrentCount      :
+    StateDetailMaxCount          :
+    StateDetailMessage           :
+    StorageLimitExceededBehavior : PurgeOldData
+    Tag                          : Microsoft.Azure.PowerShell.Cmdlets.TimeSeriesInsights.Models.Api20180815Preview.TrackedResourceTags
+    Type                         : Microsoft.TimeSeriesInsights/Environments
+    ```
+
+    This command gets a time series insights environments.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEnvironment.md
+  document type: cmdlet
+  external help file: Az.TimeSeriesInsights-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.timeseriesinsights/get-aztimeseriesinsightsenvironment
+  Module Name: Az.TimeSeriesInsights
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/TimeSeriesInsights/TimeSeriesInsights/help/Get-AzTimeSeriesInsightsEnvironment.md
+  PlatyPS schema version: 2024-05-01

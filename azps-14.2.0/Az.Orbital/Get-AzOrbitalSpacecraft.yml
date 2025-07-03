@@ -1,0 +1,234 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Orbital.Get-AzOrbitalSpacecraft
+name: Get-AzOrbitalSpacecraft
+module: Az.Orbital
+isPreview: false
+summary: |-
+  Gets the specified spacecraft in a specified resource group.
+description: |-
+  Gets the specified spacecraft in a specified resource group.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.IOrbitalIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Spacecraft ID.
+    aliases:
+    - SpacecraftName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Skiptoken
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      An opaque string that the resource provider uses to skip over previously-returned results.
+      This is used when a previous list operation call returned a partial result.
+      If a previous response contains a nextLink element, the value of the nextLink element will include a skiptoken parameter that specifies a starting point to use for subsequent calls.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalSpacecraft
+        [-SubscriptionId <String[]>]
+        [-Skiptoken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalSpacecraft
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalSpacecraft
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-Skiptoken <String>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzOrbitalSpacecraft
+        -InputObject <IOrbitalIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.IOrbitalIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Orbital.Models.ISpacecraft" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List the specified spacecraft.'
+  description: |-
+    ```powershell
+    Get-AzOrbitalSpacecraft
+    ```
+
+    ```output
+    Name                     Location NoradId TitleLine   ResourceGroupName
+    ----                     -------- ------- ---------   -----------------
+    azpstest-test-spacecraft westus2  12345   ISS (ZARYA) azpstest-gp
+    AQUA                     eastus   12345   ISS (ZARYA) azpstest-gp
+    ```
+
+    List the specified spacecraft.
+- title: 'Example 2: Gets the specified spacecraft in a specified resource group.'
+  description: |-
+    ```powershell
+    Get-AzOrbitalSpacecraft -ResourceGroupName azpstest-gp
+    ```
+
+    ```output
+    Name Location NoradId TitleLine ResourceGroupName
+    ---- -------- ------- --------- -----------------
+    AQUA westus2  27424   AQUA      azpstest-gp
+    ```
+
+    Gets the specified spacecraft in a specified resource group.
+- title: 'Example 3: Get the specified spacecraft in a specified Name.'
+  description: |-
+    ```powershell
+    Get-AzOrbitalSpacecraft -ResourceGroupName azpstest-gp -Name AQUA
+    ```
+
+    ```output
+    Name Location NoradId TitleLine ResourceGroupName
+    ---- -------- ------- --------- -----------------
+    AQUA westus2  27424   AQUA      azpstest-gp
+    ```
+
+    Get the specified spacecraft in a specified Name.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Get-AzOrbitalSpacecraft.md
+  document type: cmdlet
+  external help file: Az.Orbital-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.orbital/get-azorbitalspacecraft
+  Module Name: Az.Orbital
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Orbital/Orbital/help/Get-AzOrbitalSpacecraft.md
+  PlatyPS schema version: 2024-05-01

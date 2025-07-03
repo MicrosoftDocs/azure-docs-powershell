@@ -1,0 +1,81 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzWindowsFirewallLogsDataSourceObject
+name: New-AzWindowsFirewallLogsDataSourceObject
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Create an in-memory object for WindowsFirewallLogsDataSource.
+description: |-
+  Create an in-memory object for WindowsFirewallLogsDataSource.
+parameters:
+  cmdletParameters:
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      A friendly name for the data source.
+              This name should be unique across all data sources (regardless of type) within the data collection rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Stream
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Firewall logs streams.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzWindowsFirewallLogsDataSourceObject
+        -Stream <String[]>
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Monitor.DataCollection.Models.WindowsFirewallLogsDataSource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create windows firewall logs data source object'
+  description: |-
+    ```powershell
+    New-AzWindowsFirewallLogsDataSourceObject -Stream "Microsoft-WindowsFirewall","Microsoft-ASimNetworkSessionLogs-WindowsFirewall" -Name "myFirewallLogsDataSource1"
+    ```
+
+    ```output
+    Name                      Stream
+    ----                      ------
+    myFirewallLogsDataSource1 {Microsoft-WindowsFirewall, Microsoft-ASimNetworkSessionLogs-WindowsFirewall}
+    ```
+
+    This command creates a windows firewall log data source object.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzWindowsFirewallLogsDataSourceObject.md
+  document type: cmdlet
+  external help file: Az.DataCollectionRule.psm1-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Monitor/new-azwindowsfirewalllogsdatasourceobject
+  Module Name: Az.Monitor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Monitor/Monitor/help/New-AzWindowsFirewallLogsDataSourceObject.md
+  PlatyPS schema version: 2024-05-01

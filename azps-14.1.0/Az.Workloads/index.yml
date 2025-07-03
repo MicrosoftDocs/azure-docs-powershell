@@ -1,0 +1,59 @@
+### YamlMime:PowerShellModule1
+uid: Az.Workloads
+name: Az.Workloads Module
+isPreview: false
+cmdletGroups:
+- title: Workloads
+  cmdlets:
+  - Az.Workloads.Get-AzWorkloadsMonitor
+  - Az.Workloads.Get-AzWorkloadsProviderInstance
+  - Az.Workloads.Get-AzWorkloadsSapApplicationInstance
+  - Az.Workloads.Get-AzWorkloadsSapCentralInstance
+  - Az.Workloads.Get-AzWorkloadsSapDatabaseInstance
+  - Az.Workloads.Get-AzWorkloadsSapLandscapeMonitor
+  - Az.Workloads.Get-AzWorkloadsSapVirtualInstance
+  - Az.Workloads.Invoke-AzWorkloadsSapDiskConfiguration
+  - Az.Workloads.Invoke-AzWorkloadsSapSizingRecommendation
+  - Az.Workloads.Invoke-AzWorkloadsSapSupportedSku
+  - Az.Workloads.New-AzWorkloadsMonitor
+  - Az.Workloads.New-AzWorkloadsProviderDB2InstanceObject
+  - Az.Workloads.New-AzWorkloadsProviderHanaDbInstanceObject
+  - Az.Workloads.New-AzWorkloadsProviderInstance
+  - Az.Workloads.New-AzWorkloadsProviderPrometheusHaClusterInstanceObject
+  - Az.Workloads.New-AzWorkloadsProviderPrometheusOSInstanceObject
+  - Az.Workloads.New-AzWorkloadsProviderSapNetWeaverInstanceObject
+  - Az.Workloads.New-AzWorkloadsProviderSqlServerInstanceObject
+  - Az.Workloads.New-AzWorkloadsSapLandscapeMonitor
+  - Az.Workloads.New-AzWorkloadsSapLandscapeMonitorMetricThresholdsObject
+  - Az.Workloads.New-AzWorkloadsSapLandscapeMonitorSidMappingObject
+  - Az.Workloads.New-AzWorkloadsSapVirtualInstance
+  - Az.Workloads.Remove-AzWorkloadsMonitor
+  - Az.Workloads.Remove-AzWorkloadsProviderInstance
+  - Az.Workloads.Remove-AzWorkloadsSapLandscapeMonitor
+  - Az.Workloads.Remove-AzWorkloadsSapVirtualInstance
+  - Az.Workloads.Start-AzWorkloadsSapApplicationInstance
+  - Az.Workloads.Start-AzWorkloadsSapCentralInstance
+  - Az.Workloads.Start-AzWorkloadsSapDatabaseInstance
+  - Az.Workloads.Start-AzWorkloadsSapVirtualInstance
+  - Az.Workloads.Stop-AzWorkloadsSapApplicationInstance
+  - Az.Workloads.Stop-AzWorkloadsSapCentralInstance
+  - Az.Workloads.Stop-AzWorkloadsSapDatabaseInstance
+  - Az.Workloads.Stop-AzWorkloadsSapVirtualInstance
+  - Az.Workloads.Update-AzWorkloadsMonitor
+  - Az.Workloads.Update-AzWorkloadsSapApplicationInstance
+  - Az.Workloads.Update-AzWorkloadsSapCentralInstance
+  - Az.Workloads.Update-AzWorkloadsSapDatabaseInstance
+  - Az.Workloads.Update-AzWorkloadsSapLandscapeMonitor
+  - Az.Workloads.Update-AzWorkloadsSapVirtualInstance
+description: |-
+  Microsoft Azure PowerShell: Workloads cmdlets
+metadata:
+  Module Name: Az.Workloads
+  Module Guid: ee197d70-9add-4652-9b94-eab7bc0e93e1
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.workloads
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Az.Workloads.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Az.Workloads.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

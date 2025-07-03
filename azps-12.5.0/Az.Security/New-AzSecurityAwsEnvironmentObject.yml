@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityAwsEnvironmentObject
+name: New-AzSecurityAwsEnvironmentObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for AwsEnvironment.
+description: |-
+  Create an in-memory object for AwsEnvironment.
+parameters:
+  cmdletParameters:
+  - name: OrganizationalData
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.IAwsOrganizationalData" data-throw-if-not-resolved="False" />
+    description: |-
+      The AWS account's organizational data.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Region
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      list of regions to scan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ScanInterval
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      Scan interval in hours (value should be between 1-hour to 24-hours).
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityAwsEnvironmentObject
+        [-OrganizationalData <IAwsOrganizationalData>]
+        [-Region <String[]>]
+        [-ScanInterval <Int64>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.AwsEnvironment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new AwsEnvironment object as member'
+  description: |-
+    ```powershell
+    $member = New-AzSecurityAwsOrganizationalDataMemberObject -ParentHierarchyId "123"
+    New-AzSecurityAwsEnvironmentObject -Region "Central US" -ScanInterval 24 -OrganizationalData $member
+    ```
+
+    ```output
+    AccountName        :
+    EnvironmentType    : AwsAccount
+    OrganizationalData : {
+                           "organizationMembershipType": "Member",
+                           "parentHierarchyId": "123"
+                         }
+    Region             : {Central US}
+    ScanInterval       : 24
+    ```
+- title: 'Example 2: Create new AwsEnvironment object as organization'
+  description: |-
+    ```powershell
+    $organization = New-AzSecurityAwsOrganizationalDataMasterObject -StacksetName "myAwsStackSet" -ExcludedAccountId "123456789012"
+    New-AzSecurityAwsEnvironmentObject -Region "Central US" -ScanInterval 24 -OrganizationalData $organization
+    ```
+
+    ```output
+    AccountName        :
+    EnvironmentType    : AwsAccount
+    OrganizationalData : {
+                           "organizationMembershipType": "Organization",
+                           "stacksetName": "myAwsStackSet",
+                           "excludedAccountIds": [ "123456789012" ]
+                         }
+    Region             : {Central US}
+    ScanInterval       : 24
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAwsEnvironmentObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecurityawsenvironmentobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityAwsEnvironmentObject.md
+  PlatyPS schema version: 2024-05-01

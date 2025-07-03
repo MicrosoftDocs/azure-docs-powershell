@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Import-AzureSiteRecoveryVaultSettingsFile
+name: Import-AzureSiteRecoveryVaultSettingsFile
+module: Azure
+isPreview: false
+summary: |-
+  Imports a Site Recovery vault settings file.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Import-AzureSiteRecoveryVaultSettingsFile** cmdlet imports an Azure Site Recovery vault settings file to set the vault context for subsequent Site Recovery operations in the current session.
+parameters:
+  cmdletParameters:
+  - name: Path
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the path of the Site Recovery vault settings file.
+      This file can be downloaded from the Site Recovery vault portal and stored locally.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Import-AzureSiteRecoveryVaultSettingsFile
+        -Path <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Import a vault settings file'
+  description: |-
+    ```
+    PS C:\> Import-AzureSiteRecoveryVaultSettingsFile -Path "C:\Users\Contoso\Contosovault Monday, October 6, 2014.VaultCredentials"
+    VERBOSE: Vault Settings File path: C:\Users\Contoso\Contosovault Monday, October 6, 2014.VaultCredentials
+
+    ResourceName                                                CloudServiceName
+    ------------                                                ----------------
+    Contosovault                                                RecoveryServices-6JP23WE3SKKOM5AFQG2YQAI22MNOWK52QDKWMUP...
+    ```
+
+    This command imports the vault settings file at the specified path.
+links:
+- text: Get-AzureSiteRecoveryVaultSettings
+  href: ./Get-AzureSiteRecoveryVaultSettings.yml
+- text: Get-AzureSiteRecoveryVaultSettingsFile
+  href: ./Get-AzureSiteRecoveryVaultSettingsFile.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 5875D72D-B8DB-4F72-BF5C-242D40A13DE1
+  PlatyPS schema version: 2024-05-01

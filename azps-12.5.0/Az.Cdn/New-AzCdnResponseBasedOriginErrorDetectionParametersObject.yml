@@ -1,0 +1,97 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Cdn.New-AzCdnResponseBasedOriginErrorDetectionParametersObject
+name: New-AzCdnResponseBasedOriginErrorDetectionParametersObject
+module: Az.Cdn
+isPreview: false
+summary: |-
+  Create an in-memory object for ResponseBasedOriginErrorDetectionParameters.
+description: |-
+  Create an in-memory object for ResponseBasedOriginErrorDetectionParameters.
+parameters:
+  cmdletParameters:
+  - name: HttpErrorRange
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.IHttpErrorRangeParameters" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
+      To construct, see NOTES section for HTTPERRORRANGE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponseBasedDetectedErrorType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Support.ResponseBasedDetectedErrorTypes" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of response errors for real user requests for which origin will be deemed unhealthy.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResponseBasedFailoverThresholdPercentage
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      The percentage of failed requests in the sample where failover should trigger.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzCdnResponseBasedOriginErrorDetectionParametersObject
+        [-HttpErrorRange <IHttpErrorRangeParameters[]>]
+        [-ResponseBasedDetectedErrorType <ResponseBasedDetectedErrorTypes>]
+        [-ResponseBasedFailoverThresholdPercentage <Int32>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Cdn.Models.Api20240201.ResponseBasedOriginErrorDetectionParameters" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ResponseBasedOriginErrorDetectionParameters'
+  description: |-
+    ```powershell
+    New-AzCdnResponseBasedOriginErrorDetectionParametersObject -ResponseBasedDetectedErrorType testDetctedError -ResponseBasedFailoverThresholdPercentage 6
+    ```
+
+    ```output
+    ResponseBasedDetectedErrorType ResponseBasedFailoverThresholdPercentage
+    ------------------------------ ----------------------------------------
+    testDetctedError               6
+    ```
+
+    Create an in-memory object for ResponseBasedOriginErrorDetectionParameters
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnResponseBasedOriginErrorDetectionParametersObject.md
+  document type: cmdlet
+  external help file: Az.Cdn-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Cdn/new-AzCdnResponseBasedOriginErrorDetectionParametersObject
+  Module Name: Az.Cdn
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Cdn/Cdn/help/New-AzCdnResponseBasedOriginErrorDetectionParametersObject.md
+  PlatyPS schema version: 2024-05-01

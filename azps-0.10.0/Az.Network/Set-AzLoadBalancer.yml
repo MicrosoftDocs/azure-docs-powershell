@@ -1,0 +1,112 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Set-AzLoadBalancer
+name: Set-AzLoadBalancer
+module: Az.Network
+isPreview: false
+summary: |-
+  Sets the goal state for a load balancer.
+description: |-
+  The **Set-AzLoadBalancer** cmdlet sets the goal state for an Azure load balancer.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LoadBalancer
+    type: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a load balancer.
+      This cmdlet sets the goal state for the load balancer that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzLoadBalancer
+        -LoadBalancer <PSLoadBalancer>
+        [-AsJob]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="PSLoadBalancer" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'LoadBalancer' accepts value of type 'PSLoadBalancer' from the pipeline
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSLoadBalancer" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify a load balancer'
+  description: |-
+    ```
+    PS C:\>$slb = Get-AzLoadBalancer -Name "NRPLB" -ResourceGroupName "NRP-RG"
+    PS C:\> $slb | Add-AzLoadBalancerInboundNatRuleConfig -Name "NewRule" -FrontendIpConfiguration $slb.FrontendIpConfigurations[0] -FrontendPort 81 -BackendPort 8181 -Protocol "TCP"
+    PS C:\> $slb | Set-AzLoadBalancer
+    ```
+
+    The first command gets the load balancer named NRPLB, and then stores it in the $slb variable.
+
+    The second command uses the pipeline operator to pass the load balancer in $slb to Add-AzLoadBalancerInboundNatRuleConfig, which adds an inbound NAT rule named NewRule.
+
+    The third command passes the load balancer to **Set-AzLoadBalancer**, which updates the load balancer configuration and saves it.
+links:
+- text: Get-AzLoadBalancer
+  href: ./Get-AzLoadBalancer.yml
+- text: New-AzLoadBalancer
+  href: ./New-AzLoadBalancer.yml
+- text: Remove-AzLoadBalancer
+  href: ./Remove-AzLoadBalancer.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzLoadBalancer.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.network/set-azloadbalancer
+  Module Name: Az.Network
+  ms.assetid: 494E185D-3746-4959-846E-660017A1F392
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Network/Network/help/Set-AzLoadBalancer.md
+  PlatyPS schema version: 2024-05-01

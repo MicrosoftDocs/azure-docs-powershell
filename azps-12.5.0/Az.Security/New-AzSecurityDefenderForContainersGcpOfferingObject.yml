@@ -1,0 +1,272 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Security.New-AzSecurityDefenderForContainersGcpOfferingObject
+name: New-AzSecurityDefenderForContainersGcpOfferingObject
+module: Az.Security
+isPreview: false
+summary: |-
+  Create an in-memory object for DefenderForContainersGcpOffering.
+description: |-
+  Create an in-memory object for DefenderForContainersGcpOffering.
+parameters:
+  cmdletParameters:
+  - name: AuditLogsAutoProvisioningFlag
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is audit logs data collection enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataPipelineNativeCloudConnectionServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data collection service account email address in GCP for this offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DataPipelineNativeCloudConnectionWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The data collection GCP workload identity provider id for this offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefenderAgentAutoProvisioningFlag
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender for Cloud Kubernetes agent auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container agentless discovery enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentEnabled
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Microsoft Defender container image assessment enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MdcContainerImageAssessmentWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The workload identity provider id in GCP for this feature.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NativeCloudConnectionServiceAccountEmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The service account email address in GCP for this offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NativeCloudConnectionWorkloadIdentityProviderId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The GCP workload identity provider id for this offering.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PolicyAgentAutoProvisioningFlag
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Is Policy Kubernetes agent auto provisioning enabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSecurityDefenderForContainersGcpOfferingObject
+        [-AuditLogsAutoProvisioningFlag <Boolean>]
+        [-DataPipelineNativeCloudConnectionServiceAccountEmailAddress <String>]
+        [-DataPipelineNativeCloudConnectionWorkloadIdentityProviderId <String>]
+        [-DefenderAgentAutoProvisioningFlag <Boolean>]
+        [-MdcContainerAgentlessDiscoveryK8SEnabled <Boolean>]
+        [-MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress <String>]
+        [-MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId <String>]
+        [-MdcContainerImageAssessmentEnabled <Boolean>]
+        [-MdcContainerImageAssessmentServiceAccountEmailAddress <String>]
+        [-MdcContainerImageAssessmentWorkloadIdentityProviderId <String>]
+        [-NativeCloudConnectionServiceAccountEmailAddress <String>]
+        [-NativeCloudConnectionWorkloadIdentityProviderId <String>]
+        [-PolicyAgentAutoProvisioningFlag <Boolean>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Security.Models.DefenderForContainersGcpOffering" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create new DefenderForContainersGcpOffering object'
+  description: |-
+    ```powershell
+    $emailSuffix = "myproject.iam.gserviceaccount.com"
+    New-AzSecurityDefenderForContainersGcpOfferingObject `
+        -NativeCloudConnectionServiceAccountEmailAddress "microsoft-defender-containers@$emailSuffix" -NativeCloudConnectionWorkloadIdentityProviderId "containers" `
+        -DataPipelineNativeCloudConnectionServiceAccountEmailAddress "ms-defender-containers-stream@$emailSuffix" -DataPipelineNativeCloudConnectionWorkloadIdentityProviderId "containers-streams" `
+        -AuditLogsAutoProvisioningFlag $true -DefenderAgentAutoProvisioningFlag $true -PolicyAgentAutoProvisioningFlag $true `
+        -MdcContainerAgentlessDiscoveryK8SEnabled $true -MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId "containers" -MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress "mdc-containers-k8s-operator@$emailSuffix" `
+        -MdcContainerImageAssessmentEnabled $true -MdcContainerImageAssessmentWorkloadIdentityProviderId "containers" -MdcContainerImageAssessmentServiceAccountEmailAddress "mdc-containers-artifact-assess@$emailSuffix"
+    ```
+
+    ```output
+    AuditLogsAutoProvisioningFlag                               : True
+    DataPipelineNativeCloudConnectionServiceAccountEmailAddress : ms-defender-containers-stream@myproject.iam.gserviceaccount.com
+    DataPipelineNativeCloudConnectionWorkloadIdentityProviderId : containers-streams
+    DefenderAgentAutoProvisioningFlag                           : True
+    Description                                                 :
+    MdcContainerAgentlessDiscoveryK8SEnabled                    : True
+    MdcContainerAgentlessDiscoveryK8SServiceAccountEmailAddress : mdc-containers-k8s-operator@myproject.iam.gserviceaccount.com
+    MdcContainerAgentlessDiscoveryK8SWorkloadIdentityProviderId : containers
+    MdcContainerImageAssessmentEnabled                          : True
+    MdcContainerImageAssessmentServiceAccountEmailAddress       : mdc-containers-artifact-assess@myproject.iam.gserviceaccount.com
+    MdcContainerImageAssessmentWorkloadIdentityProviderId       : containers
+    NativeCloudConnectionServiceAccountEmailAddress             : microsoft-defender-containers@myproject.iam.gserviceaccount.com
+    NativeCloudConnectionWorkloadIdentityProviderId             : containers
+    OfferingType                                                : DefenderForContainersGcp
+    PolicyAgentAutoProvisioningFlag                             : True
+    ```
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForContainersGcpOfferingObject.md
+  document type: cmdlet
+  external help file: Az.Security-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.Security/new-azsecuritydefenderforcontainersgcpofferingobject
+  Module Name: Az.Security
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Security/Security/help/New-AzSecurityDefenderForContainersGcpOfferingObject.md
+  PlatyPS schema version: 2024-05-01

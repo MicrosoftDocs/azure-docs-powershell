@@ -1,0 +1,118 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureDns
+name: Get-AzureDns
+module: Azure
+isPreview: false
+summary: |-
+  Gets the DNS settings for an Azure deployment.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureDns** cmdlet gets the DNS settings for an Azure deployment.
+  The cmdlet returns the friendly name and IP address of the DNS server in a DNS settings object.
+parameters:
+  cmdletParameters:
+  - name: DnsSettings
+    type: <xref href="DnsSettings" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a **DnsSettings** object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureDns
+        [-DnsSettings <DnsSettings>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Get DNS settings'
+  description: |-
+    ```
+    PS C:\> Get-AzureDeployment -ServiceName "ContosoService" -Slot "Production" | Get-AzureDNS
+    ```
+
+    This command uses the **Get-AzureDeployment** cmdlet to get the production deployment of the service named ContosoService.
+    The command passes that object to the current cmdlet by using the pipeline operator.
+    The current cmdlet gets the DNS settings.
+links:
+- text: Add-AzureDns
+  href: ./Add-AzureDns.yml
+- text: Get-AzureDeployment
+  href: ./Get-AzureDeployment.yml
+- text: New-AzureDns
+  href: ./New-AzureDns.yml
+- text: Remove-AzureDns
+  href: ./Remove-AzureDns.yml
+- text: Set-AzureDns
+  href: ./Set-AzureDns.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 184FB33A-C866-4AF0-BA31-8ADCFC6EE8E2
+  PlatyPS schema version: 2024-05-01

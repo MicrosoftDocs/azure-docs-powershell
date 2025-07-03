@@ -1,0 +1,238 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.MonitoringSolutions.Get-AzMonitorLogAnalyticsSolution
+name: Get-AzMonitorLogAnalyticsSolution
+module: Az.MonitoringSolutions
+isPreview: false
+summary: |-
+  Retrieves the user solution.
+description: |-
+  Retrieves the user solution.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MonitoringSolutions.Models.IMonitoringSolutionsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      User Solution Name.
+    aliases:
+    - SolutionName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group to get.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Gets subscription credentials which uniquely identify Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzMonitorLogAnalyticsSolution
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzMonitorLogAnalyticsSolution
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMonitorLogAnalyticsSolution
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzMonitorLogAnalyticsSolution
+        -InputObject <IMonitoringSolutionsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MonitoringSolutions.Models.IMonitoringSolutionsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.MonitoringSolutions.Models.Api20151101Preview.ISolution" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a monitor log analytics solution by name'
+  description: |-
+    ```powershell
+    Get-AzMonitorLogAnalyticsSolution -ResourceGroupName azureps-monitor -Type "Microsoft.OperationsManagement/solutions" -Location "West US 2" -WorkspaceResourceId workspaceResourceId
+    ```
+
+    ```output
+    Name                      Type                                     Location
+    ----                      ----                                     --------
+    Containers(azureps-monitor) Microsoft.OperationsManagement/solutions West US 2
+    ```
+
+    This command gets a monitor log analytics solution by name.
+- title: 'Example 2: Get a monitor log analytics solution by resource id'
+  description: |-
+    ```powershell
+    @{Id = "/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourcegroups/azureps-manual-test/providers/Microsoft.OperationsManagement/solutions/Containers(monitoringworkspace-t01)"} | Get-AzMonitorLogAnalyticsSolution
+    ```
+
+    ```output
+    Name                                Type                                     Location
+    ----                                ----                                     --------
+    Containers(monitoringworkspace-t01) Microsoft.OperationsManagement/solutions East US
+    ```
+
+    This command gets a monitor log analytics solution by resource id.
+- title: 'Example 3: Get a monitor log analytics solution by object'
+  description: |-
+    ```powershell
+    $monitor = New-AzMonitorLogAnalyticsSolution -ResourceGroupName azureps-monitor -Name 'Containers(azureps-monitor)'
+    Get-AzMonitorLogAnalyticsSolution -InputObject $monitor
+    ```
+
+    ```output
+    Name                      Type                                     Location
+    ----                      ----                                     --------
+    Containers(azureps-monitor) Microsoft.OperationsManagement/solutions West US 2
+    ```
+
+    This command gets a monitor log analytics solution by object.
+- title: 'Example 4: Get all monitor log analytics solutions under a resource group'
+  description: |-
+    ```powershell
+    Get-AzMonitorLogAnalyticsSolution -ResourceGroupName azureps-monitor
+    ```
+
+    ```output
+    Name                      Type                                     Location
+    ----                      ----                                     --------
+    Containers(azureps-monitor) Microsoft.OperationsManagement/solutions West US 2
+    ```
+
+    This command gets all monitor log analytics solutions under a resource group.
+- title: 'Example 5: Get all monitor log analytics solutions under a subscription'
+  description: |-
+    ```powershell
+    Get-AzMonitorLogAnalyticsSolution
+    ```
+
+    ```output
+    Name                                Type                                     Location
+    ----                                ----                                     --------
+    Containers(monitoringworkspace-t01) Microsoft.OperationsManagement/solutions East US
+    Containers(azureps-monitor)           Microsoft.OperationsManagement/solutions West US 2
+    ```
+
+    This command gets all monitor log analytics solutions under a subscription.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MonitoringSolutions/MonitoringSolutions/help/Get-AzMonitorLogAnalyticsSolution.md
+  document type: cmdlet
+  external help file: Az.MonitoringSolutions-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.monitoringsolutions/get-azmonitorloganalyticssolution
+  Module Name: Az.MonitoringSolutions
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/MonitoringSolutions/MonitoringSolutions/help/Get-AzMonitorLogAnalyticsSolution.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,201 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Sql.Set-AzSqlServerIpv6FirewallRule
+name: Set-AzSqlServerIpv6FirewallRule
+module: Az.Sql
+isPreview: false
+summary: |-
+  Modifies an IPv6 firewall rule in Azure SQL Database server.
+description: |-
+  The **Set-AzSqlServerIpv6FirewallRule** cmdlet modifies an IPv6 firewall rule in an Azure SQL Database server.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EndIpv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the end value of the IPv6 address range for this rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Ipv6FirewallRuleName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the IPv6 firewall rule that this cmdlet modifies.
+    aliases:
+    - Name
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the resource group to which the server is assigned.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StartIpv6Address
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the start value of the IPv6 address range for the IPv6 firewall rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: "False"
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzSqlServerIpv6FirewallRule
+        [-Ipv6FirewallRuleName] <String>
+        -StartIpv6Address <String>
+        -EndIpv6Address <String>
+        [-ServerName] <String>
+        [-ResourceGroupName] <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Sql.Ipv6FirewallRule.Model.AzureSqlServerIpv6FirewallRuleModel" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Modify an IPv6 firewall rule'
+  description: |-
+    ```powershell
+    Set-AzSqlServerIpv6FirewallRule -ResourceGroupName "ResourceGroup01" -ServerName "Server01" -Ipv6FirewallRuleName "Rule01" -StartIpv6Address "0000:0000:0000:0000:0000:ffff:c0a8:00c5" -EndIpv6Address "0000:0000:0000:0000:0000:ffff:c0a8:00c7"
+    ```
+
+    ```output
+    ResourceGroupName : ResourceGroup01
+    ServerName        : Server01
+    StartIpv6Address    : 0000:0000:0000:0000:0000:ffff:c0a8:00c7
+    EndIpv6Address      : 0000:0000:0000:0000:0000:ffff:c0a8:00c8
+    Ipv6FirewallRuleName  : Rule01
+    ```
+
+    This command modifies an IPv6 firewall rule named Rule01 on the server named Server01.
+    The command modifies the start and end IPv6 addresses.
+links:
+- text: Get-AzSqlServerIpv6FirewallRule
+  href: ./Get-AzSqlServerIpv6FirewallRule.yml
+- text: New-AzSqlServerIpv6FirewallRule
+  href: ./New-AzSqlServerIpv6FirewallRule.yml
+- text: Remove-AzSqlServerIpv6FirewallRule
+  href: ./Remove-AzSqlServerIpv6FirewallRule.yml
+- text: SQL Database Documentation
+  href: https://learn.microsoft.com/azure/sql-database/
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerIpv6FirewallRule.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Sql.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.sql/set-azsqlserveripv6firewallrule
+  Module Name: Az.Sql
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Sql/Sql/help/Set-AzSqlServerIpv6FirewallRule.md
+  PlatyPS schema version: 2024-05-01

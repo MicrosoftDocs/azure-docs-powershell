@@ -1,0 +1,147 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageQueue
+name: Get-AzStorageQueue
+module: Az.Storage
+isPreview: false
+summary: |-
+  Lists storage queues.
+description: |-
+  The **Get-AzStorageQueue** cmdlet lists storage queues associated with an Azure Storage account.
+parameters:
+  cmdletParameters:
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure storage context.
+      You can create it by using the **New-AzStorageContext** cmdlet.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a name.
+      If no name is specified, the cmdlet gets a list of all the queues.
+      If a full or partial name is specified, the cmdlet gets all queues that match the name pattern.
+    aliases:
+    - N
+    - Queue
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: QueueName
+      position: "0"
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Prefix
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a prefix used in the name of the queues you want to get.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: QueuePrefix
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageQueue
+        [[-Name] <String>]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: QueueName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageQueue
+        -Prefix <String>
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: QueuePrefix
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageQueue" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Azure Storage queues'
+  description: |-
+    ```
+    PS C:\>Get-AzStorageQueue
+    ```
+
+    This command gets a list of all storage queues for the current Storage account.
+- title: 'Example 2: List Azure Storage queues using a wildcard character'
+  description: |-
+    ```
+    PS C:\>Get-AzStorageQueue -Name queue*
+    ```
+
+    This command uses a wildcard character to get a list of storage queues whose name starts with queue.
+- title: 'Example 3: List Azure Storage queues using queue name prefix'
+  description: |-
+    ```
+    PS C:\>Get-AzStorageQueue -Prefix "queue"
+    ```
+
+    This example uses the *Prefix* parameter to get a list of storage queues whose name starts with queue.
+links:
+- text: New-AzStorageQueue
+  href: ./New-AzStorageQueue.yml
+- text: Remove-AzStorageQueue
+  href: ./Remove-AzStorageQueue.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageQueue.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.storage/get-azstoragequeue
+  Module Name: Az.Storage
+  ms.assetid: C2EBCCF0-56CE-4D49-A138-74E52FC3A9AC
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Storage/Storage.Management/help/Get-AzStorageQueue.md
+  PlatyPS schema version: 2024-05-01

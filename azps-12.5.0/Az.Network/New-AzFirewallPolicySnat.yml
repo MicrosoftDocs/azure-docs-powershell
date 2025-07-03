@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.New-AzFirewallPolicySnat
+name: New-AzFirewallPolicySnat
+module: Az.Network
+isPreview: false
+summary: |-
+  Creates SNAT configuration of PrivateRange and AutoLearnPrivateRanges for the firewall policy
+description: |-
+  The New-AzFirewallPolicySnat is used to configure Private Ranges and auto learn private ranges for a firewall policy.
+parameters:
+  cmdletParameters:
+  - name: AutoLearnPrivateRange
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enable/disable auto learn private ranges.
+      By default it is disabled.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PrivateRange
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Private IP Range
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzFirewallPolicySnat
+        [-PrivateRange <String[]>]
+        [-AutoLearnPrivateRange]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSAzureFirewallPolicySNAT" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    New-AzFirewallPolicySnat -PrivateRange @("3.3.0.0/24", "98.0.0.0/8","10.227.16.0/20") -AutoLearnPrivateRange
+    ```
+
+    ```output
+    PrivateRange	            : ["3.3.0.0/24", "98.0.0.0/8","10.227.16.0/20"]
+    		AutoLearnPrivateRanges	    : Enabled
+    ```
+
+    This example configures private IP addresses/IP ranges to which traffic will not be SNATed and enables auto learn of private ip ranges in Firewall Policy.
+- title: Example 2
+  description: |-
+    ```powershell
+    New-AzFirewallPolicySnat -PrivateRange @("3.3.0.0/24", "98.0.0.0/8","10.227.16.0/20")
+    ```
+
+    ```output
+    PrivateRange	            : ["3.3.0.0/24", "98.0.0.0/8","10.227.16.0/20"]
+    	 AutoLearnPrivateRanges	    : Disabled
+    ```
+
+    This example configures private IP addresses/IP ranges to which traffic will not be SNATed and disables auto learn of private ip ranges in Firewall Policy.
+links:
+- text: New-AzFireWallPolicy
+  href: ./New-AzFireWallPolicy.yml
+- text: Set-AzFireWallPolicy
+  href: ./Set-AzFireWallPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicySnat.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/new-azfirewallpolicysnat
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/New-AzFirewallPolicySnat.md
+  PlatyPS schema version: 2024-05-01

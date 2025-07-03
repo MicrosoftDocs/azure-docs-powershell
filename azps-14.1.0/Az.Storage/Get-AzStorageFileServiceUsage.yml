@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Get-AzStorageFileServiceUsage
+name: Get-AzStorageFileServiceUsage
+module: Az.Storage
+isPreview: false
+summary: |-
+  Gets the usage of file service in storage account including account limits, file share limits and constants used in recommendations and bursting formula.
+description: |-
+  Gets the usage of file service in storage account including account limits, file share limits and constants used in recommendations and bursting formula.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Storage.Models.IStorageIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Maxpagesize
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional, specifies the maximum number of file service usages to be included in the list response.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group within the user's subscription.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StorageAccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the storage account within the specified resource group.
+      Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceUsage
+        -ResourceGroupName <String>
+        -StorageAccountName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceUsage
+        -ResourceGroupName <String>
+        -StorageAccountName <String>
+        [-SubscriptionId <String[]>]
+        [-Maxpagesize <Int32>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzStorageFileServiceUsage
+        -InputObject <IStorageIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Storage.Models.IStorageIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Storage.Models.IFileServiceUsage" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a Storage account file service usage data'
+  description: |-
+    ```powershell
+    Get-AzStorageFileServiceUsage -StorageAccountName myaccount -ResourceGroupName myresroucegroup
+    ```
+
+    ```output
+    BurstingConstantBurstFloorIops                      : 10000
+    BurstingConstantBurstIoScalar                       : 3
+    BurstingConstantBurstTimeframeSecond                : 3600
+    FileShareLimitMaxProvisionedBandwidthMiBPerSec      : 10340
+    FileShareLimitMaxProvisionedIops                    : 102400
+    FileShareLimitMaxProvisionedStorageGiB              : 262144
+    FileShareLimitMinProvisionedBandwidthMiBPerSec      : 125
+    FileShareLimitMinProvisionedIops                    : 3000
+    FileShareLimitMinProvisionedStorageGiB              : 32
+    FileShareRecommendationBandwidthScalar              : 0.1
+    FileShareRecommendationBaseBandwidthMiBPerSec       : 125
+    FileShareRecommendationBaseIops                     : 3000
+    FileShareRecommendationIoScalar                     : 1
+    Id                                                  : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresroucegroup/providers/Microsoft.Storage/storageAccounts/myaccount/fileServices/default/usages/default
+    LiveShareFileShareCount                             : 1
+    LiveShareProvisionedBandwidthMiBPerSec              : 129
+    LiveShareProvisionedIops                            : 3032
+    LiveShareProvisionedStorageGiB                      : 32
+    Name                                                : default
+    ResourceGroupName                                   : myresroucegroup
+    SoftDeletedShareFileShareCount                      : 0
+    SoftDeletedShareProvisionedBandwidthMiBPerSec       : 0
+    SoftDeletedShareProvisionedIops                     : 0
+    SoftDeletedShareProvisionedStorageGiB               : 0
+    StorageAccountLimitMaxFileShare                     : 50
+    StorageAccountLimitMaxProvisionedBandwidthMiBPerSec : 10340
+    StorageAccountLimitMaxProvisionedIops               : 102400
+    StorageAccountLimitMaxProvisionedStorageGiB         : 262144
+    Type                                                : Microsoft.Storage/storageAccounts/fileServices/usages
+    ```
+
+    This command gets the usage of file service in storage account including account limits, file share limits and constants used in recommendations and bursting formula.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileServiceUsage.md
+  document type: cmdlet
+  external help file: Az.Storage-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/get-azstoragefileserviceusage
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Get-AzStorageFileServiceUsage.md
+  PlatyPS schema version: 2024-05-01

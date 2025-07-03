@@ -1,0 +1,40 @@
+### YamlMime:PowerShellModule1
+uid: Az.Fleet
+name: Az.Fleet Module
+isPreview: false
+cmdletGroups:
+- title: Fleet
+  cmdlets:
+  - Az.Fleet.Get-AzFleet
+  - Az.Fleet.Get-AzFleetCredentials
+  - Az.Fleet.Get-AzFleetMember
+  - Az.Fleet.Get-AzFleetUpdateRun
+  - Az.Fleet.Get-AzFleetUpdateStrategy
+  - Az.Fleet.New-AzFleet
+  - Az.Fleet.New-AzFleetMember
+  - Az.Fleet.New-AzFleetUpdateGroupObject
+  - Az.Fleet.New-AzFleetUpdateRun
+  - Az.Fleet.New-AzFleetUpdateStageObject
+  - Az.Fleet.New-AzFleetUpdateStrategy
+  - Az.Fleet.Remove-AzFleet
+  - Az.Fleet.Remove-AzFleetMember
+  - Az.Fleet.Remove-AzFleetUpdateRun
+  - Az.Fleet.Remove-AzFleetUpdateStrategy
+  - Az.Fleet.Start-AzFleetUpdateRun
+  - Az.Fleet.Stop-AzFleetUpdateRun
+  - Az.Fleet.Update-AzFleet
+  - Az.Fleet.Update-AzFleetMember
+  - Az.Fleet.Update-AzFleetUpdateRun
+  - Az.Fleet.Update-AzFleetUpdateStrategy
+description: |-
+  Microsoft Azure PowerShell: Fleet cmdlets
+metadata:
+  Module Name: Az.Fleet
+  Module Guid: 8d7b53b3-f39f-4f40-a64f-cb07e29ede3a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.fleet
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Az.Fleet.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Az.Fleet.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

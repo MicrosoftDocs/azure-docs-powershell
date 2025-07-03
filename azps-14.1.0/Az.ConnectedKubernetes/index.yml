@@ -1,0 +1,25 @@
+### YamlMime:PowerShellModule1
+uid: Az.ConnectedKubernetes
+name: Az.ConnectedKubernetes Module
+isPreview: false
+cmdletGroups:
+- title: Connected Kubernetes
+  cmdlets:
+  - Az.ConnectedKubernetes.Get-AzConnectedKubernetes
+  - Az.ConnectedKubernetes.Get-AzConnectedKubernetesUserCredential
+  - Az.ConnectedKubernetes.New-AzConnectedKubernetes
+  - Az.ConnectedKubernetes.Remove-AzConnectedKubernetes
+  - Az.ConnectedKubernetes.Set-AzConnectedKubernetes
+  - Az.ConnectedKubernetes.Update-AzConnectedKubernetes
+description: |-
+  Microsoft Azure PowerShell: ConnectedKubernetes cmdlets
+metadata:
+  Module Name: Az.ConnectedKubernetes
+  Module Guid: 59df8ab1-442a-41ae-9b55-60b505bae789
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.connectedkubernetes
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Az.ConnectedKubernetes.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ConnectedKubernetes/ConnectedKubernetes/help/Az.ConnectedKubernetes.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

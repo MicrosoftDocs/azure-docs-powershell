@@ -1,0 +1,184 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.StackHCI.Enable-AzStackHCIRemoteSupport
+name: Enable-AzStackHCIRemoteSupport
+module: Az.StackHCI
+isPreview: false
+summary: |-
+  Enables Remote Support.
+description: |-
+  Enables Remote Support allows authorized Microsoft Support users to remotely access the device for diagnostics or repair depending on the access level granted.
+parameters:
+  cmdletParameters:
+  - name: AccessLevel
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Controls the remote operations that can be performed.
+      This can be either Diagnostics or DiagnosticsAndRepair.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AgreeToRemoteSupportConsent
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      If set to true then records user consent as provided and proceeds without prompt.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ExpireInMinutes
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SasCredential
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Hybrid Connection SAS Credential.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Enable-AzStackHCIRemoteSupport
+        [-AccessLevel] <String>
+        [[-ExpireInMinutes] <Int32>]
+        [[-SasCredential] <String>]
+        [-AgreeToRemoteSupportConsent]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1:'
+  description: |-
+    ```powershell
+    Enable-AzStackHCIRemoteSupport -AccessLevel Diagnostics -ExpireInMinutes 1440 -SasCredential "Sample SAS"
+    ```
+
+    ```output
+    Proceed with enabling remote support?
+    [Y] Yes  [N] No: Y
+
+    Enabling Remote Support for 'Diagnostics' expiring in '1440' minutes.
+    Using provided SAS credential to make remote support connection.
+    Remote Support successfully Enabled.
+
+
+    State         : Active
+    CreatedAt     : 3/29/2022 10:29:19 AM +00:00
+    UpdatedAt     : 3/29/2022 10:29:19 AM +00:00
+    TargetService : PowerShell
+    AccessLevel   : Diagnostics
+    ExpiresAt     : 3/30/2022 10:29:18 AM +00:00
+    SasCredential :
+    ```
+
+    Enable Remote Support on machine
+- title: 'Example 2:'
+  description: |-
+    ```powershell
+    Enable-AzStackHCIRemoteSupport -AccessLevel DiagnosticsRepair -ExpireInMinutes 1440 -SasCredential "Sample SAS" -AgreeToRemoteSupportConsent
+    ```
+
+    ```output
+    Enabling Remote Support for 'Diagnostics' expiring in '1440' minutes.
+    Using provided SAS credential to make remote support connection.
+    Remote Support successfully Enabled.
+
+
+    State         : Active
+    CreatedAt     : 3/29/2022 10:29:19 AM +00:00
+    UpdatedAt     : 3/29/2022 10:29:53 AM +00:00
+    TargetService : PowerShell
+    AccessLevel   : Diagnostics
+    ExpiresAt     : 3/30/2022 10:29:53 AM +00:00
+    SasCredential :
+    ```
+
+    Enable remort support by providing consent.
+    In this case, user is not prompted for consent
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Enable-AzStackHCIRemoteSupport.md
+  document type: cmdlet
+  external help file: Az.StackHCI-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.stackhci/enable-azstackhciremotesupport
+  Module Name: Az.StackHCI
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/StackHCI/StackHCI/help/Enable-AzStackHCIRemoteSupport.md
+  PlatyPS schema version: 2024-05-01

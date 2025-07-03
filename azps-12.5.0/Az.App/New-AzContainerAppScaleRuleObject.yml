@@ -1,0 +1,225 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.App.New-AzContainerAppScaleRuleObject
+name: New-AzContainerAppScaleRuleObject
+module: Az.App
+isPreview: false
+summary: |-
+  Create an in-memory object for ScaleRule.
+description: |-
+  Create an in-memory object for ScaleRule.
+parameters:
+  cmdletParameters:
+  - name: AzureQueueAuth
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Authentication secrets for the queue scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureQueueLength
+    type: <xref href="System.Int32" data-throw-if-not-resolved="False" />
+    description: |-
+      Queue length.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AzureQueueName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Queue name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomAuth
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Authentication secrets for the custom scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomMetadata
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ICustomScaleRuleMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata properties to describe custom scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of the custom scale rule
+              eg: azure-servicebus, redis etc.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpAuth
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Authentication secrets for the custom scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: HttpMetadata
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IHttpScaleRuleMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata properties to describe http scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Scale Rule Name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TcpAuth
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.IScaleRuleAuth" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Authentication secrets for the tcp scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TcpMetadata
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ITcpScaleRuleMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      Metadata properties to describe tcp scale rule.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzContainerAppScaleRuleObject
+        [-AzureQueueAuth <IScaleRuleAuth[]>]
+        [-AzureQueueLength <Int32>]
+        [-AzureQueueName <String>]
+        [-CustomAuth <IScaleRuleAuth[]>]
+        [-CustomMetadata <ICustomScaleRuleMetadata>]
+        [-CustomType <String>]
+        [-HttpAuth <IScaleRuleAuth[]>]
+        [-HttpMetadata <IHttpScaleRuleMetadata>]
+        [-Name <String>]
+        [-TcpAuth <IScaleRuleAuth[]>]
+        [-TcpMetadata <ITcpScaleRuleMetadata>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.App.Models.ScaleRule" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for ScaleRule.'
+  description: |-
+    ```powershell
+    New-AzContainerAppScaleRuleObject -Name "httpscalingrule" -CustomType "http" -AzureQueueLength 30 -AzureQueueName azps-containerapp
+    ```
+
+    ```output
+    Name
+    ----
+    httpscalingrule
+    ```
+
+    Create an in-memory object for ScaleRule.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppScaleRuleObject.md
+  document type: cmdlet
+  external help file: Az.App-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.App/new-azcontainerappscaleruleobject
+  Module Name: Az.App
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/App/App/help/New-AzContainerAppScaleRuleObject.md
+  PlatyPS schema version: 2024-05-01

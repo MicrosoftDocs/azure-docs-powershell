@@ -1,0 +1,777 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Add-AzureProvisioningConfig
+name: Add-AzureProvisioningConfig
+module: Azure
+isPreview: false
+summary: |-
+  Adds provisioning configuration for an Azure virtual machine.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Add-AzureProvisioningConfig** cmdlet adds provisioning configuration information to an Azure virtual machine configuration.
+  You can use the configuration object to create a virtual machine.
+
+  This cmdlet supports different provisioning configurations, including standalone Windows servers, Windows servers joined to an Active Directory domain, and Linux-based servers.
+
+  To create an Active Directory domain joined server, specify the fully qualified domain name of the Active Directory domain and the domain credentials of a user who has permission to join the virtual machine to the domain.
+parameters:
+  cmdletParameters:
+  - name: AdminUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name of the Administrator account that this configuration creates on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Certificates
+    type: <xref href="CertificateSettingList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a set of certificates that this configuration installs on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomDataFile
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a data file for the virtual machine.
+      This cmdlet encodes the contents of the file as Base64.
+      The file must be less than 64 kilobytes long.
+
+      If the guest operating system is the Windows operating system, this configuration saves this data as a binary file named %SYSTEMDRIVE%\AzureData\CustomData.bin.
+
+      If the guest operating system is Linux, this configuration passes the data by using the ovf-env.xml file.
+      Configuration copies that file to the /var/lib/waagent directory.
+      The agent also stores the Base64 encoded data in /var/lib/waagent/CustomData.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableAutomaticUpdates
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration disables automatic updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableGuestAgent
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration disables the infrastructure as a service (IaaS) guest agent.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableSSH
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration disables SSH.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisableWinRMHttps
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration disables Windows Remote Management (WinRM) on HTTPS.
+      By default, WinRM is enabled over HTTPS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Domain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the domain of the account that has permission to add the computer to a domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the user account that has permission to add the computer to a domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DomainUserName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the user account that has permission to add the computer to a domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnableWinRMHttp
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration enables WinRM over HTTP.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationAction
+    type: <xref href="ActionPreference" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies how this cmdlet responds to an information event.
+
+      The acceptable values for this parameter are:
+
+      - Continue
+      - Ignore
+      - Inquire
+      - SilentlyContinue
+      - Stop
+      - Suspend
+    aliases:
+    - infa
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InformationVariable
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies an information variable.
+    aliases:
+    - iv
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: JoinDomain
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified domain name (FQDN) of the domain to join.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Linux
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates a Linux configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxUser
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user name of the Linux administrative account that this configuration creates on the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineObjectOU
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the fully qualified name of the organizational unit (OU) in which the configuration creates the computer account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoExportPrivateKey
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration does not upload the private key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoRDPEndpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates a virtual machine without a remote desktop endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoSSHEndpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates a virtual machine without an SSH endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoSSHPassword
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates a virtual machine without an SSH password.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWinRMEndpoint
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration does not add a WinRM endpoint for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Password
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the password of the administrator account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResetPasswordOnFirstLogon
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that the virtual machine requires the user to change the password at the first logon.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSHKeyPairs
+    type: <xref href="SSHKeyPairList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies SSH key pairs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SSHPublicKeys
+    type: <xref href="SSHPublicKeyList" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies SSH public keys.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Linux
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time zone for the virtual machine, for example, Pacific Standard Time or Canada Central Standard Time.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VM
+    type: <xref href="IPersistentVM" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a virtual machine object.
+    aliases:
+    - InputObject
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Windows
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates a standalone virtual machine that runs the Windows operating system.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsDomain
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this configuration creates Windows server that is joined to an Active Directory domain.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: WindowsDomain
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WinRMCertificate
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a certificate that this configuration associates to a WinRM endpoint.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: X509Certificates
+    type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of X509 certificates that are deployed to a hosted service.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Windows
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: WindowsDomain
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Add-AzureProvisioningConfig
+        -VM <IPersistentVM>
+        [-DisableGuestAgent]
+        [-CustomDataFile <String>]
+        [-Windows]
+        [-AdminUsername <String>]
+        [-Password <String>]
+        [-ResetPasswordOnFirstLogon]
+        [-DisableAutomaticUpdates]
+        [-NoRDPEndpoint]
+        [-TimeZone <String>]
+        [-Certificates <CertificateSettingList>]
+        [-EnableWinRMHttp]
+        [-DisableWinRMHttps]
+        [-WinRMCertificate <X509Certificate2>]
+        [-X509Certificates <X509Certificate2[]>]
+        [-NoExportPrivateKey]
+        [-NoWinRMEndpoint]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Windows
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Add-AzureProvisioningConfig
+        -VM <IPersistentVM>
+        [-DisableGuestAgent]
+        [-Linux]
+        [-LinuxUser <String>]
+        [-DisableSSH]
+        [-NoSSHEndpoint]
+        [-NoSSHPassword]
+        [-SSHPublicKeys <SSHPublicKeyList>]
+        [-SSHKeyPairs <SSHKeyPairList>]
+        [-CustomDataFile <String>]
+        [-Password <String>]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Linux
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Add-AzureProvisioningConfig
+        -VM <IPersistentVM>
+        -AdminUsername <String>
+        -JoinDomain <String>
+        -Domain <String>
+        -DomainUserName <String>
+        -DomainPassword <String>
+        [-DisableGuestAgent]
+        [-CustomDataFile <String>]
+        [-WindowsDomain]
+        [-Password <String>]
+        [-ResetPasswordOnFirstLogon]
+        [-DisableAutomaticUpdates]
+        [-NoRDPEndpoint]
+        [-TimeZone <String>]
+        [-Certificates <CertificateSettingList>]
+        [-MachineObjectOU <String>]
+        [-EnableWinRMHttp]
+        [-DisableWinRMHttps]
+        [-WinRMCertificate <X509Certificate2>]
+        [-X509Certificates <X509Certificate2[]>]
+        [-NoExportPrivateKey]
+        [-NoWinRMEndpoint]
+        [-Profile <AzureSMProfile>]
+        [-InformationAction <ActionPreference>]
+        [-InformationVariable <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: WindowsDomain
+  isDefault: false
+examples:
+- title: 'Example 1: Create a standalone virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" | New-AzureVM -ServiceName "ContosoService"
+    ```
+
+    This command creates a virtual machine configuration object by using the **New-AzureVMConfig** cmdlet.
+    The command passes that object to the current cmdlet by using the pipeline operator.
+    The current cmdlet adds provisioning configuration for a virtual machine that runs the Windows operating system.
+    The configuration includes the administrator user name and password.
+    The command passes the configuration to the **New-AzureVM** cmdlet, which creates the virtual machine.
+- title: 'Example 2: Create a domain joined virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "DomainVM" -InstanceSize Small -ImageName "Image09" | Add-AzureProvisioningConfig -WindowsDomain -Password "password" -AdminUsername "AdminMain" -ResetPasswordOnFirstLogon -JoinDomain "contoso.com" -Domain "contoso" -DomainUserName "DomainAdminUser" -DomainPassword "DomainPassword" -MachineObjectOU 'OU=AzureVMs,DC=contoso,DC=com' | New-AzureVM -ServiceName "ContosoService"
+    ```
+
+    This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration for a virtual machine to be joined with the contoso domain.
+    The command includes user name and password necessary to join the virtual machine to the domain.
+    The configuration requires the user to change the user password at the first logon.
+    The command creates the virtual machine based on the provisioning object.
+- title: 'Example 3: Create a Linux-based virtual machine'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "LinuxVM" -InstanceSize Small -ImageName "LinuxImage03" | Add-AzureProvisioningConfig -Linux -LinuxUser "LinuxRoot" -Password "password" | New-AzureVM -ServiceName "ContosoService"
+    ```
+
+    This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration for a virtual machine that runs the Linux operating system.
+    The configuration includes the root user name and password.
+    The command creates the virtual machine based on the provisioning object.
+- title: 'Example 4: Create a virtual machine that includes certificates for WinRM'
+  description: |-
+    ```
+    PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
+    New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image11" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -WinRMCertificate $certs[0] -X509Certificates $certs[1], $certs[2] | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+    ```
+
+    The first command gets certificates from a certificate store, and then stores them in the $certs array variable.
+
+    The second command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration that includes certificates for WinRM.
+    The command creates the virtual machine based on the provisioning object.
+- title: 'Example 5: Create a virtual machine that has WinRM enabled over HTTP'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image14" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -EnableWinRMHttp | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+    ```
+
+    This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration that has WinRM enabled over HTTP.
+    The command creates the virtual machine based on the provisioning object.
+- title: 'Example 6: Create a virtual machine that has WinRM disabled over HTTPS'
+  description: |-
+    ```
+    PS C:\> New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -DisableWinRMHttps | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+    ```
+
+    This command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration that disables WinRM over HTTPS.
+    The command creates the virtual machine based on the provisioning object.
+- title: 'Example 7: Create a virtual machine with no key export'
+  description: |-
+    ```
+    PS C:\> $certs = Get-ChildItem Cert:\CurrentUser\My
+    New-AzureVMConfig -Name "NonDomainVM" -InstanceSize Small -ImageName "Image07" | Add-AzureProvisioningConfig -Windows -Password "password" -AdminUsername "AdminMain" -X509Certificates $certs[0], $certs[1] -NoExportPrivateKey | New-AzureVM -ServiceName "ContosoService" -WaitForBoot
+    ```
+
+    The first command gets certificates from a certificate store, and then stores them in the $certs array variable.
+
+    The second command creates a virtual machine configuration object, and then passes it to the current cmdlet.
+    The current cmdlet adds provisioning configuration for a virtual machine that includes certificates and does not export private keys.
+    The command creates the virtual machine based on the provisioning object.
+links:
+- text: New-AzureVM
+  href: ./New-AzureVM.yml
+- text: New-AzureVMConfig
+  href: ./New-AzureVMConfig.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0B3EF123-8424-4CCA-95E8-01301B70CBDC
+  PlatyPS schema version: 2024-05-01

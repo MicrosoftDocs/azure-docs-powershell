@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.GuestConfiguration
+name: Az.GuestConfiguration Module
+isPreview: false
+cmdletGroups:
+- title: Guest Configuration
+  cmdlets:
+  - Az.GuestConfiguration.Get-AzGuestConfigurationAssignment
+  - Az.GuestConfiguration.Get-AzGuestConfigurationAssignmentReport
+  - Az.GuestConfiguration.New-AzGuestConfigurationAssignment
+  - Az.GuestConfiguration.Remove-AzGuestConfigurationAssignment
+description: |-
+  Microsoft Azure PowerShell: GuestConfiguration cmdlets
+metadata:
+  Module Name: Az.GuestConfiguration
+  Module Guid: f2042330-dd50-496f-aac0-69f27fd54f2a
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.guestconfiguration
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GuestConfiguration/GuestConfiguration/help/Az.GuestConfiguration.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/GuestConfiguration/GuestConfiguration/help/Az.GuestConfiguration.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

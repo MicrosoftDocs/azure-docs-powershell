@@ -1,0 +1,220 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ScVmm.Get-AzScVmmVMDisk
+name: Get-AzScVmmVMDisk
+module: Az.ScVmm
+isPreview: false
+summary: |-
+  The operation to Get a virtual machine virtual disk.
+description: |-
+  The operation to Get a virtual machine virtual disk.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The UUID of Virtual Disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DiskName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of Virtual Disk
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: vmName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzScVmmVMDisk
+        -vmName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-DiskName <String>]
+        [-DiskId <String>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ScVmm.Models.VirtualDisk" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Disk on Virtual Machine'
+  description: |-
+    ```powershell
+    Get-AzScVmmVMDisk -vmName "test-vm" -ResourceGroupName "test-rg-01"
+    ```
+
+    ```output
+    Bus                  : 0
+    BusType              : IDE
+    CreateDiffDisk       : false
+    DiskId               : 00000000-1111-2222-0001-000000000000
+    DiskSizeGb           : 20
+    DisplayName          : test-vm-disk-1
+    Lun                  : 0
+    MaxDiskSizeGb        : 40
+    Name                 : disk_1
+    StorageQoSPolicyId   :
+    StorageQoSPolicyName :
+    TemplateDiskId       :
+    VhdFormatType        : VHD
+    VhdType              : Differencing
+    VolumeType           : BootAndSystem
+
+    Bus                  : 0
+    BusType              : IDE
+    CreateDiffDisk       : false
+    DiskId               : ffb0df4a-af83-4370-8ee2-db75e14b7b82
+    DiskSizeGb           : 4
+    DisplayName          : vm-test-disk-2
+    Lun                  : 0
+    MaxDiskSizeGb        : 40
+    Name                 : disk_2
+    StorageQoSPolicyId   :
+    StorageQoSPolicyName :
+    TemplateDiskId       :
+    VhdFormatType        : VHD
+    VhdType              : Differencing
+    VolumeType           : None
+    ```
+
+    List all Disk on Virtual Machine.
+- title: 'Example 2: Get Disk on a Virtual Machine'
+  description: |-
+    ```powershell
+    Get-AzScVmmVMDisk -vmName "test-vm" -ResourceGroupName "test-rg-01" -DiskName "disk_1"
+    ```
+
+    ```output
+    Bus                  : 0
+    BusType              : IDE
+    CreateDiffDisk       : false
+    DiskId               : 00000000-1111-2222-0001-000000000000
+    DiskSizeGb           : 20
+    DisplayName          : test-vm-disk-1
+    Lun                  : 0
+    MaxDiskSizeGb        : 40
+    Name                 : disk_1
+    StorageQoSPolicyId   :
+    StorageQoSPolicyName :
+    TemplateDiskId       :
+    VhdFormatType        : VHD
+    VhdType              : Differencing
+    VolumeType           : BootAndSystem
+    ```
+
+    Get Disk with name `DiskName` or id `DiskId` on Virtual Machine.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Get-AzScVmmVMDisk.md
+  document type: cmdlet
+  external help file: Az.ScVmm-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.scvmm/get-azscvmmvmdisk
+  Module Name: Az.ScVmm
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ScVmm/ScVmm/help/Get-AzScVmmVMDisk.md
+  PlatyPS schema version: 2024-05-01

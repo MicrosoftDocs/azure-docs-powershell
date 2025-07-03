@@ -1,0 +1,419 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Storage.Rename-AzStorageFile
+name: Rename-AzStorageFile
+module: Az.Storage
+isPreview: false
+summary: |-
+  Renames a file.
+description: |-
+  The **Rename-AzStorageFile** cmdlet renames a directory from a file share.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run cmdlet in the background
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ContentType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Sets the MIME content type of the file.
+      The default type is 'application/octet-stream'.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Context
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+    description: |-
+      Azure Storage Context Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DestinationPath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The destination path to rename the file to.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisAllowDestTrailingDot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disallow trailing dot (.) to suffix destination directory and destination file names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DisAllowSourceTrailingDot
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Disallow trailing dot (.) to suffix source directory and source file names.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Force
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Force to overwrite the existing file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IgnoreReadonly
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Optional.
+      Specifies whether the ReadOnly attribute on a preexisting destination file should be respected.
+      If true, the rename will succeed, otherwise, a previous file at the destination with the ReadOnly attribute set will cause the rename to fail.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Permission
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      If specified the permission (security descriptor) shall be set for the directory/file.
+      Default value: Inherit.
+      If SDDL is specified as input, it must have owner, group and dacl.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareClient indicated the share where the file would be listed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareDirectoryClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareDirectoryClient" data-throw-if-not-resolved="False" />
+    description: |-
+      ShareDirectoryClient indicated the share where the file would be listed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: DirectoryObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareFileClient
+    type: <xref href="Azure.Storage.Files.Shares.ShareFileClient" data-throw-if-not-resolved="False" />
+    description: |-
+      Source file instance
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: FileObject
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ShareName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the file share where the file would be listed.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SourcePath
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Path to an existing file.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ShareName
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ShareObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: DirectoryObject
+      position: "1"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Rename-AzStorageFile
+        [-ShareName] <String>
+        [-SourcePath] <String>
+        [[-DestinationPath] <String>]
+        [-ContentType <String>]
+        [-Permission <String>]
+        [-DisAllowSourceTrailingDot]
+        [-DisAllowDestTrailingDot]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IgnoreReadonly]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Rename-AzStorageFile
+        [-ShareFileClient] <ShareFileClient>
+        [[-DestinationPath] <String>]
+        [-ContentType <String>]
+        [-Permission <String>]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IgnoreReadonly]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: FileObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Rename-AzStorageFile
+        [-ShareClient] <ShareClient>
+        [-SourcePath] <String>
+        [[-DestinationPath] <String>]
+        [-ContentType <String>]
+        [-Permission <String>]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IgnoreReadonly]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ShareObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Rename-AzStorageFile
+        [-ShareDirectoryClient] <ShareDirectoryClient>
+        [-SourcePath] <String>
+        [[-DestinationPath] <String>]
+        [-ContentType <String>]
+        [-Permission <String>]
+        [-Force]
+        [-AsJob]
+        [-Context <IStorageContext>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-IgnoreReadonly]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: DirectoryObject
+  isDefault: false
+inputs:
+- name: <xref href="Azure.Storage.Files.Shares.ShareFileClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure.Storage.Files.Shares.ShareClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Azure.Storage.Files.Shares.ShareDirectoryClient" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.IStorageContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.Common.Storage.ResourceModel.AzureStorageFile" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1 : Rename a file from a file share'
+  description: |-
+    ```powershell
+    Rename-AzStorageFile -SourcePath testfile1 -DestinationPath testfile2 -ShareName myshare
+    ```
+
+    ```output
+    Directory: https://myaccount.file.core.windows.net/myshare
+
+    Type                Length Name
+    ----                ------ ----
+    File                   512 testfile2
+    ```
+
+    This command renames a file from testfile1 to testfile2 under file share myshare.
+- title: 'Example 2 : Rename a file from a file share using pipeline'
+  description: |-
+    ```powershell
+    Get-AzStorageFile -ShareName myshare -Path testfile1 | Rename-AzStorageFile -DestinationPath testfile2
+    ```
+
+    ```output
+    Directory: https://myaccount.file.core.windows.net/myshare
+
+    Type                Length Name
+    ----                ------ ----
+    File                   512 testfile2
+    ```
+
+    This command gets a file client object first, and the rename the file from testfile1 to testfile2 using pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Rename-AzStorageFile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Storage.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.storage/rename-azstoragefile
+  Module Name: Az.Storage
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Storage/Storage.Management/help/Rename-AzStorageFile.md
+  PlatyPS schema version: 2024-05-01

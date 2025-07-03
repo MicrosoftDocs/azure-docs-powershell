@@ -1,0 +1,182 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.NetworkCloud.New-AzNetworkCloudBareMetalMachineConfigurationDataObject
+name: New-AzNetworkCloudBareMetalMachineConfigurationDataObject
+module: Az.NetworkCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for BareMetalMachineConfigurationData.
+description: |-
+  Create an in-memory object for BareMetalMachineConfigurationData.
+parameters:
+  cmdletParameters:
+  - name: BmcCredentialsPassword
+    type: <xref href="System.Security.SecureString" data-throw-if-not-resolved="False" />
+    description: |-
+      The password of the administrator of the device used during initialization.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BmcCredentialsUsername
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The username of the administrator of the device used during initialization.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BmcMacAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The MAC address of the BMC for this machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BootMacAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The MAC address associated with the PXE NIC card.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineDetail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The free-form additional information about the machine, e.g.
+      an asset tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MachineName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The user-provided name for the bare metal machine created from this specification.
+              If not provided, the machine name will be generated programmatically.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: RackSlot
+    type: <xref href="System.Int64" data-throw-if-not-resolved="False" />
+    description: |-
+      The slot the physical machine is in the rack based on the BOM configuration.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SerialNumber
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The serial number of the machine.
+      Hardware suppliers may use an alternate value.
+      For example, service tag.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzNetworkCloudBareMetalMachineConfigurationDataObject
+        -BmcCredentialsPassword <SecureString>
+        -BmcCredentialsUsername <String>
+        -BmcMacAddress <String>
+        -BootMacAddress <String>
+        -RackSlot <Int64>
+        -SerialNumber <String>
+        [-MachineDetail <String>]
+        [-MachineName <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.NetworkCloud.Models.Api20240701.BareMetalMachineConfigurationData" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for BareMetalMachineConfigurationData.'
+  description: |-
+    ```powershell
+    $password = ConvertTo-SecureString "********" -AsPlainText -Force
+
+    New-AzNetworkCloudBareMetalMachineConfigurationDataObject -BmcCredentialsPassword $password -BmcCredentialsUsername username -BmcMacAddress "00:BB:CC:DD:EE:FF" -BootMacAddress "00:BB:CC:DD:EE:FF" -RackSlot 1 -SerialNumber serialNumber -MachineDetail machineDetail -MachineName machineName
+    ```
+
+    ```output
+    BmcConnectionString BmcMacAddress     BootMacAddress    MachineDetail MachineName RackSlot SerialNumber
+    ------------------- -------------     --------------    ------------- ----------- -------- ------------
+                        00:BB:CC:DD:EE:FF 00:BB:CC:DD:EE:FF machineDetail machineName 1        serialNumber
+    ```
+
+    Create an in-memory object for BareMetalMachineConfigurationData.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudBareMetalMachineConfigurationDataObject.md
+  document type: cmdlet
+  external help file: Az.NetworkCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/Az.NetworkCloud/new-AzNetworkCloudBareMetalMachineConfigurationDataObject
+  Module Name: Az.NetworkCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/NetworkCloud/NetworkCloud/help/New-AzNetworkCloudBareMetalMachineConfigurationDataObject.md
+  PlatyPS schema version: 2024-05-01

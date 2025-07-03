@@ -1,0 +1,50 @@
+### YamlMime:PowerShellModule1
+uid: Az.Oracle
+name: Az.Oracle Module
+isPreview: false
+cmdletGroups:
+- title: Oracle
+  cmdlets:
+  - Az.Oracle.Add-AzOracleCloudVMClusterVM
+  - Az.Oracle.Get-AzOracleAutonomousDatabase
+  - Az.Oracle.Get-AzOracleAutonomousDatabaseBackup
+  - Az.Oracle.Get-AzOracleAutonomousDatabaseCharacterSet
+  - Az.Oracle.Get-AzOracleAutonomousDatabaseNationalCharacterSet
+  - Az.Oracle.Get-AzOracleAutonomousDatabaseVersion
+  - Az.Oracle.Get-AzOracleCloudExadataInfrastructure
+  - Az.Oracle.Get-AzOracleCloudVMCluster
+  - Az.Oracle.Get-AzOracleDbNode
+  - Az.Oracle.Get-AzOracleDbServer
+  - Az.Oracle.Get-AzOracleDbSystemShape
+  - Az.Oracle.Get-AzOracleDnsPrivateView
+  - Az.Oracle.Get-AzOracleDnsPrivateZone
+  - Az.Oracle.Get-AzOracleGiVersion
+  - Az.Oracle.Invoke-AzOracleActionDbNode
+  - Az.Oracle.Invoke-AzOracleSwitchoverAutonomousDatabase
+  - Az.Oracle.New-AzOracleAutonomousDatabase
+  - Az.Oracle.New-AzOracleAutonomousDatabaseBackup
+  - Az.Oracle.New-AzOracleCloudExadataInfrastructure
+  - Az.Oracle.New-AzOracleCloudVMCluster
+  - Az.Oracle.New-AzOracleCustomerContactObject
+  - Az.Oracle.New-AzOracleNsgCidrObject
+  - Az.Oracle.Remove-AzOracleAutonomousDatabase
+  - Az.Oracle.Remove-AzOracleAutonomousDatabaseBackup
+  - Az.Oracle.Remove-AzOracleCloudExadataInfrastructure
+  - Az.Oracle.Remove-AzOracleCloudVMCluster
+  - Az.Oracle.Remove-AzOracleCloudVMClusterVM
+  - Az.Oracle.Restore-AzOracleAutonomousDatabase
+  - Az.Oracle.Update-AzOracleAutonomousDatabase
+  - Az.Oracle.Update-AzOracleCloudExadataInfrastructure
+  - Az.Oracle.Update-AzOracleCloudVMCluster
+description: |-
+  Microsoft Azure PowerShell: Oracle cmdlets
+metadata:
+  Module Name: Az.Oracle
+  Module Guid: 8c6ec918-2897-4019-8ecd-4f2324055811
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.oracle
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Az.Oracle.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Oracle/Oracle/help/Az.Oracle.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

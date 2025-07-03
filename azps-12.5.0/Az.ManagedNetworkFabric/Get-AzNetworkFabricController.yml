@@ -1,0 +1,215 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ManagedNetworkFabric.Get-AzNetworkFabricController
+name: Get-AzNetworkFabricController
+module: Az.ManagedNetworkFabric
+isPreview: false
+summary: |-
+  Shows the provisioning status of Network Fabric Controller.
+description: |-
+  Shows the provisioning status of Network Fabric Controller.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Network Fabric Controller.
+    aliases:
+    - NetworkFabricControllerName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+      The value must be an UUID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricController
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricController
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricController
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkFabricController
+        -InputObject <IManagedNetworkFabricIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.IManagedNetworkFabricIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ManagedNetworkFabric.Models.INetworkFabricController" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List Network Fabric Controllers by Subscription'
+  description: |-
+    ```powershell
+    Get-AzNetworkFabricController -SubscriptionId $subscriptionId
+    ```
+
+    ```output
+    Location    Name                         SystemDataCreatedAt SystemDataCreatedBy    SystemDataCreatedByType SystemDataLastModifiedAt SystemDataLastModifiedBy      SystemDataLastModifiedByType
+    --------    ----                         ------------------- -------------------    ----------------------- ------------------------ ------------------------      -----
+    eastus2euap nfa-tool-ts-GA-nfc071323     07/13/2023 09:34:40 <identity>             User                    09/05/2023 10:32:49      <identity>                    Appl…
+    eastus2euap nfa-automation-testing-nfc-1 08/07/2023 12:16:05 <identity>             Application             08/07/2023 13:19:01      <identity>                    Appl…
+    eastus2euap nfa-automation-testing-nfc-2 08/07/2023 14:31:19 <identity>             Application             08/07/2023 15:37:20      <identity>                    Appl…
+    eastus2euap nfa-tool-ts-GA-nfc081023     08/10/2023 06:43:29 <identity>             User                    09/21/2023 10:35:20      <identity>                    Appl…
+    eastus2euap nfcfab3-4-0                  09/07/2023 08:56:12 <identity>             Application             09/20/2023 14:22:59      <identity>                    Appl…
+    eastus2euap acctest3523                  09/15/2023 05:41:52 <identity>             User                    09/15/2023 05:41:52      <identity>                    User
+    eastus      controller092123             09/21/2023 11:51:54 <identity>             User                    09/22/2023 13:22:21      <identity>                    Appl…
+    ```
+
+    This command lists all the Network Fabric Controllers under the given Subscription.
+- title: 'Example 2: List Network Fabric Controllers by Resource Group'
+  description: |-
+    ```powershell
+    Get-AzNetworkFabricController -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    Annotation Id
+    ---------- --
+               /subscriptions/<identity>/resourceGroups/nfa-tool-ts-powershell-rg092123/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/controller09…
+    ```
+
+    This command lists all the Network Fabric Controllers under the given Resource Group.
+- title: 'Example 3: Get Network Fabric Controller'
+  description: |-
+    ```powershell
+    Get-AzNetworkFabricController -Name $name -ResourceGroupName $resourceGroupName
+    ```
+
+    ```output
+    Annotation Id
+    ---------- --
+               /subscriptions/<identity>/resourceGroups/nfa-tool-ts-powershell-rg092123/providers/Microsoft.ManagedNetworkFabric/networkFabricControllers/controller09…
+    ```
+
+    This command gets details of the given Network Fabric Controller.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Get-AzNetworkFabricController.md
+  document type: cmdlet
+  external help file: Az.ManagedNetworkFabric-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.managednetworkfabric/get-aznetworkfabriccontroller
+  Module Name: Az.ManagedNetworkFabric
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ManagedNetworkFabric/ManagedNetworkFabric/help/Get-AzNetworkFabricController.md
+  PlatyPS schema version: 2024-05-01

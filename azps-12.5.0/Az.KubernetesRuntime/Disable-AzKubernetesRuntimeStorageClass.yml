@@ -1,0 +1,126 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KubernetesRuntime.Disable-AzKubernetesRuntimeStorageClass
+name: Disable-AzKubernetesRuntimeStorageClass
+module: Az.KubernetesRuntime
+isPreview: false
+summary: |-
+  Disable Arc storage class service in a connected cluster.
+description: |-
+  Disable Arc storage class service in a connected cluster.
+parameters:
+  cmdletParameters:
+  - name: ArcConnectedClusterId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource uri of the connected cluster
+    aliases:
+    - ResourceUri
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzKubernetesRuntimeStorageClass
+        -ArcConnectedClusterId <String>
+        [-DefaultProfile <PSObject>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.KubernetesRuntime.Models.IServiceResource" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable Arc storage class service in a connected cluster'
+  description: |-
+    ```powershell
+    Disable-AzKubernetesRuntimeStorageClass -ArcConnectedClusterId /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/example/providers/Microsoft.Kubernetes/connectedClusters/cluster1
+    ```
+
+    ```output
+    Name                           Value
+    ----                           -----
+    K8sExtensionContributorRoleAs… Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleAssignment
+    StorageClassContributorRoleAs… Microsoft.Azure.Commands.Resources.Models.Authorization.PSRoleAssignment
+    Extension                      {…}
+    ```
+
+    Disables Arc storage class service in a connected cluster.
+    Returns the deleted Azure resources.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/Disable-AzKubernetesRuntimeStorageClass.md
+  document type: cmdlet
+  external help file: Az.KubernetesRuntime-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.kubernetesruntime/disable-azkubernetesruntimestorageclass
+  Module Name: Az.KubernetesRuntime
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KubernetesRuntime/KubernetesRuntime/help/Disable-AzKubernetesRuntimeStorageClass.md
+  PlatyPS schema version: 2024-05-01

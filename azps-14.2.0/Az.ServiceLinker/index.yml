@@ -1,0 +1,45 @@
+### YamlMime:PowerShellModule1
+uid: Az.ServiceLinker
+name: Az.ServiceLinker Module
+isPreview: false
+cmdletGroups:
+- title: ServiceLinker
+  cmdlets:
+  - Az.ServiceLinker.Get-AzServiceLinkerConfigurationForContainerApp
+  - Az.ServiceLinker.Get-AzServiceLinkerConfigurationForSpringCloud
+  - Az.ServiceLinker.Get-AzServiceLinkerConfigurationForWebApp
+  - Az.ServiceLinker.Get-AzServiceLinkerConfigurationName
+  - Az.ServiceLinker.Get-AzServiceLinkerForContainerApp
+  - Az.ServiceLinker.Get-AzServiceLinkerForSpringCloud
+  - Az.ServiceLinker.Get-AzServiceLinkerForWebApp
+  - Az.ServiceLinker.New-AzServiceLinkerAzureResourceObject
+  - Az.ServiceLinker.New-AzServiceLinkerConfluentBootstrapServerObject
+  - Az.ServiceLinker.New-AzServiceLinkerConfluentSchemaRegistryObject
+  - Az.ServiceLinker.New-AzServiceLinkerForContainerApp
+  - Az.ServiceLinker.New-AzServiceLinkerForSpringCloud
+  - Az.ServiceLinker.New-AzServiceLinkerForWebApp
+  - Az.ServiceLinker.New-AzServiceLinkerSecretAuthInfoObject
+  - Az.ServiceLinker.New-AzServiceLinkerServicePrincipalSecretAuthInfoObject
+  - Az.ServiceLinker.New-AzServiceLinkerSystemAssignedIdentityAuthInfoObject
+  - Az.ServiceLinker.New-AzServiceLinkerUserAssignedIdentityAuthInfoObject
+  - Az.ServiceLinker.Remove-AzServiceLinkerForContainerApp
+  - Az.ServiceLinker.Remove-AzServiceLinkerForSpringCloud
+  - Az.ServiceLinker.Remove-AzServiceLinkerForWebApp
+  - Az.ServiceLinker.Test-AzServiceLinkerForContainerApp
+  - Az.ServiceLinker.Test-AzServiceLinkerForSpringCloud
+  - Az.ServiceLinker.Test-AzServiceLinkerForWebApp
+  - Az.ServiceLinker.Update-AzServiceLinkerForContainerApp
+  - Az.ServiceLinker.Update-AzServiceLinkerForSpringCloud
+  - Az.ServiceLinker.Update-AzServiceLinkerForWebApp
+description: |-
+  Microsoft Azure PowerShell: ServiceLinker cmdlets
+metadata:
+  Module Name: Az.ServiceLinker
+  Module Guid: 20a4a5d9-068c-43d8-b45a-7130dd33afe4
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.servicelinker
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Az.ServiceLinker.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ServiceLinker/ServiceLinker/help/Az.ServiceLinker.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

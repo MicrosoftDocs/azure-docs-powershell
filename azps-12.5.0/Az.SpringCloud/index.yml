@@ -1,0 +1,89 @@
+### YamlMime:PowerShellModule1
+uid: Az.SpringCloud
+name: Az.SpringCloud Module
+isPreview: false
+cmdletGroups:
+- title: Spring Cloud
+  cmdlets:
+  - Az.SpringCloud.Deploy-AzSpringCloudApp
+  - Az.SpringCloud.Disable-AzSpringCloudTestEndpoint
+  - Az.SpringCloud.Enable-AzSpringCloudTestEndpoint
+  - Az.SpringCloud.Get-AzSpringCloud
+  - Az.SpringCloud.Get-AzSpringCloudApp
+  - Az.SpringCloud.Get-AzSpringCloudAppBinding
+  - Az.SpringCloud.Get-AzSpringCloudAppCustomDomain
+  - Az.SpringCloud.Get-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Get-AzSpringCloudAppDeploymentLogFileUrl
+  - Az.SpringCloud.Get-AzSpringCloudBuildpackBinding
+  - Az.SpringCloud.Get-AzSpringCloudBuildService
+  - Az.SpringCloud.Get-AzSpringCloudBuildServiceAgentPool
+  - Az.SpringCloud.Get-AzSpringCloudBuildServiceBuilder
+  - Az.SpringCloud.Get-AzSpringCloudBuildServiceSupportedBuildpack
+  - Az.SpringCloud.Get-AzSpringCloudBuildServiceSupportedStack
+  - Az.SpringCloud.Get-AzSpringCloudCertificate
+  - Az.SpringCloud.Get-AzSpringCloudConfigServer
+  - Az.SpringCloud.Get-AzSpringCloudConfigurationService
+  - Az.SpringCloud.Get-AzSpringCloudMonitoringSetting
+  - Az.SpringCloud.Get-AzSpringCloudRegistry
+  - Az.SpringCloud.Get-AzSpringCloudRuntimeVersion
+  - Az.SpringCloud.Get-AzSpringCloudSku
+  - Az.SpringCloud.Get-AzSpringCloudTestKey
+  - Az.SpringCloud.New-AzSpringCloud
+  - Az.SpringCloud.New-AzSpringCloudApp
+  - Az.SpringCloud.New-AzSpringCloudAppBinding
+  - Az.SpringCloud.New-AzSpringCloudAppCustomDomain
+  - Az.SpringCloud.New-AzSpringCloudAppDeployment
+  - Az.SpringCloud.New-AzSpringCloudAppDeploymentBuildResultObject
+  - Az.SpringCloud.New-AzSpringCloudAppDeploymentJarUploadedObject
+  - Az.SpringCloud.New-AzSpringCloudAppDeploymentNetCoreZipUploadedObject
+  - Az.SpringCloud.New-AzSpringCloudAppDeploymentSourceUploadedObject
+  - Az.SpringCloud.New-AzSpringCloudAppLoadedCertificateObject
+  - Az.SpringCloud.New-AzSpringCloudBuildpackBinding
+  - Az.SpringCloud.New-AzSpringCloudBuildpackObject
+  - Az.SpringCloud.New-AzSpringCloudBuildpacksGroupObject
+  - Az.SpringCloud.New-AzSpringCloudBuildServiceAgentPool
+  - Az.SpringCloud.New-AzSpringCloudBuildServiceBuilder
+  - Az.SpringCloud.New-AzSpringCloudCertificate
+  - Az.SpringCloud.New-AzSpringCloudConfigurationService
+  - Az.SpringCloud.New-AzSpringCloudConfigurationServiceGitRepositoryObject
+  - Az.SpringCloud.New-AzSpringCloudContentCertificateObject
+  - Az.SpringCloud.New-AzSpringCloudGitPatternRepositoryObject
+  - Az.SpringCloud.New-AzSpringCloudKeyVaultCertificateObject
+  - Az.SpringCloud.New-AzSpringCloudTestKey
+  - Az.SpringCloud.Remove-AzSpringCloud
+  - Az.SpringCloud.Remove-AzSpringCloudApp
+  - Az.SpringCloud.Remove-AzSpringCloudAppBinding
+  - Az.SpringCloud.Remove-AzSpringCloudAppCustomDomain
+  - Az.SpringCloud.Remove-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Remove-AzSpringCloudBuildpackBinding
+  - Az.SpringCloud.Remove-AzSpringCloudBuildServiceBuilder
+  - Az.SpringCloud.Remove-AzSpringCloudCertificate
+  - Az.SpringCloud.Remove-AzSpringCloudConfigurationService
+  - Az.SpringCloud.Restart-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Start-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Start-AzSpringCloudAppDeploymentJfr
+  - Az.SpringCloud.Stop-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Test-AzSpringCloudAppCustomDomain
+  - Az.SpringCloud.Test-AzSpringCloudConfigServer
+  - Az.SpringCloud.Test-AzSpringCloudConfigurationService
+  - Az.SpringCloud.Test-AzSpringCloudNameAvailability
+  - Az.SpringCloud.Update-AzSpringCloud
+  - Az.SpringCloud.Update-AzSpringCloudApp
+  - Az.SpringCloud.Update-AzSpringCloudAppActiveDeployment
+  - Az.SpringCloud.Update-AzSpringCloudAppBinding
+  - Az.SpringCloud.Update-AzSpringCloudAppCustomDomain
+  - Az.SpringCloud.Update-AzSpringCloudAppDeployment
+  - Az.SpringCloud.Update-AzSpringCloudConfigServer
+  - Az.SpringCloud.Update-AzSpringCloudMonitoringSetting
+description: |-
+  Microsoft Azure PowerShell: SpringCloud cmdlets
+metadata:
+  Module Name: Az.SpringCloud
+  Module Guid: 697e18d3-95de-4211-86a1-ec7c4e163874
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.springcloud
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Az.SpringCloud.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/Az.SpringCloud.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

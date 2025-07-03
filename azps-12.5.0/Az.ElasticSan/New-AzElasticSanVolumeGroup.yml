@@ -1,0 +1,614 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.ElasticSan.New-AzElasticSanVolumeGroup
+name: New-AzElasticSanVolumeGroup
+module: Az.ElasticSan
+isPreview: false
+summary: |-
+  Create a Volume Group.
+description: |-
+  Create a Volume Group.
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticSanInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for ELASTICSANINPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityElasticSanExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ElasticSanName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the ElasticSan.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Encryption
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of encryption
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EncryptionUserAssignedIdentity
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource identifier of the UserAssigned identity to be associated with server-side encryption on the volume group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnforceDataIntegrityCheckForIscsi
+    type: <xref href="System.Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      A boolean indicating whether or not Data Integrity Check is enabled
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The identity type.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IdentityUserAssignedIdentityId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Gets or sets a list of key value pairs that describe the set of User Assigned identities that will be used with this volume group.
+      The key is the ARM resource identifier of the identity.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of KeyVault key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVaultUri
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Uri of KeyVault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyVersion
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The version of KeyVault key.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the VolumeGroup.
+    aliases:
+    - VolumeGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: CreateViaIdentityElasticSanExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NetworkAclsVirtualNetworkRule
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IVirtualNetworkRule" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of virtual network rules.
+      To construct, see NOTES section for NETWORKACLSVIRTUALNETWORKRULE properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ProtocolType
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Type of storage target
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: CreateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzElasticSanVolumeGroup
+        -ElasticSanName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-Encryption <String>]
+        [-EnforceDataIntegrityCheckForIscsi <Boolean>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-IdentityType <String>]
+        [-IdentityUserAssignedIdentityId <String>]
+        [-KeyName <String>]
+        [-KeyVaultUri <String>]
+        [-KeyVersion <String>]
+        [-NetworkAclsVirtualNetworkRule <IVirtualNetworkRule[]>]
+        [-ProtocolType <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    New-AzElasticSanVolumeGroup
+        -Name <String>
+        -ElasticSanInputObject <IElasticSanIdentity>
+        [-Encryption <String>]
+        [-EnforceDataIntegrityCheckForIscsi <Boolean>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-IdentityType <String>]
+        [-IdentityUserAssignedIdentityId <String>]
+        [-KeyName <String>]
+        [-KeyVaultUri <String>]
+        [-KeyVersion <String>]
+        [-NetworkAclsVirtualNetworkRule <IVirtualNetworkRule[]>]
+        [-ProtocolType <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityElasticSanExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    New-AzElasticSanVolumeGroup
+        -InputObject <IElasticSanIdentity>
+        [-Encryption <String>]
+        [-EnforceDataIntegrityCheckForIscsi <Boolean>]
+        [-EncryptionUserAssignedIdentity <String>]
+        [-IdentityType <String>]
+        [-IdentityUserAssignedIdentityId <String>]
+        [-KeyName <String>]
+        [-KeyVaultUri <String>]
+        [-KeyVersion <String>]
+        [-NetworkAclsVirtualNetworkRule <IVirtualNetworkRule[]>]
+        [-ProtocolType <String>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: CreateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IElasticSanIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.ElasticSan.Models.IVolumeGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create a volume group with network rule objects'
+  description: |-
+    ```powershell
+    $virtualNetworkRule1 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1" -Action Allow
+    $virtualNetworkRule2 =  New-AzElasticSanVirtualNetworkRuleObject -VirtualNetworkResourceId  "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2" -Action Allow
+
+    New-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -Name myvolumegroup -ProtocolType 'Iscsi' -NetworkAclsVirtualNetworkRule $virtualNetworkRule1,$virtualNetworkRule2
+    ```
+
+    ```output
+    Encryption                                             : EncryptionAtRestWithPlatformKey
+    EnforceDataIntegrityCheckForIscsi                      : True
+    Id                                                     : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup
+    Name                                                   : myvolumegroup
+    NetworkAclsVirtualNetworkRule                          : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2}
+    ProtocolType                                           : iSCSI
+    ProvisioningState                                      : Succeeded
+    SystemDataCreatedAt                                    : 9/19/2022 7:05:47 AM
+    SystemDataCreatedBy                                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType                                : Application
+    SystemDataLastModifiedAt                               : 9/19/2022 7:05:47 AM
+    SystemDataLastModifiedBy                               : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType                           : Application
+    Type                                                   : Microsoft.ElasticSan/ElasticSans
+    ```
+
+    This example creates two VirtualNetworkRule objects and then input the objects and other variables to create a volume group.
+- title: 'Example 2: Create a volume group with network rule JSON input'
+  description: |-
+    ```powershell
+    New-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -Name myvolumegroup -ProtocolType 'Iscsi' `
+                -NetworkAclsVirtualNetworkRule (
+                    @{VirtualNetworkResourceId="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1";
+                        Action="Allow"},
+                    @{VirtualNetworkResourceId="/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2";
+                        Action="Allow"})
+    ```
+
+    ```output
+    Encryption                                             : EncryptionAtRestWithPlatformKey
+    EnforceDataIntegrityCheckForIscsi                      : True
+    Id                                                     : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumegroups/myvolumegroup
+    Name                                                   : myvolumegroup
+    NetworkAclsVirtualNetworkRule : {/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet1, /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myresourcegroup/providers/Microsoft.Network/virtualNetworks/myvnet/subnets/subnet2}
+    ProtocolType                                           : iSCSI
+    ProvisioningState                                      : Succeeded
+    SystemDataCreatedAt                                    : 9/19/2022 7:05:47 AM
+    SystemDataCreatedBy                                    : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataCreatedByType                                : Application
+    SystemDataLastModifiedAt                               : 9/19/2022 7:05:47 AM
+    SystemDataLastModifiedBy                               : yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy
+    SystemDataLastModifiedByType                           : Application
+    Type                                                   : Microsoft.ElasticSan/ElasticSans
+    ```
+
+    This command creates a volume group with the NetworkAclsVirtualNetworkRule input in json format.
+- title: 'Example 3: Create a volume group with platform-managed key and SystemAssigned identity type'
+  description: |-
+    ```powershell
+    New-AzElasticSanVolumeGroup -ResourceGroupName myresourcegroup -ElasticSanName myelasticsan -Name myvolumegroup -IdentityType SystemAssigned -ProtocolType Iscsi -Encryption EncryptionAtRestWithPlatformKey
+    ```
+
+    ```output
+    Encryption                                             : EncryptionAtRestWithPlatformKey
+    EncryptionIdentityEncryptionUserAssignedIdentity       :
+    EnforceDataIntegrityCheckForIscsi                      : True
+    Id                                                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumeGroups/myvolumegroup
+    IdentityPrincipalId                                    : 00000000-0000-0000-0000-000000000000
+    IdentityTenantId                                       : 00000000-0000-0000-0000-000000000000
+    IdentityType                                           : SystemAssigned
+    IdentityUserAssignedIdentity                           : {
+                                                             }
+    KeyVaultPropertyCurrentVersionedKeyExpirationTimestamp :
+    KeyVaultPropertyCurrentVersionedKeyIdentifier          :
+    KeyVaultPropertyKeyName                                :
+    KeyVaultPropertyKeyVaultUri                            :
+    KeyVaultPropertyKeyVersion                             :
+    KeyVaultPropertyLastKeyRotationTimestamp               :
+    Name                                                   : myvolumegroup
+    NetworkAclsVirtualNetworkRule                          :
+    PrivateEndpointConnection                              :
+    ProtocolType                                           : iSCSI
+    ProvisioningState                                      : Succeeded
+    ResourceGroupName                                      : myresourcegroup
+    SystemDataCreatedAt                                    : 10/7/2023 6:20:55 AM
+    SystemDataCreatedBy                                    : 00000000-0000-0000-0000-000000000000
+    SystemDataCreatedByType                                : Application
+    SystemDataLastModifiedAt                               : 10/7/2023 6:20:55 AM
+    SystemDataLastModifiedBy                               : 00000000-0000-0000-0000-000000000000
+    SystemDataLastModifiedByType                           : Application
+    Type                                                   : Microsoft.ElasticSan/elasticSans/volumeGroups
+    ```
+
+    This command creates a volume group with identity type "SystemAssigned" and encryption type "platform-managed key".
+- title: 'Example 4: Create a volume group with platform-managed key and SystemAssigned identity type'
+  description: |-
+    ```powershell
+    $useridentity = Get-AzUserAssignedIdentity -ResourceGroupName myresoucegroup -Name myuai
+
+    New-AzElasticSanVolumeGroup -ResourceGroupName myresoucegroup -ElasticSanName myelasticsan -Name myvolumegroup -IdentityType UserAssigned -IdentityUserAssignedIdentityId $useridentity.Id -Encryption EncryptionAtRestWithCustomerManagedKey -KeyName mykey -KeyVaultUri "https://mykeyvault.vault.azure.net:443" -EncryptionUserAssignedIdentity $useridentity.Id -ProtocolType Iscsi
+    ```
+
+    ```output
+    Encryption                                             : EncryptionAtRestWithCustomerManagedKey
+    EncryptionIdentityEncryptionUserAssignedIdentity       : /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuai
+    EnforceDataIntegrityCheckForIscsi                      : True
+    Id                                                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumeGroups/myvolumegroup
+    IdentityPrincipalId                                    :
+    IdentityTenantId                                       :
+    IdentityType                                           : UserAssigned
+    IdentityUserAssignedIdentity                           : {
+                                                               "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myresourcegroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/myuai": {
+                                                               }
+                                                             }
+    KeyVaultPropertyCurrentVersionedKeyExpirationTimestamp : 1/1/1970 12:00:00 AM
+    KeyVaultPropertyCurrentVersionedKeyIdentifier          : https://mykeyvault.vault.azure.net/keys/mykey/37ec78b20f9e4a29b14a0d29d93cb79f
+    KeyVaultPropertyKeyName                                : mykey
+    KeyVaultPropertyKeyVaultUri                            : https://mykeyvault.vault.azure.net:443
+    KeyVaultPropertyKeyVersion                             :
+    KeyVaultPropertyLastKeyRotationTimestamp               : 10/7/2023 6:32:28 AM
+    Name                                                   : myvolumegroup
+    NetworkAclsVirtualNetworkRule                          :
+    PrivateEndpointConnection                              :
+    ProtocolType                                           : iSCSI
+    ProvisioningState                                      : Succeeded
+    ResourceGroupName                                      : myresourcegroup
+    SystemDataCreatedAt                                    : 10/7/2023 6:32:27 AM
+    SystemDataCreatedBy                                    : 00000000-0000-0000-0000-000000000000
+    SystemDataCreatedByType                                : Application
+    SystemDataLastModifiedAt                               : 10/7/2023 6:32:27 AM
+    SystemDataLastModifiedBy                               : 00000000-0000-0000-0000-000000000000
+    SystemDataLastModifiedByType                           : Application
+    Type                                                   : Microsoft.ElasticSan/elasticSans/volumeGroups
+    ```
+
+    This command creates a volume group with identity type "SystemAssigned" and encryption type "platform-managed key".
+- title: 'Example 5: Create a volume group with EnforceDataIntegrityCheckForIscsi disabled'
+  description: |-
+    ```powershell
+    New-AzElasticSanVolumeGroup -ResourceGroupName myresoucegroup -ElasticSanName myelasticsan -Name myvolumegroup -EnforceDataIntegrityCheckForIscsi $false
+    ```
+
+    ```output
+    Encryption                                             : EncryptionAtRestWithPlatformKey
+    EncryptionIdentityEncryptionUserAssignedIdentity       :
+    EnforceDataIntegrityCheckForIscsi                      : False
+    Id                                                     : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.ElasticSan/elasticSans/myelasticsan/volumeGroups/myvolumegroup
+    IdentityPrincipalId                                    :
+    IdentityTenantId                                       :
+    IdentityType                                           :
+    IdentityUserAssignedIdentity                           : {
+                                                             }
+    KeyVaultPropertyCurrentVersionedKeyExpirationTimestamp :
+    KeyVaultPropertyCurrentVersionedKeyIdentifier          :
+    KeyVaultPropertyKeyName                                :
+    KeyVaultPropertyKeyVaultUri                            :
+    KeyVaultPropertyKeyVersion                             :
+    KeyVaultPropertyLastKeyRotationTimestamp               :
+    Name                                                   : myvolumegroup
+    NetworkAclsVirtualNetworkRule                          :
+    PrivateEndpointConnection                              :
+    ProtocolType                                           : iSCSI
+    ProvisioningState                                      : Succeeded
+    ResourceGroupName                                      : myresourcegroup
+    SystemDataCreatedAt                                    : 9/18/2024 3:45:01 AM
+    SystemDataCreatedBy                                    : 00000000-0000-0000-0000-000000000000
+    SystemDataCreatedByType                                : User
+    SystemDataLastModifiedAt                               : 9/18/2024 4:58:14 AM
+    SystemDataLastModifiedBy                               : 00000000-0000-0000-0000-000000000000
+    SystemDataLastModifiedByType                           : User
+    Type                                                   : Microsoft.ElasticSan/elasticSans/volumeGroups
+    ```
+
+    This command creates a volume group with EnforceDataIntegrityCheckForIscsi disabled.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/New-AzElasticSanVolumeGroup.md
+  document type: cmdlet
+  external help file: Az.ElasticSan-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.elasticsan/new-azelasticsanvolumegroup
+  Module Name: Az.ElasticSan
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/ElasticSan/ElasticSan/help/New-AzElasticSanVolumeGroup.md
+  PlatyPS schema version: 2024-05-01

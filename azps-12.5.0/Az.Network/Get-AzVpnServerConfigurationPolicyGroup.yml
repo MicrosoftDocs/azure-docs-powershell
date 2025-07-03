@@ -1,0 +1,199 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzVpnServerConfigurationPolicyGroup
+name: Get-AzVpnServerConfigurationPolicyGroup
+module: Az.Network
+isPreview: false
+summary: |-
+  Gets VpnServerConfigurationPolicyGroup that can be attached to P2SVpnGateway.
+description: |-
+  The **Get-AzVpnServerConfigurationPolicyGroup** cmdlet enables you to get an existing VpnServerConfigurationPolicyGroup under VpnServerConfiguration
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    aliases:
+    - ResourceName
+    - VpnServerConfigurationPolicyGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent resource name.
+    aliases:
+    - ParentVpnServerConfigurationName
+    - VpnServerConfigurationName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationObject
+    type: <xref href="PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+    description: |-
+      The parent VpnServerConfiguration for this VpnServerConfigurationPolicyGroup.
+    aliases:
+    - ParentVpnServerConfiguration
+    - VpnServerConfiguration
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerConfigurationResourceId
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource id of the parent VpnServerConfiguration for this VpnServerConfigurationPolicyGroup.
+    aliases:
+    - ParentVpnServerConfigurationId
+    - VpnServerConfigurationId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByVpnServerConfigurationResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzVpnServerConfigurationPolicyGroup
+        -ResourceGroupName <String>
+        -ServerConfigurationName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzVpnServerConfigurationPolicyGroup
+        -ServerConfigurationObject <PSVpnServerConfiguration>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationObject
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzVpnServerConfigurationPolicyGroup
+        -ServerConfigurationResourceId <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByVpnServerConfigurationResourceId
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfiguration" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.PSVpnServerConfigurationPolicyGroup" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzVpnServerConfigurationPolicyGroup -ResourceGroupName TestRG -ServerConfigurationName VpnServerConfig2 -Name Group2 | Format-List
+    ```
+
+    ```output
+    ProvisioningState               : Succeeded
+    IsDefault                       : False
+    Priority                        : 1
+    PolicyMembers                   : {policy2}
+    P2SConnectionConfigurations     : {/subscriptions/64c5a05b-0859-4e60-9634-d52db66832bd/resourceGroups/TestRG/providers/Microsoft.Network/p2sVpnGateways/d8c79d4be6fd47a497f8ac8f8eb545ad-eastus-gw/p2sConnectionConfigurations/P2SConConfig2}
+    PolicyMembersText               : [
+                                        {
+                                          "Name": "policy2",
+                                          "AttributeType": "CertificateGroupId",
+                                          "AttributeValue": "cd"
+                                        }
+                                      ]
+    P2SConnectionConfigurationsText : [
+                                        {
+                                          "Id": "/subscriptions/64c5a05b-0859-4e60-9634-d52db66832bd/resourceGroups/TestRG/providers/Microsoft.Network/p2sVpnGateways/d8c79d4be6fd47a497f8ac8f8eb545ad-eastus-gw/p2sConnectionConfigurations/P2SConConfig2"
+                                        }
+                                      ]
+    Name                            : Group2
+    Etag                            : W/"d3d91ed6-11a9-471f-880e-6459e78aeef9"
+    Id                              : /subscriptions/64c5a05b-0859-4e60-9634-d52db66832bd/resourceGroups/TestRG/providers/Microsoft.Network/vpnServerConfigurations/VpnServerConfig2/configurationPolicyGroups/Group2
+
+    ```
+
+    The **Get-AzVpnServerConfigurationPolicyGroup** cmdlet enables you to get an existing VpnServerConfigurationPolicyGroup under VpnServerConfiguration which can be attached to P2SVpnGateway for Point to site connectivity from Point to site clients to Azure VirtualWan.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnServerConfigurationPolicyGroup.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-azvpnserverconfigurationpolicygroup
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzVpnServerConfigurationPolicyGroup.md
+  PlatyPS schema version: 2024-05-01

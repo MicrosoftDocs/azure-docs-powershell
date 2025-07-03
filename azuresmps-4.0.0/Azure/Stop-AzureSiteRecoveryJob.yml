@@ -1,0 +1,108 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Stop-AzureSiteRecoveryJob
+name: Stop-AzureSiteRecoveryJob
+module: Azure
+isPreview: false
+summary: |-
+  Stops a Site Recovery job.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Stop-AzureSiteRecoveryJob** cmdlet stops an Azure Site Recovery job.
+parameters:
+  cmdletParameters:
+  - name: Id
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the ID of the job to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ById
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Job
+    type: <xref href="ASRJob" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the job to stop.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObject
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Stop-AzureSiteRecoveryJob
+        -Job <ASRJob>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObject
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Stop-AzureSiteRecoveryJob
+        -Id <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ById
+  isDefault: false
+examples:
+- title: 'Example 1: Stop all jobs'
+  description: |-
+    ```
+    PS C:\>$Jobs = Get-AzureSiteRecoveryJob
+    PS C:\> Stop-AzureSiteRecoveryJob -Job $Jobs
+    ```
+
+    The first command gets the Azure Site Recovery jobs for the current Azure Site Recovery vault by using the **Get-AzureSiteRecoveryJob** cmdlet, and then stores the results in the $Jobs variable.
+
+    The second command stops the jobs specified by $Jobs.
+links:
+- text: Get-AzureSiteRecoveryJob
+  href: ./Get-AzureSiteRecoveryJob.yml
+- text: Restart-AzureSiteRecoveryJob
+  href: ./Restart-AzureSiteRecoveryJob.yml
+- text: Resume-AzureSiteRecoveryJob
+  href: ./Resume-AzureSiteRecoveryJob.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.RecoveryServicesRdfe.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 8FF1362B-C7AB-4769-A88B-D1B6E214A006
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,107 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Peering.Get-AzPeeringCdnPrefix
+name: Get-AzPeeringCdnPrefix
+module: Az.Peering
+isPreview: false
+summary: |-
+  Lists all of the advertised prefixes for the specified peering location
+description: |-
+  Lists all of the advertised prefixes for the specified peering location
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PeeringLocation
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The peering location.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The Azure subscription ID.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPeeringCdnPrefix
+        [-SubscriptionId <String[]>]
+        -PeeringLocation <String>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Peering.Models.Api20221001.ICdnPeeringPrefix" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get Cdn prefixes'
+  description: |-
+    ```powershell
+    Get-AzPeeringCdnPrefix -PeeringLocation Seattle
+    ```
+
+    ```output
+    Prefix          AzureRegion AzureService IsPrimaryRegion BgpCommunity
+    ------          ----------- ------------ --------------- ------------
+    20.157.110.0/24 West US 2   AzureCompute True            8069:51026
+    20.157.118.0/24 West US 2   AzureCompute True            8069:51026
+    20.157.125.0/24 West US 2   AzureCompute True            8069:51026
+    20.157.180.0/24 West US 2   AzureStorage True            8069:52026
+    20.157.25.0/24  West US 2   AzureCompute True            8069:51026
+    20.157.50.0/23  West US 2   AzureStorage True            8069:52026
+    20.47.120.0/23  West US 2   AzureCompute True            8069:51026
+    20.47.62.0/23   West US 2   AzureStorage True            8069:52026
+    ```
+
+    Get all cdn prefixes for subscription
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringCdnPrefix.md
+  document type: cmdlet
+  external help file: Az.Peering-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.peering/get-azpeeringcdnprefix
+  Module Name: Az.Peering
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Get-AzPeeringCdnPrefix.md
+  PlatyPS schema version: 2024-05-01

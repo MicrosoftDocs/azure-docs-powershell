@@ -1,0 +1,119 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.DataProtection.Search-AzDataProtectionBackupVaultInAzGraph
+name: Search-AzDataProtectionBackupVaultInAzGraph
+module: Az.DataProtection
+isPreview: false
+summary: |-
+  Searches for Backup vaults in Azure Resource Graph and retrieves the expected entries
+description: |-
+  Searches for Backup vaults in Azure Resource Graph and retrieves the expected entries
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroup
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Resource Group of Vault
+    aliases:
+    - ResourceGroupName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Subscription
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription of Vault
+    aliases:
+    - SubscriptionId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Vault
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Name of the vault
+    aliases:
+    - VaultName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Search-AzDataProtectionBackupVaultInAzGraph
+        -Subscription <String[]>
+        [-ResourceGroup <String[]>]
+        [-Vault <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get a specific vault with its name.'
+  description: |-
+    ```powershell
+    Search-AzDataProtectionBackupVaultInAzGraph -Subscription "xxxxxxxx-xxxx-xxxxxxxxxxxx" -ResourceGroup $resourceGroupName -Vault $vaultName
+    ```
+
+    ```output
+    ETag IdentityPrincipalId                  IdentityTenantId                     IdentityType   Location      Name            Type
+    ---- -------------------                  ----------------                     ------------   --------      ----            ----
+         xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx SystemAssigned centraluseuap sarath-vault    Microsoft.DataProtection/backupVaults
+    ```
+
+    This command gets a specific vault by given vault name from ARG (Azure Resource Graph).
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Search-AzDataProtectionBackupVaultInAzGraph.md
+  document type: cmdlet
+  external help file: Az.DataProtection-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.dataprotection/search-azdataprotectionbackupvaultinazgraph
+  Module Name: Az.DataProtection
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/DataProtection/DataProtection/help/Search-AzDataProtectionBackupVaultInAzGraph.md
+  PlatyPS schema version: 2024-05-01

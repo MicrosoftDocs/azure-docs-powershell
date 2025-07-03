@@ -1,0 +1,232 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Relay.Get-AzRelayNamespace
+name: Get-AzRelayNamespace
+module: Az.Relay
+isPreview: false
+summary: |-
+  Returns the description for the specified namespace.
+description: |-
+  Returns the description for the specified namespace.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The namespace name
+    aliases:
+    - NamespaceName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Resource group within the Azure subscription.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Subscription credentials which uniquely identify the Microsoft Azure subscription.
+      The subscription ID forms part of the URI for every service call.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: List
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: List1
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespace
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespace
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespace
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List1
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzRelayNamespace
+        -InputObject <IRelayIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.IRelayIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Relay.Models.Api20211101.IRelayNamespace" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: List all Relay namespaces within the resource group'
+  description: |-
+    ```powershell
+    Get-AzRelayNamespace -ResourceGroupName lucas-relay-rg
+    ```
+
+    ```output
+    Name             ResourceGroupName Location        Status SkuName  ServiceBusEndpoint
+    ----             ----------------- --------        ------ -------  ------------------
+    lucasrelay       lucas-relay-rg    West Central US Active Standard https://lucasrelay.servicebus.windows.net:443/
+    namespace-pwsh01 lucas-relay-rg    East US         Active Standard https://namespace-pwsh01.servicebus.windows.net:443/
+    ```
+
+    The cmdlet lists all Relay namespaces within the resource group.
+- title: 'Example 2: Gets a description for the specified Relay namespace within the resource group'
+  description: |-
+    ```powershell
+    Get-AzRelayNamespace -ResourceGroupName lucas-relay-rg -Name namespace-pwsh01 | Format-List
+    ```
+
+    ```output
+    CreatedAt                    : 12/20/2022 3:20:46 AM
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lucas-relay-rg/providers/Microso
+                                   ft.Relay/namespaces/namespace-pwsh01
+    Location                     : East US
+    MetricId                     : 9e223dbe-3399-4e19-88eb-0975f02ac87f:namespace-pwsh01
+    Name                         : namespace-pwsh01
+    PrivateEndpointConnection    :
+    ProvisioningState            : Succeeded
+    PublicNetworkAccess          :
+    ResourceGroupName            : lucas-relay-rg
+    ServiceBusEndpoint           : https://namespace-pwsh01.servicebus.windows.net:443/
+    SkuName                      : Standard
+    SkuTier                      : Standard
+    Status                       : Active
+    SystemDataCreatedAt          :
+    SystemDataCreatedBy          :
+    SystemDataCreatedByType      :
+    SystemDataLastModifiedAt     :
+    SystemDataLastModifiedBy     :
+    SystemDataLastModifiedByType :
+    Tag                          : {
+                                   }
+    Type                         : Microsoft.Relay/Namespaces
+    UpdatedAt                    : 12/20/2022 3:21:28 AM
+    ```
+
+    The cmdlet gets a description for the specified Relay namespace within the resource group.
+- title: 'Example 3: Gets a description for the specified Relay namespace by pipeline'
+  description: |-
+    ```powershell
+    $namespaces = Get-AzRelayNamespace -ResourceGroupName lucas-relay-rg
+    $namespaces[0] | Get-AzRelayNamespace
+    ```
+
+    ```output
+    Name       ResourceGroupName Location        Status SkuName  ServiceBusEndpoint
+    ----       ----------------- --------        ------ -------  ------------------
+    lucasrelay lucas-relay-rg    West Central US Active Standard https://lucasrelay.servicebus.windows.net:443/
+    ```
+
+    The cmdlet gets a description for the specified Relay namespace by pipeline.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayNamespace.md
+  document type: cmdlet
+  external help file: Az.Relay-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.relay/get-azrelaynamespace
+  Module Name: Az.Relay
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Relay/Relay/help/Get-AzRelayNamespace.md
+  PlatyPS schema version: 2024-05-01

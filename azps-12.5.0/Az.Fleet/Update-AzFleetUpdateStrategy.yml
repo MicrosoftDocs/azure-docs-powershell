@@ -1,0 +1,376 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Fleet.Update-AzFleetUpdateStrategy
+name: Update-AzFleetUpdateStrategy
+module: Az.Fleet
+isPreview: false
+summary: |-
+  Update a FleetUpdateStrategy
+description: |-
+  Update a FleetUpdateStrategy
+parameters:
+  cmdletParameters:
+  - name: AsJob
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command as a job
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetInputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityFleetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FleetName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Fleet resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The request should only proceed if an entity matches this string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: IfNoneMatch
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The request should only proceed if no entity matches this string.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateViaIdentityExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the UpdateStrategy resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: UpdateViaIdentityFleetExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: NoWait
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Run the command asynchronously
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: StrategyStage
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IUpdateStage" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The list of stages that compose this update run.
+      Min size: 1.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: UpdateExpanded
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzFleetUpdateStrategy
+        -FleetName <String>
+        -Name <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String>]
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-StrategyStage <IUpdateStage[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateExpanded
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzFleetUpdateStrategy
+        -Name <String>
+        -FleetInputObject <IFleetIdentity>
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-StrategyStage <IUpdateStage[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityFleetExpanded
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzFleetUpdateStrategy
+        -InputObject <IFleetIdentity>
+        [-IfMatch <String>]
+        [-IfNoneMatch <String>]
+        [-StrategyStage <IUpdateStage[]>]
+        [-DefaultProfile <PSObject>]
+        [-AsJob]
+        [-NoWait]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: UpdateViaIdentityExpanded
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Fleet.Models.IFleetUpdateStrategy" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Update a fleet update strategy with a fleet object'
+  description: |-
+    ```powershell
+    $f = Get-AzFleet -Name testfleet01 -ResourceGroupName K8sFleet-Test
+    $stage = New-AzFleetUpdateStageObject -Name stag1 -Group @{name='group-a'} -AfterStageWaitInSecond 3600
+    Update-AzFleetUpdateStrategy -FleetInputObject $f -Name strategy3 -StrategyStage $stage
+    ```
+
+    ```output
+    ETag                         : "8906612a-0000-0100-0000-655b2c330000"
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/K8sFleet-Test/providers/Microsoft.ContainerService/fleets/testfleet01/updateStrategies/strategy3
+    Name                         : strategy3
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : K8sFleet-Test
+    StrategyStage                : {{
+                                     "name": "stag1",
+                                     "groups": [
+                                       {
+                                         "name": "group-a"
+                                       }
+                                     ],
+                                     "afterStageWaitInSeconds": 3600
+                                   }}
+    SystemDataCreatedAt          : 11/20/2023 9:51:46 AM
+    SystemDataCreatedBy          : user1@example.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/20/2023 9:51:46 AM
+    SystemDataLastModifiedBy     : user1@example.com
+    SystemDataLastModifiedByType : User
+    Type                         : Microsoft.ContainerService/fleets/updateStrategies
+    ```
+
+    The first command get a fleet.
+    The second command creates a new fleet update stage object.
+    The third command updates stage for specified fleet update strategy with a fleet object.
+- title: 'Example 2: Update a fleet update strategy'
+  description: |-
+    ```powershell
+    $stage = New-AzFleetUpdateStageObject -Name stag1 -Group @{name='group-a'} -AfterStageWaitInSecond 360
+    Update-AzFleetUpdateStrategy -FleetName testfleet01 -ResourceGroupName K8sFleet-Test -Name strategy1 -StrategyStage $stage
+    ```
+
+    ```output
+    ETag                         : "c9064db3-0000-0100-0000-655c75350000"
+    Id                           : /subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/K8sFleet-Test/providers/Microsoft.ContainerService/fleets/testfleet01/updateStrategies/strategy1
+    Name                         : strategy1
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : K8sFleet-Test
+    StrategyStage                : {{
+                                     "name": "stag1",
+                                     "groups": [
+                                       {
+                                         "name": "group-a"
+                                       }
+                                     ],
+                                     "afterStageWaitInSeconds": 360
+                                   }}
+    SystemDataCreatedAt          : 11/21/2023 9:15:33 AM
+    SystemDataCreatedBy          : user1@example.com
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedAt     : 11/21/2023 9:15:33 AM
+    SystemDataLastModifiedBy     : user1@example.com
+    SystemDataLastModifiedByType : User
+    Type                         : Microsoft.ContainerService/fleets/updateStrategies
+    ```
+
+    This command updates stage for specified fleet update strategy.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Update-AzFleetUpdateStrategy.md
+  document type: cmdlet
+  external help file: Az.Fleet-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.fleet/update-azfleetupdatestrategy
+  Module Name: Az.Fleet
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Fleet/Fleet/help/Update-AzFleetUpdateStrategy.md
+  PlatyPS schema version: 2024-05-01

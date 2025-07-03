@@ -1,0 +1,331 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Compute.Set-AzVmssOsProfile
+name: Set-AzVmssOsProfile
+module: Az.Compute
+isPreview: false
+summary: |-
+  Sets the VMSS operating system profile properties.
+description: |-
+  The **Set-AzVmssOsProfile** cmdlet sets the Virtual Machine Scale Set operating system profile properties.
+parameters:
+  cmdletParameters:
+  - name: AdditionalUnattendContent
+    type: <xref href="AdditionalUnattendContent" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an unattended content object.
+      You can use the Add-AzVMAdditionalUnattendContent to create the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "8"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminPassword
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator password to use for all the virtual machine instances in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "3"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: AdminUsername
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the administrator account name to use for all the virtual machine instances in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "2"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ComputerNamePrefix
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the computer name prefix for all the virtual machine instances in the VMSS.
+      Computer names must be 1 to 15 characters long.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: CustomData
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies a base-64 encoded string of custom data.
+      This is decoded to a binary array that is saved as a file on the virtual machine.
+      The maximum length of the binary array is 65535 bytes.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "4"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure.
+    aliases:
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: LinuxConfigurationDisablePasswordAuthentication
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this cmdlet disables password authentication.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "10"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Listener
+    type: <xref href="WinRMListener" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the Windows Remote Management (WinRM) listeners.
+      This enables remote Windows PowerShell.
+      You can use the Add-AzVmssWinRMListener cmdlet to create the listener.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "9"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PublicKey
+    type: <xref href="SshPublicKey" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the Secure Shell (SSH) public key object.
+      You can use the Add-AzVMSshPublicKey cmdlet to create the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "11"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Secret
+    type: <xref href="VaultSecretGroup" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies the secrets object which contains the certificate references to place on the virtual machine.
+      You can use the Add-AzVmssSecret cmdlet to create the secrets object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "12"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: TimeZone
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the time zone for the virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "7"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VirtualMachineScaleSet
+    type: <xref href="PSVirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the VMSS object.
+      You can use the New-AzVmssConfig cmdlet to create the object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsConfigurationEnableAutomaticUpdate
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether the virtual machines in the VMSS are enabled for automatic updates.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "6"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WindowsConfigurationProvisionVMAgent
+    type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates whether virtual machine agent should be provisioned on the virtual machines in the VMSS.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "5"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzVmssOsProfile
+        [-VirtualMachineScaleSet] <PSVirtualMachineScaleSet>
+        [[-ComputerNamePrefix] <String>]
+        [[-AdminUsername] <String>]
+        [[-AdminPassword] <String>]
+        [[-CustomData] <String>]
+        [[-WindowsConfigurationProvisionVMAgent] <Boolean>]
+        [[-WindowsConfigurationEnableAutomaticUpdate] <Boolean>]
+        [[-TimeZone] <String>]
+        [[-AdditionalUnattendContent] <AdditionalUnattendContent[]>]
+        [[-Listener] <WinRMListener[]>]
+        [[-LinuxConfigurationDisablePasswordAuthentication] <Boolean>]
+        [[-PublicKey] <SshPublicKey[]>]
+        [[-Secret] <VaultSecretGroup[]>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="VirtualMachineScaleSet" data-throw-if-not-resolved="False" />
+  description: |-
+    Parameter 'VirtualMachineScaleSet' accepts value of type 'VirtualMachineScaleSet' from the pipeline
+outputs:
+- name: <xref href="This cmdlet does not generate any output." data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Set the operating system profile properties for a VMSS'
+  description: |-
+    ```
+    PS C:\> Set-AzVmssOSProfile -VirtualMachineScaleSet "ContosoVMSS" -ComputerNamePrefix "Test" -AdminUsername $AdminUsername -AdminPassword $AdminPassword
+    ```
+
+    This command sets operating system profile properties for the virtual machines that belong to the VMSS named ContosoVMSS.
+    The command sets the computer name prefix for all the virtual machine instances in the VMSS to Test and supplies the administrator username and password.
+links:
+- text: Add-AzVMAdditionalUnattendContent
+  href: ./Add-AzVMAdditionalUnattendContent.yml
+- text: Add-AzVmssWinRMListener
+  href: ./Add-AzVmssWinRMListener.yml
+- text: Add-AzVMSshPublicKey
+  href: ./Add-AzVMSshPublicKey.yml
+- text: Add-AzVmssSecret
+  href: ./Add-AzVmssSecret.yml
+- text: New-AzVmssConfig
+  href: ./New-AzVmssConfig.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssOsProfile.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Compute.dll-Help-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.compute/set-azvmssosprofile
+  Module Name: Az.Compute
+  ms.assetid: 3E7B9EFA-8BC2-46EB-9AD7-43EAB7FF3891
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Compute/Compute/help/Set-AzVmssOsProfile.md
+  PlatyPS schema version: 2024-05-01

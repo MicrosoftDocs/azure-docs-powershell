@@ -1,0 +1,1358 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.KeyVault.Set-AzKeyVaultAccessPolicy
+name: Set-AzKeyVaultAccessPolicy
+module: Az.KeyVault
+isPreview: false
+summary: |-
+  Grants or modifies existing permissions for a user, application, or security group to perform operations with a key vault.
+description: |-
+  The **Set-AzKeyVaultAccessPolicy** cmdlet grants or modifies existing permissions for a user, application, or security group to perform the specified operations with a key vault. It does not modify the permissions that other users, applications, or security groups have on the key vault.
+  If you are setting permissions for a security group, this operation affects only users in that security group.
+  The following directories must all be the same Azure directory:
+  - The default directory of the Azure subscription in which the key vault resides.
+  - The Azure directory that contains the user or application group that you are granting permissions to.
+  Examples of scenarios when these conditions are not met and this cmdlet will not work are:
+  - Authorizing a user from a different organization to manage your key vault.
+  Each organization has its own directory.
+  - Your Azure account has multiple directories.
+  If you register an application in a directory other than the default directory, you cannot authorize that application to use your key vault.
+  The application must be in the default directory.
+  Note that although specifying the resource group is optional for this cmdlet, you should do so for better performance.
+
+  The cmdlet may call below Microsoft Graph API according to input parameters:
+
+  - GET /directoryObjects/{id}
+  - GET /users/{id}
+  - GET /users
+  - GET /servicePrincipals/{id}
+  - GET /servicePrincipals
+  - GET /groups/{id}
+
+  > [!NOTE]
+  > When using a service principal to grant access policy permissions, you must use the `-BypassObjectIdValidation` parameter.
+parameters:
+  cmdletParameters:
+  - name: ApplicationId
+    type: <xref href="System.Nullable`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+    description: |-
+      For future use.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: BypassObjectIdValidation
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables you to specify an object ID without validating that the object exists in Microsoft Entra ID.
+      Use this parameter only if you want to grant access to your key vault to an object ID that refers to a delegated security group from another Azure tenant.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EmailAddress
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user email address of the user to whom to grant permissions.
+      This email address must exist in the directory associated with the current subscription and be unique.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByEmailAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledForDeployment
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables the Microsoft.Compute resource provider to retrieve secrets from this key vault when this key vault is referenced in resource creation, for example when creating a virtual machine.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledForDiskEncryption
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables the Azure disk encryption service to get secrets and unwrap keys from this key vault.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: EnabledForTemplateDeployment
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Enables Azure Resource Manager to get secrets from this key vault when this key vault is referenced in a template deployment.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdForVault
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem" data-throw-if-not-resolved="False" />
+    description: |-
+      Key Vault Object
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: InputObjectByObjectId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectForVault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ObjectId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the object ID of the user or service principal in Microsoft Entra ID for which to grant permissions. Its value is in the format of GUID.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PassThru
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Returns an object representing the item with which you are working.
+      By default, this cmdlet does not generate any output.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionsToCertificates
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of certificate permissions to grant to a user or service principal.
+      'All' will grant all the permissions except 'Purge'
+      The acceptable values for this parameter:
+      - All
+      - Get
+      - List
+      - Delete
+      - Create
+      - Import
+      - Update
+      - Managecontacts
+      - Getissuers
+      - Listissuers
+      - Setissuers
+      - Deleteissuers
+      - Manageissuers
+      - Recover
+      - Backup
+      - Restore
+      - Purge
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionsToKeys
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of key operation permissions to grant to a user or service principal.
+      'All' will grant all the permissions except 'Purge'
+      The acceptable values for this parameter:
+      - All
+      - Decrypt
+      - Encrypt
+      - UnwrapKey
+      - WrapKey
+      - Verify
+      - Sign
+      - Get
+      - List
+      - Update
+      - Create
+      - Import
+      - Delete
+      - Backup
+      - Restore
+      - Recover
+      - Purge
+      - Rotate
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionsToSecrets
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies an array of secret operation permissions to grant to a user or service principal.
+      'All' will grant all the permissions except 'Purge'
+      The acceptable values for this parameter:
+      - All
+      - Get
+      - List
+      - Set
+      - Delete
+      - Backup
+      - Restore
+      - Recover
+      - Purge
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: PermissionsToStorage
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies managed storage account and SaS-definition operation permissions to grant to a user or service principal.
+      'All' will grant all the permissions except 'Purge'
+      The acceptable values for this parameter:
+      - all
+      - get
+      - list
+      - delete
+      - set
+      - update
+      - regeneratekey
+      - getsas
+      - listsas
+      - deletesas
+      - setsas
+      - recover
+      - backup
+      - restore
+      - purge
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByObjectId
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ForVault
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Key Vault Resource Id
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ResourceIdByObjectId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdByEmailAddress
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ResourceIdForVault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServicePrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the service principal name of the application to which to grant permissions.
+      Specify the application ID, also known as client ID, registered for the application in Microsoft Entra ID. The application with the service principal name that this parameter specifies must be registered in the Azure directory that contains your current subscription.
+    aliases:
+    - SPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByServicePrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByServicePrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByServicePrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The ID of the subscription.
+      By default, cmdlets are executed in the subscription that is set in the current context. If the user specifies another subscription, the current cmdlet is executed in the subscription specified by the user.
+      Overriding subscriptions only take effect during the lifecycle of the current cmdlet. It does not change the subscription in the context, and does not affect subsequent cmdlets.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: UserPrincipalName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the user principal name of the user to whom to grant permissions.
+      This user principal name must exist in the directory associated with the current subscription.
+    aliases:
+    - UPN
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: InputObjectByUserPrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ResourceIdByUserPrincipalName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VaultName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of a key vault.
+      This cmdlet modifies the access policy for the key vault that this parameter specifies.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByUserPrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByObjectId
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByServicePrincipalName
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByEmailAddress
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ForVault
+      position: "0"
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        -UserPrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByUserPrincipalName
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        -ObjectId <String>
+        [-ApplicationId <Guid>]
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-BypassObjectIdValidation]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        -ServicePrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByServicePrincipalName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        -EmailAddress <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByEmailAddress
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-VaultName] <String>
+        [[-ResourceGroupName] <String>]
+        [-EnabledForDeployment]
+        [-EnabledForTemplateDeployment]
+        [-EnabledForDiskEncryption]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ForVault
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-InputObject] <PSKeyVaultIdentityItem>
+        -ObjectId <String>
+        [-ApplicationId <Guid>]
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-BypassObjectIdValidation]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectByObjectId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-InputObject] <PSKeyVaultIdentityItem>
+        -ServicePrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectByServicePrincipalName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-InputObject] <PSKeyVaultIdentityItem>
+        -UserPrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectByUserPrincipalName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-InputObject] <PSKeyVaultIdentityItem>
+        -EmailAddress <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectByEmailAddress
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-InputObject] <PSKeyVaultIdentityItem>
+        [-EnabledForDeployment]
+        [-EnabledForTemplateDeployment]
+        [-EnabledForDiskEncryption]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: InputObjectForVault
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-ResourceId] <String>
+        -ObjectId <String>
+        [-ApplicationId <Guid>]
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-BypassObjectIdValidation]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdByObjectId
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-ResourceId] <String>
+        -ServicePrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdByServicePrincipalName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-ResourceId] <String>
+        -UserPrincipalName <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdByUserPrincipalName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-ResourceId] <String>
+        -EmailAddress <String>
+        [-PermissionsToKeys <String[]>]
+        [-PermissionsToSecrets <String[]>]
+        [-PermissionsToCertificates <String[]>]
+        [-PermissionsToStorage <String[]>]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdByEmailAddress
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Set-AzKeyVaultAccessPolicy
+        [-ResourceId] <String>
+        [-EnabledForDeployment]
+        [-EnabledForTemplateDeployment]
+        [-EnabledForDiskEncryption]
+        [-PassThru]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [-SubscriptionId <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ResourceIdForVault
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVaultIdentityItem" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.KeyVault.Models.PSKeyVault" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Grant permissions to a user for a key vault and modify the permissions'
+  description: |-
+    <!-- Skip: Output cannot be splitted from code -->
+
+
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys create,import,delete,list -PermissionsToSecrets set,delete -PassThru
+
+    Vault Name                       : Contoso03Vault
+    Resource Group Name              : myrg
+    Location                         : westus
+    Resource ID                      : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers
+                                       /Microsoft.KeyVault/vaults/contoso03vault
+    Vault URI                        : https://contoso03vault.vault.azure.net/
+    Tenant ID                        : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+    SKU                              : Standard
+    Enabled For Deployment?          : True
+    Enabled For Template Deployment? : False
+    Enabled For Disk Encryption?     : False
+    Soft Delete Enabled?             : True
+    Access Policies                  :
+                                       Tenant ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Object ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Application ID                             :
+                                       Display Name                               : User Name (username@microsoft.com)
+                                       Permissions to Keys                        : create, import, delete, list
+                                       Permissions to Secrets                     : set, delete
+                                       Permissions to Certificates                :
+                                       Permissions to (Key Vault Managed) Storage :
+
+    Tags                             :
+
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets set,delete,get -PassThru
+
+    Vault Name                       : Contoso03Vault
+    Resource Group Name              : myrg
+    Location                         : westus
+    Resource ID                      : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers
+                                       /Microsoft.KeyVault/vaults/contoso03vault
+    Vault URI                        : https://contoso03vault.vault.azure.net/
+    Tenant ID                        : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+    SKU                              : Standard
+    Enabled For Deployment?          : True
+    Enabled For Template Deployment? : False
+    Enabled For Disk Encryption?     : False
+    Soft Delete Enabled?             : True
+    Access Policies                  :
+                                       Tenant ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Object ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Application ID                             :
+                                       Display Name                               : User Name (username@microsoft.com)
+                                       Permissions to Keys                        : create, import, delete, list
+                                       Permissions to Secrets                     : set, delete, get
+                                       Permissions to Certificates                :
+                                       Permissions to (Key Vault Managed) Storage :
+
+    Tags                             :
+
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToKeys @() -PassThru
+
+    Vault Name                       : Contoso03Vault
+    Resource Group Name              : myrg
+    Location                         : westus
+    Resource ID                      : /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx/resourceGroups/myrg/providers
+                                       /Microsoft.KeyVault/vaults/contoso03vault
+    Vault URI                        : https://contoso03vault.vault.azure.net/
+    Tenant ID                        : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+    SKU                              : Standard
+    Enabled For Deployment?          : True
+    Enabled For Template Deployment? : False
+    Enabled For Disk Encryption?     : False
+    Soft Delete Enabled?             : True
+    Access Policies                  :
+                                       Tenant ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Object ID                                  : xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxxx
+                                       Application ID                             :
+                                       Display Name                               : User Name (username@microsoft.com)
+                                       Permissions to Keys                        :
+                                       Permissions to Secrets                     : set, delete, get
+                                       Permissions to Certificates                :
+                                       Permissions to (Key Vault Managed) Storage :
+
+    Tags                             :
+    ```
+
+    The first command grants permissions for a user in your Microsoft Entra ID, PattiFuller@contoso.com, to perform operations on keys and secrets with a key vault named Contoso03Vault. The *PassThru* parameter results in the updated object being returned by the cmdlet.
+    The second command modifies the permissions that were granted to PattiFuller@contoso.com in the first command, to now allow getting secrets in addition to setting and deleting them. The permissions to key operations remain unchanged after this command.
+    The final command further modifies the existing permissions for PattiFuller@contoso.com to remove all permissions to key operations. The permissions to secret operations remain unchanged after this command.
+- title: 'Example 2: Grant permissions for an application service principal to read and write secrets'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ServicePrincipalName 'http://payroll.contoso.com' -PermissionsToSecrets Get,Set
+    ```
+
+    This command grants permissions for an application for a key vault named Contoso03Vault.
+    The *ServicePrincipalName* parameter specifies the application. The application must be registered in your Microsoft Entra ID. The value of the *ServicePrincipalName* parameter must be either the service principal name of the application or the application ID GUID.
+    This example specifies the service principal name `http://payroll.contoso.com`, and the command grants the application permissions to read and write secrets.
+- title: 'Example 3: Grant permissions for an application using its object ID'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ObjectId 34595082-9346-41b6-8d6b-295a2808b8db -PermissionsToSecrets Get,Set
+    ```
+
+    This command grants the application permissions to read and write secrets.
+    This example specifies the application using the object ID of the service principal of the application.
+- title: 'Example 4: Grant permissions for a user principal name'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -UserPrincipalName 'PattiFuller@contoso.com' -PermissionsToSecrets Get,List,Set
+    ```
+
+    This command grants get, list, and set permissions for the specified user principal name for access to secrets.
+- title: 'Example 5: Enable secrets to be retrieved from a key vault by the Microsoft.Compute resource provider'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso03Vault' -ResourceGroupName 'Group14' -EnabledForDeployment
+    ```
+
+    This command grants the permissions for secrets to be retrieved from the Contoso03Vault key vault by the Microsoft.Compute resource provider.
+- title: 'Example 6: Grant permissions to a security group'
+  description: |-
+    ```powershell
+    Get-AzADGroup
+    Set-AzKeyVaultAccessPolicy -VaultName 'myownvault' -ObjectId (Get-AzADGroup -SearchString 'group2')[0].Id -PermissionsToKeys get, set -PermissionsToSecrets get, set
+    ```
+
+    The first command uses the Get-AzADGroup cmdlet to get all Active Directory groups. From the output, you see 3 groups returned, named **group1**, **group2**, and **group3**. Multiple groups can have the same name but always have a unique ObjectId. When more than one group that has the same name is returned, use the ObjectId in the output to identify the one you want to use.
+    You then use the output of this command with Set-AzKeyVaultAccessPolicy to grant permissions to group2 for your key vault, named **myownvault**. This example enumerates the groups named 'group2' inline in the same command line.
+    There may be multiple groups in the returned list that are named 'group2'.
+    This example picks the first one, indicated by index \[0\] in the returned list.
+- title: 'Example 7: Grant Azure Information Protection access to the customer-managed tenant key (BYOK)'
+  description: |-
+    ```powershell
+    Set-AzKeyVaultAccessPolicy -VaultName 'Contoso04Vault' -ServicePrincipalName 'MyServicePrincipal' -PermissionsToKeys decrypt,sign,get
+    ```
+
+    This command authorizes Azure Information Protection to use a customer-managed key (the bring your own key, or "BYOK" scenario) as the Azure Information Protection tenant key.
+    When you run this command, specify your own key vault name but you must specify the *ServicePrincipalName* parameter and specify the permissions in the example.
+links:
+- text: Get-AzKeyVault
+  href: ./Get-AzKeyVault.yml
+- text: Remove-AzKeyVaultAccessPolicy
+  href: ./Remove-AzKeyVaultAccessPolicy.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.KeyVault.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy
+  Module Name: Az.KeyVault
+  ms.assetid: 636FAD5B-8C39-4E5C-8978-6845C6B89BC0
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/KeyVault/KeyVault/help/Set-AzKeyVaultAccessPolicy.md
+  PlatyPS schema version: 2024-05-01

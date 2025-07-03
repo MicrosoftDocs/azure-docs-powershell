@@ -1,0 +1,176 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.RedisEnterpriseCache.Get-AzRedisEnterpriseCacheAccessPolicyAssignment
+name: Get-AzRedisEnterpriseCacheAccessPolicyAssignment
+module: Az.RedisEnterpriseCache
+isPreview: false
+summary: |-
+  Gets information about access policy assignment for database.
+description: |-
+  Gets information about access policy assignment for database.
+parameters:
+  cmdletParameters:
+  - name: ClusterName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Redis Enterprise cluster.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Redis Enterprise database.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Redis Enterprise database access policy assignment.
+    aliases:
+    - AccessPolicyAssignmentName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzRedisEnterpriseCacheAccessPolicyAssignment
+        -ClusterName <String>
+        -DatabaseName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: List
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzRedisEnterpriseCacheAccessPolicyAssignment
+        -ClusterName <String>
+        -DatabaseName <String>
+        -ResourceGroupName <String>
+        -Name <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: false
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.RedisEnterpriseCache.Models.Api20240901Preview.IAccessPolicyAssignment" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get access policy assignment information.'
+  description: |-
+    ```powershell
+    Get-AzRedisEnterpriseCacheAccessPolicyAssignment -AccessPolicyAssignmentName "testAccessPolicyAssignmentName" -ClusterName "MyCache" -DatabaseName "default" -ResourceGroupName "MyGroup"
+    ```
+
+    ```output
+    Name
+    ----
+    testAccessPolicyAssignmentName
+    ```
+
+    This command gets information on access policy assignment (redis user) named testAccessPolicyAssignment from Redis enterprise cache named testCache
+- title: 'Example 2: List access policy assignment information.'
+  description: |-
+    ```powershell
+    Get-AzRedisEnterpriseCacheAccessPolicyAssignment -ClusterName "MyCache" -DatabaseName "default" -ResourceGroupName "MyGroup"
+    ```
+
+    ```output
+    Name
+    ----
+    testAccessPolicyAssignmentName
+    ```
+
+    This command gets information on all access policy assignments from Redis enterprise cache named MyCache.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Get-AzRedisEnterpriseCacheAccessPolicyAssignment.md
+  document type: cmdlet
+  external help file: Az.RedisEnterpriseCache-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.redisenterprisecache/get-azredisenterprisecacheaccesspolicyassignment
+  Module Name: Az.RedisEnterpriseCache
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/RedisEnterpriseCache/RedisEnterpriseCache/help/Get-AzRedisEnterpriseCacheAccessPolicyAssignment.md
+  PlatyPS schema version: 2024-05-01

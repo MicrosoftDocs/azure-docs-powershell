@@ -1,0 +1,275 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Network.Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+name: Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+module: Az.Network
+isPreview: false
+summary: |-
+  To get network manager verifier workspace reachability analysis intent.
+description: |-
+  When given a 'Name', the **Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent** cmdlet gets that specific Verifier Workspace Reachability Analysis Intent. When not given a 'Name', the **Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent** cmdlet gets a list of the Verifier Workspace Reachability Analysis Intents in the specified network manager.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByName
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: NetworkManagerName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The network manager name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The Verifier Workspace Analysis Intent resource id.
+    aliases:
+    - ReachabilityAnalysisIntentId
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceId
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VerifierWorkspaceName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The verifier workspace name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByList
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    - name: ByName
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: true
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        -VerifierWorkspaceName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByList
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+        -NetworkManagerName <String>
+        -ResourceGroupName <String>
+        -VerifierWorkspaceName <String>
+        [-Name <String>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByName
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceId
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.Network.Models.NetworkManager.PSReachabilityAnalysisIntent" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent -NetworkManagerName "testNM" -ResourceGroupName "testRG" -VerifierWorkspaceName "testVerifierWorkspace9"
+    ```
+
+    ```output
+    Name                  : testReachabilityAnalysisIntent5
+    VerifierWorkspaceName :
+    ResourceGroupName     : testRG
+    NetworkManagerName    : testNM
+    Properties            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSReachabilityAnalysisIntentProperties
+    Type                  : Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents
+    SystemData            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText        : {
+                              "CreatedBy": "test@email.com",
+                              "CreatedByType": "User",
+                              "CreatedAt": "2024-02-16T00:03:44.5882378Z",
+                              "LastModifiedBy": "test@email.com",
+                              "LastModifiedByType": "User",
+                              "LastModifiedAt": "2024-02-16T00:03:44.5882378Z"
+                            }
+    Id                    : /subscriptions//00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Micro
+                            soft.Network/networkManagers/testNM/verifierWorkspaces/testVerifierWorkspace9/reachabilit
+                            yAnalysisIntents/testReachabilityAnalysisIntent5
+
+    Name                  : testReachabilityAnalysisIntenant6
+    VerifierWorkspaceName :
+    ResourceGroupName     : testRG
+    NetworkManagerName    : testNM
+    Properties            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSReachabilityAnalysisIntentProperties
+    Type                  : Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents
+    SystemData            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText        : {
+                              "CreatedBy": "test@email.com",
+                              "CreatedByType": "User",
+                              "CreatedAt": "2024-02-16T00:19:07.6430128Z",
+                              "LastModifiedBy": "test@email.com",
+                              "LastModifiedByType": "User",
+                              "LastModifiedAt": "2024-02-16T00:19:07.6430128Z"
+                            }
+    Id                    : /subscriptions//00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Micro
+                            soft.Network/networkManagers/testNM/verifierWorkspaces/testVerifierWorkspace9/reachabilit
+                            yAnalysisIntents/testReachabilityAnalysisIntenant6
+
+    Name                  : testReachabilityAnalysisIntenant7
+    VerifierWorkspaceName :
+    ResourceGroupName     : testRG
+    NetworkManagerName    : testNM
+    Properties            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSReachabilityAnalysisIntentProperties
+    Type                  : Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents
+    SystemData            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText        : {
+                              "CreatedBy": "test@email.com",
+                              "CreatedByType": "User",
+                              "CreatedAt": "2024-02-16T00:24:30.5939209Z",
+                              "LastModifiedBy": "test@email.com",
+                              "LastModifiedByType": "User",
+                              "LastModifiedAt": "2024-02-16T00:24:30.5939209Z"
+                            }
+    Id                    : /subscriptions//00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Micro
+                            soft.Network/networkManagers/testNM/verifierWorkspaces/testVerifierWorkspace9/reachabilit
+                            yAnalysisIntents/testReachabilityAnalysisIntenant7
+    ```
+
+    Gets all Verifier Workspace Reachability Analysis Intents in workspace 'testVerifierWorkspace9'
+- title: Example 2
+  description: |-
+    ```powershell
+    Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent -NetworkManagerName "testNM" -ResourceGroupName "testRG" -VerifierWorkspaceName "testVerifierWorkspace9" -Name "testReachabilityAnalysisIntenant7"
+    ```
+
+    ```output
+    Name                  : testReachabilityAnalysisIntenant7
+    VerifierWorkspaceName : testVerifierWorkspace9
+    ResourceGroupName     : testRG
+    NetworkManagerName    : testNM
+    Properties            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSReachabilityAnalysisIntentProperties
+    Type                  : Microsoft.Network/networkManagers/verifierWorkspaces/reachabilityAnalysisIntents
+    SystemData            : Microsoft.Azure.Commands.Network.Models.NetworkManager.PSSystemData
+    SystemDataText        : {
+                              "CreatedBy": "test@email.com",
+                              "CreatedByType": "User",
+                              "CreatedAt": "2024-02-16T00:24:30.5939209Z",
+                              "LastModifiedBy": "test@email.com",
+                              "LastModifiedByType": "User",
+                              "LastModifiedAt": "2024-02-16T00:24:30.5939209Z"
+                            }
+    Id                    : /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testRG/providers/Micro
+                            soft.Network/networkManagers/testNM/verifierWorkspaces/testVerifierWorkspace9/reachabilit
+                            yAnalysisIntents/testReachabilityAnalysisIntenant7
+    ```
+
+    Gets the Verifier Workspace Reachability Analysis Intent for 'testReachabilityAnalysisIntenant7'
+links:
+- text: New-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+  href: ./New-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent.yml
+- text: Remove-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent
+  href: ./Remove-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Network.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.network/get-aznetworkmanagerverifierworkspacereachabilityanalysisintent
+  Module Name: Az.Network
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Network/Network/help/Get-AzNetworkManagerVerifierWorkspaceReachabilityAnalysisIntent.md
+  PlatyPS schema version: 2024-05-01

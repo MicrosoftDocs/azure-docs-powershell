@@ -1,0 +1,85 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Remove-AzureVNetGateway
+name: Remove-AzureVNetGateway
+module: Azure
+isPreview: false
+summary: |-
+  Deletes a VPN gateway.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Remove-AzureVNetGateway** cmdlet deletes an existing virtual private network (VPN) gateway for a virtual network.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: VNetName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the virtual network in which this cmdlet deletes the VPN gateway.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Remove-AzureVNetGateway
+        -VNetName <String>
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+examples:
+- title: 'Example 1: Remove a virtual network gateway'
+  description: |-
+    ```
+    PS C:\> Remove-AzureVNetGateway -VNetName "ContosoVN07"
+    ```
+
+    This command removes the virtual network gateway from the virtual network named ContosoVN07.
+links:
+- text: Get-AzureVNetGateway
+  href: ./Get-AzureVNetGateway.yml
+- text: New-AzureVNetGateway
+  href: ./New-AzureVNetGateway.yml
+- text: Reset-AzureVNetGateway
+  href: ./Reset-AzureVNetGateway.yml
+- text: Resize-AzureVNetGateway
+  href: ./Resize-AzureVNetGateway.yml
+- text: Set-AzureVNetGatewayKey
+  href: ./Set-AzureVNetGatewayKey.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.ServiceManagement.Network.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 3E6EF9B8-9709-4E59-A1E5-78CDA4EAAE1B
+  PlatyPS schema version: 2024-05-01

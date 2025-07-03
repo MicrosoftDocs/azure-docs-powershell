@@ -1,0 +1,277 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.FrontDoor.Disable-AzFrontDoorCustomDomainHttps
+name: Disable-AzFrontDoorCustomDomainHttps
+module: Az.FrontDoor
+isPreview: false
+summary: |-
+  Disable HTTPS for a custom domain
+description: |-
+  The **Disable-AzFrontDoorCustomDomainHttps** disables HTTPS for a custom domain.
+parameters:
+  cmdletParameters:
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontDoorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the Front Door.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: FrontendEndpointName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Frontend endpoint name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontendEndpoint" data-throw-if-not-resolved="False" />
+    description: |-
+      The Frontend endpoint object to update.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The resource group to which the Front Door belongs.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByFieldsParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Resource Id of the Front Door endpoint to disable https
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByResourceIdParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs. The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Disable-AzFrontDoorCustomDomainHttps
+        -ResourceGroupName <String>
+        -FrontDoorName <String>
+        -FrontendEndpointName <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByFieldsParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Disable-AzFrontDoorCustomDomainHttps
+        -ResourceId <String>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByResourceIdParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Disable-AzFrontDoorCustomDomainHttps
+        -InputObject <PSFrontendEndpoint>
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.FrontDoor.Models.PSFrontendEndpoint" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Disable HTTPS for a custom domain with FrontDoorName and ResourceGroupName.'
+  description: |-
+    ```powershell
+    Disable-AzFrontDoorCustomDomainHttps -ResourceGroupName "resourcegroup1" -FrontDoorName "frontdoor1" -FrontendEndpointName "frontendpointname1-custom-xyz"
+    ```
+
+    ```output
+    HostName                         : frontendpointname1.custom.xyz
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabling
+    CustomHttpsProvisioningSubstate  : DeletingCertificate
+    CertificateSource                : FrontDoor
+    ProtocolType                     : ServerNameIndication
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontendpointname1-custom-xyz
+    Name                             : frontendpointname1-custom-xyz
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+    ```
+
+    Disable HTTPS for a custom domain "frontendpointname1-custom-xyz" with FrontDoorName as "frontdoor1" and ResourceGroupName as "resourcegroup1".
+- title: 'Example 2: Disable HTTPS for a custom domain with PSFrontendEndpoint object.'
+  description: |-
+    ```powershell
+    Get-AzFrontDoorFrontendEndpoint -ResourceGroupName "resourcegroup1" -FrontDoorName "frontdoor1" -Name "frontendpointname1-custom-xyz" | Disable-AzFrontDoorCustomDomainHttps -InputObject $frontendEndpointObj
+    ```
+
+    ```output
+    HostName                         : frontendpointname1.custom.xyz
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabling
+    CustomHttpsProvisioningSubstate  : DeletingCertificate
+    CertificateSource                : FrontDoor
+    ProtocolType                     : ServerNameIndication
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontendpointname1-custom-xyz
+    Name                             : frontendpointname1-custom-xyz
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+    ```
+
+    Disable HTTPS for a custom domain with PSFrontendEndpoint object.
+- title: 'Example 3: Disable HTTPS for a custom domain with ResourceId.'
+  description: |-
+    ```powershell
+    Disable-AzFrontDoorCustomDomainHttps -ResourceId $resourceId
+    ```
+
+    ```output
+    HostName                         : frontendpointname1.custom.xyz
+    SessionAffinityEnabledState      : Disabled
+    SessionAffinityTtlSeconds        : 0
+    WebApplicationFirewallPolicyLink :
+    Backends                         :
+    CustomHttpsProvisioningState     : Disabling
+    CustomHttpsProvisioningSubstate  : DeletingCertificate
+    CertificateSource                : FrontDoor
+    ProtocolType                     : ServerNameIndication
+    Vault                            :
+    SecretName                       :
+    SecretVersion                    :
+    CertificateType                  :
+    ResourceState                    : Enabled
+    Id                               : /subscriptions/{guid}/resourcegroups/resourcegroup1
+                                       /providers/Microsoft.Network/frontdoors/frontdoor1/frontendendpoints/frontendpointname1-custom-xyz
+    Name                             : frontendpointname1-custom-xyz
+    Type                             : Microsoft.Network/frontdoors/frontendendpoints
+    ```
+
+    Disable HTTPS for a custom domain "frontendpointname1-custom-xyz" with ResourceId as $resourceId.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Disable-AzFrontDoorCustomDomainHttps.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.FrontDoor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.frontdoor/disable-azfrontdoorcustomdomainhttps
+  Module Name: Az.FrontDoor
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/FrontDoor/FrontDoor/help/Disable-AzFrontDoorCustomDomainHttps.md
+  PlatyPS schema version: 2024-05-01

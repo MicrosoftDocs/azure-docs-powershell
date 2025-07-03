@@ -1,0 +1,101 @@
+### YamlMime:PowerShellCmdlet1
+uid: Azure.Get-AzureSqlDatabaseServer
+name: Get-AzureSqlDatabaseServer
+module: Azure
+isPreview: false
+summary: |-
+  Gets information about Azure SQL Database servers.
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  The **Get-AzureSqlDatabaseServer** cmdlet gets information about the instances of Azure SQL Database Server in the current subscription.
+  If you specify a server by name, this cmdlet returns an object that contains information about that server.
+  Otherwise, the cmdlet returns information about all the servers.
+parameters:
+  cmdletParameters:
+  - name: Profile
+    type: <xref href="AzureSMProfile" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the Azure profile from which this cmdlet reads.
+      If you do not specify a profile, this cmdlet reads from the local default profile.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ServerName
+    type: <xref href="String" data-throw-if-not-resolved="False" />
+    description: |-
+      Specifies the name of the server that this cmdlet removes.
+      Specify the server name, not the fully qualified DNS name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzureSqlDatabaseServer
+        [-ServerName <String>]
+        [-Profile <AzureSMProfile>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.WindowsAzure.Commands.SqlDatabase.Model.SqlDatabaseServerContext" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="IEnumerable" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information about all servers'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseServer
+    ```
+
+    This command returns information about all instances of Azure SQL Database Server in the current subscription.
+- title: 'Example 2: Get information about a specific server'
+  description: |-
+    ```
+    PS C:\> Get-AzureSqlDatabaseServer -ServerName "lpqd0zbr8y"
+    ```
+
+    This command returns information about the server named lpqd0zbr8y.
+links:
+- text: Azure SQL Database
+  href: https://azure.microsoft.com/en-us/services/sql-database/
+- text: List Servers
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505702.aspx
+- text: Operations for Azure SQL Databases
+  href: https://msdn.microsoft.com/en-us/library/azure/dn505719.aspx
+- text: New-AzureSqlDatabaseServer
+  href: ./New-AzureSqlDatabaseServer.yml
+- text: Remove-AzureSqlDatabaseServer
+  href: ./Remove-AzureSqlDatabaseServer.yml
+- text: Set-AzureSqlDatabaseServer
+  href: ./Set-AzureSqlDatabaseServer.yml
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.WindowsAzure.Commands.SqlDatabase.dll-Help.xml
+  HelpUri: 
+  Module Name: Azure
+  ms.assetid: 0ACEDE22-1C2B-4846-A949-710AF6C148D0
+  PlatyPS schema version: 2024-05-01

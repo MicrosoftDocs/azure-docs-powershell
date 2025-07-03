@@ -1,0 +1,141 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Monitor.New-AzAutoscaleNotification
+name: New-AzAutoscaleNotification
+module: Az.Monitor
+isPreview: false
+summary: |-
+  Creates an Autoscale email notification.
+description: |-
+  The **New-AzAutoscaleNotification** cmdlet creates an email notification for Autoscale.
+parameters:
+  cmdletParameters:
+  - name: CustomEmail
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a comma-separated list of email addresses.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "1"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with azure
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SendEmailToSubscriptionAdministrator
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation sends an email notification to the subscription administrator.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SendEmailToSubscriptionCoAdministrator
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Indicates that this operation sends an email notification to the subscription co-administrators.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Webhook
+    type: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Specifies a comma-separated list of Autoscale webhooks.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: "0"
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: true
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzAutoscaleNotification
+        [[-Webhook] <WebhookNotification[]>]
+        [[-CustomEmail] <String[]>]
+        [-SendEmailToSubscriptionAdministrator]
+        [-SendEmailToSubscriptionCoAdministrator]
+        [-DefaultProfile <IAzureContextContainer>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.WebhookNotification" data-throw-if-not-resolved="False" />
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+- name: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Management.Monitor.Management.Models.AutoscaleNotification" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an Autoscale email notification'
+  description: |-
+    ```
+    PS C:\>New-AzAutoscaleNotification -CustomEmail "pattif@contoso.com, davidchew@contoso.net"
+    ```
+
+    This command creates an Autosacale email notification for two specified addresses.
+- title: 'Example 2: Create an Autoscale email notification for the subscription administrator'
+  description: |-
+    ```
+    PS C:\>New-AzAutoscaleNotification -SendEmailToSubscriptionAdministrator
+    ```
+
+    This command creates an Autosacale email notification for the subscription administrator.
+links:
+- text: New-AzAutoscaleWebhook
+  href: ./New-AzAutoscaleWebhook.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAutoscaleNotification.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.Monitor.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/en-us/powershell/module/az.monitor/new-azautoscalenotification
+  Module Name: Az.Monitor
+  ms.assetid: B5B5F494-D912-40D0-99E2-A62FAACA3EC9
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/Azs-tzl/src/Monitor/Monitor/help/New-AzAutoscaleNotification.md
+  PlatyPS schema version: 2024-05-01

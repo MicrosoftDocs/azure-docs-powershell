@@ -1,0 +1,317 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.CosmosDB.Update-AzCosmosDbClientEncryptionKey
+name: Update-AzCosmosDbClientEncryptionKey
+module: Az.CosmosDB
+isPreview: false
+summary: |-
+  Updates the CosmosDB Client Encryption Key. Performs a client side patch operation by reading the existing Client Encryption Key.
+description: |-
+  The **Update-AzCosmosDbClientEncryptionKey** updates the CosmosDb Client Encryption Key. Performs a client side patch operation by reading the existing CosmosDB Client Encryption Key.
+parameters:
+  cmdletParameters:
+  - name: AccountName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the Cosmos DB database account.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Confirm
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Prompts you for confirmation before running the cmdlet.
+    aliases:
+    - cf
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DatabaseName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Database name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="Microsoft.Azure.Commands.Common.Authentication.Abstractions.Core.IAzureContextContainer" data-throw-if-not-resolved="False" />
+    description: |-
+      The credentials, account, tenant, and subscription used for communication with Azure.
+    aliases:
+    - AzContext
+    - AzureRmContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetResults" data-throw-if-not-resolved="False" />
+    description: |-
+      Client Encryption Key object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyEncryptionKeyResolver
+    type: <xref href="Azure.Core.Cryptography.IKeyEncryptionKeyResolver" data-throw-if-not-resolved="False" />
+    description: |-
+      IKeyEncryptionKeyResolver interface of type Azure.Core.Cryptography.IKeyEncryptionKeyResolver
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: KeyWrapMetadata
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlKeyWrapMetadata" data-throw-if-not-resolved="False" />
+    description: |-
+      KeyWrapMetaData Object of type Microsoft.Azure.Commands.CosmosDB.PSSqlKeyWrapMetadata.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Client Encryption Key name.
+    aliases:
+    - ClientEncryptionKeyName
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of resource group.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByNameParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SqlDatabaseObject
+    type: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlDatabaseGetResults" data-throw-if-not-resolved="False" />
+    description: |-
+      Sql Database object.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: ByParentObjectParameterSet
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: WhatIf
+    type: <xref href="System.Management.Automation.SwitchParameter" data-throw-if-not-resolved="False" />
+    description: |-
+      Shows what would happen if the cmdlet runs.
+      The cmdlet is not run.
+    aliases:
+    - wi
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Update-AzCosmosDbClientEncryptionKey
+        -ResourceGroupName <String>
+        -AccountName <String>
+        -DatabaseName <String>
+        -Name <String>
+        -KeyWrapMetadata <PSSqlKeyWrapMetadata>
+        [-KeyEncryptionKeyResolver <IKeyEncryptionKeyResolver>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByNameParameterSet
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Update-AzCosmosDbClientEncryptionKey
+        -Name <String>
+        -KeyWrapMetadata <PSSqlKeyWrapMetadata>
+        -SqlDatabaseObject <PSSqlDatabaseGetResults>
+        [-KeyEncryptionKeyResolver <IKeyEncryptionKeyResolver>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByParentObjectParameterSet
+  isDefault: false
+- syntax: |-
+    ```Syntax
+    Update-AzCosmosDbClientEncryptionKey
+        -KeyWrapMetadata <PSSqlKeyWrapMetadata>
+        -InputObject <PSSqlClientEncryptionKeyGetResults>
+        [-KeyEncryptionKeyResolver <IKeyEncryptionKeyResolver>]
+        [-DefaultProfile <IAzureContextContainer>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+    ```
+  parameterSetName: ByObjectParameterSet
+  isDefault: false
+inputs:
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlKeyWrapMetadata" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Data.Encryption.Cryptography.EncryptionKeyStoreProvider" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlDatabaseGetResults" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetResults" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetResults" data-throw-if-not-resolved="False" />
+- name: <xref href="Microsoft.Azure.Commands.CosmosDB.Exceptions.ResourceNotFoundException" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```powershell
+    $updatedKeyWrapMetadataObject = [Microsoft.Azure.Commands.CosmosDB.Models.PSSqlKeyWrapMetadata]::new([Microsoft.Azure.Management.CosmosDB.Models.KeyWrapMetadata]::new("myKekV2","AZURE_KEY_VAULT", "https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71", "RSA-OAEP"))
+    Update-AzCosmosDbClientEncryptionKey -AccountName myAccountName -DatabaseName myDatabaseName -ResourceGroupName myRgName -Name myClientEncryptionKeyName -KeyWrapMetadata $updatedKeyWrapMetadataObject
+    ```
+
+    ```output
+    Name     : myContainerName
+    Id       : /subscriptions/mySubscriptionId/resourceGroups/myRgName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlDatabases/myDatabaseName/clientEncryptionKeys/myClientEncryptionKeyName
+    Resource : Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetPropertiesResource
+    ```
+
+    This example shows how a key is updated. If KeyEncryptionKeyResolver is not passed Azure Key Vault KeyResolver is used by default.
+    The first command creates a KeyWrapMetadata object with name myKekV2 of type AZURE_KEY_VAULT with value set to key id https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71 and algorithm type "RSA-OAEP" used to encrypt the key.
+    In the second command a key with name as set in myClientEncryptionKeyName variable is updated with KeyWrapMetadata set to value returned by first command.
+- title: Example 2
+  description: |-
+    ```powershell
+    $updatedKeyWrapMetadataObject = [Microsoft.Azure.Commands.CosmosDB.Models.PSSqlKeyWrapMetadata]::new([Microsoft.Azure.Management.CosmosDB.Models.KeyWrapMetadata]::new("myKekV2","AZURE_KEY_VAULT", "https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71", "RSA-OAEP"))
+    $azureKeyVaultKeyResolver = [Azure.Security.KeyVault.Keys.Cryptography.KeyResolver]::new([Azure.Identity.DefaultAzureCredential]::new())
+    Update-AzCosmosDbClientEncryptionKey -AccountName myAccountName -DatabaseName myDatabaseName -ResourceGroupName myRgName -Name myClientEncryptionKeyName -KeyWrapMetadata $updatedKeyWrapMetadataObject -KeyEncryptionKeyResolver $azureKeyVaultKeyResolver
+    ```
+
+    ```output
+    Name     : myContainerName
+    Id       : /subscriptions/mySubscriptionId/resourceGroups/myRgName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlDatabases/myDatabaseName/clientEncryptionKeys/myClientEncryptionKeyName
+    Resource : Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetPropertiesResource
+    ```
+
+    This example shows how a key is updated and how KeyEncryptionKeyResolver can be passed as a parameter.
+    The first command creates a KeyWrapMetadata object with name myKekV2 of type AZURE_KEY_VAULT with value set to key id https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71 and algorithm type "RSA-OAEP" used to encrypt the key.
+    The second command creates a Azure Key Vault KeyResolver object using the Azure Default credentials.
+    In the third command a key with name as set in myClientEncryptionKeyName variable is updated with KeyWrapMetadata set to value returned by first command and KeyEncryptionKeyResolver value set to KeyResolver object obtained via the second command.
+- title: Example 3
+  description: |-
+    ```powershell
+    $updatedKeyWrapMetadataObject = [Microsoft.Azure.Commands.CosmosDB.Models.PSSqlKeyWrapMetadata]::new([Microsoft.Azure.Management.CosmosDB.Models.KeyWrapMetadata]::new("myKekV2","AZURE_KEY_VAULT", "https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71", "RSA-OAEP"))
+    $keyToUpdate = Get-AzCosmosDbClientEncryptionKey -AccountName myAccountName -DatabaseName myDatabaseName -ResourceGroupName myRgName -ClientEncryptionKeyName myClientEncryptionKeyName
+    Update-AzCosmosDbClientEncryptionKey -InputObject $keyToUpdate -KeyWrapMetadata $updatedKeyWrapMetadataObject -KeyEncryptionKeyResolver $azureKeyVaultKeyResolver
+    ```
+
+    ```output
+    Name     : myContainerName
+    Id       : /subscriptions/mySubscriptionId/resourceGroups/myRgName/providers/Microsoft.DocumentDB/databaseAccounts/myAccountName/sqlDatabases/myDatabaseName/clientEncryptionKeys/myClientEncryptionKeyName
+    Resource : Microsoft.Azure.Commands.CosmosDB.Models.PSSqlClientEncryptionKeyGetPropertiesResource
+    ```
+
+    This example shows how a key is updated using an InputObject which is obtained by reading the key which has to be updated.
+    The first command creates a KeyWrapMetadata object with name myKekV2 of type AZURE_KEY_VAULT with value set to key id https://contoso.vault.azure.net/keys/myKekV2/78deebed173b48e48f55abf87ed4cf71 and algorithm type "RSA-OAEP" used to encrypt the key.
+    In the second command reads the key which is to be updated.
+    The third command updates the key which was read earlier in the second command. The object read in the second command is passed as the InputObject along with the updated KeyWrapMetadata obtained in the first command.
+links:
+- text: Get-AzCosmosDbClientEncryptionKey
+  href: ./Get-AzCosmosDbClientEncryptionKey.yml
+- text: New-AzCosmosDbClientEncryptionKey
+  href: ./New-AzCosmosDbClientEncryptionKey.yml
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Update-AzCosmosDbClientEncryptionKey.md
+  document type: cmdlet
+  external help file: Microsoft.Azure.PowerShell.Cmdlets.CosmosDB.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.cosmosdb/update-azcosmosdbclientencryptionkey
+  Module Name: Az.CosmosDB
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CosmosDB/CosmosDB/help/Update-AzCosmosDbClientEncryptionKey.md
+  PlatyPS schema version: 2024-05-01

@@ -1,0 +1,58 @@
+### YamlMime:PowerShellModule1
+uid: Az.Peering
+name: Az.Peering Module
+isPreview: false
+cmdletGroups:
+- title: Peering
+  cmdlets:
+  - Az.Peering.Get-AzPeering
+  - Az.Peering.Get-AzPeeringAsn
+  - Az.Peering.Get-AzPeeringCdnPrefix
+  - Az.Peering.Get-AzPeeringConnectionMonitorTest
+  - Az.Peering.Get-AzPeeringLegacy
+  - Az.Peering.Get-AzPeeringLocation
+  - Az.Peering.Get-AzPeeringReceivedRoute
+  - Az.Peering.Get-AzPeeringRegisteredAsn
+  - Az.Peering.Get-AzPeeringRegisteredPrefix
+  - Az.Peering.Get-AzPeeringRpUnbilledPrefix
+  - Az.Peering.Get-AzPeeringService
+  - Az.Peering.Get-AzPeeringServiceCountry
+  - Az.Peering.Get-AzPeeringServiceLocation
+  - Az.Peering.Get-AzPeeringServicePrefix
+  - Az.Peering.Get-AzPeeringServiceProvider
+  - Az.Peering.Initialize-AzPeeringServiceConnectionMonitor
+  - Az.Peering.New-AzPeering
+  - Az.Peering.New-AzPeeringAsn
+  - Az.Peering.New-AzPeeringCheckServiceProviderAvailabilityInputObject
+  - Az.Peering.New-AzPeeringConnectionMonitorTest
+  - Az.Peering.New-AzPeeringContactDetailObject
+  - Az.Peering.New-AzPeeringDirectConnectionObject
+  - Az.Peering.New-AzPeeringExchangeConnectionObject
+  - Az.Peering.New-AzPeeringRegisteredAsn
+  - Az.Peering.New-AzPeeringRegisteredPrefix
+  - Az.Peering.New-AzPeeringService
+  - Az.Peering.New-AzPeeringServicePrefix
+  - Az.Peering.Remove-AzPeering
+  - Az.Peering.Remove-AzPeeringAsn
+  - Az.Peering.Remove-AzPeeringConnectionMonitorTest
+  - Az.Peering.Remove-AzPeeringRegisteredAsn
+  - Az.Peering.Remove-AzPeeringRegisteredPrefix
+  - Az.Peering.Remove-AzPeeringService
+  - Az.Peering.Remove-AzPeeringServicePrefix
+  - Az.Peering.Start-AzPeeringInvokeLookingGlass
+  - Az.Peering.Test-AzPeeringRegisteredPrefix
+  - Az.Peering.Test-AzPeeringServiceProviderAvailability
+  - Az.Peering.Update-AzPeering
+  - Az.Peering.Update-AzPeeringService
+description: |-
+  Microsoft Azure PowerShell: Peering cmdlets
+metadata:
+  Module Name: Az.Peering
+  Module Guid: 78c6a853-5ea3-4374-9c5f-5b532d62c892
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.peering
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Az.Peering.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Peering/Peering/help/Az.Peering.md
+  PlatyPS schema version: 2024-05-01
+  document type: module

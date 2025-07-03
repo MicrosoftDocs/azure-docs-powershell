@@ -1,0 +1,129 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Purview.Get-AzPurviewSystemScanRulesetVersion
+name: Get-AzPurviewSystemScanRulesetVersion
+module: Az.Purview
+isPreview: false
+summary: |-
+  List system scan ruleset versions in Data catalog
+description: |-
+  List system scan ruleset versions in Data catalog
+parameters:
+  cmdletParameters:
+  - name: DataSourceType
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Support.DataSourceType" data-throw-if-not-resolved="False" />
+    description: |-
+      .
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Endpoint
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The scanning endpoint of your purview account.
+      Example: https://{accountName}.purview.azure.com
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzPurviewSystemScanRulesetVersion
+        -Endpoint <String>
+        [-DataSourceType <DataSourceType>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Purviewdata.Models.Api20211001Preview.ISystemScanRuleset" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get all versions of system scanruleset available for a data source'
+  description: |-
+    ```powershell
+    Get-AzPurviewSystemScanRulesetVersion -Endpoint https://parv-brs-2.purview.azure.com/ -DataSourceType 'AzureStorage'
+    ```
+
+    ```output
+    Id                : systemscanrulesets/AzureStorage
+    Kind              : AzureStorage
+    Name              : AzureStorage
+    ResourceGroupName :
+    Status            : Enabled
+    Type              : System
+    Version           : 4
+
+    Id                : systemscanrulesets/AzureStorage
+    Kind              : AzureStorage
+    Name              : AzureStorage
+    ResourceGroupName :
+    Status            : Enabled
+    Type              : System
+    Version           : 3
+
+    Id                : systemscanrulesets/AzureStorage
+    Kind              : AzureStorage
+    Name              : AzureStorage
+    ResourceGroupName :
+    Status            : Enabled
+    Type              : System
+    Version           : 2
+
+    Id                : systemscanrulesets/AzureStorage
+    Kind              : AzureStorage
+    Name              : AzureStorage
+    ResourceGroupName :
+    Status            : Enabled
+    Type              : System
+    Version           : 1
+    ```
+
+    Get all versions of system scanruleset available for a data source
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewSystemScanRulesetVersion.md
+  document type: cmdlet
+  external help file: Az.Purview-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.purview/get-azpurviewsystemscanrulesetversion
+  Module Name: Az.Purview
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Purview/Purview/help/Get-AzPurviewSystemScanRulesetVersion.md
+  PlatyPS schema version: 2024-05-01

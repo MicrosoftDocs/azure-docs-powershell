@@ -1,0 +1,95 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.SpringCloud.New-AzSpringCloudBuildpacksGroupObject
+name: New-AzSpringCloudBuildpacksGroupObject
+module: Az.SpringCloud
+isPreview: false
+summary: |-
+  Create an in-memory object for BuildpacksGroupProperties.
+description: |-
+  Create an in-memory object for BuildpacksGroupProperties.
+notes: |-
+  ALIASES
+
+  COMPLEX PARAMETER PROPERTIES
+
+  To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
+
+
+  `BUILDPACK <IBuildpackProperties[]>`: Buildpacks in the buildpack group.
+    - `[Id <String>]`: Id of the buildpack
+parameters:
+  cmdletParameters:
+  - name: Buildpack
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.IBuildpackProperties" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      Buildpacks in the buildpack group.
+      To construct, see NOTES section for BUILDPACK properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: Name
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Buildpack group name.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    New-AzSpringCloudBuildpacksGroupObject
+        [-Buildpack <IBuildpackProperties[]>]
+        [-Name <String>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Default
+  isDefault: true
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.SpringCloud.Models.Api20220401.BuildpacksGroupProperties" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Create an in-memory object for BuildpacksGroupProperties'
+  description: |-
+    ```powershell
+    $pack = @()
+    $pack += New-AzSpringCloudBuildpackObject -Id "tanzu-buildpacks/dotnet-core"
+    $pack += New-AzSpringCloudBuildpackObject -Id "tanzu-buildpacks/python"
+    $pack += New-AzSpringCloudBuildpackObject -Id "tanzu-buildpacks/java-azure"
+    New-AzSpringCloudBuildpacksGroupObject -Name 'packtest' -Buildpack $pack
+    ```
+
+    ```output
+    Name
+    ----
+    packtest
+    ```
+
+    Create an in-memory object for BuildpacksGroupProperties.
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudBuildpacksGroupObject.md
+  document type: cmdlet
+  external help file: Az.SpringCloud-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.SpringCloud/new-AzSpringCloudBuildpacksGroupObject
+  Module Name: Az.SpringCloud
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/SpringCloud/SpringCloud/help/New-AzSpringCloudBuildpacksGroupObject.md
+  PlatyPS schema version: 2024-05-01

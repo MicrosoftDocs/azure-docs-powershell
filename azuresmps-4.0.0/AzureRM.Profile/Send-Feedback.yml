@@ -1,0 +1,36 @@
+### YamlMime:PowerShellCmdlet1
+uid: AzureRM.Profile.Send-Feedback
+name: Send-Feedback
+module: AzureRM.Profile
+isPreview: false
+summary: |-
+  {{Fill in the Synopsis}}
+
+  [!INCLUDE [rdfe-banner](../../includes/rdfe-banner.md)]
+description: |-
+  {{Fill in the Description}}
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Send-Feedback
+    ```
+  parameterSetName: Default
+  isDefault: true
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="System.Void" data-throw-if-not-resolved="False" />
+examples:
+- title: Example 1
+  description: |-
+    ```
+    PS C:\> {{ Add example code here }}
+    ```
+
+    {{ Add example description here }}
+metadata:
+  document type: cmdlet
+  external help file: Microsoft.Azure.Commands.Profile.dll-Help.xml
+  HelpUri: 
+  Module Name: AzureRM.Profile
+  PlatyPS schema version: 2024-05-01

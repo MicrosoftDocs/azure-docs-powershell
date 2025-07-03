@@ -1,0 +1,201 @@
+### YamlMime:PowerShellCmdlet1
+uid: Az.Workloads.Get-AzWorkloadsSapLandscapeMonitor
+name: Get-AzWorkloadsSapLandscapeMonitor
+module: Az.Workloads
+isPreview: false
+summary: |-
+  Gets configuration values for Single Pane Of Glass for SAP monitor for the specified subscription, resource group, and resource name.
+description: |-
+  Gets configuration values for Single Pane Of Glass for SAP monitor for the specified subscription, resource group, and resource name.
+parameters:
+  cmdletParameters:
+  - name: DefaultProfile
+    type: <xref href="System.Management.Automation.PSObject" data-throw-if-not-resolved="False" />
+    description: |-
+      The DefaultProfile parameter is not functional.
+      Use the SubscriptionId parameter when available if executing the cmdlet against a different subscription.
+    aliases:
+    - AzureRMContext
+    - AzureCredential
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: (All)
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: InputObject
+    type: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+    description: |-
+      Identity Parameter
+      To construct, see NOTES section for INPUTOBJECT properties and create a hash table.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: GetViaIdentity
+      position: Named
+      isRequired: true
+      valueFromPipeline: true
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: MonitorName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      Name of the SAP monitor resource.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: ResourceGroupName
+    type: <xref href="System.String" data-throw-if-not-resolved="False" />
+    description: |-
+      The name of the resource group.
+      The name is case insensitive.
+    defaultValue: None
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: true
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  - name: SubscriptionId
+    type: <xref href="System.String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+    description: |-
+      The ID of the target subscription.
+    defaultValue: (Get-AzContext).Subscription.Id
+    dontShow: false
+    isDynamic: false
+    parameterSets:
+    - name: Get
+      position: Named
+      isRequired: false
+      valueFromPipeline: false
+      valueFromPipelineByPropertyName: false
+      valueFromRemainingArguments: false
+    supportsWildcards: false
+  commonParameters: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+syntaxes:
+- syntax: |-
+    ```Syntax
+    Get-AzWorkloadsSapLandscapeMonitor
+        -MonitorName <String>
+        -ResourceGroupName <String>
+        [-SubscriptionId <String[]>]
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: Get
+  isDefault: true
+- syntax: |-
+    ```Syntax
+    Get-AzWorkloadsSapLandscapeMonitor
+        -InputObject <IMonitorsIdentity>
+        [-DefaultProfile <PSObject>]
+        [<CommonParameters>]
+    ```
+  parameterSetName: GetViaIdentity
+  isDefault: false
+inputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.IMonitorsIdentity" data-throw-if-not-resolved="False" />
+outputs:
+- name: <xref href="Microsoft.Azure.PowerShell.Cmdlets.Workloads.Monitors.Models.Api20230401.ISapLandscapeMonitor" data-throw-if-not-resolved="False" />
+examples:
+- title: 'Example 1: Get information about a SAP landscape monitor'
+  description: |-
+    ```powershell
+    Get-AzWorkloadsSapLandscapeMonitor -MonitorName suha-0202-ams9 -ResourceGroupName suha-0802-rg1 -SubscriptionId aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e
+    ```
+
+    ```output
+    GroupingLandscape            : {{
+                                     "name": "Prod",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    GroupingSapApplication       : {{
+                                     "name": "ERP1",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.
+                                   Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
+    Name                         : default
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : suha-0802-rg1
+    SystemData                   : {
+                                   }
+    SystemDataCreatedAt          : 06-04-2023 05:30:54
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedByType : User
+    TopMetricsThreshold          : {{
+                                     "name": "Instance Availability",
+                                     "green": 90,
+                                     "yellow": 75,
+                                     "red": 50
+                                   }}
+    Type                         : microsoft.workloads/monitors/saplandscapemonitor
+    ```
+
+    Gets information about a specific SAP landscape monitor
+- title: 'Example 2: Get information about a SAP landscape monitor by Id'
+  description: |-
+    ```powershell
+    Get-AzWorkloadsSapLandscapeMonitor -InputObject "/subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0/providers/Microsoft.Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default"
+    ```
+
+    ```output
+    GroupingLandscape            : {{
+                                     "name": "Prod",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    GroupingSapApplication       : {{
+                                     "name": "ERP1",
+                                     "topSid": [ "SID1", "SID2" ]
+                                   }}
+    Id                           : /subscriptions/aaaa0a0a-bb1b-cc2c-dd3d-eeeeee4e4e4e/resourceGroups/suha-0802-rg1/providers/Microsoft.
+                                   Workloads/monitors/suha-0202-ams9/sapLandscapeMonitor/default
+    Name                         : default
+    ProvisioningState            : Succeeded
+    ResourceGroupName            : suha-0802-rg1
+    SystemData                   : {
+                                   }
+    SystemDataCreatedAt          : 06-04-2023 05:30:54
+    SystemDataCreatedByType      : User
+    SystemDataLastModifiedByType : User
+    TopMetricsThreshold          : {{
+                                     "name": "Instance Availability",
+                                     "green": 90,
+                                     "yellow": 75,
+                                     "red": 50
+                                   }}
+    Type                         : microsoft.workloads/monitors/saplandscapemonitor
+    ```
+
+    Gets information about a specific SAP landscape monitor by ArmId
+metadata:
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Get-AzWorkloadsSapLandscapeMonitor.md
+  document type: cmdlet
+  external help file: Az.Workloads-help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/az.workloads/get-azworkloadssaplandscapemonitor
+  Module Name: Az.Workloads
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/Workloads/Workloads/help/Get-AzWorkloadsSapLandscapeMonitor.md
+  PlatyPS schema version: 2024-05-01

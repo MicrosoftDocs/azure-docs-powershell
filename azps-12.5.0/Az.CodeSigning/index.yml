@@ -1,0 +1,23 @@
+### YamlMime:PowerShellModule1
+uid: Az.CodeSigning
+name: Az.CodeSigning Module
+isPreview: false
+cmdletGroups:
+- title: Code Signing
+  cmdlets:
+  - Az.CodeSigning.Get-AzCodeSigningCertChain
+  - Az.CodeSigning.Get-AzCodeSigningCustomerEku
+  - Az.CodeSigning.Get-AzCodeSigningRootCert
+  - Az.CodeSigning.Invoke-AzCodeSigningCIPolicySigning
+description: |-
+  Microsoft Azure PowerShell: CodeSigning cmdlets
+metadata:
+  Module Name: Az.CodeSigning
+  Module Guid: 4b038ccd-b128-4b3d-be04-8a9921c69093
+  HelpInfoUri: https://learn.microsoft.com/powershell/module/az.codesigning
+  Help Version: 1.0.0.0
+  Locale: en-US
+  content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CodeSigning/CodeSigning/help/Az.CodeSigning.md
+  original_content_git_url: https://github.com/Azure/azure-powershell/blob/main/src/CodeSigning/CodeSigning/help/Az.CodeSigning.md
+  PlatyPS schema version: 2024-05-01
+  document type: module
